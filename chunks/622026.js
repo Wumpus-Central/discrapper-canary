@@ -16,6 +16,10 @@ class i {
     isFeatureTeenByDefault(e) {
         return (this.teenByDefault & e) != 0;
     }
+    hasTeenDefaults() {
+        var e;
+        return (null != (e = this.teenByDefault) ? e : 0) !== 0;
+    }
     constructor(e) {
         r(this, "teenByDefault", void 0), (this.teenByDefault = e);
     }
@@ -23,6 +27,10 @@ class i {
 class a {
     isFeatureAgeGated(e) {
         return (this.gatedFeatures & e) != 0;
+    }
+    hasAgeGatedFeatures() {
+        var e;
+        return (null != (e = this.gatedFeatures) ? e : 0) !== 0;
     }
     constructor(e) {
         r(this, "gatedFeatures", void 0), (this.gatedFeatures = e);
@@ -34,6 +42,12 @@ class o {
     }
     isFeatureTeenByDefault(e) {
         return this.settings.isFeatureTeenByDefault(e);
+    }
+    hasAgeGatedFeatures() {
+        return this.ageVerification.hasAgeGatedFeatures();
+    }
+    hasTeenDefaults() {
+        return this.settings.hasTeenDefaults();
     }
     static fromConnectionOpen(e) {
         return new o(new i(e.teen_by_default_settings), new a(e.age_gated_features));

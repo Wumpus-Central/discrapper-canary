@@ -1,23 +1,24 @@
-n.d(t, { Z: () => A }), n(388685);
-var r = n(470167),
-    i = n(904245),
-    a = n(911969),
-    o = n(147913),
-    s = n(89892),
-    l = n(710845),
-    c = n(109590),
-    u = n(681678),
-    d = n(128064),
-    f = n(312870),
-    p = n(592125),
-    _ = n(375954),
+n.d(t, { Z: () => N }), n(388685);
+var r = n(310882),
+    i = n(470167),
+    a = n(904245),
+    o = n(911969),
+    s = n(147913),
+    l = n(89892),
+    c = n(710845),
+    u = n(109590),
+    d = n(980945),
+    f = n(681678),
+    p = n(312870),
+    _ = n(592125),
+    h = n(375954),
     m = n(944486),
-    h = n(594174),
-    g = n(480916),
-    E = n(81643),
-    b = n(981631),
-    y = n(484710);
-function O(e, t, n) {
+    g = n(594174),
+    E = n(480916),
+    b = n(81643),
+    y = n(981631),
+    O = n(484710);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,75 +31,75 @@ function O(e, t, n) {
         e
     );
 }
-let v = new l.Z("AgeVerificationManager");
-function S(e) {
-    var t, n, i;
+let S = new c.Z("AgeVerificationManager");
+function I(e) {
+    var t, n, r;
     let { channelId: a, message: o } = e,
-        s = _.Z.getMessage(a, o.id);
+        s = h.Z.getMessage(a, o.id);
     if (
         (null == s || null == (n = s.embeds) || null == (t = n[0]) ? void 0 : t.type) ===
-        r.h.AGE_VERIFICATION_SYSTEM_NOTIFICATION
+        i.h.AGE_VERIFICATION_SYSTEM_NOTIFICATION
     ) {
-        let e = null == (i = s.embeds[0].fields) ? void 0 : i.find((e) => e.rawName === E.g0.CONTENT_TYPE);
-        (null == e ? void 0 : e.rawValue) === E.L0.ERROR
-            ? (u.Z.showFailedToast(y.wQ.TIGGER_PAWTECT_ERROR), (0, g.zi)(g.o6.ERROR))
-            : (null == e ? void 0 : e.rawValue) === E.L0.VERIFIED_ADULT
-              ? (u.Z.showSuccessToast(y.wQ.TIGGER_PAWTECT_VERIFIED), (0, g.zi)(g.o6.VERIFIED_ADULT))
-              : (null == e ? void 0 : e.rawValue) === E.L0.VERIFIED_TEEN &&
-                (u.Z.showSuccessToast(y.wQ.TIGGER_PAWTECT_VERIFIED), (0, g.zi)(g.o6.VERIFIED_TEEN));
+        let e = null == (r = s.embeds[0].fields) ? void 0 : r.find((e) => e.rawName === b.g0.CONTENT_TYPE);
+        (null == e ? void 0 : e.rawValue) === b.L0.ERROR
+            ? (f.Z.showFailedToast(O.wQ.TIGGER_PAWTECT_ERROR), (0, E.zi)(E.o6.ERROR))
+            : (null == e ? void 0 : e.rawValue) === b.L0.VERIFIED_ADULT
+              ? (f.Z.showSuccessToast(O.wQ.TIGGER_PAWTECT_VERIFIED), (0, E.zi)(E.o6.VERIFIED_ADULT))
+              : (null == e ? void 0 : e.rawValue) === b.L0.VERIFIED_TEEN &&
+                (f.Z.showSuccessToast(O.wQ.TIGGER_PAWTECT_VERIFIED), (0, E.zi)(E.o6.VERIFIED_TEEN));
     }
 }
-function I(e) {
-    i.Z.fetchMessages({
+function T(e) {
+    a.Z.fetchMessages({
         channelId: e,
-        limit: b.AQB,
+        limit: y.AQB,
     });
 }
-function T(e) {
-    let t = p.Z.getChannel(e);
-    ((null == t ? void 0 : t.type) === b.d4z.GUILD_FORUM || (null == t ? void 0 : t.type) === b.d4z.GUILD_MEDIA) &&
-        (0, c.EB)(t);
+function C(e) {
+    let t = _.Z.getChannel(e);
+    ((null == t ? void 0 : t.type) === y.d4z.GUILD_FORUM || (null == t ? void 0 : t.type) === y.d4z.GUILD_MEDIA) &&
+        (0, u.EB)(t);
 }
-class C extends o.Z {
+class A extends s.Z {
     constructor(...e) {
         super(...e),
-            O(this, "_previousAgeVerificationStatus", null),
-            O(this, "handlePostConnectionOpen", () => {
+            v(this, "_previousAgeVerificationStatus", null),
+            v(this, "handlePostConnectionOpen", () => {
                 var e, t;
                 this._previousAgeVerificationStatus =
-                    null != (t = null == (e = h.default.getCurrentUser()) ? void 0 : e.ageVerificationStatus)
+                    null != (t = null == (e = g.default.getCurrentUser()) ? void 0 : e.ageVerificationStatus)
                         ? t
                         : null;
             }),
-            O(this, "handleCurrentUserUpdate", (e) => {
+            v(this, "handleCurrentUserUpdate", (e) => {
                 var t;
                 let { user: n } = e,
-                    r = null != (t = (0, h.transformUser)(n).ageVerificationStatus) ? t : null,
-                    i = this._previousAgeVerificationStatus !== r && r === a.F$.VERIFIED_ADULT,
-                    o = (0, f.U)("age-verification-manager"),
-                    l = i && ((0, d.c_)("age-verification-manager") || o);
+                    i = null != (t = (0, g.transformUser)(n).ageVerificationStatus) ? t : null,
+                    a = this._previousAgeVerificationStatus !== i && i === o.F$.VERIFIED_ADULT,
+                    s = (0, p.U)("age-verification-manager"),
+                    c = a && ((0, d.ML)(r.X.AGE_GATED_SPACES) || s);
                 try {
-                    if (l) {
+                    if (c) {
                         let e = m.Z.getChannelId(),
                             t = !1;
-                        s.Z.forEach((n) => {
+                        l.Z.forEach((n) => {
                             let { channelId: r } = n,
-                                i = p.Z.getChannel(r);
-                            (null == i ? void 0 : i.nsfw) && (s.Z.clear(r), r === e && (t = !0));
+                                i = _.Z.getChannel(r);
+                            (null == i ? void 0 : i.nsfw) && (l.Z.clear(r), r === e && (t = !0));
                         }),
-                            t && null != e && (I(e), T(e));
+                            t && null != e && (T(e), C(e));
                     }
                 } catch (e) {
-                    v.warn("Error clearing cache and refetching messages", e);
+                    S.warn("Error clearing cache and refetching messages", e);
                 } finally {
-                    this._previousAgeVerificationStatus = r;
+                    this._previousAgeVerificationStatus = i;
                 }
             }),
-            O(this, "actions", {
+            v(this, "actions", {
                 POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
                 CURRENT_USER_UPDATE: this.handleCurrentUserUpdate,
-                MESSAGE_CREATE: S,
+                MESSAGE_CREATE: I,
             });
     }
 }
-let A = new C();
+let N = new A();

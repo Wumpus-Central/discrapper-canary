@@ -1,11 +1,11 @@
 n.d(t, {
-    Yd: () => d,
-    o0: () => u,
+    Yd: () => c,
+    o0: () => l,
 });
-var r = n(818083),
-    i = n(427164),
-    a = n(128064);
-let o = (0, r.B)({
+var r = n(912423),
+    i = n(818083),
+    a = n(980945);
+let o = (0, i.B)({
         kind: "user",
         id: "2025-01_default_activity_status",
         label: "Guild activity status defaults",
@@ -18,7 +18,7 @@ let o = (0, r.B)({
             },
         ],
     }),
-    s = (0, r.B)({
+    s = (0, i.B)({
         kind: "user",
         id: "2025-01_default_activity_status_new_users",
         label: "Guild activity status defaults",
@@ -31,24 +31,13 @@ let o = (0, r.B)({
             },
         ],
     }),
-    l = (0, i.le)({
-        name: "2025-11-guild-activity-aggregate-carve-out",
-        kind: "user",
-        defaultConfig: { aggregateDefaultEnabled: !0 },
-        variations: {
-            0: { aggregateDefaultEnabled: !0 },
-            1: { aggregateDefaultEnabled: !1 },
-        },
-    }),
-    c = (e) => l.getConfig({ location: e }).aggregateDefaultEnabled && (0, a.c_)("DefaultGuildActivityExperiment"),
-    u = (e) =>
+    l = (e) =>
         o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled ||
         s.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled ||
-        c(e),
-    d = (e) => {
+        (0, a.OE)(r.K.GUILD_ACTIVITY_STATUS),
+    c = (e) => {
         let t = o.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
             n = s.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
-            r = l.useConfig({ location: e }).aggregateDefaultEnabled,
-            i = (0, a.pY)("DefaultGuildActivityExperiment");
-        return t || n || (r && i);
+            i = (0, a._M)(r.K.GUILD_ACTIVITY_STATUS);
+        return t || n || i;
     };

@@ -1,18 +1,19 @@
 n.d(t, {
-    Jr: () => g,
-    O6: () => h,
-    _i: () => f,
-    v6: () => E,
+    Jr: () => E,
+    O6: () => g,
+    _i: () => p,
+    v6: () => b,
     zR: () => m,
 });
 var r = n(473749),
-    i = n(524437),
-    a = n(128064),
-    o = n(312870),
-    s = n(695346),
-    l = n(594174),
-    c = n(981631);
-function u(e, t, n) {
+    i = n(912423),
+    a = n(524437),
+    o = n(980945),
+    s = n(312870),
+    l = n(695346),
+    c = n(594174),
+    u = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,60 +37,60 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-let f = (e) => {
+let p = (e) => {
         let { setting: t, isDm: n = !1, isFriend: r = !1 } = e;
-        if (null != t && t !== i.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-        let s = l.default.getCurrentUser(),
-            c = (0, o.U)("resolveExplicitContentSettingWithDefaults");
-        return (0, a.c_)("resolveExplicitContentSettingWithDefaults") || c
-            ? p({
+        if (null != t && t !== a.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
+        let l = c.default.getCurrentUser(),
+            u = (0, s.U)("resolveExplicitContentSettingWithDefaults");
+        return (0, o.OE)(i.K.SENSITIVE_CONTENT) || u
+            ? _({
                   isDm: n,
                   isFriend: r,
               })
-            : (null == s ? void 0 : s.nsfwAllowed) === !1
+            : (null == l ? void 0 : l.nsfwAllowed) === !1
               ? m({
                     isDm: n,
                     isFriend: r,
                 })
-              : _({
+              : h({
                     isDm: n,
                     isFriend: r,
                 });
     },
-    p = (e) => {
-        let { isDm: t = !1, isFriend: n = !1 } = e;
-        return t && !n ? i.Q4.BLOCK : i.Q4.BLUR;
-    },
     _ = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
-        return t && n ? i.Q4.SHOW : t ? i.Q4.BLOCK : i.Q4.SHOW;
+        return t && !n ? a.Q4.BLOCK : a.Q4.BLUR;
+    },
+    h = (e) => {
+        let { isDm: t = !1, isFriend: n = !1 } = e;
+        return t && n ? a.Q4.SHOW : t ? a.Q4.BLOCK : a.Q4.SHOW;
     },
     m = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
-        return t && n ? i.Q4.BLUR : t ? i.Q4.BLOCK : i.Q4.BLUR;
+        return t && n ? a.Q4.BLUR : t ? a.Q4.BLOCK : a.Q4.BLUR;
     },
-    h = (e) => {
-        let t = null != e ? e : s.j7.getSetting();
+    g = (e) => {
+        let t = null != e ? e : l.j7.getSetting();
         return {
-            goreContentGuilds: f({ setting: null == t ? void 0 : t.goreContentGuilds }),
-            goreContentNonFriendDm: f({
+            goreContentGuilds: p({ setting: null == t ? void 0 : t.goreContentGuilds }),
+            goreContentNonFriendDm: p({
                 setting: null == t ? void 0 : t.goreContentNonFriendDm,
                 isDm: !0,
             }),
-            goreContentFriendDm: f({
+            goreContentFriendDm: p({
                 setting: null == t ? void 0 : t.goreContentFriendDm,
                 isDm: !0,
                 isFriend: !0,
             }),
         };
     },
-    g = (e) => {
-        let t = h();
-        s.j7.updateSetting(d({}, t, e));
+    E = (e) => {
+        let t = g();
+        l.j7.updateSetting(f({}, t, e));
     },
-    E = () => r.useMemo(() => c.BhN.EXPLICIT_MEDIA_REDACTION, []);
+    b = () => r.useMemo(() => u.BhN.EXPLICIT_MEDIA_REDACTION, []);

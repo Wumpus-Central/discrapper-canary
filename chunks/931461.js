@@ -1,8 +1,8 @@
 n.d(t, {
-    cs: () => g,
-    dL: () => y,
-    dZ: () => b,
-    jF: () => E,
+    cs: () => E,
+    dL: () => O,
+    dZ: () => y,
+    jF: () => b,
 });
 var r = n(54381),
     i = n(473749),
@@ -10,53 +10,54 @@ var r = n(54381),
     o = n(168107),
     s = n(480916),
     l = n(925513),
-    c = n(711703),
-    u = n(907995),
-    d = n(981312),
-    f = n(970013),
-    p = n(63063),
-    _ = n(128064),
+    c = n(980945),
+    u = n(711703),
+    d = n(907995),
+    f = n(981312),
+    p = n(970013),
+    _ = n(63063),
+    h = n(312870),
     m = n(484710),
-    h = n(388032);
-function g() {
+    g = n(388032);
+function E() {
     let e = (0, l.v6)(),
         t = () => {
-            window.open(p.Z.getArticleURL(e), "_blank");
+            window.open(_.Z.getArticleURL(e), "_blank");
         };
-    return (0, r.jsx)(u.f, {
-        label: h.t.EUo0yj,
+    return (0, r.jsx)(d.f, {
+        label: g.t.EUo0yj,
         labelHook: t,
         noticeType: m.nq.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
     });
 }
-function E() {
+function b() {
     let e = () => {
         o.Z.showAgeVerificationGetStartedModal({ entryPoint: s.cU.CONTENT_AND_SOCIAL_NOTICE });
     };
-    return (0, r.jsx)(u.f, {
-        label: h.t.OX4ybh,
+    return (0, r.jsx)(d.f, {
+        label: g.t.OX4ybh,
         labelHook: e,
         noticeType: m.nq.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE,
     });
 }
-function b() {
-    let e = (0, d.U)(),
+function y() {
+    let e = (0, f.U)(),
         t = (0, l.v6)(),
         n = i.useCallback(() => {
-            window.open(p.Z.getArticleURL(t), "_blank"),
-                (0, c.l)(m.nq.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, m.up.LEARN_MORE);
+            window.open(_.Z.getArticleURL(t), "_blank"),
+                (0, u.l)(m.nq.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, m.up.LEARN_MORE);
         }, [t]),
         o = i.useCallback(() => {
-            (0, c.l)(m.nq.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, m.up.VIEWED);
+            (0, u.l)(m.nq.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, m.up.VIEWED);
         }, []);
     return i.useMemo(() => {
         if (e)
             return {
-                type: f.v.INLINE_NOTICE,
+                type: p.v.INLINE_NOTICE,
                 noticeType: "info",
                 trackView: o,
                 useText: () =>
-                    h.intl.format(h.t.EUo0yj, {
+                    g.intl.format(g.t.EUo0yj, {
                         hook: (e, t) =>
                             (0, r.jsx)(
                                 a.eee,
@@ -70,33 +71,35 @@ function b() {
             };
     }, [n, e, o]);
 }
-function y() {
-    let e = (0, _.pY)("useContentAndSocialAgeVerificationInlineNotice"),
-        t = i.useCallback(() => {
+function O() {
+    let e = (0, c.yx)(),
+        t = (0, h.s)("useContentAndSocialAgeVerificationInlineNotice"),
+        n = e || t,
+        l = i.useCallback(() => {
             o.Z.showAgeVerificationGetStartedModal({ entryPoint: s.cU.CONTENT_AND_SOCIAL_NOTICE }),
-                (0, c.l)(m.nq.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, m.up.LEARN_MORE);
+                (0, u.l)(m.nq.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, m.up.LEARN_MORE);
         }, []),
-        n = i.useCallback(() => {
-            (0, c.l)(m.nq.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, m.up.VIEWED);
+        d = i.useCallback(() => {
+            (0, u.l)(m.nq.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, m.up.VIEWED);
         }, []);
     return i.useMemo(() => {
-        if (e)
+        if (n)
             return {
-                type: f.v.INLINE_NOTICE,
+                type: p.v.INLINE_NOTICE,
                 noticeType: "info",
-                trackView: n,
+                trackView: d,
                 useText: () =>
-                    h.intl.format(h.t.OX4ybh, {
-                        hook: (e, n) =>
+                    g.intl.format(g.t.OX4ybh, {
+                        hook: (e, t) =>
                             (0, r.jsx)(
                                 a.eee,
                                 {
-                                    onClick: t,
+                                    onClick: l,
                                     children: e,
                                 },
-                                n,
+                                t,
                             ),
                     }),
             };
-    }, [t, e, n]);
+    }, [l, n, d]);
 }

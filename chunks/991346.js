@@ -23,23 +23,23 @@ var r = n(473749),
     f = n(610697),
     p = n(880257),
     _ = n(631885),
-    m = n(160913),
-    h = n(725727),
+    h = n(160913),
+    m = n(725727),
     g = n(787695),
-    E = n(921157),
-    b = n(667172),
-    y = n(237292),
-    O = n(314897),
-    v = n(906467),
-    S = n(283595),
-    I = n(131951),
-    T = n(699516),
-    C = n(663389),
-    A = n(594174),
-    N = n(128064),
+    E = n(980945),
+    b = n(921157),
+    y = n(667172),
+    O = n(237292),
+    v = n(314897),
+    S = n(906467),
+    I = n(283595),
+    T = n(131951),
+    C = n(699516),
+    A = n(663389),
+    N = n(594174),
     P = n(202527),
-    R = n(312870),
-    w = n(413182),
+    w = n(312870),
+    R = n(413182),
     D = n(695346),
     x = n(526665),
     L = n(620163),
@@ -102,7 +102,7 @@ function V(e, t) {
 }
 function H(e) {
     let { shouldMergeGameSettings: t, showRedesignedThirdPartyAccessSettings: n } = e,
-        r = v.Z.isDeveloper,
+        r = S.Z.isDeveloper,
         i = [
             {
                 header: G.intl.string(G.t.cduTBL),
@@ -182,7 +182,7 @@ function H(e) {
 }
 function Y() {
     let { shouldMergeGameSettings: e } = P.b.useExperiment({ location: "settings" }),
-        { showRedesign: t } = w.b.useExperiment({ location: "settings" }),
+        { showRedesign: t } = R.b.useExperiment({ location: "settings" }),
         n = H({
             shouldMergeGameSettings: e,
             showRedesignedThirdPartyAccessSettings: t,
@@ -207,40 +207,40 @@ function Y() {
 }
 function W() {
     var e, t, n, o;
-    let v = (0, h.YO)().length,
-        w = (0, m.U)(),
-        M = (0, i.e7)([C.Z], () => C.Z.getSearchParams()),
+    let S = (0, m.YO)().length,
+        R = (0, h.U)(),
+        M = (0, i.e7)([A.Z], () => A.Z.getSearchParams()),
         k = (0, _.gU)(),
         G = (0, j.bC)(),
         Z = (0, c.w9)(),
         [F] = (0, u.cv)(Z ? [a.z.CLIPS_SETTINGS_BETA_TAG] : []),
         { shouldMergeGameSettings: B } = P.b.useExperiment({ location: "settings" }),
-        V = null != (n = null == (e = A.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
-        H = (0, y.y0)({ location: "settings" }),
-        Y = (0, b.v4)({ location: "settings" }),
+        V = null != (n = null == (e = N.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
+        H = (0, O.y0)({ location: "settings" }),
+        Y = (0, y.v4)({ location: "settings" }),
         W = (0, l.Q)(),
         K = (0, g.Z)({ location: U.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
-        z = (0, i.e7)([S.Z], () => S.Z.hasLibraryApplication()),
-        q = (0, i.e7)([O.default], () => O.default.hasTOTPEnabled()),
+        z = (0, i.e7)([I.Z], () => I.Z.hasLibraryApplication()),
+        q = (0, i.e7)([v.default], () => v.default.hasTOTPEnabled()),
         Q = D.Sb.useSetting(),
         X = (0, f.Z)(),
         J = null == (o = (0, p.Z)()) || o,
-        $ = (null == (t = (0, E.s)()) ? void 0 : t.length) > 0,
-        { hasBlockedUsers: ee, hasIgnoredUsers: et } = (0, i.cj)([T.Z], () => ({
-            hasBlockedUsers: T.Z.getBlockedIDs().length > 0,
-            hasIgnoredUsers: T.Z.getIgnoredIDs().length > 0,
+        $ = (null == (t = (0, b.s)()) ? void 0 : t.length) > 0,
+        { hasBlockedUsers: ee, hasIgnoredUsers: et } = (0, i.cj)([C.Z], () => ({
+            hasBlockedUsers: C.Z.getBlockedIDs().length > 0,
+            hasIgnoredUsers: C.Z.getIgnoredIDs().length > 0,
         })),
-        en = (0, N.pY)("SettingRendererUtils"),
-        er = (0, R.s)("SettingRendererUtils"),
+        en = (0, E.nj)(),
+        er = (0, w.s)("SettingRendererUtils"),
         ei = en || er,
         {
             inputMode: ea,
             activeInputProfile: eo,
             isInputProfileCustom: es,
-        } = (0, i.cj)([I.Z], () => ({
-            activeInputProfile: I.Z.getActiveInputProfile(),
-            inputMode: I.Z.getMode(),
-            isInputProfileCustom: I.Z.isInputProfileCustom(),
+        } = (0, i.cj)([T.Z], () => ({
+            activeInputProfile: T.Z.getActiveInputProfile(),
+            inputMode: T.Z.getMode(),
+            isInputProfileCustom: T.Z.isInputProfileCustom(),
         })),
         { enabled: el } = (0, d.zM)("useGenerateUserSettingsSections", { autoTrackExposure: !1 }),
         ec = (0, x.gj)("useGenerateUserSettingsSections"),
@@ -248,8 +248,8 @@ function W() {
     return r.useMemo(
         () =>
             (0, L.iE)({
-                unseenGiftCount: v,
-                showPrepaidPaymentPastDueWarning: w,
+                unseenGiftCount: S,
+                showPrepaidPaymentPastDueWarning: R,
                 searchParams: M,
                 numOfPendingFamilyRequests: k,
                 isOverlaySupported: G,
@@ -268,7 +268,7 @@ function W() {
                 hasSecureFramesVerifiedUserIds: $,
                 hasIgnoredUsers: et,
                 hasBlockedUsers: ee,
-                isEligibleForSensitiveContentDefaults: ei,
+                hasAgeGatedFeature: ei,
                 inputMode: ea,
                 activeInputProfile: eo,
                 isInputProfileCustom: es,
@@ -276,7 +276,7 @@ function W() {
                 isRedesignedNotificationsEnabled: ec,
                 isHDRAccessibilitySettingExperimentEnabled: eu,
             }),
-        [Q, F, ee, et, z, $, q, M, J, K, Y, H, G, V, X, k, W, B, w, v, ei, ea, eo, es, el, ec, eu],
+        [Q, F, ee, et, z, $, q, M, J, K, Y, H, G, V, X, k, W, B, R, S, ei, ea, eo, es, el, ec, eu],
     );
 }
 function K(e) {
@@ -373,7 +373,7 @@ function Q(e, t) {
 function X() {
     let e = W(),
         { shouldMergeGameSettings: t } = P.b.useExperiment({ location: "settings" }),
-        { showRedesign: n } = w.b.useExperiment({ location: "settings" }),
+        { showRedesign: n } = R.b.useExperiment({ location: "settings" }),
         i = r.useMemo(
             () =>
                 H({

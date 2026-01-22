@@ -7,8 +7,8 @@ var r = n(54381),
     i = n(473749),
     a = n(81643),
     o = n(546791),
-    s = n(594174),
-    l = n(128064),
+    s = n(980945),
+    l = n(594174),
     c = n(312870),
     u = n(931461),
     d = n(116233),
@@ -26,16 +26,15 @@ let p = {
             order: 200,
             predicate: () => {
                 var e;
-                return (null == (e = s.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
+                return (null == (e = l.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
             },
             Component: u.cs,
         },
         {
             order: 300,
             predicate: () => {
-                let e = (0, l.c_)("SensitiveContentFiltersNotice"),
-                    t = (0, c.U)("SensitiveContentFiltersNotice");
-                return (e || t) && !(0, a.kJ)();
+                let e = (0, c.U)("SensitiveContentFiltersNotice");
+                return ((0, s.Nf)() || e) && !(0, a.kJ)();
             },
             Component: u.jF,
         },

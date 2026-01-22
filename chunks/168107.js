@@ -4,15 +4,15 @@ n(473749);
 var i = n(147829),
     a = n(481060),
     o = n(429142),
-    s = n(681678),
-    l = n(128064),
+    s = n(980945),
+    l = n(681678),
     c = n(312870),
     u = n(580222),
     d = n(240758),
     f = n(81643),
     p = n(469775),
     _ = n(484710);
-function m(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function m(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -92,10 +92,10 @@ let v = {
     showAgeVerification: (e) => {
         var {
                 onClose: t,
-                entryPoint: l,
+                entryPoint: s,
                 shouldShowExpressiveModal: c = !1,
                 verificationVendorName: f,
-                verificationRequestId: m,
+                verificationRequestId: h,
                 webviewUrl: g,
             } = e,
             E = b(e, [
@@ -107,14 +107,14 @@ let v = {
                 "webviewUrl",
             ]);
         if (f === p.Rh.PERSONA) {
-            if (!(0, d.e)("AgeVerificationActionCreators") || null == m) return;
+            if (!(0, d.e)("AgeVerificationActionCreators") || null == h) return;
             new i.Client({
-                inquiryId: m,
+                inquiryId: h,
                 onComplete: () => {
                     E.onComplete(), null != t && t();
                 },
                 onError: (e) => {
-                    s.Z.showFailedToast(_.wQ.TIGGER_PAWTECT_ERROR), null != t && t();
+                    l.Z.showFailedToast(_.wQ.TIGGER_PAWTECT_ERROR), null != t && t();
                 },
                 onCancel: () => {
                     null != t && t();
@@ -126,26 +126,26 @@ let v = {
         let y = {
             modalKey: p.zJ,
             onCloseCallback: t,
-            backdropStyle: O(l),
+            backdropStyle: O(s),
             Layer: o.ZP,
         };
-        c || (0, u.v)(l)
+        c || (0, u.v)(s)
             ? (0, a.ZDy)(async () => {
                   let { default: e } = await n.e("67749").then(n.bind(n, 91175));
-                  return (t) => (0, r.jsx)(e, h({ webviewUrl: g }, E, t));
+                  return (t) => (0, r.jsx)(e, m({ webviewUrl: g }, E, t));
               }, y)
             : (0, a.ZDy)(async () => {
                   let { default: e } = await n.e("12014").then(n.bind(n, 879367));
-                  return (t) => (0, r.jsx)(e, h({ webviewUrl: g }, E, t));
+                  return (t) => (0, r.jsx)(e, m({ webviewUrl: g }, E, t));
               }, y);
     },
     showAgeVerificationGetStartedModal: (e) => {
         let { onClose: t, entryPoint: i } = e;
-        if ((0, f.kJ)() && ((0, l.c_)("age_verification_utils") || (0, c.U)("age_verification_utils")))
+        if ((0, f.kJ)() && ((0, s.mB)() || (0, c.U)("age_verification_utils")))
             return void (0, a.ZDy)(
                 async () => {
                     let { default: e } = await n.e("22447").then(n.bind(n, 686768));
-                    return (t) => (0, r.jsx)(e, E(h({}, t), { entryPoint: i }));
+                    return (t) => (0, r.jsx)(e, E(m({}, t), { entryPoint: i }));
                 },
                 {
                     modalKey: p.ux,
@@ -158,7 +158,7 @@ let v = {
             ? (0, a.ZDy)(
                   async () => {
                       let { default: e } = await n.e("50614").then(n.bind(n, 17597));
-                      return (t) => (0, r.jsx)(e, E(h({}, t), { entryPoint: i }));
+                      return (t) => (0, r.jsx)(e, E(m({}, t), { entryPoint: i }));
                   },
                   {
                       modalKey: p.ux,
@@ -170,7 +170,7 @@ let v = {
             : (0, a.ZDy)(
                   async () => {
                       let { default: e } = await n.e("80144").then(n.bind(n, 634997));
-                      return (t) => (0, r.jsx)(e, E(h({}, t), { entryPoint: i }));
+                      return (t) => (0, r.jsx)(e, E(m({}, t), { entryPoint: i }));
                   },
                   {
                       modalKey: p.ux,

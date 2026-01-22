@@ -32,6 +32,14 @@ class u extends (r = i.ZP.Store) {
         var t;
         return null != (t = null == l ? void 0 : l.isFeatureTeenByDefault(e)) && t;
     }
+    hasAgeGatedFeatures() {
+        var e;
+        return null != (e = null == l ? void 0 : l.hasAgeGatedFeatures()) && e;
+    }
+    hasTeenDefaults() {
+        var e;
+        return null != (e = null == l ? void 0 : l.hasTeenDefaults()) && e;
+    }
 }
 s(u, "displayName", "RegionalFeatureConfigStore");
 let d = new u(a.Z, { CONNECTION_OPEN: c });

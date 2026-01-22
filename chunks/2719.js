@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(481060),
     p = n(129861),
     _ = n(168107),
-    m = n(480916),
-    h = n(81643),
+    h = n(480916),
+    m = n(81643),
     g = n(952306),
     E = n(299206),
     b = n(821795),
@@ -20,20 +20,20 @@ var r = n(54381),
     O = n(144114),
     v = n(918505),
     S = n(332473),
-    I = n(921801),
-    T = n(438976),
-    C = n(485341),
-    A = n(687158),
-    N = n(518950),
-    P = n(184325),
+    I = n(980945),
+    T = n(921801),
+    C = n(438976),
+    A = n(485341),
+    N = n(687158),
+    P = n(518950),
+    w = n(184325),
     R = n(867176),
-    w = n(355497),
-    D = n(25990),
-    x = n(594174),
-    L = n(572004),
-    j = n(51144),
-    M = n(998502),
-    k = n(128064),
+    D = n(355497),
+    x = n(25990),
+    L = n(594174),
+    j = n(572004),
+    M = n(51144),
+    k = n(998502),
     U = n(312870),
     G = n(695346),
     Z = n(313789),
@@ -97,7 +97,7 @@ function J(e, t) {
         e
     );
 }
-let $ = M.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK;
+let $ = k.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK;
 function ee() {
     (0, B.openUserSettings)(Z.n.PROFILE_PANEL, { section: H.oAB.PROFILE_CUSTOMIZATION });
 }
@@ -107,8 +107,8 @@ function et(e) {
         c = i.useRef(null),
         p = (0, v.o9)(),
         _ = (0, S.b)(),
-        m = (0, y.gS)(),
-        h = null != (a = null == m || null == (t = m.nick) ? void 0 : t[0]) ? a : null,
+        h = (0, y.gS)(),
+        m = null != (a = null == h || null == (t = h.nick) ? void 0 : t[0]) ? a : null,
         [g, E] = i.useState(!1);
     i.useEffect(() => {
         E(null != c.current && c.current.scrollWidth > c.current.clientWidth);
@@ -164,11 +164,11 @@ function et(e) {
                         }),
                     }),
                 }),
-            null != h &&
+            null != m &&
                 (0, r.jsx)("div", {
                     className: z.pomeloWarning,
                     children: (0, r.jsx)(d.u, {
-                        __unsupportedReactNodeAsText: h,
+                        __unsupportedReactNodeAsText: m,
                         "aria-label": !1,
                         children: (0, r.jsx)(f.Mgn, {
                             size: "custom",
@@ -211,12 +211,12 @@ function en(e) {
     let { user: a, className: s } = e,
         l = (0, y.gS)(),
         c = null != (n = null == l || null == (t = l.nick) ? void 0 : t[0]) ? n : null,
-        p = j.ZP.getGlobalName(a),
+        p = M.ZP.getGlobalName(a),
         _ = i.useRef(null),
-        [m, h] = i.useState(!1);
+        [h, m] = i.useState(!1);
     return (
         i.useEffect(() => {
-            h(null != _.current && _.current.scrollWidth > _.current.clientWidth);
+            m(null != _.current && _.current.scrollWidth > _.current.clientWidth);
         }, [p]),
         (0, r.jsxs)("div", {
             className: o()(z.field, s),
@@ -264,7 +264,7 @@ function en(e) {
                     children: (0, r.jsx)(f.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: m ? K.intl.string(K.t["16kTw/"]) : K.intl.string(K.t.bt75uw),
+                        text: h ? K.intl.string(K.t["16kTw/"]) : K.intl.string(K.t.bt75uw),
                         "aria-label": K.intl.string(K.t.YXeWYM),
                         onClick: ee,
                     }),
@@ -387,7 +387,7 @@ function ea(e) {
     function p() {
         (0, f.h7j)((e) =>
             (0, r.jsx)(
-                w.default,
+                D.default,
                 J(Q({}, e), {
                     title: K.intl.string(K.t["3CTiKi"]),
                     children: a.hasFlag(H.xW$.MFA_SMS) ? K.intl.string(K.t.jrhJyo) : void 0,
@@ -469,7 +469,7 @@ function eo(e) {
         }),
         a = G.Sb.useSetting(),
         o = i.useRef(null);
-    return a && L.wS
+    return a && j.wS
         ? (0, r.jsx)(f.yRy, {
               targetElementRef: o,
               renderPopout: (e) => {
@@ -501,8 +501,8 @@ function eo(e) {
 }
 function es(e) {
     let { className: t } = e,
-        n = (0, h.l6)(),
-        a = (0, h.Jm)(),
+        n = (0, m.l6)(),
+        a = (0, m.Jm)(),
         s = !n || a,
         l = i.useMemo(
             () => (n ? (a ? K.intl.string(K.t.sK0dmH) : K.intl.string(K.t.XxRj7f)) : K.intl.string(K.t.UX0Ode)),
@@ -540,7 +540,7 @@ function es(e) {
                         size: "sm",
                         text: a ? K.intl.string(K.t.KPGVWl) : K.intl.string(K.t.yNGjyK),
                         "aria-label": a ? K.intl.string(K.t.KPGVWl) : K.intl.string(K.t.yNGjyK),
-                        onClick: () => _.Z.showAgeVerificationGetStartedModal({ entryPoint: m.cU.ACCOUNT_AGE_GROUP }),
+                        onClick: () => _.Z.showAgeVerificationGetStartedModal({ entryPoint: h.cU.ACCOUNT_AGE_GROUP }),
                     }),
                 }),
         ],
@@ -548,23 +548,23 @@ function es(e) {
 }
 function el() {
     var e;
-    let t = (0, c.e7)([x.default], () => {
-            let e = x.default.getCurrentUser();
+    let t = (0, c.e7)([L.default], () => {
+            let e = L.default.getCurrentUser();
             return l()(null != e, "UserSettingsAccountProfileCard: currentUser cannot be undefined"), e;
         }),
-        n = (0, A.ZP)(t.id),
-        i = (0, C.Z)(n),
+        n = (0, N.ZP)(t.id),
+        i = (0, A.Z)(n),
         a = G.co.useSetting(),
-        o = (0, c.e7)([D.Z], () => D.Z.getErrors()),
+        o = (0, c.e7)([x.Z], () => x.Z.getErrors()),
         s = null == o || null == (e = o.avatar) ? void 0 : e[0],
-        { avatarSrc: u, avatarDecorationSrc: d } = (0, N.Z)({
+        { avatarSrc: u, avatarDecorationSrc: d } = (0, P.Z)({
             userId: null == t ? void 0 : t.id,
             size: f.EFr.SIZE_80,
         }),
-        _ = (0, T.Z)(),
-        m = (0, k.pY)("UserSettingsAccountProfileCard"),
-        h = (0, U.s)("UserSettingsAccountProfileCard"),
-        g = m || h;
+        _ = (0, C.Z)(),
+        h = (0, I.nj)(),
+        m = (0, U.s)("UserSettingsAccountProfileCard"),
+        g = h || m;
     return (0, r.jsxs)("div", {
         className: z.accountProfileCard,
         children: [
@@ -603,7 +603,7 @@ function el() {
                                     (0, r.jsx)(eo, { user: t }),
                                 ],
                             }),
-                            (0, r.jsx)(P.Z, {
+                            (0, r.jsx)(w.Z, {
                                 badges: i,
                                 className: z.badgeList,
                                 badgeClassName: z.badge,
@@ -632,25 +632,25 @@ function el() {
                     (0, r.jsxs)("div", {
                         className: z.fieldList,
                         children: [
-                            (0, r.jsx)(I.F, {
+                            (0, r.jsx)(T.F, {
                                 setting: V.s6.ACCOUNT_DISPLAY_NAME,
                                 children: (0, r.jsx)(en, {
                                     className: z.fieldSpacerBottom,
                                     user: t,
                                 }),
                             }),
-                            (0, r.jsx)(I.F, {
+                            (0, r.jsx)(T.F, {
                                 setting: V.s6.ACCOUNT_USERNAME,
                                 children: (0, r.jsx)(et, { user: t }),
                             }),
-                            (0, r.jsx)(I.F, {
+                            (0, r.jsx)(T.F, {
                                 setting: V.s6.ACCOUNT_EMAIL,
                                 children: (0, r.jsx)(ei, {
                                     className: z.fieldSpacer,
                                     user: t,
                                 }),
                             }),
-                            (0, r.jsx)(I.F, {
+                            (0, r.jsx)(T.F, {
                                 setting: V.s6.ACCOUNT_PHONE_NUMBER,
                                 children: (0, r.jsx)(ea, {
                                     className: z.fieldSpacer,
@@ -658,7 +658,7 @@ function el() {
                                 }),
                             }),
                             g &&
-                                (0, r.jsx)(I.F, {
+                                (0, r.jsx)(T.F, {
                                     setting: V.s6.ACCOUNT_AGE_GROUP,
                                     children: (0, r.jsx)(es, { className: z.fieldSpacer }),
                                 }),

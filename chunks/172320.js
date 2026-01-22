@@ -2,16 +2,16 @@ n.d(e, { z: () => g }), n(539854);
 var i = n(54381),
     l = n(442837),
     s = n(332473),
-    u = n(509613),
-    r = n(594174),
-    a = n(128064),
+    u = n(980945),
+    r = n(509613),
+    a = n(594174),
     o = n(312870),
     T = n(313789),
     S = n(499311),
     c = n(732521),
     E = n(2719),
     d = n(388032);
-let _ = (0, u.ON)(T.n.ACCOUNT_PROFILE_SETTING, {
+let _ = (0, r.ON)(T.n.ACCOUNT_PROFILE_SETTING, {
         useSearchTerms: function () {
             let t = [
                     d.intl.string(d.t.LYju5J),
@@ -20,7 +20,7 @@ let _ = (0, u.ON)(T.n.ACCOUNT_PROFILE_SETTING, {
                     d.intl.string(d.t.oP5zGA),
                     d.intl.string(d.t.Ulqq6K),
                 ],
-                e = (0, a.pY)("AccountProfileSetting"),
+                e = (0, u.nj)(),
                 n = (0, o.s)("AccountProfileSetting");
             return (
                 (e || n) &&
@@ -34,7 +34,7 @@ let _ = (0, u.ON)(T.n.ACCOUNT_PROFILE_SETTING, {
         },
         Component: function () {
             let t = (0, s.b)(),
-                e = (0, l.e7)([r.default], () => r.default.getCurrentUser());
+                e = (0, l.e7)([a.default], () => a.default.getCurrentUser());
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     t && (0, i.jsx)(S.Z, {}),
@@ -44,4 +44,4 @@ let _ = (0, u.ON)(T.n.ACCOUNT_PROFILE_SETTING, {
             });
         },
     }),
-    g = (0, u.k4)(T.n.ACCOUNT_PROFILE_CATEGORY, { buildLayout: () => [_] });
+    g = (0, r.k4)(T.n.ACCOUNT_PROFILE_CATEGORY, { buildLayout: () => [_] });

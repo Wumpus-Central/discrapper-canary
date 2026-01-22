@@ -159,7 +159,7 @@ let eU = () => [
             hasSecureFramesVerifiedUserIds: e8,
             hasIgnoredUsers: e6,
             hasBlockedUsers: e7,
-            isEligibleForSensitiveContentDefaults: e9,
+            hasAgeGatedFeature: e9,
             inputMode: te,
             activeInputProfile: tt,
             isInputProfileCustom: tn,
