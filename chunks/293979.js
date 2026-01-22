@@ -212,7 +212,7 @@ let k = (e, t, n) =>
                 return {
                     type: t.type,
                     custom_id: t.customId,
-                    value: (null == n ? void 0 : n.type) === t.type ? n.value : null,
+                    value: (null == n ? void 0 : n.type) === t.type && n.value,
                 };
             }
             default:
