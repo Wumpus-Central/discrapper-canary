@@ -96,11 +96,7 @@ class b extends (r = a.Ay.Store) {
         if ((null == n ? void 0 : n.code) === "MissingRegistration")
             throw Error("MissingRegistration when configuring license");
         try {
-            if (
-                l.S.getConfig({
-                    location: "configureLicense",
-                }).enabled
-            ) {
+            if ((0, l.lM)("configureLicense")) {
                 let e = n,
                     i = await (0, f.R)(null == e ? void 0 : e.id, t);
                 if (null != i && "" !== i) {
@@ -148,12 +144,7 @@ class b extends (r = a.Ay.Store) {
         return g;
     }
     get clientEnabled() {
-        return (
-            (0, i.xl)() &&
-            l.S.getConfig({
-                location: "WarpClientStore",
-            }).enabled
-        );
+        return (0, i.xl)() && (0, l.lM)("WarpClientStore");
     }
     get enabled() {
         return "Connected" === m.status || this.connecting;

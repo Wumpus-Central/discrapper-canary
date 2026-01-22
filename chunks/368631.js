@@ -129,12 +129,7 @@ let eU = () => [
     },
     eB = () => {
         let e = [];
-        return (
-            L.S.getConfig({
-                location: "SettingsRendererConfig",
-            }).enabled && e.push(a.M.NITRO_PRIVACY_PERK_NEW_BADGE_V2),
-            e
-        );
+        return (0, L.lM)("SettingsRendererConfig") && e.push(a.M.NITRO_PRIVACY_PERK_NEW_BADGE_V2), e;
     },
     eH = () => {
         let e = eB(),
@@ -1653,10 +1648,7 @@ let eU = () => [
                 section: ew.nc_.PRIVATE_BROWSING,
                 label: eD.intl.string(eM.default.bU5ANm),
                 searchableTitles: [eD.intl.string(eM.default.SsTtq3)],
-                predicate: () =>
-                    L.S.getConfig({
-                        location: "SettingsRendererConfig",
-                    }).enabled,
+                predicate: () => (0, L.lM)("SettingsRendererConfig"),
                 newIndicator: (0, r.jsx)(eH, {}),
                 newIndicatorDismissibleContentTypes: eB(),
                 url: ew.BVt.SETTINGS("private-browsing"),

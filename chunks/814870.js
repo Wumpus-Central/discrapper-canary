@@ -25,11 +25,8 @@ let I = (0, o.t_)(A.X.PRIVATE_BROWSING_PANEL, {
         icon: l.GlobeEarthIcon,
         usePredicate: () => {
             let t = (0, r.L)(),
-                { isSupportedPrivateBrowsingPerkPlatform: e, isWeb: i, perkAvailableToUser: n } = (0, a.lV)(),
-                { enabled: l } = u.S.useConfig({
-                    location: "private_browsing_perk_settings_page",
-                });
-            return l && (e || i) && (!t || n);
+                { isSupportedPrivateBrowsingPerkPlatform: e, isWeb: i, perkAvailableToUser: n } = (0, a.lV)();
+            return (0, u.lM)("private_browsing_perk_settings_page") && (e || i) && (!t || n);
         },
         buildLayout: () => [I],
         trailing: {
