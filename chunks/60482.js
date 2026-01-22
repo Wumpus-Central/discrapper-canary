@@ -80,7 +80,7 @@ function _(e) {
         }),
     });
 }
-function m(e) {
+function h(e) {
     let { guildId: t, instances: n } = e;
     d = u(l({}, d), {
         [t]: u(l({}, p(t)), {
@@ -89,7 +89,7 @@ function m(e) {
         }),
     });
 }
-function h(e) {
+function m(e) {
     let { guildId: t, skuId: n, instructions: r } = e;
     d = u(l({}, d), { [t]: u(l({}, p(t)), { instructions: u(l({}, p(t).instructions), { [n]: r }) }) });
 }
@@ -139,9 +139,18 @@ function O(e) {
 function v(e) {
     let { guildId: t, entitlements: n } = e,
         r = p(t);
-    n.forEach((e) => {
-        r.entitlements[e.id] = e;
-    }),
+    n
+        .filter((e) => {
+            var t, n, r;
+            return (
+                (null == (r = e.sku) || null == (n = r.tenant_metadata) || null == (t = n.guild_monetization)
+                    ? void 0
+                    : t.game_server) != null
+            );
+        })
+        .forEach((e) => {
+            r.entitlements[e.id] = e;
+        }),
         I(t, r);
 }
 function S(e) {
@@ -183,8 +192,8 @@ s(T, "displayName", "GameServerStore");
 let C = new T(a.Z, {
     LOGOUT: f,
     GAME_SERVER_FETCH_CATALOG_SUCCESS: _,
-    GAME_SERVER_FETCH_INSTANCES_SUCCESS: m,
-    GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS: h,
+    GAME_SERVER_FETCH_INSTANCES_SUCCESS: h,
+    GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS: m,
     GAME_SERVER_UPDATE_INSTANCE_SUCCESS: g,
     GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: b,
     GAME_SERVER_CREATE: y,
