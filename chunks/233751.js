@@ -7,18 +7,20 @@ var i = n(54381),
     a = n(773275),
     o = n(981631),
     T = n(388032);
-let S = () => {
-    let t = (0, a.xf)((t) => t.setDoInstall),
-        e = (0, a.xf)((t) => t.setInstallationStatus),
-        n = (0, a.xf)((t) => t.installationStatus),
-        S = (0, l.useCallback)(() => {
-            (0, u.j)(o.rMx.NITRO_WARP_CTA_CLICKED, { is_enable_warp: !1 }),
-                n === r._n.ERROR && e(r._n.NOT_INSTALLED),
-                t(!0);
-        }, [t, n, e]);
+let S = (t) => {
+    let { onClick: e } = t,
+        n = (0, a.xf)((t) => t.setDoInstall),
+        S = (0, a.xf)((t) => t.setInstallationStatus),
+        c = (0, a.xf)((t) => t.installationStatus),
+        E = (0, l.useCallback)(() => {
+            null == e || e(),
+                (0, u.j)(o.rMx.NITRO_WARP_CTA_CLICKED, { is_enable_warp: !1 }),
+                c === r._n.ERROR && S(r._n.NOT_INSTALLED),
+                n(!0);
+        }, [n, c, S, e]);
     return (0, i.jsx)(s.zxk, {
         variant: "primary",
-        onClick: S,
+        onClick: E,
         text: T.intl.string(T.t["1WjMbC"]),
     });
 };

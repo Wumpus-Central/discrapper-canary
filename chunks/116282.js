@@ -8,8 +8,8 @@ var i = n(54381),
     o = n(388032),
     T = n(472057);
 let S = () => {
-    let { isWeb: t, installationStatus: e, connectionStatus: n } = (0, a.xf)(),
-        S = (0, l.useMemo)(() => {
+    let { isWeb: t, installationStatus: e, connectionStatus: n, perkAvailableToUser: S } = (0, a.xf)(),
+        c = (0, l.useMemo)(() => {
             switch (n) {
                 case r.Ij.CONNECTED:
                     return o.intl.format(T.default.EVQZqy, { helpdeskArticle: u.w });
@@ -18,11 +18,12 @@ let S = () => {
                 case r.Ij.ERROR:
                     return o.intl.format(T.default.e9MkUw, { helpdeskArticle: u.w });
                 default:
-                    return o.intl.format(T.default["Rr+ah3"], { helpdeskArticle: u.w });
+                    return o.intl.format(T.default.yL6mvx, { helpdeskArticle: u.w });
             }
         }, [n]),
-        c = (0, l.useMemo)(() => {
+        E = (0, l.useMemo)(() => {
             if (t) return o.intl.format(T.default.z6v0w5, { helpdeskArticle: u.w });
+            if (!S) return o.intl.format(T.default.yL6mvx, { helpdeskArticle: u.w });
             switch (e) {
                 case r._n.ERROR:
                     return o.intl.format(T.default.vjIpaK, { helpdeskArticle: u.w });
@@ -38,16 +39,16 @@ let S = () => {
                 case r._n.ZERO_TRUST:
                     return o.intl.string(T.default.KVSUDs);
                 case r._n.INSTALLED:
-                    return S;
+                    return c;
                 case r._n.NOT_INSTALLED:
                 case r._n.UNKNOWN:
                 default:
-                    return o.intl.format(T.default["Rr+ah3"], { helpdeskArticle: u.w });
+                    return o.intl.format(T.default.yL6mvx, { helpdeskArticle: u.w });
             }
-        }, [t, e, S]);
+        }, [t, e, c, S]);
     return (0, i.jsx)(s.xvT, {
         variant: "text-sm/normal",
         color: "text-subtle",
-        children: c,
+        children: E,
     });
 };

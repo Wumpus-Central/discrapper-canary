@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(518596),
     h = n(626135),
     f = n(323183),
-    x = n(5900),
-    b = n(299886),
+    b = n(5900),
+    x = n(299886),
     g = n(37279),
     v = n(773275),
     j = n(981631),
@@ -32,45 +32,45 @@ let T = (e) => {
             isWeb: P,
             connectionStatus: w,
         } = (0, v.xf)(),
-        { enabled: I } = b.H.useConfig({ location: "private_browsing_perk_settings_page" }),
+        { enabled: I } = x.H.useConfig({ location: "private_browsing_perk_settings_page" }),
         k = (0, r.useCallback)(() => {
             (0, c.Z)(j.Z5c.NITRO_HOME), t();
         }, [t]),
         R = (0, r.useCallback)(() => {
             (0, p.openUserSettings)(m.n.PRIVATE_BROWSING_PANEL, { section: j.oAB.PRIVATE_BROWSING });
         }, []),
-        A = [x.Ij.CONNECTED].includes(w),
-        Z = N && I && ![x._n.ZERO_TRUST, x._n.ERROR].includes(T) && !P && (!n || O),
+        A = [b.Ij.CONNECTED].includes(w),
+        Z = N && I && ![b._n.ZERO_TRUST, b._n.ERROR].includes(T) && !P && (!n || O),
         D = (0, r.useMemo)(() => {
             switch (w) {
-                case x.Ij.CONNECTED:
+                case b.Ij.CONNECTED:
                     return _.intl.string(C.default.FBu3XJ);
-                case x.Ij.INITIALIZING:
+                case b.Ij.INITIALIZING:
                     return _.intl.string(C.default["00vkCU"]);
                 default:
                     return _.intl.string(C.default["A70/wR"]);
             }
         }, [w]),
-        L = (0, r.useMemo)(() => {
+        M = (0, r.useMemo)(() => {
             if (!O) return _.intl.string(C.default.KN6HOb);
             switch (T) {
-                case x._n.INSTALLED:
-                case x._n.EXISTING_INSTALLATION:
+                case b._n.INSTALLED:
+                case b._n.EXISTING_INSTALLATION:
                     return D;
                 default:
                     return _.intl.string(C.default.KN6HOb);
             }
         }, [T, O, D]),
-        M = (0, r.useMemo)(() => {
+        L = (0, r.useMemo)(() => {
             if (!O)
                 return (0, a.jsx)(i.xvT, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
-                    children: _.intl.format(C.default["0UfKTY"], { helpdeskArticle: f.w }),
+                    children: _.intl.format(C.default.UDPKcX, { helpdeskArticle: f.w }),
                 });
             switch (T) {
-                case x._n.INSTALLED:
-                case x._n.EXISTING_INSTALLATION:
+                case b._n.INSTALLED:
+                case b._n.EXISTING_INSTALLATION:
                     return (0, a.jsx)(i.xvT, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
@@ -133,9 +133,9 @@ let T = (e) => {
                               children: [
                                   (0, a.jsx)(i.X6q, {
                                       variant: "heading-md/semibold",
-                                      children: L,
+                                      children: M,
                                   }),
-                                  M,
+                                  L,
                               ],
                           }),
                           !O &&

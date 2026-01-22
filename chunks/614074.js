@@ -8,9 +8,9 @@ var i = n(54381),
     o = n(472057),
     T = n(977701);
 let S = () => {
-        let { isWeb: t, installationStatus: e } = (0, r.xf)(),
-            n = (0, l.useMemo)(() => {
-                if (t) return a.intl.string(o.default.KN6HOb);
+        let { isWeb: t, installationStatus: e, perkAvailableToUser: n } = (0, r.xf)(),
+            T = (0, l.useMemo)(() => {
+                if (t || !n) return a.intl.string(o.default.jV0wEC);
                 switch (e) {
                     case u._n.ERROR:
                         return a.intl.string(o.default.cjqyz7);
@@ -18,7 +18,7 @@ let S = () => {
                         return a.intl.string(o.default.an5PuY);
                     case u._n.NOT_INSTALLED:
                     case u._n.UNKNOWN:
-                        return a.intl.string(o.default.KN6HOb);
+                        return a.intl.string(o.default.jV0wEC);
                     case u._n.INSTALLING:
                         return a.intl.string(o.default.lYWqUK);
                     case u._n.WAITING_FOR_TERMS:
@@ -31,10 +31,10 @@ let S = () => {
                     case u._n.INSTALLED:
                         return (0, i.jsx)(c, {});
                 }
-            }, [t, e]);
+            }, [t, e, n]);
         return (0, i.jsx)(s.X6q, {
             variant: "heading-md/semibold",
-            children: n,
+            children: T,
         });
     },
     c = () => {
