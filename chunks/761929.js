@@ -1,105 +1,88 @@
-n.d(t, { P: () => p });
-var r = n(54381);
-n(473749);
-var i = n(692547),
-    a = n(331595),
-    o = n(267843);
-function s(e, t, n) {
+n.d(t, {
+    A: () => l,
+    R: () => s,
+}),
+    n(896048);
+var r = n(64700),
+    i = n(735438);
+let a = 300;
+var s = (function (e) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
+        (e[(e.VERTICAL_TOP = 0)] = "VERTICAL_TOP"),
+        (e[(e.VERTICAL_BOTTOM = 1)] = "VERTICAL_BOTTOM"),
+        (e[(e.HORIZONTAL_LEFT = 2)] = "HORIZONTAL_LEFT"),
+        (e[(e.HORIZONTAL_RIGHT = 3)] = "HORIZONTAL_RIGHT"),
         e
     );
+})({});
+function o(e) {
+    return +(2 === e || 3 === e);
 }
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function u(e, t) {
+let l = (e) => {
+    let {
+            initialElementDimension: t,
+            resizableDomNodeRef: n,
+            maxDimension: s,
+            minDimension: l,
+            onElementResize: c,
+            onElementResizeStart: u,
+            onElementResizeEnd: d,
+            throttleDuration: f = a,
+            orientation: p,
+            usePointerEvents: _ = !1,
+            getClampedValue: h = i.clamp,
+        } = e,
+        [m, g] = r.useState(!1),
+        E = r.useRef(0),
+        b = r.useRef(!1),
+        y = r.useRef(null == t ? 0 : t);
     return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function d(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = f(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function f(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let p = (e) => {
-    var t,
-        n,
-        { size: s = "md", width: c, height: f, color: p = i.Z.colors.INTERACTIVE_ICON_DEFAULT, colorClass: _ = "" } = e,
-        m = d(e, ["size", "width", "height", "color", "colorClass"]);
-    let h = (0, o.m)(s),
-        g = null != (t = null == h ? void 0 : h.width) ? t : c,
-        E = null != (n = null == h ? void 0 : h.height) ? n : f;
-    return (0, r.jsx)(
-        "svg",
-        u(l({}, (0, a.Z)(m)), {
-            xmlns: "http://www.w3.org/2000/svg",
-            width: g,
-            height: E,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: (0, r.jsx)("path", {
-                fill: "string" == typeof p ? p : p.css,
-                fillRule: "evenodd",
-                d: "M12 8.07 10.6 6.7A5 5 0 0 0 6.75 5 3.75 3.75 0 0 0 3 8.75c0 2.32 1.59 4.76 3.87 6.96A31.87 31.87 0 0 0 12 19.67c1.2-.74 3.26-2.14 5.13-3.96 2.28-2.2 3.87-4.64 3.87-6.96A3.75 3.75 0 0 0 17.25 5a5 5 0 0 0-3.85 1.69L12 8.07Zm0-2.8A6.98 6.98 0 0 0 6.75 3 5.75 5.75 0 0 0 1 8.75c0 6.34 8.42 11.73 10.53 12.98.29.17.65.17.94 0C14.57 20.48 23 15.09 23 8.75A5.75 5.75 0 0 0 17.25 3c-2.34 0-3.88.9-5.25 2.26Z",
-                clipRule: "evenodd",
-                className: _,
-            }),
-        }),
+        r.useLayoutEffect(() => {
+            if (!m || null == n.current) return;
+            function e(e) {
+                let t = 1 === o(p) ? e.screenX : e.screenY,
+                    n = 0 === p || 2 === p,
+                    r = (t - E.current) * (n ? -1 : 1);
+                return y.current + r;
+            }
+            function t(e) {
+                return h(e, null != l ? l : 0, null != s ? s : e);
+            }
+            let r = (0, i.throttle)(c, f),
+                a = (i) => {
+                    if (null == n.current) return null;
+                    let a = e(i),
+                        s = t(a),
+                        l = 1 === o(p) ? "width" : "height";
+                    (n.current.style[l] = "".concat(s, "px")),
+                        b.current || ((b.current = !0), null == u || u(s)),
+                        r(s, a);
+                },
+                O = (n) => {
+                    g(!1);
+                    let r = e(n),
+                        i = t(r);
+                    c(i, r), null == d || d(i), (b.current = !1);
+                },
+                A = _ ? "pointerup" : "mouseup",
+                v = _ ? "pointermove" : "mousemove",
+                S = n.current.ownerDocument;
+            return (
+                S.addEventListener(A, O),
+                S.addEventListener(v, a),
+                () => {
+                    S.removeEventListener(A, O), S.removeEventListener(v, a), r.cancel();
+                }
+            );
+        }, [m, c, l, s, p, n, f, d, _, h, u]),
+        r.useCallback(
+            (e) => {
+                let t = 1 === o(p);
+                null != n.current && (y.current = t ? n.current.offsetWidth : n.current.offsetHeight),
+                    (E.current = t ? e.screenX : e.screenY),
+                    g(!0);
+            },
+            [p, n],
+        )
     );
 };

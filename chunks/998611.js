@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"RPb8Zk":["Tavo atsiliepimai mums padeda pagerinti Discord saugumo funkcijas."],"cDP3b4":["Atsiliepimas pateiktas"],"KZw6kn":["Kas neveikia?"],"eSP1F9":["Apsigalvojau dėl šio turinio rodymo"],"bC0QVX":["Instrukcijos buvo painios"],"8JFGXc":["Bandžiau atlikti nurodytus veiksmus, bet nepavyko"],"Dl4A+U":["Neturėjau prie savęs reikiamų dokumentų"],"ZsnNgz":["Man nepatinka dalytis asmenine informacija"],"ep5SQp":["Kita priežastis"],"kkKhVJ":["Per ilgai užtrunka"],"maxf2S":["Nesupratau, kam to reikia"],"Q5cQ46":["Apibūdink savo problemą"],"zApKaR":["Gal norėtum mums papasakoti išsamiau?"],"4djgO/":["Ačiū už atsiliepimą!"],"RqoA4v":["Kaip praėjo amžiaus patvirtinimo procesas?"]}',
+);

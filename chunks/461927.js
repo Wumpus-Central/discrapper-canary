@@ -1,0 +1,68 @@
+function r(e, t) {
+    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
+}
+function i(e, t) {
+    for (var n = 0; n < t.length; n++) {
+        var r = t[n];
+        (r.enumerable = r.enumerable || !1),
+            (r.configurable = !0),
+            "value" in r && (r.writable = !0),
+            Object.defineProperty(e, r.key, r);
+    }
+}
+function a(e, t, n) {
+    return t && i(e.prototype, t), n && i(e, n), e;
+}
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+n.d(t, { s: () => o });
+var o = (function () {
+    function e(t, n) {
+        r(this, e),
+            s(this, "ownerDocument", null),
+            s(this, "globalContext", void 0),
+            s(this, "optionsArgs", void 0),
+            (this.globalContext = t),
+            (this.optionsArgs = n);
+    }
+    return (
+        a(e, [
+            {
+                key: "window",
+                get: function () {
+                    return this.globalContext ? this.globalContext : "u" > typeof window ? window : void 0;
+                },
+            },
+            {
+                key: "document",
+                get: function () {
+                    var e;
+                    return null != (e = this.globalContext) && e.document
+                        ? this.globalContext.document
+                        : this.window
+                          ? this.window.document
+                          : void 0;
+                },
+            },
+            {
+                key: "rootElement",
+                get: function () {
+                    var e;
+                    return (null == (e = this.optionsArgs) ? void 0 : e.rootElement) || this.window;
+                },
+            },
+        ]),
+        e
+    );
+})();

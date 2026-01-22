@@ -1,8 +1,3 @@
-n.d(t, { r: () => l });
-var r = n(663042),
-    i = n(731965);
-let l = (0, r.U)((e) => ({
-    favoriteAdded: !1,
-    notifyFavoriteAdded: () => (0, i.j)(() => e({ favoriteAdded: !0 })),
-    clearFavoriteAdded: () => (0, i.j)(() => e({ favoriteAdded: !1 })),
-}));
+h.exports = JSON.parse(
+    '{"YnnXb6":["YnnXb6"],"vycLU2":["vycLU2"],"ZeOhh9":["ZeOhh9"],"/Xhh40":["/Xhh40"],"MVB/Ab":["MVB/Ab"],"1S6oAo":["1S6oAo"]}',
+);

@@ -1,11 +1,6 @@
-n.d(t, { Z: () => c });
-var a = n(570140),
-    o = n(610394);
-function c(e, t) {
-    o.Z.getPopoutInitializationStages()[e] !== t &&
-        a.Z.dispatch({
-            type: "OVERLAY_OOP_POPOUT_INITIALIZATION_STAGE_CHANGED",
-            update: { [e]: t },
-        });
-}
-n(575140);
+n.d(t, { o: () => l });
+var r,
+    l =
+        (((r = {})[(r.DISMISSED_IN_GAME_MESSAGE_NUX = 1)] = "DISMISSED_IN_GAME_MESSAGE_NUX"),
+        (r[(r.DISMISSED_CURRENT_CHAT_WALLPAPER = 2)] = "DISMISSED_CURRENT_CHAT_WALLPAPER"),
+        r);

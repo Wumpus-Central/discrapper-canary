@@ -1,121 +1,107 @@
-n.d(e, { q: () => _ });
-var i = n(54381),
-    l = n(473749),
-    s = n(793030),
-    u = n(442837),
-    r = n(846027),
-    a = n(509613),
-    o = n(131951),
-    T = n(313789),
-    S = n(269876),
-    c = n(65154),
-    E = n(388032),
-    d = n(130081);
-let _ = (0, a.ON)(T.n.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
-    useSearchTerms: () => [E.intl.string(E.t["sqUm+k"]), E.intl.string(E.t.I1Zuq0), E.intl.string(E.t.nuFtHH)],
-    usePredicate: () => (0, u.e7)([o.Z], () => o.Z.isInputProfileCustom()),
-    Component: function () {
-        let { autoThreshold: t, disabled: e } = (0, u.cj)([o.Z], () => ({
-                autoThreshold: o.Z.getModeOptions().autoThreshold,
-                disabled: o.Z.getMode() !== c.pM.VOICE_ACTIVITY,
-            })),
-            n = l.useCallback((t) => {
-                let e = o.Z.getMode(),
-                    { threshold: n } = o.Z.getModeOptions();
-                r.Z.setMode(e, {
-                    autoThreshold: t,
-                    threshold: n,
-                });
-            }, []),
-            a = (0, u.e7)([o.Z], () => o.Z.supports(c.AN.AUTOMATIC_VAD)),
-            { volume: T, isSpeaking: _ } = (0, S.Kq)(),
-            g = (0, u.e7)([o.Z], () => o.Z.isEnabled()),
-            I = l.useMemo(
-                () =>
-                    !g &&
-                    (0, i.jsx)("div", {
-                        className: d.noInputDevicesDetectedWarning,
-                        children: (0, i.jsx)(s.M14, {
-                            type: "warning",
-                            children: E.intl.format(E.t["O13I+O"], { onEnableClick: () => r.Z.enable(!0) }),
-                        }),
-                    }),
-                [g],
-            ),
-            A = l.useMemo(() => (t ? E.intl.string(E.t.JsbzjA) : E.intl.string(E.t.MLmyMY)), [t]),
-            N = l.useId(),
-            O = l.useId();
-        return a
-            ? (0, i.jsxs)("fieldset", {
-                  "aria-describedby": O,
-                  children: [
-                      (0, i.jsx)(s.nn4, {
-                          tag: "legend",
-                          id: N,
-                          children: E.intl.string(E.t.GByLar),
-                      }),
-                      (0, i.jsx)(s.nn4, {
-                          id: O,
-                          children: A,
-                      }),
-                      (0, i.jsxs)(s.Kqy, {
-                          direction: "vertical",
-                          gap: 8,
-                          children: [
-                              (0, i.jsx)(s.rsf, {
-                                  disabled: e,
-                                  label: E.intl.string(E.t.lY6j47),
-                                  description: A,
-                                  checked: t,
-                                  onChange: n,
-                              }),
-                              t
-                                  ? (0, i.jsx)(S.NP, {
-                                        isSpeaking: _,
-                                        className: d.autoThresholdSlider,
-                                        ariaDescribedBy: O,
-                                        ariaLabelledBy: N,
-                                        disabled: e,
-                                    })
-                                  : (0, i.jsx)(S.t8, {
-                                        volume: T,
-                                        ariaDescribedBy: O,
-                                        ariaLabelledBy: N,
-                                        disabled: e,
-                                    }),
-                              I,
-                          ],
-                      }),
-                  ],
+n.d(t, { u: () => p });
+var r = n(627968);
+n(64700);
+var i = n(827734),
+    a = n(996682),
+    s = n(27989);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
               })
-            : (0, i.jsxs)(s.Kqy, {
-                  direction: "vertical",
-                  gap: 8,
-                  children: [
-                      (0, i.jsx)(s.gNt, {
-                          label: E.intl.string(E.t["sqUm+k"]),
-                          description: A,
-                          layout: "vertical",
-                          children: (n) =>
-                              t
-                                  ? (0, i.jsx)(S.NP, {
-                                        isSpeaking: _,
-                                        className: d.autoThresholdSlider,
-                                        id: n.controlId,
-                                        ariaDescribedBy: n.describedById,
-                                        ariaLabelledBy: n.labelId,
-                                        disabled: e,
-                                    })
-                                  : (0, i.jsx)(S.t8, {
-                                        volume: T,
-                                        id: n.controlId,
-                                        ariaDescribedBy: n.describedById,
-                                        ariaLabelledBy: n.labelId,
-                                        disabled: e,
-                                    }),
-                      }),
-                      I,
-                  ],
-              });
-    },
-});
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                o(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i,
+        a = {};
+    if ("u" > typeof Reflect && Reflect.ownKeys) {
+        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+        return a;
+    }
+    if (((a = f(e, t)), Object.getOwnPropertySymbols))
+        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+    return a;
+}
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.getOwnPropertyNames(e);
+    for (r = 0; r < a.length; r++)
+        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    return i;
+}
+let p = (e) => {
+    var t, n;
+    let { size: o = "md", width: c, height: f, color: p = i.A.colors.INTERACTIVE_ICON_DEFAULT, colorClass: _ = "" } = e,
+        h = d(e, ["size", "width", "height", "color", "colorClass"]),
+        m = (0, s.J)(o),
+        g = null != (t = null == m ? void 0 : m.width) ? t : c,
+        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+    return (0, r.jsx)(
+        "svg",
+        u(l({}, (0, a.A)(h)), {
+            xmlns: "http://www.w3.org/2000/svg",
+            width: g,
+            height: E,
+            fill: "none",
+            viewBox: "0 0 24 24",
+            children: (0, r.jsx)("path", {
+                fill: "string" == typeof p ? p : p.css,
+                d: "M9.25 3.35C7.87 2.45 6 3.38 6 4.96v14.08c0 1.58 1.87 2.5 3.25 1.61l10.85-7.04a1.9 1.9 0 0 0 0-3.22L9.25 3.35Z",
+                className: _,
+            }),
+        }),
+    );
+};

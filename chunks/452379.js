@@ -1,26 +1,54 @@
-e.exports = {
-    row: "_8e830531d896108a-row",
-    column: "_8e830531d896108a-column",
-    gapXs: "_8e830531d896108a-gapXs",
-    gapSm: "_8e830531d896108a-gapSm",
-    gapMd: "_8e830531d896108a-gapMd",
-    gapLg: "_8e830531d896108a-gapLg",
-    clickable: "_8e830531d896108a-clickable",
-    content: "_8e830531d896108a-content",
-    gameProfileModal: "_8e830531d896108a-gameProfileModal",
-    gameArtHero: "_8e830531d896108a-gameArtHero",
-    coverArtRow: "_8e830531d896108a-coverArtRow",
-    overflowMenu: "_8e830531d896108a-overflowMenu",
-    headerInfo: "_8e830531d896108a-headerInfo",
-    logoWrapper: "_8e830531d896108a-logoWrapper",
-    logo: "_8e830531d896108a-logo",
-    gameDetails: "_8e830531d896108a-gameDetails",
-    gameBadge: "_8e830531d896108a-gameBadge",
-    newBadge: "_8e830531d896108a-newBadge",
-    gameIcon: "_8e830531d896108a-gameIcon",
-    mainContent: "_8e830531d896108a-mainContent",
-    sidebar: "_8e830531d896108a-sidebar",
-    buttonsContainer: "_8e830531d896108a-buttonsContainer",
-    sections: "_8e830531d896108a-sections",
-    sectionHeader: "_8e830531d896108a-sectionHeader",
+n.d(t, { A: () => p });
+var r = n(735438),
+    i = n.n(r),
+    l = n(73153),
+    a = n(510595),
+    s = n(35177),
+    o = n(405892),
+    c = n(594061),
+    u = n(617617),
+    d = n(355097);
+let p = {
+    init() {
+        (o.A[d.oD.PRELOADED_USER_SETTINGS] = s.A),
+            (o.A[d.oD.FRECENCY_AND_FAVORITES_SETTINGS] = a.A),
+            l.h.subscribe("CONNECTION_OPEN", f),
+            l.h.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", h),
+            l.h.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", A),
+            l.h.subscribe("APP_STATE_UPDATE", g);
+    },
 };
+function f() {
+    let e = u.A.getFullState(),
+        t = e[d.oD.PRELOADED_USER_SETTINGS];
+    t.editInfo.triggeredMigrations && c.wc.markDirtyFromMigration(t.proto, t.editInfo.cleanupFuncs),
+        i().forEach(c.Df, (t, n) => {
+            let r = e[Number(n)];
+            null != r.editInfo.offlineEditDataVersion &&
+                null != r.editInfo.protoToSave &&
+                t.scheduleSaveFromOfflineEdit();
+        });
+}
+function h(e) {
+    let {
+        settings: { proto: t, type: n },
+        delaySeconds: r,
+        jitter: i,
+    } = e;
+    c.Df[n].markDirty(t, {
+        delaySeconds: r,
+        jitter: i,
+    });
+}
+function A(e) {
+    let { settingsType: t } = e;
+    c.Df[t].loadIfNecessary();
+}
+function g(e) {
+    let { state: t } = e;
+    ("inactive" === t || "background" === t) &&
+        i().forEach(c.Df, (e, t) => {
+            null != u.A.getFullState()[Number(t)].editInfo.timeout &&
+                (e.logger.log("Triggering persistChanges due to AppStateUpdate"), e.persistChanges());
+        });
+}

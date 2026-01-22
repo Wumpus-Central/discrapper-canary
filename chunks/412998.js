@@ -1,1 +1,5 @@
-e.exports = "/assets/acb0ef3d64b1e7b6.png";
+var t = Object.prototype;
+e.exports = function (e) {
+    var n = e && e.constructor;
+    return e === (("function" == typeof n && n.prototype) || t);
+};

@@ -1,9 +1,1 @@
-e.exports = function (e, t, n, r) {
-    for (var i = 65535 & e, a = (e >>> 16) & 65535, o = 0; 0 !== n; ) {
-        (o = n > 2000 ? 2000 : n), (n -= o);
-        do a = (a + (i = (i + t[r++]) | 0)) | 0;
-        while (--o);
-        (i %= 65521), (a %= 65521);
-    }
-    return i | (a << 16);
-};
+e.exports = "/assets/66fc79598ac72ce2.svg";

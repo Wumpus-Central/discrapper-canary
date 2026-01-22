@@ -1,1 +1,4 @@
-e.exports = "/assets/587c08f512a71514.png";
+e.exports = {
+    F: "_0869f518093d69da",
+    $: "_87233cff4cae916c",
+};

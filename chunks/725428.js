@@ -1,1 +1,88 @@
-e.exports = "/assets/e3ae54eefd01b29d.svg";
+n.d(t, { p: () => o });
+var r = n(662087);
+function i(e, t) {
+    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
+}
+function a(e, t) {
+    for (var n = 0; n < t.length; n++) {
+        var r = t[n];
+        (r.enumerable = r.enumerable || !1),
+            (r.configurable = !0),
+            "value" in r && (r.writable = !0),
+            Object.defineProperty(e, r.key, r);
+    }
+}
+function s(e, t, n) {
+    return t && a(e.prototype, t), n && a(e, n), e;
+}
+var o = (function () {
+    function e(t, n) {
+        var r = this;
+        i(this, e),
+            (this.isSetUp = !1),
+            (this.handleRefCountChange = function () {
+                var e = r.store.getState().refCount > 0;
+                r.backend &&
+                    (e && !r.isSetUp
+                        ? (r.backend.setup(), (r.isSetUp = !0))
+                        : !e && r.isSetUp && (r.backend.teardown(), (r.isSetUp = !1)));
+            }),
+            (this.store = t),
+            (this.monitor = n),
+            t.subscribe(this.handleRefCountChange);
+    }
+    return (
+        s(e, [
+            {
+                key: "receiveBackend",
+                value: function (e) {
+                    this.backend = e;
+                },
+            },
+            {
+                key: "getMonitor",
+                value: function () {
+                    return this.monitor;
+                },
+            },
+            {
+                key: "getBackend",
+                value: function () {
+                    return this.backend;
+                },
+            },
+            {
+                key: "getRegistry",
+                value: function () {
+                    return this.monitor.registry;
+                },
+            },
+            {
+                key: "getActions",
+                value: function () {
+                    var e = this,
+                        t = this.store.dispatch;
+                    function n(n) {
+                        return function () {
+                            for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
+                            var s = n.apply(e, i);
+                            void 0 !== s && t(s);
+                        };
+                    }
+                    var i = (0, r.Lj)(this);
+                    return Object.keys(i).reduce(function (e, t) {
+                        var r = i[t];
+                        return (e[t] = n(r)), e;
+                    }, {});
+                },
+            },
+            {
+                key: "dispatch",
+                value: function (e) {
+                    this.store.dispatch(e);
+                },
+            },
+        ]),
+        e
+    );
+})();

@@ -1,155 +1,31 @@
-n.d(t, { Y: () => y }), n(388685);
-var i = n(54381),
-    r = n(473749),
-    l = n(286379),
-    a = n(442837),
-    o = n(481060),
-    s = n(797614),
-    c = n(699516),
-    u = n(378298),
-    d = n(359119),
-    p = n(473092),
-    f = n(177342),
-    h = n(134612),
-    m = n(388032);
-function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
-            });
-    }
-    return e;
-}
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function y(e) {
-    let { channelId: t, warningId: y, senderId: C } = e,
-        v = r.useCallback(() => {
-            (0, u.T)(t, [y]);
-        }, [t, y]),
-        x = (0, a.e7)([c.Z], () => c.Z.isBlocked(C)),
-        O = r.useMemo(
-            () => ({
-                channelId: t,
-                warningId: y,
-                senderId: C,
-                warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-            }),
-            [t, y, C],
-        );
-    r.useEffect(() => {
-        (0, p.KQ)(b(g({}, O), { viewName: p.pb.SAFETY_WARNING_BANNER })),
-            s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
-    }, [O]);
-    let E = r.useCallback(
-            (e) => {
-                (0, p.qc)(b(g({}, O), { cta: e }));
-            },
-            [O],
-        ),
-        j = r.useCallback(() => {
-            (0, o.ZDy)(
-                async () => {
-                    let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("98932")]).then(
-                        n.bind(n, 611446),
-                    );
-                    return (n) => {
-                        let { transitionState: r, onClose: l } = n;
-                        return (0, i.jsx)(e, {
-                            otherUserId: C,
-                            channelId: t,
-                            warningId: y,
-                            warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-                            transitionState: r,
-                            onClose: l,
-                        });
-                    };
-                },
-                { modalKey: h.X_ },
-            ),
-                E(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
-        }, [t, C, y, E]),
-        S = r.useCallback(() => {
-            v(), E(p.NM.USER_BANNER_BLOCK_CONFIRM);
-        }, [v, E]),
-        _ = r.useCallback(() => {
-            v(), E(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
-        }, [v, E]),
-        P = r.useCallback(() => {
-            (0, o.ZDy)(async () => {
-                let { default: e } = await n.e("19538").then(n.bind(n, 699783));
-                return (n) => {
-                    let { transitionState: r, onClose: l } = n;
-                    return (0, i.jsx)(e, {
-                        transitionState: r,
-                        onBlock: S,
-                        onBlockAndReport: _,
-                        onCancel: () => {
-                            null == l || l(), E(p.NM.USER_BANNER_BLOCK_CANCEL);
-                        },
-                        onClose: l,
-                        userId: C,
-                        channelId: t,
-                    });
-                };
-            });
-        }, [S, _, C, t, E]);
-    return (0, i.jsx)(f.Q, {
-        channelId: t,
-        warningId: y,
-        senderId: C,
-        warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-        header: m.intl.string(m.t.ZzlB5p),
-        description: m.intl.string(m.t["D1aU+h"]),
-        onDismiss: v,
-        buttons: [
-            {
-                text: m.intl.string(m.t.Qyu4UK),
-                variant: "primary",
-                onClick: j,
-            },
-            ...(x
-                ? []
-                : [
-                      {
-                          text: m.intl.string(m.t["7q0bNY"]),
-                          variant: "secondary",
-                          onClick: P,
-                      },
-                  ]),
-        ],
-    });
-}
+var r = {
+    popover: "fe588819f977509e",
+    popoverGradientWrapper: "f2c0db4936a60519",
+    popoverContentWithGradient: "f19ad3558ec21f05",
+    "popover--video": "e583097df37c560b",
+    footer: "_87bed0979fe8223b",
+    header: "cc4e8c59a5c42a68",
+    actionBar: "e58c2dee954ba240",
+    closeButton: "c1bcffdc1d06bf86",
+    headerWithBadge: "_95d2a857e0f505d6 cc4e8c59a5c42a68",
+    title: "dccfc9f66ebb42ba",
+    headerBody: "_7562a95605cb1d19",
+    badgeContainer: "be071ac9c8101d0c",
+    content: "bcea10230b41b38b",
+    graphic: "_6cbdb5aa1d66a74f",
+    "graphic--md": "_90b4e2aac0e92f26",
+    "graphic--sm": "f02296572a859a5b",
+    "graphic--lg": "_18fb3322eb82f88a",
+    "graphic--video": "f094fb640513d215",
+    footerText: "_8fa38ab87010e919",
+    footerLink: "d1cd373760ad1344",
+    actions: "_4ef074e109605073",
+    actionsFullWidth: "b3e9e74adda44408 _4ef074e109605073",
+    multistepIndicator: "f79ddd80fc8b1b96",
+    multistepActionLayout: "_49c850625a3c4367",
+    caretIcon: "d1d91d6d755b5db0",
+    caretFill: "d5e81f50a088c08d",
+    caretGradient: "ea990d1dca8e33fa",
+    caretStroke: "_28a0b02c16cfc7ee",
+};
+n.r((e.exports = r));

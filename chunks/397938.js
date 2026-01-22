@@ -1,285 +1,193 @@
-n.d(t, { ZP: () => I }), n(388685), n(415506);
-var r = n(54381);
-n(473749);
-var i = n(268146),
-    s = n(481060),
-    l = n(100527),
-    o = n(650958),
-    c = n(594174),
-    a = n(580991),
-    d = n(992817),
-    u = n(451467),
-    f = n(443762),
-    h = n(672811),
-    p = n(891180),
-    x = n(544753),
-    m = n(504710),
-    g = n(226372),
-    v = n(37113),
-    j = n(65154),
-    _ = n(715689),
-    b = n(388032),
-    y = n(979713);
-let w = [
+n.d(t, { A: () => _ }), n(896048);
+var r = n(627968),
+    l = n(64700),
+    i = n(837381),
+    a = n(311907),
+    s = n(827734),
+    o = n(397927),
+    c = n(941971),
+    u = n(900848),
+    d = n(371911),
+    f = n(222823),
+    p = n(309010),
+    h = n(287809),
+    b = n(851109),
+    g = n(394953),
+    m = n(355216),
+    A = n(596540),
+    y = n(879221);
+n(445368);
+var O = n(652215),
+    j = n(790782),
+    v = n(626600);
+function x() {
+    let e = (0, a.bG)([h.default], () => h.default.getCurrentUser());
+    return (0, a.bG)(
+        [f.Ay],
+        () => (null == e ? void 0 : e.id) != null && f.Ay.getMentionCount(e.id, j.P.NOTIFICATION_CENTER) > 0,
+    );
+}
+function E(e) {
+    var t, n;
+    let { onClick: d, selectedOverride: f = !1, popoutProps: h, ref: A } = e,
+        j = (0, i.Vd)("notifications-inbox"),
+        [E, _] = l.useState(!1),
+        C = (0, g.lI)(),
+        S = f || C,
+        { notificationCenterVariant: I } = (0, b.X8)({ location: "NotificationsInboxButtonInner" }),
         {
-            value: v.tI.PRESET_AUTO,
-            canUse: (e) => e !== i.vA.CAMERA && (0, a.IK)({ location: "StreamOptionsMenu" }).allowAutoQuality,
-        },
-        {
-            value: v.tI.PRESET_VIDEO,
-            canUse: (e) => !0,
-        },
-        {
-            value: v.tI.PRESET_DOCUMENTS,
-            canUse: (e) => e !== i.vA.CAMERA,
-        },
-        {
-            value: v.tI.PRESET_CUSTOM,
-            canUse: (e) => !0,
-        },
-    ],
-    O = [
-        {
-            value: v.LY.RESOLUTION_720,
-            canUse: (e) => !0,
-        },
-        {
-            value: v.LY.RESOLUTION_1080,
-            canUse: (e) => !0,
-        },
-        {
-            value: v.LY.RESOLUTION_1440,
-            canUse: (e) => !0,
-        },
-        {
-            value: v.LY.RESOLUTION_SOURCE,
-            canUse: (e) => e !== i.vA.CAMERA,
-        },
-    ],
-    C = [v.ws.FPS_15, v.ws.FPS_30, v.ws.FPS_60];
-function S(e) {
-    let { label: t } = e;
-    return (0, r.jsxs)("div", {
-        className: y.premiumOptionContainer,
+            badge: N,
+            badgeDimensions: T,
+            unreadChannelsCount: P,
+        } = (function (e) {
+            let { notificationCenterVariant: t } = (0, b.X8)({ location: "NotificationsInboxButtonInner" }),
+                { unreadChannelIds: n } = (0, g.U4)(),
+                l = x(),
+                { badge: i, dimensions: a } = (0, m.ux)({ isSelected: e });
+            return t === b.U5.LEGACY
+                ? {
+                      badge: l
+                          ? (0, r.jsx)(o.SC0, {
+                                style: {
+                                    height: 13,
+                                    width: 13,
+                                    position: "relative",
+                                },
+                                color: s.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
+                            })
+                          : null,
+                      unreadChannelsCount: 0,
+                      badgeDimensions: {
+                          height: 13,
+                          width: 13,
+                      },
+                  }
+                : {
+                      badge: i,
+                      unreadChannelsCount: n.length,
+                      badgeDimensions: a,
+                  };
+        })(S),
+        w = I === b.U5.LEGACY ? o.K$s : o.XFE,
+        R = (0, a.bG)([p.A], () => p.A.getChannelId()),
+        D = l.useMemo(() => {
+            if (I === b.U5.SIDEBAR) return O.BVt.CHANNEL(O.gNP, R);
+        }, [I, R]);
+    return (0, r.jsxs)(u.c, {
+        ref: A,
         children: [
-            t,
-            (0, r.jsx)(s.SrA, {
-                size: "xs",
-                color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+            (0, r.jsx)(c.A, {
+                selected: S && I === b.U5.SIDEBAR,
+                hovered: E && I === b.U5.SIDEBAR,
+                unread: P > 0,
+                className: v.Io,
+                disabled: I === b.U5.LEGACY,
+            }),
+            (0, r.jsx)(y.A, {
+                children: (0, r.jsx)(o.Qk9, {
+                    selected: S || E,
+                    lowerBadge: N,
+                    lowerBadgeSize: T,
+                    children: (0, r.jsx)(
+                        o.jlP,
+                        ((t = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                "function" == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        }),
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0,
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, j, h)),
+                        (n = n =
+                            {
+                                onClick: d,
+                                to: D,
+                                selected: S || E,
+                                onMouseEnter: () => _(!0),
+                                onMouseLeave: () => _(!1),
+                                children: (0, r.jsx)(w, {
+                                    size: "custom",
+                                    color: "currentColor",
+                                    className: v.iZ,
+                                    width: 20,
+                                    height: 20,
+                                }),
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(n)).forEach(function (e) {
+                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                              }),
+                        t),
+                    ),
+                }),
             }),
         ],
     });
 }
-function I(e) {
-    var t, n;
-    let { onClose: a, onSelect: y } = e,
-        [
-            {
-                audioSourceId: I,
-                notifyFriends: Z,
-                hidePreview: E,
-                muteStreamAudio: P,
-                preset: N,
-                resolution: T,
-                fps: R,
-                sourceType: M,
-                selectedChannel: A,
-            },
-            L,
-        ] = (0, f.E_)(),
-        U = !(0, d.$s)(A, "StreamOptionsMenu"),
-        D = (0, x.Z)(),
-        [G, H] = null != (t = (0, g.Z)(v.tI.PRESET_VIDEO)) ? t : [v.LY.RESOLUTION_720, v.ws.FPS_30],
-        [B, k] = null != (n = (0, g.Z)(v.tI.PRESET_DOCUMENTS)) ? n : [v.LY.RESOLUTION_SOURCE, v.ws.FPS_15],
-        F = (0, o.M)({
-            deviceType: j.h7.AUDIO_INPUT,
-            selectedDeviceId: I,
-            analyticsLocations: [l.Z.GO_LIVE_MODAL_SETTINGS_SELECTION],
-            asSubmenu: !0,
-            onDeviceSelect: (e) => (
-                L({
-                    type: "set_audio_source",
-                    audioSourceId: e,
-                }),
-                !1
-            ),
-            menuItemOverrideProps: {
-                id: "device-audio-input",
-                label: b.intl.string(_.default.YSdHVw),
-                subtextLineClamp: 1,
-            },
-            computeMenuRadioItemOverrideProps: (e) => ({
-                group: "device-audio-input-group",
-                id: "device-audio-input-".concat(e),
-            }),
-        });
-    return (0, r.jsxs)(s.v2r, {
-        "aria-label": b.intl.string(b.t["+1H47t"]),
-        navId: "stream-options",
-        onClose: a,
-        onSelect: y,
-        children: [
-            (0, r.jsx)(s.kSQ, {
-                label: b.intl.string(_.default.P2pjmy),
-                children: w
-                    .filter((e) => {
-                        let { canUse: t } = e;
-                        return t(M);
-                    })
-                    .map((e) => {
-                        let { value: t } = e;
-                        return (0, r.jsx)(
-                            s.k5B,
-                            {
-                                group: "preset",
-                                id: "stream-preset-".concat(t),
-                                checked: N === t,
-                                label: (0, h.L)(t),
-                                subtext: (function (e) {
-                                    switch (e) {
-                                        case v.tI.PRESET_VIDEO:
-                                            return b.intl.format(_.default.G5O1Mz, {
-                                                resolution: (0, p.M)(G),
-                                                frameRate: H,
-                                            });
-                                        case v.tI.PRESET_DOCUMENTS:
-                                            return b.intl.format(_.default["8tcFL5"], {
-                                                resolution: (0, p.M)(B),
-                                                frameRate: k,
-                                            });
-                                        case v.tI.PRESET_AUTO:
-                                            return b.intl.string(_.default.m4jtlc);
-                                        case v.tI.PRESET_CUSTOM:
-                                            return;
-                                        default:
-                                            throw Error("No case implemented for ".concat(e));
-                                    }
-                                })(t),
-                                action: () =>
-                                    L({
-                                        type: "set_preset",
-                                        preset: t,
-                                    }),
-                            },
-                            t,
-                        );
+function _() {
+    let e = l.useRef(null),
+        { notificationCenterVariant: t } = (0, b.X8)({ location: "NotificationsInboxButton" }),
+        n = x(),
+        i = (0, m.HN)();
+    return t === b.U5.SIDEBAR
+        ? (0, r.jsx)(E, { onClick: i })
+        : t === b.U5.POPOUT
+          ? (0, r.jsx)(A.A, {
+                targetElementRef: e,
+                popoutPosition: "right",
+                popoutAlign: "bottom",
+                children: (t, n, l) =>
+                    (0, r.jsx)(E, {
+                        ref: e,
+                        selectedOverride: n,
+                        onClick: () => {
+                            i(), t();
+                        },
+                        popoutProps: l,
                     }),
-            }),
-            N === v.tI.PRESET_CUSTOM &&
-                (0, r.jsxs)(r.Fragment, {
-                    children: [
-                        (0, r.jsx)(s.Clw, {}),
-                        (0, r.jsx)(s.sNh, {
-                            id: "resolution",
-                            label: b.intl.string(_.default.IG5n0X),
-                            children: O.filter((e) => {
-                                let { canUse: t } = e;
-                                return t(M);
-                            }).map((e) => {
-                                let { value: t } = e;
-                                return (0, r.jsx)(
-                                    s.k5B,
-                                    {
-                                        group: "resolution",
-                                        id: "stream-option-resolution-".concat(t),
-                                        checked: T === t,
-                                        label:
-                                            t !== v.LY.RESOLUTION_720
-                                                ? (0, r.jsx)(S, { label: (0, p.M)(t) })
-                                                : (0, p.M)(t),
-                                        action: () =>
-                                            (function (e) {
-                                                if (!(0, u.Z)(N, e, R, c.default.getCurrentUser(), D))
-                                                    return (
-                                                        a(),
-                                                        (0, m.E)({
-                                                            analyticsLocation: l.Z.GO_LIVE_MODAL_SETTINGS_SELECTION,
-                                                        })
-                                                    );
-                                                L({
-                                                    type: "set_resolution",
-                                                    resolution: e,
-                                                });
-                                            })(t),
-                                    },
-                                    t,
-                                );
-                            }),
-                        }),
-                        (0, r.jsx)(s.sNh, {
-                            id: "frame-rate",
-                            label: b.intl.string(b.t.SkkeIt),
-                            children: C.map((e) =>
-                                (0, r.jsx)(
-                                    s.k5B,
-                                    {
-                                        group: "frame-rate",
-                                        id: "stream-option-frame-rate-".concat(e),
-                                        checked: R === e,
-                                        label:
-                                            e === v.ws.FPS_60
-                                                ? (0, r.jsx)(S, { label: "".concat(e, "fps") })
-                                                : "".concat(e, "fps"),
-                                        action: () =>
-                                            (function (e) {
-                                                if (!(0, u.Z)(N, T, e, c.default.getCurrentUser(), D))
-                                                    return (
-                                                        a(),
-                                                        (0, m.E)({
-                                                            analyticsLocation: l.Z.GO_LIVE_MODAL_SETTINGS_SELECTION,
-                                                        })
-                                                    );
-                                                L({
-                                                    type: "set_fps",
-                                                    fps: e,
-                                                });
-                                            })(e),
-                                    },
-                                    e,
-                                ),
-                            ),
-                        }),
-                    ],
-                }),
-            (0, r.jsx)(s.Clw, {}),
-            (0, r.jsx)(s.S89, {
-                id: "stream-option-mute",
-                checked: P,
-                label: b.intl.string(_.default["b0+Irf"]),
-                action: () =>
-                    L({
-                        type: "set_mute_audio",
-                        value: !P,
-                    }),
-            }),
-            M === i.vA.CAMERA && F,
-            (0, r.jsxs)(s.sNh, {
-                id: "advanced-items",
-                label: b.intl.string(_.default.eYyK1v),
-                children: [
-                    (0, r.jsx)(s.S89, {
-                        id: "stream-option-share-preview",
-                        checked: E,
-                        label: b.intl.string(_.default.H3QjqX),
-                        action: () =>
-                            L({
-                                type: "set_hide_preview",
-                                hidePreview: !E,
-                            }),
-                    }),
-                    U &&
-                        (0, r.jsx)(s.S89, {
-                            id: "stream-option-notify",
-                            checked: Z,
-                            label: b.intl.string(_.default.SiHtXy),
-                            action: () =>
-                                L({
-                                    type: "set_notify_friends",
-                                    value: !Z,
-                                }),
-                        }),
-                ],
-            }),
-        ],
-    });
+            })
+          : t === b.U5.LEGACY
+            ? (0, r.jsx)(d.C, {
+                  spacing: 0,
+                  badgeState: { badgeForYou: n },
+                  targetElementRef: e,
+                  popoutPosition: "right",
+                  popoutAlign: "top",
+                  dialogClassName: v.T8,
+                  children: (t, n, l) =>
+                      (0, r.jsx)(E, {
+                          ref: e,
+                          selectedOverride: n,
+                          onClick: () => {
+                              i(), t();
+                          },
+                          popoutProps: l,
+                      }),
+              })
+            : null;
 }

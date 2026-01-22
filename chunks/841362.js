@@ -1,174 +1,83 @@
-n.d(t, {
-    Ee: () => I,
-    Y8: () => T,
-});
-var r = n(595707),
-    i = n(576418),
-    a = n(995827),
-    o = n(937397),
-    s = n(913074),
-    l = n(156748),
-    c = n(819851),
-    u = n(306373),
-    d = n(33777),
-    f = n(984940),
-    p = n(69771),
-    _ = n(485853),
-    m = n(880016),
-    h = n(158821),
-    g = n(413565),
-    E = n(401522),
-    b = n(228400),
-    y = n(473749);
-let O = (0, y.createContext)(null),
-    v = (0, y.createContext)(null),
-    S = (0, y.createContext)(null),
-    I = (0, y.forwardRef)(function (e, t) {
-        var n, s;
-        [e, t] = (0, r.pE)(e, t, O);
-        let { validationBehavior: d } = (0, r.jn)(a.q) || {},
-            f = null != (s = null != (n = e.validationBehavior) ? n : d) ? s : "native",
-            p = (0, b.w)({
-                ...e,
-                validationBehavior: f,
-            }),
-            [_, g] = (0, r.xc)(!e["aria-label"] && !e["aria-labelledby"]),
-            {
-                radioGroupProps: E,
-                labelProps: v,
-                descriptionProps: I,
-                errorMessageProps: T,
-                ...C
-            } = (0, u.a)(
-                {
-                    ...e,
-                    label: g,
-                    validationBehavior: f,
-                },
-                p,
-            ),
-            A = (0, r.aX)({
-                ...e,
-                values: {
-                    orientation: e.orientation || "vertical",
-                    isDisabled: p.isDisabled,
-                    isReadOnly: p.isReadOnly,
-                    isRequired: p.isRequired,
-                    isInvalid: p.isInvalid,
-                    state: p,
-                },
-                defaultClassName: "react-aria-RadioGroup",
-            }),
-            N = (0, m.z)(e, { global: !0 });
-        return y.createElement(
-            "div",
-            {
-                ...(0, h.d)(N, A, E),
-                ref: t,
-                slot: e.slot || void 0,
-                "data-orientation": e.orientation || "vertical",
-                "data-invalid": p.isInvalid || void 0,
-                "data-disabled": p.isDisabled || void 0,
-                "data-readonly": p.isReadOnly || void 0,
-                "data-required": p.isRequired || void 0,
+n.d(t, { A: () => f });
+var r = n(627968),
+    l = n(311907),
+    i = n(397927),
+    a = n(351001),
+    s = n(696451),
+    o = n(576705),
+    c = n(102817),
+    u = n(641131),
+    d = n(985018);
+function f(e) {
+    let { channel: t, user: f, guild: p } = e,
+        h = (0, l.bG)([o.A], () => null != f && null != p && (0, a.KX)(f, p, [o.A])),
+        b = (0, l.bG)([s.Ay], () => null == f || null == s.Ay.getMember(t.guild_id, f.id));
+    if (!h) return null;
+    let g = b ? d.intl.string(u.default.Ux67nW) : d.intl.string(u.default["snp/lJ"]),
+        m = "kick-user-".concat(null == f ? void 0 : f.id);
+    return (0, r.jsx)(
+        c.A,
+        {
+            text: g,
+            icon: i.Nxw,
+            onClick: () => {
+                null != f &&
+                    (0, i.mMO)(async () => {
+                        let { default: e } = await n.e("17862").then(n.bind(n, 324785));
+                        return (n) => {
+                            var l, i;
+                            return (0, r.jsx)(
+                                e,
+                                ((l = (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        "function" == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                }),
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0,
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({}, n)),
+                                (i = i =
+                                    {
+                                        guildId: t.guild_id,
+                                        user: f,
+                                        modReportId: t.id,
+                                    }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(i)).forEach(function (e) {
+                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
+                                      }),
+                                l),
+                            );
+                        };
+                    });
             },
-            y.createElement(
-                r.zt,
-                {
-                    values: [
-                        [S, p],
-                        [
-                            o.n,
-                            {
-                                ...v,
-                                ref: _,
-                                elementType: "span",
-                            },
-                        ],
-                        [
-                            c.j,
-                            {
-                                slots: {
-                                    description: I,
-                                    errorMessage: T,
-                                },
-                            },
-                        ],
-                        [i.E, C],
-                    ],
-                },
-                y.createElement(l.y, null, A.children),
-            ),
-        );
-    }),
-    T = (0, y.forwardRef)(function (e, t) {
-        let { inputRef: n = null, ...i } = e;
-        [e, t] = (0, r.pE)(i, t, v);
-        let a = y.useContext(S),
-            o = (0, g.B)((0, y.useMemo)(() => (0, E.l)(n, void 0 !== e.inputRef ? e.inputRef : null), [n, e.inputRef])),
-            {
-                labelProps: l,
-                inputProps: c,
-                isSelected: u,
-                isDisabled: b,
-                isPressed: O,
-            } = (0, d.x)(
-                {
-                    ...(0, r.vl)(e),
-                    children: "function" == typeof e.children || e.children,
-                },
-                a,
-                o,
-            ),
-            { isFocused: I, isFocusVisible: T, focusProps: C } = (0, f.F)(),
-            A = b || a.isReadOnly,
-            { hoverProps: N, isHovered: P } = (0, p.X)({
-                ...e,
-                isDisabled: A,
-            }),
-            R = (0, r.aX)({
-                ...e,
-                defaultClassName: "react-aria-Radio",
-                values: {
-                    isSelected: u,
-                    isPressed: O,
-                    isHovered: P,
-                    isFocused: I,
-                    isFocusVisible: T,
-                    isDisabled: b,
-                    isReadOnly: a.isReadOnly,
-                    isInvalid: a.isInvalid,
-                    isRequired: a.isRequired,
-                },
-            }),
-            w = (0, m.z)(e, { global: !0 });
-        return (
-            delete w.id,
-            delete w.onClick,
-            y.createElement(
-                "label",
-                {
-                    ...(0, h.d)(w, l, N, R),
-                    ref: t,
-                    "data-selected": u || void 0,
-                    "data-pressed": O || void 0,
-                    "data-hovered": P || void 0,
-                    "data-focused": I || void 0,
-                    "data-focus-visible": T || void 0,
-                    "data-disabled": b || void 0,
-                    "data-readonly": a.isReadOnly || void 0,
-                    "data-invalid": a.isInvalid || void 0,
-                    "data-required": a.isRequired || void 0,
-                },
-                y.createElement(
-                    _.T,
-                    { elementType: "span" },
-                    y.createElement("input", {
-                        ...(0, h.d)(c, C),
-                        ref: o,
-                    }),
-                ),
-                y.createElement(s.p.Provider, { value: { isSelected: u } }, R.children),
-            )
-        );
-    });
+            disabled: b,
+        },
+        m,
+    );
+}

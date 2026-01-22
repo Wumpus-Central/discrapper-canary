@@ -1,8 +1,1 @@
-function r(e, t) {
-    return (r = Object.setPrototypeOf
-        ? Object.setPrototypeOf.bind()
-        : function (e, t) {
-              return (e.__proto__ = t), e;
-          })(e, t);
-}
-n.d(t, { Z: () => r });
+e.exports = "/assets/c385ef9dd294be87.png";

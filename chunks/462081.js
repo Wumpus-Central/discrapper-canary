@@ -1,7 +1,3 @@
-e.exports = {
-    eventPromptsContainer: "_1405b3b8e8eb5fd0-eventPromptsContainer",
-    controlButton: "_1405b3b8e8eb5fd0-controlButton",
-    wrapper: "_1405b3b8e8eb5fd0-wrapper",
-    buttonContainer: "_1405b3b8e8eb5fd0-buttonContainer",
-    buttonSection: "_1405b3b8e8eb5fd0-buttonSection",
-};
+s.exports = JSON.parse(
+    '{"yfwZuy":["マイバッジを表示"],"UnPGii":["プロフィールにバッジが追加されました\u3002"],"nvaTQq":["Orbsプロフィールバッジを入手しました\uFF01"]}',
+);

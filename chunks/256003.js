@@ -1,8 +1,23 @@
-n.d(t, { Z: () => u }), n(388685);
-var r = n(782425),
-    l = n(524550),
-    i = n(731965);
-function o(e) {
+n.d(t, { N: () => p });
+var r = n(627968);
+n(64700);
+var i = n(827734),
+    a = n(996682),
+    s = n(27989);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -13,80 +28,87 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-function a(e, t) {
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : c(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let s = (0, l.F)((e, t) => ({
-        selectedUserIds: {},
-        addUsers: (n, r) => {
-            var l;
-            let { selectedUserIds: s } = t(),
-                c = new Set([...(null != (l = s[n]) ? l : new Set()), ...r]);
-            (0, i.j)(() => {
-                e({ selectedUserIds: a(o({}, s), { [n]: c }) });
-            });
-        },
-        removeUser: (n, r) => {
-            let { selectedUserIds: l } = t(),
-                s = l[n];
-            if (null == s) return;
-            let c = [...s].filter((e) => e !== r);
-            (0, i.j)(() => {
-                e({ selectedUserIds: a(o({}, l), { [n]: new Set(c) }) });
-            });
-        },
-        clearSelection: (n) => {
-            let { selectedUserIds: r } = t();
-            null != r &&
-                (0, i.j)(() => {
-                    e({ selectedUserIds: a(o({}, r), { [n]: new Set() }) });
-                });
-        },
-    })),
-    c = new Set();
-function u(e) {
-    return s((t) => {
-        var n;
-        return {
-            selectedUserIds: null != (n = t.selectedUserIds[e]) ? n : c,
-            addUsers: (n) => {
-                t.addUsers(e, n);
-            },
-            removeUser: (n) => {
-                t.removeUser(e, n);
-            },
-            clearSelection: () => {
-                t.clearSelection(e);
-            },
-        };
-    }, r.X);
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i,
+        a = {};
+    if ("u" > typeof Reflect && Reflect.ownKeys) {
+        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+        return a;
+    }
+    if (((a = f(e, t)), Object.getOwnPropertySymbols))
+        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+    return a;
 }
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.getOwnPropertyNames(e);
+    for (r = 0; r < a.length; r++)
+        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    return i;
+}
+let p = (e) => {
+    var t, n;
+    let { size: o = "md", width: c, height: f, color: p = i.A.colors.INTERACTIVE_ICON_DEFAULT, colorClass: _ = "" } = e,
+        h = d(e, ["size", "width", "height", "color", "colorClass"]),
+        m = (0, s.J)(o),
+        g = null != (t = null == m ? void 0 : m.width) ? t : c,
+        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+    return (0, r.jsxs)(
+        "svg",
+        u(l({}, (0, a.A)(h)), {
+            xmlns: "http://www.w3.org/2000/svg",
+            width: g,
+            height: E,
+            fill: "none",
+            viewBox: "0 0 24 24",
+            children: [
+                (0, r.jsx)("path", {
+                    fill: "string" == typeof p ? p : p.css,
+                    d: "M8 1a3 3 0 0 0-3 3v16a3 3 0 0 0 3 3h3.67c.38 0 .63-.42.52-.8A4 4 0 0 1 12 21v-3.5a.5.5 0 0 0-.5-.5H8a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v8.5c0 .28.22.5.5.5h1a.5.5 0 0 0 .5-.5V4a3 3 0 0 0-3-3H8Z",
+                    className: _,
+                }),
+                (0, r.jsx)("path", {
+                    fill: "string" == typeof p ? p : p.css,
+                    d: "M14 17c0-1.1.9-2 2-2h3a2 2 0 0 1 2 2v.36c0-.21.14-.4.34-.47l2-.67a.5.5 0 0 1 .66.47v4.62a.5.5 0 0 1-.66.47l-2-.67a.5.5 0 0 1-.34-.47V21a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-4Z",
+                    className: _,
+                }),
+            ],
+        }),
+    );
+};

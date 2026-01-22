@@ -1,13 +1,16 @@
-e.exports = {
-    container: "ecf309abcb1a7d5a-container",
-    iframe: "ecf309abcb1a7d5a-iframe",
-    clickShield: "ecf309abcb1a7d5a-clickShield",
-    splashImage: "ecf309abcb1a7d5a-splashImage",
-    splash: "ecf309abcb1a7d5a-splash",
-    avatar: "ecf309abcb1a7d5a-avatar",
-    subheader: "ecf309abcb1a7d5a-subheader",
-    medium: "ecf309abcb1a7d5a-medium",
-    small: "ecf309abcb1a7d5a-small",
-    header: "ecf309abcb1a7d5a-header",
-    buttons: "ecf309abcb1a7d5a-buttons",
-};
+n.d(t, { c: () => o });
+var r = n(627968);
+n(64700);
+var i = n(503698),
+    a = n.n(i),
+    s = n(688196);
+function o(e) {
+    let { className: t, gap: n } = e;
+    return (0, r.jsx)("div", {
+        className: a()(s.y, t),
+        style: {
+            marginTop: n,
+            marginBottom: n,
+        },
+    });
+}

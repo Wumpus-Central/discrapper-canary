@@ -1,25 +1,16 @@
-e.d(n, { Z: () => u });
-var i = e(54381);
-e(473749);
-var l = e(442837),
-    a = e(481060),
-    r = e(41776),
-    s = e(569471),
-    o = e(346479),
-    d = e(388032);
-function u(t, n) {
-    let e = (0, l.e7)([s.Z], () => s.Z.hasJoined(t.id));
-    return (0, l.e7)([r.Z], () => null != t.guild_id && r.Z.isLurking(t.guild_id))
-        ? null
-        : e
-          ? (0, i.jsx)(a.sNh, {
-                id: "leave-thread",
-                label: t.isForumPost() ? d.intl.string(d.t["2LsZdT"]) : d.intl.string(d.t["fa/84m"]),
-                action: () => o.Z.leaveThread(t, n),
-            })
-          : (0, i.jsx)(a.sNh, {
-                id: "join-thread",
-                label: t.isForumPost() ? d.intl.string(d.t.ihLPiO) : d.intl.string(d.t["10kukS"]),
-                action: () => o.Z.joinThread(t, n),
-            });
-}
+e.exports = {
+    kL: "d69a58efb026a125",
+    WH: "b3a53d7969477e0b",
+    Wb: "bc362706e3e392c2",
+    ti: "_53cb6b6926086fc6",
+    wx: "fb6e8e080cabe3bc",
+    qd: "_761e297bf9f291c7",
+    yk: "f82d89eac487f741",
+    Lc: "_364408186f7a9435",
+    fd: "ef8e1fe815c4aa87",
+    Zf: "_5eef72a4d1bb51a8",
+    $g: "_5b043944d6243ed0",
+    $f: "_045e5f2efe971218",
+    S: "_95d5fd77eefe352f",
+    pl: "_777ba7068e35a8fa",
+};

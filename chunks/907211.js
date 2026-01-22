@@ -1,0 +1,5073 @@
+n.d(t, { z: () => i });
+let { Themes: r } = n(680049).zv,
+    i = {
+        SemanticColors: {
+            ANDROID_NAVIGATION_BAR_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_830",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_100",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_24",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_24",
+                    opacity: 1,
+                },
+            },
+            ANDROID_NAVIGATION_SCRIM_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_830",
+                    opacity: 0.5,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_100",
+                    opacity: 0.5,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_24",
+                    opacity: 0.5,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_24",
+                    opacity: 0.5,
+                },
+            },
+            APP_MESSAGE_EMBED_SECONDARY_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 0.7,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.7,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.7,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 0.7,
+                },
+            },
+            BACKGROUND_ACCENT: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_530",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_17",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_15",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "gradient.mid",
+                        opacity: 0.9,
+                        lightness: "*0.5",
+                        saturation: "*0.2",
+                    },
+                    dark: {
+                        color: "gradient.mid",
+                        opacity: 0.8,
+                        lightness: "*0.5",
+                        saturation: "*1.2",
+                    },
+                },
+            },
+            BACKGROUND_BASE_LOW: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_20",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.8,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.7,
+                    },
+                },
+            },
+            BACKGROUND_BASE_LOWER: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_630",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_130",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_20",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.8,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.7,
+                    },
+                },
+            },
+            BACKGROUND_BASE_LOWEST: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_660",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_160",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_23",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.8,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.7,
+                    },
+                },
+            },
+            BACKGROUND_BRAND: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+            },
+            BACKGROUND_FEEDBACK_CRITICAL: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+            },
+            BACKGROUND_FEEDBACK_INFO: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "OPACITY_BLUE_8",
+                    opacity: 0.0784313725490196,
+                },
+                [r.LIGHT]: {
+                    raw: "OPACITY_BLUE_8",
+                    opacity: 0.0784313725490196,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "OPACITY_BLUE_8",
+                    opacity: 0.0784313725490196,
+                },
+                [r.DARKER]: {
+                    raw: "OPACITY_BLUE_8",
+                    opacity: 0.0784313725490196,
+                },
+            },
+            BACKGROUND_FEEDBACK_NOTIFICATION: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+            },
+            BACKGROUND_FEEDBACK_POSITIVE: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "OPACITY_GREEN_8",
+                    opacity: 0.0784313725490196,
+                },
+                [r.LIGHT]: {
+                    raw: "OPACITY_GREEN_8",
+                    opacity: 0.0784313725490196,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "OPACITY_GREEN_8",
+                    opacity: 0.0784313725490196,
+                },
+                [r.DARKER]: {
+                    raw: "OPACITY_GREEN_8",
+                    opacity: 0.0784313725490196,
+                },
+            },
+            BACKGROUND_FEEDBACK_WARNING: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "YELLOW_300",
+                    opacity: 0.1,
+                },
+                [r.LIGHT]: {
+                    raw: "YELLOW_400",
+                    opacity: 0.1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "YELLOW_300",
+                    opacity: 0.1,
+                },
+                [r.DARKER]: {
+                    raw: "YELLOW_300",
+                    opacity: 0.1,
+                },
+            },
+            BACKGROUND_MOD_MUTED: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_500",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_400",
+                    opacity: 0.08,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.16,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.12,
+                },
+                gradient: {
+                    light: {
+                        color: "BLACK_500",
+                        opacity: 0.05,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.05,
+                    },
+                },
+            },
+            BACKGROUND_MOD_NORMAL: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_500",
+                    opacity: 0.16,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_400",
+                    opacity: 0.16,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.2,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.16,
+                },
+            },
+            BACKGROUND_MOD_STRONG: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_500",
+                    opacity: 0.54,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_400",
+                    opacity: 0.24,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.18,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.24,
+                },
+                gradient: {
+                    light: {
+                        color: "BLACK_500",
+                        opacity: 0.1,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.1,
+                    },
+                },
+            },
+            BACKGROUND_MOD_SUBTLE: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_500",
+                    opacity: 0.48,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_400",
+                    opacity: 0.16,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.12,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.16,
+                },
+                gradient: {
+                    light: {
+                        color: "BLACK_500",
+                        opacity: 0.075,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.075,
+                    },
+                },
+            },
+            BACKGROUND_SCRIM: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.7,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.54,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_19",
+                    opacity: 0.75,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.7,
+                },
+                gradient: {
+                    light: {
+                        color: "gradient.start",
+                        saturation: 0.2,
+                        lightness: 0.3,
+                        opacity: 0.7,
+                    },
+                    dark: {
+                        color: "gradient.start",
+                        saturation: 0.25,
+                        lightness: 0.1,
+                        opacity: 0.7,
+                    },
+                },
+            },
+            BACKGROUND_SCRIM_LIGHTBOX: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.92,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.92,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.92,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.92,
+                },
+            },
+            BACKGROUND_SECONDARY_ALT: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_660",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_160",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_17",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_15",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.5,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.5,
+                    },
+                },
+            },
+            BACKGROUND_SURFACE_HIGH: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_800",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_23",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_18",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "gradient.mid",
+                        lightness: 0.9,
+                    },
+                    dark: {
+                        color: "gradient.mid",
+                        lightness: 0.1,
+                    },
+                },
+            },
+            BACKGROUND_SURFACE_HIGHEST: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_800",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_19",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_17",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.5,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.5,
+                    },
+                },
+            },
+            BACKGROUND_TILE_GRADIENT_PINK_END: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "ILLO_PINK_70",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_PINK_30",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_PINK_70",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_PINK_70",
+                    opacity: 0.3,
+                },
+            },
+            BACKGROUND_TILE_GRADIENT_PINK_START: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "ILLO_PINK_50",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_PINK_10",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_PINK_50",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_PINK_50",
+                    opacity: 0.3,
+                },
+            },
+            BADGE_BACKGROUND_BRAND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+            },
+            BADGE_NOTIFICATION_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+            },
+            BG_SURFACE_RAISED: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_560",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_23",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_18",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.5,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.5,
+                    },
+                },
+            },
+            BLACK: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+            },
+            BLUR_FALLBACK: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_700",
+                    opacity: 0.96,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_530",
+                    opacity: 0.96,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_19",
+                    opacity: 0.96,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_17",
+                    opacity: 0.96,
+                },
+            },
+            BLUR_FALLBACK_PRESSED: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_730",
+                    opacity: 0.96,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_560",
+                    opacity: 0.96,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_20",
+                    opacity: 0.96,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_18",
+                    opacity: 0.96,
+                },
+            },
+            BORDER_FEEDBACK_CRITICAL: {
+                category: "border",
+                [r.DARK]: {
+                    raw: "OPACITY_RED_20",
+                    opacity: 0.2,
+                },
+                [r.LIGHT]: {
+                    raw: "OPACITY_RED_24",
+                    opacity: 0.23921568627450981,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "OPACITY_RED_24",
+                    opacity: 0.23921568627450981,
+                },
+                [r.DARKER]: {
+                    raw: "OPACITY_RED_20",
+                    opacity: 0.2,
+                },
+            },
+            BORDER_FOCUS: {
+                category: "border",
+                [r.DARK]: {
+                    raw: "BLUE_345",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLUE_360",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLUE_345",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BLUE_345",
+                    opacity: 1,
+                },
+            },
+            BORDER_MUTED: {
+                category: "border",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 0.03,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.04,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.08,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.06,
+                },
+            },
+            BORDER_STRONG: {
+                category: "border",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 0.16,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.16,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.24,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.22,
+                },
+            },
+            BORDER_SUBTLE: {
+                category: "border",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 0.08,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.08,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.14,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.12,
+                },
+            },
+            BUTTON_DANGER_BACKGROUND_DISABLED: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+            },
+            BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+            },
+            BUTTON_OUTLINE_BRAND_BORDER_ACTIVE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_560",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_560",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_560",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_560",
+                    opacity: 1,
+                },
+            },
+            BUTTON_OUTLINE_PRIMARY_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+            },
+            CARD_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_23",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_18",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.75,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.1,
+                    },
+                },
+            },
+            CARD_GRADIENT_BG: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.4,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.7,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.4,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.4,
+                },
+            },
+            CARD_GRADIENT_PRESSED_BG: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.5,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.5,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.5,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.5,
+                },
+            },
+            CARD_PRIMARY_PRESSED_BG: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_645",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_160",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_25",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_19",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.075,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.05,
+                    },
+                },
+            },
+            CARD_SECONDARY_BG: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_630",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_25",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_19",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.4,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.1,
+                    },
+                },
+            },
+            CARD_SECONDARY_PRESSED_BG: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_645",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_160",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_26",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_21",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.75,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.05,
+                    },
+                },
+            },
+            CHANNEL_ICON: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_400",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_10",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_10",
+                    opacity: 1,
+                },
+            },
+            CHANNELS_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_460",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_9",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_9",
+                    opacity: 1,
+                },
+            },
+            CHANNELTEXTAREA_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_560",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_160",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_23",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_15",
+                    opacity: 1,
+                },
+            },
+            CHAT_BANNER_BG: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_630",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_130",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_20",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: { color: "gradient.start" },
+                    dark: {
+                        color: "gradient.start",
+                        opacity: 1,
+                    },
+                },
+            },
+            CHAT_BORDER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_700",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_200",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_20",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_20",
+                    opacity: 1,
+                },
+            },
+            CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 0.85,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.85,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.85,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 0.85,
+                },
+            },
+            CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 0.7,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.7,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.7,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 0.7,
+                },
+            },
+            CONTEXT_MENU_BACKDROP_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.7,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.54,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.7,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.7,
+                },
+            },
+            CONTROL_BRAND_FOREGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_360",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_360",
+                    opacity: 1,
+                },
+            },
+            CONTROL_BRAND_FOREGROUND_NEW: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_360",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_360",
+                    opacity: 1,
+                },
+            },
+            CONTROL_CONNECTED_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+            },
+            CONTROL_CONNECTED_BORDER_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_400",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+            },
+            CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+            },
+            CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+            },
+            CONTROL_PRIMARY_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+            },
+            CONTROL_PRIMARY_TEXT_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "NEUTRAL_1",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_1",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_1",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_1",
+                    opacity: 1,
+                },
+            },
+            CONTROL_SECONDARY_BACKGROUND_ACTIVE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_400",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_530",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_10",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_10",
+                    opacity: 1,
+                },
+            },
+            CONTROL_SECONDARY_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_460",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_17",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_15",
+                    opacity: 1,
+                },
+            },
+            CONTROL_SECONDARY_BORDER_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+            },
+            CONTROL_SECONDARY_TEXT_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+            },
+            CUSTOM_STATUS_BUBBLE_BG: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_800",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_19",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_17",
+                    opacity: 1,
+                },
+            },
+            EMBED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_630",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_130",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_23",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_18",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.25,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.1,
+                    },
+                },
+            },
+            EMBED_BACKGROUND_ALTERNATE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_200",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_23",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_18",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.25,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.075,
+                    },
+                },
+            },
+            EXPRESSIVE_GRADIENT_BLUE_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_BLUE_60",
+                    opacity: 0.45,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_BLUE_30",
+                    opacity: 0.8,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_BLUE_60",
+                    opacity: 0.25,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_BLUE_60",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_BLUE_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_BLUE_40",
+                    opacity: 0.45,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_BLUE_10",
+                    opacity: 0.8,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_BLUE_40",
+                    opacity: 0.25,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_BLUE_40",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_GREEN_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_GREEN_70",
+                    opacity: 0.45,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_GREEN_30",
+                    opacity: 0.8,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_GREEN_70",
+                    opacity: 0.25,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_GREEN_70",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_GREEN_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_GREEN_50",
+                    opacity: 0.45,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_GREEN_10",
+                    opacity: 0.8,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_GREEN_50",
+                    opacity: 0.25,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_GREEN_50",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_NITRO_GREEN_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_NITRO_BLUE",
+                    opacity: 0.5,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_BLUE_40",
+                    opacity: 0.9,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_NITRO_BLUE",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_NITRO_BLUE",
+                    opacity: 0.4,
+                },
+            },
+            EXPRESSIVE_GRADIENT_NITRO_GREEN_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_GREEN_50",
+                    opacity: 0.5,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_GREEN_10",
+                    opacity: 0.9,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_GREEN_50",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_GREEN_50",
+                    opacity: 0.4,
+                },
+            },
+            EXPRESSIVE_GRADIENT_NITRO_PINK_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_NITRO_BLUE",
+                    opacity: 0.5,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_BLUE_40",
+                    opacity: 0.9,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_NITRO_BLUE",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_NITRO_BLUE",
+                    opacity: 0.4,
+                },
+            },
+            EXPRESSIVE_GRADIENT_NITRO_PINK_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_PINK_60",
+                    opacity: 0.5,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_PINK_30",
+                    opacity: 0.9,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_PINK_60",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_PINK_60",
+                    opacity: 0.4,
+                },
+            },
+            EXPRESSIVE_GRADIENT_PINK_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_PINK_70",
+                    opacity: 0.45,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_PINK_30",
+                    opacity: 0.8,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_PINK_70",
+                    opacity: 0.25,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_PINK_70",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_PINK_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_PINK_50",
+                    opacity: 0.45,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_PINK_10",
+                    opacity: 0.8,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_PINK_50",
+                    opacity: 0.25,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_PINK_50",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_PURPLE_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_PURPLE_60",
+                    opacity: 0.45,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_PURPLE_30",
+                    opacity: 0.8,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_PURPLE_60",
+                    opacity: 0.25,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_PURPLE_60",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_PURPLE_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_PURPLE_40",
+                    opacity: 0.45,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_PURPLE_10",
+                    opacity: 0.8,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_PURPLE_40",
+                    opacity: 0.25,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_PURPLE_40",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_BRONZE_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_ORANGE_70",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_ORANGE_70",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_ORANGE_70",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_ORANGE_70",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_BRONZE_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_ORANGE_30",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_ORANGE_30",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_ORANGE_30",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_ORANGE_30",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_PURPLE_50",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_PURPLE_50",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_PURPLE_50",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_PURPLE_50",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_PURPLE_40",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_PURPLE_40",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_PURPLE_40",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_PURPLE_40",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_EMERALD_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_GREEN_60",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_GREEN_60",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_GREEN_60",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_GREEN_60",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_EMERALD_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_GREEN_40",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_GREEN_40",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_GREEN_40",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_GREEN_40",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_GOLD_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "YELLOW_NEW_41",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "YELLOW_NEW_41",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "YELLOW_NEW_41",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "YELLOW_NEW_41",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_GOLD_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "ILLO_YELLOW_50",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "ILLO_YELLOW_50",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "ILLO_YELLOW_50",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "ILLO_YELLOW_50",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_OPAL_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLUE_NEW_50",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "BLUE_NEW_50",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLUE_NEW_50",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "BLUE_NEW_50",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_OPAL_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "TEAL_NEW_30",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "TEAL_NEW_30",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "TEAL_NEW_30",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "TEAL_NEW_30",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_PLATINUM_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "TEAL_NEW_60",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "TEAL_NEW_60",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "TEAL_NEW_60",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "TEAL_NEW_60",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_PLATINUM_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "TEAL_NEW_20",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "TEAL_NEW_20",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "TEAL_NEW_20",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "TEAL_NEW_20",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_RUBY_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_NEW_80",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_NEW_80",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_NEW_80",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "RED_NEW_80",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_RUBY_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_NEW_44",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_NEW_44",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_NEW_44",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "RED_NEW_44",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_SILVER_END: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "NEUTRAL_58",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_58",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_58",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_58",
+                    opacity: 0.3,
+                },
+            },
+            EXPRESSIVE_GRADIENT_TENURE_BADGE_SILVER_START: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "NEUTRAL_12",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_12",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_12",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_12",
+                    opacity: 0.3,
+                },
+            },
+            GRADIENT_PROGRESS_PILL_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "NEUTRAL_47",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_17",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_66",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_57",
+                    opacity: 1,
+                },
+            },
+            GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_700",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PRIMARY_700",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PRIMARY_700",
+                    opacity: 1,
+                },
+            },
+            GUILD_PROFILE_BANNER_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_660",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_40",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_23",
+                    opacity: 1,
+                },
+            },
+            ICON_FEEDBACK_CRITICAL: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+            },
+            ICON_FEEDBACK_INFO: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLUE_345",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLUE_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLUE_345",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BLUE_345",
+                    opacity: 1,
+                },
+            },
+            ICON_FEEDBACK_NOTIFICATION: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+            },
+            ICON_FEEDBACK_POSITIVE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_330",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_330",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_330",
+                    opacity: 1,
+                },
+            },
+            ICON_FEEDBACK_WARNING: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "YELLOW_400",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+            },
+            ICON_MUTED: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_400",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_400",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_12",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 1,
+                },
+            },
+            ICON_OVERLAY_DARK: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+            },
+            ICON_OVERLAY_LIGHT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "NEUTRAL_1",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_2",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_8",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_2",
+                    opacity: 1,
+                },
+            },
+            ICON_STATUS_DND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+            },
+            ICON_STATUS_IDLE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "YELLOW_400",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+            },
+            ICON_STATUS_OFFLINE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_460",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_9",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_9",
+                    opacity: 1,
+                },
+            },
+            ICON_STATUS_ONLINE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_400",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+            },
+            ICON_STRONG: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_130",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_860",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_5",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+            },
+            ICON_SUBTLE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_330",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_9",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_9",
+                    opacity: 1,
+                },
+            },
+            ICON_TRANSPARENT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "TRANSPARENT",
+                    opacity: 0,
+                },
+                [r.LIGHT]: {
+                    raw: "TRANSPARENT",
+                    opacity: 0,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "TRANSPARENT",
+                    opacity: 0,
+                },
+                [r.DARKER]: {
+                    raw: "TRANSPARENT",
+                    opacity: 0,
+                },
+            },
+            ICON_VOICE_MUTED: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+            },
+            INPUT_BACKGROUND_DEFAULT: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_700",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.08,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_300",
+                    opacity: 0.1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_24",
+                    opacity: 0.85,
+                },
+                gradient: {
+                    light: {
+                        color: "BLACK_500",
+                        opacity: 0.1,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.3,
+                    },
+                },
+            },
+            INPUT_BORDER_DEFAULT: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PLUM_11",
+                    opacity: 0.32,
+                },
+                [r.LIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.32,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.32,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.32,
+                },
+            },
+            INPUT_PLACEHOLDER_TEXT_DEFAULT: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_400",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_460",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_9",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_10",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "BLACK_500",
+                        opacity: 0.6,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.55,
+                    },
+                },
+            },
+            INPUT_TEXT_DEFAULT: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_230",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_6",
+                    opacity: 1,
+                },
+            },
+            INPUT_TEXT_ERROR_DEFAULT: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_230",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_6",
+                    opacity: 1,
+                },
+            },
+            INTERACTIVE_BACKGROUND_ACTIVE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_500",
+                    opacity: 0.48,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_400",
+                    opacity: 0.2,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_13",
+                    opacity: 0.48,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_13",
+                    opacity: 0.48,
+                },
+            },
+            INTERACTIVE_BACKGROUND_HOVER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_500",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_400",
+                    opacity: 0.16,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_13",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_13",
+                    opacity: 0.3,
+                },
+            },
+            INTERACTIVE_BACKGROUND_SELECTED: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_500",
+                    opacity: 0.6,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_400",
+                    opacity: 0.24,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_13",
+                    opacity: 0.6,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_13",
+                    opacity: 0.6,
+                },
+            },
+            INTERACTIVE_ICON_ACTIVE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_860",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_3",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_1",
+                    opacity: 1,
+                },
+            },
+            INTERACTIVE_ICON_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_330",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_6",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_6",
+                    opacity: 1,
+                },
+            },
+            INTERACTIVE_ICON_HOVER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_230",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+            },
+            INTERACTIVE_MUTED: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_500",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_300",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_13",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_13",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "BLACK_500",
+                        opacity: 0.3,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.3,
+                    },
+                },
+            },
+            INTERACTIVE_TEXT_ACTIVE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_860",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_3",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_1",
+                    opacity: 1,
+                },
+            },
+            INTERACTIVE_TEXT_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_330",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_6",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_6",
+                    opacity: 1,
+                },
+            },
+            INTERACTIVE_TEXT_HOVER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_230",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+            },
+            LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_660",
+                    opacity: 0.5,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_130",
+                    opacity: 0.1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PRIMARY_660",
+                    opacity: 0.5,
+                },
+                [r.DARKER]: {
+                    raw: "PRIMARY_660",
+                    opacity: 0.5,
+                },
+            },
+            LEGACY_ANDROID_BLUR_OVERLAY_ULTRA_THIN: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.025,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.25,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.025,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.025,
+                },
+            },
+            LEGACY_BLUR_FALLBACK_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_660",
+                    opacity: 0.975,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_230",
+                    opacity: 0.975,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PRIMARY_660",
+                    opacity: 0.975,
+                },
+                [r.DARKER]: {
+                    raw: "PRIMARY_660",
+                    opacity: 0.975,
+                },
+            },
+            LEGACY_BLUR_FALLBACK_ULTRA_THIN: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.95,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.95,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.95,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.95,
+                },
+            },
+            MENTION_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 0.15,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 0.5,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 0.5,
+                },
+            },
+            MENTION_FOREGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_260",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_560",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_230",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_230",
+                    opacity: 1,
+                },
+            },
+            MESSAGE_AUTOMOD_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_400",
+                    opacity: 0.05,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_400",
+                    opacity: 0.05,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_345",
+                    opacity: 0.08,
+                },
+                [r.DARKER]: {
+                    raw: "RED_345",
+                    opacity: 0.08,
+                },
+            },
+            MESSAGE_AUTOMOD_BACKGROUND_HOVER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_400",
+                    opacity: 0.1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_400",
+                    opacity: 0.1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_400",
+                    opacity: 0.1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_400",
+                    opacity: 0.1,
+                },
+            },
+            MESSAGE_BACKGROUND_HOVER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_900",
+                    opacity: 0.06,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_900",
+                    opacity: 0.03,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_21",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_21",
+                    opacity: 1,
+                },
+            },
+            MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_360",
+                    opacity: 0.08,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_360",
+                    opacity: 0.1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_360",
+                    opacity: 0.08,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_360",
+                    opacity: 0.08,
+                },
+            },
+            MESSAGE_HIGHLIGHT_BACKGROUND_HOVER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_360",
+                    opacity: 0.06,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_360",
+                    opacity: 0.2,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_360",
+                    opacity: 0.06,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_360",
+                    opacity: 0.06,
+                },
+            },
+            MESSAGE_MENTIONED_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "YELLOW_300",
+                    opacity: 0.1,
+                },
+                [r.LIGHT]: {
+                    raw: "YELLOW_300",
+                    opacity: 0.1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "YELLOW_260",
+                    opacity: 0.08,
+                },
+                [r.DARKER]: {
+                    raw: "YELLOW_260",
+                    opacity: 0.08,
+                },
+            },
+            MESSAGE_MENTIONED_BACKGROUND_HOVER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "YELLOW_300",
+                    opacity: 0.08,
+                },
+                [r.LIGHT]: {
+                    raw: "YELLOW_300",
+                    opacity: 0.2,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "YELLOW_300",
+                    opacity: 0.08,
+                },
+                [r.DARKER]: {
+                    raw: "YELLOW_300",
+                    opacity: 0.08,
+                },
+            },
+            MESSAGE_REACTED_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 0.15,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 0.15,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 0.15,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 0.15,
+                },
+            },
+            MESSAGE_REACTED_TEXT_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_200",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_560",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_200",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_200",
+                    opacity: 1,
+                },
+            },
+            MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_630",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_130",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_20",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "gradient.mid",
+                        lightness: 0.925,
+                        saturation: "*0.8",
+                    },
+                    dark: {
+                        color: "gradient.mid",
+                        lightness: 0.12,
+                        saturation: "*0.5",
+                    },
+                },
+            },
+            MOBILE_ALERT_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_20",
+                    opacity: 1,
+                },
+            },
+            MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 0.07,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.12,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.07,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 0.07,
+                },
+            },
+            MOBILE_BACKGROUND_SCRIM_OPAQUE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_19",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+            },
+            MOBILE_COACHMARK_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_800",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_19",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_17",
+                    opacity: 1,
+                },
+            },
+            MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_630",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_130",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_20",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "gradient.end",
+                        lightness: "*1.05",
+                    },
+                    dark: {
+                        color: "gradient.end",
+                        lightness: "*0.95",
+                    },
+                },
+            },
+            MOBILE_TEXT_HEADING_PRIMARY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_130",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_860",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_2",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_3",
+                    opacity: 1,
+                },
+            },
+            MOBILE_TOAST_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_800",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_19",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_17",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "gradient.start",
+                        lightness: 0.7,
+                        saturation: 0.5,
+                        opacity: 0.95,
+                    },
+                    dark: {
+                        color: "gradient.start",
+                        lightness: 0.4,
+                        saturation: 0.5,
+                        opacity: 0.95,
+                    },
+                },
+            },
+            MOBILE_TYPING_INDICATOR_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_630",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_130",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_20",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "gradient.end",
+                        lightness: "*0.9",
+                        saturation: "*0.6",
+                        opacity: 0.9,
+                    },
+                    dark: {
+                        color: "gradient.end",
+                        lightness: "*1.5",
+                        saturation: "*1",
+                        opacity: 0.9,
+                    },
+                },
+            },
+            MODAL_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_16",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_16",
+                    opacity: 1,
+                },
+            },
+            MODAL_FOOTER_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_630",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_130",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_17",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_17",
+                    opacity: 1,
+                },
+            },
+            NAVIGATOR_HEADER_TINT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+            },
+            NOTICE_BACKGROUND_POSITIVE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_NEW_98",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_NEW_1",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_NEW_98",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_NEW_87",
+                    opacity: 1,
+                },
+            },
+            OVERLAY_BACKDROP_LIGHTBOX: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "OPACITY_BLACK_92",
+                    opacity: 0.9215686274509803,
+                },
+                [r.LIGHT]: {
+                    raw: "OPACITY_BLACK_92",
+                    opacity: 0.9215686274509803,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "OPACITY_BLACK_92",
+                    opacity: 0.9215686274509803,
+                },
+                [r.DARKER]: {
+                    raw: "OPACITY_BLACK_92",
+                    opacity: 0.9215686274509803,
+                },
+            },
+            PANEL_BG: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_24",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_20",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.2,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.2,
+                    },
+                },
+            },
+            POLLS_NORMAL_IMAGE_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_660",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PRIMARY_660",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PRIMARY_660",
+                    opacity: 1,
+                },
+            },
+            POLLS_VICTOR_FILL: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_360",
+                    opacity: 0.2,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_400",
+                    opacity: 0.2,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_360",
+                    opacity: 0.2,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_360",
+                    opacity: 0.2,
+                },
+            },
+            POLLS_VOTED_FILL: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 0.2,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 0.2,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 0.2,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 0.2,
+                },
+            },
+            PREMIUM_NITRO_PINK_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PREMIUM_NITRO_PINK_LIGHT",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PREMIUM_NITRO_PINK_DARK",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PREMIUM_NITRO_PINK_LIGHT",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PREMIUM_NITRO_PINK_LIGHT",
+                    opacity: 1,
+                },
+            },
+            PROFILE_GRADIENT_NOTE_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.3,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.3,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.3,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.3,
+                },
+            },
+            PROFILE_GRADIENT_OVERLAY: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.6,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.6,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.6,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.6,
+                },
+            },
+            PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.8,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.8,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.8,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.8,
+                },
+            },
+            PROFILE_GRADIENT_ROLE_PILL_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_660",
+                    opacity: 0.5,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.5,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PRIMARY_660",
+                    opacity: 0.5,
+                },
+                [r.DARKER]: {
+                    raw: "PRIMARY_660",
+                    opacity: 0.5,
+                },
+            },
+            PROFILE_GRADIENT_ROLE_PILL_BORDER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 0.2,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_660",
+                    opacity: 0.2,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.2,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 0.2,
+                },
+            },
+            PROFILE_GRADIENT_SECTION_BOX: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.45,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 0.45,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.45,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.45,
+                },
+            },
+            REDESIGN_ACTIVITY_CARD_BADGE_ICON: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_400",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_10",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_ACTIVE_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_ACTIVE_PRESSED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_460",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_460",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_460",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_460",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_ACTIVE_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_DANGER_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_DESTRUCTIVE_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_DESTRUCTIVE_PRESSED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_460",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_460",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_460",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_460",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_DESTRUCTIVE_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_OVERLAY_ALPHA_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.54,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.54,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.54,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.54,
+                },
+            },
+            REDESIGN_BUTTON_OVERLAY_ALPHA_PRESSED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.64,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.64,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.64,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.64,
+                },
+            },
+            REDESIGN_BUTTON_OVERLAY_ALPHA_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_POSITIVE_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PREMIUM_TIER_2_PINK_FOR_GRADIENTS",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PREMIUM_TIER_2_PINK_FOR_GRADIENTS",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PREMIUM_TIER_2_PINK_FOR_GRADIENTS",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PREMIUM_TIER_2_PINK_FOR_GRADIENTS",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_PREMIUM_PRIMARY_PRESSED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.1,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.1,
+                },
+            },
+            REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_PRIMARY_ALT_BORDER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_400",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_360",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_PRIMARY_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_PRIMARY_OVERLAY_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_PRIMARY_OVERLAY_PRESSED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_230",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_230",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_PRIMARY_OVERLAY_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PRIMARY_860",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_860",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_25",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_25",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_PRIMARY_PRESSED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_560",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_560",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_560",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_560",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_PRIMARY_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_SECONDARY_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_460",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_17",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_15",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.72,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.24,
+                    },
+                },
+            },
+            REDESIGN_BUTTON_SECONDARY_BORDER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 0.08,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.08,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.14,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.12,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0,
+                    },
+                },
+            },
+            REDESIGN_BUTTON_SECONDARY_OVERLAY_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.54,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.54,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.54,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.54,
+                },
+            },
+            REDESIGN_BUTTON_SECONDARY_OVERLAY_PRESSED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.64,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.64,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.64,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.64,
+                },
+            },
+            REDESIGN_BUTTON_SECONDARY_OVERLAY_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_SECONDARY_PRESSED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_500",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_130",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_15",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_13",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.62,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.34,
+                    },
+                },
+            },
+            REDESIGN_BUTTON_SECONDARY_PRESSED_BORDER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "TRANSPARENT",
+                    opacity: 0,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.04,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.08,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.06,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0,
+                    },
+                },
+            },
+            REDESIGN_BUTTON_SECONDARY_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PRIMARY_230",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_6",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_SELECTED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 0.24,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 0.16,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 0.24,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 0.24,
+                },
+            },
+            REDESIGN_BUTTON_SELECTED_PRESSED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 0.28,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 0.24,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 0.28,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 0.28,
+                },
+            },
+            REDESIGN_BUTTON_SELECTED_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_TERTIARY_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_660",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.08,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_300",
+                    opacity: 0.1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.12,
+                },
+                gradient: {
+                    light: {
+                        color: "gradient.secondary",
+                        opacity: 0.4,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.1,
+                    },
+                },
+            },
+            REDESIGN_BUTTON_TERTIARY_PRESSED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_560",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.16,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.2,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.2,
+                },
+                gradient: {
+                    light: {
+                        color: "gradient.secondary",
+                        opacity: 0.3,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.2,
+                    },
+                },
+            },
+            REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PRIMARY_330",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_6",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_5",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_BUTTON_TERTIARY_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PRIMARY_230",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_6",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_CHANNEL_NAME_MUTED_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PRIMARY_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_460",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_10",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_10",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_CHANNEL_NAME_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PRIMARY_130",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_860",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_2",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_3",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_CHAT_INPUT_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_700",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.08,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_300",
+                    opacity: 0.1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.12,
+                },
+            },
+            REDESIGN_IMAGE_BUTTON_PRESSED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 0.08,
+                },
+                [r.LIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.08,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 0.08,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 0.08,
+                },
+            },
+            REDESIGN_INPUT_CONTROL_ACTIVE_BG: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_645",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_17",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_16",
+                    opacity: 1,
+                },
+            },
+            REDESIGN_INPUT_CONTROL_SELECTED: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+            },
+            SPINE_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_530",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_17",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_15",
+                    opacity: 1,
+                },
+            },
+            SPOILER_HIDDEN_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_700",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_200",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_14",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_14",
+                    opacity: 1,
+                },
+            },
+            SPOILER_REVEALED_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_660",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_160",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.16,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.16,
+                },
+            },
+            STAGE_CARD_PILL_BG: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_630",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_25",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_19",
+                    opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "gradient.mid",
+                        lightness: 0.98,
+                    },
+                    dark: {
+                        color: "gradient.mid",
+                        lightness: 0.16,
+                    },
+                },
+            },
+            STATUS_DANGER: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+            },
+            STATUS_ONLINE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_400",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+            },
+            STATUS_POSITIVE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_400",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+            },
+            STATUS_POSITIVE_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+            },
+            STATUS_POSITIVE_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+            },
+            STATUS_SPEAKING: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+            },
+            STATUS_WARNING: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "YELLOW_400",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+            },
+            STATUS_WARNING_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "YELLOW_400",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+            },
+            STATUS_WARNING_TEXT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BLACK",
+                    opacity: 1,
+                },
+            },
+            TEXT_BRAND: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "BRAND_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BRAND_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BRAND_400",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BRAND_360",
+                    opacity: 1,
+                },
+            },
+            TEXT_DEFAULT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PRIMARY_230",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_6",
+                    opacity: 1,
+                },
+            },
+            TEXT_FEEDBACK_CRITICAL: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "RED_345",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_345",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_345",
+                    opacity: 1,
+                },
+            },
+            TEXT_FEEDBACK_INFO: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "BLUE_330",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLUE_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLUE_330",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BLUE_330",
+                    opacity: 1,
+                },
+            },
+            TEXT_FEEDBACK_POSITIVE: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "GREEN_330",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_330",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_330",
+                    opacity: 1,
+                },
+            },
+            TEXT_FEEDBACK_WARNING: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "YELLOW_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+            },
+            TEXT_LINK: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "BLUE_345",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "BLUE_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "BLUE_345",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "BLUE_345",
+                    opacity: 1,
+                },
+            },
+            TEXT_MUTED: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PRIMARY_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_460",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_10",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_10",
+                    opacity: 1,
+                },
+            },
+            TEXT_OVERLAY_DARK: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+            },
+            TEXT_OVERLAY_LIGHT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "NEUTRAL_1",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_2",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_8",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_2",
+                    opacity: 1,
+                },
+            },
+            TEXT_STATUS_DND: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_430",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_400",
+                    opacity: 1,
+                },
+            },
+            TEXT_STATUS_IDLE: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "YELLOW_400",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "YELLOW_300",
+                    opacity: 1,
+                },
+            },
+            TEXT_STATUS_OFFLINE: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PRIMARY_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_460",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_9",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_9",
+                    opacity: 1,
+                },
+            },
+            TEXT_STATUS_ONLINE: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "GREEN_400",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "GREEN_360",
+                    opacity: 1,
+                },
+            },
+            TEXT_STRONG: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PRIMARY_230",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_6",
+                    opacity: 1,
+                },
+            },
+            TEXT_SUBTLE: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PRIMARY_330",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_500",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_8",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_9",
+                    opacity: 1,
+                },
+            },
+            THEME_LOCKED_BLUR_FALLBACK: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_700",
+                    opacity: 0.96,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_700",
+                    opacity: 0.96,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PRIMARY_700",
+                    opacity: 0.96,
+                },
+                [r.DARKER]: {
+                    raw: "PRIMARY_700",
+                    opacity: 0.96,
+                },
+            },
+            THREAD_CHANNEL_SPINE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_500",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_300",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_13",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_13",
+                    opacity: 1,
+                },
+            },
+            VOICE_VIDEO_VIDEO_TILE_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PLUM_17",
+                    opacity: 0.4,
+                },
+                [r.LIGHT]: {
+                    raw: "PLUM_17",
+                    opacity: 0.4,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_17",
+                    opacity: 0.4,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_17",
+                    opacity: 0.4,
+                },
+            },
+            VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "PRIMARY_700",
+                    opacity: 0.48,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_700",
+                    opacity: 0.48,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PRIMARY_700",
+                    opacity: 0.48,
+                },
+                [r.DARKER]: {
+                    raw: "PRIMARY_700",
+                    opacity: 0.48,
+                },
+            },
+            WHITE: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "WHITE",
+                    opacity: 1,
+                },
+            },
+        },
+    };

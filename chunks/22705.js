@@ -1,6 +1,10 @@
-function r() {
-    throw TypeError(
-        "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
-    );
+function r(e) {
+    var t;
+    return null != e
+        ? {
+              id: e.id,
+              name: null != (t = e.name) ? t : "",
+          }
+        : null;
 }
-n.d(t, { Z: () => r });
+n.d(t, { A: () => r });

@@ -1,0 +1,26 @@
+function r(e, t) {
+    if (!e) throw Error(t);
+}
+n.d(t, {
+    bn: () => c,
+    e1: () => u,
+    vA: () => r,
+    wO: () => d,
+});
+let i = 3.4028234663852886e38,
+    a = -3.4028234663852886e38,
+    s = 4294967295,
+    o = 2147483647,
+    l = -2147483648;
+function c(e) {
+    if ("number" != typeof e) throw Error("invalid int 32: " + typeof e);
+    if (!Number.isInteger(e) || e > o || e < l) throw Error("invalid int 32: " + e);
+}
+function u(e) {
+    if ("number" != typeof e) throw Error("invalid uint 32: " + typeof e);
+    if (!Number.isInteger(e) || e > s || e < 0) throw Error("invalid uint 32: " + e);
+}
+function d(e) {
+    if ("number" != typeof e) throw Error("invalid float 32: " + typeof e);
+    if (Number.isFinite(e) && (e > i || e < a)) throw Error("invalid float 32: " + e);
+}

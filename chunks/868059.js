@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"Xypb3z":["Peșteră"],"qRFFLK":["Prăjit la friteuză"],"lFIyM/":["Fantomă"],"fPU01d":["Megafon"],"KN+v77":["Iepuraș spațial"],"kHmvdt":["Cyber Boss"]}',
+e.exports = JSON.parse(
+    '{"Xypb3z":["Caverna"],"qRFFLK":["Deep Fried"],"lFIyM/":["Fantasma"],"fPU01d":["Megafone"],"KN+v77":["Coelho do Espaço"],"kHmvdt":["Chefão Cibernético"]}',
 );

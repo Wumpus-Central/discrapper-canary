@@ -1,6 +1,1 @@
-n.d(t, { Z: () => r });
-var r = {};
-r = {
-    removeButtonLabel: "Fjern",
-    removeDescription: `Tryk p\xe5 Slet for at fjerne tag.`,
-};
+e.exports = "/assets/77c06b9961cb5aee.svg";

@@ -1,1 +1,5 @@
-e.exports = "/assets/56c85c94064c51fc.svg";
+var n = e(693755),
+    o = Object;
+t.exports = function (t) {
+    return o(n(t));
+};

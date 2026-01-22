@@ -1,24 +1,3 @@
-n.d(t, { Z: () => o });
-var r = n(473749),
-    l = n(557816),
-    a = n.n(l),
-    s = n(442837),
-    i = n(597688);
-function o() {
-    let e = (0, s.e7)([i.Z], () => i.Z.products);
-    return (0, r.useCallback)(
-        (t) =>
-            a()(
-                t
-                    .map((t) => {
-                        let n = e.get(t);
-                        return null != n && null != n.variantGroupStoreListingId
-                            ? i.Z.getProductByStoreListingId(n.variantGroupStoreListingId)
-                            : n;
-                    })
-                    .filter((e) => null != e),
-                "storeListingId",
-            ),
-        [e],
-    );
-}
+n.exports = JSON.parse(
+    '{"klSpfs":["Chỉnh Sửa Cài Đặt"],"NzUuLD":["+",[1,"count"]," tin nhắn"],"O+racd":["Không có thông báo nào."],"5H2Jd6":["Hiển thị tất cả"],"Ko8NGn":["Hiện Dấu Trang"],"dcpdhC":["Chọn một tin nhắn để chuyển đến đó."],"VAK+h9":["Chào mừng đến với Trung Tâm Thông Báo của bạn!"]}',
+);

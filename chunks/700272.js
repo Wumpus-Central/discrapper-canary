@@ -1,0 +1,2 @@
+r.d(t, { A: () => n });
+let n = r(947156).A.Symbol;

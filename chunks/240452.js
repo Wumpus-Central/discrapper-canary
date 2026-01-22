@@ -1,17 +1,6 @@
-n.d(t, { w: () => o });
-var r = n(427164),
-    i = n(480218);
-let l = (0, r.le)({
-    name: "2025-12-video-stats-for-nerds",
-    kind: "user",
-    defaultConfig: { enableVideoStatsForNerds: !1 },
-    variations: {
-        0: { enableVideoStatsForNerds: !1 },
-        1: { enableVideoStatsForNerds: !0 },
-    },
-});
-function o(e) {
-    let { location: t } = e,
-        { isInHoldout: n } = i._.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return n ? { enableVideoStatsForNerds: !1 } : l.getConfig({ location: t });
-}
+e.exports = {
+    rf: "_2e3dfa35bcc9c2ea",
+    Ns: "_799484fe51099659",
+    At: "_4e0874876099452c",
+    _8: "_96d96c3340cbe078",
+};

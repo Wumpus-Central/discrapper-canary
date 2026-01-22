@@ -1,20 +1,11 @@
-n.d(i, { default: () => a });
-var s = n(54381);
-n(473749);
-var e = n(159691),
-    r = n(388032);
-function a(t) {
-    let { transitionState: i, onClose: n } = t;
-    return (0, s.jsx)(e.u_l, {
-        title: r.intl.string(r.t.xSV3nU),
-        subtitle: r.intl.string(r.t.jPMGbB),
-        actions: [
-            {
-                text: r.intl.string(r.t["NX+WJN"]),
-                onClick: n,
-            },
-        ],
-        transitionState: i,
-        onClose: n,
+n.d(t, { A: () => s });
+var r = n(311907),
+    i = n(429913),
+    a = n(800828);
+function s(e) {
+    let t = (0, r.bG)([a.A], () => {
+        let t = a.A.getGameRelationshipsForUser(e);
+        if (0 !== t.length) return t[0].applicationId;
     });
+    return (0, i.h)(t);
 }

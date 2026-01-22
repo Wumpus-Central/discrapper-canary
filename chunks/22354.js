@@ -1,6 +1,11 @@
-e.exports = {
-    category: "f06a86efca18b62f-category",
-    categoryDivider: "f06a86efca18b62f-categoryDivider",
-    categoryHeader: "f06a86efca18b62f-categoryHeader",
-    categoryContent: "f06a86efca18b62f-categoryContent",
-};
+n.d(t, { X: () => i });
+let r = (0, n(945810).mj)({
+    name: "2025-11-nitro-badge-upsell",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+function i(e) {
+    let { enabled: t } = r.useConfig({ location: e });
+    return t;
+}

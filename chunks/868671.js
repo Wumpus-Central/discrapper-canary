@@ -1,139 +1,105 @@
-n.d(t, {
-    H: () => I,
-    T: () => v,
-}),
-    n(388685);
-var r = n(473749),
-    i = n(442837),
-    a = n(570140),
-    o = n(439170),
-    s = n(592125),
-    l = n(430824),
-    c = n(451478),
-    u = n(626135),
-    d = n(162461),
-    f = n(71585),
-    p = n(34586),
-    _ = n(69259),
-    m = n(590026),
-    h = n(178762),
-    g = n(206583),
-    E = n(809017),
-    b = n(981631),
-    y = n(388032);
-let O = 3,
-    v = 0,
-    S = 3000;
-function I(e) {
-    let {
-            memberStoreProps: { groups: t, rows: n, version: v },
-            channelId: I,
-            guildId: T,
-        } = e,
-        [C, A] = r.useState(!1),
-        { requestId: N, entries: P, impressionCappedEntryIds: R } = (0, m.Z)(I),
-        w = (0, i.e7)([f.Z], () => f.Z.hidden),
-        D = (0, i.e7)([c.Z], () => c.Z.isFocused()),
-        x = (0, i.e7)([s.Z], () => s.Z.getChannel(I)),
-        L = (0, i.e7)([l.Z], () => l.Z.getGuild(T), [T]),
-        j = (0, p.E)(L),
-        M = null != j && j && (null == x ? void 0 : x.isForumChannel()) === !1,
-        [k, U, G, Z] = r.useMemo(() => {
-            let e;
-            if (null == P || 0 === P.length || null == N || !M) return [t, n, v];
-            let r = O,
-                i = C ? P.length : r,
-                a = P.slice(0, i);
-            e = w
-                ? [{ type: o.so.HIDDEN_CONTENT_INVENTORY }]
-                : a.map((e) => ({
-                      type: o.so.CONTENT_INVENTORY,
-                      entry: e,
-                      requestId: N,
-                  }));
-            let s = () => {
-                    A((e) => {
-                        let t = !e;
-                        return (
-                            u.default.track(b.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
-                                channel_id: I,
-                                guild_id: T,
-                                expanded: t,
-                            }),
-                            t
-                        );
-                    });
-                },
-                l = {
-                    id: E.G,
-                    type: o.so.CONTENT_INVENTORY_GROUP,
-                    key: E.G,
-                    count: e.length,
-                    index: n.length,
-                    title: y.intl.string(y.t["6gwSFY"]),
-                    onToggleExpand: s,
-                    expanded: C,
-                    expandedCount: P.length,
-                    feedHeight: e.map(h.iZ).reduce((e, t) => e + t, 0),
-                };
-            return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [I, P, C, t, T, N, n, v, w, M]),
-        F = r.useRef(0),
-        B = r.useRef(P),
-        V = r.useRef(void 0),
-        H = r.useRef({ impressionCappedEntryIds: R }),
-        Y = r.useCallback(
-            (e) => {
-                var t;
-                let n = Math.floor(e / h.YN),
-                    r = Math.min(null != (t = null == Z ? void 0 : Z.length) ? t : 0, n);
-                F.current = Math.max(F.current, r);
-            },
-            [Z],
-        );
-    return (
-        r.useEffect(() => {
-            B.current = P;
-        }, [P]),
-        r.useEffect(() => {
-            H.current = { impressionCappedEntryIds: R };
-        }, [R]),
-        r.useEffect(
-            () => (
-                (F.current = 0),
-                (V.current = Date.now()),
-                () => {
-                    var e, t;
-                    if (null == N || null == V.current || Date.now() - V.current < S) return;
-                    let n = null != (t = null == (e = B.current) ? void 0 : e.map((e) => e.id)) ? t : [],
-                        r = n.slice(0, F.current);
-                    !w &&
-                        D &&
-                        M &&
-                        ((0, _.e)(b.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
-                            request_id: N,
-                            first_shown_at: V.current,
-                            item_ids: r,
-                            surface_type: g.Kd.GUILD_MEMBER_LIST,
-                            channel_id: I,
-                            guild_id: T,
-                            all_item_ids: n,
-                            impression_capped_item_ids: [...H.current.impressionCappedEntryIds],
-                        }),
-                        (0, d.wm)("useInjectContentInventoryFeed") &&
-                            a.Z.dispatch({
-                                type: "CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS",
-                                itemIds: r,
-                            }));
-                }
-            ),
-            [N, I, T, w, D, M],
-        ),
-        {
-            groups: k,
-            rows: U,
-            version: G,
-            updateMaxRowSeen: Y,
+var r = (function () {
+    function e(e, t) {
+        for (var n = 0; n < t.length; n++) {
+            var r = t[n];
+            (r.enumerable = r.enumerable || !1),
+                (r.configurable = !0),
+                "value" in r && (r.writable = !0),
+                Object.defineProperty(e, r.key, r);
         }
-    );
+    }
+    return function (t, n, r) {
+        return n && e(t.prototype, n), r && e(t, r), t;
+    };
+})();
+function i(e, t) {
+    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
 }
+function a(e, t) {
+    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return t && ("object" == typeof t || "function" == typeof t) ? t : e;
+}
+function s(e, t) {
+    if ("function" != typeof t && null !== t)
+        throw TypeError("Super expression must either be null or a function, not " + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+            value: e,
+            enumerable: !1,
+            writable: !0,
+            configurable: !0,
+        },
+    })),
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+}
+var o = n(698380);
+n(313319);
+var l = n(958554),
+    c = n(82322),
+    u = n(731841);
+e.exports = (function (e) {
+    function t(e, n) {
+        i(this, t);
+        var r = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+        return (
+            (r._a = "number" == typeof e ? new l(e) : e),
+            (r._b = "number" == typeof n ? new l(n) : n),
+            (r._listeners = {}),
+            r
+        );
+    }
+    return (
+        s(t, e),
+        r(t, [
+            {
+                key: "__getValue",
+                value: function () {
+                    return this._a.__getValue() + this._b.__getValue();
+                },
+            },
+            {
+                key: "addListener",
+                value: function (e) {
+                    var t = this;
+                    !this._aListener &&
+                        this._a.addListener &&
+                        (this._aListener = this._a.addListener(function () {
+                            for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
+                        })),
+                        !this._bListener &&
+                            this._b.addListener &&
+                            (this._bListener = this._b.addListener(function () {
+                                for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
+                            }));
+                    var n = guid();
+                    return (this._listeners[n] = e), n;
+                },
+            },
+            {
+                key: "removeListener",
+                value: function (e) {
+                    delete this._listeners[e];
+                },
+            },
+            {
+                key: "interpolate",
+                value: function (e) {
+                    return new u(this, c.create(e));
+                },
+            },
+            {
+                key: "__attach",
+                value: function () {
+                    this._a.__addChild(this), this._b.__addChild(this);
+                },
+            },
+            {
+                key: "__detach",
+                value: function () {
+                    this._a.__removeChild(this), this._b.__removeChild(this);
+                },
+            },
+        ]),
+        t
+    );
+})(o);

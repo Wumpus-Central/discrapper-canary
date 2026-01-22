@@ -1,9 +1,4 @@
-e.exports = {
-    close: "b30d08ac278b31bd-close",
-    modal: "b30d08ac278b31bd-modal",
-    modalContentContainer: "b30d08ac278b31bd-modalContentContainer",
-    contentContainer: "b30d08ac278b31bd-contentContainer",
-    boostImage: "b30d08ac278b31bd-boostImage",
-    footer: "b30d08ac278b31bd-footer",
-    disabled: "b30d08ac278b31bd-disabled",
-};
+function r(e) {
+    for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
+}
+n.d(t, { G: () => r }), n(65821);

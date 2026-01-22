@@ -1,8 +1,20 @@
-e.exports = {
-    card: "_20585df30caf32ab-card",
-    cardBackgroundImage: "_20585df30caf32ab-cardBackgroundImage",
-    cardImage: "_20585df30caf32ab-cardImage",
-    itemIcon: "_20585df30caf32ab-itemIcon",
-    itemIconHeart: "_20585df30caf32ab-itemIconHeart",
-    itemIconShop: "_20585df30caf32ab-itemIconShop",
+n.d(t, { A: () => s });
+var r = n(627968);
+n(64700);
+var i = n(397927),
+    a = n(860028);
+let s = (e) => {
+    let { size: t } = e;
+    return (0, r.jsx)("div", {
+        className: a.G,
+        style: {
+            width: t,
+            height: t,
+        },
+        children: (0, r.jsx)(i.XAi, {
+            size: "xxs",
+            color: "currentColor",
+            className: a.I,
+        }),
+    });
 };

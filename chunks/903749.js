@@ -1,17 +1,55 @@
-t.d(n, { Z: () => o });
-var l = t(512722),
-    a = t.n(l),
-    i = t(442837),
-    r = t(339085),
-    s = t(633302);
-function o(e) {
-    let { emojiId: n, emojiName: t } = e,
-        l = (0, i.e7)([r.ZP], () => (null != n ? r.ZP.getCustomEmojiById(n) : null));
-    if (null != l || null != t)
-        if (null == n)
-            return (
-                a()(null != t, "emojiName must be defined if emojiId is not defined"),
-                s.ZP.convertSurrogateToName(t, !1)
-            );
-        else return null == l ? void 0 : l.name;
-}
+Object.defineProperty(t, "__esModule", { value: !0 }),
+    (t.stringFormatter =
+        t.DEFAULT_REACT_RICH_TEXT_ELEMENTS =
+        t.makeReactFormatter =
+        t.reactFormatter =
+        t.markdownFormatter =
+        t.RichTextNodeType =
+        t.astFormatter =
+            void 0);
+var r = n(286301);
+Object.defineProperty(t, "astFormatter", {
+    enumerable: !0,
+    get: function () {
+        return r.astFormatter;
+    },
+}),
+    Object.defineProperty(t, "RichTextNodeType", {
+        enumerable: !0,
+        get: function () {
+            return r.RichTextNodeType;
+        },
+    });
+var i = n(442904);
+Object.defineProperty(t, "markdownFormatter", {
+    enumerable: !0,
+    get: function () {
+        return i.markdownFormatter;
+    },
+});
+var a = n(533186);
+Object.defineProperty(t, "reactFormatter", {
+    enumerable: !0,
+    get: function () {
+        return a.reactFormatter;
+    },
+}),
+    Object.defineProperty(t, "makeReactFormatter", {
+        enumerable: !0,
+        get: function () {
+            return a.makeReactFormatter;
+        },
+    }),
+    Object.defineProperty(t, "DEFAULT_REACT_RICH_TEXT_ELEMENTS", {
+        enumerable: !0,
+        get: function () {
+            return a.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
+        },
+    });
+var s = n(860500);
+Object.defineProperty(t, "stringFormatter", {
+    enumerable: !0,
+    get: function () {
+        return s.stringFormatter;
+    },
+});

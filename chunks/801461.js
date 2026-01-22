@@ -1,36 +1,23 @@
 n.d(t, {
-    Kq: () => o,
-    RN: () => r,
-    Wq: () => a,
-    en: () => u,
-    hy: () => s,
-    iF: () => i,
-    kt: () => c,
-    nA: () => l,
-});
-let r = /([^A-Za-z0-9_.]+)/g,
-    i = /\.+/g;
-var a = (function (e) {
-        return (
-            (e.NONE = "none"),
-            (e.EDIT_DISPLAY_NAME = "display-name"),
-            (e.EDIT_USERNAME = "username"),
-            (e.PREVIEW = "preview"),
-            (e.SUGGESTION = "suggestion"),
-            e
-        );
-    })({}),
-    o = (function (e) {
-        return (
-            (e.APP_START = "app start"),
-            (e.NOTICE = "notice"),
-            (e.USER_SETTINGS = "user settings"),
-            (e.USER_SETTINGS_EDIT = "user settings edit"),
-            (e.YOU_TAB = "you tab"),
-            e
-        );
-    })({});
-let s = 32,
-    l = "pomelo",
-    c = [1564, 917505, 12644, 65279, 173, 6068, 10240, 4447, 847, 4448, 65440],
-    u = 2000;
+    ZN: () => i,
+    qH: () => r,
+}),
+    n(457529),
+    n(896048),
+    n(321073);
+function r(e, t, n) {
+    let r = [...t];
+    return (
+        "multiple" === e
+            ? null != t.find((e) => e.id === n.id)
+                ? (r = t.filter((e) => e.id !== n.id))
+                : r.push(n)
+            : (r = [n]),
+        r
+    );
+}
+function i() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "listbox",
+        t = arguments.length > 1 ? arguments[1] : void 0;
+    return "".concat(e, "-option-").concat(t);
+}

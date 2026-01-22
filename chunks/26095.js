@@ -1,70 +1,48 @@
-var r = n(165566),
-    i = {
-        childContextTypes: !0,
-        contextType: !0,
-        contextTypes: !0,
-        defaultProps: !0,
-        displayName: !0,
-        getDefaultProps: !0,
-        getDerivedStateFromError: !0,
-        getDerivedStateFromProps: !0,
-        mixins: !0,
-        propTypes: !0,
-        type: !0,
+n.d(t, { A: () => r });
+var i = n(627968);
+n(64700);
+var a = n(397927),
+    l = n(73153);
+let r = {
+    open(e) {
+        l.h.dispatch({
+            type: "SAFETY_HUB_APPEAL_OPEN",
+            classificationId: e,
+        }),
+            (0, a.mMO)(async () => {
+                let { default: t } = await Promise.all([n.e("74327"), n.e("5482")]).then(n.bind(n, 355690));
+                return (n) =>
+                    (0, i.jsx)(
+                        t,
+                        (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    i = Object.keys(n);
+                                "function" == typeof Object.getOwnPropertySymbols &&
+                                    (i = i.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        }),
+                                    )),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: i,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0,
+                                                  })
+                                                : (e[t] = i);
+                                    });
+                            }
+                            return e;
+                        })({ classificationId: e }, n),
+                    );
+            });
     },
-    a = {
-        name: !0,
-        length: !0,
-        prototype: !0,
-        caller: !0,
-        callee: !0,
-        arguments: !0,
-        arity: !0,
+    close() {
+        l.h.dispatch({ type: "SAFETY_HUB_APPEAL_CLOSE" });
     },
-    o = {
-        $$typeof: !0,
-        render: !0,
-        defaultProps: !0,
-        displayName: !0,
-        propTypes: !0,
-    },
-    s = {
-        $$typeof: !0,
-        compare: !0,
-        defaultProps: !0,
-        displayName: !0,
-        propTypes: !0,
-        type: !0,
-    },
-    l = {};
-function c(e) {
-    return r.isMemo(e) ? s : l[e.$$typeof] || i;
-}
-(l[r.ForwardRef] = o), (l[r.Memo] = s);
-var u = Object.defineProperty,
-    d = Object.getOwnPropertyNames,
-    f = Object.getOwnPropertySymbols,
-    p = Object.getOwnPropertyDescriptor,
-    _ = Object.getPrototypeOf,
-    m = Object.prototype;
-function h(e, t, n) {
-    if ("string" != typeof t) {
-        if (m) {
-            var r = _(t);
-            r && r !== m && h(e, r, n);
-        }
-        var i = d(t);
-        f && (i = i.concat(f(t)));
-        for (var o = c(e), s = c(t), l = 0; l < i.length; ++l) {
-            var g = i[l];
-            if (!a[g] && !(n && n[g]) && !(s && s[g]) && !(o && o[g])) {
-                var E = p(t, g);
-                try {
-                    u(e, g, E);
-                } catch (e) {}
-            }
-        }
-    }
-    return e;
-}
-e.exports = h;
+};

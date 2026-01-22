@@ -1,117 +1,83 @@
-n.d(t, { Z: () => m }), n(388685);
-var r = n(54381),
-    i = n(473749),
-    l = n(704215),
-    a = n(481060),
-    o = n(243778),
-    s = n(433280),
-    c = n(34131),
-    u = n(567458),
-    d = n(782959),
-    p = n(933104),
-    f = n(337721),
-    g = n(921944);
-function h(e) {
-    let { renderPopout: t, renderGuildHeaderDropdownButton: n } = e,
-        l = i.useRef(null);
-    return (0, r.jsx)(a.yRy, {
-        targetElementRef: l,
-        renderPopout: () =>
-            (0, r.jsx)("div", {
-                onClick: (e) => e.stopPropagation(),
-                children: "function" == typeof t ? t(l) : t,
-            }),
-        position: "bottom",
-        align: "center",
-        animation: a.yRy.Animation.TRANSLATE,
-        shouldShow: !0,
-        children: () =>
-            (0, r.jsx)("div", {
-                ref: l,
-                children: n(),
-            }),
-    });
+function r(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
 }
-let m = i.memo(function (e) {
-    let { contentTypes: t, guild: n, renderGuildHeaderDropdownButton: i } = e,
-        [a, m] = (0, o.US)(t, g.R.GUILD_HEADER_TOOLTIPS);
-    return (0, r.jsx)(r.Fragment, {
-        children: (() => {
-            switch (a) {
-                case l.z.GUILD_POWERUP_PERKS_COACHMARK:
-                    return (0, r.jsx)(h, {
-                        renderPopout: (e) =>
-                            (0, r.jsx)(p.$h, {
-                                guildId: n.id,
-                                markAsDismissed: m,
-                                channelRowRef: e,
-                            }),
-                        renderGuildHeaderDropdownButton: i,
-                    });
-                case l.z.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK:
-                    return (0, r.jsx)(h, {
-                        renderPopout: (e) =>
-                            (0, r.jsx)(p.r0, {
-                                guildId: n.id,
-                                markAsDismissed: m,
-                                channelRowRef: e,
-                            }),
-                        renderGuildHeaderDropdownButton: i,
-                    });
-                case l.z.GAME_SERVER_HOSTING_BATCH_RELEASE_V1_COACHMARK:
-                    return (0, r.jsx)(h, {
-                        renderPopout: (e) =>
-                            (0, r.jsx)(p.f7, {
-                                guildId: n.id,
-                                markAsDismissed: m,
-                                channelRowRef: e,
-                            }),
-                        renderGuildHeaderDropdownButton: i,
-                    });
-                case l.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
-                    return (0, r.jsx)(h, {
-                        renderPopout: (e) =>
-                            (0, r.jsx)(s.Z, {
-                                guildId: n.id,
-                                markAsDismissed: m,
-                                targetElementRef: e,
-                            }),
-                        renderGuildHeaderDropdownButton: i,
-                    });
-                case l.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
-                    return (0, r.jsx)(h, {
-                        renderPopout: (e) =>
-                            (0, r.jsx)(f.Z, {
-                                guild: n,
-                                markAsDismissed: m,
-                                targetElementRef: e,
-                            }),
-                        renderGuildHeaderDropdownButton: i,
-                    });
-                case l.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
-                    return (0, r.jsx)(h, {
-                        renderPopout: (0, r.jsx)(u.Z, { markAsDismissed: m }),
-                        renderGuildHeaderDropdownButton: i,
-                    });
-                case l.z.MEDIA_CHANNEL_UPSELL:
-                    return (0, r.jsx)(d.Z, {
-                        guildId: n.id,
-                        markAsDismissed: m,
-                        renderTargetElement: i,
-                    });
-                case l.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
-                    return (0, r.jsx)(h, {
-                        renderPopout: (e) =>
-                            (0, r.jsx)(c.Z, {
-                                guildId: n.id,
-                                markAsDismissed: m,
-                                targetElementRef: e,
-                            }),
-                        renderGuildHeaderDropdownButton: i,
-                    });
-                default:
-                    return i();
-            }
-        })(),
-    });
+function i(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            i.forEach(function (t) {
+                r(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function a(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function s(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : a(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+n.d(t, {
+    G9: () => f,
+    Im: () => d,
+    ZQ: () => l,
+    sl: () => u,
+    wJ: () => c,
+    yZ: () => o,
 });
+var o = (function (e) {
+        return (e[(e.BACKGROUND = 0)] = "BACKGROUND"), e;
+    })({}),
+    l = (function (e) {
+        return (
+            (e[(e.OPTION_1 = 0)] = "OPTION_1"),
+            (e[(e.OPTION_2 = 1)] = "OPTION_2"),
+            (e[(e.OPTION_3 = 2)] = "OPTION_3"),
+            (e[(e.OPTION_4 = 3)] = "OPTION_4"),
+            (e[(e.OPTION_7 = 7)] = "OPTION_7"),
+            (e[(e.OPTION_8 = 8)] = "OPTION_8"),
+            (e[(e.OPTION_9 = 9)] = "OPTION_9"),
+            (e[(e.OPTION_10 = 10)] = "OPTION_10"),
+            e
+        );
+    })({});
+let c = [7, 8, 9, 10],
+    u = [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, t, n) => s(i({}, e), { [t]: n }), {}),
+    d = {
+        width: 1280,
+        height: 720,
+    },
+    f = 10485760;

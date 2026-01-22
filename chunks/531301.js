@@ -1,45 +1,26 @@
-n.d(t, { Z: () => c }), n(415506);
-var r = n(473749),
-    i = n(442837),
-    a = n(544891),
-    o = n(570140),
-    s = n(432835),
-    l = n(981631);
-function c(e) {
-    let t = (0, i.e7)([s.Z], () => s.Z.getNote(e));
+n.d(t, { A: () => i }), n(321073);
+var r = n(7584);
+function i(e) {
+    let t = [];
     return (
-        r.useEffect(() => {
-            null == t && u(e);
-        }, [t, e]),
-        null != t
-            ? t
-            : {
-                  loading: !0,
-                  note: null,
-              }
+        e.forEach((e) => {
+            let n = r.Ay.getByName(e);
+            if (
+                null != n &&
+                (t.push({
+                    src: n.url,
+                    colorize: !1,
+                }),
+                n.hasDiversity)
+            )
+                for (let e in n.diversityChildren) {
+                    let r = n.diversityChildren[e];
+                    t.push({
+                        src: r.url,
+                        colorize: !1,
+                    });
+                }
+        }),
+        t
     );
-}
-async function u(e) {
-    o.Z.dispatch({
-        type: "USER_NOTE_LOAD_START",
-        userId: e,
-    });
-    try {
-        let { body: t } = await a.tn.get({
-            url: l.ANM.NOTE(e),
-            oldFormErrors: !0,
-            rejectWithError: !0,
-        });
-        if (t.note_user_id !== e) throw Error("Invalid response from server");
-        o.Z.dispatch({
-            type: "USER_NOTE_UPDATE",
-            id: e,
-            note: t.note,
-        });
-    } catch (t) {
-        o.Z.dispatch({
-            type: "USER_NOTE_UPDATE",
-            id: e,
-        });
-    }
 }

@@ -1,66 +1,27 @@
-o.r(t), o.d(t, { default: () => v }), o(35282), o(65234), o(111804), o(490233), o(97749), o(388685);
-var n = o(54381);
-o(473749);
-var r = o(755721),
-    a = o(481060),
-    l = o(457330),
-    i = o(726542),
-    c = o(77987),
-    s = o(787025),
-    d = o(656649),
-    u = o(388032),
-    f = o(467591);
-let v = (0, c.e)(function (e) {
-    let { match: t } = e,
-        o = t.params.type,
-        c = i.Z.get(o);
-    if (null == c)
-        return (0, n.jsx)(s.G, {
-            children: (0, n.jsx)(a.Text, {
-                className: f.error,
-                variant: "text-md/normal",
-                color: "text-feedback-warning",
-                children: u.intl.string(u.t.WLDKSb),
-            }),
-        });
-    async function v() {
-        var e, t, n;
-        let r = new URLSearchParams(window.location.search),
-            { body: a } = await l.Z.authorize(o, {
-                location: "Connection Intermediate",
-                twoWayLink: null != r.get("two_way_link") ? "true" === r.get("two_way_link") : void 0,
-                twoWayLinkType: null != (e = r.get("two_way_link_type")) ? e : void 0,
-                userCode: null != (t = r.get("two_way_user_code")) ? t : void 0,
-                successRedirect: null != (n = r.get("success_redirect")) ? n : void 0,
-            });
-        window.location = a.url;
-    }
-    return (0, n.jsx)(s.G, {
-        wrapperClassName: f.wrapper,
-        children: (0, n.jsxs)("div", {
-            className: f.root,
-            children: [
-                (0, n.jsx)(d.KJ, {
-                    className: f.logos,
-                    platform: c,
-                }),
-                (0, n.jsx)(a.Heading, {
-                    variant: "text-lg/bold",
-                    className: f.header,
-                    children: u.intl.format(u.t.Pw4vee, { provider: c.name }),
-                }),
-                (0, n.jsx)(a.Text, {
-                    variant: "text-md/normal",
-                    className: f.body,
-                    children: u.intl.format(u.t.rHlSVB, { provider: c.name }),
-                }),
-                (0, n.jsx)(r.zx, {
-                    size: r.zx.Sizes.LARGE,
-                    color: r.zx.Colors.BRAND,
-                    onClick: v,
-                    children: u.intl.string(u.t["+NJGEj"]),
-                }),
-            ],
-        }),
-    });
-});
+e.exports = {
+    Nr: "_7ab67739f3d6e664",
+    SA: "_9d69236db2b9af50",
+    Do: "bda18b7b5003b036",
+    En: "fbb128dc5203baa2",
+    MY: "_9738fc8d2c9fb9bf",
+    Yi: "ef35960f1fc5f353",
+    j0: "_7ba6b4df9527ac6b",
+    TS: "_4b80f8b9621046f7",
+    $f: "e512054a103ad00b",
+    DE: "_7de58c6543911ddc",
+    q9: "b83e9e1d208efe91",
+    my: "d17824ae7d0846f6",
+    OA: "_4b0411568e060a56",
+    DD: "e71d5ccf948b8160",
+    w$: "f245b55cbf964e4c",
+    J5: "_9c6854540eeae181",
+    iQ: "_1d5b369db6121496",
+    h_: "ad8fbebf08549b33",
+    Fj: "_6d3a5ab25e5d3106",
+    Kl: "c19166087b354362",
+    kq: "_2a5fdc7fa0648d3a",
+    JX: "d394f38143ac15be _2a5fdc7fa0648d3a",
+    Li: "_9ec1f971a0fb207a _2a5fdc7fa0648d3a",
+    HI: "_251fd1d37fae5b64",
+    ax: "_765f78001262aabc",
+};

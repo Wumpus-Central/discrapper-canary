@@ -1,73 +1,42 @@
-n.d(t, { Z: () => m });
-var a = n(54381),
-    r = n(473749),
-    i = n(793030),
-    l = n(481060),
-    s = n(972959),
-    o = n(313789),
-    c = n(518596),
-    d = n(981631);
-let u = (0, s.H)(() => ({
-    setting: o.n.ACCOUNT_PANEL,
-    section: d.oAB.ACCOUNT,
-    subsection: void 0,
-}));
-function m() {
-    let e = u.useField("setting"),
-        t = u.useField("section"),
-        n = u.useField("subsection"),
-        s = r.useCallback(() => {
-            (0, c.openUserSettings)(e, {
-                section: t,
-                subsection: n,
-            });
-        }, [e, t, n]),
-        m = r.useMemo(
-            () =>
-                Object.values(o.n).map((e) => ({
-                    id: e,
-                    label: e,
-                    value: e,
-                })),
-            [],
-        ),
-        p = r.useMemo(
-            () =>
-                Object.values(d.oAB).map((e) => ({
-                    id: e,
-                    label: e,
-                    value: e,
-                })),
-            [],
-        );
-    return (0, a.jsxs)(i.C3N, {
-        label: "Settings Navigation Tool",
-        children: [
-            (0, a.jsx)(l.VcW, {
-                label: "Setting (Redesign)",
-                placeholder: "Select a setting",
-                value: e,
-                onSelectionChange: (e) => u.setState({ setting: e }),
-                options: m,
-                selectionMode: "single",
-            }),
-            (0, a.jsx)(l.VcW, {
-                label: "Setting Section (Legacy)",
-                value: t,
-                onSelectionChange: (e) => u.setState({ section: e }),
-                options: p,
-                selectionMode: "single",
-            }),
-            (0, a.jsx)(l.oil, {
-                label: "Setting Subsection (Legacy)",
-                placeholder: "Type a subsection...",
-                onChange: (e) => u.setState({ subsection: e }),
-            }),
-            (0, a.jsx)(i.zxk, {
-                variant: "primary",
-                onClick: s,
-                text: "Open User Settings",
-            }),
-        ],
-    });
+n.d(t, { d: () => a }), n(321073), n(896048);
+var r = n(509973);
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class a {
+    addSample(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        (this.total += e * t),
+            (this.totalWeight += t),
+            this.samples++,
+            r.TDigest.prototype.push.call(this.digest, e, t),
+            this.digest.check_continuous();
+    }
+    getReport() {
+        var e, t, n, r;
+        let i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [25, 50, 75, 90, 95],
+            a = {};
+        for (let e of i) a[e] = null != (r = this.digest.percentile(e / 100)) ? r : 0;
+        return {
+            min: null != (e = this.digest.percentile(0)) ? e : 0,
+            max: null != (t = this.digest.percentile(1)) ? t : 0,
+            count: null != (n = this.digest.size()) ? n : 0,
+            percentiles: a,
+            mean: this.totalWeight > 0 ? this.total / this.totalWeight : 0,
+            samples: this.samples,
+        };
+    }
+    constructor() {
+        i(this, "digest", new r.Digest()), i(this, "total", 0), i(this, "samples", 0), i(this, "totalWeight", 0);
+    }
 }

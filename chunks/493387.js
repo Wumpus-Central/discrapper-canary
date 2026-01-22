@@ -1,190 +1,196 @@
-n.d(t, { Z: () => j }), n(539854);
-var r = n(54381),
-    i = n(473749),
-    a = n(442837),
-    o = n(704215),
-    s = n(907862),
-    l = n(481060),
-    c = n(783097),
-    u = n(335670),
-    d = n(272933),
-    f = n(524995),
-    p = n(812206),
-    _ = n(914498),
-    h = n(515344),
-    m = n(243778),
-    g = n(810568),
-    E = n(168524),
-    b = n(171516),
-    y = n(404577),
-    O = n(375954),
-    v = n(81063),
-    S = n(768581),
-    I = n(758371),
-    T = n(994339),
-    C = n(866449),
-    A = n(206074),
-    N = n(77603),
-    P = n(732067),
-    w = n(328886),
-    R = n(921944),
-    D = n(388032);
-function x(e, t) {
-    var n;
-    let r = (0, b.h)(e),
-        i = (0, a.e7)([p.Z, y.Z], () => {
-            let t = p.Z.getApplication(e);
-            return null != t ? y.Z.getGameByApplication(t) : null;
-        }, [e]);
-    return {
-        openGameProfileModal: (0, E.Z)({
-            location: "Rich Presence Activity Invite Embed",
-            applicationId: null != (n = null == i ? void 0 : i.id) ? n : void 0,
-            source: g.m1.Embed,
-            trackEntryPointImpression: !0,
-            sourceUserId: t,
-        }),
-        launchableAppId: r,
-    };
+n.d(t, { A: () => v }), n(321073), n(896048);
+var r = n(627968),
+    l = n(64700),
+    i = n(503698),
+    a = n.n(i),
+    s = n(615300),
+    o = n(311907),
+    c = n(73939),
+    u = n(582754),
+    d = n(397927),
+    f = n(736653),
+    p = n(531685),
+    h = n(85448),
+    b = n(806931),
+    g = n(254187),
+    m = n(20976),
+    A = n(162253);
+function y(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
 }
-function L(e, t) {
-    var n, r, i, a;
-    let { bot: o } = t,
-        s =
-            (null == (n = e.activity) ? void 0 : n.icon_override) != null
-                ? (0, v.xF)(t.id, null == (r = e.activity) ? void 0 : r.icon_override)
-                : null;
-    return {
-        iconSrc:
-            null != s
-                ? s
-                : S.ZP.getApplicationIconURL({
-                      id: t.id,
-                      icon: t.icon,
-                      bot: o,
-                  }),
-        name: null != (a = null == (i = e.activity) ? void 0 : i.name_override) ? a : t.name,
-    };
-}
-function j(e) {
-    var t, n;
-    let {
-            analyticsLocations: p,
-            application: g,
-            channel: E,
-            currentUserId: b,
-            currentUserPresenceActivity: y,
-            hideParty: v,
-            message: S,
-            onView: j,
-            partyStatusElement: M,
-            presenceActivity: k,
-        } = e,
-        U = (0, c.ye)(g),
-        { iconSrc: G, name: Z } = L(S, g),
-        F =
-            null !=
-            (n = (0, N.v)({
-                messageId: S.id,
-                presenceActivity: k,
-                application: g,
-            }))
-                ? n
-                : void 0,
-        { openGameProfileModal: B, launchableAppId: V } = x(g.id, S.author.id),
-        H = (0, A.Z)({
-            application: g,
-            analyticsLocations: p,
-        }),
-        Y = i.useMemo(() => {
-            if (null != H)
-                return {
-                    label: D.intl.string(D.t["jaYS/h"]),
-                    icon: l.v3n,
-                    trackingArea: _.j_.CLOUD_PLAY,
-                    onClick: H,
-                };
-        }, [H]),
-        W = (0, h.G)(g),
-        K = i.useMemo(() => (null != B ? B : null != W && U ? W : void 0), [U, B, W]),
-        z = u.Z.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
-        { canStartAuthorization: q, hasAlreadyLinked: Q, startAuthorization: X } = (0, f.FG)(g),
-        J = (0, d.C)(X, Q),
-        $ = !(0, T.Z)(k, S, g.id),
-        ee = (0, I.dQ)(Z, null == (t = S.activity) ? void 0 : t.type, $),
-        et = i.useRef(null),
-        en = (0, a.e7)([O.Z], () => O.Z.getMessages(E.id)),
-        er = () => {
-            let e = [];
-            return (
-                (0, C.c)(S.id, en) && q && !Q && z.enabled && e.push(o.z.GAME_INVITE_ACCOUNT_LINK_UPSELL),
-                (0, r.jsx)(m.ZP, {
-                    contentTypes: e,
-                    children: (e) => {
-                        let { visibleContent: t, markAsDismissed: n } = e;
-                        if (t === o.z.GAME_INVITE_ACCOUNT_LINK_UPSELL)
-                            return (0, r.jsx)(s.J2, {
-                                graphic: {
-                                    type: "dynamic",
-                                    component: l.P3w.ACCOUNT_LINK_DISPLAY,
-                                    props: { application: g },
-                                },
-                                title: D.intl.formatToPlainString(D.t["lo6H6+"], { gameName: g.name }),
-                                body: D.intl.string(D.t.qYAzOp),
-                                targetElementRef: et,
-                                caretConfig: { align: "start" },
-                                shouldShow: !0,
-                                gradientColor: "purple",
-                                onRequestClose: () => n(R.L.USER_DISMISS),
-                            });
-                    },
-                })
+let O = {
+    SCALE_MIN: 0.7,
+    SCALE_MAX: 1,
+    DURATION_IN: 300,
+    DURATION_OUT: 170,
+    EASING_IN: s.A.Easing.inOut(s.A.Easing.back()),
+    EASING_OUT: s.A.Easing.quad,
+};
+class j extends l.PureComponent {
+    componentDidMount() {
+        this.componentDidAppear();
+    }
+    componentDidAppear() {
+        let { scaleAnimation: e, widthAnimation: t } = this;
+        e.setValue(1), t.setValue(1);
+    }
+    componentWillEnter(e) {
+        let { scaleAnimation: t, widthAnimation: n } = this;
+        t.setValue(0),
+            n.setValue(0),
+            s.A.parallel([
+                s.A.timing(t, {
+                    toValue: 1,
+                    duration: O.DURATION_IN,
+                    easing: O.EASING_IN,
+                }),
+                s.A.timing(n, {
+                    toValue: 1,
+                    duration: 200,
+                }),
+            ]).start(e);
+    }
+    componentWillLeave(e) {
+        let { scaleAnimation: t, spriteAnimation: n, spriteOpacity: r, widthAnimation: l } = this;
+        r.setValue(1), n.setValue(0);
+        let i = [];
+        for (let e = 0; e < 23; e++)
+            i.push(
+                s.A.timing(n, {
+                    toValue: -26 * e,
+                    duration: 17,
+                }),
             );
+        s.A.sequence([
+            s.A.timing(t, {
+                toValue: 0,
+                duration: O.DURATION_OUT,
+                easing: O.EASING_OUT,
+            }),
+            s.A.sequence(i),
+            s.A.timing(l, {
+                toValue: 0,
+                duration: 125,
+            }),
+        ]).start(e);
+    }
+    getScaleStyle() {
+        let { scaleAnimation: e } = this;
+        return s.A.accelerate({
+            transform: [
+                {
+                    scale: e.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: [O.SCALE_MIN, O.SCALE_MAX],
+                    }),
+                },
+            ],
+            opacity: e,
+        });
+    }
+    getSpriteStyle() {
+        let { spriteAnimation: e, spriteOpacity: t } = this;
+        return {
+            backgroundPosition: e,
+            opacity: t,
         };
-    return $
-        ? (0, r.jsx)(P.Z, {
-              message: S,
-              application: g,
-              applicationName: Z,
-              channel: E,
-              header: ee,
-              currentUserId: b,
-              launchableAppId: V,
-              isEmbeddedApplication: U,
-              tryWithGdnAction: Y,
-              staticBannerSrc: F,
-              onClickContent: K,
-              iconSrc: G,
-              onView: j,
-              presenceActivity: k,
-              analyticsLocations: p,
-              showAuthButton: q && !Q && z.enabled,
-              startAuthorization: J,
-              accountLinkButtonRef: et,
-              renderAccountLinkUpsell: er,
-          })
-        : (0, r.jsx)(w.Z, {
-              message: S,
-              application: g,
-              applicationName: Z,
-              channel: E,
-              header: ee,
-              currentUserId: b,
-              launchableAppId: V,
-              isEmbeddedApplication: U,
-              tryWithGdnAction: Y,
-              staticBannerSrc: F,
-              onClickContent: K,
-              iconSrc: G,
-              onView: j,
-              presenceActivity: k,
-              currentUserPresenceActivity: y,
-              hideParty: v,
-              partyStatusElement: M,
-              analyticsLocations: p,
-              showAuthButton: q && !Q && z.enabled,
-              startAuthorization: J,
-              accountLinkButtonRef: et,
-              renderAccountLinkUpsell: er,
-          });
+    }
+    getWidthStyle() {
+        return {
+            width: this.widthAnimation.interpolate({
+                inputRange: [0, 1],
+                outputRange: ["0px", "".concat(this.props.width, "px")],
+            }),
+        };
+    }
+    render() {
+        let { theme: e, children: t, className: n } = this.props,
+            l = (0, u.Mw)(e),
+            i = a()(g._y, {
+                [A.cp]: l,
+                [A.QB]: !l,
+            });
+        return (0, r.jsxs)(s.A.div, {
+            role: "listitem",
+            className: a()(g.kY, n),
+            style: this.getWidthStyle(),
+            children: [
+                (0, r.jsx)("div", {
+                    className: a()(g.XY, m.xM, m.wq, m.Hu),
+                    children: (0, r.jsx)(s.A.div, {
+                        className: i,
+                        style: this.getSpriteStyle(),
+                    }),
+                }),
+                (0, r.jsx)(s.A.div, {
+                    style: this.getScaleStyle(),
+                    children: t,
+                }),
+            ],
+        });
+    }
+    constructor(...e) {
+        super(...e),
+            y(this, "scaleAnimation", new s.A.Value(0)),
+            y(this, "spriteAnimation", new s.A.Value(0)),
+            y(this, "spriteOpacity", new s.A.Value(0)),
+            y(this, "widthAnimation", new s.A.Value(0));
+    }
+}
+function v(e) {
+    var t;
+    let { participants: n, onContextMenu: l, className: i, onClick: s, width: u, guildId: m } = e,
+        A = (0, f.Ay)(),
+        y = ((t = n.length), ((0, d.FT9)(d._3J.SIZE_80) + 16) * t > u ? d._3J.SIZE_40 : d._3J.SIZE_80),
+        O = (0, o.bG)([p.A], () => p.A.isFocused()),
+        v = n.map((e) => {
+            var t, n;
+            if (e.type !== b.lp.USER) return null;
+            let { user: i, voiceState: a, speaking: o, voiceDb: c = -1 / 0, latched: u, ringing: f } = e;
+            return (0, r.jsx)(
+                j,
+                {
+                    className: g.Wp,
+                    width: (0, d.FT9)(y),
+                    theme: A,
+                    children: (0, r.jsx)(d.sqX, {
+                        "aria-label": i.username,
+                        onClick: (t) => (null == s ? void 0 : s(e, t)),
+                        onContextMenu: (t) => (null == l ? void 0 : l(e, t)),
+                        children: (0, r.jsx)(
+                            h.A,
+                            {
+                                userId: i.id,
+                                src: i.getAvatarURL(m, (0, d.FT9)(y), o && O),
+                                size: y,
+                                muted: null != (t = null == a ? void 0 : a.isVoiceMuted()) && t,
+                                deafen: null != (n = null == a ? void 0 : a.isVoiceDeafened()) && n,
+                                speaking: o,
+                                voiceDb: c,
+                                latched: u,
+                                ringing: f,
+                            },
+                            e.id,
+                        ),
+                    }),
+                },
+                i.id,
+            );
+        });
+    return (0, r.jsx)(c.F, {
+        component: "div",
+        role: "list",
+        className: a()(g.zr, i),
+        children: v,
+    });
 }

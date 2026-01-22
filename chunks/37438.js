@@ -1,31 +1,14 @@
-a.d(i, { Z: () => n });
-var t = a(261168);
-let n = {
-    date: (0, t.Z)({
-        formats: {
-            full: "EEEE d MMMM y",
-            long: "d MMMM y",
-            medium: "d MMM y",
-            short: "dd/MM/y",
+n.d(t, { A: () => s });
+var r = n(420970),
+    i = n(90924),
+    l = n(592653),
+    a = n(652215);
+let s = {
+    [a.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: (0, r.T)(a.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
+        scope: l.WW,
+        handler(e) {
+            let { socket: t } = e;
+            return (0, i.lG)(t.transport), (0, l.Y$)();
         },
-        defaultWidth: "full",
-    }),
-    time: (0, t.Z)({
-        formats: {
-            full: "HH:mm:ss zzzz",
-            long: "HH:mm:ss z",
-            medium: "HH:mm:ss",
-            short: "HH:mm",
-        },
-        defaultWidth: "full",
-    }),
-    dateTime: (0, t.Z)({
-        formats: {
-            full: "{{date}} 'à' {{time}}",
-            long: "{{date}} 'à' {{time}}",
-            medium: "{{date}}, {{time}}",
-            short: "{{date}}, {{time}}",
-        },
-        defaultWidth: "full",
     }),
 };

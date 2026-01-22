@@ -1,0 +1,61 @@
+n.d(t, {
+    A: () => s,
+    M: () => o,
+}),
+    n(896048);
+var r = n(64700),
+    i = n(311907),
+    a = n(775602);
+function s(e) {
+    let [t, n] = r.useState(!1),
+        [s, o] = r.useState(!1),
+        l = (0, i.bG)([a.A], () => a.A.keyboardModeEnabled);
+    r.useEffect(() => {
+        let t = e.current;
+        if (null == t) return;
+        n(!1), o(!1);
+        let r = () => n(!0),
+            i = () => n(!1),
+            a = () => o(!0),
+            s = (e) => {
+                t.contains(e.relatedTarget) || o(!1);
+            };
+        return (
+            t.addEventListener("mouseenter", r),
+            t.addEventListener("mouseleave", i),
+            t.addEventListener("focusin", a),
+            t.addEventListener("focusout", s),
+            () => {
+                t.removeEventListener("mouseenter", r),
+                    t.removeEventListener("mouseleave", i),
+                    t.removeEventListener("focusin", a),
+                    t.removeEventListener("focusout", s);
+            }
+        );
+    }, [e]);
+    let c = l && s;
+    return {
+        isHovering: t,
+        isFocusing: c,
+        isHoveringOrFocusing: t || c,
+    };
+}
+function o(e) {
+    let [t, n] = r.useState(!1);
+    return (
+        r.useEffect(() => {
+            let t = e.current;
+            if (null == t) return;
+            let r = () => n(!0),
+                i = () => n(!1);
+            return (
+                t.addEventListener("mouseenter", r),
+                t.addEventListener("mouseleave", i),
+                () => {
+                    t.removeEventListener("mouseenter", r), t.removeEventListener("mouseleave", i);
+                }
+            );
+        }, [e]),
+        t
+    );
+}

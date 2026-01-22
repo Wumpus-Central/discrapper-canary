@@ -1,3 +1,3 @@
-e.exports = function (e) {
-    return e && e.ownerDocument && e.ownerDocument.defaultView ? e.ownerDocument.defaultView : window;
-};
+n.d(t, { A: () => r });
+var r = {};
+r = { Empty: "Boş" };

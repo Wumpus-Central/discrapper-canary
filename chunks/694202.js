@@ -1,22 +1,12 @@
-n.d(t, { i: () => s });
-var r = n(54381);
-n(473749);
-var i = n(481060),
-    a = n(388032),
-    o = n(436304);
-let s = () =>
-    (0, r.jsxs)("div", {
-        className: o.bar,
-        children: [
-            (0, r.jsx)(i.Text, {
-                variant: "text-xs/bold",
-                color: "text-strong",
-                children: a.intl.string(a.t.md9HmB),
-            }),
-            (0, r.jsx)(i.Text, {
-                variant: "text-xs/medium",
-                color: "text-muted",
-                children: a.intl.string(a.t.fiq8O5),
-            }),
-        ],
-    });
+i.d(e, { u: () => T });
+var n = i(419954),
+    l = i(780964),
+    s = i(345584),
+    r = i(253816),
+    u = i(763656),
+    a = i(352345),
+    o = i(985018);
+let T = (0, n.zZ)(l.X.OVERLAY_ENABLE_CATEGORY, {
+    useSubnavLabel: () => o.intl.string(o.t["/dp6yY"]),
+    buildLayout: () => [r.a, a.z, u.k, s.C],
+});

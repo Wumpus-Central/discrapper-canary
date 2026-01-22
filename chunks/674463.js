@@ -1,1 +1,1 @@
-e.exports = { actionBarButton: "_18c2e91d346707ab-actionBarButton" };
+e.exports = "/assets/b2f5d4d002a97f3a.svg";

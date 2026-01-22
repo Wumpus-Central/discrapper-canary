@@ -1,37 +1,20 @@
-n.d(t, { Z: () => c });
-var l = n(473749),
-    i = n(442837),
-    s = n(345162),
-    r = n(485386),
-    a = n(496675),
-    o = n(594174),
-    u = n(700785),
-    d = n(981631);
-function c(e) {
-    let {
-        sortedRoles: t,
-        currentUser: n,
-        canManageRoles: c,
-    } = (0, i.cj)(
-        [r.Z, o.default, a.Z],
-        () => ({
-            sortedRoles: null != e ? r.Z.getSortedRoles(e.id) : [],
-            currentUser: o.default.getCurrentUser(),
-            canManageRoles: null != e && a.Z.can(d.Plq.MANAGE_ROLES, e),
-        }),
-        [e],
-    );
-    return l.useMemo(() => {
-        if (null == e || null == n || !c) return [];
-        let l = u.e9(e, n.id);
-        return t.filter((t) => {
-            var i;
-            return (
-                !(0, s.fI)(t) &&
-                !t.managed &&
-                (null == (i = t.tags) ? void 0 : i.guild_connections) === void 0 &&
-                !!u.r6(e, n.id, l, t)
-            );
-        });
-    }, [e, n, c, t]);
-}
+e.exports = {
+    RH: "_34e6527fd52678e1",
+    yM: "_1bdfbbf1511cea67",
+    wH: "_9e146c169c64298f",
+    r0: "a3a503d224584b38",
+    BO: "e49a12e3787d6251",
+    AU: "f70582f0bd9f8d29",
+    AI: "_4989563f4953ffad",
+    g3: "_218e8b1c821d23b4",
+    RK: "_86965c2ed3603725",
+    AA: "_4ab84591307b2633",
+    r9: "_545e8f6354ff9373",
+    P0: "_9c7286e9bd455350",
+    Xu: "_6e74f164a2956fbd",
+    VO: "d5aa564409b3f1f4",
+    eQ: "_4259d589da634de9",
+    xl: "_507fdb5c4abda938",
+    k$: "_512942385783d74e",
+    mT: "_122efba68b7a46b6",
+};

@@ -1,1 +1,5 @@
-e.exports = "/assets/2714509af6d39df5.svg";
+n.d(t, { q: () => i });
+var r = {};
+function i() {
+    return r;
+}

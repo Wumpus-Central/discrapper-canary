@@ -1,3 +1,1 @@
-e.exports = function (e) {
-    return "handled" === e || !0 === e;
-};
+e.exports = "/assets/6f53f1e88cb9a14d.svg";

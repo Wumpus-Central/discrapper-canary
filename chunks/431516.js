@@ -1,13 +1,8 @@
-n.d(t, { N: () => s });
-var r = n(399606),
-    i = n(999382),
-    l = n(594174),
-    a = n(981631);
-function s() {
-    let e = (0, r.e7)([l.default], () => l.default.getCurrentUser()),
-        t = (0, r.e7)([i.Z], () => i.Z.getProps().mfaLevel);
-    return {
-        isUserMFAEnabled: (null == e ? void 0 : e.mfaEnabled) === !0,
-        isModerationMFAEnabled: t === a.BpS.ELEVATED,
-    };
+n.d(t, { A: () => s });
+var r = n(397927),
+    l = n(790381),
+    i = n(266080),
+    a = n(544105);
+function s(e) {
+    return null != e ? (0, r.kHD)(e === a.f$.XBOX ? i.A : l.A) : r.qo0;
 }

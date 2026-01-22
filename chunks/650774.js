@@ -1,92 +1,24 @@
-n.d(t, { Z: () => E });
-var r,
-    i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function s(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let l = {},
-    c = {};
-function u(e) {
-    let { guilds: t } = e;
-    (l = {}),
-        t.forEach((e) => {
-            l[e.id] = e.member_count;
-        });
-}
-function d(e) {
-    l = s({}, e.guildMemberCounts);
-}
-function f(e) {
-    let { guild: t } = e;
-    l[t.id] = t.member_count;
-}
-function p(e) {
-    let { guild: t } = e;
-    if (null == l[t.id] && null == c[t.id]) return !1;
-    delete l[t.id], delete c[t.id];
-}
-function _(e) {
-    let { guildId: t, memberCount: n, onlineCount: r } = e,
-        i = !1;
-    return l[t] !== n && ((l[t] = n), (i = !0)), c[t] !== r && ((c[t] = r), (i = !0)), i;
-}
-function m(e) {
-    let { invite: t } = e,
-        { guild: n, approximate_presence_count: r } = t;
-    if ((null == n ? void 0 : n.id) == null || null == r) return !1;
-    c[n.id] = r;
-}
-function h(e) {
-    let { guildId: t, count: n } = e;
-    if (null == t || null == n) return !1;
-    c[t] = n;
-}
-class g extends (r = i.ZP.Store) {
-    getMemberCounts() {
-        return l;
-    }
-    getMemberCount(e) {
-        return null != e ? l[e] : null;
-    }
-    getOnlineCount(e) {
-        return null != e ? c[e] : null;
-    }
-}
-o(g, "displayName", "GuildMemberCountStore");
-let E = new g(a.Z, {
-    CONNECTION_OPEN: u,
-    OVERLAY_INITIALIZE: d,
-    GUILD_CREATE: f,
-    GUILD_DELETE: p,
-    GUILD_MEMBER_LIST_UPDATE: _,
-    INVITE_ACCEPT_SUCCESS: m,
-    INVITE_RESOLVE_SUCCESS: m,
-    ONLINE_GUILD_MEMBER_COUNT_UPDATE: h,
-});
+var r = n(834647),
+    a = n(675879),
+    o = n(798325),
+    i = RangeError,
+    s = String.fromCharCode,
+    l = String.fromCodePoint,
+    c = a([].join);
+r(
+    {
+        target: "String",
+        stat: !0,
+        arity: 1,
+        forced: !!l && 1 !== l.length,
+    },
+    {
+        fromCodePoint: function (e) {
+            for (var t, n = [], r = arguments.length, a = 0; r > a; ) {
+                if (((t = +arguments[a++]), o(t, 1114111) !== t)) throw new i(t + " is not a valid code point");
+                n[a] = t < 65536 ? s(t) : s(((t -= 65536) >> 10) + 55296, (t % 1024) + 56320);
+            }
+            return c(n, "");
+        },
+    },
+);

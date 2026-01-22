@@ -1,8 +1,0 @@
-n.d(t, { Z: () => o });
-var r = n(442837),
-    i = n(485386),
-    a = n(584825);
-function o(e, t) {
-    let n = (0, a.jO)(t);
-    return (0, r.e7)([i.Z], () => (null != e && null != n ? i.Z.getRole(e, n.role_id) : void 0));
-}

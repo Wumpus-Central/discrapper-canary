@@ -1,370 +1,1308 @@
-n.d(t, { Z: () => i });
-var r = n(321294);
-let i = {
-    iptc: {
-        256: {
-            name: "Model Version",
-            description: (e) => ((e[0] << 8) + e[1]).toString(),
-        },
-        261: {
-            name: "Destination",
-            repeatable: !0,
-        },
-        276: {
-            name: "File Format",
-            description: (e) => ((e[0] << 8) + e[1]).toString(),
-        },
-        278: {
-            name: "File Format Version",
-            description: (e) => ((e[0] << 8) + e[1]).toString(),
-        },
-        286: "Service Identifier",
-        296: "Envelope Number",
-        306: "Product ID",
-        316: "Envelope Priority",
-        326: {
-            name: "Date Sent",
-            description: a,
-        },
-        336: {
-            name: "Time Sent",
-            description: o,
-        },
-        346: {
-            name: "Coded Character Set",
-            description: s,
-            encoding_name: s,
-        },
-        356: "UNO",
-        376: {
-            name: "ARM Identifier",
-            description: (e) => ((e[0] << 8) + e[1]).toString(),
-        },
-        378: {
-            name: "ARM Version",
-            description: (e) => ((e[0] << 8) + e[1]).toString(),
-        },
-        512: {
-            name: "Record Version",
-            description: (e) => ((e[0] << 8) + e[1]).toString(),
-        },
-        515: "Object Type Reference",
-        516: "Object Attribute Reference",
-        517: "Object Name",
-        519: "Edit Status",
-        520: {
-            name: "Editorial Update",
-            description: (e) => ("01" === (0, r.SI)(e) ? "Additional Language" : "Unknown"),
-        },
-        522: "Urgency",
-        524: {
-            name: "Subject Reference",
-            repeatable: !0,
-            description: (e) => {
-                let t = (0, r.SI)(e).split(":");
-                return t[2] + (t[3] ? "/" + t[3] : "") + (t[4] ? "/" + t[4] : "");
-            },
-        },
-        527: "Category",
-        532: {
-            name: "Supplemental Category",
-            repeatable: !0,
-        },
-        534: "Fixture Identifier",
-        537: {
-            name: "Keywords",
-            repeatable: !0,
-        },
-        538: {
-            name: "Content Location Code",
-            repeatable: !0,
-        },
-        539: {
-            name: "Content Location Name",
-            repeatable: !0,
-        },
-        542: "Release Date",
-        547: "Release Time",
-        549: "Expiration Date",
-        550: "Expiration Time",
-        552: "Special Instructions",
-        554: {
-            name: "Action Advised",
-            description: (e) => {
-                let t = (0, r.SI)(e);
-                return "01" === t
-                    ? "Object Kill"
-                    : "02" === t
-                      ? "Object Replace"
-                      : "03" === t
-                        ? "Object Append"
-                        : "04" === t
-                          ? "Object Reference"
-                          : "Unknown";
-            },
-        },
-        557: {
-            name: "Reference Service",
-            repeatable: !0,
-        },
-        559: {
-            name: "Reference Date",
-            repeatable: !0,
-        },
-        562: {
-            name: "Reference Number",
-            repeatable: !0,
-        },
-        567: {
-            name: "Date Created",
-            description: a,
-        },
-        572: {
-            name: "Time Created",
-            description: o,
-        },
-        574: {
-            name: "Digital Creation Date",
-            description: a,
-        },
-        575: {
-            name: "Digital Creation Time",
-            description: o,
-        },
-        577: "Originating Program",
-        582: "Program Version",
-        587: {
-            name: "Object Cycle",
-            description: (e) => {
-                let t = (0, r.SI)(e);
-                return "a" === t ? "morning" : "p" === t ? "evening" : "b" === t ? "both" : "Unknown";
-            },
-        },
-        592: {
-            name: "By-line",
-            repeatable: !0,
-        },
-        597: {
-            name: "By-line Title",
-            repeatable: !0,
-        },
-        602: "City",
-        604: "Sub-location",
-        607: "Province/State",
-        612: "Country/Primary Location Code",
-        613: "Country/Primary Location Name",
-        615: "Original Transmission Reference",
-        617: "Headline",
-        622: "Credit",
-        627: "Source",
-        628: "Copyright Notice",
-        630: {
-            name: "Contact",
-            repeatable: !0,
-        },
-        632: "Caption/Abstract",
-        634: {
-            name: "Writer/Editor",
-            repeatable: !0,
-        },
-        637: {
-            name: "Rasterized Caption",
-            description: (e) => e,
-        },
-        642: "Image Type",
-        643: {
-            name: "Image Orientation",
-            description: (e) => {
-                let t = (0, r.SI)(e);
-                return "P" === t ? "Portrait" : "L" === t ? "Landscape" : "S" === t ? "Square" : "Unknown";
-            },
-        },
-        647: "Language Identifier",
-        662: {
-            name: "Audio Type",
-            description: (e) => {
-                let t = (0, r.SI)(e),
-                    n = t.charAt(0),
-                    i = t.charAt(1),
-                    a = "";
-                return ("1" === n ? (a += "Mono") : "2" === n && (a += "Stereo"),
-                "A" === i
-                    ? (a += ", actuality")
-                    : "C" === i
-                      ? (a += ", question and answer session")
-                      : "M" === i
-                        ? (a += ", music, transmitted by itself")
-                        : "Q" === i
-                          ? (a += ", response to a question")
-                          : "R" === i
-                            ? (a += ", raw sound")
-                            : "S" === i
-                              ? (a += ", scener")
-                              : "V" === i
-                                ? (a += ", voicer")
-                                : "W" === i && (a += ", wrap"),
-                "" !== a)
-                    ? a
-                    : t;
-            },
-        },
-        663: {
-            name: "Audio Sampling Rate",
-            description: (e) => parseInt((0, r.SI)(e), 10) + " Hz",
-        },
-        664: {
-            name: "Audio Sampling Resolution",
-            description: (e) => {
-                let t = parseInt((0, r.SI)(e), 10);
-                return t + (1 === t ? " bit" : " bits");
-            },
-        },
-        665: {
-            name: "Audio Duration",
-            description: (e) => {
-                let t = (0, r.SI)(e);
-                return t.length >= 6 ? t.substr(0, 2) + ":" + t.substr(2, 2) + ":" + t.substr(4, 2) : t;
-            },
-        },
-        666: "Audio Outcue",
-        698: "Short Document ID",
-        699: "Unique Document ID",
-        700: "Owner ID",
-        712: {
-            name: (e) => (2 === e.length ? "ObjectData Preview File Format" : "Record 2 destination"),
-            description: (e) => {
-                if (2 === e.length) {
-                    let t = (e[0] << 8) + e[1];
-                    if (0 === t) return "No ObjectData";
-                    if (1 === t) return "IPTC-NAA Digital Newsphoto Parameter Record";
-                    if (2 === t) return "IPTC7901 Recommended Message Format";
-                    else if (3 === t) return "Tagged Image File Format (Adobe/Aldus Image data)";
-                    else if (4 === t) return "Illustrator (Adobe Graphics data)";
-                    else if (5 === t) return "AppleSingle (Apple Computer Inc)";
-                    else if (6 === t) return "NAA 89-3 (ANPA 1312)";
-                    else if (7 === t) return "MacBinary II";
-                    else if (8 === t) return "IPTC Unstructured Character Oriented File Format (UCOFF)";
-                    else if (9 === t) return "United Press International ANPA 1312 variant";
-                    else if (10 === t) return "United Press International Down-Load Message";
-                    else if (11 === t) return "JPEG File Interchange (JFIF)";
-                    else if (12 === t) return "Photo-CD Image-Pac (Eastman Kodak)";
-                    else if (13 === t) return "Microsoft Bit Mapped Graphics File [*.BMP]";
-                    else if (14 === t) return "Digital Audio File [*.WAV] (Microsoft & Creative Labs)";
-                    else if (15 === t) return "Audio plus Moving Video [*.AVI] (Microsoft)";
-                    else if (16 === t) return "PC DOS/Windows Executable Files [*.COM][*.EXE]";
-                    else if (17 === t) return "Compressed Binary File [*.ZIP] (PKWare Inc)";
-                    else if (18 === t) return "Audio Interchange File Format AIFF (Apple Computer Inc)";
-                    else if (19 === t) return "RIFF Wave (Microsoft Corporation)";
-                    else if (20 === t) return "Freehand (Macromedia/Aldus)";
-                    else if (21 === t) return 'Hypertext Markup Language "HTML" (The Internet Society)';
-                    else if (22 === t) return "MPEG 2 Audio Layer 2 (Musicom), ISO/IEC";
-                    else if (23 === t) return "MPEG 2 Audio Layer 3, ISO/IEC";
-                    else if (24 === t) return "Portable Document File (*.PDF) Adobe";
-                    else if (25 === t) return "News Industry Text Format (NITF)";
-                    else if (26 === t) return "Tape Archive (*.TAR)";
-                    else if (27 === t) return "Tidningarnas Telegrambyrå NITF version (TTNITF DTD)";
-                    else if (28 === t) return "Ritzaus Bureau NITF version (RBNITF DTD)";
-                    else if (29 === t) return "Corel Draw [*.CDR]";
-                    return `Unknown format ${t}`;
-                }
-                return (0, r.SI)(e);
-            },
-        },
-        713: {
-            name: "ObjectData Preview File Format Version",
-            description: (e, t) => {
-                let n = {
-                        "00": { "00": "1" },
-                        "01": {
-                            "01": "1",
-                            "02": "2",
-                            "03": "3",
-                            "04": "4",
-                        },
-                        "02": { "04": "4" },
-                        "03": {
-                            "01": "5.0",
-                            "02": "6.0",
-                        },
-                        "04": { "01": "1.40" },
-                        "05": { "01": "2" },
-                        "06": { "01": "1" },
-                        11: { "01": "1.02" },
-                        20: {
-                            "01": "3.1",
-                            "02": "4.0",
-                            "03": "5.0",
-                            "04": "5.5",
-                        },
-                        21: { "02": "2.0" },
-                    },
-                    i = (0, r.SI)(e);
-                if (t["ObjectData Preview File Format"]) {
-                    let e = (0, r.SI)(t["ObjectData Preview File Format"].value);
-                    if (n[e] && n[e][i]) return n[e][i];
-                }
-                return i;
-            },
-        },
-        714: "ObjectData Preview Data",
-        1802: {
-            name: "Size Mode",
-            description: (e) => e[0].toString(),
-        },
-        1812: {
-            name: "Max Subfile Size",
-            description: (e) => {
-                let t = 0;
-                for (let n = 0; n < e.length; n++) t = (t << 8) + e[n];
-                return t.toString();
-            },
-        },
-        1882: {
-            name: "ObjectData Size Announced",
-            description: (e) => {
-                let t = 0;
-                for (let n = 0; n < e.length; n++) t = (t << 8) + e[n];
-                return t.toString();
-            },
-        },
-        1887: {
-            name: "Maximum ObjectData Size",
-            description: (e) => {
-                let t = 0;
-                for (let n = 0; n < e.length; n++) t = (t << 8) + e[n];
-                return t.toString();
-            },
-        },
-    },
-};
-function a(e) {
-    let t = (0, r.SI)(e);
-    return t.length >= 8 ? t.substr(0, 4) + "-" + t.substr(4, 2) + "-" + t.substr(6, 2) : t;
+n.d(t, { A: () => _ }), n(896048), n(638769);
+var a = n(627968),
+    l = n(64700),
+    i = n(110259),
+    r = n(205693),
+    s = n(397927),
+    o = n(847599),
+    c = n(598653),
+    d = n(71393),
+    u = n(287809),
+    m = n(166403),
+    p = n(203982),
+    h = n(652215),
+    f = n(204925),
+    x = n(985018),
+    b = n(815907),
+    g = n(661251);
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            a = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (a = a.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            a.forEach(function (t) {
+                var a;
+                (a = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: a,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = a);
+            });
+    }
+    return e;
 }
-function o(e) {
-    let t = (0, r.SI)(e),
-        n = t;
+function j(e, t) {
     return (
-        t.length >= 6 &&
-            ((n = t.substr(0, 2) + ":" + t.substr(2, 2) + ":" + t.substr(4, 2)),
-            11 === t.length && (n += t.substr(6, 1) + t.substr(7, 2) + ":" + t.substr(9, 2))),
-        n
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
     );
 }
-function s(e) {
-    let t = (0, r.SI)(e);
-    if ("\x1B%G" === t) return "UTF-8";
-    if ("\x1B%5" === t) return "Windows-1252";
-    if ("\x1B%/G" === t) return "UTF-8 Level 1";
-    if ("\x1B%/H" === t) return "UTF-8 Level 2";
-    if ("\x1B%/I" === t) return "UTF-8 Level 3";
-    else if ("\x1B/A" === t) return "ISO-8859-1";
-    else if ("\x1B/B" === t) return "ISO-8859-2";
-    else if ("\x1B/C" === t) return "ISO-8859-3";
-    else if ("\x1B/D" === t) return "ISO-8859-4";
-    else if ("\x1B/@" === t) return "ISO-8859-5";
-    else if ("\x1B/G" === t) return "ISO-8859-6";
-    else if ("\x1B/F" === t) return "ISO-8859-7";
-    else if ("\x1B/H" === t) return "ISO-8859-8";
-    return "Unknown";
+let y = {
+    EmailEnterModal: async () => {
+        let { default: e } = await n.e("29232").then(n.bind(n, 180275));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    headerText: x.intl.string(x.t.ZLRYGU),
+                    confirmButtonText: x.intl.string(x.t.PDTjLN),
+                    confirmButtonVariant: "primary",
+                }),
+            );
+    },
+    EmailPincodeModal: async () => {
+        let { default: e } = await n.e("19840").then(n.bind(n, 79779));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    headerText: x.intl.string(x.t.H3Q7U8),
+                    onFormSubmit: () => {},
+                    onResend: () => {},
+                    onSuccess: () => {},
+                    confirmButtonText: x.intl.string(x.t["13ofGu"]),
+                    impression: { impressionName: i.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
+                }),
+            );
+    },
+    AgeVerificationRetryModal: async () => {
+        let { default: e } = await n.e("18467").then(n.bind(n, 297102));
+        return (t) => (0, a.jsx)(e, j(v({}, t), { entryPoint: o.q1.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL }));
+    },
+    ExistingUserAgeGatePrompt: async () => {
+        let { default: e } = await Promise.all([n.e("10136"), n.e("63090")]).then(n.bind(n, 776971));
+        return (t) => (0, a.jsx)(e, j(v({}, t), { source: f.w_.NSFW_SERVER }));
+    },
+    ExistingUserAgeGateUnderage: async () => {
+        let { default: e } = await n.e("80959").then(n.bind(n, 784578));
+        return (t) => (0, a.jsx)(e, v({}, t));
+    },
+    NewUserAgeGate: async () => {
+        let { default: e } = await n.e("1143").then(n.bind(n, 284778));
+        return (t) => (0, a.jsx)(e, v({}, t));
+    },
+    AutomatedUnderageAppealModal: async () => {
+        let { default: e } = await n.e("93530").then(n.bind(n, 244321));
+        return (t) => (0, a.jsx)(e, j(v({}, t), { classificationId: "123" }));
+    },
+    AutomodRaidResolveModal: async () => {
+        let { default: e } = await n.e("7133").then(n.bind(n, 580812));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    guildId: "123",
+                    messageId: null,
+                }),
+            );
+    },
+    AutomodUserProfileQuarantineAlert: async () => {
+        let { default: e } = await n.e("52343").then(n.bind(n, 725034));
+        return (t) => (0, a.jsx)(e, j(v({}, t), { guildId: "123" }));
+    },
+    PhoneVerificationModal: async () => {
+        let { default: e } = await Promise.resolve().then(n.bind(n, 515258));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                v(
+                    {
+                        error: null,
+                        working: !1,
+                        validPhone: !1,
+                    },
+                    t,
+                ),
+            );
+    },
+    VoiceSettingsModal: async () => {
+        let { default: e } = await n.e("96531").then(n.bind(n, 880510));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    mediaEngineContext: r.x.DEFAULT,
+                    subtitle: "Devtools subtitle",
+                }),
+            );
+    },
+    DynamicGraphicDemo: async () => {
+        let { DynamicGraphicComponent: e } = await Promise.resolve().then(n.bind(n, 116833));
+        return (t) =>
+            (0, a.jsx)(
+                s.kpP,
+                j(v({}, t), {
+                    title: "Dynamic Graphics Demo",
+                    subtitle: "This modal demonstrates the dynamic graphics system",
+                    graphic: {
+                        type: "dynamic",
+                        component: e.DEMO,
+                        aspectRatio: "6/4",
+                        props: { text: "Dynamic Content Loaded!" },
+                    },
+                    actions: [
+                        {
+                            variant: "primary",
+                            text: "Close",
+                            onClick: t.onClose,
+                        },
+                    ],
+                    children: (0, a.jsx)("div", {
+                        children:
+                            "This modal showcases the new dynamic graphics system where components can be loaded dynamically based on enum values, providing type safety while maintaining runtime flexibility.",
+                    }),
+                }),
+            );
+    },
+    OverlayDisabledSurveyModal: async () => {
+        let { default: e } = await n.e("82318").then(n.bind(n, 387101)),
+            { OverlayToggledClientSettingType: t } = await Promise.resolve().then(n.bind(n, 810412));
+        return (n) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, n), {
+                    clientSettingType: t.LEGACY_GAME,
+                    gameId: "123456789",
+                }),
+            );
+    },
+    PremiumSubscriptionPauseModal: async () => {
+        let { PremiumSubscriptionPauseModalSelect: e } = await n.e("80347").then(n.bind(n, 318998)),
+            { CancellationContext: t } = await Promise.resolve().then(n.bind(n, 916974)),
+            { PremiumTypes: i } = await Promise.resolve().then(n.bind(n, 788868)),
+            r = {
+                id: "test-subscription-id",
+                userId: "test-user-id",
+                status: 1,
+                currency: "usd",
+                currentPeriodStart: new Date(),
+                currentPeriodEnd: new Date(Date.now() + 2592000000),
+                items: [
+                    {
+                        id: "test-item-id",
+                        planId: "511651880837840896",
+                        quantity: 1,
+                    },
+                ],
+                paymentSourceId: "test-payment-source",
+                renewalMutations: null,
+                hasActiveTrial: !1,
+            },
+            s = l.forwardRef((n, s) => {
+                let [o, c] = l.useState(null);
+                return (0, a.jsx)(t.Provider, {
+                    value: {
+                        setStep: () => {},
+                        premiumType: i.TIER_2,
+                        onClose: n.onClose,
+                        transitionState: n.transitionState,
+                        premiumSubscription: r,
+                        analyticsLocations: [],
+                        analyticsLocation: void 0,
+                        confettiCanvas: null,
+                        churnUserDiscountOffer: null,
+                        isFetchingChurnDiscountOffer: !1,
+                        fullPrice: "$9.99",
+                        discountedPrice: void 0,
+                        planId: "511651880837840896",
+                        paymentsBlocked: !1,
+                        renewalInvoice: null,
+                        renewalInvoiceDetails: null,
+                        handleCancellation: async () => {},
+                        applyOffer: async () => {},
+                        pauseDuration: o,
+                        setPauseDuration: c,
+                    },
+                    children: (0, a.jsx)(e, {}),
+                });
+            });
+        return (s.displayName = "PremiumSubscriptionPauseModalWrapper"), (e) => (0, a.jsx)(s, v({}, e));
+    },
+    NewMemberActionModal: async () => {
+        let { default: e } = await Promise.all([n.e("54569"), n.e("24900")]).then(n.bind(n, 251632)),
+            { NewMemberActionTypes: t } = await Promise.resolve().then(n.bind(n, 374084)),
+            l = {
+                channelId: "123456789",
+                title: "Welcome to the server!",
+                description: "Say hello in the welcome channel",
+                actionType: t.CHAT,
+                emoji: null,
+                icon: null,
+            };
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    guildId: "123456789",
+                    action: l,
+                    onSave: (e, t, n) => {
+                        console.log("NewMemberActionModal onSave:", {
+                            action: e,
+                            iconData: t,
+                            shouldSaveIcon: n,
+                        });
+                    },
+                    onDelete: () => {
+                        console.log("NewMemberActionModal onDelete");
+                    },
+                }),
+            );
+    },
+    PlayStationModal: async () => {
+        let { default: e } = await n.e("71282").then(n.bind(n, 315337)),
+            t = await Promise.resolve().then(n.bind(n, 643501)),
+            { createChannelRecord: l } = await Promise.resolve().then(n.bind(n, 95701)),
+            i = l({
+                id: "123456789",
+                name: "test-voice-channel",
+                type: 2,
+                guild_id: "987654321",
+                position: 0,
+                permissionOverwrites: {},
+                parent_id: void 0,
+                nsfw: !1,
+                topic: void 0,
+                lastMessageId: void 0,
+                bitrate: 64000,
+                userLimit: 0,
+                rateLimitPerUser: 0,
+                icon: null,
+                ownerId: null,
+                application_id: null,
+                lastPinTimestamp: null,
+                rtcRegion: null,
+                videoQualityMode: null,
+                messageCount: 0,
+                memberCount: 0,
+                threadMetadata: void 0,
+                member: void 0,
+                defaultAutoArchiveDuration: void 0,
+                flags: 0,
+                totalMessageSent: 0,
+                availableTags: [],
+                appliedTags: [],
+                defaultReactionEmoji: null,
+                defaultThreadRateLimitPerUser: 0,
+                defaultSortOrder: null,
+                defaultForumLayout: 0,
+            }),
+            r = {
+                "device-1": {
+                    id: "device-1",
+                    name: "PS5 - Living Room",
+                    platform: "playstation",
+                },
+                "device-2": {
+                    id: "device-2",
+                    name: "PS5 - Bedroom",
+                    platform: "playstation",
+                },
+                "device-3": {
+                    id: "device-3",
+                    name: "PS4 - Office",
+                    platform: "playstation",
+                },
+            },
+            s = (n) => {
+                let l = t.default.getDevicesForPlatform,
+                    s = t.default.getFetchingDevices,
+                    o = t.default.getLastSelectedDeviceByPlatform,
+                    c = t.default.getAwaitingRemoteSessionInfo;
+                (t.default.getDevicesForPlatform = (e) => (e === h.fg2.PLAYSTATION ? r : l.call(t.default, e))),
+                    (t.default.getFetchingDevices = (e) => e !== h.fg2.PLAYSTATION && s.call(t.default, e)),
+                    (t.default.getLastSelectedDeviceByPlatform = (e) =>
+                        e === h.fg2.PLAYSTATION ? "device-1" : o.call(t.default, e)),
+                    (t.default.getAwaitingRemoteSessionInfo = () => null);
+                let d = n.onClose;
+                return (
+                    (n.onClose = async () => {
+                        (t.default.getDevicesForPlatform = l),
+                            (t.default.getFetchingDevices = s),
+                            (t.default.getLastSelectedDeviceByPlatform = o),
+                            (t.default.getAwaitingRemoteSessionInfo = c),
+                            await d();
+                    }),
+                    (0, a.jsx)(
+                        e,
+                        j(v({}, n), {
+                            channel: i,
+                            platform: h.fg2.PLAYSTATION,
+                        }),
+                    )
+                );
+            };
+        return (s.displayName = "PlayStationModalWrapper"), s;
+    },
+    GameDetectionReportModal: async () => {
+        let { default: e } = await Promise.all([n.e("27495"), n.e("81865")]).then(n.bind(n, 651930));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    detectedActivity: {
+                        application_id: "123456789",
+                        name: "Test Game",
+                    },
+                }),
+            );
+    },
+    AppealIngestionModal: async () => {
+        let { default: e } = await Promise.all([n.e("74327"), n.e("99484")]).then(n.bind(n, 355690));
+        return (t) => (0, a.jsx)(e, j(v({}, t), { classificationId: "123456789" }));
+    },
+    CreateTagModal: async () => {
+        let { default: e } = await n.e("47326").then(n.bind(n, 950989));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    channelId: "123456789",
+                    guildId: "987654321",
+                }),
+            );
+    },
+    CreateTagModalEdit: async () => {
+        let { default: e } = await n.e("47326").then(n.bind(n, 950989)),
+            t = {
+                id: "tag-123",
+                name: "Bug Report",
+                emojiId: "123456789",
+                emojiName: "\uD83D\uDC1B",
+                moderated: !0,
+            };
+        return (n) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, n), {
+                    channelId: "123456789",
+                    guildId: "987654321",
+                    tag: t,
+                }),
+            );
+    },
+    ConfirmModal: async () => {
+        let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 158954));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    title: "Confirm Action",
+                    subtitle: "Are you sure you want to perform this action? This action cannot be undone.",
+                    confirmText: "Confirm",
+                    onConfirm: () => console.log("ConfirmModal: Confirmed"),
+                    onCancel: () => console.log("ConfirmModal: Cancelled"),
+                }),
+            );
+    },
+    AlertModal: async () => {
+        let { default: e } = await n.e("10919").then(n.bind(n, 556506));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    title: "Alert",
+                    body: "This is an alert message with a single action.",
+                    confirmText: "OK",
+                    onConfirm: () => console.log("AlertModal: Confirmed"),
+                }),
+            );
+    },
+    AlertModalWithCancel: async () => {
+        let { default: e } = await n.e("10919").then(n.bind(n, 556506));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    title: "Confirm Action",
+                    body: "Are you sure you want to proceed with this action?",
+                    confirmText: "Yes",
+                    cancelText: "No",
+                    onConfirm: () => console.log("AlertModalWithCancel: Confirmed"),
+                    onCancel: () => console.log("AlertModalWithCancel: Cancelled"),
+                }),
+            );
+    },
+    AlertModalWithSecondary: async () => {
+        let { default: e } = await n.e("10919").then(n.bind(n, 556506));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    title: "Settings Change",
+                    body: "This will change your account settings.",
+                    confirmText: "Apply",
+                    cancelText: "Cancel",
+                    secondaryConfirmText: "Don't show this again",
+                    onConfirm: () => console.log("AlertModalWithSecondary: Confirmed"),
+                    onCancel: () => console.log("AlertModalWithSecondary: Cancelled"),
+                    onConfirmSecondary: () => console.log("AlertModalWithSecondary: Secondary action confirmed"),
+                }),
+            );
+    },
+    GuildDisableCommunicationModal: async () => {
+        let {
+                Button: e,
+                Text: t,
+                Heading: l,
+                Checkbox: i,
+                ButtonGroup: r,
+            } = await Promise.resolve().then(n.bind(n, 397927)),
+            { DisableCommunicationDuration: s, getFriendlyDurationString: o } = await Promise.resolve().then(
+                n.bind(n, 200700),
+            ),
+            c = await Promise.resolve().then(n.t.bind(n, 64700, 19)),
+            d = "TestUser";
+        function u(n) {
+            let [u, m] = c.useState(s.DURATION_60_SEC),
+                [p, h] = c.useState(""),
+                [f, x] = c.useState(!1),
+                [b, g] = c.useState(!1),
+                v = [
+                    {
+                        value: s.DURATION_60_SEC,
+                        label: o(s.DURATION_60_SEC),
+                    },
+                    {
+                        value: s.DURATION_5_MIN,
+                        label: o(s.DURATION_5_MIN),
+                    },
+                    {
+                        value: s.DURATION_10_MIN,
+                        label: o(s.DURATION_10_MIN),
+                    },
+                    {
+                        value: s.DURATION_1_HOUR,
+                        label: o(s.DURATION_1_HOUR),
+                    },
+                    {
+                        value: s.DURATION_1_DAY,
+                        label: o(s.DURATION_1_DAY),
+                    },
+                    {
+                        value: s.DURATION_1_WEEK,
+                        label: o(s.DURATION_1_WEEK),
+                    },
+                ],
+                j = c.useCallback(async () => {
+                    x(!0),
+                        console.log("GuildDisableCommunicationModal: Timing out user", {
+                            user: d,
+                            duration: o(u),
+                            reason: null != p ? p : "No reason provided",
+                            resolveFlag: b,
+                        }),
+                        await new Promise((e) => setTimeout(e, 1000)),
+                        x(!1),
+                        n.onClose();
+                }, [u, p, b, n]);
+            return (0, a.jsxs)("div", {
+                style: {
+                    padding: "20px",
+                    maxWidth: "500px",
+                },
+                children: [
+                    (0, a.jsxs)(l, {
+                        variant: "heading-lg/semibold",
+                        className: "mb-2",
+                        children: ["Disable Communication for ", d, "#", "0001"],
+                    }),
+                    (0, a.jsx)(t, {
+                        variant: "text-sm/normal",
+                        className: "mb-4",
+                        color: "text-subtle",
+                        children: "This will temporarily disable the user's ability to communicate in this server.",
+                    }),
+                    (0, a.jsxs)("div", {
+                        className: "mb-4",
+                        children: [
+                            (0, a.jsx)(l, {
+                                variant: "heading-sm/semibold",
+                                className: "mb-2",
+                                children: "Duration",
+                            }),
+                            (0, a.jsx)(r, {
+                                children: v.map((t) =>
+                                    (0, a.jsx)(
+                                        e,
+                                        {
+                                            variant: u === t.value ? "primary" : "secondary",
+                                            size: "sm",
+                                            text: t.label,
+                                            onClick: () => m(t.value),
+                                        },
+                                        t.value,
+                                    ),
+                                ),
+                            }),
+                        ],
+                    }),
+                    (0, a.jsxs)("div", {
+                        className: "mb-4",
+                        children: [
+                            (0, a.jsx)(l, {
+                                variant: "heading-sm/semibold",
+                                className: "mb-2",
+                                children: "Reason (Optional)",
+                            }),
+                            (0, a.jsx)("textarea", {
+                                value: p,
+                                onChange: (e) => h(e.target.value),
+                                placeholder: "Enter reason for timeout...",
+                                style: {
+                                    width: "100%",
+                                    minHeight: "80px",
+                                    padding: "8px",
+                                    border: "1px solid var(--border-subtle)",
+                                    borderRadius: "4px",
+                                    backgroundColor: "var(--background-base-low)",
+                                    color: "var(--text-strong)",
+                                    resize: "vertical",
+                                },
+                            }),
+                        ],
+                    }),
+                    (0, a.jsx)("div", {
+                        className: "mb-4",
+                        children: (0, a.jsx)(i, {
+                            checked: b,
+                            onChange: g,
+                            label: "Resolve associated mod report",
+                        }),
+                    }),
+                    (0, a.jsxs)("div", {
+                        style: {
+                            display: "flex",
+                            gap: "8px",
+                            justifyContent: "flex-end",
+                        },
+                        children: [
+                            (0, a.jsx)(e, {
+                                variant: "secondary",
+                                text: "Cancel",
+                                onClick: n.onClose,
+                            }),
+                            (0, a.jsx)(e, {
+                                variant: "primary",
+                                text: "Timeout User",
+                                onClick: j,
+                                disabled: f,
+                            }),
+                        ],
+                    }),
+                ],
+            });
+        }
+        return (e) => (0, a.jsx)(u, v({}, e));
+    },
+    GuildPowerupDeactivateModal: async () => {
+        let { Button: e, Text: t, Heading: l, Checkbox: i } = await Promise.resolve().then(n.bind(n, 397927)),
+            r = await Promise.resolve().then(n.t.bind(n, 64700, 19)),
+            s = "Level 3 Server Boost",
+            o = 200,
+            c = 60,
+            d = 8;
+        function u(n) {
+            let [u, m] = r.useState(!1),
+                [p, h] = r.useState(!1),
+                f = r.useCallback(async () => {
+                    h(!0),
+                        console.log("GuildPowerupDeactivateModal: Deactivating powerup", {
+                            powerup: s,
+                            guildId: "123456789",
+                        }),
+                        await new Promise((e) => setTimeout(e, 2000)),
+                        h(!1),
+                        n.onClose();
+                }, [n]);
+            return (0, a.jsxs)("div", {
+                style: {
+                    padding: "20px",
+                    maxWidth: "500px",
+                },
+                children: [
+                    (0, a.jsxs)(l, {
+                        variant: "heading-lg/semibold",
+                        className: "mb-2",
+                        children: ["Deactivate ", s],
+                    }),
+                    (0, a.jsxs)(t, {
+                        variant: "text-sm/normal",
+                        className: "mb-4",
+                        color: "text-subtle",
+                        children: [
+                            "This will remove the ",
+                            s,
+                            " from your server and disable all associated features.",
+                        ],
+                    }),
+                    (0, a.jsxs)("div", {
+                        className: "mb-4",
+                        style: {
+                            backgroundColor: "var(--background-base-lower)",
+                            padding: "16px",
+                            borderRadius: "8px",
+                            border: "1px solid var(--border-subtle)",
+                        },
+                        children: [
+                            (0, a.jsx)(l, {
+                                variant: "heading-sm/semibold",
+                                className: "mb-2",
+                                children: "Current Features",
+                            }),
+                            (0, a.jsxs)("div", {
+                                style: {
+                                    display: "grid",
+                                    gridTemplateColumns: "1fr 1fr",
+                                    gap: "8px",
+                                },
+                                children: [
+                                    (0, a.jsxs)(t, {
+                                        variant: "text-sm/normal",
+                                        color: "text-subtle",
+                                        children: ["\u2022 ", o, " emoji slots"],
+                                    }),
+                                    (0, a.jsxs)(t, {
+                                        variant: "text-sm/normal",
+                                        color: "text-subtle",
+                                        children: ["\u2022 ", c, " sticker slots"],
+                                    }),
+                                    (0, a.jsxs)(t, {
+                                        variant: "text-sm/normal",
+                                        color: "text-subtle",
+                                        children: ["\u2022 ", d, " sound slots"],
+                                    }),
+                                    (0, a.jsx)(t, {
+                                        variant: "text-sm/normal",
+                                        color: "text-subtle",
+                                        children: "\u2022 Custom server banner",
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                    (0, a.jsxs)("div", {
+                        className: "mb-4",
+                        style: {
+                            backgroundColor: "var(--background-danger)",
+                            padding: "16px",
+                            borderRadius: "8px",
+                            border: "1px solid var(--border-feedback-critical)",
+                        },
+                        children: [
+                            (0, a.jsxs)(t, {
+                                variant: "eyebrow",
+                                color: "text-feedback-critical",
+                                className: "mb-2",
+                                children: [
+                                    (0, a.jsx)("span", {
+                                        role: "img",
+                                        "aria-label": "Warning",
+                                        children: "\u26A0️",
+                                    }),
+                                    " ",
+                                    "Warning",
+                                ],
+                            }),
+                            (0, a.jsx)(t, {
+                                variant: "text-sm/medium",
+                                color: "text-feedback-critical",
+                                children:
+                                    "Deactivating this powerup will immediately remove all Level 3 features from your server. Members will lose access to custom emojis, stickers, and other premium features. This action cannot be undone.",
+                            }),
+                        ],
+                    }),
+                    (0, a.jsx)("div", {
+                        className: "mb-4",
+                        children: (0, a.jsx)(i, {
+                            checked: u,
+                            onChange: m,
+                            label: "I understand that deactivating this powerup will remove all Level 3 features from my server",
+                            labelType: "secondary",
+                        }),
+                    }),
+                    (0, a.jsxs)("div", {
+                        style: {
+                            display: "flex",
+                            gap: "8px",
+                            justifyContent: "flex-end",
+                        },
+                        children: [
+                            (0, a.jsx)(e, {
+                                variant: "secondary",
+                                text: "Cancel",
+                                onClick: n.onClose,
+                            }),
+                            (0, a.jsx)(e, {
+                                variant: "critical-primary",
+                                text: "Deactivate Level",
+                                onClick: f,
+                                disabled: !u,
+                                loading: p,
+                            }),
+                        ],
+                    }),
+                ],
+            });
+        }
+        return (e) => (0, a.jsx)(u, v({}, e));
+    },
+    DataHarvestModal: async () => {
+        let { default: e } = await n.e("98171").then(n.bind(n, 481398));
+        return (t) =>
+            (0, a.jsx)(e, {
+                modalProps: t,
+                onConfirm: (e) => {
+                    console.log("DataHarvestModal: Requesting data export for:", e),
+                        setTimeout(() => {
+                            console.log("DataHarvestModal: Data export request submitted successfully");
+                        }, 1000);
+                },
+            });
+    },
+    EnableCommunityModal: async () => {
+        let { default: e } = await Promise.all([n.e("20115"), n.e("2118")]).then(n.bind(n, 939006));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    onClose: async () => {
+                        console.log("EnableCommunityModal: Closed"), await t.onClose();
+                    },
+                }),
+            );
+    },
+    DeprivateModal: async () => {
+        let e = (await Promise.all([n.e("8018"), n.e("77238")]).then(n.bind(n, 147696))).default;
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    guildId: "123456789012345678",
+                    startingChannelId: "987654321098765432",
+                }),
+            );
+    },
+    CameraPreviewModal: async () => {
+        let { default: e } = await n.e("10534").then(n.bind(n, 308229));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    videoEnabled: !1,
+                    onEnable: () => console.log("Camera enabled"),
+                }),
+            );
+    },
+    CameraPreviewModalWithVideo: async () => {
+        let { default: e } = await n.e("10534").then(n.bind(n, 308229));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    videoEnabled: !0,
+                    onEnable: () => console.log("Camera enabled"),
+                }),
+            );
+    },
+    ModeratorReportResolveConfirmModal: async () => {
+        let { default: e } = await n.e("92682").then(n.bind(n, 390897));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    handleResolveFlag: () => console.log("ModeratorReportResolveConfirmModal: Flag resolved"),
+                }),
+            );
+    },
+    SelectFriendsModal: async () => {
+        let { default: e, SelectFriendsModalScreens: t } = await Promise.resolve().then(n.bind(n, 303682));
+        return (n) =>
+            (0, a.jsx)(e, {
+                onClose: async () => {
+                    console.log("SelectFriendsModal: Closed"), await n.onClose();
+                },
+                startingScreen: t.SELECT_FRIENDS,
+            });
+    },
+    SelectFriendsModalReminder: async () => {
+        let { default: e, SelectFriendsModalScreens: t } = await Promise.resolve().then(n.bind(n, 303682));
+        return (n) =>
+            (0, a.jsx)(e, {
+                onClose: async () => {
+                    console.log("SelectFriendsModalReminder: Closed"), await n.onClose();
+                },
+                startingScreen: t.REMINDER,
+            });
+    },
+    AddFavoriteChannelModal: async () => {
+        let { default: e } = await n.e("59839").then(n.bind(n, 889186));
+        return (t) => (0, a.jsx)(e, j(v({}, t), { parentId: null }));
+    },
+    ActivityShareMomentModal: async () => {
+        let { default: e } = await Promise.all([n.e("28136"), n.e("21743"), n.e("58697")]).then(n.bind(n, 190930));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    applicationId: "123456789",
+                    mediaUrl: "https://picsum.photos/400/300.jpg",
+                }),
+            );
+    },
+    CallUserConfirmationModal: async () => {
+        let { default: e } = await n.e("19106").then(n.bind(n, 279673));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    onSubmit: () => {
+                        console.log("CallUserConfirmationModal: Call confirmed"), t.onClose();
+                    },
+                }),
+            );
+    },
+    OptInReorderAttemptModal: async () => {
+        let { default: e } = await n.e("24848").then(n.bind(n, 354643));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), { onClose: () => (console.log("OptInReorderAttemptModal: Modal closed"), t.onClose()) }),
+            );
+    },
+    GuildAntiRaidReportModal: async () => {
+        let { default: e } = await n.e("4075").then(n.bind(n, 59430));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    guildId: "123456789",
+                    onClose: () => (console.log("GuildAntiRaidReportModal: Modal closed"), t.onClose()),
+                }),
+            );
+    },
+    ConsentCheckBoxModal: async () => {
+        let { VoidConfirmModal: e } = await Promise.resolve().then(n.bind(n, 640238)),
+            { Text: t, Heading: l } = await Promise.resolve().then(n.bind(n, 397927)),
+            i = await Promise.resolve().then(n.t.bind(n, 64700, 19));
+        function r(n) {
+            let [r, o] = i.useState(!1),
+                [c, d] = i.useState(!1);
+            return (0, a.jsx)(
+                e,
+                j(v({}, n), {
+                    header: "Consent CheckBox Examples",
+                    confirmText: "Close",
+                    cancelText: "",
+                    onConfirm: () => (console.log("ConsentCheckBoxModal: Modal closed"), n.onClose()),
+                    onCancel: () => {},
+                    children: (0, a.jsxs)("div", {
+                        style: {
+                            padding: "20px",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "20px",
+                        },
+                        children: [
+                            (0, a.jsxs)("div", {
+                                children: [
+                                    (0, a.jsx)(l, {
+                                        variant: "heading-md/semibold",
+                                        style: { marginBottom: "12px" },
+                                        children: "Terms of Service Consent",
+                                    }),
+                                    (0, a.jsx)(s.Checkbox, {
+                                        label: "I agree to Discord's Terms of Service and Privacy Policy",
+                                        checked: r,
+                                        onChange: (e) => o(e),
+                                        labelType: "secondary",
+                                    }),
+                                    (0, a.jsxs)(t, {
+                                        variant: "text-sm/normal",
+                                        color: "text-subtle",
+                                        style: { marginTop: "8px" },
+                                        children: ["Consent status: ", r ? "Agreed" : "Not agreed"],
+                                    }),
+                                ],
+                            }),
+                            (0, a.jsxs)("div", {
+                                children: [
+                                    (0, a.jsx)(l, {
+                                        variant: "heading-md/semibold",
+                                        style: { marginBottom: "12px" },
+                                        children: "Promotional Email Consent",
+                                    }),
+                                    (0, a.jsx)(s.Checkbox, {
+                                        label: "I would like to receive promotional emails from Discord about new features, events, and other updates.",
+                                        checked: c,
+                                        onChange: (e) => d(e),
+                                        labelType: "secondary",
+                                    }),
+                                    (0, a.jsxs)(t, {
+                                        variant: "text-sm/normal",
+                                        color: "text-subtle",
+                                        style: { marginTop: "8px" },
+                                        children: ["Promo consent status: ", c ? "Opted in" : "Not opted in"],
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                }),
+            );
+        }
+        return (r.displayName = "ConsentCheckBoxModalContent"), (e) => (0, a.jsx)(r, v({}, e));
+    },
+    GuildRaidLockdownFeedbackModal: async () => {
+        let { default: e } = await n.e("46313").then(n.bind(n, 336496));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    guildId: "123456789",
+                    onClose: () => (console.log("GuildRaidLockdownFeedbackModal: Modal closed"), t.onClose()),
+                }),
+            );
+    },
+    GuildVerificationLevelModal: async () => {
+        let { default: e } = await n.e("70232").then(n.bind(n, 313003)),
+            { dangerouslyConstructGuildRecordFromUntypedObject: t } = await Promise.resolve().then(n.bind(n, 860689)),
+            l = t({
+                id: "123456789",
+                name: "Test Server",
+                description: "A test server for development",
+                ownerId: "987654321",
+                icon: null,
+                splash: null,
+                banner: null,
+                homeHeader: null,
+                features: [],
+                preferredLocale: "en-US",
+                afkChannelId: null,
+                afkTimeout: 300,
+                systemChannelId: null,
+                verificationLevel: 2,
+                joinedAt: new Date(),
+                defaultMessageNotifications: 0,
+                mfaLevel: 0,
+                application_id: null,
+                explicitContentFilter: 0,
+                vanityURLCode: null,
+                premiumTier: 0,
+                premiumSubscriberCount: 0,
+                premiumProgressBarEnabled: !1,
+                systemChannelFlags: 0,
+                discoverySplash: null,
+                rulesChannelId: null,
+                safetyAlertsChannelId: null,
+                publicUpdatesChannelId: null,
+                maxStageVideoChannelUsers: 10,
+                maxVideoChannelUsers: 25,
+                maxMembers: 500000,
+                nsfwLevel: 0,
+                ownerConfiguredContentLevel: null,
+                hubType: null,
+                latestOnboardingQuestionId: null,
+                profile: null,
+                premiumFeatures: null,
+                moderatorReporting: null,
+            });
+        return (t) => (0, a.jsx)(e, j(v({}, t), { guild: l }));
+    },
+    GuildVerificationLevelModalCommunity: async () => {
+        let { default: e } = await n.e("70232").then(n.bind(n, 313003)),
+            { dangerouslyConstructGuildRecordFromUntypedObject: t } = await Promise.resolve().then(n.bind(n, 860689)),
+            { GuildFeatures: l } = await Promise.resolve().then(n.bind(n, 652215)),
+            i = t({
+                id: "123456789",
+                name: "Test Community Server",
+                description: "A test community server for development",
+                ownerId: "987654321",
+                icon: null,
+                splash: null,
+                banner: null,
+                homeHeader: null,
+                features: [l.COMMUNITY],
+                preferredLocale: "en-US",
+                afkChannelId: null,
+                afkTimeout: 300,
+                systemChannelId: null,
+                verificationLevel: 3,
+                joinedAt: new Date(),
+                defaultMessageNotifications: 0,
+                mfaLevel: 0,
+                application_id: null,
+                explicitContentFilter: 0,
+                vanityURLCode: null,
+                premiumTier: 0,
+                premiumSubscriberCount: 0,
+                premiumProgressBarEnabled: !1,
+                systemChannelFlags: 0,
+                discoverySplash: null,
+                rulesChannelId: null,
+                safetyAlertsChannelId: null,
+                publicUpdatesChannelId: null,
+                maxStageVideoChannelUsers: 10,
+                maxVideoChannelUsers: 25,
+                maxMembers: 500000,
+                nsfwLevel: 0,
+                ownerConfiguredContentLevel: null,
+                hubType: null,
+                latestOnboardingQuestionId: null,
+                profile: null,
+                premiumFeatures: null,
+                moderatorReporting: null,
+            });
+        return (t) => (0, a.jsx)(e, j(v({}, t), { guild: i }));
+    },
+    EmojiAddModal: async () => {
+        let { EmojiAddModal: e } = await n.e("90410").then(n.bind(n, 126033));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    guildId: "123456789",
+                    initialTierEmojiIds: new Set(["emoji1"]),
+                    onSubmit: (e) => {
+                        console.log("EmojiAddModal: Selected emojis:", Array.from(e));
+                    },
+                    transitionToManageEmoji: () => {
+                        console.log("EmojiAddModal: Transition to manage emoji clicked");
+                    },
+                    onClose: () => (console.log("EmojiAddModal: Modal closed"), t.onClose()),
+                }),
+            );
+    },
+    StreamFullModal: async () => {
+        let { default: e } = await n.e("25894").then(n.bind(n, 389170));
+        return (t) => (0, a.jsx)(e, v({}, t));
+    },
+    FamilyCenterAcceptLinkModal: async () => {
+        let e = u.default.getUser("12345"),
+            t = u.default.getUser("67890");
+        if (void 0 === e || void 0 === t) return () => null;
+        let { default: l } = await n.e("31385").then(n.bind(n, 58144));
+        return (n) =>
+            (0, a.jsx)(
+                l,
+                j(v({}, n), {
+                    currentUser: t,
+                    otherUser: e,
+                }),
+            );
+    },
+    FamilyCenterDeclineLinkModal: async () => {
+        let e = u.default.getUser("12345"),
+            t = u.default.getUser("67890");
+        if (void 0 === e || void 0 === t) return () => null;
+        let { default: l } = await n.e("84811").then(n.bind(n, 389094));
+        return (n) =>
+            (0, a.jsx)(
+                l,
+                j(v({}, n), {
+                    currentUser: t,
+                    otherUser: e,
+                }),
+            );
+    },
+    FamilyCenterCancelLinkModal: async () => {
+        let e = u.default.getUser("12345"),
+            t = u.default.getUser("67890");
+        if (void 0 === e || void 0 === t) return () => null;
+        let { default: l } = await n.e("17219").then(n.bind(n, 187278));
+        return (n) =>
+            (0, a.jsx)(
+                l,
+                j(v({}, n), {
+                    currentUser: e,
+                    otherUser: t,
+                }),
+            );
+    },
+    FamilyCenterDisconnectLinkModal: async () => {
+        let e = u.default.getUser("12345"),
+            t = u.default.getUser("67890");
+        if (void 0 === e || void 0 === t) return () => null;
+        let { default: l } = await n.e("43139").then(n.bind(n, 179950));
+        return (n) =>
+            (0, a.jsx)(
+                l,
+                j(v({}, n), {
+                    currentUser: e,
+                    otherUser: t,
+                }),
+            );
+    },
+    FamilyCenterQRCodeModal: async () => {
+        let { default: e } = await Promise.all([n.e("43887"), n.e("72875")]).then(n.bind(n, 320742));
+        return (t) => (0, a.jsx)(e, v({}, t));
+    },
+    PremiumGroupFriendsSelectorModal: async () => {
+        let { default: e } = await n.e("73987").then(n.bind(n, 773486)),
+            t = m.A.getPremiumGroupSubscription();
+        return null == t ? () => null : (n) => (0, a.jsx)(e, j(v({}, n), { subscription: t }));
+    },
+    PremiumGroupAcceptInviteModal: async () => {
+        let { default: e } = await n.e("60072").then(n.bind(n, 159707));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    premiumGroupSubscriptionId: "1234567890",
+                    premiumGroupInviteId: "1234567890",
+                    isExistingSub: !1,
+                    premiumGroupPrimaryName: "Test User",
+                }),
+            );
+    },
+    QuarantineModeInfoModal: async () => {
+        let { default: e } = await n.e("74575").then(n.bind(n, 218642));
+        return (t) => (0, a.jsx)(e, v({}, t));
+    },
+    SafetyUserSentimentFeedbackModal: async () => {
+        let { default: e } = await Promise.all([n.e("16833"), n.e("95095")]).then(n.bind(n, 156189));
+        return (t) => (0, a.jsx)(e, v({}, t));
+    },
+    CaptchaTestModal: async () => {
+        let { default: e } = await n.e("48817").then(n.bind(n, 424584));
+        return (t) => (0, a.jsx)(e, v({}, t));
+    },
+    PasswordConfirm: async () => {
+        let { default: e } = await Promise.resolve().then(n.bind(n, 662758));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                j(v({}, t), {
+                    title: "Confirm Password",
+                    actionText: "Submit",
+                    handleSubmit: async (e) => {
+                        console.log("PasswordConfirm: Password submitted:", e),
+                            await new Promise((e) => setTimeout(e, 1000));
+                    },
+                }),
+            );
+    },
+    BlockedDomainModal: async () => {
+        let { default: e } = await n.e("40850").then(n.bind(n, 534340));
+        return (t) => (0, a.jsx)(e, j(v({}, t), { url: "https://example-phishing-site.com/malicious-page" }));
+    },
+    DmSettingsUpsellModal: async () => {
+        let { default: e } = await n.e("62684").then(n.bind(n, 228855)),
+            t = Object.keys(d.A.getGuilds())[0];
+        return (n) => (0, a.jsx)(e, j(v({}, n), { guildId: t }));
+    },
+    LinkNotDiscordModal: async () => {
+        let { default: e } = await n.e("20978").then(n.bind(n, 696452));
+        return (t) => (0, a.jsx)(e, j(v({}, t), { url: "https://external-website.com/some-page" }));
+    },
+    UrgentMessageModal: async () => {
+        let { default: e } = await n.e("88077").then(n.bind(n, 187964));
+        return (t) => (0, a.jsx)(e, v({}, t));
+    },
+    UserAgreementsModal: async () => {
+        let { default: e } = await n.e("22220").then(n.bind(n, 639719));
+        return (t) => (0, a.jsx)(e, v({}, t));
+    },
+    DisableRiskyPermsModal: async () => {
+        let { default: e } = await n.e("71905").then(n.bind(n, 868952)),
+            t = Object.values(d.A.getGuilds())[0];
+        return null == t ? () => null : (n) => (0, a.jsx)(e, j(v({}, n), { guild: t }));
+    },
+    OtherFriendRequestsModal: async () => {
+        let { default: e } = await Promise.all([n.e("71853"), n.e("75052")]).then(n.bind(n, 516259));
+        return (t) => (0, a.jsx)(e, v({}, t));
+    },
+    AcceptInviteModal: async () => {
+        let { default: e } = await Promise.all([n.e("79023"), n.e("83155"), n.e("52367")]).then(n.bind(n, 563038));
+        return (t) => (0, a.jsx)(e, v({}, t));
+    },
+    PremiumGroupSubscribeModal: async () => {
+        let { default: e } = await n.e("69595").then(n.bind(n, 526710));
+        return (t) => (0, a.jsx)(e, v({}, t));
+    },
+};
+function _() {
+    let e = l.useMemo(
+            () =>
+                Object.keys(y)
+                    .map((e) => ({
+                        label: e,
+                        value: e,
+                        id: e,
+                    }))
+                    .sort((e, t) => e.label.localeCompare(t.label)),
+            [],
+        ),
+        [t, n] = l.useState(null);
+    return (0, a.jsx)(s.IpV, {
+        className: g.nd,
+        children: (0, a.jsxs)("div", {
+            className: b.l$,
+            children: [
+                (0, a.jsx)("section", {
+                    className: b.uW,
+                    children: (0, a.jsxs)(s.BJc, {
+                        direction: "horizontal",
+                        gap: 8,
+                        align: "end",
+                        children: [
+                            (0, a.jsx)(s.ZiE, {
+                                label: "Open a Modal",
+                                placeholder: "Select a modal",
+                                options: e,
+                                value: t,
+                                onSelectionChange: n,
+                                selectionMode: "single",
+                            }),
+                            (0, a.jsx)(s.Button, {
+                                variant: "primary",
+                                text: "Open",
+                                disabled: null == t,
+                                onClick: () => null != t && (0, s.mMO)(y[t]),
+                            }),
+                        ],
+                    }),
+                }),
+                (0, a.jsxs)("section", {
+                    className: b.uW,
+                    children: [
+                        (0, a.jsx)(s.Heading, {
+                            variant: "heading-md/semibold",
+                            children: "Wow moment",
+                        }),
+                        (0, a.jsx)("div", {
+                            className: b.bd,
+                            children: (0, a.jsx)(s.Button, {
+                                variant: "primary",
+                                text: "Open",
+                                onClick: () => {
+                                    (0, c.o)(!0), p._.dispatch(h.jej.PREMIUM_SUBSCRIPTION_CREATED);
+                                },
+                            }),
+                        }),
+                    ],
+                }),
+            ],
+        }),
+    });
 }

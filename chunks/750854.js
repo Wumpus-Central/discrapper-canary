@@ -1,27 +1,24 @@
-IntlMessageFormat.__addLocaleData({
-    locale: "de",
-    pluralRuleFunction: function (e, t) {
-        var n = !String(e).split(".")[1];
-        return t ? "other" : 1 == e && n ? "one" : "other";
-    },
-}),
-    IntlMessageFormat.__addLocaleData({
-        locale: "de-AT",
-        parentLocale: "de",
-    }),
-    IntlMessageFormat.__addLocaleData({
-        locale: "de-BE",
-        parentLocale: "de",
-    }),
-    IntlMessageFormat.__addLocaleData({
-        locale: "de-CH",
-        parentLocale: "de",
-    }),
-    IntlMessageFormat.__addLocaleData({
-        locale: "de-LI",
-        parentLocale: "de",
-    }),
-    IntlMessageFormat.__addLocaleData({
-        locale: "de-LU",
-        parentLocale: "de",
-    });
+t.d(n, {
+    Gk: () => i,
+    J2: () => l,
+    yN: () => c,
+    z2: () => a,
+});
+var r = t(627968);
+function l(e) {
+    let { children: n } = e;
+    return (0, r.jsx)("em", { children: n });
+}
+function c(e) {
+    let { children: n } = e;
+    return (0, r.jsx)("strong", { children: n });
+}
+function a(e) {
+    let { children: n } = e;
+    return (0, r.jsx)("u", { children: n });
+}
+function i(e) {
+    let { children: n } = e;
+    return (0, r.jsx)("s", { children: n });
+}
+t(64700);

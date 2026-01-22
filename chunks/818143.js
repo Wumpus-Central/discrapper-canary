@@ -1,1 +1,6 @@
-e.exports = "/assets/3a2d57c0bde9b218.webp";
+n.d(t, { G: () => a });
+var r = n(311907),
+    i = n(787392);
+function a() {
+    return (0, r.yK)([i.A], () => i.A.getUserIds());
+}

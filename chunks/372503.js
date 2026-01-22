@@ -1,1 +1,1 @@
-n(54381), n(473749), n(787068);
+e.exports = "/assets/c6a3bac3f6071693.svg";

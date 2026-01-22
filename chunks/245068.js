@@ -1,35 +1,68 @@
-e.exports = {
-    centeringWrapper: "_108416a1e2b69fee-centeringWrapper",
-    timelineWrapper: "_108416a1e2b69fee-timelineWrapper",
-    timelineHeader: "_108416a1e2b69fee-timelineHeader",
-    timelineContainer: "_108416a1e2b69fee-timelineContainer",
-    playPauseButtonWrapper: "_108416a1e2b69fee-playPauseButtonWrapper",
-    timeline: "_108416a1e2b69fee-timeline",
-    waveform: "_108416a1e2b69fee-waveform",
-    timelineDragging: "_108416a1e2b69fee-timelineDragging",
-    timelineVideo: "_108416a1e2b69fee-timelineVideo",
-    timelineBackground: "_108416a1e2b69fee-timelineBackground",
-    hiddenCanvas: "_108416a1e2b69fee-hiddenCanvas",
-    dragHandle: "_108416a1e2b69fee-dragHandle",
-    dragHandleLeft: "_108416a1e2b69fee-dragHandleLeft _108416a1e2b69fee-dragHandle",
-    dragHandleRight: "_108416a1e2b69fee-dragHandleRight _108416a1e2b69fee-dragHandle",
-    dragBox: "_108416a1e2b69fee-dragBox",
-    dragging: "_108416a1e2b69fee-dragging",
-    playhead: "_108416a1e2b69fee-playhead",
-    timePillBackground: "_108416a1e2b69fee-timePillBackground",
-    timePillText: "_108416a1e2b69fee-timePillText",
-    cropArrow: "_108416a1e2b69fee-cropArrow",
-    cropLeftArrow: "_108416a1e2b69fee-cropLeftArrow _108416a1e2b69fee-cropArrow",
-    cropRightArrow: "_108416a1e2b69fee-cropRightArrow _108416a1e2b69fee-cropArrow",
-    timePillContainer: "_108416a1e2b69fee-timePillContainer",
-    char: "_108416a1e2b69fee-char",
-    slashCharacter: "_108416a1e2b69fee-slashCharacter _108416a1e2b69fee-char",
-    numberTimeline: "_108416a1e2b69fee-numberTimeline",
-    numberTimelineTrack: "_108416a1e2b69fee-numberTimelineTrack",
-    timeNotch: "_108416a1e2b69fee-timeNotch",
-    timeNotchTick: "_108416a1e2b69fee-timeNotchTick",
-    timeNotchLabel: "_108416a1e2b69fee-timeNotchLabel",
-    timeSubNotch: "_108416a1e2b69fee-timeSubNotch",
-    timeSubNotchTick: "_108416a1e2b69fee-timeSubNotchTick",
-    timelineIcon: "_108416a1e2b69fee-timelineIcon",
-};
+n.d(t, { X: () => E });
+var r = n(627968),
+    i = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    o = n(582754),
+    l = n(397927),
+    c = n(736653),
+    u = n(550111),
+    d = n(331402),
+    f = n(442759),
+    p = n(940622),
+    _ = n(929283),
+    h = n(650906),
+    m = n(180171),
+    g = n(989099);
+let E = i.memo(function (e) {
+    let { product: t, isHighlighted: n, user: i, forCollectedModal: a } = e,
+        { firstProfileEffect: E, firstAvatarDecoration: b, firstNameplate: y } = (0, f.f5)(t),
+        O = (0, p.br)(b),
+        A = (0, c.Ay)(),
+        v = (0, o.qB)(A),
+        S = null != y && null != b && null != E,
+        I = S ? l._3J.SIZE_72 : l._3J.SIZE_80,
+        T = v ? g : m;
+    return (0, r.jsxs)("div", {
+        className: s()(h.kL, {
+            [h.ib]: !S,
+            [h.c$]: S,
+        }),
+        children: [
+            null != E &&
+                (0, r.jsx)("div", {
+                    className: h.NM,
+                    children: (0, r.jsx)(d.A, {
+                        isHighlighted: n,
+                        skuId: E.skuId,
+                        removeSetHeight: !0,
+                        delayProfileEffectIntro: a,
+                        withScaleAnimation: a,
+                    }),
+                }),
+            S &&
+                (0, r.jsx)("div", {
+                    className: h.M4,
+                    children: (0, r.jsx)(u.A, {
+                        user: i,
+                        nameplate: y,
+                        isHighlighted: n,
+                        showPlaceholderUser: !n,
+                        pendingAvatarDecoration: O,
+                    }),
+                }),
+            null != O &&
+                (0, r.jsx)("div", {
+                    className: h._P,
+                    children: (0, r.jsx)(_.i, {
+                        item: O,
+                        user: i,
+                        avatarSize: I,
+                        isHighlighted: n,
+                        avatarPlaceholderSrc: T,
+                        className: h.my,
+                    }),
+                }),
+        ],
+    });
+});

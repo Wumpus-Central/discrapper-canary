@@ -1,30 +1,51 @@
-n.d(t, {
-    I: () => o,
-    s: () => a,
-});
-var r = n(823379),
-    i = n(49898),
-    l = n(388032);
-function a(e) {
-    switch (e) {
-        case i.GlobalDiscoveryTab.SERVERS:
-            return l.intl.string(l.t["+Anbp9"]);
-        case i.GlobalDiscoveryTab.APPS:
-            return l.intl.string(l.t.bGwCoR);
-        case i.GlobalDiscoveryTab.QUESTS:
-            return l.intl.string(l.t.EcaD4e);
-        default:
-            (0, r.vE)(e);
+n.d(t, { A: () => d }), n(896048);
+var r = n(73153),
+    i = n(272355),
+    a = n(854492),
+    s = n(734057),
+    o = n(967198),
+    l = n(403362);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class u extends i.A {
+    _initialize() {
+        r.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
+            r.h.subscribe("LOGOUT", this.handleLogout);
+    }
+    _terminate() {
+        r.h.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
+            r.h.unsubscribe("LOGOUT", this.handleLogout);
+    }
+    constructor(...e) {
+        super(...e),
+            c(this, "handleVoiceChannelSelect", (e) => {
+                let { channelId: t, guildId: n } = e;
+                if (null != t) {
+                    let e = s.A.getChannel(t);
+                    if (null == e || e.isGuildStageVoice()) return;
+                }
+                this.terminate();
+                let r = null == t ? null : null != n ? n : null;
+                this.handleDisconnectFromStageChannel(r);
+            }),
+            c(this, "handleDisconnectFromStageChannel", (e) => {
+                let t = o.A.getGuildId();
+                (0, a.A)([t, e].filter(l.Vq));
+            }),
+            c(this, "handleLogout", () => {
+                this.terminate(), this.handleDisconnectFromStageChannel(null);
+            });
     }
 }
-function o(e) {
-    if (e.startsWith("/discovery/applications")) return i.GlobalDiscoveryTab.APPS;
-    switch (e) {
-        case "/discovery/quests":
-            return i.GlobalDiscoveryTab.QUESTS;
-        case "/discovery/servers":
-            return i.GlobalDiscoveryTab.SERVERS;
-        default:
-            return i.GLOBAL_DISCOVERY_DEFAULT_TAB;
-    }
-}
+let d = new u();

@@ -1,43 +1,30 @@
-e.d(n, { default: () => f }), e(388685);
-var i = e(54381),
-    a = e(473749),
-    o = e(793030),
-    r = e(481060),
-    l = e(117984),
-    s = e(388032);
-function f(t) {
-    let { onClose: n, transitionState: e } = t,
-        [f, u] = a.useState("");
-    return (0, i.jsx)("form", {
-        onSubmit: function (t) {
-            t.preventDefault(), (0, l.CM)(f), n();
-        },
-        children: (0, i.jsx)(o.Modal, {
-            title: s.intl.string(s.t["ISN+NM"]),
-            actions: [
-                {
-                    text: s.intl.string(s.t["ETE/oC"]),
-                    onClick: n,
-                    variant: "secondary",
-                },
-                {
-                    text: s.intl.string(s.t["ISN+NM"]),
-                    variant: "primary",
-                    type: "submit",
-                    autoFocus: !1,
-                    disabled: "" === f,
-                },
-            ],
-            transitionState: e,
-            onClose: n,
-            children: (0, i.jsx)(r.oil, {
-                label: s.intl.string(s.t.OCAkGP),
-                value: f,
-                onChange: u,
-                maxLength: 100,
-                placeholder: s.intl.string(s.t.eTVbtx),
-                autoFocus: !0,
-            }),
-        }),
-    });
+function r() {
+    return null;
 }
+function i(e) {
+    return null;
+}
+function a(e) {
+    return null;
+}
+function s(e) {
+    return null;
+}
+function o(e) {
+    return null;
+}
+function l(e) {
+    return null;
+}
+function c(e) {
+    return null;
+}
+n.d(t, {
+    Dr: () => a,
+    aK: () => c,
+    bX: () => r,
+    fP: () => l,
+    iD: () => o,
+    rX: () => i,
+    sL: () => s,
+});

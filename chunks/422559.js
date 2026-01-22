@@ -1,125 +1,272 @@
-n.d(t, {
-    VY: () => o,
-    _$: () => s,
-    wt: () => c,
-}),
-    n(415506);
-var r = n(149765),
-    i = n(981631),
-    a = n(388032);
-let o = [
-    i.Plq.ADMINISTRATOR,
-    i.Plq.MANAGE_GUILD,
-    i.Plq.MANAGE_ROLES,
-    i.Plq.MANAGE_CHANNELS,
-    i.Plq.KICK_MEMBERS,
-    i.Plq.BAN_MEMBERS,
-    i.Plq.CREATE_INSTANT_INVITE,
-    i.Plq.MANAGE_NICKNAMES,
-    i.Plq.CHANGE_NICKNAME,
-    i.Plq.MANAGE_GUILD_EXPRESSIONS,
-    i.Plq.CREATE_GUILD_EXPRESSIONS,
-    i.Plq.MANAGE_WEBHOOKS,
-    i.Plq.VIEW_AUDIT_LOG,
-    i.Plq.VIEW_CHANNEL,
-    i.Plq.MANAGE_EVENTS,
-    i.Plq.CREATE_EVENTS,
-    i.Plq.MODERATE_MEMBERS,
-    i.Plq.VIEW_GUILD_ANALYTICS,
-    i.Plq.VIEW_CREATOR_MONETIZATION_ANALYTICS,
-    i.Plq.USE_EXTERNAL_APPS,
-    i.Plq.SEND_MESSAGES,
-    i.Plq.SEND_MESSAGES_IN_THREADS,
-    i.Plq.CREATE_PUBLIC_THREADS,
-    i.Plq.CREATE_PRIVATE_THREADS,
-    i.Plq.SEND_TTS_MESSAGES,
-    i.Plq.MANAGE_MESSAGES,
-    i.Plq.MANAGE_THREADS,
-    i.Plq.EMBED_LINKS,
-    i.Plq.ATTACH_FILES,
-    i.Plq.READ_MESSAGE_HISTORY,
-    i.Plq.MENTION_EVERYONE,
-    i.Plq.ADD_REACTIONS,
-    i.Plq.USE_EXTERNAL_EMOJIS,
-    i.Plq.USE_EXTERNAL_STICKERS,
-    i.Plq.USE_APPLICATION_COMMANDS,
-    i.Plq.SEND_VOICE_MESSAGES,
-    i.Plq.SEND_POLLS,
-    i.Plq.PIN_MESSAGES,
-    i.Plq.BYPASS_SLOWMODE,
-    i.Plq.CONNECT,
-    i.Plq.SPEAK,
-    i.Plq.MUTE_MEMBERS,
-    i.Plq.DEAFEN_MEMBERS,
-    i.Plq.MOVE_MEMBERS,
-    i.Plq.USE_VAD,
-    i.Plq.PRIORITY_SPEAKER,
-    i.Plq.REQUEST_TO_SPEAK,
-    i.Plq.STREAM,
-    i.Plq.USE_EMBEDDED_ACTIVITIES,
-    i.Plq.USE_SOUNDBOARD,
-    i.Plq.USE_EXTERNAL_SOUNDS,
-    i.Plq.SET_VOICE_CHANNEL_STATUS,
-];
-function s(e) {
-    return Object.values(i.Plq).some((t) => r.e$(e, t) && !o.includes(t));
+t.r(n), t.d(n, { default: () => j });
+var l = t(627968),
+    r = t(64700),
+    i = t(311907),
+    a = t(398590),
+    s = t(83257),
+    c = t(793574),
+    o = t(58149),
+    u = t(688810),
+    d = t(460760),
+    _ = t(817818),
+    E = t(591552),
+    I = t(225142),
+    A = t(292572),
+    b = t(122906),
+    f = t(475723),
+    S = t(887501),
+    N = t(149280),
+    O = t(97469),
+    g = t(544028),
+    G = t(447696),
+    T = t(684407),
+    h = t(808728),
+    D = t(498642),
+    M = t(576705),
+    m = t(997509),
+    p = t(555337),
+    C = t(287479),
+    R = t(110807),
+    v = t(595818),
+    U = t(652215),
+    y = t(985018);
+function L(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        t = arguments.length > 2 ? arguments[2] : void 0;
+    o.Ay.trackWithMetadata(U.HAw.SETTINGS_PANE_VIEWED, {
+        settings_type: "guild",
+        origin_pane: n,
+        destination_pane: e,
+        location: t,
+    });
 }
-let l = {
-    [i.Plq.ADMINISTRATOR.toString()]: () => a.intl.string(a.t.PGvZqX),
-    [i.Plq.MANAGE_GUILD.toString()]: () => a.intl.string(a.t.QZRcfO),
-    [i.Plq.MANAGE_ROLES.toString()]: () => a.intl.string(a.t["C8d+oG"]),
-    [i.Plq.MANAGE_CHANNELS.toString()]: () => a.intl.string(a.t["9qLtWs"]),
-    [i.Plq.KICK_MEMBERS.toString()]: () => a.intl.string(a.t.pBNv6i),
-    [i.Plq.BAN_MEMBERS.toString()]: () => a.intl.string(a.t.oTBA7N),
-    [i.Plq.CREATE_INSTANT_INVITE.toString()]: () => a.intl.string(a.t.zJrgTG),
-    [i.Plq.MANAGE_NICKNAMES.toString()]: () => a.intl.string(a.t["t+Ct5x"]),
-    [i.Plq.CHANGE_NICKNAME.toString()]: () => a.intl.string(a.t.dilOF6),
-    [i.Plq.MANAGE_GUILD_EXPRESSIONS.toString()]: () => a.intl.string(a.t.bbuXIn),
-    [i.Plq.CREATE_GUILD_EXPRESSIONS.toString()]: () => a.intl.string(a.t.HarVuP),
-    [i.Plq.MANAGE_WEBHOOKS.toString()]: () => a.intl.string(a.t["/ADKmM"]),
-    [i.Plq.VIEW_AUDIT_LOG.toString()]: () => a.intl.string(a.t.fZgLpA),
-    [i.Plq.VIEW_CHANNEL.toString()]: () => a.intl.string(a.t.uV83yi),
-    [i.Plq.SEND_MESSAGES.toString()]: () => a.intl.string(a.t.T32rkC),
-    [i.Plq.SEND_TTS_MESSAGES.toString()]: () => a.intl.string(a.t.Mg7bku),
-    [i.Plq.MANAGE_MESSAGES.toString()]: () => a.intl.string(a.t["6lU9xM"]),
-    [i.Plq.EMBED_LINKS.toString()]: () => a.intl.string(a.t["969dEL"]),
-    [i.Plq.ATTACH_FILES.toString()]: () => a.intl.string(a.t["3AS4UM"]),
-    [i.Plq.READ_MESSAGE_HISTORY.toString()]: () => a.intl.string(a.t.l9ufaR),
-    [i.Plq.MENTION_EVERYONE.toString()]: () => a.intl.string(a.t.Y78KGC),
-    [i.Plq.ADD_REACTIONS.toString()]: () => a.intl.string(a.t.yEoJAr),
-    [i.Plq.USE_EXTERNAL_EMOJIS.toString()]: () => a.intl.string(a.t.BpBGZU),
-    [i.Plq.USE_EXTERNAL_STICKERS.toString()]: () => a.intl.string(a.t["UeRs+b"]),
-    [i.Plq.USE_APPLICATION_COMMANDS.toString()]: () => a.intl.string(a.t.shbR1a),
-    [i.Plq.SEND_VOICE_MESSAGES.toString()]: () => a.intl.string(a.t["+8GStU"]),
-    [i.Plq.CONNECT.toString()]: () => a.intl.string(a.t.S0W8Z5),
-    [i.Plq.SPEAK.toString()]: () => a.intl.string(a.t["8w1tIR"]),
-    [i.Plq.MUTE_MEMBERS.toString()]: () => a.intl.string(a.t["8EI30/"]),
-    [i.Plq.DEAFEN_MEMBERS.toString()]: () => a.intl.string(a.t["9L47Fr"]),
-    [i.Plq.MOVE_MEMBERS.toString()]: () => a.intl.string(a.t.YtjJPQ),
-    [i.Plq.USE_VAD.toString()]: () => a.intl.string(a.t["08zAV7"]),
-    [i.Plq.PRIORITY_SPEAKER.toString()]: () => a.intl.string(a.t.BVK71i),
-    [i.Plq.CREATE_PUBLIC_THREADS.toString()]: () => a.intl.string(a.t["25rKnX"]),
-    [i.Plq.CREATE_PRIVATE_THREADS.toString()]: () => a.intl.string(a.t.QwbTSa),
-    [i.Plq.SEND_MESSAGES_IN_THREADS.toString()]: () => a.intl.string(a.t.fTE74g),
-    [i.Plq.MANAGE_THREADS.toString()]: () => a.intl.string(a.t.kEqgr7),
-    [i.Plq.MANAGE_EVENTS.toString()]: () => a.intl.string(a.t.HIgA5a),
-    [i.Plq.CREATE_EVENTS.toString()]: () => a.intl.string(a.t.qyjZua),
-    [i.Plq.MODERATE_MEMBERS.toString()]: () => a.intl.string(a.t["7DgVBr"]),
-    [i.Plq.REQUEST_TO_SPEAK.toString()]: () => a.intl.string(a.t["5kicT2"]),
-    [i.Plq.VIEW_GUILD_ANALYTICS.toString()]: () => a.intl.string(a.t["rQJBE/"]),
-    [i.Plq.VIEW_CREATOR_MONETIZATION_ANALYTICS.toString()]: () => a.intl.string(a.t["0lTLTv"]),
-    [i.Plq.STREAM.toString()]: () => a.intl.string(a.t.FlNoSV),
-    [i.Plq.USE_EMBEDDED_ACTIVITIES.toString()]: () => a.intl.string(a.t.rLSGeh),
-    [i.Plq.USE_SOUNDBOARD.toString()]: () => a.intl.string(a.t.Bco7NG),
-    [i.Plq.USE_EXTERNAL_SOUNDS.toString()]: () => a.intl.string(a.t.pwaVJ6),
-    [i.Plq.SET_VOICE_CHANNEL_STATUS.toString()]: () => a.intl.string(a.t.VBwkUf),
-    [i.Plq.SEND_POLLS.toString()]: () => a.intl.string(a.t.UMQ7Ww),
-    [i.Plq.USE_EXTERNAL_APPS.toString()]: () => a.intl.string(a.t.TtA5rK),
-    [i.Plq.PIN_MESSAGES.toString()]: () => a.intl.string(a.t.Y5BI39),
-    [i.Plq.BYPASS_SLOWMODE.toString()]: () => a.intl.string(a.t.kqcjeV),
+let w = {
+    canManageGuild: !1,
+    canManageChannels: !1,
+    canManageRoles: !1,
+    canManageBans: !1,
+    canManageNicknames: !1,
+    canManageGuildExpressions: !1,
+    canViewAuditLog: !1,
+    canManageWebhooks: !1,
+    canAccessMembersPage: !1,
+    canViewGuildAnalytics: !1,
+    isOwner: !1,
+    isOwnerWithRequiredMfaLevel: !1,
+    isGuildAdmin: !1,
 };
-function c(e) {
-    let t = l[e.toString()];
-    if (null == t) throw Error("Unknown permission. Did you provide a _single_ bit flag? Perm: ".concat(e));
-    return t();
+class P extends r.PureComponent {
+    componentDidMount() {
+        L(this.props.section, null, this.props.analyticsLocation);
+    }
+    componentWillUnmount() {
+        m.A.close();
+    }
+    componentDidUpdate(e) {
+        let { section: n } = e,
+            {
+                section: t,
+                isGuildAdmin: l,
+                canManageGuild: r,
+                canManageRoles: i,
+                canManageBans: s,
+                canManageNicknames: c,
+                canManageGuildExpressions: o,
+                canViewAuditLog: u,
+                canManageWebhooks: d,
+                canUnlinkChannels: _,
+                canAccessMembersPage: E,
+                canViewGuildAnalytics: I,
+            } = this.props;
+        t !== n && L(t, n),
+            ((l || r || i || s || c || o || u || E || d || _) &&
+                (u || t !== U.BEX.AUDIT_LOG) &&
+                (i || t !== U.BEX.ROLES) &&
+                (o || t !== U.BEX.EMOJI) &&
+                (o || t !== U.BEX.STICKERS) &&
+                (o || t !== U.BEX.SOUNDBOARD) &&
+                (s || t !== U.BEX.BANS) &&
+                (I || t !== U.BEX.ANALYTICS) &&
+                (E || t !== U.BEX.MEMBERS)) ||
+                (0, a.jH)();
+    }
+    render() {
+        var e, n;
+        let {
+            theme: t,
+            sidebarTheme: r,
+            section: i,
+            guild: c,
+            isGuildAdmin: o,
+            canManageGuild: u,
+            canViewAuditLog: d,
+            canManageRoles: _,
+            canManageGuildExpressions: E,
+            canManageWebhooks: I,
+            canUnlinkChannels: A,
+            canManageBans: b,
+            canAccessMembersPage: S,
+            canViewGuildAnalytics: N,
+            isOwner: O,
+            isOwnerWithRequiredMfaLevel: g,
+            showDirtyGuildTemplateIndicator: G,
+            memberCount: T,
+            onboardingStep: h,
+            onboardingEnabled: D,
+            welcomeScreenEmpty: M,
+            guildMetadata: p,
+            permissionMigrationAvailable: C,
+        } = this.props;
+        if (null == c) return null;
+        let U = (0, R.SB)({
+                guild: c,
+                isGuildAdmin: o,
+                canManageGuild: u,
+                canViewAuditLog: d,
+                canManageRoles: _,
+                canManageGuildExpressions: E,
+                canManageWebhooks: I,
+                canUnlinkChannels: A,
+                canManageBans: b,
+                canAccessMembersPage: S,
+                canViewGuildAnalytics: N,
+                isOwner: O,
+                isOwnerWithRequiredMfaLevel: g,
+                showDirtyGuildTemplateIndicator: G,
+                memberCount: T,
+                onboardingStep: h,
+                onboardingEnabled: D,
+                welcomeScreenEmpty: M,
+                guildMetadata: p,
+                section: i,
+                permissionMigrationAvailable: C,
+            }),
+            L = (null == (n = U.find((e) => e.section === i)) || null == (e = n.predicate) ? void 0 : e.call(n)) !== !1,
+            w = (0, v.x)();
+        return (0, l.jsxs)("div", {
+            children: [
+                (0, l.jsx)(s.Ay, {
+                    theme: t,
+                    sidebarTheme: r,
+                    section: L && null != i ? i : w,
+                    onSetSection: m.A.setSection,
+                    onClose: a.jH,
+                    title: "" !== c.name ? c.name : y.intl.string(y.t["154/bL"]),
+                    sections: U,
+                }),
+                (0, l.jsx)(f.w, { guildId: c.id }),
+            ],
+        });
+    }
+}
+function j() {
+    var e, n, t;
+    let {
+            guild: a,
+            section: s,
+            analyticsLocation: o,
+            guildMetadata: f,
+            isGuildMetadataLoaded: R,
+        } = (0, i.cf)([p.A], () => p.A.getProps()),
+        { analyticsLocations: v } = (0, u.Ay)(c.A.GUILD_SETTINGS),
+        y = (0, i.bG)([g.A], () => g.A.theme),
+        L = (0, O.NC)(),
+        j = (0, i.bG)([h.Ay], () => (null != a ? h.Ay.getChannels(a.id).SELECTABLE : null), [a]),
+        B = (0, i.cf)([M.A], () => (null != a ? M.A.getGuildPermissionProps(a) : w)),
+        x = null == a ? void 0 : a.id,
+        H = (0, i.bG)([M.A], () => null != a && M.A.canAccessGuildSettings(a));
+    r.useEffect(() => {
+        R || null == x || (0, d.mo)(x);
+    }, [R, x]);
+    let W = null != (e = null == a ? void 0 : a.features.has(U.GuildFeatures.COMMUNITY)) && e;
+    r.useEffect(() => {
+        null != x && W && ((0, _.jx)(x), (0, G.Fy)(x));
+    }, [x, W]),
+        r.useEffect(() => {
+            null != x && (0, I.ag)(x);
+        }, [x]);
+    let k = (0, i.bG)([b.A], () => {
+            var e;
+            return (
+                (null == a ? void 0 : a.id) != null && (null == (e = b.A.getForGuild(a.id)) ? void 0 : e.isDirty) === !0
+            );
+        }, [a]),
+        F = (0, i.bG)([D.A], () => D.A.getMemberCount(null == a ? void 0 : a.id), [a]);
+    r.useEffect(() => {
+        null != x && B.canManageGuild && A.A.loadTemplatesForGuild(x);
+    }, [x, B.canManageGuild]),
+        r.useEffect(() => {
+            H || m.A.close();
+        }, [H]);
+    let X = (0, i.bG)([C.A], () => C.A.getCurrentPage()),
+        V = (0, i.bG)([E.A], () => null != x && E.A.getEnabled(x)),
+        K = (0, i.bG)([T.A], () => null != x && T.A.isEmpty(x)),
+        q = (0, S.A)(x).length > 0,
+        J = (0, N.A)(a);
+    return (0, l.jsx)(u.f5, {
+        value: v,
+        children: (0, l.jsx)(
+            P,
+            ((n = (function (e) {
+                for (var n = 1; n < arguments.length; n++) {
+                    var t = null != arguments[n] ? arguments[n] : {},
+                        l = Object.keys(t);
+                    "function" == typeof Object.getOwnPropertySymbols &&
+                        (l = l.concat(
+                            Object.getOwnPropertySymbols(t).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                            }),
+                        )),
+                        l.forEach(function (n) {
+                            var l;
+                            (l = t[n]),
+                                n in e
+                                    ? Object.defineProperty(e, n, {
+                                          value: l,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0,
+                                      })
+                                    : (e[n] = l);
+                        });
+                }
+                return e;
+            })(
+                {
+                    guild: a,
+                    section: s,
+                    theme: y,
+                    sidebarTheme: L,
+                    channels: j,
+                    showDirtyGuildTemplateIndicator: k,
+                    analyticsLocation: o,
+                    memberCount: F,
+                },
+                B,
+            )),
+            (t = t =
+                {
+                    canUnlinkChannels: q,
+                    canViewGuildAnalytics: B.canViewGuildAnalytics,
+                    onboardingStep: X,
+                    onboardingEnabled: V,
+                    welcomeScreenEmpty: K,
+                    guildMetadata: f,
+                    permissionMigrationAvailable: J,
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
+                : (function (e, n) {
+                      var t = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var l = Object.getOwnPropertySymbols(e);
+                          t.push.apply(t, l);
+                      }
+                      return t;
+                  })(Object(t)).forEach(function (e) {
+                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
+                  }),
+            n),
+        ),
+    });
 }

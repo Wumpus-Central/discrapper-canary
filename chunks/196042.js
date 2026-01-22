@@ -1,0 +1,26 @@
+n.d(t, {
+    Ay: () => a,
+    fy: () => i,
+    oy: () => r,
+});
+let r = (0, n(600975).C)({
+        kind: "user",
+        id: "2023-06_bogo_promotion_gate",
+        label: "BOGO Promotion Manager",
+        defaultConfig: { enabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: "Enable BOGO Promotion Manager",
+                config: { enabled: !0 },
+            },
+        ],
+    }),
+    i = function () {
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        return r.getCurrentConfig({ location: "489551_2" }, { autoTrackExposure: e });
+    },
+    a = function () {
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        return r.useExperiment({ location: "489551_1" }, { autoTrackExposure: e });
+    };

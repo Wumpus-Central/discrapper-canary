@@ -1,73 +1,81 @@
-n.d(t, { Z: () => v });
-var r = n(54381),
-    i = n(473749),
-    l = n(442837),
-    a = n(570140),
-    o = n(519938),
-    c = n(928518),
-    s = n(585483),
-    u = n(317381),
-    d = n(16609),
-    f = n(917107),
-    p = n(716600),
-    b = n(918559),
-    m = n(981631);
-let g = (e, t) => {
-    a.Z.wait(() => {
-        (0, o.Cz)(e, t);
-    });
-};
+n.d(t, { A: () => h }), n(228524), n(896048);
+var l = n(627968),
+    r = n(64700),
+    a = n(311907),
+    i = n(397927),
+    s = n(964486),
+    o = n(58149),
+    c = n(632738),
+    d = n(780964),
+    u = n(840065),
+    m = n(734057),
+    b = n(319582),
+    p = n(369053),
+    x = n(652215),
+    g = n(985018),
+    f = n(71561);
 function v(e) {
-    let t,
-        { embedId: n, className: a, style: o } = e,
-        v = (0, l.e7)([c.Z], () => c.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)),
-        h = (0, p.Z)(),
-        E = (0, l.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
-    if (null == h || (0, f.Z)((0, d.p)(h.location)) || E !== b.Ez.PANEL) {
-        var _;
-        t = null != (_ = null == v ? void 0 : v.window) ? _ : window;
-    } else t = window;
-    let y = i.useRef(null),
-        S = i.useMemo(() => {
-            let e = null;
-            return () => {
-                null == e &&
-                    (e = t.requestAnimationFrame(() => {
-                        var t, r;
-                        g(n, null != (r = null == (t = y.current) ? void 0 : t.getBoundingClientRect()) ? r : null),
-                            (e = null);
-                    }));
-            };
-        }, [n, t]);
+    let { title: t, description: n, onButtonClick: a, trackSettingsUpsellsAction: i } = e,
+        [o, d] = r.useState(!1);
     return (
-        i.useEffect(
-            () => (
-                t.addEventListener("resize", S),
-                s.S.subscribe(m.CkL.REMEASURE_TARGET, S),
-                () => {
-                    t.removeEventListener("resize", S), s.S.unsubscribe(m.CkL.REMEASURE_TARGET, S);
-                }
-            ),
-            [S, t],
-        ),
-        i.useLayoutEffect(() => {
-            let e = y.current;
-            if (null == e) return;
-            let t = e.ownerDocument.defaultView;
-            if (null == t) return;
-            S();
-            let r = new t.ResizeObserver(S);
-            return (
-                r.observe(e),
-                () => {
-                    r.disconnect(), g(n, null);
-                }
-            );
-        }, [n, S]),
-        (0, r.jsx)("div", {
-            ref: y,
-            style: o,
-            className: a,
+        (0, s.Ay)(() => {
+            i(p.lJ.SETTINGS_UPSELLS_VIEWED);
+        }),
+        (0, l.jsx)(c.PQ, {
+            title: t,
+            description: n,
+            buttonText: o ? g.intl.string(g.t["h+WsPb"]) : g.intl.string(g.t.A8t4Nf),
+            buttonDisabled: o,
+            onButtonPress: () => {
+                a(), d(!0), i(p.lJ.SETTINGS_UPSELLS_APPLY_CLICKED);
+            },
         })
     );
+}
+function h(e) {
+    let { settingsUpsells: t, channelId: n, onModalClose: r, reportId: s, reportType: c, reportSubType: h } = e,
+        j = (0, a.bG)([m.A], () => m.A.getChannel(n)),
+        _ = (0, b.MR)(t, null == j ? void 0 : j.type),
+        A = (0, p.Mw)(c, h, s);
+    return 0 === _.length
+        ? null
+        : (0, l.jsxs)("div", {
+              className: f.kL,
+              children: [
+                  (0, l.jsx)(i.Heading, {
+                      variant: "text-sm/semibold",
+                      className: f.wx,
+                      children: g.intl.string(g.t["1yxTIJ"]),
+                  }),
+                  (0, l.jsx)("div", {
+                      className: f.uk,
+                      children: _.map((e, n) => {
+                          let { getTitle: r, getDescription: a, onApply: i } = e;
+                          return (0, l.jsx)(
+                              v,
+                              {
+                                  title: r(),
+                                  description: a(),
+                                  onButtonClick: i,
+                                  trackSettingsUpsellsAction: A(t[n]),
+                              },
+                              n,
+                          );
+                      }),
+                  }),
+                  (0, l.jsx)(i.QWc, {
+                      text: g.intl.string(g.t.olebGx),
+                      onClick: () => {
+                          (0, u.openUserSettings)(d.X.CONTENT_AND_SOCIAL_PANEL, { section: x.nc_.CONTENT_AND_SOCIAL }),
+                              r(),
+                              o.Ay.trackWithMetadata(x.HAw.IAR_SETTINGS_UPSELLS_ACTION, {
+                                  report_id: s,
+                                  report_type: c.name,
+                                  report_subtype: h,
+                                  action: p.lJ.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED,
+                              });
+                      },
+                  }),
+              ],
+          });
 }

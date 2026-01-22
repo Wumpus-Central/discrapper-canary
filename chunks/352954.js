@@ -1,86 +1,13 @@
-n.d(t, { Z: () => u }), n(415506);
-var r = n(54381);
-n(473749);
-var i = n(248514),
-    a = n(481060),
-    o = n(981631),
-    s = n(388032);
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let u = {
-    openSecureFramesStreamVerification: function (e, t) {
-        (0, a.ZDy)(async () => {
-            let i = (await n.e("94904").then(n.bind(n, 660250))).default;
-            return (n) =>
-                (0, r.jsx)(
-                    i,
-                    c(
-                        {
-                            streamKey: e,
-                            channelId: t,
-                        },
-                        n,
-                    ),
-                );
-        });
-    },
-    openSecureFramesUserVerificationModal: function (e, t, i, s) {
-        i() &&
-            (0, a.ZDy)(
-                async () => {
-                    let i = (await n.e("33397").then(n.bind(n, 963410))).default;
-                    return (n) =>
-                        (0, r.jsx)(
-                            i,
-                            c(
-                                {
-                                    userId: e,
-                                    channelId: t,
-                                },
-                                n,
-                            ),
-                        );
-                },
-                { contextKey: s === o.IlC.POPOUT ? a.u1M : a.z1l },
-            );
-    },
-    openSecureFramesUpdateConfirmation: function (e) {
-        let { title: t, subtitle: n, confirmText: r = s.intl.string(s.t["cY+Oob"]), onConfirm: a } = e;
-        (0, i.Z)({
-            title: t,
-            subtitle: n,
-            confirmText: r,
-            onConfirm: a,
-        });
-    },
-    handleSecureFramesUserVerificationLink: function (e) {
-        throw Error("handleSecureFramesUserVerificationLink not implemented");
-    },
+e.exports = {
+    kL: "_8ef4785970b42f48",
+    cy: "_416322b62a338c3c",
+    ut: "_01da1ba5e09c7a33",
+    mG: "e3347d3231f4f7d9",
+    Mg: "_62713a87c84ff820",
+    me: "_095fc26d4248ca43",
+    p_: "c42fd80bb91af546",
+    ap: "_1f647ea0e7c5fdb5",
+    t3: "b7d6b4c8e44fa8c3",
+    o8: "d4f57ae9a6e0a779",
+    zS: "_3eaab85bb17c7ba0",
 };

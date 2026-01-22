@@ -1,5 +1,14 @@
-e.exports = {
-    container: "d1d9f3257b6b604c-container",
-    tabBar: "d1d9f3257b6b604c-tabBar",
-    tabBarItem: "d1d9f3257b6b604c-tabBarItem",
-};
+n.d(t, { A: () => a });
+var r = n(64700),
+    i = n(256311);
+function a(e) {
+    r.useEffect(() => {
+        if (null != e)
+            return (
+                i.A.lockChangeLog(e),
+                () => {
+                    i.A.unlockChangeLog(e);
+                }
+            );
+    }, [e]);
+}

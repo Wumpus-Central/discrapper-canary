@@ -1,103 +1,102 @@
-n.d(t, {
-    S: () => c,
-    w: () => d,
-});
-var r = n(481060),
-    i = n(925221),
-    l = n(236413),
-    a = n(85960),
-    s = n(273504),
-    o = n(388032);
-let c = (e) => {
-    switch (e) {
-        case s.fX.KEYWORD:
-        case s.fX.USER_PROFILE:
-            return !0;
-        default:
-            return !1;
+l.d(t, { A: () => f });
+var n = l(627968);
+l(64700);
+var r = l(172218),
+    s = l(397927),
+    a = l(854818),
+    i = l(212407),
+    o = l(815280),
+    c = l(985018),
+    u = l(922868);
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var l = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(l);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(l).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
+                }),
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = l[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = n);
+            });
     }
-};
-function d(e, t) {
-    var n, c, d, u, g, f;
-    return null != e &&
-        ((e) => {
-            switch (e) {
-                case s.fX.KEYWORD:
-                case s.fX.ML_SPAM:
-                case s.fX.DEFAULT_KEYWORD_LIST:
-                case s.fX.MENTION_SPAM:
-                case s.fX.SERVER_POLICY:
-                case s.fX.USER_PROFILE:
-                    return !0;
-                default:
-                    return !1;
-            }
-        })(e)
-        ? {
-              headerText:
-                  null !== (n = null != (f = null == t ? void 0 : t.name) ? f : a.I6[e].getDefaultRuleName()) &&
-                  void 0 !== n
-                      ? n
-                      : "",
-              headerSubtext:
-                  null !=
-                  (c = ((e, t) => {
-                      if ((0, l.Vb)(t) && (0, l.DO)(t))
-                          return t.triggerMetadata.regexPatterns.length > 0
-                              ? o.intl.formatToPlainString(o.t.xZUvxR, {
-                                    keywordCount: t.triggerMetadata.keywordFilter.length,
-                                    regexPatternCount: t.triggerMetadata.regexPatterns.length,
-                                })
-                              : o.intl.formatToPlainString(o.t.dJN7Lk, {
-                                    keywordCount: t.triggerMetadata.keywordFilter.length,
-                                });
-                  })(0, t))
-                      ? c
-                      : "",
-              descriptionText:
-                  null !=
-                  (d = ((e) => {
-                      switch (e) {
-                          case s.fX.KEYWORD:
-                              return o.intl.string(o.t.TzvaeK);
-                          case s.fX.ML_SPAM:
-                              return o.intl.string(o.t.jBZSQl);
-                          case s.fX.DEFAULT_KEYWORD_LIST:
-                              return o.intl.string(o.t.Drc8ft);
-                          case s.fX.MENTION_SPAM:
-                              return o.intl.string(o.t.flhXO4);
-                          case s.fX.USER_PROFILE:
-                              return o.intl.string(o.t.A35LyL);
-                          default:
-                              return null;
-                      }
-                  })(e))
-                      ? d
-                      : "",
-              descriptionSubtext:
-                  null !=
-                  (u = ((e) => {
-                      if (e === s.fX.KEYWORD) return o.intl.formatToPlainString(o.t.yNec2m, {});
-                  })(e))
-                      ? u
-                      : "",
-              icon:
-                  null !=
-                  (g = ((e) => {
-                      switch (e) {
-                          case s.fX.MENTION_SPAM:
-                              return r.lOy;
-                          case s.fX.KEYWORD:
-                              return r.avL;
-                          case s.fX.ML_SPAM:
-                          case s.fX.USER_PROFILE:
-                              return (0, r.GSL)(i.Z);
-                          case s.fX.DEFAULT_KEYWORD_LIST:
-                              return r.Oqj;
-                      }
-                  })(e))
-                      ? g
-                      : r.xPt,
-          }
-        : null;
+    return e;
 }
+let f = (e) => {
+    let { immersiveBannerBlock: t, onVisibilityChange: l } = e,
+        f = (0, r.K)(
+            (e) => {
+                null == l || l(e);
+            },
+            0.33,
+            null != l,
+        ),
+        { bannerUrl: b, bannerAnimatedUrl: g } = (0, i.qY)(t),
+        p = null != t.textColor ? { color: t.textColor } : void 0,
+        m = null != t.body && "" !== t.body,
+        h = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
+    return (0, n.jsxs)("div", {
+        ref: f,
+        className: u.BX,
+        children: [
+            (0, n.jsx)("div", {
+                className: u.vK,
+                children:
+                    null != b &&
+                    (0, n.jsx)(o.A, {
+                        bannerStatic: b,
+                        bannerAnimated: g,
+                    }),
+            }),
+            (0, n.jsx)("div", {
+                className: u.HQ,
+                children: (0, n.jsxs)("div", {
+                    className: u.Yn,
+                    children: [
+                        null != t.endTime
+                            ? (0, n.jsx)(a.e, {
+                                  endDate: t.endTime,
+                                  size: "lg",
+                              })
+                            : null,
+                        (0, n.jsx)(s.Heading, {
+                            variant: "heading-xxl/bold",
+                            className: u.DD,
+                            color: "text-strong",
+                            style: d({}, p),
+                            children: t.title,
+                        }),
+                        m || h
+                            ? (0, n.jsxs)(s.Text, {
+                                  variant: "text-md/medium",
+                                  style: d({}, p),
+                                  children: [
+                                      m && t.body,
+                                      m && h && " ",
+                                      h &&
+                                          (0, n.jsx)(s.MzZ, {
+                                              href: t.helpCenterUrl,
+                                              className: u.CU,
+                                              style: d({}, p),
+                                              children: c.intl.string(c.t.O7ADgv),
+                                          }),
+                                  ],
+                              })
+                            : null,
+                    ],
+                }),
+            }),
+        ],
+    });
+};

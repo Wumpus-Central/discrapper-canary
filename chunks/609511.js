@@ -1,57 +1,45 @@
-var r = n(939793),
-    i = n(861960),
-    a = n(777994),
-    o = n(326048),
-    s = n(688709),
-    l = "[object Boolean]",
-    c = "[object Date]",
-    u = "[object Map]",
-    d = "[object Number]",
-    f = "[object RegExp]",
-    p = "[object Set]",
-    _ = "[object String]",
-    m = "[object Symbol]",
-    h = "[object ArrayBuffer]",
-    g = "[object DataView]",
-    E = "[object Float32Array]",
-    b = "[object Float64Array]",
-    y = "[object Int8Array]",
-    O = "[object Int16Array]",
-    v = "[object Int32Array]",
-    S = "[object Uint8Array]",
-    I = "[object Uint8ClampedArray]",
-    T = "[object Uint16Array]",
-    C = "[object Uint32Array]";
-e.exports = function (e, t, n) {
-    var A = e.constructor;
-    switch (t) {
-        case h:
-            return r(e);
-        case l:
-        case c:
-            return new A(+e);
-        case g:
-            return i(e, n);
-        case E:
-        case b:
-        case y:
-        case O:
-        case v:
-        case S:
-        case I:
-        case T:
-        case C:
-            return s(e, n);
-        case u:
-            return new A();
-        case d:
-        case _:
-            return new A(e);
-        case f:
-            return a(e);
-        case p:
-            return new A();
-        case m:
-            return o(e);
+n.d(t, { A: () => c }), n(896048);
+var r,
+    l = n(311907),
+    i = n(73153);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let s = {};
+class o extends (r = l.Ay.PersistedStore) {
+    initialize(e) {
+        for (let t in e) {
+            let n = e[t];
+            s[t] = new Set(n);
+        }
     }
-};
+    hasViewedPrompt(e, t) {
+        let n = s[t];
+        return null != n && !!n.has(e);
+    }
+    getState() {
+        return s;
+    }
+}
+a(o, "displayName", "GuildPromptsStore"), a(o, "persistKey", "GuildPromptsStore");
+let c = new o(i.h, {
+    GUILD_PROMPT_VIEWED: function (e) {
+        let { prompt: t, guildId: n } = e,
+            r = s[n];
+        return null == r ? ((s[n] = new Set()), s[n].add(t), !0) : !r.has(t) && (r.add(t), !0);
+    },
+    GUILD_DELETE: function (e) {
+        let { guild: t } = e;
+        return null != s[t.id] && !t.unavailable && (delete s[t.id], !0);
+    },
+});

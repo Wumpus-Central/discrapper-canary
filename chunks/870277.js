@@ -1,1 +1,1 @@
-e.exports = { list: "_20827cfa325893cd-list" };
+e.exports = "/assets/c8143059c304f79d.svg";

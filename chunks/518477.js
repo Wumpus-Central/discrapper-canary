@@ -1,0 +1,207 @@
+n.d(t, {
+    AQ: () => p,
+    In: () => i,
+    KM: () => a,
+    L7: () => d,
+    Mq: () => u,
+    RP: () => s,
+    bk: () => o,
+    d6: () => l,
+    dS: () => f,
+    jM: () => _,
+    pt: () => c,
+});
+var r = n(652215);
+let i = 300,
+    a = "user-profile-popout";
+var s = (function (e) {
+        return (
+            (e.FEATURED = "FEATURED"),
+            (e.USER_INFO = "USER_INFO"),
+            (e.BOT_INFO = "BOT_INFO"),
+            (e.ACTIVITY = "ACTIVITY"),
+            (e.MUTUALS = "MUTUALS"),
+            (e.MUTUAL_GUILDS = "MUTUAL_GUILDS"),
+            (e.MUTUAL_FRIENDS = "MUTUAL_FRIENDS"),
+            (e.BOT_DATA_ACCESS = "BOT_DATA_ACCESS"),
+            (e.WIDGETS = "WIDGETS"),
+            (e.WISHLIST = "WISHLIST"),
+            e
+        );
+    })({}),
+    o = (function (e) {
+        return (
+            (e.ROLES = "ROLES"),
+            (e.CONNECTIONS = "CONNECTIONS"),
+            (e.APPS = "APPS"),
+            (e.NOTE = "NOTE"),
+            (e.RECENT_ACTIVITY = "RECENT_ACTIVITY"),
+            e
+        );
+    })({}),
+    l = (function (e) {
+        return (
+            (e[(e.NICKNAME = 0)] = "NICKNAME"),
+            (e[(e.PRONOUNS = 1)] = "PRONOUNS"),
+            (e[(e.AVATAR = 2)] = "AVATAR"),
+            (e[(e.ANIMATED_AVATAR = 3)] = "ANIMATED_AVATAR"),
+            (e[(e.BANNER = 4)] = "BANNER"),
+            (e[(e.ANIMATED_BANNER = 5)] = "ANIMATED_BANNER"),
+            (e[(e.BIO = 6)] = "BIO"),
+            (e[(e.THEME = 7)] = "THEME"),
+            (e[(e.AVATAR_DECORATION = 8)] = "AVATAR_DECORATION"),
+            (e[(e.PROFILE_EFFECT = 9)] = "PROFILE_EFFECT"),
+            e
+        );
+    })({}),
+    c = (function (e) {
+        return (
+            (e.VIEW = "VIEW"),
+            (e.SEND_MESSAGE = "SEND_MESSAGE"),
+            (e.SEND_DIRECT_MESSAGE = "SEND_DIRECT_MESSAGE"),
+            (e.SEND_FRIEND_REQUEST = "SEND_FRIEND_REQUEST"),
+            (e.ACCEPT_FRIEND_REQUEST = "ACCEPT_FRIEND_REQUEST"),
+            (e.IGNORE_FRIEND_REQUEST = "IGNORE_FRIEND_REQUEST"),
+            (e.CANCEL_FRIEND_REQUEST = "CANCEL_FRIEND_REQUEST"),
+            (e.REMOVE_FRIEND = "REMOVE_FRIEND"),
+            (e.REMOVE_GAME_FRIEND = "REMOVE_GAME_FRIEND"),
+            (e.BLOCK = "BLOCK"),
+            (e.UNBLOCK = "UNBLOCK"),
+            (e.IGNORE = "IGNORE"),
+            (e.UNIGNORE = "UNIGNORE"),
+            (e.REPORT = "REPORT"),
+            (e.COPY_USERNAME = "COPY_USERNAME"),
+            (e.COPY_USER_ID = "COPY_USER_ID"),
+            (e.COPY_APP_ID = "COPY_APP_ID"),
+            (e.COPY_APP_LINK = "COPY_APP_LINK"),
+            (e.PRESS_VIEW_PROFILE = "PRESS_VIEW_PROFILE"),
+            (e.PRESS_VIEW_MAIN_PROFILE = "PRESS_VIEW_MAIN_PROFILE"),
+            (e.PRESS_VIEW_SERVER_PROFILE = "PRESS_VIEW_SERVER_PROFILE"),
+            (e.PRESS_OPTIONS = "PRESS_OPTIONS"),
+            (e.HOVER_BADGE = "HOVER_BADGE"),
+            (e.PRESS_BADGE = "PRESS_BADGE"),
+            (e.PRESS_SECTION = "PRESS_SECTION"),
+            (e.PRESS_PRONOUNS = "PRESS_PRONOUNS"),
+            (e.PRESS_MUTUAL_FRIEND = "PRESS_MUTUAL_FRIEND"),
+            (e.PRESS_MUTUAL_GUILD = "PRESS_MUTUAL_GUILD"),
+            (e.PRESS_ADD_NOTE = "PRESS_ADD_NOTE"),
+            (e.PRESS_SET_STATUS = "PRESS_SET_STATUS"),
+            (e.PRESS_SET_CUSTOM_STATUS = "PRESS_SET_CUSTOM_STATUS"),
+            (e.HOVER_CUSTOM_STATUS = "HOVER_CUSTOM_STATUS"),
+            (e.PRESS_ADD_CUSTOM_STATUS = "PRESS_ADD_CUSTOM_STATUS"),
+            (e.PRESS_EDIT_CUSTOM_STATUS = "PRESS_EDIT_CUSTOM_STATUS"),
+            (e.PRESS_CLEAR_CUSTOM_STATUS = "PRESS_CLEAR_CUSTOM_STATUS"),
+            (e.PRESS_REACT_CUSTOM_STATUS = "PRESS_REACT_CUSTOM_STATUS"),
+            (e.PRESS_REPLY_CUSTOM_STATUS = "PRESS_REPLY_CUSTOM_STATUS"),
+            (e.SEND_REACT_CUSTOM_STATUS = "SEND_REACT_CUSTOM_STATUS"),
+            (e.SEND_REPLY_CUSTOM_STATUS = "SEND_REPLY_CUSTOM_STATUS"),
+            (e.PRESS_REACT_AVATAR = "PRESS_REACT_AVATAR"),
+            (e.PRESS_REPLY_AVATAR = "PRESS_REPLY_AVATAR"),
+            (e.SEND_REACT_AVATAR = "SEND_REACT_AVATAR"),
+            (e.SEND_REPLY_AVATAR = "SEND_REPLY_AVATAR"),
+            (e.PRESS_SWITCH_ACCOUNTS = "PRESS_SWITCH_ACCOUNTS"),
+            (e.PRESS_SET_FRIEND_NICKNAME = "PRESS_SET_FRIEND_NICKNAME"),
+            (e.PRESS_INVITE_TO_SERVER = "PRESS_INVITE_TO_SERVER"),
+            (e.PRESS_MOD_VIEW = "PRESS_MOD_VIEW"),
+            (e.PRESS_SHOW_MORE_ACTIVITY = "PRESS_SHOW_MORE_ACTIVITY"),
+            (e.JOIN_ACTIVITY = "JOIN_ACTIVITY"),
+            (e.SET_NOTE = "SET_NOTE"),
+            (e.SET_VOLUME = "SET_VOLUME"),
+            (e.EDIT_PROFILE = "EDIT_PROFILE"),
+            (e.EDIT_GUILD_PROFILE = "EDIT_GUILD_PROFILE"),
+            (e.VOICE_CALL = "VOICE_CALL"),
+            (e.VIDEO_CALL = "VIDEO_CALL"),
+            (e.MUTE = "MUTE"),
+            (e.SERVER_MUTE = "SERVER_MUTE"),
+            (e.MUTE_SOUNDBOARD = "MUTE_SOUNDBOARD"),
+            (e.DISABLE_VIDEO = "DISABLE_VIDEO"),
+            (e.DEAFEN = "DEAFEN"),
+            (e.DISCONNECT = "DISCONNECT"),
+            (e.ADD_ROLE = "ADD_ROLE"),
+            (e.REMOVE_ROLE = "REMOVE_ROLE"),
+            (e.PRESS_VIEW_APP_COMMANDS = "PRESS_VIEW_APP_COMMANDS"),
+            (e.PRESS_ADD_APP = "PRESS_ADD_APP"),
+            (e.PRESS_APP_COMMAND = "PRESS_APP_COMMAND"),
+            (e.PRESS_APP_STOREFRONT = "PRESS_APP_STOREFRONT"),
+            (e.PRESS_APP_CONNECTION = "PRESS_APP_CONNECTION"),
+            (e.VIEW_SECURE_FRAMES_VERIFICATION_CODE = "VIEW_SECURE_FRAMES_VERIFICATION_CODE"),
+            (e.EXPAND_ROLES = "EXPAND_ROLES"),
+            (e.COLLAPSE_ROLES = "COLLAPSE_ROLES"),
+            (e.EXPAND_GAME_TAGS = "EXPAND_GAME_TAGS"),
+            (e.COLLAPSE_GAME_TAGS = "COLLAPSE_GAME_TAGS"),
+            (e.ADD_GAME_TAGS = "ADD_GAME_TAGS"),
+            (e.REMOVE_GAME_TAGS = "REMOVE_GAME_TAGS"),
+            (e.VIEW_BLOCKED_PROFILE = "VIEW_BLOCKED_PROFILE"),
+            (e.VIEW_IGNORED_PROFILE = "VIEW_IGNORED_PROFILE"),
+            (e.DONT_SHOW_AGAIN_IGNORED_PROFILE = "DONT_SHOW_AGAIN_IGNORED_PROFILE"),
+            (e.PRESS_MOVE_TO_CHANNEL = "PRESS_MOVE_TO_CHANNEL"),
+            (e.PRESS_REMOVE_FROM_STAGE = "PRESS_REMOVE_FROM_STAGE"),
+            (e.PRESS_INVITE_TO_SPEAK = "PRESS_INVITE_TO_SPEAK"),
+            (e.PRESS_MANAGE_USER = "PRESS_MANAGE_USER"),
+            (e.PRESS_VERIFY_USER = "PRESS_VERIFY_USER"),
+            (e.PRESS_UNVERIFY_USER = "PRESS_UNVERIFY_USER"),
+            (e.PRESS_TIME_OUT_USER = "PRESS_TIME_OUT_USER"),
+            (e.PRESS_REMOVE_TIME_OUT = "PRESS_REMOVE_TIME_OUT"),
+            (e.PRESS_KICK_USER = "PRESS_KICK_USER"),
+            (e.PRESS_BAN_USER = "PRESS_BAN_USER"),
+            (e.COPY_CONNECTED_ACCOUNT = "COPY_CONNECTED_ACCOUNT"),
+            (e.PRESS_VIEW_CONNECTED_ACCOUNT = "PRESS_VIEW_CONNECTED_ACCOUNT"),
+            (e.PRESS_REACT_REPLY_TOAST = "PRESS_REACT_REPLY_TOAST"),
+            (e.VISIT_SHOP = "VISIT_SHOP"),
+            (e.GET_PREMIUM = "GET_NITRO"),
+            (e.VIEW_PREMIUM_PERKS = "VIEW_NITRO_PERKS"),
+            (e.ACCEPT_GAME_FRIEND_REQUEST = "ACCEPT_GAME_FRIEND_REQUEST"),
+            (e.IGNORE_GAME_FRIEND_REQUEST = "IGNORE_GAME_FRIEND_REQUEST"),
+            (e.RING = "RING"),
+            (e.STOP_RINGING = "STOP_RINGING"),
+            (e.MANAGE_APP = "MANAGE_APP"),
+            (e.PRESS_REMOVE_FROM_THREAD = "PRESS_REMOVE_FROM_THREAD"),
+            (e.PRESS_LEAVE_THREAD = "PRESS_LEAVE_THREAD"),
+            (e.VIEW_WIDGET = "VIEW_WIDGET"),
+            (e.VIEW_GAME_WIDGET_BREADCRUMB = "VIEW_GAME_WIDGET_BREADCRUMB"),
+            (e.PRESS_GAME_WIDGET_BREADCRUMB = "PRESS_GAME_WIDGET_BREADCRUMB"),
+            (e.EDIT_SAVED = "EDIT_SAVED"),
+            (e.VIEW_WIDGETS_EMPTY_STATE = "VIEW_WIDGETS_EMPTY_STATE"),
+            (e.VIEW_APPLICATION_WIDGETS_EMPTY_STATE = "VIEW_APPLICATION_WIDGETS_EMPTY_STATE"),
+            (e.PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT = "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT"),
+            (e.PRESS_APPLICATION_WIDGET_PLACEHOLDER_CONNECT = "PRESS_APPLICATION_WIDGET_PLACEHOLDER_CONNECT"),
+            (e.VIEW_APPLICATION_WIDGET_PREVIEW = "VIEW_APPLICATION_WIDGET_PREVIEW"),
+            (e.PRESS_APPLICATION_WIDGET_PREVIEW = "PRESS_APPLICATION_WIDGET_PREVIEW"),
+            (e.PRESS_SHOW_MORE_WIDGETS = "PRESS_SHOW_MORE_WIDGETS"),
+            (e.COPY_AVATAR_IMAGE_LINK = "COPY_AVATAR_IMAGE_LINK"),
+            (e.COPY_BANNER_IMAGE_LINK = "COPY_BANNER_IMAGE_LINK"),
+            e
+        );
+    })({}),
+    u = (function (e) {
+        return (
+            (e.WISHLIST_ITEM_CLICKED = "WISHLIST_ITEM_CLICKED"),
+            (e.WISHLIST_TOGGLE_PRIVATE = "WISHLIST_TOGGLE_PRIVATE"),
+            (e.WISHLIST_TOGGLE_PUBLIC = "WISHLIST_TOGGLE_PUBLIC"),
+            (e.PRESS_WISHLIST_BREADCRUMB_CARD = "PRESS_WISHLIST_BREADCRUMB_CARD"),
+            (e.PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD = "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD"),
+            (e.VIEW_WISHLIST = "VIEW_WISHLIST"),
+            e
+        );
+    })({});
+function d(e) {
+    let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
+    return null != n
+        ? "https://".concat(n, "/badge-icons/").concat(e, ".png")
+        : "".concat(location.protocol).concat(t).concat(r.Rsh.BADGE_ICON(e));
+}
+var f = (function (e) {
+        return (e.ACTIVITY = "ACTIVITY"), (e.AVATAR = "AVATAR"), (e.STATUS = "STATUS"), e;
+    })({}),
+    p = (function (e) {
+        return (e.REPLY = "REPLY"), (e.REACT = "REACT"), e;
+    })({}),
+    _ = (function (e) {
+        return (
+            (e.WIDGET_ADDED = "WIDGET_ADDED"),
+            (e.WIDGET_REMOVED = "WIDGET_REMOVED"),
+            (e.WIDGET_SAVE_FAILURE = "WIDGET_SAVE_FAILURE"),
+            (e.SOMETHING_WENT_WRONG = "SOMETHING_WENT_WRONG"),
+            e
+        );
+    })({});

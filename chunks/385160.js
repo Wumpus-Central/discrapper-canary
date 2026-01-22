@@ -1,0 +1,22 @@
+n.d(t, { Ao: () => l });
+let r = (0, n(945810).mj)({
+    name: "2025-11-guild-powerups-mobile",
+    kind: "user",
+    defaultConfig: {
+        enabled: !1,
+        notificationsEnabled: !1,
+    },
+    variations: {
+        1: {
+            enabled: !0,
+            notificationsEnabled: !1,
+        },
+        2: {
+            enabled: !0,
+            notificationsEnabled: !0,
+        },
+    },
+});
+function l(e) {
+    return r.useConfig({ location: e }).enabled;
+}

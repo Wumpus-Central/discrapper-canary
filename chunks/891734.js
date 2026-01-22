@@ -1,42 +1,11 @@
-n.d(t, { Z: () => s });
-var r = n(632471),
-    i = n(740078),
-    a = n(510104),
-    o = n(126387);
-function s(e, t) {
-    void 0 === t && (t = {});
-    var n = t,
-        s = n.placement,
-        l = n.boundary,
-        c = n.rootBoundary,
-        u = n.padding,
-        d = n.flipVariations,
-        f = n.allowedAutoPlacements,
-        p = void 0 === f ? i.Ct : f,
-        _ = (0, r.Z)(s),
-        m = _
-            ? d
-                ? i.bw
-                : i.bw.filter(function (e) {
-                      return (0, r.Z)(e) === _;
-                  })
-            : i.mv,
-        h = m.filter(function (e) {
-            return p.indexOf(e) >= 0;
-        });
-    0 === h.length && (h = m);
-    var g = h.reduce(function (t, n) {
-        return (
-            (t[n] = (0, a.Z)(e, {
-                placement: n,
-                boundary: l,
-                rootBoundary: c,
-                padding: u,
-            })[(0, o.Z)(n)]),
-            t
-        );
-    }, {});
-    return Object.keys(g).sort(function (e, t) {
-        return g[e] - g[t];
-    });
-}
+n.d(t, { g: () => l });
+var r = n(311907),
+    i = n(582754),
+    a = n(775602),
+    s = n(544028),
+    o = n(478840);
+let l = (e) => {
+    let t = (0, r.bG)([a.A], () => a.A.saturation),
+        n = (0, r.bG)([s.A], () => (0, i.Mw)(s.A.theme));
+    return (0, o.V)(e, t, n);
+};

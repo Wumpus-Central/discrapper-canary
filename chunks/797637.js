@@ -1,0 +1,39 @@
+n.d(t, { A: () => u });
+var r = n(627968);
+n(64700);
+var i = n(397927),
+    a = n(954571),
+    s = n(559868),
+    o = n(652215),
+    l = n(985018);
+let c = () => {
+    a.default.track(o.HAw.CHANGE_LOG_CTA_CLICKED, {
+        cta_type: "profile_bio",
+        target: s.Do,
+    });
+};
+function u() {
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)("span", { children: l.intl.string(l.t.OJmNR9) }),
+            (0, r.jsx)("br", {}),
+            (0, r.jsx)("br", {}),
+            (0, r.jsx)("span", {
+                children: l.intl.format(l.t.RCYeBL, {
+                    blogHook: (e, t) =>
+                        (0, r.jsx)(
+                            i.MzZ,
+                            {
+                                onClick: c,
+                                target: "_blank",
+                                rel: "noreferrer noopener",
+                                href: s.Do,
+                                children: e,
+                            },
+                            t,
+                        ),
+                }),
+            }),
+        ],
+    });
+}

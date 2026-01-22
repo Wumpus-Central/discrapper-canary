@@ -1,5 +1,1 @@
-e.exports = {
-    container: "aa69ccbefb0925a4-container",
-    content: "aa69ccbefb0925a4-content",
-    tabBar: "aa69ccbefb0925a4-tabBar",
-};
+e.exports = "/assets/c89d234618179857.svg";

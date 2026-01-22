@@ -1,12 +1,8 @@
-n.d(t, {
-    q: () => a,
-    u: () => i,
-});
-var r = n(894417);
-function i(e, t, n) {
-    return (0, r.Fp)(e, (0, r.VV)(t, n));
-}
-function a(e, t, n) {
-    var r = i(e, t, n);
-    return r > n ? n : r;
-}
+e.exports = function (e, t, n, r, i) {
+    return (
+        i(e, function (e, i, a) {
+            n = r ? ((r = !1), e) : t(n, e, i, a);
+        }),
+        n
+    );
+};

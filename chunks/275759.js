@@ -1,269 +1,341 @@
 n.d(t, {
-    FI: () => y,
-    O1: () => m,
-    SJ: () => _,
-    Ur: () => b,
-    kQ: () => E,
-    n_: () => g,
-    xp: () => h,
+    Ay: () => ec,
+    ZD: () => E,
+    hb: () => O,
 }),
-    n(65234),
-    n(111804),
-    n(490233),
-    n(97749),
-    n(388685),
-    n(467055);
-var r = n(512722),
-    i = n.n(r),
-    a = n(392711),
-    o = n.n(a);
-n(442837), n(704215);
-var s = n(277800);
-n(266454);
-var l = n(485386),
-    c = n(430824);
-n(496675);
-var u = n(591759),
-    d = n(856651),
-    f = n(981631),
-    p = n(388032);
-let _ = [
-    "426537812993638400",
-    "1042836142560645130",
-    "296023718839451649",
-    "979802510766268446",
-    "1031611223235637258",
-    "512333785338216465",
-];
-var m = (function (e) {
-    return (e[(e.AND = 0)] = "AND"), (e[(e.OR = 1)] = "OR"), e;
-})({});
-function h(e) {
-    var t;
-    let { searchParams: n } = null != (t = u.Z.toURLSafe(e)) ? t : { searchParams: new URLSearchParams() },
-        { code: r, state: a, error: o, error_description: s } = Object.fromEntries(n);
+    n(896048),
+    n(321073),
+    n(638769);
+var r,
+    i = n(735438),
+    a = n.n(i),
+    s = n(989349),
+    o = n.n(s),
+    l = n(311907),
+    c = n(73153),
+    u = n(49463),
+    d = n(21119),
+    f = n(153488),
+    p = n(994500),
+    _ = n(70730),
+    h = n(652215);
+function m(e, t, n) {
     return (
-        i()(!Array.isArray(r), "Received multiple query param values for code"),
-        i()(!Array.isArray(a), "Received multiple query param values for state"),
-        i()(!Array.isArray(o), "Received multiple query param values for error"),
-        i()(!Array.isArray(s), "Received multiple query param values for error_description"),
-        {
-            code: r,
-            state: a,
-            error: o,
-            errorDescription: s,
-        }
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
     );
 }
 function g(e) {
-    let { connectionType: t, connectionMetadataField: n, operator: r, operatorText: i, value: a } = e,
-        o = null,
-        s = Math.round(Number(a));
-    switch (r) {
-        case d.iO.EQUAL:
-            (o = p.t.H97H4S), t === f.ABu.PAYPAL && n === d.PC.PAYPAL_VERIFIED && (o = p.t["N95b+f"]);
-            break;
-        case d.iO.NOT_EQUAL:
-            o = p.t["D9B/q2"];
-            break;
-        case d.iO.LESS_THAN:
-            (o = p.t["3ru8/N"]), (s = Math.max(0, s - 1));
-            break;
-        case d.iO.GREATER_THAN:
-            (o = p.t.wCVDHn), (s = Math.max(0, s + 1));
-            break;
-        case void 0:
-        case null:
-            return null;
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            });
     }
-    if ((null != i && (o = i), null != o && null != r))
-        switch (t) {
-            case f.ABu.REDDIT:
-                switch (n) {
-                    case d.PC.CREATED_AT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: s }),
-                        });
-                        break;
-                    case d.PC.REDDIT_TOTAL_KARMA:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.P2JAEc, { karma: s }),
-                        });
-                        break;
-                    case d.PC.REDDIT_GOLD:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.string(p.t["+/5TCx"]) });
-                        break;
-                    case d.PC.REDDIT_MOD:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.string(p.t["9rPbEs"]) });
-                        break;
-                    default:
-                        return null;
-                }
-                break;
-            case f.ABu.STEAM:
-                switch (n) {
-                    case d.PC.CREATED_AT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: s }),
-                        });
-                        break;
-                    case d.PC.STEAM_GAME_COUNT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.H9eLoe, { count: s }),
-                        });
-                        break;
-                    case d.PC.STEAM_ITEM_COUNT_TF2:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.MceZJ6, { count: s }),
-                        });
-                        break;
-                    case d.PC.STEAM_ITEM_COUNT_DOTA2:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.dMnRar, { count: s }),
-                        });
-                        break;
-                    default:
-                        return null;
-                }
-                break;
-            case f.ABu.BLUESKY:
-                switch (n) {
-                    case d.PC.CREATED_AT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: s }),
-                        });
-                        break;
-                    case d.PC.BLUESKY_FOLLOWERS_COUNT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.xIdKU8, { count: s }),
-                        });
-                        break;
-                    case d.PC.BLUESKY_STATUSES_COUNT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t["dy3+NR"], { count: s }),
-                        });
-                        break;
-                    default:
-                        return null;
-                }
-                break;
-            case f.ABu.TWITTER:
-                switch (n) {
-                    case d.PC.CREATED_AT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: s }),
-                        });
-                        break;
-                    case d.PC.TWITTER_VERIFIED:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.string(p.t.xRygZL) });
-                        break;
-                    case d.PC.TWITTER_FOLLOWERS_COUNT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.bkajar, { count: s }),
-                        });
-                        break;
-                    case d.PC.TWITTER_STATUSES_COUNT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.MI7NKi, { count: s }),
-                        });
-                        break;
-                    default:
-                        return null;
-                }
-                break;
-            case f.ABu.PAYPAL:
-                switch (n) {
-                    case d.PC.CREATED_AT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: s }),
-                        });
-                        break;
-                    case d.PC.PAYPAL_VERIFIED:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.string(p.t.slSQuB) });
-                        break;
-                    default:
-                        return null;
-                }
-                break;
-            case f.ABu.EBAY:
-                switch (n) {
-                    case d.PC.CREATED_AT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: s }),
-                        });
-                        break;
-                    case d.PC.EBAY_TOP_RATED_SELLER:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.string(p.t.TEEYwa) });
-                        break;
-                    case d.PC.EBAY_POSITIVE_FEEDBACK_PERCENTAGE:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.rl9Vgy, { value: s }),
-                        });
-                        break;
-                    case d.PC.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.QP5W1R, { count: s }),
-                        });
-                        break;
-                    case d.PC.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t["6ZFYdK"], { count: s }),
-                        });
-                        break;
-                    default:
-                        return null;
-                }
-                break;
-            case f.ABu.TIKTOK:
-                switch (n) {
-                    case d.PC.TIKTOK_VERIFIED:
-                        o = p.intl.format(o, { platformQuantityHook: () => p.intl.string(p.t.uv7ety) });
-                        break;
-                    case d.PC.TIKTOK_FOLLOWER_COUNT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.qIPDRy, { count: s }),
-                        });
-                        break;
-                    case d.PC.TIKTOK_FOLLOWING_COUNT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.zRta4X, { count: s }),
-                        });
-                        break;
-                    case d.PC.TIKTOK_LIKES_COUNT:
-                        o = p.intl.format(o, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t["ar0WW+"], { count: s }),
-                        });
-                        break;
-                    default:
-                        return null;
-                }
-                break;
-            default:
-                return null;
+    return e;
+}
+let E = 5,
+    b = 7,
+    y = 86400000,
+    O = 604800000,
+    A = 1209600000,
+    v = 1,
+    S = 5,
+    I = 0.7,
+    T = 0.5;
+function C() {
+    return {
+        messageGiftIntentLastShownMap: {},
+        lastShownFriendsListGiftIntents: [],
+        friendsTabBadgeLastDismissedTime: null,
+        giftUnreadNotificationLastDismissedTimes: [],
+        profilePopoutGiftIntentsDismissMap: {},
+    };
+}
+let N = C(),
+    R = [],
+    w = new Set(),
+    P = new Set(),
+    D = {},
+    x = null,
+    L = null;
+function j() {
+    return null != L ? L : Date.now();
+}
+function M(e, t) {
+    let n = new Date(),
+        r = new Date(e.getTime());
+    r.setFullYear(t);
+    let i = new Date(r.getTime());
+    i.setDate(r.getDate() - b);
+    let a = new Date(r.getTime());
+    return a.setDate(r.getDate() + b), n > i && n < a;
+}
+function k(e) {
+    return !M(e, e.getFullYear()) && M(e, new Date().getFullYear());
+}
+function U() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+    if (e) {
+        let e = Math.ceil(R.length / 2);
+        R.slice(0, e).forEach((e) => {
+            w.add(e);
+        }),
+            R.forEach((e) => {
+                P.add(e);
+            });
+    } else
+        for (let e of R) {
+            let t = d.A.getUserAffinity(e);
+            null != t && t.dmProbability > I && w.add(e), null != t && t.dmProbability > T && P.add(e);
         }
-    return o;
 }
-function E(e) {
-    return e.some((e) => null === e.tags.guild_connections);
+function G() {
+    if (null != x) return void eo(x);
+    if ((B(), !f.A.hasConsented(h.YAq.PERSONALIZATION))) return;
+    let { enabled: e } = _.u.getConfig({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" });
+    if (e) {
+        for (let e of p.A.getFriendIDs()) {
+            let t = p.A.getSince(e),
+                n = d.A.getUserAffinity(e);
+            if (p.A.isFriend(e) && null != n && n.dmProbability > 0 && null != t) {
+                let n = new Date(t);
+                k(n) && (R.push(e), (D[e] = { friendsSince: n }));
+            }
+        }
+        R.sort((e, t) => d.A.compareByDmProbability(e, t)), U();
+    }
 }
-function b(e) {
-    var t, n;
-    let { guildMember: r, guild: i, sortedGuildRoles: a, channel: u, onlyChannelConnectionRoles: d = !1 } = e;
-    if (null == r || (null == i && null != u && (i = c.Z.getGuild(u.getGuildId())), null == i)) return null;
-    let { id: f } = i;
-    null == a && (a = l.Z.getSortedRoles(f));
-    let p = a.filter((e) => null === e.tags.guild_connections && r.roles.includes(e.id)),
-        _ = o().intersection(p, (0, s.Z)(u));
-    return _.length > 0 ? (null != (t = _[0]) ? t : null) : d ? null : null != (n = p[0]) ? n : null;
+function V(e) {
+    return Math.round(o()().diff(e, "years", !0));
 }
-function y(e, t) {
-    if (null == e || "" === e) return null;
-    let n = new Date(e);
-    return !(n instanceof Date) || isNaN(n.getTime())
-        ? null
-        : n.toLocaleDateString(t, {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-          });
+function F() {
+    return Array.from(P).some((e) => !N.lastShownFriendsListGiftIntents.includes(e));
 }
+function B() {
+    (R.length = 0), w.clear(), P.clear(), (D = {});
+}
+function H() {
+    B();
+}
+function Y() {
+    (N = C()), B();
+}
+function W() {
+    N.lastShownFriendsListGiftIntents = Array.from(R);
+}
+function K(e) {
+    let { recipientUserId: t } = e;
+    Z(t);
+}
+function z() {
+    N.giftUnreadNotificationLastDismissedTimes.push(j());
+}
+function q() {
+    let e = j();
+    N.giftUnreadNotificationLastDismissedTimes = N.giftUnreadNotificationLastDismissedTimes.filter(
+        (t) => e - t <= 7 * y,
+    );
+}
+function X(e) {
+    let { recipientUserId: t } = e;
+    Z(t);
+}
+function Z(e) {
+    null == N.messageGiftIntentLastShownMap[e] && (N.messageGiftIntentLastShownMap[e] = j());
+}
+function Q() {
+    let e = j();
+    for (let t in N.messageGiftIntentLastShownMap)
+        e - N.messageGiftIntentLastShownMap[t] > A && delete N.messageGiftIntentLastShownMap[t];
+}
+function $() {
+    let e = j(),
+        t = y * b * 2;
+    for (let n in N.profilePopoutGiftIntentsDismissMap)
+        e - N.profilePopoutGiftIntentsDismissMap[n] > t && delete N.profilePopoutGiftIntentsDismissMap[n];
+}
+function J() {
+    N.lastShownFriendsListGiftIntents = [];
+}
+function ee() {
+    N.messageGiftIntentLastShownMap = {};
+}
+function et() {
+    N.giftUnreadNotificationLastDismissedTimes = [];
+}
+function en(e) {
+    let { total: t } = e;
+    if (null == t) {
+        (x = null), G();
+        return;
+    }
+    eo(t);
+}
+function er(e) {
+    let { date: t } = e;
+    L = t;
+}
+function ei() {
+    L = null;
+}
+function ea(e) {
+    let { recipientUserId: t } = e;
+    N.profilePopoutGiftIntentsDismissMap[t] = j();
+}
+function es() {
+    N.profilePopoutGiftIntentsDismissMap = {};
+}
+function eo(e) {
+    B();
+    let { enabled: t } = _.u.getConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" });
+    if (!t) return;
+    x = e;
+    let n = p.A.getFriendIDs().filter((e) => !p.A.isIgnored(e));
+    a()
+        .sampleSize(n, e)
+        .forEach((e) => {
+            let t = p.A.getSince(e);
+            if (null != t) {
+                let n = new Date(t);
+                R.push(e), (D[e] = { friendsSince: n });
+            }
+        }),
+        R.sort((e, t) => d.A.compareByDmProbability(e, t)),
+        U(!0);
+}
+class el extends (r = l.Ay.PersistedStore) {
+    initialize(e) {
+        if (((N = C()), null != e)) {
+            var t;
+            (N.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime),
+                (N.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)),
+                (N.messageGiftIntentLastShownMap = g({}, e.messageGiftIntentLastShownMap)),
+                (N.giftUnreadNotificationLastDismissedTimes = Array.from(
+                    null != (t = e.giftUnreadNotificationLastDismissedTimes) ? t : [],
+                )),
+                (N.profilePopoutGiftIntentsDismissMap = g({}, e.profilePopoutGiftIntentsDismissMap));
+        }
+        this.syncWith([p.A, d.A, f.A, u.A], G), Q(), q(), $();
+    }
+    getState() {
+        return N;
+    }
+    getFriendAnniversaries() {
+        return R;
+    }
+    getNextRecipientUserIDForNotification() {
+        if (!this.isNotificationCooldownActive())
+            return Array.from(w).find((e) => null == N.messageGiftIntentLastShownMap[e]);
+    }
+    isNotificationCooldownActive() {
+        q();
+        let e = N.giftUnreadNotificationLastDismissedTimes;
+        if (0 === e.length) return !1;
+        if (e.length >= S) return !0;
+        let t = j();
+        return e.filter((e) => t - e <= y).length >= v;
+    }
+    canShowFriendsTabBadge() {
+        return F();
+    }
+    getFriendAnniversaryYears(e) {
+        let t = D[e];
+        return null == t ? 0 : V(t.friendsSince);
+    }
+    canShowProfilePopoutGiftIntents(e) {
+        return null == N.profilePopoutGiftIntentsDismissMap[e] && null != D[e];
+    }
+    isGiftIntentMessageInCooldown(e) {
+        return null != N.messageGiftIntentLastShownMap[e];
+    }
+    getDevToolTotalFriendAnniversaries() {
+        return x;
+    }
+    getDevToolCurrentDate() {
+        return L;
+    }
+    getHighestAffinityFriendAnniversaries() {
+        return Array.from(w);
+    }
+    getHighAffinityFriendAnniversaries() {
+        return Array.from(P);
+    }
+    getGiftUnreadNotificationLastDismissedTimes() {
+        return N.giftUnreadNotificationLastDismissedTimes;
+    }
+    getMessageGiftIntentLastShownMap() {
+        return N.messageGiftIntentLastShownMap;
+    }
+    getProfilePopoutGiftIntentsDismissMap() {
+        return N.profilePopoutGiftIntentsDismissMap;
+    }
+}
+m(el, "displayName", "PremiumGiftingIntentStore"),
+    m(el, "persistKey", "PremiumGiftingIntentStore"),
+    m(el, "migrations", [
+        (e) => {
+            var t, n;
+            return null == e
+                ? e
+                : {
+                      friendsTabBadgeLastDismissedTime: null != (t = e.friendsTabBadgeLastDismissedTime) ? t : null,
+                      lastShownFriendsListGiftIntents: null != (n = e.lastShownFriendsListGiftIntents) ? n : [],
+                      messageGiftIntentLastShownMap: {},
+                  };
+        },
+        (e) => {
+            var t, n;
+            return null == e
+                ? e
+                : {
+                      friendsTabBadgeLastDismissedTime: null,
+                      lastShownFriendsListGiftIntents: null != (t = e.lastShownFriendsListGiftIntents) ? t : [],
+                      messageGiftIntentLastShownMap: null != (n = e.messageGiftIntentLastShownMap) ? n : {},
+                      giftUnreadNotificationLastDismissedTimes: [],
+                  };
+        },
+        (e) => {
+            var t, n, r;
+            return null == e
+                ? e
+                : {
+                      friendsTabBadgeLastDismissedTime: null,
+                      lastShownFriendsListGiftIntents: null != (t = e.lastShownFriendsListGiftIntents) ? t : [],
+                      messageGiftIntentLastShownMap: null != (n = e.messageGiftIntentLastShownMap) ? n : {},
+                      giftUnreadNotificationLastDismissedTimes:
+                          null != (r = e.giftUnreadNotificationLastDismissedTimes) ? r : [],
+                      profilePopoutGiftIntentsDismissMap: {},
+                  };
+        },
+    ]);
+let ec = new el(c.h, {
+    CONNECTION_OPEN: H,
+    LOGOUT: Y,
+    MESSAGE_GIFT_INTENT_SHOWN: K,
+    FRIENDS_LIST_GIFT_INTENTS_SHOWN: W,
+    GIFT_UNREAD_NOTIFICATION_DISMISS: z,
+    GIFT_INTENT_FLOW_PURCHASED_GIFT: X,
+    PROFILE_POPOUT_GIFT_INTENTS_DISMISS: ea,
+    DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: J,
+    DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET: ee,
+    DEV_TOOLS_GIFT_UNREAD_NOTIFICATION_COOLDOWN_RESET: et,
+    DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT: en,
+    DEV_TOOLS_SET_CURRENT_DATE: er,
+    DEV_TOOLS_RESET_CURRENT_DATE: ei,
+    DEV_TOOLS_PROFILE_POPOUT_GIFT_INTENTS_DISMISS_RESET: es,
+});

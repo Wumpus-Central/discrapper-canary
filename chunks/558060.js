@@ -1,93 +1,27 @@
-n.d(t, { Z: () => d });
-var r = n(54381);
-n(473749);
-var i = n(120356),
-    a = n.n(i),
-    l = n(884697),
-    o = n(754433),
-    s = n(409116),
-    c = n(981631),
-    u = n(12089);
+r.d(t, {
+    A: () => d,
+    R: () => a,
+}),
+    r(896048);
+var n = r(627968),
+    i = r(64700),
+    o = r(284009),
+    l = r.n(o),
+    s = r(284683);
+let c = i.createContext(void 0);
+function a() {
+    let e = i.useContext(c);
+    return l()(null != e, "must use useGuildShopSortContext within a GuildShopSortOptionsContextProvider"), e;
+}
 function d(e) {
-    var t, n;
-    let {
-            product: i,
-            isPremiumUser: d,
-            discount: m,
-            className: f,
-            discountOfferAmount: p,
-            hideStrikethroughPrice: v = !1,
-            nitroIconType: b,
-            nitroIconSize: h = "md",
-        } = e,
-        g = (0, l.ql)(i, c.tuJ.DEFAULT);
-    if (null == g) return null;
-    if (g.amount <= 0)
-        return (0, r.jsx)("div", {
-            className: a()(u.priceTagsContainer, f),
-            children: (0, r.jsx)(s.F, { price: g }),
-        });
-    let x = (0, l.ql)(i, c.tuJ.PREMIUM_TIER_2),
-        P =
-            (0, l.x6)(i) && d
-                ? ((t = (function (e) {
-                      for (var t = 1; t < arguments.length; t++) {
-                          var n = null != arguments[t] ? arguments[t] : {},
-                              r = Object.keys(n);
-                          "function" == typeof Object.getOwnPropertySymbols &&
-                              (r = r.concat(
-                                  Object.getOwnPropertySymbols(n).filter(function (e) {
-                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                  }),
-                              )),
-                              r.forEach(function (t) {
-                                  var r;
-                                  (r = n[t]),
-                                      t in e
-                                          ? Object.defineProperty(e, t, {
-                                                value: r,
-                                                enumerable: !0,
-                                                configurable: !0,
-                                                writable: !0,
-                                            })
-                                          : (e[t] = r);
-                              });
-                      }
-                      return e;
-                  })({}, g)),
-                  (n = n = { amount: m.original }),
-                  Object.getOwnPropertyDescriptors
-                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                      : (function (e, t) {
-                            var n = Object.keys(e);
-                            if (Object.getOwnPropertySymbols) {
-                                var r = Object.getOwnPropertySymbols(e);
-                                n.push.apply(n, r);
-                            }
-                            return n;
-                        })(Object(n)).forEach(function (e) {
-                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                        }),
-                  t)
-                : g,
-        j = d && null != x;
-    return (0, r.jsxs)("div", {
-        className: a()(u.priceTagsContainer, f),
-        children: [
-            v
-                ? null
-                : (0, r.jsx)(o.y, {
-                      price: P,
-                      className: u.price,
-                  }),
-            (0, r.jsx)(s.F, {
-                price: j ? x : P,
-                discount: m,
-                className: a()({ [u.price]: null == p }),
-                nitroIconType: j ? b : void 0,
-                nitroIconSize: h,
-                discountOfferAmount: p,
-            }),
-        ],
+    let { children: t, defaultSortOption: r = s.p$.NEWEST_ARRIVALS } = e,
+        [o, l] = i.useState(r);
+    return (0, n.jsx)(c.Provider, {
+        value: {
+            sortOption: o,
+            setSortOption: l,
+            onReset: () => l(r),
+        },
+        children: t,
     });
 }

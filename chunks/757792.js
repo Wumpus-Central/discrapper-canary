@@ -1,0 +1,59 @@
+n.d(t, {
+    P3: () => f,
+    Sg: () => d,
+});
+var r = n(417597),
+    i = n(554146),
+    a = n(961350),
+    s = n(927813),
+    o = n(661191),
+    l = n(199773);
+let c = {
+        [i.M.MJ_NEW_USER_CHAT_BAR]: 0,
+        [i.M.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
+        [i.M.SEEN_LAUNCH_WELCOME]: 0,
+        [i.M.SEEN_OLD_DESIGN]: 0,
+        [i.M.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0,
+        [i.M.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0,
+        [i.M.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0,
+        [i.M.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE]: 0,
+        [i.M.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0,
+        [i.M.WHATS_NEW_SERVER_PROFILE_FLIP]: 0,
+        [i.M.WHATS_NEW_SERVER_PROFILE_BADGE]: 0,
+        [i.M.WHATS_NEW_TENURE_BADGE_REWARD]: 0,
+        [i.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0,
+        [i.M.TRIAL_NUX_EMOJI_BUTTON]: 0,
+        [i.M.TRIAL_NUX_EMOJI_PICKER]: 0,
+        [i.M.TRIAL_NUX_STREAM_COACH_MARK]: 0,
+        [i.M.OVERLAY_OOP_SETTINGS_NUX]: 0,
+        [i.M.OVERLAY_OOP_WELCOME_NUX]: 0,
+        [i.M.OVERLAY_OOP_WELCOME_BACKGROUND_NUX]: 0,
+        [i.M.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX]: 0,
+        [i.M.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX]: 0,
+        [i.M.Q1_2025_REVERSE_TRIAL]: 0,
+        [i.M.Q1_2025_FOLLOW_UP_REVERSE_TRIAL_OFFER]: 0,
+        [i.M.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0,
+        [i.M.PERMADECOS_NITRO_TAB_NEW_BADGE]: 0,
+        [i.M.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0,
+        [i.M.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2]: 0,
+        [i.M.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL]: 0,
+        [i.M.Q2_2025_MARKETING_MOMENT_FIRST_IMPRESSION_MODAL]: 0,
+        [i.M.BOGO_2025_ANNOUNCEMENT_MODAL]: 0,
+        [i.M.NITRO_DROP_REWARD]: 0,
+        [i.M.QUEST_HOME_ENTRYPOINT_ONBOARDING]: 0,
+    },
+    u = s.A.Millis.DAY;
+function d(e) {
+    let { userId: t, newUserMinAgeRequiredOverridden: n } = (0, r.cf)([a.default, l.A], () => ({
+        userId: a.default.getId(),
+        newUserMinAgeRequiredOverridden: l.A.newUserMinAgeRequiredOverridden,
+    }));
+    return n ? e : e.filter((e) => p(t, e));
+}
+function f(e) {
+    return !l.A.newUserMinAgeRequiredOverridden && !p(a.default.getId(), e);
+}
+function p(e, t) {
+    var n;
+    return null != e && o.default.age(e) >= (null != (n = c[t]) ? n : u);
+}

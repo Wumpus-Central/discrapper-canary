@@ -1,20 +1,3 @@
-n.d(t, { T: () => o });
-var r = n(722733),
-    i = n(751823);
-let a = (0, r.ZP)({
-    kind: "user",
-    name: "2025-11-global-frame-pool-lock",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
-});
-function o(e) {
-    let { location: t, disable: n = !1 } = e,
-        { isInHoldout: r } = i.L.getCurrentConfig(
-            { location: t },
-            {
-                disable: n,
-                autoTrackExposure: !0,
-            },
-        );
-    return r || n ? a.definition.defaultConfig : a.getConfig({ location: t });
-}
+e.exports = JSON.parse(
+    '{"uG6teD":["Account Successfully Linked"],"kxF9br":["SDK connected via RPC"],"8a7IrV":["Connection entrypoint URL registered"],"9iLeL2":["URL configured as ",[1,"url"]],"AGLx00":["Connected game flow:"],"w0pN4R":["Link account"],"yKwZc2":["Manage account linking"],"aTULMB":["Auth callback not detected. If you called the function and are still seeing this, check logs for details"],"eg0mNa":["Cannot link because no valid linking flows are available"],"OEkrCx":["This flow will be used"],"no+FQS":["The first available linking flow will be used, starting at the top"],"PFxxJa":["If your game is running and it can\u2019t connect to Discord, try viewing your game\u2019s logs to debug"],"S94dzs":["RegisterAuthorizeRequestCallback called and working correctly"],"vR0zs6":["Account Linking"],"KoK4J9":["Devtools: ",[1,"appName"]],"tkIymA":["Unlink"],"K3ObrU":["Web flow:"]}',
+);

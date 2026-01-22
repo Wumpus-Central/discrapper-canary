@@ -1,1 +1,5 @@
-e.exports = "/assets/f4efda2217ab7169.svg";
+n.d(t, { p: () => r });
+let r = {
+    authorIds: [],
+    message: "",
+};

@@ -1,15 +1,8 @@
 n.d(t, {
-    Pg: () => o,
-    Te: () => i,
-    kb: () => a,
+    Zp: () => r,
+    k: () => l,
+    l0: () => i,
 });
-var r = n(570140);
-function i() {
-    r.Z.wait(() => r.Z.dispatch({ type: "DOMAIN_MIGRATION_START" }));
-}
-function a() {
-    r.Z.dispatch({ type: "DOMAIN_MIGRATION_FAILURE" });
-}
-function o() {
-    window.location.reload();
-}
+let r = "#83DDC5",
+    l = "#F47FFF",
+    i = "#FFDE4D";

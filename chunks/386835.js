@@ -1,209 +1,53 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = /[a-zA-Z]\w*/,
-        r = [
-            "as",
-            "break",
-            "class",
-            "construct",
-            "continue",
-            "else",
-            "for",
-            "foreign",
-            "if",
-            "import",
-            "in",
-            "is",
-            "return",
-            "static",
-            "var",
-            "while",
-        ],
-        i = ["true", "false", "null"],
-        a = ["this", "super"],
-        o = [
-            "Bool",
-            "Class",
-            "Fiber",
-            "Fn",
-            "List",
-            "Map",
-            "Null",
-            "Num",
-            "Object",
-            "Range",
-            "Sequence",
-            "String",
-            "System",
-        ],
-        s = [
-            "-",
-            "~",
-            /\*/,
-            "%",
-            /\.\.\./,
-            /\.\./,
-            /\+/,
-            "<<",
-            ">>",
-            ">=",
-            "<=",
-            "<",
-            ">",
-            /\^/,
-            /!=/,
-            /!/,
-            /\bis\b/,
-            "==",
-            "&&",
-            "&",
-            /\|\|/,
-            /\|/,
-            /\?:/,
-            "=",
-        ],
-        l = {
-            relevance: 0,
-            match: t.concat(/\b(?!(if|while|for|else|super)\b)/, n, /(?=\s*[({])/),
-            className: "title.function",
+!(function (e, t) {
+    t(n(989349));
+})(0, function (e) {
+    return e.defineLocale("en-gb", {
+        months: "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
+        monthsShort: "Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"),
+        weekdays: "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),
+        weekdaysShort: "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
+        weekdaysMin: "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
+        longDateFormat: {
+            LT: "HH:mm",
+            LTS: "HH:mm:ss",
+            L: "DD/MM/YYYY",
+            LL: "D MMMM YYYY",
+            LLL: "D MMMM YYYY HH:mm",
+            LLLL: "dddd, D MMMM YYYY HH:mm",
         },
-        c = {
-            match: t.concat(
-                t.either(t.concat(/\b(?!(if|while|for|else|super)\b)/, n), t.either(...s)),
-                /(?=\s*\([^)]+\)\s*\{)/,
-            ),
-            className: "title.function",
-            starts: {
-                contains: [
-                    {
-                        begin: /\(/,
-                        end: /\)/,
-                        contains: [
-                            {
-                                relevance: 0,
-                                scope: "params",
-                                match: n,
-                            },
-                        ],
-                    },
-                ],
-            },
+        calendar: {
+            sameDay: "[Today at] LT",
+            nextDay: "[Tomorrow at] LT",
+            nextWeek: "dddd [at] LT",
+            lastDay: "[Yesterday at] LT",
+            lastWeek: "[Last] dddd [at] LT",
+            sameElse: "L",
         },
-        u = {
-            variants: [
-                {
-                    match: [/class\s+/, n, /\s+is\s+/, n],
-                },
-                {
-                    match: [/class\s+/, n],
-                },
-            ],
-            scope: {
-                2: "title.class",
-                4: "title.class.inherited",
-            },
-            keywords: r,
+        relativeTime: {
+            future: "in %s",
+            past: "%s ago",
+            s: "a few seconds",
+            ss: "%d seconds",
+            m: "a minute",
+            mm: "%d minutes",
+            h: "an hour",
+            hh: "%d hours",
+            d: "a day",
+            dd: "%d days",
+            M: "a month",
+            MM: "%d months",
+            y: "a year",
+            yy: "%d years",
         },
-        d = {
-            relevance: 0,
-            match: t.either(...s),
-            className: "operator",
+        dayOfMonthOrdinalParse: /\d{1,2}(st|nd|rd|th)/,
+        ordinal: function (e) {
+            var t = e % 10,
+                n = 1 == ~~((e % 100) / 10) ? "th" : 1 === t ? "st" : 2 === t ? "nd" : 3 === t ? "rd" : "th";
+            return e + n;
         },
-        f = {
-            className: "string",
-            begin: /"""/,
-            end: /"""/,
+        week: {
+            dow: 1,
+            doy: 4,
         },
-        p = {
-            className: "property",
-            begin: t.concat(/\./, t.lookahead(n)),
-            end: n,
-            excludeBegin: !0,
-            relevance: 0,
-        },
-        _ = {
-            relevance: 0,
-            match: t.concat(/\b_/, n),
-            scope: "variable",
-        },
-        m = {
-            relevance: 0,
-            match: /\b[A-Z]+[a-z]+([A-Z]+[a-z]+)*/,
-            scope: "title.class",
-            keywords: { _: o },
-        },
-        h = e.C_NUMBER_MODE,
-        g = {
-            match: [n, /\s*/, /=/, /\s*/, /\(/, n, /\)\s*\{/],
-            scope: {
-                1: "title.function",
-                3: "operator",
-                6: "params",
-            },
-        },
-        E = e.COMMENT(/\/\*\*/, /\*\//, {
-            contains: [
-                {
-                    match: /@[a-z]+/,
-                    scope: "doctag",
-                },
-                "self",
-            ],
-        }),
-        b = {
-            scope: "subst",
-            begin: /%\(/,
-            end: /\)/,
-            contains: [h, m, l, _, d],
-        },
-        y = {
-            scope: "string",
-            begin: /"/,
-            end: /"/,
-            contains: [
-                b,
-                {
-                    scope: "char.escape",
-                    variants: [
-                        { match: /\\\\|\\["0%abefnrtv]/ },
-                        { match: /\\x[0-9A-F]{2}/ },
-                        { match: /\\u[0-9A-F]{4}/ },
-                        { match: /\\U[0-9A-F]{8}/ },
-                    ],
-                },
-            ],
-        };
-    b.contains.push(y);
-    let O = [...r, ...a, ...i],
-        v = {
-            relevance: 0,
-            match: t.concat("\\b(?!", O.join("|"), "\\b)", /[a-zA-Z_]\w*(?:[?!]|\b)/),
-            className: "variable",
-        },
-        S = {
-            scope: "comment",
-            variants: [
-                {
-                    begin: [/#!?/, /[A-Za-z_]+(?=\()/],
-                    beginScope: {},
-                    keywords: { literal: i },
-                    contains: [],
-                    end: /\)/,
-                },
-                {
-                    begin: [/#!?/, /[A-Za-z_]+/],
-                    beginScope: {},
-                    end: /$/,
-                },
-            ],
-        };
-    return {
-        name: "Wren",
-        keywords: {
-            keyword: r,
-            "variable.language": a,
-            literal: i,
-        },
-        contains: [S, h, y, f, E, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, m, u, g, c, l, d, _, p, v],
-    };
-};
+    });
+});

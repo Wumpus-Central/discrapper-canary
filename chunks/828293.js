@@ -1,0 +1,8 @@
+n.d(t, { A: () => r });
+var r = {};
+r = {
+    rangeOverflow: (e) => `O valor deve ser ${e.maxValue} ou anterior.`,
+    rangeReversed: "A data inicial deve ser anterior à data final.",
+    rangeUnderflow: (e) => `O valor deve ser ${e.minValue} ou posterior.`,
+    unavailableDate: "Data selecionada indisponível.",
+};

@@ -1,1 +1,2 @@
-e.exports = "/assets/ee9728bf83716149.svg";
+n.d(t, { A: () => r });
+let r = { disabled: !1 };

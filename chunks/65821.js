@@ -1,0 +1,86 @@
+var r = n(557939),
+    i = n(860511),
+    a = n(985848),
+    s = n(43902),
+    o = "WebAssembly",
+    l = i[o],
+    c = 7 !== Error("e", { cause: 7 }).cause,
+    u = function (e, t) {
+        var n = {};
+        (n[e] = s(e, t, c)),
+            r(
+                {
+                    global: !0,
+                    constructor: !0,
+                    arity: 1,
+                    forced: c,
+                },
+                n,
+            );
+    },
+    d = function (e, t) {
+        if (l && l[e]) {
+            var n = {};
+            (n[e] = s(o + "." + e, t, c)),
+                r(
+                    {
+                        target: o,
+                        stat: !0,
+                        constructor: !0,
+                        arity: 1,
+                        forced: c,
+                    },
+                    n,
+                );
+        }
+    };
+u("Error", function (e) {
+    return function (t) {
+        return a(e, this, arguments);
+    };
+}),
+    u("EvalError", function (e) {
+        return function (t) {
+            return a(e, this, arguments);
+        };
+    }),
+    u("RangeError", function (e) {
+        return function (t) {
+            return a(e, this, arguments);
+        };
+    }),
+    u("ReferenceError", function (e) {
+        return function (t) {
+            return a(e, this, arguments);
+        };
+    }),
+    u("SyntaxError", function (e) {
+        return function (t) {
+            return a(e, this, arguments);
+        };
+    }),
+    u("TypeError", function (e) {
+        return function (t) {
+            return a(e, this, arguments);
+        };
+    }),
+    u("URIError", function (e) {
+        return function (t) {
+            return a(e, this, arguments);
+        };
+    }),
+    d("CompileError", function (e) {
+        return function (t) {
+            return a(e, this, arguments);
+        };
+    }),
+    d("LinkError", function (e) {
+        return function (t) {
+            return a(e, this, arguments);
+        };
+    }),
+    d("RuntimeError", function (e) {
+        return function (t) {
+            return a(e, this, arguments);
+        };
+    });

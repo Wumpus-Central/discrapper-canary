@@ -1,19 +1,8 @@
-n.d(t, {
-    nr: () => l,
-    pn: () => s,
-});
-var r = n(54381),
-    i = n(473749);
-let a = { isRichTooltip: !1 },
-    o = i.createContext(a);
-function s(e) {
-    let { children: t, isRichTooltip: n = !1 } = e,
-        a = i.useMemo(() => ({ isRichTooltip: n }), [n]);
-    return (0, r.jsx)(o.Provider, {
-        value: a,
-        children: t,
-    });
-}
-function l() {
-    return i.useContext(o);
-}
+n.d(t, { f: () => c });
+var r,
+    i = n(218681),
+    a = n(503698),
+    s = n.n(a),
+    o = n(752439),
+    l = n(219293);
+let c = (0, o.d)(s()(l.qZ, l.Vl), null != (r = window.ResizeObserver) ? r : i.t);

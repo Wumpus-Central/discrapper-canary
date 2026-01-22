@@ -1,17 +1,17 @@
-e.exports = {
-    modalRoot: "_38ccf23309082998-modalRoot",
-    modalContent: "_38ccf23309082998-modalContent",
-    infoContainer: "_38ccf23309082998-infoContainer",
-    labelIconContainer: "_38ccf23309082998-labelIconContainer",
-    labelIcon: "_38ccf23309082998-labelIcon",
-    buttonsContainer: "_38ccf23309082998-buttonsContainer",
-    detailsContainer: "_38ccf23309082998-detailsContainer",
-    titleDescriptionContainer: "_38ccf23309082998-titleDescriptionContainer",
-    carouselContainer: "_38ccf23309082998-carouselContainer",
-    carousel: "_38ccf23309082998-carousel",
-    modalHeaderButtonsContainer: "_38ccf23309082998-modalHeaderButtonsContainer",
-    modalHeaderButton: "_38ccf23309082998-modalHeaderButton",
-    wishlistButton: "_38ccf23309082998-wishlistButton",
-    logoContainer: "_38ccf23309082998-logoContainer",
-    logo: "_38ccf23309082998-logo",
-};
+n.d(t, { A: () => o });
+var r = n(627968);
+n(64700);
+var l = n(503698),
+    i = n.n(l),
+    a = n(397927),
+    s = n(793109);
+function o(e) {
+    let { className: t } = e;
+    return (0, r.jsx)("div", {
+        className: i()(s.L, t),
+        children: (0, r.jsx)(a.LK_, {
+            size: "lg",
+            color: "currentColor",
+        }),
+    });
+}

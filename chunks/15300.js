@@ -1,1 +1,6 @@
-e.exports = "/assets/276711a7d32f06d9.svg";
+IntlMessageFormat.__addLocaleData({
+    locale: "th",
+    pluralRuleFunction: function (e, t) {
+        return "other";
+    },
+});
