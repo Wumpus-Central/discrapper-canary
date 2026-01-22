@@ -1,18 +1,19 @@
 n.d(t, {
-    $V: () => R,
+    $V: () => w,
     Fg: () => b,
     KM: () => A,
-    LE: () => P,
-    M: () => T,
+    LE: () => D,
+    M: () => C,
     O8: () => O,
-    b: () => C,
-    c2: () => x,
-    f: () => U,
-    gh: () => w,
+    b: () => N,
+    c2: () => L,
+    f: () => G,
+    gh: () => P,
     ku: () => E,
     mS: () => I,
-    nx: () => G,
-    qo: () => N,
+    nx: () => V,
+    qo: () => R,
+    s9: () => T,
     y5: () => v,
 }),
     n(896048),
@@ -41,20 +42,20 @@ let g = -1,
             return null == e.isEligible || (null == (t = e.isEligible) ? void 0 : t.call(e));
         }),
     b = (e) => {
-        let { channelId: t, authorId: n } = G(e);
+        let { channelId: t, authorId: n } = V(e);
         return null == t || null == e ? m.LO.NONE : y(t, n);
     },
     y = (e, t) => {
         let n = f.default.getCurrentUser();
         if (null == n || t === n.id) return m.LO.NONE;
-        let r = x(e, t, [c.A, d.A]);
+        let r = L(e, t, [c.A, d.A]);
         return null == r ? m.LO.NONE : O(r);
     },
     O = (e) => {
         let t = E();
         return null == e
             ? m.LO.NONE
-            : P(t.map((t) => (U(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(p.Vq));
+            : D(t.map((t) => (G(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(p.Vq));
     };
 
 function A(e) {
@@ -70,7 +71,7 @@ function v(e, t) {
             ? void 0
             : n.some(
                   (e) =>
-                      C(
+                      N(
                           {
                               type: _.D.Attachment,
                               media: e,
@@ -82,7 +83,7 @@ function v(e, t) {
             ? void 0
             : r.some(
                   (e) =>
-                      C(
+                      N(
                           {
                               type: _.D.Embed,
                               media: e,
@@ -130,7 +131,7 @@ function I(e, t) {
         (null == (n = e.attachments)
             ? void 0
             : n.some((e) =>
-                  R(
+                  w(
                       {
                           type: _.D.Attachment,
                           media: e,
@@ -141,7 +142,7 @@ function I(e, t) {
         (null == (r = e.embeds)
             ? void 0
             : r.some((e) =>
-                  R(
+                  w(
                       {
                           type: _.D.Embed,
                           media: e,
@@ -151,7 +152,7 @@ function I(e, t) {
               )) ||
         (null != e.components &&
             S(e.components).some((e) =>
-                R(
+                w(
                     {
                         type: _.D.GenericMedia,
                         media: e,
@@ -172,6 +173,10 @@ function I(e, t) {
 }
 
 function T(e) {
+    return !(null != e.components && S(e.components).some((e) => e.loadingState === a.TD.LOADING)) && !0;
+}
+
+function C(e) {
     var t, n, r, i;
     let a = b(e);
     if (a === m.LO.NONE)
@@ -183,7 +188,7 @@ function T(e) {
             null == (r = e.attachments)
                 ? void 0
                 : r.filter((e) =>
-                      R(
+                      w(
                           {
                               type: _.D.Attachment,
                               media: e,
@@ -195,7 +200,7 @@ function T(e) {
             null == (i = e.embeds)
                 ? void 0
                 : i.filter((e) =>
-                      R(
+                      w(
                           {
                               type: _.D.Embed,
                               media: e,
@@ -209,35 +214,35 @@ function T(e) {
     };
 }
 
-function C(e, t) {
-    if (t === m.LO.NONE) return [];
-    let n = D(t);
-    return 0 === n.length ? [] : n.filter((t) => w(t, e)).map((e) => m.Jn[e].obscureReason);
-}
-
 function N(e, t) {
-    if (t === m.LO.NONE) return !1;
-    let n = D(t);
-    return 0 !== n.length && n.filter((t) => w(t, e)).length > 0;
+    if (t === m.LO.NONE) return [];
+    let n = x(t);
+    return 0 === n.length ? [] : n.filter((t) => P(t, e)).map((e) => m.Jn[e].obscureReason);
 }
 
 function R(e, t) {
+    if (t === m.LO.NONE) return !1;
+    let n = x(t);
+    return 0 !== n.length && n.filter((t) => P(t, e)).length > 0;
+}
+
+function w(e, t) {
     if (t === m.LO.NONE || s.Ay.get("explicit_media_redaction_ignore_pending_scan")) return !1;
-    let n = D(t);
+    let n = x(t);
     if (0 === n.length) return !1;
     switch (e.type) {
         case _.D.Embed:
-            return L(e.media, n);
-        case _.D.Attachment:
             return j(e.media, n);
-        case _.D.GenericMedia:
+        case _.D.Attachment:
             return M(e.media, n);
+        case _.D.GenericMedia:
+            return k(e.media, n);
         default:
             return !1;
     }
 }
 
-function w(e, t) {
+function P(e, t) {
     var n, i, a, o;
     if (null == e) return !1;
     let l = m.Jn[e];
@@ -257,7 +262,7 @@ function w(e, t) {
     }
 }
 
-function P(e) {
+function D(e) {
     let t = m.LO.NONE;
     for (let n of e)
         switch (n) {
@@ -273,14 +278,14 @@ function P(e) {
     return t;
 }
 
-function D(e) {
+function x(e) {
     if (e === m.LO.NONE) return [];
     let t = [];
     for (let n of E()) (e & n.bitmask) > 0 && t.push(n.harmType);
     return t;
 }
 
-function x(e, t) {
+function L(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [c.A, d.A],
         [r, i] = n,
         a = r.getChannel(e),
@@ -294,7 +299,7 @@ function x(e, t) {
           : _.v.GUILD;
 }
 
-function L(e, t) {
+function j(e, t) {
     var n, r, i, a, s, o, l;
     return (
         !(
@@ -303,7 +308,7 @@ function L(e, t) {
             0 ===
                 t.filter(
                     (t) =>
-                        !w(t, {
+                        !P(t, {
                             type: _.D.Embed,
                             media: e,
                         }),
@@ -322,23 +327,7 @@ function L(e, t) {
                 (null == (o = e.image) ? void 0 : o.height) === 0) ||
             ("images" in e &&
                 (null == (l = e.images) ? void 0 : l.some((e) => null != e && 0 === e.width && 0 === e.height)))
-        ) && k(V(e), t)
-    );
-}
-
-function j(e, t) {
-    var n;
-    return (
-        0 !== t.length &&
-        0 !==
-            t.filter(
-                (t) =>
-                    !w(t, {
-                        type: _.D.Attachment,
-                        media: e,
-                    }),
-            ).length &&
-        k(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
+        ) && U(F(e), t)
     );
 }
 
@@ -349,25 +338,41 @@ function M(e, t) {
         0 !==
             t.filter(
                 (t) =>
-                    !w(t, {
-                        type: _.D.GenericMedia,
+                    !P(t, {
+                        type: _.D.Attachment,
                         media: e,
                     }),
             ).length &&
-        k(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
+        U(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
     );
 }
 
 function k(e, t) {
+    var n;
+    return (
+        0 !== t.length &&
+        0 !==
+            t.filter(
+                (t) =>
+                    !P(t, {
+                        type: _.D.GenericMedia,
+                        media: e,
+                    }),
+            ).length &&
+        U(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
+    );
+}
+
+function U(e, t) {
     let n = h.A.validContentScanVersion;
     return e !== g && (t.includes(m.kn.GORE) || t.includes(m.kn.SELF_HARM) ? null == e || e < n : null == e);
 }
 
-function U(e) {
+function G(e) {
     return null != e && [i.TO.BLOCK, i.TO.BLUR].includes(e);
 }
 
-function G(e) {
+function V(e) {
     var t, n;
     let r = null,
         i = null;
@@ -388,7 +393,7 @@ function G(e) {
     };
 }
 
-function V(e) {
+function F(e) {
     return null != e.content_scan_version
         ? e.content_scan_version
         : null != e.contentScanVersion || null != e.contentScanVersion
