@@ -1,6 +1,7 @@
 e.exports = {
     sensitivity: "ac7648c9bd968881-sensitivity",
     sliderBar: "ac7648c9bd968881-sliderBar",
+    disabled: "ac7648c9bd968881-disabled",
     speaking: "ac7648c9bd968881-speaking",
     inputSensitivityToggle: "ac7648c9bd968881-inputSensitivityToggle",
     manual: "ac7648c9bd968881-manual",
