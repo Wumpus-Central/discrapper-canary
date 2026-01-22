@@ -14,8 +14,8 @@ var r = n(54381),
     f = n(332473),
     p = n(518560),
     _ = n(921801),
-    m = n(577275),
-    h = n(484459),
+    h = n(577275),
+    m = n(484459),
     g = n(325067),
     E = n(246946),
     b = n(663389),
@@ -29,8 +29,8 @@ var r = n(54381),
     A = n(562436),
     N = n(354255),
     P = n(499311),
-    R = n(47863),
-    w = n(732521),
+    w = n(47863),
+    R = n(732521),
     D = n(2719),
     x = n(726985),
     L = n(981631),
@@ -43,12 +43,12 @@ function k() {
         }),
         t = (0, s.e7)([g.Z], () => g.Z.getBackupCodes()),
         n = (0, f.b)(),
-        { teams: i, loading: a } = (0, m.Z)({ refreshOnDepChange: !0 });
+        { teams: i, loading: a } = (0, h.Z)({ refreshOnDepChange: !0 });
     return (0, r.jsxs)(l.l09, {
         children: [
             (0, r.jsxs)(_.F, {
                 setting: x.s6.ACCOUNT_PROFILE,
-                children: [n && (0, r.jsx)(P.Z, {}), (0, r.jsx)(w.Z, { currentUser: e }), (0, r.jsx)(D.Z, {})],
+                children: [n && (0, r.jsx)(P.Z, {}), (0, r.jsx)(R.Z, { currentUser: e }), (0, r.jsx)(D.Z, {})],
             }),
             (0, r.jsx)(_.F, {
                 setting: x.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
@@ -72,7 +72,7 @@ function k() {
                 setting: x.s6.ACCOUNT_REMOVAL,
                 children: [
                     (0, r.jsx)(l.izJ, {}),
-                    (0, r.jsx)(R.Z, {
+                    (0, r.jsx)(w.Z, {
                         currentUser: e,
                         userTeamsLoading: a,
                         userTeams: i,
@@ -88,7 +88,7 @@ var U = (function (e) {
 class G extends i.PureComponent {
     componentDidMount() {
         let { currentUser: e } = this.props;
-        (0, h.Z)(e.id, e.getAvatarURL(void 0, 80));
+        (0, m.Z)(e.id, e.getAvatarURL(void 0, 80));
     }
     componentWillUnmount() {
         c.Z.clearBackupCodes(), (0, u.Zy)();
@@ -127,19 +127,18 @@ class G extends i.PureComponent {
     }
 }
 let Z = () => {
-    let e = (0, s.e7)([y.default], () => {
-            let e = y.default.getCurrentUser();
-            return o()(null != e, "ConnectedUserAccountSettings: currentUser cannot be undefined"), e;
-        }),
+    let e = (0, s.e7)([y.default], () => y.default.getCurrentUser()),
         t = (0, s.e7)([E.Z], () => E.Z.hidePersonalInformation),
         n = (0, s.e7)([S.Z], () => S.Z.theme),
         i = (0, s.e7)([v.default], () => v.default.locale),
         a = (0, s.e7)([b.Z], () => b.Z.getSubsection());
-    return (0, r.jsx)(G, {
-        theme: n,
-        currentUser: e,
-        hide: t,
-        locale: i,
-        subsection: a,
-    });
+    return null == e
+        ? null
+        : (0, r.jsx)(G, {
+              theme: n,
+              currentUser: e,
+              hide: t,
+              locale: i,
+              subsection: a,
+          });
 };
