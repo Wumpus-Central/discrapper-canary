@@ -30,6 +30,7 @@ function c(e) {
         hidePrivateData: !1,
         premiumSubscription: void 0,
         speakingWhileMuted: !1,
+        speakingWhilePTTInactive: !1,
         occluded: !1,
         dismissibleContents: {
             avatar: [],

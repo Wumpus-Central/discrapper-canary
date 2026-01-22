@@ -1,6 +1,6 @@
 n.d(t, {
-    A: () => e0,
-    g: () => eX,
+    A: () => e9,
+    g: () => e0,
 }),
     n(896048),
     n(321073);
@@ -32,8 +32,8 @@ var a = n(627968),
     N = n(954921),
     T = n(521502),
     I = n(380610),
-    w = n(313961),
-    k = n(617354),
+    k = n(313961),
+    w = n(617354),
     P = n(980923),
     R = n(206018),
     D = n(18235),
@@ -44,8 +44,8 @@ var a = n(627968),
     G = n(379848),
     F = n(609425),
     V = n(922301),
-    H = n(750112),
-    W = n(643501),
+    W = n(750112),
+    H = n(643501),
     K = n(977700),
     z = n(74848),
     q = n(449630),
@@ -66,41 +66,43 @@ var a = n(627968),
     eo = n(840065),
     ec = n(167579),
     ed = n(173660),
-    eu = n(277342),
-    em = n(616356),
-    ep = n(961350),
-    eh = n(734057),
-    ef = n(629016),
-    ex = n(186111),
-    eb = n(430452),
-    eg = n(383501),
-    ev = n(967198),
-    ej = n(461213),
-    ey = n(485296),
-    e_ = n(351906),
-    eA = n(287809),
-    eC = n(166403),
-    eS = n(954571),
-    eO = n(486020),
-    eE = n(957565),
-    eN = n(203982),
-    eT = n(927813),
-    eI = n(403362),
+    eu = n(340913),
+    em = n(41580),
+    ep = n(935101),
+    eh = n(277342),
+    ef = n(616356),
+    ex = n(961350),
+    eb = n(734057),
+    eg = n(629016),
+    ev = n(186111),
+    ej = n(430452),
+    ey = n(383501),
+    e_ = n(967198),
+    eA = n(461213),
+    eC = n(485296),
+    eS = n(351906),
+    eO = n(287809),
+    eE = n(166403),
+    eN = n(486020),
+    eT = n(203982),
+    eI = n(927813),
+    ek = n(403362),
     ew = n(536194),
-    ek = n(427262),
-    eP = n(837921),
-    eR = n(42473),
-    eD = n(994314),
-    eM = n(485599),
-    eL = n(809991),
-    eU = n(652215),
-    eB = n(49999),
-    eG = n(654487),
-    eF = n(731854),
-    eV = n(985018),
-    eH = n(146664);
+    eP = n(427262),
+    eR = n(837921),
+    eD = n(350535),
+    eM = n(42473),
+    eL = n(994314),
+    eU = n(485599),
+    eB = n(809991),
+    eG = n(652215),
+    eF = n(49999),
+    eV = n(654487),
+    eW = n(731854),
+    eH = n(985018),
+    eK = n(146664);
 
-function eW(e, t, n) {
+function ez(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -114,7 +116,7 @@ function eW(e, t, n) {
     );
 }
 
-function eK(e) {
+function eq(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -125,13 +127,13 @@ function eK(e) {
                 }),
             )),
             a.forEach(function (t) {
-                eW(e, t, n[t]);
+                ez(e, t, n[t]);
             });
     }
     return e;
 }
 
-function ez(e, t) {
+function eQ(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -149,11 +151,12 @@ function ez(e, t) {
         e
     );
 }
-let eq = eP.Ay.getEnableHardwareAcceleration() ? h.JsQ : h.euF,
-    eQ = 2 * eT.A.Millis.MINUTE,
-    eY = 5 * eT.A.Millis.SECOND;
+let eY = eR.Ay.getEnableHardwareAcceleration() ? h.JsQ : h.euF,
+    eJ = 2.5 * eI.A.Millis.SECOND,
+    eX = 2 * eI.A.Millis.MINUTE,
+    eZ = 5 * eI.A.Millis.SECOND;
 
-function eJ(e) {
+function e$(e) {
     let {
             ref: t,
             speaking: n,
@@ -171,7 +174,7 @@ function eJ(e) {
         } = e,
         j = l.useRef(null),
         y = null != t ? t : j,
-        _ = (0, eO.F_)({
+        _ = (0, eN.F_)({
             avatarDecoration: b,
             size: (0, N.Te)(h._3J.SIZE_32),
         }),
@@ -198,9 +201,9 @@ function eJ(e) {
                         null != l && a(l), null == (n = e.current) || n.call(e);
                     };
                     return (
-                        eN._.subscribe(eU.jej.SHOW_ACCOUNT_PROFILE_POPOUT, t),
+                        eT._.subscribe(eG.jej.SHOW_ACCOUNT_PROFILE_POPOUT, t),
                         () => {
-                            eN._.unsubscribe(eU.jej.SHOW_ACCOUNT_PROFILE_POPOUT, t);
+                            eT._.unsubscribe(eG.jej.SHOW_ACCOUNT_PROFILE_POPOUT, t);
                         }
                     );
                 }),
@@ -215,7 +218,7 @@ function eJ(e) {
     return null == c
         ? null
         : (0, a.jsx)(x.A, {
-              object: eU.ZSU.AVATAR,
+              object: eG.ZSU.AVATAR,
               children: (0, a.jsx)(ei.A, {
                   user: c,
                   targetElementRef: y,
@@ -252,8 +255,8 @@ function eJ(e) {
                       C(e),
                       (0, a.jsxs)(
                           h.DUT,
-                          ez(
-                              eK(
+                          eQ(
+                              eq(
                                   {
                                       innerRef: y,
                                       style: E,
@@ -265,27 +268,25 @@ function eJ(e) {
                                       var n;
                                       null == (n = e.onClick) || n.call(e, t), null == u || u(t);
                                   },
-                                  "aria-label": eV.intl.string(eV.t["3Uj+2p"]),
+                                  "aria-label": eH.intl.string(eH.t["3Uj+2p"]),
                                   "data-jump-section": g,
-                                  className: r()(eH.R3, {
-                                      [eH.ZQ]: null != f,
+                                  className: r()(eK.R3, {
+                                      [eK.ZQ]: null != f,
                                   }),
                                   children: [
-                                      (0, a.jsx)(eq, {
+                                      (0, a.jsx)(eY, {
                                           size: h._3J["SIZE_".concat(32)],
                                           src: c.getAvatarURL(void 0, 28, !1),
                                           avatarDecoration: _,
                                           "aria-label": c.username,
-                                          status: o ? eU.clD.STREAMING : d,
+                                          status: o ? eG.clD.STREAMING : d,
                                           isSpeaking: n,
                                           isLatched: i,
                                           voiceDb: s,
-                                          className: eH.my,
+                                          className: eK.my,
                                       }),
                                       (0, a.jsx)("div", {
-                                          className: r()(eH.oM, {
-                                              [eH.K0]: eE.p5,
-                                          }),
+                                          className: eK.oM,
                                           children: p(A),
                                       }),
                                   ],
@@ -296,39 +297,16 @@ function eJ(e) {
               }),
           });
 }
-class eX extends l.PureComponent {
-    get isCopiedStreakGodlike() {
-        let { copiedStreak: e } = this.state;
-        return e >= 10;
-    }
+class e0 extends l.PureComponent {
     componentDidUpdate(e) {
-        let { speakingWhileMuted: t, occluded: n } = e,
-            { speakingWhileMuted: a, occluded: l } = this.props;
-        l !== n && this.handleOccludedChanged(), a !== t && this.handleSpeakingWhileMutedChanged();
+        let { speakingWhileMuted: t, speakingWhilePTTInactive: n, occluded: a } = e,
+            { speakingWhileMuted: l, occluded: i, speakingWhilePTTInactive: r } = this.props;
+        i !== a && this.handleOccludedChanged(),
+            l !== t && this.handleSpeakingWhileMutedChanged(),
+            r !== n && this.handleSpeakingWhilePTTChanged();
     }
     componentWillUnmount() {
-        this.copiedTimeout.stop(), this.copiedDecayTimeout.stop(), this.speakingWhileMutedTooltipTimeout.stop();
-    }
-    renderCopiedSuccess() {
-        let { copiedStreak: e } = this.state,
-            t = [
-                eV.intl.string(eV.t.MSaeTe),
-                eV.intl.string(eV.t.UmrCw7),
-                eV.intl.string(eV.t.gKE0Jq),
-                eV.intl.string(eV.t["4DSKbi"]),
-                eV.intl.string(eV.t["+8ENdT"]),
-                eV.intl.string(eV.t.GlWHv8),
-                eV.intl.string(eV.t.hIzxU9),
-                eV.intl.string(eV.t["26uMPL"]),
-                eV.intl.string(eV.t.uFs7R2),
-                eV.intl.string(eV.t.bLXdcY),
-                eV.intl.string(eV.t.gPg9fS),
-            ],
-            n = Math.min(Math.max(0, e - 1), t.length - 1);
-        return (0, a.jsx)(h.bfh, {
-            isShaking: this.isCopiedStreakGodlike,
-            children: t[n],
-        });
+        this.speakingWhileMutedTooltipTimeout.stop(), this.speakingWhilePTTTooltipTimeout.stop();
     }
     renderStatus() {
         let { hovered: e } = this.state,
@@ -358,7 +336,7 @@ class eX extends l.PureComponent {
                     activities: t,
                     applicationStream: n,
                     voiceChannel: s ? o : void 0,
-                    textClassName: eH.XD,
+                    textClassName: eK.XD,
                     hideTooltip: !0,
                 }),
             });
@@ -367,7 +345,7 @@ class eX extends l.PureComponent {
                 ? void 0
                 : t.find((e) => {
                       let { type: t } = e;
-                      return t === eU.$pd.CUSTOM_STATUS;
+                      return t === eG.$pd.CUSTOM_STATUS;
                   });
         return null != c
             ? (0, a.jsx)(C.A, {
@@ -375,16 +353,16 @@ class eX extends l.PureComponent {
                   forceHover: e,
                   children: (0, a.jsx)(B.A, {
                       activity: c,
-                      emojiClassName: eH.Zg,
-                      className: eH.WO,
+                      emojiClassName: eK.Zg,
+                      className: eK.WO,
                   }),
               })
-            : null != i && i !== eU.clD.UNKNOWN && l.hasUniqueUsername()
+            : null != i && i !== eG.clD.UNKNOWN && l.hasUniqueUsername()
               ? (0, a.jsx)(C.A, {
                     hoverText: r,
                     forceHover: e,
                     children: (0, a.jsx)(A.A, {
-                        text: ek.Ay.humanizeStatus(i),
+                        text: eP.Ay.humanizeStatus(i),
                     }),
                 })
               : r;
@@ -395,8 +373,8 @@ class eX extends l.PureComponent {
             onClick: n,
         } = e;
         return (0, a.jsx)(
-            eJ,
-            ez(eK({}, this.props), {
+            e$,
+            eQ(eq({}, this.props), {
                 ref: this.avatarWithPopoutRef,
                 handleClick: n,
                 handleMouseLeave: this.handleMouseLeave,
@@ -410,7 +388,7 @@ class eX extends l.PureComponent {
         let { currentUser: n, dismissibleContents: l } = this.props;
         return null == n
             ? null
-            : (0, a.jsx)(eL.A, {
+            : (0, a.jsx)(eB.A, {
                   guildId: null != (t = this.props.selectedGuildId) ? t : null,
                   currentUser: n,
                   targetElementRef: this.avatarWithPopoutRef,
@@ -431,10 +409,10 @@ class eX extends l.PureComponent {
                           children: (e) =>
                               (0, a.jsxs)("div", {
                                   ref: this.containerRef,
-                                  className: r()(eH.kL, {
-                                      [eH.UG]: null != n,
-                                      [eH.bc]: !l,
-                                      [eH.G5]: i,
+                                  className: r()(eK.kL, {
+                                      [eK.UG]: null != n,
+                                      [eK.bc]: !l,
+                                      [eK.G5]: i,
                                   }),
                                   onMouseEnter: this.handleMouseEnter,
                                   onMouseLeave: this.handleMouseLeave,
@@ -446,8 +424,8 @@ class eX extends l.PureComponent {
                                       }),
                                       this.renderNameZone(e),
                                       (0, a.jsx)(
-                                          eZ,
-                                          ez(eK({}, this.props, this.state), {
+                                          e1,
+                                          eQ(eq({}, this.props, this.state), {
                                               accountContainerRef: this.containerRef,
                                               handleMouseEnterMute: this.handleMouseEnterMute,
                                               handleMouseLeaveMute: this.handleMouseLeaveMute,
@@ -469,37 +447,36 @@ class eX extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            eW(this, "copiedTimeout", new u.Ep()),
-            eW(this, "copiedDecayTimeout", new u.Ep()),
-            eW(this, "speakingWhileMutedTooltipTimeout", new u.Ep()),
-            eW(this, "lastSpeakingWhileMutedNotificationTime", void 0),
-            eW(this, "state", {
+            ez(this, "speakingWhileMutedTooltipTimeout", new u.Ep()),
+            ez(this, "speakingWhilePTTTooltipTimeout", new u.Ep()),
+            ez(this, "lastSpeakingWhileMutedNotificationTime", void 0),
+            ez(this, "lastSpeakingWhilePTTNotificationTime", void 0),
+            ez(this, "state", {
                 hovered: !1,
-                copiedStreak: 0,
                 shouldShowNametagTooltip: !1,
-                shouldShowCopiedFeedback: !1,
                 shouldShowSpeakingWhileMutedTooltip: !1,
+                shouldShowSpeakingWhilePTTTooltip: !1,
                 hoveringOnMute: !1,
             }),
-            eW(this, "containerRef", l.createRef()),
-            eW(this, "avatarWithPopoutRef", l.createRef()),
-            eW(this, "handleToggleSelfMute", () => {
+            ez(this, "containerRef", l.createRef()),
+            ez(this, "avatarWithPopoutRef", l.createRef()),
+            ez(this, "handleToggleSelfMute", () => {
                 let { serverMute: e, suppress: t, selfMute: n } = this.props;
-                (0, M.A)(e, t, eU.JJy.ACCOUNT_PANEL), (0, L.X)(S.A.ACCOUNT, L.O.MIC, n);
+                (0, M.A)(e, t, eG.JJy.ACCOUNT_PANEL), (0, L.X)(S.A.ACCOUNT, L.O.MIC, n);
             }),
-            eW(this, "handleToggleSelfDeaf", () => {
+            ez(this, "handleToggleSelfDeaf", () => {
                 let { serverDeaf: e, selfDeaf: t } = this.props;
-                (0, D.A)(e, eU.JJy.ACCOUNT_PANEL), (0, L.X)(S.A.ACCOUNT, L.O.DEAFEN, !t);
+                (0, D.A)(e, eG.JJy.ACCOUNT_PANEL), (0, L.X)(S.A.ACCOUNT, L.O.DEAFEN, !t);
             }),
-            eW(this, "handleOpenAccountSettings", () => {
+            ez(this, "handleOpenAccountSettings", () => {
                 this.dismissTooltips(),
-                    eg.A.isConnected()
+                    ey.A.isConnected()
                         ? (0, eo.openUserSettings)(er.X.VOICE_AND_VIDEO_PANEL, {
-                              section: eU.nc_.VOICE,
+                              section: eG.nc_.VOICE,
                           })
                         : (0, eo.openUserSettings)();
             }),
-            eW(this, "handleOpenSettingsContextMenu", (e) => {
+            ez(this, "handleOpenSettingsContextMenu", (e) => {
                 let { currentUser: t } = this.props;
                 null != t &&
                     (0, f.L3)(e, async () => {
@@ -507,7 +484,7 @@ class eX extends l.PureComponent {
                         return (n) =>
                             (0, a.jsx)(
                                 e,
-                                ez(eK({}, n), {
+                                eQ(eq({}, n), {
                                     user: t,
                                     premiumSubscription: this.props.premiumSubscription,
                                     webBuildOverride: this.props.webBuildOverride,
@@ -516,8 +493,8 @@ class eX extends l.PureComponent {
                             );
                     });
             }),
-            eW(this, "audioOnInteractionHandler", (0, U.s)("AudioDeviceMenu", S.A.ACCOUNT)),
-            eW(this, "handleInputAudioContextMenu", (e, t) => {
+            ez(this, "audioOnInteractionHandler", (0, U.s)("AudioDeviceMenu", S.A.ACCOUNT)),
+            ez(this, "handleInputAudioContextMenu", (e, t) => {
                 this.dismissTooltips(),
                     (0, f.L3)(e, async () => {
                         let { default: e } = await n.e("78827").then(n.bind(n, 385318));
@@ -539,7 +516,7 @@ class eX extends l.PureComponent {
                         };
                     });
             }),
-            eW(this, "handleOutputAudioContextMenu", (e, t) => {
+            ez(this, "handleOutputAudioContextMenu", (e, t) => {
                 this.dismissTooltips(),
                     (0, f.L3)(e, async () => {
                         let { default: e } = await n.e("78827").then(n.bind(n, 385318));
@@ -556,109 +533,91 @@ class eX extends l.PureComponent {
                             });
                     });
             }),
-            eW(this, "handleMouseEnter", () => {
+            ez(this, "handleMouseEnter", () => {
                 this.setState({
                     hovered: !0,
                 });
             }),
-            eW(this, "handleMouseLeave", () => {
+            ez(this, "handleMouseLeave", () => {
                 this.setState({
                     hovered: !1,
                 });
             }),
-            eW(this, "handleMouseEnterMute", () => {
+            ez(this, "handleMouseEnterMute", () => {
                 this.setState({
                     hoveringOnMute: !0,
                     shouldShowSpeakingWhileMutedTooltip: !1,
+                    shouldShowSpeakingWhilePTTTooltip: !1,
                 }),
-                    this.speakingWhileMutedTooltipTimeout.stop();
+                    this.speakingWhileMutedTooltipTimeout.stop(),
+                    this.speakingWhilePTTTooltipTimeout.stop();
             }),
-            eW(this, "handleMouseLeaveMute", () => {
+            ez(this, "handleMouseLeaveMute", () => {
                 this.setState({
                     hoveringOnMute: !1,
                 });
             }),
-            eW(this, "dismissSpeakingWhileMutedTooltip", () => {
+            ez(this, "dismissSpeakingWhileMutedTooltip", () => {
                 this.setState({
                     shouldShowSpeakingWhileMutedTooltip: !1,
                 }),
                     this.speakingWhileMutedTooltipTimeout.stop();
             }),
-            eW(this, "dismissTooltips", () => {
-                var e, t, n, a;
+            ez(this, "dismissSpeakingWhilePTTTooltip", () => {
+                this.setState({
+                    shouldShowSpeakingWhilePTTTooltip: !1,
+                }),
+                    this.speakingWhilePTTTooltipTimeout.stop();
+            }),
+            ez(this, "dismissTooltips", () => {
+                var e, t, n, a, l, i;
                 null == (e = (t = this.props).dismissInputDeviceChangedTooltip) || e.call(t),
                     null == (n = (a = this.props).dismissOutputDeviceChangedTooltip) || n.call(a),
-                    this.dismissSpeakingWhileMutedTooltip();
+                    null == (l = (i = this.props).dismissPTTJoinTooltip) || l.call(i),
+                    this.dismissSpeakingWhileMutedTooltip(),
+                    this.dismissSpeakingWhilePTTTooltip();
             }),
-            eW(this, "handleCopyTag", () => {
-                let { currentUser: e } = this.props,
-                    { shouldShowNametagTooltip: t, copiedStreak: n } = this.state;
-                if (null == e) return;
-                (0, eE.C)(
-                    ek.Ay.getUserTag(e, {
-                        decoration: "never",
-                        identifiable: "always",
-                    }),
-                ),
-                    eS.default.track(eU.HAw.TEXT_COPIED, {
-                        type: "User Tag",
-                    });
-                let a = {
-                    shouldShowCopiedFeedback: !0,
-                    shouldShowNametagTooltip: !0,
-                };
-                t || (a.copiedStreak = n + 1),
-                    this.setState(a, () => {
-                        this.copiedTimeout.start(1e3, () =>
-                            this.setState({
-                                shouldShowNametagTooltip: !1,
-                            }),
-                        ),
-                            this.copiedDecayTimeout.start(2e3, () =>
-                                this.setState({
-                                    copiedStreak: 0,
-                                }),
-                            );
-                    });
-            }),
-            eW(this, "handleOccludedChanged", () => {
+            ez(this, "handleOccludedChanged", () => {
                 let { occluded: e } = this.props;
                 e &&
                     this.setState({
                         shouldShowNametagTooltip: !1,
                         shouldShowSpeakingWhileMutedTooltip: !1,
+                        shouldShowSpeakingWhilePTTTooltip: !1,
                     });
             }),
-            eW(this, "handleSpeakingWhileMutedChanged", () => {
+            ez(this, "handleSpeakingWhileMutedChanged", () => {
                 let {
                         selfMute: e,
                         serverMute: t,
                         suppress: n,
                         speakingWhileMuted: a,
                         occluded: l,
-                        shouldShowInputDeviceChangedTooltip: i,
-                        shouldShowOutputDeviceChangedTooltip: r,
+                        shouldShowPTTJoinTooltip: i,
+                        shouldShowInputDeviceChangedTooltip: r,
+                        shouldShowOutputDeviceChangedTooltip: s,
                     } = this.props,
-                    { hoveringOnMute: s } = this.state,
-                    o =
+                    { hoveringOnMute: o } = this.state,
+                    c =
                         void 0 === this.lastSpeakingWhileMutedNotificationTime ||
-                        Date.now() - this.lastSpeakingWhileMutedNotificationTime > eQ;
+                        performance.now() - this.lastSpeakingWhileMutedNotificationTime > eX;
                 a
-                    ? s ||
+                    ? o ||
                       !e ||
                       t ||
                       n ||
                       l ||
-                      !o ||
-                      i ||
+                      !c ||
                       r ||
+                      s ||
+                      i ||
                       this.setState(
                           {
                               shouldShowSpeakingWhileMutedTooltip: !0,
                           },
                           () => {
-                              (this.lastSpeakingWhileMutedNotificationTime = Date.now()),
-                                  this.speakingWhileMutedTooltipTimeout.start(2e3, () =>
+                              (this.lastSpeakingWhileMutedNotificationTime = performance.now()),
+                                  this.speakingWhileMutedTooltipTimeout.start(eJ, () =>
                                       this.setState({
                                           shouldShowSpeakingWhileMutedTooltip: !1,
                                       }),
@@ -670,19 +629,62 @@ class eX extends l.PureComponent {
                       }),
                       this.speakingWhileMutedTooltipTimeout.stop());
             }),
-            eW(this, "renderNameTag", (e) => {
+            ez(this, "handleSpeakingWhilePTTChanged", () => {
+                let {
+                        selfMute: e,
+                        serverMute: t,
+                        suppress: n,
+                        speakingWhilePTTInactive: a,
+                        occluded: l,
+                        shouldShowPTTJoinTooltip: i,
+                        shouldShowInputDeviceChangedTooltip: r,
+                        shouldShowOutputDeviceChangedTooltip: s,
+                    } = this.props,
+                    { hoveringOnMute: o } = this.state,
+                    c =
+                        void 0 === this.lastSpeakingWhilePTTNotificationTime ||
+                        performance.now() - this.lastSpeakingWhilePTTNotificationTime > eX;
+                a
+                    ? o ||
+                      e ||
+                      t ||
+                      n ||
+                      l ||
+                      !c ||
+                      r ||
+                      s ||
+                      i ||
+                      this.setState(
+                          {
+                              shouldShowSpeakingWhilePTTTooltip: !0,
+                          },
+                          () => {
+                              (this.lastSpeakingWhilePTTNotificationTime = performance.now()),
+                                  this.speakingWhilePTTTooltipTimeout.start(eJ, () =>
+                                      this.setState({
+                                          shouldShowSpeakingWhilePTTTooltip: !1,
+                                      }),
+                                  );
+                          },
+                      )
+                    : (this.setState({
+                          shouldShowSpeakingWhilePTTTooltip: !1,
+                      }),
+                      this.speakingWhilePTTTooltipTimeout.stop());
+            }),
+            ez(this, "renderNameTag", (e) => {
                 let { currentUser: t, username: n } = this.props;
                 return null == t
                     ? null
                     : (0, a.jsxs)(a.Fragment, {
                           children: [
                               (0, a.jsx)("div", {
-                                  className: eH.eW,
-                                  children: (0, a.jsx)(eM.A, {
+                                  className: eK.eW,
+                                  children: (0, a.jsx)(eU.A, {
                                       className: r()({
-                                          [eH.e8]: null != e,
+                                          [eK.e8]: null != e,
                                       }),
-                                      children: (0, a.jsx)(H.A, {
+                                      children: (0, a.jsx)(W.A, {
                                           userName: n,
                                           displayNameStyles: e,
                                           effectDisplayType: this.state.hovered ? V.G.ANIMATED : V.G.STATIC,
@@ -692,8 +694,8 @@ class eX extends l.PureComponent {
                                   }),
                               }),
                               (0, a.jsx)("div", {
-                                  className: eH.XP,
-                                  children: (0, a.jsx)(eD.A, {
+                                  className: eK.XP,
+                                  children: (0, a.jsx)(eL.A, {
                                       children: this.renderStatus(),
                                   }),
                               }),
@@ -703,7 +705,7 @@ class eX extends l.PureComponent {
     }
 }
 
-function eZ(e) {
+function e1(e) {
     let {
             selfDeaf: t,
             selfMute: n,
@@ -712,72 +714,80 @@ function eZ(e) {
             serverDeaf: r,
             suppress: s,
             shouldShowSpeakingWhileMutedTooltip: o,
-            isEligibleForPomelo: c,
-            webBuildOverride: d,
-            handleMouseEnterMute: u,
-            handleMouseLeaveMute: m,
-            handleToggleSelfDeaf: p,
-            handleToggleSelfMute: h,
-            handleInputAudioContextMenu: f,
-            handleOutputAudioContextMenu: x,
-            handleOpenAccountSettings: b,
-            handleOpenSettingsContextMenu: g,
-            dismissibleContents: v,
-            nameplate: j,
-            accountContainerRef: y,
-            shouldShowInputDeviceChangedTooltip: _ = !1,
-            shouldShowOutputDeviceChangedTooltip: A = !1,
-            dismissTooltips: C,
+            shouldShowSpeakingWhilePTTTooltip: c,
+            isEligibleForPomelo: d,
+            webBuildOverride: u,
+            handleMouseEnterMute: m,
+            handleMouseLeaveMute: p,
+            handleToggleSelfDeaf: h,
+            handleToggleSelfMute: f,
+            handleInputAudioContextMenu: x,
+            handleOutputAudioContextMenu: b,
+            handleOpenAccountSettings: g,
+            handleOpenSettingsContextMenu: v,
+            dismissibleContents: j,
+            nameplate: y,
+            accountContainerRef: _,
+            shouldShowInputDeviceChangedTooltip: A = !1,
+            shouldShowOutputDeviceChangedTooltip: C = !1,
+            shouldShowPTTJoinTooltip: S = !1,
+            dismissTooltips: O,
+            speaking: E,
+            latched: N,
         } = e,
-        S = (0, Y.K)(j);
+        T = (0, Y.K)(y);
     return (0, a.jsxs)("div", {
-        className: eH.Uo,
-        style: S,
+        className: eK.Uo,
+        style: T,
         children: [
-            (0, a.jsx)(e6, {
-                accountContainerRef: y,
+            (0, a.jsx)(e2, {
+                accountContainerRef: _,
                 selfMute: n,
                 serverMute: i,
                 suppress: s,
                 awaitingRemote: l,
-                onMouseEnter: u,
-                onMouseLeave: m,
-                onClick: h,
-                onContextMenu: f,
-                iconForeground: null != j ? eH.t4 : void 0,
-                nameplate: j,
-                shouldShowInputDeviceChangedTooltip: _,
+                onMouseEnter: m,
+                onMouseLeave: p,
+                onClick: f,
+                onContextMenu: x,
+                iconForeground: null != y ? eK.t4 : void 0,
+                nameplate: y,
+                shouldShowInputDeviceChangedTooltip: A,
                 shouldShowSpeakingWhileMutedTooltip: o,
-                dismissTooltips: C,
+                shouldShowSpeakingWhilePTTTooltip: c,
+                shouldShowPTTJoinTooltip: S,
+                dismissTooltips: O,
+                speaking: E,
+                latched: N,
             }),
-            (0, a.jsx)(e9, {
+            (0, a.jsx)(e8, {
                 selfDeaf: t,
                 serverDeaf: r,
-                onClick: p,
-                onContextMenu: x,
+                onClick: h,
+                onContextMenu: b,
                 awaitingRemote: l,
-                iconForeground: null != j ? eH.t4 : void 0,
-                nameplate: j,
-                shouldShowOutputDeviceChangedTooltip: A,
-                dismissTooltips: C,
+                iconForeground: null != y ? eK.t4 : void 0,
+                nameplate: y,
+                shouldShowOutputDeviceChangedTooltip: C,
+                dismissTooltips: O,
             }),
-            (0, a.jsx)(e1, {
-                isEligibleForPomelo: c,
-                webBuildOverride: d,
-                onClick: b,
-                onContextMenu: g,
-                dismissibleContents: v.settings,
-                iconForeground: null != j ? eH.t4 : void 0,
-                nameplate: j,
-                shouldShowInputDeviceChangedTooltip: _,
-                shouldShowOutputDeviceChangedTooltip: A,
+            (0, a.jsx)(e7, {
+                isEligibleForPomelo: d,
+                webBuildOverride: u,
+                onClick: g,
+                onContextMenu: v,
+                dismissibleContents: j.settings,
+                iconForeground: null != y ? eK.t4 : void 0,
+                nameplate: y,
+                shouldShowInputDeviceChangedTooltip: A,
+                shouldShowOutputDeviceChangedTooltip: C,
             }),
         ],
     });
 }
 
-function e$(e) {
-    let t = (0, c.bG)([eg.A], () => null != eg.A.getChannelId()),
+function e6(e) {
+    let t = (0, c.bG)([ey.A], () => null != ey.A.getChannelId()),
         n = (0, z.Py)(e),
         a = l.useRef(new u.Ep()),
         [i, r] = l.useState(!1);
@@ -785,7 +795,7 @@ function e$(e) {
         t &&
             n &&
             (r(!0),
-            a.current.start(eY, () => {
+            a.current.start(eZ, () => {
                 r(!1);
             }));
     }, [t, n]);
@@ -803,40 +813,40 @@ function e$(e) {
     );
 }
 
-function e0() {
+function e9() {
     var e;
-    let t = (0, c.bG)([eA.default], () => eA.default.getCurrentUser()),
-        n = (0, c.bG)([ep.default], () => ep.default.getId()),
+    let t = (0, c.bG)([eO.default], () => eO.default.getCurrentUser()),
+        n = (0, c.bG)([ex.default], () => ex.default.getId()),
         {
             activities: l,
             streaming: i,
             status: r,
-        } = (0, c.cf)([ej.A], () => {
-            let e = ej.A.getActivities();
+        } = (0, c.cf)([eA.A], () => {
+            let e = eA.A.getActivities();
             return {
                 activities: e,
                 streaming:
                     null !=
                     e.find((e) => {
                         let { type: t } = e;
-                        return t === eU.$pd.STREAMING;
+                        return t === eG.$pd.STREAMING;
                     }),
-                status: ej.A.getStatus(),
+                status: eA.A.getStatus(),
             };
         }),
-        s = (0, c.bG)([em.A], () => em.A.getAnyStreamForUser(n)),
+        s = (0, c.bG)([ef.A], () => ef.A.getAnyStreamForUser(n)),
         u = (0, b.A)({
             userId: n,
         }),
-        m = (0, c.bG)([ey.A], () => ey.A.isCurrentUserPTTLatched()),
-        p = (0, c.bG)([ey.A], () => ey.A.getVoiceVolume(n)),
-        f = ek.Ay.useUserTag(t, {
+        m = (0, c.bG)([eC.A], () => eC.A.isCurrentUserPTTLatched()),
+        p = (0, c.bG)([eC.A], () => eC.A.getVoiceVolume(n)),
+        f = eP.Ay.useUserTag(t, {
             decoration: "never",
         }),
-        x = (0, c.bG)([e_.A], () => e_.A.hidePersonalInformation),
-        g = (0, c.bG)([eg.A, eh.A], () => {
-            let e = eg.A.getChannelId();
-            return null != e ? eh.A.getChannel(e) : null;
+        x = (0, c.bG)([eS.A], () => eS.A.hidePersonalInformation),
+        g = (0, c.bG)([ey.A, eb.A], () => {
+            let e = ey.A.getChannelId();
+            return null != e ? eb.A.getChannel(e) : null;
         }),
         { mute: v, selfMute: y, suppress: _ } = (0, ed.A)(g),
         { selfDeaf: A, deaf: C } = (0, ec.A)(g),
@@ -848,18 +858,18 @@ function e0() {
                     : e.discord_web
                 : null;
         }),
-        k = (0, c.bG)([eC.A], () => eC.A.getPremiumTypeSubscription()),
-        P = (0, c.bG)([eb.A], () => eb.A.getSpeakingWhileMuted()),
-        R = (0, c.bG)([w.A], () => w.A.isFullscreenInContext()),
-        D = (0, c.bG)([ex.A], () => ex.A.hasLayers()),
+        w = (0, c.bG)([eE.A], () => eE.A.getPremiumTypeSubscription()),
+        P = (0, c.bG)([ej.A], () => ej.A.getSpeakingWhileMuted()),
+        R = (0, c.bG)([k.A], () => k.A.isFullscreenInContext()),
+        D = (0, c.bG)([ev.A], () => ev.A.hasLayers()),
         M = (0, h.red)(h.DXt) || D || ew.P.isDisallowPopupsSet() || R,
         L = (0, Z.g)(),
-        U = (0, c.bG)([W.default], () => null != W.default.getAwaitingRemoteSessionInfo()),
-        B = (0, c.bG)([ev.A], () => ev.A.getGuildId()),
+        U = (0, c.bG)([H.default], () => null != H.default.getAwaitingRemoteSessionInfo()),
+        B = (0, c.bG)([e_.A], () => e_.A.getGuildId()),
         G = null == t ? void 0 : t.avatarDecoration,
         F = (0, E.A)(G),
-        V = null != (e = ek.Ay.useName(t)) ? e : "",
-        { voiceActivityStatusEnabled: H } = (0, j.G)({
+        V = null != (e = eP.Ay.useName(t)) ? e : "",
+        { voiceActivityStatusEnabled: W } = (0, j.G)({
             location: "Account",
         }),
         K = (0, $.C)(t, "Account"),
@@ -872,9 +882,9 @@ function e0() {
             guildId: void 0,
         }),
         { isQuestBarEmpty: J, hasLoadedQuestBar: X } = (0, en.c9)({
-            location: eG.rE.CONFLICT_CHECKS,
+            location: eV.rE.CONFLICT_CHECKS,
         }),
-        et = (0, c.bG)([ea.A, eA.default, ef.A], () => {
+        et = (0, c.bG)([ea.A, eO.default, eg.A], () => {
             let e,
                 t = ea.A.getSyncingWith(),
                 n = ea.A.getActivity(),
@@ -884,9 +894,9 @@ function e0() {
                 null != e)
             ) {
                 var l;
-                a = o()(Array.from(null != (l = ef.A.getParty(e)) ? l : []))
-                    .map((e) => eA.default.getUser(e))
-                    .filter(eI.Vq)
+                a = o()(Array.from(null != (l = eg.A.getParty(e)) ? l : []))
+                    .map((e) => eO.default.getUser(e))
+                    .filter(ek.Vq)
                     .value();
             }
             return a.length > 1;
@@ -900,11 +910,13 @@ function e0() {
         K && el.avatar.push(d.M.TENURE_BADGE_CHURN_REMINDER),
         el.avatar.push(d.M.WIDGETS_RTC_UPSELL_COACHMARK),
         z && el.settings.push(d.M.NITRO_PRIVACY_PERK_BETA_COACHMARK));
-    let { shouldShowTooltip: ei, dismissTooltip: er } = e$(eF.oh.AUDIO_INPUT),
-        { shouldShowTooltip: es, dismissTooltip: eo } = e$(eF.oh.AUDIO_OUTPUT);
+    let { shouldShowTooltip: ei, dismissTooltip: er } = e6(eW.oh.AUDIO_INPUT),
+        { shouldShowTooltip: es, dismissTooltip: eo } = e6(eW.oh.AUDIO_OUTPUT),
+        { shouldShowTooltip: eu, dismissTooltip: eh } = (0, em.A)(),
+        eN = (0, ep.A)();
     return (0, a.jsx)(O.f5, {
         value: q,
-        children: (0, a.jsx)(eX, {
+        children: (0, a.jsx)(e0, {
             currentUser: t,
             username: V,
             activities: l,
@@ -914,7 +926,7 @@ function e0() {
             userTag: f,
             hidePrivateData: x,
             occluded: M,
-            premiumSubscription: k,
+            premiumSubscription: w,
             selfDeaf: A,
             selfMute: y,
             serverDeaf: C,
@@ -922,6 +934,7 @@ function e0() {
             speaking: u,
             voiceDb: p,
             speakingWhileMuted: P,
+            speakingWhilePTTInactive: eN,
             latched: m && null != g,
             status: r,
             streaming: i,
@@ -929,7 +942,7 @@ function e0() {
             webBuildOverride: N,
             awaitingRemote: U,
             isEligibleForPomelo: L,
-            voiceActivityStatusEnabled: H,
+            voiceActivityStatusEnabled: W,
             nameplate: Y,
             selectedGuildId: B,
             avatarDecoration: F,
@@ -940,11 +953,13 @@ function e0() {
             shouldShowOutputDeviceChangedTooltip: es,
             dismissInputDeviceChangedTooltip: er,
             dismissOutputDeviceChangedTooltip: eo,
+            shouldShowPTTJoinTooltip: eu,
+            dismissPTTJoinTooltip: eh,
         }),
     });
 }
 
-function e1(e) {
+function e7(e) {
     let t,
         n,
         {
@@ -959,10 +974,10 @@ function e1(e) {
         f = l.useRef(null);
     t =
         null != i
-            ? eV.intl.formatToPlainString(eV.t.Gzh6ZP, {
+            ? eH.intl.formatToPlainString(eH.t.Gzh6ZP, {
                   webBuildOverride: i.id,
               })
-            : eV.intl.string(eV.t.cduTBL);
+            : eH.intl.string(eH.t.cduTBL);
     let x = h.Zes,
         b = (0, p.w)();
     return (
@@ -970,16 +985,16 @@ function e1(e) {
         (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)(
-                    eR.A,
-                    ez(
-                        eK(
+                    eM.A,
+                    eQ(
+                        eq(
                             {
                                 ref: f,
                                 tooltipText: t,
                                 tooltipPositionKey: n,
                                 onClick: s,
                                 onContextMenu: o,
-                                "aria-label": eV.intl.string(eV.t.cduTBL),
+                                "aria-label": eH.intl.string(eH.t.cduTBL),
                                 icon: (0, a.jsx)(x, {
                                     size: "refresh_sm",
                                     color: "currentColor",
@@ -995,7 +1010,7 @@ function e1(e) {
                 ),
                 (0, a.jsx)(G.Ay, {
                     contentTypes: c,
-                    groupName: eB.m.ACCOUNT_NAME_ZONE,
+                    groupName: eF.m.ACCOUNT_NAME_ZONE,
                     children: (e) => {
                         let { visibleContent: t, markAsDismissed: n } = e;
                         if (t === d.M.NITRO_PRIVACY_PERK_BETA_COACHMARK)
@@ -1010,56 +1025,76 @@ function e1(e) {
     );
 }
 
-function e6(e) {
-    let {
-            selfMute: t,
-            serverMute: n,
-            suppress: i,
-            awaitingRemote: s,
-            iconForeground: o,
-            onMouseEnter: c,
-            onMouseLeave: d,
-            onClick: u,
-            nameplate: m,
-            shouldShowSpeakingWhileMutedTooltip: p,
-            shouldShowInputDeviceChangedTooltip: f,
-            dismissTooltips: x,
+function e2(e) {
+    let t,
+        {
+            selfMute: n,
+            serverMute: i,
+            suppress: s,
+            awaitingRemote: o,
+            iconForeground: d,
+            onMouseEnter: u,
+            onMouseLeave: m,
+            onClick: p,
+            nameplate: f,
+            shouldShowSpeakingWhileMutedTooltip: x,
+            shouldShowSpeakingWhilePTTTooltip: b,
+            shouldShowInputDeviceChangedTooltip: g,
+            shouldShowPTTJoinTooltip: v,
+            dismissTooltips: j,
+            speaking: y,
+            latched: _,
         } = e,
-        b = t || i || n,
-        g = l.useRef(null),
-        { Component: v, events: j, play: y } = (0, eu.q)(b),
-        _ = n || i ? h.O1p : v,
-        A = p
-            ? {
-                  tooltipType: "green_void_do_not_use",
-                  tooltipText: eV.intl.string(eV.t["29gnR4"]),
-                  tooltipForceOpen: !0,
-              }
-            : {
-                  tooltipText: (0, P.A)(t, n, i, s),
-              },
-        { analyticsLocations: C } = (0, O.Ay)(S.A.AUDIO_INPUT_BUTTON);
-    l.useEffect(() => () => y(), [b, y]);
-    let E = b ? h.LU0.colors.ICON_VOICE_MUTED : "currentColor",
-        { name: N } = (0, z.x5)(eF.oh.AUDIO_INPUT),
-        { enabledInputProfiles: T } = (0, es.d)({
+        A = n || s || i,
+        C = (0, c.bG)([ej.A], () => ej.A.getMode() === eG.TBI.PUSH_TO_TALK),
+        { showPTTIconIndicator: E } = eu.A.useConfig({
+            location: "MicrophoneButton",
+        }),
+        N = l.useRef(null),
+        { Component: T, events: I, play: k } = (0, eh.q)(A),
+        w = i || s ? h.O1p : T,
+        D = (0, c.bG)([ej.A], () => ej.A.getSettings().modeOptions.shortcut),
+        M = (0, P.A)(n, i, s, o);
+    t = x
+        ? {
+              tooltipType: "green_void_do_not_use",
+              tooltipText: eH.intl.string(eH.t["29gnR4"]),
+              tooltipForceOpen: !0,
+          }
+        : v || b
+          ? {
+                tooltipType: "green_void_do_not_use",
+                tooltipText: eH.intl.format(eH.t.c1qUOQ, {
+                    keybind: eD.dI(D).toLocaleUpperCase(),
+                }),
+                tooltipForceOpen: !0,
+            }
+          : {
+                tooltipText: M,
+            };
+    let { analyticsLocations: L } = (0, O.Ay)(S.A.AUDIO_INPUT_BUTTON);
+    l.useEffect(() => () => k(), [A, k]);
+    let B = E && C,
+        G = A ? h.LU0.colors.ICON_VOICE_MUTED : "currentColor",
+        { name: F } = (0, z.x5)(eW.oh.AUDIO_INPUT),
+        { enabledInputProfiles: V } = (0, es.d)({
             location: "MicrophoneButton",
         });
     return (0, a.jsx)(O.f5, {
-        value: C,
+        value: L,
         children: (0, a.jsx)(h.YNO, {
-            targetElementRef: g,
+            targetElementRef: N,
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (
-                    x(),
+                    j(),
                     (0, a.jsx)(O.f5, {
-                        value: C,
+                        value: L,
                         children: (0, a.jsx)(R.A, {
                             onInteraction: (0, U.s)("AudioDeviceMenu", S.A.ACCOUNT),
                             onClose: t,
                             maybeRenderPTTCheckbox: !0,
-                            renderInputProfiles: T.length > 0,
+                            renderInputProfiles: V.length > 0,
                             renderInputDevices: !0,
                             maybeRenderInputMeter: !0,
                             renderInputVolume: !0,
@@ -1072,83 +1107,95 @@ function e6(e) {
             align: "left",
             animation: h.YNO.Animation.FADE,
             spacing: 4,
-            children: (e, t) => {
-                let { onClick: n } = e,
-                    { isShown: l } = t,
-                    i = l ? h.tN5 : h.abt;
+            children: (e, n) => {
+                let { onClick: l } = e,
+                    { isShown: i } = n,
+                    s = i ? h.tN5 : h.abt;
                 return (0, a.jsxs)("div", {
-                    ref: g,
-                    className: r()(eH.WU, {
-                        [eH.v8]: b,
-                        [eH.q6]: l,
+                    ref: N,
+                    className: r()(eK.WU, {
+                        [eK.v8]: A,
+                        [eK.q6]: i,
                     }),
                     children: [
                         (0, a.jsx)(
-                            eR.A,
-                            eK(
+                            eM.A,
+                            eQ(
+                                eq(
+                                    {
+                                        "aria-checked": A,
+                                        "aria-label": eH.intl.string(eH.t.w4m945),
+                                        className: eK.$o,
+                                        disabled: o,
+                                        icon: (0, a.jsx)(w, {
+                                            size: "custom",
+                                            width: 20,
+                                            height: 20,
+                                            color: G,
+                                            className: d,
+                                        }),
+                                        onClick: p,
+                                        onContextMenu: l,
+                                        onMouseEnter: () => {
+                                            u(), I.onMouseEnter();
+                                        },
+                                        onMouseLeave: () => {
+                                            m(), I.onMouseLeave();
+                                        },
+                                        plated: null != f,
+                                        redGlow: A,
+                                        role: "switch",
+                                    },
+                                    t,
+                                ),
                                 {
-                                    "aria-checked": b,
-                                    "aria-label": eV.intl.string(eV.t.w4m945),
-                                    className: eH.$o,
-                                    disabled: s,
-                                    icon: (0, a.jsx)(_, {
-                                        size: "custom",
-                                        width: 20,
-                                        height: 20,
-                                        color: E,
-                                        className: o,
-                                    }),
-                                    onClick: u,
-                                    onContextMenu: n,
-                                    onMouseEnter: () => {
-                                        c(), j.onMouseEnter();
-                                    },
-                                    onMouseLeave: () => {
-                                        d(), j.onMouseLeave();
-                                    },
-                                    plated: null != m,
-                                    redGlow: b,
-                                    role: "switch",
+                                    children: B
+                                        ? (0, a.jsx)("div", {
+                                              className: r()(eK.Ur, {
+                                                  [eK.zY]: y,
+                                                  [eK.yM]: _ && !y,
+                                              }),
+                                          })
+                                        : null,
                                 },
-                                A,
                             ),
                         ),
-                        (0, a.jsx)(eR.A, {
-                            "aria-label": f
-                                ? eV.intl.formatToPlainString(eV.t["18wnuD"], {
-                                      inputDeviceName: N,
+                        (0, a.jsx)(eM.A, {
+                            "aria-label": g
+                                ? eH.intl.formatToPlainString(eH.t["18wnuD"], {
+                                      inputDeviceName: F,
                                   })
-                                : eV.intl.string(eV.t.fRzCbB),
-                            className: r()(eH.UT, {
-                                [eH.q6]: l,
+                                : eH.intl.string(eH.t.fRzCbB),
+                            className: r()(eK.UT, {
+                                [eK.q6]: i,
                             }),
-                            disabled: s,
-                            icon: (0, a.jsx)(i, {
-                                className: eH.$$,
+                            disabled: o,
+                            icon: (0, a.jsx)(s, {
+                                className: eK.$$,
                                 size: "custom",
                                 width: 12,
                                 height: 12,
-                                color: E,
+                                color: G,
                             }),
-                            onClick: n,
-                            onContextMenu: n,
-                            onMouseEnter: c,
-                            onMouseLeave: d,
-                            plated: null != m,
-                            redGlow: b,
-                            tooltipType: f ? "green_void_do_not_use" : void 0,
-                            tooltipForceOpen: f,
-                            tooltipPositionKey: f
-                                ? eV.intl.formatToPlainString(eV.t["18wnuD"], {
-                                      inputDeviceName: N,
+                            onClick: l,
+                            onContextMenu: l,
+                            onMouseEnter: u,
+                            onMouseLeave: m,
+                            plated: null != f,
+                            redGlow: A,
+                            tooltipType: g ? "green_void_do_not_use" : void 0,
+                            tooltipForceOpen: g,
+                            tooltipPositionKey: g
+                                ? eH.intl.formatToPlainString(eH.t["18wnuD"], {
+                                      inputDeviceName: F,
                                   })
                                 : void 0,
-                            tooltipShouldShow: !l,
-                            tooltipText: f
-                                ? eV.intl.format(eV.t["18wnuD"], {
-                                      inputDeviceName: N,
+                            tooltipShouldShow: !i,
+                            tooltipText: g
+                                ? eH.intl.format(eH.t["18wnuD"], {
+                                      inputDeviceName: F,
                                   })
-                                : eV.intl.string(eV.t.fRzCbB),
+                                : eH.intl.string(eH.t.fRzCbB),
                         }),
                     ],
                 });
@@ -1157,7 +1204,7 @@ function e6(e) {
     });
 }
 
-function e9(e) {
+function e8(e) {
     let {
             selfDeaf: t,
             serverDeaf: n,
@@ -1175,8 +1222,8 @@ function e9(e) {
             events: { onMouseEnter: b, onMouseLeave: g },
         } = (0, m.I)(p ? "undeafen" : "deafen"),
         v = n ? h.TJE : f,
-        { name: j } = (0, z.x5)(eF.oh.AUDIO_OUTPUT),
-        y = (0, k.A)(t, n, i),
+        { name: j } = (0, z.x5)(eW.oh.AUDIO_OUTPUT),
+        y = (0, w.A)(t, n, i),
         { analyticsLocations: _ } = (0, O.Ay)(S.A.AUDIO_OUTPUT_BUTTON),
         A = l.useRef(null);
     return (
@@ -1211,15 +1258,15 @@ function e9(e) {
                         m = u ? h.tN5 : h.abt;
                     return (0, a.jsxs)("div", {
                         ref: A,
-                        className: r()(eH.WU, {
-                            [eH.v8]: p,
-                            [eH.q6]: u,
+                        className: r()(eK.WU, {
+                            [eK.v8]: p,
+                            [eK.q6]: u,
                         }),
                         children: [
-                            (0, a.jsx)(eR.A, {
+                            (0, a.jsx)(eM.A, {
                                 "aria-checked": p,
-                                "aria-label": eV.intl.string(eV.t.wjcRFX),
-                                className: eH.$o,
+                                "aria-label": eH.intl.string(eH.t.wjcRFX),
+                                className: eK.$o,
                                 disabled: i,
                                 icon: (0, a.jsx)(v, {
                                     size: "custom",
@@ -1228,9 +1275,9 @@ function e9(e) {
                                     color: p ? h.LU0.colors.ICON_VOICE_MUTED : "currentColor",
                                     className: o,
                                 }),
-                                iconForeground: p ? eH.of : void 0,
+                                iconForeground: p ? eK.of : void 0,
                                 innerClassName: r()({
-                                    [eH.T3]: n,
+                                    [eK.T3]: n,
                                 }),
                                 onClick: s,
                                 onContextMenu: l,
@@ -1241,13 +1288,13 @@ function e9(e) {
                                 role: "switch",
                                 tooltipText: y,
                             }),
-                            (0, a.jsx)(eR.A, {
-                                className: r()(eH.UT, {
-                                    [eH.q6]: u,
+                            (0, a.jsx)(eM.A, {
+                                className: r()(eK.UT, {
+                                    [eK.q6]: u,
                                 }),
                                 disabled: i,
                                 icon: (0, a.jsx)(m, {
-                                    className: eH.$$,
+                                    className: eK.$$,
                                     size: "custom",
                                     width: 12,
                                     height: 12,
@@ -1260,21 +1307,21 @@ function e9(e) {
                                 tooltipType: d ? "green_void_do_not_use" : void 0,
                                 tooltipForceOpen: d,
                                 tooltipPositionKey: d
-                                    ? eV.intl.formatToPlainString(eV.t["f+DDY/"], {
+                                    ? eH.intl.formatToPlainString(eH.t["f+DDY/"], {
                                           outputDeviceName: j,
                                       })
                                     : void 0,
                                 tooltipShouldShow: !u,
                                 tooltipText: d
-                                    ? eV.intl.format(eV.t["f+DDY/"], {
+                                    ? eH.intl.format(eH.t["f+DDY/"], {
                                           outputDeviceName: j,
                                       })
-                                    : eV.intl.string(eV.t.aA4Vce),
+                                    : eH.intl.string(eH.t.aA4Vce),
                                 "aria-label": d
-                                    ? eV.intl.formatToPlainString(eV.t["f+DDY/"], {
+                                    ? eH.intl.formatToPlainString(eH.t["f+DDY/"], {
                                           outputDeviceName: j,
                                       })
-                                    : eV.intl.string(eV.t.aA4Vce),
+                                    : eH.intl.string(eH.t.aA4Vce),
                             }),
                         ],
                     });

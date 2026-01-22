@@ -694,6 +694,7 @@ var r = n(478437),
             (e.SYSTEM_SERVICE_WARNING = "SYSTEM_SERVICE_WARNING"),
             (e.VOICE_FILTERS_ERROR = "VOICE_FILTERS_ERROR"),
             (e.SAFETY_SUSPENDED_USER_WARNING = "SAFETY_SUSPENDED_USER_WARNING"),
+            (e.PTT_NO_KEYBIND_WARNING = "PTT_NO_KEYBIND_WARNING"),
             e
         );
     })({}),
