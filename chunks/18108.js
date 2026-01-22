@@ -1,55 +1,59 @@
-t.d(r, { g: () => i });
-let a = (e, r) => {
-        let t = n(e, r);
-        if (t > 0) {
-            let a = o(e, r),
-                n = (t / e.length + t / r.length + (t - a) / t) / 3;
-            return n < 0.7 ? n : n + 0.1 * l(e, r) * (1 - n);
+n.d(t, { g: () => o });
+let r = (e, t) => {
+        let n = i(e, t);
+        if (n > 0) {
+            let r = n,
+                i = a(e, t),
+                o = (r / e.length + r / t.length + (r - i) / r) / 3;
+            if (o < 0.7) return o;
+            let l = 0.1;
+            return o + s(e, t) * l * (1 - o);
         }
         return 0;
     },
-    n = (e, r) => {
-        let t = Math.floor(Math.max(e.length, r.length) / 2) - 1,
-            a = [],
-            n = 0;
-        for (var o = 0; o < e.length; o++)
-            for (var l = Math.max(0, o - t); l <= Math.min(r.length, o + t); l++)
-                if (e[o] === r[l] && !a[l]) {
-                    (a[l] = !0), n++;
+    i = (e, t) => {
+        let n = Math.floor(Math.max(e.length, t.length) / 2) - 1,
+            r = [],
+            i = 0;
+        for (var a = 0; a < e.length; a++)
+            for (var s = Math.max(0, a - n); s <= Math.min(t.length, a + n); s++)
+                if (e[a] === t[s] && !r[s]) {
+                    (r[s] = !0), i++;
                     break;
                 }
-        return n;
+        return i;
     },
-    o = (e, r) => {
-        let t = Math.floor(Math.max(e.length, r.length) / 2) - 1,
-            a = {
+    a = (e, t) => {
+        let n = Math.floor(Math.max(e.length, t.length) / 2) - 1,
+            r = {
                 a: "",
                 b: "",
             },
-            n = [];
-        for (let o = 0; o < e.length; o++)
-            for (let l = Math.max(0, o - t); l <= Math.min(r.length, o + t); l++)
-                if (e[o] === r[l] && !n[l]) {
-                    (a.a += e[o]), (n[l] = !0);
+            i = [];
+        for (let a = 0; a < e.length; a++)
+            for (let s = Math.max(0, a - n); s <= Math.min(t.length, a + n); s++)
+                if (e[a] === t[s] && !i[s]) {
+                    (r.a += e[a]), (i[s] = !0);
                     break;
                 }
-        n = [];
-        for (let o = 0; o < r.length; o++)
-            for (let l = Math.max(0, o - t); l <= Math.min(e.length, o + t); l++)
-                if (r[o] === e[l] && !n[l]) {
-                    (a.b += r[o]), (n[l] = !0);
+        i = [];
+        for (let a = 0; a < t.length; a++)
+            for (let s = Math.max(0, a - n); s <= Math.min(e.length, a + n); s++)
+                if (t[a] === e[s] && !i[s]) {
+                    (r.b += t[a]), (i[s] = !0);
                     break;
                 }
-        let o = 0;
-        for (let e = 0; e < a.a.length; e++) a.a[e] !== a.b[e] && o++;
-        return Math.floor(o / 2);
+        let a = 0;
+        for (let e = 0; e < r.a.length; e++) r.a[e] !== r.b[e] && a++;
+        return Math.floor(a / 2);
     },
-    l = (e, r) => {
-        let t = 0;
-        for (; t < 4; t++) if (e[t] !== r[t]) return t;
-        return ++t;
+    s = (e, t) => {
+        let n = 4,
+            r = 0;
+        for (; r < n; r++) if (e[r] !== t[r]) return r;
+        return ++r;
     };
-function i(e, r, t) {
-    let { caseSensitive: n = !1 } = null != t ? t : {};
-    return n ? a(e, r) : a(e.toLowerCase(), r.toLowerCase());
+function o(e, t, n) {
+    let { caseSensitive: i = !1 } = null != n ? n : {};
+    return i ? r(e, t) : r(e.toLowerCase(), t.toLowerCase());
 }

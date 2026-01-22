@@ -66,15 +66,16 @@ function p(e) {
                         u = l === t,
                         f = i || u ? "text-default" : "text-muted";
                     return (0, r.jsxs)(
-                        "li",
+                        o.DUT,
                         {
+                            tag: "li",
                             className: s()(d.Aw, { [d.$K]: i }),
+                            onClick: () => a((e) => (e === t ? null : t)),
+                            onMouseEnter: () => c(t),
+                            onMouseLeave: () => c(null),
                             children: [
-                                (0, r.jsxs)(o.DUT, {
+                                (0, r.jsxs)("div", {
                                     className: d.k7,
-                                    onClick: () => a((e) => (e === t ? null : t)),
-                                    onMouseEnter: () => c(t),
-                                    onMouseLeave: () => c(null),
                                     children: [
                                         (0, r.jsx)(o.Text, {
                                             className: d.b1,
