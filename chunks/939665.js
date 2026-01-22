@@ -160,7 +160,7 @@ function L(e) {
                                     type: "critical",
                                     children: eP,
                                 })
-                              : (0, l.jsx)(j.$, {
+                              : (0, l.jsx)(j.$p, {
                                     planOptions: eg,
                                     eligibleForMultiMonthPlans: em,
                                     selectedPlanId: null == Z ? void 0 : Z.id,
@@ -194,7 +194,7 @@ function L(e) {
                               justify: c.A.Justify.BETWEEN,
                               align: c.A.Align.CENTER,
                               className: $,
-                              children: (0, l.jsx)(j.Z, {
+                              children: (0, l.jsx)(j.Z3, {
                                   onStepChange: L,
                                   onBackClick: () => L(S.pn.SKU_SELECT),
                                   showBackButton: null == U && null == H,

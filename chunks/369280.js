@@ -223,7 +223,7 @@ function X(e) {
                         (0, r.jsx)(v.P, {
                             planSkuId: ef.skuId,
                         }),
-                        (0, r.jsx)(M.$, {
+                        (0, r.jsx)(M.$p, {
                             planOptions: eb,
                             eligibleForMultiMonthPlans: !1,
                             selectedPlanId: P,

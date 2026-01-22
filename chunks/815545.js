@@ -102,34 +102,46 @@ function b(e, t, n, r) {
     throw Error("Unexpected invoice plan: ".concat(e.subscriptionPlanId));
 }
 let y = (e, t) => {
+        var n;
         let {
-                premiumTrialOffer: n,
-                subscriptionPlan: r,
-                overrideAmount: a,
-                isPrepaidPaymentSource: c,
-                currency: u,
+                premiumTrialOffer: r,
+                subscriptionPlan: c,
+                overrideAmount: u,
+                isPrepaidPaymentSource: d,
+                currency: f,
             } = t,
-            d = null != r ? r : s.A.get(e.subscriptionPlanId),
-            f = null == n ? void 0 : n.subscription_trial;
-        i()(null != d, "Missing subscriptionPlan");
-        let p = b(
+            p = null != c ? c : s.A.get(e.subscriptionPlanId),
+            _ = null == r ? void 0 : r.subscription_trial;
+        i()(null != p, "Missing subscriptionPlan");
+        let h = b(
                 e,
+                p,
                 d,
-                c,
                 (0, o.re)({
-                    intervalType: null == f ? void 0 : f.interval,
-                    intervalCount: null == f ? void 0 : f.interval_count,
+                    intervalType: null == _ ? void 0 : _.interval,
+                    intervalCount: null == _ ? void 0 : _.interval_count,
                 }),
             ),
-            _ = null != a ? a : e.amount,
-            h = (0, l.$g)(_, u);
+            m = null != u ? u : e.amount,
+            g = (0, l.$g)(m, f),
+            E = d ? g : (0, l.CE)(g, p.interval, p.intervalCount),
+            y = null != (n = e.discounts) ? n : [],
+            O = y.find((e) => e.type === a.iS.SUBSCRIPTION_PLAN),
+            A = y.find((e) => e.type === a.iS.PREMIUM_TRIAL),
+            v = y.find((e) => e.type === a.iS.ENTITLEMENT),
+            S = y.reduce((e, t) => e + t.amount, 0);
         return {
-            label: p,
-            value: c ? h : (0, l.CE)(h, d.interval, d.intervalCount),
-            amount: _,
-            formattedPrice: h,
-            subscriptionPlan: d,
-            subscriptionTrial: f,
+            label: h,
+            value: E,
+            amount: m,
+            amountWithoutDiscount: e.amount + S,
+            discountAmountOff: S,
+            formattedPrice: g,
+            subscriptionPlan: p,
+            subscriptionTrial: _,
+            trialDiscount: A,
+            subscriptionDiscount: O,
+            entitlementDiscount: v,
         };
     },
     O = (e, t) => {

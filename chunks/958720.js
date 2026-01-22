@@ -1,215 +1,237 @@
 n.d(t, {
-    A: () => E,
+    A: () => y,
 });
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(284009),
-    o = n.n(s),
-    l = n(311907),
-    c = n(397927),
-    u = n(937008),
-    d = n(97352),
-    f = n(252424),
-    p = n(927578),
-    _ = n(580630),
-    h = n(788868),
-    m = n(985018),
-    g = n(371894);
+var r = n(627968),
+    i = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    o = n(284009),
+    l = n.n(o),
+    c = n(311907),
+    u = n(397927),
+    d = n(93159),
+    f = n(937008),
+    p = n(97352),
+    _ = n(252424),
+    h = n(927578),
+    m = n(580630),
+    g = n(788868),
+    E = n(985018),
+    b = n(371894);
 
-function E(e) {
+function y(e) {
     let {
             userLocale: t,
             premiumSubscription: n,
-            planId: i,
-            selectPlan: s,
-            selected: E,
-            priceOptions: b,
-            isPrepaid: y,
-            isCustomGift: O,
-            shouldUseCalculatedDiscount: A,
-            shouldShowUpdatedPaymentModal: v,
-            discountOffer: S,
-            discountAmountOff: I,
-            isEligibleForDiscount: T,
-            isEligibleForBOGOPromotion: C,
-            isEligibleForTrial: N,
+            planId: a,
+            selectPlan: o,
+            selected: y,
+            priceOptions: O,
+            isPrepaid: A,
+            isCustomGift: v,
+            shouldUseUnifiedCheckoutUI: S,
+            shouldUseCalculatedDiscount: I,
+            shouldShowUpdatedPaymentModal: T,
+            discountOffer: C,
+            discountAmountOff: N,
+            isEligibleForDiscount: R,
+            isEligibleForBOGOPromotion: w,
+            isEligibleForTrial: P,
+            isCurrentPlan: D,
+            disabled: x,
         } = e,
-        { isGift: R } = (0, u.Pv)(),
-        w = (0, l.bG)([d.A], () => d.A.get(i));
-    o()(null != w, "Missing subscriptionPlan");
-    let P = null != n && n.planId === i,
-        D =
-            P ||
-            (i === h.gD.PREMIUM_MONTH_TIER_2 &&
-                null != n &&
-                [h.gD.PREMIUM_YEAR_TIER_0, h.gD.PREMIUM_YEAR_TIER_1].includes(n.planId)),
-        x = h.XE[i];
-    A && (x = (0, p.k8)(w, R, b));
-    let L = (0, p.y8)(i, !1, R, b),
-        j = null != x && !v,
-        M = w.interval === h.WT.YEAR ? m.t.ECT4A5 : m.t.v9QeON,
-        k = () =>
-            C && !R && i === h.gD.PREMIUM_MONTH_TIER_2
-                ? (0, r.jsx)(c.Text, {
+        { isGift: L } = (0, f.Pv)(),
+        j = (0, c.bG)([p.A], () => p.A.get(a));
+    l()(null != j, "Missing subscriptionPlan");
+    let M = g.XE[a];
+    I && (M = (0, h.k8)(j, L, O));
+    let k = (0, h.y8)(a, !1, L, O),
+        U = j.interval === g.WT.YEAR && null != M ? Math.floor(k.amount / (1 - M / 100)) : null,
+        G = null != M && !T,
+        V = j.interval === g.WT.YEAR ? E.t.ECT4A5 : E.t.v9QeON,
+        F = () =>
+            w && !L && a === g.gD.PREMIUM_MONTH_TIER_2
+                ? (0, r.jsx)(u.Text, {
                       tag: "span",
                       variant: "eyebrow",
                       color: "always-white",
-                      className: g.kP,
-                      children: m.intl.string(m.t.iQTfWx),
+                      className: b.kP,
+                      children: E.intl.string(E.t.iQTfWx),
                   })
                 : null,
-        U = () =>
-            null != x &&
-            !C &&
-            (0, r.jsx)(c.Text, {
+        B = () =>
+            null != M &&
+            !w &&
+            (0, r.jsx)(u.Text, {
                 tag: "span",
                 variant: "eyebrow",
                 color: "always-white",
-                className: g.kP,
-                children: m.intl.format(m.t.IAybsG, {
-                    discount: (0, f.l9)(t, x / 100),
+                className: b.kP,
+                children: E.intl.format(E.t.IAybsG, {
+                    discount: (0, _.l9)(t, M / 100),
                 }),
             }),
-        G = () =>
-            C
-                ? k()
-                : (w.interval === h.WT.YEAR && null != n) || (j && !P)
-                  ? w.interval === h.WT.YEAR && null != n
+        H = () =>
+            w
+                ? F()
+                : (j.interval === g.WT.YEAR && null != n) || (G && !D)
+                  ? j.interval === g.WT.YEAR && null != n
                       ? (0, r.jsxs)("span", {
-                            className: g.IS,
-                            children: ["(", m.intl.string(m.t["122kWB"]), ")"],
+                            className: b.IS,
+                            children: ["(", E.intl.string(E.t["122kWB"]), ")"],
                         })
-                      : j && !P
-                        ? U()
+                      : G && !D
+                        ? B()
                         : void 0
                   : null,
-        V = () =>
+        Y = (0, h.m6)(j.id),
+        W = i.useMemo(
+            () => (0, h.D8)(j.interval, L, A, j.intervalCount, v, Y),
+            [j.interval, j.intervalCount, L, A, v, Y],
+        ),
+        K = () =>
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: a()(g.Gl, {
-                            [g.h4]: E || O,
-                            [g.ox]: v && (E || O),
+                        className: s()(b.Gl, {
+                            [b.h4]: y || v,
+                            [b.ox]: T && (y || v),
                         }),
-                        children: [(0, p.D8)(w.interval, R, y, w.intervalCount, O, (0, p.m6)(w.id)), O && G()],
+                        children: [W, v && H()],
                     }),
-                    O &&
+                    v &&
                         (0, r.jsx)("div", {
-                            className: g._R,
-                            children: m.intl.format(m.t.ori2Jm, {
-                                currencyAmount: (0, _.$g)(L.amount, L.currency),
+                            className: b._R,
+                            children: E.intl.format(E.t.ori2Jm, {
+                                currencyAmount: (0, m.$g)(k.amount, k.currency),
                             }),
                         }),
                 ],
             }),
-        F = () =>
-            T && null != I && w.interval === h.WT.MONTH
-                ? (0, _.$g)(L.amount - I, L.currency)
-                : N
-                  ? (0, _.$g)(0, L.currency, {
+        z = () =>
+            R && null != N && j.interval === g.WT.MONTH
+                ? (0, m.$g)(k.amount - N, k.currency)
+                : P
+                  ? (0, m.$g)(0, k.currency, {
                         minimumFractionDigits: 0,
                         maximumFractionDigits: 0,
                     })
-                  : (0, _.$g)(L.amount, L.currency),
-        B = () => {
-            if (T && null != I && w.interval === h.WT.MONTH) {
+                  : (0, m.$g)(k.amount, k.currency),
+        q = () => {
+            if (R && null != N && j.interval === g.WT.MONTH) {
                 var e;
-                return m.intl.format(m.t["VeE/4E"], {
-                    numMonths: null != (e = null == S ? void 0 : S.discount.user_usage_limit) ? e : h.OJ,
-                    discountedPrice: (0, _.$g)(L.amount - I, L.currency),
-                    regularPrice: (0, _.$g)(L.amount, L.currency),
+                return E.intl.format(E.t["VeE/4E"], {
+                    numMonths: null != (e = null == C ? void 0 : C.discount.user_usage_limit) ? e : g.OJ,
+                    discountedPrice: (0, m.$g)(k.amount - N, k.currency),
+                    regularPrice: (0, m.$g)(k.amount, k.currency),
                 });
             }
-            return N
-                ? m.intl.format(M, {
-                      price: (0, _.$g)(L.amount, L.currency),
+            return P
+                ? E.intl.format(V, {
+                      price: (0, m.$g)(k.amount, k.currency),
                   })
-                : w.interval === h.WT.YEAR
-                  ? m.intl.formatToPlainString(m.t.rtLTJP, {
-                        percent: x,
+                : j.interval === g.WT.YEAR
+                  ? E.intl.formatToPlainString(E.t.rtLTJP, {
+                        percent: M,
                     })
                   : null;
         },
-        H = () => {
-            D || s(i);
-        };
-    return (0, r.jsxs)(c.DUT, {
-        role: O ? "menuitem" : "radio",
-        "aria-checked": E,
-        tabIndex: E ? 0 : -1,
-        focusProps: {
-            offset: {
-                left: -4,
-                right: -4,
-                top: 0,
-                bottom: 0,
-            },
+        X = () => {
+            x || o(a);
         },
-        onClick: H,
-        className: a()(g.G_, {
-            [g.vW]: O && E,
-            [g.Gb]: O,
-        }),
-        children: [
-            (0, r.jsxs)("div", {
-                className: a()(g.XM, {
-                    [g.PA]: D,
-                }),
-                children: [
-                    (0, r.jsxs)("div", {
-                        className: g.l,
-                        children: [
-                            !O &&
-                                (0, r.jsx)("div", {
-                                    className: g.E2,
-                                    children: (0, r.jsx)(c.Checkbox, {
-                                        checked: E,
-                                        value: E,
-                                        label: "",
-                                        description: "",
-                                        onChange: H,
-                                    }),
-                                }),
-                            V(),
-                            P &&
-                                (0, r.jsxs)("span", {
-                                    className: g.bq,
-                                    children: ["(", m.intl.string(m.t.ymSxhy), ")"],
-                                }),
-                            !O && G(),
-                        ],
-                    }),
-                    v
-                        ? (0, r.jsx)("div", {
-                              className: a()({
-                                  [g.kb]: E,
-                              }),
-                              children: m.intl.format(m.t.hXcaLT, {
-                                  price: F(),
-                              }),
-                          })
-                        : (0, r.jsx)("div", {
-                              className: a()({
-                                  [g.h4]: E || O,
-                              }),
-                              children: (0, _.$g)(L.amount, L.currency),
+        Z = T
+            ? E.intl.format(E.t.hXcaLT, {
+                  price: z(),
+              })
+            : (0, m.$g)(k.amount, k.currency);
+    return S
+        ? (0, r.jsx)(d.ZA, {
+              id: a,
+              title: null,
+              titleDescriber: (0, h.YR)(j.interval, j.intervalCount),
+              primaryText: Z,
+              subtext:
+                  null != U
+                      ? (0, r.jsx)(d.Lo, {
+                            strikethrough: !0,
+                            price: (0, m.$g)(U, k.currency),
+                        })
+                      : void 0,
+              isDisabled: x,
+          })
+        : (0, r.jsxs)(u.DUT, {
+              role: v ? "menuitem" : "radio",
+              "aria-checked": y,
+              tabIndex: y ? 0 : -1,
+              focusProps: {
+                  offset: {
+                      left: -4,
+                      right: -4,
+                      top: 0,
+                      bottom: 0,
+                  },
+              },
+              onClick: X,
+              className: s()(b.G_, {
+                  [b.vW]: v && y,
+                  [b.Gb]: v,
+              }),
+              children: [
+                  (0, r.jsxs)("div", {
+                      className: s()(b.XM, {
+                          [b.PA]: x,
+                      }),
+                      children: [
+                          (0, r.jsxs)("div", {
+                              className: b.l,
+                              children: [
+                                  !v &&
+                                      (0, r.jsx)("div", {
+                                          className: b.E2,
+                                          children: (0, r.jsx)(u.Checkbox, {
+                                              checked: y,
+                                              value: y,
+                                              label: "",
+                                              description: "",
+                                              onChange: X,
+                                          }),
+                                      }),
+                                  K(),
+                                  D &&
+                                      (0, r.jsxs)("span", {
+                                          className: b.bq,
+                                          children: ["(", E.intl.string(E.t.ymSxhy), ")"],
+                                      }),
+                                  !v && H(),
+                              ],
                           }),
-                ],
-            }),
-            v &&
-                (0, r.jsx)("div", {
-                    className: g.hB,
-                    children: (0, r.jsx)(c.Text, {
-                        variant: "text-md/normal",
-                        color: E ? "text-default" : "interactive-text-default",
-                        className: a()(g.Ub, {
-                            [g.sw]: T || N,
-                        }),
-                        children: B(),
-                    }),
-                }),
-        ],
-    });
+                          T
+                              ? (0, r.jsx)("div", {
+                                    className: s()({
+                                        [b.kb]: y,
+                                    }),
+                                    children: Z,
+                                })
+                              : (0, r.jsx)("div", {
+                                    className: s()({
+                                        [b.h4]: y || v,
+                                    }),
+                                    children: Z,
+                                }),
+                      ],
+                  }),
+                  T &&
+                      (0, r.jsx)("div", {
+                          className: b.hB,
+                          children: (0, r.jsx)(u.Text, {
+                              variant: "text-md/normal",
+                              color: y ? "text-default" : "interactive-text-default",
+                              className: s()(b.Ub, {
+                                  [b.sw]: R || P,
+                              }),
+                              children: q(),
+                          }),
+                      }),
+              ],
+          });
 }

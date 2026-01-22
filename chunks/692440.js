@@ -1,10 +1,11 @@
 n.d(t, {
-    DP: () => G,
+    DP: () => V,
+    Lw: () => G,
     _J: () => x,
     m0: () => U,
     mT: () => L,
     sw: () => D,
-    tC: () => V,
+    tC: () => F,
     wP: () => j,
 }),
     n(896048);
@@ -83,6 +84,8 @@ function P(e) {
             subscriptionPlan: m,
             label: g,
             value: E,
+            subscriptionDiscount: b,
+            entitlementDiscount: y,
         } = (0, S.Ol)(t, {
             subscriptionPlan: h,
             premiumTrialOffer: p,
@@ -90,14 +93,14 @@ function P(e) {
             isPrepaidPaymentSource: o,
             currency: a,
         }),
-        b = g;
+        v = g;
     return (
         !0 === i &&
-            (b = (0, r.jsxs)("div", {
+            (v = (0, r.jsxs)("div", {
                 className: N._H,
                 children: [
                     (0, r.jsxs)("div", {
-                        children: [b, " "],
+                        children: [v, " "],
                     }),
                     (0, r.jsx)(u.m_, {
                         text: C.intl.format(C.t.UDop9c, {}),
@@ -112,10 +115,11 @@ function P(e) {
                 ],
             })),
         (0, r.jsx)(A.f0, {
-            label: b,
+            label: v,
             value: E,
             originalAmount: t.subscriptionPlanPrice * t.quantity,
-            discounts: t.discounts,
+            subscriptionDiscount: b,
+            entitlementDiscount: y,
             interval: m.interval,
             intervalCount: m.intervalCount,
             currency: a,
@@ -428,69 +432,73 @@ function U(e) {
         ],
     });
 }
-
-function G(e) {
-    let t,
-        { plan: n, className: i, isPrepaidPaymentSource: a = !1, isCustomGift: s = !1, invoicePreview: o } = e,
-        { tax: l, taxInclusive: c, currency: u } = o,
-        f = o.total,
-        p = f - l,
-        _ = (0, E.$g)(p, u),
-        h = (0, E.$g)(f, u);
-    return (
-        (t = s
-            ? (0, g.D8)(n.interval, !0, void 0, void 0, !0, (0, g.m6)(n.id))
-            : C.intl.formatToPlainString(C.t.LQLxkW, {
-                  planName: (0, g.Mn)(n.id, !1, a),
-              })),
-        (0, r.jsxs)("div", {
-            className: i,
-            children: [
-                (0, r.jsx)(d.Heading, {
-                    variant: "heading-md/semibold",
-                    children: C.intl.string(C.t.PEjaCx),
-                }),
-                l >= 0 && !1 === c
-                    ? (0, r.jsxs)(r.Fragment, {
-                          children: [
-                              (0, r.jsx)(d.Text, {
-                                  variant: "text-md/bold",
-                                  className: N.Uc,
-                                  children: t,
-                              }),
-                              (0, r.jsxs)(A.Yx, {
-                                  className: i,
-                                  children: [
-                                      (0, r.jsx)(A.Xd, {
-                                          children: C.intl.string(C.t.sail9P),
-                                      }),
-                                      (0, r.jsx)(A.oR, {
-                                          label: t,
-                                          value: _,
-                                      }),
-                                      (0, r.jsx)(v.A, {
-                                          invoice: o,
-                                      }),
-                                      (0, r.jsx)(A.pK, {}),
-                                      (0, r.jsx)(A.oR, {
-                                          label: C.intl.string(C.t.txajQG),
-                                          value: h,
-                                          className: N.RV,
-                                      }),
-                                  ],
-                              }),
-                          ],
-                      })
-                    : (0, r.jsx)(d.Heading, {
-                          variant: "text-md/normal",
-                          children: "".concat(t, " - ").concat(h),
-                      }),
-            ],
-        })
-    );
-}
+let G = (e, t) => {
+    let { isCustomGift: n, isPrepaidPaymentSource: r } = t;
+    return n
+        ? (0, g.D8)(e.interval, !0, void 0, void 0, !0, (0, g.m6)(e.id))
+        : C.intl.formatToPlainString(C.t.LQLxkW, {
+              planName: (0, g.Mn)(e.id, !1, r),
+          });
+};
 
 function V(e) {
+    let { plan: t, className: n, isPrepaidPaymentSource: i = !1, isCustomGift: a = !1, invoicePreview: s } = e,
+        { tax: o, taxInclusive: l, currency: c } = s,
+        u = s.total,
+        f = u - o,
+        p = (0, E.$g)(f, c),
+        _ = (0, E.$g)(u, c),
+        h = G(t, {
+            isCustomGift: a,
+            isPrepaidPaymentSource: i,
+        });
+    return (0, r.jsxs)("div", {
+        className: n,
+        children: [
+            (0, r.jsx)(d.Heading, {
+                variant: "heading-md/semibold",
+                children: C.intl.string(C.t.PEjaCx),
+            }),
+            o >= 0 && !1 === l
+                ? (0, r.jsxs)(r.Fragment, {
+                      children: [
+                          (0, r.jsx)(d.Text, {
+                              variant: "text-md/bold",
+                              className: N.Uc,
+                              children: h,
+                          }),
+                          (0, r.jsxs)(A.Yx, {
+                              className: n,
+                              children: [
+                                  (0, r.jsx)(A.Xd, {
+                                      children: C.intl.string(C.t.sail9P),
+                                  }),
+                                  (0, r.jsx)(A.oR, {
+                                      label: h,
+                                      value: p,
+                                  }),
+                                  (0, r.jsx)(v.A, {
+                                      invoice: s,
+                                  }),
+                                  (0, r.jsx)(A.pK, {}),
+                                  (0, r.jsx)(A.oR, {
+                                      label: C.intl.string(C.t.txajQG),
+                                      value: _,
+                                      className: N.RV,
+                                  }),
+                              ],
+                          }),
+                      ],
+                  })
+                : (0, r.jsx)(d.Heading, {
+                      variant: "text-md/normal",
+                      children: "".concat(h, " - ").concat(_),
+                  }),
+        ],
+    });
+}
+
+function F(e) {
     let t,
         { invoice: n, plan: i } = e,
         a = (0, y.Z)(n.invoiceItems).find((e) => e.subscriptionPlanId === i.id);

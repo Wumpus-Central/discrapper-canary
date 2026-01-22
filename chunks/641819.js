@@ -145,7 +145,7 @@ function S(e) {
             children: (0, l.jsx)(o.jlY, {
                 "data-migration-pending": !0,
                 className: P.Hx,
-                children: (0, l.jsx)(g.Z, {
+                children: (0, l.jsx)(g.Z3, {
                     onStepChange: (e) => {
                         null != L &&
                             null != M &&
