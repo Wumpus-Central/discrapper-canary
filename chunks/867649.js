@@ -7,8 +7,8 @@ var r = n(627968);
 n(64700);
 var i = n(311907),
     a = n(397927),
-    s = n(750506),
-    o = n(111162),
+    s = n(865116),
+    o = n(750506),
     l = n(885576),
     c = n(287809),
     u = n(818348),
@@ -16,7 +16,7 @@ var i = n(311907),
 
 function f() {
     var e;
-    let t = (0, i.bG)([o.default], () => o.default.isIdleStatusIndicatorEnabled),
+    let t = (0, i.bG)([s.Ay], () => s.Ay.get("idle_status_indicator")),
         n = (0, i.bG)([c.default], () => {
             var e, t;
             return null != (e = null == (t = c.default.getCurrentUser()) ? void 0 : t.isStaff()) && e;
@@ -28,7 +28,7 @@ function f() {
         f && _.push("IDLE"),
         p && _.push("AFK"),
         n && t
-            ? (0, r.jsx)(s.Ay, {
+            ? (0, r.jsx)(o.Ay, {
                   children: (0, r.jsxs)("div", {
                       className: d.kL,
                       children: [

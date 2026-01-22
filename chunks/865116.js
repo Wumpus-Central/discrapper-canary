@@ -53,6 +53,14 @@ let l = {
             label: "Ignore pending scan on explicit media",
             category: 1,
         },
+        analytics_debugger: {
+            label: "Enable analytics debugger view",
+            category: 1,
+        },
+        idle_status_indicator: {
+            label: "Enable idle status indicator",
+            category: 1,
+        },
         upload_fail_50: {
             label: "Uploads: Fail 50% of uploads with 500 status after a 1 second delay",
             category: 0,

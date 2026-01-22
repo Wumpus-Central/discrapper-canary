@@ -1,6 +1,7 @@
 n.d(t, {
-    C: () => d,
-    O: () => u,
+    C1: () => d,
+    Or: () => u,
+    YR: () => c,
 });
 var r = n(627968),
     i = n(353640),
@@ -12,8 +13,6 @@ let l = 4,
     u = (0, i.v)((e) => ({
         horizontalSpacing: l,
         verticalSpacing: l,
-        maxHorizontalSpacing: c,
-        maxVerticalSpacing: c,
         setHorizontalSpacing: (t) => {
             e({
                 horizontalSpacing: Math.round(Math.min(Math.max(t, 0), c)),

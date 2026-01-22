@@ -1,5 +1,6 @@
 n.d(t, {
-    A: () => eg,
+    A: () => eb,
+    s: () => eo,
 }),
     n(896048),
     n(747238),
@@ -30,32 +31,34 @@ var r = n(627968),
     S = n(883600),
     I = n(235986),
     T = n(172272),
-    C = n(53705),
-    N = n(354328),
-    R = n(142120),
-    w = n(353171),
-    P = n(735729),
-    D = n(237984),
-    x = n(195043),
-    L = n(111162),
-    j = n(274184),
-    M = n(954571),
-    k = n(661191),
-    U = n(837921),
-    G = n(544028),
-    V = n(253932),
-    F = n(559248),
-    B = n(740625),
-    H = n(524738),
-    Y = n(179690),
-    W = n(531525),
-    K = n(652215),
-    z = n(986238),
-    q = n(254441),
-    X = n(506823),
-    Z = n(473169);
+    C = n(263834),
+    N = n(865116),
+    R = n(53705),
+    w = n(354328),
+    P = n(142120),
+    D = n(353171),
+    x = n(735729),
+    L = n(237984),
+    j = n(195043),
+    M = n(111162),
+    k = n(274184),
+    U = n(954571),
+    G = n(661191),
+    V = n(837921),
+    F = n(544028),
+    B = n(253932),
+    H = n(559248),
+    Y = n(740625),
+    W = n(524738),
+    K = n(179690),
+    z = n(531525),
+    q = n(652215),
+    X = n(986238),
+    Z = n(254441),
+    Q = n(506823),
+    $ = n(473169);
 
-function Q(e, t, n) {
+function J(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -69,7 +72,7 @@ function Q(e, t, n) {
     );
 }
 
-function $(e) {
+function ee(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -80,13 +83,13 @@ function $(e) {
                 }),
             )),
             r.forEach(function (t) {
-                Q(e, t, n[t]);
+                J(e, t, n[t]);
             });
     }
     return e;
 }
 
-function J(e, t) {
+function et(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -99,19 +102,19 @@ function J(e, t) {
     return n;
 }
 
-function ee(e, t) {
+function en(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : J(Object(t)).forEach(function (n) {
+            : et(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let et = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
-    en = [
+let er = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
+    ei = [
         {
             id: "branch",
             value: "branch",
@@ -124,32 +127,32 @@ let et = ["discord_web", "discord_marketing", "discord_developers", "discord_ios
         },
     ];
 
-function er(e) {
+function ea(e) {
     return "discord_ios" in e || "discord_android" in e;
 }
-class ei extends i.Component {
+class es extends i.Component {
     render() {
         let { project: e, overrideType: t, overrideId: n, disabled: i, error: a } = this.props,
             o = "branch" === t ? "Branch Name" : "Commit SHA";
         return (0, r.jsxs)(I.A, {
             direction: I.A.Direction.VERTICAL,
-            className: s()(q.oS, Z.SX, X.N, q.nM),
+            className: s()(Z.oS, $.SX, Q.N, Z.nM),
             children: [
                 (0, r.jsx)(y.A, {
-                    className: s()(q.lL, {
-                        [q.zi]: i,
+                    className: s()(Z.lL, {
+                        [Z.zi]: i,
                     }),
                     onClick: i ? void 0 : this.handleRemoveBuildOverride,
                 }),
                 (0, r.jsxs)(I.A, {
-                    className: Z.QB,
+                    className: $.QB,
                     children: [
                         (0, r.jsx)(I.A.Child, {
                             basis: "50%",
                             children: (0, r.jsx)(h.l6P, {
                                 selectionMode: "single",
                                 label: "Override Type",
-                                options: en,
+                                options: ei,
                                 onSelectionChange: this.handleOverrideTypeChanged,
                                 value: t,
                                 disabled: i,
@@ -172,14 +175,14 @@ class ei extends i.Component {
                         null != a &&
                             "" !== a &&
                             (0, r.jsx)(h.Text, {
-                                className: q.AS,
+                                className: Z.AS,
                                 color: "text-feedback-critical",
                                 variant: "text-sm/normal",
                                 children: a,
                             }),
                         (0, r.jsxs)(h.Text, {
                             variant: "text-sm/normal",
-                            className: q.AS,
+                            className: Z.AS,
                             children: [
                                 "This controls the build that will be served for the ",
                                 (0, r.jsx)("code", {
@@ -195,15 +198,15 @@ class ei extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            Q(this, "handleRemoveBuildOverride", () => {
+            J(this, "handleRemoveBuildOverride", () => {
                 this.props.onBuildOverrideRemoved(this.props.project);
             }),
-            Q(this, "handleOverrideIdChanged", (e) => {
+            J(this, "handleOverrideIdChanged", (e) => {
                 this.props.onBuildOverrideUpdated(this.props.project, {
                     id: e,
                 });
             }),
-            Q(this, "handleOverrideTypeChanged", (e) => {
+            J(this, "handleOverrideTypeChanged", (e) => {
                 this.props.onBuildOverrideUpdated(this.props.project, {
                     type: e,
                     id: "",
@@ -211,7 +214,7 @@ class ei extends i.Component {
             });
     }
 }
-class ea extends i.Component {
+class eo extends i.Component {
     async refreshBuildOverrides() {
         this.setState({
             loading: !0,
@@ -235,12 +238,12 @@ class ea extends i.Component {
         let { buildOverrides: e } = this.state;
         if (null == e) return [];
         let t = Object.keys(e);
-        return l().without(et, ...t);
+        return l().without(er, ...t);
     }
     renderEmpty() {
         return (0, r.jsx)(h.ppr, {
-            theme: G.A.theme,
-            className: s()(Z.eT, Z.SX),
+            theme: F.A.theme,
+            className: s()($.eT, $.SX),
             children: (0, r.jsx)(h.SGT, {
                 children: "You have no build overrides configured.",
             }),
@@ -252,7 +255,7 @@ class ea extends i.Component {
             ? null
             : l().map(e, (e, i) =>
                   (0, r.jsx)(
-                      ei,
+                      es,
                       {
                           project: i,
                           overrideType: e.type,
@@ -303,7 +306,7 @@ class ea extends i.Component {
                 (0, r.jsx)(h.Button, {
                     variant: "primary",
                     text: "Save Build Overrides",
-                    disabled: er(null != t ? t : {}),
+                    disabled: ea(null != t ? t : {}),
                     onClick: this.handleSaveChanges,
                     loading: e,
                 }),
@@ -315,14 +318,14 @@ class ea extends i.Component {
             { loading: t, saving: n, buildOverrides: i } = this.state;
         e = t
             ? (0, r.jsx)(h.y$y, {
-                  className: Z.QX,
+                  className: $.QX,
               })
             : null != i && 0 === Object.keys(i).length
               ? this.renderEmpty()
               : this.renderItems();
         let a = !n && !t && this.getAvailableProjects().length > 0,
             s =
-                er(null != i ? i : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL
+                ea(null != i ? i : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL
                     ? (0, r.jsx)(h.Text, {
                           color: "text-feedback-critical",
                           variant: "text-md/normal",
@@ -330,10 +333,9 @@ class ea extends i.Component {
                               "Mobile build overrides must be generated using the desktop/web stable client for now!",
                       })
                     : null;
-        return (0, r.jsx)(x.x, {
-            setting: W.H.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
+        return (0, r.jsx)(j.x, {
+            setting: z.H.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
             children: (0, r.jsx)(h.nVY, {
-                label: "Build Overrides",
                 children: (0, r.jsxs)(h.BJc, {
                     gap: 16,
                     children: [
@@ -342,6 +344,7 @@ class ea extends i.Component {
                             label: "Add Build Override",
                             placeholder: "discord_project",
                             description: "Select a project to create a build override for.",
+                            layout: "horizontal-responsive",
                             value: void 0,
                             options: this.getAvailableProjects().map((e) => ({
                                 id: e,
@@ -364,7 +367,7 @@ class ea extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            Q(this, "state", {
+            J(this, "state", {
                 loading: !0,
                 buildOverrides: {},
                 loadedBuildOverrides: {},
@@ -372,9 +375,9 @@ class ea extends i.Component {
                 saving: !1,
                 didSave: !1,
             }),
-            Q(this, "handleAddBuildOverride", (e) => {
+            J(this, "handleAddBuildOverride", (e) => {
                 if (null == e) return;
-                let t = ee($({}, this.state.buildOverrides), {
+                let t = en(ee({}, this.state.buildOverrides), {
                     [e]: {
                         type: "branch",
                         id: "",
@@ -384,31 +387,31 @@ class ea extends i.Component {
                     buildOverrides: t,
                 });
             }),
-            Q(this, "handleBuildOverrideUpdated", (e, t) => {
+            J(this, "handleBuildOverrideUpdated", (e, t) => {
                 let { buildOverrides: n } = this.state,
-                    r = $({}, null != n ? n[e] : {}, t),
-                    i = ee($({}, this.state.buildOverrides), {
+                    r = ee({}, null != n ? n[e] : {}, t),
+                    i = en(ee({}, this.state.buildOverrides), {
                         [e]: r,
                     });
                 this.setState({
                     buildOverrides: i,
                 });
             }),
-            Q(this, "handleBuildOverrideRemoved", (e) => {
-                let t = $({}, this.state.buildOverrides);
+            J(this, "handleBuildOverrideRemoved", (e) => {
+                let t = ee({}, this.state.buildOverrides);
                 delete t[e],
                     this.setState({
                         buildOverrides: t,
                     });
             }),
-            Q(this, "handleDiscardChanges", () => {
+            J(this, "handleDiscardChanges", () => {
                 this.setState({
                     buildOverrides: l().cloneDeep(this.state.loadedBuildOverrides),
                     errors: {},
                     didSave: !1,
                 });
             }),
-            Q(this, "handleSaveChanges", async () => {
+            J(this, "handleSaveChanges", async () => {
                 let { buildOverrides: e } = this.state;
                 if (null == e) return;
                 this.setState({
@@ -437,12 +440,12 @@ class ea extends i.Component {
                         didSave: !1,
                     });
             }),
-            Q(this, "handleLinkGeneration", () => {
+            J(this, "handleLinkGeneration", () => {
                 let { buildOverrides: e } = this.state;
                 (0, h.qfG)((t) =>
                     (0, r.jsx)(
-                        es,
-                        ee($({}, t), {
+                        el,
+                        en(ee({}, t), {
                             buildOverrides: e,
                         }),
                     ),
@@ -450,10 +453,10 @@ class ea extends i.Component {
             });
     }
 }
-class es extends i.Component {
+class el extends i.Component {
     isMobile() {
         var e;
-        return er(null != (e = this.props.buildOverrides) ? e : {});
+        return ea(null != (e = this.props.buildOverrides) ? e : {});
     }
     renderSettingsForm() {
         let {
@@ -468,7 +471,7 @@ class es extends i.Component {
                 experiments: c,
                 experimentsError: u,
             } = this.state,
-            d = z.fL.find((t) => t.value === e),
+            d = X.fL.find((t) => t.value === e),
             f = a.map((e) => ({
                 id: e,
                 label: e,
@@ -481,7 +484,7 @@ class es extends i.Component {
                     selectionMode: "single",
                     label: "Expire After",
                     value: null != d ? d.value : void 0,
-                    options: z.fL,
+                    options: X.fL,
                     onSelectionChange: this.handleExpirationChange,
                 }),
                 this.isMobile()
@@ -490,7 +493,7 @@ class es extends i.Component {
                           selectionMode: "single",
                           label: "Release Channel",
                           value: t,
-                          options: z.VP,
+                          options: X.VP,
                           onSelectionChange: this.handleReleaseChannelChange,
                       }),
                 this.isMobile()
@@ -591,7 +594,7 @@ class es extends i.Component {
         var t;
         super(...e),
             (t = this),
-            Q(this, "state", {
+            J(this, "state", {
                 ttlSeconds: 3600,
                 releaseChannel: "all",
                 userIds: new Set(),
@@ -605,19 +608,19 @@ class es extends i.Component {
                 status: 0,
                 allowLoggedOut: !1,
             }),
-            Q(this, "setUserEntryError", (e) => {
+            J(this, "setUserEntryError", (e) => {
                 this.setState({
                     userIdEntryError: e,
                 });
             }),
-            Q(this, "setStatusMessage", function (e) {
+            J(this, "setStatusMessage", function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
                 t.setState({
                     statusText: e,
                     status: n,
                 });
             }),
-            Q(this, "handleUserIDEntry", (e) => {
+            J(this, "handleUserIDEntry", (e) => {
                 if (!/^[\d\s,]*$/.test(e)) return this.setUserEntryError("User IDs are numbers!");
                 let t = new Set(e.split(/[,\s]+/).filter(Boolean));
                 this.setState({
@@ -625,20 +628,20 @@ class es extends i.Component {
                     userIds: t,
                 });
             }),
-            Q(this, "setAllowedVersionError", (e) => {
+            J(this, "setAllowedVersionError", (e) => {
                 this.setState({
                     allowedVersionEntryError: e,
                 });
             }),
-            Q(this, "handleAllowedVersionEntry", (e) => {
+            J(this, "handleAllowedVersionEntry", (e) => {
                 this.setState({
                     allowedVersionEntry: e,
                 });
             }),
-            Q(this, "handleAllowedVersionEnter", (e) => {
-                e.charCode === K.Ks6.ENTER && this.handleAddAllowedVersion();
+            J(this, "handleAllowedVersionEnter", (e) => {
+                e.charCode === q.Ks6.ENTER && this.handleAddAllowedVersion();
             }),
-            Q(this, "handleAddAllowedVersion", () => {
+            J(this, "handleAddAllowedVersion", () => {
                 let { allowedVersions: e, allowedVersionEntry: t } = this.state;
                 return 0 === (t = t.trim()).length
                     ? this.setAllowedVersionError("Enter a valid version number!")
@@ -650,29 +653,29 @@ class es extends i.Component {
                             allowedVersionEntryError: "",
                         });
             }),
-            Q(this, "handleRemoveAllowedVersion", (e) => {
+            J(this, "handleRemoveAllowedVersion", (e) => {
                 let { allowedVersions: t } = this.state;
                 (t = t.filter((t) => t !== e)),
                     this.setState({
                         allowedVersions: t,
                     });
             }),
-            Q(this, "handleAllowLoggedOut", (e) => {
+            J(this, "handleAllowLoggedOut", (e) => {
                 this.setState({
                     allowLoggedOut: e,
                 });
             }),
-            Q(this, "handleExpirationChange", (e) => {
+            J(this, "handleExpirationChange", (e) => {
                 this.setState({
                     ttlSeconds: e,
                 });
             }),
-            Q(this, "handleReleaseChannelChange", (e) => {
+            J(this, "handleReleaseChannelChange", (e) => {
                 this.setState({
                     releaseChannel: e,
                 });
             }),
-            Q(this, "handleExperiments", (e) => {
+            J(this, "handleExperiments", (e) => {
                 if (0 === e.trim().length)
                     return void this.setState({
                         experimentsError: void 0,
@@ -700,7 +703,7 @@ class es extends i.Component {
                     experimentsError: void 0,
                 });
             }),
-            Q(this, "generatePayload", () => ({
+            J(this, "generatePayload", () => ({
                 overrides: this.props.buildOverrides,
                 meta: {
                     release_channel: "all" === this.state.releaseChannel ? null : this.state.releaseChannel,
@@ -711,7 +714,7 @@ class es extends i.Component {
                     experiments: null == this.state.experiments ? null : JSON.parse(this.state.experiments),
                 },
             })),
-            Q(this, "handleGenerateLink", async () => {
+            J(this, "handleGenerateLink", async () => {
                 if (this.isMobile() && 0 === this.state.allowedVersions.length)
                     return void this.setAllowedVersionError("You must add at least one allowed version for iOS");
                 this.setStatusMessage(null);
@@ -731,43 +734,43 @@ class es extends i.Component {
     }
 }
 
-function eo() {
-    let { horizontalSpacing: e, verticalSpacing: t, maxHorizontalSpacing: n, maxVerticalSpacing: a } = (0, T.O)(),
-        s = i.useMemo(
+function ec() {
+    let { horizontalSpacing: e, verticalSpacing: t } = (0, T.Or)(),
+        n = i.useMemo(
             () =>
                 Array.from(
                     {
-                        length: n + 1,
+                        length: T.YR + 1,
                     },
                     (e, t) => t,
                 ),
-            [n],
+            [],
         ),
-        o = i.useMemo(
+        a = i.useMemo(
             () =>
                 Array.from(
                     {
-                        length: a + 1,
+                        length: T.YR + 1,
                     },
                     (e, t) => t,
                 ),
-            [a],
+            [],
         ),
-        { cssDebuggingEnabled: l, layoutDebuggingEnabled: c } = (0, d.cf)([L.default], () => ({
-            cssDebuggingEnabled: L.default.cssDebuggingEnabled,
-            layoutDebuggingEnabled: L.default.layoutDebuggingEnabled,
+        { cssDebuggingEnabled: s, layoutDebuggingEnabled: o } = (0, d.cf)([M.default], () => ({
+            cssDebuggingEnabled: M.default.cssDebuggingEnabled,
+            layoutDebuggingEnabled: M.default.layoutDebuggingEnabled,
         })),
-        u = (0, N.A)("highlight_void_toggleables"),
-        f = (0, N.A)("highlight_mana_components");
+        l = (0, w.A)("highlight_void_toggleables"),
+        c = (0, w.A)("highlight_mana_components");
     return (0, r.jsxs)(h.nVY, {
         label: "Design Tools",
         children: [
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_CSS_DEBUGGING,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_CSS_DEBUGGING,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Enable CSS Debugging",
                     description: "Display raw colors as pink. Toggling this will refresh the browser.",
-                    checked: l,
+                    checked: s,
                     onChange: (e) => {
                         (0, E.x)({
                             cssDebuggingEnabled: e,
@@ -776,12 +779,12 @@ function eo() {
                     },
                 }),
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Enable Layout Debugging",
                     description: "Renders a grid on top of the app to help debug layout alignment issues.",
-                    checked: c,
+                    checked: o,
                     onChange: (e) => {
                         (0, E.x)({
                             layoutDebuggingEnabled: e,
@@ -789,8 +792,8 @@ function eo() {
                     },
                 }),
             }),
-            (0, r.jsxs)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
+            (0, r.jsxs)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
                 children: [
                     (0, r.jsx)(h.Apm, {
                         label: "Horizontal Grid Spacing",
@@ -798,9 +801,9 @@ function eo() {
                             "Adjust the spacing between horizontal grid lines. Set to 0 to disable horizontal grid lines.",
                         initialValue: e,
                         minValue: 0,
-                        maxValue: n,
-                        markers: s,
-                        onValueChange: (e) => T.O.getState().setHorizontalSpacing(e),
+                        maxValue: T.YR,
+                        markers: n,
+                        onValueChange: (e) => T.Or.getState().setHorizontalSpacing(e),
                         onValueRender: (e) => "".concat(Math.round(e), "px"),
                         onMarkerRender: (e) => (e % 4 == 0 ? "".concat(e) : void 0),
                         equidistant: !0,
@@ -811,67 +814,66 @@ function eo() {
                             "Adjust the spacing between vertical grid lines. Set to 0 to disable vertical grid lines.",
                         initialValue: t,
                         minValue: 0,
-                        maxValue: a,
-                        markers: o,
-                        onValueChange: (e) => T.O.getState().setVerticalSpacing(e),
+                        maxValue: T.YR,
+                        markers: a,
+                        onValueChange: (e) => T.Or.getState().setVerticalSpacing(e),
                         onValueRender: (e) => "".concat(Math.round(e), "px"),
                         onMarkerRender: (e) => (e % 4 == 0 ? "".concat(e) : void 0),
                         equidistant: !0,
                     }),
                 ],
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_HIGHLIGHT_MANA_COMPONENTS,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_HIGHLIGHT_MANA_COMPONENTS,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Highlight Mana Components",
                     description: "Highlights all Mana design system components for easier debugging",
-                    checked: f,
-                    onChange: (e) => (0, C.L)("highlight_mana_components", e),
+                    checked: c,
+                    onChange: (e) => (0, R.L)("highlight_mana_components", e),
                 }),
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_HIGHLIGHT_VOID_TOGGLEABLES,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_HIGHLIGHT_VOID_TOGGLEABLES,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Highlight Void Toggleable Components",
                     description:
                         "Highlights deprecated toggleable components: VoidCheckbox (green), VoidRadioGroup (yellow), VoidSwitch (blue)",
-                    checked: u,
-                    onChange: (e) => (0, C.L)("highlight_void_toggleables", e),
+                    checked: l,
+                    onChange: (e) => (0, R.L)("highlight_void_toggleables", e),
                 }),
             }),
         ],
     });
 }
 
-function el() {
+function eu() {
     let {
             isTracingRequests: e,
             isForcedCanary: t,
             isAxeEnabled: n,
             isSourceMapsEnabled: i,
-            isIdleStatusIndicatorEnabled: a,
-            onlyShowPreviewAppCollections: s,
-            disableAppCollectionsCache: o,
-            preventPopoutClose: l,
-            logKeyboardMismatches: c,
-        } = (0, d.cf)([L.default], () => ({
-            isTracingRequests: L.default.isTracingRequests,
-            isForcedCanary: L.default.isForcedCanary,
-            isAxeEnabled: L.default.isAxeEnabled,
-            isSourceMapsEnabled: L.default.sourceMapsEnabled,
-            isIdleStatusIndicatorEnabled: L.default.isIdleStatusIndicatorEnabled,
-            onlyShowPreviewAppCollections: L.default.onlyShowPreviewAppCollections,
-            disableAppCollectionsCache: L.default.disableAppCollectionsCache,
-            preventPopoutClose: L.default.preventPopoutClose,
-            logKeyboardMismatches: L.default.logKeyboardMismatches,
+            onlyShowPreviewAppCollections: a,
+            disableAppCollectionsCache: s,
+            preventPopoutClose: o,
+            logKeyboardMismatches: l,
+        } = (0, d.cf)([M.default], () => ({
+            isTracingRequests: M.default.isTracingRequests,
+            isForcedCanary: M.default.isForcedCanary,
+            isAxeEnabled: M.default.isAxeEnabled,
+            isSourceMapsEnabled: M.default.sourceMapsEnabled,
+            onlyShowPreviewAppCollections: M.default.onlyShowPreviewAppCollections,
+            disableAppCollectionsCache: M.default.disableAppCollectionsCache,
+            preventPopoutClose: M.default.preventPopoutClose,
+            logKeyboardMismatches: M.default.logKeyboardMismatches,
         })),
-        u = (0, P.A)("go_back_to_regular_input"),
-        f = V.HZ.useSetting();
+        c = (0, d.bG)([N.Ay], () => N.Ay.get("idle_status_indicator")),
+        u = (0, x.A)("go_back_to_regular_input"),
+        f = B.HZ.useSetting();
     return (0, r.jsxs)(h.nVY, {
         label: "Developer Flags",
         children: [
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_TRACING_REQUESTS,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_TRACING_REQUESTS,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Enable Tracing Requests",
                     description: "Force trace all client requests with APM",
@@ -882,8 +884,8 @@ function el() {
                         }),
                 }),
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_FORCED_CANARY,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_FORCED_CANARY,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Enable Forced Canary",
                     description: "Force all API requests to canary instances",
@@ -894,17 +896,17 @@ function el() {
                         }),
                 }),
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_ALWAYS_DELIVER,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_ALWAYS_DELIVER,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Ads auto-targeting",
                     description: "Make user targetable for all active ads",
                     checked: f,
-                    onChange: (e) => V.HZ.updateSetting(e),
+                    onChange: (e) => B.HZ.updateSetting(e),
                 }),
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_SOURCE_MAPS,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_SOURCE_MAPS,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Enable source maps to be loaded on this client",
                     description: "Only enable on devices you trust.",
@@ -915,20 +917,17 @@ function el() {
                         }),
                 }),
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Enable idle status indicator",
                     description: "Displays a floating idle status indicator",
-                    checked: a,
-                    onChange: (e) =>
-                        (0, E.x)({
-                            idleStatusIndicatorEnabled: e,
-                        }),
+                    checked: c,
+                    onChange: (e) => C.L("idle_status_indicator", e),
                 }),
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Enable Accessibility Auditing",
                     description:
@@ -940,69 +939,69 @@ function el() {
                         }),
                 }),
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Prevent Popouts From Closing Automatically",
                     description:
                         "This is to enable viewing console logs for popout crashes. This may leave your app/popout in a weird state.",
-                    checked: l,
+                    checked: o,
                     onChange: (e) =>
                         (0, E.x)({
                             preventPopoutClose: e,
                         }),
                 }),
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_LOG_KEYBOARD_MISMATCHES,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_LOG_KEYBOARD_MISMATCHES,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Enable Logging of Keyboard Mismatches",
                     description: "Logs mismatches in detected keyboard codes to the console",
-                    checked: c,
+                    checked: l,
                     onChange: (e) =>
                         (0, E.x)({
                             logKeyboardMismatches: e,
                         }),
                 }),
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Preview unpublished application collections",
                     description:
                         "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
-                    checked: s,
+                    checked: a,
                     onChange: (e) =>
                         (0, E.x)({
                             onlyShowPreviewAppCollections: e,
                         }),
                 }),
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Disable application collections cache",
                     description:
                         "Disable application collections cache so that you can see updates to collections immediately.",
-                    checked: o,
+                    checked: s,
                     onChange: (e) =>
                         (0, E.x)({
                             disableAppCollectionsCache: e,
                         }),
                 }),
             }),
-            (0, r.jsx)(x.x, {
-                setting: W.H.DEVELOPER_OPTIONS_DISABLE_ALIGN_CHAT_INPUT,
+            (0, r.jsx)(j.x, {
+                setting: z.H.DEVELOPER_OPTIONS_DISABLE_ALIGN_CHAT_INPUT,
                 children: (0, r.jsx)(h.dOG, {
                     label: "Disable aligning chat input to the bottom of the screen",
                     description: "Disable aligning chat input to the bottom of the screen",
                     checked: u,
                     onChange: (e) => {
-                        M.default.track(K.HAw.GUILD_JOIN_FEEDBACK, {
+                        U.default.track(q.HAw.GUILD_JOIN_FEEDBACK, {
                             reason: "disable-align-chat-input",
                             rating: e ? "yes" : "no",
                         }),
-                            (0, w.s)("go_back_to_regular_input", {
+                            (0, D.s)("go_back_to_regular_input", {
                                 enabled: e,
                             });
                     },
@@ -1012,25 +1011,24 @@ function el() {
     });
 }
 
-function ec() {
+function ed() {
     let {
-        isLoggingGatewayEvents: e,
-        isLoggingOverlayEvents: t,
-        isLoggingAnalyticsEvents: n,
-        isAnalyticsDebuggerEnabled: i,
-    } = (0, d.cf)([L.default], () => ({
-        isLoggingGatewayEvents: L.default.isLoggingGatewayEvents,
-        isLoggingOverlayEvents: L.default.isLoggingOverlayEvents,
-        isLoggingAnalyticsEvents: L.default.isLoggingAnalyticsEvents,
-        isAnalyticsDebuggerEnabled: L.default.isAnalyticsDebuggerEnabled,
-    }));
-    return (0, r.jsx)(x.x, {
-        setting: W.H.DEVELOPER_OPTIONS_LOGGING_TAB,
+            isLoggingGatewayEvents: e,
+            isLoggingOverlayEvents: t,
+            isLoggingAnalyticsEvents: n,
+        } = (0, d.cf)([M.default], () => ({
+            isLoggingGatewayEvents: M.default.isLoggingGatewayEvents,
+            isLoggingOverlayEvents: M.default.isLoggingOverlayEvents,
+            isLoggingAnalyticsEvents: M.default.isLoggingAnalyticsEvents,
+        })),
+        i = (0, d.bG)([N.Ay], () => N.Ay.get("analytics_debugger"));
+    return (0, r.jsx)(j.x, {
+        setting: z.H.DEVELOPER_OPTIONS_LOGGING_TAB,
         children: (0, r.jsxs)(h.nVY, {
             label: "Logging",
             children: [
-                (0, r.jsx)(x.x, {
-                    setting: W.H.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
+                (0, r.jsx)(j.x, {
+                    setting: z.H.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
                     children: (0, r.jsx)(h.dOG, {
                         label: "Enable Logging of Gateway Events to Console",
                         description:
@@ -1042,8 +1040,8 @@ function ec() {
                             }),
                     }),
                 }),
-                (0, r.jsx)(x.x, {
-                    setting: W.H.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
+                (0, r.jsx)(j.x, {
+                    setting: z.H.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
                     children: (0, r.jsx)(h.dOG, {
                         label: "Enable Logging of Overlay RPC Events & Commands",
                         description: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
@@ -1054,8 +1052,8 @@ function ec() {
                             }),
                     }),
                 }),
-                (0, r.jsx)(x.x, {
-                    setting: W.H.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
+                (0, r.jsx)(j.x, {
+                    setting: z.H.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
                     children: (0, r.jsx)(h.dOG, {
                         label: "Enable Logging of Analytics Events",
                         description: "Logs all analytics events to the developer console",
@@ -1066,16 +1064,13 @@ function ec() {
                             }),
                     }),
                 }),
-                (0, r.jsx)(x.x, {
-                    setting: W.H.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
+                (0, r.jsx)(j.x, {
+                    setting: z.H.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
                     children: (0, r.jsx)(h.dOG, {
                         label: "Enable standard analytics debugger view",
                         description: "Displays a floating debugger with viewed impressions",
                         checked: i,
-                        onChange: (e) =>
-                            (0, E.x)({
-                                analyticsDebuggerEnabled: e,
-                            }),
+                        onChange: (e) => C.L("analytics_debugger", e),
                     }),
                 }),
             ],
@@ -1083,19 +1078,19 @@ function ec() {
     });
 }
 
-function eu() {
+function ef() {
     throw Error("Send help");
 }
 
-function ed(e) {
-    U.Ay.triggerJSException(e);
+function ep(e) {
+    V.Ay.triggerJSException(e);
 }
 
-function ef() {
+function e_() {
     let [e, t] = i.useState(!1),
         n = () => {
             f.Bo.post({
-                url: K.Rsh.AUTH_SESSION_NOTIFICATIONS_DEBUG,
+                url: q.Rsh.AUTH_SESSION_NOTIFICATIONS_DEBUG,
                 rejectWithError: !0,
             });
         };
@@ -1104,28 +1099,28 @@ function ef() {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: [q.NC, Z.SX].join(" "),
+                      className: [Z.NC, $.SX].join(" "),
                       children: [
-                          (0, r.jsx)(x.x, {
-                              setting: W.H.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
+                          (0, r.jsx)(j.x, {
+                              setting: z.H.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
                               children: (0, r.jsx)(h.Button, {
                                   variant: "primary",
                                   text: "Open Overlay",
-                                  onClick: () => (0, D.o)(),
+                                  onClick: () => (0, L.o)(),
                               }),
                           }),
-                          (0, r.jsx)(x.x, {
-                              setting: W.H.DEVELOPER_OPTIONS_RESET_SOCKET,
+                          (0, r.jsx)(j.x, {
+                              setting: z.H.DEVELOPER_OPTIONS_RESET_SOCKET,
                               children: (0, r.jsx)(h.Button, {
                                   variant: "primary",
                                   text: "Reset Socket",
                                   onClick: () => {
-                                      R.A.getSocket().close(), R.A.getSocket().connect();
+                                      P.A.getSocket().close(), P.A.getSocket().connect();
                                   },
                               }),
                           }),
-                          (0, r.jsx)(x.x, {
-                              setting: W.H.DEVELOPER_OPTIONS_CLEAR_CACHES,
+                          (0, r.jsx)(j.x, {
+                              setting: z.H.DEVELOPER_OPTIONS_CLEAR_CACHES,
                               children: (0, r.jsx)(h.Button, {
                                   variant: "primary",
                                   text: "Clear Caches",
@@ -1139,16 +1134,16 @@ function ef() {
                                   },
                               }),
                           }),
-                          (0, r.jsx)(x.x, {
-                              setting: W.H.DEVELOPER_OPTIONS_SHOW_TOTP_SUCCESS,
+                          (0, r.jsx)(j.x, {
+                              setting: z.H.DEVELOPER_OPTIONS_SHOW_TOTP_SUCCESS,
                               children: (0, r.jsx)(h.Button, {
                                   variant: "primary",
                                   text: "Show TOTP Success",
-                                  onClick: () => (0, Y.sy)(!0),
+                                  onClick: () => (0, K.sy)(!0),
                               }),
                           }),
-                          (0, r.jsx)(x.x, {
-                              setting: W.H.DEVELOPER_OPTIONS_TRIGGER_SUSPICIOUS_SESSIONS,
+                          (0, r.jsx)(j.x, {
+                              setting: z.H.DEVELOPER_OPTIONS_TRIGGER_SUSPICIOUS_SESSIONS,
                               children: (0, r.jsx)(h.Button, {
                                   variant: "primary",
                                   text: "Trigger Suspicious Sessions Notifications",
@@ -1157,12 +1152,12 @@ function ef() {
                           }),
                       ],
                   }),
-                  (0, r.jsx)(x.x, {
-                      setting: W.H.DEVELOPER_OPTIONS_CRASHES,
+                  (0, r.jsx)(j.x, {
+                      setting: z.H.DEVELOPER_OPTIONS_CRASHES,
                       children: (0, r.jsx)(h.nVY, {
                           label: "Crashes",
                           children: (0, r.jsxs)("div", {
-                              className: q.NC,
+                              className: Z.NC,
                               children: [
                                   (0, r.jsx)(h.l6P, {
                                       label: "Native libdiscord crash",
@@ -1201,7 +1196,7 @@ function ef() {
                                               label: "Out of Memory",
                                           },
                                       ],
-                                      onSelectionChange: (e) => null != e && U.Ay.crash(e),
+                                      onSelectionChange: (e) => null != e && V.Ay.crash(e),
                                   }),
                                   (0, r.jsx)(h.l6P, {
                                       selectionMode: "single",
@@ -1230,7 +1225,7 @@ function ef() {
                                               label: "Exception in main process",
                                           },
                                       ],
-                                      onSelectionChange: (e) => (null != e ? ed(e) : void 0),
+                                      onSelectionChange: (e) => (null != e ? ep(e) : void 0),
                                   }),
                                   (0, r.jsx)(h.Button, {
                                       variant: "primary",
@@ -1240,7 +1235,7 @@ function ef() {
                                   (0, r.jsx)(h.Button, {
                                       variant: "primary",
                                       text: "onClick Throw",
-                                      onClick: eu,
+                                      onClick: ef,
                                   }),
                               ],
                           }),
@@ -1250,16 +1245,16 @@ function ef() {
           });
 }
 
-function ep() {
-    let e = (0, d.bG)([j.Ay], () => j.Ay.getSurveyOverride()),
+function eh() {
+    let e = (0, d.bG)([k.Ay], () => k.Ay.getSurveyOverride()),
         [t, n] = i.useState(null != e ? e : ""),
         a = (e) => {
             e.preventDefault(), t.length > 0 ? b.xr(t) : b.xr(null);
         };
-    return (0, r.jsx)(x.x, {
-        setting: W.H.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
+    return (0, r.jsx)(j.x, {
+        setting: z.H.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
         children: (0, r.jsx)("form", {
-            className: q.Nn,
+            className: Z.Nn,
             onSubmit: a,
             children: (0, r.jsx)(h.nVY, {
                 label: "Survey Override",
@@ -1285,7 +1280,7 @@ function ep() {
     });
 }
 
-function e_() {
+function em() {
     var e;
     let t = (0, d.bG)([S.A], () => S.A.overrideId()),
         [n, a] = i.useState(null != (e = S.A.overrideId()) ? e : ""),
@@ -1294,10 +1289,10 @@ function e_() {
         },
         o = () => {
             let e = new Date("2018-01-01");
-            V.pK.updateSetting(k.default.fromTimestamp(e.getTime())), p.w.set("lastChangeLogDate", e);
+            B.pK.updateSetting(G.default.fromTimestamp(e.getTime())), p.w.set("lastChangeLogDate", e);
         };
-    return (0, r.jsx)(x.x, {
-        setting: W.H.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
+    return (0, r.jsx)(j.x, {
+        setting: z.H.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
         children: (0, r.jsxs)(h.nVY, {
             label: "Changelog",
             children: [
@@ -1336,61 +1331,61 @@ function e_() {
     });
 }
 
-function eh() {
-    return (0, r.jsx)(x.x, {
-        setting: W.H.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+function eg() {
+    return (0, r.jsx)(j.x, {
+        setting: z.H.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
         children: (0, r.jsx)(h.nVY, {
             label: "Client-Side Overrides",
-            children: (0, r.jsx)(F.M, {}),
+            children: (0, r.jsx)(H.M, {}),
         }),
     });
 }
 
-function em() {
+function eE() {
     return (0, r.jsxs)(h.BJc, {
         gap: 24,
         children: [
-            (0, r.jsx)(ea, {}),
-            (0, r.jsx)(c.cGx, {}),
-            (0, r.jsx)(ep, {}),
-            (0, r.jsx)(c.cGx, {}),
-            (0, r.jsx)(e_, {}),
+            (0, r.jsx)(eo, {}),
             (0, r.jsx)(c.cGx, {}),
             (0, r.jsx)(eh, {}),
+            (0, r.jsx)(c.cGx, {}),
+            (0, r.jsx)(em, {}),
+            (0, r.jsx)(c.cGx, {}),
+            (0, r.jsx)(eg, {}),
         ],
     });
 }
-let eg = function () {
-    return (0, r.jsx)(B.R, {
+let eb = function () {
+    return (0, r.jsx)(Y.R, {
         header: "Developer Options",
-        children: (0, r.jsx)(H.A, {
-            parentSetting: W.H.DEVELOPER_OPTIONS,
-            settingsSection: K.nc_.DEVELOPER_OPTIONS,
+        children: (0, r.jsx)(W.A, {
+            parentSetting: z.H.DEVELOPER_OPTIONS,
+            settingsSection: q.nc_.DEVELOPER_OPTIONS,
             tabs: [
                 {
                     title: "Overrides",
-                    component: em,
-                    setting: W.H.DEVELOPER_OPTIONS_OVERRIDES_TAB,
+                    component: eE,
+                    setting: z.H.DEVELOPER_OPTIONS_OVERRIDES_TAB,
                 },
                 {
                     title: "Manual Triggers",
-                    component: ef,
-                    setting: W.H.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
+                    component: e_,
+                    setting: z.H.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
                 },
                 {
                     title: "Developer Flags",
-                    component: el,
-                    setting: W.H.DEVELOPER_OPTIONS_FLAGS_TAB,
+                    component: eu,
+                    setting: z.H.DEVELOPER_OPTIONS_FLAGS_TAB,
                 },
                 {
                     title: "Logging",
-                    component: ec,
-                    setting: W.H.DEVELOPER_OPTIONS_LOGGING_TAB,
+                    component: ed,
+                    setting: z.H.DEVELOPER_OPTIONS_LOGGING_TAB,
                 },
                 {
                     title: "Design Tools",
-                    component: eo,
-                    setting: W.H.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
+                    component: ec,
+                    setting: z.H.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
                 },
             ],
         }),

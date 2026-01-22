@@ -133,7 +133,7 @@ let et = (0, z.Fe)({
                                                         (0, r.jsxs)("div", {
                                                             className: s()(ee.XX, f && ee.Xq),
                                                             children: [
-                                                                (0, r.jsx)(C.C, {}),
+                                                                (0, r.jsx)(C.C1, {}),
                                                                 (0, r.jsx)("div", {
                                                                     className: ee.x$,
                                                                     "data-app-not-dev-tools": !0,

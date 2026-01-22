@@ -56,11 +56,14 @@ function f(e, t) {
             rejectWithError: !1,
         }).then(
             (e) => {
-                var t;
-                a.h.dispatch({
-                    type: "SURVEY_FETCHED",
-                    survey: null == e || null == (t = e.body) ? void 0 : t.survey,
-                });
+                var t, n;
+                return (
+                    a.h.dispatch({
+                        type: "SURVEY_FETCHED",
+                        survey: null == e || null == (t = e.body) ? void 0 : t.survey,
+                    }),
+                    null == e || null == (n = e.body) ? void 0 : n.survey
+                );
             },
             () => {
                 a.h.dispatch({

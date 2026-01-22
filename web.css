@@ -85660,12 +85660,8 @@ div._7d4bd3ed8d0f6117 {
     opacity: .75
 }
 
-.theme-light .f2a01c8db82694ed {
-    box-shadow: inset 0 -1px 0 hsl(var(--primary-300-hsl)/.3)
-}
-
-.theme-dark .f2a01c8db82694ed {
-    box-shadow: inset 0 -1px 0 hsl(var(--primary-400-hsl)/.3)
+.f2a01c8db82694ed {
+    border-bottom: 1px solid var(--border-subtle)
 }
 
 ._70f46465f7727a60 {

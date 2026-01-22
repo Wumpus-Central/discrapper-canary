@@ -103,7 +103,6 @@ let m = (() => {
         axeEnabled: !1,
         cssDebuggingEnabled: !1,
         layoutDebuggingEnabled: !1,
-        analyticsDebuggerEnabled: !1,
         bugReporterEnabled: !0,
         idleStatusIndicatorEnabled: !1,
         onlyShowPreviewAppCollections: !1,
@@ -171,9 +170,6 @@ class S extends (r = s.Ay.Store) {
     }
     get sourceMapsEnabled() {
         return b.sourceMapsEnabled;
-    }
-    get isAnalyticsDebuggerEnabled() {
-        return b.analyticsDebuggerEnabled;
     }
     get isBugReporterEnabled() {
         return b.bugReporterEnabled;

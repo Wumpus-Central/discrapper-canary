@@ -10,9 +10,9 @@ var r = n(627968),
     o = n(942381),
     l = n(311907),
     c = n(397927),
-    u = n(750506),
-    d = n(540999),
-    f = n(111162),
+    u = n(865116),
+    d = n(750506),
+    f = n(540999),
     p = n(797820),
     _ = n(803102),
     h = n(686757),
@@ -54,15 +54,15 @@ function b() {
             }),
             o.x,
         ),
-        n = (0, l.bG)([f.default], () => f.default.isAnalyticsDebuggerEnabled),
-        a = (0, l.bG)([d.A], () => d.A.isDeveloper),
+        n = (0, l.bG)([u.Ay], () => u.Ay.get("analytics_debugger")),
+        a = (0, l.bG)([f.A], () => f.A.isDeveloper),
         [E, b] = i.useState(!1),
         y = null != e ? e : {},
         { name: O } = y,
         A = g(y, ["name"]),
         v = null != O;
     return a && n
-        ? (0, r.jsx)(u.Ay, {
+        ? (0, r.jsx)(d.Ay, {
               children: (0, r.jsxs)("div", {
                   className: s()(m.kL, {
                       [m.YV]: E,
