@@ -185,7 +185,7 @@ function E(e) {
                     children: (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
                         color: E ? "text-default" : "interactive-text-default",
-                        className: a()(g.planOptionSubtext, { [g.discountPlanOptionSubtext]: C }),
+                        className: a()(g.planOptionSubtext, { [g.planWithOfferOptionSubtext]: C || N }),
                         children: B(),
                     }),
                 }),

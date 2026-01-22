@@ -13,7 +13,7 @@ e.exports = {
     planOptionDiscount: "b130855d8984d74e-planOptionDiscount",
     planOptionSubtextContainer: "b130855d8984d74e-planOptionSubtextContainer",
     planOptionSubtext: "b130855d8984d74e-planOptionSubtext",
-    discountPlanOptionSubtext: "b130855d8984d74e-discountPlanOptionSubtext",
+    planWithOfferOptionSubtext: "b130855d8984d74e-planWithOfferOptionSubtext",
     planOptionClickableContainer: "b130855d8984d74e-planOptionClickableContainer",
     optionPriceSelected: "b130855d8984d74e-optionPriceSelected",
     updatedOptionSelected: "b130855d8984d74e-updatedOptionSelected",
