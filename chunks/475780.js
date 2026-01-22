@@ -1,6 +1,7 @@
 e.exports = {
     headerWrapper: "_4909b209943734bd-headerWrapper",
     headerContent: "_4909b209943734bd-headerContent",
+    headerContentText: "_4909b209943734bd-headerContentText",
     appIcon: "_4909b209943734bd-appIcon",
     headerButtons: "_4909b209943734bd-headerButtons",
     details: "_4909b209943734bd-details",
