@@ -22,7 +22,6 @@ var r = {
     "./abc-ginto-discord/abcgintodiscord-500-medium.woff2": ["140206"],
     "./noto-sans/notosans-600-semibolditalic.woff2": ["592"],
     "./abc-ginto-normal/abcgintonormal-300-light.woff2": ["929029"],
-    "./zilla-slab/zillaslab-400-normal.woff2": ["248246", "72475"],
     "./museo-moderno/museomoderno-500-medium.woff2": ["893315"],
     "./abc-ginto-normal/abcgintonormal-500-medium.woff2": ["261548"],
     "./fraunces/fraunces-400-normal.woff2": ["928859", "61032"],
