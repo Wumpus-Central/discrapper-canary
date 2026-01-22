@@ -6,7 +6,7 @@ let a = {
         {
             id: "cms",
             name: "CMS",
-            groups: [r.B, i.V],
+            groups: [n(799369).n, r.B, i.V],
         },
     ],
 };
