@@ -16,15 +16,15 @@ var s = r(54381),
     p = r(699516),
     b = r(585483),
     j = r(51144),
-    _ = r(981631),
-    v = r(388032),
-    T = r(761582);
-let P = (e) => {
+    v = r(981631),
+    _ = r(388032),
+    P = r(761582);
+let T = (e) => {
         let { channel: t, guildName: r } = e,
             l = (0, a.e7)([g.Z], () => g.Z.getGuild(t.guild_id)),
             n = (0, o.ZP)(t);
         return (0, s.jsxs)("div", {
-            className: T.result,
+            className: P.result,
             children: [
                 (0, s.jsx)(m.Z, {
                     size: m.E.SMALL_32,
@@ -32,7 +32,7 @@ let P = (e) => {
                     channel: t,
                 }),
                 (0, s.jsxs)("div", {
-                    className: T.resultText,
+                    className: P.resultText,
                     children: [
                         (0, s.jsx)(i.Text, {
                             variant: "text-md/medium",
@@ -52,7 +52,7 @@ let P = (e) => {
             r = (0, o.ZP)(t),
             l = (0, x._)(t);
         return (0, s.jsxs)("div", {
-            className: T.result,
+            className: P.result,
             children: [
                 (0, s.jsx)(h.Z, {
                     "aria-hidden": !0,
@@ -60,7 +60,7 @@ let P = (e) => {
                     channel: t,
                 }),
                 (0, s.jsxs)("div", {
-                    className: T.resultText,
+                    className: P.resultText,
                     children: [
                         (0, s.jsx)(i.Text, {
                             variant: "text-md/medium",
@@ -81,7 +81,7 @@ let P = (e) => {
             n = j.ZP.useName(t),
             u = j.ZP.useUserTag(t);
         return (0, s.jsxs)("div", {
-            className: T.result,
+            className: P.result,
             children: [
                 (0, s.jsx)(d.Z, {
                     "aria-hidden": !0,
@@ -90,7 +90,7 @@ let P = (e) => {
                     status: r,
                 }),
                 (0, s.jsxs)("div", {
-                    className: T.resultText,
+                    className: P.resultText,
                     children: [
                         (0, s.jsx)(i.Text, {
                             variant: "text-md/medium",
@@ -116,7 +116,7 @@ class N extends l.Component {
                 break;
             case c.h8.TEXT_CHANNEL: {
                 let { categoryName: t, guildName: l } = r;
-                e = (0, s.jsx)(P, {
+                e = (0, s.jsx)(T, {
                     channel: r.data.record,
                     categoryName: t,
                     guildName: l,
@@ -139,18 +139,18 @@ class N extends l.Component {
             (t = r.sent
                 ? (0, s.jsx)(i.Button, {
                       variant: "secondary",
-                      text: v.intl.string(v.t.i6A1Xw),
+                      text: _.intl.string(_.t.i6A1Xw),
                       size: "sm",
                       disabled: !0,
                   })
                 : (0, s.jsx)(i.Button, {
                       variant: "secondary",
-                      text: v.intl.string(v.t["6F9ivu"]),
+                      text: _.intl.string(_.t["6F9ivu"]),
                       size: "sm",
                       loading: l,
                   })),
             (0, s.jsxs)(i.P3F, {
-                className: T.resultWrapper,
+                className: P.resultWrapper,
                 onClick: this.handleClick,
                 children: [e, t],
             })
@@ -190,7 +190,7 @@ function E(e) {
         ),
         [m, x] = l.useState(o),
         [g, p] = l.useState([]),
-        [j, P] = l.useState(!1),
+        [j, T] = l.useState(!1),
         S = l.useRef(null),
         C = l.useCallback(() => {
             var e;
@@ -202,18 +202,18 @@ function E(e) {
         }, [S]);
     l.useEffect(
         () => (
-            b.S.subscribe(_.CkL.SCROLL_PAGE_UP, C),
+            b.S.subscribe(v.CkL.SCROLL_PAGE_UP, C),
             () => {
-                b.S.unsubscribe(_.CkL.SCROLL_PAGE_UP, C);
+                b.S.unsubscribe(v.CkL.SCROLL_PAGE_UP, C);
             }
         ),
         [C],
     ),
         l.useEffect(
             () => (
-                b.S.subscribe(_.CkL.SCROLL_PAGE_DOWN, E),
+                b.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, E),
                 () => {
-                    b.S.unsubscribe(_.CkL.SCROLL_PAGE_DOWN, E);
+                    b.S.unsubscribe(v.CkL.SCROLL_PAGE_DOWN, E);
                 }
             ),
             [E],
@@ -252,49 +252,52 @@ function E(e) {
         ? null
         : (0, s.jsx)(n.Modal, {
               transitionState: t,
-              title: v.intl.formatToPlainString(v.t["2tN7ih"], { name: h.name }),
+              title: _.intl.formatToPlainString(_.t["2tN7ih"], { name: h.name }),
               onClose: r,
               actions: [],
               input: (0, s.jsx)(i.E1j, {
                   query: m,
                   onChange: Z,
-                  placeholder: v.intl.string(v.t["5h0QOP"]),
+                  placeholder: _.intl.string(_.t["5h0QOP"]),
                   autoFocus: !0,
                   onClear: () => {
                       Z("");
                   },
               }),
               size: "md",
-              "aria-label": v.intl.formatToPlainString(v.t["2tN7ih"], { name: h.name }),
-              children: (0, s.jsx)(i.YAO, {
-                  scrollerRef: S,
-                  className: 0 === d.length ? T.noResults : T.results,
-                  paddingBottom: 12,
-                  sections: [d.length],
-                  sectionHeight: 0,
-                  renderSection: _.VqG,
-                  rowHeight: (e, t) => (e > 0 ? 0 : 48 * (null != d[t])),
-                  renderRow: (e) => {
-                      let { section: t, row: r } = e;
-                      if (t > 0) return null;
-                      let l = d[r];
-                      return null == l
-                          ? null
-                          : (0, s.jsx)(
-                                N,
-                                {
-                                    row: r,
-                                    result: l,
-                                    sending: null != l.data.record.id && g.includes(l.data.record.id),
-                                    onInvite: k,
-                                },
-                                l.data.record.id,
-                            );
-                  },
-                  onScroll: (e) => {
-                      let t = e.currentTarget.scrollTop > 0;
-                      j !== t && P(t);
-                  },
-              }),
+              "aria-label": _.intl.formatToPlainString(_.t["2tN7ih"], { name: h.name }),
+              listProps:
+                  d.length > 0
+                      ? {
+                            ref: S,
+                            paddingBottom: 12,
+                            sections: [d.length],
+                            sectionHeight: 0,
+                            renderSection: v.VqG,
+                            rowHeight: (e, t) => (e > 0 ? 0 : 48 * (null != d[t])),
+                            renderRow: (e) => {
+                                let { section: t, row: r } = e;
+                                if (t > 0) return null;
+                                let l = d[r];
+                                return null == l
+                                    ? null
+                                    : (0, s.jsx)(
+                                          N,
+                                          {
+                                              row: r,
+                                              result: l,
+                                              sending: null != l.data.record.id && g.includes(l.data.record.id),
+                                              onInvite: k,
+                                          },
+                                          l.data.record.id,
+                                      );
+                            },
+                            onScroll: (e) => {
+                                let t = e.currentTarget.scrollTop > 0;
+                                j !== t && T(t);
+                            },
+                        }
+                      : void 0,
+              children: 0 === d.length && (0, s.jsx)("div", { className: P.noResults }),
           });
 }
