@@ -1,5 +1,6 @@
 n.d(t, {
     Cf: () => f,
+    PI: () => h,
     Vv: () => p,
     o$: () => d,
     tp: () => _,
@@ -49,4 +50,9 @@ function _(e) {
         }, [t]),
         u = (0, i.b8)();
     return (0, a.f)("useShouldShowAgeVerificationPopover") && !u && n;
+}
+
+function h() {
+    let e = (0, i.uE)();
+    return (0, a.f)("useShouldShowAgeVerificationForEvent") && !e;
 }

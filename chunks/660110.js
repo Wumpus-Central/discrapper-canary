@@ -1,103 +1,110 @@
-n.d(t, {
-    A: () => m,
+n.d(e, {
+    A: () => p,
+    V: () => x,
 });
-var l = n(627968);
+var l,
+    i = n(627968);
 n(64700);
-var a = n(397927),
-    i = n(975807),
-    c = n(935649),
-    r = n(847599),
-    s = n(36149),
-    d = n(975571),
-    u = n(418208),
-    o = n(652215),
-    f = n(985018);
+var r = n(397927),
+    s = n(975807),
+    a = n(935649),
+    u = n(847599),
+    c = n(36149),
+    o = n(975571),
+    d = n(418208),
+    h = n(652215),
+    v = n(985018);
 
-function b() {
-    return (0, s.yM)()
-        ? f.intl.format(f.t.iWGjcg, {
-              hook: (e) =>
-                  (0, l.jsx)(a.MzZ, {
-                      onClick: (e) => {
-                          e.preventDefault(),
-                              e.stopPropagation(),
-                              (0, i.A)(d.A.getArticleURL(o.MVz.TIGGER_PAWTECT_LEARN_MORE));
+function m() {
+    return (0, c.yM)()
+        ? v.intl.format(v.t.iWGjcg, {
+              hook: (t) =>
+                  (0, i.jsx)(r.MzZ, {
+                      onClick: (t) => {
+                          t.preventDefault(),
+                              t.stopPropagation(),
+                              (0, s.A)(o.A.getArticleURL(h.MVz.TIGGER_PAWTECT_LEARN_MORE));
                       },
                       useDefaultUnderlineStyles: !1,
-                      children: e.join(""),
+                      children: t.join(""),
                   }),
           })
-        : f.intl.format(f.t.edpbxy, {
-              hook: (e) =>
-                  (0, l.jsx)(a.MzZ, {
-                      onClick: (e) => {
-                          e.preventDefault(),
-                              e.stopPropagation(),
-                              c.A.showAgeVerificationGetStartedModal({
-                                  entryPoint: r.q1.START_STAGE_PROMPT,
+        : v.intl.format(v.t.edpbxy, {
+              hook: (t) =>
+                  (0, i.jsx)(r.MzZ, {
+                      onClick: (t) => {
+                          t.preventDefault(),
+                              t.stopPropagation(),
+                              a.A.showAgeVerificationGetStartedModal({
+                                  entryPoint: u.q1.START_STAGE_PROMPT,
                               });
                       },
                       useDefaultUnderlineStyles: !1,
-                      children: e.join(""),
+                      children: t.join(""),
                   }),
           });
 }
 
-function h(e) {
-    let { className: t } = e,
-        n = (0, s.yM)();
-    return (0, l.jsx)("div", {
-        className: t,
-        children: (0, l.jsx)(a.wx6, {
+function g(t) {
+    let { className: e } = t,
+        n = (0, c.yM)();
+    return (0, i.jsx)("div", {
+        className: e,
+        children: (0, i.jsx)(r.wx6, {
             type: n ? "info" : "warning",
-            children: (0, l.jsx)(b, {}),
+            children: (0, i.jsx)(m, {}),
         }),
     });
 }
 
-function _(e) {
-    let { className: t } = e,
-        n = (0, s.yM)();
-    return (0, l.jsx)("div", {
-        className: t,
-        children: (0, l.jsxs)(a.BJc, {
+function f(t) {
+    let { className: e } = t,
+        n = (0, c.yM)();
+    return (0, i.jsx)("div", {
+        className: e,
+        children: (0, i.jsxs)(r.BJc, {
             direction: "horizontal",
             gap: 4,
             align: "center",
             children: [
                 n
-                    ? (0, l.jsx)(a.mir, {
+                    ? (0, i.jsx)(r.mir, {
                           size: "refresh_sm",
                           color: "var(--text-default)",
                       })
-                    : (0, l.jsx)(a.id, {
+                    : (0, i.jsx)(r.id, {
                           size: "refresh_sm",
                           color: "var(--text-default)",
                       }),
-                (0, l.jsx)(a.Text, {
+                (0, i.jsx)(r.Text, {
                     color: "text-default",
                     variant: "text-sm/medium",
-                    children: (0, l.jsx)(b, {}),
+                    children: (0, i.jsx)(m, {}),
                 }),
             ],
         }),
     });
 }
+var x = (((l = {})[(l.TOP = 0)] = "TOP"), (l[(l.BOTTOM = 1)] = "BOTTOM"), l);
 
-function m(e) {
-    let { className: t, noBackground: n, divider: i } = e;
-    return (0, u.Vv)()
-        ? (0, l.jsxs)(l.Fragment, {
-              children: [
-                  (0, l.jsx)("div", {
-                      className: t,
-                      children: n ? (0, l.jsx)(_, {}) : (0, l.jsx)(h, {}),
-                  }),
-                  i &&
-                      (0, l.jsx)(a.cGx, {
-                          gap: 16,
-                      }),
-              ],
-          })
-        : null;
+function p(t) {
+    let { className: e, noBackground: n, divider: l, channelId: s } = t;
+    if (!(0, d.Vv)(null != s ? s : void 0)) return null;
+    let a = Array.isArray(l) ? l : null != l ? [l] : [];
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            a.includes(0) &&
+                (0, i.jsx)(r.cGx, {
+                    gap: 16,
+                }),
+            (0, i.jsx)("div", {
+                className: e,
+                children: n ? (0, i.jsx)(f, {}) : (0, i.jsx)(g, {}),
+            }),
+            (null == a ? void 0 : a.includes(1)) &&
+                (0, i.jsx)(r.cGx, {
+                    gap: 16,
+                }),
+        ],
+    });
 }
