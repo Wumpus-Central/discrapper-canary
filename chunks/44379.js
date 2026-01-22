@@ -1,46 +1,62 @@
-n.d(t, { H: () => c });
+n.d(t, { H: () => d }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(481060),
-    o = n(937615),
-    s = n(576929),
-    l = n(224319);
-function c(e) {
-    let { label: t, lineItems: n, intervalType: c, intervalCount: u, currency: d, defaultExpanded: f = !1 } = e,
-        p = i.useMemo(() => n.reduce((e, t) => e + t.amount, 0), [n]),
-        _ = (0, o.T4)(p, d),
-        h = (0, o.og)(_, c, u);
-    return (0, r.jsxs)(s.O, {
-        label: t,
-        defaultExpanded: f,
-        isDisabled: n.length <= 1,
-        collapsedContent: (0, r.jsx)(a.Text, {
-            variant: "text-md/normal",
-            color: "text-subtle",
-            children: h,
-        }),
-        children: [
-            n.map((e) => {
-                let { id: t, label: n, amount: i, icon: a, tooltip: l } = e,
-                    f = (0, o.T4)(i, d),
-                    p = (0, o.og)(f, c, u);
-                return (0, r.jsx)(
-                    s.r,
-                    {
-                        label: n,
-                        value: p,
-                        icon: a,
-                        tooltip: l,
-                    },
-                    t,
-                );
+    a = n(120356),
+    o = n.n(a),
+    s = n(481060),
+    l = n(937615),
+    c = n(576929),
+    u = n(224319);
+function d(e) {
+    let {
+            label: t,
+            totalLineItemLabel: n,
+            lineItems: a,
+            intervalType: d,
+            intervalCount: f,
+            currency: p,
+            defaultExpanded: _ = !1,
+        } = e,
+        [h, m] = i.useState(_),
+        g = i.useMemo(() => a.reduce((e, t) => e + t.amount, 0), [a]),
+        E = (0, l.T4)(g, p),
+        b = (0, l.og)(E, d, f),
+        y = (0, r.jsxs)(c.O, {
+            label: t,
+            defaultExpanded: _,
+            isDisabled: a.length <= 0,
+            onExpandedChange: m,
+            collapsedContent: (0, r.jsx)(s.Text, {
+                variant: "text-md/normal",
+                color: "text-subtle",
+                children: b,
             }),
-            (0, r.jsx)("div", { className: l.separator }),
-            (0, r.jsx)(s.r, {
-                label: t,
-                value: h,
-                color: "text-strong",
-            }),
-        ],
+            children: [
+                a.map((e) => {
+                    let { id: t, label: n, amount: i, icon: a, tooltip: o } = e,
+                        s = (0, l.T4)(i, p),
+                        u = (0, l.og)(s, d, f);
+                    return (0, r.jsx)(
+                        c.r,
+                        {
+                            label: n,
+                            value: u,
+                            icon: a,
+                            tooltip: o,
+                        },
+                        t,
+                    );
+                }),
+                (0, r.jsx)("div", { className: u.separator }),
+                (0, r.jsx)(c.r, {
+                    label: null != n ? n : t,
+                    value: b,
+                    color: "text-strong",
+                }),
+            ],
+        });
+    return (0, r.jsx)("div", {
+        className: o()({ [u.container]: h }),
+        children: y,
     });
 }

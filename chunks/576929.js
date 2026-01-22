@@ -10,28 +10,41 @@ var r = n(54381),
     s = n(126484),
     l = n(143867);
 function c(e) {
-    let { label: t, defaultExpanded: n = !1, isDisabled: a = !1, collapsedContent: o, children: c } = e,
-        [u, d] = i.useState(n);
+    let {
+            label: t,
+            defaultExpanded: n = !1,
+            onExpandedChange: a,
+            isDisabled: o = !1,
+            collapsedContent: c,
+            children: u,
+        } = e,
+        [d, f] = i.useState(n),
+        p = i.useCallback(
+            (e) => {
+                f(e), null != a && a(e);
+            },
+            [a],
+        );
     return (0, r.jsxs)(s.UQ, {
         defaultExpanded: n,
-        isDisabled: a,
-        onExpandedChange: d,
+        isDisabled: o,
+        onExpandedChange: p,
         children: [
             (0, r.jsxs)("div", {
                 className: l.header,
                 children: [
                     (0, r.jsx)(s.o4, {
                         variant: "text-md/medium",
-                        color: u ? "text-strong" : "text-muted",
+                        color: d ? "text-strong" : "text-muted",
                         children: t,
                     }),
-                    (!u || a) && o,
+                    (!d || o) && c,
                 ],
             }),
             (0, r.jsx)(s.Hk, {
                 children: (0, r.jsx)("div", {
                     className: l.lineItemsContainer,
-                    children: c,
+                    children: u,
                 }),
             }),
         ],

@@ -2,12 +2,11 @@ n.d(t, {
     As: () => D,
     By: () => x,
     Lu: () => L,
-    e9: () => F,
-    hG: () => k,
-    nd: () => Z,
-    yT: () => B,
+    e9: () => G,
+    hG: () => j,
+    nd: () => U,
+    yT: () => Z,
 }),
-    n(642613),
     n(388685);
 var r = n(54381),
     i = n(473749),
@@ -73,26 +72,29 @@ function R(e) {
             className: o,
             isPrepaidPaymentSource: s,
             referralTrialOfferId: l,
-            inTrialPeriod: c,
+            inTrialPeriod: f,
         } = e,
+        p = (0, O.N)(l),
+        h = (0, c.e7)([_.Z], () => _.Z.get(t.subscriptionPlanId)),
         {
-            label: f,
-            value: p,
-            subscriptionPlan: _,
-        } = (0, I.b5)(t, {
+            subscriptionPlan: m,
+            label: g,
+            value: E,
+        } = (0, I.pK)(t, {
+            subscriptionPlan: h,
+            premiumTrialOffer: p,
             overrideAmount: n,
-            referralTrialOfferId: l,
             isPrepaidPaymentSource: s,
             currency: a,
         }),
-        h = f;
+        b = g;
     return (
         !0 === i &&
-            (h = (0, r.jsxs)("div", {
+            (b = (0, r.jsxs)("div", {
                 className: N.invoiceItemLabelWithIcon,
                 children: [
                     (0, r.jsxs)("div", {
-                        children: [h, " "],
+                        children: [b, " "],
                     }),
                     (0, r.jsx)(u.u, {
                         text: A.intl.format(A.t.UDop9c, {}),
@@ -107,15 +109,15 @@ function R(e) {
                 ],
             })),
         (0, r.jsx)(v.i$, {
-            label: h,
-            value: p,
+            label: b,
+            value: E,
             originalAmount: t.subscriptionPlanPrice * t.quantity,
             discounts: t.discounts,
-            interval: _.interval,
-            intervalCount: _.intervalCount,
+            interval: m.interval,
+            intervalCount: m.intervalCount,
             currency: a,
             className: o,
-            inTrialPeriod: c,
+            inTrialPeriod: f,
         })
     );
 }
@@ -217,23 +219,6 @@ function L(e) {
     });
 }
 function j(e) {
-    let t = e.slice();
-    return (
-        t.sort((e, t) => {
-            let n = (0, g.uZ)(e.subscriptionPlanId),
-                r = (0, g.uZ)(t.subscriptionPlanId);
-            return n && !r ? -1 : !n && r ? 1 : 0;
-        }),
-        t
-    );
-}
-function M(e) {
-    return e.filter((e) => {
-        let { subscriptionPlanId: t } = e;
-        return t !== T.Xh.NONE_MONTH && t !== T.Xh.NONE_YEAR;
-    });
-}
-function k(e) {
     let { proratedInvoice: t, renewalInvoice: n, overrideRenewalDate: i } = e,
         { intervalType: a, intervalCount: o } = (0, g.dn)(t),
         { intervalType: s, intervalCount: l } = (0, g.dn)(n);
@@ -244,7 +229,7 @@ function k(e) {
         children: A.intl.format(A.t.JWWD4E, { renewalDate: c }),
     });
 }
-function U(e) {
+function M(e) {
     let { isUpdate: t, currentInvoice: n, newInvoice: i, inTrialPeriod: a } = e,
         s = null != n ? (0, y.j)(n.invoiceItems) : null,
         l = null != n ? (0, g.dn)(n) : null,
@@ -257,7 +242,7 @@ function U(e) {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(v.Z9, { children: A.intl.string(A.t.tuqjWQ) }),
-                          M(j((0, y.j)(n.invoiceItems))).map((e) =>
+                          (0, I.gI)(n).map((e) =>
                               (0, r.jsx)(
                                   R,
                                   {
@@ -273,7 +258,7 @@ function U(e) {
                   })
                 : null,
             (0, r.jsx)(v.Z9, { children: A.intl.string(A.t.qxVrh6) }),
-            M(j((0, y.j)(i.invoiceItems))).map((e) => {
+            (0, I.gI)(i).map((e) => {
                 let n =
                     null != s &&
                     !s.some((t) => t.subscriptionPlanId === e.subscriptionPlanId && t.quantity === e.quantity);
@@ -303,7 +288,7 @@ function U(e) {
         ],
     });
 }
-function G(e) {
+function k(e) {
     var t;
     let {
             proratedInvoice: n,
@@ -348,7 +333,7 @@ function G(e) {
         }),
     });
 }
-function Z(e) {
+function U(e) {
     let {
             premiumSubscription: t,
             proratedInvoice: n,
@@ -379,7 +364,7 @@ function Z(e) {
             u
                 ? null
                 : (0, r.jsx)(v.P7, {
-                      children: (0, r.jsx)(G, {
+                      children: (0, r.jsx)(k, {
                           proratedInvoice: n,
                           renewalInvoice: a,
                           isTrial: l,
@@ -403,7 +388,7 @@ function Z(e) {
                             ],
                         }),
                         O
-                            ? (0, r.jsx)(U, {
+                            ? (0, r.jsx)(M, {
                                   isUpdate: s,
                                   currentInvoice: y,
                                   newInvoice: a,
@@ -415,7 +400,7 @@ function Z(e) {
         ],
     });
 }
-function F(e) {
+function G(e) {
     let t,
         { plan: n, className: i, isPrepaidPaymentSource: a = !1, isCustomGift: o = !1, invoicePreview: s } = e,
         { tax: l, taxInclusive: c, currency: u } = s,
@@ -469,7 +454,7 @@ function F(e) {
         })
     );
 }
-function B(e) {
+function Z(e) {
     let t,
         { invoice: n, plan: i } = e,
         a = (0, y.j)(n.invoiceItems).find((e) => e.subscriptionPlanId === i.id);

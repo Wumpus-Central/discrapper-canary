@@ -44,6 +44,7 @@ let _ = (e) => {
                 ? {
                       type: "PREMIUM_WITH_TRIAL",
                       invoicePreview: i,
+                      renewalInvoicePreview: o,
                   }
                 : null == a || null == o || s
                   ? {
