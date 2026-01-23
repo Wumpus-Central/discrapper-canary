@@ -25,7 +25,7 @@ function g(e) {
             let e =
                     d.isPlatformEmbedded && c.Ay.supportsFeature(f.BYE.WEBAUTHN)
                         ? c.Ay.webAuthnAuthenticate(x)
-                        : i.Jt(JSON.parse(x)).then((e) => JSON.stringify(e)),
+                        : (0, i.Jt)(JSON.parse(x)).then(JSON.stringify),
                 t = async (e) => {
                     try {
                         await n({
