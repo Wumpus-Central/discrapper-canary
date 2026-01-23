@@ -1,6 +1,6 @@
 n.d(t, {
     A: () => S,
-    l: () => C,
+    l: () => N,
 });
 var r = n(627968),
     i = n(64700),
@@ -8,17 +8,18 @@ var r = n(627968),
     s = n.n(a),
     o = n(319354),
     l = n(435371),
-    c = n(421380),
-    u = n(397927),
-    d = n(241524),
-    f = n(147925),
-    p = n(461782),
-    _ = n(447404),
-    h = n(722776),
-    m = n(985018),
-    g = n(35204);
+    c = n(614820),
+    u = n(421380),
+    d = n(397927),
+    f = n(241524),
+    p = n(147925),
+    _ = n(461782),
+    h = n(447404),
+    m = n(722776),
+    g = n(985018),
+    E = n(35204);
 
-function E(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,13 +44,13 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
 
-function y(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,12 +63,12 @@ function y(e, t) {
     return n;
 }
 
-function O(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,13 +86,13 @@ function A(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = v(e, t)), Object.getOwnPropertySymbols))
+    if (((a = I(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function v(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -104,43 +105,44 @@ function v(e, t) {
 
 function S(e) {
     let {
-        label: t,
-        onClick: n,
-        onKeyDown: i,
-        onMouseEnter: a,
-        onMouseLeave: u,
-        onContextMenu: d,
-        className: f,
-        wrapperClassName: p,
-        iconClassName: h,
-        iconColor: m = "currentColor",
-        iconComponent: E,
-        themeable: b = !1,
-        disabled: y = !1,
-        isActive: O = !1,
-        tooltipPosition: A = "top",
-        shouldShowTooltip: v = !0,
-        forceTooltipOpen: S = !1,
-        buttonRef: I,
-        grow: T,
-        "aria-label": C,
-        look: N,
-        buttonText: R,
-        size: w,
-        color: P,
-    } = e;
-    return (0, r.jsx)(_.A, {
+            label: t,
+            onClick: n,
+            onKeyDown: i,
+            onMouseEnter: a,
+            onMouseLeave: d,
+            onContextMenu: f,
+            className: p,
+            wrapperClassName: _,
+            iconClassName: m,
+            iconColor: g = "currentColor",
+            iconComponent: y,
+            themeable: b = !1,
+            disabled: O = !1,
+            isActive: v = !1,
+            tooltipPosition: A = "top",
+            shouldShowTooltip: I = !0,
+            forceTooltipOpen: S = !1,
+            buttonRef: T,
+            grow: C,
+            "aria-label": N,
+            look: w,
+            buttonText: R,
+            size: P,
+            color: D,
+        } = e,
+        x = (0, c.O)(t);
+    return (0, r.jsx)(h.A, {
         children: (0, r.jsx)(l.m_, {
             position: A,
             __unsupportedReactNodeAsText: t,
             ariaHidden: !0,
-            shouldShow: v,
+            shouldShow: I,
             forceOpen: S,
-            children: (0, r.jsxs)(c.$n, {
+            children: (0, r.jsxs)(u.$n, {
                 "data-migration-pending": !0,
-                look: null != N ? N : c.$n.Looks.BLANK,
-                size: null != w ? w : c.$n.Sizes.NONE,
-                color: P,
+                look: null != w ? w : u.$n.Looks.BLANK,
+                size: null != P ? P : u.$n.Sizes.NONE,
+                color: D,
                 onKeyDown: (e) => {
                     null == i || i(e);
                 },
@@ -149,35 +151,35 @@ function S(e) {
                 },
                 onClick: n,
                 onMouseEnter: a,
-                onMouseLeave: u,
-                onContextMenu: null != d ? d : void 0,
+                onMouseLeave: d,
+                onContextMenu: null != f ? f : void 0,
                 onFocus: (e) => {
                     null == a || a(e);
                 },
-                onBlur: u,
-                disabled: y,
-                innerClassName: s()(g.NL, {
-                    [g.eq]: null != R,
+                onBlur: d,
+                disabled: O,
+                innerClassName: s()(E.NL, {
+                    [E.eq]: null != R,
                 }),
                 className: s()(
                     {
-                        [g.vu]: O,
+                        [E.vu]: v,
                     },
-                    f,
+                    p,
                 ),
-                wrapperClassName: p,
-                buttonRef: I,
-                grow: T,
-                "aria-label": C,
+                wrapperClassName: _,
+                buttonRef: T,
+                grow: C,
+                "aria-label": null != N ? N : x,
                 children: [
-                    (0, r.jsx)(E, {
+                    (0, r.jsx)(y, {
                         size: o.E.md,
-                        className: s()(h, {
-                            [g.pd]: null == R,
-                            [g.IW]: b,
-                            [g.vu]: O,
+                        className: s()(m, {
+                            [E.pd]: null == R,
+                            [E.IW]: b,
+                            [E.vu]: v,
                         }),
-                        color: m,
+                        color: g,
                     }),
                     R,
                 ],
@@ -185,32 +187,32 @@ function S(e) {
         }),
     });
 }
-let I = {
-        disconnect: g.Zf,
-        join: g.fj,
-        red: g.wv,
-        white: g.ON,
-        green: g.wL,
-        yellow: g.D9,
-        primaryDark: g.Zq,
-        primaryLight: g.Zq,
-        activeLight: g.H3,
-        premiumGradient: g.ck,
+let T = {
+        disconnect: E.Zf,
+        join: E.fj,
+        red: E.wv,
+        white: E.ON,
+        green: E.wL,
+        yellow: E.D9,
+        primaryDark: E.Zq,
+        primaryLight: E.Zq,
+        activeLight: E.H3,
+        premiumGradient: E.ck,
     },
-    T = {
-        disconnect: g.Zf,
-        join: g.fj,
-        red: g.Xr,
-        white: g.ON,
-        green: g.Vu,
-        yellow: g.D9,
-        primaryDark: g.Zq,
-        primaryLight: g.Zq,
-        activeLight: g.H3,
-        premiumGradient: g.ck,
+    C = {
+        disconnect: E.Zf,
+        join: E.fj,
+        red: E.Xr,
+        white: E.ON,
+        green: E.Vu,
+        yellow: E.D9,
+        primaryDark: E.Zq,
+        primaryLight: E.Zq,
+        activeLight: E.H3,
+        premiumGradient: E.ck,
     };
 
-function C(e) {
+function N(e) {
     var t;
     let {
             ref: n,
@@ -218,14 +220,14 @@ function C(e) {
             caretColor: o,
             isActive: l = !1,
             className: c,
-            iconClassName: E,
+            iconClassName: u,
             onPopoutClick: y,
-            popoutOpen: v = !1,
-            popoutDisabled: C = !1,
+            popoutOpen: O = !1,
+            popoutDisabled: I = !1,
             isTrayButton: N,
-            applyStyles: R = !1,
+            applyStyles: w = !1,
         } = e,
-        w = A(e, [
+        R = A(e, [
             "ref",
             "color",
             "caretColor",
@@ -238,42 +240,42 @@ function C(e) {
             "isTrayButton",
             "applyStyles",
         ]),
-        P = (0, h.A)(a, l),
+        P = (0, m.A)(a, l),
         D = null != o ? o : P,
-        x = (0, d.A)("(max-width: 456px)"),
+        x = (0, f.A)("(max-width: 456px)"),
         L = i.useRef(null),
-        j = i.useContext(p.vG);
+        j = i.useContext(_.vG);
     i.useEffect(() => {
         null != L.current && (j ? L.current.pause() : L.current.play());
     }, [j]);
-    let M = null != (t = w.onContextMenu) ? t : y,
+    let M = null != (t = R.onContextMenu) ? t : y,
         k = null == y && !N,
         U = null != y && !N,
         G = N && null != y && !x,
         V = (0, r.jsx)(
             S,
-            O(b({}, w), {
+            v(b({}, R), {
                 grow: !1,
                 onContextMenu: M,
-                iconClassName: s()(E, g.LF, k && g.Ns),
-                className: s()(x || R ? c : null, l && g.vu, g.wh, T[P], k && g.Sy, G && g.hA),
+                iconClassName: s()(u, E.LF, k && E.Ns),
+                className: s()(x || w ? c : null, l && E.vu, E.wh, C[P], k && E.Sy, G && E.hA),
             }),
         );
     return x
         ? V
         : (0, r.jsxs)("div", {
               ref: n,
-              className: s()(g.re, v && g.q6, c, U && [g.TD, I[P]]),
+              className: s()(E.re, O && E.q6, c, U && [E.TD, T[P]]),
               children: [
                   V,
                   null != y
-                      ? (0, r.jsx)(_.A, {
-                            children: (0, r.jsx)(u.DUT, {
-                                "aria-label": m.intl.string(m.t.PdRCRg),
-                                onClick: C ? void 0 : y,
-                                className: s()(g.cd, N && g.Ml, T[D], v && [g.q6, g.vu], C && g.r9),
-                                children: (0, r.jsx)(f.A, {
-                                    className: s()(g.gG, v && g.ho, C && g.r9),
+                      ? (0, r.jsx)(h.A, {
+                            children: (0, r.jsx)(d.DUT, {
+                                "aria-label": g.intl.string(g.t.PdRCRg),
+                                onClick: I ? void 0 : y,
+                                className: s()(E.cd, N && E.Ml, C[D], O && [E.q6, E.vu], I && E.r9),
+                                children: (0, r.jsx)(p.A, {
+                                    className: s()(E.gG, O && E.ho, I && E.r9),
                                 }),
                             }),
                         })

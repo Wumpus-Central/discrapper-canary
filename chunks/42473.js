@@ -6,12 +6,13 @@ var r = n(627968),
     i = n(503698),
     s = n.n(i),
     a = n(435371),
-    o = n(421380),
-    u = n(397927),
-    c = n(573435),
-    d = n(310945);
+    o = n(614820),
+    u = n(421380),
+    c = n(397927),
+    d = n(573435),
+    p = n(310945);
 
-function p(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +38,7 @@ function p(e) {
     return e;
 }
 
-function m(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,7 +57,7 @@ function m(e, t) {
     );
 }
 
-function f(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,56 +85,56 @@ function f(e, t) {
             (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     return i;
 }
-let y = l.forwardRef(function (e, t) {
+let b = l.forwardRef(function (e, t) {
         let {
                 children: n,
                 onContextMenu: l,
                 onClick: i,
                 onMouseDown: a,
-                disabled: u,
-                icon: p,
+                disabled: o,
+                icon: c,
                 iconForeground: m,
                 innerClassName: f,
                 className: y,
-                redGlow: g,
-                onMouseEnter: b,
+                redGlow: b,
+                onMouseEnter: g,
                 onMouseLeave: A,
                 "aria-label": x,
                 "aria-checked": v,
                 role: h,
-                plated: E,
+                plated: O,
             } = e,
-            O =
-                "function" == typeof p
-                    ? (0, r.jsx)(p, {
+            E =
+                "function" == typeof c
+                    ? (0, r.jsx)(c, {
                           width: 20,
                           height: 20,
                           size: "custom",
                           colorClass: null != m ? m : "",
                           color: "currentColor",
                       })
-                    : p;
-        return (0, r.jsxs)(o.$n, {
+                    : c;
+        return (0, r.jsxs)(u.$n, {
             "data-migration-pending": !0,
             "aria-label": x,
             buttonRef: t,
-            look: o.$n.Looks.BLANK,
-            size: o.$n.Sizes.NONE,
-            disabled: u,
+            look: u.$n.Looks.BLANK,
+            size: u.$n.Sizes.NONE,
+            disabled: o,
             innerClassName: f,
-            wrapperClassName: s()(d.x6, y),
-            className: s()(d.x6, y, {
-                [d.Xr]: g,
-                [d.r9]: u,
-                [d.Sn]: !u,
-                [d.ZQ]: E,
-                [d.OH]: g && E,
+            wrapperClassName: s()(p.x6, y),
+            className: s()(p.x6, y, {
+                [p.Xr]: b,
+                [p.r9]: o,
+                [p.Sn]: !o,
+                [p.ZQ]: O,
+                [p.OH]: b && O,
             }),
             onClick: (e) => {
                 null != i && i(e);
             },
             onMouseDown: a,
-            onMouseEnter: b,
+            onMouseEnter: g,
             onMouseLeave: A,
             onContextMenu: l,
             role: h,
@@ -148,29 +149,37 @@ let y = l.forwardRef(function (e, t) {
             },
             children: [
                 null != n
-                    ? (0, r.jsx)(c.Ay, {
+                    ? (0, r.jsx)(d.Ay, {
                           width: 20,
                           height: 20,
-                          mask: c.Ay.Masks.PANEL_BUTTON,
-                          children: O,
+                          mask: d.Ay.Masks.PANEL_BUTTON,
+                          children: E,
                       })
-                    : O,
+                    : E,
                 n,
             ],
         });
     }),
     g = l.forwardRef(function (e, t) {
         if (null == e.tooltipType) {
-            let { tooltipText: n, tooltipForceOpen: l, tooltipShouldShow: i, tooltipPositionKey: s } = e,
-                o = f(e, ["tooltipText", "tooltipForceOpen", "tooltipShouldShow", "tooltipPositionKey"]);
+            let {
+                    tooltipText: n,
+                    tooltipForceOpen: l,
+                    tooltipShouldShow: i,
+                    tooltipPositionKey: s,
+                    "aria-label": u,
+                } = e,
+                c = y(e, ["tooltipText", "tooltipForceOpen", "tooltipShouldShow", "tooltipPositionKey", "aria-label"]),
+                d = (0, o.O)(n);
             return (0, r.jsx)(a.m_, {
                 text: n,
                 forceOpen: l,
                 shouldShow: i,
                 positionKey: s,
                 children: (0, r.jsx)(
-                    y,
-                    m(p({}, o), {
+                    b,
+                    f(m({}, c), {
+                        "aria-label": null != u ? u : d,
                         ref: t,
                     }),
                 ),
@@ -184,13 +193,13 @@ let y = l.forwardRef(function (e, t) {
                     tooltipPositionKey: s,
                     onClick: a,
                     onMouseEnter: o,
-                    onMouseLeave: c,
-                    onContextMenu: g,
-                    onFocus: b,
+                    onMouseLeave: u,
+                    onContextMenu: d,
+                    onFocus: g,
                     onBlur: A,
                     "aria-label": x,
                 } = e,
-                v = f(e, [
+                v = y(e, [
                     "tooltipText",
                     "tooltipForceOpen",
                     "tooltipShouldShow",
@@ -203,14 +212,14 @@ let y = l.forwardRef(function (e, t) {
                     "onBlur",
                     "aria-label",
                 ]);
-            return (0, r.jsx)(u.STz, {
+            return (0, r.jsx)(c.STz, {
                 "data-migration-pending": !0,
-                tooltipClassName: d.RF,
-                tooltipContentClassName: d.In,
+                tooltipClassName: p.RF,
+                tooltipContentClassName: p.In,
                 "aria-label": x,
                 forceOpen: l,
                 shouldShow: i,
-                color: u.oMw.GREEN,
+                color: c.oMw.GREEN,
                 positionKeyStemOverride: s,
                 text: n,
                 children: (e) => {
@@ -219,14 +228,14 @@ let y = l.forwardRef(function (e, t) {
                         onMouseEnter: l,
                         onMouseLeave: i,
                         onContextMenu: s,
-                        onFocus: u,
-                        onBlur: d,
-                        "aria-label": f,
+                        onFocus: c,
+                        onBlur: p,
+                        "aria-label": y,
                     } = e;
                     return (0, r.jsx)(
-                        y,
-                        m(
-                            p(
+                        b,
+                        f(
+                            m(
                                 {
                                     onClick: (e) => {
                                         null == n || n(), null == a || a(e);
@@ -235,18 +244,18 @@ let y = l.forwardRef(function (e, t) {
                                         null == l || l(), null == o || o();
                                     },
                                     onMouseLeave: () => {
-                                        null == i || i(), null == c || c();
+                                        null == i || i(), null == u || u();
                                     },
                                     onContextMenu: (e) => {
-                                        null == s || s(), null == g || g(e);
+                                        null == s || s(), null == d || d(e);
                                     },
                                     onFocus: () => {
-                                        null == u || u(), null == b || b();
+                                        null == c || c(), null == g || g();
                                     },
                                     onBlur: () => {
-                                        null == d || d(), null == A || A();
+                                        null == p || p(), null == A || A();
                                     },
-                                    "aria-label": f,
+                                    "aria-label": y,
                                 },
                                 v,
                             ),
