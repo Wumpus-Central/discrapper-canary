@@ -3,7 +3,7 @@ n.d(t, {
     $8o: () => ei,
     $OG: () => tw,
     $aF: () => ta,
-    $jw: () => nA,
+    $jw: () => nv,
     $pd: () => eZ,
     AD1: () => p.AD,
     AKn: () => rC,
@@ -12,7 +12,7 @@ n.d(t, {
     AaC: () => nH,
     Ahp: () => td,
     Ajs: () => rw,
-    An1: () => rA,
+    An1: () => rv,
     AnalyticsObjectTypes: () => tR,
     Auw: () => i.A,
     BBH: () => tO,
@@ -32,25 +32,25 @@ n.d(t, {
     Dmq: () => ne,
     DpB: () => n1,
     DqD: () => e6,
-    EMb: () => eA,
+    EMb: () => ev,
     EZt: () => n9,
     EkJ: () => ea,
-    F05: () => tb,
+    F05: () => ty,
     FI6: () => t5,
     FXj: () => p.FX,
     FYj: () => eh,
     F_X: () => nm,
-    Fz7: () => nI,
+    Fz7: () => nS,
     G2g: () => tM,
     G6Q: () => J,
     GD: () => n4,
-    GaG: () => ny,
+    GaG: () => nb,
     Gg3: () => p.Gg,
     GuildFeatures: () => L,
     H2B: () => rf,
     HAw: () => ns,
     Hf6: () => n0,
-    I4_: () => ty,
+    I4_: () => tb,
     IWg: () => g,
     Ign: () => eP,
     IjB: () => e1,
@@ -58,11 +58,11 @@ n.d(t, {
     J$u: () => nk,
     JJy: () => tC,
     Joy: () => p.Jo,
-    K3c: () => rI,
-    KE7: () => b,
+    K3c: () => rS,
+    KE7: () => y,
     KIY: () => tY,
     KL3: () => ew,
-    Kby: () => nS,
+    Kby: () => nI,
     KcG: () => p.Kc,
     Kf: () => p.Kf,
     Ks6: () => nN,
@@ -80,10 +80,10 @@ n.d(t, {
     MdR: () => to,
     Mmu: () => tT,
     NA2: () => eM,
-    NH1: () => rb,
+    NH1: () => ry,
     NJ8: () => p.NJ,
     NKC: () => rm,
-    NOr: () => rv,
+    NOr: () => rA,
     NcF: () => p.Nc,
     O3O: () => tW,
     OLI: () => p.OL,
@@ -120,14 +120,14 @@ n.d(t, {
     TZK: () => eq,
     T_y: () => tm,
     TbF: () => eB,
-    ThZ: () => tv,
+    ThZ: () => tA,
     TpD: () => tZ,
     U2_: () => p.U2,
-    UNo: () => eI,
+    UNo: () => eS,
     UVF: () => Z,
-    Ue3: () => eS,
+    Ue3: () => eI,
     Umv: () => eu,
-    UqL: () => tS,
+    UqL: () => tI,
     Ut1: () => ez,
     Uyk: () => nt,
     VFs: () => eW,
@@ -155,7 +155,7 @@ n.d(t, {
     YI$: () => p.YI,
     YYv: () => d.YY,
     Yri: () => p.Yr,
-    YvQ: () => I,
+    YvQ: () => S,
     Z86: () => nD,
     ZE4: () => p.ZE,
     ZGg: () => eY,
@@ -168,11 +168,11 @@ n.d(t, {
     __0: () => p.__,
     _i_: () => tt,
     _tK: () => tQ,
-    a3B: () => nv,
+    a3B: () => nA,
     aUe: () => h,
     aVn: () => R,
     ajI: () => en,
-    b7d: () => S,
+    b7d: () => I,
     bFR: () => k,
     bNI: () => nL,
     bb8: () => G,
@@ -184,7 +184,7 @@ n.d(t, {
     d0r: () => ej,
     d3x: () => nF,
     d68: () => o.d,
-    d7Q: () => ev,
+    d7Q: () => eA,
     dD: () => ra,
     dJq: () => ed,
     dL4: () => p.dL,
@@ -209,7 +209,7 @@ n.d(t, {
     frM: () => p.fr,
     frR: () => el,
     ftr: () => tU,
-    g0g: () => nb,
+    g0g: () => ny,
     g6G: () => _.g6,
     gG4: () => nB,
     gGk: () => nO,
@@ -256,7 +256,7 @@ n.d(t, {
     lLE: () => rE,
     lM6: () => re,
     lT7: () => nn,
-    liQ: () => tI,
+    liQ: () => tS,
     lid: () => t8,
     m3P: () => T,
     m_i: () => rl,
@@ -267,7 +267,7 @@ n.d(t, {
     n83: () => nq,
     nRU: () => C,
     nc_: () => tP,
-    nd0: () => A,
+    nd0: () => v,
     ndy: () => nr,
     nfo: () => p.nf,
     nhx: () => nl,
@@ -278,15 +278,15 @@ n.d(t, {
     oIV: () => e7,
     oJQ: () => nY,
     ogj: () => j,
-    orn: () => eb,
+    orn: () => ey,
     p2C: () => te,
-    p_A: () => v,
+    p_A: () => A,
     p_j: () => nP,
     pr7: () => H,
     pwA: () => z,
     qF7: () => p.qF,
     qNw: () => W,
-    qlD: () => ey,
+    qlD: () => eb,
     qmC: () => p.qm,
     rLJ: () => eT,
     rbe: () => r.r,
@@ -298,7 +298,7 @@ n.d(t, {
     sbO: () => Y,
     sdF: () => eU,
     sl8: () => B,
-    t02: () => tA,
+    t02: () => tv,
     tEg: () => p.tE,
     tF5: () => p.tF,
     tSW: () => n2,
@@ -312,11 +312,11 @@ n.d(t, {
     ump: () => t2,
     uss: () => X,
     uvi: () => eN,
-    uw8: () => rS,
+    uw8: () => rI,
     vkP: () => U,
     w7I: () => p.w7,
     wLU: () => ti,
-    wLn: () => ry,
+    wLn: () => rb,
     wY_: () => rh,
     wqg: () => rg,
     x0t: () => p.x0,
@@ -331,7 +331,7 @@ n.d(t, {
     yTV: () => tH,
     zF_: () => n6,
     zOV: () => tV,
-    zWA: () => y,
+    zWA: () => b,
     zgK: () => nh,
     zzC: () => ek,
 }),
@@ -465,10 +465,10 @@ var r = n(478437),
             e
         );
     })({}),
-    b = (function (e) {
+    y = (function (e) {
         return (e.ALL_SERVERS = "ALL_SERVERS"), (e.THIS_SERVER = "THIS_SERVER"), e;
     })({}),
-    y = (function (e) {
+    b = (function (e) {
         return (
             (e.TRANSPORT = "TRANSPORT"),
             (e.OUTBOUND = "OUTBOUND"),
@@ -544,7 +544,7 @@ var r = n(478437),
             e
         );
     })({}),
-    A = (function (e) {
+    v = (function (e) {
         return (
             (e.DISPLAY = "DISPLAY"),
             (e.INVITE = "INVITE"),
@@ -565,7 +565,7 @@ var r = n(478437),
             e
         );
     })({}),
-    v = (function (e) {
+    A = (function (e) {
         return (
             (e.OVERVIEW = "OVERVIEW"),
             (e.PERMISSIONS = "PERMISSIONS"),
@@ -589,10 +589,10 @@ var r = n(478437),
             e
         );
     })({}),
-    S = (function (e) {
+    I = (function (e) {
         return (e.TOPIC = "TOPIC"), e;
     })({}),
-    I = (function (e) {
+    S = (function (e) {
         return (
             (e.NONE = "NONE"),
             (e.MEMBERS = "MEMBERS"),
@@ -1980,7 +1980,7 @@ var eE = (function (e) {
             e
         );
     })({}),
-    eb = (function (e) {
+    ey = (function (e) {
         return (
             (e[(e.ALL_MESSAGES = 0)] = "ALL_MESSAGES"),
             (e[(e.ONLY_MENTIONS = 1)] = "ONLY_MENTIONS"),
@@ -1989,12 +1989,12 @@ var eE = (function (e) {
             e
         );
     })({});
-let ey = 100,
+let eb = 100,
     eO = 200,
-    eA = 50,
     ev = 50,
-    eS = 25,
-    eI = 200,
+    eA = 50,
+    eI = 25,
+    eS = 200,
     eT = 100,
     eC = 250,
     eN = 2e3,
@@ -2158,8 +2158,8 @@ let eJ = 128,
     tm = 25,
     tg = /^FILTER_/,
     tE = /^ANSWER_/,
-    tb = 32;
-var ty = (function (e) {
+    ty = 32;
+var tb = (function (e) {
         return (
             (e.GUILD = "GUILD"),
             (e.FAVORITES = "FAVORITES"),
@@ -2185,7 +2185,7 @@ var ty = (function (e) {
     tO = (function (e) {
         return (e.NEWEST = "newest"), (e.OLDEST = "oldest"), (e.MOST_RELEVANT = "most_relevant"), e;
     })({}),
-    tA = (function (e) {
+    tv = (function (e) {
         return (
             (e[(e.UNKNOWN_ACCOUNT = 10001)] = "UNKNOWN_ACCOUNT"),
             (e[(e.UNKNOWN_APPLICATION = 10002)] = "UNKNOWN_APPLICATION"),
@@ -2384,7 +2384,7 @@ var ty = (function (e) {
             e
         );
     })({}),
-    tv = (function (e) {
+    tA = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2467,7 +2467,7 @@ var ty = (function (e) {
             e
         );
     })({}),
-    tS = (function (e) {
+    tI = (function (e) {
         return (
             (e.JOIN = "join"),
             (e.ASK_TO_JOIN = "ask to join"),
@@ -2477,7 +2477,7 @@ var ty = (function (e) {
             e
         );
     })({}),
-    tI = (function (e) {
+    tS = (function (e) {
         return (
             (e.AUTH = "Auth"),
             (e.STORE_LISTING = "Store Listing"),
@@ -4687,6 +4687,7 @@ var na = (function (e) {
             (e.PREMIUM_FEATURE_USAGE = "premium_feature_usage_v2"),
             (e.PREMIUM_FEATURE_TRY_OUT = "premium_feature_try_out"),
             (e.TEXT_IN_VOICE_OPENED = "text_in_voice_opened"),
+            (e.TEXT_IN_VOICE_CLOSED = "text_in_voice_closed"),
             (e.GUILD_AUTOMOD_FEEDBACK = "guild_automod_feedback"),
             (e.GUILD_RAID_REPORTED = "guild_raid_reported"),
             (e.GUILD_RAID_FEEDBACK = "guild_raid_feedback"),
@@ -5479,10 +5480,10 @@ var ng = (function (e) {
     nE = (function (e) {
         return (e.USER = "1"), (e.ROLE = "0"), e;
     })({}),
-    nb = (function (e) {
+    ny = (function (e) {
         return (e[(e.ROLE = 1)] = "ROLE"), (e[(e.USER = 2)] = "USER"), (e[(e.CHANNEL = 3)] = "CHANNEL"), e;
     })({}),
-    ny = (function (e) {
+    nb = (function (e) {
         return (
             (e.ALL = "ALL"),
             (e.UNKNOWN = "UNKNOWN"),
@@ -5654,8 +5655,8 @@ var ng = (function (e) {
             e
         );
     })({});
-let nA = 50;
-var nv = (function (e) {
+let nv = 50;
+var nA = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -5671,10 +5672,10 @@ var nv = (function (e) {
             e
         );
     })({}),
-    nS = (function (e) {
+    nI = (function (e) {
         return (e.UPDATE_PASSWORD = "update_password"), e;
     })({}),
-    nI = (function (e) {
+    nS = (function (e) {
         return (
             (e.CAPTCHA = "captcha"),
             (e.EMAIL_OR_PHONE = "email_or_phone"),
@@ -6275,10 +6276,10 @@ let rg = "discodoEasterEgg";
 var rE = (function (e) {
         return (e.INITIAL = "initial"), (e.ENTER = "enter"), (e.UPDATE = "update"), (e.LEAVE = "leave"), e;
     })({}),
-    rb = (function (e) {
+    ry = (function (e) {
         return (e[(e.INCOMING = 1)] = "INCOMING"), (e[(e.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), e;
     })({}),
-    ry = (function (e) {
+    rb = (function (e) {
         return (
             (e[(e.APPLICATION = 0)] = "APPLICATION"),
             (e[(e.OVERVIEW = 1)] = "OVERVIEW"),
@@ -6291,12 +6292,12 @@ var rE = (function (e) {
         );
     })({});
 let rO = 2500,
-    rA = 0,
-    rv = 2592e6;
-var rS = (function (e) {
+    rv = 0,
+    rA = 2592e6;
+var rI = (function (e) {
         return (e.USERS = "users"), (e.ROLES = "roles"), (e.EVERYONE = "everyone"), e;
     })({}),
-    rI = (function (e) {
+    rS = (function (e) {
         return (e[(e.AUTO = 1)] = "AUTO"), (e[(e.FULL = 2)] = "FULL"), e;
     })({});
 let rT = 100,

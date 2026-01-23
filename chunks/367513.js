@@ -1,13 +1,15 @@
 n.d(t, {
-    A: () => u,
+    A: () => f,
 });
 var r = n(73153),
     i = n(58149),
-    a = n(954571),
-    s = n(203982),
-    o = n(652215);
+    a = n(134047),
+    s = n(734057),
+    o = n(954571),
+    l = n(203982),
+    c = n(652215);
 
-function l(e, t, n) {
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +23,7 @@ function l(e, t, n) {
     );
 }
 
-function c(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +34,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-let u = {
+let f = {
     rebuildRTCActiveChannels() {
         r.h.dispatch({
             type: "CHANNEL_RTC_ACTIVE_CHANNELS",
@@ -65,10 +67,10 @@ let u = {
         });
     },
     updateLayout(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.BRT.APP;
-        a.default.track(
-            o.HAw.VIDEO_LAYOUT_TOGGLED,
-            c(
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.BRT.APP;
+        o.default.track(
+            c.HAw.VIDEO_LAYOUT_TOGGLED,
+            d(
                 {
                     video_layout: t,
                 },
@@ -117,19 +119,33 @@ let u = {
             dismissed: t,
         });
     },
-    updateChatOpen(e, t) {
-        r.h.dispatch({
-            type: "CHANNEL_RTC_UPDATE_CHAT_OPEN",
-            channelId: e,
-            chatOpen: t,
-        }),
-            t
-                ? setTimeout(() => {
-                      s._.dispatch(o.jej.FOCUS_CHANNEL_TEXT_AREA, {
-                          channelId: e,
-                      });
-                  }, 0)
-                : s._.dispatch(o.jej.FOCUS_CHAT_BUTTON);
+    updateChatOpen(e, t, n) {
+        if (
+            (r.h.dispatch({
+                type: "CHANNEL_RTC_UPDATE_CHAT_OPEN",
+                channelId: e,
+                chatOpen: t,
+            }),
+            t)
+        )
+            setTimeout(() => {
+                l._.dispatch(c.jej.FOCUS_CHANNEL_TEXT_AREA, {
+                    channelId: e,
+                });
+            }, 0);
+        else if (
+            (l._.dispatch(c.jej.FOCUS_CHAT_BUTTON),
+            a.M.getConfig({
+                location: "ChannelCall",
+            }).collectAnalytics)
+        ) {
+            var i;
+            o.default.track(c.HAw.TEXT_IN_VOICE_CLOSED, {
+                reason: n,
+                channel_id: e,
+                guild_id: null == (i = s.A.getChannel(e)) ? void 0 : i.getGuildId(),
+            });
+        }
     },
     jumpToVoiceChannelMessage(e, t, n, i) {
         r.h.dispatch({
