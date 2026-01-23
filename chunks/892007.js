@@ -1,5 +1,5 @@
 e.exports = {
-    uW: "fe9b916f8c098b65",
-    so: "_9cc6ac9edc64c90c",
-    wx: "_7d2057363346e1d5",
+    uW: "section_bf424d",
+    so: "headings_bf424d",
+    wx: "header_bf424d",
 };

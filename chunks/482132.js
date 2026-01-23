@@ -1,7 +1,7 @@
 n.d(t, {
     Ay: () => E,
-    UX: () => y,
-    dZ: () => b,
+    UX: () => b,
+    dZ: () => y,
 });
 var r = n(627968),
     i = n(64700),
@@ -56,13 +56,13 @@ function g(e) {
 function E(e) {
     var t, n, a, o, c, h;
     let m,
-        { header: E, isLargeModal: b, stepProps: y } = g(e),
+        { header: E, isLargeModal: y, stepProps: b } = g(e),
         {
             step: O,
-            stepConfigs: A,
-            setBodyNode: v,
-            setFooterNode: S,
-            setModalOverlayNode: I,
+            stepConfigs: v,
+            setBodyNode: A,
+            setFooterNode: I,
+            setModalOverlayNode: S,
             setReadySlideId: T,
             premiumBrandRefreshBackgroundClassName: C,
             selectedSkuId: N,
@@ -70,15 +70,15 @@ function E(e) {
             isGift: w,
         } = (0, d.P5)(),
         P = null != N && N in p.WN,
-        D = A.find((e) => e.key === O);
+        D = v.find((e) => e.key === O);
     i.useEffect(() => {
-        I(null);
-    }, [O, I]),
+        S(null);
+    }, [O, S]),
         l()(null != D, "Unknown step for current payment flow.");
     let x = null != (t = null == D || null == (a = D.options) ? void 0 : a.hideSlider) && t,
         L = null == D || null == (o = D.options) ? void 0 : o.bodyClassName,
         j = null == D || null == (c = D.options) ? void 0 : c.sliderBodyClassName;
-    switch ((void 0 !== b && b && (j = _.nS), O)) {
+    switch ((void 0 !== y && y && (j = _.nS), O)) {
         case f.pn.ADD_PAYMENT_STEPS:
             m = 408;
             break;
@@ -91,7 +91,7 @@ function E(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null == (n = null == D || null == (h = D.options) ? void 0 : h.renderHeader) || n ? E : null,
-            D.renderStep(y),
+            D.renderStep(b),
             null == O || x
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
@@ -109,30 +109,32 @@ function E(e) {
                                   width: m,
                                   overflow: R ? "visible" : void 0,
                                   shouldUseMediaQueriesForSizing: !0,
-                                  children: A.filter((e) => null != e.key).map((e) =>
-                                      (0, r.jsx)(
-                                          u.q7S,
-                                          {
-                                              id: e.key,
-                                              children: (0, r.jsx)("form", {
-                                                  className: s()(_.OO, j),
-                                                  ref: (e) => {
-                                                      v(e);
-                                                  },
-                                                  onSubmit: (e) => e.preventDefault(),
-                                              }),
-                                          },
-                                          e.key,
+                                  children: v
+                                      .filter((e) => null != e.key)
+                                      .map((e) =>
+                                          (0, r.jsx)(
+                                              u.q7S,
+                                              {
+                                                  id: e.key,
+                                                  children: (0, r.jsx)("form", {
+                                                      className: s()(_.OO, j),
+                                                      ref: (e) => {
+                                                          A(e);
+                                                      },
+                                                      onSubmit: (e) => e.preventDefault(),
+                                                  }),
+                                              },
+                                              e.key,
+                                          ),
                                       ),
-                                  ),
                               }),
                           }),
                           (0, r.jsx)("div", {
-                              ref: (e) => S(e),
+                              ref: (e) => I(e),
                           }),
                           (0, r.jsx)("div", {
                               ref: (e) => {
-                                  I(e);
+                                  S(e);
                               },
                           }),
                       ],
@@ -141,13 +143,13 @@ function E(e) {
     });
 }
 
-function b(e) {
+function y(e) {
     let { children: t } = e,
         { bodyNode: n } = (0, d.P5)();
     return null == n ? null : c.createPortal(t, n);
 }
 
-function y(e) {
+function b(e) {
     let { children: t } = e,
         { footerNode: n } = (0, d.P5)();
     return null == n ? null : c.createPortal(t, n);

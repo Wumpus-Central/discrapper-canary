@@ -1,6 +1,6 @@
 e.exports = {
-    Ui: "_115216782e20d27a",
-    Nr: "_13b66fb3ea90dbb5",
-    Ux: "dd92fcff29f01d05",
-    Oj: "_1ee6b80d2c2ee9a8",
+    Ui: "cardContainer__8833c",
+    Nr: "card__8833c",
+    Ux: "cardContent__8833c",
+    Oj: "selectedCard__8833c",
 };

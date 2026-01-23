@@ -1,4 +1,4 @@
 e.exports = {
-    q: "fa547ecdd8d2b484",
-    G: "_4ca5ace6b4e4e819",
+    q: "footer_bb3ce8",
+    G: "buttonGroup_bb3ce8",
 };

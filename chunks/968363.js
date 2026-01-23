@@ -1,7 +1,7 @@
 e.exports = {
-    b9: "_8e4749c5b41d1af6",
-    a9: "c0ec521589fb5a76",
-    f_: "_49c3667a8d644692",
-    u7: "_6d5a16e9aa54d7a9",
-    u0: "a6a0607f3eedd31c",
+    b9: "applicationEducation__526cc",
+    a9: "sectionLabel__526cc",
+    f_: "entry__526cc",
+    u7: "entryIcon__526cc",
+    u0: "entryText__526cc",
 };

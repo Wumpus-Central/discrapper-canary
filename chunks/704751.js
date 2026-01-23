@@ -1,9 +1,9 @@
 e.exports = {
-    _P: "_241cbbedfc9442a7",
-    xC: "_7f7180624de90495",
-    M4: "_0b2b69a674ed631b",
-    qF: "_4f10a30503b64a15",
-    l$: "b7805e77d4126e86",
-    hT: "_31c739c88ff2aeef",
-    dc: "fa1a5e5cbe00b34f",
+    _P: "avatarDecorationPreview__9baf3",
+    xC: "profileEffectPreview__9baf3",
+    M4: "nameplatePreview__9baf3",
+    qF: "nameplate__9baf3",
+    l$: "giftAnimation__9baf3",
+    hT: "bundlePreview__9baf3",
+    dc: "spinnerContainer__9baf3",
 };

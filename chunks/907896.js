@@ -1,3 +1,3 @@
 e.exports = {
-    A: "_332c98bfa4d7bba1",
+    A: "mobileContainer__26f4a",
 };

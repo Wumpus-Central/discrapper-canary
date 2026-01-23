@@ -1,7 +1,7 @@
 e.exports = {
-    U0: "bbd6138556e6e1e4",
-    KR: "_8b385588f9053e2b",
-    ah: "ab139be787067209",
-    Us: "_2184b42cc51f4ea2",
-    gV: "_28c300b4e2c27d50",
+    U0: "draftBadgeContainer_ea81a9",
+    KR: "tierName_ea81a9",
+    ah: "tierImage_ea81a9",
+    Us: "tierPrice_ea81a9",
+    gV: "tierPeriod_ea81a9",
 };

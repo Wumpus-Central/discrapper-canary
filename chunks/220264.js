@@ -1,3 +1,3 @@
 e.exports = {
-    S: "b692999e2a90c02f",
+    S: "paymentMethodLabel_f630da",
 };

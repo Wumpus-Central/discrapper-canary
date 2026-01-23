@@ -1,3 +1,3 @@
 e.exports = {
-    P: "e34dec8b87eedfca",
+    P: "premiumIcon__7b750",
 };

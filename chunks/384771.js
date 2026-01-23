@@ -1,3 +1,3 @@
 e.exports = {
-    y: "d70efffb6b2e5e7b",
+    y: "divider__3b806",
 };

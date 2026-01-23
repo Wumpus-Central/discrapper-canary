@@ -1,5 +1,5 @@
 e.exports = {
-    ZO: "_713060c115e8420e",
-    wx: "_9336174cdb6ba6b3",
-    Kk: "_376a830161792e1c",
+    ZO: "channelHeader__9f71b",
+    wx: "header__9f71b",
+    Kk: "icon__9f71b",
 };

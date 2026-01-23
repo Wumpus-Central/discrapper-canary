@@ -1,5 +1,5 @@
 e.exports = {
-    kL: "_2544d6520a971651",
-    u1: "_779ceb83f43dc565",
-    k$: "_55b6571f3e71e622",
+    kL: "container__0f711",
+    u1: "spinner__0f711",
+    k$: "loadingPlaceholder__0f711",
 };

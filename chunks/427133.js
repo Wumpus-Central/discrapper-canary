@@ -1,11 +1,11 @@
 var r = {
-    art: "a4074cfd5306febe",
-    small: "_1bbeb6851e83bd97",
-    medium: "_6a2484346f836b49",
-    large: "_4b66a079ebc41f3c",
-    header: "_1245af6120474a14",
-    errorCodeMessage: "_06a6552aac57afef",
-    description: "_6d75ad5572e5c0fb",
-    outerButton: "_10bade8f2e2d2fbc",
+    art: "art_c6e099",
+    small: "small_c6e099",
+    medium: "medium_c6e099",
+    large: "large_c6e099",
+    header: "header_c6e099",
+    errorCodeMessage: "errorCodeMessage_c6e099",
+    description: "description_c6e099",
+    outerButton: "outerButton_c6e099",
 };
 n.r((e.exports = r));

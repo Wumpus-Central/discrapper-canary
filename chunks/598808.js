@@ -1,9 +1,9 @@
 e.exports = {
-    kL: "_5ba75ef0e86c1b62",
-    Kr: "_8045bdf3e28655f0",
-    ML: "_9fca587b7e64c8d0",
-    Us: "cec7624a100c1a6f",
-    Nr: "_5b8e5dabbde457a4",
-    Ee: "_5cadf3c1de53165a",
-    h9: "_0bf43c77081f6d0b",
+    kL: "container__9d597",
+    Kr: "hasMultipleCards__9d597",
+    ML: "cardsList__9d597",
+    Us: "firstCardContainer__9d597",
+    Nr: "card__9d597",
+    Ee: "backgroundCardContainer__9d597",
+    h9: "backgroundCard__9d597",
 };

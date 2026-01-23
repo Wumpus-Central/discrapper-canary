@@ -1,7 +1,7 @@
 e.exports = {
-    kL: "_0b8dcbee198b2411",
-    zc: "e1a74f0d75f11b4a",
-    _e: "_0e3e3c4a7111c0ce",
-    P_: "a779eb6ae9c98d5b",
-    UD: "_06f5dcb8d5bbf2fa",
+    kL: "container_a1d343",
+    zc: "iconContainer_a1d343",
+    _e: "bannerImage_a1d343",
+    P_: "textContent_a1d343",
+    UD: "buttonContainer_a1d343",
 };

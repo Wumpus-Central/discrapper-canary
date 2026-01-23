@@ -1,3 +1,3 @@
 e.exports = {
-    s: "_7fc2911aaa852dc4",
+    s: "sharedCanvas_c4eba0",
 };

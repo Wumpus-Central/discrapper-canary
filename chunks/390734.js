@@ -1,9 +1,9 @@
 e.exports = {
-    pf: "_0c57cd50b79f0794",
-    VQ: "_1ae0c933fa5aad23",
-    H5: "_2c6719b2a761528a",
-    p_: "d98349458985545f",
-    Hj: "_97c079e87b89f1bc",
-    t1: "a4999e858731e582",
-    wH: "_2d1c1e7d1055bead",
+    pf: "inventory__6980e",
+    VQ: "inventoryControls__6980e",
+    H5: "inventoryControlsButton__6980e",
+    p_: "list__6980e",
+    Hj: "nameplateItem__6980e",
+    t1: "nameplateItemOverlay__6980e",
+    wH: "selected__6980e",
 };

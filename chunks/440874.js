@@ -1,4 +1,4 @@
 e.exports = {
-    _: "_86c97dedd2adcad1",
-    y: "_489c7852ffebb9ba",
+    _: "secondarySection_ed47e5",
+    y: "divider_ed47e5",
 };

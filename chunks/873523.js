@@ -1,5 +1,5 @@
 e.exports = {
-    nw: "_0cce7058a1061da4",
-    WH: "_672924b5ccd69597",
-    O6: "_505ad470e098d242",
+    nw: "outerContainer__5a77b",
+    WH: "innerContainer__5a77b",
+    O6: "languageItem__5a77b",
 };

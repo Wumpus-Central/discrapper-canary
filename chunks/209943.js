@@ -1,8 +1,8 @@
 e.exports = {
-    Pl: "c9c90a430022d041",
-    fl: "_22856123d726ed9e",
-    wz: "e5e665149d839b25",
-    Xh: "_74d5e7ed6caf1dab",
-    aY: "aed03dfcc691adb1",
-    Lo: "_9a81e4aff1002b00",
+    Pl: "errorNotificationContainer_e13eda",
+    fl: "errorNotificationWrapper_e13eda",
+    wz: "errorClickNotification_e13eda",
+    Xh: "stackTraceCode_e13eda",
+    aY: "code_e13eda",
+    Lo: "notificationIcon_e13eda",
 };

@@ -1,3 +1,3 @@
 e.exports = {
-    $: "_83e8e79ce4a94999",
+    $: "poggermodeIcon_bc2dd4",
 };

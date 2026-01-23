@@ -1,7 +1,7 @@
 e.exports = {
-    y9: "_67f1fad921d0afa6",
-    R1: "_2d78f31aa0fcd17a",
-    $f: "_3d5ba84c0a859db6",
-    Mg: "_68e2f319bbb5016d",
-    yF: "_41b05e2c2dea14b7",
+    y9: "memberSinceWrapper_c4eb81",
+    R1: "memberSince_c4eb81",
+    $f: "guildIcon_c4eb81",
+    Mg: "discordIcon_c4eb81",
+    yF: "divider_c4eb81",
 };

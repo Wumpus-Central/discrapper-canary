@@ -1,4 +1,4 @@
 e.exports = {
-    J: "ba27dbdf0d129112",
-    Q: "_4014983d3e21cb9c",
+    J: "contentSection_b6bcee",
+    Q: "content_b6bcee",
 };

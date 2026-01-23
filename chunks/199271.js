@@ -1,3 +1,3 @@
 e.exports = {
-    zi: "_578e4e066d74857a",
+    zi: "applicationPermissions__9a8ce",
 };

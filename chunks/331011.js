@@ -1,5 +1,5 @@
 e.exports = {
-    KG: "_4cdc428b7e6d0abf",
-    HV: "_92921e68ed0a5fe7",
-    vu: "_23b6ff895480b0d8",
+    KG: "rowItem_a0365b",
+    HV: "last_a0365b",
+    vu: "active_a0365b",
 };

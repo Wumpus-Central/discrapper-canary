@@ -1,8 +1,8 @@
 e.exports = {
-    iW: "_485533ceeb4f7c6d",
-    Me: "cd223bbd33c54873",
-    xX: "_8a39658d34abbd7d",
-    D7: "_58d648dff5e78fa8",
-    m6: "_4ce12fd96d343c13",
-    Iv: "c643fedaf5939b51",
+    iW: "main_c08b38",
+    Me: "fullBorderWithGradient_c08b38",
+    xX: "artwork_c08b38",
+    D7: "gradient_c08b38",
+    m6: "bottomCenterContent_c08b38",
+    Iv: "cover_c08b38",
 };

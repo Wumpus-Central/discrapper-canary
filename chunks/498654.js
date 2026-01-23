@@ -1,4 +1,4 @@
 e.exports = {
-    Kk: "_7d9566d7c24287cf",
-    T: "_4df0d0fae875920c",
+    Kk: "icon_d98031",
+    T: "browser_d98031",
 };

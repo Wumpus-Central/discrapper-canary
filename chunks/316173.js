@@ -1,7 +1,7 @@
 e.exports = {
-    $e: "_08cd6dab89d5a829",
-    XI: "bc4c4e569d93e828",
-    _5: "_8a87858fc2a45cda",
-    lf: "_944a4a638498608e",
-    WA: "_4ef9199713233914",
+    $e: "warning__915cb",
+    XI: "action__915cb",
+    _5: "formHeader__915cb",
+    lf: "actionDescription__915cb",
+    WA: "resetButton__915cb",
 };

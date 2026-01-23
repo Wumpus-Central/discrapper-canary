@@ -1,3 +1,3 @@
 e.exports = {
-    u: "_5388756f41e4f463",
+    u: "spinner__1d6c7",
 };

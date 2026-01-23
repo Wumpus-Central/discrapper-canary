@@ -1,3 +1,3 @@
 e.exports = {
-    A: "_03a23f28414086b7",
+    A: "freeTrialText__1995d",
 };

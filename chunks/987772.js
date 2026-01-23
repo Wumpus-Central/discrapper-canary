@@ -1,8 +1,8 @@
 e.exports = {
-    Pf: "a162599bb5dccc37",
-    fp: "_0337b35ea908d517",
-    IX: "bdd6b96276148edc",
-    QK: "_3ef35503dcce1019",
-    DX: "_7c84d97726debcba",
-    V2: "_6b935cab6304f203",
+    Pf: "label__27da5",
+    fp: "createLabel__27da5",
+    IX: "labelIcon__27da5",
+    QK: "labelText__27da5",
+    DX: "labelTitle__27da5",
+    V2: "labelSubtitle__27da5",
 };

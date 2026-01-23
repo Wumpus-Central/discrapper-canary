@@ -1,4 +1,4 @@
 e.exports = {
-    L: "_1a89a727124cf491",
-    R: "a3569a0e7a771bb7 _1a89a727124cf491",
+    L: "iconBase__933a1",
+    R: "mentionsBadge__933a1 iconBase__933a1",
 };

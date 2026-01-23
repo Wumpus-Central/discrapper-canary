@@ -1,4 +1,4 @@
 e.exports = {
-    N: "ddd45776ddc6eeff",
-    P: "_306def2f8b1d7b33",
+    N: "card_b651ff",
+    P: "label_b651ff",
 };

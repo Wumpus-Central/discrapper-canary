@@ -1,3 +1,3 @@
 e.exports = {
-    q: "_33b5d82914dab863",
+    q: "badge_dd79c2",
 };

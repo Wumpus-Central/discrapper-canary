@@ -1,4 +1,4 @@
 e.exports = {
-    p: "bbdddd52855aef11",
-    _: "_1a1ff3c1d7a259b2",
+    p: "locatorEntry__19739",
+    _: "entryAuthor__19739",
 };

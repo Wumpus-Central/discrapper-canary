@@ -1,9 +1,9 @@
 e.exports = {
-    fr: "b219f7b994c24fff",
-    my: "_415970436ed9946d",
-    oJ: "b6bf59bcb670aaec",
-    uh: "_94c4456cc5e39640",
-    HO: "f3b545f559332ca7",
-    H0: "a99b6d944f39dabb",
-    Dd: "_3bf9c703ac1db488",
+    fr: "welcomeMessageContainer__6f212",
+    my: "avatar__6f212",
+    oJ: "avatarBackground__6f212",
+    uh: "avatarBorder__6f212",
+    HO: "adminUsernameContainer__6f212",
+    H0: "welcomeMessageContent__6f212",
+    Dd: "ownerIcon__6f212",
 };

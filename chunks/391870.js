@@ -1,6 +1,6 @@
 e.exports = {
-    IG: "d54f9341a32c01e4",
-    TE: "b9dbe2f99eb9474b",
-    Ac: "_28fba0810c25ab1c",
-    r9: "_87b1bc46de4ba3b8",
+    IG: "streamerModeEnabled_aa3ffd",
+    TE: "streamerModeEnabledImage_aa3ffd",
+    Ac: "streamerModeEnabledBtn_aa3ffd",
+    r9: "disabled_aa3ffd",
 };

@@ -1,7 +1,7 @@
 e.exports = {
-    AS: "cbf78674b3029d87",
-    vu: "dd77bfe9d9413729",
-    Kk: "_5c3c98552cd82c81",
-    Ly: "bc6fbb147465c327",
-    DB: "_20b01d33d3df4781",
+    AS: "item_caf372",
+    vu: "active_caf372",
+    Kk: "icon_caf372",
+    Ly: "itemContent_caf372",
+    DB: "itemContainer_caf372",
 };

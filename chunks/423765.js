@@ -1,3 +1,3 @@
 e.exports = {
-    D: "_4f6f7807345178bb",
+    D: "resizeHandle__4b144",
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    h: "_4d97e413c968730f",
-    S: "_7702d27b07425192",
+    h: "description__509fe",
+    S: "image__509fe",
 };

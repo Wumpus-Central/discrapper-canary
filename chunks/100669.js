@@ -1,5 +1,5 @@
 e.exports = {
-    Xb: "_08f186a5ef54f140",
-    yF: "_8b3bb2b7e1971989",
-    Q9: "e95387895d67b475",
+    Xb: "aboutContainer__17a6d",
+    yF: "divider__17a6d",
+    Q9: "informationContainer__17a6d",
 };

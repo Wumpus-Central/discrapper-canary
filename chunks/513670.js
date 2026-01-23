@@ -1,3 +1,3 @@
 e.exports = {
-    B: "_432017862c339221",
+    B: "checkoutModalFooter_e3bd55",
 };

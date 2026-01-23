@@ -1,9 +1,9 @@
 e.exports = {
-    MZ: "e59179f18b8e2bf6",
-    xK: "e48347cf34b079dc",
-    MR: "_54bbc0ce101c0ca2",
-    wV: "_4115e4af658a53b2",
-    uA: "_95eed80ab9efd24c",
-    C: "_4a255e8291ec8ce4",
-    _5: "_51cd392c72b80647",
+    MZ: "planSelectStep__65b48",
+    xK: "externalErrorBlock__65b48",
+    MR: "helpMessageWrapper__65b48",
+    wV: "footerRight__65b48",
+    uA: "backStep__65b48",
+    C: "copy__65b48",
+    _5: "loadingWrapper__65b48",
 };

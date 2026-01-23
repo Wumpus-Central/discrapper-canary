@@ -1,6 +1,6 @@
 r.exports = {
-    kL: "_3bcf5cd8d37705f8",
-    DT: "f3d622a8a3af5680",
-    JW: "bc447807384344e1",
-    Lw: "cd81d3eb95813343",
+    kL: "container_a88956",
+    DT: "backgroundSvg_a88956",
+    JW: "svg_a88956",
+    Lw: "overlay_a88956",
 };

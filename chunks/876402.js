@@ -1,4 +1,4 @@
 e.exports = {
-    i: "_470569a07fb6818a",
-    b: "eb9967ecb6c813b0",
+    i: "wrapper__946ec",
+    b: "closeButton__946ec",
 };

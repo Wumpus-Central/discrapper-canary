@@ -1,4 +1,4 @@
-e.exports = {
-    H: "edb38eac92202bbf",
-    u: "_8f159776ffac856c",
+i.exports = {
+    H: "giftOptionContainer__39090",
+    u: "cardsRow__39090",
 };

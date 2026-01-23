@@ -1,5 +1,5 @@
 e.exports = {
-    BQ: "a974c94350692c9f",
-    Vt: "a509e95c8a857fb4",
-    yM: "_58533646fd673bef",
+    BQ: "advancedModeDivider__4914c",
+    Vt: "advancedTitle__4914c",
+    yM: "titleCaret__4914c",
 };

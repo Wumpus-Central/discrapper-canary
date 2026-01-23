@@ -1,4 +1,4 @@
 e.exports = {
-    dc: "_545bd11565d82503",
-    jK: "_7d52406ad9ff119a",
+    dc: "spinnerContainer__6efa2",
+    jK: "emptyArt__6efa2",
 };

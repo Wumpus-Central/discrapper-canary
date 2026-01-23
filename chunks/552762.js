@@ -1,7 +1,7 @@
 e.exports = {
-    rV: "aec815b5193d832a",
-    bF: "_2fc7d8be8104ad2a",
-    n5: "_8fc8ea5805958984",
-    C9: "_25c87ff46d6f409e",
-    YD: "e69cc337503ddb2d",
+    rV: "getXboxApp__7ba5f",
+    bF: "getXboxAppBody__7ba5f",
+    n5: "getXboxAppHeading__7ba5f",
+    C9: "getXboxAppQR__7ba5f",
+    YD: "xboxLogoBox__7ba5f",
 };

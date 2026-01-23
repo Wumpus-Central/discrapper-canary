@@ -1,3 +1,3 @@
 e.exports = {
-    u: "_342bd892810607f2",
+    u: "closeIcon__4f15b",
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    YK: "_25964d3a2bc4ab57",
-    Nr: "_3387229982e7c52e _25964d3a2bc4ab57",
+    YK: "spacing_a959b1",
+    Nr: "card_a959b1 spacing_a959b1",
 };

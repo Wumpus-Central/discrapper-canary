@@ -1,4 +1,4 @@
 e.exports = {
-    r: "_9c1985752dc5cfa5",
-    M: "_6b0372e576066148",
+    r: "dismissButton_dd40b0",
+    M: "dismissIcon_dd40b0",
 };

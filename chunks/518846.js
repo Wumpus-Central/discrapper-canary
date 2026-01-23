@@ -1,4 +1,4 @@
 e.exports = {
-    R: "eca33d34f7fe824e",
-    Q: "_4a79e3e78a5cfd99",
+    R: "nitroRewardTileAssetContainer_a92e89",
+    Q: "nitroRewardTileAsset_a92e89",
 };

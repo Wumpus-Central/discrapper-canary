@@ -1,4 +1,4 @@
 e.exports = {
-    Ix: "b1af84ff3da529aa",
-    GC: "_8733b2927c414268",
+    Ix: "channel__427f0",
+    GC: "buttonGroup__427f0",
 };

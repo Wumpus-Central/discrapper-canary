@@ -1,3 +1,3 @@
 e.exports = {
-    B: "_91a483dccfa63683",
+    B: "slideContainer__01ce3",
 };

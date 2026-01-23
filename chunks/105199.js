@@ -1,4 +1,4 @@
 e.exports = {
-    Y: "_5a4d78a0dea75cde",
-    Q: "a27b70999f29b3d7",
+    Y: "oauth2PageWrapper__647f0",
+    Q: "oauth2PageContent__647f0",
 };

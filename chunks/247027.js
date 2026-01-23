@@ -1,3 +1,3 @@
 t.exports = {
-    L: "e68ed9069fe67afa",
+    L: "confettiCanvas__6c43c",
 };

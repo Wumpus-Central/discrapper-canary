@@ -1,3 +1,3 @@
 e.exports = {
-    C: "e45d8fc861e69498",
+    C: "ticketIcon__0557e",
 };

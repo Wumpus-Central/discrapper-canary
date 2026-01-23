@@ -1,10 +1,10 @@
 e.exports = {
-    vk: "e15a7ce60cf87c8d",
-    pq: "_84cc605d9a83fc52",
-    n8: "f4cadc203f009e51",
-    GI: "eea24a14f7b3ccf1",
-    os: "_4ef8a381f8a33d9d",
-    Pc: "_2f48b7b446488856",
-    oE: "d7007e1959c05818",
-    Cr: "_4a719876bb5964fb",
+    vk: "clickable__2debe",
+    pq: "info__2debe",
+    n8: "line__2debe",
+    GI: "appArch__2debe",
+    os: "os__2debe",
+    Pc: "versionHash__2debe",
+    oE: "compact__2debe",
+    Cr: "compactInfo__2debe",
 };

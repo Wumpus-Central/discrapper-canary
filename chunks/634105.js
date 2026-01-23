@@ -1,10 +1,10 @@
 e.exports = {
-    N4: "_8428192b9bc24855",
-    Kk: "_3d4c5bb28e36ca4a",
-    as: "_7bcb3af067fe0a2d",
-    EX: "_688d393e640f4e54",
-    SO: "_09ddaca097ba1a04",
-    _r: "_677f6452d427d27f",
-    cG: "b4de244dfcdc7f7f",
-    QU: "cb5781f8ec92eff9",
+    N4: "note__2ef07",
+    Kk: "icon__2ef07",
+    as: "large__2ef07",
+    EX: "small__2ef07",
+    SO: "colorWarning__2ef07",
+    _r: "colorError__2ef07",
+    cG: "colorPrimary__2ef07",
+    QU: "colorSecondary__2ef07",
 };

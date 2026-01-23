@@ -1,6 +1,6 @@
 e.exports = {
-    kL: "_560454de6ecf6429",
-    v9: "dabab3da8fa9a86b",
-    KJ: "_1f2a7fa721257f9a",
-    rx: "_6359fcf2037c2ddb",
+    kL: "container__87dda",
+    v9: "placeholderItem__87dda",
+    KJ: "chatTextAreaPlaceholder__87dda",
+    rx: "appLauncherPlaceholder__87dda",
 };

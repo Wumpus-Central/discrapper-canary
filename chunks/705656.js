@@ -1,4 +1,4 @@
 t.exports = {
-    kL: "_7963fe2d849d6c7d",
-    qr: "_474179f3f9bb8306",
+    kL: "container_ca98d9",
+    qr: "footer_ca98d9",
 };

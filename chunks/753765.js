@@ -1,5 +1,5 @@
 e.exports = {
-    kL: "_53f0d7dcedd04f5f",
-    MT: "_5e355eba7559be6c",
-    UE: "_70347610b848d7c1",
+    kL: "container__74f90",
+    MT: "enableCard__74f90",
+    UE: "arrow__74f90",
 };

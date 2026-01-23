@@ -1,3 +1,3 @@
 e.exports = {
-    K: "_31bd7181e69e5dc0",
+    K: "icon_a9c2d1",
 };

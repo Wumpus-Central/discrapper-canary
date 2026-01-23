@@ -1,6 +1,6 @@
 e.exports = {
-    Rc: "_72b85716fee132f6",
-    XG: "d34b8a7e07994b06",
-    vi: "_0ff05e737d70caec",
-    _s: "_090ddba676271a36",
+    Rc: "carouselMaxWidth_b8429c",
+    XG: "scroller_b8429c",
+    vi: "tierPreviewsContainer_b8429c",
+    _s: "tierPreviews_b8429c",
 };

@@ -1,6 +1,6 @@
 t.exports = {
-    g4: "_30105cc700be08b9",
-    S3: "_06da1bd1f46e51e7",
-    pt: "f5d8110fa428aa76",
-    j7: "d594defc958f1085",
+    g4: "loadingContainer_f3bc7c",
+    S3: "giftSentToGameNoticeContainerPadding_f3bc7c",
+    pt: "customGiftMessage_f3bc7c",
+    j7: "giftSenderText_f3bc7c",
 };

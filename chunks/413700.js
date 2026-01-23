@@ -1,9 +1,9 @@
 e.exports = {
-    lj: "_914e4a549733c6c8",
-    x6: "d10ae60a82e375b2 _914e4a549733c6c8",
-    p8: "_6cde63ce8c6d1e3e",
-    Nr: "_3f0b3ebeebcd0819 _914e4a549733c6c8",
-    p_: "c3c66ad4df252fbc",
-    q8: "b3cf3cc1bd958ed1",
-    dw: "_4df63b1a4de66658",
+    lj: "elevated__3f12a",
+    x6: "button__3f12a elevated__3f12a",
+    p8: "buttonTitle__3f12a",
+    Nr: "card__3f12a elevated__3f12a",
+    p_: "cardContents__3f12a",
+    q8: "cardAccentLeft__3f12a",
+    dw: "cardAccentRight__3f12a",
 };

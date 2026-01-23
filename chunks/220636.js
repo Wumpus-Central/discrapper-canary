@@ -1,5 +1,5 @@
 e.exports = {
-    MK: "d3c087054ba4f412",
-    Eq: "_6d0a9b0fc8d2a1e4",
-    CO: "_3b2115e92b70fd30",
+    MK: "menu__43313",
+    Eq: "customMenuItem__43313",
+    CO: "customNotches__43313",
 };

@@ -1,10 +1,10 @@
 e.exports = {
-    Cg: "f7bf85a8ca1f50e3",
-    k1: "_68615bd0d634065c",
-    wC: "_3e1df4113e4fea34",
-    tp: "_4cc25adff64fd87a",
-    wx: "_2e4abbeedbc2d0fe",
-    nM: "_5ac0b86de11f3108",
-    uR: "_4f571d323c9a5b78",
-    ah: "a178e06b83c5afaa",
+    Cg: "tierNameColumn_e431b0",
+    k1: "priceColumn_e431b0",
+    wC: "subscribersColumn_e431b0",
+    tp: "table_e431b0",
+    wx: "header_e431b0",
+    nM: "row_e431b0",
+    uR: "tierNameCell_e431b0",
+    ah: "tierImage_e431b0",
 };

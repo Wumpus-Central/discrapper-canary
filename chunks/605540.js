@@ -1,8 +1,8 @@
 e.exports = {
-    wx: "_34cb375534e3ad44",
-    Vg: "_2aff9b4538c3333d",
-    kL: "_8b64cca6697ca3d3",
-    UE: "_5f3ae70ea5fad6b2",
-    Kk: "c248d3cb61af59bd",
-    Qq: "bccfa87927bbffd7",
+    wx: "header_a14595",
+    Vg: "grid_a14595",
+    kL: "container_a14595",
+    UE: "arrow_a14595",
+    Kk: "icon_a14595",
+    Qq: "text_a14595",
 };

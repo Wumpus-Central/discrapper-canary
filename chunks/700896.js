@@ -1,4 +1,4 @@
 e.exports = {
-    r: "_1928c52337192758",
-    a: "_619bb0362c097415",
+    r: "finePrintWithOverheadSeparator_df7724",
+    a: "finePrint_df7724",
 };

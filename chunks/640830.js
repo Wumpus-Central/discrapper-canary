@@ -1,10 +1,10 @@
 e.exports = {
-    kL: "_87e357720af90a99",
-    $g: "_51464ad96e5f1f47",
-    PG: "_1c26263a55b37996",
-    Yi: "dc53919857f51f63",
-    RC: "_5674f1180cd7d254",
-    h$: "c5d41f1a829637b3",
-    Nu: "ce0f5d10a384a62e",
-    LH: "_66810534febc31f9",
+    kL: "container__7a78a",
+    $g: "sizeMedium__7a78a",
+    PG: "sizeSmall__7a78a",
+    Yi: "placeholderDetailsCard__7a78a",
+    RC: "placeholderText__7a78a",
+    h$: "placeholderBar__7a78a",
+    Nu: "placeholderCoverGrid__7a78a",
+    LH: "placeholderCover__7a78a",
 };

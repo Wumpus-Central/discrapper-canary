@@ -1,3 +1,3 @@
 e.exports = {
-    X: "c35abbd1179cba6c",
+    X: "interactionInfoMenuItem_e1195d",
 };

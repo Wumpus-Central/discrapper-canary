@@ -1,9 +1,9 @@
 e.exports = {
-    KQ: "e38dc7c7065e2e17",
-    m4: "_2b24017f40518d39",
-    TP: "d4d7dc287b688c14",
-    P7: "_72129bf7a62f1118",
-    ai: "_41b8569e81e1e961",
-    yZ: "e31fef3674f36375",
-    y7: "_0426ad7344e93b90",
+    KQ: "messagesPopoutWrap__0aee3",
+    m4: "messagesPopout__0aee3",
+    TP: "messagesGroupHeaderWrap__0aee3",
+    P7: "messagesGroupHeader__0aee3",
+    ai: "chevron__0aee3",
+    yZ: "collapsed__0aee3",
+    y7: "emptyStateContainer__0aee3",
 };

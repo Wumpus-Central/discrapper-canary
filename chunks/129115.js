@@ -1,4 +1,4 @@
 t.exports = {
-    h: "_3259ec76e7b1e6d4",
-    c: "b9e7995af27fdda0",
+    h: "description_c524f4",
+    c: "reset_c524f4",
 };

@@ -1,3 +1,3 @@
 e.exports = {
-    U: "f11821d2fc992965",
+    U: "warningContainer__98bed",
 };

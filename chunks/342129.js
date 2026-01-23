@@ -1,3 +1,3 @@
 e.exports = {
-    a: "fc6e74cfdd72930c",
+    a: "soundButton_d9cf5f",
 };

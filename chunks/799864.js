@@ -1,8 +1,8 @@
 e.exports = {
-    D$: "_858a189d353d2da2",
-    iu: "_8d11703bc2dd37b6",
-    fS: "_3cc3b9727ca0f31b _8d11703bc2dd37b6",
-    n1: "f6ef93b18d8f2211",
-    nn: "d7a2d1757bb54d3b fallbackImage _8d11703bc2dd37b6",
-    vM: "_5800b300bbd90f67",
+    D$: "similarGames_a02225",
+    iu: "similarGameImageWrapper_a02225",
+    fS: "similarGameImageClickable_a02225 similarGameImageWrapper_a02225",
+    n1: "similarGameImage_a02225",
+    nn: "loadingArtwork_a02225 fallbackImage similarGameImageWrapper_a02225",
+    vM: "loadingHeading_a02225",
 };

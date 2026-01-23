@@ -1,5 +1,5 @@
 e.exports = {
-    kL: "_2ef38d73a94706a1",
-    wx: "_06b782b5c5fcaff3",
-    uk: "eb74e4d987cb09e6",
+    kL: "container__2c3b4",
+    wx: "header__2c3b4",
+    uk: "upsellsContainer__2c3b4",
 };

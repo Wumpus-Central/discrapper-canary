@@ -1,4 +1,4 @@
 e.exports = {
-    i: "_7f00515538d9036d",
-    V: "_59ee23134d5a8500",
+    i: "wrapper__686ce",
+    V: "subtitle__686ce",
 };

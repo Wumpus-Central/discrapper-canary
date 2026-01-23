@@ -1,5 +1,5 @@
 e.exports = {
-    hI: "_1aa709f185e295e6",
-    Jt: "_6b7637235bf75cc0",
-    Eb: "_76ae2b48351bacfd",
+    hI: "localizedName_e42467",
+    Jt: "flag_e42467",
+    Eb: "flagImage_e42467",
 };

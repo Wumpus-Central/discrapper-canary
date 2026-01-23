@@ -1,9 +1,9 @@
 e.exports = {
-    kZ: "af714e0bd50a04d3",
-    BN: "_37fc4f18dd4e37d5",
-    yJ: "e1e31b142966aa4d",
-    Nr: "a4d3aeaf3a019f0d",
-    $L: "_429bbeee92717c16",
-    wG: "_9b32141bf6e43348",
-    dj: "_5b0e18eac65ff609",
+    kZ: "draggable__55bab",
+    BN: "moreContainer__55bab",
+    yJ: "audienceContainer__55bab",
+    Nr: "audienceContainerCollapsed__55bab",
+    $L: "audienceIconContainer__55bab",
+    wG: "audienceIcon__55bab",
+    dj: "userAvatar__55bab",
 };

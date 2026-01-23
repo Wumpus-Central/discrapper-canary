@@ -1,3 +1,3 @@
 e.exports = {
-    Y: "_589e5d50921bc7b6",
+    Y: "legacyInputCommandHeader__38272",
 };

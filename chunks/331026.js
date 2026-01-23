@@ -1,10 +1,10 @@
 e.exports = {
-    Hu: "_7ac18573b7277fce",
-    Vl: "ab5619d842574d13",
-    BU: "c9ecfbbe0cbe5e12",
-    XA: "_693aa0e1126b4a52 ab5619d842574d13",
-    UE: "cb935d479255430e",
-    Hf: "_665cc7a4c0c6ce3c",
-    t1: "e3c9a42170184470 _665cc7a4c0c6ce3c",
-    XS: "dfcfcbcf2be5ff9f _665cc7a4c0c6ce3c",
+    Hu: "alignCenter__31873",
+    Vl: "alignLeft__31873",
+    BU: "horizontalPaginationItemContainer__31873",
+    XA: "verticalPaginationItemContainer__31873 alignLeft__31873",
+    UE: "arrow__31873",
+    Hf: "arrowContainer__31873",
+    t1: "prevButtonContainer__31873 arrowContainer__31873",
+    XS: "nextButtonContainer__31873 arrowContainer__31873",
 };

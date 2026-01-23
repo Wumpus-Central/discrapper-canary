@@ -1,3 +1,3 @@
 e.exports = {
-    v: "_84d4e63c73c8a065",
+    v: "clickable_faf576",
 };

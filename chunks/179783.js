@@ -1,5 +1,5 @@
 e.exports = {
-    BQ: "e79ed3935e42e4e0",
-    BB: "_1ab3633d3c2b8af3",
-    b: "bc7bdb0f6087fb08",
+    BQ: "sharePromptContainer__56d6c",
+    BB: "sharePromptContent__56d6c",
+    b: "closeButton__56d6c",
 };

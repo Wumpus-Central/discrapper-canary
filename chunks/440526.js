@@ -1,4 +1,4 @@
 e.exports = {
-    I: "d4b36f0bcba2c5ed",
-    e: "b053a1d00bddb613",
+    I: "applicationIcon_c4891f",
+    e: "seasonalIcon_c4891f",
 };

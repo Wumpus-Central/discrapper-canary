@@ -1,3 +1,3 @@
 e.exports = {
-    M: "_7db8792687fdadeb",
+    M: "clipPill_d762d7",
 };

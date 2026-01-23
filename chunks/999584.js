@@ -1,3 +1,3 @@
 e.exports = {
-    Gt: "_60142111e284ad66",
+    Gt: "gameIcon__5a366",
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    E1: "_51ec33be51865f47",
-    j3: "_447ba3b4d2cfc655",
+    E1: "chevronButton__5ae61",
+    j3: "chevronButtonContent__5ae61",
 };

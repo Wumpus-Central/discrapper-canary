@@ -1,4 +1,4 @@
-e.exports = {
-    ym: "_2c795710feac7dd5",
-    gH: "_1489a19fde96dddf",
+i.exports = {
+    ym: "premiumBrandRefreshTier0Card__9e160",
+    gH: "narrowLayout__9e160",
 };

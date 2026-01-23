@@ -1,4 +1,4 @@
 e.exports = {
-    Q: "_0781c338df7ee9fc",
-    Y: "cf1c421363e4d951",
+    Q: "effect_a9ddb3",
+    Y: "effectsWrapper_a9ddb3",
 };

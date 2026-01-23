@@ -1,5 +1,5 @@
 e.exports = {
-    l8: "abda95a14a4a67dd",
-    XG: "b9f518e21b8b2ae7",
-    KA: "_1597e0728b406855",
+    l8: "optionHeader__1f657",
+    XG: "scroller__1f657",
+    KA: "templatesList__1f657",
 };

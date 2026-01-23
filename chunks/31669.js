@@ -1,4 +1,4 @@
 e.exports = {
-    Eh: "_7e1162e2474fc063",
-    Nr: "cb50a2827f30ec98",
+    Eh: "mainLoginContainer__86e92",
+    Nr: "card__86e92",
 };

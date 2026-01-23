@@ -1,5 +1,5 @@
 e.exports = {
-    Im: "_316809564b829314",
-    fi: "_7e700a655fc6ab95",
-    Rl: "_5bfbadd2e80b8513",
+    Im: "twoColumnContainer_ee84e7",
+    fi: "column_ee84e7",
+    Rl: "profileViewDisabled_ee84e7",
 };

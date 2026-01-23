@@ -1,5 +1,5 @@
 e.exports = {
-    U5: "_8af4817ebce7ffa5",
-    $f: "_9e35574a568d8b69",
-    YS: "_79a1e86b5e3767fa",
+    U5: "inviteInfo__29497",
+    $f: "guildIcon__29497",
+    YS: "guildNameContainer__29497",
 };

@@ -1,7 +1,7 @@
 e.exports = {
-    Yb: "_9bf2eac13374bea6",
-    Sv: "_4a59a0952a75ee20",
-    qr: "_6e16acb65eb1934e",
-    z8: "eec48464d4e343ba",
-    hz: "b6c8f26e4e6ab6bc",
+    Yb: "paymentSourceRow__0eeee",
+    Sv: "subText__0eeee",
+    qr: "footer__0eeee",
+    z8: "footerContent__0eeee",
+    hz: "lockIcon__0eeee",
 };

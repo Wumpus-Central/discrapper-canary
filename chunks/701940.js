@@ -1,5 +1,5 @@
 e.exports = {
-    nd: "_274643a4dd381d35",
-    yF: "bfae0f316c685cd1",
-    gs: "_8ddafbf7a871ac39",
+    nd: "panel__9d40d",
+    yF: "divider__9d40d",
+    gs: "inGameNuxContainer__9d40d",
 };

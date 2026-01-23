@@ -1,6 +1,6 @@
 e.exports = {
-    lP: "_8c1a3719b0a83b9d",
-    yJ: "_5898e74bf4330cb9",
-    Wx: "a03c359c5304b266",
-    w9: "_8963a9d412d0d4d2",
+    lP: "countDownWrapper__46b37",
+    yJ: "mobileWrapper__46b37",
+    Wx: "countdownLabel__46b37",
+    w9: "countdownBody__46b37",
 };

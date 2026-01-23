@@ -1,6 +1,6 @@
 e.exports = {
-    ON: "_894a69f06af85416",
-    qc: "d5232177f3163454",
-    j8: "_2a079347ab933f88",
-    Nz: "_551a2b5f2f5256cb",
+    ON: "searchBar__824d3",
+    qc: "searchIcon__824d3",
+    j8: "searchIconContainerHidden__824d3",
+    Nz: "searchFloating__824d3",
 };

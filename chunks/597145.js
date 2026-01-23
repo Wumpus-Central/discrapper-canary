@@ -1,6 +1,6 @@
 e.exports = {
-    bK: "c2b7e06da1c2c44d",
-    f8: "_93bf8bbf5de3fb3a",
-    kf: "c74f87dfba168386",
-    jV: "_026a05a231c2ad95",
+    bK: "perkRow_c609c8",
+    f8: "perkIconContainer_c609c8",
+    kf: "perkIcon_c609c8",
+    jV: "perkDescription_c609c8",
 };

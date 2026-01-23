@@ -1,7 +1,7 @@
 e.exports = {
-    T7: "_89d794887097c6b1",
-    Dk: "_99cf945ed48d658f",
-    AS: "d0edfcfbc2d8911e",
-    SF: "fa627354c295c7ba d0edfcfbc2d8911e",
-    R9: "d08711a4b1aeaca4",
+    T7: "singleItemWrapper_ed6d69",
+    Dk: "carousel_ed6d69",
+    AS: "item_ed6d69",
+    SF: "singleItem_ed6d69 item_ed6d69",
+    R9: "viewport_ed6d69",
 };

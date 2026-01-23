@@ -1,3 +1,3 @@
 e.exports = {
-    E: "ad7d3ccfb44660eb",
+    E: "colorPicker__69f5f",
 };

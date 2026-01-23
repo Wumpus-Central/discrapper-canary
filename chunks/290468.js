@@ -1,3 +1,3 @@
 e.exports = {
-    k: "_66e9f4e798209950",
+    k: "checkbox_cc7654",
 };

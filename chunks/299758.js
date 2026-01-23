@@ -1,5 +1,5 @@
 e.exports = {
-    iE: "fc6218fdcbab4165",
-    Kk: "_43c2ffa030d9625c",
-    pq: "cc70a2c56a7a29fa",
+    iE: "wrapper__834f5",
+    Kk: "icon__834f5",
+    pq: "info__834f5",
 };

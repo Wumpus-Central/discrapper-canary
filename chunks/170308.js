@@ -1,5 +1,5 @@
 e.exports = {
-    kL: "f69186be397fdb82",
-    hQ: "_7e38b258552bc88e",
-    RH: "_0a72dab2e80f02aa",
+    kL: "container__15b9a",
+    hQ: "contentContainer__15b9a",
+    RH: "footerHeader__15b9a",
 };

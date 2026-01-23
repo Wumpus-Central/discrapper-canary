@@ -1,3 +1,3 @@
 t.exports = {
-    u: "_1ba370f197c5c517",
+    u: "spinner__9ae4f",
 };

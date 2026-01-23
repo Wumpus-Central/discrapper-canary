@@ -1,8 +1,8 @@
 e.exports = {
-    ij: "_83bd328d1ab5c1f7",
-    NY: "a46d4e3e93031f56",
-    FU: "a18fc4d975baaa08",
-    i7: "_61a086876e5b4f2c",
-    Pc: "_430ab5bf63bc2756",
-    rM: "e17e51b14c9b569a",
+    ij: "wishlistButton__979b1",
+    NY: "disabledButton__979b1",
+    FU: "withHover__979b1",
+    i7: "normalIconColor__979b1",
+    Pc: "wishlistedOrHoveredIconColor__979b1",
+    rM: "disabledIconColor__979b1",
 };

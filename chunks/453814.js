@@ -1,4 +1,4 @@
 e.exports = {
-    Q: "_259071db68b8e21d",
-    a: "_79d4ae888ec72ce0",
+    Q: "sectionsContainer__722a8",
+    a: "nitroWheel__722a8",
 };

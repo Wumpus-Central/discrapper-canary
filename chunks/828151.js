@@ -1,5 +1,5 @@
 e.exports = {
-    XG: "_83d485c0512fc44e",
-    D$: "_0a44866d047a07e8",
-    Y7: "cf8b411747810188",
+    XG: "scroller__28fdc",
+    D$: "friendsLoadingItem__28fdc",
+    Y7: "guildsLoadingItem__28fdc",
 };

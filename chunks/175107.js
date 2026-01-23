@@ -1,4 +1,4 @@
 e.exports = {
-    L: "d0b85f662d5ca51d",
-    p: "c443b4bd6de97660",
+    L: "category__3ddc0",
+    p: "channelIcon__3ddc0",
 };

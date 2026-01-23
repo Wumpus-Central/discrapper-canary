@@ -1,3 +1,3 @@
 e.exports = {
-    a: "_6ad2c73af32e7221",
+    a: "emptyCard__0a9e8",
 };

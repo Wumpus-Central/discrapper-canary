@@ -1,5 +1,5 @@
 e.exports = {
-    Nr: "cb77e45422564b86",
-    wx: "_444e2c560ed1e862",
-    UD: "_16c039d91465bd91",
+    Nr: "card__2eab1",
+    wx: "header__2eab1",
+    UD: "buttonContainer__2eab1",
 };

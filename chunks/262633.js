@@ -1,5 +1,5 @@
 e.exports = {
-    pG: "_746416afa2a34a70",
-    TR: "_7b190b94e511b20b",
-    kb: "fcf74891def2fa8b",
+    pG: "right__89d2b",
+    TR: "down__89d2b",
+    kb: "left__89d2b",
 };

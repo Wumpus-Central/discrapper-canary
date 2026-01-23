@@ -1,10 +1,10 @@
 e.exports = {
-    Ql: "_8a9192a43a63fac9",
-    VG: "_213a95a3ec801898",
-    dn: "_4d5027926ec1c611",
-    P6: "_251014318258c35b",
-    rf: "_2a0fc7496a9e9937",
-    bf: "_47a95f6282c644e4",
-    Gt: "e2b84a3c21204d7a",
-    G3: "_015d926f02bb649b",
+    Ql: "nowPlayingNotification__81a05",
+    VG: "nowPlayingNotificationAnimationWrapper__81a05",
+    dn: "nowPlayingNotificationContainer__81a05",
+    P6: "nowPlayingNotificationWrapper__81a05",
+    rf: "body__81a05",
+    bf: "nowPlayingNotificationIcon__81a05",
+    Gt: "gameIcon__81a05",
+    G3: "bodyText__81a05",
 };

@@ -1,5 +1,5 @@
 e.exports = {
-    kL: "_9986152154554be2",
-    $H: "_9acad7fb8c2195a1",
-    YU: "d5656b76314a8749",
+    kL: "container_d1d9f3",
+    $H: "tabBar_d1d9f3",
+    YU: "tabBarItem_d1d9f3",
 };

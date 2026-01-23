@@ -1,3 +1,3 @@
 e.exports = {
-    T3: "bad388d83331e790",
+    T3: "customCursors__90b04",
 };

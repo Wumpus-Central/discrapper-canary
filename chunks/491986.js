@@ -1,7 +1,7 @@
 e.exports = {
-    kL: "e9113b21ef31299d",
-    Qs: "_185f66d3c3dfe0ae",
-    j0: "b9a939bc419852a2",
-    Zd: "_85591833c75b66b2",
-    fh: "e872699e41ca43b4",
+    kL: "container_a154bf",
+    Qs: "content_a154bf",
+    j0: "splashImage_a154bf",
+    Zd: "splashHeader_a154bf",
+    fh: "splashText_a154bf",
 };

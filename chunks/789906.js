@@ -1,4 +1,4 @@
 e.exports = {
-    i: "_6f61039822356173",
-    f: "b498e3b59a9ae9b3",
+    i: "wrapper__63f6b",
+    f: "column__63f6b",
 };

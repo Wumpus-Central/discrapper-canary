@@ -1,7 +1,7 @@
 e.exports = {
-    rt: "_662bfceb4771746b",
-    uH: "_2a3b0b4f75f6fd15",
-    iE: "b7c181dda3902166",
-    UD: "_19247397d3cc779d",
-    qi: "_238295e837c6f184",
+    rt: "eventPromptsContainer__1405b",
+    uH: "controlButton__1405b",
+    iE: "wrapper__1405b",
+    UD: "buttonContainer__1405b",
+    qi: "buttonSection__1405b",
 };

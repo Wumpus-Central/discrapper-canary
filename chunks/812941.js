@@ -1,7 +1,7 @@
 e.exports = {
-    sA: "cf5005afb3f0d46e",
-    b: "f31f77237a4feb44",
-    Dd: "_29675796d6dd981f",
-    wx: "_845b84b4a05ab832",
-    mv: "bfc5546bbe1ceb28",
+    sA: "modalHeaderCustomGift_b54a5b",
+    b: "closeButton_b54a5b",
+    Dd: "closeButtonInner_b54a5b",
+    wx: "header_b54a5b",
+    mv: "headerAnimation_b54a5b",
 };

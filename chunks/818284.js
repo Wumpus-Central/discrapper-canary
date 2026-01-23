@@ -1,4 +1,4 @@
 e.exports = {
-    Q: "_048befb1b3d3021a",
-    x: "_613b4835ff0f1e26",
+    Q: "content__6e5a0",
+    x: "cancelButton__6e5a0",
 };

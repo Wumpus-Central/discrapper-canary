@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => b,
+    A: () => _,
 });
 var r = n(627968),
     i = n(64700),
@@ -11,140 +11,142 @@ var r = n(627968),
     u = n(787523),
     d = n(69175),
     p = n(652215),
-    f = n(985018),
-    h = n(388756);
-let A = [
+    h = n(985018),
+    g = n(388756);
+let f = [
         {
             feature: p.x0t.SINGLE_PLAYER,
-            getText: () => f.intl.string(f.t["V+/FjO"]),
-            getTooltip: () => f.intl.string(f.t["w+X9sT"]),
+            getText: () => h.intl.string(h.t["V+/FjO"]),
+            getTooltip: () => h.intl.string(h.t["w+X9sT"]),
             IconComponent: a.nys,
         },
         {
             feature: p.x0t.LOCAL_MULTIPLAYER,
-            getText: () => f.intl.string(f.t.srnWru),
-            getTooltip: () => f.intl.string(f.t.sDdLWA),
+            getText: () => h.intl.string(h.t.srnWru),
+            getTooltip: () => h.intl.string(h.t.sDdLWA),
             IconComponent: a.nFg,
         },
         {
             feature: p.x0t.ONLINE_MULTIPLAYER,
-            getText: () => f.intl.string(f.t.xPHbgA),
-            getTooltip: () => f.intl.string(f.t.g6kR4D),
+            getText: () => h.intl.string(h.t.xPHbgA),
+            getTooltip: () => h.intl.string(h.t.g6kR4D),
             IconComponent: a.nFg,
         },
         {
             feature: p.x0t.PVP,
-            getText: () => f.intl.string(f.t.qhgwxx),
-            getTooltip: () => f.intl.string(f.t["5jGrhN"]),
+            getText: () => h.intl.string(h.t.qhgwxx),
+            getTooltip: () => h.intl.string(h.t["5jGrhN"]),
             IconComponent: a.quN,
         },
         {
             feature: p.x0t.LOCAL_COOP,
-            getText: () => f.intl.string(f.t.FqbalJ),
-            getTooltip: () => f.intl.string(f.t.vIgDgd),
+            getText: () => h.intl.string(h.t.FqbalJ),
+            getTooltip: () => h.intl.string(h.t.vIgDgd),
             IconComponent: a.nFg,
         },
         {
             feature: p.x0t.ONLINE_COOP,
-            getText: () => f.intl.string(f.t.lDHO4Y),
-            getTooltip: () => f.intl.string(f.t.VXDphs),
+            getText: () => h.intl.string(h.t.lDHO4Y),
+            getTooltip: () => h.intl.string(h.t.VXDphs),
             IconComponent: a.nFg,
         },
         {
             feature: p.x0t.CROSS_PLATFORM,
-            getText: () => f.intl.string(f.t.SWo2Hf),
-            getTooltip: () => f.intl.string(f.t.ll2wzY),
+            getText: () => h.intl.string(h.t.SWo2Hf),
+            getTooltip: () => h.intl.string(h.t.ll2wzY),
             IconComponent: a.fNY,
         },
         {
             feature: p.x0t.RICH_PRESENCE,
-            getText: () => f.intl.string(f.t.PVSVtI),
-            getTooltip: () => f.intl.string(f.t.O6Yp4d),
+            getText: () => h.intl.string(h.t.PVSVtI),
+            getTooltip: () => h.intl.string(h.t.O6Yp4d),
             IconComponent: u.A,
         },
         {
             feature: p.x0t.DISCORD_GAME_INVITES,
-            getText: () => f.intl.string(f.t.agm68P),
-            getTooltip: () => f.intl.string(f.t.kS2vFN),
+            getText: () => h.intl.string(h.t.agm68P),
+            getTooltip: () => h.intl.string(h.t.kS2vFN),
             IconComponent: c.A,
         },
         {
             feature: p.x0t.SPECTATOR_MODE,
-            getText: () => f.intl.string(f.t.ZtiU7w),
-            getTooltip: () => f.intl.string(f.t.kUtiKa),
+            getText: () => h.intl.string(h.t.ZtiU7w),
+            getTooltip: () => h.intl.string(h.t.kUtiKa),
             IconComponent: a.npA,
         },
         {
             feature: p.x0t.CONTROLLER_SUPPORT,
-            getText: () => f.intl.string(f.t.UlBQ8P),
-            getTooltip: () => f.intl.string(f.t.iG00jA),
+            getText: () => h.intl.string(h.t.UlBQ8P),
+            getTooltip: () => h.intl.string(h.t.iG00jA),
             IconComponent: a.LVO,
         },
         {
             feature: p.x0t.CLOUD_SAVES,
-            getText: () => f.intl.string(f.t.rOcNrD),
-            getTooltip: () => f.intl.string(f.t.kvw18E),
+            getText: () => h.intl.string(h.t.rOcNrD),
+            getTooltip: () => h.intl.string(h.t.kvw18E),
             IconComponent: o.A,
         },
         {
             feature: p.x0t.SECURE_NETWORKING,
-            getText: () => f.intl.string(f.t.GKFWL3),
-            getTooltip: () => f.intl.string(f.t.VudViJ),
+            getText: () => h.intl.string(h.t.GKFWL3),
+            getTooltip: () => h.intl.string(h.t.VudViJ),
             IconComponent: d.A,
         },
     ],
-    g = (e) => {
+    m = (e) => {
         let { IconComponent: t, text: n, tooltip: i } = e;
         return (0, r.jsxs)("div", {
-            className: h.nM,
+            className: g.nM,
             children: [
                 (0, r.jsx)(l.m, {
                     text: i,
                     children: (0, r.jsx)(t, {
-                        className: h.AD,
+                        className: g.AD,
                     }),
                 }),
                 (0, r.jsx)("span", {
-                    className: h.oo,
+                    className: g.oo,
                     children: n,
                 }),
                 (0, r.jsx)(a.A9s, {
                     size: "md",
                     color: "currentColor",
-                    className: h.$8,
+                    className: g.$8,
                 }),
             ],
         });
     };
-class m extends i.PureComponent {
+class A extends i.PureComponent {
     render() {
         let { sku: e } = this.props,
-            t = A.filter((t) => {
-                let { feature: n } = t;
-                return e.features.has(n);
-            }).map((e) => {
-                let { feature: t, IconComponent: n, getText: i, getTooltip: l } = e;
-                return (0, r.jsx)(
-                    g,
-                    {
-                        IconComponent: n,
-                        text: i(),
-                        tooltip: l(),
-                    },
-                    t,
-                );
-            });
+            t = f
+                .filter((t) => {
+                    let { feature: n } = t;
+                    return e.features.has(n);
+                })
+                .map((e) => {
+                    let { feature: t, IconComponent: n, getText: i, getTooltip: l } = e;
+                    return (0, r.jsx)(
+                        m,
+                        {
+                            IconComponent: n,
+                            text: i(),
+                            tooltip: l(),
+                        },
+                        t,
+                    );
+                });
         return 0 === t.length
             ? null
             : (0, r.jsxs)("div", {
-                  className: h.qT,
+                  className: g.qT,
                   children: [
                       (0, r.jsx)(s.A, {
-                          children: f.intl.string(f.t.XXENra),
+                          children: h.intl.string(h.t.XXENra),
                       }),
                       t,
                   ],
               });
     }
 }
-let b = m;
+let _ = A;

@@ -1,5 +1,5 @@
 t.exports = {
-    Hc: "d516b5b696313133",
-    jT: "bae49f3cb48682eb",
-    jE: "_14c209f05e45b517",
+    Hc: "modalHeader__2ecf4",
+    jT: "modalContainer__2ecf4",
+    jE: "modalContent__2ecf4",
 };

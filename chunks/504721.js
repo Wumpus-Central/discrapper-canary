@@ -1,4 +1,4 @@
 e.exports = {
-    M8: "_7a088928de672332",
-    kL: "d42cebac8b394463",
+    M8: "firstPromotionalAvatar__55414",
+    kL: "container__55414",
 };

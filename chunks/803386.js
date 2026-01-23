@@ -1,6 +1,6 @@
 e.exports = {
-    xA: "_2b11efdccb25612d",
-    iD: "_1e35fcc4062089c0",
-    fi: "_77fee0db2719b174",
-    N1: "bb7508b90764b846",
+    xA: "emojiSpriteImage_d982c2",
+    iD: "emojiLockIconContainer_d982c2",
+    fi: "emojiLockIcon_d982c2",
+    N1: "lockedEmoji_d982c2",
 };

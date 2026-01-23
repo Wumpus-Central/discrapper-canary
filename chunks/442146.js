@@ -1,4 +1,4 @@
 t.exports = {
-    K2: "_48d4e59336108f09",
-    ij: "_365ab8f2f0ca2f10",
+    K2: "actionText_b8ffc2",
+    ij: "descriptionText_b8ffc2",
 };

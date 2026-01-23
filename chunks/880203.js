@@ -1,3 +1,3 @@
 e.exports = {
-    s: "_1e86de334d3127ca",
+    s: "selectorHeading_a1294d",
 };

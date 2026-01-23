@@ -1,3 +1,3 @@
 e.exports = {
-    bI: "_2741a297651aa791",
+    bI: "countryFlagEmoji_b9da6a",
 };

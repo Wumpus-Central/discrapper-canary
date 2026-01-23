@@ -1,4 +1,4 @@
 e.exports = {
-    L: "e05bfe49f7bf3b67",
-    k: "_7b627d5664911a97",
+    L: "progressContainer__81ae5",
+    k: "downloadIcon__81ae5",
 };

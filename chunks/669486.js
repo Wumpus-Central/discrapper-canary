@@ -1,4 +1,4 @@
 e.exports = {
-    uX: "_811e0aaf69f1aff1",
-    gb: "a94dbfda52b3b776",
+    uX: "textButton__7b3e8",
+    gb: "iconButton__7b3e8",
 };

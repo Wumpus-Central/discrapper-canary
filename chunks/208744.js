@@ -1,8 +1,8 @@
 e.exports = {
-    wx: "e5187717fbdc6007",
-    g7: "_5720895772741d6b",
-    TK: "_420cb8266c75bde5",
-    Pf: "_972d0981da5ee9ed",
-    Xh: "eb136848402d2720",
-    Q2: "_9b24e4efceb985d4",
+    wx: "header__74994",
+    g7: "staffReviewHeader__74994",
+    TK: "headerText__74994",
+    Pf: "label__74994",
+    Xh: "username__74994",
+    Q2: "notes__74994",
 };

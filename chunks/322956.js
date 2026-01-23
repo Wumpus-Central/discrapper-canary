@@ -1,7 +1,7 @@
 e.exports = {
-    hQ: "_98e408abfc7f5a0d",
-    tE: "_1d4289c019dc80ab",
-    Qq: "ee374aa2d4cd82fc",
-    dD: "ed156775baec44bc",
-    R_: "_8525d4f076b7a638",
+    hQ: "contentContainer__665be",
+    tE: "rewardTileContainer__665be",
+    Qq: "rewardTile__665be",
+    dD: "copyContainer__665be",
+    R_: "heading__665be",
 };

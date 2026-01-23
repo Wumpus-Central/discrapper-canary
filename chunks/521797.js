@@ -1,5 +1,5 @@
 t.exports = {
-    lm: "f72214b83d4b3074",
-    xi: "_5b45f35518eefee0",
-    NP: "_344068a55e182792",
+    lm: "radioHeader__1347c",
+    xi: "commentContainer__1347c",
+    NP: "commentHeader__1347c",
 };

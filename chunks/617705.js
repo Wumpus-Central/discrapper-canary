@@ -1,6 +1,6 @@
 e.exports = {
-    $6: "de056dc69febb5fd",
-    H: "_273e2cabb7b4a9dc",
-    U_: "c8915ec707dcc0c8",
-    q3: "_3b9a51c90aec48b8",
+    $6: "attributionBannerContainer__7b5f3",
+    H: "avatarContainer__7b5f3",
+    U_: "bannerHeader__7b5f3",
+    q3: "bannerIcon__7b5f3",
 };

@@ -1,6 +1,6 @@
 e.exports = {
-    Fg: "_3f87780f150afabf",
-    N4: "_91341e88be80d0b4",
-    Hh: "d07d255e9ca031c6",
-    iD: "_0854c5ad10655d00",
+    Fg: "premiumTrialBadge_e4ef22",
+    N4: "backgroundGradient_e4ef22",
+    Hh: "premiumTrialAcknowledgedBadge_e4ef22",
+    iD: "BogoBadgeClockIcon_e4ef22",
 };

@@ -1,5 +1,5 @@
 e.exports = {
-    jP: "_2e7fae0752fe4dc2",
-    FG: "_1ac43bc7c7ace879",
-    xD: "_092285e7c95921a9",
+    jP: "drawerSizingWrapper__9c62c",
+    FG: "contentWrapper__9c62c",
+    xD: "slideContent__9c62c",
 };

@@ -1,3 +1,3 @@
 e.exports = {
-    uu: "_7d545597016ede3e",
+    uu: "actionButtons_cc1819",
 };

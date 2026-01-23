@@ -1,4 +1,4 @@
 e.exports = {
-    A: "_90c97ba67fcb8dc7",
-    v: "_0934ff6039740782",
+    A: "outer_ac6414",
+    v: "inner_ac6414",
 };

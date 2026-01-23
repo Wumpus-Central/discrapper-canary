@@ -1,7 +1,7 @@
 e.exports = {
-    iE: "_9323c4f910d3d15d",
-    iJ: "_355ce9eec2fa3f72",
-    q4: "bb5132caa608e716",
-    iQ: "_4dfb205dbe604f68",
-    oU: "_0888de289c23eda6",
+    iE: "wrapper__89573",
+    iJ: "innerWrapper__89573",
+    q4: "invisible__89573",
+    iQ: "descriptionContainer__89573",
+    oU: "nitroIcon__89573",
 };

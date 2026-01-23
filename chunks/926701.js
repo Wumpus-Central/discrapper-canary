@@ -1,4 +1,4 @@
 e.exports = {
-    r: "aedb9a056ac45742",
-    h: "_26f238e1aea1101c",
+    r: "body__949a0",
+    h: "description__949a0",
 };

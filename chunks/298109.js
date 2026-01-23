@@ -1,5 +1,5 @@
 e.exports = {
-    $H: "e86c6277f3c6e4ba",
-    YU: "a05937826eb69a6f",
-    HY: "_7eee1569b2b556d7",
+    $H: "tabBar_d6f9e9",
+    YU: "tabBarItem_d6f9e9",
+    HY: "guildTabBarItem_d6f9e9",
 };

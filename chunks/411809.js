@@ -1,8 +1,8 @@
 e.exports = {
-    EA: "_897662e9c5242c29",
-    vk: "fda2f4f2bee5948b",
-    _y: "da79589f203b41ab",
-    fW: "bcde41202dd1d0a5",
-    eg: "_0eeeb0c74d8fb8c2",
-    jw: "_3c0489780ebcdd89",
+    EA: "baseControlItem_dbfbe0",
+    vk: "clickable_dbfbe0",
+    _y: "baseControlItemLeadingElement_dbfbe0",
+    fW: "baseControlItemTrailingElements_dbfbe0",
+    eg: "baseControlItemTitle_dbfbe0",
+    jw: "baseControlItemContent_dbfbe0",
 };

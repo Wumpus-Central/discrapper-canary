@@ -1,6 +1,6 @@
 e.exports = {
-    MP: "_1665d7fd8892cffa",
-    aM: "c0f50b8eb63f6aca",
-    jU: "f256db6d39f378f1",
-    BI: "e631de340f6efecf",
+    MP: "itemCard__7e549",
+    aM: "emptyCard__7e549",
+    jU: "emptyHeader__7e549",
+    BI: "emptyText__7e549",
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    CJ: "dac2e2f744972396",
-    P4: "_47091a566d7e79d0",
+    CJ: "roleInputContainer_cfa6c7",
+    P4: "roleColorContainer_cfa6c7",
 };

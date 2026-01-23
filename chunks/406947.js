@@ -1,10 +1,10 @@
 e.exports = {
-    sp: "ce08bb2b8ba59fd5",
-    Ld: "_9c5f5bcb1edbdef3",
-    Im: "_02fe875c57b18d7d",
-    $I: "_66230254d7032c86",
-    U$: "_0f2d4747345e6c76",
-    B_: "_782278ecd20ec891",
-    ej: "_2bd5b6b351ad93cd",
-    mu: "_6ad03ecd42298fec",
+    sp: "cardContentsContainer_ed9c90",
+    Ld: "stepperContainer_ed9c90",
+    Im: "stepper_ed9c90",
+    $I: "mentionLimitContainer_ed9c90",
+    U$: "mentionLimitIconContainer_ed9c90",
+    B_: "mentionLimitIcon_ed9c90",
+    ej: "mentionLimitTextContainer_ed9c90",
+    mu: "descriptionHint_ed9c90",
 };

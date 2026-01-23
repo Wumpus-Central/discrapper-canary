@@ -1,4 +1,4 @@
 e.exports = {
-    K: "_5ace849fbfa00383",
-    R: "_9ace5455a00e0c3b",
+    K: "tooltipDescription_cd30d9",
+    R: "tooltipWordmark_cd30d9",
 };

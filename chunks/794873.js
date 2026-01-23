@@ -1,4 +1,4 @@
 e.exports = {
-    y: "d4b81804bc54b61e",
-    p: "f119039f0b2202f8",
+    y: "divider_ad82d8",
+    p: "totalDue_ad82d8",
 };

@@ -1,10 +1,10 @@
 e.exports = {
-    A7: "b29ee023f4e12ded",
-    hr: "_8f5156ff0e0ffb4c",
-    qB: "_210cefd590025eeb",
-    vW: "_2bd623f0f7cf4f9c",
-    rD: "c02c284fd8b302f5",
-    qk: "e57697b909de565d",
-    LU: "_1c9a34b41db449da",
-    l_: "_867283515d15047d",
+    A7: "outer__146e2",
+    hr: "progressBar__146e2",
+    qB: "progress__146e2",
+    vW: "inner__146e2",
+    rD: "coverContent__146e2",
+    qk: "progressTextWrapper__146e2",
+    LU: "progressTextOverlay__146e2",
+    l_: "progressText__146e2",
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    ed: "e2e9816df9ead092",
-    wP: "ee533426824ecd92",
+    ed: "disclaimer__59ad9",
+    wP: "linkIcon__59ad9",
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    IN: "_1a35542cbb239245",
-    I8: "_6e47a847a564ad49",
+    IN: "hotspotsSection__16e9e",
+    I8: "statusIcon__16e9e",
 };

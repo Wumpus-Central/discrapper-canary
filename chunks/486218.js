@@ -1,3 +1,3 @@
 e.exports = {
-    U: "_79aa3c6a8ecad5b5",
+    U: "premiumChannelIcon__15e7f",
 };

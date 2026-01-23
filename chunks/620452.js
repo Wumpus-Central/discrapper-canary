@@ -1,5 +1,5 @@
 e.exports = {
-    jx: "eea47aebf7039d92",
-    xM: "e738d5afba4345f7",
-    Vd: "_48441a64f1e7d039",
+    jx: "buttonsWrapper__65bb6",
+    xM: "horizontal__65bb6",
+    Vd: "vertical__65bb6",
 };

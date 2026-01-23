@@ -1,4 +1,4 @@
 e.exports = {
-    j: "_5f483390bee89559",
-    M: "a648e45f1575b4bc",
+    j: "modalContent_cb1992",
+    M: "degradedWarningContainer_cb1992",
 };

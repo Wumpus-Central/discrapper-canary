@@ -1,4 +1,4 @@
 e.exports = {
-    T: "_206e0a191eb2e42a",
-    C: "f2bab3528536ce06",
+    T: "background__506d9",
+    C: "foreground__506d9",
 };

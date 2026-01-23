@@ -1,3 +1,3 @@
 e.exports = {
-    w: "ceba1143f244771b",
+    w: "logo__11f7b",
 };

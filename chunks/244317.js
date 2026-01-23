@@ -1,5 +1,5 @@
 e.exports = {
-    Eq: "a9d89e818ad2647c",
-    ns: "_776117be53f2c577",
-    rk: "b593e933dd82a837",
+    Eq: "slowModeIcon_b21699",
+    ns: "cooldownWrapper_b21699",
+    rk: "cooldownText_b21699",
 };

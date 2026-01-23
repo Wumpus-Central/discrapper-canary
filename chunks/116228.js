@@ -1,3 +1,3 @@
 e.exports = {
-    U: "_7295cfeee687e446",
+    U: "buttons_bb2295",
 };

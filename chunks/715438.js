@@ -1,6 +1,6 @@
 e.exports = {
-    kL: "bd362fe6d780e0d3",
-    r5: "a2102888f31110b1",
-    dq: "e77339ac1826de9f",
-    ox: "_2cb2949127754321",
+    kL: "container_e6b065",
+    r5: "trophyIconContainer_e6b065",
+    dq: "lockContainer_e6b065",
+    ox: "confettiIcon_e6b065",
 };

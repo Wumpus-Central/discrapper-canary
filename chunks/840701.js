@@ -1,7 +1,7 @@
 e.exports = {
-    wx: "_834bf18297400e79",
-    Xf: "ff880cee91293f27",
-    Pu: "_58a30711075ff412",
-    mh: "b7c0fcc3f19bb78d",
-    yF: "_42a172e528c0ebf1",
+    wx: "header_eae0ef",
+    Xf: "safetyChecklist_eae0ef",
+    Pu: "safetyStepRow_eae0ef",
+    mh: "safetyStepContent_eae0ef",
+    yF: "divider_eae0ef",
 };

@@ -1,10 +1,10 @@
 e.exports = {
-    kL: "dac01f6334ad39b7",
-    Tp: "_65c509cf279de230",
-    Qs: "_3f5e5eeeb209c86e",
-    b: "_422c73aa9f15edaa",
-    yP: "_52d1bd906286a06b",
-    h_: "_467514e04e9d5aad",
-    wx: "_6fbe2a94a931dae3",
-    Tn: "_18504e2b6e169dc5",
+    kL: "container__52c9d",
+    Tp: "background__52c9d",
+    Qs: "content__52c9d",
+    b: "closeButton__52c9d",
+    yP: "closeButtonIcon__52c9d",
+    h_: "description__52c9d",
+    wx: "header__52c9d",
+    Tn: "upsellImage__52c9d",
 };

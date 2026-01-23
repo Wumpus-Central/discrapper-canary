@@ -1,3 +1,3 @@
 e.exports = {
-    $: "_283d83a9fabbec52",
+    $: "productCardBadge_b8a6bd",
 };

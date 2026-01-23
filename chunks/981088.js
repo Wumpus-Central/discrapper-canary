@@ -1,4 +1,4 @@
 e.exports = {
-    R: "_310f19456a0d6395",
-    A: "_6e5b6d1a8cce9e46",
+    R: "tooltipContainer__7bebc",
+    A: "tooltipWordmarkContainer__7bebc",
 };

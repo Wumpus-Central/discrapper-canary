@@ -1,9 +1,9 @@
 e.exports = {
-    iA: "_99a55976f6df2768",
-    pn: "_5fa605437d185d8d",
-    eH: "_522b615007c6bd45",
-    R: "_47eb9eba87c0b6cd",
-    nD: "_971fd9cb38b94497",
-    cL: "_33bf2167b0716ae9",
-    kL: "dec3edc035e22eca",
+    iA: "buttonIcon__92b20",
+    pn: "allPaymentsToggleButton__92b20",
+    eH: "allPaymentsSection__92b20",
+    R: "hidden__92b20",
+    nD: "SeparatorLower__92b20",
+    cL: "SeparatorUpper__92b20",
+    kL: "container__92b20",
 };

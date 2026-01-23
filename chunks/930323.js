@@ -1,3 +1,3 @@
 e.exports = {
-    C: "_13ae7e65cbad7a76",
+    C: "learnMore__7b2a3",
 };

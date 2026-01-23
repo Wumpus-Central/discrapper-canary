@@ -1,10 +1,10 @@
 e.exports = {
-    kL: "_0074ced060d0c936",
-    vU: "_976d1781566f8c14",
-    wx: "_2362b67a41949c94",
-    qi: "_418fd1c30227b7e4",
-    VE: "ca72899d40694bb7",
-    Z2: "c788cb24dfc75c67",
-    FS: "f31c78a0b0d87fac",
-    uM: "_2c6cc1c467f74547",
+    kL: "container_f37514",
+    vU: "appContainer_f37514",
+    wx: "header_f37514",
+    qi: "appInfo_f37514",
+    VE: "appIconMask_f37514",
+    Z2: "appIcon_f37514",
+    FS: "textContainer_f37514",
+    uM: "guildStack_f37514",
 };

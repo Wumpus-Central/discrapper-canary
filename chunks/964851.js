@@ -1,3 +1,3 @@
 t.exports = {
-    j: "a15461338957630c",
+    j: "modalContent__55d91",
 };

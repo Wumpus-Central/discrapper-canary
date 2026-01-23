@@ -1,3 +1,3 @@
 e.exports = {
-    c: "_4f747b08dd0fa663",
+    c: "insufficientOrbs__3b1b0",
 };

@@ -1,3 +1,3 @@
 e.exports = {
-    y: "_84dbb04334ff9d29",
+    y: "categorySubGroup__65726",
 };

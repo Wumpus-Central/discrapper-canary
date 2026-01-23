@@ -1,3 +1,3 @@
 e.exports = {
-    r: "_3bca7a69e9c30b0b",
+    r: "settingsPage_f131e9",
 };

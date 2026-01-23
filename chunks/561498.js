@@ -1,10 +1,10 @@
 e.exports = {
-    kK: "_5107eb8aaa4360c5",
-    Lh: "_86bb1c5595fe774f",
-    Nr: "_893800dd49394c4c",
-    G3: "d65882696d6cff31",
-    DD: "_4e2645e8e3a790d9",
-    Qq: "_38d396a6efeaaeda",
-    of: "_115b18d7493d7dd9",
-    Om: "_4512324b79b4dd99",
+    kK: "cardGroup__02e50",
+    Lh: "cardGroupWithHeadingSpacing__02e50",
+    Nr: "card__02e50",
+    G3: "selectionIndicator__02e50",
+    DD: "title__02e50",
+    Qq: "text__02e50",
+    of: "strikethrough__02e50",
+    Om: "selectionIcon__02e50",
 };

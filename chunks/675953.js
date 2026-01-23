@@ -1,7 +1,7 @@
 e.exports = {
-    Os: "_24ff25790cf75298",
-    yf: "be4c4c857e7025cb",
-    aA: "_542c4179c7408d0b",
-    i: "e310bdb51c228366",
-    vX: "_3e6b8f4c41babd1e",
+    Os: "nameplatePlaceholderUserRow_e75aa6",
+    yf: "nameplatePlaceholderAvatar_e75aa6",
+    aA: "nameplatePlaceholderBar_e75aa6",
+    i: "smallRow_e75aa6",
+    vX: "smallBar_e75aa6",
 };

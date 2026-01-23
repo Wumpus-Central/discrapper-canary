@@ -1,7 +1,7 @@
 e.exports = {
-    p9: "_323757d2c5a5ce5a",
-    LV: "_667403df4de710d8",
-    L_: "f4ad35eee0023983",
-    tk: "_0f5dc460f097491e",
-    y8: "_19caf19d4e22df66",
+    p9: "cardDescriptionTenureReward__1f069",
+    LV: "descriptionCTATenureReward__1f069",
+    L_: "cardDescription__1f069",
+    tk: "nitroGradientBorderHover__1f069",
+    y8: "promotionRedemptionImage__1f069",
 };

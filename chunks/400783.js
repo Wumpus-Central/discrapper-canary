@@ -1,8 +1,8 @@
 e.exports = {
-    EL: "_6c375401b0344f1d",
-    P0: "_80f2ba28778bfbe8",
-    bc: "a678b32d21354828",
-    rn: "_22c8250c939252fd",
-    Ow: "_5c700002f4aa2170",
-    Wj: "_96b8300112df4330",
+    EL: "confirmation__1051d",
+    P0: "iconWrapper__1051d",
+    bc: "statusTextContainer__1051d",
+    rn: "incompleteButtonsContainer__1051d",
+    Ow: "confirmationButtonRow__1051d",
+    Wj: "rejectionReasonLabel__1051d",
 };

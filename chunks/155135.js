@@ -1,4 +1,4 @@
 e.exports = {
-    U: "_1d6326c956971e3b",
-    o: "_5c06555cf5c18ea0",
+    U: "eyebrow__72025",
+    o: "actions__72025",
 };

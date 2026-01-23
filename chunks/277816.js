@@ -1,4 +1,4 @@
 e.exports = {
-    iE: "_5eab8b060c2ddf64",
-    vW: "_0066a29d80f84820",
+    iE: "wrapper__02fc8",
+    vW: "inner__02fc8",
 };

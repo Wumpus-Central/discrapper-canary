@@ -1,4 +1,4 @@
 e.exports = {
-    t: "cc0bc6e19f8285f7",
-    I: "a6ab14601318d367",
+    t: "guildSeparator__252b6",
+    I: "fullWidth__252b6",
 };

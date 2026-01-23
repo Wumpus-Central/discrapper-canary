@@ -1,3 +1,3 @@
 t.exports = {
-    M: "dc38075d0d91e490",
+    M: "flagIcon_c98db5",
 };

@@ -1,9 +1,9 @@
 e.exports = {
-    Wz: "_33460a59fe12fbdb",
-    sr: "_884a34ba02fba772",
-    mr: "e393a2c5d76bf4a5",
-    DM: "_9f4fdf7e06896b8e",
-    Kk: "f0a146a2ae2df87b",
-    b: "cd97b36a54eb6fbe",
-    ut: "_40b1d619725f89cb",
+    Wz: "devBanner__56d75",
+    sr: "local__56d75",
+    mr: "staging__56d75",
+    DM: "buildOverride__56d75",
+    Kk: "icon__56d75",
+    b: "closeButton__56d75",
+    ut: "closeIcon__56d75",
 };

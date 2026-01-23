@@ -1,5 +1,5 @@
 e.exports = {
-    Nr: "_812fc01b972116d8",
-    YK: "_30303dcb2623eb73",
-    z3: "_6a3f01ec38b860e2",
+    Nr: "card__6aefd",
+    YK: "spacing__6aefd",
+    z3: "error__6aefd",
 };

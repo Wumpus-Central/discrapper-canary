@@ -1,4 +1,4 @@
 e.exports = {
-    n: "_021dd7fdd71579e5",
-    Q: "a391ac55b427cce8",
+    n: "jumpButton_ed0c8c",
+    Q: "text_ed0c8c",
 };

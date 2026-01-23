@@ -1,8 +1,8 @@
 e.exports = {
-    ol: "_22fafb36d13a974f",
-    HD: "edc5dc37ebdc45bf",
-    Jk: "_0e492980cfbe1018",
-    JC: "c1daa86e4c3aef35",
-    HV: "ca138f7b1b669353",
-    $x: "_46146738383db142",
+    ol: "members__1ee8c",
+    HD: "avatars__1ee8c",
+    Jk: "singleUserName__1ee8c",
+    JC: "role__1ee8c",
+    HV: "last__1ee8c",
+    $x: "channelSettingButtons__1ee8c",
 };

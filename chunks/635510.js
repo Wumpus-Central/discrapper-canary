@@ -1,4 +1,4 @@
 e.exports = {
-    X: "_09966890f875f51d",
-    i: "_9cba347a361f5133",
+    X: "scroller_f35c3c",
+    i: "wrapper_f35c3c",
 };

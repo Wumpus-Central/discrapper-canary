@@ -1,4 +1,4 @@
 e.exports = {
-    q: "_040f816ca63b2048",
-    Q: "a6b952c8f6e5dcd5",
+    q: "statusText__19b6d",
+    Q: "text__19b6d",
 };

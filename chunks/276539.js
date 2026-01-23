@@ -1,5 +1,5 @@
 e.exports = {
-    Qy: "e1ae81d5b2d8ffd2",
-    bw: "_61d5cd2c91b63374",
-    k1: "_03ffd1b9db2f5bb4",
+    Qy: "listingNameColumn__6ef11",
+    bw: "paymentsCountColumn__6ef11",
+    k1: "priceColumn__6ef11",
 };

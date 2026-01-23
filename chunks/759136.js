@@ -1,3 +1,3 @@
 e.exports = {
-    n: "_1a420e23d2b4c8ce",
+    n: "panel_c8030e",
 };

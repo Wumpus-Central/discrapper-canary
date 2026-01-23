@@ -1,4 +1,4 @@
 e.exports = {
-    k: "c3e64beb71516f8b",
-    Z: "d1dffc68b60e0733",
+    k: "container__7bdb0",
+    Z: "appIcon__7bdb0",
 };

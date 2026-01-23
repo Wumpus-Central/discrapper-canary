@@ -1,9 +1,9 @@
 e.exports = {
-    Ew: "_14964e08516d6a86",
-    lt: "_645a4b6290aeec14",
-    _M: "aba57616a4a7e42a",
-    q3: "c03678f642137010",
-    U_: "_79f33a4711b94a83",
-    mi: "e4fb7e8d2b2f8c02",
-    uu: "_6875074c985649c2",
+    Ew: "spamBanner_a2eac3",
+    lt: "bannerTextContainer_a2eac3",
+    _M: "bannerText_a2eac3",
+    q3: "bannerIcon_a2eac3",
+    U_: "bannerHeader_a2eac3",
+    mi: "bannerSubtext_a2eac3",
+    uu: "actionButtons_a2eac3",
 };

@@ -1,6 +1,6 @@
 e.exports = {
-    xP: "_68841f5a1581e7c6",
-    Nq: "aa28eb475fb85ead",
-    _d: "_82901281fbfb335e",
-    ez: "f71054eeb46622de",
+    xP: "giftButton__82222",
+    Nq: "innerGiftButton__82222",
+    _d: "buttonText__82222",
+    ez: "giftIcon__82222",
 };

@@ -1,10 +1,10 @@
 e.exports = {
-    wx: "_06f2bd14b395e689",
-    K8: "_3b4eceae6329c8b2",
-    Kk: "c074c793e22dc3f3",
-    P0: "f6c72879f4c96c47",
-    Ul: "fcb1773fbc3292ff",
-    yM: "_9bb1d8957576eafe",
-    Vw: "d9fc3447217cd7ef",
-    PC: "_916c410e999320b8",
+    wx: "header__4a3a5",
+    K8: "secondaryHeader__4a3a5",
+    Kk: "icon__4a3a5",
+    P0: "iconWrapper__4a3a5",
+    Ul: "detailsIcon__4a3a5",
+    yM: "detailsWrapper__4a3a5",
+    Vw: "headerDetailsWrapper__4a3a5",
+    PC: "premiumIcon__4a3a5",
 };

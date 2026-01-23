@@ -1,3 +1,3 @@
 e.exports = {
-    C: "_0916f0fece2c1f11",
+    C: "krispCard_fb7bea",
 };

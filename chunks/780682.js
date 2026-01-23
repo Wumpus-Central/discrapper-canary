@@ -1,3 +1,3 @@
 e.exports = {
-    u: "_61ff15bd95362188",
+    u: "goLiveGridContainer__466c6",
 };

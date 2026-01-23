@@ -1,6 +1,6 @@
 e.exports = {
-    BK: "_9815f2fdd9b89e92",
-    G4: "_4d72029d44411373 _9815f2fdd9b89e92",
-    AF: "_44180de8ed68525a",
-    JY: "_6016c8c9282e808e",
+    BK: "messageContent_dbf24f",
+    G4: "messageReplacement_dbf24f messageContent_dbf24f",
+    AF: "messageContentIcon_dbf24f",
+    JY: "messageFocusBlock_dbf24f",
 };

@@ -1,9 +1,9 @@
 e.exports = {
-    kL: "_016cfe8a8917c2c4",
-    DU: "_0c91a1220f85b2a2",
-    iK: "aaa38bd175dd3424",
-    Di: "_370233fd364bd2af",
-    Uc: "adb168face5660d9 _016cfe8a8917c2c4",
-    PA: "d67ed8d1ffeaf452",
-    R: "d158ad15c10e7032",
+    kL: "container__01ae2",
+    DU: "floating__01ae2",
+    iK: "notFloating__01ae2",
+    Di: "resizeHandle__01ae2",
+    Uc: "chatTarget__01ae2 container__01ae2",
+    PA: "chatLayerWrapper__01ae2",
+    R: "hidden__01ae2",
 };

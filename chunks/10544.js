@@ -1,6 +1,6 @@
 e.exports = {
-    $$: "_9be37ac5e501cc3e",
-    XG: "_134a0eb0086c0ff6",
-    vY: "_4dfc074f91111f8d",
-    u1: "d45310ffccd37118",
+    $$: "pageContainer__09fde",
+    XG: "scroller__09fde",
+    vY: "cardsContainer__09fde",
+    u1: "spinner__09fde",
 };

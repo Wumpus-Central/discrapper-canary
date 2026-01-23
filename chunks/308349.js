@@ -1,9 +1,9 @@
 e.exports = {
-    wx: "_7f91d0ac19383a13",
-    b: "_361bc0418a5b1e6b",
-    DD: "_42af068cab940c06",
-    VA: "_1203ac5bcbb655c3",
-    f9: "_7b7ed18f412cf0c9",
-    Gv: "_8790d9bbeb4521eb",
-    iv: "bc6d27ad5adb9b14",
+    wx: "header__78f69",
+    b: "closeButton__78f69",
+    DD: "title__78f69",
+    VA: "subtitle__78f69",
+    f9: "optionsList__78f69",
+    Gv: "backButton__78f69",
+    iv: "skip__78f69",
 };

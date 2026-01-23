@@ -1,4 +1,4 @@
 t.exports = {
-    Nr: "_4a05de1503e27ea8",
-    z3: "_3f85b26b471124c4",
+    Nr: "card_d7fb2d",
+    z3: "error_d7fb2d",
 };

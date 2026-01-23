@@ -1,4 +1,4 @@
 e.exports = {
-    P: "fa42ca65605c8827",
-    r: "_202becdeed53eea3",
+    P: "promotedTag__1d868",
+    r: "promotedTagBackground__1d868",
 };

@@ -1,8 +1,8 @@
 e.exports = {
-    b: "ffb473d8f84b81c2",
-    yl: "_58804b3cd8934b39",
-    jE: "df1e52205015a2de",
-    _H: "aed8b9da78c016df",
-    xK: "b3077f9aa555b6c2",
-    u1: "_7149041a501aae23",
+    b: "closeButton__23c09",
+    yl: "modal__23c09",
+    jE: "modalContent__23c09",
+    _H: "leftPanel__23c09",
+    xK: "rightPanel__23c09",
+    u1: "spinner__23c09",
 };

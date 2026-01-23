@@ -1,4 +1,4 @@
 e.exports = {
-    j: "_687807c15d360d74",
-    v: "b8807d780f03c846",
+    j: "pauseBackground_d70e0d",
+    v: "pause_d70e0d",
 };

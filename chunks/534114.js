@@ -1,10 +1,10 @@
 e.exports = {
-    PD: "_673f450413f6bd50",
-    UT: "_27870177835e7516",
-    wu: "_2eb6afa3eba22f3a",
-    HG: "ffaa575d793b43c7",
-    hd: "_5c8f72e0f59f15a3",
-    d5: "_8e7a2f534c5ee4e6",
-    iY: "f241d99f38f3ce5b",
-    RU: "a3018f8a71794c77",
+    PD: "sideContainer_de3a16",
+    UT: "gridContainer_de3a16",
+    wu: "guildCountContainer_de3a16",
+    HG: "guildsIconContainer_de3a16",
+    hd: "sectionContainer_de3a16",
+    d5: "reducedGap_de3a16",
+    iY: "infoSection_de3a16",
+    RU: "linkGrid_de3a16",
 };

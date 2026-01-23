@@ -1,10 +1,10 @@
 e.exports = {
-    kL: "_2d1c825301df1a33",
-    os: "_5d515b844f657feb",
-    Vs: "_6b7f36ef76c72a33",
-    Nu: "_2413edb5710839fd",
-    HA: "_426ee392a8db19aa",
-    PD: "_2f672224069482a8",
-    UD: "_03a0bca39e3a6f1d",
-    Qs: "eaef8bfcb1017c26",
+    kL: "container__5aa3a",
+    os: "tiles__5aa3a",
+    Vs: "tile__5aa3a",
+    Nu: "participantsRow__5aa3a",
+    HA: "channelName__5aa3a",
+    PD: "joinButton__5aa3a",
+    UD: "buttonContainer__5aa3a",
+    Qs: "content__5aa3a",
 };

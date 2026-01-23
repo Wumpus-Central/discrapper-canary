@@ -1,3 +1,3 @@
 e.exports = {
-    I: "_2fe68ffa1c58003b",
+    I: "channelAttachmentArea_b77158",
 };

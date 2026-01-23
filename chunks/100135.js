@@ -1,4 +1,4 @@
 e.exports = {
-    Qs: "_9dfdf8602c101e67",
-    DD: "f8d1e4179474232b",
+    Qs: "content__21615",
+    DD: "title__21615",
 };

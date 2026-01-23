@@ -1,3 +1,3 @@
 e.exports = {
-    l: "_46dd3d94bcc9d82c",
+    l: "actionBarIcon_a7e304",
 };

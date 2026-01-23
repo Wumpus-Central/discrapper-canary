@@ -1,3 +1,3 @@
 e.exports = {
-    f: "_8eafc9304099c5cd",
+    f: "badgeContainer_fc0249",
 };

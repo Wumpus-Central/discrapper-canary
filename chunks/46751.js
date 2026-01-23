@@ -1,5 +1,5 @@
 e.exports = {
-    WD: "_45a1b1917a9a85ea",
-    Tw: "eac0ee969e989d61",
-    Tc: "f336699fe6e57b05",
+    WD: "tagGroup_cfee8f",
+    Tw: "tagList_cfee8f",
+    Tc: "tag_cfee8f",
 };

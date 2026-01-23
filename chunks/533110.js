@@ -1,3 +1,3 @@
 e.exports = {
-    P: "_10d70a9aa97e8e5e",
+    P: "label__202d8",
 };

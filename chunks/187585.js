@@ -1,7 +1,7 @@
 e.exports = {
-    u1: "_07b185343818b7d0",
-    tu: "_0c75743a55e7f9fa",
-    ql: "_8a40ef845298efd3 _0c75743a55e7f9fa",
-    xD: "a7125b7eea703d98",
-    lO: "c7a419fb0d61b3e9",
+    u1: "spinner__0920e",
+    tu: "homeWrapper__0920e",
+    ql: "homeWrapperNormal__0920e homeWrapper__0920e",
+    xD: "headerBarV2LightBackground__0920e",
+    lO: "headerBarV2DarkBackground__0920e",
 };

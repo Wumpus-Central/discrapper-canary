@@ -1,4 +1,4 @@
 e.exports = {
-    Z: "a0d6e3e7d2fb8ad5",
-    y: "_6d064bbb11bc86d3",
+    Z: "venmoIcon__44362",
+    y: "connectionInstructions__44362",
 };

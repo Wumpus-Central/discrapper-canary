@@ -1,3 +1,3 @@
 e.exports = {
-    sp: "_9cded61be31722d4",
+    sp: "cardContentsContainer__3c5e8",
 };

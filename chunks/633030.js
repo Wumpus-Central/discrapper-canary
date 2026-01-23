@@ -1,4 +1,4 @@
 e.exports = {
-    F: "_0869f518093d69da",
-    $: "_87233cff4cae916c",
+    F: "hamBanner__6a41e",
+    $: "hamBannerButton__6a41e",
 };

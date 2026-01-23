@@ -1,5 +1,5 @@
 var r = {
-    effect: "_45e3973bd055c4f0",
-    effects: "_15e4c70f3f3c4e66",
+    effect: "effect__263e4",
+    effects: "effects__263e4",
 };
 n.r((e.exports = r));

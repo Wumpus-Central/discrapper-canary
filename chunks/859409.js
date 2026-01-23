@@ -1,8 +1,8 @@
 e.exports = {
-    zr: "_938407074b1fe2b6",
-    iE: "e6fd41218e0f4633",
-    wx: "e584d1d7f93ee367",
-    rf: "ea2abbaa046e186f",
-    ry: "e5469640374481ee",
-    z3: "_169ff7a89aa29e88",
+    zr: "root__0d52d",
+    iE: "wrapper__0d52d",
+    wx: "header__0d52d",
+    rf: "body__0d52d",
+    ry: "logos__0d52d",
+    z3: "error__0d52d",
 };

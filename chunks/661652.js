@@ -4,8 +4,8 @@ n.d(t, {
     n(896048);
 var a = n(627968),
     l = n(64700),
-    i = n(503698),
-    r = n.n(i),
+    r = n(503698),
+    i = n.n(r),
     s = n(311907),
     o = n(873298),
     c = n(397927),
@@ -14,14 +14,14 @@ var a = n(627968),
     m = n(688810),
     p = n(975460),
     h = n(362490),
-    f = n(587895),
-    x = n(429913),
-    b = n(15285),
-    g = n(905552),
+    x = n(587895),
+    g = n(429913),
+    f = n(15285),
+    b = n(905552),
     v = n(253932),
     j = n(546183),
-    y = n(157257),
-    _ = n(661251),
+    _ = n(157257),
+    y = n(661251),
     A = n(508474);
 let C = [
     {
@@ -50,31 +50,31 @@ function S() {
     var e;
     let t,
         n,
-        i = l.useRef(null),
+        r = l.useRef(null),
         { analyticsLocations: o } = (0, m.Ay)(u.A.DEV_TOOLS),
         S = v.TA.useSetting(),
         [O, E] = l.useState(""),
-        N = (0, s.bG)([b.Ay, y.A], () => (0, g.A)(b.Ay, y.A)),
-        T = (0, x.h)(O),
-        I = (0, s.yK)([f.A], () => {
+        T = (0, s.bG)([f.Ay, _.A], () => (0, b.A)(f.Ay, _.A)),
+        N = (0, g.h)(O),
+        w = (0, s.yK)([x.A], () => {
             var e, t;
             return null !=
                 (e =
-                    null == T || null == (t = T.linkedGames)
+                    null == N || null == (t = N.linkedGames)
                         ? void 0
-                        : t.map((e) => f.A.getApplication(e.id)).filter((e) => null != e))
+                        : t.map((e) => x.A.getApplication(e.id)).filter((e) => null != e))
                 ? e
                 : [];
         }),
-        w = (0, h.RD)(T, {
+        I = (0, h.RD)(N, {
             allowedFlows: [h._M.RPC],
         }),
-        k = (0, h.RD)(T, {
+        k = (0, h.RD)(N, {
             allowedFlows: [h._M.WEB],
         }),
-        P = (0, h.RD)(T),
+        P = (0, h.RD)(N),
         { canDeauthorize: R, deauthorize: D } =
-            ((e = null == T ? void 0 : T.id),
+            ((e = null == N ? void 0 : N.id),
             (t = (0, s.bG)([j.default], () => j.default.getNewestTokenForApplication(e))),
             (n = l.useCallback(() => {
                 null != t && d.A.delete(t.id);
@@ -84,8 +84,8 @@ function S() {
                 deauthorize: n,
             });
     return (0, a.jsxs)("div", {
-        ref: i,
-        className: r()(_.nd, A.n),
+        ref: r,
+        className: i()(y.nd, A.n),
         children: [
             (0, a.jsxs)("div", {
                 className: A.k,
@@ -116,29 +116,31 @@ function S() {
                         value: O,
                         onChange: E,
                     }),
-                    null != N && null != N.id
+                    null != T && null != T.id
                         ? (0, a.jsx)(c.Button, {
-                              onClick: () => E(N.id),
+                              onClick: () => E(T.id),
                               variant: "primary",
-                              text: "Use detected game: ".concat(N.name, " (").concat(N.id, ")"),
+                              text: "Use detected game: ".concat(T.name, " (").concat(T.id, ")"),
                           })
                         : null,
                     (0, a.jsxs)(c.Text, {
                         variant: "text-md/normal",
-                        children: ["Application Name: ", null != T ? T.name : "N/A"],
+                        children: ["Application Name: ", null != N ? N.name : "N/A"],
                     }),
                     (0, a.jsxs)(c.Text, {
                         variant: "text-md/normal",
                         children: [
                             "Linked Games:",
                             " ",
-                            I.length > 0
-                                ? I.map((e) => {
-                                      var t;
-                                      return (null == (t = (0, p.t)(T)) ? void 0 : t.id) === e.id
-                                          ? "".concat(e.name, "*")
-                                          : e.name;
-                                  }).join(", ")
+                            w.length > 0
+                                ? w
+                                      .map((e) => {
+                                          var t;
+                                          return (null == (t = (0, p.t)(N)) ? void 0 : t.id) === e.id
+                                              ? "".concat(e.name, "*")
+                                              : e.name;
+                                      })
+                                      .join(", ")
                                 : "N/A",
                         ],
                     }),
@@ -167,9 +169,9 @@ function S() {
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
                     (0, a.jsx)(c.Button, {
-                        disabled: !w.canStartAuthorization,
+                        disabled: !I.canStartAuthorization,
                         onClick: () =>
-                            w.startAuthorization({
+                            I.startAuthorization({
                                 analyticsLocations: o,
                             }),
                         variant: "secondary",

@@ -1,4 +1,4 @@
 e.exports = {
-    K: "_2907e57baef98268",
-    q: "_86567a902a312e55",
+    K: "icon_bd6d20",
+    q: "placeholder_bd6d20",
 };

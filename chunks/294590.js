@@ -1,7 +1,7 @@
 e.exports = {
-    zr: "_70f2c06299c8340d",
-    _o: "_2677d641186cb84c",
-    nB: "d96e92532edb3625",
-    Om: "_539f58082ec020f7",
-    $J: "_61f8866c43636974",
+    zr: "secondaryButton__652ee",
+    _o: "buttonWrapper__652ee",
+    nB: "noGrow__652ee",
+    Om: "dot__652ee",
+    $J: "boostIcon__652ee",
 };

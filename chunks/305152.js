@@ -1,3 +1,3 @@
 e.exports = {
-    M: "_4314d2cbd220a89e",
+    M: "bar__4930d",
 };

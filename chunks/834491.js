@@ -1,8 +1,8 @@
 e.exports = {
-    oU: "d4dffad2990844c6",
-    wu: "_0b0cddf9945ad3be",
-    cy: "_5a175321ab2b781b",
-    Lj: "_917117ce924f5c34",
-    zx: "_4134e0dbfb29869d",
-    n0: "c66c2cecc8d08988",
+    oU: "embedSections_b5ecb2",
+    wu: "embedHelper_b5ecb2",
+    cy: "helperText_b5ecb2",
+    Lj: "embedWrapper_b5ecb2",
+    zx: "embedSection_b5ecb2",
+    n0: "questsEmbed_b5ecb2",
 };

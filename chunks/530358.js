@@ -1,7 +1,7 @@
 e.exports = {
-    jC: "_7c4d709ad3871588",
-    rb: "_47d852fd5d5f04bf",
-    Xq: "bf16c836ea135305",
-    S3: "_3979572c20a2ccfb",
-    bM: "_557a2c273fba6388",
+    jC: "popoutContainer__8641f",
+    rb: "mainContent__8641f",
+    Xq: "roleIconContainer__8641f",
+    S3: "roleName__8641f",
+    bM: "truncatingText__8641f",
 };

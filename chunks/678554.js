@@ -1,5 +1,5 @@
 e.exports = {
-    zC: "_6f933e9f9428fe6d",
-    n2: "a8954c7b803aea9e",
-    UD: "_273706796e81394a",
+    zC: "messageContainer__7796e",
+    n2: "saveNoticeContainer__7796e",
+    UD: "buttonContainer__7796e",
 };

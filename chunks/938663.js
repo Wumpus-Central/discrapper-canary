@@ -1,5 +1,5 @@
 e.exports = {
-    zh: "_1541b5fbc7cfe9c5",
-    AY: "ad2c3f8dfc9fcd14",
-    l_: "_4474c4100a274bb3",
+    zh: "floaterWrapper__1836e",
+    AY: "visibleFloater__1836e",
+    l_: "progressText__1836e",
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    v: "_939cf28d550880bb",
-    k: "_1628716e3a7337d5",
+    v: "clickable__997f6",
+    k: "container__997f6",
 };

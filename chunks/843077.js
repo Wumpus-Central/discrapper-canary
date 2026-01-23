@@ -1,5 +1,5 @@
 e.exports = {
-    Iv: "_554099c42db766fc",
-    l$: "_509dda51d240a478",
-    Pm: "f9a2dba014931f51",
+    Iv: "panelHeader__86951",
+    l$: "panelInner__86951",
+    Pm: "panelRow__86951",
 };

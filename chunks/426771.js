@@ -1,3 +1,3 @@
 e.exports = {
-    i: "_1918fe6ee8edf22f",
+    i: "previewContainer__70c78",
 };

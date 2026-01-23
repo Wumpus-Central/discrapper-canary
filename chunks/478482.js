@@ -1,7 +1,7 @@
 e.exports = {
-    dt: "ba0d1db10d81f15f",
-    YW: "_3943245974321472",
-    dE: "_76150af807108289",
-    qq: "_6b40be723065596a",
-    tD: "_7780e07a50a4f8cc",
+    dt: "upsellFooter__5e07c",
+    YW: "upsellFooterIcon__5e07c",
+    dE: "reverseTrialUpsellContainer__5e07c",
+    qq: "unlockIcon__5e07c",
+    tD: "upsellText__5e07c",
 };

@@ -1,3 +1,3 @@
 e.exports = {
-    tp: "_7cf6ce71b012b986",
+    tp: "table_b4ec0b",
 };

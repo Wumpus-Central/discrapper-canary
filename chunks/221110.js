@@ -1,5 +1,5 @@
 e.exports = {
-    uE: "f3c1e378a1830ba9",
-    Bi: "fd532bfa7231a149",
-    dj: "_45fb259133dc9a66",
+    uE: "thankYouCard_b851f5",
+    Bi: "thankYouText_b851f5",
+    dj: "userAvatar_b851f5",
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    k: "_83661570cd94c4f7",
-    X: "c4663940e15e8912",
+    k: "container__96cb9",
+    X: "guildAvatar__96cb9",
 };

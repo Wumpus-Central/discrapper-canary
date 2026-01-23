@@ -1,7 +1,7 @@
 e.exports = {
-    iE: "_2318ea7a4136b40f",
-    qd: "_2ad55a4b169169c6",
-    rW: "_4887fe088458dc8d",
-    h_: "_1892dfa9d379e746",
-    PX: "f9dd8c51b1eb15a7",
+    iE: "wrapper__3425d",
+    qd: "headerTitle__3425d",
+    rW: "subscriptionImg__3425d",
+    h_: "description__3425d",
+    PX: "benefits__3425d",
 };

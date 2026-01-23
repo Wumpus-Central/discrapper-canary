@@ -1,3 +1,3 @@
 t.exports = {
-    j: "_00b89f6449f3a82f",
+    j: "modalBodyText__44fbb",
 };

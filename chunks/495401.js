@@ -1,10 +1,10 @@
 e.exports = {
-    XG: "ea6f8e23c62660d4",
-    gy: "_3373e7b467f61cf9 " + n(473134).kL,
-    bu: "_826a0867df2782e4",
-    di: "c443d7b6633fbb4c _3373e7b467f61cf9 " + n(473134).kL,
-    Eo: "a4ff949f15835e3d",
-    Vq: "_72cd8b929a67f234 _3373e7b467f61cf9 " + n(473134).kL,
-    qz: "_458c098f159670aa",
-    ts: "_3a01fcf12fc545bd",
+    XG: "scroller__629e4",
+    gy: "unread__629e4 " + n(473134).kL,
+    bu: "unreadBar__629e4",
+    di: "unreadBottom__629e4 unread__629e4 " + n(473134).kL,
+    Eo: "positionedContainer__629e4",
+    Vq: "unreadTop__629e4 unread__629e4 " + n(473134).kL,
+    qz: "voiceUserSummary__629e4",
+    ts: "sectionDivider__629e4",
 };

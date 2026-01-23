@@ -1,7 +1,7 @@
 e.exports = {
-    nd: "_68af8ffd38729ca3",
-    KE: "_768bc5c8ea8247a9",
-    rf: "_8cb904d667c21349",
-    nZ: "_503f041345a3d370",
-    Dx: "fcfa15b203440046",
+    nd: "panel__0939d",
+    KE: "toolbar__0939d",
+    rf: "subPanel__0939d",
+    nZ: "subPanelHeaderBar__0939d",
+    Dx: "inspectorContainer__0939d",
 };

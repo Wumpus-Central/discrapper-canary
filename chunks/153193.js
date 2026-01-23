@@ -1,9 +1,9 @@
 e.exports = {
-    u1: "eafeab0850e2e6c3",
-    yl: "cee1d05812b9db67",
-    Hc: "f631521a35236733",
-    iT: "_0fa2d38e7a9d7fbe",
-    jE: "_89c90485c3b21922",
-    kk: "_1338753c26c83da4",
-    Hx: "d2f3ee3cede1ae94",
+    u1: "spinner_ced2f2",
+    yl: "modal_ced2f2",
+    Hc: "modalHeader_ced2f2",
+    iT: "modalCloseButton_ced2f2",
+    jE: "modalContent_ced2f2",
+    kk: "modalPreview_ced2f2",
+    Hx: "modalFooter_ced2f2",
 };

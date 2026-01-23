@@ -1,7 +1,7 @@
 e.exports = {
-    h2: "d23c90972b914377",
-    hd: "_881d9fd4a11b371c",
-    _U: "cc7504fb08689229",
-    YI: "f928c7ec8551a948",
-    c5: "_058d4a04295e40f9",
+    h2: "emptyWrapper_f12222",
+    hd: "emptyImage_f12222",
+    _U: "emptyTitle_f12222",
+    YI: "emptySubtitle_f12222",
+    c5: "emptyCTA_f12222",
 };

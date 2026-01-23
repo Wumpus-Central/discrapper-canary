@@ -1,3 +1,3 @@
 e.exports = {
-    f: "_6cad583a7d73d1f9",
+    f: "defaultColor__5345c",
 };

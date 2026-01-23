@@ -1,4 +1,4 @@
 e.exports = {
-    U: "db0494828cf36197",
-    S: "b572637b5e32acf4",
+    U: "camera__19236",
+    S: "cameraPreview__19236",
 };

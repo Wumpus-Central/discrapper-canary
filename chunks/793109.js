@@ -1,3 +1,3 @@
 e.exports = {
-    L: "db44ab9019cdd32d",
+    L: "voiceClipThumbnail__60cfd",
 };

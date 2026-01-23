@@ -1,4 +1,4 @@
 e.exports = {
-    $T: "_12f836796f61094a",
-    ON: "_667642cf6207447f",
+    $T: "termsApplyAnchor__95fb7",
+    ON: "modalTopPill__95fb7",
 };

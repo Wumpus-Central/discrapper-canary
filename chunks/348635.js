@@ -1,7 +1,7 @@
 e.exports = {
-    ZO: "_4c939876f52fd3da",
-    Kk: "_5ff98813d40aae7e",
-    ro: "_1e12e1cfc98cfd12",
-    yP: "_4490b3befcdd0e5d",
-    j1: "_02218da979fc27c1",
+    ZO: "channelHeader__06fb5",
+    Kk: "icon__06fb5",
+    ro: "dmIcon__06fb5",
+    yP: "channelNameSection__06fb5",
+    j1: "channelTypeIcon__06fb5",
 };

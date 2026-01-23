@@ -1,6 +1,6 @@
 e.exports = {
-    kL: "d3beb7c616e29fe0",
-    uW: "_70441b2e508ed531",
-    z6: "c6ee5f42e5643634",
-    wx: "_3b3c99ca031c433d",
+    kL: "container__9b0bb",
+    uW: "section__9b0bb",
+    z6: "formSwitch__9b0bb",
+    wx: "header__9b0bb",
 };

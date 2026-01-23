@@ -1,5 +1,5 @@
 e.exports = {
-    b6: "_045aae760f752372",
-    ex: "_8cb5622586eab4d3",
-    yY: "_8570a63bd37435c0",
+    b6: "roleTag__9cd44",
+    ex: "roleTagContainer__9cd44",
+    yY: "roleColor__9cd44",
 };

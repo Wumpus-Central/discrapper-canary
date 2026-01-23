@@ -1,9 +1,9 @@
 e.exports = {
-    jr: "fceb96329574697e",
-    Lw: "_897dd101a346d9ab",
-    V8: "_10a8daabbeb571b9",
-    tB: "e8d7faeda20b47f6",
-    Kk: "ddecd165a915d27a",
-    gb: "_893b8069d6880b2f",
-    b6: "_8ce5245fe363b47d",
+    jr: "headerBar__8a7fc",
+    Lw: "overlay__8a7fc",
+    V8: "relative__8a7fc",
+    tB: "backdrop__8a7fc",
+    Kk: "icon__8a7fc",
+    gb: "iconButton__8a7fc",
+    b6: "floatingSearchTabsMask__8a7fc",
 };

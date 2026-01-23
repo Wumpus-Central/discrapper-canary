@@ -1,6 +1,6 @@
 e.exports = {
-    sn: "_0cd4348c837b574b",
-    $J: "ffacca2a760ec565",
-    qX: "_24d43e129b0d0047",
-    De: "_0f759cd586592e2e",
+    sn: "boostIconContainer__8dbf5",
+    $J: "boostIcon__8dbf5",
+    qX: "boostIconCanceled__8dbf5",
+    De: "snowflake__8dbf5",
 };

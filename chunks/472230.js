@@ -1,3 +1,3 @@
 t.exports = {
-    p: "_6c349d367a4e8c24",
+    p: "channelIcon_f08fc1",
 };

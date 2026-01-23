@@ -1,5 +1,5 @@
 e.exports = {
-    lm: "dc40a597099664e0",
-    z3: "dcff5b5687ca4ccb",
-    wx: "_0dcfec64b0998123",
+    lm: "notice__30f28",
+    z3: "error__30f28",
+    wx: "header__30f28",
 };

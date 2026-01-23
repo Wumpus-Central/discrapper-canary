@@ -1,7 +1,7 @@
 e.exports = {
-    kL: "b88f617dba3848ff",
-    Kk: "_832c208739687d98",
-    h_: "_1eb90104eb695d63",
-    Pf: "_70a90fd8f6807448",
-    UE: "_5a0dee36b2630b5e",
+    kL: "container_d8f25b",
+    Kk: "icon_d8f25b",
+    h_: "description_d8f25b",
+    Pf: "label_d8f25b",
+    UE: "arrow_d8f25b",
 };

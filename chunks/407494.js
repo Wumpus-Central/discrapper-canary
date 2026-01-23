@@ -1,5 +1,5 @@
 e.exports = {
-    Nr: "_485882c8e27b5996",
-    GC: "_2c307b3d3e50c6a2",
-    wP: "_3ea061be312048c9",
+    Nr: "card__46c9e",
+    GC: "cardBackgroundImage__46c9e",
+    wP: "cardImage__46c9e",
 };

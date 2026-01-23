@@ -1,3 +1,3 @@
 e.exports = {
-    S: "_881924af757debdb",
+    S: "guildProductRoleIcon__77573",
 };

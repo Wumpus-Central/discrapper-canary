@@ -1,8 +1,8 @@
 e.exports = {
-    Sn: "c16a7d89da4535da",
-    Bw: "_6fcab2bd17ad390a",
-    So: "f82b8fd08a0e1db9",
-    dY: "d81e213b718454e1",
-    kv: "_80d8839b9b05c456",
-    H7: "_4f6fe86d1463b252",
+    Sn: "enabled_f4f0eb",
+    Bw: "attachmentImage_f4f0eb",
+    So: "radioBackground_f4f0eb",
+    dY: "radioForeground_f4f0eb",
+    kv: "checkbox_f4f0eb",
+    H7: "checkboxSelected_f4f0eb",
 };

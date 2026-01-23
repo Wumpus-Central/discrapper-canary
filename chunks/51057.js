@@ -1,6 +1,6 @@
 t.exports = {
-    Qs: "_385339d725ae0e08",
-    wx: "f4f46bbf30673131",
-    Wj: "_097fce541913273e",
-    Xq: "_25f06ad554ef8ed3",
+    Qs: "content_ea12e5",
+    wx: "header_ea12e5",
+    Wj: "headerShortcut_ea12e5",
+    Xq: "tips_ea12e5",
 };

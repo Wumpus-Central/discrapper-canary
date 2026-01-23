@@ -1,9 +1,9 @@
 e.exports = {
-    YS: "d8a91a9c19284be8",
-    Zp: "c5afcb67910aad48",
-    rz: "_4cedaca792595d9e",
-    qF: "aedcfc6823a1c544",
-    rk: "_190509101569f601",
-    my: "_9b8490fff6cbac7b",
-    ww: "e0ca369e9602c1c5",
+    YS: "profileEffectContainer_a84142",
+    Zp: "profileEffectBackground_a84142",
+    rz: "nameplateContainer_a84142",
+    qF: "nameplate_a84142",
+    rk: "giftMainAnimationWrapper_a84142",
+    my: "avatar_a84142",
+    ww: "bundlePreviewWrapper_a84142",
 };

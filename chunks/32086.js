@@ -1,10 +1,10 @@
 e.exports = {
-    nM: "d9db0f1c606a07e6",
-    yF: "_11bb9b9e3ce1e5a8",
-    uW: "_52407bd579cd638a",
-    my: "_1890ddda91840641",
-    Qq: "_00834d62df84a315",
-    Kk: "_476f78a8bee4f358",
-    Xh: "_281600dccfda0877",
-    Qz: "f45735c17c005744 _476f78a8bee4f358",
+    nM: "row__89d80",
+    yF: "divider__89d80",
+    uW: "section__89d80",
+    my: "avatar__89d80",
+    Qq: "text__89d80",
+    Kk: "icon__89d80",
+    Xh: "username__89d80",
+    Qz: "sectionIconContainer__89d80 icon__89d80",
 };

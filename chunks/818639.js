@@ -1,5 +1,5 @@
 t.exports = {
-    bo: "c323967f3eabfc83",
-    OA: "db67bd614075fac3",
-    J5: "_494152ca20ff0653",
+    bo: "guildContainer_c9e6eb",
+    OA: "guildInfo_c9e6eb",
+    J5: "guildName_c9e6eb",
 };

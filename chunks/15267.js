@@ -1,4 +1,4 @@
 e.exports = {
-    U: "dfbcb395c25def16",
-    B: "ecab61e221770712",
+    U: "autoThresholdSlider__39fa9",
+    B: "noInputDevicesDetectedWarning__39fa9",
 };

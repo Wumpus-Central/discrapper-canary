@@ -1,4 +1,4 @@
 e.exports = {
-    Or: "_892694d1ea1b1fc7",
-    qS: "_16196cbb3fb9ccfe",
+    Or: "chatIcon__233f8",
+    qS: "badge__233f8",
 };

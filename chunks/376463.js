@@ -1,6 +1,6 @@
 e.exports = {
-    Nr: "_6241434734901919",
-    FG: "f11b0c77d469d258",
-    yF: "_6c0fb65e7562c2a0",
-    fH: "_56f4c94472122a24",
+    Nr: "card__611f6",
+    FG: "contentWrapper__611f6",
+    yF: "divider__611f6",
+    fH: "serverActions__611f6",
 };

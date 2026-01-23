@@ -1,4 +1,4 @@
 e.exports = {
-    U: "f221533781808c70",
-    x: "_378a892f758071a9",
+    U: "offerPill__3b397",
+    x: "premiumBrandRefreshOfferPill__3b397",
 };

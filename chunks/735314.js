@@ -1,9 +1,9 @@
 e.exports = {
-    Se: "_8680611897238de3",
-    oi: "_9088cb778c8a2344",
-    PO: "_87006e02f5872d8a",
-    BN: "_94b78e8193a99228",
-    TC: "a85d0cdf11b1e352",
-    KY: "bdd58a9d5b7341af",
-    BX: "_88f5fc2aa3cc395a",
+    Se: "upload_aa605f",
+    oi: "sizeClip_aa605f",
+    PO: "uploadContainer_aa605f",
+    BN: "smallActionBar_aa605f",
+    TC: "actionBarContainer_aa605f",
+    KY: "actionBar_aa605f",
+    BX: "miniPopover_aa605f",
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    q: "a60b283fb9a1753c",
-    r: "_843f1a6acb8fe25a",
+    q: "badge__436c9",
+    r: "badgeIcon__436c9",
 };

@@ -1,9 +1,9 @@
 e.exports = {
-    VK: "_1af493a6c3429759",
-    lI: "aa0ee9cf04ffd794",
-    Eh: "_39729fe2c5e2b362",
-    j3: "_2b8db57c853b6d6b",
-    z3: "_64e576712d3fedf2",
-    Qn: "e659aa5f4f46df3d",
-    JX: "e525d3ad30e75092",
+    VK: "collapsablePane__7ed4d",
+    lI: "fieldset__7ed4d",
+    Eh: "collapsablePaneHeader__7ed4d",
+    j3: "collapsiblePaneList__7ed4d",
+    z3: "error__7ed4d",
+    Qn: "timeInput__7ed4d",
+    JX: "periodText__7ed4d",
 };

@@ -1,4 +1,4 @@
 e.exports = {
-    A: "_128d830559bb7b74",
-    s: "_0e0b47e465d1f624",
+    A: "skeletonsContainer__72fa0",
+    s: "bannerSkeleton__72fa0",
 };

@@ -1,3 +1,3 @@
 e.exports = {
-    ut: "_16554bb00233885e",
+    ut: "closeIcon_ec3eb0",
 };

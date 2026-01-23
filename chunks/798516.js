@@ -1,3 +1,3 @@
 e.exports = {
-    S: "c9b1336f45d96f7a",
+    S: "loadingSpinner__5b1b2",
 };

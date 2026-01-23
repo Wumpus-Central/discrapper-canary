@@ -1,8 +1,8 @@
 e.exports = {
-    Rf: "_91e54fe06650b03d",
-    V8: "_3d41b20ebc532adc",
-    Hj: "a5cfaaefd5b5e7b1",
-    F8: "_7ea8efcecc75934e",
-    f: "_4691f944338045d9",
-    N5: "_61cf9b21d50d69b9",
+    Rf: "tooltipBodyContainer__7d7fe",
+    V8: "tooltipPremiumFooterContainer__7d7fe",
+    Hj: "tooltipRemovePadding__7d7fe",
+    F8: "gemIcon__7d7fe",
+    f: "tooltipPremiumFooterSegment__7d7fe",
+    N5: "tooltipPremiumFooterTierSegment__7d7fe",
 };

@@ -1,8 +1,8 @@
 e.exports = {
-    cs: "b2cc2f32063da290",
-    j$: "_07ddd4624b0fa5d0",
-    HA: "_46942f68cffe1bfc",
-    W$: "cb2b0ebe390b6ccd",
-    Pf: "d2a10f5fd491d976",
-    DF: "_5f4bcd3fa0965bfe",
+    cs: "outgoing-call-pulse__3751b",
+    j$: "menuItem__3751b",
+    HA: "channelName__3751b",
+    W$: "subtext__3751b",
+    Pf: "label__3751b",
+    DF: "ringing__3751b",
 };

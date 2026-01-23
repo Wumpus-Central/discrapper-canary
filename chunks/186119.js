@@ -1,3 +1,3 @@
 e.exports = {
-    F: "_6c5904a670989d1b",
+    F: "legalFinePrint__1048e",
 };

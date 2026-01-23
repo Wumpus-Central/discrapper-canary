@@ -1,3 +1,3 @@
 e.exports = {
-    I: "_5e9d3ce76a39e234",
+    I: "newBadgeRow__46b5e",
 };

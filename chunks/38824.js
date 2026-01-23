@@ -1,7 +1,7 @@
 e.exports = {
-    UA: "_733907f7496fe932",
-    yt: "a592098049fd3249",
-    Fp: "_49cbf08122c9b19a",
-    Vf: "b291986898095ac0",
-    oB: "_7b499a5c62f96061",
+    UA: "profileCustomizationSection__44061",
+    yt: "baseLayout__44061",
+    Fp: "previewsContainer__44061",
+    Vf: "previewTitle__44061",
+    oB: "formContent__44061",
 };

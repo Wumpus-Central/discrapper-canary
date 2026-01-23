@@ -1,3 +1,3 @@
 e.exports = {
-    Tg: "_41ecf44b18414575",
+    Tg: "textArea__08bd2",
 };

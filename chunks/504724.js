@@ -1,4 +1,4 @@
 e.exports = {
-    M: "_69a44e594cdd7625",
-    D: "a9cc7751d0013f90",
+    M: "errorImage_d389c2",
+    D: "carousel_d389c2",
 };

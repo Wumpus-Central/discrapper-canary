@@ -1,4 +1,4 @@
 e.exports = {
-    k: "_38fa933746011342",
-    X: "_4b292570abd78b92",
+    k: "container_f85df1",
+    X: "singleGameWidget_f85df1",
 };

@@ -1,3 +1,3 @@
 e.exports = {
-    L: "_03e59400e15a7b57",
+    L: "gameCoverOverflowCount_fc1255",
 };

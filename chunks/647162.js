@@ -1,10 +1,10 @@
 e.exports = {
-    yF: "_261abd02b9160c38",
-    KJ: "_8fe1d7430c0017ea",
-    ov: "_4f5643d723d5dc8e",
-    Wn: "_32c95fc43accdb1c",
-    dM: "_1f2c3673bb2501de _32c95fc43accdb1c",
-    fE: "_59af443098ab5b7e",
-    BH: "f52039de59a63381",
-    Qs: "_9c309f5d2069f7c8",
+    yF: "divider__908e2",
+    KJ: "isUnread__908e2",
+    ov: "hasContent__908e2",
+    Wn: "endCap__908e2",
+    dM: "unreadPill__908e2 endCap__908e2",
+    fE: "unreadPillCap__908e2",
+    BH: "unreadPillCapStroke__908e2",
+    Qs: "content__908e2",
 };

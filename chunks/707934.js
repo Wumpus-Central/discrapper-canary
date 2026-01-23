@@ -1,7 +1,7 @@
 e.exports = {
-    kL: "_2a7a70ea8c7dcc31",
-    Nr: "a43836e936eb04c7",
-    Gt: "be81c66b5247fcaa",
-    Vx: "_243dd0581ff52ed6",
-    qS: "d3a894c845348cc9",
+    kL: "container__0919a",
+    Nr: "card__0919a",
+    Gt: "gameIcon__0919a",
+    Vx: "gameInfo__0919a",
+    qS: "badge__0919a",
 };

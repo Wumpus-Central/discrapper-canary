@@ -1,7 +1,7 @@
 e.exports = {
-    bW: "cd412cd800393d19",
-    nd: "e653f7336f94adb4",
-    t5: "c624c811cd7cb5bd",
-    Kk: "_1ea1eca1c9ade568",
-    kX: "_7009540f7ca41165",
+    bW: "triggerButton__64c86",
+    nd: "panel__64c86",
+    t5: "disablePanelAnimation__64c86",
+    Kk: "icon__64c86",
+    kX: "iconClosed__64c86",
 };

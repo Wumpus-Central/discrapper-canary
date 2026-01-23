@@ -1,7 +1,7 @@
 e.exports = {
-    Ej: "_6e0f6905c40860f2",
-    X$: "_4d7f3f3757853bdf",
-    JV: "af1f62acaac5e36a",
-    PO: "_719ad1eaa967212f",
-    Qh: "dfd7deaf18867ca8",
+    Ej: "paginationContainer_e8f197",
+    X$: "pagination_e8f197",
+    JV: "paginationInput_e8f197",
+    PO: "pageSizeSelection_e8f197",
+    Qh: "pageLabel_e8f197",
 };

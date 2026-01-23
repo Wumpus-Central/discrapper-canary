@@ -1,6 +1,6 @@
 e.exports = {
-    Tr: "_8bc81c71878a8e46",
-    t_: "_48c4bcfcfa131be0",
-    md: "_2a5831b91934bd4b",
-    vt: "_5920bcfce158f3fe",
+    Tr: "progressWrapper__4264a",
+    t_: "confetti__4264a",
+    md: "progressCont__4264a",
+    vt: "questProgressRewardTile__4264a",
 };

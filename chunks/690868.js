@@ -1,8 +1,8 @@
 e.exports = {
-    uK: "_88481ffa00f5483b",
-    mG: "_03260f5c6afd29c0",
-    hZ: "_59bf794f0b184fa5",
-    z3: "_80e8886634868e69",
-    vu: "_3fc4e106a9e03816",
-    vk: "_95443346189db549",
+    uK: "option_a19535",
+    mG: "inline_a19535",
+    hZ: "set_a19535",
+    z3: "error_a19535",
+    vu: "active_a19535",
+    vk: "clickable_a19535",
 };

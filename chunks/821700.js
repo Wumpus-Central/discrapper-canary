@@ -1,3 +1,3 @@
 e.exports = {
-    q: "_53e9977ba42c7f60",
+    q: "footer__8e8b5",
 };

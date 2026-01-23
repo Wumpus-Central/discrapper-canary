@@ -1,3 +1,3 @@
 e.exports = {
-    g: "_503aa9b5074ffa40",
+    g: "selector_c248b6",
 };

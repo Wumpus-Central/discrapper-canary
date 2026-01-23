@@ -1,10 +1,10 @@
 e.exports = {
-    W6: "_678d87f8e6e92b1a",
-    aD: "_0764a13bc39ece0c",
-    BJ: "_3c9c1df05b78329e",
-    Dh: "e6d821601e9dcf6d",
-    in: "_643d671e73ddb994",
-    jA: "c0f0e7d0c7ff5fa4",
-    ty: "a7c7b0c848ef8301",
-    QE: "_4820fb5b1887025b",
+    W6: "nagivateBackContainer__786f4",
+    aD: "calendarContainer__786f4",
+    BJ: "calendar__786f4",
+    Dh: "otherDatesContainer__786f4",
+    in: "focused__786f4",
+    jA: "leftContainer__786f4",
+    ty: "otherDateLabel__786f4",
+    QE: "radioSelection__786f4",
 };

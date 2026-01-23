@@ -1,6 +1,6 @@
 e.exports = {
-    iE: "e699509884426cd8",
-    Fk: "_1b34d74b3708db64",
-    GG: "_85beb771588134e8",
-    UU: "_77e1edc54e8dc79a",
+    iE: "wrapper__49d3a",
+    Fk: "vingette__49d3a",
+    GG: "character__49d3a",
+    UU: "flip__49d3a",
 };

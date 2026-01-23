@@ -1,4 +1,4 @@
 e.exports = {
-    cl: "f93977d84c52396f",
-    KP: "_764c972db4a846fb",
+    cl: "guildSelectOptionIcon_b476ba",
+    KP: "clydeIconContainer_b476ba",
 };

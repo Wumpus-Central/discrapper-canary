@@ -1,10 +1,10 @@
 e.exports = {
-    iE: "db529b847983f02c",
-    aC: "_773471d75c534a96",
-    NQ: "_14e718fa1e58a16c",
-    dw: "_75b6cbe9c0c71d94",
-    OP: "e7f1903b80928d67",
-    Ro: "a1721d22b912525a",
-    a7: "_4757a4188741aa28",
-    aO: "f4e72da114e898f8",
+    iE: "wrapper_d144f8",
+    aC: "target_d144f8",
+    NQ: "dragOver_d144f8",
+    dw: "centerTarget_d144f8",
+    OP: "autoPointerEvents_d144f8",
+    Ro: "folderEndWrapper_d144f8",
+    a7: "wrapperOver_d144f8",
+    aO: "folderTarget_d144f8",
 };

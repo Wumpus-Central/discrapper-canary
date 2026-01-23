@@ -1,9 +1,9 @@
 e.exports = {
-    mO: "db92d596fee44ece",
-    On: "_24055899b8394ee9",
-    cm: "_496ac66614a86037",
-    f9: "_19d9b20ae6c874f2",
-    Gt: "_007d3ed744895916",
-    pq: "_7ee82867f69338ee",
-    it: "_0edfb8cf25e87509",
+    mO: "gameName__8c6c2",
+    On: "clickableGameName__8c6c2",
+    cm: "gameWrapper__8c6c2",
+    f9: "gameIconWrapper__8c6c2",
+    Gt: "gameIcon__8c6c2",
+    pq: "info__8c6c2",
+    it: "liveBadge__8c6c2",
 };

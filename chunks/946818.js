@@ -1,4 +1,4 @@
 e.exports = {
-    Y: "_78f2914042062b06",
-    p: "bf2325ac2641f493",
+    Y: "videoPaused_afb275",
+    p: "warningCircle_afb275",
 };

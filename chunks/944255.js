@@ -1,10 +1,10 @@
 e.exports = {
-    VH: "_3befccd1faea52ba",
-    Ck: "ac9f7f2d68b79e39",
-    Me: "ca6d9171c69220ed",
-    cF: "d5c699a889df22aa",
-    W$: "_4b6a34e53048bf22",
-    fK: "e8cbe3804998916f",
-    yF: "_08e27af8a665c919",
-    ZT: "_55bb81f4619882c8",
+    VH: "preview__3e443",
+    Ck: "firstMessage__3e443",
+    Me: "compactPreview__3e443",
+    cF: "themeTitle__3e443",
+    W$: "subtext__3e443",
+    fK: "a11yCallout__3e443",
+    yF: "divider__3e443",
+    ZT: "themeTitleContainer__3e443",
 };

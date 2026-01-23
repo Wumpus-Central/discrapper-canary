@@ -1,8 +1,8 @@
 e.exports = {
-    Dt: "_337cd8a2143050c5",
-    ax: "_92755a657ef7e7af",
-    lm: "_31eb4fb0bfad773c",
-    Io: "_3b6fd007ba14e55f",
-    dK: "be12f99f3e116ce1",
-    nW: "d67d634c4c28aa30",
+    Dt: "guildSelector_c3d948",
+    ax: "nitroWheel_c3d948",
+    lm: "notice_c3d948",
+    Io: "pill_c3d948",
+    dK: "pillText_c3d948",
+    nW: "pillIcon_c3d948",
 };

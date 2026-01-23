@@ -1,5 +1,5 @@
 e.exports = {
-    Ei: "_449b2c59bbc741e1",
-    rx: "f214c842e2d834f4",
-    xr: "_61ed05406752f1f4",
+    Ei: "colorPicker_cd4367",
+    rx: "colorPickerContainer_cd4367",
+    xr: "gradientPicker_cd4367",
 };
