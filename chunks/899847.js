@@ -1,7 +1,7 @@
 n.d(t, {
-    Ay: () => y,
+    Ay: () => b,
     HB: () => E,
-    Xz: () => b,
+    Xz: () => y,
     e$: () => g,
     nt: () => m,
 }),
@@ -111,13 +111,13 @@ async function E() {
         );
     });
 }
-async function b() {
+async function y() {
     await r.Bo.post({
         url: f.Rsh.FAMILY_CENTER_SHARE_IAR_WITH_PARENTS,
         rejectWithError: !0,
     });
 }
-let y = {
+let b = {
     async initialPageLoad() {
         var e, t, n, i, s, o, l, c, u, d, p;
         a.h.dispatch({
@@ -127,7 +127,7 @@ let y = {
                 url: f.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_ME,
                 rejectWithError: !1,
             }),
-            { teen_audit_log: m, linked_users: g, users: E } = _,
+            { teen_audit_log: m, linked_users: g, users: E, age_group: y } = _,
             b = {
                 teenId: null == m ? void 0 : m.teen_user_id,
                 rangeStartId: null == m ? void 0 : m.range_start_id,
@@ -149,6 +149,7 @@ let y = {
                 familyCenterTeenActivity: b,
                 linkedUsers: g,
                 users: E,
+                ageGroup: y,
             }),
             b
         );

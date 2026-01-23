@@ -7,11 +7,11 @@ var r = n(417597),
     i = n(287809),
     a = n(842144),
     s = n(695515),
-    o = n(945276);
+    o = n(438732);
 let l = () => {
         let e = (0, o.A)();
         return (0, r.bG)([s.A, i.default], () => {
-            if (!e) return i.default.getCurrentUser();
+            if (!0 !== e) return i.default.getCurrentUser();
             let t = s.A.getSelectedTeenId();
             if (null !== t) return i.default.getUser(t);
         });

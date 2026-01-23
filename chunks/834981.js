@@ -1,14 +1,15 @@
 n.d(t, {
+    Du: () => m,
     GR: () => _,
     Li: () => h,
-    VE: () => m,
-    VT: () => E,
+    VE: () => g,
+    VT: () => y,
     W1: () => b,
-    XC: () => O,
-    v4: () => y,
+    XC: () => v,
+    v4: () => O,
     vx: () => p,
     xk: () => f,
-    xr: () => g,
+    xr: () => E,
 }),
     n(638769);
 var r = n(64700),
@@ -16,8 +17,8 @@ var r = n(64700),
     a = n(287809),
     s = n(695515),
     o = n(923531),
-    l = n(500470),
-    c = n(945276),
+    l = n(438732),
+    c = n(500470),
     u = n(191627);
 
 function d(e) {
@@ -47,19 +48,27 @@ function _() {
 let h = () => p().length > 0;
 
 function m() {
+    let e = (0, i.bG)([s.A], () => s.A.getLinkedUsers());
+    return r.useMemo(
+        () => Object.values(e).some((e) => null != e && e.link_status === u.Ef.ACTIVE && e.link_type === u.QM.PARENT),
+        [e],
+    );
+}
+
+function g() {
     let e = (0, i.bG)([s.A], () => s.A.getLinkCode()),
         t = (0, i.bG)([a.default], () => a.default.getCurrentUser());
     return null == e || null == t ? null : (0, u.jZ)(t.id, e);
 }
 
-function g() {
-    let e = (0, c.A)(),
+function E() {
+    let e = (0, l.A)(),
         t = p(),
         n = e ? u.Y7 : u.kp;
     return t.length >= n;
 }
 
-function E() {
+function y() {
     let e = (0, i.bG)([a.default], () => a.default.getCurrentUser()),
         t = (0, i.bG)([s.A], () => s.A.getLinkedUsers());
     return null == e
@@ -71,13 +80,13 @@ function b() {
     return p().length;
 }
 
-function y(e) {
-    let t = (0, l.k)(),
+function O(e) {
+    let t = (0, c.k)(),
         n = (0, i.bG)([s.A], () => (null == t ? null : s.A.getRangeStartTimestamp()));
     return null == n ? null : (0, o.i6)(new Date(n).getTime(), () => e, 7);
 }
 
-function O(e, t) {
+function v(e, t) {
     let n = (0, i.bG)([s.A], () => s.A.getLinkTimestamp(e));
     return null != n ? (0, o.mV)(Date.parse(n), t === u.Ef.PENDING ? u.lu : u.dI) : null;
 }

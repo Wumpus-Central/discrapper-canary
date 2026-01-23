@@ -1,5 +1,5 @@
 n.d(t, {
-    j: () => y,
+    j: () => b,
 });
 var r = n(64700),
     i = n(731738),
@@ -13,42 +13,43 @@ var r = n(64700),
     f = n(695515),
     p = n(809697),
     _ = n(500470),
-    h = n(945276),
+    h = n(33666),
     m = n(834981),
     g = n(191627),
     E = n(652215),
-    b = n(204925);
+    y = n(204925);
 
-function y(e) {
+function b(e) {
     let { location: t, onMountEffect: n } = e,
-        y = (0, h.A)(),
+        b = (0, h.A)(),
         O = (0, m.W1)(),
-        { familyCenterInitialized: A, isLoading: v } = (0, a.cf)([f.A], () => ({
+        { familyCenterInitialized: v, isLoading: A } = (0, a.cf)([f.A], () => ({
             familyCenterInitialized: f.A.getIsInitialized(),
             isLoading: f.A.isLoading(),
         })),
-        S = (0, _.k)(),
-        { selectedTab: I, handleTabChange: T } = (0, p.A)(),
+        I = (0, _.k)(),
+        { selectedTab: S, handleTabChange: T } = (0, p.A)(),
         C = u.default.getCurrentUser(),
-        N = null != y,
-        R = A && null != C && !N;
+        N = null != b,
+        w = "adult" === b,
+        R = v && null != C && !N;
     (0, s.Ay)(() => {
         (0, c.d)("family-center"), null != n && n();
     });
-    let w = {
-            isConsideredAdult: y,
+    let P = {
+            isConsideredAdult: w,
             numOfAcceptedRequests: O,
-            selectedTab: I,
-            selectedTeenId: S,
+            selectedTab: S,
+            selectedTeenId: I,
         },
-        P = r.useRef(w);
+        D = r.useRef(P);
     return (
         r.useEffect(() => {
-            P.current = w;
+            D.current = P;
         }),
         r.useEffect(() => {
-            if (A && N) {
-                let { isConsideredAdult: e, numOfAcceptedRequests: n, selectedTab: r, selectedTeenId: a } = P.current;
+            if (v && N) {
+                let { isConsideredAdult: e, numOfAcceptedRequests: n, selectedTab: r, selectedTeenId: a } = D.current;
                 d.default.track(E.HAw.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: e,
                     num_of_accepted_links: n,
@@ -60,13 +61,13 @@ function y(e) {
                         name: i.K.FAMILY_CENTER_VIEW,
                     });
             }
-        }, [A, N, t]),
+        }, [v, N, t]),
         r.useEffect(() => {
-            R && (0, o.yO)(b.w_.FAMILY_CENTER);
+            R && (0, o.yO)(y.w_.FAMILY_CENTER);
         }, [R]),
         {
-            isLoading: v,
-            selectedTab: I,
+            isLoading: A,
+            selectedTab: S,
             handleTabChange: T,
             showAgeGateModal: R,
         }
