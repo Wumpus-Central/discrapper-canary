@@ -2002,60 +2002,6 @@ let { Themes: r } = n(680049).zv,
                     opacity: 1,
                 },
             },
-            REDESIGN_BUTTON_PRIMARY_ALT_BORDER: {
-                [r.DARK]: {
-                    raw: "BRAND_300",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "BRAND_600",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "BRAND_345",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "BRAND_330",
-                    opacity: 1,
-                },
-            },
-            REDESIGN_BUTTON_SECONDARY_BORDER: {
-                [r.DARK]: {
-                    raw: "NEUTRAL_12",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "NEUTRAL_50",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "NEUTRAL_24",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "NEUTRAL_19",
-                    opacity: 1,
-                },
-            },
-            REDESIGN_BUTTON_SECONDARY_TEXT: {
-                [r.DARK]: {
-                    raw: "NEUTRAL_1",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "NEUTRAL_76",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "NEUTRAL_6",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "NEUTRAL_1",
-                    opacity: 1,
-                },
-            },
             REDESIGN_BUTTON_TERTIARY_TEXT: {
                 [r.DARK]: {
                     raw: "NEUTRAL_1",

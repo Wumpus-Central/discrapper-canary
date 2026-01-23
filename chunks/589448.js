@@ -7196,25 +7196,6 @@ let { Themes: r } = n(680049).zv,
                     opacity: 0.64,
                 },
             },
-            REDESIGN_BUTTON_OVERLAY_ALPHA_TEXT: {
-                category: "text",
-                [r.DARK]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-            },
             REDESIGN_BUTTON_POSITIVE_BACKGROUND: {
                 category: "generic",
                 [r.DARK]: {
@@ -7310,63 +7291,6 @@ let { Themes: r } = n(680049).zv,
                     opacity: 1,
                 },
             },
-            REDESIGN_BUTTON_PRIMARY_ALT_BORDER: {
-                category: "generic",
-                [r.DARK]: {
-                    raw: "BLURPLE_26",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "BLURPLE_50",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "BLURPLE_42",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "BLURPLE_36",
-                    opacity: 1,
-                },
-            },
-            REDESIGN_BUTTON_PRIMARY_BACKGROUND: {
-                category: "generic",
-                [r.DARK]: {
-                    raw: "BRAND_500",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "BRAND_500",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "BRAND_500",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "BRAND_500",
-                    opacity: 1,
-                },
-            },
-            REDESIGN_BUTTON_PRIMARY_OVERLAY_BACKGROUND: {
-                category: "generic",
-                [r.DARK]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-            },
             REDESIGN_BUTTON_PRIMARY_OVERLAY_PRESSED_BACKGROUND: {
                 category: "generic",
                 [r.DARK]: {
@@ -7424,25 +7348,6 @@ let { Themes: r } = n(680049).zv,
                     opacity: 1,
                 },
             },
-            REDESIGN_BUTTON_PRIMARY_TEXT: {
-                category: "text",
-                [r.DARK]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-            },
             REDESIGN_BUTTON_SECONDARY_BACKGROUND: {
                 category: "generic",
                 [r.DARK]: {
@@ -7469,35 +7374,6 @@ let { Themes: r } = n(680049).zv,
                     dark: {
                         color: "WHITE_500",
                         opacity: 0.24,
-                    },
-                },
-            },
-            REDESIGN_BUTTON_SECONDARY_BORDER: {
-                category: "generic",
-                [r.DARK]: {
-                    raw: "OPACITY_12",
-                    opacity: 0.12156862745098039,
-                },
-                [r.LIGHT]: {
-                    raw: "OPACITY_28",
-                    opacity: 0.2784313725490196,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "OPACITY_20",
-                    opacity: 0.2,
-                },
-                [r.DARKER]: {
-                    raw: "OPACITY_12",
-                    opacity: 0.12156862745098039,
-                },
-                gradient: {
-                    light: {
-                        color: "WHITE_500",
-                        opacity: 0,
-                    },
-                    dark: {
-                        color: "WHITE_500",
-                        opacity: 0,
                     },
                 },
             },
@@ -7616,25 +7492,6 @@ let { Themes: r } = n(680049).zv,
                     },
                 },
             },
-            REDESIGN_BUTTON_SECONDARY_TEXT: {
-                category: "text",
-                [r.DARK]: {
-                    raw: "NEUTRAL_10",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "NEUTRAL_69",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "NEUTRAL_10",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "NEUTRAL_5",
-                    opacity: 1,
-                },
-            },
             REDESIGN_BUTTON_SELECTED_BACKGROUND: {
                 category: "generic",
                 [r.DARK]: {
@@ -7671,25 +7528,6 @@ let { Themes: r } = n(680049).zv,
                 [r.DARKER]: {
                     raw: "BRAND_500",
                     opacity: 0.28,
-                },
-            },
-            REDESIGN_BUTTON_SELECTED_TEXT: {
-                category: "text",
-                [r.DARK]: {
-                    raw: "BLURPLE_50",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "BLURPLE_50",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "BLURPLE_50",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "BLURPLE_50",
-                    opacity: 1,
                 },
             },
             REDESIGN_BUTTON_TERTIARY_BACKGROUND: {
