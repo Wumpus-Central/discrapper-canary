@@ -12,7 +12,6 @@ var r = {
     footerLink: "footerLink__2ee1b " + n(248789).footerLink,
     actionBar: "actionBar__2ee1b " + n(248789).actionBar,
     actions: "actions__2ee1b " + n(248789).actions,
-    actionsFullWidth: "actionsFullWidth__2ee1b " + n(248789).actionsFullWidth,
     multistepIndicator: "multistepIndicator__2ee1b " + n(248789).multistepIndicator,
     multistepActionLayout: "multistepActionLayout__2ee1b " + n(248789).multistepActionLayout,
     caretIcon: "caretIcon__2ee1b " + n(248789).caretIcon,

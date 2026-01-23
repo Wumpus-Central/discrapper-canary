@@ -14,7 +14,7 @@ e.exports = {
     h_: "arrowHovered__87d05",
     XG: "scroller__87d05",
     Ki: "video__87d05",
-    yf: "mediaPlayer__87d05",
     tN: "videoWrapper__87d05",
+    yf: "mediaPlayer__87d05",
     Dk: "carousel__87d05",
 };

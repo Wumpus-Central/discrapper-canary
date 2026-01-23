@@ -1,6 +1,6 @@
 n.d(t, {
-    A: () => $,
-    q: () => X,
+    A: () => J,
+    q: () => Z,
 }),
     n(896048);
 var r,
@@ -19,18 +19,18 @@ var r,
     m = n(318009),
     g = n(92960),
     E = n(14214),
-    b = n(775602),
-    y = n(697138),
+    y = n(775602),
+    b = n(697138),
     O = n(933958),
-    A = n(793574),
-    v = n(688810),
-    S = n(590703),
-    I = n(681582),
+    v = n(793574),
+    A = n(688810),
+    I = n(590703),
+    S = n(681582),
     T = n(573435),
     C = n(71855),
     N = n(203480),
-    R = n(670735),
-    w = n(549205),
+    w = n(670735),
+    R = n(549205),
     P = n(750506),
     D = n(267102),
     x = n(666347),
@@ -102,11 +102,11 @@ function q(e, t) {
     );
 }
 
-function X(e) {
+function Z(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
     return t && k.isPlatformEmbedded && !n;
 }
-class Z extends (r = a.Component) {
+class X extends (r = a.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
@@ -153,19 +153,19 @@ class Z extends (r = a.Component) {
             r = !1,
             i = n.head;
         c()(null != i, "Window document ".concat(r ? "body" : "head", " was null"));
-        let a = i.querySelector("style[".concat(S.Vg, "]"));
+        let a = i.querySelector("style[".concat(I.Vg, "]"));
         if (null != a) {
             a.textContent = e;
             return;
         }
         let s = n.createElement("style");
-        s.setAttribute(S.Vg, "true"), (s.textContent = e), i.appendChild(s);
+        s.setAttribute(I.Vg, "true"), (s.textContent = e), i.appendChild(s);
     }
     registerPopoutGlobalKeybinds() {
         var e;
         let { guestWindow: t } = this.props,
             n = t.document;
-        for (let t of ((this._combokeys = (0, w.I)(n.documentElement)),
+        for (let t of ((this._combokeys = (0, R.I)(n.documentElement)),
         [E.VT, E.rR, g.D, ...(null != (e = this.props.keybinds) ? e : [])]))
             if (t.comboKeysBindGlobal)
                 for (let e of t.binds)
@@ -189,18 +189,18 @@ class Z extends (r = a.Component) {
                 hideModals: g = !1,
                 appContext: E,
             } = this.props,
-            b = X({
+            y = Z({
                 withTitleBar: a,
                 isFullScreen: r,
             }),
-            O = n === H.f ? x.A : R.A;
+            O = n === H.f ? x.A : w.A;
         return (0, i.jsx)(u.Kd, {
             children: (0, i.jsx)(
                 j.e,
                 {
                     windowKey: n,
                     themeOverride: d,
-                    children: (0, i.jsx)(y.A, {
+                    children: (0, i.jsx)(b.A, {
                         children: (0, i.jsxs)(h.xpW, {
                             containerRef: this.rootRef,
                             children: [
@@ -213,13 +213,13 @@ class Z extends (r = a.Component) {
                                             (0, i.jsx)(D.Wr, {
                                                 appContext: null != E ? E : B.BRT.POPOUT,
                                                 renderWindow: s,
-                                                children: (0, i.jsx)(I.l, {
+                                                children: (0, i.jsx)(S.l, {
                                                     children: (0, i.jsxs)(P.Yf, {
                                                         children: [
                                                             (0, i.jsxs)("div", {
                                                                 className: Y.SW,
                                                                 children: [
-                                                                    b &&
+                                                                    y &&
                                                                         (0, i.jsx)(p.NPJ, {
                                                                             theme: _,
                                                                             children: (e) =>
@@ -278,7 +278,7 @@ class Z extends (r = a.Component) {
             });
     }
 }
-W(Z, "defaultProps", {
+W(X, "defaultProps", {
     withTitleBar: !0,
 });
 let Q = a.forwardRef(function (e, t) {
@@ -293,6 +293,10 @@ let Q = a.forwardRef(function (e, t) {
                 let e = n.document.documentElement;
                 c()(null != e, "Window document element was null"), e.setAttribute("lang", l);
             }, [n, l]),
+            a.useEffect(() => {
+                let e = n.document.documentElement;
+                c()(null != e, "Window document element was null"), (e.className = d);
+            }, [n, d]),
             (0, i.jsx)("div", {
                 "data-popout-root": !0,
                 ref: t,
@@ -301,29 +305,29 @@ let Q = a.forwardRef(function (e, t) {
             })
         );
     }),
-    $ = a.forwardRef(function (e, t) {
+    J = a.forwardRef(function (e, t) {
         var n;
         let { guestWindow: r, isFullScreen: a } = (0, _.cf)([F.A], () => ({
             guestWindow: F.A.getWindow(e.windowKey),
             isFullScreen: F.A.isWindowFullScreen(e.windowKey),
         }));
         c()(null != r, "Missing guestWindow reference");
-        let { forcedColors: s, connectedEmbeddedActivity: o } = (0, _.cf)([b.A, O.Ay], () => ({
-            forcedColors: b.A.useForcedColors ? "yes" : "no",
+        let { forcedColors: s, connectedEmbeddedActivity: o } = (0, _.cf)([y.A, O.Ay], () => ({
+            forcedColors: y.A.useForcedColors ? "yes" : "no",
             connectedEmbeddedActivity: O.Ay.getCurrentEmbeddedActivity(),
         }));
         (0, N.A)(r, !1);
-        let { analyticsLocations: l } = (0, v.Ay)(A.A.POPOUT_WINDOW),
-            { clientThemesClassName: u, clientThemesCSS: d } = (0, S.Ay)(),
+        let { analyticsLocations: l } = (0, A.Ay)(v.A.POPOUT_WINDOW),
+            { clientThemesClassName: u, clientThemesCSS: d } = (0, I.Ay)(),
             f = (0, L.NC)(),
             p = null != (n = e.themeOverride) ? n : f;
         return null == r
             ? null
             : (0, i.jsx)(h.WaV, {
-                  children: (0, i.jsx)(v.f5, {
+                  children: (0, i.jsx)(A.f5, {
                       value: l,
                       children: (0, i.jsx)(
-                          Z,
+                          X,
                           q(
                               K(
                                   {

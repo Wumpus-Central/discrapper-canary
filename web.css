@@ -3261,6 +3261,7 @@
     --custom-gradient-color-start: var(--blurple-50);
     --custom-gradient-color-end: var(--blurple-50);
     --custom-gradient-offset-bottom: 0%;
+    isolation: isolate;
     position: relative
 }
 
@@ -3275,11 +3276,8 @@
     mask-image: radial-gradient(100% 100% at 50% 100%, var(--transparent) 60%, #000 100%);
     position: absolute;
     right: 0;
-    top: 0
-}
-
-:where(.container_a62383>*) {
-    position: relative
+    top: 0;
+    z-index: -1
 }
 
 .purple_a62383 {
@@ -10281,13 +10279,11 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     outline-offset: -2px
 }
 
-.selectField__5fa2f[data-read-only=true],
-.selectField__5fa2f[data-read-only=true] * {
+.selectField__5fa2f[data-read-only=true] {
     cursor: default !important
 }
 
-.selectField__5fa2f[data-disabled=true],
-.selectField__5fa2f[data-disabled=true] * {
+.selectField__5fa2f[data-disabled=true] {
     cursor: not-allowed !important
 }
 
@@ -12528,16 +12524,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     display: flex;
     flex-direction: column;
     gap: var(--space-8)
-}
-
-.actionsFullWidth_d6f39b {
-    flex-direction: column;
-    width: 100%
-}
-
-.actionsFullWidth_d6f39b>* {
-    min-width: 0;
-    width: 100%
 }
 
 .multistepIndicator_d6f39b {
@@ -24954,18 +24940,10 @@ screen and (max-width:485px) {
     flex-shrink: 0
 }
 
-.badgeContainer__635ed div {
-    overflow: hidden
-}
-
-.badgeContainer__635ed div,
 .badgeLabel__635ed {
+    overflow-x: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
-}
-
-.badgeLabel__635ed {
-    overflow-x: hidden
 }
 
 :where(.badgesContainer__635ed) {
@@ -25625,14 +25603,14 @@ img.thumbnail__0f2e8 {
     border: 1px solid var(--__current--spoiler-border-color)
 }
 
-.spoilerMarkdownContent__299eb h1>span>*,
-.spoilerMarkdownContent__299eb h2>span>*,
-.spoilerMarkdownContent__299eb h3>span>*,
-.spoilerMarkdownContent__299eb h4>span>*,
-.spoilerMarkdownContent__299eb h5>span>*,
-.spoilerMarkdownContent__299eb ol li>span>*,
-.spoilerMarkdownContent__299eb small>span>*,
-.spoilerMarkdownContent__299eb ul li>span>* {
+.spoilerMarkdownContent__299eb h1>span>span,
+.spoilerMarkdownContent__299eb h2>span>span,
+.spoilerMarkdownContent__299eb h3>span>span,
+.spoilerMarkdownContent__299eb h4>span>span,
+.spoilerMarkdownContent__299eb h5>span>span,
+.spoilerMarkdownContent__299eb ol li>span>span,
+.spoilerMarkdownContent__299eb small>span>span,
+.spoilerMarkdownContent__299eb ul li>span>span {
     pointer-events: var(--__current--spoiler-pointer-events)
 }
 
@@ -26608,13 +26586,13 @@ img.thumbnail__0f2e8 {
     pointer-events: none
 }
 
-.volumeButtonSlider__2d263>div {
-    overflow: hidden;
-    pointer-events: auto
-}
-
 .volumeButtonSlider__2d263.sliderVisible__2d263 {
     display: initial
+}
+
+.mediaBar__2d263 {
+    overflow: hidden;
+    pointer-events: auto
 }
 
 .wrapper_cf09d8 {
@@ -29665,10 +29643,6 @@ img.thumbnail__0f2e8 {
     inset-inline-end: 4px;
     position: absolute;
     top: 8px
-}
-
-.markup__75297 .codeActions__75297>div {
-    cursor: pointer
 }
 
 .markup__75297 .codeContainer__75297:hover .codeActions__75297 {
@@ -33827,8 +33801,6 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .actions__2ee1b {}
-
-.actionsFullWidth__2ee1b {}
 
 .multistepIndicator__2ee1b {}
 
@@ -48929,10 +48901,6 @@ div.mobilePushContainer__3d3b0 {
     font-weight: var(--font-weight-bold)
 }
 
-.uploadArea_b78547 * {
-    pointer-events: none
-}
-
 .uploadArea_b78547.droppable_b78547 {
     visibility: visible
 }
@@ -48945,6 +48913,7 @@ div.mobilePushContainer__3d3b0 {
     animation: uploadIconAnimateIn_b78547 .25s ease-in-out 0s normal forwards;
     display: flex;
     height: 170px;
+    pointer-events: none;
     position: relative;
     width: 310px
 }
@@ -66563,7 +66532,7 @@ screen and (max-width:485px) {
     margin-top: var(--custom-app-message-embed-base-info-top)
 }
 
-.description__1f7ec * {
+.description__1f7ec strong {
     font-weight: 500
 }
 
@@ -67567,7 +67536,9 @@ screen and (max-width:485px) {
     height: -moz-fit-content;
     height: fit-content;
     grid-row-gap: .25rem;
+    align-items: start;
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    justify-items: start;
     min-height: 0;
     min-width: 0;
     padding-bottom: .125rem;
@@ -67578,11 +67549,6 @@ screen and (max-width:485px) {
 
 .container_b7e1cb:empty {
     display: none
-}
-
-.container_b7e1cb>* {
-    align-self: start;
-    justify-self: start
 }
 
 .gifFavoriteButton_b7e1cb {
@@ -70652,7 +70618,6 @@ screen and (max-width:485px) {
 
 .removeMosaicItemButton__6c706 {
     align-self: flex-start;
-    color: var(--interactive-text-default);
     cursor: pointer;
     flex: 0 0 auto;
     opacity: 0;
@@ -70707,8 +70672,7 @@ screen and (max-width:485px) {
 }
 
 .removeMosaicItemButton__6c706:focus-within,
-.removeMosaicItemButton__6c706:hover,
-:hover+.removeMosaicItemButton__6c706 {
+.removeMosaicItemButton__6c706:hover {
     color: var(--interactive-text-hover)
 }
 
@@ -70720,8 +70684,8 @@ screen and (max-width:485px) {
 
 .removeMosaicItemHoverButton__6c706:hover,
 .keyboard-mode .removeMosaicItemHoverButton__6c706:focus {
-    background-color: var(--control-critical-primary-background-default);
-    color: var(--white)
+    background-color: var(--control-critical-primary-background-default) !important;
+    color: var(--control-critical-primary-text-default) !important
 }
 
 .removeMosaicItemHoverButton__6c706:active {
@@ -71708,7 +71672,7 @@ screen and (max-width:485px) {
     padding-inline: 0
 }
 
-.tertiaryAction__0be77 :hover {
+.tertiaryAction__0be77:hover {
     text-decoration: underline
 }
 
@@ -73658,7 +73622,7 @@ screen and (max-width:485px) {
     margin-top: var(--custom-app-message-embed-base-info-top)
 }
 
-.description__403f1 * {
+.description__403f1 strong {
     font-weight: var(--font-weight-medium)
 }
 
@@ -88145,11 +88109,8 @@ div.nagbar_d74ef8 {
 }
 
 .recorderContainer__2636e {
+    cursor: pointer;
     transition: border .15s ease
-}
-
-.recorderContainer__2636e * {
-    cursor: pointer
 }
 
 .recorderContainer__2636e:not(.containerDisabled__2636e):focus-within,
@@ -88158,10 +88119,6 @@ div.nagbar_d74ef8 {
 }
 
 .containerDisabled__2636e {
-    cursor: not-allowed
-}
-
-.containerDisabled__2636e * {
     cursor: not-allowed
 }
 
@@ -105135,7 +105092,7 @@ img[alt] {
 }
 
 .enable-forced-colors:not(.platform-web) body:before,
-html:has(.enable-forced-colors:not(.platform-web)) body:before {
+html.enable-forced-colors:not(.platform-web) body:before {
     border: 6px solid #d3d3d3;
     border-top: 0 solid #d3d3d3;
     box-sizing: border-box;
@@ -105152,8 +105109,8 @@ html:has(.enable-forced-colors:not(.platform-web)) body:before {
 
 .enable-forced-colors:not(.platform-web) #app-mount__51fd7,
 .enable-forced-colors:not(.platform-web) .appMount__51fd7,
-html:has(.enable-forced-colors:not(.platform-web)) #app-mount__51fd7,
-html:has(.enable-forced-colors:not(.platform-web)) .appMount__51fd7 {
+html.enable-forced-colors:not(.platform-web) #app-mount__51fd7,
+html.enable-forced-colors:not(.platform-web) .appMount__51fd7 {
     background-color: Canvas;
     box-sizing: border-box;
     height: calc(100% - 6px);
@@ -105162,22 +105119,22 @@ html:has(.enable-forced-colors:not(.platform-web)) .appMount__51fd7 {
 }
 
 .enable-forced-colors:not(.platform-web).theme-dark body:before,
-html:has(.enable-forced-colors:not(.platform-web)).theme-dark body:before {
+html.enable-forced-colors:not(.platform-web).theme-dark body:before {
     border-color: #d3d3d3
 }
 
 .enable-forced-colors:not(.platform-web).theme-dark.app-focused body:before,
-html:has(.enable-forced-colors:not(.platform-web)).theme-dark.app-focused body:before {
+html.enable-forced-colors:not(.platform-web).theme-dark.app-focused body:before {
     border-color: gold
 }
 
 .enable-forced-colors:not(.platform-web).theme-light body:before,
-html:has(.enable-forced-colors:not(.platform-web)).theme-light body:before {
+html.enable-forced-colors:not(.platform-web).theme-light body:before {
     border-color: gray
 }
 
 .enable-forced-colors:not(.platform-web).theme-light.app-focused body:before,
-html:has(.enable-forced-colors:not(.platform-web)).theme-light.app-focused body:before {
+html.enable-forced-colors:not(.platform-web).theme-light.app-focused body:before {
     border-color: #483d8b
 }
 

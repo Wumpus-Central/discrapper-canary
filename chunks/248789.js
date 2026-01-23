@@ -20,7 +20,6 @@ var r = {
     footerText: "footerText_d6f39b",
     footerLink: "footerLink_d6f39b",
     actions: "actions_d6f39b",
-    actionsFullWidth: "actionsFullWidth_d6f39b actions_d6f39b",
     multistepIndicator: "multistepIndicator_d6f39b",
     multistepActionLayout: "multistepActionLayout_d6f39b",
     caretIcon: "caretIcon_d6f39b",
