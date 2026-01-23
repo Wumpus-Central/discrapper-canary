@@ -48,6 +48,11 @@ var r = n(835245),
             (e.MiniGameProfile = "mini_game_profile"),
             (e.GameMention = "game_mention"),
             (e.GameSheet = "game_sheet"),
+            (e.QuestBar = "quest_bar"),
+            (e.QuestHome = "quest_home_desktop"),
+            (e.QuestActivityPanel = "quest_activity_panel"),
+            (e.QuestEmbed = "quest_embed"),
+            (e.QuestLiveStream = "quest_live_stream"),
             e
         );
     })({}),

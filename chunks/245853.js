@@ -2,6 +2,7 @@ n.d(t, {
     Bw: () => i,
     L5: () => s,
     LO: () => l,
+    RJ: () => f,
     XM: () => o,
     qd: () => c,
     t$: () => d,
@@ -124,6 +125,21 @@ let c = (0, r.mj)({
             enabled: !1,
         },
         variations: {
+            1: {
+                enabled: !0,
+            },
+        },
+    }),
+    f = (0, r.mj)({
+        name: "2026-01-business-profile-linking",
+        kind: "user",
+        defaultConfig: {
+            enabled: !1,
+        },
+        variations: {
+            0: {
+                enabled: !1,
+            },
             1: {
                 enabled: !0,
             },

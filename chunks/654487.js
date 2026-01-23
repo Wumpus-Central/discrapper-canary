@@ -2,30 +2,30 @@ n.d(t, {
     B3: () => N,
     BQ: () => L,
     CI: () => E,
-    Fw: () => v,
+    Fw: () => A,
     GD: () => g,
     J6: () => C,
     K3: () => P,
     Ko: () => _,
     Li: () => u.L,
-    Ls: () => R,
+    Ls: () => w,
     Pc: () => x,
     TY: () => c.T,
     WQ: () => M,
     ZV: () => p,
-    aJ: () => S,
-    eA: () => A,
-    ej: () => y,
+    aJ: () => I,
+    eA: () => v,
+    ej: () => b,
     fO: () => h,
-    fP: () => b,
-    gB: () => I,
+    fP: () => y,
+    gB: () => S,
     hK: () => T,
     kL: () => D,
     mg: () => O,
     pc: () => U,
     rE: () => d,
     tZ: () => f,
-    zO: () => w,
+    zO: () => R,
 }),
     n(896048),
     n(638769);
@@ -83,6 +83,7 @@ var r = n(735438),
             (e.NAVIGATE_TO_QUEST_HOME_UTIL = "navigate_to_quest_home_util"),
             (e.QUEST_DEEP_LINK_UTIL = "quest_deep_link_util"),
             (e.YOU_TAB_PROFILE_HEADER = "you_tab_profile_header"),
+            (e.QUEST_INSTRUCTIONS = "quest_instructions"),
             e
         );
     })({});
@@ -106,7 +107,7 @@ let m = (0, s.TP)(),
             ? "".concat(m, "/_cdn_storage/")
             : "https://cdn.discordapp.com/",
     E = g + "quests/";
-var b = (function (e) {
+var y = (function (e) {
     return (
         (e.COLLAPSED = "collapsed"),
         (e.EXPANDED = "expanded"),
@@ -116,9 +117,9 @@ var b = (function (e) {
         e
     );
 })({});
-let y = "545364944258990091",
+let b = "545364944258990091",
     O = "{reward_code}";
-var A = (function (e) {
+var v = (function (e) {
     return (
         (e.EXCLUDED_QUEST = "excluded_quest"),
         (e.UNKNOWN_QUEST = "unknown_quest"),
@@ -126,9 +127,9 @@ var A = (function (e) {
         e
     );
 })({});
-let v = "1333839522189938740",
-    S = "1410358070831480904",
-    I = "1420556874629251124",
+let A = "1333839522189938740",
+    I = "1410358070831480904",
+    S = "1420556874629251124",
     T = "1402418703554842694",
     C = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA]),
     N = new Set([
@@ -139,7 +140,7 @@ let v = "1333839522189938740",
         i.n.PLAY_ON_DESKTOP_V2,
         i.n.PLAY_ACTIVITY,
     ]),
-    R = new Set([
+    w = new Set([
         i.n.STREAM_ON_DESKTOP,
         i.n.PLAY_ON_DESKTOP,
         i.n.PLAY_ON_XBOX,
@@ -147,7 +148,7 @@ let v = "1333839522189938740",
         i.n.PLAY_ON_DESKTOP_V2,
         i.n.PLAY_ACTIVITY,
     ]),
-    w = new Set([
+    R = new Set([
         i.n.STREAM_ON_DESKTOP,
         i.n.PLAY_ON_DESKTOP,
         i.n.PLAY_ON_XBOX,

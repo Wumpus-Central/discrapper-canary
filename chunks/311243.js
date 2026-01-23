@@ -18,13 +18,15 @@ let c = function (e) {
             taskDetails: d,
             location: p,
             sourceQuestContent: m,
+            gameProfileSource: f,
         } = e,
-        f = (0, a.mU)({
+        y = (0, a.mU)({
             quest: l,
             taskDetails: d,
             location: p,
             questContent: c,
             sourceQuestContent: m,
+            gameProfileSource: f,
         });
     return (0, r.jsxs)("div", {
         className: i()(u.iE, t),
@@ -41,7 +43,7 @@ let c = function (e) {
                 children: (0, r.jsx)(s.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: f,
+                    children: y,
                 }),
             }),
         ],
