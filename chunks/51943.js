@@ -1,28 +1,28 @@
 n.d(t, {
-    A: () => g,
+    A: () => m,
 });
 var r = n(627968);
 n(64700);
 var l = n(827734),
     i = n(3026),
-    a = n(582754),
-    s = n(397927),
+    s = n(582754),
+    a = n(397927),
     o = n(442433),
     c = n(263063),
     u = n(562153),
     d = n(939496),
-    f = n(518477),
-    p = n(996988),
-    h = n(7319);
-let b = (0, s.FT9)(s._3J.SIZE_16);
+    p = n(518477),
+    h = n(996988),
+    f = n(7319);
+let g = (0, a.FT9)(a._3J.SIZE_16);
 
-function g(e) {
-    let { user: t, guild: g, nick: m, onSelect: A } = e,
-        { theme: y, themeType: O } = (0, d.E)(),
-        j = t.hasAvatarForGuild(g.id);
-    return (0, r.jsxs)(s.DUT, {
+function m(e) {
+    let { user: t, guild: m, nick: b, onSelect: A } = e,
+        { theme: y, themeType: _ } = (0, d.E)(),
+        O = t.hasAvatarForGuild(m.id);
+    return (0, r.jsxs)(a.DUT, {
         focusProps:
-            O === p.d.MODAL_V2
+            _ === h.d.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -35,7 +35,7 @@ function g(e) {
                           right: 8,
                       },
                   },
-        className: h.nM,
+        className: f.nM,
         onClick: A,
         onContextMenu: (e) => {
             (0, o.L3)(e, async () => {
@@ -49,21 +49,21 @@ function g(e) {
                     n.e("16301"),
                     n.e("22191"),
                     n.e("25961"),
+                    n.e("8018"),
                     n.e("21968"),
                     n.e("35894"),
                     n.e("50796"),
-                    n.e("49862"),
                     n.e("8458"),
-                    n.e("8018"),
                     n.e("47841"),
-                    n.e("59541"),
+                    n.e("49862"),
                     n.e("60989"),
                     n.e("24202"),
-                    n.e("94503"),
-                    n.e("14360"),
+                    n.e("38985"),
+                    n.e("36290"),
+                    n.e("59541"),
                     n.e("59735"),
                     n.e("54469"),
-                    n.e("68605"),
+                    n.e("35686"),
                 ]).then(n.bind(n, 544676));
                 return (t) => {
                     var n, l;
@@ -96,7 +96,7 @@ function g(e) {
                         })({}, t)),
                         (l = l =
                             {
-                                guild: g,
+                                guild: m,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -118,48 +118,48 @@ function g(e) {
         children: [
             (0, r.jsx)(c.A, {
                 tabIndex: -1,
-                guild: g,
+                guild: m,
                 showBadge: !0,
-                className: null != g.icon ? h.Kk : h.lN,
-                badgeStrokeColor: (0, a.Mw)(y) ? l.A.unsafe_rawColors.PRIMARY_600.css : l.A.unsafe_rawColors.WHITE.css,
-                badgeTooltipColor: s.oMw.PRIMARY,
-                badgeTooltipDelay: f.In,
+                className: null != m.icon ? f.Kk : f.lN,
+                badgeStrokeColor: (0, s.Mw)(y) ? l.A.unsafe_rawColors.PRIMARY_600.css : l.A.unsafe_rawColors.WHITE.css,
+                badgeTooltipColor: a.oMw.PRIMARY,
+                badgeTooltipDelay: p.In,
                 size: c.A.Sizes.MEDIUM,
                 active: !0,
             }),
             (0, r.jsxs)("div", {
-                className: h.zH,
+                className: f.zH,
                 children: [
                     (0, r.jsx)("div", {
-                        className: h.UU,
-                        children: g.name,
+                        className: f.UU,
+                        children: m.name,
                     }),
-                    j &&
+                    O &&
                         (0, r.jsxs)("div", {
-                            className: h.C9,
+                            className: f.C9,
                             children: [
-                                (0, r.jsx)(s.euF, {
-                                    src: t.getAvatarURL(g.id, b),
-                                    size: s._3J.SIZE_16,
-                                    className: h.my,
+                                (0, r.jsx)(a.euF, {
+                                    src: t.getAvatarURL(m.id, g),
+                                    size: a._3J.SIZE_16,
+                                    className: f.my,
                                     "aria-hidden": !0,
                                 }),
-                                (0, r.jsx)(s.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: "text-xs/medium",
                                     children: (0, r.jsx)(i.A, {
-                                        delay: f.In,
-                                        children: null != m ? m : u.Ay.getName(g.id, void 0, t),
+                                        delay: p.In,
+                                        children: null != b ? b : u.Ay.getName(m.id, void 0, t),
                                     }),
                                 }),
                             ],
                         }),
-                    !j &&
-                        null != m &&
-                        (0, r.jsx)(s.Text, {
+                    !O &&
+                        null != b &&
+                        (0, r.jsx)(a.Text, {
                             variant: "text-xs/medium",
                             children: (0, r.jsx)(i.A, {
-                                delay: f.In,
-                                children: m,
+                                delay: p.In,
+                                children: b,
                             }),
                         }),
                 ],

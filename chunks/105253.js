@@ -222,8 +222,8 @@ function I(e) {
                           f(A.Ps.STAGE_INSTANCE),
                               (0, o.mMO)(async () => {
                                   let { default: e } = await Promise.all([
-                                      n.e("72271"),
                                       n.e("8018"),
+                                      n.e("72271"),
                                       n.e("64233"),
                                       n.e("29592"),
                                   ]).then(n.bind(n, 409200));
