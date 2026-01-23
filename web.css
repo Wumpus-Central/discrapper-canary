@@ -74337,23 +74337,6 @@ screen and (max-width:485px) {
     width: 100%
 }
 
-.mainContainer_ceba9e.compact_ceba9e {
-    -webkit-padding-start: 0;
-    padding-inline-start: 0;
-    -webkit-margin-start: -3.95rem;
-    margin-inline-start: -3.95rem
-}
-
-.actions_ceba9e {
-    display: flex;
-    flex-direction: row;
-    gap: 16px
-}
-
-.embed_ceba9e {
-    margin: 8px 0
-}
-
 .mainContainer__844a1.compact__844a1 {
     -webkit-padding-start: 0;
     padding-inline-start: 0;
