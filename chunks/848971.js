@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => I,
+    A: () => T,
 }),
     n(896048);
 var r = n(627968),
@@ -10,14 +10,15 @@ var r = n(627968),
     l = n(73153),
     c = n(915089),
     u = n(450232),
-    d = n(193658),
-    f = n(526162),
-    p = n(603880),
-    _ = n(635917),
-    h = n(355097),
-    m = n(985018),
-    g = n(638959),
-    E = n(944255);
+    d = n(358776),
+    f = n(193658),
+    p = n(526162),
+    _ = n(603880),
+    h = n(635917),
+    m = n(355097),
+    g = n(985018),
+    E = n(638959),
+    y = n(944255);
 
 function b(e, t, n) {
     return (
@@ -33,7 +34,7 @@ function b(e, t, n) {
     );
 }
 
-function y(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +51,7 @@ function y(e) {
     return e;
 }
 
-function O(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,14 +69,14 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function v(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -103,62 +104,64 @@ function S(e, t) {
     return i;
 }
 
-function I(e) {
-    let { className: t, disabled: n, isEditor: b, renderCTAButtons: O } = e,
-        [S] = (0, a.yK)([f.A], () => [f.A.getCurrentDesktopIcon()]),
-        I = i.useRef(null);
-    (0, d.A)(I, h.kq.CUSTOM_APP_ICONS);
-    let T = (0, c.GV)(),
-        C = (0, s._u)({
+function T(e) {
+    let { className: t, disabled: n, isEditor: b, renderCTAButtons: v } = e,
+        [S] = (0, a.yK)([p.A], () => [p.A.getCurrentDesktopIcon()]),
+        T = (0, d.dk)("AppIconSelectionGroup"),
+        C = i.useRef(null);
+    (0, f.A)(C, m.kq.CUSTOM_APP_ICONS);
+    let N = (0, c.GV)(),
+        R = (0, s._u)({
             orientation: "horizontal",
-            labelledBy: T,
+            labelledBy: N,
         }),
-        { ref: N } = C,
-        R = v(C, ["ref"]),
-        w = (e) => {
+        { ref: w } = R,
+        P = I(R, ["ref"]),
+        D = (e) => {
             l.h.dispatch({
                 type: "APP_ICON_UPDATED",
                 id: e,
             });
         };
     return (0, r.jsx)("div", {
-        ref: I,
+        ref: C,
         children: (0, r.jsx)(
             "div",
-            A(y({}, R), {
-                ref: N,
-                className: g.__invalid_container,
+            A(O({}, P), {
+                ref: w,
+                className: E.__invalid_container,
                 children: (0, r.jsxs)("div", {
                     className: t,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: g.wx,
+                            className: E.wx,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: g.so,
+                                    className: E.so,
                                     children: [
                                         !b &&
                                             (0, r.jsxs)("div", {
-                                                className: g.DD,
+                                                className: E.DD,
                                                 children: [
                                                     (0, r.jsx)(o.Heading, {
-                                                        className: g.Qw,
-                                                        variant: "text-lg/medium",
-                                                        children: m.intl.string(m.t.NThqTw),
+                                                        className: E.Qw,
+                                                        variant: T ? "heading-xl/normal" : "text-lg/medium",
+                                                        color: T ? "text-strong" : void 0,
+                                                        children: g.intl.string(g.t.NThqTw),
                                                     }),
                                                     (0, r.jsx)(u.A, {
-                                                        className: g.PC,
+                                                        className: E.PC,
                                                     }),
                                                 ],
                                             }),
                                         (0, r.jsx)(o.Heading, {
                                             variant: "text-sm/normal",
-                                            className: E.W$,
-                                            children: m.intl.string(m.t.IgENJo),
+                                            className: y.W$,
+                                            children: g.intl.string(g.t.IgENJo),
                                         }),
                                     ],
                                 }),
-                                null == O ? void 0 : O(),
+                                null == v ? void 0 : v(),
                             ],
                         }),
                         (0, r.jsx)(o.BJc, {
@@ -168,18 +171,18 @@ function I(e) {
                             style: {
                                 marginTop: 16,
                             },
-                            children: (0, _.v8)()
+                            children: (0, h.v8)()
                                 .filter((e) => {
                                     let { isHidden: t } = e;
                                     return !t;
                                 })
                                 .map((e, t) =>
                                     (0, r.jsx)(
-                                        p.A,
+                                        _.A,
                                         {
                                             icon: e,
                                             isSelected: S === e.id,
-                                            onSelect: (e) => w(e),
+                                            onSelect: (e) => D(e),
                                             disabled: n,
                                             tabIndex: 0 !== t || n ? void 0 : 0,
                                             locked: !1,

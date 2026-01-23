@@ -88225,11 +88225,6 @@ div.nagbar_d74ef8 {
     width: auto
 }
 
-.header__3c320 {
-    margin-bottom: var(--space-16);
-    min-height: 40px
-}
-
 .title__3c320 {
     padding-top: var(--space-8)
 }
@@ -88243,6 +88238,14 @@ div.nagbar_d74ef8 {
 .title__3c320+.subtitle__3c320 {
     margin-bottom: var(--space-12);
     margin-top: -8px
+}
+
+.isolatedHeader__3c320 {
+    min-height: 40px
+}
+
+.headerLast__3c320 {
+    margin-bottom: var(--space-16)
 }
 
 .divider__3c320 {

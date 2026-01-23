@@ -10,21 +10,30 @@ var n = i(627968),
     o = i(780964),
     T = i(614651),
     A = i(70040),
-    S = i(985018);
+    d = i(985018),
+    S = i(402699);
 let E = (0, a.E2)(o.X.APPEARANCE_CLIENT_THEMES, {
-    useSearchTerms: () => [S.intl.string(S.t.Ksh3ik), S.intl.string(S.t["0EzVst"]), S.intl.string(S.t.OCOOiI)],
+    useSearchTerms: () => [d.intl.string(d.t.Ksh3ik), d.intl.string(d.t["0EzVst"]), d.intl.string(d.t.OCOOiI)],
     Component: () => {
         let t = (0, l.bG)([r.A], () => r.A.useForcedColors);
-        return (0, n.jsx)(s.nVY, {
-            label: S.intl.string(S.t.Ksh3ik),
-            children: t
-                ? (0, n.jsx)(s.wx6, {
-                      type: "info",
-                      children: (0, u.D)() ? (0, n.jsx)(T.Ys, {}) : S.intl.string(S.t.AUMSZP),
-                  })
-                : (0, n.jsxs)("div", {
-                      children: [(0, n.jsx)(T.ac, {}), (0, n.jsx)(A.I, {})],
-                  }),
+        return (0, n.jsxs)("fieldset", {
+            children: [
+                (0, n.jsx)(s.Text, {
+                    tag: "legend",
+                    variant: "heading-xl/normal",
+                    color: "text-strong",
+                    className: S.D,
+                    children: d.intl.string(d.t.Ksh3ik),
+                }),
+                t
+                    ? (0, n.jsx)(s.wx6, {
+                          type: "info",
+                          children: (0, u.D)() ? (0, n.jsx)(T.Ys, {}) : d.intl.string(d.t.AUMSZP),
+                      })
+                    : (0, n.jsxs)("div", {
+                          children: [(0, n.jsx)(T.ac, {}), (0, n.jsx)(A.I, {})],
+                      }),
+            ],
         });
     },
 });
