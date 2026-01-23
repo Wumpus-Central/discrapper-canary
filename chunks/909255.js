@@ -6,25 +6,23 @@ var r = n(627968),
     l = n(342494),
     a = n(397927),
     s = n(976860),
-    o = n(84483),
-    c = n(652215),
-    u = n(49999),
-    d = n(49370),
-    p = n(985018),
-    f = n(880055);
+    o = n(652215),
+    c = n(49999),
+    u = n(49370),
+    d = n(985018),
+    p = n(880055);
 
 function h(e) {
     let { targetElementRef: t, dismissPopover: n, children: h } = e,
-        { orbsRewardAmount: A } = (0, o.uX)("PremiumOrbRewardsUpsellPopover"),
         g = i.useCallback(() => {
-            n(u.i.TAKE_ACTION), (0, s.pX)(c.BVt.APPLICATION_STORE);
+            n(c.i.TAKE_ACTION), (0, s.pX)(o.BVt.APPLICATION_STORE);
         }, [n]),
-        m = (0, r.jsx)(l.AM, {
+        f = (0, r.jsx)(l.AM, {
             targetElementRef: t,
-            onRequestClose: () => n(u.i.USER_DISMISS),
+            onRequestClose: () => n(c.i.USER_DISMISS),
             graphic: {
                 type: "image",
-                src: f.A,
+                src: p.A,
             },
             badge: {
                 type: "beta",
@@ -37,13 +35,11 @@ function h(e) {
                 align: "start",
             },
             size: "md",
-            title: p.intl.string(d.default["3BI7j6"]),
-            body: p.intl.formatToPlainString(d.default.FGYM4u, {
-                orbsCount: A,
-            }),
+            title: d.intl.string(u.default["3BI7j6"]),
+            body: d.intl.string(u.default.XNHr3C),
             actions: [
                 {
-                    text: p.intl.string(p.t.hvVgAZ),
+                    text: d.intl.string(d.t.hvVgAZ),
                     onClick: g,
                 },
             ],
@@ -58,7 +54,7 @@ function h(e) {
             (0, r.jsx)("div", {
                 children: h,
             }),
-            m,
+            f,
         ],
     });
 }
