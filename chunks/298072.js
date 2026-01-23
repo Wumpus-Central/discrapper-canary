@@ -1,43 +1,32 @@
 n.d(t, {
-    Q: () => u,
-    n: () => d,
+    Q: () => o,
+    n: () => c,
 }),
     n(896048);
 var r = n(942381),
     i = n(265690),
-    l = n(575593),
-    a = n(311907),
-    s = n(4227),
-    o = n(841702);
-let c = (0, i.h)(
+    l = n(312852),
+    a = n(623373);
+let s = (0, i.h)(
         () => ({
             selectionStates: new Map(),
         }),
         r.x,
     ),
-    u = (e) => {
-        var t, n;
-        (0, o.b5)();
-        let r = (0, a.bG)([s.A], () => s.A.purchases),
-            i = c((t) => {
+    o = (e) => {
+        let t = (0, l.K)(e),
+            n = s((t) => {
                 var n;
-                return (null == e ? void 0 : e.type) !== l.R.VARIANTS_GROUP
-                    ? 0
-                    : null == (n = t.selectionStates.get(e.storeListingId))
-                      ? void 0
-                      : n.selectedVariantIndex;
+                return null != e && (0, a.B1)(e)
+                    ? null == (n = t.selectionStates.get(e.storeListingId))
+                        ? void 0
+                        : n.selectedVariantIndex
+                    : null;
             });
-        return null != i
-            ? Math.max(0, i)
-            : Math.max(
-                  0,
-                  null != (t = null == e || null == (n = e.variants) ? void 0 : n.findIndex((e) => !r.has(e.skuId)))
-                      ? t
-                      : 0,
-              );
+        return null != n ? Math.max(0, n) : t;
     },
-    d = (e, t) => {
-        c.setState((n) => {
+    c = (e, t) => {
+        s.setState((n) => {
             var r, i, l;
             let a =
                 null != (r = n.selectionStates.get(e.storeListingId))

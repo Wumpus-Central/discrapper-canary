@@ -85,12 +85,12 @@ async function E(e) {
             scrollTarget: f,
             guildId: h,
             channelId: E,
-            showGuildProfile: b = !0,
-            appContext: y,
+            showGuildProfile: y = !0,
+            appContext: b,
             customStatusPrompt: O,
-            disableActionsForPreview: A = !1,
+            disableActionsForPreview: v = !1,
         } = e,
-        v = _(e, [
+        A = _(e, [
             "userId",
             "tabSection",
             "scrollTarget",
@@ -101,17 +101,18 @@ async function E(e) {
             "customStatusPrompt",
             "disableActionsForPreview",
         ]),
-        S = l.default.getUser(a);
-    if (null == S) return;
-    let I = l.default.getCurrentUser();
+        I = l.default.getUser(a);
     if (null == I) return;
-    let T = g(a, b ? h : void 0);
+    let S = l.default.getCurrentUser();
+    if (null == S) return;
+    let T = g(a, y ? h : void 0);
     m.add(
         await (0, i.mMO)(
             async () => {
                 let e = (
                     await Promise.all([
                         n.e("10614"),
+                        n.e("20088"),
                         n.e("42944"),
                         n.e("10117"),
                         n.e("13696"),
@@ -124,24 +125,24 @@ async function E(e) {
                         e,
                         p(
                             {
-                                user: S,
-                                currentUser: I,
+                                user: I,
+                                currentUser: S,
                                 guildId: h,
                                 initialTabSection: s,
                                 initialScrollTarget: f,
                                 channelId: E,
-                                showGuildProfile: b,
+                                showGuildProfile: y,
                                 customStatusPrompt: O,
-                                disableActionsForPreview: A,
+                                disableActionsForPreview: v,
                             },
                             t,
-                            v,
+                            A,
                         ),
                     );
             },
             {
                 modalKey: T,
-                contextKey: (0, i.TId)(null != (t = null != y ? y : (0, o.zd)()) ? t : d.BRT.APP),
+                contextKey: (0, i.TId)(null != (t = null != b ? b : (0, o.zd)()) ? t : d.BRT.APP),
                 onCloseRequest: () => {
                     u.A.hasUnsavedChanges()
                         ? c.A.notifyUnsavedWidgets()
@@ -152,18 +153,18 @@ async function E(e) {
     );
 }
 
-function b() {
+function y() {
     if (0 !== m.size) {
         for (let e of m) (0, i.OoC)(e);
         m.clear(), c.A.clearPendingWidgets();
     }
 }
-class y extends s.A {
+class b extends s.A {
     _initialize() {
-        a.h.subscribe("USER_PROFILE_MODAL_OPEN", E), a.h.subscribe("USER_PROFILE_MODAL_CLOSE", b);
+        a.h.subscribe("USER_PROFILE_MODAL_OPEN", E), a.h.subscribe("USER_PROFILE_MODAL_CLOSE", y);
     }
     _terminate() {
-        a.h.unsubscribe("USER_PROFILE_MODAL_OPEN", E), a.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", b);
+        a.h.unsubscribe("USER_PROFILE_MODAL_OPEN", E), a.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", y);
     }
 }
-let O = new y();
+let O = new b();

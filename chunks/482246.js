@@ -16,14 +16,14 @@ var r = n(627968),
     _ = n(576622),
     h = n(287809),
     m = n(674658),
-    g = n(898461),
-    E = n(203632),
+    g = n(645178),
+    E = n(898461),
+    y = n(203632),
     b = n(14702),
-    y = n(764999),
     O = n(985018),
-    A = n(245948);
+    v = n(245948);
 
-function v(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function v(e, t, n) {
     );
 }
 
-function S(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,13 +48,13 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
 }
 
-function I(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,7 +72,7 @@ function T(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -84,15 +84,15 @@ let C = (e) => {
             isSelected: n,
             price: a,
             onSelect: o,
-            shouldDisplayHeader: v = !1,
-            className: I,
+            shouldDisplayHeader: A = !1,
+            className: S,
             previewHeaderClassName: C,
             hideProfilePreview: N = !1,
         } = e,
         { product: R } = (0, m.q)(t, !0),
         { giftRecipient: w, giftRecipientError: P } = (0, f.Pv)(),
         D = (0, u.bG)([h.default], () => h.default.getCurrentUser()),
-        x = (0, y.o7)(R),
+        x = (0, g.o7)(R),
         L = i.useRef(null);
     if (null == R) return null;
     let [j] = R.items;
@@ -120,11 +120,11 @@ let C = (e) => {
             null != t && null != o && o(t);
         };
     return (0, r.jsxs)("div", {
-        className: I,
+        className: S,
         children: [
-            v &&
+            A &&
                 (0, r.jsx)("div", {
-                    className: s()(A.QU, C),
+                    className: s()(v.QU, C),
                     children: (0, r.jsx)(d.D0$, {
                         label: O.intl.string(O.t.PpoJzt),
                         children:
@@ -137,11 +137,11 @@ let C = (e) => {
                                     renderPopout: (e) =>
                                         (0, r.jsx)(
                                             p.A,
-                                            T(S({}, e), {
+                                            T(I({}, e), {
                                                 user: w,
                                                 pendingAvatar: w.getAvatarURL(null, (0, d.FT9)(d._3J.SIZE_80)),
-                                                pendingAvatarDecoration: (0, g.T)(j) ? j : null,
-                                                pendingProfileEffect: (0, E.C)(j) ? j : null,
+                                                pendingAvatarDecoration: (0, E.T)(j) ? j : null,
+                                                pendingProfileEffect: (0, y.C)(j) ? j : null,
                                                 canUsePremiumCustomization: !0,
                                                 disabledInputs: !0,
                                                 hideExampleButton: !0,
@@ -152,8 +152,8 @@ let C = (e) => {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             d.DUT,
-                                            T(S({}, e), {
-                                                className: A.Nx,
+                                            T(I({}, e), {
+                                                className: v.Nx,
                                                 innerRef: L,
                                                 children: (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/medium",
@@ -170,20 +170,20 @@ let C = (e) => {
             (0, r.jsxs)(d.DUT, {
                 tag: "div",
                 onClick: U,
-                className: s()(A.i1, {
-                    [A.no]: n && null == P,
-                    [A.cN]: n && null != P,
+                className: s()(v.i1, {
+                    [v.no]: n && null == P,
+                    [v.cN]: n && null != P,
                 }),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: A.Ug,
+                        className: v.Ug,
                         children: [
                             (0, r.jsx)(b.O, {
                                 product: R,
                                 fallbackLabel: null,
                             }),
                             (0, r.jsxs)("div", {
-                                className: A.JZ,
+                                className: v.JZ,
                                 children: [
                                     (0, r.jsx)(d.Text, {
                                         variant: "text-md/semibold",
@@ -205,7 +205,7 @@ let C = (e) => {
                     n &&
                         null != P &&
                         (0, r.jsx)("div", {
-                            className: A.Wh,
+                            className: v.Wh,
                             children: (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-feedback-critical",

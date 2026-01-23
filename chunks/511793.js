@@ -20,13 +20,13 @@ var r = n(627968),
     m = n(701663),
     g = n(7143),
     E = n(404787),
-    b = n(411199),
-    y = n(463347),
+    y = n(411199),
+    b = n(463347),
     O = n(614792),
-    A = n(961350),
-    v = n(954571),
-    S = n(53505),
-    I = n(374400),
+    v = n(961350),
+    A = n(954571),
+    I = n(53505),
+    S = n(374400),
     T = n(723702),
     C = n(837921),
     N = n(652215);
@@ -161,6 +161,7 @@ let L = (0, h.Fe)({
                 n.e("83898"),
                 n.e("4787"),
                 n.e("88974"),
+                n.e("20088"),
                 n.e("6502"),
                 n.e("79023"),
                 n.e("28979"),
@@ -171,7 +172,7 @@ let L = (0, h.Fe)({
                 n.e("74492"),
                 n.e("34160"),
                 n.e("33563"),
-                n.e("98763"),
+                n.e("21724"),
                 n.e("97492"),
                 n.e("22477"),
                 n.e("28636"),
@@ -294,10 +295,10 @@ function er(e, t) {
 class ei extends i.Component {
     componentDidMount() {
         let { isAuthenticated: e } = this.props;
-        C.Ay.cleanupDisplaySleep(), b.A.initialize(), (O.A.wasAuthenticated = e);
+        C.Ay.cleanupDisplaySleep(), y.A.initialize(), (O.A.wasAuthenticated = e);
     }
     componentWillUnmount() {
-        b.A.terminate();
+        y.A.terminate();
     }
     render() {
         let e,
@@ -342,7 +343,7 @@ class ei extends i.Component {
                                         component: Y,
                                     }),
                                     (0, r.jsx)(_.A, {
-                                        path: N.BVt.INVITE_PROXY(y.pv.channelId()),
+                                        path: N.BVt.INVITE_PROXY(b.pv.channelId()),
                                         component: M,
                                     }),
                                     (0, r.jsx)(s.rd, {
@@ -401,8 +402,8 @@ class ei extends i.Component {
                                         ? null
                                         : (0, r.jsx)(s.qh, {
                                               path: N.BVt.CHANNEL(
-                                                  y.pv.guildId(),
-                                                  y.pv.channelId({
+                                                  b.pv.guildId(),
+                                                  b.pv.channelId({
                                                       optional: !0,
                                                   }),
                                                   ":messageId?",
@@ -414,7 +415,7 @@ class ei extends i.Component {
                                         to: N.BVt.LOGIN,
                                     }),
                                     (0, r.jsx)(_.A, {
-                                        path: N.BVt.INVITE_PROXY(y.pv.channelId()),
+                                        path: N.BVt.INVITE_PROXY(b.pv.channelId()),
                                         component: M,
                                     }),
                                     (0, r.jsx)(s.rd, {
@@ -480,14 +481,14 @@ class ei extends i.Component {
                                         path: N.BVt.DOWNLOAD_QR_CODE_REDIRECT,
                                         render: () => {
                                             var e, t, n;
-                                            let r = null == (t = v.default.getSuperProperties()) ? void 0 : t.os,
+                                            let r = null == (t = A.default.getSuperProperties()) ? void 0 : t.os,
                                                 i = (0, a.parse)(
                                                     (null != (e = window.location.search) ? e : "").substr(1),
                                                 ),
                                                 s = null == (n = i.referring_location) ? void 0 : n.toString();
                                             return (
                                                 ("iOS" === r || "Android" === r) &&
-                                                    v.default.track(N.HAw.DOWNLOAD_APP, {
+                                                    A.default.track(N.HAw.DOWNLOAD_APP, {
                                                         platform: r,
                                                         ptb: !1,
                                                         released: !0,
@@ -495,7 +496,7 @@ class ei extends i.Component {
                                                         referring_location: s,
                                                         qr_code: !0,
                                                     }),
-                                                (window.location.href = (0, S.b$)(
+                                                (window.location.href = (0, I.b$)(
                                                     null != s && "" !== s ? s : "qr_code",
                                                     r,
                                                 )),
@@ -507,8 +508,8 @@ class ei extends i.Component {
                                         path: N.BVt.OPEN_APP_FROM_EMAIL,
                                         render: () => {
                                             var e, t;
-                                            let n = null == (t = v.default.getSuperProperties()) ? void 0 : t.os,
-                                                i = (0, I.Z)(null != (e = window.location.search) ? e : "");
+                                            let n = null == (t = A.default.getSuperProperties()) ? void 0 : t.os,
+                                                i = (0, S.Z)(null != (e = window.location.search) ? e : "");
                                             if ("iOS" !== n && "Android" !== n)
                                                 return (0, r.jsx)(s.rd, {
                                                     to:
@@ -517,10 +518,10 @@ class ei extends i.Component {
                                                             : N.BVt.APP,
                                                 });
                                             {
-                                                let e = (0, S.b$)("app_open_from_email", n, i.mobile),
+                                                let e = (0, I.b$)("app_open_from_email", n, i.mobile),
                                                     t = (0, c.X7)(e);
                                                 null != t &&
-                                                    v.default.track(N.HAw.DEEP_LINK_CLICKED, {
+                                                    A.default.track(N.HAw.DEEP_LINK_CLICKED, {
                                                         fingerprint: (0, u.v)(t.fingerprint),
                                                         attempt_id: t.attemptId,
                                                         source: t.utmSource,
@@ -610,9 +611,9 @@ function es(e) {
     );
 }
 let eo = d.Ay.connectStores(
-    [A.default, g.A],
+    [v.default, g.A],
     () => ({
-        isAuthenticated: A.default.isAuthenticated(),
+        isAuthenticated: v.default.isAuthenticated(),
         migrationStatus: g.A.getMigrationStatus(),
     }),
     {
