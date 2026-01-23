@@ -1,0 +1,483 @@
+n.d(t, {
+    W: () => f,
+});
+var r = n(627968);
+n(64700);
+var i = n(996682),
+    a = n(27989);
+
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+
+function o(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+
+function u(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i,
+        a = {};
+    if ("u" > typeof Reflect && Reflect.ownKeys) {
+        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+        return a;
+    }
+    if (((a = d(e, t)), Object.getOwnPropertySymbols))
+        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+    return a;
+}
+
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.getOwnPropertyNames(e);
+    for (r = 0; r < a.length; r++)
+        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    return i;
+}
+let f = (e) => {
+    var t, n;
+    let { size: s = "md", width: l, height: d } = e,
+        f = u(e, ["size", "width", "height"]),
+        p = (0, a.J)(s),
+        _ = null != (t = null == p ? void 0 : p.width) ? t : l,
+        h = null != (n = null == p ? void 0 : p.height) ? n : d;
+    return (0, r.jsxs)(
+        "svg",
+        c(o({}, (0, i.A)(f)), {
+            xmlns: "http://www.w3.org/2000/svg",
+            width: _,
+            height: h,
+            fill: "none",
+            viewBox: "0 0 24 24",
+            children: [
+                (0, r.jsx)("path", {
+                    fill: "#F3F3F4",
+                    fillRule: "evenodd",
+                    d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2Z",
+                    clipRule: "evenodd",
+                }),
+                (0, r.jsxs)("g", {
+                    clipPath: "url(#a)",
+                    children: [
+                        (0, r.jsx)("mask", {
+                            id: "b",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#b)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "M17.4 11.65h-1.38a.28.28 0 0 1-.28-.28c0-.15.12-.29.28-.29h2.1v-1.03h-2.1a1.33 1.33 0 0 0 0 2.66h1.36c.15 0 .28.12.28.27 0 .15-.13.27-.28.27h-2.92c-.25.47-.49.87-.98 1.08h3.92a1.34 1.34 0 0 0 0-2.68Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "c",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#c)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "M12.1 10.05c-1.16 0-2.12.96-2.12 2.13v4.45h1.06v-2.3h1.06a2.14 2.14 0 0 0 0-4.28Zm0 3.2h-1.06v-1.07c0-.6.48-1.08 1.07-1.08a1.08 1.08 0 0 1 0 2.15Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "d",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#d)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#C8036F",
+                                d: "M6.63 14.33c-1 0-1.84-.72-2.07-1.65 0 0-.06-.3-.06-.5 0-.21.06-.52.06-.52a2.14 2.14 0 0 1 4.2.5v.52H5.65c.19.36.56.57 1 .57h2.8V10.2a.83.83 0 0 0-.82-.83H4.64a.82.82 0 0 0-.83.82v3.98c0 .45.37.83.83.83h3.98c.4 0 .75-.29.81-.67h-2.8Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "e",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#e)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#C8036F",
+                                d: "M6.63 11.05c-.43 0-.8.26-.99.6h1.97c-.18-.34-.55-.6-.98-.6Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "f",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#f)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#C8036F",
+                                d: "M8.43 8.08c0-.97-.8-1.76-1.8-1.76-.98 0-1.78.76-1.8 1.7v.55c0 .06.05.12.11.12h.66c.07 0 .13-.06.13-.12v-.5c0-.48.4-.87.9-.87s.9.4.9.88v.49c0 .06.05.12.12.12h.66c.06 0 .12-.06.12-.12v-.5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "g",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#g)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "m13.3 15.7-.1.54c-.05.28-.23.4-.47.4-.2 0-.37-.13-.32-.4l.1-.54h.14l-.1.54c-.02.17.05.27.2.27.14 0 .27-.09.3-.26l.1-.55h.14Zm-.59-.17c0 .05.04.07.08.07s.1-.03.1-.1c0-.04-.04-.06-.07-.06-.05 0-.1.03-.1.1Zm.32 0c0 .05.04.07.08.07s.1-.03.1-.1c0-.04-.04-.06-.07-.06-.05 0-.1.03-.1.1Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "h",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#h)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "m13.65 15.7-.06.38a.34.34 0 0 1 .25-.12c.16 0 .28.1.28.28 0 .25-.18.4-.4.4-.1 0-.17-.03-.21-.11l-.03.1h-.13l.16-.93h.14Zm-.1.64c0 .1.06.17.17.17.13 0 .25-.1.26-.25 0-.1-.07-.17-.17-.17-.13 0-.25.1-.26.25Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "i",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#i)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "M14.39 16.36c0 .09.06.16.18.16.07 0 .16-.03.2-.07l.08.08a.46.46 0 0 1-.3.12c-.2 0-.3-.12-.3-.3 0-.22.18-.4.4-.4.22 0 .34.13.27.4h-.53Zm.42-.12c0-.11-.06-.16-.17-.16-.1 0-.2.05-.23.16h.4Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "j",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#j)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "m15.29 15.97-.01.09c.06-.08.14-.1.21-.1.06 0 .12.02.15.05l-.08.12a.15.15 0 0 0-.1-.04.2.2 0 0 0-.22.18l-.06.36h-.14l.12-.66h.13Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "k",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#k)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "m16.3 15.97.07.52.25-.52h.16l-.35.66h-.16l-.06-.44-.1.22-.12.22h-.16l-.12-.66h.15l.07.52.25-.52h.12Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "l",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#l)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "M16.95 16.36c0 .09.07.16.19.16.06 0 .15-.03.2-.07l.07.08a.46.46 0 0 1-.3.12c-.19 0-.3-.12-.3-.3 0-.22.18-.4.42-.4.2 0 .33.13.25.4h-.53Zm.42-.12c.01-.11-.05-.16-.16-.16-.1 0-.2.05-.24.16h.4Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "m",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#m)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "m17.86 15.97-.12.66h-.13l.11-.66h.14Zm-.12-.18c0 .05.03.08.07.08.05 0 .1-.04.1-.1a.07.07 0 0 0-.07-.07c-.04 0-.1.03-.1.1Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "n",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#n)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "M18.47 16.13c-.04-.04-.1-.06-.16-.06-.1 0-.16.03-.16.09 0 .05.05.07.13.08.12 0 .27.05.24.21-.02.13-.14.2-.31.2-.11 0-.21-.02-.28-.12l.09-.1c.05.07.13.1.21.1.07 0 .14-.03.16-.09 0-.06-.04-.08-.14-.09-.11 0-.23-.05-.23-.17 0-.17.17-.22.3-.22.1 0 .18.02.24.08l-.09.1Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "o",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#o)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "m18.9 15.97-.06.35c-.02.12.03.2.14.2.11 0 .2-.1.22-.2l.06-.35h.14l-.12.66h-.12l.01-.1a.34.34 0 0 1-.25.1c-.16 0-.25-.1-.22-.3l.07-.36h.13Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "p",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#p)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "m20 16.63.07-.35c.02-.12-.02-.2-.15-.2-.1 0-.2.1-.22.2l-.06.35h-.14l.12-.66h.13l-.01.1c.07-.07.15-.1.24-.1.16 0 .26.1.22.3l-.06.36H20Z",
+                            }),
+                        }),
+                        (0, r.jsx)("mask", {
+                            id: "q",
+                            width: "21",
+                            height: "13",
+                            x: "2",
+                            y: "5",
+                            maskUnits: "userSpaceOnUse",
+                            style: {
+                                maskType: "luminance",
+                            },
+                            children: (0, r.jsx)("path", {
+                                fill: "#fff",
+                                d: "M22.49 5H2.46v13h20.03V5Z",
+                            }),
+                        }),
+                        (0, r.jsx)("g", {
+                            mask: "url(#q)",
+                            children: (0, r.jsx)("path", {
+                                fill: "#71706F",
+                                d: "M20.47 16.72c-.01.09.06.12.17.12.1 0 .21-.05.24-.2l.02-.11a.31.31 0 0 1-.25.12c-.17 0-.29-.1-.29-.28 0-.26.2-.41.41-.41.1 0 .18.04.2.12l.03-.1h.13l-.11.67c-.04.24-.23.32-.4.32-.2 0-.31-.1-.29-.25h.14Zm.04-.38c0 .11.07.18.18.18.28 0 .35-.44.07-.44-.13 0-.25.1-.25.26Z",
+                            }),
+                        }),
+                    ],
+                }),
+                (0, r.jsx)("defs", {
+                    children: (0, r.jsx)("clipPath", {
+                        id: "a",
+                        children: (0, r.jsx)("path", {
+                            fill: "#fff",
+                            d: "M2.46 5h20.03v13H2.46z",
+                        }),
+                    }),
+                }),
+            ],
+        }),
+    );
+};

@@ -1,0 +1,127 @@
+n.d(t, {
+    W: () => f,
+});
+var r = n(627968);
+n(64700);
+var i = n(996682),
+    a = n(27989);
+
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+
+function o(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+
+function u(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i,
+        a = {};
+    if ("u" > typeof Reflect && Reflect.ownKeys) {
+        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+        return a;
+    }
+    if (((a = d(e, t)), Object.getOwnPropertySymbols))
+        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+    return a;
+}
+
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.getOwnPropertyNames(e);
+    for (r = 0; r < a.length; r++)
+        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    return i;
+}
+let f = (e) => {
+    var t, n;
+    let { size: s = "md", width: l, height: d } = e,
+        f = u(e, ["size", "width", "height"]),
+        p = (0, a.J)(s),
+        _ = null != (t = null == p ? void 0 : p.width) ? t : l,
+        h = null != (n = null == p ? void 0 : p.height) ? n : d;
+    return (0, r.jsxs)(
+        "svg",
+        c(o({}, (0, i.A)(f)), {
+            xmlns: "http://www.w3.org/2000/svg",
+            width: _,
+            height: h,
+            fill: "none",
+            viewBox: "0 0 24 24",
+            children: [
+                (0, r.jsx)("path", {
+                    fill: "#F3F3F4",
+                    fillRule: "evenodd",
+                    d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2Z",
+                    clipRule: "evenodd",
+                }),
+                (0, r.jsx)("path", {
+                    fill: "#FCAF16",
+                    d: "m11.2 12.05-.06-.05c-.25-.24-.6-.35-1.05-.32-.38.02-.68.17-.92.31 0-.13.02-.26.03-.38l.03-.38a.89.89 0 0 0-.06-.35.07.07 0 0 0-.06-.04 1 1 0 0 0-.43.14l-.03.07c0 .13-.03.51-.06.56l-.02.05a6.89 6.89 0 0 0 0 1.43c0 .04.08.1.14.13.07.02.28-.04.4-.08h.05c.03-.01.06-.05.05-.09v-.12c.1-.35.45-.77.87-.84a.6.6 0 0 1 .57.19c.02.02.06.28-.1.57-.11.22-.34.4-.65.52-.29.1-.6.15-1 .14l-.36-.25c-.31-.22-.7-.49-1.05-.62-.06-.03-.17-.12-.24-.17l-.04-.03c-.2-.16-.58-.42-.89-.63l-.17-.1v-.04l.2-.13c.28-.16.4-.24.43-.28l.04-.02.67-.38a8.23 8.23 0 0 0 1.76-1.15l.02-.06v-.06a.37.37 0 0 0 .01-.22c0-.03-.02-.05-.05-.06-.3-.03-.69.15-1.04.48a.94.94 0 0 1-.21.15l-.06.03c-.39.22-1.26.77-1.72 1.06.03-.5.12-1.2.23-1.78v-.07l-.06-.08-.03-.07h-.01c-.1-.05-.17-.03-.22-.01l-.1.03-.12.04a.07.07 0 0 0-.05.05c-.22.53-.4 1.4-.44 2.1a10.5 10.5 0 0 0-1.04-.58l-.03-.01a.73.73 0 0 1-.24-.11l-.17-.11-.25-.16-.07-.02a.8.8 0 0 0-.38.26l-.01.04v.06l.02.05.01.03c.12.12.43.33.73.5l.35.18.54.3.09.06.06.04h.01l-.97.66-.51.34a3 3 0 0 1-.3.14.42.42 0 0 0-.23.19l-.01.03.01.02.04.03.06.03.05.04h.05c.1.01.23-.04.48-.15.23-.1.85-.48 1.11-.64l.12-.06c.04 0 .1-.04.14-.07.05-.05.17-.12.24-.15l.08-.04v.03c.01.8.06 1.4.15 1.86v.02c.05.07.1.26.14.43l.1.34.03.03c.06.04.24.1.35.1l.03-.01.02-.04.02-.16-.01-.21-.01-.12c-.04-.57-.08-1.4-.08-1.93v-.05l.52.33c.72.46 1.8 1.17 2.46 1.35a.1.1 0 0 0 .1-.02l.1-.06.01-.01c.04-.02.06-.08.07-.15.55-.03 1.32-.24 1.73-.76.16-.2.23-.45.23-.66 0-.17-.04-.32-.13-.4Z",
+                }),
+                (0, r.jsx)("path", {
+                    fill: "#776C61",
+                    stroke: "#776C61",
+                    strokeWidth: ".11",
+                    d: "M13.7 9.94v1.73l2.06-1.71.02-.02h1.08l-.12.1-2.22 1.77 2.4 2.15.12.1h-1.07l-.02-.02-2.24-2.06v2.08h-.76V9.94h.76ZM19.3 9.94c.47 0 .84.08 1.1.25.25.18.38.45.38.8 0 .44-.26.76-.64.9.24.06.42.17.56.32a1 1 0 0 1 .24.68c0 .31-.11.6-.37.82-.26.22-.65.35-1.2.35h-2.1V9.94h2.03Zm-1.27 3.55h1.2c.39 0 .62-.08.75-.19.13-.1.18-.26.18-.45 0-.21-.07-.37-.22-.48-.16-.11-.4-.17-.74-.17h-1.17v1.29Zm0-1.86h1.24c.24 0 .43-.05.57-.14a.47.47 0 0 0 .21-.41c0-.18-.04-.32-.16-.41-.12-.1-.33-.16-.7-.16h-1.16v1.12Z",
+                }),
+            ],
+        }),
+    );
+};

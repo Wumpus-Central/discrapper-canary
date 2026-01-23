@@ -92,7 +92,7 @@ function f(e, t) {
 }
 let p = (e) => {
     var t, n;
-    let { size: o = "md", width: c, height: f, color: p = i.A.colors.ICON_STRONG, colorClass: _ = "" } = e,
+    let { size: o = "md", width: c, height: f, color: p = i.A.colors.ICON_OVERLAY_LIGHT, colorClass: _ = "" } = e,
         h = d(e, ["size", "width", "height", "color", "colorClass"]),
         m = (0, s.J)(o),
         g = null != (t = null == m ? void 0 : m.width) ? t : c,

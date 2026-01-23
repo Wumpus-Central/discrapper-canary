@@ -1,0 +1,137 @@
+n.d(t, {
+    E: () => f,
+});
+var r = n(627968);
+n(64700);
+var i = n(996682),
+    a = n(27989);
+
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+
+function o(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+
+function u(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i,
+        a = {};
+    if ("u" > typeof Reflect && Reflect.ownKeys) {
+        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+        return a;
+    }
+    if (((a = d(e, t)), Object.getOwnPropertySymbols))
+        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+    return a;
+}
+
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.getOwnPropertyNames(e);
+    for (r = 0; r < a.length; r++)
+        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    return i;
+}
+let f = (e) => {
+    var t, n;
+    let { size: s = "md", width: l, height: d } = e,
+        f = u(e, ["size", "width", "height"]),
+        p = (0, a.J)(s),
+        _ = null != (t = null == p ? void 0 : p.width) ? t : l,
+        h = null != (n = null == p ? void 0 : p.height) ? n : d;
+    return (0, r.jsxs)(
+        "svg",
+        c(o({}, (0, i.A)(f)), {
+            xmlns: "http://www.w3.org/2000/svg",
+            width: _,
+            height: h,
+            fill: "none",
+            viewBox: "0 0 24 24",
+            children: [
+                (0, r.jsx)("path", {
+                    fill: "#000",
+                    fillRule: "evenodd",
+                    d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2Z",
+                    clipRule: "evenodd",
+                }),
+                (0, r.jsx)("path", {
+                    fill: "#FC0",
+                    d: "M7.9 8.61a3.57 3.57 0 0 1 4.65 2.63l2.45-.5A6.06 6.06 0 0 0 7.1 6.3l.8 2.32Z",
+                }),
+                (0, r.jsx)("path", {
+                    fill: "#00A0DE",
+                    d: "m5.05 16.5 1.66-1.87a3.54 3.54 0 0 1 0-5.32L5.05 7.44a6.02 6.02 0 0 0 0 9.06Z",
+                }),
+                (0, r.jsx)("path", {
+                    fill: "#EC3413",
+                    d: "M12.54 12.7a3.58 3.58 0 0 1-4.65 2.67l-.8 2.37A6.13 6.13 0 0 0 15 13.2l-2.46-.5Z",
+                }),
+                (0, r.jsx)("path", {
+                    fill: "#fff",
+                    d: "M14.22 18.33a1.43 1.43 0 0 1-.13-1.26c.14-.39.4-.68.75-.83a1.42 1.42 0 0 1 1.91.82l.05.13-2.58 1.14Zm.86-1.52a.72.72 0 0 0-.43.77l1.3-.57c-.23-.27-.52-.36-.87-.2Zm1.03 1.23-.03-.02a.77.77 0 0 1-.35.3c-.29.13-.56.1-.75-.07l-.02.02-.33.5a1.35 1.35 0 0 0 1.36.13c.27-.11.48-.3.62-.52l-.5-.34ZM17.73 15.5v2.78l.43.18-.25.57-.48-.2a.54.54 0 0 1-.23-.2.61.61 0 0 1-.1-.34v-2.78h.63Z",
+                }),
+                (0, r.jsx)("path", {
+                    fill: "#fff",
+                    d: "M18.83 17.6c0-.24.11-.46.28-.6l-.45-.5a1.44 1.44 0 0 0 0 2.18l.45-.5a.78.78 0 0 1-.28-.59ZM19.6 18.36a.76.76 0 0 1-.25-.04l-.2.63c.14.05.3.08.45.08.69 0 1.27-.5 1.4-1.17l-.64-.13a.78.78 0 0 1-.76.63ZM19.6 16.12c-.16 0-.31.03-.45.08l.2.63a.77.77 0 0 1 1 .6l.65-.14a1.44 1.44 0 0 0-1.4-1.17Z",
+                }),
+            ],
+        }),
+    );
+};
