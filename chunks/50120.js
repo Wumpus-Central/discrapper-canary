@@ -89,6 +89,7 @@ let D = (0, c.A)(
         return (0, r.jsx)(d.f5, {
             value: M,
             children: (0, r.jsxs)(l.W1t, {
+                "data-menu-migration-ready": !0,
                 navId: "user-settings-cog",
                 onClose: a.Z_,
                 "aria-label": C.intl.string(C.t.opYYHn),

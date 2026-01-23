@@ -107,6 +107,7 @@ function u(e) {
                 }),
         });
     return (0, r.jsx)(i.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "message-reminder-create",
         onClose: o.Z_,
         "aria-label": s.intl.string(s.t.mJ3P0N),

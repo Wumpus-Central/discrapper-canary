@@ -1,6 +1,6 @@
 n.d(t, {
     A: () => O,
-    n: () => y,
+    n: () => b,
 });
 var r = n(627968),
     i = n(64700),
@@ -60,7 +60,7 @@ function E(e, t) {
     return n;
 }
 
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,18 +71,18 @@ function b(e, t) {
         e
     );
 }
-let y = "content-inventory-context";
+let b = "content-inventory-context";
 
 function O(e) {
     var t;
-    let { user: n, guildId: m, channel: E, entry: O, onSelect: A, disableGameProfileLinks: v } = e,
-        S = i.useRef(null),
-        I = i.useContext(p.Jd),
+    let { user: n, guildId: m, channel: E, entry: O, onSelect: v, disableGameProfileLinks: A } = e,
+        I = i.useRef(null),
+        S = i.useContext(p.Jd),
         T = (0, d.A)({
             userId: n.id,
             guildId: m,
             channelId: null == E ? void 0 : E.id,
-            onAction: I,
+            onAction: S,
         }),
         C = (0, l.A)({
             id: n.id,
@@ -96,25 +96,26 @@ function O(e) {
         w = (0, f.zD)(O),
         P = (0, u.A)({
             location: "ContentPopoutContextMenu",
-            applicationId: w && !0 !== v ? (null == (t = O.extra) ? void 0 : t.application_id) : void 0,
+            applicationId: w && !0 !== A ? (null == (t = O.extra) ? void 0 : t.application_id) : void 0,
             source: c.Ob.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: O.author_id,
         });
     return (0, r.jsx)(s.YNO, {
-        targetElementRef: S,
+        targetElementRef: I,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(s.W1t, {
-                navId: y,
+                "data-menu-mixed": !0,
+                navId: b,
                 onClose: () => {
                     (0, o.Z_)(), t();
                 },
                 "aria-label": _.intl.string(_.t.liqwPJ),
-                onSelect: A,
+                onSelect: v,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(s.rXV, {
@@ -125,7 +126,7 @@ function O(e) {
                                         id: "game-profile",
                                         label: _.intl.string(_.t.f7aVGn),
                                         action: (e) => {
-                                            P(e), null == I || I();
+                                            P(e), null == S || S();
                                         },
                                     }),
                             ],
@@ -143,10 +144,10 @@ function O(e) {
                 text: _.intl.string(_.t["UKOtz+"]),
                 children: (0, r.jsx)(
                     s.DUT,
-                    b(
+                    y(
                         g(
                             {
-                                innerRef: S,
+                                innerRef: I,
                                 className: h.r,
                             },
                             e,

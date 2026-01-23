@@ -6,8 +6,8 @@ var r = n(627968),
     o = n(64700),
     i = n(522579),
     l = n(311907),
-    c = n(397927),
-    a = n(157559),
+    a = n(397927),
+    c = n(157559),
     u = n(442433),
     s = n(847767),
     d = n(358367),
@@ -18,14 +18,14 @@ var r = n(627968),
     g = n(837921),
     O = n(102597),
     j = n(629788),
-    w = n(980504),
-    m = n(652215),
+    m = n(980504),
+    w = n(652215),
     v = n(985018);
 let h = (0, d.A)(
     (0, s.A)(
         function (e) {
             let { soundGuild: t, sound: s, activeCallGuildId: d, onSelect: b } = e,
-                m = (function (e, t) {
+                w = (function (e, t) {
                     let { canManageGuildExpressions: i } = (0, l.cf)(
                             [p.A],
                             () =>
@@ -36,9 +36,9 @@ let h = (0, d.A)(
                                     : p.A.getGuildPermissionProps(t),
                             [t],
                         ),
-                        a = o.useCallback(() => {
+                        c = o.useCallback(() => {
                             if ((null == t ? void 0 : t.id) == null) return null;
-                            (0, c.mMO)(async () => {
+                            (0, a.mMO)(async () => {
                                 let { default: o } = await Promise.all([n.e("40556"), n.e("61274")]).then(
                                     n.bind(n, 6503),
                                 );
@@ -95,11 +95,11 @@ let h = (0, d.A)(
                         }, [t, e]);
                     return i
                         ? (0, r.jsx)(
-                              c.Drp,
+                              a.Drp,
                               {
                                   id: "edit-soundboard-sound",
                                   label: v.intl.string(v.t.ponZcG),
-                                  action: a,
+                                  action: c,
                               },
                               "edit-soundboard-sound",
                           )
@@ -126,17 +126,17 @@ let h = (0, d.A)(
                                     l = "".concat(t, ".").concat(o);
                                 y.isPlatformEmbedded ? await g.Ay.saveFile(e, l) : (0, i.saveAs)(r, l);
                             } catch (e) {
-                                a.A.show({
+                                c.A.show({
                                     title: v.intl.string(v.t.mK3tDH),
                                     body: v.intl.string(v.t.jLlfDN),
                                     confirmText: v.intl.string(v.t.BddRzS),
                                 });
                             }
                         }, [t]);
-                    return e.guildId === w.mV
+                    return e.guildId === m.mV
                         ? null
                         : (0, r.jsx)(
-                              c.Drp,
+                              a.Drp,
                               {
                                   id: "download-soundboard-sound",
                                   label: v.intl.string(v.t["/fzLLK"]),
@@ -150,18 +150,19 @@ let h = (0, d.A)(
                     id: s.soundId,
                     label: v.intl.string(v.t.HJikXp),
                 });
-            return (0, r.jsx)(c.W1t, {
+            return (0, r.jsx)(a.W1t, {
+                "data-menu-mixed": !0,
                 navId: "sound-button-context",
                 onClose: u.Z_,
                 "aria-label": v.intl.string(v.t.liqwPJ),
                 onSelect: b,
-                children: (0, r.jsxs)(c.rXV, {
-                    children: [m, P, h, A],
+                children: (0, r.jsxs)(a.rXV, {
+                    children: [w, P, h, A],
                 }),
             });
         },
         {
-            object: m.ZSU.CONTEXT_MENU,
+            object: w.ZSU.CONTEXT_MENU,
         },
     ),
     [b.A.CONTEXT_MENU, b.A.SOUNDBOARD_BUTTON],

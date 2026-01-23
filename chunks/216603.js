@@ -4,8 +4,8 @@ n.d(e, {
     n(896048);
 var r = n(627968),
     l = n(64700),
-    c = n(621466),
-    i = n(397927),
+    i = n(621466),
+    c = n(397927),
     a = n(442433),
     o = n(614203),
     s = n(723702),
@@ -15,19 +15,19 @@ var r = n(627968),
 function d(t) {
     let { text: e, target: n, onHeightUpdate: d, onSelect: b } = t,
         f = l.useCallback(() => {
-            (0, a.Z_)(), (0, c.vq)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0));
+            (0, a.Z_)(), (0, i.vq)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0));
         }, [n]),
         [y, h] = (0, o.A)({
             text: e,
             target: n,
             onHeightUpdate: d,
         });
-    if (!s.isPlatformEmbedded || !((0, c.vq)(n, HTMLInputElement) || (0, c.vq)(n, HTMLTextAreaElement))) return null;
+    if (!s.isPlatformEmbedded || !((0, i.vq)(n, HTMLInputElement) || (0, i.vq)(n, HTMLTextAreaElement))) return null;
     let O =
         "" !== e
             ? [
                   (0, r.jsx)(
-                      i.Drp,
+                      c.Drp,
                       {
                           id: "cut",
                           label: p.intl.string(p.t.pNPVhe),
@@ -37,7 +37,7 @@ function d(t) {
                       "cut",
                   ),
                   (0, r.jsx)(
-                      i.Drp,
+                      c.Drp,
                       {
                           id: "copy",
                           label: p.intl.string(p.t.OpuAlK),
@@ -48,22 +48,23 @@ function d(t) {
                   ),
               ]
             : null;
-    return (0, r.jsxs)(i.W1t, {
+    return (0, r.jsxs)(c.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "textarea-context",
         onClose: f,
         "aria-label": p.intl.string(p.t.NWlDSI),
         onSelect: b,
         children: [
-            (0, r.jsx)(i.rXV, {
+            (0, r.jsx)(c.rXV, {
                 children: y,
             }),
-            (0, r.jsx)(i.rXV, {
+            (0, r.jsx)(c.rXV, {
                 children: h,
             }),
-            (0, r.jsxs)(i.rXV, {
+            (0, r.jsxs)(c.rXV, {
                 children: [
                     O,
-                    (0, r.jsx)(i.Drp, {
+                    (0, r.jsx)(c.Drp, {
                         id: "paste",
                         label: p.intl.string(p.t.lMUxVi),
                         hint: (0, s.isMac)() ? "⌘V" : "Ctrl+V",

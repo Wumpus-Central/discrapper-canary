@@ -29,6 +29,7 @@ let p = (0, c.A)(
             context: n,
             object: b.ZSU.CONTEXT_MENU,
             children: (0, r.jsxs)(i.W1t, {
+                "data-menu-mixed": !0,
                 navId: "user-context",
                 onClose: l.Z_,
                 "aria-label": f.intl.string(f.t.liqwPJ),

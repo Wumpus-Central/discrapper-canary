@@ -1,5 +1,5 @@
 n.d(t, {
-    default: () => x,
+    default: () => E,
 });
 var r = n(627968);
 n(64700);
@@ -21,9 +21,9 @@ var i = n(397927),
     j = n(995102),
     h = n(288104),
     v = n(661504),
-    P = n(969128),
-    _ = n(90509),
-    m = n(985018);
+    m = n(969128),
+    P = n(90509),
+    _ = n(985018);
 
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -59,25 +59,26 @@ function C(e) {
         y = (0, O.A)(t),
         f = (0, p.A)(t),
         g = (0, d.A)(t),
-        P = (0, u.A)(t),
-        w = (0, _.A)(t),
+        m = (0, u.A)(t),
+        w = (0, P.A)(t),
         C = (0, o.A)({
             id: t.id,
-            label: m.intl.string(m.t["2visC6"]),
+            label: _.intl.string(_.t["2visC6"]),
         }),
-        E = (0, b.os)("ChannelCategoryFavoritesMenu"),
-        x = (0, v.Ay)(t);
+        x = (0, b.os)("ChannelCategoryFavoritesMenu"),
+        E = (0, v.Ay)(t);
     return (0, r.jsxs)(i.W1t, {
+        "data-menu-mixed": !0,
         navId: "channel-context",
         onClose: l.Z_,
-        "aria-label": m.intl.string(m.t.Xm41aV),
+        "aria-label": _.intl.string(_.t.Xm41aV),
         onSelect: n,
         children: [
             (0, r.jsxs)(i.rXV, {
-                children: [a, P, g],
+                children: [a, m, g],
             }),
             (0, r.jsxs)(i.rXV, {
-                children: [c, E ? x : s],
+                children: [c, x ? E : s],
             }),
             (0, r.jsxs)(i.rXV, {
                 children: [y, f],
@@ -92,28 +93,29 @@ function C(e) {
     });
 }
 
-function E(e) {
+function x(e) {
     let { channel: t, guild: n, onSelect: a } = e,
         c = (0, A.A)(t),
         s = (0, j.Ay)(t),
         u = (0, h.A)(t),
-        _ = (0, O.A)(t),
+        P = (0, O.A)(t),
         w = (0, p.A)(t),
         C = (0, g.A)(t),
-        E = (0, d.A)(t),
-        x = (0, y.A)(t, n),
+        x = (0, d.A)(t),
+        E = (0, y.A)(t, n),
         D = (0, f.A)(t),
         S = (0, o.A)({
             id: t.id,
-            label: m.intl.string(m.t["2visC6"]),
+            label: _.intl.string(_.t["2visC6"]),
         }),
-        G = (0, P.A)(t),
+        G = (0, m.A)(t),
         N = (0, b.os)("ChannelCategoryNormalMenu"),
         T = (0, v.Ay)(t);
     return (0, r.jsxs)(i.W1t, {
+        "data-menu-mixed": !0,
         navId: "channel-context",
         onClose: l.Z_,
-        "aria-label": m.intl.string(m.t.Xm41aV),
+        "aria-label": _.intl.string(_.t.Xm41aV),
         onSelect: a,
         children: [
             (0, r.jsx)(
@@ -126,7 +128,7 @@ function E(e) {
             (0, r.jsxs)(
                 i.rXV,
                 {
-                    children: [G, _, w],
+                    children: [G, P, w],
                 },
                 "channel-actions",
             ),
@@ -140,7 +142,7 @@ function E(e) {
             (0, r.jsxs)(
                 i.rXV,
                 {
-                    children: [C, E, x, D],
+                    children: [C, x, E, D],
                 },
                 "admin-actions",
             ),
@@ -154,9 +156,9 @@ function E(e) {
         ],
     });
 }
-let x = (0, a.A)(
+let E = (0, a.A)(
     function (e) {
-        return (0, s.A)() ? (0, r.jsx)(C, w({}, e)) : (0, r.jsx)(E, w({}, e));
+        return (0, s.A)() ? (0, r.jsx)(C, w({}, e)) : (0, r.jsx)(x, w({}, e));
     },
     [c.A.CONTEXT_MENU, c.A.CHANNEL_CATEGORY_MENU],
 );

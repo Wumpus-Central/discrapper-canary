@@ -121,6 +121,7 @@ function D(e) {
         G = (0, f.A)(t, n, a),
         B = t.isNonUserBot();
     return (0, r.jsxs)(l.W1t, {
+        "data-menu-mixed": !0,
         navId: "user-context",
         onClose: i.Z_,
         "aria-label": h.intl.string(h.t.liqwPJ),
@@ -197,6 +198,7 @@ function x(e) {
         L = (0, d.A)(t),
         V = t.isNonUserBot();
     return (0, r.jsxs)(l.W1t, {
+        "data-menu-mixed": !0,
         navId: "user-context",
         onClose: i.Z_,
         "aria-label": h.intl.string(h.t.liqwPJ),

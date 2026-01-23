@@ -8,8 +8,8 @@ n(64700);
 var i = n(397927),
     l = n(442433),
     o = n(847767),
-    s = n(358367),
-    a = n(793574),
+    a = n(358367),
+    s = n(793574),
     c = n(734337),
     u = n(855187),
     d = n(479335),
@@ -26,8 +26,8 @@ var i = n(397927),
     y = n(985018);
 
 function x(e) {
-    let { isOwnSettings: t, userId: n, channelId: l, guildId: o, context: s } = e,
-        a = (0, m.A)({
+    let { isOwnSettings: t, userId: n, channelId: l, guildId: o, context: a } = e,
+        s = (0, m.A)({
             userId: n,
             guildId: o,
             channelId: l,
@@ -37,7 +37,7 @@ function x(e) {
             }),
             label: y.intl.string(y.t.iXAna6),
         }),
-        d = (0, p.A)(n, s, i.oyn),
+        d = (0, p.A)(n, a, i.oyn),
         f = (0, v.A)(n),
         g = (0, O.A)(n),
         A = (0, c.A)(n),
@@ -45,7 +45,7 @@ function x(e) {
         h = (0, b.A)();
     return [
         (0, r.jsxs)(i.rXV, {
-            children: [a, d],
+            children: [s, d],
         }),
         (0, r.jsxs)(i.rXV, {
             children: [f, g, A, j, t && h],
@@ -64,13 +64,13 @@ function D(e, t, n) {
             id: e.id,
             label: y.intl.string(y.t["/AXYnE"]),
         }),
-        s = (0, j.A)({
+        a = (0, j.A)({
             user: e,
             guildId: n,
             channelId: t,
             location: "GuildVoiceUserContextMenu",
         }),
-        a = (0, A.A)({
+        s = (0, A.A)({
             user: e,
             guildId: n,
             channelId: t,
@@ -81,15 +81,15 @@ function D(e, t, n) {
         });
     return [
         (0, r.jsxs)(i.rXV, {
-            children: [s, a],
+            children: [a, s],
         }),
         c,
     ];
 }
-let E = (0, s.A)(
+let E = (0, a.A)(
     (0, o.A)(
         function (e) {
-            let { user: t, channel: n, onSelect: o, onInteraction: s, context: a } = e,
+            let { user: t, channel: n, onSelect: o, onInteraction: a, context: s } = e,
                 c = n.id,
                 u = t.isNonUserBot(),
                 d = t.id === g.default.getId(),
@@ -97,7 +97,7 @@ let E = (0, s.A)(
                     isOwnSettings: d,
                     userId: t.id,
                     channelId: c,
-                    context: a,
+                    context: s,
                 }),
                 A = D(t, c),
                 j = (0, f.A)({
@@ -105,11 +105,12 @@ let E = (0, s.A)(
                     label: y.intl.string(y.t["/AXYnE"]),
                 });
             return (0, r.jsx)(i.W1t, {
+                "data-menu-mixed": !0,
                 navId: "user-context",
                 onClose: l.Z_,
                 "aria-label": y.intl.string(y.t.liqwPJ),
                 onSelect: o,
-                onInteraction: s,
+                onInteraction: a,
                 variant: "fixed",
                 children:
                     !u &&
@@ -136,5 +137,5 @@ let E = (0, s.A)(
             object: h.ZSU.CONTEXT_MENU,
         },
     ),
-    [a.A.VOICE_USER],
+    [s.A.VOICE_USER],
 );

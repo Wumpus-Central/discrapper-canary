@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => g,
+    A: () => m,
 });
 var r = n(627968);
 n(64700);
@@ -7,14 +7,15 @@ var i = n(397927),
     l = n(442433),
     s = n(828208),
     a = n(513461),
-    c = n(557420),
-    o = n(322388),
+    o = n(557420),
+    c = n(322388),
     d = n(985018),
     u = n(369529);
 
-function f(e) {
-    let { addFormField: t, onSelect: n, guild: c, allowTerms: f } = e;
+function g(e) {
+    let { addFormField: t, onSelect: n, guild: o, allowTerms: g } = e;
     return (0, r.jsx)(i.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "add-questions",
         className: u.M,
         onClose: l.Z_,
@@ -26,34 +27,34 @@ function f(e) {
                     id: "text-input",
                     icon: (0, i.kHD)(s.A),
                     label: d.intl.string(d.t.w6Q9wz),
-                    action: () => (0, o.PV)(a.rX.TEXT_INPUT, t, c),
+                    action: () => (0, c.PV)(a.rX.TEXT_INPUT, t, o),
                 }),
                 (0, r.jsx)(i.Drp, {
                     id: "paragraph",
                     icon: i.$tc,
                     label: d.intl.string(d.t.gG0JBN),
-                    action: () => (0, o.PV)(a.rX.PARAGRAPH, t, c),
+                    action: () => (0, c.PV)(a.rX.PARAGRAPH, t, o),
                 }),
                 (0, r.jsx)(i.Drp, {
                     id: "multiple-choice",
                     icon: i.jsc,
                     label: d.intl.string(d.t.ooKh3m),
-                    action: () => (0, o.PV)(a.rX.MULTIPLE_CHOICE, t, c),
+                    action: () => (0, c.PV)(a.rX.MULTIPLE_CHOICE, t, o),
                 }),
-                f &&
+                g &&
                     (0, r.jsx)(i.Drp, {
                         id: "terms",
                         icon: i.B8Q,
                         label: d.intl.string(d.t["3pz9t3"]),
-                        action: () => (0, o.PV)(a.rX.TERMS, t, c),
+                        action: () => (0, c.PV)(a.rX.TERMS, t, o),
                     }),
             ],
         }),
     });
 }
-let g = function (e) {
+let m = function (e) {
     let { addFormField: t, guild: n, allowTerms: i } = e;
-    return (0, r.jsx)(c.d, {
+    return (0, r.jsx)(o.d, {
         text: d.intl.string(d.t.CoHdoG),
         tooltipText: d.intl.string(d.t.nsI4dU),
         onClick: (e) => {
@@ -62,7 +63,7 @@ let g = function (e) {
                 (e) => {
                     var l, s;
                     return (0, r.jsx)(
-                        f,
+                        g,
                         ((l = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},

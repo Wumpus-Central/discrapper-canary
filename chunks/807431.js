@@ -3,8 +3,8 @@ n.d(t, {
 });
 var l = n(627968);
 n(64700);
-var r = n(397927),
-    i = n(442433),
+var i = n(397927),
+    r = n(442433),
     a = n(961973),
     s = n(997509),
     u = n(36942),
@@ -15,15 +15,16 @@ function c(e) {
     let { guild: t, onSelect: n } = e,
         c = (0, u.A)(t.id),
         h = (0, a.rs)(t.id);
-    return (0, l.jsx)(r.W1t, {
+    return (0, l.jsx)(i.W1t, {
+        "data-menu-mixed": !0,
         onSelect: n,
         navId: "guild-browse-channels-context-menu",
         "aria-label": o.intl.string(o.t.ogxXGq),
-        onClose: i.Z_,
-        children: (0, l.jsxs)(r.rXV, {
+        onClose: r.Z_,
+        children: (0, l.jsxs)(i.rXV, {
             children: [
                 h &&
-                    (0, l.jsx)(r.Drp, {
+                    (0, l.jsx)(i.Drp, {
                         id: "go-to-settings",
                         label: o.intl.string(o.t.X70lV6),
                         action: () => {

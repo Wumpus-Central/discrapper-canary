@@ -1,5 +1,5 @@
 r.d(t, {
-    default: () => l,
+    default: () => u,
 });
 var n = r(627968),
     o = r(64700),
@@ -7,9 +7,9 @@ var n = r(627968),
     a = r(442433),
     i = r(545059);
 
-function l(e) {
-    let { groupId: t, onSelect: l } = e,
-        u = o.useCallback(() => {
+function u(e) {
+    let { groupId: t, onSelect: u } = e,
+        l = o.useCallback(() => {
             (0, c.mMO)(async () => {
                 let { default: e } = await r.e("51080").then(r.bind(r, 519528));
                 return (r) => {
@@ -67,15 +67,16 @@ function l(e) {
             i.A.deleteGroup(t), (0, a.Z_)();
         }, [t]);
     return (0, n.jsxs)(c.W1t, {
+        "data-menu-migration-ready": !0,
         "aria-label": "Group Context Menu",
         navId: "group-context-menu",
         onClose: a.Z_,
-        onSelect: l,
+        onSelect: u,
         children: [
             (0, n.jsx)(c.Drp, {
                 id: "edit",
                 label: "Edit Group",
-                action: u,
+                action: l,
             }),
             (0, n.jsx)(c.Drp, {
                 id: "delete",

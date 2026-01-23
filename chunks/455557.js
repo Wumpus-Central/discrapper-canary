@@ -1,5 +1,5 @@
 r.d(t, {
-    default: () => d,
+    default: () => p,
 });
 var n = r(627968);
 r(64700);
@@ -10,21 +10,22 @@ var l = r(397927),
     o = r(153594),
     s = r(531335),
     u = r(652215),
-    p = r(985018);
+    d = r(985018);
 
-function d(e) {
+function p(e) {
     let { guild: t, onSelect: r } = e,
-        d = c.Ay.getDefaultChannel(t.id, !0, u.xBc.CREATE_INSTANT_INVITE),
+        p = c.Ay.getDefaultChannel(t.id, !0, u.xBc.CREATE_INSTANT_INVITE),
         b = (0, o.A)(t.id),
         O = (0, a.A)(t),
         y = (0, s.A)({
             guild: t,
             source: u.PE1.GUILD_CONTEXT_MENU,
-            channel: d,
+            channel: p,
         });
     return (0, n.jsxs)(l.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "guild-context",
-        "aria-label": p.intl.string(p.t.HpQykc),
+        "aria-label": d.intl.string(d.t.HpQykc),
         onClose: i.Z_,
         onSelect: r,
         children: [

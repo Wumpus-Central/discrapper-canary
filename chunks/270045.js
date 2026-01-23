@@ -17,13 +17,13 @@ var r = n(627968),
     m = n(859703),
     g = n(341915),
     E = n(807876),
-    b = n(890687),
-    y = n(651892),
+    y = n(890687),
+    b = n(651892),
     O = n(710969),
-    A = n(901406),
-    v = n(792620),
-    S = n(814793),
-    I = n(201805),
+    v = n(901406),
+    A = n(792620),
+    I = n(814793),
+    S = n(201805),
     T = n(545986),
     C = n(654487),
     N = n(652215),
@@ -121,29 +121,29 @@ function k(e) {
         P = [g.uF.QUEST_BAR_V2, g.uF.QUEST_BAR].includes(e.questContent),
         D = (0, _.Ut)(),
         x = (0, h.go)(),
-        L = (0, y.wr)(e.quest),
-        j = !0 === e.showShareLink && (0, S.E0)(e.quest.config),
+        L = (0, b.wr)(e.quest),
+        j = !0 === e.showShareLink && (0, I.E0)(e.quest.config),
         {
             handleComplete: M,
             handleProgress: k,
             handleResetDismissibilityClick: U,
             handleResetStatusClick: G,
             handleOverrideDeliveryClick: V,
-        } = (0, b.j$)(e.quest.id),
+        } = (0, y.j$)(e.quest.id),
         F = () => {
             k(0.9 * Math.random() + 0.03);
         },
         B = i.useCallback(() => {
             e.quest.id === C.Fw
                 ? window.open(f.A.getArticleURL(N.MVz.VIRTUAL_CURRENCY_LEARN_MORE))
-                : (0, A.pu)(e.quest, {
+                : (0, v.pu)(e.quest, {
                       content: e.questContent,
                       ctaContent: _.Cy.CONTEXT_MENU_OPEN_GAME_LINK,
                       impressionId: x,
                       sourceQuestContent: e.sourceQuestContent,
                   });
         }, [x, e.quest, e.questContent, e.sourceQuestContent]),
-        H = (0, I.Lk)({
+        H = (0, S.Lk)({
             isShareable: j,
             questId: e.quest.id,
             trackingCtx: i.useMemo(
@@ -198,7 +198,7 @@ function k(e) {
         Q = () => {
             G(), Z();
         },
-        $ = (0, b.nv)(e.quest),
+        $ = (0, y.nv)(e.quest),
         J = i.useMemo(
             () =>
                 (0, r.jsx)(s.sLh, {
@@ -214,6 +214,7 @@ function k(e) {
         }, [e.quest.id]),
         et = e.shouldShowDisclosure && e.quest.id !== C.Fw;
     return (0, r.jsxs)(s.W1t, {
+        "data-menu-mixed": !0,
         variant: "fixed",
         onSelect: K,
         navId: "quests-entry",
@@ -296,7 +297,7 @@ function k(e) {
                                 label: w.intl.string(w.t.jQEfRT),
                                 action: M,
                             }),
-                            (0, v.g5)(e.quest) &&
+                            (0, A.g5)(e.quest) &&
                                 (0, r.jsxs)(s.Drp, {
                                     id: "console",
                                     label: "Console Heartbeat",
@@ -304,7 +305,7 @@ function k(e) {
                                         (0, r.jsx)(s.Drp, {
                                             disabled: !0,
                                             id: "status",
-                                            label: "Status: ".concat((0, v.YL)(e.quest) ? "alive" : "dead"),
+                                            label: "Status: ".concat((0, A.YL)(e.quest) ? "alive" : "dead"),
                                         }),
                                         (0, r.jsx)(s.Drp, {
                                             id: "start",

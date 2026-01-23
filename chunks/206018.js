@@ -14,8 +14,8 @@ var o = r(110259),
     p = r(48435),
     O = r(485873),
     f = r(24933),
-    y = r(964592),
-    d = r(430452),
+    d = r(964592),
+    y = r(430452),
     m = r(383501),
     g = r(532624),
     v = r(723702),
@@ -39,8 +39,8 @@ function C(e) {
             renderOutputDevices: E = !1,
             renderOutputVolume: V = !1,
             renderInputDevices: M = !1,
-            renderInputVolume: U = !1,
-            maybeRenderInputMeter: x = !1,
+            renderInputVolume: x = !1,
+            maybeRenderInputMeter: U = !1,
             renderSettingsButton: N = !1,
         } = e,
         { analyticsLocations: L } = (0, s.Ay)();
@@ -62,17 +62,17 @@ function C(e) {
             analyticsLocations: L,
             asSubmenu: !0,
         }),
-        K = (0, u.bG)([d.A], () => d.A.getActiveInputProfile()),
+        K = (0, u.bG)([y.A], () => y.A.getActiveInputProfile()),
         X = (0, f.A)(L),
         H = (0, O.A)(L),
-        G = (0, y.A)(L),
+        G = (0, d.A)(L),
         J = i.x.DEFAULT,
-        Y = d.A.isSelfDeaf(J),
-        Z = (0, u.bG)([d.A], () => d.A.getMode()),
+        Y = y.A.isSelfDeaf(J),
+        Z = (0, u.bG)([y.A], () => y.A.getMode()),
         q = Z === A.TBI.VOICE_ACTIVITY ? A.TBI.PUSH_TO_TALK : A.TBI.VOICE_ACTIVITY,
-        Q = (0, u.bG)([d.A, g.Ay], () => {
+        Q = (0, u.bG)([y.A, g.Ay], () => {
             var e;
-            let t = (null == (e = d.A.getModeOptions().shortcut) ? void 0 : e.length) > 0,
+            let t = (null == (e = y.A.getModeOptions().shortcut) ? void 0 : e.length) > 0,
                 r = null != g.Ay.getKeybindForAction(A.hCu.PUSH_TO_TALK, !1, !0),
                 n = null != g.Ay.getKeybindForAction(A.hCu.PUSH_TO_TALK_PRIORITY, !1, !0);
             return t || r || n;
@@ -81,6 +81,7 @@ function C(e) {
     return (0, n.jsx)(c.A, {
         object: A.ZSU.CONTEXT_MENU,
         children: (0, n.jsxs)(l.W1t, {
+            "data-menu-mixed": !0,
             onSelect: C,
             onInteraction: r,
             onClose: D,
@@ -94,8 +95,8 @@ function C(e) {
                 }),
                 (0, n.jsxs)(l.rXV, {
                     children: [
-                        U && H,
-                        x &&
+                        x && H,
+                        U &&
                             W &&
                             (0, n.jsx)(l.aK1, {
                                 id: "input-device-meter",

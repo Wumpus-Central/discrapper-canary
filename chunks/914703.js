@@ -5,24 +5,25 @@ var r = n(627968);
 n(64700);
 var l = n(397927),
     i = n(660273),
-    a = n(57907),
-    s = n(867455),
+    s = n(57907),
+    a = n(867455),
     o = n(607508),
     c = n(37411);
 
 function u(e) {
-    let { channel: t, closePopout: n, onSelect: u, navId: d, label: f } = e,
-        p = (0, i.A)(t, "Notifications Bell"),
-        h = (0, a.A)(t),
-        b = (0, o.X)(t);
+    let { channel: t, closePopout: n, onSelect: u, navId: d, label: p } = e,
+        h = (0, i.A)(t, "Notifications Bell"),
+        f = (0, s.A)(t),
+        g = (0, o.X)(t);
     return (0, r.jsxs)(l.W1t, {
+        "data-menu-migration-ready": !0,
         navId: d,
         onClose: n,
-        "aria-label": f,
+        "aria-label": p,
         onSelect: u,
         children: [
             (0, r.jsxs)(l.rXV, {
-                children: [t.isForumPost() ? p : null, h],
+                children: [t.isForumPost() ? h : null, f],
             }),
             (0, r.jsx)(l.rXV, {
                 children: (0, c.EU)().map((e) => {
@@ -34,10 +35,10 @@ function u(e) {
                             id: "".concat(n),
                             label: i,
                             action: () =>
-                                s.A.setNotificationSettings(t, {
+                                a.A.setNotificationSettings(t, {
                                     flags: n,
                                 }),
-                            checked: n === b,
+                            checked: n === g,
                         },
                         n,
                     );

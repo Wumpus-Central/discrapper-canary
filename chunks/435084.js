@@ -1,25 +1,25 @@
 n.d(t, {
-    A: () => b,
+    A: () => g,
 });
 var r = n(627968),
     l = n(64700),
     i = n(311907),
-    a = n(435371),
-    s = n(397927),
+    s = n(435371),
+    a = n(397927),
     o = n(378939),
     c = n(734057),
     u = n(309010),
     d = n(187508),
-    f = n(652215),
-    p = n(985018);
+    p = n(652215),
+    h = n(985018);
 
-function h(e) {
+function f(e) {
     let { closePopout: t, onSelect: n } = e,
         l = (0, i.bG)([c.A, u.A], () => c.A.getChannel(u.A.getChannelId())),
         {
-            everyoneFilter: a,
-            roleFilter: h,
-            guildFilter: b,
+            everyoneFilter: s,
+            roleFilter: f,
+            guildFilter: g,
         } = (0, i.cf)([d.Ay], () => {
             let { everyoneFilter: e, roleFilter: t, guildFilter: n } = d.Ay;
             return {
@@ -28,72 +28,73 @@ function h(e) {
                 guildFilter: n,
             };
         });
-    return (0, r.jsxs)(s.W1t, {
+    return (0, r.jsxs)(a.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "mentions-filter",
-        "aria-label": p.intl.string(p.t.pEasFX),
+        "aria-label": h.intl.string(h.t.pEasFX),
         onClose: t,
         onSelect: n,
         children: [
-            (0, r.jsx)(s.sLh, {
+            (0, r.jsx)(a.sLh, {
                 id: "Everyone",
-                label: p.intl.string(p.t.cdyUsV),
+                label: h.intl.string(h.t.cdyUsV),
                 action: function () {
                     o.A.setGuildFilter({
-                        everyoneFilter: !a,
+                        everyoneFilter: !s,
                     });
                 },
-                checked: a,
+                checked: s,
             }),
-            (0, r.jsx)(s.sLh, {
+            (0, r.jsx)(a.sLh, {
                 id: "Roles",
-                label: p.intl.string(p.t.lZejCq),
+                label: h.intl.string(h.t.lZejCq),
                 action: function () {
                     o.A.setGuildFilter({
-                        roleFilter: !h,
+                        roleFilter: !f,
                     });
                 },
-                checked: h,
+                checked: f,
             }),
             null == l || l.isPrivate()
                 ? null
-                : (0, r.jsx)(s.sLh, {
+                : (0, r.jsx)(a.sLh, {
                       id: "All Servers",
-                      label: p.intl.string(p.t.GWMA6s),
+                      label: h.intl.string(h.t.GWMA6s),
                       action: function () {
                           o.A.setGuildFilter({
-                              guildFilter: b === f.KE7.THIS_SERVER ? f.KE7.ALL_SERVERS : f.KE7.THIS_SERVER,
+                              guildFilter: g === p.KE7.THIS_SERVER ? p.KE7.ALL_SERVERS : p.KE7.THIS_SERVER,
                           });
                       },
-                      checked: b === f.KE7.ALL_SERVERS,
+                      checked: g === p.KE7.ALL_SERVERS,
                   }),
         ],
     });
 }
 
-function b() {
+function g() {
     let e = l.useRef(null);
-    return (0, r.jsx)(s.YNO, {
+    return (0, r.jsx)(a.YNO, {
         targetElementRef: e,
         align: "right",
-        animation: s.YNO.Animation.NONE,
+        animation: a.YNO.Animation.NONE,
         position: "bottom",
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(h, {
+            return (0, r.jsx)(f, {
                 closePopout: t,
             });
         },
         children: (t) => {
             let { onClick: n } = t;
-            return (0, r.jsx)(a.m_, {
-                text: p.intl.string(p.t.pEasFX),
+            return (0, r.jsx)(s.m_, {
+                text: h.intl.string(h.t.pEasFX),
                 targetElementRef: e,
-                children: (0, r.jsx)(s.K0, {
+                children: (0, r.jsx)(a.K0, {
                     size: "sm",
                     variant: "secondary",
-                    "aria-label": p.intl.string(p.t.pEasFX),
-                    color: s.o5d.TERTIARY,
-                    icon: s.RgP,
+                    "aria-label": h.intl.string(h.t.pEasFX),
+                    color: a.o5d.TERTIARY,
+                    icon: a.RgP,
                     onClick: n,
                 }),
             });

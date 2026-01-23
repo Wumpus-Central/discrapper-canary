@@ -3,8 +3,8 @@ t.d(e, {
 });
 var r = t(627968);
 t(64700);
-var c = t(397927),
-    a = t(442433),
+var a = t(397927),
+    c = t(442433),
     l = t(358367),
     i = t(793574),
     o = t(50268),
@@ -18,16 +18,17 @@ let u = (0, l.A)(
                 id: e.id,
                 label: A.intl.string(A.t.gFHI3k),
             });
-        return (0, r.jsxs)(c.W1t, {
+        return (0, r.jsxs)(a.W1t, {
+            "data-menu-mixed": !0,
             navId: "channel-context",
-            onClose: a.Z_,
+            onClose: c.Z_,
             "aria-label": A.intl.string(A.t.Xm41aV),
             onSelect: t,
             children: [
-                (0, r.jsx)(c.rXV, {
+                (0, r.jsx)(a.rXV, {
                     children: l,
                 }),
-                (0, r.jsx)(c.rXV, {
+                (0, r.jsx)(a.rXV, {
                     children: i,
                 }),
             ],

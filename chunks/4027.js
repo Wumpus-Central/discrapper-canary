@@ -82,6 +82,7 @@ let A = (0, o.A)(
             return null == t || t.isManaged()
                 ? null
                 : (0, r.jsxs)(i.W1t, {
+                      "data-menu-mixed": !0,
                       navId: "gdm-context",
                       "aria-label": j.intl.string(j.t.Xm41aV),
                       onClose: l.Z_,

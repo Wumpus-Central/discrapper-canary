@@ -6,22 +6,22 @@ var r = n(627968),
     l = n(64700),
     i = n(397927),
     a = n(429913),
-    s = n(486020),
-    o = n(188275),
+    o = n(486020),
+    s = n(188275),
     c = n(985018),
     u = n(416e3);
 
 function d(e) {
     let { title: t, handleOpenCollectiblesShop: n, handleOpenGameShop: d, socialLayerStorefrontApplicationId: f } = e,
         p = l.useRef(null),
-        [b, g] = l.useState(!1),
-        m = (0, a.h)(f),
+        [g, m] = l.useState(!1),
+        b = (0, a.h)(f),
         y = l.useMemo(() => {
-            let e = null == m || m.id !== o.XR ? c.intl.string(c.t.apFNLU) : c.intl.string(c.t["kq/75v"]);
-            if (null == m) return e;
-            let t = s.Ay.getApplicationIconURL({
-                id: m.id,
-                icon: m.icon,
+            let e = null == b || b.id !== s.XR ? c.intl.string(c.t.apFNLU) : c.intl.string(c.t["kq/75v"]);
+            if (null == b) return e;
+            let t = o.Ay.getApplicationIconURL({
+                id: b.id,
+                icon: b.icon,
                 size: 20,
             });
             return (0, r.jsxs)("div", {
@@ -39,7 +39,7 @@ function d(e) {
                     }),
                 ],
             });
-        }, [m]),
+        }, [b]),
         O = l.useMemo(
             () =>
                 (0, r.jsxs)(i.rXV, {
@@ -53,21 +53,22 @@ function d(e) {
                         (0, r.jsx)(i.Drp, {
                             id: "browse-social-layer-storefront",
                             label: y,
-                            iconLeft: null != m ? void 0 : i.U1X,
+                            iconLeft: null != b ? void 0 : i.U1X,
                             action: d,
                         }),
                     ],
                 }),
-            [n, d, y, m],
+            [n, d, y, b],
         );
     return (0, r.jsx)(i.YNO, {
         targetElementRef: p,
         position: "bottom",
-        onRequestOpen: () => g(!0),
-        onRequestClose: () => g(!1),
+        onRequestOpen: () => m(!0),
+        onRequestClose: () => m(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(i.W1t, {
+                "data-menu-migration-ready": !0,
                 navId: "wishlist-overflow-menu",
                 onSelect: void 0,
                 onClose: t,
@@ -107,7 +108,7 @@ function d(e) {
                         buttonRef: p,
                         variant: "secondary",
                         size: "sm",
-                        icon: b ? i.PGe : i.abt,
+                        icon: g ? i.PGe : i.abt,
                         iconPosition: "end",
                         text: t,
                     },

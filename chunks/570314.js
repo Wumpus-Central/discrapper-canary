@@ -17,11 +17,11 @@ var r = n(627968),
     m = n(692848),
     g = n(622543),
     E = n(403777),
-    b = n(993401),
-    y = n(652215),
+    y = n(993401),
+    b = n(652215),
     O = n(985018);
 
-function A(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function A(e, t, n) {
     );
 }
 
-function v(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,13 +46,13 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
 
-function S(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -63,13 +63,13 @@ function S(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = I(e, t)), Object.getOwnPropertySymbols))
+    if (((a = S(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,8 +82,8 @@ function I(e, t) {
 
 function T(e) {
     let { user: t, closePopout: n } = e,
-        A = S(e, ["user", "closePopout"]),
-        I = i.useRef(null),
+        v = I(e, ["user", "closePopout"]),
+        S = i.useRef(null),
         T = (0, a.bG)([g.A], () => {
             var e;
             return null == (e = g.A.getUserProfile(t.id)) ? void 0 : e.application;
@@ -97,11 +97,11 @@ function T(e) {
                     ? ((0, l.hg)(T.id),
                       (0, s.OoC)((0, E.n)(R, null == C ? void 0 : C.guild_id)),
                       null == n || n(),
-                      p.default.track(y.HAw.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, {
+                      p.default.track(b.HAw.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, {
                           application_id: T.id,
                       }))
                     : (0, m.o)(
-                          v(
+                          A(
                               {
                                   applicationId: T.id,
                               },
@@ -116,10 +116,11 @@ function T(e) {
         L = N ? void 0 : x;
     return _.p5
         ? (0, r.jsx)(s.YNO, {
-              targetElementRef: I,
+              targetElementRef: S,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(s.W1t, {
+                      "data-menu-migration-ready": !0,
                       navId: "user-bot-profile-add-app",
                       onClose: t,
                       "aria-label": O.intl.string(O.t.dbkxVm),
@@ -135,12 +136,12 @@ function T(e) {
               },
               children: (e) => {
                   let { onClick: t } = e,
-                      n = S(e, ["onClick"]);
+                      n = I(e, ["onClick"]);
                   return (0, r.jsx)(
-                      b.FD,
-                      v(
+                      y.FD,
+                      A(
                           {
-                              buttonRef: I,
+                              buttonRef: S,
                               action: "PRESS_ADD_APP",
                               text: P,
                               icon: L,
@@ -148,14 +149,14 @@ function T(e) {
                               onClick: w,
                           },
                           n,
-                          A,
+                          v,
                       ),
                   );
               },
           })
         : (0, r.jsx)(
-              b.FD,
-              v(
+              y.FD,
+              A(
                   {
                       action: "PRESS_ADD_APP",
                       text: P,
@@ -163,7 +164,7 @@ function T(e) {
                       onClick: w,
                       variant: "primary",
                   },
-                  A,
+                  v,
               ),
           );
 }

@@ -13,6 +13,7 @@ var o = e(985018);
 function u(t) {
     let { onSelect: a, layoutId: e = s.OVERLAY_LAYOUT_ID, version: u } = t;
     return (0, r.jsx)(i.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "overlay",
         onClose: n.Z_,
         "aria-label": o.intl.string(o.t.tPfVWi),

@@ -16,9 +16,9 @@ function b(e) {
     let { guild: a, onSelect: s } = e,
         [b, p] = t.useState(a.premiumProgressBarEnabled),
         [h, g] = t.useState(!1),
-        k = (0, i.bG)([c.A], () => c.A.can(o.xBc.MANAGE_GUILD, a)),
-        m = async () => {
-            k &&
+        m = (0, i.bG)([c.A], () => c.A.can(o.xBc.MANAGE_GUILD, a)),
+        k = async () => {
+            m &&
                 (g(!0),
                 await l.A.saveGuild(a.id, {
                     premiumProgressBarEnabled: !b,
@@ -27,6 +27,7 @@ function b(e) {
                 g(!1));
         };
     return (0, r.jsx)(n.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "progress-bar-context",
         onClose: d.Z_,
         "aria-label": u.intl.string(u.t["m85s/h"]),
@@ -36,7 +37,7 @@ function b(e) {
             label: u.intl.string(u.t["0CJWP2"]),
             checked: b,
             disabled: h,
-            action: m,
+            action: k,
         }),
     });
 }

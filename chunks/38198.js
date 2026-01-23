@@ -9,26 +9,26 @@ n.d(t, {
 var r = n(627968),
     l = n(64700),
     i = n(311907),
-    a = n(554146),
-    s = n(827734),
+    s = n(554146),
+    a = n(827734),
     o = n(397927),
     c = n(308368),
     u = n(795816),
     d = n(688810),
-    f = n(211401),
-    p = n(500049),
-    h = n(975412),
-    b = n(826673),
-    g = n(160761),
-    m = n(379848),
+    p = n(211401),
+    h = n(500049),
+    f = n(975412),
+    g = n(826673),
+    m = n(160761),
+    b = n(379848),
     A = n(970244),
     y = n(867455),
-    O = n(780057),
-    j = n(747926),
-    v = n(320501),
-    x = n(954571),
-    E = n(203982),
-    _ = n(453771),
+    _ = n(780057),
+    O = n(747926),
+    j = n(320501),
+    v = n(954571),
+    x = n(203982),
+    E = n(453771),
     C = n(518960),
     S = n(408018),
     I = n(447155),
@@ -40,28 +40,28 @@ var r = n(627968),
 let D = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
 
 function M() {
-    let e = (0, i.bG)([v.A], () => v.A.hasCurrentUserSentMessageSinceAppStart()),
+    let e = (0, i.bG)([j.A], () => j.A.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
-    e && t.push(a.M.ACTIVITIES_CHAT_MENU_NEW_BADGE);
-    let [n] = (0, g.DP)(t);
+    e && t.push(s.M.ACTIVITIES_CHAT_MENU_NEW_BADGE);
+    let [n] = (0, m.DP)(t);
     return (
         l.useEffect(
             () => () => {
-                n === a.M.ACTIVITIES_CHAT_MENU_NEW_BADGE &&
-                    (0, b.Dr)(a.M.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
+                n === s.M.ACTIVITIES_CHAT_MENU_NEW_BADGE &&
+                    (0, g.Dr)(s.M.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
                         dismissAction: T.i.TAKE_ACTION,
                     });
             },
             [n],
         ),
-        (0, r.jsx)(m.Ay, {
+        (0, r.jsx)(b.Ay, {
             contentTypes: t,
             children: (e) => {
                 let { visibleContent: t } = e;
-                return t === a.M.ACTIVITIES_CHAT_MENU_NEW_BADGE
+                return t === s.M.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, r.jsx)(o.LpS, {
                           text: w.intl.string(w.t.y2b7CA),
-                          color: s.A.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT.css,
+                          color: a.A.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT.css,
                       })
                     : null;
             },
@@ -72,36 +72,36 @@ function M() {
 function L(e) {
     let {
             channel: t,
-            chatInputType: s,
-            options: g,
-            onFileUpload: m,
-            onClose: v,
+            chatInputType: a,
+            options: m,
+            onFileUpload: b,
+            onClose: j,
             onSelect: L,
-            draftType: G,
-            editorTextContent: k,
+            draftType: k,
+            editorTextContent: G,
             setValue: U,
-            openClips: V,
+            openClips: B,
         } = e,
-        { analyticsLocations: F, newestAnalyticsLocation: H } = (0, d.Ay)(),
-        B = (0, A.s)({
+        { analyticsLocations: V, newestAnalyticsLocation: F } = (0, d.Ay)(),
+        H = (0, A.s)({
             channel: t,
         }),
-        K = (0, i.bG)([O.A], () => O.A.isInProgress());
+        K = (0, i.bG)([_.A], () => _.A.isInProgress());
 
     function W() {
-        (0, j.Tv)(t, void 0, "Plus Button");
+        (0, O.Tv)(t, void 0, "Plus Button");
     }
 
     function z() {
-        x.default.track(N.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), U("/", (0, S.x7)("/"));
+        v.default.track(N.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), U("/", (0, S.x7)("/"));
     }
 
     function Y() {
-        V();
+        B();
     }
 
     function q() {
-        (0, b.Dr)(a.M.POLLS_CHAT_INPUT_COACHMARK, {
+        (0, g.Dr)(s.M.POLLS_CHAT_INPUT_COACHMARK, {
             dismissAction: T.i.TAKE_ACTION,
         }),
             (0, o.mMO)(
@@ -163,12 +163,12 @@ function L(e) {
     }
 
     function X() {
-        x.default.track(N.HAw.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        v.default.track(N.HAw.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id,
         }),
-            (0, h.A)({
+            (0, f.A)({
                 context:
                     null != t
                         ? {
@@ -179,7 +179,7 @@ function L(e) {
                               type: "contextless",
                           },
                 openInPopout: !1,
-                analyticsLocation: H,
+                analyticsLocation: F,
             }),
             (0, u.LV)({
                 guildId: t.guild_id,
@@ -187,14 +187,14 @@ function L(e) {
     }
 
     function J() {
-        let e = k,
+        let e = G,
             n = "txt",
             r = "",
-            l = k.match(D);
+            l = G.match(D);
         null != l && ((r = l[1]), (n = l[2]), (e = l[3]), (r += l[4])),
             (0, C.R)(
                 [
-                    (0, _.VE)(
+                    (0, E.VE)(
                         new Blob([e], {
                             type: "text/plain",
                         }),
@@ -203,29 +203,30 @@ function L(e) {
                     ),
                 ],
                 t,
-                G,
+                k,
             ),
-            E._.dispatchToLastSubscribed(N.jej.CLEAR_TEXT),
+            x._.dispatchToLastSubscribed(N.jej.CLEAR_TEXT),
             "" !== r &&
-                E._.dispatchToLastSubscribed(N.jej.INSERT_TEXT, {
+                x._.dispatchToLastSubscribed(N.jej.INSERT_TEXT, {
                     plainText: r,
                 });
     }
     return (
         l.useEffect(() => {
-            x.default.track(N.HAw.OPEN_POPOUT, {
+            v.default.track(N.HAw.OPEN_POPOUT, {
                 type: "Send Attachment",
                 channel_id: t.id,
                 guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id]),
         (0, r.jsx)(o.W1t, {
+            "data-menu-mixed": !0,
             onSelect: L,
             navId: "channel-attach",
-            onClose: v,
+            onClose: j,
             "aria-label": w.intl.string(w.t.Xm41aV),
             className: R.MK,
-            children: g.map(function (e) {
+            children: m.map(function (e) {
                 let n = (0, r.jsxs)("div", {
                     className: R.ed,
                     children: [
@@ -253,12 +254,12 @@ function L(e) {
                             {
                                 id: "upload-file",
                                 label: n,
-                                action: m,
+                                action: b,
                             },
                             "upload-file",
                         );
                     case I.v.UPLOAD_TEXT_AS_FILE:
-                        if ("" === k) return null;
+                        if ("" === G) return null;
                         return (0, r.jsx)(
                             o.Drp,
                             {
@@ -302,7 +303,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: N.xL.JOIN,
                                             activity: n,
-                                            location: F[F.length - 1],
+                                            location: V[V.length - 1],
                                         })
                                     );
                                 },
@@ -323,7 +324,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: N.xL.LISTEN,
                                             activity: n,
-                                            location: F[F.length - 1],
+                                            location: V[V.length - 1],
                                         })
                                     );
                                 },
@@ -344,7 +345,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: N.xL.WATCH,
                                             activity: n,
-                                            location: F[F.length - 1],
+                                            location: V[V.length - 1],
                                         })
                                     );
                                 },
@@ -377,7 +378,7 @@ function L(e) {
                             {
                                 id: "APP_LAUNCHER",
                                 label: n,
-                                action: () => (0, f.R)(p.s4.TEXT, s, void 0, t.id),
+                                action: () => (0, p.R)(h.s4.TEXT, a, void 0, t.id),
                             },
                             "APP_LAUNCHER",
                         );
@@ -402,7 +403,7 @@ function L(e) {
                                     (0, A.e0)({
                                         channel: t,
                                     }),
-                                children: B,
+                                children: H,
                             },
                             "scheduled_message",
                         );

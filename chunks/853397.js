@@ -1,6 +1,6 @@
 n.d(t, {
-    Zt: () => A,
-    yo: () => v,
+    Zt: () => v,
+    yo: () => A,
 });
 var r = n(627968),
     i = n(64700),
@@ -48,7 +48,7 @@ function E(e) {
     return e;
 }
 
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function b(e, t) {
     return n;
 }
 
-function y(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -74,11 +74,11 @@ function y(e, t) {
 }
 
 function O(e) {
-    let { user: t, guildId: n, viewProfileItem: i, appContext: _, popoutTargetRef: g, children: b } = e,
-        { trackUserProfileAction: y, context: O } = (0, p.NJ)(),
-        { analyticsLocations: A, newestAnalyticsLocation: v } = (0, o.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
-        S = null != O && O.showGuildProfile ? n : void 0,
-        I = {
+    let { user: t, guildId: n, viewProfileItem: i, appContext: _, popoutTargetRef: g, children: y } = e,
+        { trackUserProfileAction: b, context: O } = (0, p.NJ)(),
+        { analyticsLocations: v, newestAnalyticsLocation: A } = (0, o.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
+        I = null != O && O.showGuildProfile ? n : void 0,
+        S = {
             action: h.pt.PRESS_OPTIONS,
             icon: a.jNK,
             tooltipText: m.intl.string(m.t["UKOtz+"]),
@@ -88,31 +88,31 @@ function O(e) {
             user: t,
             guildId: n,
             onAction: () =>
-                y({
+                b({
                     action: "PRESS_INVITE_TO_SERVER",
-                    analyticsLocations: A,
+                    analyticsLocations: v,
                 }),
         }),
         C = (0, l.A)({
             user: t,
             guildId: n,
-            location: v,
+            location: A,
             color: "danger",
             appContext: _,
             onBlock: () =>
-                y({
+                b({
                     action: "BLOCK",
-                    analyticsLocations: A,
+                    analyticsLocations: v,
                 }),
             onIgnore: () =>
-                y({
+                b({
                     action: "IGNORE",
-                    analyticsLocations: A,
+                    analyticsLocations: v,
                 }),
             onUnblock: () =>
-                y({
+                b({
                     action: "UNBLOCK",
-                    analyticsLocations: A,
+                    analyticsLocations: v,
                 }),
         }),
         N = [
@@ -121,58 +121,58 @@ function O(e) {
                 (0, u.A)({
                     user: t,
                     guildId: n,
-                    location: v,
+                    location: A,
                     appContext: _,
                     onBlock: () =>
-                        y({
+                        b({
                             action: "BLOCK",
-                            analyticsLocations: A,
+                            analyticsLocations: v,
                         }),
                     onIgnore: () =>
-                        y({
+                        b({
                             action: "IGNORE",
-                            analyticsLocations: A,
+                            analyticsLocations: v,
                         }),
                     onUnignore: () =>
-                        y({
+                        b({
                             action: "UNIGNORE",
-                            analyticsLocations: A,
+                            analyticsLocations: v,
                         }),
                 }),
                 C,
                 (0, f.A)({
                     user: t,
                     guildId: n,
-                    location: v,
+                    location: A,
                     appContext: _,
                     color: "danger",
                     onAction: () =>
-                        y({
+                        b({
                             action: "REPORT",
-                            analyticsLocations: A,
+                            analyticsLocations: v,
                         }),
                 }),
                 (0, f.M)({
                     user: t,
                     guildId: n,
-                    location: v,
+                    location: A,
                     appContext: _,
                     color: "danger",
                     onAction: () =>
-                        y({
+                        b({
                             action: "REPORT",
-                            analyticsLocations: A,
+                            analyticsLocations: v,
                         }),
                 }),
             ],
             [
                 (0, c.A)({
                     user: t,
-                    guildId: S,
+                    guildId: I,
                     onSuccess: () =>
-                        y({
+                        b({
                             action: "COPY_USER_ID",
-                            analyticsLocations: A,
+                            analyticsLocations: v,
                         }),
                 }),
             ],
@@ -180,12 +180,13 @@ function O(e) {
     return N.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(o.f5, {
-              value: A,
+              value: v,
               children: (0, r.jsx)(a.YNO, {
                   targetElementRef: g,
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
                       return (0, r.jsx)(a.W1t, {
+                          "data-menu-mixed": !0,
                           navId: "user-profile-overflow-menu",
                           onSelect: void 0,
                           onClose: t,
@@ -201,16 +202,16 @@ function O(e) {
                           ),
                       });
                   },
-                  children: (e) => b(E({}, e, I)),
+                  children: (e) => y(E({}, e, S)),
               }),
           });
 }
 
-function A(e) {
+function v(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
         O,
-        y(E({}, e), {
+        b(E({}, e), {
             popoutTargetRef: t,
             children: (e) =>
                 (0, r.jsx)(
@@ -226,11 +227,11 @@ function A(e) {
     );
 }
 
-function v(e) {
+function A(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
         O,
-        y(E({}, e), {
+        b(E({}, e), {
             popoutTargetRef: t,
             children: (e) =>
                 (0, r.jsx)(

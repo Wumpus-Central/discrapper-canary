@@ -4,8 +4,8 @@ t.d(n, {
 var r = t(627968);
 t(64700);
 var i = t(397927),
-    c = t(442433),
-    a = t(847767),
+    a = t(442433),
+    c = t(847767),
     l = t(358367),
     o = t(793574),
     s = t(886393),
@@ -21,10 +21,10 @@ var i = t(397927),
     j = t(641131),
     g = t(985018);
 let _ = (0, l.A)(
-    (0, a.A)(
+    (0, c.A)(
         function (e) {
             let { channel: n, onSelect: t } = e,
-                a = (0, d.A)(n),
+                c = (0, d.A)(n),
                 l = (0, s.A)(n),
                 o = (0, O.m)(n),
                 y = (0, O.y)(n),
@@ -38,15 +38,16 @@ let _ = (0, l.A)(
                 x = (0, A.Ay)(n),
                 C = (0, h.os)("ReportToModChannelContextMenu");
             return (0, r.jsxs)(i.W1t, {
+                "data-menu-mixed": !0,
                 navId: "report-to-mod-channel-context",
-                onClose: c.Z_,
+                onClose: a.Z_,
                 "aria-label": g.intl.string(j.default["zp+z/E"]),
                 onSelect: t,
                 children: [
                     (0, r.jsxs)(
                         i.rXV,
                         {
-                            children: [a, o],
+                            children: [c, o],
                         },
                         "mark-as-read-or-favorite",
                     ),

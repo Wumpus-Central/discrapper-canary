@@ -5,24 +5,24 @@ n.d(t, {
 var r = n(627968),
     l = n(64700),
     i = n(311907),
-    a = n(990078),
-    s = n(397927),
+    s = n(990078),
+    a = n(397927),
     o = n(73153),
     c = n(334738),
     u = n(461678),
     d = n(880457),
-    f = n(164684),
-    p = n(85109),
-    h = n(914703),
-    b = n(932883),
-    g = n(394953),
-    m = n(654795),
+    p = n(164684),
+    h = n(85109),
+    f = n(914703),
+    g = n(932883),
+    m = n(394953),
+    b = n(654795),
     A = n(849077),
     y = n(652215),
-    O = n(985018),
-    j = n(471135);
+    _ = n(985018),
+    O = n(471135);
 
-function v(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function v(e) {
     return e;
 }
 
-function x(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,7 +66,7 @@ function x(e, t) {
         e
     );
 }
-let E = {
+let x = {
     [A.Th.MENTION]: [A.kR.SETTINGS],
     [A.Th.REPLY]: [A.kR.SETTINGS],
     [A.Th.REACTION]: [A.kR.SETTINGS],
@@ -74,31 +74,31 @@ let E = {
     [A.Th.MESSAGE]: [A.kR.SETTINGS],
 };
 
-function _(e) {
+function E(e) {
     let { label: t, onClick: n, message: i, Icon: o, interactionType: c } = e,
         [u, d] = (0, l.useState)(!1),
-        f = (0, b.op)();
-    return (0, r.jsx)(a.m, {
+        p = (0, g.op)();
+    return (0, r.jsx)(s.m, {
         text: t,
         position: "top",
         spacing: 4,
         asContainer: !0,
         onTooltipShow: () => d(!0),
         onTooltipHide: () => d(!1),
-        children: (0, r.jsx)(s.DUT, {
-            className: j.XI,
+        children: (0, r.jsx)(a.DUT, {
+            className: O.XI,
             onClick: (e) => {
-                (0, b.Ml)({
+                (0, g.Ml)({
                     message: i,
                     interactionType: c,
-                    viewId: f,
+                    viewId: p,
                 }),
                     e.stopPropagation(),
                     n(i);
             },
             children: (0, r.jsx)(o, {
                 size: u ? "sm" : "xs",
-                className: j.gE,
+                className: O.gE,
             }),
         }),
     });
@@ -106,23 +106,23 @@ function _(e) {
 
 function C(e) {
     let { channel: t, message: n, label: i, Icon: o, Menu: c, interactionType: u, actionType: d } = e,
-        f = (0, b.op)(),
-        [p, h] = (0, l.useState)(!1),
-        [g, A] = (0, l.useState)(!1),
+        p = (0, g.op)(),
+        [h, f] = (0, l.useState)(!1),
+        [m, A] = (0, l.useState)(!1),
         y = (0, l.useRef)(null),
-        { openMenu: O, closeMenu: E } = (0, m.s)();
-    return (0, r.jsx)(s.YNO, {
-        shouldShow: g,
-        animation: s.YNO.Animation.NONE,
+        { openMenu: _, closeMenu: x } = (0, b.s)();
+    return (0, r.jsx)(a.YNO, {
+        shouldShow: m,
+        animation: a.YNO.Animation.NONE,
         position: "right",
         align: "top",
         autoInvert: !1,
         targetElementRef: y,
         onRequestClose: () => {
-            A(!1), E(n.id, d);
+            A(!1), x(n.id, d);
         },
         renderPopout: (e) =>
-            (0, r.jsx)(s.lGe, {
+            (0, r.jsx)(a.lGe, {
                 onClick: (e) => e.stopPropagation(),
                 returnRef: y,
                 children: (0, r.jsx)(c, {
@@ -132,34 +132,34 @@ function C(e) {
                 }),
             }),
         children: (e) =>
-            (0, r.jsx)(a.m, {
+            (0, r.jsx)(s.m, {
                 text: i,
                 position: "top",
                 spacing: 4,
                 asContainer: !0,
-                onTooltipShow: () => h(!0),
-                onTooltipHide: () => h(!1),
-                children: (0, r.jsx)(s.DUT, {
+                onTooltipShow: () => f(!0),
+                onTooltipHide: () => f(!1),
+                children: (0, r.jsx)(a.DUT, {
                     innerRef: y,
-                    className: j.XI,
+                    className: O.XI,
                     onClick: (e) => {
                         let t;
-                        (0, b.Ml)({
+                        (0, g.Ml)({
                             message: n,
                             interactionType: u,
-                            viewId: f,
+                            viewId: p,
                         }),
                             e.stopPropagation(),
-                            A((t = !g)),
-                            t ? O(n.id, d) : E(n.id, d);
+                            A((t = !m)),
+                            t ? _(n.id, d) : x(n.id, d);
                     },
                     children: (0, r.jsx)(
                         o,
-                        x(v({}, e), {
+                        v(j({}, e), {
                             message: n,
                             "aria-label": i,
-                            className: j.gE,
-                            size: p ? "sm" : "xs",
+                            className: O.gE,
+                            size: h ? "sm" : "xs",
                         }),
                     ),
                 }),
@@ -169,8 +169,8 @@ function C(e) {
 let S = {
     [A.kR.ACK]: {
         type: "standard",
-        Icon: s.A9s,
-        label: O.intl.string(O.t.e6RscS),
+        Icon: a.A9s,
+        label: _.intl.string(_.t.e6RscS),
         onClick: (e) => {
             o.h.dispatch({
                 type: "NOTIFICATIONS_INBOX_ITEM_ACK",
@@ -188,84 +188,92 @@ let S = {
                     e.id,
                 );
         },
-        interactionType: b.X8.ACK,
+        interactionType: g.X8.ACK,
     },
     [A.kR.BOOKMARK]: {
         type: "menu",
-        label: O.intl.string(O.t["9p3D9p"]),
+        label: _.intl.string(_.t["9p3D9p"]),
         Icon: (e) =>
-            null != p.A.getSavedMessage(e.message.channel_id, e.message.id)
-                ? (0, r.jsx)(s.cFy, v({}, e))
-                : (0, r.jsx)(s.c$8, v({}, e)),
-        interactionType: b.X8.BOOKMARK,
+            null != h.A.getSavedMessage(e.message.channel_id, e.message.id)
+                ? (0, r.jsx)(a.cFy, j({}, e))
+                : (0, r.jsx)(a.c$8, j({}, e)),
+        interactionType: g.X8.BOOKMARK,
         Menu: (e) => {
             let { message: t, renderPopoutProps: n } = e,
-                l = (0, i.bG)([p.A], () => p.A.getSavedMessage(t.channel_id, t.id)),
-                a = (0, d.P)({
+                l = (0, i.bG)([h.A], () => h.A.getSavedMessage(t.channel_id, t.id)),
+                s = (0, d.P)({
                     message: t,
                     savedMessage: l,
                 });
             return (0, r.jsxs)(
-                s.W1t,
-                x(v({}, n), {
-                    navId: "message-reminder-create",
-                    "aria-label": O.intl.string(O.t.mJ3P0N),
-                    onClose: n.closePopout,
-                    onSelect: () => null,
-                    children: [
-                        null != l
-                            ? (0, r.jsx)(s.Drp, {
-                                  id: "remove-from-for-later",
-                                  label: O.intl.string(O.t.SvXS1Z),
-                                  icon: s.cFy,
-                                  action: () =>
-                                      (0, f.x)({
-                                          channelId: t.channel_id,
-                                          messageId: t.id,
-                                          dueAt: l.saveData.dueAt,
-                                          displayToast: !0,
-                                      }),
-                              })
-                            : (0, r.jsx)(s.Drp, {
-                                  id: "create-bookmark",
-                                  label: O.intl.string(O.t["9p3D9p"]),
-                                  icon: s.c$8,
-                                  action: () =>
-                                      (0, f.Y)({
-                                          channelId: t.channel_id,
-                                          messageId: t.id,
-                                          displayToast: !0,
-                                      }),
-                              }),
-                        (0, r.jsx)(s.bXX, {}),
-                        a,
-                    ],
-                }),
+                a.W1t,
+                v(
+                    j(
+                        {
+                            "data-menu-mixed": !0,
+                        },
+                        n,
+                    ),
+                    {
+                        navId: "message-reminder-create",
+                        "aria-label": _.intl.string(_.t.mJ3P0N),
+                        onClose: n.closePopout,
+                        onSelect: () => null,
+                        children: [
+                            null != l
+                                ? (0, r.jsx)(a.Drp, {
+                                      id: "remove-from-for-later",
+                                      label: _.intl.string(_.t.SvXS1Z),
+                                      icon: a.cFy,
+                                      action: () =>
+                                          (0, p.x)({
+                                              channelId: t.channel_id,
+                                              messageId: t.id,
+                                              dueAt: l.saveData.dueAt,
+                                              displayToast: !0,
+                                          }),
+                                  })
+                                : (0, r.jsx)(a.Drp, {
+                                      id: "create-bookmark",
+                                      label: _.intl.string(_.t["9p3D9p"]),
+                                      icon: a.c$8,
+                                      action: () =>
+                                          (0, p.Y)({
+                                              channelId: t.channel_id,
+                                              messageId: t.id,
+                                              displayToast: !0,
+                                          }),
+                                  }),
+                            (0, r.jsx)(a.bXX, {}),
+                            s,
+                        ],
+                    },
+                ),
             );
         },
     },
     [A.kR.SETTINGS]: {
         type: "menu",
-        Icon: s.XFE,
-        label: O.intl.string(O.t.h850Ss),
-        interactionType: b.X8.SETTINGS,
+        Icon: a.XFE,
+        label: _.intl.string(_.t.h850Ss),
+        interactionType: g.X8.SETTINGS,
         Menu: (e) => {
             let { channel: t, renderPopoutProps: n } = e;
             return t.isThread()
                 ? (0, r.jsx)(
-                      h.A,
-                      x(v({}, n), {
+                      f.A,
+                      v(j({}, n), {
                           channel: t,
                           navId: "thread-context",
-                          label: O.intl.string(O.t["1NBjqb"]),
+                          label: _.intl.string(_.t["1NBjqb"]),
                       }),
                   )
                 : (0, r.jsx)(
                       u.A,
-                      x(v({}, n), {
+                      v(j({}, n), {
                           channel: t,
                           navId: "channel-context",
-                          label: O.intl.string(O.t.Xm41aV),
+                          label: _.intl.string(_.t.Xm41aV),
                       }),
                   );
         },
@@ -274,27 +282,27 @@ let S = {
 
 function I(e) {
     let t,
-        { message: n, channel: i, isUnread: a } = e,
+        { message: n, channel: i, isUnread: s } = e,
         o =
-            ((t = (0, g.i3)()),
+            ((t = (0, m.i3)()),
             (0, l.useMemo)(() => {
                 let e = A.Th.MENTION,
                     n = new Set();
-                return a && n.add(A.kR.ACK), t && n.add(A.kR.BOOKMARK), E[e].forEach((e) => n.add(e)), Array.from(n);
-            }, [n, a, t]));
-    return (0, r.jsx)(s.BJc, {
+                return s && n.add(A.kR.ACK), t && n.add(A.kR.BOOKMARK), x[e].forEach((e) => n.add(e)), Array.from(n);
+            }, [n, s, t]));
+    return (0, r.jsx)(a.BJc, {
         direction: "horizontal",
         gap: 4,
         align: "center",
         justify: "center",
-        className: j.o1,
+        className: O.o1,
         children: o.map((e) => {
             let t = S[e];
             switch (t.type) {
                 case "standard":
                     return (0, r.jsx)(
-                        _,
-                        x(v({}, t), {
+                        E,
+                        v(j({}, t), {
                             actionType: e,
                             message: n,
                         }),
@@ -303,7 +311,7 @@ function I(e) {
                 case "menu":
                     return (0, r.jsx)(
                         C,
-                        x(v({}, t), {
+                        v(j({}, t), {
                             actionType: e,
                             channel: i,
                             message: n,

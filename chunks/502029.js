@@ -4,8 +4,8 @@ n.d(t, {
 var i = n(627968);
 n(64700);
 var r = n(397927),
-    s = n(442433),
-    d = n(820284),
+    d = n(442433),
+    s = n(820284),
     a = n(250729),
     c = n(568873),
     l = n(652215),
@@ -15,12 +15,13 @@ function o(e) {
     let { guildId: t, analyticsContext: n, onSelect: o } = e,
         h = (0, a.A)(t),
         v = (0, c.A)(t);
-    return (0, i.jsx)(d.A, {
+    return (0, i.jsx)(s.A, {
         context: n,
         object: l.ZSU.CONTEXT_MENU,
         children: (0, i.jsxs)(r.W1t, {
+            "data-menu-migration-ready": !0,
             navId: "user-context",
-            onClose: s.Z_,
+            onClose: d.Z_,
             "aria-label": u.intl.string(u.t.liqwPJ),
             onSelect: o,
             children: [

@@ -1,33 +1,34 @@
 r.d(t, {
-    default: () => d,
+    default: () => f,
 });
 var n = r(627968);
 r(64700);
 var o = r(417597),
     c = r(397927),
     i = r(442433),
-    l = r(58149),
-    a = r(576705),
+    a = r(58149),
+    l = r(576705),
     s = r(954571),
     p = r(147036),
     b = r(957565),
     O = r(634654),
     u = r(652215),
     y = r(746080),
-    f = r(985018);
+    d = r(985018);
 
-function d(e) {
+function f(e) {
     let { guild: t, onSelect: r } = e,
-        d = (0, o.bG)([a.A], () => null != t && a.A.can(u.xBc.ADMINISTRATOR, t));
+        f = (0, o.bG)([l.A], () => null != t && l.A.can(u.xBc.ADMINISTRATOR, t));
     return (0, n.jsx)(c.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "guild-shop-context",
-        "aria-label": f.intl.string(f.t.g3KvYF),
+        "aria-label": d.intl.string(d.t.g3KvYF),
         onClose: i.Z_,
         onSelect: r,
         children: (0, n.jsx)(c.rXV, {
             children: (0, n.jsx)(c.Drp, {
                 id: "role-subscription-copy-link",
-                label: f.intl.string(f.t.WqhZss),
+                label: d.intl.string(d.t.WqhZss),
                 action: () => {
                     var e, r;
                     s.default.track(
@@ -56,10 +57,10 @@ function d(e) {
                                     });
                             }
                             return e;
-                        })({}, (0, l.H$)(t.id))),
+                        })({}, (0, a.H$)(t.id))),
                         (r = r =
                             {
-                                is_admin_or_owner: d,
+                                is_admin_or_owner: f,
                                 copy_location: O.lJ.CHANNEL_ROW_CONTEXT_MENU,
                             }),
                         Object.getOwnPropertyDescriptors

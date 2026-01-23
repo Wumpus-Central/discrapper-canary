@@ -1,24 +1,25 @@
-e.d(i, {
-    default: () => d,
+n.d(i, {
+    default: () => r,
 });
-var n = e(627968),
-    a = e(397927),
-    s = e(442433),
-    l = e(50268),
-    r = e(985018);
+var a = n(627968),
+    e = n(397927),
+    l = n(442433),
+    s = n(50268),
+    d = n(985018);
 
-function d(t) {
+function r(t) {
     let { tag: i } = t;
-    return (0, n.jsx)(a.W1t, {
+    return (0, a.jsx)(e.W1t, {
+        "data-menu-all-icons": !0,
         navId: "forum-tag",
-        onClose: s.Z_,
-        "aria-label": r.intl.string(r.t.AzTwiu),
+        onClose: l.Z_,
+        "aria-label": d.intl.string(d.t.AzTwiu),
         onSelect: void 0,
         className: "context-menu",
-        children: (0, n.jsx)(a.rXV, {
-            children: (0, l.A)({
+        children: (0, a.jsx)(e.rXV, {
+            children: (0, s.A)({
                 id: i.id,
-                label: r.intl.string(r.t["8VG6IY"]),
+                label: d.intl.string(d.t["8VG6IY"]),
             }),
         }),
     });

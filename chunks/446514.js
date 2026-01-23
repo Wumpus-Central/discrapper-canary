@@ -24,18 +24,18 @@ var l = n(627968),
 
 function x(t) {
     var e, n, x, C, O, A, E, v, L, k, D, P;
-    let { text: w, editor: G, target: M, onHeightUpdate: _, onSelect: I } = t,
+    let { text: w, editor: _, target: G, onHeightUpdate: M, onSelect: I } = t,
         N = (0, p.us)("SlateTextAreaContextMenu", {
             autoTrackExposure: !1,
         }).enabled,
         V = r.useCallback(
             (t) => {
-                i.rL.focus(G),
+                i.rL.focus(_),
                     setTimeout(() => {
-                        null == t || t(), m.VW.focus(G);
+                        null == t || t(), m.VW.focus(_);
                     }, 0);
             },
-            [G],
+            [_],
         ),
         H = r.useCallback(() => {
             (0, c.Z_)(V);
@@ -44,25 +44,25 @@ function x(t) {
             let t = y.Ay.readClipboard();
             0 !== t.length &&
                 V(() => {
-                    a.gB.insertText(G, t);
+                    a.gB.insertText(_, t);
                 });
-        }, [V, G]),
+        }, [V, _]),
         [U, X] = (0, b.A)({
             text: w,
-            target: M,
-            onHeightUpdate: _,
+            target: G,
+            onHeightUpdate: M,
         }),
-        K = (0, T.A)(G),
+        K = (0, T.A)(_),
         W = (0, s.bG)([d.A], () => d.A.isSubmitButtonEnabled),
         F = g._3.useSetting(),
         Z = g.ng.useSetting();
     if (!h.isPlatformEmbedded) return null;
-    let Y = null != (e = null == (A = G.chatInputType) || null == (O = A.commands) ? void 0 : O.enabled) && e,
-        q = null != (n = null == (v = G.chatInputType) || null == (E = v.stickers) ? void 0 : E.autoSuggest) && n,
-        B = null != (x = null == (k = G.chatInputType) || null == (L = k.submit) ? void 0 : L.button) && x,
+    let Y = null != (e = null == (A = _.chatInputType) || null == (O = A.commands) ? void 0 : O.enabled) && e,
+        q = null != (n = null == (v = _.chatInputType) || null == (E = v.stickers) ? void 0 : E.autoSuggest) && n,
+        B = null != (x = null == (k = _.chatInputType) || null == (L = k.submit) ? void 0 : L.button) && x,
         Q =
             null !=
-                (C = null == (P = G.chatInputType) || null == (D = P.autocomplete) ? void 0 : D.mentionSuggestions) &&
+                (C = null == (P = _.chatInputType) || null == (D = P.autocomplete) ? void 0 : D.mentionSuggestions) &&
             C,
         z = Y || q,
         J = h.isPlatformEmbedded && y.Ay.clipboardHasMixedContent(),
@@ -107,6 +107,7 @@ function x(t) {
             },
         });
     return (0, l.jsxs)(o.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "textarea-context",
         onClose: H,
         "aria-label": j.intl.string(j.t.NWlDSI),

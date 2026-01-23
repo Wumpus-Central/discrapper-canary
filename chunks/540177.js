@@ -17,6 +17,7 @@ function d(e) {
         i = (0, s.N)(n, a.Ft),
         u = (0, c.A)();
     return (0, r.jsxs)(l.W1t, {
+        "data-menu-mixed": !0,
         onSelect: () => {},
         navId: "devtools-popout",
         variant: "fixed",
@@ -36,8 +37,8 @@ function p(e) {
     let { className: t, focusSectionProps: n } = e,
         [s, o] = i.useState(!1),
         [c, p] = i.useState(0),
-        f = i.useRef(null),
-        h = (e) => {
+        h = i.useRef(null),
+        g = (e) => {
             clearTimeout(c),
                 p(
                     setTimeout(() => {
@@ -46,10 +47,10 @@ function p(e) {
                 );
         };
     return (0, r.jsx)("div", {
-        onMouseEnter: () => h(!0),
-        onMouseLeave: () => h(!1),
+        onMouseEnter: () => g(!0),
+        onMouseLeave: () => g(!1),
         children: (0, r.jsx)(l.YNO, {
-            targetElementRef: f,
+            targetElementRef: h,
             shouldShow: s,
             animation: l.YNO.Animation.NONE,
             position: "bottom",
@@ -91,7 +92,7 @@ function p(e) {
                         return e;
                     })(
                         {
-                            ref: f,
+                            ref: h,
                             onClick: () => (0, a.Ft)(),
                             icon: l.VaJ,
                             "aria-label": "DevTools",

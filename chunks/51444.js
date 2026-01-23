@@ -2,8 +2,8 @@ a.d(t, {
     default: () => f,
 });
 var n = a(627968),
-    l = a(64700),
-    r = a(311907),
+    r = a(64700),
+    l = a(311907),
     i = a(397927),
     o = a(442433),
     s = a(391973),
@@ -18,28 +18,28 @@ var g = a(652215),
 
 function f(e) {
     var t, a;
-    let { onSelect: f, onClose: b } = e,
+    let { onSelect: f, onClose: y } = e,
         {
-            avatarSizeMode: y,
+            avatarSizeMode: b,
             displayNameMode: O,
             displayUserMode: j,
-        } = (0, r.cf)([d.default], () => ({
+        } = (0, l.cf)([d.default], () => ({
             avatarSizeMode: d.default.getAvatarSizeMode(),
             displayNameMode: d.default.getDisplayNameMode(),
             displayUserMode: d.default.getDisplayUserMode(),
         })),
-        h = l.useRef(b);
-    l.useEffect(() => {
-        h.current = b;
+        h = r.useRef(y);
+    r.useEffect(() => {
+        h.current = y;
     }),
-        l.useEffect(
+        r.useEffect(
             () => () => {
                 var e;
                 return null == (e = h.current) ? void 0 : e.call(h);
             },
             [],
         );
-    let A = (0, r.bG)([p.A, u.A], () => {
+    let A = (0, l.bG)([p.A, u.A], () => {
             let e = p.A.getWidgetByType(g.uss.VOICE_V3);
             if (null == e) return null;
             let t = u.A.getWidget(e.id);
@@ -58,6 +58,7 @@ function f(e) {
                   }));
     }
     return (0, n.jsxs)(i.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "overlay-voice-widget-context-menu",
         onClose: o.Z_,
         "aria-label": m.intl.string(m.t.tPfVWi),
@@ -79,7 +80,7 @@ function f(e) {
                         i.iDA,
                         {
                             label: e.name,
-                            checked: y === e.value,
+                            checked: b === e.value,
                             id: "avatar-size-mode-".concat(e.value),
                             group: "avatar-size-mode",
                             action: () => c.A.setAvatarSizeMode(e.value),
@@ -147,7 +148,7 @@ function f(e) {
                     id: "voice-widget-max-users-displayed",
                     label: m.intl.string(m.t["X/Uyzc"]),
                     control: (e, t) => {
-                        var a, l;
+                        var a, r;
                         return (0, n.jsx)(
                             i.i42,
                             ((a = (function (e) {
@@ -175,7 +176,7 @@ function f(e) {
                                 }
                                 return e;
                             })({}, e)),
-                            (l = l =
+                            (r = r =
                                 {
                                     ref: t,
                                     value: S,
@@ -186,7 +187,7 @@ function f(e) {
                                     "aria-label": m.intl.string(m.t["X/Uyzc"]),
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))
+                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(r))
                                 : (function (e, t) {
                                       var a = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -194,8 +195,8 @@ function f(e) {
                                           a.push.apply(a, n);
                                       }
                                       return a;
-                                  })(Object(l)).forEach(function (e) {
-                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(l, e));
+                                  })(Object(r)).forEach(function (e) {
+                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(r, e));
                                   }),
                             a),
                         );

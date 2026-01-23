@@ -11,14 +11,14 @@ var r,
     a = n.n(o),
     s = n(989349),
     c = n.n(s),
-    d = n(156828),
-    u = n(397927),
+    u = n(156828),
+    d = n(397927),
     C = n(282054),
-    f = n(652215),
-    b = n(985018),
-    m = n(309852);
+    m = n(652215),
+    p = n(985018),
+    b = n(309852);
 
-function p(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,7 +64,7 @@ function j(e, t) {
 }
 let g = "MMM Do, YYYY",
     h = c()("2015-05-15").local(),
-    x = (0, d.Fe)({
+    x = (0, u.Fe)({
         createPromise: () => Promise.resolve().then(n.bind(n, 939538)),
         webpackId: 939538,
     });
@@ -86,19 +86,19 @@ function O(e) {
             afterDate: r,
             beforeDate: o,
             selectedOption: s,
-            isCustomDateRange: d,
+            isCustomDateRange: u,
             menuName: g,
             onClose: y,
             onSelectDateOption: O,
             onToggleCustomDateRange: v,
-            onSelectStartDate: H,
-            onSelectEndDate: w,
+            onSelectStartDate: _,
+            onSelectEndDate: H,
         } = e,
-        A = [
+        w = [
             {
                 id: 0,
                 option: null,
-                label: b.intl.string(b.t.jelCib),
+                label: p.intl.string(p.t.jelCib),
             },
             {
                 id: 1,
@@ -106,7 +106,7 @@ function O(e) {
                     input: 1,
                     unit: "h",
                 },
-                label: b.intl.string(b.t["91RDqi"]),
+                label: p.intl.string(p.t["91RDqi"]),
             },
             {
                 id: 2,
@@ -114,7 +114,7 @@ function O(e) {
                     input: 24,
                     unit: "h",
                 },
-                label: b.intl.string(b.t["Lj/1Tq"]),
+                label: p.intl.string(p.t["Lj/1Tq"]),
             },
             {
                 id: 3,
@@ -122,7 +122,7 @@ function O(e) {
                     input: 7,
                     unit: "d",
                 },
-                label: b.intl.string(b.t.NnUMSZ),
+                label: p.intl.string(p.t.NnUMSZ),
             },
             {
                 id: 4,
@@ -130,7 +130,7 @@ function O(e) {
                     input: 2,
                     unit: "w",
                 },
-                label: b.intl.string(b.t.hY3XWH),
+                label: p.intl.string(p.t.hY3XWH),
             },
             {
                 id: 5,
@@ -138,7 +138,7 @@ function O(e) {
                     input: 4,
                     unit: "w",
                 },
-                label: b.intl.string(b.t.kQTwT0),
+                label: p.intl.string(p.t.kQTwT0),
             },
             {
                 id: 6,
@@ -146,111 +146,112 @@ function O(e) {
                     input: 3,
                     unit: "M",
                 },
-                label: b.intl.string(b.t.EPuP0s),
+                label: p.intl.string(p.t.EPuP0s),
             },
         ],
-        [D, S] = i.useState(!1),
-        _ =
+        [A, S] = i.useState(!1),
+        D =
             7 !== s
                 ? null
                 : null != t && null != n
                   ? "".concat(t, " - ").concat(n)
                   : null != t
-                    ? b.intl.formatToPlainString(b.t.ClmSzd, {
+                    ? p.intl.formatToPlainString(p.t.ClmSzd, {
                           date: t,
                       })
                     : null != n
-                      ? b.intl.formatToPlainString(b.t.YvNhsd, {
+                      ? p.intl.formatToPlainString(p.t.YvNhsd, {
                             date: n,
                         })
                       : null,
         N = i.useCallback(() => {
             S(!0), v();
         }, [v]),
+        L = i.useCallback(
+            (e) => {
+                _(e);
+            },
+            [_],
+        ),
         P = i.useCallback(
             (e) => {
                 H(e);
             },
             [H],
         ),
-        V = i.useCallback(
-            (e) => {
-                w(e);
-            },
-            [w],
-        ),
-        L = i.useCallback(() => {
+        R = i.useCallback(() => {
             null == o && null == r && O(0, null), S(!1);
         }, [r, o, O]);
-    return (0, l.jsx)(u.W1t, {
+    return (0, l.jsx)(d.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "member-safety-guild-member-".concat(g, "-menu"),
         onClose: y,
-        "aria-label": b.intl.string(b.t.k9m8Rg),
-        onSelect: f.tEg,
-        children: (0, l.jsx)(u.rXV, {
-            children: D
+        "aria-label": p.intl.string(p.t.k9m8Rg),
+        onSelect: m.tEg,
+        children: (0, l.jsx)(d.rXV, {
+            children: A
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(u.Drp, {
+                          (0, l.jsx)(d.Drp, {
                               id: "back",
-                              action: L,
+                              action: R,
                               render: (e) =>
                                   (0, l.jsxs)(
                                       "span",
-                                      j(p({}, e), {
-                                          className: m.W6,
+                                      j(f({}, e), {
+                                          className: b.W6,
                                           children: [
-                                              (0, l.jsx)(u.n2b, {
+                                              (0, l.jsx)(d.n2b, {
                                                   size: "custom",
                                                   color: "currentColor",
                                                   width: 16,
                                                   height: 16,
                                               }),
-                                              (0, l.jsx)(u.Text, {
+                                              (0, l.jsx)(d.Text, {
                                                   variant: "eyebrow",
                                                   color: "text-strong",
-                                                  children: b.intl.string(b.t.BTfN6g),
+                                                  children: p.intl.string(p.t.BTfN6g),
                                               }),
                                           ],
                                       }),
                                   ),
                           }),
-                          (0, l.jsx)(u.Drp, {
+                          (0, l.jsx)(d.Drp, {
                               id: "after-date-menu-item",
-                              label: b.intl.string(b.t.RDqVOD),
+                              label: p.intl.string(p.t.RDqVOD),
                               subtext: t,
-                              subMenuClassName: m.aD,
-                              children: (0, l.jsx)(u.Drp, {
+                              subMenuClassName: b.aD,
+                              children: (0, l.jsx)(d.Drp, {
                                   id: "after-date-picker",
                                   render: (e) =>
                                       (0, l.jsx)(
                                           x,
-                                          j(p({}, e), {
-                                              calendarClassName: m.BJ,
-                                              value: d && null != r ? c()(r) : void 0,
-                                              onSelect: P,
+                                          j(f({}, e), {
+                                              calendarClassName: b.BJ,
+                                              value: u && null != r ? c()(r) : void 0,
+                                              onSelect: L,
                                               maxDate: c()().local(),
                                               minDate: h,
                                           }),
                                       ),
                               }),
                           }),
-                          (0, l.jsx)(u.Drp, {
+                          (0, l.jsx)(d.Drp, {
                               id: "before-date-menu-item",
-                              label: b.intl.string(b.t.jF54hQ),
+                              label: p.intl.string(p.t.jF54hQ),
                               subtext: n,
-                              subMenuClassName: m.aD,
-                              children: (0, l.jsx)(u.Drp, {
+                              subMenuClassName: b.aD,
+                              children: (0, l.jsx)(d.Drp, {
                                   id: "before-date-picker",
                                   render: (e) =>
                                       (0, l.jsx)(
                                           x,
-                                          j(p({}, e), {
-                                              calendarClassName: m.BJ,
-                                              value: d && null != o ? c()(o) : void 0,
-                                              onSelect: V,
+                                          j(f({}, e), {
+                                              calendarClassName: b.BJ,
+                                              value: u && null != o ? c()(o) : void 0,
+                                              onSelect: P,
                                               maxDate: c()().local(),
-                                              minDate: d && null != r ? c()(r) : h,
+                                              minDate: u && null != r ? c()(r) : h,
                                           }),
                                       ),
                               }),
@@ -259,10 +260,10 @@ function O(e) {
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          A.map((e) => {
+                          w.map((e) => {
                               let { id: t, option: n, label: r } = e;
                               return (0, l.jsx)(
-                                  u.iDA,
+                                  d.iDA,
                                   {
                                       group: "member-safety-guild-member-".concat(g, "-menu"),
                                       id: "guild-member-".concat(g, "-option-").concat(t),
@@ -273,50 +274,50 @@ function O(e) {
                                   "option-".concat(t),
                               );
                           }),
-                          (0, l.jsx)(u.bXX, {}),
-                          (0, l.jsx)(u.Drp, {
+                          (0, l.jsx)(d.bXX, {}),
+                          (0, l.jsx)(d.Drp, {
                               id: "guild-member-".concat(g, "-custom-option}"),
                               action: N,
                               render: (e) =>
                                   (0, l.jsxs)("div", {
-                                      className: a()(m.Dh, {
-                                          [m.in]: e.isFocused,
+                                      className: a()(b.Dh, {
+                                          [b.in]: e.isFocused,
                                       }),
                                       children: [
                                           (0, l.jsxs)("div", {
-                                              className: m.jA,
+                                              className: b.jA,
                                               children: [
-                                                  (0, l.jsx)(u.Text, {
-                                                      className: a()(m.ty, {
-                                                          [m.in]: e.isFocused,
+                                                  (0, l.jsx)(d.Text, {
+                                                      className: a()(b.ty, {
+                                                          [b.in]: e.isFocused,
                                                       }),
                                                       variant: "text-sm/medium",
-                                                      children: b.intl.string(b.t.BTfN6g),
+                                                      children: p.intl.string(p.t.BTfN6g),
                                                   }),
-                                                  null != _ &&
-                                                      (0, l.jsx)(u.Text, {
-                                                          className: a()(m.ty, {
-                                                              [m.in]: e.isFocused,
+                                                  null != D &&
+                                                      (0, l.jsx)(d.Text, {
+                                                          className: a()(b.ty, {
+                                                              [b.in]: e.isFocused,
                                                           }),
                                                           color: "text-muted",
                                                           variant: "text-xxs/medium",
-                                                          children: _,
+                                                          children: D,
                                                       }),
                                               ],
                                           }),
                                           7 === s
                                               ? (0, l.jsx)(C.A, {
-                                                    foreground: m.QE,
+                                                    foreground: b.QE,
                                                     width: 18,
                                                     height: 18,
                                                 })
-                                              : (0, l.jsx)(u._BQ, {
+                                              : (0, l.jsx)(d._BQ, {
                                                     size: "custom",
                                                     color: "currentColor",
                                                     width: 16,
                                                     height: 16,
-                                                    className: a()(m.ty, {
-                                                        [m.in]: e.isFocused,
+                                                    className: a()(b.ty, {
+                                                        [b.in]: e.isFocused,
                                                     }),
                                                 }),
                                       ],

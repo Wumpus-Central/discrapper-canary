@@ -3,20 +3,20 @@ n.d(t, {
 });
 var r = n(627968),
     a = n(64700),
-    l = n(397927),
-    i = n(442433),
+    i = n(397927),
+    l = n(442433),
     s = n(793574),
-    c = n(307600),
-    o = n(363487),
+    o = n(307600),
+    c = n(363487),
     d = n(365003),
     u = n(843095),
-    f = n(800007),
-    b = n(294726),
-    m = n(985018),
-    x = n(396936);
-let j = {
+    m = n(800007),
+    f = n(294726),
+    g = n(985018),
+    _ = n(396936);
+let x = {
     steps: {
-        [f.HS.SERVER_SETTINGS]: {
+        [m.HS.SERVER_SETTINGS]: {
             onBack: {
                 type: "close",
             },
@@ -29,45 +29,46 @@ let j = {
 
 function v(e) {
     let { guildId: t, instance: n } = e,
-        f = a.useRef(null),
+        m = a.useRef(null),
         v = (0, d.A)(n.providerType, n.gameServerPanelUrl);
-    return (0, o.A)(t)
-        ? (0, r.jsx)(l.YNO, {
-              targetElementRef: f,
+    return (0, c.A)(t)
+        ? (0, r.jsx)(i.YNO, {
+              targetElementRef: m,
               align: "top",
               position: "right",
               animationPosition: "bottom",
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: a } = e;
-                  return (0, r.jsx)(l.W1t, {
+                  return (0, r.jsx)(i.W1t, {
+                      "data-menu-migration-ready": !0,
                       navId: "game_server-popout-context-menu",
                       onClose: () => {
-                          (0, i.Z_)(), a();
+                          (0, l.Z_)(), a();
                       },
-                      "aria-label": m.intl.string(b.default["yb+ork"]),
+                      "aria-label": g.intl.string(f.default["yb+ork"]),
                       onSelect: void 0,
-                      children: (0, r.jsxs)(l.rXV, {
+                      children: (0, r.jsxs)(i.rXV, {
                           children: [
                               null != v &&
-                                  (0, r.jsx)(l.Drp, {
+                                  (0, r.jsx)(i.Drp, {
                                       id: "get-support",
-                                      icon: l.oyn,
-                                      label: m.intl.string(b.default.bBkeMs),
+                                      icon: i.oyn,
+                                      label: g.intl.string(f.default.bBkeMs),
                                       action: () => {
-                                          (0, c.h)({
+                                          (0, o.h)({
                                               href: v,
                                           });
                                       },
                                   }),
-                              (0, r.jsx)(l.Drp, {
+                              (0, r.jsx)(i.Drp, {
                                   id: "settings",
-                                  icon: l.Zes,
-                                  label: m.intl.string(b.default["feUiM/"]),
+                                  icon: i.Zes,
+                                  label: g.intl.string(f.default["feUiM/"]),
                                   action: () => {
                                       (0, u.A)({
                                           guildId: t,
-                                          stepConfig: j,
+                                          stepConfig: x,
                                           initialGameServerInstance: n,
                                           analyticsLocation: s.A.GAME_SERVER_PAGE,
                                       });
@@ -80,7 +81,7 @@ function v(e) {
               children: (e) => {
                   var t, n;
                   return (0, r.jsx)(
-                      l.DUT,
+                      i.DUT,
                       ((t = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -107,15 +108,15 @@ function v(e) {
                           return e;
                       })(
                           {
-                              "aria-label": m.intl.string(m.t["UKOtz+"]),
-                              className: x.v,
+                              "aria-label": g.intl.string(g.t["UKOtz+"]),
+                              className: _.v,
                           },
                           e,
                       )),
                       (n = n =
                           {
-                              innerRef: f,
-                              children: (0, r.jsx)(l.jNK, {
+                              innerRef: m,
+                              children: (0, r.jsx)(i.jNK, {
                                   color: "currentColor",
                                   size: "sm",
                               }),

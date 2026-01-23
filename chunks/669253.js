@@ -72,6 +72,7 @@ let h = (e) => {
                 label: c.intl.string(c.t["+NP/b2"]),
             });
         return (0, r.jsxs)(a.W1t, {
+            "data-menu-mixed": !0,
             navId: "authorized-app-action-menu",
             onClose: n,
             "aria-label": c.intl.string(c.t.tKobzb),

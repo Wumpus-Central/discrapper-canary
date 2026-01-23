@@ -33,7 +33,7 @@ function f(t) {
             name: j,
             isInExpressionPicker: !0,
         }),
-        P =
+        x =
             null != m
                 ? (0, l.jsx)(i.Dr, {
                       id: "copy",
@@ -41,7 +41,7 @@ function f(t) {
                       action: () => (0, g.C)(m),
                   })
                 : null,
-        x = (0, u.A)({
+        P = (0, u.A)({
             id: O,
             shiftId:
                 f === d.g.EMOJI
@@ -82,13 +82,14 @@ function f(t) {
                   })
                 : null;
     return (0, l.jsx)(o.W1t, {
+        "data-menu-mixed": !0,
         navId: "expression-picker",
         onClose: a.Z_,
         "aria-label": y.intl.string(y.t.XoasSC),
         onSelect: n,
         className: "context-menu",
         children: (0, l.jsxs)(o.rXV, {
-            children: [I, g.p5 && C ? (null != P ? P : x) : null, g.p5 && C ? w : null],
+            children: [I, g.p5 && C ? (null != x ? x : P) : null, g.p5 && C ? w : null],
         }),
     });
 }

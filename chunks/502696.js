@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => A,
+    A: () => f,
 });
 var r = n(627968);
 n(64700);
@@ -12,15 +12,15 @@ var i = n(397927),
     u = n(163518),
     d = n(294132),
     p = n(971203),
-    f = n(652215),
-    h = n(985018);
+    h = n(652215),
+    g = n(985018);
 
-function A(e) {
-    let { party: t, close: n, onSelect: A } = e,
-        g = (0, c.A)(t),
-        m = (0, p.A)(t),
-        b = (0, d.A)(t),
-        _ = (0, u.A)(t),
+function f(e) {
+    let { party: t, close: n, onSelect: f } = e,
+        m = (0, c.A)(t),
+        A = (0, p.A)(t),
+        _ = (0, d.A)(t),
+        b = (0, u.A)(t),
         E = (0, s.A)(t),
         O = (0, o.A)(t);
     return (
@@ -34,23 +34,24 @@ function A(e) {
                     );
                 })
                 .map((e) => e.game.name);
-            a.default.track(f.HAw.OPEN_POPOUT, {
+            a.default.track(h.HAw.OPEN_POPOUT, {
                 type: "Now Playing Card Popout",
                 games_detected: e,
             });
         }),
         (0, r.jsxs)(i.W1t, {
+            "data-menu-mixed": !0,
             navId: "now-playing-menu",
             onClose: n,
-            "aria-label": h.intl.string(h.t.ogxXGq),
-            onSelect: A,
+            "aria-label": g.intl.string(g.t.ogxXGq),
+            onSelect: f,
             children: [
-                g,
+                m,
                 (0, r.jsxs)(i.rXV, {
-                    children: [m, b],
+                    children: [A, _],
                 }),
                 (0, r.jsx)(i.rXV, {
-                    children: _,
+                    children: b,
                 }),
                 (0, r.jsx)(i.rXV, {
                     children: E,

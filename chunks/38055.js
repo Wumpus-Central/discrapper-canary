@@ -70,6 +70,7 @@ let h = (e) => {
         let { closePopout: t } = e,
             i = (0, a.bG)([l.A], () => l.A.hidden);
         return (0, r.jsx)(s.W1t, {
+            "data-menu-migration-ready": !0,
             onSelect: () => {},
             navId: "member-list-settings-menu",
             onClose: null != t ? t : c.tEg,

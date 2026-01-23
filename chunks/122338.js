@@ -7,30 +7,31 @@ var r = n(627968),
     l = n(64700),
     i = n(397927),
     a = n(183555),
-    s = n(735321),
-    o = n(394245),
+    o = n(735321),
+    s = n(394245),
     c = n(985018),
     u = n(542467);
 let d = l.memo(function (e) {
     let { currentTags: t, onTagSelect: n, onNoneSelect: l, onClose: a } = e;
     return (0, r.jsx)(i.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "widget-game-tags",
         "aria-label": c.intl.string(c.t.r6EJOu),
         onClose: a,
         onSelect: () => {},
         className: u.VS,
-        children: Object.entries(o.Pb).map((e) => {
+        children: Object.entries(s.Pb).map((e) => {
             let a,
-                [s, u] = e,
+                [o, u] = e,
                 d =
                     ((a = []),
-                    u.type === o.me.RADIO &&
+                    u.type === s.me.RADIO &&
                         a.push(
                             (0, r.jsx)(
                                 i.iDA,
                                 {
-                                    id: "".concat(s, "-none"),
-                                    group: s,
+                                    id: "".concat(o, "-none"),
+                                    group: o,
                                     label: c.intl.string(c.t.PoWNfe),
                                     checked: !u.tags.some((e) => t.includes(e)),
                                     action: () => l(u.tags),
@@ -39,15 +40,15 @@ let d = l.memo(function (e) {
                             ),
                         ),
                     u.tags.forEach((e) => {
-                        let l = o.PT[e];
+                        let l = s.PT[e];
                         null != l &&
-                            (u.type === o.me.RADIO
+                            (u.type === s.me.RADIO
                                 ? a.push(
                                       (0, r.jsx)(
                                           i.iDA,
                                           {
                                               id: e,
-                                              group: s,
+                                              group: o,
                                               label: l.getText(),
                                               checked: t.includes(e),
                                               action: () => n(e, !0),
@@ -75,7 +76,7 @@ let d = l.memo(function (e) {
                     label: u.getLabel(),
                     children: d,
                 },
-                s,
+                o,
             );
         }),
     });
@@ -83,21 +84,21 @@ let d = l.memo(function (e) {
 
 function f(e) {
     let { tags: t, widgetType: n, applicationId: f, ref: p } = e,
-        b = (0, l.useRef)(null),
-        { trackUserProfileEditAction: g } = (0, a.NJ)(),
-        m = (0, l.useMemo)(() => (null != t ? t : []), [t]),
+        g = (0, l.useRef)(null),
+        { trackUserProfileEditAction: m } = (0, a.NJ)(),
+        b = (0, l.useMemo)(() => (null != t ? t : []), [t]),
         y = (0, l.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    r = new Set(m);
+                    r = new Set(b);
                 if (t) {
-                    let t = Object.values(o.Pb).find((t) => t.tags.includes(e));
+                    let t = Object.values(s.Pb).find((t) => t.tags.includes(e));
                     null != t &&
                         (t.tags.forEach((e) => {
                             r.delete(e);
                         }),
                         r.add(e),
-                        g({
+                        m({
                             action: "TAG_ADDED",
                             widgetEdited: n,
                             gameId: f,
@@ -105,42 +106,42 @@ function f(e) {
                 } else
                     r.has(e)
                         ? (r.delete(e),
-                          g({
+                          m({
                               action: "TAG_REMOVED",
                               widgetEdited: n,
                               gameId: f,
                           }))
                         : (r.add(e),
-                          g({
+                          m({
                               action: "TAG_ADDED",
                               widgetEdited: n,
                               gameId: f,
                           }));
-                (0, s.s1)(n, f, Array.from(r));
+                (0, o.s1)(n, f, Array.from(r));
             },
-            [m, g, n, f],
+            [b, m, n, f],
         ),
         O = (0, l.useCallback)(
             (e) => {
-                let t = new Set(m);
+                let t = new Set(b);
                 e.forEach((e) => {
                     t.delete(e);
                 }),
-                    g({
+                    m({
                         action: "TAG_REMOVED",
                         widgetEdited: n,
                         gameId: f,
                     }),
-                    (0, s.s1)(n, f, Array.from(t));
+                    (0, o.s1)(n, f, Array.from(t));
             },
-            [m, g, n, f],
+            [b, m, n, f],
         );
     return (0, r.jsx)(i.YNO, {
-        targetElementRef: b,
+        targetElementRef: g,
         position: "right",
         align: "top",
         onRequestOpen: () => {
-            g({
+            m({
                 action: "PRESS_ADD_TAG",
                 widgetEdited: n,
             });
@@ -148,7 +149,7 @@ function f(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(d, {
-                currentTags: m,
+                currentTags: b,
                 onTagSelect: y,
                 onNoneSelect: O,
                 onClose: t,
@@ -158,9 +159,9 @@ function f(e) {
             var t, n;
             return (0, r.jsx)("div", {
                 ref: (e) => (
-                    null != e && ((b.current = e), (p.current = e)),
+                    null != e && ((g.current = e), (p.current = e)),
                     () => {
-                        (b.current = null), (p.current = null);
+                        (g.current = null), (p.current = null);
                     }
                 ),
                 children: (0, r.jsx)(

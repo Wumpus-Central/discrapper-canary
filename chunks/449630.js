@@ -4,8 +4,8 @@ n.d(t, {
     n(896048);
 var a = n(627968),
     l = n(64700),
-    i = n(607399),
-    r = n(158954),
+    r = n(607399),
+    i = n(158954),
     s = n(311907),
     o = n(554146),
     c = n(397927),
@@ -14,23 +14,23 @@ var a = n(627968),
     m = n(688810),
     p = n(395332),
     h = n(713517),
-    f = n(576241),
-    x = n(645507),
-    b = n(379848),
-    g = n(970931),
+    x = n(576241),
+    g = n(645507),
+    f = n(379848),
+    b = n(970931),
     v = n(258836),
     j = n(206835),
-    y = n(182592),
-    _ = n(183555),
+    _ = n(182592),
+    y = n(183555),
     A = n(950191),
     C = n(657331),
     S = n(718019),
     O = n(31432),
     E = n(915614),
-    N = n(223330),
-    T = n(559506),
-    I = n(646986),
-    w = n(379654),
+    T = n(223330),
+    N = n(559506),
+    w = n(646986),
+    I = n(379654),
     k = n(946356),
     P = n(810396),
     R = n(376285),
@@ -42,8 +42,8 @@ var a = n(627968),
     G = n(957565),
     F = n(562153),
     V = n(927578),
-    H = n(832248),
-    W = n(962303),
+    W = n(832248),
+    H = n(962303),
     K = n(163233),
     z = n(95551),
     q = n(471303),
@@ -84,11 +84,11 @@ function ea(e) {
 }
 
 function el(e) {
-    let { currentUser: t, onClose: n, setPopoutRef: el, highlightBadge: ei, openedAt: er } = e,
+    let { currentUser: t, onClose: n, setPopoutRef: el, highlightBadge: er, openedAt: ei } = e,
         es = __OVERLAY__,
         eo = (0, A.Ay)(t.id, void 0),
         { analyticsLocations: ec } = (0, m.Ay)(u.A.USER_PROFILE_ACCOUNT_POPOUT),
-        ed = (0, _.pb)({
+        ed = (0, y.pb)({
             layout: "ACCOUNT_POPOUT",
             userId: t.id,
             guildId: void 0,
@@ -100,39 +100,39 @@ function el(e) {
     }, [eu, el]),
         l.useEffect(
             () => (
-                H.A.setState({
+                W.A.setState({
                     isOpen: !0,
                 }),
                 () =>
-                    H.A.setState({
+                    W.A.setState({
                         isOpen: !1,
                     })
             ),
             [],
         );
-    let ef = (0, s.bG)([U.A], () => U.A.getStatus(t.id)),
-        ex = L.CY.useSetting(),
-        eb = (0, Y.Q)(ex),
-        eg = (0, s.bG)([B.A], () => B.A.hidePersonalInformation),
-        ev = (0, g.kB)(),
+    let ex = (0, s.bG)([U.A], () => U.A.getStatus(t.id)),
+        eg = L.CY.useSetting(),
+        ef = (0, Y.Q)(eg),
+        eb = (0, s.bG)([B.A], () => B.A.hidePersonalInformation),
+        ev = (0, b.kB)(),
         ej = L.Q_.useSetting(),
-        ey = (0, Y.T)(ef),
-        e_ = (0, W.j)(n),
+        e_ = (0, Y.T)(ex),
+        ey = (0, H.j)(n),
         eA = (0, j.A)({
             analyticsLocations: ec,
         }),
         eC = (0, V.TW)(t),
-        eS = (0, f.h)({
+        eS = (0, x.h)({
             location: "UserProfileAccountPopout",
         }),
         eO = l.useRef(null),
         eE = l.useRef(null),
-        eN = l.useRef((0, H.A)((e) => e.shouldRenderTenureLevelUp)),
-        eT = l.useMemo(() => (0, x.A)(), []),
-        [eI, ew] = l.useState(!0);
+        eT = l.useRef((0, W.A)((e) => e.shouldRenderTenureLevelUp)),
+        eN = l.useMemo(() => (0, g.A)(), []),
+        [ew, eI] = l.useState(!0);
     l.useEffect(() => {
         setTimeout(() => {
-            ew(!1);
+            eI(!1);
         }, 500);
     }, []);
     let ek = (e) => {
@@ -140,7 +140,7 @@ function el(e) {
                 (0, C.openUserProfileModal)(
                     ea(
                         {
-                            customStatusPrompt: eT,
+                            customStatusPrompt: eN,
                             sourceAnalyticsLocations: ec,
                         },
                         ed,
@@ -150,7 +150,7 @@ function el(e) {
         },
         eP = (null == eo ? void 0 : eo.widgets) != null && eo.widgets.length > 0,
         eR = eP ? [] : [o.M.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
-        [eD, eM] = (0, b.kn)(eR),
+        [eD, eM] = (0, f.kn)(eR),
         eL = eD === o.M.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE,
         eU = l.useCallback(() => {
             eM(Z.i.USER_DISMISS), n();
@@ -166,9 +166,9 @@ function el(e) {
         });
     return (0, a.jsx)(m.f5, {
         value: ec,
-        children: (0, a.jsx)(_.of, {
+        children: (0, a.jsx)(y.of, {
             value: ed,
-            openedAt: er,
+            openedAt: ei,
             fetchStartedAt: null == eo ? void 0 : eo.fetchStartedAt,
             fetchEndedAt: null == eo ? void 0 : eo.fetchEndedAt,
             isLoaded: null == eo ? void 0 : eo.isLoaded,
@@ -208,17 +208,17 @@ function el(e) {
                                         user: t,
                                         themeType: $.d.POPOUT,
                                         onCloseProfile: n,
-                                        prompt: eS ? eT : null,
+                                        prompt: eS ? eN : null,
                                     }),
                                 ],
                             }),
                             (0, a.jsxs)(c.HOs, {
                                 className: et.rf,
                                 style: {
-                                    pointerEvents: eI ? "none" : void 0,
+                                    pointerEvents: ew ? "none" : void 0,
                                 },
                                 children: [
-                                    (0, a.jsx)(T.A, {
+                                    (0, a.jsx)(N.A, {
                                         userId: t.id,
                                     }),
                                     (0, a.jsx)(P.A, {
@@ -231,8 +231,8 @@ function el(e) {
                                             displayProfile: eo,
                                             themeType: $.d.POPOUT,
                                             onClose: n,
-                                            shouldOpenBadgeTooltip: null != ei ? (e) => e === ei : void 0,
-                                            shouldGlowTenureBadge: eN.current,
+                                            shouldOpenBadgeTooltip: null != er ? (e) => e === er : void 0,
+                                            shouldGlowTenureBadge: eT.current,
                                         }),
                                         nicknameIcons: (0, a.jsx)(R.A, {
                                             user: t,
@@ -242,20 +242,20 @@ function el(e) {
                                     (0, a.jsx)(M.A, {
                                         user: t,
                                         bio: null == eo ? void 0 : eo.bio,
-                                        hidePersonalInformation: eg,
+                                        hidePersonalInformation: eb,
                                         onClose: n,
                                     }),
                                     eP &&
-                                        (0, a.jsx)(w.A, {
+                                        (0, a.jsx)(I.A, {
                                             user: t,
                                             widgets: null == eo ? void 0 : eo.widgets,
                                             onOpenUserProfileModal: ek,
                                         }),
-                                    (0, a.jsx)(N.A, {
+                                    (0, a.jsx)(T.A, {
                                         isPremiumUser: eC,
                                         onInteraction: n,
                                     }),
-                                    (0, a.jsx)(I.A, {
+                                    (0, a.jsx)(w.A, {
                                         user: t,
                                         currentUser: t,
                                         onOpenUserProfileModal: ek,
@@ -283,18 +283,18 @@ function el(e) {
                                                         (0, a.jsx)(z.N3, {
                                                             action: "PRESS_SET_STATUS",
                                                             label: (0, a.jsx)(q.A, {}),
-                                                            sublabel: null != eb && eb,
+                                                            sublabel: null != ef && ef,
                                                             icon: () =>
                                                                 (0, a.jsx)(c.nW6, {
-                                                                    status: ef,
+                                                                    status: ex,
                                                                     size: 12,
                                                                 }),
                                                             trailing:
-                                                                (ev || ef === X.clD.DND) &&
+                                                                (ev || ex === X.clD.DND) &&
                                                                 (0, a.jsx)(c.a_I, {
                                                                     size: "xxs",
                                                                 }),
-                                                            renderSubmenu: i.Fr
+                                                            renderSubmenu: r.Fr
                                                                 ? void 0
                                                                 : (e) => {
                                                                       let { closePopout: t } = e;
@@ -303,10 +303,10 @@ function el(e) {
                                                                           className: et.hQ,
                                                                           "aria-label": ee.intl.string(ee.t.E13trI),
                                                                           onClose: t,
-                                                                          children: ey,
+                                                                          children: e_,
                                                                       });
                                                                   },
-                                                            onClick: i.Fr
+                                                            onClick: r.Fr
                                                                 ? () => {
                                                                       n(),
                                                                           (0, c.mMO)(
@@ -315,13 +315,13 @@ function el(e) {
                                                                                       e((e) => {
                                                                                           var t, n;
                                                                                           let { onClose: l } = e,
-                                                                                              i = (function (e, t) {
+                                                                                              r = (function (e, t) {
                                                                                                   if (null == e)
                                                                                                       return {};
                                                                                                   var n,
                                                                                                       a,
                                                                                                       l,
-                                                                                                      i = {};
+                                                                                                      r = {};
                                                                                                   if (
                                                                                                       "u" >
                                                                                                           typeof Reflect &&
@@ -346,16 +346,16 @@ function el(e) {
                                                                                                                       e,
                                                                                                                       a,
                                                                                                                   ) &&
-                                                                                                                  (i[
+                                                                                                                  (r[
                                                                                                                       a
                                                                                                                   ] =
                                                                                                                       e[
                                                                                                                           a
                                                                                                                       ]);
-                                                                                                      return i;
+                                                                                                      return r;
                                                                                                   }
                                                                                                   if (
-                                                                                                      ((i = (function (
+                                                                                                      ((r = (function (
                                                                                                           e,
                                                                                                           t,
                                                                                                       ) {
@@ -364,18 +364,18 @@ function el(e) {
                                                                                                           var n,
                                                                                                               a,
                                                                                                               l = {},
-                                                                                                              i =
+                                                                                                              r =
                                                                                                                   Object.getOwnPropertyNames(
                                                                                                                       e,
                                                                                                                   );
                                                                                                           for (
                                                                                                               a = 0;
                                                                                                               a <
-                                                                                                              i.length;
+                                                                                                              r.length;
                                                                                                               a++
                                                                                                           )
                                                                                                               (n =
-                                                                                                                  i[a]),
+                                                                                                                  r[a]),
                                                                                                                   !(
                                                                                                                       t.indexOf(
                                                                                                                           n,
@@ -415,21 +415,21 @@ function el(e) {
                                                                                                                       e,
                                                                                                                       a,
                                                                                                                   ) &&
-                                                                                                                  (i[
+                                                                                                                  (r[
                                                                                                                       a
                                                                                                                   ] =
                                                                                                                       e[
                                                                                                                           a
                                                                                                                       ]);
-                                                                                                  return i;
+                                                                                                  return r;
                                                                                               })(e, ["onClose"]);
                                                                                           return (0, a.jsx)(
-                                                                                              r.dWK,
+                                                                                              i.dWK,
                                                                                               ((t = ea(
                                                                                                   {
                                                                                                       onClose: l,
                                                                                                   },
-                                                                                                  i,
+                                                                                                  r,
                                                                                               )),
                                                                                               (n = n =
                                                                                                   {
@@ -442,6 +442,8 @@ function el(e) {
                                                                                                           ),
                                                                                                       children: (0,
                                                                                                       a.jsx)(c.W1t, {
+                                                                                                          "data-menu-migration-ready":
+                                                                                                              !0,
                                                                                                           navId: "set-status-submenu-mobile-web",
                                                                                                           variant:
                                                                                                               "fixed",
@@ -457,7 +459,7 @@ function el(e) {
                                                                                                           onClose: l,
                                                                                                           onSelect:
                                                                                                               void 0,
-                                                                                                          children: ey,
+                                                                                                          children: e_,
                                                                                                       }),
                                                                                                   }),
                                                                                               Object.getOwnPropertyDescriptors
@@ -527,7 +529,7 @@ function el(e) {
                                                                     navId: "switch-accounts-submenu",
                                                                     "aria-label": ee.intl.string(ee.t.wFhVqL),
                                                                     onClose: t,
-                                                                    children: e_,
+                                                                    children: ey,
                                                                 });
                                                             },
                                                         }),
@@ -550,8 +552,8 @@ function el(e) {
                                 ],
                             }),
                             (null == eo ? void 0 : eo.profileEffect) != null &&
-                                !eN.current &&
-                                (0, a.jsx)(y.A, {
+                                !eT.current &&
+                                (0, a.jsx)(_.A, {
                                     skuId: eo.profileEffect.skuId,
                                     isHovering: eh,
                                 }),

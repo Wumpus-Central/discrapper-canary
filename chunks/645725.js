@@ -18,13 +18,13 @@ var r = n(627968),
     m = n(928658),
     g = n(611010),
     E = n(967198),
-    b = n(287809),
-    y = n(954571),
+    y = n(287809),
+    b = n(954571),
     O = n(957565),
-    A = n(692848),
-    v = n(989837),
-    S = n(735991),
-    I = n(346446),
+    v = n(692848),
+    A = n(989837),
+    I = n(735991),
+    S = n(346446),
     T = n(60809),
     C = n(652215),
     N = n(985018),
@@ -90,8 +90,8 @@ function L(e) {
     var t;
     let { application: a, context: w, className: D, sectionName: L } = e,
         j = i.useRef(null),
-        M = (0, l.bG)([v.A], () => v.A.entrypoint()),
-        k = (0, S.Pp)(a),
+        M = (0, l.bG)([A.A], () => A.A.entrypoint()),
+        k = (0, I.Pp)(a),
         U = (0, _.Ie)(k),
         G = (0, f.G)(a.id),
         V = (0, l.bG)([E.A], () => {
@@ -102,14 +102,14 @@ function L(e) {
             location: d.Oh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: a.id,
             section_name: L,
-            source: v.A.lastShownEntrypoint(),
+            source: A.A.lastShownEntrypoint(),
         },
-        B = b.default.getCurrentUser(),
+        B = y.default.getCurrentUser(),
         H = (0, h.A)({
             id: a.id,
             label: N.intl.string(N.t["+NP/b2"]),
         }),
-        Y = (0, I.r)({
+        Y = (0, S.r)({
             application: a,
         }),
         W = (0, o.Lt)(null != (t = a.flags) ? t : 0, C.gfo.EMBEDDED),
@@ -135,7 +135,7 @@ function L(e) {
                     (0, O.C)(e, () =>
                         (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["L/PwZf"]), c.ToastType.SUCCESS)),
                     ),
-                        y.default.track(C.HAw.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                        b.default.track(C.HAw.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: a.id,
                             source: M,
                         });
@@ -152,6 +152,7 @@ function L(e) {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsxs)(c.W1t, {
+                        "data-menu-mixed": !0,
                         className: T.qp,
                         navId: "app-details-more-menu",
                         onClose: t,
@@ -187,7 +188,7 @@ function L(e) {
                                               action: () => {
                                                   null == k.customInstallUrl &&
                                                       (0, u.zV)(C.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, F),
-                                                      (0, A.o)(
+                                                      (0, v.o)(
                                                           x(P({}, k), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;

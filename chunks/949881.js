@@ -1,13 +1,14 @@
 n.d(t, {
-    default: () => l,
+    default: () => i,
 });
 var r = n(627968);
 n(64700);
 var a = n(397927),
     o = n(442433),
     c = n(818348);
-let l = (e) =>
+let i = (e) =>
     (0, r.jsx)(a.W1t, {
+        "data-menu-migration-ready": !0,
         onClose: o.Z_,
         navId: "staff-only-entry-debug",
         "aria-label": "staff only content inventory debug",

@@ -20,6 +20,7 @@ function u(t) {
             null == n && (0, a.Z_)();
         }, [n]),
         (0, r.jsx)(l.W1t, {
+            "data-menu-mixed": !0,
             onSelect: t.onSelect,
             navId: "dev-context",
             "aria-label": null != (e = t["aria-label"]) ? e : o.intl.string(o.t.ogxXGq),

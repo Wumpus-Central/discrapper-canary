@@ -16,6 +16,7 @@ let p = function (e) {
         O = null != (t = null == p ? void 0 : p.id) ? t : s.dJq,
         y = (0, c.bG)([a.A], () => null != p && a.A.canManageUser(s.xBc.BAN_MEMBERS, u, p), [p, u]);
     return (0, n.jsx)(o.W1t, {
+        "data-menu-all-icons": !0,
         navId: "member-application-context-menu",
         onClose: i.Z_,
         "aria-label": b.intl.string(b.t.liqwPJ),

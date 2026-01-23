@@ -1,22 +1,23 @@
-t.d(l, {
+l.d(t, {
     default: () => o,
 });
-var i = t(627968);
-t(64700);
-var e = t(397927),
-    a = t(442433),
-    r = t(50268),
-    s = t(687279),
-    c = t(985018);
+var i = l(627968);
+l(64700);
+var e = l(397927),
+    a = l(442433),
+    r = l(50268),
+    s = l(687279),
+    c = l(985018);
 
 function o(n) {
-    let { channel: l, channelId: t, originalLink: o, messageId: d, onSelect: u } = n,
-        h = (0, s.A)(l, o, d),
+    let { channel: t, channelId: l, originalLink: o, messageId: d, onSelect: u } = n,
+        h = (0, s.A)(t, o, d),
         p = (0, r.A)({
-            id: t,
+            id: l,
             label: c.intl.string(c.t.gFHI3k),
         });
     return (0, i.jsxs)(e.W1t, {
+        "data-menu-mixed": !0,
         navId: "channel-mention-context",
         onClose: a.Z_,
         onSelect: u,

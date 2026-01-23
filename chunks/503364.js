@@ -84,6 +84,7 @@ function h(e) {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(s.W1t, {
+                      "data-menu-mixed": !0,
                       navId: "game-profile-context",
                       onClose: () => {
                           (0, o.Z_)(), t();

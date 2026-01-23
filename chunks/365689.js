@@ -7,8 +7,8 @@ var i = n(397927),
     r = n(442433),
     a = n(847767),
     o = n(358367),
-    s = n(468389),
-    d = n(793574),
+    d = n(468389),
+    s = n(793574),
     u = n(50268),
     c = n(346247),
     A = n(700210),
@@ -28,10 +28,10 @@ var i = n(397927),
     M = n(198229),
     C = n(243949),
     D = n(180798),
-    I = n(972432),
-    P = n(77544),
-    T = n(652215),
-    _ = n(985018);
+    P = n(972432),
+    I = n(77544),
+    _ = n(652215),
+    T = n(985018);
 let L = (0, o.A)(
     (0, a.A)(
         function (e) {
@@ -40,14 +40,14 @@ let L = (0, o.A)(
                     guildId: n,
                     showModalItems: a = !0,
                     showMediaItems: o = !1,
-                    showChatItems: d = !0,
+                    showChatItems: s = !0,
                     context: L,
-                    onSelect: N,
+                    onSelect: U,
                 } = e,
-                U = {
-                    page: T.liQ.GUILD_CHANNEL,
-                    section: T.JJy.CHAT_USERNAME,
-                    object: T.ZSU.CONTEXT_MENU_ITEM,
+                N = {
+                    page: _.liQ.GUILD_CHANNEL,
+                    section: _.JJy.CHAT_USERNAME,
+                    object: _.ZSU.CONTEXT_MENU_ITEM,
                 },
                 G = (0, C.A)({
                     userId: t.id,
@@ -55,7 +55,7 @@ let L = (0, o.A)(
                 }),
                 R = (0, h.A)(t, n, L),
                 B = (0, j.A)(t.id, L),
-                w = (0, P.A)(t.id),
+                w = (0, I.A)(t.id),
                 V = (0, y.A)({
                     user: t,
                     context: L,
@@ -68,23 +68,23 @@ let L = (0, o.A)(
                 F = (0, g.A)({
                     user: t,
                 }),
-                K = (0, I.A)(t.id),
+                K = (0, P.A)(t.id),
                 X = (0, M.A)(t.id),
-                Y = (0, c.A)({
+                H = (0, c.A)({
                     guildId: n,
                     userId: t.id,
-                    analyticsLocation: U,
+                    analyticsLocation: N,
                     context: L,
                 }),
-                H = (0, A.A)({
+                W = (0, A.A)({
                     user: t,
                     guildId: n,
                 }),
-                W = (0, v.A)({
+                Y = (0, v.A)({
                     user: t,
                     guildId: n,
                 }),
-                J = (0, s.A)(null, t),
+                J = (0, d.A)(null, t),
                 q = (0, b.A)({
                     user: t,
                 }),
@@ -109,20 +109,21 @@ let L = (0, o.A)(
                 en = (0, x.A)(t, n),
                 el = (0, u.A)({
                     id: t.id,
-                    label: _.intl.string(_.t["/AXYnE"]),
+                    label: T.intl.string(T.t["/AXYnE"]),
                 }),
                 ei = t.isNonUserBot();
             return (0, l.jsxs)(i.W1t, {
+                "data-menu-mixed": !0,
                 navId: "user-context",
                 onClose: r.Z_,
-                "aria-label": _.intl.string(_.t.liqwPJ),
-                onSelect: N,
+                "aria-label": T.intl.string(T.t.liqwPJ),
+                onSelect: U,
                 children: [
                     !ei &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
                                 (0, l.jsxs)(i.rXV, {
-                                    children: [a && G, d && R, B, V, a && k, a && F, w],
+                                    children: [a && G, s && R, B, V, a && k, a && F, w],
                                 }),
                                 o &&
                                     (0, l.jsx)(i.rXV, {
@@ -132,7 +133,7 @@ let L = (0, o.A)(
                                     children: a && J,
                                 }),
                                 (0, l.jsxs)(i.rXV, {
-                                    children: [o && X, a && Y, a && W, q, Z, z, H, a && Q, a && $],
+                                    children: [o && X, a && H, a && Y, q, Z, z, W, a && Q, a && $],
                                 }),
                                 (0, l.jsx)(i.rXV, {
                                     children: ee,
@@ -149,8 +150,8 @@ let L = (0, o.A)(
             });
         },
         {
-            object: T.ZSU.CONTEXT_MENU,
+            object: _.ZSU.CONTEXT_MENU,
         },
     ),
-    [d.A.CONTEXT_MENU, d.A.GUILD_USER_MENU],
+    [s.A.CONTEXT_MENU, s.A.GUILD_USER_MENU],
 );

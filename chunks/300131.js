@@ -1,23 +1,23 @@
 n.d(t, {
-    A: () => b,
+    A: () => g,
 });
 var r = n(627968),
     l = n(64700),
     i = n(397927),
     a = n(793574),
-    s = n(688810),
-    o = n(975571),
+    o = n(688810),
+    s = n(975571),
     c = n(993401),
     u = n(652215),
     d = n(985018),
     f = n(998855);
-let p = o.A.getArticleURL(u.MVz.CUSTOM_PROFILES_WISHLIST);
+let p = s.A.getArticleURL(u.MVz.CUSTOM_PROFILES_WISHLIST);
 
-function b(e) {
-    let { isOwner: t, isWishlistPublic: n, onToggleVisibility: o } = e,
+function g(e) {
+    let { isOwner: t, isWishlistPublic: n, onToggleVisibility: s } = e,
         u = l.useRef(null),
-        { analyticsLocations: b } = (0, s.Ay)(a.A.USER_PROFILE_WISHLIST),
-        g = l.useMemo(
+        { analyticsLocations: g } = (0, o.Ay)(a.A.USER_PROFILE_WISHLIST),
+        m = l.useMemo(
             () =>
                 t
                     ? (0, r.jsxs)(i.rXV, {
@@ -40,7 +40,7 @@ function b(e) {
                                       ],
                                   }),
                                   checked: n,
-                                  action: o,
+                                  action: s,
                               }),
                               (0, r.jsx)(i.bXX, {}),
                               (0, r.jsx)(i.Drp, {
@@ -56,22 +56,23 @@ function b(e) {
                           ],
                       })
                     : null,
-            [t, n, o],
+            [t, n, s],
         );
-    return null == g
+    return null == m
         ? null
-        : (0, r.jsx)(s.f5, {
-              value: b,
+        : (0, r.jsx)(o.f5, {
+              value: g,
               children: (0, r.jsx)(i.YNO, {
                   targetElementRef: u,
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
                       return (0, r.jsx)(i.W1t, {
+                          "data-menu-migration-ready": !0,
                           navId: "wishlist-overflow-menu",
                           onSelect: void 0,
                           onClose: t,
                           "aria-label": d.intl.string(d.t.GdNkvG),
-                          children: g,
+                          children: m,
                       });
                   },
                   children: (e) =>

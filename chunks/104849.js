@@ -12,14 +12,14 @@ var r = n(627968),
     d = n(793574),
     A = n(688810),
     b = n(50268),
-    f = n(346247),
-    O = n(504049),
+    O = n(346247),
+    f = n(504049),
     g = n(696451),
     y = n(977997),
     p = n(291247),
     E = n(239211),
-    j = n(399476),
-    m = n(301541),
+    m = n(399476),
+    j = n(301541),
     v = n(252726),
     _ = n(103629),
     h = n(521819),
@@ -38,15 +38,15 @@ let I = (0, c.A)(
                     context: P,
                     onSelect: I,
                     moderationAlertId: D,
-                    analyticsLocation: x,
-                    analyticsLocations: T,
+                    analyticsLocation: T,
+                    analyticsLocations: x,
                     onCloseContextMenu: N,
                     showTransferOwnershipItem: w,
                 } = e,
                 { analyticsLocations: G } = (0, A.Ay)(d.A.CONTEXT_MENU),
                 R = (0, s.p)(),
-                U = null != (t = null == T ? void 0 : T[0]) ? t : G[0],
-                B = (0, O.$9)(u, {
+                U = null != (t = null == x ? void 0 : x[0]) ? t : G[0],
+                B = (0, f.$9)(u, {
                     location: U,
                     targetUserId: n.id,
                 }),
@@ -55,29 +55,29 @@ let I = (0, c.A)(
                     return null != (e = y.A.getUserVoiceChannelId(u, n.id)) ? e : void 0;
                 }, [u, n.id]),
                 k = l.useCallback(() => {
-                    B(O.Nj.COPY_ID);
+                    B(f.Nj.COPY_ID);
                 }, [B]),
                 V = (0, i.bG)([g.Ay], () => g.Ay.isMember(u, n.id), [u, n.id]),
                 F = (0, S.A)({
                     userId: n.id,
                     guildId: u,
-                    sourceAnalyticsLocations: T,
+                    sourceAnalyticsLocations: x,
                 }),
-                H = (0, m.A)(n.id, P),
-                Y = (0, f.A)({
+                H = (0, j.A)(n.id, P),
+                K = (0, O.A)({
                     guildId: u,
                     userId: n.id,
-                    analyticsLocation: null != x ? x : R.location,
+                    analyticsLocation: null != T ? T : R.location,
                     analyticsLocations: [U],
                     context: P,
                 }),
-                K = (0, E.A)({
+                Y = (0, E.A)({
                     user: n,
                     guildId: u,
                     location: U,
                     channelId: c,
                 }),
-                W = (0, j.A)({
+                W = (0, m.A)({
                     user: n,
                     guildId: u,
                     location: U,
@@ -95,6 +95,7 @@ let I = (0, c.A)(
                 Q = (0, v.A)(n, u),
                 J = !!(null == n ? void 0 : n.isNonUserBot());
             return (0, r.jsxs)(a.W1t, {
+                "data-menu-mixed": !0,
                 navId: "user-context",
                 onClose: () => {
                     (0, o.Z_)(), null == N || N();
@@ -109,7 +110,7 @@ let I = (0, c.A)(
                                     children: [F, H],
                                 }),
                                 (0, r.jsxs)(a.rXV, {
-                                    children: [Y, W, K],
+                                    children: [K, W, Y],
                                 }),
                                 V &&
                                     (0, r.jsxs)(r.Fragment, {

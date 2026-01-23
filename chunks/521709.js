@@ -8,14 +8,15 @@ var c = r(311907),
     i = r(442433),
     a = r(847767),
     l = r(181079),
-    s = r(422258),
-    u = r(652215),
+    u = r(422258),
+    s = r(652215),
     b = r(985018);
 let p = (0, a.A)(
     function (e) {
         let { onSelect: t } = e,
             r = (0, c.bG)([l.A], () => l.A.favoriteServerMuted);
         return (0, n.jsx)(o.W1t, {
+            "data-menu-migration-ready": !0,
             navId: "favorite-server-context",
             onClose: i.Z_,
             "aria-label": b.intl.string(b.t.liqwPJ),
@@ -24,13 +25,13 @@ let p = (0, a.A)(
                 children: (0, n.jsx)(o.sLh, {
                     id: "mute-server",
                     label: b.intl.string(b.t.vRzp7P),
-                    action: () => (0, s.p0)(),
+                    action: () => (0, u.p0)(),
                     checked: r,
                 }),
             }),
         });
     },
     {
-        object: u.ZSU.CONTEXT_MENU,
+        object: s.ZSU.CONTEXT_MENU,
     },
 );

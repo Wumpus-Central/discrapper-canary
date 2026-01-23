@@ -1,26 +1,26 @@
 n.d(t, {
-    A: () => f,
+    A: () => g,
 });
 var l = n(627968);
 n(64700);
 var r = n(371444),
-    a = n(392421),
-    i = n(602137),
+    i = n(392421),
+    a = n(602137),
     s = n(397927),
-    c = n(212007),
-    o = n(422844),
+    o = n(212007),
+    c = n(422844),
     d = n(853742),
     u = n(985018),
     m = n(641131),
     h = n(384474);
 
-function f(e) {
+function g(e) {
     let { channel: t, closePopout: n } = e,
-        { sortOrder: f, layoutType: g, tagSetting: x } = (0, o.R)(t.id),
-        { showResolvedFlags: b, setShowResolvedFlags: p } = (0, c.T)(t.id),
-        j = (0, o.p)(),
+        { sortOrder: g, layoutType: x, tagSetting: f } = (0, c.R)(t.id),
+        { showResolvedFlags: p, setShowResolvedFlags: b } = (0, o.T)(t.id),
+        j = (0, c.p)(),
         v = t.isMediaChannel(),
-        y = (e) => {
+        _ = (e) => {
             (0, d.Cd)({
                 guildId: t.guild_id,
                 channelId: t.id,
@@ -29,7 +29,7 @@ function f(e) {
                 j.getState().setSortOrder(t.id, e),
                 n();
         },
-        A = (e) => {
+        y = (e) => {
             (0, d.ad)({
                 guildId: t.guild_id,
                 channelId: t.id,
@@ -38,13 +38,14 @@ function f(e) {
                 j.getState().setLayoutType(t.id, e),
                 n();
         },
-        C = (e) => {
+        A = (e) => {
             j.getState().setTagSetting(t.id, e), n();
         },
-        O = null != t.availableTags && t.availableTags.length > 0;
+        C = null != t.availableTags && t.availableTags.length > 0;
     return (0, l.jsx)("div", {
         className: h.k,
         children: (0, l.jsxs)(s.W1t, {
+            "data-menu-migration-ready": !0,
             navId: "sort-and-view",
             "aria-label": v ? u.intl.string(u.t["kQN/bi"]) : u.intl.string(u.t.DJzbkL),
             hideScroller: !0,
@@ -58,15 +59,15 @@ function f(e) {
                             id: "sort-by-recent-activity",
                             group: "sort-by",
                             label: u.intl.string(u.t.jOPmcI),
-                            action: () => y(i.T.LATEST_ACTIVITY),
-                            checked: f === i.T.LATEST_ACTIVITY,
+                            action: () => _(a.T.LATEST_ACTIVITY),
+                            checked: g === a.T.LATEST_ACTIVITY,
                         }),
                         (0, l.jsx)(s.iDA, {
                             id: "sort-by-date-posted",
                             group: "sort-by",
                             label: u.intl.string(u.t.UIltXd),
-                            action: () => y(i.T.CREATION_DATE),
-                            checked: f === i.T.CREATION_DATE,
+                            action: () => _(a.T.CREATION_DATE),
+                            checked: g === a.T.CREATION_DATE,
                         }),
                     ],
                 }),
@@ -76,8 +77,8 @@ function f(e) {
                         children: (0, l.jsx)(s.sLh, {
                             id: "resolved-flags-none",
                             label: u.intl.string(u.t.XJuakA),
-                            action: () => p(!b),
-                            checked: b,
+                            action: () => b(!p),
+                            checked: p,
                         }),
                     }),
                 t.isMediaChannel() || t.isModeratorReportChannel()
@@ -89,19 +90,19 @@ function f(e) {
                                   id: "view-as-list",
                                   group: "view-as",
                                   label: u.intl.string(u.t["NJFr+g"]),
-                                  action: () => A(r.C.LIST),
-                                  checked: g === r.C.LIST,
+                                  action: () => y(r.C.LIST),
+                                  checked: x === r.C.LIST,
                               }),
                               (0, l.jsx)(s.iDA, {
                                   id: "view-as-grid",
                                   group: "view-as",
                                   label: u.intl.string(u.t.wKeggb),
-                                  action: () => A(r.C.GRID),
-                                  checked: g === r.C.GRID,
+                                  action: () => y(r.C.GRID),
+                                  checked: x === r.C.GRID,
                               }),
                           ],
                       }),
-                O
+                C
                     ? (0, l.jsxs)(s.rXV, {
                           label: u.intl.string(u.t.Paxaug),
                           children: [
@@ -109,15 +110,15 @@ function f(e) {
                                   id: "match-some",
                                   group: "tag-setting",
                                   label: u.intl.string(u.t.rQ0ctQ),
-                                  action: () => C(a.n.MATCH_SOME),
-                                  checked: x === a.n.MATCH_SOME,
+                                  action: () => A(i.n.MATCH_SOME),
+                                  checked: f === i.n.MATCH_SOME,
                               }),
                               (0, l.jsx)(s.iDA, {
                                   id: "match-all",
                                   group: "tag-setting",
                                   label: u.intl.string(u.t.FCXUu0),
-                                  action: () => C(a.n.MATCH_ALL),
-                                  checked: x === a.n.MATCH_ALL,
+                                  action: () => A(i.n.MATCH_ALL),
+                                  checked: f === i.n.MATCH_ALL,
                               }),
                           ],
                       })
@@ -132,7 +133,7 @@ function f(e) {
                             children: u.intl.string(u.t["3b//lO"]),
                         }),
                         action: () => {
-                            y(t.getDefaultSortOrder()), A(t.getDefaultLayout()), C(t.getDefaultTagSetting());
+                            _(t.getDefaultSortOrder()), y(t.getDefaultLayout()), A(t.getDefaultTagSetting());
                         },
                     }),
                 }),

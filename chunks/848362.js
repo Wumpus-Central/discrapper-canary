@@ -46,32 +46,33 @@ function E(e) {
             handleGoLive: p,
             onClose: _,
             onSelect: E,
-            appContext: b = h.BRT.APP,
-            disableChangeWindows: y = !1,
+            appContext: y = h.BRT.APP,
+            disableChangeWindows: b = !1,
             onInteraction: O,
         } = e,
-        A = null != (t = a.find((e) => e.ownerId === (null == i ? void 0 : i.id))) ? t : null,
-        v = g(n, i, a),
-        S = (0, c.A)(A, b),
-        I = (0, u.E)({
-            disableChangeWindows: y,
-            stream: A,
+        v = null != (t = a.find((e) => e.ownerId === (null == i ? void 0 : i.id))) ? t : null,
+        A = g(n, i, a),
+        I = (0, c.A)(v, y),
+        S = (0, u.E)({
+            disableChangeWindows: b,
+            stream: v,
             showReportOption: f,
             handleGoLive: p,
             minimal: !0,
-            appContext: b,
+            appContext: y,
         });
     return (0, r.jsx)(o.A, {
         section: h.JJy.CONTEXT_MENU,
         children: (0, r.jsxs)(s.W1t, {
+            "data-menu-mixed": !0,
             onSelect: E,
             navId: "manage-streams",
             onClose: _,
             onInteraction: O,
-            "aria-label": null != A ? m.intl.string(m.t.S5anIc) : m.intl.string(m.t.fjBNo1),
+            "aria-label": null != v ? m.intl.string(m.t.S5anIc) : m.intl.string(m.t.fjBNo1),
             children: [
                 (0, r.jsx)(s.rXV, {
-                    children: v.map((e) => {
+                    children: A.map((e) => {
                         let { stream: t, username: n } = e;
                         return (0, r.jsx)(
                             s.Drp,
@@ -87,14 +88,14 @@ function E(e) {
                         );
                     }),
                 }),
-                l ? null : I,
+                l ? null : S,
                 l
                     ? null
                     : (0, r.jsx)(s.rXV, {
                           children: (0, r.jsx)(s.Drp, {
                               id: "more-options",
                               label: m.intl.string(m.t.PdRCRg),
-                              children: S,
+                              children: I,
                           }),
                       }),
             ],

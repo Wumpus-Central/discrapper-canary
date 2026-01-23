@@ -9,8 +9,8 @@ var i = n(397927),
     o = n(358367),
     s = n(155718),
     d = n(468389),
-    c = n(793574),
-    u = n(810845),
+    u = n(793574),
+    c = n(810845),
     A = n(854182),
     f = n(734337),
     b = n(855187),
@@ -51,7 +51,7 @@ let B = (0, o.A)(
                     channel: n,
                     channelSelected: a = !1,
                     showMute: o = !0,
-                    showMediaItems: c = !1,
+                    showMediaItems: u = !1,
                     showChannelCallItems: F = !1,
                     showModalItems: B = !0,
                     targetIsUser: W = !1,
@@ -94,8 +94,8 @@ let B = (0, o.A)(
                 ed = (0, V.A)({
                     user: t,
                 }),
-                ec = (0, R.A)(t.id),
-                eu = (0, g.u)({
+                eu = (0, R.A)(t.id),
+                ec = (0, g.u)({
                     userId: t.id,
                     channelId: n.id,
                     guildId: n.getGuildId(),
@@ -123,7 +123,7 @@ let B = (0, o.A)(
                 ey = (0, A.A)(n.id),
                 ev = (0, _.A)(t),
                 em = (0, b.A)(t.id),
-                e_ = (0, u.A)(n.id, t.id),
+                e_ = (0, c.A)(n.id, t.id),
                 ex = (0, I.A)({
                     commandType: s.kc.USER,
                     commandTargetId: t.id,
@@ -141,6 +141,7 @@ let B = (0, o.A)(
                 eS = n.isManaged(),
                 eM = t.isNonUserBot();
             return (0, r.jsxs)(i.W1t, {
+                "data-menu-mixed": !0,
                 navId: "user-context",
                 onClose: l.Z_,
                 "aria-label": Y.intl.string(Y.t.liqwPJ),
@@ -170,16 +171,16 @@ let B = (0, o.A)(
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(i.rXV, {
-                                    children: c && ei,
+                                    children: u && ei,
                                 }),
                                 (0, r.jsx)(i.rXV, {
                                     children: B && er,
                                 }),
                                 (0, r.jsxs)(i.rXV, {
                                     children: [
-                                        c && ec,
-                                        B && eu,
-                                        c && eA,
+                                        u && eu,
+                                        B && ec,
+                                        u && eA,
                                         ex,
                                         B && en,
                                         eo,
@@ -187,7 +188,7 @@ let B = (0, o.A)(
                                         ed,
                                         B && eb,
                                         B && ef,
-                                        c && em,
+                                        u && em,
                                     ],
                                 }),
                                 (0, r.jsx)(i.rXV, {
@@ -219,5 +220,5 @@ let B = (0, o.A)(
             object: F.ZSU.CONTEXT_MENU,
         },
     ),
-    [c.A.CONTEXT_MENU, c.A.DM_USER_MENU],
+    [u.A.CONTEXT_MENU, u.A.DM_USER_MENU],
 );

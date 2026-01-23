@@ -3,8 +3,8 @@ n.d(t, {
 });
 var r = n(627968);
 n(64700);
-var l = n(397927),
-    i = n(442433),
+var i = n(397927),
+    l = n(442433),
     o = n(847767),
     a = n(358367),
     d = n(468389),
@@ -96,9 +96,10 @@ let C = (0, a.A)(
                 }),
                 Q = (0, A.A)(t),
                 $ = t.isNonUserBot();
-            return (0, r.jsxs)(l.W1t, {
+            return (0, r.jsxs)(i.W1t, {
+                "data-menu-mixed": !0,
                 navId: "user-context",
-                onClose: i.Z_,
+                onClose: l.Z_,
                 "aria-label": U.intl.string(U.t.liqwPJ),
                 onSelect: C,
                 onInteraction: L,
@@ -106,25 +107,25 @@ let C = (0, a.A)(
                     !$ &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(l.rXV, {
+                                (0, r.jsx)(i.rXV, {
                                     children: Q,
                                 }),
-                                (0, r.jsxs)(l.rXV, {
+                                (0, r.jsxs)(i.rXV, {
                                     children: [G, V, k, M, N, w ? R : null, B],
                                 }),
                                 a &&
-                                    (0, r.jsx)(l.rXV, {
+                                    (0, r.jsx)(i.rXV, {
                                         children: F,
                                     }),
-                                (0, r.jsx)(l.rXV, {
+                                (0, r.jsx)(i.rXV, {
                                     children: W,
                                 }),
-                                (0, r.jsxs)(l.rXV, {
+                                (0, r.jsxs)(i.rXV, {
                                     children: [a && X, K, H, J, Y, z, q],
                                 }),
                             ],
                         }),
-                    (0, r.jsx)(l.rXV, {
+                    (0, r.jsx)(i.rXV, {
                         children: Z,
                     }),
                 ],

@@ -1,18 +1,18 @@
-t.d(n, {
+t.d(e, {
     default: () => p,
 });
 var i = t(627968),
-    o = t(64700),
-    l = t(397927),
+    l = t(64700),
+    o = t(397927),
     a = t(442433),
     c = t(486503),
-    r = t(253932),
-    s = t(957565),
+    s = t(253932),
+    r = t(957565),
     u = t(985018);
 
-function p(e) {
-    let { imageUrl: n, onSelect: t } = e,
-        p = r.Q_.useSetting(),
+function p(n) {
+    let { imageUrl: e, onSelect: t } = n,
+        p = s.Q_.useSetting(),
         { tidaWebformEnabled: d } = c.A.useExperiment(
             {
                 location: "RoleIconContextMenu",
@@ -21,21 +21,22 @@ function p(e) {
                 autoTrackExposure: !1,
             },
         ),
-        x = o.useCallback(() => {
-            (0, s.C)(n);
-        }, [n]);
-    return s.p5 && p && d
-        ? (0, i.jsx)(l.W1t, {
+        x = l.useCallback(() => {
+            (0, r.C)(e);
+        }, [e]);
+    return r.p5 && p && d
+        ? (0, i.jsx)(o.W1t, {
+              "data-menu-all-icons": !0,
               navId: "role-icon-context",
               onClose: a.Z_,
               onSelect: t,
               "aria-label": u.intl.string(u.t.Zow2V5),
-              children: (0, i.jsx)(l.rXV, {
-                  children: (0, i.jsx)(l.Drp, {
+              children: (0, i.jsx)(o.rXV, {
+                  children: (0, i.jsx)(o.Drp, {
                       id: "copy-image-link",
                       label: u.intl.string(u.t["8xHmxo"]),
                       action: x,
-                      icon: l.qYV,
+                      icon: o.qYV,
                   }),
               }),
           })

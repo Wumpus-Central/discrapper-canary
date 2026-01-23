@@ -1,4 +1,4 @@
-n.d(e, {
+n.d(t, {
     default: () => O,
 });
 var l = n(627968);
@@ -20,9 +20,9 @@ var r = n(397927),
     v = n(652215),
     E = n(985018);
 
-function O(t) {
+function O(e) {
     let {
-            guildEventId: e,
+            guildEventId: t,
             recurrenceId: n,
             channel: O,
             guild: m,
@@ -30,42 +30,42 @@ function O(t) {
             isRecurrenceItem: h = !1,
             onSelect: D,
             target: _,
-        } = t,
+        } = e,
         w = (0, b.A)({
-            guildEventId: e,
+            guildEventId: t,
             recurrenceId: n,
             guild: m,
             channel: O,
         }),
         N = (0, d.A)({
-            guildEventId: e,
+            guildEventId: t,
             recurrenceId: n,
             guild: m,
             channel: O,
         }),
         G = (0, g.A)({
-            guildEventId: e,
+            guildEventId: t,
             guild: m,
             channel: O,
             recurrenceId: n,
             isRecurrenceItem: h,
         }),
-        S = (0, y.A)(e, m, O),
-        P = (0, A.A)(e, m, O),
-        x = (0, s.A)(e, m.id, n),
-        T = (0, c.A)(e, _),
-        C = (0, f.A)(e),
+        S = (0, y.A)(t, m, O),
+        P = (0, A.A)(t, m, O),
+        x = (0, s.A)(t, m.id, n),
+        T = (0, c.A)(t, _),
+        C = (0, f.A)(t),
         I = (0, o.A)({
-            id: e,
+            id: t,
             label: E.intl.string(E.t.WZwPO4),
         }),
         L = (0, o.A)({
             id: n,
             label: E.intl.string(E.t.NZRGQo),
         }),
-        U = (0, a.A)(e, m.id, O, n),
+        U = (0, a.A)(t, m.id, O, n),
         V = (0, p.A)({
-            guildEventId: e,
+            guildEventId: t,
             guildId: m.id,
             recurrenceId: n,
         });
@@ -73,6 +73,7 @@ function O(t) {
         context: j,
         object: v.ZSU.CONTEXT_MENU,
         children: (0, l.jsxs)(r.W1t, {
+            "data-menu-mixed": !0,
             navId: "user-context",
             onClose: i.Z_,
             "aria-label": E.intl.string(E.t.liqwPJ),

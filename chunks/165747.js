@@ -1,28 +1,29 @@
-n.d(l, {
+l.d(n, {
     default: () => o,
 }),
-    n(321073);
-var i = n(627968);
-n(64700);
-var e = n(397927),
-    s = n(442433),
-    a = n(50268),
-    r = n(292024),
-    u = n(652215),
-    d = n(985018);
+    l(321073);
+var e = l(627968);
+l(64700);
+var i = l(397927),
+    s = l(442433),
+    a = l(50268),
+    r = l(292024),
+    u = l(652215),
+    d = l(985018);
 
 function o(t) {
-    let { role: l, guild: n, onSelect: o } = t,
+    let { role: n, guild: l, onSelect: o } = t,
         p = [],
-        c = (0, r.A)(n, l, u.BEX.INTEGRATIONS);
+        c = (0, r.A)(l, n, u.BEX.INTEGRATIONS);
     null != c && p.push(c);
     let h = (0, a.A)({
-        id: l.id,
+        id: n.id,
         label: d.intl.string(d.t.sMsaLg),
     });
     return (null != h && p.push(h), 0 === p.length)
         ? null
-        : (0, i.jsx)(e.W1t, {
+        : (0, e.jsx)(i.W1t, {
+              "data-menu-mixed": !0,
               navId: "guild-integrations-permission-role-context",
               "aria-label": d.intl.string(d.t["337Ja9"]),
               onClose: s.Z_,

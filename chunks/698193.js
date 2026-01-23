@@ -22,8 +22,8 @@ var l = e(311907),
     f = e(769591),
     y = e(446600),
     C = e(533957),
-    V = e(886393),
-    m = e(477190),
+    m = e(886393),
+    V = e(477190),
     O = e(307623),
     E = e(317910),
     G = e(173682),
@@ -72,10 +72,10 @@ function H(n) {
     let { channel: t, guild: e, onSelect: s } = n,
         c = t.isGuildStageVoice(),
         d = (0, l.bG)([y.A], () => (c ? y.A.getStageInstanceByChannel(t.id) : void 0), [c, t.id]),
-        A = (0, V.A)(t),
+        A = (0, m.A)(t),
         v = (0, p.Qs)(t.id),
         C = (0, x.A)(null == v ? void 0 : v.id, e, t),
-        m = (0, T.A)(t, d),
+        V = (0, T.A)(t, d),
         O = (0, b.m)(t),
         X = (0, b.y)(t),
         N = (0, h.A)(t),
@@ -95,13 +95,14 @@ function H(n) {
         R = (0, L.Ay)(t),
         W = (0, k.A)();
     return (0, i.jsxs)(r.W1t, {
+        "data-menu-mixed": !0,
         navId: "channel-context",
         onClose: a.Z_,
         "aria-label": U.intl.string(U.t.Xm41aV),
         onSelect: s,
         children: [
             (0, i.jsx)(r.rXV, {
-                children: null != v ? C : m,
+                children: null != v ? C : V,
             }),
             (0, i.jsxs)(r.rXV, {
                 children: [S, P, N, O],
@@ -133,7 +134,7 @@ function Y(n) {
         c = t.isGuildStageVoice(),
         d = (0, l.bG)([y.A], () => (c ? y.A.getStageInstanceByChannel(t.id) : void 0), [c, t.id]),
         A = (0, N.A)(t),
-        h = (0, V.A)(t),
+        h = (0, m.A)(t),
         g = (0, p.Qs)(t.id),
         j = (0, x.A)(null == g ? void 0 : g.id, e, t),
         B = (0, T.A)(t, d),
@@ -147,7 +148,7 @@ function Y(n) {
         F = (0, D.A)(t, e),
         q = (0, I.A)(t, e.id),
         K = (0, C.A)(t, e),
-        J = (0, m.A)(t, e),
+        J = (0, V.A)(t, e),
         $ = (0, O.A)(t),
         nn = (0, u.A)({
             id: t.id,
@@ -162,6 +163,7 @@ function Y(n) {
         ns = (0, L.Ay)(t),
         nc = (0, k.A)();
     return (0, i.jsxs)(r.W1t, {
+        "data-menu-mixed": !0,
         navId: "channel-context",
         onClose: a.Z_,
         "aria-label": U.intl.string(U.t.Xm41aV),

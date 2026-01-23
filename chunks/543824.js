@@ -26,6 +26,7 @@ function s(e) {
             [],
         ),
         (0, n.jsxs)(a.W1t, {
+            "data-menu-migration-ready": !0,
             navId: "overlay-go-live-widget-context-menu",
             onClose: i.Z_,
             "aria-label": u.intl.string(u.t.tPfVWi),

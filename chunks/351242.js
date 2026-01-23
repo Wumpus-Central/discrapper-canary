@@ -8,6 +8,7 @@ var i = n(397927),
 let s = (e) => {
     let { onChangeAvatar: t, onChangeAvatarDecoration: n, onClose: s, className: o } = e;
     return (0, r.jsxs)(i.W1t, {
+        "data-menu-migration-ready": !0,
         className: o,
         onClose: s,
         onSelect: void 0,

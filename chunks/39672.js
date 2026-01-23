@@ -75,10 +75,10 @@ function g(e) {
         hasCancelableGuildBoostSlot: h,
         premiumSubscription: g,
         onSelect: E,
-        fractionalState: b,
+        fractionalState: y,
     } = e;
 
-    function y() {
+    function b() {
         (0, a.mMO)(async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 657516));
             return (n) =>
@@ -105,7 +105,7 @@ function g(e) {
         });
     }
 
-    function A() {
+    function v() {
         (0, a.mMO)(async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 342744));
             return (n) =>
@@ -117,7 +117,7 @@ function g(e) {
                 );
         });
     }
-    let v = {
+    let A = {
         transfer: {
             label: null != t.premiumGuildSubscription ? d.intl.string(d.t["PR0n//"]) : d.intl.string(d.t["+fmEYG"]),
             subtext: t.isOnCooldown() ? d.intl.string(d.t.XnB8M0) : null,
@@ -136,20 +136,20 @@ function g(e) {
     };
     switch (g.status) {
         case c.Dmq.PAST_DUE:
-            (v.cancel.disabled = !0), (v.cancel.subtext = d.intl.string(d.t.WnL6DV)), (v.uncancel.disabled = !0);
+            (A.cancel.disabled = !0), (A.cancel.subtext = d.intl.string(d.t.WnL6DV)), (A.uncancel.disabled = !0);
             break;
         case c.Dmq.PAUSE_PENDING:
         case c.Dmq.PAUSED:
-            b === u.xc.NONE &&
-                ((v.transfer.disabled = !0),
-                (v.transfer.subtext = d.intl.string(d.t.LiLRRT)),
-                (v.cancel.subtext = d.intl.string(d.t["1ywaWL"])),
-                (v.cancel.disabled = !0),
-                (v.uncancel.disabled = !0));
+            y === u.xc.NONE &&
+                ((A.transfer.disabled = !0),
+                (A.transfer.subtext = d.intl.string(d.t.LiLRRT)),
+                (A.cancel.subtext = d.intl.string(d.t["1ywaWL"])),
+                (A.cancel.disabled = !0),
+                (A.uncancel.disabled = !0));
     }
-    let S = i.useMemo(
+    let I = i.useMemo(
         () =>
-            g.isPausedOrPausePending && b === u.xc.NONE
+            g.isPausedOrPausePending && y === u.xc.NONE
                 ? (0, r.jsx)(a.Drp, {
                       id: "manage-subscription",
                       label: d.intl.string(d.t.obRG6Y),
@@ -161,9 +161,10 @@ function g(e) {
                       className: f.v,
                   })
                 : null,
-        [b, g],
+        [y, g],
     );
     return (0, r.jsxs)(a.W1t, {
+        "data-menu-mixed": !0,
         onSelect: E,
         navId: "subscription-context",
         variant: "fixed",
@@ -172,28 +173,28 @@ function g(e) {
         children: [
             (0, r.jsx)(a.Drp, {
                 id: "apply",
-                label: v.transfer.label,
-                subtext: v.transfer.subtext,
-                action: y,
-                disabled: v.transfer.disabled,
+                label: A.transfer.label,
+                subtext: A.transfer.subtext,
+                action: b,
+                disabled: A.transfer.disabled,
             }),
             (0, l.I5)(t)
                 ? (0, r.jsx)(a.Drp, {
                       id: "uncancel",
-                      label: v.uncancel.label,
-                      subtext: v.uncancel.subtext,
-                      action: A,
-                      disabled: v.uncancel.disabled,
+                      label: A.uncancel.label,
+                      subtext: A.uncancel.subtext,
+                      action: v,
+                      disabled: A.uncancel.disabled,
                   })
                 : (0, r.jsx)(a.Drp, {
                       id: "cancel",
-                      label: v.cancel.label,
-                      subtext: v.cancel.subtext,
+                      label: A.cancel.label,
+                      subtext: A.cancel.subtext,
                       action: O,
-                      disabled: v.cancel.disabled,
+                      disabled: A.cancel.disabled,
                       color: "danger",
                   }),
-            S,
+            I,
         ],
     });
 }

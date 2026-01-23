@@ -23,52 +23,53 @@ function p(e) {
             display: m,
             onSelect: g,
             onClose: E,
-            appContext: b,
-            targetElementRef: y,
+            appContext: y,
+            targetElementRef: b,
         } = e,
-        [O, A] = i.useState(!1),
-        { analyticsLocations: v } = (0, o.Ay)(s.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        S = (0, c.A)({
+        [O, v] = i.useState(!1),
+        { analyticsLocations: A } = (0, o.Ay)(s.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        I = (0, c.A)({
             display: m,
             user: p,
             activity: _,
             entry: h,
-            analyticsLocations: v,
+            analyticsLocations: A,
         }),
-        I = (0, u.NR)(),
+        S = (0, u.NR)(),
         T = i.useRef(null),
-        C = null != (t = null == I ? void 0 : I.interactionPopoutTargetRef) ? t : T,
+        C = null != (t = null == S ? void 0 : S.interactionPopoutTargetRef) ? t : T,
         N = (0, d.A)({
             entry: h,
             activity: _,
             user: p,
             display: m,
             onClose: E,
-            onAction: S,
+            onAction: I,
             isMenuOpen: O,
-            appContext: b,
+            appContext: y,
         });
     return 0 === N.length || p.bot
         ? null
         : (0, r.jsx)(a.YNO, {
-              targetElementRef: null != y ? y : C,
+              targetElementRef: null != b ? b : C,
               align: "top",
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  S({
+                  I({
                       action: "OPEN_MENU",
                   }),
-                      A(!0);
+                      v(!0);
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)("div", {
                       onClick: (e) => e.stopPropagation(),
                       children: (0, r.jsx)(a.W1t, {
+                          "data-menu-migration-ready": !0,
                           navId: l.n,
                           onClose: () => {
-                              t(), A(!1);
+                              t(), v(!1);
                           },
                           "aria-label": f.intl.string(f.t.PlAQz1),
                           onSelect: g,

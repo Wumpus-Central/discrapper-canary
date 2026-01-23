@@ -81,6 +81,7 @@ function P(t) {
         w = (0, d.A)(n, e),
         L = (0, b.A)(e);
     return (0, r.jsxs)(l.W1t, {
+        "data-menu-mixed": !0,
         navId: "game-context",
         onClose: a.Z_,
         "aria-label": j.intl.string(j.t.tKobzb),

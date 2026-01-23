@@ -15,8 +15,8 @@ var r = n(311907),
     b = n(854182),
     g = n(734337),
     p = n(855187),
-    f = n(479335),
-    m = n(50268),
+    m = n(479335),
+    f = n(50268),
     h = n(222311),
     j = n(164891),
     v = n(734057),
@@ -90,7 +90,7 @@ let J = (0, a.A)(
                 el = (0, B.A)(n.id),
                 es = (0, N.A)(n.id, o.id),
                 eo = (0, V.A)(n.id),
-                ea = (0, f.u)({
+                ea = (0, m.u)({
                     userId: n.id,
                     channelId: o.id,
                     guildId: o.getGuildId(),
@@ -113,11 +113,11 @@ let J = (0, a.A)(
                     user: n,
                     location: "GroupDMUserContextMenu",
                 }),
-                ef = (0, U.A)({
+                em = (0, U.A)({
                     user: n,
                     location: "GroupDMUserContextMenu",
                 }),
-                em = (0, m.A)({
+                ef = (0, f.A)({
                     id: n.id,
                     label: F.intl.string(F.t["/AXYnE"]),
                 }),
@@ -139,6 +139,7 @@ let J = (0, a.A)(
                 eP = o.isManaged(),
                 ew = null == (t = o.recipients) ? void 0 : t.includes(n.id);
             return (0, i.jsxs)(l.W1t, {
+                "data-menu-mixed": !0,
                 navId: "user-context",
                 onClose: s.Z_,
                 "aria-label": F.intl.string(F.t.liqwPJ),
@@ -175,7 +176,7 @@ let J = (0, a.A)(
                                         eA,
                                         eb,
                                         eg,
-                                        z && ef,
+                                        z && em,
                                         z && ep,
                                         X && eO,
                                     ],
@@ -187,7 +188,7 @@ let J = (0, a.A)(
                             ],
                         }),
                     (0, i.jsx)(l.rXV, {
-                        children: em,
+                        children: ef,
                     }),
                 ],
             });

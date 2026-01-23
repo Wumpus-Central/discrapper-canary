@@ -1,32 +1,33 @@
-n.d(i, {
-    default: () => d,
+l.d(i, {
+    default: () => r,
 });
-var e = n(627968),
-    t = n(64700),
-    a = n(397927),
-    s = n(442433),
-    c = n(50268),
-    r = n(985018);
+var n = l(627968),
+    t = l(64700),
+    a = l(397927),
+    s = l(442433),
+    c = l(50268),
+    d = l(985018);
 
-function d(l) {
-    let { guild: i, shiftId: n, onSelect: d, closePopout: o, "aria-label": u } = l,
+function r(e) {
+    let { guild: i, shiftId: l, onSelect: r, closePopout: o, "aria-label": u } = e,
         p = (0, c.A)({
             id: i.id,
-            label: r.intl.string(r.t["94lLD7"]),
-            shiftId: n,
+            label: d.intl.string(d.t["94lLD7"]),
+            shiftId: l,
             onSuccess: o,
         }),
-        h = t.useCallback((l) => {
-            l.stopPropagation();
+        h = t.useCallback((e) => {
+            e.stopPropagation();
         }, []);
-    return (0, e.jsx)(a.DUT, {
+    return (0, n.jsx)(a.DUT, {
         onClick: h,
-        children: (0, e.jsx)(a.W1t, {
-            onSelect: d,
+        children: (0, n.jsx)(a.W1t, {
+            "data-menu-mixed": !0,
+            onSelect: r,
             navId: "guild-discovery-context-menu",
-            "aria-label": null != u ? u : r.intl.string(r.t.ogxXGq),
+            "aria-label": null != u ? u : d.intl.string(d.t.ogxXGq),
             onClose: s.Z_,
-            children: (0, e.jsx)(a.rXV, {
+            children: (0, n.jsx)(a.rXV, {
                 children: p,
             }),
         }),

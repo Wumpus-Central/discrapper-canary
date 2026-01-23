@@ -5,8 +5,8 @@ var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(397927),
-    o = n(442433),
+    o = n(397927),
+    s = n(442433),
     c = n(928658),
     u = n(985018),
     d = n(418843);
@@ -14,33 +14,34 @@ var r = n(627968),
 function f(e) {
     let { widget: t, userId: n, className: i, menuItems: f } = e,
         p = l.useRef(null),
-        b = () => {
+        g = () => {
             (0, c.GJ)(n, t);
         };
-    return (0, r.jsx)(s.YNO, {
+    return (0, r.jsx)(o.YNO, {
         targetElementRef: p,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(s.W1t, {
+            return (0, r.jsx)(o.W1t, {
+                "data-menu-mixed": !0,
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
-                    (0, o.Z_)(), t();
+                    (0, s.Z_)(), t();
                 },
                 onSelect: () => {},
                 "aria-label": u.intl.string(u.t.xpSHSk),
-                children: (0, r.jsxs)(s.rXV, {
+                children: (0, r.jsxs)(o.rXV, {
                     children: [
                         (0, r.jsx)(
-                            s.Drp,
+                            o.Drp,
                             {
                                 id: "flag-widget",
                                 label: u.intl.string(u.t.D4GvHE),
-                                action: b,
+                                action: g,
                                 color: "danger",
-                                icon: s.iFK,
+                                icon: o.iFK,
                             },
                             "flag-widget",
                         ),
@@ -52,7 +53,7 @@ function f(e) {
         children: (e) => {
             var t, n;
             return (0, r.jsx)(
-                s.DUT,
+                o.DUT,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -83,7 +84,7 @@ function f(e) {
                         innerRef: p,
                         "aria-label": u.intl.string(u.t.xpSHSk),
                         className: a()(d.x, i),
-                        children: (0, r.jsx)(s.jNK, {
+                        children: (0, r.jsx)(o.jNK, {
                             size: "sm",
                             color: "currentColor",
                         }),

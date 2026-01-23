@@ -10,8 +10,8 @@ var l = n(311907),
     c = n(475777),
     a = n(87001),
     s = n(574172),
-    p = n(253932),
-    d = n(235661),
+    d = n(253932),
+    p = n(235661),
     b = n(71393),
     O = n(652215),
     f = n(985018);
@@ -23,8 +23,8 @@ function j(e) {
         v,
         g,
         { channel: A, onSelect: h, onInteraction: y } = e,
-        E = (0, d.A)(),
-        P = p.vL.useSetting(),
+        E = (0, p.A)(),
+        P = d.vL.useSetting(),
         D =
             ((t = null != A ? A : void 0),
             (n = (0, l.bG)([a.A], () => a.A.getWindow(O.MLl.CHANNEL_CALL_POPOUT))),
@@ -46,6 +46,7 @@ function j(e) {
                   })
                 : null);
     return (0, r.jsxs)(i.W1t, {
+        "data-menu-mixed": !0,
         navId: "rtc-channel",
         "aria-label": f.intl.string(f.t.ogxXGq),
         onClose: o.Z_,
@@ -60,7 +61,7 @@ function j(e) {
                     (0, r.jsx)(i.sLh, {
                         id: "show-voice-states",
                         checked: P,
-                        action: () => p.vL.updateSetting(!P),
+                        action: () => d.vL.updateSetting(!P),
                         label: f.intl.string(f.t.vkbSB0),
                     }),
                 ],

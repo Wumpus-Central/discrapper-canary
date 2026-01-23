@@ -1,49 +1,50 @@
 n.d(t, {
-    default: () => p,
+    default: () => h,
 });
 var r = n(627968),
     l = n(64700),
     i = n(314116),
-    a = n(397927),
-    s = n(442433),
+    s = n(397927),
+    a = n(442433),
     o = n(50268),
     c = n(928658),
     u = n(208882),
     d = n(352123),
-    f = n(985018);
+    p = n(985018);
 
-function p(e) {
-    let { entry: t, onSelect: p, closePopout: h, hideEditButton: b = !1 } = e,
-        { isEntryAdmin: g, canEdit: m, canRemove: A } = (0, d.A)(t),
+function h(e) {
+    let { entry: t, onSelect: h, closePopout: f, hideEditButton: g = !1 } = e,
+        { isEntryAdmin: m, canEdit: b, canRemove: A } = (0, d.A)(t),
         y = (0, o.A)({
             id: t.guildId,
-            label: f.intl.string(f.t["94lLD7"]),
-            onSuccess: h,
+            label: p.intl.string(p.t["94lLD7"]),
+            onSuccess: f,
         });
     l.useEffect(() => {
-        m || A || null != y || (0, s.Z_)();
+        b || A || null != y || (0, a.Z_)();
     });
-    let O = () => {
+    let _ = () => {
         u.ZM(t.channelId, t.guildId);
     };
 
-    function j() {
-        (0, s.Z_)(), null == h || h();
+    function O() {
+        (0, a.Z_)(), null == f || f();
     }
-    return (0, r.jsxs)(a.W1t, {
+    return (0, r.jsxs)(s.W1t, {
+        "data-menu-mixed": !0,
         navId: "guild-entry-context",
-        onClose: j,
-        "aria-label": f.intl.string(f.t.HpQykc),
-        onSelect: p,
+        onClose: O,
+        "aria-label": p.intl.string(p.t.HpQykc),
+        onSelect: h,
         children: [
-            (0, r.jsxs)(a.rXV, {
+            (0, r.jsxs)(s.rXV, {
                 children: [
-                    m && !b
-                        ? (0, r.jsx)(a.Drp, {
+                    b && !g
+                        ? (0, r.jsx)(s.Drp, {
                               id: "update-entry",
-                              label: f.intl.string(f.t.XnuOvN),
+                              label: p.intl.string(p.t.XnuOvN),
                               action: function () {
-                                  (0, a.mMO)(async () => {
+                                  (0, s.mMO)(async () => {
                                       let { default: e } = await n.e("88869").then(n.bind(n, 201700));
                                       return (n) => {
                                           var l, i;
@@ -99,42 +100,42 @@ function p(e) {
                                           );
                                       };
                                   }),
-                                      j();
+                                      O();
                               },
                           })
                         : null,
                     A
-                        ? (0, r.jsx)(a.Drp, {
+                        ? (0, r.jsx)(s.Drp, {
                               id: "remove-from-hub",
-                              label: f.intl.string(f.t.KUxYWH),
+                              label: p.intl.string(p.t.KUxYWH),
                               action: function () {
                                   (0, i.A)({
-                                      title: f.intl.string(f.t.KUxYWH),
-                                      subtitle: f.intl.format(f.t["/5y0uV"], {
+                                      title: p.intl.string(p.t.KUxYWH),
+                                      subtitle: p.intl.format(p.t["/5y0uV"], {
                                           guildName: t.name,
                                       }),
-                                      confirmText: f.intl.string(f.t.N86XcP),
-                                      onConfirm: O,
+                                      confirmText: p.intl.string(p.t.N86XcP),
+                                      onConfirm: _,
                                   }),
-                                      j();
+                                      O();
                               },
                               color: "danger",
                           })
                         : null,
-                    g
+                    m
                         ? null
-                        : (0, r.jsx)(a.Drp, {
+                        : (0, r.jsx)(s.Drp, {
                               id: "report-server-listing",
-                              label: f.intl.string(f.t.Aen9eh),
+                              label: p.intl.string(p.t.Aen9eh),
                               action: function () {
-                                  null != t && ((0, c.sJ)(t), j());
+                                  null != t && ((0, c.sJ)(t), O());
                               },
-                              icon: a.iFK,
+                              icon: s.iFK,
                               color: "danger",
                           }),
                 ],
             }),
-            (0, r.jsx)(a.rXV, {
+            (0, r.jsx)(s.rXV, {
                 children: y,
             }),
         ],

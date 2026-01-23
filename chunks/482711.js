@@ -1,6 +1,6 @@
 n.d(t, {
-    A: () => v,
-    i: () => A,
+    A: () => A,
+    i: () => v,
 });
 var r = n(627968),
     i = n(64700),
@@ -60,7 +60,7 @@ function E(e, t) {
     return n;
 }
 
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function b(e, t) {
         e
     );
 }
-let y = 600;
+let b = 600;
 
 function O(e) {
     let {
@@ -93,6 +93,7 @@ function O(e) {
     return (0, r.jsx)("div", {
         className: h.li,
         children: (0, r.jsxs)(o.W1t, {
+            "data-menu-migration-ready": !0,
             navId: "guild-product-context",
             onClose: g,
             "aria-label": _.intl.string(_.t.Z146dM),
@@ -154,7 +155,7 @@ function O(e) {
     });
 }
 
-function A(e) {
+function v(e) {
     let {
             product: t,
             guildId: n,
@@ -168,17 +169,17 @@ function A(e) {
             onUnpublishProduct: p,
             onDeleteProduct: m,
             onCopyProductLink: E,
-            onTestDownload: y,
-            onReportProduct: A,
+            onTestDownload: b,
+            onReportProduct: v,
         } = e,
-        v = i.useRef(null),
-        S = (e) => {
+        A = i.useRef(null),
+        I = (e) => {
             e.stopPropagation();
         };
     return (0, r.jsx)("div", {
-        onClick: S,
+        onClick: I,
         children: (0, r.jsx)(o.YNO, {
-            targetElementRef: v,
+            targetElementRef: A,
             position: "right",
             align: "top",
             spacing: -8,
@@ -186,7 +187,7 @@ function A(e) {
             renderPopout: (e) =>
                 (0, r.jsx)(
                     O,
-                    b(g({}, e), {
+                    y(g({}, e), {
                         guildId: n,
                         productId: t.id,
                         showEditProduct: a,
@@ -199,16 +200,16 @@ function A(e) {
                         onUnpublishProduct: p,
                         onDeleteProduct: m,
                         onCopyLink: E,
-                        onTestDownload: y,
-                        onReportProduct: A,
+                        onTestDownload: b,
+                        onReportProduct: v,
                     }),
                 ),
             children: (e, n) => {
                 let { isShown: i } = n;
                 return (0, r.jsx)(
                     o.DUT,
-                    b(g({}, e), {
-                        innerRef: v,
+                    y(g({}, e), {
+                        innerRef: A,
                         "aria-label": _.intl.formatToPlainString(_.t.RtqjeB, {
                             productName: t.name,
                         }),
@@ -228,7 +229,7 @@ function A(e) {
     });
 }
 
-function v(e) {
+function A(e) {
     let {
             product: t,
             guildId: n,
@@ -236,10 +237,10 @@ function v(e) {
             onUnpublishProduct: a,
             onDeleteProduct: m,
             onCopyProductLink: E,
-            onTestDownload: v,
-            disabled: S = !1,
+            onTestDownload: A,
+            disabled: I = !1,
         } = e,
-        I = (0, c.R)(t, y),
+        S = (0, c.R)(t, b),
         T = null !== t.price_tier ? (0, u.$g)(t.price_tier, p.Yr.USD) : void 0,
         C = (0, d.z)(t);
 
@@ -248,7 +249,7 @@ function v(e) {
             Promise.resolve((e) =>
                 (0, r.jsx)(
                     O,
-                    b(g({}, e), {
+                    y(g({}, e), {
                         closePopout: l.Z_,
                         guildId: n,
                         productId: t.id,
@@ -262,7 +263,7 @@ function v(e) {
                         onUnpublishProduct: a,
                         onDeleteProduct: m,
                         onCopyLink: E,
-                        onTestDownload: v,
+                        onTestDownload: A,
                         onReportProduct: () => {},
                     }),
                 ),
@@ -272,9 +273,9 @@ function v(e) {
     return (0, r.jsxs)(o.sqX, {
         tag: "article",
         className: s()(h.gc, h.Um, {
-            [h.r9]: S,
+            [h.r9]: I,
         }),
-        onClick: S ? void 0 : i,
+        onClick: I ? void 0 : i,
         onContextMenu: N,
         "aria-label": _.intl.formatToPlainString(_.t["X/yAKs"], {
             productName: t.name,
@@ -282,7 +283,7 @@ function v(e) {
         children: [
             (0, r.jsx)("img", {
                 alt: "",
-                src: I,
+                src: S,
                 className: h.K_,
             }),
             (0, r.jsxs)("div", {
@@ -330,8 +331,8 @@ function v(e) {
                             t.published ? (0, r.jsx)(f.S, {}) : (0, r.jsx)(f.$, {}),
                         ],
                     }),
-                    !S &&
-                        (0, r.jsx)(A, {
+                    !I &&
+                        (0, r.jsx)(v, {
                             product: t,
                             guildId: n,
                             showEditProduct: !0,
@@ -344,7 +345,7 @@ function v(e) {
                             onUnpublishProduct: a,
                             onDeleteProduct: m,
                             onCopyProductLink: E,
-                            onTestDownload: v,
+                            onTestDownload: A,
                             onReportProduct: () => {},
                         }),
                 ],

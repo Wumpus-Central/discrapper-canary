@@ -3,15 +3,15 @@ n.d(t, {
 });
 var r = n(627968),
     i = n(64700),
-    c = n(397927),
+    a = n(397927),
     o = n(348417),
-    a = n(985018);
+    c = n(985018);
 
 function s(e) {
     let { onClose: t } = e,
         { showSuggestions: s, showActivityTicker: l, setShowSuggestions: u, setShowActivityTicker: b } = (0, o.A)(),
-        p = i.useCallback(() => {
-            (0, c.mMO)(async () => {
+        d = i.useCallback(() => {
+            (0, a.mMO)(async () => {
                 let { default: e } = await n.e("51080").then(n.bind(n, 519528));
                 return (t) =>
                     (0, r.jsx)(
@@ -45,24 +45,25 @@ function s(e) {
             }),
                 t();
         }, [t]);
-    return (0, r.jsxs)(c.W1t, {
+    return (0, r.jsxs)(a.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "friends-popout-settings",
         onClose: t,
-        "aria-label": a.intl.string(a.t["3D5yo/"]),
+        "aria-label": c.intl.string(c.t["3D5yo/"]),
         onSelect: () => {},
         children: [
-            (0, r.jsx)(c.Drp, {
+            (0, r.jsx)(a.Drp, {
                 id: "create-group",
                 label: "Create Group",
-                action: p,
+                action: d,
             }),
-            (0, r.jsx)(c.sLh, {
+            (0, r.jsx)(a.sLh, {
                 id: "show-suggestions",
                 label: "Show Suggestions",
                 checked: s,
                 action: () => u(!s),
             }),
-            (0, r.jsx)(c.sLh, {
+            (0, r.jsx)(a.sLh, {
                 id: "show-activity-ticker",
                 label: "Show Activity Ticker",
                 checked: l,

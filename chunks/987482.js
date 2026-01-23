@@ -13,26 +13,26 @@ var r = n(627968),
     u = n(247775),
     d = n(311907),
     p = n(732955),
-    f = n(397927),
-    h = n(315982),
-    A = n(961350),
-    g = n(287809),
-    m = n(954571),
-    b = n(53505),
-    _ = n(652215),
+    h = n(397927),
+    g = n(315982),
+    f = n(961350),
+    m = n(287809),
+    A = n(954571),
+    _ = n(53505),
+    b = n(652215),
     E = n(985018),
     O = n(386144);
 let y = [
         {
             getOs: () => E.intl.string(E.t.NK5ySJ),
             icon: O.Bt,
-            url: () => (0, b.oW)("osx", !1),
+            url: () => (0, _.oW)("osx", !1),
             platformKey: 0,
         },
         {
             getOs: () => E.intl.string(E.t.OvKGE6),
             icon: O.KF,
-            url: () => (0, b.oW)("win", !1),
+            url: () => (0, _.oW)("win", !1),
             platformKey: 1,
         },
         {
@@ -40,11 +40,11 @@ let y = [
             icon: O.pS,
             url: [
                 {
-                    url: () => (0, b.oW)("linux", !1, "deb"),
+                    url: () => (0, _.oW)("linux", !1, "deb"),
                     getText: () => E.intl.string(E.t.Sodsus),
                 },
                 {
-                    url: () => (0, b.oW)("linux", !1, "tar.gz"),
+                    url: () => (0, _.oW)("linux", !1, "tar.gz"),
                     getText: () => E.intl.string(E.t.G3U6IV),
                 },
             ],
@@ -55,13 +55,13 @@ let y = [
         {
             getOs: () => E.intl.string(E.t.wCVyNT),
             icon: O.s4,
-            url: () => _.AMi.IOS,
+            url: () => b.AMi.IOS,
             platformKey: 3,
         },
         {
             getOs: () => E.intl.string(E.t.wuQpJD),
             icon: O.yA,
-            url: () => _.AMi.ANDROID,
+            url: () => b.AMi.ANDROID,
             platformKey: 4,
         },
     ],
@@ -73,14 +73,15 @@ let y = [
                 (e) => {
                     let { closePopout: i } = e;
                     return Array.isArray(n)
-                        ? (0, r.jsx)(f.W1t, {
+                        ? (0, r.jsx)(h.W1t, {
+                              "data-menu-migration-ready": !0,
                               navId: "download-app-menu",
                               "aria-label": E.intl.string(E.t["+1H47t"]),
                               onClose: i,
                               onSelect: void 0,
                               children: n.map((e) =>
                                   (0, r.jsx)(
-                                      f.Drp,
+                                      h.Drp,
                                       {
                                           id: e.url(),
                                           label: e.getText(),
@@ -95,7 +96,7 @@ let y = [
                 [t, n, l],
             );
         return Array.isArray(n)
-            ? (0, r.jsx)(f.YNO, {
+            ? (0, r.jsx)(h.YNO, {
                   renderPopout: c,
                   targetElementRef: a,
                   align: "left",
@@ -192,7 +193,7 @@ let y = [
                     }),
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(f.Heading, {
+                            (0, r.jsx)(h.Heading, {
                                 className: O.$r,
                                 variant: "heading-lg/semibold",
                                 children: d,
@@ -214,8 +215,8 @@ let y = [
 
 function C(e) {
     let { source: t, onClose: n, transitionState: l } = e,
-        s = (0, d.bG)([g.default], () => g.default.getCurrentUser()),
-        b = (0, d.bG)([A.default], () => A.default.getFingerprint()),
+        s = (0, d.bG)([m.default], () => m.default.getCurrentUser()),
+        _ = (0, d.bG)([f.default], () => f.default.getFingerprint()),
         v = null == s || s.isClaimed(),
         [C, N] = i.useState(
             (function () {
@@ -243,8 +244,8 @@ function C(e) {
         );
 
     function T(e, r) {
-        (null != u.getToken() || null != b) &&
-            m.default.track(_.HAw.DOWNLOAD_APP, {
+        (null != u.getToken() || null != _) &&
+            A.default.track(b.HAw.DOWNLOAD_APP, {
                 platform: e,
                 ptb: !1,
                 released: !0,
@@ -252,7 +253,7 @@ function C(e) {
                 referring_location: t,
                 qr_code: !1,
             }),
-            v ? window.open(r, "_blank") : (n(), h.R());
+            v ? window.open(r, "_blank") : (n(), g.R());
     }
 
     function j(e) {
@@ -260,7 +261,7 @@ function C(e) {
     }
     return (
         i.useEffect(() => {
-            m.default.track(_.HAw.OPEN_MODAL, {
+            A.default.track(b.HAw.OPEN_MODAL, {
                 type: "Download App",
                 source: {
                     location: t,
@@ -272,7 +273,7 @@ function C(e) {
             actions: void 0,
             onClose: n,
             transitionState: l,
-            preview: (0, r.jsx)(f.Text, {
+            preview: (0, r.jsx)(h.Text, {
                 variant: "text-sm/normal",
                 children: E.intl.format(E.t["RJS+1P"], {}),
             }),
@@ -283,7 +284,7 @@ function C(e) {
                         (0, r.jsxs)("div", {
                             className: O.Fp,
                             children: [
-                                (0, r.jsx)(f.Heading, {
+                                (0, r.jsx)(h.Heading, {
                                     variant: "heading-md/normal",
                                     color: "text-subtle",
                                     className: O.wx,
@@ -310,7 +311,7 @@ function C(e) {
                         className: O.Fp,
                         children: [
                             !c.Fr &&
-                                (0, r.jsx)(f.Heading, {
+                                (0, r.jsx)(h.Heading, {
                                     variant: "heading-md/normal",
                                     color: "text-subtle",
                                     className: O.wx,

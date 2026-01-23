@@ -47,6 +47,7 @@ function m(e) {
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, r.jsx)(s.W1t, {
+                "data-menu-migration-ready": !0,
                 navId: "user-profile-friend-request-buttons",
                 onSelect: void 0,
                 onClose: n,

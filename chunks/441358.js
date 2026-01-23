@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => _,
+    A: () => D,
 }),
     n(896048),
     n(733351);
@@ -10,13 +10,13 @@ var r = n(627968),
     a = n(111956),
     s = n.n(a),
     c = n(33851),
-    d = n.n(c),
-    u = n(417597),
+    u = n.n(c),
+    d = n(417597),
     C = n(397927),
-    f = n(71393),
-    b = n(351906),
-    m = n(509402),
-    p = n(282054),
+    m = n(71393),
+    p = n(351906),
+    b = n(509402),
+    f = n(282054),
     j = n(266047),
     g = n(221950),
     h = n(11541),
@@ -24,9 +24,9 @@ var r = n(627968),
     y = n(652215),
     O = n(985018),
     v = n(653952),
-    H = n(658122);
+    _ = n(658122);
 
-function w(e) {
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function w(e) {
     return e;
 }
 
-function A(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,7 +70,7 @@ function A(e, t) {
         e
     );
 }
-let D = [
+let A = [
     h.UP.DISCOVERY,
     h.UP.VANITY_URL,
     h.UP.BOT,
@@ -126,7 +126,7 @@ function S(e) {
                         width: t,
                     });
                 case h.UP.MANUAL_MEMBER_VERIFICATION:
-                    return (0, r.jsx)(m.A, {
+                    return (0, r.jsx)(b.A, {
                         className: v.Kk,
                         height: t,
                         width: t,
@@ -143,10 +143,10 @@ function S(e) {
                     return null;
             }
         })(t, s),
-        d = (0, h.CI)(t, i);
+        u = (0, h.CI)(t, i);
     return (0, r.jsxs)("div", {
         className: v.$E,
-        "aria-label": d,
+        "aria-label": u,
         children: [
             null != c ? c : null,
             (0, r.jsx)(C.Text, {
@@ -160,19 +160,19 @@ function S(e) {
     });
 }
 
-function _(e) {
+function D(e) {
     var t;
     let { guildId: n, onClose: i } = e,
-        a = (0, u.bG)([j.A], () => j.A.getSearchStateByGuildId(n), [n], d()),
+        a = (0, d.bG)([j.A], () => j.A.getSearchStateByGuildId(n), [n], u()),
         { inviteCodes: c } = (0, x.N)(n),
-        m = (0, u.bG)([f.A], () => f.A.getGuild(n)),
-        _ = null != (t = null == m ? void 0 : m.vanityURLCode) ? t : null,
-        [N, P] = l.useState(!1),
-        { selectedSourceInviteCode: V, selectedJoinSourceType: L } = a,
-        E = null != L && L !== h.UP.UNSPECIFIED,
-        M = (0, u.bG)([b.A], () => b.A.hideInstantInvites, []);
-    M && (c = []);
-    let R = l.useMemo(
+        b = (0, d.bG)([m.A], () => m.A.getGuild(n)),
+        D = null != (t = null == b ? void 0 : b.vanityURLCode) ? t : null,
+        [N, L] = l.useState(!1),
+        { selectedSourceInviteCode: P, selectedJoinSourceType: R } = a,
+        V = null != R && R !== h.UP.UNSPECIFIED,
+        E = (0, d.bG)([p.A], () => p.A.hideInstantInvites, []);
+    E && (c = []);
+    let M = l.useMemo(
         () =>
             s()((e) => {
                 let t = e.trim();
@@ -185,9 +185,9 @@ function _(e) {
     );
     l.useEffect(
         () => () => {
-            R.cancel();
+            M.cancel();
         },
-        [R],
+        [M],
     );
     let I = l.useCallback(
             (e) => {
@@ -201,7 +201,7 @@ function _(e) {
         ),
         T = l.useCallback(
             (e) => {
-                e === L
+                e === R
                     ? (0, g.Ld)(n, {
                           selectedSourceInviteCode: void 0,
                           selectedJoinSourceType: void 0,
@@ -210,9 +210,9 @@ function _(e) {
                           selectedSourceInviteCode: null,
                           selectedJoinSourceType: e,
                       }),
-                    P(!1);
+                    L(!1);
             },
-            [n, L],
+            [n, R],
         ),
         Z = l.useCallback(
             (e) => {
@@ -220,11 +220,12 @@ function _(e) {
                     selectedSourceInviteCode: e,
                     selectedJoinSourceType: void 0,
                 }),
-                    R(e);
+                    M(e);
             },
-            [n, R],
+            [n, M],
         );
     return (0, r.jsx)(C.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "members-table-join-method-menu",
         onClose: () => {
             i();
@@ -236,11 +237,11 @@ function _(e) {
                   children: [
                       (0, r.jsx)(C.Drp, {
                           id: "back",
-                          action: () => P(!1),
+                          action: () => L(!1),
                           render: (e) =>
                               (0, r.jsxs)(
                                   "span",
-                                  A(w({}, e), {
+                                  w(H({}, e), {
                                       className: v.RX,
                                       children: [
                                           (0, r.jsx)(C.n2b, {
@@ -259,7 +260,7 @@ function _(e) {
                                   }),
                               ),
                       }),
-                      D.map((e) =>
+                      A.map((e) =>
                           (0, r.jsx)(
                               C.iDA,
                               {
@@ -267,13 +268,13 @@ function _(e) {
                                   label: (t) =>
                                       (0, r.jsx)(
                                           S,
-                                          A(w({}, t), {
+                                          w(H({}, t), {
                                               type: e,
-                                              vanityUrl: _,
-                                              text: (0, h.CI)(e, _, M),
+                                              vanityUrl: D,
+                                              text: (0, h.CI)(e, D, E),
                                           }),
                                       ),
-                                  checked: L === e,
+                                  checked: R === e,
                                   disabled: !1,
                                   action: () => T(e),
                                   group: "join-source-type-options",
@@ -292,8 +293,8 @@ function _(e) {
                               control: (e, t) =>
                                   (0, r.jsx)(
                                       C.VPO,
-                                      A(w({}, e), {
-                                          query: null != V ? V : "",
+                                      w(H({}, e), {
+                                          query: null != P ? P : "",
                                           onChange: Z,
                                           ref: t,
                                           placeholder: O.intl.string(O.t.YwJnGz),
@@ -308,7 +309,7 @@ function _(e) {
                           {
                               id: "join-source-type-option-all",
                               label: O.intl.string(O.t.an9Ry3),
-                              checked: null == V && null == L,
+                              checked: null == P && null == R,
                               disabled: !1,
                               action: () => T(null),
                               group: "join-source-type-options",
@@ -323,13 +324,13 @@ function _(e) {
                                   label: (t) =>
                                       (0, r.jsx)(
                                           S,
-                                          A(w({}, t), {
+                                          w(H({}, t), {
                                               type: h.UP.INVITE,
-                                              vanityUrl: _,
+                                              vanityUrl: D,
                                               text: e,
                                           }),
                                       ),
-                                  checked: V === e,
+                                  checked: P === e,
                                   disabled: !1,
                                   action: () => I(e),
                                   group: "join-source-type-options",
@@ -342,13 +343,13 @@ function _(e) {
                           C.Drp,
                           {
                               id: "other-join-methods",
-                              action: () => P(!0),
+                              action: () => L(!0),
                               render: (e) =>
                                   (0, r.jsxs)("div", {
                                       className: o()(v.RI, v.RX),
                                       children: [
                                           (0, r.jsxs)("div", {
-                                              className: H.label,
+                                              className: _.label,
                                               children: [
                                                   (0, r.jsx)(C.Text, {
                                                       variant: "text-sm/medium",
@@ -357,24 +358,24 @@ function _(e) {
                                                       }),
                                                       children: O.intl.string(O.t["Kz/cho"]),
                                                   }),
-                                                  E
+                                                  V
                                                       ? (0, r.jsx)("div", {
                                                             className: v.TF,
                                                             children: (0, r.jsx)(
                                                                 S,
-                                                                A(w({}, e), {
+                                                                w(H({}, e), {
                                                                     size: 12,
-                                                                    text: (0, h.CI)(L, _, M),
-                                                                    type: L,
-                                                                    vanityUrl: _,
+                                                                    text: (0, h.CI)(R, D, E),
+                                                                    type: R,
+                                                                    vanityUrl: D,
                                                                 }),
                                                             ),
                                                         })
                                                       : null,
                                               ],
                                           }),
-                                          E
-                                              ? (0, r.jsx)(p.A, {
+                                          V
+                                              ? (0, r.jsx)(f.A, {
                                                     background: v.__invalid_radio,
                                                     foreground: v.QE,
                                                     width: 16,

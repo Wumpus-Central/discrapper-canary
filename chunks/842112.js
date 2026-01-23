@@ -7,17 +7,18 @@ var l = r(311907),
     o = r(397927),
     i = r(442433),
     c = r(686956),
-    s = r(383394),
-    a = r(711014),
+    a = r(383394),
+    s = r(711014),
     d = r(567035),
     b = r(652215),
     p = r(985018);
 
 function u(e) {
     let { folderId: t, folderName: u, folderColor: f, unread: y, onSelect: O } = e,
-        j = (0, l.bG)([a.Ay], () => a.Ay.getGuildFolderById(t), [t]),
-        g = (0, l.bG)([s.A], () => s.A.getExpandedFolders().size > 0);
+        j = (0, l.bG)([s.Ay], () => s.Ay.getGuildFolderById(t), [t]),
+        g = (0, l.bG)([a.A], () => a.A.getExpandedFolders().size > 0);
     return (0, n.jsxs)(o.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "guild-context",
         "aria-label": p.intl.string(p.t.HpQykc),
         onClose: i.Z_,

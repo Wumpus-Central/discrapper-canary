@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => I,
+    A: () => S,
 });
 var r = n(627968);
 n(64700);
@@ -19,7 +19,7 @@ var i = n(503698),
     g = n(985018),
     E = n(592392);
 
-function b(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function b(e, t, n) {
     );
 }
 
-function y(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -63,7 +63,7 @@ function O(e, t) {
     return n;
 }
 
-function A(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,7 +75,7 @@ function A(e, t) {
     );
 }
 
-function v(e) {
+function A(e) {
     switch (e) {
         case d.in.PRIMARY:
         case d.in.PREMIUM:
@@ -89,10 +89,11 @@ function v(e) {
     }
 }
 
-function S(e) {
+function I(e) {
     let { url: t, onSelect: n } = e;
     return p.p5 && null != t
         ? (0, r.jsx)(l.W1t, {
+              "data-menu-migration-ready": !0,
               navId: "component-button",
               onClose: c.Z_,
               "aria-label": g.intl.string(g.t.tvTXy8),
@@ -108,23 +109,23 @@ function S(e) {
         : null;
 }
 
-function I(e) {
+function S(e) {
     let t,
-        { label: n, style: i, disabled: p, emoji: g, url: b, skuId: O } = e,
-        { executeStateUpdate: I, visualState: T, isDisabled: C } = (0, h.At)(e),
+        { label: n, style: i, disabled: p, emoji: g, url: y, skuId: O } = e,
+        { executeStateUpdate: S, visualState: T, isDisabled: C } = (0, h.At)(e),
         N = (0, f.Q)(O),
         R = null != O && i === d.in.PREMIUM,
         w = R && (null == N ? void 0 : N.disabled),
         P = R ? (null == N ? void 0 : N.label) : n,
         D = null != g,
         x = null != P && P.length > 0,
-        L = i === d.in.LINK && null != b && b.length > 0,
+        L = i === d.in.LINK && null != y && y.length > 0,
         j = T === m.BB.LOADING || (R && null == N);
     return (
         (t = L
             ? () => {
                   (0, _.h)({
-                      href: null != b ? b : "",
+                      href: null != y ? y : "",
                       shouldConfirm: !0,
                   });
               }
@@ -132,10 +133,10 @@ function I(e) {
               ? null != N && !1 === N.disabled
                   ? N.onClick
                   : s.noop
-              : () => I()),
+              : () => S()),
         (0, r.jsxs)(o.$n, {
             "data-migration-pending": !0,
-            color: v(i),
+            color: A(i),
             size: o.$n.Sizes.SMALL,
             disabled: p || T === m.BB.DISABLED || C || w,
             onClick: t,
@@ -143,9 +144,9 @@ function I(e) {
                 L &&
                     (0, c.jA)(e, (e) =>
                         (0, r.jsx)(
-                            S,
-                            A(y({}, e), {
-                                url: b,
+                            I,
+                            v(b({}, e), {
+                                url: y,
                             }),
                         ),
                     );

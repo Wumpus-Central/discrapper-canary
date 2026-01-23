@@ -1,70 +1,71 @@
-l.d(n, {
-    default: () => b,
+t.d(n, {
+    default: () => A,
 });
-var t = l(627968);
-l(64700);
-var r = l(621466),
-    i = l(397927),
-    c = l(442433),
-    s = l(50268),
-    d = l(373963),
-    a = l(777933),
-    o = l(826308),
-    h = l(345254),
-    u = l(483768),
-    f = l(20883),
-    A = l(979766),
-    p = l(985018);
+var l = t(627968);
+t(64700);
+var i = t(621466),
+    r = t(397927),
+    s = t(442433),
+    d = t(50268),
+    a = t(373963),
+    c = t(777933),
+    o = t(826308),
+    h = t(345254),
+    u = t(483768),
+    p = t(20883),
+    f = t(979766),
+    g = t(985018);
 
-function b(e) {
+function A(e) {
     var n;
-    let l,
-        b,
-        v,
-        { channel: x, message: g, target: j, attachment: m, onSelect: V } = e,
-        k = j;
-    if (null != m) b = l = m.url;
+    let t,
+        A,
+        m,
+        { channel: x, message: v, target: _, attachment: j, onSelect: V } = e,
+        b = _;
+    if (null != j) A = t = j.url;
     else
-        for (; (0, r.vq)(k); )
-            (0, r.vq)(k, HTMLImageElement) && null != k.src && (b = k.src),
-                (0, r.vq)(k, HTMLAnchorElement) && null != k.href && ((l = k.href), (v = k.textContent)),
-                (k = k.parentNode);
-    let C = null == (n = document.getSelection()) ? void 0 : n.toString(),
-        X = (0, d.A)(C),
-        _ = (0, o.A)(C),
-        w = (0, A.A)(g, x),
-        q = (0, f.A)(g, x),
-        H = (0, h.A)(g, x),
-        I = (0, u.A)(g, x),
-        M = (0, a.A)(null != l ? l : b, v),
-        N = (0, s.A)({
-            id: g.id,
-            label: p.intl.string(p.t.zBoHlf),
-            shiftId: "".concat(g.channel_id, "-").concat(g.id),
+        for (; (0, i.vq)(b); )
+            (0, i.vq)(b, HTMLImageElement) && null != b.src && (A = b.src),
+                (0, i.vq)(b, HTMLAnchorElement) && null != b.href && ((t = b.href), (m = b.textContent)),
+                (b = b.parentNode);
+    let k = null == (n = document.getSelection()) ? void 0 : n.toString(),
+        C = (0, a.A)(k),
+        X = (0, o.A)(k),
+        w = (0, f.A)(v, x),
+        q = (0, p.A)(v, x),
+        H = (0, h.A)(v, x),
+        I = (0, u.A)(v, x),
+        M = (0, c.A)(null != t ? t : A, m),
+        N = (0, d.A)({
+            id: v.id,
+            label: g.intl.string(g.t.zBoHlf),
+            shiftId: "".concat(v.channel_id, "-").concat(v.id),
         }),
-        S = (0, s.A)({
-            id: g.author.id,
-            label: p.intl.string(p.t.Muw4wm),
+        S = (0, d.A)({
+            id: v.author.id,
+            label: g.intl.string(g.t.Muw4wm),
         });
-    return (0, t.jsxs)(i.W1t, {
+    return (0, l.jsxs)(r.W1t, {
+        "data-menu-mixed": !0,
         navId: "message",
-        onClose: c.Z_,
-        "aria-label": p.intl.string(p.t.ChPNkN),
+        onClose: s.Z_,
+        "aria-label": g.intl.string(g.t.ChPNkN),
         onSelect: V,
         children: [
-            (0, t.jsx)(i.rXV, {
+            (0, l.jsx)(r.rXV, {
+                children: C,
+            }),
+            (0, l.jsx)(r.rXV, {
                 children: X,
             }),
-            (0, t.jsx)(i.rXV, {
-                children: _,
-            }),
-            (0, t.jsxs)(i.rXV, {
+            (0, l.jsxs)(r.rXV, {
                 children: [w, q, H, I],
             }),
-            (0, t.jsx)(i.rXV, {
+            (0, l.jsx)(r.rXV, {
                 children: M,
             }),
-            (0, t.jsxs)(i.rXV, {
+            (0, l.jsxs)(r.rXV, {
                 children: [N, S],
             }),
         ],

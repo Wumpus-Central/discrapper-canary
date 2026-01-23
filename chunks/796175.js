@@ -242,6 +242,7 @@ function U(e) {
         ? (0, r.jsx)(p.f5, {
               value: ef,
               children: (0, r.jsxs)(i.W1t, {
+                  "data-menu-mixed": !0,
                   navId: "stream-context",
                   onClose: o.Z_,
                   "aria-label": X.intl.string(X.t.Gl3Q30),
@@ -278,6 +279,7 @@ function U(e) {
               context: Y,
               object: D.ZSU.CONTEXT_MENU,
               children: (0, r.jsxs)(i.W1t, {
+                  "data-menu-mixed": !0,
                   navId: "stream-context",
                   onClose: o.Z_,
                   "aria-label": X.intl.string(X.t.Gl3Q30),

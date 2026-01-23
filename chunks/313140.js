@@ -1,5 +1,5 @@
 t.d(n, {
-    default: () => p,
+    default: () => d,
 });
 var r = t(627968);
 t(64700);
@@ -12,17 +12,18 @@ var c = t(397927),
     s = t(317910),
     b = t(475777),
     A = t(985018);
-let p = (0, i.A)(
+let d = (0, i.A)(
     function (e) {
         let { channel: n, guild: t, onSelect: i } = e,
             a = (0, s.A)(n),
-            p = (0, b.A)(n, t),
-            d = (0, u.A)(n),
+            d = (0, b.A)(n, t),
+            p = (0, u.A)(n),
             E = (0, o.A)({
                 id: n.id,
                 label: A.intl.string(A.t.gFHI3k),
             });
         return (0, r.jsxs)(c.W1t, {
+            "data-menu-mixed": !0,
             navId: "channel-context",
             onClose: l.Z_,
             "aria-label": A.intl.string(A.t.Xm41aV),
@@ -32,10 +33,10 @@ let p = (0, i.A)(
                     children: a,
                 }),
                 (0, r.jsx)(c.rXV, {
-                    children: p,
+                    children: d,
                 }),
                 (0, r.jsx)(c.rXV, {
-                    children: d,
+                    children: p,
                 }),
                 (0, r.jsx)(c.rXV, {
                     children: E,

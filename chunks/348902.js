@@ -26,6 +26,7 @@ let A = (0, a.A)(
                     label: p.intl.string(p.t["FfCL+6"]),
                 });
             return (0, r.jsxs)(i.W1t, {
+                "data-menu-mixed": !0,
                 navId: "game-context",
                 onClose: c.Z_,
                 "aria-label": p.intl.string(p.t.liqwPJ),

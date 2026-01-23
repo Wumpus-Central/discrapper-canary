@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => m,
+    A: () => b,
 });
 var r = n(627968),
     l = n(64700),
@@ -8,24 +8,24 @@ var r = n(627968),
     a = n(417597),
     s = n(397927),
     c = n(70738),
-    d = n(266047),
-    u = n(221950),
+    u = n(266047),
+    d = n(221950),
     C = n(652215),
-    f = n(985018);
-let b = [
+    m = n(985018);
+let p = [
     c.mF.ORDER_BY_GUILD_JOINED_AT_DESC,
     c.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
     c.mF.ORDER_BY_USER_ID_DESC,
     c.mF.ORDER_BY_USER_ID_ASC,
 ];
 
-function m(e) {
+function b(e) {
     let { guildId: t, onClose: n } = e,
-        i = (0, a.bG)([d.A], () => d.A.getSearchStateByGuildId(t), [t], o()),
-        m = l.useCallback(
+        i = (0, a.bG)([u.A], () => u.A.getSearchStateByGuildId(t), [t], o()),
+        b = l.useCallback(
             (e) => {
                 var n, r;
-                (0, u.Ld)(
+                (0, d.Ld)(
                     t,
                     ((n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -74,14 +74,15 @@ function m(e) {
             [t, i],
         );
     return (0, r.jsx)(s.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "members-table-sort-menu",
         onClose: () => {
             null == n || n();
         },
-        "aria-label": f.intl.string(f.t["u/7Rdc"]),
+        "aria-label": m.intl.string(m.t["u/7Rdc"]),
         onSelect: C.tEg,
         children: (0, r.jsx)(s.rXV, {
-            children: b.map((e) => {
+            children: p.map((e) => {
                 var t;
                 return (0, r.jsx)(
                     s.iDA,
@@ -90,13 +91,13 @@ function m(e) {
                         label: (function (e) {
                             switch (e) {
                                 case c.mF.ORDER_BY_GUILD_JOINED_AT_DESC:
-                                    return f.intl.string(f.t.V7zCwB);
+                                    return m.intl.string(m.t.V7zCwB);
                                 case c.mF.ORDER_BY_GUILD_JOINED_AT_ASC:
-                                    return f.intl.string(f.t.l2Zaet);
+                                    return m.intl.string(m.t.l2Zaet);
                                 case c.mF.ORDER_BY_USER_ID_DESC:
-                                    return f.intl.string(f.t.xMA6RG);
+                                    return m.intl.string(m.t.xMA6RG);
                                 case c.mF.ORDER_BY_USER_ID_ASC:
-                                    return f.intl.string(f.t.bUKkZx);
+                                    return m.intl.string(m.t.bUKkZx);
                                 default:
                                     return null;
                             }
@@ -106,7 +107,7 @@ function m(e) {
                                 ? e === c.mF.ORDER_BY_GUILD_JOINED_AT_DESC
                                 : e === t,
                         disabled: !1,
-                        action: () => m(e),
+                        action: () => b(e),
                         group: "members-table-sort",
                     },
                     "members-table-sort-".concat(e),

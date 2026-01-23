@@ -1,5 +1,5 @@
 n.d(t, {
-    w: () => f,
+    w: () => h,
 }),
     n(896048);
 var r = n(627968),
@@ -44,6 +44,7 @@ let d = () =>
 function p(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(l.W1t, {
+        "data-menu-all-icons": !0,
         onSelect: () => {},
         navId: "staff-help-popout",
         variant: "fixed",
@@ -68,24 +69,24 @@ function p(e) {
     });
 }
 
-function f(e) {
+function h(e) {
     let { className: t, focusSectionProps: n } = e,
         [a, s] = i.useState(!1),
-        [f, h] = i.useState(0),
-        A = i.useRef(null),
-        g = (e) => {
-            clearTimeout(f),
-                h(
+        [h, g] = i.useState(0),
+        f = i.useRef(null),
+        m = (e) => {
+            clearTimeout(h),
+                g(
                     setTimeout(() => {
                         s(e);
                     }, 100),
                 );
         };
     return (0, r.jsx)("div", {
-        onMouseEnter: () => g(!0),
-        onMouseLeave: () => g(!1),
+        onMouseEnter: () => m(!0),
+        onMouseLeave: () => m(!1),
         children: (0, r.jsx)(l.YNO, {
-            targetElementRef: A,
+            targetElementRef: f,
             shouldShow: a,
             animation: l.YNO.Animation.NONE,
             position: "bottom",
@@ -103,7 +104,7 @@ function f(e) {
                     o.In,
                     u(
                         {
-                            ref: A,
+                            ref: f,
                             onClick: d,
                             icon: l.Q5O,
                             "aria-label": c.intl.string(c.t["5LqopY"]),

@@ -5,38 +5,39 @@ var n = r(627968),
     l = r(64700),
     o = r(503698),
     a = r.n(o),
-    c = r(397927),
-    i = r(975807),
+    i = r(397927),
+    c = r(975807),
     s = r(212031),
     u = r(975571),
-    f = r(809465),
-    b = r(652215),
-    y = r(985018),
+    y = r(809465),
+    f = r(652215),
+    b = r(985018),
     d = r(535790);
 
 function p(e) {
     let { onClose: t } = e;
-    return (0, n.jsx)(c.W1t, {
+    return (0, n.jsx)(i.W1t, {
+        "data-menu-migration-ready": !0,
         navId: "settings-footer-more-menu",
         onClose: t,
         onSelect: () => {},
         "aria-label": "More options",
-        children: (0, n.jsxs)(c.rXV, {
+        children: (0, n.jsxs)(i.rXV, {
             children: [
-                (0, n.jsx)(c.Drp, {
+                (0, n.jsx)(i.Drp, {
                     id: "changelog",
-                    label: y.intl.string(y.t.LRmNAl),
+                    label: b.intl.string(b.t.LRmNAl),
                     action: () => (0, s.j)(!0),
                 }),
-                (0, n.jsx)(c.Drp, {
+                (0, n.jsx)(i.Drp, {
                     id: "acknowledgements",
-                    label: y.intl.string(y.t["0nUKy3"]),
-                    action: () => (0, i.A)(b.X7G.ACKNOWLEDGEMENTS),
+                    label: b.intl.string(b.t["0nUKy3"]),
+                    action: () => (0, c.A)(f.X7G.ACKNOWLEDGEMENTS),
                 }),
-                (0, n.jsx)(c.Drp, {
+                (0, n.jsx)(i.Drp, {
                     id: "support",
-                    label: y.intl.string(y.t["Yl/Riu"]),
-                    action: () => (0, i.A)(u.C),
+                    label: b.intl.string(b.t["Yl/Riu"]),
+                    action: () => (0, c.A)(u.C),
                 }),
             ],
         }),
@@ -47,19 +48,19 @@ function g() {
     let e = l.useRef(null);
     return (0, n.jsxs)("div", {
         children: [
-            (0, n.jsx)(f.A, {
+            (0, n.jsx)(y.A, {
                 compact: !0,
             }),
             (0, n.jsxs)("div", {
                 className: d.yJ,
                 children: [
-                    (0, n.jsx)(c.MzZ, {
-                        href: b.X7G.PRIVACY,
-                        children: (0, n.jsx)(c.Text, {
+                    (0, n.jsx)(i.MzZ, {
+                        href: f.X7G.PRIVACY,
+                        children: (0, n.jsx)(i.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: y.intl.string(y.t["Knf/f/"]),
+                            children: b.intl.string(b.t["Knf/f/"]),
                         }),
                     }),
                     (0, n.jsx)("span", {
@@ -67,13 +68,13 @@ function g() {
                         "aria-hidden": "true",
                         children: "•",
                     }),
-                    (0, n.jsx)(c.MzZ, {
-                        href: b.X7G.TERMS,
-                        children: (0, n.jsx)(c.Text, {
+                    (0, n.jsx)(i.MzZ, {
+                        href: f.X7G.TERMS,
+                        children: (0, n.jsx)(i.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: y.intl.string(y.t.uFSTGq),
+                            children: b.intl.string(b.t.uFSTGq),
                         }),
                     }),
                     (0, n.jsx)("span", {
@@ -81,12 +82,12 @@ function g() {
                         "aria-hidden": "true",
                         children: "•",
                     }),
-                    (0, n.jsx)(c.YNO, {
+                    (0, n.jsx)(i.YNO, {
                         targetElementRef: e,
                         position: "top",
                         align: "center",
                         spacing: 0,
-                        animation: c.YNO.Animation.NONE,
+                        animation: i.YNO.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
                             return (0, n.jsx)(p, {
@@ -96,7 +97,7 @@ function g() {
                         children: (t, r) => {
                             var l, o;
                             return (0, n.jsx)(
-                                c.MzZ,
+                                i.MzZ,
                                 ((l = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var r = null != arguments[t] ? arguments[t] : {},
@@ -129,11 +130,11 @@ function g() {
                                         className: a()(d.Mj, {
                                             [d.vu]: r.isShown,
                                         }),
-                                        children: (0, n.jsx)(c.Text, {
+                                        children: (0, n.jsx)(i.Text, {
                                             tag: "span",
                                             variant: "text-xxs/normal",
                                             color: "currentColor",
-                                            children: y.intl.string(y.t["UKOtz+"]),
+                                            children: b.intl.string(b.t["UKOtz+"]),
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors

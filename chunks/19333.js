@@ -6,16 +6,16 @@ n(64700);
 var l = n(503698),
     i = n.n(l),
     a = n(688807),
-    s = n(311907),
-    o = n(435371),
+    o = n(311907),
+    s = n(435371),
     c = n(397927),
     u = n(442433),
     d = n(775602),
     f = n(915089),
     p = n(961350),
-    b = n(183555),
-    g = n(735321),
-    m = n(384377),
+    g = n(183555),
+    m = n(735321),
+    b = n(384377),
     y = n(518477),
     O = n(985018),
     j = n(10241);
@@ -67,14 +67,14 @@ function h(e, t) {
 
 function v(e) {
     let { widget: t, className: n, buttonRef: l, additionalMenuItems: a } = e,
-        s = (0, g.L)(t),
-        o = (0, f.GV)();
-    return (0, r.jsx)(w, {
+        o = (0, m.L)(t),
+        s = (0, f.GV)();
+    return (0, r.jsx)(A, {
         targetRef: l,
         widget: t,
         additionalMenuItems: a,
         children: (e) =>
-            (0, r.jsx)(A, {
+            (0, r.jsx)(_, {
                 children: (0, r.jsxs)(
                     c.DUT,
                     h(
@@ -82,11 +82,11 @@ function v(e) {
                             {
                                 innerRef: l,
                                 className: i()(j.x6, n),
-                                "data-dnd-name": s,
+                                "data-dnd-name": o,
                                 "aria-label": O.intl.formatToPlainString(O.t.HWNJJN, {
-                                    widgetTitle: s,
+                                    widgetTitle: o,
                                 }),
-                                "aria-describedby": o,
+                                "aria-describedby": s,
                                 "aria-keyshortcuts": "Control+D, Meta+D",
                             },
                             e,
@@ -97,7 +97,7 @@ function v(e) {
                                     size: "sm",
                                 }),
                                 (0, r.jsx)(c.AC4, {
-                                    id: o,
+                                    id: s,
                                     children: O.intl.string(O.t.bsuqFn),
                                 }),
                             ],
@@ -107,13 +107,13 @@ function v(e) {
             }),
     });
 }
-let A = (e) => {
+let _ = (e) => {
         let { children: t } = e,
-            n = (0, s.bG)([d.A], () => d.A.keyboardModeEnabled),
+            n = (0, o.bG)([d.A], () => d.A.keyboardModeEnabled),
             { isDragging: l } = (0, a.V)((e) => ({
                 isDragging: e.isDragging(),
             }));
-        return (0, r.jsx)(o.m_, {
+        return (0, r.jsx)(s.m_, {
             __unsupportedReactNodeAsText: (0, r.jsxs)("div", {
                 className: j.HE,
                 children: [
@@ -145,13 +145,13 @@ let A = (e) => {
             children: t,
         });
     },
-    w = (e) => {
+    A = (e) => {
         let { children: t, widget: l, targetRef: i, additionalMenuItems: a } = e,
-            { trackUserProfileEditAction: s } = (0, b.NJ)(),
-            o = (e) => {
+            { trackUserProfileEditAction: o } = (0, g.NJ)(),
+            s = (e) => {
                 if (e.shiftKey) {
-                    (0, g.qA)(l),
-                        s(
+                    (0, m.qA)(l),
+                        o(
                             x(
                                 {
                                     action: "WIDGET_REMOVED",
@@ -159,7 +159,7 @@ let A = (e) => {
                                 l.getProfileEditAnalyticsOptions(),
                             ),
                         ),
-                        (0, m.XA)(y.jM.WIDGET_REMOVED);
+                        (0, b.XA)(y.jM.WIDGET_REMOVED);
                     return;
                 }
                 (0, c.mMO)(
@@ -171,7 +171,7 @@ let A = (e) => {
                                 h(x({}, t), {
                                     userId: p.default.getId(),
                                     widget: l,
-                                    trackUserProfileEditAction: s,
+                                    trackUserProfileEditAction: o,
                                 }),
                             );
                     },
@@ -188,6 +188,7 @@ let A = (e) => {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(c.W1t, {
+                    "data-menu-mixed": !0,
                     navId: "user-profile-widget-context-menu",
                     onClose: () => {
                         (0, u.Z_)(), t();
@@ -201,7 +202,7 @@ let A = (e) => {
                             (0, r.jsx)(c.Drp, {
                                 id: "remove-widget",
                                 label: O.intl.string(O.t.Mm07Yc),
-                                action: o,
+                                action: s,
                                 color: "danger",
                                 icon: c.ucK,
                             }),

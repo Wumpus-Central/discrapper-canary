@@ -24,24 +24,25 @@ let O = (0, a.A)(
             let { user: t, channel: n, guildId: o, onSelect: a, onInteraction: u, context: E } = e,
                 O = n.id,
                 j = t.isNonUserBot(),
-                p = t.id === _.default.getId(),
-                v = (0, s.A)(t),
+                v = t.id === _.default.getId(),
+                p = (0, s.A)(t),
                 y = (0, A.A)(t, o, O),
                 S = (0, f.n)({
-                    isOwnSettings: p,
+                    isOwnSettings: v,
                     userId: t.id,
                     channelId: O,
                     guildId: o,
                     context: E,
                 }),
-                [h, C] = (0, f.O)(t, O, o),
+                [C, h] = (0, f.O)(t, O, o),
                 I = (0, b.A)(t, o, O),
-                x = (0, c.A)({
+                m = (0, c.A)({
                     id: t.id,
                     label: g.intl.string(g.t["/AXYnE"]),
                 }),
-                T = (0, d.A)(t.id, n);
+                x = (0, d.A)(t.id, n);
             return (0, r.jsx)(i.W1t, {
+                "data-menu-mixed": !0,
                 navId: "user-context",
                 onClose: l.Z_,
                 "aria-label": g.intl.string(g.t.liqwPJ),
@@ -53,27 +54,27 @@ let O = (0, a.A)(
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsxs)(i.rXV, {
-                                children: [v, y],
+                                children: [p, y],
                             }),
-                            T,
+                            x,
                             S,
-                            !p &&
+                            !v &&
                                 (0, r.jsx)(i.rXV, {
                                     children: (0, r.jsxs)(i.Drp, {
                                         id: "more-options",
                                         label: g.intl.string(g.t.PdRCRg),
                                         children: [
-                                            h,
+                                            C,
                                             (0, r.jsx)(i.rXV, {
                                                 children: I,
                                             }),
-                                            C,
+                                            h,
                                         ],
                                     }),
                                 }),
-                            p &&
+                            v &&
                                 (0, r.jsx)(i.rXV, {
-                                    children: x,
+                                    children: m,
                                 }),
                         ],
                     }),

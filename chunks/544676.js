@@ -24,8 +24,8 @@ var i = n(627968),
     j = n(881136),
     N = n(813597),
     v = n(21605),
-    L = n(684509),
-    m = n(153594),
+    m = n(684509),
+    L = n(153594),
     G = n(531335),
     x = n(652215),
     D = n(985018);
@@ -87,10 +87,10 @@ function w(e) {
             source: x.PE1.GUILD_CONTEXT_MENU,
             channel: null,
         }),
-        T = (0, m.A)(u),
+        T = (0, L.A)(u),
         R = (0, _.A)(t),
         k = (0, j.A)(t),
-        U = (0, L.A)(t),
+        U = (0, m.A)(t),
         C = (0, O.A)({
             guildId: t.id,
             userId: A.default.getId(),
@@ -126,6 +126,7 @@ function w(e) {
     }
     return t.features.has(x.GuildFeatures.HUB)
         ? (0, i.jsxs)(a.W1t, {
+              "data-menu-mixed": !0,
               navId: "guild-context",
               onClose: o.Z_,
               "aria-label": D.intl.string(D.t.HpQykc),
@@ -168,6 +169,7 @@ function w(e) {
               ],
           })
         : (0, i.jsxs)(a.W1t, {
+              "data-menu-mixed": !0,
               navId: "guild-context",
               onClose: o.Z_,
               "aria-label": D.intl.string(D.t.HpQykc),

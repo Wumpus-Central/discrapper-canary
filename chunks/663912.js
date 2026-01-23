@@ -295,6 +295,7 @@ function U(e) {
         context: ee,
         object: _.ZSU.CONTEXT_MENU,
         children: (0, r.jsxs)(a.W1t, {
+            "data-menu-mixed": !0,
             navId: "stream-context",
             onClose: c.Z_,
             "aria-label": k.intl.string(k.t.Gl3Q30),

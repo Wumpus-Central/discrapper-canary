@@ -4,22 +4,23 @@ n.d(t, {
 var r = n(627968),
     l = n(64700),
     i = n(990078),
-    a = n(397927),
-    s = n(245205),
+    s = n(397927),
+    a = n(245205),
     o = n(985018);
 let c = (e) => {
         let { item: t, closePopout: n } = e;
-        return (0, r.jsx)(a.W1t, {
+        return (0, r.jsx)(s.W1t, {
+            "data-menu-all-icons": !0,
             navId: "notification-actions",
             onClose: n,
             onSelect: n,
             "aria-label": o.intl.string(o.t.ljs3Oe),
-            children: (0, r.jsx)(a.Drp, {
+            children: (0, r.jsx)(s.Drp, {
                 id: "delete",
                 label: o.intl.string(o.t.oyYWHE),
-                icon: a.ucK,
+                icon: s.ucK,
                 action: async () => {
-                    await (0, s.VP)(t);
+                    await (0, a.VP)(t);
                 },
             }),
         });
@@ -27,7 +28,7 @@ let c = (e) => {
     u = l.memo(function (e) {
         let { item: t } = e,
             n = l.useRef(null);
-        return (0, r.jsx)(a.YNO, {
+        return (0, r.jsx)(s.YNO, {
             targetElementRef: n,
             renderPopout: (e) => {
                 var n, l;
@@ -79,16 +80,16 @@ let c = (e) => {
             },
             position: "bottom",
             align: "right",
-            animation: a.YNO.Animation.NONE,
+            animation: s.YNO.Animation.NONE,
             children: (e) => {
                 let { onClick: t } = e;
                 return (0, r.jsx)(i.m, {
                     text: o.intl.string(o.t["UKOtz+"]),
                     asContainer: !0,
-                    children: (0, r.jsx)(a.K0, {
+                    children: (0, r.jsx)(s.K0, {
                         buttonRef: n,
                         size: "sm",
-                        icon: a.jNK,
+                        icon: s.jNK,
                         variant: "icon-only",
                         "aria-label": o.intl.string(o.t["UKOtz+"]),
                         "aria-haspopup": "menu",

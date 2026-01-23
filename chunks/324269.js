@@ -32,6 +32,7 @@ function u(e) {
         );
     return (0, n.jsx)("div", {
         children: (0, n.jsxs)(l.W1t, {
+            "data-menu-migration-ready": !0,
             navId: "sort-and-view",
             "aria-label": a.intl.string(a.t["4jfWTK"]),
             hideScroller: !0,
