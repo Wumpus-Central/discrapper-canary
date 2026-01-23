@@ -1,13 +1,13 @@
 n.d(t, {
     $e: () => A,
-    DD: () => h,
-    LR: () => m,
-    Rz: () => g,
-    UU: () => _,
-    _b: () => O,
-    fB: () => E,
-    gm: () => y,
-    jR: () => v,
+    DD: () => m,
+    LR: () => g,
+    Rz: () => E,
+    UU: () => h,
+    _b: () => v,
+    fB: () => y,
+    gm: () => O,
+    jR: () => I,
 }),
     n(65821),
     n(896048);
@@ -28,18 +28,41 @@ function p(e) {
 }
 
 function _() {
+    return new Promise((e, t) => {
+        let n = 5e3,
+            r = Date.now(),
+            s = () => {
+                Date.now() - r >= n
+                    ? t(Error("Timeout waiting for Braintree client to be initialized in store"))
+                    : null != a.A.getClient()
+                      ? e()
+                      : setTimeout(s, 1e3);
+            },
+            o = () => {
+                i.h.unsubscribe("BRAINTREE_CREATE_CLIENT_SUCCESS", o), setTimeout(s, 0);
+            };
+        i.h.subscribe("BRAINTREE_CREATE_CLIENT_SUCCESS", o);
+    });
+}
+
+function h() {
     (0, o.j)().then((e) => {
         e.client
             .create({
                 authorization: u.Gg3.BRAINTREE.KEY,
             })
             .then((e) => {
-                i.h.dispatch({
-                    type: "BRAINTREE_CREATE_CLIENT_SUCCESS",
-                    client: e,
-                }),
-                    m(),
-                    h();
+                _()
+                    .then(() => {
+                        g(), m();
+                    })
+                    .catch((e) => {
+                        s.pM(e);
+                    }),
+                    i.h.dispatch({
+                        type: "BRAINTREE_CREATE_CLIENT_SUCCESS",
+                        client: e,
+                    });
             })
             .catch(() =>
                 i.h.dispatch({
@@ -49,7 +72,7 @@ function _() {
     });
 }
 
-function h() {
+function m() {
     let e = a.A.getClient();
     if (null == e) throw Error("Braintree client must be initialized before creating Venmo client.");
     (0, o.j)().then((t) => {
@@ -73,7 +96,7 @@ function h() {
     });
 }
 
-function m() {
+function g() {
     let e = a.A.getClient();
     if (null == e) throw Error("braintree client must be initialized before calling this");
     (0, o.j)().then((t) => {
@@ -124,7 +147,7 @@ function m() {
     });
 }
 
-function g() {
+function E() {
     let e = a.A.getPayPalClient();
     if (null == e) throw Error("braintree paypal client must be initialized before calling this");
     i.h.dispatch({
@@ -170,7 +193,7 @@ function g() {
             });
 }
 
-function E() {
+function y() {
     let e = a.A.getVenmoClient();
     if (null == e) throw Error("Braintree Venmo client must be initialized before calling tokenize.");
     i.h.dispatch({
@@ -211,13 +234,13 @@ function b(e, t) {
     }
 }
 
-function y() {
+function O() {
     return b(a.A.getPayPalClient(), {
         type: "BRAINTREE_TEARDOWN_PAYPAL_CLIENT",
     });
 }
 
-function O() {
+function v() {
     return b(a.A.getVenmoClient(), {
         type: "BRAINTREE_TEARDOWN_VENMO_CLIENT",
     });
@@ -226,13 +249,13 @@ function O() {
 function A() {
     let e = a.A.getLastURL();
     null == e
-        ? g()
+        ? E()
         : (i.h.dispatch({
               type: "BRAINTREE_TOKENIZE_PAYPAL_START",
           }),
           window.open(e));
 }
 
-function v() {
-    E();
+function I() {
+    y();
 }

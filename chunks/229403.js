@@ -15,8 +15,13 @@ class p extends i.PureComponent {
     componentDidMount() {
         null != this.props.venmoClient && o.fB();
     }
+    componentDidUpdate(e) {
+        null == e.venmoClient && null != this.props.venmoClient && o.fB();
+    }
     componentWillUnmount() {
-        o._b().then(() => o.DD());
+        o._b().then(() => {
+            null != c.A.getClient() && o.DD();
+        });
     }
     render() {
         let { venmoUsername: e, className: t, venmoClient: n } = this.props,
