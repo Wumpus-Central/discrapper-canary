@@ -28,18 +28,18 @@ var r = n(284009),
     m = n(183636),
     g = n(937724),
     E = n(626584),
-    b = n(831062),
-    y = n(614792),
+    y = n(831062),
+    b = n(614792),
     O = n(111162),
-    A = n(954571),
-    v = n(353835),
-    S = n(927813),
-    I = n(723702),
+    v = n(954571),
+    A = n(353835),
+    I = n(927813),
+    S = n(723702),
     T = n(728458),
     C = n(175306),
     N = n(949189),
-    R = n(313449),
-    w = n(362488),
+    w = n(313449),
+    R = n(362488),
     P = n(805396),
     D = n(932170),
     x = n(538343),
@@ -110,21 +110,21 @@ let Y = new E.A("GatewaySocket"),
 
 function K(e) {
     let { actuallySkipped: t, reason: n } = e;
-    if (!(0, w.K)()) return;
+    if (!(0, R.K)()) return;
     let r = j.j(),
         i = k.L7(),
         a = m.A.getState(),
         s = i.length > 0 ? "".concat(n, " + ").concat(i) : n,
         o = r ? "paused" : "request_state";
-    A.default.track(G.HAw.GATEWAY_CONNECT_SKIPPED, {
+    v.default.track(G.HAw.GATEWAY_CONNECT_SKIPPED, {
         actually_skipped: null != t ? t : r,
         client_app_state: a,
         connect_reason: s,
         skip_context: o,
     }),
-        (0, w.a)() &&
+        (0, R.a)() &&
             setTimeout(() => {
-                A.default.track(G.HAw.POST_GATEWAY_CONNECT_SKIPPED, {
+                v.default.track(G.HAw.POST_GATEWAY_CONNECT_SKIPPED, {
                     actually_skipped: null != t ? t : r,
                     original_client_app_state: a,
                     client_app_state: m.A.getState(),
@@ -182,13 +182,13 @@ function z(e) {
 }
 
 function q() {}
-let X = 4,
-    Z = 1001,
+let Z = 4,
+    X = 1001,
     Q = "Stream end encountered",
-    $ = 4004,
-    J = 30 * S.A.Millis.SECOND,
-    ee = 3 * S.A.Millis.MINUTE,
-    et = +S.A.Millis.MINUTE;
+    J = 4004,
+    $ = 30 * I.A.Millis.SECOND,
+    ee = 3 * I.A.Millis.MINUTE,
+    et = +I.A.Millis.MINUTE;
 
 function en(e, t, n) {
     let r = 0;
@@ -285,7 +285,7 @@ class ea extends L.A {
                     "The connection timed out after ".concat(e, " ms - did not receive OP_HELLO in time."),
                 ),
                     this.setResumeUrl(null);
-            }, J));
+            }, $));
         let o = new URL(i);
         o.searchParams.append("encoding", r),
             o.searchParams.append("v", a.toString()),
@@ -316,9 +316,9 @@ class ea extends L.A {
                     let l = Date.now() - n;
                     switch (
                         ("READY" === a
-                            ? y.A.parseReady.set(n, l)
+                            ? b.A.parseReady.set(n, l)
                             : "READY_SUPPLEMENTAL" === a
-                              ? y.A.parseReadySupplemental.set(n, l)
+                              ? b.A.parseReadySupplemental.set(n, l)
                               : l > 10 && s.A.mark("\uD83C\uDF10", "Parse " + a, l),
                         null != i && (this.seq = i),
                         r)
@@ -360,7 +360,7 @@ class ea extends L.A {
                 }),
                 onError: () => {
                     this.setResumeUrl(null),
-                        v.A.flushDNSCache(),
+                        A.A.flushDNSCache(),
                         this._handleClose(!1, 0, "An error with the websocket occurred");
                 },
                 onClose: (e) => {
@@ -458,7 +458,7 @@ class ea extends L.A {
                 code: t,
                 reason: n,
             }),
-            t === $)
+            t === J)
         )
             return (
                 (this.connectionState = C.A.CLOSED),
@@ -481,13 +481,13 @@ class ea extends L.A {
                     .concat(n, ") retrying in ")
                     .concat((r / 1e3).toFixed(2), " seconds."),
             ),
-                this.gatewayBackoff.fails > X && this._reset(e, t, n);
+                this.gatewayBackoff.fails > Z && this._reset(e, t, n);
         }
     }
     _tryDetectInvalidIOSToken(e, t, n) {
-        (0, I.isIOS)() &&
+        (0, S.isIOS)() &&
             null != this.token &&
-            e === Z &&
+            e === X &&
             t === Q &&
             ((this.iosGoingAwayEventCount += 1),
             3 === this.iosGoingAwayEventCount &&
@@ -500,7 +500,7 @@ class ea extends L.A {
                 }).then(
                     (e) => {
                         let { status: t } = e;
-                        A.default.track(G.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+                        v.default.track(G.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
                             api_status_code: t,
                         });
                     },
@@ -509,8 +509,8 @@ class ea extends L.A {
                         401 === t &&
                             ((this.connectionState = C.A.CLOSED),
                             Y.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
-                            this._reset(n, $, "invalid token manually detected")),
-                            A.default.track(G.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+                            this._reset(n, J, "invalid token manually detected")),
+                            v.default.track(G.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
                                 api_status_code: t,
                             });
                     },
@@ -568,7 +568,7 @@ class ea extends L.A {
             null != t && ((t.onopen = q), (t.onmessage = q), (t.onerror = q), (t.onclose = q), null == e || e(t)),
             this.gatewayBackoff.cancel(),
             this.compressionHandler.close(),
-            (this.compressionHandler = (0, R.Z)(W));
+            (this.compressionHandler = (0, w.Z)(W));
     }
     _doResume() {
         var e;
@@ -590,7 +590,7 @@ class ea extends L.A {
     async _doIdentify() {
         (this.seq = 0), (this.sessionId = null);
         let e = this.handleIdentify();
-        if (null === e) return void this._handleClose(!0, $, "No connection info provided");
+        if (null === e) return void this._handleClose(!0, J, "No connection info provided");
         this.connectionState = C.A.IDENTIFYING;
         let t = Date.now();
         this.identifyStartTime = t;
@@ -632,12 +632,12 @@ class ea extends L.A {
             (this.identifyCompressedByteSize = a.deflate(d).length),
             (this.identifyCount += 1),
             this.send(L.p.IDENTIFY, u, !1),
-            A.default.track(G.HAw.SESSION_START_CLIENT, {});
+            v.default.track(G.HAw.SESSION_START_CLIENT, {});
     }
     _doFastConnectIdentify() {
         (this.seq = 0), (this.sessionId = null);
         let e = this.handleIdentify();
-        if (null === e) return void this._handleClose(!0, $, "No connection info provided");
+        if (null === e) return void this._handleClose(!0, J, "No connection info provided");
         let { token: t } = e;
         (this.token = t),
             (this.connectionState = C.A.IDENTIFYING),
@@ -709,7 +709,7 @@ class ea extends L.A {
         let { action: t, error: n, metricAction: r } = e;
         Y.error("resetSocketOnError during ".concat(t, ": ").concat(n.message), n.stack);
         let i = (0, c.b)();
-        b.A.increment(
+        y.A.increment(
             {
                 name: l.K.SOCKET_CRASHED,
                 tags: ["action:".concat(null != r ? r : t), "modded_client:".concat(i)],
@@ -722,7 +722,7 @@ class ea extends L.A {
                         socketCrashedAction: t,
                     },
                 }),
-            A.default.track(G.HAw.GATEWAY_SOCKET_RESET, {
+            v.default.track(G.HAw.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 has_client_mods: i,
@@ -765,9 +765,11 @@ class ea extends L.A {
         this._cleanup((e) => e.close(t)),
             (this.connectionState = C.A.CLOSED),
             e ||
+                ((this.sessionId = null),
+                (this.token = null),
                 setImmediate(() => {
                     this._reset(!0, 1e3, "Disconnect requested by user");
-                });
+                }));
     }
     networkStateChange(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -881,7 +883,7 @@ class ea extends L.A {
             (this.connectionStartTime = 0),
             (this.identifyStartTime = 0),
             (this.nextReconnectIsImmediate = !1),
-            (this.compressionHandler = (0, R.Z)(W)),
+            (this.compressionHandler = (0, w.Z)(W)),
             (this.hasConnectedOnce = !1),
             (this.isFastConnect = !1),
             (this.identifyCount = 0),
