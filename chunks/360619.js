@@ -27,13 +27,13 @@ var r = n(64700),
     m = n(35587),
     g = n(677402),
     E = n(207560),
-    b = n(818143),
-    y = n(639555),
+    y = n(818143),
+    b = n(639555),
     O = n(617641),
-    A = n(961350),
-    v = n(540999),
-    S = n(189081),
-    I = n(430452),
+    v = n(961350),
+    A = n(540999),
+    I = n(189081),
+    S = n(430452),
     T = n(994500),
     C = n(628965),
     N = n(287809),
@@ -107,7 +107,7 @@ function H(e, t) {
 
 function Y(e) {
     let { shouldMergeGameSettings: t, showRedesignedThirdPartyAccessSettings: n } = e,
-        r = v.A.isDeveloper,
+        r = A.A.isDeveloper,
         i = [
             {
                 header: G.intl.string(G.t.cduTBL),
@@ -156,7 +156,6 @@ function Y(e) {
                     k.H.LANGUAGE,
                     k.H.WINDOW_SETTINGS,
                     k.H.LINUX_SETTINGS,
-                    k.H.STREAMER_MODE,
                     k.H.SETTINGS_ADVANCED,
                 ],
             },
@@ -218,7 +217,7 @@ function W() {
 
 function K() {
     var e, t, n, s;
-    let v = (0, m.IO)().length,
+    let A = (0, m.IO)().length,
         P = (0, h.l)(),
         M = (0, i.bG)([C.A], () => C.A.getSearchParams()),
         k = (0, _.VT)(),
@@ -232,19 +231,19 @@ function K() {
         Y = (0, O.Lc)({
             location: "settings",
         }),
-        W = (0, y.Rv)({
+        W = (0, b.Rv)({
             location: "settings",
         }),
         K = (0, l.H)(),
         z = (0, g.H)({
             location: U.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY,
         }),
-        q = (0, i.bG)([S.A], () => S.A.hasLibraryApplication()),
-        X = (0, i.bG)([A.default], () => A.default.hasTOTPEnabled()),
+        q = (0, i.bG)([I.A], () => I.A.hasLibraryApplication()),
+        X = (0, i.bG)([v.default], () => v.default.hasTOTPEnabled()),
         Z = D.Q_.useSetting(),
         Q = (0, f.A)(),
         $ = null == (t = (0, p.A)()) || t,
-        J = (null == (s = (0, b.G)()) ? void 0 : s.length) > 0,
+        J = (null == (s = (0, y.G)()) ? void 0 : s.length) > 0,
         { hasBlockedUsers: ee, hasIgnoredUsers: et } = (0, i.cf)([T.A], () => ({
             hasBlockedUsers: T.A.getBlockedIDs().length > 0,
             hasIgnoredUsers: T.A.getIgnoredIDs().length > 0,
@@ -256,10 +255,10 @@ function K() {
             inputMode: ea,
             activeInputProfile: es,
             isInputProfileCustom: eo,
-        } = (0, i.cf)([I.A], () => ({
-            activeInputProfile: I.A.getActiveInputProfile(),
-            inputMode: I.A.getMode(),
-            isInputProfileCustom: I.A.isInputProfileCustom(),
+        } = (0, i.cf)([S.A], () => ({
+            activeInputProfile: S.A.getActiveInputProfile(),
+            inputMode: S.A.getMode(),
+            isInputProfileCustom: S.A.isInputProfileCustom(),
         })),
         { enabled: el } = (0, d.us)("useGenerateUserSettingsSections", {
             autoTrackExposure: !1,
@@ -269,7 +268,7 @@ function K() {
     return r.useMemo(
         () =>
             (0, L.zj)({
-                unseenGiftCount: v,
+                unseenGiftCount: A,
                 showPrepaidPaymentPastDueWarning: P,
                 searchParams: M,
                 numOfPendingFamilyRequests: k,
@@ -297,7 +296,7 @@ function K() {
                 isRedesignedNotificationsEnabled: ec,
                 isHDRAccessibilitySettingExperimentEnabled: eu,
             }),
-        [Z, F, ee, et, q, J, X, M, $, z, W, Y, G, H, Q, k, K, B, P, v, ei, ea, es, eo, el, ec, eu],
+        [Z, F, ee, et, q, J, X, M, $, z, W, Y, G, H, Q, k, K, B, P, A, ei, ea, es, eo, el, ec, eu],
     );
 }
 

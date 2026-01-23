@@ -91424,24 +91424,6 @@ html .invoiceCancelRow__968a4 {
     margin-top: 24px
 }
 
-@media (max-width:900px) {
-    .noticeImage__8ab7e {
-        display: none
-    }
-}
-
-.sectionLabel__8ab7e:only-child {
-    display: none
-}
-
-.noticeCard__8ab7e {
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-8);
-    justify-content: space-between;
-    padding: var(--space-20)
-}
-
 .systemServiceContainer__79adc {
     align-items: center;
     display: flex;

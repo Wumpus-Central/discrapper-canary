@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => f,
+    A: () => d,
 });
 var r = n(627968);
 n(64700);
@@ -8,30 +8,26 @@ var i = n(503698),
     s = n(397927),
     o = n(780964),
     l = n(840065),
-    c = n(652215),
-    u = n(985018),
-    d = n(391870);
+    c = n(985018),
+    u = n(391870);
 
-function f(e) {
+function d(e) {
     let { disableButton: t } = e,
         n = () => {
-            !0 !== t &&
-                (0, l.openUserSettings)(o.X.STREAMER_MODE_PANEL, {
-                    section: c.nc_.STREAMER_MODE,
-                });
+            !0 !== t && (0, l.openUserSettings)(o.X.STREAMER_MODE_PANEL);
         };
     return (0, r.jsxs)("div", {
-        className: d.IG,
+        className: u.IG,
         children: [
             (0, r.jsx)("div", {
-                className: d.TE,
+                className: u.TE,
             }),
             (0, r.jsx)(s.DUT, {
-                className: a()(d.Ac, {
-                    [d.r9]: t,
+                className: a()(u.Ac, {
+                    [u.r9]: t,
                 }),
                 onClick: n,
-                children: u.intl.string(u.t.Br1ls3),
+                children: c.intl.string(c.t.Br1ls3),
             }),
         ],
     });
