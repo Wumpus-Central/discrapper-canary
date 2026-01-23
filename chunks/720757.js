@@ -7,19 +7,19 @@ n.d(t, {
 var r = n(64700),
     i = n(311907);
 
-function a(e, t, n) {
-    let a = e,
-        { name: s, kind: o, variations: l, defaultConfig: c } = a;
+function a(e, t, n, a) {
+    let s = e,
+        { name: o, kind: l, variations: c, defaultConfig: u } = s;
     return (
-        t.registerExperiment(a),
+        t.registerExperiment(s),
         {
-            definition: a,
+            definition: s,
             useConfig: function (e) {
-                var a;
-                let u = n(o, e),
-                    [d, f] = (0, i.yK)([t], () => t.getEvaluationAndAssignment(o, u, s), [u]),
+                var n;
+                let s = a(l, e),
+                    [d, f] = (0, i.yK)([t], () => t.getEvaluationAndAssignment(l, s, o), [s]),
                     p = null == f ? void 0 : f.variantId,
-                    _ = null != (a = null == f ? void 0 : f.trackedVariantId) ? a : p,
+                    _ = null != (n = null == f ? void 0 : f.trackedVariantId) ? n : p,
                     h = null == f ? void 0 : f.revision,
                     m = null == f ? void 0 : f.isOverride,
                     g = null == f ? void 0 : f.exposureTrackingEnabled;
@@ -30,38 +30,38 @@ function a(e, t, n) {
                             null != h &&
                             !1 === m &&
                             !0 === g &&
-                            t.trackExperimentExposure(d, s, e.location, o, h, _, u);
-                    }, [u, d, _, h, e.location, m, g]),
+                            t.trackExperimentExposure(d, o, e.location, l, h, _, s);
+                    }, [s, d, _, h, e.location, m, g]),
                     null == p)
                 )
-                    return c;
+                    return u;
                 {
-                    let e = l[p];
-                    return null != e ? e : c;
+                    let e = c[p];
+                    return null != e ? e : u;
                 }
             },
             getConfig: function (e) {
                 var r;
-                let i = n(o, e),
-                    [a, u] = t.getEvaluationAndAssignment(o, i, s),
-                    d = null == u ? void 0 : u.variantId,
-                    f = null != (r = null == u ? void 0 : u.trackedVariantId) ? r : d,
-                    p = null == u ? void 0 : u.revision,
-                    _ = null == u ? void 0 : u.isOverride,
-                    h = null == u ? void 0 : u.exposureTrackingEnabled;
+                let i = n(l, e),
+                    [a, s] = t.getEvaluationAndAssignment(l, i, o),
+                    d = null == s ? void 0 : s.variantId,
+                    f = null != (r = null == s ? void 0 : s.trackedVariantId) ? r : d,
+                    p = null == s ? void 0 : s.revision,
+                    _ = null == s ? void 0 : s.isOverride,
+                    h = null == s ? void 0 : s.exposureTrackingEnabled;
                 if (
                     (null != a &&
                         null != f &&
                         null != p &&
                         !1 === _ &&
                         !0 === h &&
-                        t.trackExperimentExposure(a, s, e.location, o, p, f, i),
+                        t.trackExperimentExposure(a, o, e.location, l, p, f, i),
                     null == d)
                 )
-                    return c;
+                    return u;
                 {
-                    let e = l[d];
-                    return null != e ? e : c;
+                    let e = c[d];
+                    return null != e ? e : u;
                 }
             },
         }
