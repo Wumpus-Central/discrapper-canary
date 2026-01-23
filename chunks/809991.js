@@ -5,38 +5,37 @@ n.d(t, {
 var a = n(627968);
 n(64700);
 var l = n(554146),
-    i = n(354486),
-    r = n(379848),
+    r = n(354486),
+    i = n(379848),
     s = n(441811),
     o = n(587084),
     c = n(693240),
-    d = n(987237),
-    u = n(844526),
-    m = n(201805),
-    p = n(523620),
-    h = n(49999),
-    f = n(654487);
+    d = n(844526),
+    u = n(201805),
+    m = n(523620),
+    p = n(49999),
+    h = n(654487);
 
 function x(e) {
     var t, n, x;
-    let { isQuestBarEmpty: b, hasLoadedQuestBar: g } = (0, m.c9)({
-            location: f.rE.CONFLICT_CHECKS,
+    let { isQuestBarEmpty: g, hasLoadedQuestBar: f } = (0, u.c9)({
+            location: h.rE.CONFLICT_CHECKS,
         }),
-        v = null != e.targetElementRef.current && b && g,
-        [j, y] = (0, o.r)(e.guildId, {
-            shouldShow: v,
+        b = null != e.targetElementRef.current && g && f,
+        [v, j] = (0, o.r)(e.guildId, {
+            shouldShow: b,
         }),
-        [_, A] = (0, o.L)(e.currentUser, {
-            shouldShow: v,
+        [_, y] = (0, o.L)(e.currentUser, {
+            shouldShow: b,
         }),
-        [C, S] = (0, i.l)({
-            shouldShow: v,
+        [A, C] = (0, r.l)({
+            shouldShow: b,
         });
-    return v
-        ? j === l.M.GUILD_TAG_AVAILABLE_COACHMARK_V2
+    return b
+        ? v === l.M.GUILD_TAG_AVAILABLE_COACHMARK_V2
             ? (0, a.jsx)(c.w, {
                   guildId: e.guildId,
-                  onDismiss: y,
+                  onDismiss: j,
                   targetElementRef: e.targetElementRef,
                   children: e.children,
               })
@@ -44,44 +43,37 @@ function x(e) {
               ? (0, a.jsx)(c.o, {
                     guildId:
                         null != (n = null == (x = e.currentUser.primaryGuild) ? void 0 : x.identityGuildId) ? n : null,
-                    onDismiss: A,
+                    onDismiss: y,
                     targetElementRef: e.targetElementRef,
                     children: e.children,
                 })
-              : C === l.M.DO_NOT_DISTURB_REMINDER_POPOVER
-                ? (0, a.jsx)(i.A, {
+              : A === l.M.DO_NOT_DISTURB_REMINDER_POPOVER
+                ? (0, a.jsx)(r.A, {
                       targetElementRef: e.targetElementRef,
-                      onDismiss: S,
+                      onDismiss: C,
                       children: e.children,
                   })
                 : (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)(u.A, {
-                              groupName: h.m.ACCOUNT_NAME_ZONE,
+                          (0, a.jsx)(d.A, {
+                              groupName: p.m.ACCOUNT_NAME_ZONE,
                               targetElementRef: e.targetElementRef,
                           }),
-                          (0, a.jsx)(r.Ay, {
-                              contentTypes: v && null != (t = e.additionalDCs) ? t : [],
-                              groupName: h.m.ACCOUNT_NAME_ZONE,
+                          (0, a.jsx)(i.Ay, {
+                              contentTypes: b && null != (t = e.additionalDCs) ? t : [],
+                              groupName: p.m.ACCOUNT_NAME_ZONE,
                               children: (t) => {
-                                  let { visibleContent: n, markAsDismissed: i } = t;
+                                  let { visibleContent: n, markAsDismissed: r } = t;
                                   switch (n) {
                                       case l.M.WIDGETS_RTC_UPSELL_COACHMARK:
-                                          return (0, a.jsx)(p.A, {
-                                              markAsDismissed: i,
+                                          return (0, a.jsx)(m.A, {
+                                              markAsDismissed: r,
                                               targetElementRef: e.targetElementRef,
                                               children: e.children,
                                           });
                                       case l.M.DISPLAY_NAME_STYLES_COACHMARK:
                                           return (0, a.jsx)(s.l, {
-                                              markAsDismissed: i,
-                                              targetElementRef: e.targetElementRef,
-                                              children: e.children,
-                                          });
-                                      case l.M.TENURE_BADGE_CHURN_REMINDER:
-                                          return (0, a.jsx)(d.A, {
-                                              markAsDismissed: i,
-                                              mode: "popover",
+                                              markAsDismissed: r,
                                               targetElementRef: e.targetElementRef,
                                               children: e.children,
                                           });
