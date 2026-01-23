@@ -130,7 +130,7 @@ function I(e) {
 
 function w(e) {
     var n, l, v, b, w, D;
-    let { transitionState: P, onClose: R, guildId: _, action: H, onSave: G, onDelete: L } = e,
+    let { transitionState: P, onClose: _, guildId: R, action: H, onSave: G, onDelete: L } = e,
         F = i.useRef(null),
         W = i.useRef(null),
         J = null == H || null == g.A.getChannel(H.channelId) ? null : H.channelId,
@@ -215,11 +215,11 @@ function w(e) {
                 t,
                 (i || a) && !e,
             ),
-                R();
-        }, [G, R, X, $, U, en, et, er, es, ec, ei, ea]),
+                _();
+        }, [G, _, X, $, U, en, et, er, es, ec, ei, ea]),
         eh = i.useCallback(() => {
-            null == L || L(), R();
-        }, [L, R]),
+            null == L || L(), _();
+        }, [L, _]),
         eg = i.useCallback(
             (e) => {
                 Z(e),
@@ -267,10 +267,10 @@ function w(e) {
         ),
         ej = i.useMemo(
             () =>
-                x.Ay.getSelectableChannels(_)
+                x.Ay.getSelectableChannels(R)
                     .filter((e) => !q.has(e.channel.id) && (0, m.Rc)(e.channel))
                     .map((e) => {
-                        let n = p.A.getGuild(_),
+                        let n = p.A.getGuild(R),
                             l = (0, u.gU)(e.channel, n);
                         return {
                             id: e.channel.id,
@@ -279,7 +279,7 @@ function w(e) {
                             leading: null != l ? l : void 0,
                         };
                     }),
-            [_, q],
+            [R, q],
         ),
         ev = i.useCallback(function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -339,7 +339,7 @@ function w(e) {
         () => [
             {
                 text: S.intl.string(S.t["ETE/oC"]),
-                onClick: R,
+                onClick: _,
                 variant: "secondary",
             },
             {
@@ -349,12 +349,12 @@ function w(e) {
                 disabled: eu || ed,
             },
         ],
-        [em, ed, eu, R],
+        [em, ed, eu, _],
     );
     return (0, t.jsxs)(a.Modal, {
         title: S.intl.string(S.t.ncTLSo),
         transitionState: P,
-        onClose: R,
+        onClose: _,
         actions: eA,
         actionBarInput:
             null != H
@@ -509,13 +509,13 @@ function w(e) {
                                     children: [
                                         (0, t.jsx)(o.Drp, {
                                             id: "emoji",
-                                            label: i,
+                                            void_label: i,
                                             icon: o.nm2,
                                         }),
                                         (0, t.jsx)(o.Drp, {
                                             className: T.K8,
                                             id: "upload",
-                                            label: l,
+                                            void_label: l,
                                             icon: o.JMY,
                                         }),
                                         null != eb || null != en

@@ -127,11 +127,7 @@ function g(e) {
                     children: (0, l.jsx)(s.Drp, {
                         id: "reset-all",
                         className: h.Z,
-                        label: (0, l.jsx)(s.Text, {
-                            variant: "text-sm/medium",
-                            color: "none",
-                            children: u.intl.string(u.t["3b//lO"]),
-                        }),
+                        label: u.intl.string(u.t["3b//lO"]),
                         action: () => {
                             _(t.getDefaultSortOrder()), y(t.getDefaultLayout()), A(t.getDefaultTagSetting());
                         },

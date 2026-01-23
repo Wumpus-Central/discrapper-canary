@@ -47,11 +47,7 @@ function u(e) {
                     children: (0, n.jsx)(l.Drp, {
                         id: "reset-all",
                         className: d.Z,
-                        label: (0, n.jsx)(l.Text, {
-                            variant: "text-sm/medium",
-                            color: "none",
-                            children: a.intl.string(a.t["3b//lO"]),
-                        }),
+                        label: a.intl.string(a.t["3b//lO"]),
                         action: u,
                     }),
                 }),

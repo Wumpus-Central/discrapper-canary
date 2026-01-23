@@ -52,7 +52,7 @@ function d(e) {
                         }),
                         (0, r.jsx)(i.Drp, {
                             id: "browse-social-layer-storefront",
-                            label: y,
+                            void_label: y,
                             iconLeft: null != b ? void 0 : i.U1X,
                             action: d,
                         }),

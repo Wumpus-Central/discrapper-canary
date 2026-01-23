@@ -61,7 +61,7 @@ function p(e) {
                         o.Drp,
                         {
                             id: t,
-                            label: n,
+                            void_label: n,
                             icon: t === i ? o.yr3 : void 0,
                             action: () => r(t),
                         },

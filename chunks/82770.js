@@ -12,9 +12,7 @@ var r = n(397927),
 function d(e) {
     return (0, i.jsx)(r.Drp, {
         id: "application-directory",
-        label: (0, i.jsx)(i.Fragment, {
-            children: c.intl.string(c.t.AKcFUj),
-        }),
+        label: c.intl.string(c.t.AKcFUj),
         icon: r.k9F,
         action: () => {
             (0, l.transitionToGlobalDiscovery)({

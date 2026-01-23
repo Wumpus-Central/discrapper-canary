@@ -131,7 +131,7 @@ let D = (0, c.A)(
                                     id: c,
                                 },
                                 {
-                                    label: a,
+                                    void_label: a,
                                     action: () => {
                                         var e, t;
                                         let n;

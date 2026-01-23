@@ -45,11 +45,7 @@ function g(e) {
                               (0, r.jsx)(i.bXX, {}),
                               (0, r.jsx)(i.Drp, {
                                   id: "wishlist-privacy-setting2",
-                                  label: (0, r.jsx)(i.Text, {
-                                      variant: "text-sm/medium",
-                                      color: "text-strong",
-                                      children: d.intl.string(d.t.hvVgAZ),
-                                  }),
+                                  label: d.intl.string(d.t.hvVgAZ),
                                   icon: i.I9m,
                                   action: () => window.open(p),
                               }),

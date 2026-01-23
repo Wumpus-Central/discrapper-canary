@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => m,
+    A: () => h,
 });
 var r = n(627968);
 n(64700);
@@ -9,10 +9,9 @@ var i = n(311907),
     o = n(994500),
     l = n(287809),
     c = n(652215),
-    u = n(985018),
-    d = n(533110);
+    u = n(985018);
 
-function f(e, t, n) {
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +25,7 @@ function f(e, t, n) {
     );
 }
 
-function p(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,13 +36,13 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
 
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,57 +55,52 @@ function _(e, t) {
     return n;
 }
 
-function h(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function m(e) {
+function h(e) {
     let {
             user: t,
-            guildId: f,
-            channelId: _,
-            onBlock: m,
-            onIgnore: g,
-            onUnignore: E,
-            location: b = "ContextMenu",
+            guildId: d,
+            channelId: p,
+            onBlock: h,
+            onIgnore: m,
+            onUnignore: g,
+            location: E = "ContextMenu",
             appContext: y = c.BRT.APP,
         } = e,
-        { id: O } = t,
-        A = (0, i.bG)([l.default], () => {
+        { id: b } = t,
+        O = (0, i.bG)([l.default], () => {
             var e;
-            return (null == (e = l.default.getCurrentUser()) ? void 0 : e.id) === O;
-        }, [O]),
-        { isIgnored: v, isBlocked: S } = (0, i.cf)(
+            return (null == (e = l.default.getCurrentUser()) ? void 0 : e.id) === b;
+        }, [b]),
+        { isIgnored: v, isBlocked: A } = (0, i.cf)(
             [o.A],
             () => ({
-                isIgnored: o.A.isIgnored(O),
-                isBlocked: o.A.isBlocked(O),
+                isIgnored: o.A.isIgnored(b),
+                isBlocked: o.A.isBlocked(b),
             }),
-            [O],
+            [b],
         );
-    return A || S
+    return O || A
         ? null
         : (0, r.jsx)(a.Drp, {
               id: "ignore",
               color: "default",
-              label: v
-                  ? u.intl.string(u.t["8wXU9B"])
-                  : (0, r.jsx)("div", {
-                        className: d.P,
-                        children: u.intl.string(u.t.ytCpKs),
-                    }),
+              label: v ? u.intl.string(u.t["8wXU9B"]) : u.intl.string(u.t.ytCpKs),
               action: v
                   ? () => {
-                        null == E || E(),
-                            s.A.unignoreUser(O, null != b ? b : "use-ignore-user-item-web", null != _ ? _ : void 0);
+                        null == g || g(),
+                            s.A.unignoreUser(b, null != E ? E : "use-ignore-user-item-web", null != p ? p : void 0);
                     }
                   : () => {
                         (0, a.mMO)(
@@ -117,13 +111,13 @@ function m(e) {
                                 return (n) =>
                                     (0, r.jsx)(
                                         e,
-                                        h(p({}, n), {
-                                            guildId: f,
-                                            channelId: _,
+                                        _(f({}, n), {
+                                            guildId: d,
+                                            channelId: p,
                                             user: t,
-                                            onIgnore: g,
-                                            onBlock: m,
-                                            location: b,
+                                            onIgnore: m,
+                                            onBlock: h,
+                                            location: E,
                                         }),
                                     );
                             },

@@ -31197,12 +31197,6 @@ img.thumbnail__0f2e8 {
     width: 16px
 }
 
-.label__202d8 {
-    align-items: center;
-    display: flex;
-    gap: var(--space-4)
-}
-
 .bannerButton_fb7f94 {
     align-items: center;
     background: var(--redesign-button-overlay-alpha-background);
@@ -94871,11 +94865,6 @@ html .invoiceCancelRow__968a4 {
 .callAvatarMaskContainer_f910d0 {
     height: 100%;
     position: relative
-}
-
-.item__0c135 {
-    align-items: center;
-    display: flex
 }
 
 .root__2dbe1 {

@@ -57,7 +57,7 @@ function b(e) {
                                     },
                                 });
                             },
-                            label: a,
+                            void_label: a,
                         },
                         n,
                     );
@@ -67,7 +67,7 @@ function b(e) {
                         {
                             id: n,
                             action: () => b(n),
-                            label: a,
+                            void_label: a,
                         },
                         n,
                     );

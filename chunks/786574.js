@@ -7,8 +7,8 @@ n.d(t, {
     n(638769);
 var a = n(627968),
     l = n(64700),
-    i = n(614820),
-    r = n(397927),
+    r = n(614820),
+    i = n(397927),
     s = n(231643),
     o = n(890288);
 
@@ -27,11 +27,11 @@ function d(e, t) {
             let t = n.toLowerCase().trim();
             return e.filter((e) => {
                 var n, a, l;
-                let r = (null != (n = (0, i.O)(e.name)) ? n : "").toLowerCase(),
+                let i = (null != (n = (0, r.O)(e.name)) ? n : "").toLowerCase(),
                     s = (null != (a = e.group) ? a : "").toLowerCase(),
                     o = null != (l = e.tags) ? l : [];
                 return (
-                    r.includes(t) ||
+                    i.includes(t) ||
                     e.id.toLowerCase().includes(t) ||
                     s.includes(t) ||
                     o.some((e) => e.toLowerCase().includes(t))
@@ -42,13 +42,13 @@ function d(e, t) {
         l.useMemo(
             () =>
                 (0, a.jsx)(
-                    r.aK1,
+                    i.aK1,
                     {
                         id: "devtools-search",
                         control: (e, t) => {
-                            var l, i;
+                            var l, r;
                             return (0, a.jsx)(
-                                r.VPO,
+                                i.VPO,
                                 ((l = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,7 +74,7 @@ function d(e, t) {
                                     }
                                     return e;
                                 })({}, e)),
-                                (i = i =
+                                (r = r =
                                     {
                                         query: n,
                                         onChange: o,
@@ -82,7 +82,7 @@ function d(e, t) {
                                         ref: t,
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
+                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(r))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -90,8 +90,8 @@ function d(e, t) {
                                               n.push.apply(n, a);
                                           }
                                           return n;
-                                      })(Object(i)).forEach(function (e) {
-                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
+                                      })(Object(r)).forEach(function (e) {
+                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(r, e));
                                       }),
                                 l),
                             );
@@ -106,7 +106,7 @@ function d(e, t) {
             if ("" !== n.trim() && 0 === d.length)
                 e.push(
                     (0, a.jsx)(
-                        r.Drp,
+                        i.Drp,
                         {
                             id: "devtools-no-results",
                             label: 'No DevTools found for "'.concat(n, '"'),
@@ -127,14 +127,14 @@ function d(e, t) {
                         return t;
                     })(d.filter((e) => e.group !== s.fu.NONE));
                 l.forEach((n) => {
-                    let { id: l, name: i } = n;
+                    let { id: l, name: r } = n;
                     return e.push(
                         (0, a.jsx)(
-                            r.Drp,
+                            i.Drp,
                             {
                                 id: l,
-                                label: (0, a.jsx)(c, {
-                                    label: i,
+                                void_label: (0, a.jsx)(c, {
+                                    label: r,
                                 }),
                                 action: () => t(l),
                             },
@@ -147,26 +147,26 @@ function d(e, t) {
                         if (null != s && s.length > 0) {
                             let o = s.sort((e, t) => {
                                 var n, a;
-                                return (null != (n = (0, i.O)(e.name)) ? n : "").localeCompare(
-                                    null != (a = (0, i.O)(t.name)) ? a : "",
+                                return (null != (n = (0, r.O)(e.name)) ? n : "").localeCompare(
+                                    null != (a = (0, r.O)(t.name)) ? a : "",
                                 );
                             });
                             "" === n.trim()
                                 ? e.push(
                                       (0, a.jsx)(
-                                          r.Drp,
+                                          i.Drp,
                                           {
                                               id: "devtools-".concat(l),
-                                              label: (0, a.jsx)(c, {
+                                              void_label: (0, a.jsx)(c, {
                                                   label: l,
                                               }),
-                                              children: (0, a.jsx)(r.rXV, {
+                                              children: (0, a.jsx)(i.rXV, {
                                                   children: o.map((e) =>
                                                       (0, a.jsx)(
-                                                          r.Drp,
+                                                          i.Drp,
                                                           {
                                                               id: "devtools-".concat(e.id),
-                                                              label: (0, a.jsx)(c, {
+                                                              void_label: (0, a.jsx)(c, {
                                                                   label: e.name,
                                                               }),
                                                               action: () => t(e.id),
@@ -181,15 +181,15 @@ function d(e, t) {
                                   )
                                 : e.push(
                                       (0, a.jsx)(
-                                          r.rXV,
+                                          i.rXV,
                                           {
                                               label: l,
                                               children: o.map((e) =>
                                                   (0, a.jsx)(
-                                                      r.Drp,
+                                                      i.Drp,
                                                       {
                                                           id: "devtools-filtered-".concat(e.id),
-                                                          label: (0, a.jsx)(c, {
+                                                          void_label: (0, a.jsx)(c, {
                                                               label: e.name,
                                                           }),
                                                           action: () => t(e.id),

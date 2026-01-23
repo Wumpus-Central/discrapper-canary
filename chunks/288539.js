@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => S,
+    A: () => I,
 });
 var r = n(627968),
     i = n(64700),
@@ -18,7 +18,7 @@ var r = n(627968),
     g = n(562153),
     E = n(427262);
 
-function b(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function b(e, t, n) {
     );
 }
 
-function y(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -62,7 +62,7 @@ function O(e, t) {
     return n;
 }
 
-function A(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function A(e, t) {
     );
 }
 
-function v(e) {
+function A(e) {
     let { userId: t, className: a, children: s } = e,
         l = i.useCallback(() => {
             (0, u.K)({
@@ -89,7 +89,7 @@ function v(e) {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                A(y({}, n), {
+                                v(b({}, n), {
                                     userId: t,
                                 }),
                             );
@@ -105,26 +105,26 @@ function v(e) {
     });
 }
 
-function S(e) {
+function I(e) {
     let {
             className: t,
             userId: u,
-            channelId: b,
+            channelId: y,
             parsedUserId: O,
-            content: S,
-            inlinePreview: I = !1,
+            content: I,
+            inlinePreview: S = !1,
             viewingChannelId: T,
         } = e,
         C = i.useRef(null),
         { analyticsLocations: N } = (0, c.Ay)(l.A.USER_MENTION),
-        R = (0, s.bG)([m.default], () => m.default.getUser(u)),
-        w = (0, s.bG)([p.A], () => p.A.getChannel(b)),
-        P = null != w ? w.getGuildId() : null,
+        w = (0, s.bG)([m.default], () => m.default.getUser(u)),
+        R = (0, s.bG)([p.A], () => p.A.getChannel(y)),
+        P = null != R ? R.getGuildId() : null,
         D =
-            I || null == R || null == P || null == b
+            S || null == w || null == P || null == y
                 ? void 0
                 : (e) => {
-                      null != w &&
+                      null != R &&
                           (0, o.L3)(e, async () => {
                               let { default: e } = await Promise.all([
                                   n.e("97262"),
@@ -132,33 +132,33 @@ function S(e) {
                                   n.e("33818"),
                                   n.e("55296"),
                                   n.e("84841"),
-                                  n.e("86246"),
+                                  n.e("9001"),
                               ]).then(n.bind(n, 107632));
                               return (t) =>
                                   (0, r.jsx)(
                                       e,
-                                      A(y({}, t), {
+                                      v(b({}, t), {
                                           viewingChannelId: T,
-                                          user: R,
-                                          channel: w,
+                                          user: w,
+                                          channel: R,
                                           guildId: P,
                                       }),
                                   );
                           });
                   },
-        x = E.Ay.useName(R),
-        L = (0, s.bG)([p.A, _.Ay, h.A], () => g.Ay.getNickname(P, b, R));
-    if (null == R)
-        return (0, r.jsx)(v, {
+        x = E.Ay.useName(w),
+        L = (0, s.bG)([p.A, _.Ay, h.A], () => g.Ay.getNickname(P, y, w));
+    if (null == w)
+        return (0, r.jsx)(A, {
             userId: O,
             className: t,
-            children: S,
+            children: I,
         });
     let j = (e) =>
         (0, r.jsx)(
             d.A,
-            A(
-                y(
+            v(
+                b(
                     {
                         ref: C,
                         className: t,
@@ -171,7 +171,7 @@ function S(e) {
                 },
             ),
         );
-    return I
+    return S
         ? (0, r.jsx)(c.f5, {
               value: N,
               children: j(),
@@ -180,9 +180,9 @@ function S(e) {
               value: N,
               children: (0, r.jsx)(f.A, {
                   targetElementRef: C,
-                  user: R,
+                  user: w,
                   guildId: null != P ? P : void 0,
-                  channelId: b,
+                  channelId: y,
                   position: a.Fr ? "top" : "right",
                   clickTrap: !0,
                   children: (e) => j(e),

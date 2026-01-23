@@ -110,7 +110,7 @@ function f(e) {
                         a.Drp,
                         {
                             id: t,
-                            label: p,
+                            void_label: p,
                             icon: t === n ? a.yr3 : void 0,
                             action: () => s(t),
                         },

@@ -7,8 +7,8 @@ var i = n(311907),
     r = n(397927),
     a = n(308528),
     o = n(313369),
-    s = n(267102),
-    d = n(964404),
+    d = n(267102),
+    s = n(964404),
     u = n(961350),
     c = n(734057),
     A = n(994500),
@@ -17,30 +17,30 @@ var i = n(311907),
     f = n(985018);
 
 function m(e) {
-    let { user: t, context: m, label: O, joinCallVideo: p, id: y, onCall: E } = e,
-        v = (0, s.aL)(),
-        h = (0, i.bG)([u.default], () => u.default.getId() === t.id),
-        j = (0, i.bG)([A.A], () => A.A.isBlocked(t.id)),
-        x = (0, i.bG)([b.A, c.A], () => b.A.getVoiceChannelId() === c.A.getDMFromUserId(t.id)),
-        { copyVariant: S } = o.o.useConfig({
+    let { user: t, context: m, joinCallVideo: O, id: p, onCall: y } = e,
+        E = (0, d.aL)(),
+        v = (0, i.bG)([u.default], () => u.default.getId() === t.id),
+        h = (0, i.bG)([A.A], () => A.A.isBlocked(t.id)),
+        j = (0, i.bG)([b.A, c.A], () => b.A.getVoiceChannelId() === c.A.getDMFromUserId(t.id)),
+        { copyVariant: x } = o.o.useConfig({
             location: "useCallUserItem",
         });
-    if (h || m === g.BRT.POPOUT || x || t.bot || t.isProvisional) return null;
-    let M = () => {
-            null == E || E(),
+    if (v || m === g.BRT.POPOUT || j || t.bot || t.isProvisional) return null;
+    let S = () => {
+            null == y || y(),
                 a.A.openPrivateChannel({
                     recipientIds: t.id,
                     joinCall: !0,
-                    joinCallVideo: p,
+                    joinCallVideo: O,
                 }),
-                v.dispatch(g.jej.POPOUT_CLOSE),
+                E.dispatch(g.jej.POPOUT_CLOSE),
                 (0, r.s7G)();
         },
-        C = !d.Ay.disableCallUserConfirmationPrompt;
+        M = !s.Ay.disableCallUserConfirmationPrompt;
     return (0, l.jsx)(r.Drp, {
-        id: null != y ? y : "call",
-        label: null != O ? O : "control" !== S ? f.intl.string(f.t["ZeP+kK"]) : f.intl.string(f.t.JJogjm),
-        action: C
+        id: null != p ? p : "call",
+        label: "control" !== x ? f.intl.string(f.t["ZeP+kK"]) : f.intl.string(f.t.JJogjm),
+        action: M
             ? () => {
                   (0, r.mMO)(async () => {
                       let { default: e } = await n.e("19106").then(n.bind(n, 279673));
@@ -73,14 +73,14 @@ function m(e) {
                                   return e;
                               })(
                                   {
-                                      onSubmit: M,
+                                      onSubmit: S,
                                   },
                                   t,
                               ),
                           );
                   });
               }
-            : M,
-        disabled: j,
+            : S,
+        disabled: h,
     });
 }
