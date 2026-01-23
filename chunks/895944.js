@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => R,
+    A: () => w,
 }),
     n(896048);
 var r,
@@ -12,12 +12,13 @@ var r,
     u = n(84483),
     d = n(572009),
     f = n(287809),
-    p = n(927813),
-    _ = n(474090),
-    h = n(649032),
-    m = n(788868);
+    p = n(166403),
+    _ = n(927813),
+    h = n(474090),
+    m = n(649032),
+    g = n(788868);
 
-function g(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,15 +31,15 @@ function g(e, t, n) {
         e
     );
 }
-let E = 864e5,
+let y = 864e5,
     b = 3e4,
-    y = 36e5,
-    O = new c.Z({
-        ttlMs: E,
+    O = 36e5,
+    v = new c.Z({
+        ttlMs: y,
     });
 
 function A() {
-    let e = O.getValue();
+    let e = v.getValue();
     if (null == e) return !1;
     let t = new Date();
     for (let n of e.values()) {
@@ -55,46 +56,46 @@ function A() {
     return !1;
 }
 
-function v() {
-    (0, d.I9)(f.default.getCurrentUser()) ? O.setTtl(b) : A() ? O.setTtl(y) : O.setTtl(E);
+function I() {
+    (0, d.I9)(f.default.getCurrentUser()) ? v.setTtl(b) : A() ? v.setTtl(O) : v.setTtl(y);
 }
 
 function S() {
-    O.setLoading();
+    v.setLoading();
 }
 
-function I(e) {
+function T(e) {
     let { programRewards: t } = e;
-    if (!O.isLoading()) return !1;
+    if (!v.isLoading()) return !1;
     let n = new Map();
     t.forEach((e) => {
         n.set(e.reward_program, e);
     }),
-        O.setValue(n),
-        v();
-}
-
-function T() {
-    if (!O.isLoading()) return !1;
-    O.setError();
+        v.setValue(n),
+        I();
 }
 
 function C() {
-    O.clear();
+    if (!v.isLoading()) return !1;
+    v.setError();
 }
-class N extends (r = o.Ay.PersistedStore) {
+
+function N() {
+    v.clear();
+}
+class R extends (r = o.Ay.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(f.default), (null == e ? void 0 : e.cache) != null)) {
+        if ((this.waitFor(p.A, f.default), this.syncWith([p.A], () => {}), (null == e ? void 0 : e.cache) != null)) {
             let t = new Map(e.cache.value);
-            O.restore({
+            v.restore({
                 value: t,
                 fetchedAt: e.cache.fetchedAt,
             });
         }
-        v();
+        I();
     }
     getState() {
-        let e = O.serialize();
+        let e = v.serialize();
         return {
             cache:
                 null != e
@@ -107,14 +108,14 @@ class N extends (r = o.Ay.PersistedStore) {
     }
     passesGeneralUIInvariant(e) {
         if (!this.isInProperTreatments()) return !1;
-        if (e === h.W.NITRO) {
+        if (e === m.W.NITRO) {
             let t = this.getRewardForProgram(e);
             if (null == t) return !1;
             let n = t.next_reward_date,
                 r = t.program_current_state;
             if (null == r) return !1;
             if (null == n || "" === n) {
-                if (![h.L.PAYMENT_PROCESSING, h.L.PAYMENT_ERROR].includes(r)) return !1;
+                if (![m.L.PAYMENT_PROCESSING, m.L.PAYMENT_ERROR].includes(r)) return !1;
             } else {
                 let e = new Date(n).getTime();
                 if (Number.isNaN(e) || e < Date.now()) return !1;
@@ -124,7 +125,7 @@ class N extends (r = o.Ay.PersistedStore) {
     }
     passesProgressBarInvariant(e) {
         if (!this.isInProperTreatments()) return !1;
-        if (e === h.W.NITRO) {
+        if (e === m.W.NITRO) {
             let t = this.getRewardForProgram(e);
             if (null == t) return !1;
             let n = t.total_countdown_duration_ms;
@@ -132,26 +133,27 @@ class N extends (r = o.Ay.PersistedStore) {
             let r = t.next_reward_date;
             if (null == r || "" === r) return !1;
             let i = new Date(r).getTime();
-            if (Number.isNaN(i) || i <= Date.now() || (0, a.default)(new Date(r), new Date()) > n / p.A.Millis.DAY)
+            if (Number.isNaN(i) || i <= Date.now() || (0, a.default)(new Date(r), new Date()) > n / _.A.Millis.DAY)
                 return !1;
         }
         return !0;
     }
     hasNecessaryPremiumSubscriptionStatus() {
-        return (0, _.YE)(f.default.getCurrentUser(), m.PremiumTypes.TIER_2);
+        let e = p.A.getMostRecentPremiumTypeSubscription();
+        return (0, h.YE)(f.default.getCurrentUser(), g.PremiumTypes.TIER_2) && null != e && !e.isPurchasedExternally;
     }
     isInProperTreatments() {
         let { isInTreatment: e } = (0, u.v9)("ProgramRewardsStore");
         return e;
     }
     isFetching() {
-        return O.isLoading();
+        return v.isLoading();
     }
     isFetched() {
-        return O.isValid();
+        return v.isValid();
     }
     hasCachedValue() {
-        return null != O.getValue();
+        return null != v.getValue();
     }
     isReady() {
         return (
@@ -163,28 +165,28 @@ class N extends (r = o.Ay.PersistedStore) {
         );
     }
     shouldFetch() {
-        return !!this.isInProperTreatments() && !!this.hasNecessaryPremiumSubscriptionStatus() && O.shouldFetch();
+        return !!this.isInProperTreatments() && !!this.hasNecessaryPremiumSubscriptionStatus() && v.shouldFetch();
     }
     isError() {
-        return O.isError();
+        return v.isError();
     }
     getStatus() {
-        return O.getStatus();
+        return v.getStatus();
     }
     getRewardForProgram(e) {
         var t;
-        return null == (t = O.getValue()) ? void 0 : t.get(e);
+        return null == (t = v.getValue()) ? void 0 : t.get(e);
     }
     forceExpire() {
-        O.forceExpire();
+        v.forceExpire();
     }
 }
-g(N, "displayName", "ProgramRewardsStore"), g(N, "persistKey", "ProgramRewardsStore");
-let R = new N(l.h, {
-    LOGOUT: C,
+E(R, "displayName", "ProgramRewardsStore"), E(R, "persistKey", "ProgramRewardsStore");
+let w = new R(l.h, {
+    LOGOUT: N,
     PROGRAM_REWARDS_FETCH: S,
-    PROGRAM_REWARDS_FETCH_SUCCESS: I,
-    PROGRAM_REWARDS_FETCH_FAILURE: T,
-    CURRENT_USER_UPDATE: v,
-    CONNECTION_OPEN: v,
+    PROGRAM_REWARDS_FETCH_SUCCESS: T,
+    PROGRAM_REWARDS_FETCH_FAILURE: C,
+    CURRENT_USER_UPDATE: I,
+    CONNECTION_OPEN: I,
 });
