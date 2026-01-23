@@ -1,111 +1,112 @@
 n.d(t, {
-    m: () => s,
+    m: () => o,
 }),
     n(896048);
 var a = n(64700),
-    l = n(216456),
-    i = n(341915),
-    r = n(652215);
+    l = n(341915),
+    r = n(561844),
+    i = n(590202),
+    s = n(652215);
 
-function s(e) {
+function o(e) {
     let {
             quest: t,
             isExpanded: n,
-            setIsExpanded: s,
-            expandQuestBar: o,
-            isQuestCompleted: c,
-            isQuestAccepted: d,
-            prevIsQuestAccepted: u,
-            impressionRef: m,
+            setIsExpanded: o,
+            expandQuestBar: c,
+            isQuestCompleted: d,
+            isQuestAccepted: u,
+            prevIsQuestAccepted: m,
+            impressionRef: p,
         } = e,
-        p = a.useRef(-1),
-        h = a.useRef(!1),
-        [f, x] = a.useState(!1),
-        [b, g] = a.useState(!1),
-        v = a.useCallback(() => {
-            x(!0);
-        }, []),
+        h = a.useRef(-1),
+        x = a.useRef(!1),
+        [g, f] = a.useState(!1),
+        [b, v] = a.useState(!1),
         j = a.useCallback(() => {
-            x(!1), h.current || c || s(!1);
-        }, [c, s]),
-        y = a.useCallback(() => {
-            x(!1), c || s(!1), (h.current = !1);
-        }, [c, s]),
-        _ = a.useCallback(() => {
-            g(!0);
+            f(!0);
         }, []),
+        _ = a.useCallback(() => {
+            f(!1), x.current || d || o(!1);
+        }, [d, o]),
+        y = a.useCallback(() => {
+            f(!1), d || o(!1), (x.current = !1);
+        }, [d, o]),
         A = a.useCallback(() => {
-            g(!1), s(!1);
-        }, [s]),
-        C = a.useCallback(
+            v(!0);
+        }, []),
+        C = a.useCallback(() => {
+            v(!1), o(!1);
+        }, [o]),
+        S = a.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if (n) return;
                 let { withDelay: t = !1 } = e;
-                t ? (p.current = window.setTimeout(o, 75)) : o();
+                t ? (h.current = window.setTimeout(c, 75)) : c();
             },
-            [o, n],
+            [c, n],
         ),
-        S = a.useCallback(() => {
-            C();
-        }, [C]),
         O = a.useCallback(() => {
-            window.clearTimeout(p.current), f || b || h.current || s(!1);
-        }, [f, b, s]),
+            S();
+        }, [S]),
+        T = a.useCallback(() => {
+            window.clearTimeout(h.current), g || b || x.current || o(!1);
+        }, [g, b, o]),
         E = a.useCallback(() => {
             var e;
-            (0, l.av)({
+            (0, r.av)({
                 questId: t.id,
-                event: r.HAw.QUEST_HOVER,
+                event: s.HAw.QUEST_HOVER,
                 properties: {
-                    content_id: i.uF.QUEST_BAR,
-                    content_name: (0, l.jO)(i.uF.QUEST_BAR),
-                    impression_id: null == (e = m.current) ? void 0 : e.getId(),
+                    content_id: l.uF.QUEST_BAR,
+                    content_name: (0, i.jO)(l.uF.QUEST_BAR),
+                    impression_id: null == (e = p.current) ? void 0 : e.getId(),
                 },
                 shouldExtendSession: !0,
-                sourceQuestContent: i.uF.QUEST_BAR_V2,
+                sourceQuestContent: l.uF.QUEST_BAR_V2,
             }),
-                (h.current = !0),
-                C({
+                (x.current = !0),
+                S({
                     withDelay: !0,
                 });
-        }, [C, m, t.id]),
+        }, [S, p, t.id]),
         N = a.useCallback(() => {
             var e;
-            (0, l.av)({
+            (0, r.av)({
                 questId: t.id,
-                event: r.HAw.QUEST_HOVER_OFF,
+                event: s.HAw.QUEST_HOVER_OFF,
                 properties: {
-                    content_id: i.uF.QUEST_BAR,
-                    content_name: (0, l.jO)(i.uF.QUEST_BAR),
-                    impression_id: null == (e = m.current) ? void 0 : e.getId(),
+                    content_id: l.uF.QUEST_BAR,
+                    content_name: (0, i.jO)(l.uF.QUEST_BAR),
+                    impression_id: null == (e = p.current) ? void 0 : e.getId(),
                 },
-                sourceQuestContent: i.uF.QUEST_BAR_V2,
+                sourceQuestContent: l.uF.QUEST_BAR_V2,
             }),
-                (h.current = !1),
-                O();
-        }, [O, m, t.id]);
+                (x.current = !1),
+                T();
+        }, [T, p, t.id]);
     return (
         a.useEffect(() => {
             b && N();
         }, [b, N]),
         a.useLayoutEffect(() => {
-            d && !u && h.current && o();
-        }, [o, d, u]),
+            u && !m && x.current && c();
+        }, [c, u, m]),
         a.useLayoutEffect(() => {
-            c || !d || u || h.current || s(!1);
-        }, [d, c, u, s]),
+            d || !u || m || x.current || o(!1);
+        }, [u, d, m, o]),
         {
-            ctxMenuOpen: f,
+            ctxMenuOpen: g,
             gameSheetOpen: b,
-            handleCtxMenuOpened: v,
-            handleCtxMenuClosed: j,
+            handleCtxMenuOpened: j,
+            handleCtxMenuClosed: _,
             handleCtxMenuSelection: y,
-            handleGameSheetOpened: _,
-            handleGameSheetClosed: A,
-            handleFocus: C,
-            handleFocusWithoutDelay: S,
-            handleBlur: O,
+            handleGameSheetOpened: A,
+            handleGameSheetClosed: C,
+            handleFocus: S,
+            handleFocusWithoutDelay: O,
+            handleBlur: T,
             handleMouseEnter: E,
             handleMouseLeave: N,
         }

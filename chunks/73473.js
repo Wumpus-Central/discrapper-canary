@@ -1,5 +1,5 @@
 n.d(t, {
-    R: () => m,
+    R: () => g,
 }),
     n(896048);
 var r = n(64700),
@@ -8,9 +8,10 @@ var r = n(64700),
     s = n(311907),
     o = n(475743),
     l = n(531685),
-    c = n(906822);
+    c = n(266569),
+    u = n(971649);
 
-function u(e, t, n) {
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +25,7 @@ function u(e, t, n) {
     );
 }
 
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,13 +36,13 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
 
-function f(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,28 +55,29 @@ function f(e, t) {
     return n;
 }
 
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let _ = (e) => {
+n(23766);
+let h = (e) => {
         let [t, n] = r.useState(!1),
             a = null != e ? e : t,
             s = a !== (0, o.A)(a);
         return {
             visible: a,
             visibleChanged: s,
-            reference: (0, i.K)((e) => n(e), c.ur),
+            reference: (0, i.K)((e) => n(e), 0.5),
         };
     },
-    h = () => {
+    m = () => {
         let e = (0, s.bG)([l.A], () => l.A.isFocused()),
             t = (0, o.A)(e),
             n = e !== t;
@@ -84,11 +86,11 @@ let _ = (e) => {
             focusedChanged: n,
         };
     },
-    m = r.memo(function (e) {
-        let { focused: t, focusedChanged: n } = h(),
-            { visible: i, visibleChanged: s, reference: o } = _(e.overrideVisibility),
-            { key: l, adContentIds: u } = (0, c.RC)(e),
-            f = p(d({}, e), {
+    g = r.memo(function (e) {
+        let { focused: t, focusedChanged: n } = m(),
+            { visible: i, visibleChanged: s, reference: o } = h(e.overrideVisibility),
+            { key: l, adContentIds: d } = (0, u.RC)(e),
+            p = _(f({}, e), {
                 focused: t,
                 focusedChanged: n,
                 visible: i,
@@ -97,18 +99,18 @@ let _ = (e) => {
             });
         return "questOrQuests" in e
             ? (0, r.createElement)(
-                  c.bK,
-                  p(d({}, f), {
+                  c.xs,
+                  _(f({}, p), {
                       key: l,
-                      adContentIds: u,
+                      adContentIds: d,
                       adCreativeType: a.p.QUEST,
                   }),
               )
             : (0, r.createElement)(
-                  c.bK,
-                  p(d({}, f), {
+                  c.xs,
+                  _(f({}, p), {
                       key: l,
-                      adContentIds: u,
+                      adContentIds: d,
                       adCreativeType: e.adCreativeType,
                   }),
               );

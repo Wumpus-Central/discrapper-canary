@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => O,
+    A: () => v,
 });
 var r = n(627968),
     i = n(64700),
@@ -10,108 +10,109 @@ var r = n(627968),
     c = n(397927),
     u = n(775602),
     d = n(607470),
-    f = n(216456),
-    p = n(579473),
-    _ = n(92246),
-    h = n(241124),
-    m = n(415441),
-    g = n(734736),
-    E = n(545986),
+    f = n(579473),
+    p = n(18437),
+    _ = n(590202),
+    h = n(92246),
+    m = n(241124),
+    g = n(415441),
+    E = n(734736),
+    y = n(545986),
     b = n(985018),
-    y = n(773570);
-let O = function (e) {
+    O = n(773570);
+let v = function (e) {
     let t,
         {
             className: n,
             quest: a,
-            autoplay: O = !0,
+            autoplay: v = !0,
             learnMoreStyle: A = null,
-            learnMoreFontSize: v,
+            learnMoreFontSize: I,
             sourceQuestContent: S,
-            lazyLoad: I = !1,
-            style: T,
+            lazyLoad: T = !1,
+            style: C,
         } = e,
-        C = (0, f.Ut)(),
-        N = (0, l.bG)([u.A], () => u.A.useReducedMotion),
-        R = i.useMemo(() => (0, p.tW)(a, p.fY.REWARD), [a]),
-        w = i.useMemo(() => (0, p.tW)(a, p.fY.REWARD_IMAGE), [a]),
-        P = i.useCallback(
+        N = (0, p.Ut)(),
+        w = (0, l.bG)([u.A], () => u.A.useReducedMotion),
+        R = i.useMemo(() => (0, f.tW)(a, f.fY.REWARD), [a]),
+        P = i.useMemo(() => (0, f.tW)(a, f.fY.REWARD_IMAGE), [a]),
+        D = i.useCallback(
             (t) => {
                 var n;
                 (0, o.vq)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
-                    C({
+                    N({
                         questId: a.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
-                        questContentCTA: f.Cy.REWARD_LEARN_MORE,
+                        questContentCTA: _.Cy.REWARD_LEARN_MORE,
                         sourceQuestContent: S,
                     }),
-                    (0, E.navigateToQuestHome)({
+                    (0, y.navigateToQuestHome)({
                         fromContent: e.questContent,
                         questId: a.id,
                     }),
                     null == (n = e.onClick) || n.call(e, t);
             },
-            [C, a.id, e, S],
+            [N, a.id, e, S],
         ),
-        D = i.useRef(null),
-        x = i.useRef(O),
-        L = (0, _.K9)(a.config);
+        x = i.useRef(null),
+        L = i.useRef(v),
+        j = (0, h.K9)(a.config);
     return (
         i.useEffect(() => {
-            if (null != D.current) {
-                if (!R.isAnimated || N) {
-                    (D.current.currentTime = 0), D.current.pause();
+            if (null != x.current) {
+                if (!R.isAnimated || w) {
+                    (x.current.currentTime = 0), x.current.pause();
                     return;
                 }
-                O && !x.current
-                    ? D.current.play()
-                    : !O && x.current && ((D.current.currentTime = 0), D.current.pause()),
-                    (x.current = O);
+                v && !L.current
+                    ? x.current.play()
+                    : !v && L.current && ((x.current.currentTime = 0), x.current.pause()),
+                    (L.current = v);
             }
-        }, [O, R, N]),
-        (t = L
-            ? (0, r.jsx)(h.Sn, {
+        }, [v, R, w]),
+        (t = j
+            ? (0, r.jsx)(m.Sn, {
                   id: "QuestRewardTile_rewardTileNitro",
                   children: (e) =>
-                      (0, r.jsx)(g.A, {
+                      (0, r.jsx)(E.A, {
                           ref: e,
-                          className: y.eB,
+                          className: O.eB,
                       }),
               })
-            : I
-              ? (0, r.jsx)(m.N, {
-                    showVideo: O,
+            : T
+              ? (0, r.jsx)(g.N, {
+                    showVideo: v,
                     imageAsset:
-                        null != w
+                        null != P
                             ? {
-                                  asset: w,
+                                  asset: P,
                                   assetId: "QuestRewardTile_rewardTileStatic",
-                                  className: y.XM,
+                                  className: O.XM,
                                   alt: b.intl.string(b.t.UMclVN),
                               }
                             : void 0,
                     videoAsset: {
                         asset: R,
                         assetId: "QuestRewardTile_rewardTileAnimated",
-                        className: s()(y.eB, y.tv),
+                        className: s()(O.eB, O.tv),
                     },
                     onLoadComplete: e.onLoadComplete,
                 })
               : R.isAnimated
-                ? (0, r.jsx)(h.Sn, {
+                ? (0, r.jsx)(m.Sn, {
                       id: "QuestRewardTile_rewardTileAnimated",
                       children: (t) => {
                           var n;
                           return (0, r.jsx)(d.A, {
                               ref: (e) => {
-                                  (t.current = e), (D.current = e);
+                                  (t.current = e), (x.current = e);
                               },
-                              autoPlay: !N && O,
+                              autoPlay: !w && v,
                               loop: !0,
                               muted: !0,
                               playsInline: !0,
-                              className: y.eB,
+                              className: O.eB,
                               controls: !1,
                               onProgress: e.onLoadComplete,
                               children: (0, r.jsx)("source", {
@@ -121,42 +122,42 @@ let O = function (e) {
                           });
                       },
                   })
-                : (0, r.jsx)(h.Sn, {
+                : (0, r.jsx)(m.Sn, {
                       id: "QuestRewardTile_rewardTileStatic",
                       children: (t) =>
                           (0, r.jsx)("img", {
                               ref: t,
-                              alt: (0, _.mq)(a.config),
-                              className: s()(y.eB, y.Qz),
+                              alt: (0, h.mq)(a.config),
+                              className: s()(O.eB, O.Qz),
                               src: R.url,
                               onLoad: e.onLoadComplete,
                           }),
                   })),
         null == A
             ? (0, r.jsx)("div", {
-                  className: s()(y.al, n),
-                  style: T,
+                  className: s()(O.al, n),
+                  style: C,
                   children: t,
               })
             : (0, r.jsxs)(c.DUT, {
-                  className: s()(y.a$, y.al, y.Yi, n),
-                  onClick: P,
-                  style: T,
+                  className: s()(O.a$, O.al, O.Yi, n),
+                  onClick: D,
+                  style: C,
                   children: [
                       t,
                       "text" === A &&
                           (0, r.jsx)(c.Text, {
                               color: "always-white",
                               variant: "text-xs/normal",
-                              className: y.n_,
+                              className: O.n_,
                               style: {
-                                  fontSize: v,
+                                  fontSize: I,
                               },
                               children: b.intl.format(b.t.DYAleT, {}),
                           }),
                       "icon" === A &&
                           (0, r.jsx)("div", {
-                              className: y.n_,
+                              className: O.n_,
                               children: (0, r.jsx)(c.mir, {
                                   size: "xxs",
                                   color: c.LU0.colors.WHITE.css,

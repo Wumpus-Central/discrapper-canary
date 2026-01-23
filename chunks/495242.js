@@ -1,31 +1,32 @@
 n.d(t, {
-    Z: () => h,
+    Z: () => x,
 });
 var a = n(627968);
 n(64700);
 var l = n(397927),
-    i = n(780964),
-    r = n(840065),
-    s = n(216456),
-    o = n(341915),
-    c = n(652215),
-    d = n(985018),
-    u = n(805180);
+    r = n(780964),
+    i = n(840065),
+    s = n(341915),
+    o = n(18437),
+    c = n(590202),
+    d = n(652215),
+    u = n(985018),
+    m = n(805180);
 
-function m(e) {
-    let { text: t, quest: n, sourceQuestContent: d } = e,
-        m = (0, s.Ut)();
+function p(e) {
+    let { text: t, quest: n, sourceQuestContent: u } = e,
+        p = (0, o.Ut)();
     return (0, a.jsx)(l.DUT, {
-        className: u.Z0,
+        className: m.Z0,
         onClick: () => {
-            m({
+            p({
                 questId: n.id,
-                questContent: o.uF.QUEST_BAR_V2,
-                questContentCTA: s.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
-                sourceQuestContent: d,
+                questContent: s.uF.QUEST_BAR_V2,
+                questContentCTA: c.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
+                sourceQuestContent: u,
             }),
-                (0, r.openUserSettings)(i.X.CONNECTIONS_PANEL, {
-                    section: c.nc_.CONNECTIONS,
+                (0, i.openUserSettings)(r.X.CONNECTIONS_PANEL, {
+                    section: d.nc_.CONNECTIONS,
                 });
         },
         children: (0, a.jsx)(l.Text, {
@@ -37,27 +38,27 @@ function m(e) {
     });
 }
 
-function p(e) {
+function h(e) {
     let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: l } = e;
     return t.length > 0
-        ? (0, a.jsx)(m, {
-              text: d.intl.string(d.t["qiS+xj"]),
+        ? (0, a.jsx)(p, {
+              text: u.intl.string(u.t["qiS+xj"]),
               quest: n,
               sourceQuestContent: l,
           })
         : null;
 }
 
-function h(e) {
+function x(e) {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(l.Text, {
                 color: "text-muted",
                 variant: "text-xs/medium",
-                children: d.intl.string(d.t.EJFSvD),
+                children: u.intl.string(u.t.EJFSvD),
             }),
             (0, a.jsx)(
-                p,
+                h,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
