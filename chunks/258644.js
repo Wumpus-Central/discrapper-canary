@@ -1,1 +1,1 @@
-e.exports = JSON.parse('{"eoXh7B":["Tilauksen yhteenveto"]}');
+e.exports = JSON.parse('{"Tt3O81":["Seuraava uusiminen"],"eoXh7B":["Tilauksen yhteenveto"]}');
