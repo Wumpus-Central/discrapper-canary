@@ -12,13 +12,12 @@ var r,
     u = n(84483),
     d = n(572009),
     f = n(287809),
-    p = n(166403),
-    _ = n(927813),
-    h = n(474090),
-    m = n(649032),
-    g = n(788868);
+    p = n(927813),
+    _ = n(474090),
+    h = n(649032),
+    m = n(788868);
 
-function E(e, t, n) {
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,15 +30,15 @@ function E(e, t, n) {
         e
     );
 }
-let y = 864e5,
-    b = 3e4,
-    O = 36e5,
-    v = new c.Z({
-        ttlMs: y,
+let E = 864e5,
+    y = 3e4,
+    b = 36e5,
+    O = new c.Z({
+        ttlMs: E,
     });
 
-function A() {
-    let e = v.getValue();
+function v() {
+    let e = O.getValue();
     if (null == e) return !1;
     let t = new Date();
     for (let n of e.values()) {
@@ -56,46 +55,46 @@ function A() {
     return !1;
 }
 
+function A() {
+    (0, d.I9)(f.default.getCurrentUser()) ? O.setTtl(y) : v() ? O.setTtl(b) : O.setTtl(E);
+}
+
 function I() {
-    (0, d.I9)(f.default.getCurrentUser()) ? v.setTtl(b) : A() ? v.setTtl(O) : v.setTtl(y);
+    O.setLoading();
 }
 
-function S() {
-    v.setLoading();
-}
-
-function T(e) {
+function S(e) {
     let { programRewards: t } = e;
-    if (!v.isLoading()) return !1;
+    if (!O.isLoading()) return !1;
     let n = new Map();
     t.forEach((e) => {
         n.set(e.reward_program, e);
     }),
-        v.setValue(n),
-        I();
+        O.setValue(n),
+        A();
+}
+
+function T() {
+    if (!O.isLoading()) return !1;
+    O.setError();
 }
 
 function C() {
-    if (!v.isLoading()) return !1;
-    v.setError();
+    O.clear();
 }
-
-function N() {
-    v.clear();
-}
-class R extends (r = o.Ay.PersistedStore) {
+class N extends (r = o.Ay.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(p.A, f.default), this.syncWith([p.A], () => {}), (null == e ? void 0 : e.cache) != null)) {
+        if ((this.waitFor(f.default), (null == e ? void 0 : e.cache) != null)) {
             let t = new Map(e.cache.value);
-            v.restore({
+            O.restore({
                 value: t,
                 fetchedAt: e.cache.fetchedAt,
             });
         }
-        I();
+        A();
     }
     getState() {
-        let e = v.serialize();
+        let e = O.serialize();
         return {
             cache:
                 null != e
@@ -108,14 +107,14 @@ class R extends (r = o.Ay.PersistedStore) {
     }
     passesGeneralUIInvariant(e) {
         if (!this.isInProperTreatments()) return !1;
-        if (e === m.W.NITRO) {
+        if (e === h.W.NITRO) {
             let t = this.getRewardForProgram(e);
             if (null == t) return !1;
             let n = t.next_reward_date,
                 r = t.program_current_state;
             if (null == r) return !1;
             if (null == n || "" === n) {
-                if (![m.L.PAYMENT_PROCESSING, m.L.PAYMENT_ERROR].includes(r)) return !1;
+                if (![h.L.PAYMENT_PROCESSING, h.L.PAYMENT_ERROR].includes(r)) return !1;
             } else {
                 let e = new Date(n).getTime();
                 if (Number.isNaN(e) || e < Date.now()) return !1;
@@ -125,7 +124,7 @@ class R extends (r = o.Ay.PersistedStore) {
     }
     passesProgressBarInvariant(e) {
         if (!this.isInProperTreatments()) return !1;
-        if (e === m.W.NITRO) {
+        if (e === h.W.NITRO) {
             let t = this.getRewardForProgram(e);
             if (null == t) return !1;
             let n = t.total_countdown_duration_ms;
@@ -133,27 +132,26 @@ class R extends (r = o.Ay.PersistedStore) {
             let r = t.next_reward_date;
             if (null == r || "" === r) return !1;
             let i = new Date(r).getTime();
-            if (Number.isNaN(i) || i <= Date.now() || (0, a.default)(new Date(r), new Date()) > n / _.A.Millis.DAY)
+            if (Number.isNaN(i) || i <= Date.now() || (0, a.default)(new Date(r), new Date()) > n / p.A.Millis.DAY)
                 return !1;
         }
         return !0;
     }
     hasNecessaryPremiumSubscriptionStatus() {
-        let e = p.A.getMostRecentPremiumTypeSubscription();
-        return (0, h.YE)(f.default.getCurrentUser(), g.PremiumTypes.TIER_2) && null != e && !e.isPurchasedExternally;
+        return (0, _.YE)(f.default.getCurrentUser(), m.PremiumTypes.TIER_2);
     }
     isInProperTreatments() {
         let { isInTreatment: e } = (0, u.v9)("ProgramRewardsStore");
         return e;
     }
     isFetching() {
-        return v.isLoading();
+        return O.isLoading();
     }
     isFetched() {
-        return v.isValid();
+        return O.isValid();
     }
     hasCachedValue() {
-        return null != v.getValue();
+        return null != O.getValue();
     }
     isReady() {
         return (
@@ -165,28 +163,28 @@ class R extends (r = o.Ay.PersistedStore) {
         );
     }
     shouldFetch() {
-        return !!this.isInProperTreatments() && !!this.hasNecessaryPremiumSubscriptionStatus() && v.shouldFetch();
+        return !!this.isInProperTreatments() && !!this.hasNecessaryPremiumSubscriptionStatus() && O.shouldFetch();
     }
     isError() {
-        return v.isError();
+        return O.isError();
     }
     getStatus() {
-        return v.getStatus();
+        return O.getStatus();
     }
     getRewardForProgram(e) {
         var t;
-        return null == (t = v.getValue()) ? void 0 : t.get(e);
+        return null == (t = O.getValue()) ? void 0 : t.get(e);
     }
     forceExpire() {
-        v.forceExpire();
+        O.forceExpire();
     }
 }
-E(R, "displayName", "ProgramRewardsStore"), E(R, "persistKey", "ProgramRewardsStore");
-let w = new R(l.h, {
-    LOGOUT: N,
-    PROGRAM_REWARDS_FETCH: S,
-    PROGRAM_REWARDS_FETCH_SUCCESS: T,
-    PROGRAM_REWARDS_FETCH_FAILURE: C,
-    CURRENT_USER_UPDATE: I,
-    CONNECTION_OPEN: I,
+g(N, "displayName", "ProgramRewardsStore"), g(N, "persistKey", "ProgramRewardsStore");
+let w = new N(l.h, {
+    LOGOUT: C,
+    PROGRAM_REWARDS_FETCH: I,
+    PROGRAM_REWARDS_FETCH_SUCCESS: S,
+    PROGRAM_REWARDS_FETCH_FAILURE: T,
+    CURRENT_USER_UPDATE: A,
+    CONNECTION_OPEN: A,
 });
