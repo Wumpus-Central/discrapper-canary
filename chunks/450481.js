@@ -1,61 +1,62 @@
-n.d(e, {
-    p: () => p,
+n.d(t, {
+    p: () => f,
 }),
     n(896048);
-var i = n(64700),
-    r = n(575593),
-    l = n(631670),
-    a = n(587600),
-    s = n(207803),
-    u = n(993408),
-    d = n(442759),
-    o = n(985018);
-let p = (t) => {
-    let { product: e, onSuccess: p, onError: c } = t,
-        [O, h] = i.useState(!1),
-        { firstAvatarDecoration: f, firstProfileEffect: b, firstNameplate: y } = (0, d.f5)(e),
-        A = (0, u.aw)(e)
-            ? o.intl.string(o.t.tf1ZZ4)
-            : e.type === r.R.AVATAR_DECORATION
-              ? o.intl.string(o.t.zOA4ax)
-              : e.type === r.R.NAMEPLATE
-                ? o.intl.string(o.t.gOzMvx)
-                : o.intl.string(o.t.SWm2ai);
-    return {
-        handleUseNow: i.useCallback(async () => {
-            h(!0);
-            let t = {};
-            try {
-                if ((null != f && (t.avatarDecoration = f), null != b)) {
-                    let t = (0, a.yX)({
-                        pendingProfileEffect: b,
-                    });
-                    await (0, s.gi)(t);
+var r = n(64700),
+    i = n(575593),
+    a = n(631670),
+    s = n(587600),
+    o = n(207803),
+    l = n(993408),
+    c = n(442759),
+    u = n(985018);
+let d = 6e3,
+    f = (e) => {
+        let { product: t, onSuccess: f, onError: p } = e,
+            [_, h] = r.useState(!1),
+            { firstAvatarDecoration: m, firstProfileEffect: g, firstNameplate: E } = (0, c.f5)(t),
+            y = (0, l.aw)(t)
+                ? u.intl.string(u.t.tf1ZZ4)
+                : t.type === i.R.AVATAR_DECORATION
+                  ? u.intl.string(u.t.zOA4ax)
+                  : t.type === i.R.NAMEPLATE
+                    ? u.intl.string(u.t.gOzMvx)
+                    : u.intl.string(u.t.SWm2ai);
+        return {
+            handleUseNow: r.useCallback(async () => {
+                h(!0);
+                let e = {};
+                try {
+                    if ((null != m && (e.avatarDecoration = m), null != g)) {
+                        let e = (0, s.yX)({
+                            pendingProfileEffect: g,
+                        });
+                        await (0, o.gi)(e);
+                    }
+                    null != E && (e.nameplate = E), Object.keys(e).length > 0 && (await (0, a.yu)(e));
+                    {
+                        let {
+                            ToastPosition: e,
+                            ToastType: t,
+                            createToast: r,
+                            popToast: i,
+                            showToast: a,
+                        } = await Promise.resolve().then(n.bind(n, 397927));
+                        i(),
+                            a(
+                                r(y, t.MESSAGE, {
+                                    duration: d,
+                                    position: e.TOP,
+                                }),
+                            );
+                    }
+                    null == f || f();
+                } catch (e) {
+                    null == p || p(e);
+                } finally {
+                    h(!1);
                 }
-                null != y && (t.nameplate = y), Object.keys(t).length > 0 && (await (0, l.yu)(t));
-                {
-                    let {
-                        ToastPosition: t,
-                        ToastType: e,
-                        createToast: i,
-                        popToast: r,
-                        showToast: l,
-                    } = await Promise.resolve().then(n.bind(n, 397927));
-                    r(),
-                        l(
-                            i(A, e.MESSAGE, {
-                                duration: 6e3,
-                                position: t.TOP,
-                            }),
-                        );
-                }
-                null == p || p();
-            } catch (t) {
-                null == c || c(t);
-            } finally {
-                h(!1);
-            }
-        }, [f, b, y, p, A, c]),
-        isApplying: O,
+            }, [m, g, E, f, y, p]),
+            isApplying: _,
+        };
     };
-};

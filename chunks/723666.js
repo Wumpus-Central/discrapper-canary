@@ -1,11 +1,13 @@
 n.d(t, {
-    A: () => f,
+    A: () => m,
+    d: () => h,
 });
 var r = n(627968),
     i = n(64700),
-    a = n(604238);
+    a = n(835245),
+    s = n(604238);
 
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +21,7 @@ function s(e, t, n) {
     );
 }
 
-function o(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,13 +32,13 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
 
-function l(e, t) {
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,19 +51,19 @@ function l(e, t) {
     return n;
 }
 
-function c(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : c(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function u(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -72,13 +74,13 @@ function u(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = d(e, t)), Object.getOwnPropertySymbols))
+    if (((a = f(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function d(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -88,40 +90,48 @@ function d(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-let f = (e) => {
+
+function p(e, t) {
+    if ("string" == typeof e) return e;
+    let { block: n } = e,
+        i = d(e, ["block"]),
+        s = t[n];
+    if (null == s) return null;
+    let o = (() => {
+        if ("children" in e) {
+            if (!Array.isArray(e.children) && null != e.children) return p(e.children, t);
+            if (null != e.children && e.children.length > 0) return e.children.map((e) => p(e, t));
+        }
+        return null;
+    })();
+    return (0, r.jsx)(
+        s,
+        u(l({}, i), {
+            children: o,
+        }),
+        (0, a.A)(),
+    );
+}
+
+function _(e, t) {
+    return e.children.map((e) => p(e, t));
+}
+
+function h(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.E;
+    try {
+        return _(e, t), !0;
+    } catch (e) {
+        return !1;
+    }
+}
+let m = (e) => {
     let { template: t, overrides: n } = e,
-        s = (0, a.e)({
+        a = (0, s.e)({
             overrides: n,
         }),
-        l = i.useCallback(
-            (e) => {
-                let t = (e) => {
-                    if ("string" == typeof e) return e;
-                    let { block: n } = e,
-                        i = u(e, ["block"]),
-                        a = s[n];
-                    if (null == a) return null;
-                    let l = (() => {
-                        if ("children" in e) {
-                            if (!Array.isArray(e.children) && null != e.children) return t(e.children);
-                            if (null != e.children && e.children.length > 0) return e.children.map((e) => t(e));
-                        }
-                        return null;
-                    })();
-                    return (0, r.jsx)(
-                        a,
-                        c(o({}, i), {
-                            children: l,
-                        }),
-                        Date.now(),
-                    );
-                };
-                return t(e);
-            },
-            [s],
-        ),
-        d = i.useMemo(() => t.children.map(l), [t, l]);
+        o = i.useMemo(() => _(t, a), [t, a]);
     return (0, r.jsx)("div", {
-        children: d,
+        children: o,
     });
 };

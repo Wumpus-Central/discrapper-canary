@@ -6,7 +6,7 @@ var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(985018),
-    s = n(262300),
+    s = n(39919),
     o = (function (e) {
         return (
             (e.SELECT_PAYMENT_METHOD = "SELECT_PAYMENT_METHOD"),

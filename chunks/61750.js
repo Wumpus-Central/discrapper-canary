@@ -53,7 +53,7 @@ let l = (e) => {
     (0, i.mMO)(
         async () => {
             if (t.skuId === a.Dp.FRACTIONAL_PREMIUM || t.skuId === a.Dp.ORB_PROFILE_BADGE) {
-                let { default: e } = await Promise.all([n.e("52860"), n.e("95481")]).then(n.bind(n, 328064));
+                let { default: e } = await n.e("95481").then(n.bind(n, 328064));
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -70,7 +70,7 @@ let l = (e) => {
                         ),
                     );
             }
-            let { default: e } = await Promise.all([n.e("52860"), n.e("92643")]).then(n.bind(n, 393870));
+            let { default: e } = await n.e("92643").then(n.bind(n, 393870));
             return (n) =>
                 (0, r.jsx)(
                     e,

@@ -31,9 +31,9 @@ var r = n(627968),
     C = n(837921),
     N = n(652215);
 n(436317);
-var R = n(396574);
+var w = n(396574);
 
-function w(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -58,7 +58,7 @@ function P(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -161,7 +161,6 @@ let L = (0, h.Fe)({
                 n.e("83898"),
                 n.e("4787"),
                 n.e("88974"),
-                n.e("20088"),
                 n.e("6502"),
                 n.e("79023"),
                 n.e("28979"),
@@ -172,9 +171,8 @@ let L = (0, h.Fe)({
                 n.e("74492"),
                 n.e("34160"),
                 n.e("33563"),
-                n.e("21724"),
                 n.e("97492"),
-                n.e("22477"),
+                n.e("36054"),
                 n.e("28636"),
                 n.e("46636"),
                 n.e("71853"),
@@ -250,12 +248,12 @@ let L = (0, h.Fe)({
         webpackId: 611861,
         name: "Overlay",
     }),
-    X = (0, h.Fe)({
+    Z = (0, h.Fe)({
         createPromise: () => n.e("66708").then(n.bind(n, 303174)),
         webpackId: 303174,
         name: "SuspendedUserSafetyHubPage",
     }),
-    Z = (0, h.Fe)({
+    X = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("91227"), n.e("71791")]).then(n.bind(n, 125820)),
         webpackId: 125820,
         name: "QuestsLandingPage",
@@ -265,12 +263,12 @@ let L = (0, h.Fe)({
         webpackId: 589877,
         name: "QuestPreviewLandingPage",
     }),
-    $ = (0, h.Fe)({
+    J = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("34917"), n.e("81881")]).then(n.bind(n, 519716)),
         webpackId: 519716,
         name: "ConnectionsAuthorizeContinue",
     }),
-    J = (0, h.Fe)({
+    $ = (0, h.Fe)({
         createPromise: () => n.e("15243").then(n.bind(n, 998345)),
         webpackId: 998345,
         name: "ApplicationDirectoryRoutes",
@@ -307,7 +305,7 @@ class ei extends i.Component {
             (e =
                 n === g.p.IN_PROGRESS
                     ? null
-                    : R.VP
+                    : w.VP
                       ? T.isPlatformEmbedded
                           ? (0, r.jsxs)(s.dO, {
                                 children: [
@@ -315,7 +313,7 @@ class ei extends i.Component {
                                         ? null
                                         : (0, r.jsx)(s.qh, {
                                               path: N.BVt.ACCOUNT_STANDING,
-                                              component: X,
+                                              component: Z,
                                           }),
                                     (0, r.jsx)(s.qh, {
                                         exact: !0,
@@ -424,7 +422,7 @@ class ei extends i.Component {
                                     }),
                                     (0, r.jsx)(_.A, {
                                         path: N.BVt.QUESTS(":questId"),
-                                        component: Z,
+                                        component: X,
                                         impressionName: o.ImpressionNames.QUESTS_LANDING_PAGE,
                                         impressionProperties: (e) => {
                                             let { computedMatch: t } = e;
@@ -463,7 +461,7 @@ class ei extends i.Component {
                                     }),
                                     (0, r.jsx)(_.A, {
                                         path: N.BVt.CONNECTIONS_AUTHORIZE_CONTINUE(":type"),
-                                        component: $,
+                                        component: J,
                                     }),
                                     (0, r.jsx)(_.A, {
                                         path: N.BVt.CONNECTIONS_SUCCESS(":type"),
@@ -550,13 +548,13 @@ class ei extends i.Component {
                                         ? null
                                         : (0, r.jsx)(s.qh, {
                                               path: [N.BVt.ACCOUNT_STANDING],
-                                              component: X,
+                                              component: Z,
                                           }),
                                     t
                                         ? null
                                         : (0, r.jsx)(s.qh, {
                                               path: [N.BVt.APPLICATION_DIRECTORY],
-                                              component: J,
+                                              component: $,
                                           }),
                                     t
                                         ? null
