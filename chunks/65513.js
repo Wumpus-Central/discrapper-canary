@@ -15,13 +15,13 @@ var r = n(627968),
     u = n(397927),
     d = n(770178),
     p = n(736653),
-    f = n(975807),
-    h = n(151252),
-    A = n(954571),
-    g = n(216456),
+    h = n(975807),
+    g = n(151252),
+    f = n(954571),
     m = n(859703),
-    b = n(341915),
-    _ = n(545986),
+    A = n(341915),
+    _ = n(590202),
+    b = n(545986),
     E = n(654487),
     O = n(652215),
     y = n(818348),
@@ -114,7 +114,7 @@ function T(e) {
     let { config: t, onQuestCtaClick: n } = e,
         l = (0, s.zy)(),
         T = (0, s.W6)(),
-        { enabled: j } = (0, h.Z)({
+        { enabled: j } = (0, g.Z)({
             location: E.rE.QUEST_HOME_DESKTOP,
         }),
         x = (0, p.Ay)(),
@@ -128,9 +128,9 @@ function T(e) {
         D = (0, c.bG)([m.A], () => m.A.quests);
     return (
         i.useEffect(() => {
-            A.default.track(
+            f.default.track(
                 O.HAw.QUEST_CONTENT_VIEWED,
-                C(S({}, (0, g.fF)(b.uF.QUEST_HOME_TAKEOVER)), {
+                C(S({}, (0, _.fF)(A.uF.QUEST_HOME_TAKEOVER)), {
                     quest_id: t.campaignId,
                     is_targeted: !1,
                 }),
@@ -193,17 +193,17 @@ function T(e) {
                                         children: [
                                             (0, r.jsx)(u.Button, {
                                                 onClick: () => {
-                                                    (0, f.A)(t.ctaSponsorUrl.url),
-                                                        A.default.track(
+                                                    (0, h.A)(t.ctaSponsorUrl.url),
+                                                        f.default.track(
                                                             O.HAw.QUEST_CONTENT_CLICKED,
                                                             S(
                                                                 {
                                                                     quest_id: t.campaignId,
-                                                                    cta_name: g.Cy.OPEN_GAME_LINK,
+                                                                    cta_name: _.Cy.OPEN_GAME_LINK,
                                                                     click_id: (0, o.A)(),
                                                                     is_targeted: !1,
                                                                 },
-                                                                (0, g.fF)(b.uF.QUEST_HOME_TAKEOVER),
+                                                                (0, _.fF)(A.uF.QUEST_HOME_TAKEOVER),
                                                             ),
                                                         );
                                                 },
@@ -224,20 +224,20 @@ function T(e) {
                                                                   ),
                                                                       null == n || n(),
                                                                       window.requestIdleCallback(() => {
-                                                                          (0, _.navigateToQuestHome)({
+                                                                          (0, b.navigateToQuestHome)({
                                                                               questId: e.questId,
                                                                           });
                                                                       }),
-                                                                      A.default.track(
+                                                                      f.default.track(
                                                                           O.HAw.QUEST_CONTENT_CLICKED,
                                                                           S(
                                                                               {
                                                                                   quest_id: t.campaignId,
-                                                                                  cta_name: g.Cy.LEARN_MORE,
+                                                                                  cta_name: _.Cy.VIEW_QUESTS,
                                                                                   click_id: (0, o.A)(),
                                                                                   is_targeted: !1,
                                                                               },
-                                                                              (0, g.fF)(b.uF.QUEST_HOME_TAKEOVER),
+                                                                              (0, _.fF)(A.uF.QUEST_HOME_TAKEOVER),
                                                                           ),
                                                                       );
                                                               },
