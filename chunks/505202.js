@@ -83,57 +83,58 @@ function b(e) {
             subtext: v,
             subtextLineClamp: A,
             hasSubmenu: I,
-            disabled: S,
-            isFocused: T,
-            menuItemProps: C,
-            action: N,
-            onClose: w,
-            onFocus: R,
-            className: P,
-            focusedClassName: D,
-            dontCloseOnActionIfHoldingShiftKey: x,
-            dontCloseOnAction: L,
-            iconProps: j,
+            loading: S,
+            disabled: T,
+            isFocused: C,
+            menuItemProps: N,
+            action: w,
+            onClose: R,
+            onFocus: P,
+            className: D,
+            focusedClassName: x,
+            dontCloseOnActionIfHoldingShiftKey: L,
+            dontCloseOnAction: j,
+            iconProps: M,
         } = e,
-        { onSelect: M, onInteraction: k } = i.useContext(c.x),
-        U = i.useRef(null),
-        G = i.useCallback(
+        { onSelect: k, onInteraction: U } = i.useContext(c.x),
+        G = i.useRef(null),
+        V = i.useCallback(
             (e) => {
                 var t;
                 if (
-                    (null == k ||
-                        k({
+                    (null == U ||
+                        U({
                             type: c.Q.DEFAULT,
                         }),
-                    null == N)
+                    null == w)
                 )
                     return !1;
-                (e.shiftKey && x) || L || w(),
+                (e.shiftKey && L) || j || R(),
                     e.persist(),
-                    null == M || M(),
-                    (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => N(e));
+                    null == k || k(),
+                    (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => w(e));
             },
-            [N, w, M, x, L, k],
+            [w, R, k, L, j, U],
         );
     return (
         i.useEffect(() => {
-            T && ((0, u.Y)(U), null == R || R());
-        }, [T, R]),
+            C && ((0, u.Y)(G), null == P || P());
+        }, [C, P]),
         (0, r.jsxs)(
             o.DUT,
             y(
                 g(
                     {
-                        innerRef: U,
-                        className: s()(h.item, h.labelContainer, _.jV[t], P, {
-                            [h.disabled]: S,
-                            [h.focused]: T,
-                            [null != D ? D : ""]: T,
+                        innerRef: G,
+                        className: s()(h.item, h.labelContainer, _.jV[t], D, {
+                            [h.disabled]: T,
+                            [h.focused]: C,
+                            [null != x ? x : ""]: C,
                         }),
-                        onClick: S ? void 0 : G,
-                        "aria-disabled": S,
+                        onClick: T ? void 0 : V,
+                        "aria-disabled": T,
                     },
-                    C,
+                    N,
                 ),
                 {
                     "data-menu-item": "true",
@@ -148,10 +149,10 @@ function b(e) {
                                             {
                                                 color: "currentColor",
                                             },
-                                            j,
+                                            M,
                                         ),
                                         {
-                                            className: s()(h.icon, null == j ? void 0 : j.className),
+                                            className: s()(h.icon, null == M ? void 0 : M.className),
                                         },
                                     ),
                                 ),
@@ -159,7 +160,7 @@ function b(e) {
                         null != b &&
                             (0, r.jsx)(p.B, {
                                 accessory: b,
-                                isFocused: T,
+                                isFocused: C,
                             }),
                         (0, r.jsxs)("div", {
                             className: h.label,
@@ -183,6 +184,13 @@ function b(e) {
                                 className: h.hintContainer,
                                 children: (0, l.J)(O, e),
                             }),
+                        S &&
+                            (0, r.jsx)("div", {
+                                className: h.iconContainer,
+                                children: (0, r.jsx)(o.y$y, {
+                                    type: o.y$y.Type.PULSING_ELLIPSIS,
+                                }),
+                            }),
                         (0, d.O)(m)
                             ? m
                             : null != m &&
@@ -195,10 +203,10 @@ function b(e) {
                                               {
                                                   color: "currentColor",
                                               },
-                                              j,
+                                              M,
                                           ),
                                           {
-                                              className: s()(h.icon, null == j ? void 0 : j.className),
+                                              className: s()(h.icon, null == M ? void 0 : M.className),
                                           },
                                       ),
                                   ),

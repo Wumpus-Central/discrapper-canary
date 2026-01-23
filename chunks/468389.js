@@ -1,5 +1,5 @@
 i.d(e, {
-    A: () => K,
+    A: () => Q,
 }),
     i(896048),
     i(321073);
@@ -15,15 +15,15 @@ var l = i(311907),
     s = i(655116),
     p = i(160768),
     A = i(341335),
-    y = i(286617),
-    I = i(533207),
-    b = i(881335),
+    b = i(286617),
+    y = i(533207),
+    I = i(881335),
     f = i(961350),
     v = i(734057),
     O = i(498642),
-    j = i(71393),
-    E = i(576705),
-    g = i(290863),
+    g = i(71393),
+    j = i(576705),
+    E = i(290863),
     m = i(994500),
     h = i(309010),
     S = i(461213),
@@ -33,29 +33,29 @@ var l = i(311907),
     C = i(562153),
     P = i(795816),
     x = i(933958),
-    L = i(447031),
-    D = i(170148),
+    D = i(447031),
+    L = i(170148),
     U = i(902169),
-    G = i(969151),
-    w = i(550151),
+    w = i(969151),
+    G = i(550151),
     V = i(833349),
     Y = i(765379),
     k = i(946255),
     M = i(360469),
     R = i(652215),
     J = i(272984),
-    $ = i(985018);
+    K = i(985018);
 
-function K(t, e) {
-    let { analyticsLocations: K } = (0, c.Ay)(),
-        Q = (0, l.bG)([_.default], () => _.default.getCurrentUser()),
-        X = (0, l.bG)([x.Ay], () => x.Ay.getSelfEmbeddedActivities()),
+function Q(t, e) {
+    let { analyticsLocations: Q } = (0, c.Ay)(),
+        X = (0, l.bG)([_.default], () => _.default.getCurrentUser()),
+        $ = (0, l.bG)([x.Ay], () => x.Ay.getSelfEmbeddedActivities()),
         B = (0, l.yK)([S.A], () =>
             S.A.getActivities().filter(
-                (t) => null == t.application_id || !(null == X ? void 0 : X.has(t.application_id)),
+                (t) => null == t.application_id || !(null == $ ? void 0 : $.has(t.application_id)),
             ),
         ),
-        H = (0, l.yK)([g.A], () => (null != e ? g.A.getActivities(e.id, null == t ? void 0 : t.getGuildId()) : []), [
+        H = (0, l.yK)([E.A], () => (null != e ? E.A.getActivities(e.id, null == t ? void 0 : t.getGuildId()) : []), [
             e,
             t,
         ]),
@@ -68,7 +68,7 @@ function K(t, e) {
                   })
                 : i;
         }, [e, t]),
-        F = (0, l.bG)([E.A], () => null == t || t.isPrivate() || E.A.can(R.xBc.SEND_MESSAGES, t), [t]),
+        F = (0, l.bG)([j.A], () => null == t || t.isPrivate() || j.A.can(R.xBc.SEND_MESSAGES, t), [t]),
         Z = (0, l.yK)(
             [T.A],
             () => [
@@ -85,48 +85,48 @@ function K(t, e) {
         ]),
         z = null == t ? void 0 : t.id,
         tt = (0, l.yK)(
-            [v.A, j.A, O.A, m.A, h.A, N.A, E.A],
+            [v.A, g.A, O.A, m.A, h.A, N.A, j.A],
             () => [
                 ...H.map((t) =>
                     (0, U.A)({
-                        user: null != e ? e : Q,
+                        user: null != e ? e : X,
                         activity: t,
                         application: W.find((e) => (null == e ? void 0 : e.id) === t.application_id),
                         channelId: z,
-                        currentUser: Q,
+                        currentUser: X,
                         isEmbedded: (0, Y.A)(t),
                         ChannelStore: v.A,
-                        GuildStore: j.A,
+                        GuildStore: g.A,
                         GuildMemberCountStore: O.A,
                         RelationshipStore: m.A,
                         SelectedChannelStore: h.A,
                         VoiceStateStore: N.A,
-                        PermissionStore: E.A,
+                        PermissionStore: j.A,
                     }),
                 ),
                 ...q.map((t) => {
-                    let i = null != e ? e : Q;
+                    let i = null != e ? e : X;
                     return (
                         null != i &&
-                        (0, w.Ay)({
+                        (0, G.Ay)({
                             userId: i.id,
                             application: W.find((e) => (null == e ? void 0 : e.id) === t.applicationId),
                             channelId: z,
-                            currentUser: Q,
-                            isActivitiesEnabledForCurrentPlatform: (0, D.A)(),
+                            currentUser: X,
+                            isActivitiesEnabledForCurrentPlatform: (0, L.A)(),
                             ChannelStore: v.A,
-                            GuildStore: j.A,
+                            GuildStore: g.A,
                             VoiceStateStore: N.A,
-                            PermissionStore: E.A,
-                        }) === w.Gy.CAN_JOIN
+                            PermissionStore: j.A,
+                        }) === G.Gy.CAN_JOIN
                     );
                 }),
             ],
-            [H, W, z, Q, q, e],
+            [H, W, z, X, q, e],
         ),
         te = (0, l.yK)(
             [s.A, f.default],
-            () => H.map((t) => (t.type === R.$pd.LISTENING && null != e ? (0, y.A)(s.A, f.default, e, t) : void 0)),
+            () => H.map((t) => (t.type === R.$pd.LISTENING && null != e ? (0, b.A)(s.A, f.default, e, t) : void 0)),
             [e, H],
         ),
         ti = (0, d.p)();
@@ -161,7 +161,7 @@ function K(t, e) {
                     intent: M.W9.PLAY,
                     embedded: i,
                     locationObject: ti.location,
-                    analyticsLocations: K,
+                    analyticsLocations: Q,
                 }),
                 !i)
             ) {
@@ -175,24 +175,24 @@ function K(t, e) {
                     applicationId: t.application_id,
                     partyId: null == (a = t.party) ? void 0 : a.id,
                     locationObject: ti.location,
-                    analyticsLocations: K,
+                    analyticsLocations: Q,
                 });
             }
         },
         ta = async (e) => {
-            await (0, L.A)({
+            await (0, D.A)({
                 applicationId: e.applicationId,
                 activityChannelId: null == t ? void 0 : t.id,
                 locationObject: ti.location,
-                analyticsLocations: K,
+                analyticsLocations: Q,
             });
         },
         to = [];
     return (
-        null == X ||
-            X.forEach((l) => {
+        null == $ ||
+            $.forEach((l) => {
                 let o = (null == e ? void 0 : e.id) != null && l.userIds.has(null == e ? void 0 : e.id),
-                    r = E.A.can(R.xBc.CREATE_INSTANT_INVITE, t),
+                    r = j.A.can(R.xBc.CREATE_INSTANT_INVITE, t),
                     d = W.find((t) => (null == t ? void 0 : t.id) === l.applicationId);
                 null != l.launchId &&
                     !o &&
@@ -203,12 +203,12 @@ function K(t, e) {
                             a.Drp,
                             {
                                 id: "invite-to-join-embedded",
-                                label: $.intl.string($.t["3fRySx"]),
+                                label: K.intl.string(K.t["3fRySx"]),
                                 subtext: d.name,
                                 action: () => {
                                     ((l, o) => {
                                         let r = v.A.getChannel(l),
-                                            d = null == r ? void 0 : j.A.getGuild(r.guild_id);
+                                            d = null == r ? void 0 : g.A.getGuild(r.guild_id);
                                         if (null != r && null != d) {
                                             if (null != e)
                                                 return P.Ue({
@@ -315,7 +315,7 @@ function K(t, e) {
                                                     },
                                                 });
                                         }
-                                    })((0, G.H)(l.location), l.applicationId);
+                                    })((0, w.H)(l.location), l.applicationId);
                                 },
                             },
                             "self-embedded-".concat(l.applicationId),
@@ -330,7 +330,7 @@ function K(t, e) {
                               a.Drp,
                               {
                                   id: "invite-to-join",
-                                  label: $.intl.string($.t["3fRySx"]),
+                                  label: K.intl.string(K.t["3fRySx"]),
                                   subtext: t.name,
                                   action: () => tn(R.xL.JOIN, t),
                               },
@@ -344,7 +344,7 @@ function K(t, e) {
                               a.Drp,
                               {
                                   id: "invite-to-listen",
-                                  label: $.intl.string($.t["5vvGpV"]),
+                                  label: K.intl.string(K.t["5vvGpV"]),
                                   subtext: t.name,
                                   action: () => tn(R.xL.LISTEN, t),
                               },
@@ -370,13 +370,9 @@ function K(t, e) {
                             a.Drp,
                             {
                                 id: "join",
-                                label: t ? $.intl.string($.t.bf6Ci7) : $.intl.string($.t.VJlc0S),
+                                label: t ? K.intl.string(K.t.bf6Ci7) : K.intl.string(K.t.VJlc0S),
                                 disabled: t,
-                                hint: t
-                                    ? (0, n.jsx)(a.y$y, {
-                                          type: a.y$y.Type.PULSING_ELLIPSIS,
-                                      })
-                                    : null,
+                                loading: t,
                                 subtext: i.name,
                                 action: () => tl(i),
                             },
@@ -389,7 +385,7 @@ function K(t, e) {
                             a.Drp,
                             {
                                 id: "ask-to-join",
-                                label: $.intl.string($.t.OKsSCR),
+                                label: K.intl.string(K.t.OKsSCR),
                                 subtext: i.name,
                                 action: () => tn(R.xL.JOIN_REQUEST, i),
                             },
@@ -404,7 +400,7 @@ function K(t, e) {
                         a.Drp,
                         {
                             id: "spotify-play-".concat(i.session_id),
-                            action: () => (0, b.A)(o, J.Qp.USER_ACTIVITY_PLAY),
+                            action: () => (0, I.A)(o, J.Qp.USER_ACTIVITY_PLAY),
                             label: (0, p.A)(o, J.Qp.USER_ACTIVITY_PLAY),
                             subtext: r
                                 ? (0, A.A)(
@@ -421,8 +417,8 @@ function K(t, e) {
                         a.Drp,
                         {
                             id: "spotify-sync-".concat(i.session_id),
-                            action: () => (0, I.A)(o, J.Qp.USER_ACTIVITY_SYNC),
-                            label: $.intl.string($.t.gXYoq2),
+                            action: () => (0, y.A)(o, J.Qp.USER_ACTIVITY_SYNC),
+                            label: K.intl.string(K.t.gXYoq2),
                             subtext: d
                                 ? (0, A.A)(
                                       o,
@@ -439,11 +435,11 @@ function K(t, e) {
         }),
         q.forEach((t, e) => {
             var i;
-            let l = t.userIds.has(null != (i = null == Q ? void 0 : Q.id) ? i : R.dJq),
+            let l = t.userIds.has(null != (i = null == X ? void 0 : X.id) ? i : R.dJq),
                 o = e + H.length,
                 r = Z[o] || l,
-                d = $.intl.string($.t["4i2vj+"]);
-            l ? (d = $.intl.string($.t["0OiwfH"])) : Z[o] && (d = $.intl.string($.t.bf6Ci7));
+                d = K.intl.string(K.t["4i2vj+"]);
+            l ? (d = K.intl.string(K.t["0OiwfH"])) : Z[o] && (d = K.intl.string(K.t.bf6Ci7));
             let c = W.find((e) => (null == e ? void 0 : e.id) === t.applicationId);
             tt[o] &&
                 null != c &&
@@ -454,11 +450,7 @@ function K(t, e) {
                             id: "embedded-activity-join-".concat(t.applicationId),
                             label: d,
                             disabled: r,
-                            hint: Z[o]
-                                ? (0, n.jsx)(a.y$y, {
-                                      type: a.y$y.Type.PULSING_ELLIPSIS,
-                                  })
-                                : null,
+                            loading: Z[o],
                             subtext: c.name,
                             action: () => ta(t),
                         },
