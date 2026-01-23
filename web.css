@@ -74718,14 +74718,14 @@ screen and (max-width:485px) {
 }
 
 .username_b7f4b4 {
+    color: var(--text-muted);
     font-size: 12px;
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-normal);
     line-height: 14px
 }
 
 .tagFaded_b7f4b4 {
-    flex-shrink: 10;
-    opacity: .6
+    flex-shrink: 10
 }
 
 .discriminator_b7f4b4 {
