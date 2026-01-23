@@ -12,10 +12,10 @@ var o = n(381247),
     u = n(794873);
 
 function d(e) {
-    let { label: t, lineItems: n, currency: a, defaultExpanded: l = !1 } = e,
-        c = n.length > 0,
-        d = i.useMemo(() => n.reduce((e, t) => e + t.amount, 0), [n]),
-        _ = i.useMemo(() => n.reduce((e, t) => (t.amount < 0 ? e + Math.abs(t.amount) : e), 0), [n]);
+    let { label: t, totalDueLabel: n, lineItems: a, currency: l, defaultExpanded: c = !1 } = e,
+        d = a.length > 0,
+        _ = i.useMemo(() => a.reduce((e, t) => e + t.amount, 0), [a]),
+        h = i.useMemo(() => a.reduce((e, t) => (t.amount < 0 ? e + Math.abs(t.amount) : e), 0), [a]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
@@ -23,20 +23,20 @@ function d(e) {
             }),
             (0, r.jsx)(o.h, {
                 label: t,
-                defaultExpanded: l,
-                isDisabled: !c,
+                defaultExpanded: c,
+                isDisabled: !d,
                 collapsedContent: (0, r.jsx)(f, {
-                    amount: _,
-                    currency: a,
+                    amount: h,
+                    currency: l,
                 }),
-                children: n.map((e) => {
+                children: a.map((e) => {
                     let { id: t, label: n, amount: i } = e,
-                        l = (0, s.$g)(i, a);
+                        a = (0, s.$g)(i, l);
                     return (0, r.jsx)(
                         o.i,
                         {
                             label: n,
-                            value: l,
+                            value: a,
                             valueColor: i < 0 ? "text-feedback-positive" : "text-muted",
                         },
                         t,
@@ -44,8 +44,9 @@ function d(e) {
                 }),
             }),
             (0, r.jsx)(p, {
-                amount: d,
-                currency: a,
+                amount: _,
+                currency: l,
+                label: n,
             }),
         ],
     });
@@ -65,18 +66,18 @@ function f(e) {
 }
 
 function p(e) {
-    let { amount: t, currency: n } = e,
-        i = (0, s.$g)(t, n);
+    let { amount: t, currency: n, label: i } = e,
+        o = (0, s.$g)(t, n);
     return (0, r.jsxs)(a.Text, {
         variant: "text-lg/semibold",
         color: "text-strong",
         className: u.p,
         children: [
             (0, r.jsx)("span", {
-                children: c.intl.string(l.default.Zxav97),
+                children: null != i ? i : c.intl.string(l.default.Zxav97),
             }),
             (0, r.jsx)("span", {
-                children: i,
+                children: o,
             }),
         ],
     });

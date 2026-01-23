@@ -1,7 +1,8 @@
 n.d(t, {
-    Ol: () => y,
-    Q8: () => m,
-    qi: () => O,
+    Ol: () => I,
+    Q8: () => b,
+    Sb: () => S,
+    qi: () => T,
 }),
     n(638769),
     n(65821),
@@ -18,7 +19,63 @@ var r = n(284009),
     f = n(519412),
     p = n(985018);
 
-function _(e) {
+function _(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                _(e, t, n[t]);
+            });
+    }
+    return e;
+}
+
+function m(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : m(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+
+function E(e) {
     let t = e.slice();
     return (
         t.sort((e, t) => {
@@ -30,18 +87,32 @@ function _(e) {
     );
 }
 
-function h(e) {
+function y(e) {
     return e.filter((e) => {
         let { subscriptionPlanId: t } = e;
         return t !== u.gD.NONE_MONTH && t !== u.gD.NONE_YEAR;
     });
 }
-let m = (e) => h(_((0, c.Z)(e.invoiceItems))),
-    g = (e, t) => {
+let b = (e, t) => {
+        let n = null != t ? (0, o.Ge)(t) : null,
+            { intervalType: r, intervalCount: i } = (0, o.Ge)(e),
+            a = null != n && (n.intervalType !== r || n.intervalCount !== i);
+        return y(E((0, c.Z)(e.invoiceItems))).map((e) =>
+            g(h({}, e), {
+                showGuildSubscriptionAdjustmentTooltip:
+                    a &&
+                    (e.subscriptionPlanId === u.gD.PREMIUM_MONTH_GUILD ||
+                        e.subscriptionPlanId === u.gD.PREMIUM_YEAR_GUILD ||
+                        e.subscriptionPlanId === u.gD.PREMIUM_3_MONTH_GUILD ||
+                        e.subscriptionPlanId === u.gD.PREMIUM_6_MONTH_GUILD),
+            }),
+        );
+    },
+    O = (e, t) => {
         var n;
         return (null != (n = e.discounts) ? n : []).some((e) => e.type === t);
     },
-    E = (e, t) => {
+    v = (e, t) => {
         var n, r, i;
         return (
             e.subscriptionPlanPrice -
@@ -51,8 +122,8 @@ let m = (e) => h(_((0, c.Z)(e.invoiceItems))),
         );
     };
 
-function b(e, t, n, r) {
-    let i = g(e, a.iS.PREMIUM_TRIAL);
+function A(e, t, n, r) {
+    let i = O(e, a.iS.PREMIUM_TRIAL);
     switch (e.subscriptionPlanId) {
         case u.gD.PREMIUM_GROUP_MONTH:
             return p.intl.formatToPlainString(f.default["8bPDtb"], {
@@ -101,7 +172,7 @@ function b(e, t, n, r) {
     }
     throw Error("Unexpected invoice plan: ".concat(e.subscriptionPlanId));
 }
-let y = (e, t) => {
+let I = (e, t) => {
         var n;
         let {
                 premiumTrialOffer: r,
@@ -113,7 +184,7 @@ let y = (e, t) => {
             p = null != c ? c : s.A.get(e.subscriptionPlanId),
             _ = null == r ? void 0 : r.subscription_trial;
         i()(null != p, "Missing subscriptionPlan");
-        let h = b(
+        let h = A(
                 e,
                 p,
                 d,
@@ -126,77 +197,83 @@ let y = (e, t) => {
             g = (0, l.$g)(m, f),
             E = d ? g : (0, l.CE)(g, p.interval, p.intervalCount),
             y = null != (n = e.discounts) ? n : [],
-            O = y.find((e) => e.type === a.iS.SUBSCRIPTION_PLAN),
-            A = y.find((e) => e.type === a.iS.PREMIUM_TRIAL),
+            b = y.find((e) => e.type === a.iS.SUBSCRIPTION_PLAN),
+            O = y.find((e) => e.type === a.iS.PREMIUM_TRIAL),
             v = y.find((e) => e.type === a.iS.ENTITLEMENT),
-            S = y.reduce((e, t) => e + t.amount, 0);
+            I = y.reduce((e, t) => e + t.amount, 0);
         return {
             label: h,
             value: E,
             amount: m,
-            amountWithoutDiscount: e.amount + S,
-            discountAmountOff: S,
+            amountWithoutDiscount: e.amount + I,
+            discountAmountOff: I,
             formattedPrice: g,
             subscriptionPlan: p,
             subscriptionTrial: _,
-            trialDiscount: A,
-            subscriptionDiscount: O,
+            trialDiscount: O,
+            subscriptionDiscount: b,
             entitlementDiscount: v,
         };
     },
-    O = (e, t) => {
-        let n = (0, c.Z)(e.invoiceItems),
-            r = n.find((e) => e.subscriptionPlanId === t.id);
-        i()(null != r, "Expected newPlanInvoiceItem");
-        let s = n.find((e) => !(0, o.z4)(e.subscriptionPlanId) && e.amount < 0),
-            d = n.find(
+    S = (e, t) => {
+        let n = (0, c.Z)(e.invoiceItems);
+        return {
+            subscriptionPlanInvoiceItem: n.find((e) => e.subscriptionPlanId === t.id),
+            coalescedInvoiceItems: n,
+        };
+    },
+    T = (e, t) => {
+        let { subscriptionPlanInvoiceItem: n, coalescedInvoiceItems: r } = S(e, t);
+        i()(null != n, "Expected newPlanInvoiceItem");
+        let s = r.find((e) => !(0, o.z4)(e.subscriptionPlanId) && e.amount < 0),
+            c = r.find(
                 (e) =>
                     null == e.subscriptionPlanId &&
                     null != e.discounts &&
                     e.discounts.find((e) => e.type === a.iS.PREMIUM_LEGACY_UPGRADE_PROMOTION),
             ),
-            f = g(r, a.iS.PREMIUM_TRIAL),
-            _ = E(r, a.iS.SUBSCRIPTION_PLAN),
-            h = r.quantity * _,
-            m = r.amount + (null != s ? s.amount : 0) - h + (null != d ? d.amount : 0),
-            b = n.filter(
+            d = O(n, a.iS.PREMIUM_TRIAL),
+            f = v(n, a.iS.SUBSCRIPTION_PLAN),
+            _ = n.quantity * f,
+            h = n.amount + (null != s ? s.amount : 0) - _ + (null != c ? c.amount : 0),
+            m = r.filter(
                 (e) =>
                     e.subscriptionPlanId === u.gD.PREMIUM_MONTH_GUILD ||
                     e.subscriptionPlanId === u.gD.PREMIUM_YEAR_GUILD,
             ),
-            y = b.reduce((e, t) => e + t.amount, 0),
-            O = [];
+            g = m.reduce((e, t) => e + t.amount, 0),
+            E = [];
         return (
-            0 === m ||
-                f ||
-                O.push({
+            0 === h ||
+                d ||
+                E.push({
                     id: "base-plan-adjustment",
                     label: p.intl.formatToPlainString(p.t.ZSVged, {
                         planName: (0, o.ys)(t.id) ? (0, o.RH)(t.id) : t.name,
                     }),
                     tooltipText: p.intl.string(p.t.JmwQJM),
                     tooltipAriaLabel: "",
-                    value: (0, l.$g)(m, e.currency),
-                    amount: m,
+                    value: (0, l.$g)(h, e.currency),
+                    amount: h,
                 }),
-            0 !== y &&
-                O.push({
+            0 !== g &&
+                E.push({
                     id: "guild-subscription-adjustment",
                     label: p.intl.string(p.t["+as5ZZ"]),
                     tooltipText: p.intl.format(p.t.UDop9c, {}),
                     tooltipAriaLabel: p.intl.string(p.t.P68ePO),
-                    value: (0, l.$g)(y, e.currency),
-                    amount: y,
+                    value: (0, l.$g)(g, e.currency),
+                    amount: g,
                 }),
             {
-                newPlanInvoiceItem: r,
-                basePlanFullAmount: h,
-                basePlanAdjustment: m,
-                guildSubscriptionAdjustment: y,
-                isTrialItem: f,
-                invoiceAdjustmentDisplayItems: O,
-                guildSubscriptionInvoiceItems: b,
-                promotionItem: d,
+                newPlanInvoiceItem: n,
+                basePlanFullAmount: _,
+                basePlanAdjustment: h,
+                guildSubscriptionAdjustment: g,
+                isTrialItem: d,
+                invoiceAdjustmentDisplayItems: E,
+                guildSubscriptionInvoiceItems: m,
+                promotionItem: c,
                 basePlanCreditItem: s,
             }
         );

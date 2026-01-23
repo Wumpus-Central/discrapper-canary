@@ -1,26 +1,30 @@
 n.d(t, {
-    _: () => R,
+    _: () => j,
 }),
     n(896048),
     n(321073);
 var r = n(627968),
     i = n(397927),
     a = n(854354),
-    s = n(270537),
-    o = n(669510),
-    l = n(234419),
-    c = n(446929),
-    u = n(692440),
-    d = n(815545),
-    f = n(494230),
-    p = n(299301),
-    _ = n(927578),
-    h = n(788868),
-    m = n(985018),
-    g = n(756366),
-    E = n(220264);
+    s = n(93159),
+    o = n(270537),
+    l = n(241989),
+    c = n(669510),
+    u = n(234419),
+    d = n(446929),
+    f = n(692440),
+    p = n(815545),
+    _ = n(494230),
+    h = n(299301),
+    m = n(927578),
+    g = n(580630),
+    E = n(427262),
+    y = n(788868),
+    b = n(985018),
+    O = n(756366),
+    v = n(220264);
 
-function b(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +38,7 @@ function b(e, t, n) {
     );
 }
 
-function y(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,13 +49,13 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
 }
 
-function O(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,28 +68,18 @@ function O(e, t) {
     return n;
 }
 
-function A(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let v = (e, t) => {
-        if (1 === t)
-            switch (e) {
-                case h.WT.MONTH:
-                    return m.intl.string(g.default.ajn5LL);
-                case h.WT.YEAR:
-                    return m.intl.string(g.default.FNijW7);
-            }
-        return m.intl.string(g.default.jxUJkZ);
-    },
-    S = (e, t, n) => {
+let C = (e, t, n) => {
         var r;
         return {
             id: null != (r = e.discount_id) ? r : t,
@@ -93,35 +87,68 @@ let v = (e, t) => {
             amount: -e.amount,
         };
     },
-    I = (e, t) => {
+    N = (e) => {
+        let { interval: t } = e,
+            n = (0, m.m6)(e.id);
+        switch (t) {
+            case y.WT.MONTH:
+                let r = b.intl.string(O.default.ZnoRKt);
+                return n === y.PremiumTypes.TIER_0
+                    ? b.intl.formatToPlainString(O.default.Z9mu9q, {
+                          timeInterval: r,
+                      })
+                    : b.intl.formatToPlainString(O.default["8Jt4Dw"], {
+                          timeInterval: r,
+                      });
+            case y.WT.YEAR:
+                let i = b.intl.string(O.default.Xrg8aC);
+                return n === y.PremiumTypes.TIER_0
+                    ? b.intl.formatToPlainString(O.default.Z9mu9q, {
+                          timeInterval: i,
+                      })
+                    : b.intl.formatToPlainString(O.default["8Jt4Dw"], {
+                          timeInterval: i,
+                      });
+            case y.WT.DAY:
+                let a = b.intl.string(O.default.WmjxYl);
+                return n === y.PremiumTypes.TIER_0
+                    ? b.intl.formatToPlainString(O.default.Z9mu9q, {
+                          timeInterval: a,
+                      })
+                    : b.intl.formatToPlainString(O.default["8Jt4Dw"], {
+                          timeInterval: a,
+                      });
+        }
+    },
+    w = (e, t) => {
         let {
                 isPrepaidPaymentSource: n,
                 invoiceSummaryTypeWithPreview: r,
                 subscriptionPlan: i,
                 premiumTrialOffer: a,
             } = t,
-            { newPlanInvoiceItem: s, basePlanFullAmount: o, invoiceAdjustmentDisplayItems: l } = (0, d.qi)(e, i),
-            c = r.type === p.N$.PREMIUM_DEFAULT ? o : void 0,
+            { newPlanInvoiceItem: s, basePlanFullAmount: o, invoiceAdjustmentDisplayItems: l } = (0, p.qi)(e, i),
+            c = r.type === h.N$.PREMIUM_DEFAULT ? o : void 0,
             {
                 label: u,
-                amount: f,
-                amountWithoutDiscount: _,
-                subscriptionDiscount: h,
-                entitlementDiscount: E,
-                trialDiscount: b,
-            } = (0, d.Ol)(s, {
+                amount: d,
+                amountWithoutDiscount: f,
+                subscriptionDiscount: _,
+                entitlementDiscount: m,
+                trialDiscount: g,
+            } = (0, p.Ol)(s, {
                 overrideAmount: c,
                 subscriptionPlan: i,
                 premiumTrialOffer: a,
                 isPrepaidPaymentSource: n,
                 currency: e.currency,
             }),
-            y = null != h || null != E || null != b,
-            O = [
+            E = null != _ || null != m || null != g,
+            y = [
                 {
                     id: s.id,
                     label: u,
-                    amount: y ? _ : f,
+                    amount: E ? f : d,
                 },
                 ...l.map((e) => ({
                     id: e.id,
@@ -130,19 +157,19 @@ let v = (e, t) => {
                 })),
             ];
         return (
-            null != b
-                ? O.push(S(b, "trial-discount", m.intl.string(g.default["7LeLN4"])))
-                : (null != h && O.push(S(h, "subscription-discount", m.intl.string(g.default["9yHcmL"]))),
-                  null != E && O.push(S(E, "entitlement-discount", m.intl.string(m.t.A7Hpfs)))),
-            O
+            null != g
+                ? y.push(C(g, "trial-discount", b.intl.string(O.default["7LeLN4"])))
+                : (null != _ && y.push(C(_, "subscription-discount", b.intl.string(O.default["9yHcmL"]))),
+                  null != m && y.push(C(m, "entitlement-discount", b.intl.string(b.t.A7Hpfs)))),
+            y
         );
     },
-    T = (e, t) => {
+    R = (e, t) => {
         let { isCustomGift: n, isPrepaidPaymentSource: r, subscriptionPlan: i } = t;
         return [
             {
                 id: "premium-gift-line-item",
-                label: (0, u.Lw)(i, {
+                label: (0, f.Lw)(i, {
                     isCustomGift: n,
                     isPrepaidPaymentSource: r,
                 }),
@@ -150,153 +177,209 @@ let v = (e, t) => {
             },
         ];
     },
-    C = (e) => {
+    P = (e) => {
         let {
                 isPrepaidPaymentSource: t,
                 invoiceSummaryTypeWithPreview: n,
                 subscriptionPlan: i,
-                premiumTrialOffer: o,
+                premiumTrialOffer: s,
                 isCustomGift: l,
             } = e,
             { invoicePreview: c } = n,
             u =
-                n.type === p.N$.PREMIUM_GIFT
-                    ? T(c, {
+                n.type === h.N$.PREMIUM_GIFT
+                    ? R(c, {
                           isCustomGift: l,
                           isPrepaidPaymentSource: t,
                           subscriptionPlan: i,
                       })
-                    : I(c, {
+                    : w(c, {
                           isPrepaidPaymentSource: t,
                           invoiceSummaryTypeWithPreview: n,
                           subscriptionPlan: i,
-                          premiumTrialOffer: o,
+                          premiumTrialOffer: s,
                       }),
             d = (0, a.l)(c, {
                 manualLineItems: u,
                 addTaxLineItem: !0,
             });
-        return (0, r.jsx)(s.V, {
-            label: m.intl.string(g.default.eoXh7B),
+        return (0, r.jsx)(o.V, {
+            label: b.intl.string(O.default.eoXh7B),
             lineItems: d,
             currency: c.currency,
+            totalDueLabel: b.intl.string(O.default.R0cZsM),
         });
     },
-    N = (e, t) => {
-        let n = (0, d.Q8)(e),
-            { intervalType: r, intervalCount: i } = (0, _.Ge)(e),
-            a = e.currency;
+    D = (e, t, n) => {
+        let r = (0, p.Q8)(t, e),
+            { intervalType: i, intervalCount: a } = (0, m.Ge)(t),
+            s = t.currency;
         return {
-            lineItems: n.map((e) => {
-                let { subscriptionPlanPrice: n } = e,
-                    { label: r } = (0, d.Ol)(e, {
-                        premiumTrialOffer: t,
-                        currency: a,
-                    });
+            lineItems: r.map((e) => {
+                let { subscriptionPlanPrice: t, showGuildSubscriptionAdjustmentTooltip: r } = e,
+                    { label: i } = (0, p.Ol)(e, {
+                        premiumTrialOffer: n,
+                        currency: s,
+                    }),
+                    a = r ? b.intl.format(b.t.UDop9c, {}) : void 0;
                 return {
                     id: e.id,
-                    label: r,
-                    amount: n,
-                    tooltip: e.tooltipText,
+                    label: i,
+                    amount: t,
+                    tooltip: a,
                 };
             }),
-            intervalType: r,
-            intervalCount: i,
-            currency: a,
-            label: m.intl.format(g.default["57B1ks"], {
-                renewalDate: e.subscriptionPeriodEnd,
+            intervalType: i,
+            intervalCount: a,
+            currency: s,
+            label: b.intl.format(O.default["57B1ks"], {
+                renewalDate: t.subscriptionPeriodEnd,
             }),
-            totalLineItemLabel: v(r, i),
+            totalLineItemLabel: L(i, a),
         };
     },
-    R = (e) => {
+    x = (e, t, n) => {
+        var i;
+        let { isPrepaidPaymentSource: a, giftRecipient: o } = n,
+            l = e.type === h.N$.PREMIUM_GIFT,
+            { invoicePreview: c } = e,
+            u = l ? N(t) : (0, m.Mn)(t.id, !1, a),
+            d =
+                l && null != o
+                    ? {
+                          username: E.Ay.getUserTag(o, {
+                              identifiable: "never",
+                          }),
+                          avatarUrl: o.getAvatarURL(void 0, 16),
+                          nickname: E.Ay.getName(o),
+                      }
+                    : void 0,
+            f = null == o ? b.intl.string(O.default.AM9XGb) : "",
+            _ = l ? f : b.intl.string(O.default["2zUa6I"]),
+            v = (0, m.m6)(t.id) === y.PremiumTypes.TIER_0 ? (0, r.jsx)(s.DH, {}) : (0, r.jsx)(s.JW, {}),
+            { subscriptionPlanInvoiceItem: A } = (0, p.Sb)(c, t),
+            I =
+                null != (i = l ? (null == A ? void 0 : A.amount) : null == A ? void 0 : A.subscriptionPlanPrice)
+                    ? i
+                    : 0,
+            S = (0, g.$g)(I, c.currency);
+        return {
+            label: u,
+            description: _,
+            price: e.type === h.N$.PREMIUM_GIFT ? S : (0, g.CE)(S, t.interval, t.intervalCount),
+            gift: d,
+            graphic: v,
+        };
+    },
+    L = (e, t) => {
+        if (1 === t)
+            switch (e) {
+                case y.WT.MONTH:
+                    return b.intl.string(O.default.ajn5LL);
+                case y.WT.YEAR:
+                    return b.intl.string(O.default.FNijW7);
+            }
+        return b.intl.string(O.default.jxUJkZ);
+    },
+    j = (e) => {
         let { referralTrialOfferId: t, selectedPlanId: n, priceOptions: a } = e,
             {
                 error: s,
-                isGift: u,
-                oneTimePurchaseNitroGiftInvoicePreview: d,
-                subscriptionPeriodEnd: _,
-                trialInvoicePreview: h,
-                proratedInvoicePreview: g,
-                renewalInvoicePreview: b,
+                isGift: o,
+                giftRecipient: f,
+                oneTimePurchaseNitroGiftInvoicePreview: p,
+                subscriptionPeriodEnd: m,
+                trialInvoicePreview: g,
+                proratedInvoicePreview: E,
+                renewalInvoicePreview: y,
                 planSwitchLoading: O,
-                plan: v,
+                plan: A,
                 isPrepaid: S,
-                discountInvoiceItems: I,
-                premiumPlanOptions: T,
-                shouldAllowPlanSelect: R,
-                isCustomGift: w,
-            } = (0, f.L)(e),
-            P = (0, p.yf)({
+                discountInvoiceItems: C,
+                premiumPlanOptions: N,
+                shouldAllowPlanSelect: w,
+                isCustomGift: R,
+            } = (0, _.L)(e),
+            L = (0, h.yf)({
                 error: s,
-                isGift: u,
-                oneTimePurchaseNitroGiftInvoicePreview: d,
-                trialInvoicePreview: h,
-                proratedInvoicePreview: g,
-                renewalInvoicePreview: b,
+                isGift: o,
+                oneTimePurchaseNitroGiftInvoicePreview: p,
+                trialInvoicePreview: g,
+                proratedInvoicePreview: E,
+                renewalInvoicePreview: y,
                 planSwitchLoading: O,
             }),
-            D = (0, l.V)(t),
-            x = (0, c.RO)({
+            j = (0, u.V)(t),
+            M = (0, d.RO)({
                 selectedPlanId: n,
                 priceOptions: a,
-                planOptions: T,
+                planOptions: N,
                 eligibleForMultiMonthPlans: !1,
-                subscriptionPeriodEnd: _,
-                discountInvoiceItems: I,
+                subscriptionPeriodEnd: m,
+                discountInvoiceItems: C,
             }),
-            L = (0, r.jsx)(
-                c.fJ,
-                A(
-                    y(
+            k = (0, r.jsx)(
+                d.fJ,
+                T(
+                    I(
                         {
-                            planOptions: T,
+                            planOptions: N,
                         },
-                        x,
+                        M,
                     ),
                     {
                         shouldUseUnifiedCheckoutUI: !0,
                     },
                 ),
             );
-        if (null == P || P.type === p.N$.LOADING) return null;
-        let j = (0, r.jsx)(C, {
-                invoiceSummaryTypeWithPreview: P,
-                subscriptionPlan: v,
+        if (null == L || L.type === h.N$.LOADING) return null;
+        let U = (0, r.jsx)(P, {
+                invoiceSummaryTypeWithPreview: L,
+                subscriptionPlan: A,
                 isPrepaidPaymentSource: S,
-                premiumTrialOffer: D,
-                isCustomGift: w,
+                premiumTrialOffer: j,
+                isCustomGift: R,
             }),
-            M = null;
+            G = null;
         if (
             !S &&
-            (P.type === p.N$.PREMIUM_DEFAULT || P.type === p.N$.PREMIUM_WITH_TRIAL) &&
-            null != P.renewalInvoicePreview
+            (L.type === h.N$.PREMIUM_DEFAULT || L.type === h.N$.PREMIUM_WITH_TRIAL) &&
+            null != L.renewalInvoicePreview
         ) {
-            let e = N(P.renewalInvoicePreview, D);
-            M = (0, r.jsx)(o._, y({}, e));
+            let e = D(L.invoicePreview, L.renewalInvoicePreview, j);
+            G = (0, r.jsx)(c._, I({}, e));
         }
+        let V = x(L, A, {
+                isPrepaidPaymentSource: S,
+                giftRecipient: f,
+            }),
+            F = w ? k : (0, r.jsx)(l.f7, I({}, V));
         return (0, r.jsxs)("div", {
             children: [
-                R ? L : null,
+                (0, r.jsx)("div", {
+                    style: {
+                        height: 24,
+                    },
+                }),
+                F,
                 (0, r.jsx)("div", {
                     style: {
                         height: 12,
                     },
                 }),
-                M,
+                G,
                 (0, r.jsx)(i.Text, {
                     variant: "text-md/normal",
                     color: "text-strong",
-                    className: E.S,
-                    children: m.intl.string(m.t["YH7B+D"]),
+                    className: v.S,
+                    children: b.intl.string(b.t["YH7B+D"]),
                 }),
                 (0, r.jsx)("div", {
                     style: {
                         height: 24,
                     },
                 }),
-                j,
+                U,
                 (0, r.jsx)("div", {
                     style: {
                         height: 12,
