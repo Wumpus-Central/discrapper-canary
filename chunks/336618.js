@@ -18,18 +18,18 @@ var r = n(627968),
     m = n(379848),
     g = n(532794),
     E = n(810498),
-    b = n(40493),
-    y = n(412260),
+    y = n(40493),
+    b = n(412260),
     O = n(404036),
-    A = n(594832),
-    v = n(186111),
-    S = n(287809),
-    I = n(927813),
+    v = n(594832),
+    A = n(186111),
+    I = n(287809),
+    S = n(927813),
     T = n(661191),
     C = n(240248),
     N = n(427262),
-    R = n(184761),
-    w = n(743477),
+    w = n(184761),
+    R = n(743477),
     P = n(545428),
     D = n(652215),
     x = n(49999),
@@ -94,7 +94,7 @@ function V(e, t) {
 }
 
 function F(e) {
-    let { tooltipsWithKeybinds: t } = R.C.useConfig({
+    let { tooltipsWithKeybinds: t } = w.C.useConfig({
             location: "GiftBoxAnimationButton",
         }),
         n = i.useCallback(
@@ -128,7 +128,7 @@ function F(e) {
 
 function B(e) {
     let { Component: t, events: n, play: a } = (0, u.T)(),
-        { tooltipsWithKeybinds: s } = R.C.useConfig({
+        { tooltipsWithKeybinds: s } = w.C.useConfig({
             location: "TrinketsAnimationButton",
         }),
         o = i.useCallback(
@@ -195,72 +195,74 @@ function B(e) {
         ),
     });
 }
-let H = I.A.Millis.DAYS_30;
+let H = S.A.Millis.DAYS_30;
 
 function Y(e) {
-    var t, n;
-    let { disabled: a, channel: u } = e,
-        { analyticsLocations: d } = (0, _.Ay)(p.A.GIFT_BUTTON),
-        [f, I] = i.useState(!1),
-        R = (0, l.bG)([v.A], () => !(null === v.A || void 0 === v.A ? void 0 : v.A.hasLayers())),
-        P = (0, l.bG)([S.default], () => S.default.getCurrentUser()),
-        L = null != P ? T.default.age(P.id) : 0,
-        M = (0, l.bG)([y.A], () => {
-            let e = y.A.getMarketingComponentByType(o.C.GIFT_ICON);
+    var t, n, a;
+    let { disabled: u, channel: d } = e,
+        { analyticsLocations: f } = (0, _.Ay)(p.A.GIFT_BUTTON),
+        [S, w] = i.useState(!1),
+        P = (0, l.bG)([A.A], () => !(null === A.A || void 0 === A.A ? void 0 : A.A.hasLayers())),
+        L = (0, l.bG)([I.default], () => I.default.getCurrentUser()),
+        M = null != L ? T.default.age(L.id) : 0,
+        k = (0, l.bG)([b.A], () => {
+            let e = b.A.getMarketingComponentByType(o.C.GIFT_ICON);
             return null == e || "giftIcon" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftIcon;
         }),
-        k = (0, l.bG)([y.A], () => {
-            let e = y.A.getMarketingComponentByType(o.C.GIFT_ICON_COACHMARK);
+        U = (0, l.bG)([b.A], () => {
+            let e = b.A.getMarketingComponentByType(o.C.GIFT_ICON_COACHMARK);
             return null == e || "giftIconCoachmark" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftIconCoachmark;
         }),
-        U = i.useMemo(() => {
-            let e = null == M ? void 0 : M.gradient;
-            if (null == e || null == e.colors || e.colors.length < 2) return;
-            let t = (0, E.K5)(
-                {
-                    gradient: e.colors,
-                    angle: e.angle,
-                },
-                {
-                    defaultAngle: 180,
-                },
-            );
-            if ((null == t ? void 0 : t.background) != null)
-                return {
-                    "--custom-promotion-gradient": t.background,
-                };
-        }, [null == M ? void 0 : M.gradient]),
-        G = !(0, C.uJ)(null == M ? void 0 : M.boxAnimationUrl),
+        G = null == k ? void 0 : k.gradient,
         V =
-            (!(0, C.uJ)(null == M ? void 0 : M.trinketAnimationUrl) ||
-                !(0, C.uJ)(null == M ? void 0 : M.trinketGlowAnimationUrl)) &&
-            !G,
-        Y = null != k && !a && R && L >= H,
-        [W, K] = (0, m.RF)(
-            Y ? c.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
+            null != G && null != G.colors && G.colors.length >= 2
+                ? (0, E.K5)(
+                      {
+                          gradient: G.colors,
+                          angle: null != (t = G.angle) ? t : void 0,
+                      },
+                      {
+                          defaultAngle: 180,
+                      },
+                  )
+                : void 0,
+        Y = i.useMemo(() => {
+            if ((null == V ? void 0 : V.background) != null)
+                return {
+                    "--custom-promotion-gradient": V.background,
+                };
+        }, [V]),
+        W = !(0, C.uJ)(null == k ? void 0 : k.boxAnimationUrl),
+        K =
+            (!(0, C.uJ)(null == k ? void 0 : k.trinketAnimationUrl) ||
+                !(0, C.uJ)(null == k ? void 0 : k.trinketGlowAnimationUrl)) &&
+            !W,
+        z = null != U && !u && P && M >= H,
+        [q, Z] = (0, m.RF)(
+            z ? c.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, h.c)(c.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
         ),
-        z = null != W,
-        q = f || z,
-        X = (0, N.R1)(u),
-        Z = u.type === D.rbe.DM,
-        Q = (0, A.tA)({
+        X = null != q,
+        Q = S || X,
+        J = (0, N.R1)(d),
+        $ = d.type === D.rbe.DM,
+        ee = (0, v.tA)({
             location: "gift-promotion-button",
             isGift: !0,
-            giftRecipient: X,
+            giftRecipient: J,
         });
-    if (a) return null;
-    let $ = () => {
-            Q && Z && null != X
+    if (u) return null;
+    let et = () => {
+            ee && $ && null != J
                 ? (0, O.A)({
-                      giftRecipient: X,
-                      analyticsLocations: d,
+                      giftRecipient: J,
+                      analyticsLocations: f,
                       analyticsObject: {
-                          page: u.isPrivate() ? D.liQ.DM_CHANNEL : D.liQ.GUILD_CHANNEL,
+                          page: d.isPrivate() ? D.liQ.DM_CHANNEL : D.liQ.GUILD_CHANNEL,
                           section: D.JJy.CHANNEL_TEXT_AREA,
                           object: D.ZSU.BUTTON_ICON,
                           objectType: D.AnalyticsObjectTypes.GIFT,
@@ -268,59 +270,59 @@ function Y(e) {
                   })
                 : (0, g.A)({
                       isGift: !0,
-                      giftRecipient: null == X ? void 0 : X,
+                      giftRecipient: null == J ? void 0 : J,
                       initialPlanId: null,
-                      analyticsLocations: d,
+                      analyticsLocations: f,
                       analyticsObject: {
-                          page: u.isPrivate() ? D.liQ.DM_CHANNEL : D.liQ.GUILD_CHANNEL,
+                          page: d.isPrivate() ? D.liQ.DM_CHANNEL : D.liQ.GUILD_CHANNEL,
                           section: D.JJy.CHANNEL_TEXT_AREA,
                           object: D.ZSU.GIFTING_PROMOTION_BUTTON,
                           objectType: D.AnalyticsObjectTypes.GIFT,
                       },
                   });
         },
-        J = () => {
-            I(!1), K(x.i.TAKE_ACTION), $();
+        en = () => {
+            w(!1), Z(x.i.TAKE_ACTION), et();
         },
-        ee =
-            G && (null == M ? void 0 : M.boxAnimationUrl) != null
+        er =
+            W && (null == k ? void 0 : k.boxAnimationUrl) != null
                 ? (0, r.jsx)(F, {
-                      boxAnimationUrl: M.boxAnimationUrl,
-                      hovered: q,
-                      onClick: J,
+                      boxAnimationUrl: k.boxAnimationUrl,
+                      hovered: Q,
+                      onClick: en,
                   })
-                : V
+                : K
                   ? (0, r.jsx)(B, {
-                        trinketAnimationUrl: null != (t = null == M ? void 0 : M.trinketAnimationUrl) ? t : null,
+                        trinketAnimationUrl: null != (n = null == k ? void 0 : k.trinketAnimationUrl) ? n : null,
                         trinketGlowAnimationUrl:
-                            null != (n = null == M ? void 0 : M.trinketGlowAnimationUrl) ? n : null,
-                        hovered: q,
-                        onClick: J,
+                            null != (a = null == k ? void 0 : k.trinketGlowAnimationUrl) ? a : null,
+                        hovered: Q,
+                        onClick: en,
                     })
-                  : (0, r.jsx)(w.A, {
-                        disabled: a,
-                        channel: u,
+                  : (0, r.jsx)(R.A, {
+                        disabled: u,
+                        channel: d,
                     });
     return (0, r.jsx)("div", {
         className: s()(j.kL, {
-            [j.DM]: q,
+            [j.DM]: Q,
         }),
-        style: U,
+        style: Y,
         onMouseEnter: () => {
-            f || I(!0);
+            S || w(!0);
         },
         onMouseLeave: () => {
-            I(!1);
+            w(!1);
         },
-        children: z
-            ? (0, r.jsx)(b.A, {
-                  onComplete: () => I(!1),
-                  onCheckItOutClick: $,
-                  markAsDismissed: K,
-                  coachmarkConfig: k,
-                  children: ee,
+        children: X
+            ? (0, r.jsx)(y.A, {
+                  onComplete: () => w(!1),
+                  onCheckItOutClick: et,
+                  markAsDismissed: Z,
+                  coachmarkConfig: U,
+                  children: er,
               })
-            : ee,
+            : er,
     });
 }
 let W = i.memo(Y);

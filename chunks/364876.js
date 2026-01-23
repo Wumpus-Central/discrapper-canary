@@ -1,62 +1,73 @@
 n.d(t, {
     _: () => f,
 });
-var l = n(627968),
-    r = n(311907),
-    i = n(582754),
-    s = n(397927),
-    a = n(736653),
-    o = n(775602),
-    u = n(937008),
-    c = n(552736),
+var r = n(627968),
+    l = n(64700),
+    i = n(877624),
+    s = n(311907),
+    a = n(397927),
+    o = n(937008),
+    u = n(807098),
+    c = n(412260),
     d = n(810498),
     p = n(298305),
-    m = n(686046);
+    m = n(985018),
+    g = n(686046);
 
 function f() {
-    var e, t;
-    let n = (0, r.bG)([o.A], () => o.A.useReducedMotion),
-        f = (0, a.Ay)(),
-        g = (0, i.Mw)(f),
-        j = (0, c.A)(),
-        y = null == j ? void 0 : j.planSelectionBanner,
-        { claimableRewards: h } = (0, u.Pv)();
-    if (null == y || null == h) return null;
-    let v = null == (e = y.getBackgroundImageUrl) ? void 0 : e.call(y, g),
-        b = (0, d.gc)(v),
-        O =
-            null == (t = y.gradientConfig)
-                ? void 0
-                : t.call(y, {
-                      isDarkMode: g,
-                      isAndroid: !1,
-                  }),
-        x = (0, d.K5)(O, {
-            colorStops: [0, 12, 100],
+    var e;
+    let t = (0, s.bG)([c.A], () => {
+            let e = c.A.getMarketingComponentByType(i.C.GIFT_CUSTOMIZATION_BANNER);
+            return null == e || "giftCustomizationBanner" !== e.properties.properties.oneofKind
+                ? null
+                : e.properties.properties.giftCustomizationBanner;
         }),
-        P = (0, d.x)(b, x, {
-            backgroundSize: "cover, auto",
-            backgroundPosition: "right center, 0% 0%",
-        });
-    return (0, l.jsxs)("div", {
-        className: m.qD,
-        style: P,
-        children: [
-            (0, l.jsx)("div", {
-                className: m.my,
-                children: (0, l.jsx)(p.A, {
-                    claimableRewards: h,
-                    maxRewardImageSrc: y.getImageUrl(g, n),
-                    size: s._3J.SIZE_40,
-                    imageScaling: 1.25,
+        { claimableRewards: n } = (0, o.Pv)(),
+        f = (0, u.T)(null == t ? void 0 : t.asset),
+        y = (0, u.T)(null == t ? void 0 : t.backgroundAsset),
+        j = null == t ? void 0 : t.gradient,
+        b =
+            null != j && null != j.colors && j.colors.length >= 2
+                ? (0, d.K5)(
+                      {
+                          gradient: j.colors,
+                          angle: null != (e = j.angle) ? e : void 0,
+                      },
+                      {
+                          colorStops: [0, 12, 100],
+                      },
+                  )
+                : void 0,
+        h = l.useMemo(() => (0, d.gc)(null != y ? y : void 0), [y]),
+        v = l.useMemo(
+            () =>
+                (0, d.x)(h, b, {
+                    backgroundSize: "cover, auto",
+                    backgroundPosition: "right center, 0% 0%",
                 }),
-            }),
-            (0, l.jsx)(s.Text, {
-                variant: "text-md/medium",
-                className: m._M,
-                color: "always-white",
-                children: y.desktopBannerText(h.length),
-            }),
-        ],
-    });
+            [h, b],
+        );
+    return null == t || null == n
+        ? null
+        : (0, r.jsxs)("div", {
+              className: g.qD,
+              style: v,
+              children: [
+                  (0, r.jsx)("div", {
+                      className: g.my,
+                      children: (0, r.jsx)(p.A, {
+                          claimableRewards: n,
+                          maxRewardImageSrc: null != f ? f : "",
+                          size: a._3J.SIZE_40,
+                          imageScaling: 1.25,
+                      }),
+                  }),
+                  (0, r.jsx)(a.Text, {
+                      variant: "text-md/medium",
+                      className: g._M,
+                      color: "always-white",
+                      children: m.intl.string(m.t.Abiuci),
+                  }),
+              ],
+          });
 }
