@@ -48648,6 +48648,12 @@ body .headerAnimation_b54a5b {
     filter: drop-shadow(0 4px 10px var(--shadow-low-hover))
 }
 
+.paymentIcon__84bdf {
+    height: 24px;
+    object-fit: contain;
+    width: 24px
+}
+
 .container__33980 {
     display: flex;
     gap: 8px;
