@@ -52152,12 +52152,9 @@ div.modalOverrideBody__34eac {
 
 .videoBackground__58471 {
     border-radius: inherit;
-    height: 100%;
-    inset-inline-start: 0;
+    inset: 1px;
     object-fit: cover;
     position: absolute;
-    top: 0;
-    width: 100%;
     z-index: 0
 }
 
