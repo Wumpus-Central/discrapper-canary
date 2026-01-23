@@ -12,19 +12,19 @@ var n = l(627968),
     u = l(442433),
     d = l(429913),
     p = l(769015),
-    m = l(725177),
-    f = l(532624),
-    y = l(350535),
-    b = l(792852),
-    v = l(652215),
-    j = l(857266),
+    m = l(780964),
+    f = l(840065),
+    y = l(532624),
+    b = l(350535),
+    v = l(792852),
+    j = l(652215),
     h = l(985018),
     g = l(410387);
 let O = r.memo(function (e) {
         let { allClips: t } = e,
-            { query: i, setQuery: a } = (0, b.P)(),
-            d = (0, s.bG)([f.Ay], () => f.Ay.getKeybindForAction(v.hCu.SAVE_CLIP)),
-            p = (0, b.P)(
+            { query: i, setQuery: a } = (0, v.P)(),
+            d = (0, s.bG)([y.Ay], () => y.Ay.getKeybindForAction(j.hCu.SAVE_CLIP)),
+            p = (0, v.P)(
                 (e) =>
                     e.selectedUserIds.size > 0 ||
                     null != e.selectedActivity ||
@@ -32,9 +32,7 @@ let O = r.memo(function (e) {
                     null != e.selectedYear,
             ),
             O = r.useCallback(() => {
-                (0, m.A)(j.J.CLIPS, {
-                    stackingBehavior: "stack",
-                });
+                (0, f.openUserSettings)(m.X.CLIPS_PANEL);
             }, []),
             x = r.useCallback(
                 (e) => {
@@ -93,7 +91,7 @@ let O = r.memo(function (e) {
                 [t],
             ),
             C = r.useCallback(() => a(""), [a]),
-            w = null != d ? y.dI(d.shortcut, !0) : null;
+            w = null != d ? b.dI(d.shortcut, !0) : null;
         return (0, n.jsxs)("div", {
             className: g.aN,
             children: [
@@ -189,13 +187,13 @@ let O = r.memo(function (e) {
 
 function C(e) {
     let { clipsByGame: t, filteredClips: l, favoriteClips: i, allClips: a } = e,
-        s = (0, b.P)((e) => e.selectedGameId),
-        c = (0, b.P)((e) => e.setSelectedGameId),
+        s = (0, v.P)((e) => e.selectedGameId),
+        c = (0, v.P)((e) => e.setSelectedGameId),
         u = r.useMemo(() => t.map((e) => e.applicationId), [t]),
         m = (0, d.A)(u),
         f = r.useCallback(() => c(null), [c]),
         y = r.useCallback(() => c("favorites"), [c]),
-        v = r.useMemo(() => new Map(m.map((e) => [null == e ? void 0 : e.id, e])), [m]);
+        b = r.useMemo(() => new Map(m.map((e) => [null == e ? void 0 : e.id, e])), [m]);
     return (0, n.jsxs)("div", {
         className: g.pz,
         children: [
@@ -248,7 +246,7 @@ function C(e) {
                                                 name: t,
                                                 count: l,
                                                 icon: (0, n.jsx)(p.A, {
-                                                    game: v.get(r),
+                                                    game: b.get(r),
                                                     size: p.M.XSMALL,
                                                 }),
                                                 isSelected: s === r,

@@ -7,24 +7,22 @@ var n = l(627968),
     a = l.n(i),
     s = l(417597),
     c = l(397927),
-    o = l(725177),
-    u = l(532624),
-    d = l(350535),
-    p = l(572164),
-    m = l(652215),
-    f = l(857266),
+    o = l(780964),
+    u = l(840065),
+    d = l(532624),
+    p = l(350535),
+    m = l(572164),
+    f = l(652215),
     y = l(985018),
     b = l(7709);
 
 function v(e) {
     let { isEmptyBecauseQuery: t } = e,
-        l = (0, s.bG)([u.Ay], () => u.Ay.getKeybindForAction(m.hCu.SAVE_CLIP)),
-        i = (0, p.Et)(),
+        l = (0, s.bG)([d.Ay], () => d.Ay.getKeybindForAction(f.hCu.SAVE_CLIP)),
+        i = (0, m.Et)(),
         v = t ? b.HT : b.Kt,
         j = r.useCallback(() => {
-            (0, o.A)(f.J.CLIPS, {
-                stackingBehavior: "stack",
-            });
+            (0, u.openUserSettings)(o.X.CLIPS_PANEL);
         }, []),
         h = (() => {
             if (!i)
@@ -37,7 +35,7 @@ function v(e) {
                     onClick: j,
                 });
             {
-                let e = d.dI(l.shortcut, !0);
+                let e = p.dI(l.shortcut, !0);
                 return y.intl.format(y.t["xY/8K5"], {
                     keybind: e,
                     keybindHook: () =>

@@ -1,5 +1,5 @@
 i.d(e, {
-    K: () => I,
+    K: () => g,
 });
 var n = i(419954),
     l = i(780964),
@@ -10,11 +10,11 @@ var n = i(419954),
     o = i(211639),
     T = i(657733),
     A = i(728699),
-    S = i(345648),
-    E = i(814870),
-    d = i(863671),
+    d = i(345648),
+    S = i(814870),
+    E = i(863671),
     _ = i(985018);
-let I = (0, n.WI)(l.X.USER_SECTION, {
+let g = (0, n.WI)(l.X.USER_SECTION, {
     useTitle: () => _.intl.string(_.t.cduTBL),
-    buildLayout: () => [s.J, o.TC, T.v, A.T, r.J, d.$, a.z, S.e, u.rC, E.u],
+    buildLayout: () => [s.J, o.TC, T.v, A.T, r.J, E.$, a.z, d.e, u.r, S.u],
 });

@@ -1,9 +1,8 @@
 n.d(t, {
-    $m: () => l,
     E7: () => o,
-    WJ: () => d,
-    dk: () => u,
-    qz: () => c,
+    WJ: () => u,
+    dk: () => c,
+    qz: () => l,
     t0: () => s,
 });
 var r = n(945810);
@@ -49,18 +48,14 @@ let i = (0, r.mj)({
             location: e,
         }).showRedesignedNotifications,
     l = (e) =>
-        i.useConfig({
-            location: e,
-        }).showRedesignedVoiceAndVideo,
-    c = (e) =>
         i.getConfig({
             location: e,
         }).showRedesignedVoiceAndVideo,
-    u = (e) =>
+    c = (e) =>
         a.useConfig({
             location: e,
         }).enabled,
-    d = (e) =>
+    u = (e) =>
         a.getConfig({
             location: e,
         }).enabled;

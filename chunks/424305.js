@@ -36,4 +36,5 @@ let T = (0, r.Hn)(u.X.CLIPS_LENGTH, {
             }),
         },
     ],
+    fieldLayout: "horizontal-responsive",
 });

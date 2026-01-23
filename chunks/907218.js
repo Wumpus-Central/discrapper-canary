@@ -42,4 +42,5 @@ let T = (0, r.Hn)(u.X.CLIPS_FRAME_RATE, {
             }),
         },
     ],
+    fieldLayout: "horizontal-responsive",
 });

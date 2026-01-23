@@ -19,12 +19,6 @@ function u(e) {
             setting: o.H.GAMES_MY_GAMES,
         },
         {
-            id: l.J.CLIPS,
-            title: c.intl.string(c.t.z2jK6X),
-            icon: r.xgA,
-            setting: o.H.GAMES_CLIPS,
-        },
-        {
             id: l.J.OVERLAY,
             title: c.intl.string(c.t.bNqkD9),
             icon: r.vH5,

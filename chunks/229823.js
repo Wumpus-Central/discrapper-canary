@@ -54,4 +54,5 @@ let T = (0, r.Hn)(u.X.CLIPS_RESOLUTION, {
             label: o.intl.string(o.t.XjXqzh),
         },
     ],
+    fieldLayout: "horizontal-responsive",
 });

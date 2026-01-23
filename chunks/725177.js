@@ -42,8 +42,6 @@ function c(e) {
     switch (e) {
         case a.J.MY_GAMES:
             return [r.X.REGISTERED_GAMES_PANEL, s.nc_.REGISTERED_GAMES];
-        case a.J.CLIPS:
-            return [r.X.CLIPS_PANEL, s.nc_.CLIPS];
         case a.J.OVERLAY:
             return [r.X.OVERLAY_PANEL, s.nc_.OVERLAY];
         case a.J.ACTIVITY_PRIVACY:
