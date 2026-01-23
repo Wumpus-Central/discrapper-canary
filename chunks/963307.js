@@ -23,14 +23,14 @@ var r,
     m = n(498642),
     g = n(696451),
     E = n(317525),
-    b = n(71393),
-    y = n(290863),
+    y = n(71393),
+    b = n(290863),
     O = n(461213),
-    A = n(287809),
-    v = n(652215),
-    S = n(985018);
+    v = n(287809),
+    A = n(652215),
+    I = n(985018);
 
-function I(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -55,7 +55,7 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -101,28 +101,28 @@ var P = (function (e) {
 
 function D(e, t, n, r) {
     switch (t) {
-        case v.clD.ONLINE:
-        case v.clD.OFFLINE:
-        case v.clD.UNKNOWN:
+        case A.clD.ONLINE:
+        case A.clD.OFFLINE:
+        case A.clD.UNKNOWN:
             return {
                 type: "GROUP",
                 key: t,
                 id: t,
                 get title() {
                     switch (t) {
-                        case v.clD.ONLINE:
-                            return S.intl.string(S.t.WbGtnH);
-                        case v.clD.OFFLINE:
-                            return S.intl.string(S.t.Vv0abJ);
+                        case A.clD.ONLINE:
+                            return I.intl.string(I.t.WbGtnH);
+                        case A.clD.OFFLINE:
+                            return I.intl.string(I.t.Vv0abJ);
                         default:
-                            return S.intl.string(S.t["UQMV/E"]);
+                            return I.intl.string(I.t["UQMV/E"]);
                     }
                 },
                 count: n,
                 index: r,
             };
         default:
-            let i = b.A.getGuild(e),
+            let i = y.A.getGuild(e),
                 a = null != i ? E.A.getRole(i.id, t) : null;
             return {
                 type: "GROUP",
@@ -137,12 +137,13 @@ function D(e, t, n, r) {
 
 function x(e, t, n) {
     let r = n === _.default.getId(),
-        i = y.A.isMobileOnline(n),
-        a = r ? O.A.getStatus() : y.A.getStatus(n, e),
-        s = r ? O.A.getActivities() : y.A.getActivities(n, e),
-        o = p.A.getStreamForUser(n, e),
-        l = A.default.getUser(n);
-    return null == l
+        i = b.A.isMobileOnline(n),
+        a = b.A.isVROnline(n),
+        s = r ? O.A.getStatus() : b.A.getStatus(n, e),
+        o = r ? O.A.getActivities() : b.A.getActivities(n, e),
+        l = p.A.getStreamForUser(n, e),
+        c = v.default.getUser(n);
+    return null == c
         ? null
         : N(
               T(
@@ -152,12 +153,13 @@ function x(e, t, n) {
                   g.Ay.getMember(e, n),
               ),
               {
-                  user: l,
-                  status: a,
-                  activities: s,
-                  applicationStream: o,
+                  user: c,
+                  status: s,
+                  activities: o,
+                  applicationStream: l,
                   isOwner: t === n,
                   isMobileOnline: i,
+                  isVROnline: a,
               },
           );
 }
@@ -168,7 +170,7 @@ function L(e) {
 }
 
 function j(e) {
-    return f.Ib(v.xBc.VIEW_CHANNEL, e)
+    return f.Ib(A.xBc.VIEW_CHANNEL, e)
         ? R
         : o()
               .v3(
@@ -176,9 +178,9 @@ function j(e) {
                       .reduce((e, t) => {
                           let { id: n, allow: r, deny: i } = t;
                           return (
-                              l.zy(r, v.xBc.VIEW_CHANNEL)
+                              l.zy(r, A.xBc.VIEW_CHANNEL)
                                   ? e.push("allow:".concat(n))
-                                  : l.zy(i, v.xBc.VIEW_CHANNEL) && e.push("deny:".concat(n)),
+                                  : l.zy(i, A.xBc.VIEW_CHANNEL) && e.push("deny:".concat(n)),
                               e
                           );
                       }, [])
@@ -189,7 +191,7 @@ function j(e) {
 }
 class M {
     updateOwnerId() {
-        let e = b.A.getGuild(this.guildId);
+        let e = y.A.getGuild(this.guildId);
         if (null == e) return !1;
         let t = f.wT(e);
         return this.ownerId !== t && ((this.ownerId = t), !0);
@@ -260,13 +262,13 @@ class M {
         null != n && (this.groups.splice(t, 1, D(this.guildId, e, n.count, n.index)), this.version++);
     }
     constructor(e, t) {
-        I(this, "guildId", void 0),
-            I(this, "listId", void 0),
-            I(this, "ownerId", void 0),
-            I(this, "rows", []),
-            I(this, "groups", []),
-            I(this, "members", {}),
-            I(this, "version", 0),
+        S(this, "guildId", void 0),
+            S(this, "listId", void 0),
+            S(this, "ownerId", void 0),
+            S(this, "rows", []),
+            S(this, "groups", []),
+            S(this, "members", {}),
+            S(this, "version", 0),
             (this.guildId = e),
             (this.listId = t),
             this.updateOwnerId();
@@ -281,7 +283,7 @@ class k {
             null == r &&
                 ((r = new M(e, t)).setGroups([
                     {
-                        id: v.clD.UNKNOWN,
+                        id: A.clD.UNKNOWN,
                         count: 0,
                     },
                 ]),
@@ -306,7 +308,7 @@ class k {
         this._guildLists = {};
     }
     constructor() {
-        I(this, "_guildLists", {});
+        S(this, "_guildLists", {});
     }
 }
 let U = new k();
@@ -382,7 +384,7 @@ function q() {
 }
 class X extends (r = c.Ay.Store) {
     initialize() {
-        this.waitFor(A.default, b.A, E.A, h.A, g.Ay, y.A, O.A, _.default, m.A, p.A, d.A),
+        this.waitFor(v.default, y.A, E.A, h.A, g.Ay, b.A, O.A, _.default, m.A, p.A, d.A),
             this.syncWith([O.A], z),
             this.syncWith([p.A], K);
     }
@@ -399,7 +401,7 @@ class X extends (r = c.Ay.Store) {
         return U.get(e, L(t)).rows;
     }
 }
-I(X, "displayName", "ChannelMemberStore");
+S(X, "displayName", "ChannelMemberStore");
 let Z = new X(u.h, {
     CONNECTION_OPEN: V,
     OVERLAY_INITIALIZE: V,

@@ -25,7 +25,7 @@ var r,
     g = n(287809),
     E = n(652215);
 
-function b(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,12 +38,12 @@ function b(e, t, n) {
         e
     );
 }
-let y = Object.freeze([]),
+let b = Object.freeze([]),
     O = {},
-    A = {},
     v = {},
-    S = {},
+    A = {},
     I = {},
+    S = {},
     T = {},
     C = {};
 
@@ -93,11 +93,11 @@ function j(e) {
 }
 
 function M(e, t) {
-    (v[e] = t), (S[e] = j(t));
+    (A[e] = t), (I[e] = j(t));
 }
 
 function k(e) {
-    delete v[e], delete S[e];
+    delete A[e], delete I[e];
 }
 
 function U(e, t) {
@@ -141,7 +141,7 @@ function U(e, t) {
 }
 
 function G(e) {
-    if ((delete A[e], k(e), delete I[e], delete T[e], null == O[e])) return;
+    if ((delete v[e], k(e), delete S[e], delete T[e], null == O[e])) return;
     let t = Object.values(O[e]),
         n = t.reduce((e, t) => {
             let n = t.processedAtTimestamp,
@@ -151,9 +151,9 @@ function G(e) {
             return n > r || (n === r && i > a) ? t : e;
         }, t[0]);
     n.status !== E.clD.OFFLINE || (null != n.hiddenActivities && n.hiddenActivities.length > 0)
-        ? ((A[e] = n.status),
+        ? ((v[e] = n.status),
           M(e, n.activities),
-          (I[e] = V(
+          (S[e] = V(
               Object.values(t).flatMap((e) => {
                   var t;
                   return null != (t = e.hiddenActivities) ? t : [];
@@ -167,7 +167,7 @@ function G(e) {
           ? delete O[e]
           : n.status === E.clD.OFFLINE &&
             t.some((e) => null != e.hiddenActivities && e.hiddenActivities.length > 0) &&
-            (I[e] = V(
+            (S[e] = V(
                 Object.values(t).flatMap((e) => {
                     var t;
                     return null != (t = e.hiddenActivities) ? t : [];
@@ -194,9 +194,9 @@ function F(e) {
     let n = o().maxBy(Object.values(t), (e) => e.processedAtTimestamp);
     if (n.status !== E.clD.OFFLINE || (null != n.hiddenActivities && n.hiddenActivities.length > 0)) {
         var r;
-        (A[e] = n.status),
+        (v[e] = n.status),
             M(e, n.activities),
-            (I[e] = null != (r = n.hiddenActivities) ? r : []),
+            (S[e] = null != (r = n.hiddenActivities) ? r : []),
             null != n.clientStatus && (T[e] = n.clientStatus);
     }
 }
@@ -222,8 +222,8 @@ function B(e) {
         u[t] = {
             status: r,
             clientStatus: i,
-            activities: y,
-            hiddenActivities: y,
+            activities: b,
+            hiddenActivities: b,
             processedAtTimestamp: l,
         };
     else {
@@ -263,8 +263,8 @@ function H(e) {
         c[t] = {
             status: r,
             clientStatus: i,
-            activities: y,
-            hiddenActivities: y,
+            activities: b,
+            hiddenActivities: b,
             processedAtTimestamp: o,
         };
     else {
@@ -300,17 +300,17 @@ function z(e) {
         r = m.default.getId();
     (O = {}),
         (C = {}),
-        (A = {
-            [r]: A[r],
-        }),
         (v = {
             [r]: v[r],
         }),
-        (S = {
-            [r]: S[r],
+        (A = {
+            [r]: A[r],
         }),
         (I = {
             [r]: I[r],
+        }),
+        (S = {
+            [r]: S[r],
         }),
         (T = {
             [r]: {},
@@ -366,9 +366,9 @@ function z(e) {
 function q(e) {
     let { presences: t } = e;
     (O = t.presencesForGuilds),
-        (A = t.statuses),
-        (v = t.activities),
-        (I = t.hiddenActivities),
+        (v = t.statuses),
+        (A = t.activities),
+        (S = t.hiddenActivities),
         (C = t.activityMetadata);
 }
 
@@ -484,8 +484,8 @@ function et(e) {
 
 function en(e) {
     let t = m.default.getId();
-    if (A[t] === e.status && v[t] === e.activities && I[t] === e.hiddenActivities) return !1;
-    (A[t] = e.status), M(t, [...e.activities].sort(L)), (I[t] = [...e.hiddenActivities].sort(L)), delete C[t];
+    if (v[t] === e.status && A[t] === e.activities && S[t] === e.hiddenActivities) return !1;
+    (v[t] = e.status), M(t, [...e.activities].sort(L)), (S[t] = [...e.hiddenActivities].sort(L)), delete C[t];
 }
 
 function er(e) {
@@ -497,7 +497,7 @@ class ei extends (r = l.Ay.Store) {
         this.waitFor(m.default, d.A, g.default);
     }
     setCurrentUserOnConnectionOpen(e, t) {
-        (A[m.default.getId()] = e), M(m.default.getId(), [...t].sort(L));
+        (v[m.default.getId()] = e), M(m.default.getId(), [...t].sort(L));
     }
     getStatus(e) {
         var t, n;
@@ -505,7 +505,7 @@ class ei extends (r = l.Ay.Store) {
             i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.clD.OFFLINE,
             a = g.default.getUser(e);
         if ((null != a && a.hasFlag(E.nhx.BOT_HTTP_INTERACTIONS) && (i = E.clD.UNKNOWN), null == r))
-            return null != (n = A[e]) ? n : i;
+            return null != (n = v[e]) ? n : i;
         let s = N(e, r);
         return null != (t = null == s ? void 0 : s.status) ? t : i;
     }
@@ -513,30 +513,30 @@ class ei extends (r = l.Ay.Store) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         if (null == t) {
             var n;
-            return null != (n = S[e]) ? n : y;
+            return null != (n = I[e]) ? n : b;
         }
         let r = N(e, t);
-        return null == r || null == r.activities ? y : j(r.activities);
+        return null == r || null == r.activities ? b : j(r.activities);
     }
     getUnfilteredActivities(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         if (null == t) {
             var n;
-            return null != (n = v[e]) ? n : y;
+            return null != (n = A[e]) ? n : b;
         }
         let r = N(e, t);
-        return null == r || null == r.activities ? y : r.activities;
+        return null == r || null == r.activities ? b : r.activities;
     }
     getHiddenActivities(e) {
         var t, n, r;
         let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return null == i
-            ? null != (r = I[e])
+            ? null != (r = S[e])
                 ? r
-                : y
+                : b
             : null != (t = null == (n = N(e, i)) ? void 0 : n.hiddenActivities)
               ? t
-              : y;
+              : b;
     }
     getPrimaryActivity(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -544,8 +544,8 @@ class ei extends (r = l.Ay.Store) {
     }
     getAllApplicationActivities(e) {
         let t = [];
-        for (let n of h.default.keys(S))
-            for (let r of S[n])
+        for (let n of h.default.keys(I))
+            for (let r of I[n])
                 r.application_id === e &&
                     t.push({
                         userId: n,
@@ -568,11 +568,20 @@ class ei extends (r = l.Ay.Store) {
         return C[e];
     }
     getUserIds() {
-        return h.default.keys(v);
+        return h.default.keys(A);
     }
     isMobileOnline(e) {
         let t = T[e];
-        return null != t && t[E.xfJ.MOBILE] === E.clD.ONLINE && t[E.xfJ.DESKTOP] !== E.clD.ONLINE;
+        return (
+            null != t &&
+            t[E.xfJ.MOBILE] === E.clD.ONLINE &&
+            t[E.xfJ.DESKTOP] !== E.clD.ONLINE &&
+            t[E.xfJ.VR] !== E.clD.ONLINE
+        );
+    }
+    isVROnline(e) {
+        let t = T[e];
+        return null != t && t[E.xfJ.VR] === E.clD.ONLINE;
     }
     getClientStatus(e) {
         return T[e];
@@ -580,16 +589,16 @@ class ei extends (r = l.Ay.Store) {
     getState() {
         return {
             presencesForGuilds: O,
-            statuses: A,
-            activities: v,
-            filteredActivities: S,
-            hiddenActivities: I,
+            statuses: v,
+            activities: A,
+            filteredActivities: I,
+            hiddenActivities: S,
             activityMetadata: C,
             clientStatuses: T,
         };
     }
 }
-b(ei, "displayName", "PresenceStore");
+y(ei, "displayName", "PresenceStore");
 let ea = new ei(c.h, {
     CONNECTION_OPEN: K,
     CONNECTION_OPEN_SUPPLEMENTAL: z,
