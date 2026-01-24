@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => N,
+    A: () => R,
 }),
     n(896048);
 var r = n(141931),
@@ -18,11 +18,11 @@ var r = n(141931),
     m = n(874124),
     g = n(476697),
     E = n(571044),
-    b = n(310689),
-    y = n(753070),
+    y = n(310689),
+    b = n(753070),
     O = n(765682);
 
-function A(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function A(e, t, n) {
     );
 }
 
-function v(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,13 +47,13 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
 
-function S(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,30 +66,36 @@ function S(e, t) {
     return n;
 }
 
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
+let T = new Set(["356943187589201930"]);
 
-function T(e) {
+function C(e) {
     return e.hasOwnProperty("pid");
 }
 
-function C(e) {
+function N(e) {
+    let t = e.id;
+    return null != t && T.has(t);
+}
+
+function w(e) {
     var t;
-    if (T(e))
+    if (C(e))
         return {
             pid: e.pid,
         };
-    let n = (0, b.A)(void 0, e, a.Ay.getRunningGames()),
-        i = !(0, _.isWindows)() || null == n || (null == e ? void 0 : e.id.startsWith(r.fS.CAMERA)),
+    let n = (0, y.A)(void 0, e, a.Ay.getRunningGames()),
+        i = !(0, _.isWindows)() || null == n || N(n) || (null == e ? void 0 : e.id.startsWith(r.fS.CAMERA)),
         s = null != n ? n.pid : null;
     return i || null == s
         ? (null == s &&
@@ -105,14 +111,14 @@ function C(e) {
               pid: s,
           };
 }
-async function N(e, t) {
-    var n, _, E, b, A, S, T, N;
-    let R = p.default.getCurrentUser(),
-        w = f.A.getVoiceChannelId(),
-        P = c.A.getChannel(w),
+async function R(e, t) {
+    var n, _, E, y, v, I, T, C;
+    let N = p.default.getCurrentUser(),
+        R = f.A.getVoiceChannelId(),
+        P = c.A.getChannel(R),
         D = null == P ? void 0 : P.getGuildId(),
         x = null == (T = u.A.getGuild(D)) ? void 0 : T.premiumTier;
-    if (null == R || null == P || null == w) return [!1, "no user or channel"];
+    if (null == N || null == P || null == R) return [!1, "no user or channel"];
     let L = null;
     if (null == (L = "number" == typeof e ? a.Ay.getGameForPID(e) : e)) return [!1, "no source"];
     if (
@@ -127,15 +133,15 @@ async function N(e, t) {
         { allowAutoQuality: V } = (0, h.eO)({
             location: "startStreamWithSource",
         });
-    G !== y.jQ.PRESET_AUTO || V || (G = y.jQ.PRESET_VIDEO);
-    let F = G === y.jQ.PRESET_AUTO ? y.jQ.PRESET_VIDEO : G,
-        [B, H] = null != (_ = (0, g.A)(F, R, x)) ? _ : [],
+    G !== b.jQ.PRESET_AUTO || V || (G = b.jQ.PRESET_VIDEO);
+    let F = G === b.jQ.PRESET_AUTO ? b.jQ.PRESET_VIDEO : G,
+        [B, H] = null != (_ = (0, g.A)(F, N, x)) ? _ : [],
         Y = null != (E = null != B ? B : null == t ? void 0 : t.resolution) ? E : M,
-        W = null != (b = null != H ? H : null == t ? void 0 : t.fps) ? b : k,
-        K = null != (A = null == t ? void 0 : t.previewDisabled) ? A : o.uh.getSetting(),
-        z = null != (S = null == t ? void 0 : t.soundshareEnabled) ? S : U;
+        W = null != (y = null != H ? H : null == t ? void 0 : t.fps) ? y : k,
+        K = null != (v = null == t ? void 0 : t.previewDisabled) ? v : o.uh.getSetting(),
+        z = null != (I = null == t ? void 0 : t.soundshareEnabled) ? I : U;
     return (
-        (0, m.A)(F, Y, W, R, x, P) || ((G = y.jQ.PRESET_VIDEO), (Y = y.on.RESOLUTION_720), (W = y.kn.FPS_30)),
+        (0, m.A)(F, Y, W, N, x, P) || ((G = b.jQ.PRESET_VIDEO), (Y = b.on.RESOLUTION_720), (W = b.kn.FPS_30)),
         (0, i.Xd)({
             preset: G,
             resolution: Y,
@@ -144,9 +150,9 @@ async function N(e, t) {
         }),
         (0, i.XI)(
             D,
-            w,
-            I(v({}, C(L)), {
-                audioSourceId: (null == (N = L.id) ? void 0 : N.startsWith(r.fS.CAMERA))
+            R,
+            S(A({}, w(L)), {
+                audioSourceId: (null == (C = L.id) ? void 0 : C.startsWith(r.fS.CAMERA))
                     ? null == t
                         ? void 0
                         : t.audioSourceId
