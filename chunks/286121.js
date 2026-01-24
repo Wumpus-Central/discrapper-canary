@@ -28,14 +28,15 @@ let l = {
                         showDisabledItems: m,
                         showColoredItems: g,
                         showLoading: E,
-                        dangerItemColor: y,
+                        showTrailingIndicator: y,
+                        dangerItemColor: b,
                     } = e,
-                    [b, O] = i.useState(!0),
-                    [v, A] = i.useState(!1),
-                    [I, S] = i.useState("text"),
-                    [T, C] = i.useState("cozy"),
-                    [N, w] = i.useState(!0),
-                    R = (e) =>
+                    [O, v] = i.useState(!0),
+                    [A, I] = i.useState(!1),
+                    [S, T] = i.useState("text"),
+                    [C, N] = i.useState("cozy"),
+                    [w, R] = i.useState(!0),
+                    P = (e) =>
                         (0, r.jsxs)(s.W1t, {
                             navId: "menu-story",
                             "aria-label": "Story Menu",
@@ -83,7 +84,12 @@ let l = {
                                                 id: "brand-item",
                                                 label: "Brand Item",
                                                 color: "brand",
-                                                icon: p ? s.Zes : void 0,
+                                                trailingIndicator: y
+                                                    ? {
+                                                          type: "icon",
+                                                          icon: s.I9m,
+                                                      }
+                                                    : void 0,
                                                 action: () => {},
                                             }),
                                             (0, r.jsx)(s.Drp, {
@@ -137,14 +143,14 @@ let l = {
                                             (0, r.jsx)(s.sLh, {
                                                 id: "notifications",
                                                 label: "Enable Notifications Enable Notifications Enable Notifications",
-                                                checked: b,
-                                                action: () => O(!b),
+                                                checked: O,
+                                                action: () => v(!O),
                                             }),
                                             (0, r.jsx)(s.sLh, {
                                                 id: "mute",
                                                 label: "Mute Channel",
-                                                checked: v,
-                                                action: () => A(!v),
+                                                checked: A,
+                                                action: () => I(!A),
                                             }),
                                         ],
                                     }),
@@ -155,8 +161,8 @@ let l = {
                                             (0, r.jsx)(s.fPC, {
                                                 id: "switch-notifications",
                                                 label: "Push Notifications",
-                                                checked: b,
-                                                action: () => O(!b),
+                                                checked: O,
+                                                action: () => v(!O),
                                             }),
                                         ],
                                     }),
@@ -171,15 +177,15 @@ let l = {
                                                         id: "radio-text",
                                                         group: "channel-type",
                                                         label: "Text Channel Text Channel Text Channel Text Channel Text Channel Text Channel ",
-                                                        checked: "text" === I,
-                                                        action: () => S("text"),
+                                                        checked: "text" === S,
+                                                        action: () => T("text"),
                                                     }),
                                                     (0, r.jsx)(s.iDA, {
                                                         id: "radio-voice",
                                                         group: "channel-type",
                                                         label: "Voice Channel",
-                                                        checked: "voice" === I,
-                                                        action: () => S("voice"),
+                                                        checked: "voice" === S,
+                                                        action: () => T("voice"),
                                                     }),
                                                 ],
                                             }),
@@ -191,15 +197,15 @@ let l = {
                                                         id: "radio-cozy",
                                                         group: "view-mode",
                                                         label: "Cozy",
-                                                        checked: "cozy" === T,
-                                                        action: () => C("cozy"),
+                                                        checked: "cozy" === C,
+                                                        action: () => N("cozy"),
                                                     }),
                                                     (0, r.jsx)(s.iDA, {
                                                         id: "radio-compact",
                                                         group: "view-mode",
                                                         label: "Compact",
-                                                        checked: "compact" === T,
-                                                        action: () => C("compact"),
+                                                        checked: "compact" === C,
+                                                        action: () => N("compact"),
                                                     }),
                                                 ],
                                             }),
@@ -235,34 +241,34 @@ let l = {
                                 (0, r.jsx)(s.Drp, {
                                     id: "delete",
                                     label: "Delete Message",
-                                    color: y,
+                                    color: b,
                                     icon: p ? s.ucK : void 0,
                                     action: () => {},
                                 }),
                             ],
                         }),
-                    P = i.useRef(null);
+                    D = i.useRef(null);
                 return (0, r.jsxs)("div", {
                     className: o.k,
                     children: [
-                        !N &&
+                        !w &&
                             (0, r.jsx)(a.$nd, {
                                 text: "Open Menu",
-                                onClick: () => w(!0),
+                                onClick: () => R(!0),
                             }),
                         (0, r.jsx)(s.YNO, {
                             renderPopout: (e) => {
                                 let { closePopout: t } = e;
-                                return R(t);
+                                return P(t);
                             },
                             position: "bottom",
                             align: "center",
                             shouldShow: !0,
-                            targetElementRef: P,
-                            onRequestClose: () => w(!1),
+                            targetElementRef: D,
+                            onRequestClose: () => R(!1),
                             children: () =>
                                 (0, r.jsx)("div", {
-                                    ref: P,
+                                    ref: D,
                                     style: {
                                         width: 1,
                                         height: 1,
@@ -348,6 +354,11 @@ let l = {
                 showLoading: {
                     type: "boolean",
                     label: "Show Loading",
+                    defaultValue: !1,
+                },
+                showTrailingIndicator: {
+                    type: "boolean",
+                    label: "Show Trailing Indicator",
                     defaultValue: !1,
                 },
                 dangerItemColor: {
