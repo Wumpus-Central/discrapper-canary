@@ -1,13 +1,15 @@
 n.d(t, {
-    A: () => g,
+    A: () => b,
 }),
     n(896048);
 var r,
     i = n(311907),
     a = n(73153),
-    s = n(961350);
+    s = n(961350),
+    o = n(927813),
+    l = n(469679);
 
-function o(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,66 +22,74 @@ function o(e, t, n) {
         e
     );
 }
-let l = 3 * n(927813).A.Millis.DAY,
-    c = {};
+let u = 3 * o.A.Millis.DAY,
+    d = {};
 
-function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now(),
-        n = {};
-    for (let [r, i] of Object.entries(e)) null != i && t - i < l && (n[r] = i);
-    return n;
-}
-
-function d(e) {
-    let { channelId: t, timestamp: n } = e;
-    if (t in c) return !1;
-    c[t] = n;
-}
-
-function f(e) {
-    let { message: t } = e;
-    delete c[t.channel_id];
+function f() {
+    return l.T.getConfig({
+        location: "ReplyNudgeStore",
+    }).enabled;
 }
 
 function p(e) {
-    let { channelId: t, userId: n } = e;
-    if (n !== s.default.getId()) return !1;
-    delete c[t];
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now(),
+        n = {};
+    for (let [r, i] of Object.entries(e)) null != i && t - i < u && (n[r] = i);
+    return n;
 }
 
 function _(e) {
+    let { channelId: t, timestamp: n } = e;
+    if (t in d) return !1;
+    d[t] = n;
+}
+
+function h(e) {
+    let { message: t } = e;
+    if (!(t.channel_id in d)) return !1;
+    delete d[t.channel_id];
+}
+
+function m(e) {
+    let { channelId: t, userId: n } = e;
+    if (n !== s.default.getId() || !(t in d)) return !1;
+    delete d[t];
+}
+
+function g(e) {
     let {
         channel: { id: t },
     } = e;
-    delete c[t];
+    if (!(t in d)) return !1;
+    delete d[t];
 }
 
-function h() {
-    c = {};
+function E() {
+    d = {};
 }
-class m extends (r = i.Ay.PersistedStore) {
+class y extends (r = i.Ay.PersistedStore) {
     initialize(e) {
         var t;
-        (c = u(null != (t = null == e ? void 0 : e.nudgedChannels) ? t : {})), this.waitFor(s.default);
+        (d = p(null != (t = null == e ? void 0 : e.nudgedChannels) ? t : {})), this.waitFor(s.default);
     }
     getState() {
         return {
-            nudgedChannels: c,
+            nudgedChannels: d,
         };
     }
     getNudgeTimestamp(e) {
         var t;
-        return null != (t = c[e]) ? t : null;
+        return f() && null != (t = d[e]) ? t : null;
     }
     isChannelNudged(e) {
         return null != this.getNudgeTimestamp(e);
     }
 }
-o(m, "displayName", "ReplyNudgeStore"), o(m, "persistKey", "ReplyNudgeStore");
-let g = new m(a.h, {
-    REPLY_NUDGE_SET: d,
-    MESSAGE_CREATE: f,
-    MESSAGE_REACTION_ADD: p,
-    CHANNEL_DELETE: _,
-    LOGOUT: h,
+c(y, "displayName", "ReplyNudgeStore"), c(y, "persistKey", "ReplyNudgeStore");
+let b = new y(a.h, {
+    REPLY_NUDGE_SET: _,
+    MESSAGE_CREATE: h,
+    MESSAGE_REACTION_ADD: m,
+    CHANNEL_DELETE: g,
+    LOGOUT: E,
 });
