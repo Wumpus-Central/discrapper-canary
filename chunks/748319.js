@@ -569,10 +569,9 @@ class eZ extends l.PureComponent {
                     this.speakingWhilePTTTooltipTimeout.stop();
             }),
             eK(this, "dismissTooltips", () => {
-                var e, t, n, a, l, r;
-                null == (e = (t = this.props).dismissInputDeviceChangedTooltip) || e.call(t),
-                    null == (n = (a = this.props).dismissOutputDeviceChangedTooltip) || n.call(a),
-                    null == (l = (r = this.props).dismissPTTJoinTooltip) || l.call(r),
+                var e, t, n, a;
+                null == (e = (t = this.props).onDismissDeviceChangedTooltip) || e.call(t),
+                    null == (n = (a = this.props).dismissPTTJoinTooltip) || n.call(a),
                     this.dismissSpeakingWhileMutedTooltip(),
                     this.dismissSpeakingWhilePTTTooltip();
             }),
@@ -593,22 +592,20 @@ class eZ extends l.PureComponent {
                         speakingWhileMuted: a,
                         occluded: l,
                         shouldShowPTTJoinTooltip: r,
-                        shouldShowInputDeviceChangedTooltip: i,
-                        shouldShowOutputDeviceChangedTooltip: s,
+                        deviceChangedTooltipType: i,
                     } = this.props,
-                    { hoveringOnMute: o } = this.state,
-                    c =
+                    { hoveringOnMute: s } = this.state,
+                    o =
                         void 0 === this.lastSpeakingWhileMutedNotificationTime ||
                         performance.now() - this.lastSpeakingWhileMutedNotificationTime > eJ;
                 a
-                    ? o ||
+                    ? s ||
                       !e ||
                       t ||
                       n ||
                       l ||
-                      !c ||
-                      i ||
-                      s ||
+                      !o ||
+                      null != i ||
                       r ||
                       this.setState(
                           {
@@ -636,22 +633,20 @@ class eZ extends l.PureComponent {
                         speakingWhilePTTInactive: a,
                         occluded: l,
                         shouldShowPTTJoinTooltip: r,
-                        shouldShowInputDeviceChangedTooltip: i,
-                        shouldShowOutputDeviceChangedTooltip: s,
+                        deviceChangedTooltipType: i,
                     } = this.props,
-                    { hoveringOnMute: o } = this.state,
-                    c =
+                    { hoveringOnMute: s } = this.state,
+                    o =
                         void 0 === this.lastSpeakingWhilePTTNotificationTime ||
                         performance.now() - this.lastSpeakingWhilePTTNotificationTime > eJ;
                 a
-                    ? o ||
+                    ? s ||
                       e ||
                       t ||
                       n ||
                       l ||
-                      !c ||
-                      i ||
-                      s ||
+                      !o ||
+                      null != i ||
                       r ||
                       this.setState(
                           {
@@ -727,17 +722,16 @@ function e0(e) {
             dismissibleContents: j,
             nameplate: _,
             accountContainerRef: y,
-            shouldShowInputDeviceChangedTooltip: A = !1,
-            shouldShowOutputDeviceChangedTooltip: C = !1,
-            shouldShowPTTJoinTooltip: S = !1,
-            dismissTooltips: O,
-            speaking: T,
-            latched: E,
+            deviceChangedTooltipType: A,
+            shouldShowPTTJoinTooltip: C = !1,
+            dismissTooltips: S,
+            speaking: O,
+            latched: T,
         } = e,
-        N = (0, Y.K)(_);
+        E = (0, Y.K)(_);
     return (0, a.jsxs)("div", {
         className: eH.Uo,
-        style: N,
+        style: E,
         children: [
             (0, a.jsx)(e7, {
                 accountContainerRef: y,
@@ -751,13 +745,13 @@ function e0(e) {
                 onContextMenu: g,
                 iconForeground: null != _ ? eH.t4 : void 0,
                 nameplate: _,
-                shouldShowInputDeviceChangedTooltip: A,
                 shouldShowSpeakingWhileMutedTooltip: o,
+                shouldShowInputDeviceChangedTooltip: !o && "input" === A,
                 shouldShowSpeakingWhilePTTTooltip: c,
-                shouldShowPTTJoinTooltip: S,
-                dismissTooltips: O,
-                speaking: T,
-                latched: E,
+                shouldShowPTTJoinTooltip: C,
+                dismissTooltips: S,
+                speaking: O,
+                latched: T,
             }),
             (0, a.jsx)(e2, {
                 selfDeaf: t,
@@ -767,8 +761,8 @@ function e0(e) {
                 awaitingRemote: l,
                 iconForeground: null != _ ? eH.t4 : void 0,
                 nameplate: _,
-                shouldShowOutputDeviceChangedTooltip: C,
-                dismissTooltips: O,
+                shouldShowOutputDeviceChangedTooltip: "output" === A,
+                dismissTooltips: S,
             }),
             (0, a.jsx)(e9, {
                 isEligibleForPomelo: d,
@@ -778,8 +772,6 @@ function e0(e) {
                 dismissibleContents: j.settings,
                 iconForeground: null != _ ? eH.t4 : void 0,
                 nameplate: _,
-                shouldShowInputDeviceChangedTooltip: A,
-                shouldShowOutputDeviceChangedTooltip: C,
             }),
         ],
     });
@@ -817,9 +809,9 @@ function e6() {
     let t = (0, c.bG)([eS.default], () => eS.default.getCurrentUser()),
         n = (0, c.bG)([ex.default], () => ex.default.getId()),
         {
-            activities: l,
-            streaming: r,
-            status: i,
+            activities: r,
+            streaming: i,
+            status: s,
         } = (0, c.cf)([ey.A], () => {
             let e = ey.A.getActivities();
             return {
@@ -833,23 +825,23 @@ function e6() {
                 status: ey.A.getStatus(),
             };
         }),
-        s = (0, c.bG)([eh.A], () => eh.A.getAnyStreamForUser(n)),
-        u = (0, f.A)({
+        u = (0, c.bG)([eh.A], () => eh.A.getAnyStreamForUser(n)),
+        m = (0, f.A)({
             userId: n,
         }),
-        m = (0, c.bG)([eA.A], () => eA.A.isCurrentUserPTTLatched()),
-        p = (0, c.bG)([eA.A], () => eA.A.getVoiceVolume(n)),
-        x = ek.Ay.useUserTag(t, {
+        p = (0, c.bG)([eA.A], () => eA.A.isCurrentUserPTTLatched()),
+        x = (0, c.bG)([eA.A], () => eA.A.getVoiceVolume(n)),
+        g = ek.Ay.useUserTag(t, {
             decoration: "never",
         }),
-        g = (0, c.bG)([eC.A], () => eC.A.hidePersonalInformation),
-        b = (0, c.bG)([ej.A, eg.A], () => {
+        b = (0, c.bG)([eC.A], () => eC.A.hidePersonalInformation),
+        v = (0, c.bG)([ej.A, eg.A], () => {
             let e = ej.A.getChannelId();
             return null != e ? eg.A.getChannel(e) : null;
         }),
-        { mute: v, selfMute: _, suppress: y } = (0, ec.A)(b),
-        { selfDeaf: A, deaf: C } = (0, eo.A)(b),
-        E = (0, c.bG)([N.A], () => {
+        { mute: _, selfMute: y, suppress: A } = (0, ec.A)(v),
+        { selfDeaf: C, deaf: E } = (0, eo.A)(v),
+        k = (0, c.bG)([N.A], () => {
             var e;
             return (0, w.kK)()
                 ? null == (e = N.A.getCurrentBuildOverride().overrides)
@@ -857,30 +849,30 @@ function e6() {
                     : e.discord_web
                 : null;
         }),
-        k = (0, c.bG)([eO.A], () => eO.A.getPremiumTypeSubscription()),
-        P = (0, c.bG)([ev.A], () => ev.A.getSpeakingWhileMuted()),
-        R = (0, c.bG)([I.A], () => I.A.isFullscreenInContext()),
-        D = (0, c.bG)([eb.A], () => eb.A.hasLayers()),
-        M = (0, h.red)(h.DXt) || D || eI.P.isDisallowPopupsSet() || R,
-        L = (0, $.g)(),
-        U = (0, c.bG)([H.default], () => null != H.default.getAwaitingRemoteSessionInfo()),
-        B = (0, c.bG)([e_.A], () => e_.A.getGuildId()),
-        G = null == t ? void 0 : t.avatarDecoration,
-        F = (0, T.A)(G),
-        V = null != (e = ek.Ay.useName(t)) ? e : "",
-        { voiceActivityStatusEnabled: W } = (0, j.G)({
+        P = (0, c.bG)([eO.A], () => eO.A.getPremiumTypeSubscription()),
+        R = (0, c.bG)([ev.A], () => ev.A.getSpeakingWhileMuted()),
+        D = (0, c.bG)([I.A], () => I.A.isFullscreenInContext()),
+        M = (0, c.bG)([eb.A], () => eb.A.hasLayers()),
+        L = (0, h.red)(h.DXt) || M || eI.P.isDisallowPopupsSet() || D,
+        U = (0, $.g)(),
+        B = (0, c.bG)([H.default], () => null != H.default.getAwaitingRemoteSessionInfo()),
+        G = (0, c.bG)([e_.A], () => e_.A.getGuildId()),
+        F = null == t ? void 0 : t.avatarDecoration,
+        V = (0, T.A)(F),
+        W = null != (e = ek.Ay.useName(t)) ? e : "",
+        { voiceActivityStatusEnabled: K } = (0, j.G)({
             location: "Account",
         }),
-        K = (0, Z.lM)("Account"),
-        { analyticsLocations: z } = (0, O.Ay)(S.A.ACCOUNT),
-        q = (0, Q.r)({
+        z = (0, Z.lM)("Account"),
+        { analyticsLocations: q } = (0, O.Ay)(S.A.ACCOUNT),
+        Y = (0, Q.r)({
             user: t,
             guildId: void 0,
         }),
-        { isQuestBarEmpty: Y, hasLoadedQuestBar: J } = (0, et.c9)({
+        { isQuestBarEmpty: J, hasLoadedQuestBar: X } = (0, et.c9)({
             location: eF.rE.CONFLICT_CHECKS,
         }),
-        X = (0, c.bG)([en.A, eS.default, ef.A], () => {
+        ee = (0, c.bG)([en.A, eS.default, ef.A], () => {
             let e,
                 t = en.A.getSyncingWith(),
                 n = en.A.getActivity(),
@@ -897,59 +889,70 @@ function e6() {
             }
             return a.length > 1;
         }),
-        ee = {
+        ea = {
             avatar: [],
             settings: [],
         };
-    !M &&
-        (ee.avatar.push(d.M.DISPLAY_NAME_STYLES_COACHMARK),
-        ee.avatar.push(d.M.WIDGETS_RTC_UPSELL_COACHMARK),
-        K && ee.settings.push(d.M.NITRO_PRIVACY_PERK_BETA_COACHMARK));
-    let { shouldShowTooltip: ea, dismissTooltip: el } = e1(eV.oh.AUDIO_INPUT),
-        { shouldShowTooltip: er, dismissTooltip: ei } = e1(eV.oh.AUDIO_OUTPUT),
-        { shouldShowTooltip: es, dismissTooltip: ed } = (0, eu.A)(),
-        ep = (0, em.A)();
+    !L &&
+        (ea.avatar.push(d.M.DISPLAY_NAME_STYLES_COACHMARK),
+        ea.avatar.push(d.M.WIDGETS_RTC_UPSELL_COACHMARK),
+        z && ea.settings.push(d.M.NITRO_PRIVACY_PERK_BETA_COACHMARK));
+    let { shouldShowTooltip: el, dismissTooltip: er } = e1(eV.oh.AUDIO_INPUT),
+        { shouldShowTooltip: ei, dismissTooltip: es } = e1(eV.oh.AUDIO_OUTPUT),
+        { shouldShowTooltip: ed, dismissTooltip: ep } = (0, eu.A)(),
+        eT = (0, em.A)(),
+        eE = l.useMemo(() => (el ? "input" : ei ? "output" : void 0), [el, ei]),
+        eN = l.useCallback(
+            (e) => {
+                switch (e) {
+                    case "input":
+                        er();
+                        break;
+                    case "output":
+                        es();
+                }
+            },
+            [er, es],
+        );
     return (0, a.jsx)(O.f5, {
-        value: z,
+        value: q,
         children: (0, a.jsx)(eZ, {
             currentUser: t,
-            username: V,
-            activities: l,
-            applicationStream: s,
-            voiceChannel: b,
-            dismissibleContents: ee,
-            userTag: x,
-            hidePrivateData: g,
-            occluded: M,
-            premiumSubscription: k,
-            selfDeaf: A,
-            selfMute: _,
-            serverDeaf: C,
-            serverMute: v,
-            speaking: u,
-            voiceDb: p,
-            speakingWhileMuted: P,
-            speakingWhilePTTInactive: ep,
-            latched: m && null != b,
-            status: i,
-            streaming: r,
-            suppress: y,
-            webBuildOverride: E,
-            awaitingRemote: U,
-            isEligibleForPomelo: L,
-            voiceActivityStatusEnabled: W,
-            nameplate: q,
-            selectedGuildId: B,
-            avatarDecoration: F,
-            isQuestBarEmpty: Y,
-            hasLoadedQuestBar: J,
-            isListenAlongVisible: X,
-            shouldShowInputDeviceChangedTooltip: ea,
-            shouldShowOutputDeviceChangedTooltip: er,
-            dismissInputDeviceChangedTooltip: el,
-            dismissOutputDeviceChangedTooltip: ei,
-            shouldShowPTTJoinTooltip: es,
-            dismissPTTJoinTooltip: ed,
+            username: W,
+            activities: r,
+            applicationStream: u,
+            voiceChannel: v,
+            dismissibleContents: ea,
+            userTag: g,
+            hidePrivateData: b,
+            occluded: L,
+            premiumSubscription: P,
+            selfDeaf: C,
+            selfMute: y,
+            serverDeaf: E,
+            serverMute: _,
+            speaking: m,
+            voiceDb: x,
+            speakingWhileMuted: R,
+            speakingWhilePTTInactive: eT,
+            latched: p && null != v,
+            status: s,
+            streaming: i,
+            suppress: A,
+            webBuildOverride: k,
+            awaitingRemote: B,
+            isEligibleForPomelo: U,
+            voiceActivityStatusEnabled: K,
+            nameplate: Y,
+            selectedGuildId: G,
+            avatarDecoration: V,
+            isQuestBarEmpty: J,
+            hasLoadedQuestBar: X,
+            isListenAlongVisible: ee,
+            deviceChangedTooltipType: eE,
+            onDismissDeviceChangedTooltip: () => eN(eE),
+            shouldShowPTTJoinTooltip: ed,
+            dismissPTTJoinTooltip: ep,
         }),
     });
 }
