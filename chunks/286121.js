@@ -56,6 +56,7 @@ let l = {
                                     label: "Pin Message",
                                     icon: p ? s.tsw : void 0,
                                     subtext: h ? "Pin this message to the channel" : void 0,
+                                    badge: "beta",
                                     loading: E,
                                     action: () => {},
                                 }),
@@ -63,6 +64,7 @@ let l = {
                                     id: "copy",
                                     label: "Copy Message Link",
                                     icon: p ? s.TdU : void 0,
+                                    badge: "new",
                                     action: () => {},
                                 }),
                                 m &&

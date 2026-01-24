@@ -17,6 +17,7 @@ var r = {
     iconContainer: "iconContainer_c1e9c4",
     iconContainerLeft: "iconContainerLeft_c1e9c4 iconContainer_c1e9c4",
     iconContainerLarge: "iconContainerLarge_c1e9c4",
+    badgeContainer: "badgeContainer_c1e9c4",
     switchContainer: "switchContainer_c1e9c4",
     icon: "icon_c1e9c4",
     avatarAccessory: "avatarAccessory_c1e9c4",

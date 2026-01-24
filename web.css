@@ -56055,6 +56055,15 @@ h2.title_feb59c {
     width: 32px
 }
 
+.badgeContainer_c1e9c4 {
+    flex: 0 0 auto;
+    -webkit-margin-start: 8px;
+    align-items: center;
+    display: flex;
+    height: 18px;
+    margin-inline-start: 8px
+}
+
 .switchContainer_c1e9c4 {
     flex-shrink: 0
 }
