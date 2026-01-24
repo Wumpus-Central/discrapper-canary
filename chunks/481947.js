@@ -22,13 +22,13 @@ var r = n(627968),
     m = n(73392),
     g = n(769015),
     E = n(217356),
-    b = n(559405),
-    y = n(790381),
+    y = n(559405),
+    b = n(790381),
     O = n(266080),
-    A = n(427262),
-    v = n(652215),
-    S = n(806931),
-    I = n(544105),
+    v = n(427262),
+    A = n(652215),
+    I = n(806931),
+    S = n(544105),
     T = n(985018),
     C = n(77615);
 
@@ -46,7 +46,7 @@ function N(e, t, n) {
     );
 }
 
-function R(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function R(e) {
     return e;
 }
 
-function w(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -81,7 +81,7 @@ function P(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -133,7 +133,7 @@ let L = 16,
             : (0, r.jsx)(u.DUT, {
                   onClick: l,
                   className: C.Pt,
-                  children: (0, r.jsx)(b.A, {
+                  children: (0, r.jsx)(y.A, {
                       userId: o,
                       size: L,
                       hangStatusActivity: t,
@@ -163,11 +163,11 @@ function k(e) {
         video: m,
         isStreaming: g,
         disabled: E,
-        isWatching: b,
-        iconClassName: A,
+        isWatching: y,
+        iconClassName: v,
         embeddedApplication: N,
-        otherClientSessionType: R,
-        voicePlatform: w,
+        otherClientSessionType: w,
+        voicePlatform: R,
         application: P,
         guildId: D,
         channelId: x,
@@ -183,7 +183,7 @@ function k(e) {
     if (h || E) return null;
     let W = [],
         K = V({
-            iconClassName: A,
+            iconClassName: v,
             mute: n,
             localMute: i,
             serverMute: o,
@@ -200,7 +200,7 @@ function k(e) {
                           children: (0, r.jsx)(u.OCo, {
                               size: "md",
                               color: "currentColor",
-                              className: s()(C.Kk, A),
+                              className: s()(C.Kk, v),
                               colorClass: C.of,
                           }),
                       },
@@ -215,7 +215,7 @@ function k(e) {
                           children: (0, r.jsx)(u.npA, {
                               size: "md",
                               color: "currentColor",
-                              className: s()(C.Kk, A),
+                              className: s()(C.Kk, v),
                           }),
                       },
                       "video",
@@ -228,7 +228,7 @@ function k(e) {
                     {
                         text: T.intl.string(T.t.HFwRpk),
                         children: (0, r.jsx)(u.EpV, {
-                            className: s()(C.Kk, A),
+                            className: s()(C.Kk, v),
                             color: u.LU0.colors.STATUS_WARNING_BACKGROUND,
                         }),
                     },
@@ -244,33 +244,33 @@ function k(e) {
                         children: (0, r.jsx)(u.bxf, {
                             size: "md",
                             color: "currentColor",
-                            className: s()(C.Kk, A),
+                            className: s()(C.Kk, v),
                         }),
                     },
                     "activity",
                 ),
             ),
-        R === I.f$.XBOX || w === S.J7.XBOX
+        w === S.f$.XBOX || R === I.J7.XBOX
             ? W.push(
                   (0, r.jsx)(
                       O.A,
                       {
-                          className: s()(C.Kk, A),
+                          className: s()(C.Kk, v),
                       },
                       "xbox",
                   ),
               )
-            : (R === I.f$.PLAYSTATION || w === S.J7.PLAYSTATION) &&
+            : (w === S.f$.PLAYSTATION || R === I.J7.PLAYSTATION) &&
               W.push(
                   (0, r.jsx)(
-                      y.A,
+                      b.A,
                       {
-                          className: s()(C.Kk, A),
+                          className: s()(C.Kk, v),
                       },
                       "playstation",
                   ),
               ),
-        b &&
+        y &&
             W.push(
                 (0, r.jsx)(
                     c.m,
@@ -279,7 +279,7 @@ function k(e) {
                         children: (0, r.jsx)(u.bMW, {
                             size: "xs",
                             color: "currentColor",
-                            className: s()(C.Kk, A),
+                            className: s()(C.Kk, v),
                         }),
                     },
                     "watch",
@@ -295,7 +295,7 @@ function k(e) {
                     "stream",
                 ),
             );
-    let z = null != P && !(0, l.Lt)(P.flags, v.gfo.EMBEDDED),
+    let z = null != P && !(0, l.Lt)(P.flags, A.gfo.EMBEDDED),
         q = null == k && z;
     return 0 !== W.length || 0 !== K.length || U || q
         ? (0, r.jsxs)("div", {
@@ -317,7 +317,7 @@ function k(e) {
                                       G,
                                       {
                                           application: P,
-                                          iconClassName: A,
+                                          iconClassName: v,
                                           guildId: D,
                                           channelId: x,
                                           userId: L.id,
@@ -327,7 +327,7 @@ function k(e) {
                                 : (0, r.jsx)(j, {
                                       userId: L.id,
                                       hangStatusActivity: k,
-                                      iconClassName: A,
+                                      iconClassName: v,
                                       isSelf: F,
                                       onAddHangStatusClicked: Y,
                                   }),
@@ -342,7 +342,7 @@ let U = function (e) {
     let {
             avatarContainerClass: n = C.H,
             userNameClassName: i = C.gr,
-            size: a = v.OSZ.SMALL,
+            size: a = A.OSZ.SMALL,
             selected: o = !1,
             disabled: l = !1,
             isOverlay: d = !1,
@@ -351,13 +351,13 @@ let U = function (e) {
         _ = D(e, ["avatarContainerClass", "userNameClassName", "size", "selected", "disabled", "isOverlay", "ref"]),
         {
             onClick: g,
-            onKeyDown: b,
-            onDoubleClick: y,
+            onKeyDown: y,
+            onDoubleClick: b,
             onContextMenu: O,
-            onMouseLeave: S,
-            onMouseDown: I,
+            onMouseLeave: I,
+            onMouseDown: S,
             priority: N,
-            speaking: w = !1,
+            speaking: R = !1,
             voiceDb: x = -1 / 0,
             latched: L,
             collapsed: j,
@@ -377,28 +377,28 @@ let U = function (e) {
             userId: z.id,
             guildId: G,
         }),
-        X = (0, m.a)({
+        Z = (0, m.a)({
             displayNameStyles: q,
         }),
-        Z = (0, p.v)({
-            isSpeaking: w,
-            isLatched: L,
+        X = (0, p.v)({
+            isSpeaking: R,
+            isLatched: L && !M && !U,
             voiceDb: x,
         }),
         Q = (e) => {
             null == g || g(e, z);
         },
-        $ = (e) => {
-            null == y || y(e, z);
-        },
         J = (e) => {
+            null == b || b(e, z);
+        },
+        $ = (e) => {
             null == O || O(e, z);
         },
         ee = (e) => {
-            null == S || S(e, z);
+            null == I || I(e, z);
         },
         et = (e) => {
-            null == I || I(e, z);
+            null == S || S(e, z);
         };
 
     function en() {
@@ -407,7 +407,7 @@ let U = function (e) {
                   text: T.intl.string(T.t.BVK71i),
                   children: (0, r.jsx)("div", {
                       className: s()(C.G, {
-                          [C.g4]: !M && !U && w,
+                          [C.g4]: !M && !U && R,
                       }),
                   }),
               })
@@ -417,25 +417,25 @@ let U = function (e) {
     function er() {
         return (0, r.jsx)("div", {
             className: s()(n, C.my, {
-                [C.Jb]: a === v.OSZ.LARGE,
-                [C.dT]: a === v.OSZ.SMALL,
+                [C.Jb]: a === A.OSZ.LARGE,
+                [C.dT]: a === A.OSZ.SMALL,
             }),
-            style: R(
+            style: w(
                 {
-                    backgroundImage: "url(".concat(z.getAvatarURL(G, a === v.OSZ.LARGE ? 38 : 24), ")"),
+                    backgroundImage: "url(".concat(z.getAvatarURL(G, a === A.OSZ.LARGE ? 38 : 24), ")"),
                 },
-                Z,
+                X,
             ),
         });
     }
 
     function ei() {
         let e = (0, r.jsxs)("div", {
-                className: s()(i, C.Xh, X, {
-                    [C.Pi]: !M && !U && w,
+                className: s()(i, C.Xh, Z, {
+                    [C.Pi]: !M && !U && R,
                 }),
                 children: [
-                    null != V ? V : A.Ay.getName(z),
+                    null != V ? V : v.Ay.getName(z),
                     F
                         ? (0, r.jsxs)("span", {
                               className: C.IW,
@@ -452,13 +452,13 @@ let U = function (e) {
                 disableTooltip: !0,
                 className: s()(C.fc, d && C.zW),
                 profileViewedAnalytics: {
-                    source: d ? v.JJy.OVERLAY : v.ThZ.VOICE_PANEL,
+                    source: d ? A.JJy.OVERLAY : A.ThZ.VOICE_PANEL,
                 },
             };
         return !j || d
             ? (0, r.jsx)(
                   E.A,
-                  P(R({}, t), {
+                  P(w({}, t), {
                       children: e,
                   }),
               )
@@ -468,7 +468,7 @@ let U = function (e) {
     function ea() {
         return (0, r.jsx)(
             k,
-            R(
+            w(
                 {
                     disabled: l,
                 },
@@ -483,17 +483,17 @@ let U = function (e) {
             [C.EF]: Y,
             [C.wH]: o,
             [C.vk]: null != g,
-            [C.L9]: a === v.OSZ.SMALL,
-            [C.p8]: a === v.OSZ.LARGE,
+            [C.L9]: a === A.OSZ.SMALL,
+            [C.p8]: a === A.OSZ.LARGE,
             [C.r9]: !o && l,
             [C.DF]: K,
         }),
         onClick: Q,
-        onDoubleClick: $,
-        onContextMenu: J,
+        onDoubleClick: J,
+        onContextMenu: $,
         onMouseLeave: ee,
         onMouseDown: et,
-        onKeyDown: b,
+        onKeyDown: y,
         "aria-label": null != (t = null != W ? W : V) ? t : z.username,
         focusProps: {
             offset: {
@@ -515,14 +515,14 @@ function G(e) {
         _ = (0, o.K)((e) => p(e));
     i.useEffect(() => {
         d &&
-            f.Ay.trackWithMetadata(v.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
+            f.Ay.trackWithMetadata(A.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
                 channel_id: l,
                 guild_id: a,
                 user_id: u,
             });
     }, [t.id, l, a, u, d]);
     let h = () => {
-        f.Ay.trackWithMetadata(v.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
+        f.Ay.trackWithMetadata(A.HAw.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
             channel_id: l,
             guild_id: a,
             game_name: t.name,

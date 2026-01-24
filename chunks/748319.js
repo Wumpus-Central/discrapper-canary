@@ -935,7 +935,7 @@ function e6() {
             voiceDb: x,
             speakingWhileMuted: R,
             speakingWhilePTTInactive: eT,
-            latched: p && null != v,
+            latched: p && null != v && !_ && !y,
             status: s,
             streaming: i,
             suppress: A,
