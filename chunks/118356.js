@@ -91,6 +91,11 @@ class d {
                     r = t();
                 return this.log(e, Date.now() - n), r;
             }),
+            i(this, "timeAsync", async (e, t) => {
+                let n = Date.now(),
+                    r = await t();
+                return this.log(e, "".concat(Date.now() - n, "ms")), r;
+            }),
             i(this, "fileOnly", function (e) {
                 for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
                 s(t.name, "file-only", e, ...r),
