@@ -198,24 +198,25 @@ class x {
                         ? void 0
                         : n.reduce((t, n) => {
                               if (n.type === b.lp.USER) {
-                                  let t = (0, a.R)({
-                                      userId: e,
-                                      checkIsMuted: !0,
-                                  });
-                                  return (
-                                      t && (this.lastSpoke[e] = Date.now()),
-                                      this.participantByIndex.set(
-                                          n.id,
-                                          T(I({}, n), {
-                                              speaking: t,
-                                              voiceDb: _.A.getVoiceVolume(e),
-                                              latched: D(e),
-                                              lastSpoke: this.lastSpoke[e],
-                                              soundsharing: _.A.isSoundSharing(e),
-                                          }),
-                                      ),
-                                      !0
-                                  );
+                                  let r = (0, a.R)({
+                                          userId: e,
+                                          checkIsMuted: !0,
+                                      }),
+                                      i = D(e),
+                                      s = _.A.isSoundSharing(e);
+                                  return n.speaking === r && n.latched === i && n.soundsharing === s
+                                      ? t
+                                      : (r && (this.lastSpoke[e] = Date.now()),
+                                        this.participantByIndex.set(
+                                            n.id,
+                                            T(I({}, n), {
+                                                speaking: r,
+                                                latched: i,
+                                                lastSpoke: this.lastSpoke[e],
+                                                soundsharing: s,
+                                            }),
+                                        ),
+                                        !0);
                               }
                               return t;
                           }, !1)) && t
@@ -307,7 +308,6 @@ class x {
                         userId: e,
                         checkIsMuted: !0,
                     }),
-                    voiceDb: _.A.getVoiceVolume(e),
                     latched: D(e),
                     lastSpoke: null != (s = this.lastSpoke[e]) ? s : 0,
                     soundsharing: _.A.isSoundSharing(e),

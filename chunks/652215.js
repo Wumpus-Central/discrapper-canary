@@ -1,29 +1,29 @@
 n.d(t, {
     $4X: () => eD,
     $8o: () => ei,
-    $OG: () => tw,
+    $OG: () => tR,
     $aF: () => ta,
     $jw: () => nv,
-    $pd: () => eZ,
+    $pd: () => eX,
     AD1: () => p.AD,
     AKn: () => rC,
     AMi: () => tq,
     AO_: () => nE,
     AaC: () => nH,
     Ahp: () => td,
-    Ajs: () => rw,
+    Ajs: () => rR,
     An1: () => rv,
-    AnalyticsObjectTypes: () => tR,
+    AnalyticsObjectTypes: () => tw,
     Auw: () => i.A,
     BBH: () => tO,
     BEX: () => O,
     BIo: () => no,
-    BRT: () => nX,
+    BRT: () => nZ,
     BVt: () => d.BV,
-    BYE: () => t$,
-    CS1: () => eR,
+    BYE: () => tJ,
+    CS1: () => ew,
     CT4: () => _.CT,
-    CUs: () => nR,
+    CUs: () => nw,
     CmT: () => p.Cm,
     D0I: () => ep,
     D2K: () => nf,
@@ -42,7 +42,7 @@ n.d(t, {
     F_X: () => nm,
     Fz7: () => nS,
     G2g: () => tM,
-    G6Q: () => J,
+    G6Q: () => $,
     GD: () => n4,
     GaG: () => nb,
     Gg3: () => p.Gg,
@@ -61,13 +61,13 @@ n.d(t, {
     K3c: () => rS,
     KE7: () => y,
     KIY: () => tY,
-    KL3: () => ew,
+    KL3: () => eR,
     Kby: () => nI,
     KcG: () => p.Kc,
     Kf: () => p.Kf,
     Ks6: () => nN,
     LU7: () => rp,
-    LWr: () => tJ,
+    LWr: () => t$,
     L_o: () => p.L_,
     Lti: () => p.Lt,
     Lw6: () => p.Lw,
@@ -87,9 +87,9 @@ n.d(t, {
     NcF: () => p.Nc,
     O3O: () => tW,
     OLI: () => p.OL,
-    OQC: () => n$,
+    OQC: () => nJ,
     OSZ: () => Q,
-    Oi0: () => rR,
+    Oi0: () => rw,
     P0V: () => eK,
     P6Q: () => ro,
     PE$: () => nM,
@@ -99,7 +99,7 @@ n.d(t, {
     PvD: () => er,
     Q4z: () => tD,
     Q7O: () => p.Q7,
-    QCW: () => nZ,
+    QCW: () => nX,
     RCc: () => e9,
     RWi: () => ng,
     R_U: () => nV,
@@ -112,19 +112,19 @@ n.d(t, {
     SO9: () => n_,
     T2E: () => tE,
     T7x: () => eL,
-    TBI: () => w,
+    TBI: () => R,
     TGd: () => p.TG,
-    TGz: () => tX,
+    TGz: () => tZ,
     TLS: () => t3,
     TVA: () => t6,
     TZK: () => eq,
     T_y: () => tm,
     TbF: () => eB,
     ThZ: () => tA,
-    TpD: () => tZ,
+    TpD: () => tX,
     U2_: () => p.U2,
     UNo: () => eS,
-    UVF: () => Z,
+    UVF: () => X,
     Ue3: () => eI,
     Umv: () => eu,
     UqL: () => tI,
@@ -136,7 +136,7 @@ n.d(t, {
     W6J: () => _.W6,
     WA1: () => eG,
     WMy: () => _.WM,
-    WTw: () => nJ,
+    WTw: () => n$,
     WxW: () => rT,
     Wzo: () => p.Wz,
     X30: () => rL,
@@ -164,13 +164,13 @@ n.d(t, {
     _4N: () => rO,
     _Ak: () => p._A,
     _Ee: () => e_,
-    _Of: () => eX,
+    _Of: () => eZ,
     __0: () => p.__,
     _i_: () => tt,
     _tK: () => tQ,
     a3B: () => nA,
     aUe: () => h,
-    aVn: () => R,
+    aVn: () => w,
     ajI: () => en,
     b7d: () => I,
     bFR: () => k,
@@ -195,10 +195,10 @@ n.d(t, {
     dzt: () => nK,
     e$_: () => p.e$,
     eA$: () => eo,
-    eAD: () => e$,
+    eAD: () => eJ,
     eGj: () => ef,
     eMA: () => n5,
-    eQT: () => eJ,
+    eQT: () => e$,
     elq: () => D,
     ewM: () => tz,
     f5z: () => q,
@@ -273,7 +273,7 @@ n.d(t, {
     nhx: () => nl,
     nyz: () => tn,
     o$q: () => t1,
-    o1q: () => nw,
+    o1q: () => nR,
     oA2: () => t7,
     oIV: () => e7,
     oJQ: () => nY,
@@ -310,7 +310,7 @@ n.d(t, {
     ugG: () => tF,
     uje: () => n3,
     ump: () => t2,
-    uss: () => X,
+    uss: () => Z,
     uvi: () => eN,
     uw8: () => rI,
     vkP: () => U,
@@ -326,7 +326,7 @@ n.d(t, {
     xL: () => ec,
     xei: () => p.xe,
     xfJ: () => p.xf,
-    yFH: () => $,
+    yFH: () => J,
     yKI: () => nz,
     yTV: () => tH,
     zF_: () => n6,
@@ -621,10 +621,10 @@ var r = n(478437),
     N = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    R = (function (e) {
+    w = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    w = (function (e) {
+    R = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     P = (function (e) {
@@ -929,7 +929,7 @@ var H = (function (e) {
     q = (function (e) {
         return (e.ALWAYS = "ALWAYS"), (e.ONLY_WHILE_SPEAKING = "ONLY_WHILE_SPEAKING"), e;
     })({}),
-    X = (function (e) {
+    Z = (function (e) {
         return (
             (e.GUILDS = "GUILDS"),
             (e.VOICE = "VOICE"),
@@ -947,7 +947,7 @@ var H = (function (e) {
             e
         );
     })({}),
-    Z = (function (e) {
+    X = (function (e) {
         return (
             (e.DEFAULT = "DEFAULT"),
             (e.PINNED = "PINNED"),
@@ -962,7 +962,7 @@ var H = (function (e) {
     Q = (function (e) {
         return (e.LARGE = "large"), (e.SMALL = "small"), e;
     })({}),
-    $ = (function (e) {
+    J = (function (e) {
         return (
             (e[(e.ACTIVE = 0)] = "ACTIVE"),
             (e[(e.TIMED_OUT = 1)] = "TIMED_OUT"),
@@ -971,7 +971,7 @@ var H = (function (e) {
             e
         );
     })({}),
-    J = (function (e) {
+    $ = (function (e) {
         return (
             (e.TOP_LEFT = "topLeft"),
             (e.TOP_RIGHT = "topRight"),
@@ -1953,6 +1953,7 @@ let ed = "",
         CONFERENCE_MODE_VOICE_CHANNEL: (e) => "/conference-mode/channels/".concat(e),
         CONFERENCE_MODE_VOICE_CHANNEL_USERS: (e) => "/conference-mode/channels/".concat(e, "/users"),
         CONFERENCE_MODE_EVENTS: "/conference-mode/events",
+        CONFERENCE_MODE_CONFERENCES: "/conference-mode/conference",
         GUILD_MIGRATE_PIN_PERMISSION: (e) => "/guilds/".concat(e, "/migrate-pin-permission"),
         GET_APPLICATION_TOKENS: (e) => "/oauth2/applications/".concat(e, "/tokens"),
         GUILD_MIGRATE_SLOWMODE_PERMISSION: (e) => "/guilds/".concat(e, "/migrate-bypass-slowmode-permission"),
@@ -1996,8 +1997,8 @@ let eb = 100,
     eT = 100,
     eC = 250,
     eN = 2e3,
-    eR = 4e3,
-    ew = 250,
+    ew = 4e3,
+    eR = 250,
     eP = 100,
     eD = 1e3,
     ex = 100,
@@ -2046,10 +2047,10 @@ var eq = (function (e) {
             e
         );
     })({}),
-    eX = (function (e) {
+    eZ = (function (e) {
         return (e.VIDEO = "video"), (e.VOICE = "voice"), e;
     })({}),
-    eZ = (function (e) {
+    eX = (function (e) {
         return (
             (e[(e.PLAYING = 0)] = "PLAYING"),
             (e[(e.STREAMING = 1)] = "STREAMING"),
@@ -2064,10 +2065,10 @@ var eq = (function (e) {
     eQ = (function (e) {
         return (e.GAME = "game"), (e.USER = "user"), (e.GROUP = "group"), e;
     })({}),
-    e$ = (function (e) {
+    eJ = (function (e) {
         return (e.LOADING = "LOADING"), (e.COMPLETE = "COMPLETE"), (e.FAILED = "FAILED"), e;
     })({});
-let eJ = 128,
+let e$ = 128,
     e0 = 1024,
     e1 = 2e3,
     e2 = 8e3,
@@ -3106,7 +3107,7 @@ var tC = (function (e) {
             e
         );
     })({}),
-    tR = (function (e) {
+    tw = (function (e) {
         return (
             (e.GIFT = "gift"),
             (e.BUY = "buy"),
@@ -3132,7 +3133,7 @@ var tC = (function (e) {
             e
         );
     })({});
-let tw = {
+let tR = {
         page: "Direct",
         object: "Web URL",
     },
@@ -3539,13 +3540,13 @@ let tW = Object.freeze({
         IOS: "https://itunes.apple.com/app/discord/id985746746",
         ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
     }),
-    tX = 0x99aab5,
-    tZ = (0, l.Hl)(tX),
+    tZ = 0x99aab5,
+    tX = (0, l.Hl)(tZ),
     tQ = [
         1752220, 3066993, 3447003, 0x9b59b6, 0xe91e63, 0xf1c40f, 0xe67e22, 0xe74c3c, 9807270, 6323595, 1146986, 2067276,
         2123412, 7419530, 0xad1457, 0xc27c0e, 0xa84300, 0x992d22, 9936031, 5533306,
     ];
-var t$ = (function (e) {
+var tJ = (function (e) {
         return (
             (e.VOICE_LEGACY_SUBSYSTEM = "voice_legacy_subsystem"),
             (e.DEBUG_LOGGING = "debug_logging"),
@@ -3557,7 +3558,7 @@ var t$ = (function (e) {
             e
         );
     })({}),
-    tJ = (function (e) {
+    t$ = (function (e) {
         return (
             (e.FILTER_FROM = "FILTER_FROM"),
             (e.FILTER_MENTIONS = "FILTER_MENTIONS"),
@@ -5734,7 +5735,7 @@ var nC = (function (e) {
             e
         );
     })({}),
-    nR = (function (e) {
+    nw = (function (e) {
         return (
             (e.TOP_LEFT = "top-left"),
             (e.TOP_RIGHT = "top-right"),
@@ -5743,7 +5744,7 @@ var nC = (function (e) {
             e
         );
     })({}),
-    nw = (function (e) {
+    nR = (function (e) {
         return (e.VIDEO = "VIDEO"), (e.ACTIVITY = "ACTIVITY"), (e.FRAME = "FRAME"), (e.HAVEN = "HAVEN"), e;
     })({}),
     nP = (function (e) {
@@ -6031,16 +6032,16 @@ var nW = (function (e) {
     })({});
 let nz = 14,
     nq = 30;
-var nX = (function (e) {
+var nZ = (function (e) {
     return (
         (e.OVERLAY = "OVERLAY"), (e.APP = "APP"), (e.POPOUT = "POPOUT"), (e.CALL_TILE_POPOUT = "CALL_TILE_POPOUT"), e
     );
 })({});
-let nZ = __OVERLAY__ ? "OVERLAY" : "APP";
+let nX = __OVERLAY__ ? "OVERLAY" : "APP";
 var nQ = (function (e) {
         return (e.COMPLETE = "complete"), (e.TRANSITION = "transition"), e;
     })({}),
-    n$ = (function (e) {
+    nJ = (function (e) {
         return (
             (e.QUEUED = "queued"),
             (e.PLANNING = "planning"),
@@ -6055,7 +6056,7 @@ var nQ = (function (e) {
             e
         );
     })({}),
-    nJ = (function (e) {
+    n$ = (function (e) {
         return (
             (e.INSTALL_REQUIRED = "install_required"),
             (e.INSTALLING = "installing"),
@@ -6303,8 +6304,8 @@ let rT = 100,
 var rN = (function (e) {
     return (e[(e.NULL = 0)] = "NULL"), (e[(e.DISABLED = 1)] = "DISABLED"), (e[(e.ENABLED = 2)] = "ENABLED"), e;
 })({});
-let rR = "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
-var rw = (function (e) {
+let rw = "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
+var rR = (function (e) {
         return (
             (e[(e.CLIPS_ENABLED = 1)] = "CLIPS_ENABLED"),
             (e[(e.ALLOW_VOICE_RECORDING = 2)] = "ALLOW_VOICE_RECORDING"),
