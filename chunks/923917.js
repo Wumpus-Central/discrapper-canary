@@ -293,10 +293,6 @@ let Q = a.forwardRef(function (e, t) {
                 let e = n.document.documentElement;
                 c()(null != e, "Window document element was null"), e.setAttribute("lang", l);
             }, [n, l]),
-            a.useEffect(() => {
-                let e = n.document.documentElement;
-                c()(null != e, "Window document element was null"), (e.className = d);
-            }, [n, d]),
             (0, i.jsx)("div", {
                 "data-popout-root": !0,
                 ref: t,
