@@ -7,7 +7,8 @@ n.d(t, {
     n2: () => p,
     oO: () => _,
     wc: () => m,
-});
+}),
+    n(896048);
 var r = n(284009),
     i = n.n(r),
     a = n(562465),
@@ -53,19 +54,35 @@ async function d() {
     }
 }
 async function f(e, t, n, r) {
-    let { users: i, next_index: s } = (
+    let {
+        users: i,
+        next_index: s,
+        ineligible_users: l,
+    } = (
         await a.Bo.get({
             url: c.Rsh.BILLING_SUBSCRIPTION_ELIGIBLE_USERS(e),
             query: {
                 index: t,
                 limit: null != r ? r : u,
                 search_query: n,
+                include_ineligible: !0,
             },
             rejectWithError: !0,
         })
     ).body;
     return {
-        users: i.map((e) => new o.A(e)),
+        users: [
+            ...i.map((e) =>
+                Object.assign(new o.A(e), {
+                    eligible: !0,
+                }),
+            ),
+            ...(null != l ? l : []).map((e) =>
+                Object.assign(new o.A(e), {
+                    eligible: !1,
+                }),
+            ),
+        ],
         nextIndex: s,
     };
 }

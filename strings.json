@@ -22690,6 +22690,7 @@
   "MIiPur": "!!{premiumGroupProductName}!! {sentCount, plural, one {invite sent} other {invites sent} }",
   "Um/7BM": "Invite plan members",
   "5fZHp3": "Send Invite",
+  "5tzM9V": "!!{disabledUserName}!! can’t join your !!{premiumGroupProductName}!! right now",
   "0LHbPc": "You have great friends, just none that are eligible right now. You can always check again later to see if that changes. [Learn more](Learn more).",
   "ONaJLH": "No one’s eligible right now",
   "zrtwpV": "Could you give us a description of them? Height? Eye color? Actually, come back later and try again.",

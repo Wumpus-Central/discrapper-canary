@@ -19,8 +19,9 @@ function l(e) {
             searchQuery: f = "",
             emptySearchContent: p,
             className: _,
+            tooltipConfig: h,
         } = e,
-        h = (0, i.K)((e) => {
+        m = (0, i.K)((e) => {
             e && !c && (null == u || u());
         });
     return f.length > 0 && 0 === t.length && null != p
@@ -49,16 +50,15 @@ function l(e) {
                               user: e,
                               checked: n(e),
                               disabled: !!(null == d ? void 0 : d(e)),
-                              onChange: (e, t) => {
-                                  l(e, t);
-                              },
+                              onChange: l,
+                              tooltipConfig: h,
                           },
                           e.id,
                       ),
                   ),
                   c && (0, r.jsx)(a.y$y, {}),
                   (0, r.jsx)("div", {
-                      ref: h,
+                      ref: m,
                   }),
               ],
           });
