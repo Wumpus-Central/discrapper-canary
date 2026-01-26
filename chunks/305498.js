@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => A,
+    A: () => f,
 });
 var r = n(627968),
     i = n(64700),
@@ -11,21 +11,21 @@ var r = n(627968),
     u = n(652215),
     d = n(49999),
     p = n(49370),
-    f = n(985018),
-    h = n(880055);
+    h = n(985018),
+    g = n(880055);
 
-function A(e) {
-    let { targetElementRef: t, dismissPopover: n, children: A } = e,
-        { orbsRewardAmount: g } = (0, c.uX)("PremiumOrbRewardsOrbDropPopover"),
-        m = i.useCallback(() => {
-            n(d.i.TAKE_ACTION), (0, o.pX)(u.BVt.APPLICATION_STORE);
+function f(e) {
+    let { targetElementRef: t, dismissPopover: n, children: f } = e,
+        { orbsRewardAmount: m } = (0, c.uX)("PremiumOrbRewardsOrbDropPopover"),
+        A = i.useCallback(() => {
+            n(d.i.TAKE_ACTION), (0, o.pX)("".concat(u.BVt.NITRO_HOME, "?section=orbs"));
         }, [n]),
-        b = (0, r.jsx)(l.AM, {
+        _ = (0, r.jsx)(l.AM, {
             targetElementRef: t,
             onRequestClose: () => n(d.i.USER_DISMISS),
             graphic: {
                 type: "image",
-                src: h.A,
+                src: g.A,
             },
             badge: {
                 type: "beta",
@@ -38,15 +38,15 @@ function A(e) {
                 align: "start",
             },
             size: "md",
-            title: f.intl.string(p.default["78+gLr"]),
-            body: f.intl.formatToPlainString(p.default.Ry1TXC, {
-                orbsCount: g,
+            title: h.intl.string(p.default["78+gLr"]),
+            body: h.intl.formatToPlainString(p.default.Ry1TXC, {
+                orbsCount: m,
             }),
             actions: [
                 {
-                    text: f.intl.string(f.t.RzWDqY),
+                    text: h.intl.string(h.t.RzWDqY),
                     icon: a.tvc,
-                    onClick: m,
+                    onClick: A,
                 },
             ],
             gradientColor: {
@@ -58,9 +58,9 @@ function A(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                children: A,
+                children: f,
             }),
-            b,
+            _,
         ],
     });
 }

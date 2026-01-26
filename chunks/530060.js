@@ -15,12 +15,13 @@ var i = n(503698),
     p = n(985018),
     _ = n(128906);
 let h = (e) => {
-    let { className: t, location: n } = e,
-        { analyticsLocations: i } = (0, l.Ay)(n);
+    let { className: t, location: n, sectionRef: i } = e,
+        { analyticsLocations: h } = (0, l.Ay)(n);
     return (0, s.bG)([c.A], () => c.A.passesGeneralUIInvariant(u.W.NITRO))
         ? (0, r.jsx)(l.f5, {
-              value: i,
+              value: h,
               children: (0, r.jsxs)("div", {
+                  ref: i,
                   className: a()(_.uW, _.Uv, t),
                   children: [
                       (0, r.jsx)(o.DZT, {

@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => R,
+    A: () => D,
 });
 var r = n(627968),
     i = n(64700),
@@ -12,149 +12,155 @@ var r = n(627968),
     d = n(607470),
     f = n(895944),
     p = n(649032),
-    _ = n(309954),
-    h = n(287809),
-    m = n(975571),
-    g = n(474090),
-    E = n(385243),
+    _ = n(976860),
+    h = n(309954),
+    m = n(287809),
+    g = n(975571),
+    E = n(474090),
+    y = n(385243),
     b = n(788868),
-    y = n(652215),
-    O = n(49370),
-    A = n(985018),
-    v = n(125634),
-    S = n(268920),
-    I = n(633217),
-    T = n(909340);
-let C = () => {
+    O = n(652215),
+    v = n(901123),
+    A = n(49370),
+    I = n(985018),
+    S = n(125634),
+    T = n(268920),
+    C = n(633217),
+    N = n(909340);
+let w = () => {
         let e = (0, s.bG)([u.A], () => u.A.useReducedMotion);
         return (0, r.jsx)("div", {
-            className: v.s,
+            className: S.s,
             children: e
                 ? (0, r.jsx)("img", {
-                      src: S.A,
-                      className: v.Cb,
+                      src: T.A,
+                      className: S.Cb,
                       alt: "Orb",
                   })
                 : (0, r.jsxs)(d.A, {
                       autoPlay: !0,
                       loop: !0,
-                      className: v.Cb,
+                      className: S.Cb,
                       children: [
                           (0, r.jsx)("source", {
-                              src: I.A,
+                              src: C.A,
                               type: "video/webm",
                           }),
                           (0, r.jsx)("img", {
-                              src: S.A,
-                              className: v.Cb,
+                              src: T.A,
+                              className: S.Cb,
                               alt: "Orb",
                           }),
                       ],
                   }),
         });
     },
-    N = 4100;
+    R = 4100;
 
-function R(e) {
-    let { targetElementRef: t, shouldShow: n, onRequestClose: S, ctaText: I, ctaOnClick: R } = e,
-        w = (0, s.bG)([u.A], () => u.A.useReducedMotion),
-        P = (0, s.bG)([f.A], () => f.A.getRewardForProgram(p.W.NITRO)),
-        D = (0, s.bG)([h.default], () => h.default.getCurrentUser()),
-        { balance: x } = (0, _.W)(),
-        L = i.useMemo(() => {
-            let e = (0, g.YE)(D, b.PremiumTypes.TIER_2),
-                t = !(0, g.ki)(D);
+function P() {
+    (0, _.pX)("".concat(v.BV.NITRO_HOME, "?section=orbs"));
+}
+
+function D(e) {
+    let { targetElementRef: t, shouldShow: n, onRequestClose: _, ctaText: v, ctaOnClick: T } = e,
+        C = (0, s.bG)([u.A], () => u.A.useReducedMotion),
+        D = (0, s.bG)([f.A], () => f.A.getRewardForProgram(p.W.NITRO)),
+        x = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
+        { balance: L } = (0, h.W)(),
+        j = i.useMemo(() => {
+            let e = (0, E.YE)(x, b.PremiumTypes.TIER_2),
+                t = !(0, E.ki)(x);
             if (!f.A.passesGeneralUIInvariant(p.W.NITRO)) return null;
             if (t)
                 return (0, r.jsx)(c.EYj, {
                     variant: "text-xs/normal",
                     color: "text-default",
-                    children: A.intl.format(O.default.cjEl8a, {
-                        deepLinkToNitroOrbs: () => {},
+                    children: I.intl.format(A.default.cjEl8a, {
+                        deepLinkToNitroOrbs: P,
                     }),
                 });
-            if (e && null != P) {
-                let e = (0, a.default)(new Date(P.next_reward_date), new Date());
+            if (e && null != D) {
+                let e = (0, a.default)(new Date(D.next_reward_date), new Date());
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(c.EYj, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: A.intl.format(O.default["AvL/At"], {
+                            children: I.intl.format(A.default["AvL/At"], {
                                 days: Math.max(1, e),
-                                deepLinkToNitroOrbs: () => {},
+                                deepLinkToNitroOrbs: P,
                             }),
                         }),
-                        (0, r.jsx)(E.A, {}),
+                        (0, r.jsx)(y.A, {}),
                     ],
                 });
             }
             return null;
-        }, [D, P]);
+        }, [x, D]);
     return (0, r.jsxs)(o.x, {
         targetElementRef: t,
         shouldShow: n,
-        onRequestClose: S,
+        onRequestClose: _,
         position: "bottom",
         gradientColor: "blue",
         modal: !0,
         closeOnClickOutside: !0,
         children: [
-            (null != x ? x : 0) >= N &&
+            (null != L ? L : 0) >= R &&
                 (0, r.jsx)(d.A, {
-                    autoPlay: !w,
-                    loop: !w,
+                    autoPlay: !C,
+                    loop: !C,
                     muted: !0,
                     playsInline: !0,
                     tabIndex: -1,
-                    className: v.yG,
-                    src: T.A,
+                    className: S.yG,
+                    src: N.A,
                 }),
             (0, r.jsxs)("div", {
-                className: v.Qs,
+                className: S.Qs,
                 children: [
                     (0, r.jsx)(l.q, {
-                        onClick: S,
+                        onClick: _,
                     }),
                     (0, r.jsxs)("div", {
-                        className: v.hQ,
+                        className: S.hQ,
                         children: [
-                            (0, r.jsx)(C, {}),
+                            (0, r.jsx)(w, {}),
                             (0, r.jsxs)("div", {
-                                className: v.y$,
+                                className: S.y$,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: v.E2,
+                                        className: S.E2,
                                         children: [
                                             (0, r.jsx)(c.EYj, {
                                                 variant: "display-lg",
-                                                className: v.K,
-                                                children: null != x ? x : 0,
+                                                className: S.K,
+                                                children: null != L ? L : 0,
                                             }),
-                                            (null != x ? x : 0) > 0 &&
+                                            (null != L ? L : 0) > 0 &&
                                                 (0, r.jsx)(c.EYj, {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
-                                                    children: A.intl.string(O.default.KclK9z),
+                                                    children: I.intl.string(A.default.KclK9z),
                                                 }),
                                         ],
                                     }),
-                                    L,
+                                    j,
                                 ],
                             }),
                             (0, r.jsx)(c.$nd, {
-                                text: I,
+                                text: v,
                                 variant: "primary",
                                 size: "sm",
-                                onClick: R,
+                                onClick: T,
                                 fullWidth: !0,
                             }),
                             (0, r.jsx)(c.EYj, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
-                                className: v.CU,
-                                children: A.intl.format(O.default.fhAVek, {
-                                    helpdeskArticle: m.A.getArticleURL(y.MVz.ORBS_FAQ),
+                                className: S.CU,
+                                children: I.intl.format(A.default.fhAVek, {
+                                    helpdeskArticle: g.A.getArticleURL(O.MVz.ORBS_FAQ),
                                 }),
                             }),
                         ],
