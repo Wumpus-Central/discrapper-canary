@@ -1,11 +1,12 @@
 n.d(t, {
     Hz: () => c,
     It: () => s,
-    LU: () => p,
+    LU: () => _,
     PF: () => d,
     VP: () => l,
-    fA: () => f,
+    fA: () => p,
     g7: () => u,
+    zU: () => f,
 });
 var r,
     i = n(214958),
@@ -37,17 +38,15 @@ let s = parseInt(null != (r = a().version) ? r : "0", 10),
         ("Firefox" === a().name && s >= 80) ||
         "Opera" === a().name ||
         "Microsoft Edge" === a().name,
-    d =
-        o ||
-        ("Firefox" === a().name && s >= 73) ||
-        ("Safari" === a().name && s >= 13) ||
-        ("Chrome" === a().name && s >= 80) ||
-        ("Microsoft Edge" === a().name && s >= 80),
+    d = "u" > typeof RTCPeerConnection && "function" == typeof RTCPeerConnection.prototype.addTransceiver,
     f =
+        "u" > typeof RTCRtpSender &&
+        ("transform" in RTCRtpSender.prototype || "createEncodedStreams" in RTCRtpSender.prototype),
+    p =
         ("Chrome" === a().name && s >= 58) ||
         ("Safari" === a().name && s >= 15) ||
         ("Firefox" === a().name && s >= 108),
-    p =
+    _ =
         ("Chrome" === a().name && s >= 72) ||
         ("Safari" === a().name && s >= 11) ||
         ("Opera" === a().name && s >= 60) ||
