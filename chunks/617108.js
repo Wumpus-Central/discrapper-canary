@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => g,
+    A: () => E,
 });
 var r = n(627968);
 n(64700);
@@ -8,50 +8,56 @@ var i = n(397927),
     s = n(793574),
     o = n(688810),
     l = n(532794),
-    c = n(804412),
-    u = n(422936),
-    d = n(635995),
-    f = n(915516),
-    p = n(788868),
-    _ = n(652215),
-    h = n(985018),
-    m = n(237082);
-let g = function (e) {
+    c = n(954571),
+    u = n(804412),
+    d = n(422936),
+    f = n(635995),
+    p = n(915516),
+    _ = n(788868),
+    h = n(652215),
+    m = n(985018),
+    g = n(237082);
+let E = function (e) {
     var t;
-    let { dismissCurrentNotice: n, subscriptionTier: g } = e,
-        { analyticsLocations: E } = (0, o.Ay)(s.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
-        b = (0, u.O)(),
-        y = (0, a.A)(null != b && null != b.expires_at ? Date.parse(b.expires_at) : 0),
-        { variant: O, showNagbar: A } = (0, c.Ay)("PremiumDiscountEndingNotice");
+    let { dismissCurrentNotice: n, subscriptionTier: E } = e,
+        { analyticsLocations: y } = (0, o.Ay)(s.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
+        b = (0, d.O)(),
+        O = (0, a.A)(null != b && null != b.expires_at ? Date.parse(b.expires_at) : 0),
+        { variant: v, showNagbar: A } = (0, u.Ay)("PremiumDiscountEndingNotice");
     if (
         null == b ||
-        (null == (t = b.discount) ? void 0 : t.plan_ids.some((e) => p.hd[e].skuId !== g)) ||
+        (null == (t = b.discount) ? void 0 : t.plan_ids.some((e) => _.hd[e].skuId !== E)) ||
         null == b.expires_at ||
-        Object.values(y).every((e) => 0 === e) ||
+        Object.values(O).every((e) => 0 === e) ||
         !A
     )
         return null;
-    let v = () => {
+    let I = () => {
         (0, l.A)({
-            subscriptionTier: g,
-            analyticsLocations: E,
+            subscriptionTier: E,
+            analyticsLocations: y,
             analyticsObject: {
-                page: _.liQ.IN_APP,
-                section: _.JJy.NOTIFICATION_BAR,
-                object: _.ZSU.BUTTON_CTA,
+                page: h.liQ.IN_APP,
+                section: h.JJy.NOTIFICATION_BAR,
+                object: h.ZSU.BUTTON_CTA,
             },
         });
     };
-    return O === c.CJ.NAGBAR_REFRESH
-        ? (0, r.jsxs)(d.T0, {
-              onClick: n,
+    return v === u.CJ.NAGBAR_REFRESH
+        ? (0, r.jsxs)(f.T0, {
+              onClick: () => {
+                  n(),
+                      c.default.track(h.HAw.APP_NOTICE_CLOSED, {
+                          notice_type: h.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
+                      });
+              },
               children: [
-                  (0, r.jsx)(d.In, {
-                      children: (0, f.rn)(y, Number(b.discount.amount)),
+                  (0, r.jsx)(f.In, {
+                      children: (0, p.rn)(O, Number(b.discount.amount)),
                   }),
-                  (0, r.jsx)(d.fY, {
-                      onClick: v,
-                      text: h.intl.string(h.t.zLXssK),
+                  (0, r.jsx)(f.fY, {
+                      onClick: I,
+                      text: m.intl.string(m.t.zLXssK),
                   }),
               ],
           })
@@ -59,18 +65,18 @@ let g = function (e) {
               color: i.Hv$.PREMIUM_TIER_2,
               children: [
                   (0, r.jsx)(i.PMB, {
-                      noticeType: _.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
+                      noticeType: h.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
                       onClick: n,
                   }),
                   (0, r.jsx)(i.tvc, {
                       size: "md",
                       color: "currentColor",
-                      className: m.PC,
+                      className: g.PC,
                   }),
-                  (0, f.rn)(y, Number(b.discount.amount)),
+                  (0, p.rn)(O, Number(b.discount.amount)),
                   (0, r.jsx)(i.zr9, {
-                      onClick: v,
-                      children: h.intl.string(h.t.zLXssK),
+                      onClick: I,
+                      children: m.intl.string(m.t.zLXssK),
                   }),
               ],
           });
