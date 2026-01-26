@@ -13,22 +13,22 @@ var o = r(417597),
     b = r(957565),
     O = r(634654),
     u = r(652215),
-    y = r(746080),
-    d = r(985018);
+    d = r(746080),
+    y = r(985018);
 
 function f(e) {
     let { guild: t, onSelect: r } = e,
         f = (0, o.bG)([l.A], () => null != t && l.A.can(u.xBc.ADMINISTRATOR, t));
     return (0, n.jsx)(c.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated": !0,
         navId: "guild-shop-context",
-        "aria-label": d.intl.string(d.t.g3KvYF),
+        "aria-label": y.intl.string(y.t.g3KvYF),
         onClose: i.Z_,
         onSelect: r,
         children: (0, n.jsx)(c.rXV, {
             children: (0, n.jsx)(c.Drp, {
                 id: "role-subscription-copy-link",
-                label: d.intl.string(d.t.WqhZss),
+                label: y.intl.string(y.t.WqhZss),
                 action: () => {
                     var e, r;
                     s.default.track(
@@ -77,7 +77,7 @@ function f(e) {
                               }),
                         e),
                     ),
-                        (0, b.C)((0, p.n)(t.id, y.VV.GUILD_SHOP));
+                        (0, b.C)((0, p.n)(t.id, d.VV.GUILD_SHOP));
                 },
             }),
         }),

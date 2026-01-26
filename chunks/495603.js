@@ -1,43 +1,47 @@
 i.d(l, {
-    default: () => d,
+    default: () => a,
 });
-var t = i(627968),
-    s = i(64700),
-    e = i(397927),
+var e = i(627968),
+    t = i(64700),
+    s = i(397927),
     r = i(442433),
     u = i(50268),
-    a = i(985018);
+    c = i(985018);
 
-function d(n) {
-    let { id: l, role: i, handleDeletePermission: d } = n,
-        o = (0, u.A)({
+function a(n) {
+    let { id: l, role: i, handleDeletePermission: a } = n,
+        d = (0, u.A)({
             id: l,
-            label: null == i ? a.intl.string(a.t["/AXYnE"]) : a.intl.string(a.t.sMsaLg),
+            label: null == i ? c.intl.string(c.t["/AXYnE"]) : c.intl.string(c.t.sMsaLg),
         });
     return (
-        s.useEffect(() => {
-            null == d && null == o && (0, r.Z_)();
-        }, [o, d]),
-        (0, t.jsxs)(e.W1t, {
-            "data-menu-all-icons": !0,
+        t.useEffect(() => {
+            null == a && null == d && (0, r.Z_)();
+        }, [d, a]),
+        (0, e.jsxs)(s.W1t, {
+            "data-menu-migrated": !0,
             navId: null == i ? "member-permissions-menu" : "role-permissions-menu",
-            "aria-label": null == i ? a.intl.string(a.t.pJMipx) : a.intl.string(a.t.ltedOh),
+            "aria-label": null == i ? c.intl.string(c.t.pJMipx) : c.intl.string(c.t.ltedOh),
             onClose: r.Z_,
             onSelect: void 0,
             children: [
-                null != d &&
-                    (0, t.jsx)(e.rXV, {
-                        children: (0, t.jsx)(e.Drp, {
+                null != a &&
+                    (0, e.jsx)(s.rXV, {
+                        children: (0, e.jsx)(s.Drp, {
                             id: "remove-permission",
                             color: "danger",
-                            label: null == i ? a.intl.string(a.t.hXfRwD) : a.intl.string(a.t["T+3Adg"]),
-                            icon: e.ucK,
-                            action: d,
+                            label: null == i ? c.intl.string(c.t.hXfRwD) : c.intl.string(c.t["T+3Adg"]),
+                            icon: s.ucK,
+                            leadingAccessory: {
+                                type: "icon",
+                                icon: s.ucK,
+                            },
+                            action: a,
                         }),
                     }),
-                null != o &&
-                    (0, t.jsx)(e.rXV, {
-                        children: o,
+                null != d &&
+                    (0, e.jsx)(s.rXV, {
+                        children: d,
                     }),
             ],
         })

@@ -14,13 +14,13 @@ var r,
     u = n(49463),
     d = n(698441),
     p = n(141468),
-    f = n(961350),
-    h = n(734057),
-    A = n(197305),
-    g = n(71393),
-    m = n(320501),
-    b = n(576705),
-    _ = n(222823),
+    h = n(961350),
+    g = n(734057),
+    f = n(197305),
+    m = n(71393),
+    A = n(320501),
+    _ = n(576705),
+    b = n(222823),
     E = n(994500),
     O = n(543465),
     y = n(927813),
@@ -94,9 +94,9 @@ let M = +y.A.Millis.DAY,
     F = {},
     Y = {},
     K = {},
-    z = {},
     W = {},
     q = {},
+    z = {},
     Q = 0,
     X = !1,
     Z = !1,
@@ -115,9 +115,9 @@ let M = +y.A.Millis.DAY,
     eu = !1,
     ed = !1,
     ep = 0,
-    ef = 0;
+    eh = 0;
 
-function eh(e, t) {
+function eg(e, t) {
     if (Date.now() - V > 6 * y.A.Millis.HOUR) {
         let n = new Set(e.map((e) => e.id));
         return t.slice(0, 20).filter((e) => n.has(e.id)).length >= 3;
@@ -125,17 +125,17 @@ function eh(e, t) {
     return !1;
 }
 
-function eA(e) {
+function ef(e) {
     if (!N.A.filterStaffContent()) return !0;
     if ((0, x.xj)(e)) {
         if (e.data.guild_id === T.VL) return !0;
-        let t = g.A.getGuild(e.data.guild_id);
+        let t = m.A.getGuild(e.data.guild_id);
         if (null == t || t.features.has(P.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)) return !1;
     }
     return !0;
 }
 
-function eg(e, t, n, r) {
+function em(e, t, n, r) {
     let i = e.filter((e) => e.type !== n);
     return (
         t.forEach((e, t) => {
@@ -145,7 +145,7 @@ function eg(e, t, n, r) {
     );
 }
 
-function em() {
+function eA() {
     if (
         ((en = en.filter((e) => e.type !== T.Mm.RECOMMENDED_GUILDS)),
         (er = er.filter((e) => e.type !== T.Mm.RECOMMENDED_GUILDS)),
@@ -153,7 +153,7 @@ function em() {
     )
         return;
     let e = "recommendedGuilds",
-        t = g.A.getGuildsArray().filter((e) => e.features.has(P.GuildFeatures.COMMUNITY)).length >= 5,
+        t = m.A.getGuildsArray().filter((e) => e.features.has(P.GuildFeatures.COMMUNITY)).length >= 5,
         n = j.A.getReadTimestamp(e);
     if (t && null != n && Date.now() - ea > M && Date.now() - n < k) return;
     let r = {
@@ -169,7 +169,7 @@ function em() {
     } else en.splice(5, 0, r);
 }
 
-function eb() {
+function e_() {
     let e = new Set();
     if (
         (B.forEach((t) => {
@@ -186,13 +186,13 @@ function eb() {
     B.forEach((e) => {
         (Y[e.id] = e),
             e.type === T.Mm.CUSTOM_STATUS &&
-                (E.A.isBlockedOrIgnored(e.data.user_id) ? (z[e.id] = !0) : (K[e.id] = (0, x.YM)(e)));
+                (E.A.isBlockedOrIgnored(e.data.user_id) ? (W[e.id] = !0) : (K[e.id] = (0, x.YM)(e)));
     });
 }
 
-function e_(e) {
+function eb(e) {
     var t, n, r;
-    let l, a, u, p, f;
+    let l, a, u, p, h;
     if ((B.length > 0 && ((U = B), (B = []), (H = [])), Q++, null != e)) (en = e.newUnread), (er = e.newRead);
     else {
         let [e, t] = eE(U);
@@ -201,17 +201,17 @@ function e_(e) {
     if (
         (N.A.onlyShowRecentGeneratedCandidates() ||
             ((function () {
-                let e = g.A.getGuildIds(),
+                let e = m.A.getGuildIds(),
                     t = [];
                 for (let r of e) {
-                    if (null != W[r] && W[r] < 0) continue;
+                    if (null != q[r] && q[r] < 0) continue;
                     let e = d.Ay.getGuildScheduledEventsForGuild(r),
                         i = 0;
                     for (let r of e)
                         if (!(0, d.AZ)(r)) {
                             if (null != r.channel_id) {
-                                let e = h.A.getChannel(r.channel_id);
-                                if (!b.A.can(P.xBc.VIEW_CHANNEL, e)) continue;
+                                let e = g.A.getChannel(r.channel_id);
+                                if (!_.A.can(P.xBc.VIEW_CHANNEL, e)) continue;
                             }
                             if ((0, d.W$)(r, 2 * y.A.Seconds.DAY) || (0, d.Fd)(r)) {
                                 var n;
@@ -240,8 +240,8 @@ function e_(e) {
                         }
                 }
                 t.sort((e, t) => {
-                    let n = A.A.getGuildAffinity(e.data.guild_id),
-                        r = A.A.getGuildAffinity(t.data.guild_id);
+                    let n = f.A.getGuildAffinity(e.data.guild_id),
+                        r = f.A.getGuildAffinity(t.data.guild_id);
                     return (null != r ? r.score : 0) - (null != n ? n.score : 0);
                 });
                 let r = [],
@@ -249,22 +249,22 @@ function e_(e) {
                 t.forEach((e) => {
                     (Y[e.id] = e), null != j.A.getReadTimestamp(e.id) ? i.push(e) : r.push(e);
                 }),
-                    (en = eg(en, r, T.Mm.GUILD_EVENT, 7)),
-                    (er = eg(er, i, T.Mm.GUILD_EVENT, 7));
+                    (en = em(en, r, T.Mm.GUILD_EVENT, 7)),
+                    (er = em(er, i, T.Mm.GUILD_EVENT, 7));
             })(),
             (l = new Set()),
             (a = {}),
             (u = []),
             (p = []),
-            (f = null != (t = null == (n = s.A.getFeed(w.X1.GLOBAL_FEED)) ? void 0 : n.entries) ? t : [])
+            (h = null != (t = null == (n = s.A.getFeed(w.X1.GLOBAL_FEED)) ? void 0 : n.entries) ? t : [])
                 .sort((e, t) => e.rank - t.rank)
                 .slice(0, 5),
-            f.forEach((e) => {
+            h.forEach((e) => {
                 if (
                     l.has(e.content.id) ||
-                    (e.content.content_type !== i.I.PLAYED_GAME &&
-                        e.content.content_type !== i.I.CUSTOM_STATUS &&
-                        e.content.content_type !== i.I.TOP_GAME) ||
+                    (e.content.content_type !== i.ContentInventoryEntryType.PLAYED_GAME &&
+                        e.content.content_type !== i.ContentInventoryEntryType.CUSTOM_STATUS &&
+                        e.content.content_type !== i.ContentInventoryEntryType.TOP_GAME) ||
                     (0, c.I5)(e.content)
                 )
                     return;
@@ -294,9 +294,9 @@ function e_(e) {
                 };
                 l.add(e.content.id), (Y[t.id] = t), null != j.A.getReadTimestamp(t.id) ? p.push(t) : u.push(t);
             }),
-            (en = eg(en, u, T.Mm.ACTIVITY, 5)),
-            (er = eg(er, p, T.Mm.ACTIVITY, 5)),
-            em()),
+            (en = em(en, u, T.Mm.ACTIVITY, 5)),
+            (er = em(er, p, T.Mm.ACTIVITY, 5)),
+            eA()),
         null != F.load_id && G !== F.load_id)
     ) {
         S.k.trackFeedLoaded({
@@ -361,7 +361,7 @@ function eC(e) {
     let { type: t, messageId: n, userId: r, emoji: i, reactionType: l } = e,
         a = K[n];
     if (null == a || a.type !== T.Mm.MESSAGE) return !1;
-    let s = f.default.getId() === r;
+    let s = h.default.getId() === r;
     "MESSAGE_REACTION_ADD" === t
         ? (a.message = a.message.addReaction(i, s, e.colors, l))
         : (a.message = a.message.removeReaction(i, s, l));
@@ -376,22 +376,22 @@ function eN(e) {
     });
     let i = Z,
         [l, a] = eE(B);
-    if (((H = eO(l, t)), (Z = J ? i && H.length >= T.$P : i && eh(r, B)), 0 === n.length && i === Z)) return !1;
+    if (((H = eO(l, t)), (Z = J ? i && H.length >= T.$P : i && eg(r, B)), 0 === n.length && i === Z)) return !1;
     0 !== n.length && ((en = r), (er = [...er, ...n]));
 }
 class eT extends (r = l.Ay.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(f.default, h.A, s.A, u.A, A.A, d.Ay, g.A, N.A, j.A, m.A, b.A, _.Ay, E.A, O.Ay), null != e)) {
+        if ((this.waitFor(h.default, g.A, s.A, u.A, f.A, d.Ay, m.A, N.A, j.A, A.A, _.A, b.Ay, E.A, O.Ay), null != e)) {
             var t, n, r, i, l, a, o;
             (U = null != (t = e.dehydratedItems) ? t : []).forEach((e) => {
                 Y[e.id] = e;
             }),
-                (W = null != (n = e.customGuildScores) ? n : {}),
-                (q = null != (r = e.customChannelScoresByGuild) ? r : {}),
+                (q = null != (n = e.customGuildScores) ? n : {}),
+                (z = null != (r = e.customChannelScoresByGuild) ? r : {}),
                 (et = null != (i = e.numOpens) ? i : 0),
                 (V = null != (l = e.lastOpened) ? l : 0),
                 (ea = null != (a = e.lastJoinedRecommendedGuild) ? a : 0),
-                (ef = null != (o = e.lastTakenICYMISurvey) ? o : 0);
+                (eh = null != (o = e.lastTakenICYMISurvey) ? o : 0);
         }
     }
     getVersion() {
@@ -431,20 +431,20 @@ class eT extends (r = l.Ay.PersistedStore) {
         return ei;
     }
     getMissingItems() {
-        return z;
+        return W;
     }
     customMuted(e, t) {
         return this.getCustomGuildScore(e) === x.n$.MUTED || this.getCustomChannelScore(e, t) === x.n$.MUTED;
     }
     getCustomChannelScore(e, t) {
-        return null == q[e] || null == q[e][t] ? x.n$.UNKNOWN : (0, x.Wu)(q[e][t]);
+        return null == z[e] || null == z[e][t] ? x.n$.UNKNOWN : (0, x.Wu)(z[e][t]);
     }
     getCustomGuildScore(e) {
         var t;
-        return null != (t = W[e]) ? t : 0;
+        return null != (t = q[e]) ? t : 0;
     }
     getCustomGuildScores() {
-        return W;
+        return q;
     }
     hasNewContent() {
         return Z;
@@ -486,7 +486,7 @@ class eT extends (r = l.Ay.PersistedStore) {
         return ep;
     }
     lastTakenICYMISurvey() {
-        return ef;
+        return eh;
     }
     getIndexInHydratedFeed(e) {
         return "recommended_guilds" === e || "recommendedGuilds" === e
@@ -497,11 +497,11 @@ class eT extends (r = l.Ay.PersistedStore) {
         return {
             dehydratedItems: U,
             numOpens: et,
-            customGuildScores: W,
-            customChannelScoresByGuild: q,
+            customGuildScores: q,
+            customChannelScoresByGuild: z,
             lastOpened: V,
             lastJoinedRecommendedGuild: ea,
-            lastTakenICYMISurvey: ef,
+            lastTakenICYMISurvey: eh,
         };
     }
 }
@@ -514,10 +514,10 @@ let ej = new eT(a.h, {
             (Y = {}),
             (F = {}),
             (K = {}),
-            (z = {}),
-            (G = null),
             (W = {}),
+            (G = null),
             (q = {}),
+            (z = {}),
             (Q = 0),
             (X = !1),
             (Z = !1),
@@ -538,7 +538,7 @@ let ej = new eT(a.h, {
     },
     LOAD_ICYMI_FROM_NOTIFICATION: function (e) {
         let { messageItem: t, customStatusItem: n } = e;
-        if (null != n) return (ee = n), null != G && ((B = B.length > 0 ? B : [...U]), eb(), e_()), !0;
+        if (null != n) return (ee = n), null != G && ((B = B.length > 0 ? B : [...U]), e_(), eb()), !0;
         if (null != t) {
             let e = {
                 id: t.message.id,
@@ -560,7 +560,7 @@ let ej = new eT(a.h, {
             ) {
                 let [t, n] = eE((U = [e, ...U]));
                 (en = t), (er = n);
-            } else (B = [e, ...B]), e_();
+            } else (B = [e, ...B]), eb();
             return !0;
         }
         return !1;
@@ -572,7 +572,7 @@ let ej = new eT(a.h, {
                 n = N.A.onlyShowRecentGeneratedCandidates(),
                 r = new Set(T.H8);
             n ? (r = new Set([T.Mm.GENERATED_CANDIDATE])) : t && r.add(T.Mm.GENERATED_CANDIDATE);
-            let i = e.filter((e) => r.has(e.type)).filter(eA);
+            let i = e.filter((e) => r.has(e.type)).filter(ef);
             return (
                 n && i.sort((e, t) => v.default.extractTimestamp(t.id) - v.default.extractTimestamp(e.id)),
                 i.map((e) => {
@@ -600,7 +600,7 @@ let ej = new eT(a.h, {
                 })
             );
         })(t)),
-            eb(),
+            e_(),
             (F = {
                 load_id: n,
                 load_time_millis: Date.now() - r,
@@ -609,8 +609,8 @@ let ej = new eT(a.h, {
         let [a, s] = eE(B);
         if (((H = eO(a)), !J || 0 === Q || i))
             (Q = 0),
-                !eu && eh(a, B) ? ((Z = !0), (X = !0)) : (Z = !1),
-                e_({
+                !eu && eg(a, B) ? ((Z = !0), (X = !0)) : (Z = !1),
+                eb({
                     newUnread: a,
                     newRead: s,
                 });
@@ -645,7 +645,7 @@ let ej = new eT(a.h, {
         i.forEach((e) => {
             let t = c[e.message_id];
             if (null == t) {
-                z[e.message_id] = !0;
+                W[e.message_id] = !0;
                 return;
             }
             let n = Y[e.message_id];
@@ -662,7 +662,7 @@ let ej = new eT(a.h, {
                         has_mention: !1,
                     },
                 });
-            let r = m.A.getMessage(t.channel_id, t.message.id);
+            let r = A.A.getMessage(t.channel_id, t.message.id);
             if (null != r) {
                 let e = (0, x.Rh)(t, n);
                 K[t.message.id] = D(R({}, e), {
@@ -673,12 +673,12 @@ let ej = new eT(a.h, {
             l.forEach((e) => {
                 let t = u[e.content_id];
                 if (null == t) {
-                    z[e.content_id] = !0;
+                    W[e.content_id] = !0;
                     return;
                 }
                 let n = Y[e.content_id];
                 if (null == n) {
-                    z[e.content_id] = !0;
+                    W[e.content_id] = !0;
                     return;
                 }
                 K[t.id] = D(R({}, n), {
@@ -688,12 +688,12 @@ let ej = new eT(a.h, {
             a.forEach((e) => {
                 let t = d[e.content_id];
                 if (null == t) {
-                    z[e.content_id] = !0;
+                    W[e.content_id] = !0;
                     return;
                 }
                 let n = Y[e.content_id];
                 if (null == n || n.type !== T.Mm.GENERATED_CANDIDATE) {
-                    z[e.content_id] = !0;
+                    W[e.content_id] = !0;
                     return;
                 }
                 K[t.content_id] = D(R({}, n), {
@@ -706,30 +706,30 @@ let ej = new eT(a.h, {
     LOAD_ICYMI_CUSTOM_SCORES: function (e) {
         let { scores: t } = e;
         for (let e of t)
-            for (let t of ((W[e.guild_id] = e.guild_score),
+            for (let t of ((q[e.guild_id] = e.guild_score),
             eS(e.guild_id, e.guild_score),
             Object.keys(e.custom_channel_scores)))
-                null == q[e.guild_id] && (q[e.guild_id] = {}),
-                    (q[e.guild_id][t] = e.custom_channel_scores[t]),
+                null == z[e.guild_id] && (z[e.guild_id] = {}),
+                    (z[e.guild_id][t] = e.custom_channel_scores[t]),
                     eI(t, e.custom_channel_scores[t]);
-        (W = R({}, W)), (q = R({}, q));
+        (q = R({}, q)), (z = R({}, z));
     },
     LOAD_ICYMI_RECOMMENDED_GUILDS: function (e) {
         let { guilds: t } = e;
-        (el = t.map((e) => (0, I.jE)(e.guild))), em();
+        (el = t.map((e) => (0, I.jE)(e.guild))), eA();
     },
     ICYMI_CUSTOM_SCORES_UPDATED: function (e) {
         let { channelScores: t, guildId: n, guildScore: r } = e;
-        null != r && ((W[n] = r), eS(n, r), (W = R({}, W))),
+        null != r && ((q[n] = r), eS(n, r), (q = R({}, q))),
             null == t ||
                 t.forEach((e) => {
                     let { channelId: t, score: r } = e;
-                    null == q[n] && (q[n] = {}), (q[n][t] = r), eI(t, r), (q = R({}, q));
+                    null == z[n] && (z[n] = {}), (z[n][t] = r), eI(t, r), (z = R({}, z));
                 });
     },
     RELOAD_ICYMI: function () {
         if (0 === B.length) return !1;
-        e_(), (Z = !1);
+        eb(), (Z = !1);
     },
     ICYMI_TAB_OPENED: function () {
         (J = !0), (V = Date.now()), X && ((X = !1), (Z = !1)), et < 5 && et++;
@@ -742,7 +742,7 @@ let ej = new eT(a.h, {
         let { messageId: t, reactions: n } = e,
             r = K[t];
         if (null == r || r.type !== T.Mm.MESSAGE) return !1;
-        let i = f.default.getId();
+        let i = h.default.getId();
         r.message = r.message.addReactionBatch(n, i);
     },
     MESSAGE_REACTION_REMOVE: eC,
@@ -797,6 +797,6 @@ let ej = new eT(a.h, {
     },
     ICYMI_TAKE_SURVEY: function (e) {
         let { takenAt: t } = e;
-        ef = t;
+        eh = t;
     },
 });

@@ -64,7 +64,7 @@ function m(e) {
             i.W1t,
             d(
                 {
-                    "data-menu-migration-ready": !0,
+                    "data-menu-migrated": !0,
                     variant: "fixed",
                     hideScroller: !0,
                     onSelect: void 0,
@@ -95,10 +95,10 @@ function p(e) {
                 bottom: -8,
             },
         },
-        E = l.useCallback(() => {
+        T = l.useCallback(() => {
             _(!0);
         }, []),
-        T = l.useCallback(() => {
+        E = l.useCallback(() => {
             _(!1);
         }, []),
         N = () =>
@@ -161,7 +161,7 @@ function p(e) {
                                           e,
                                       ),
                                       {
-                                          onClick: E,
+                                          onClick: T,
                                           focusProps: O,
                                           children: (0, a.jsx)(r.ChevronSmallRightIcon, {
                                               size: "xs",
@@ -183,7 +183,7 @@ function p(e) {
                                     e,
                                 ),
                                 {
-                                    onClick: E,
+                                    onClick: T,
                                     focusProps: O,
                                     children: [
                                         N(),
@@ -214,14 +214,14 @@ function p(e) {
     return C
         ? (0, a.jsx)("li", {
               className: c.j$,
-              onMouseEnter: E,
-              onMouseLeave: T,
+              onMouseEnter: T,
+              onMouseLeave: E,
               children: (0, a.jsx)(i.YNO, {
                   targetElementRef: A,
                   spacing: 0,
                   renderPopout: g,
                   shouldShow: j,
-                  onRequestClose: T,
+                  onRequestClose: E,
                   children: w,
               }),
           })

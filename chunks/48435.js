@@ -98,18 +98,18 @@ function g(e) {
             showAllDevices: _ = !1,
             selectedDeviceId: g,
             menuGroupOverrideProps: E,
-            menuItemOverrideProps: b,
-            computeMenuRadioItemOverrideProps: y,
+            menuItemOverrideProps: y,
+            computeMenuRadioItemOverrideProps: b,
         } = e,
-        { setDevice: O, getLabel: A, getLocation: v } = m(n),
-        [S, I] = i.useState(_),
-        T = v(s[s.length - 1]),
+        { setDevice: O, getLabel: v, getLocation: A } = m(n),
+        [I, S] = i.useState(_),
+        T = A(s[s.length - 1]),
         [C, N] = (0, l.tR)(n, {
             location: T,
         }),
-        R = S ? C.concat(N) : C,
-        { id: w, name: P } = (0, l.x5)(n),
-        D = null != g ? g : w,
+        w = I ? C.concat(N) : C,
+        { id: R, name: P } = (0, l.x5)(n),
+        D = null != g ? g : R,
         x = i.useMemo(
             () =>
                 C.concat(N).find((e) => {
@@ -118,7 +118,7 @@ function g(e) {
                 }),
             [C, N, D],
         ),
-        L = R.map((e) => {
+        L = w.map((e) => {
             let t,
                 { id: i, disabled: o, name: c } = e,
                 u = c,
@@ -133,12 +133,7 @@ function g(e) {
                             group: "".concat(n, "-devices"),
                             disabled: o,
                             label: u,
-                            subtext:
-                                null != t &&
-                                (0, r.jsx)(a.Text, {
-                                    variant: "text-xs/normal",
-                                    children: t,
-                                }),
+                            subtext: t,
                             checked: i === D,
                             action: () => {
                                 var e;
@@ -148,7 +143,7 @@ function g(e) {
                                     });
                             },
                         },
-                        null == y ? void 0 : y(i),
+                        null == b ? void 0 : b(i),
                     ),
                     "".concat(n, "-").concat(i),
                 )
@@ -159,7 +154,7 @@ function g(e) {
             label: d.intl.string(d.t.E99UMh),
             dontCloseOnAction: !0,
             action: () => {
-                I(!0),
+                S(!0),
                     o.default.track(c.HAw.DEVICES_LIST_SHOW_MORE_CLICKED, {
                         device_type: n,
                         location: T,
@@ -169,7 +164,7 @@ function g(e) {
                     });
             },
         }),
-        M = !S && (null == N ? void 0 : N.length) > 0;
+        M = !I && (null == N ? void 0 : N.length) > 0;
     return u
         ? (0, r.jsxs)(
               a.Drp,
@@ -177,10 +172,10 @@ function g(e) {
                   p(
                       {
                           id: "".concat(n, "-devices"),
-                          label: A(),
+                          label: v(),
                           subtext: null != (t = null == x ? void 0 : x.name) ? t : P,
                       },
-                      b,
+                      y,
                   ),
                   {
                       children: [L, M && j],
@@ -192,7 +187,7 @@ function g(e) {
               h(
                   p(
                       {
-                          label: A(),
+                          label: v(),
                       },
                       E,
                   ),

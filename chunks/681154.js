@@ -1,5 +1,5 @@
 n.d(t, {
-    I: () => r,
+    ContentInventoryEntryType: () => r,
 });
 var r = (function (e) {
     return (

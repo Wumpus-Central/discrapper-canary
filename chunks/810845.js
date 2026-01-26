@@ -39,5 +39,9 @@ function b(e, t) {
                     : f.intl.string(f.t.ifpl2s),
               action: p,
               icon: a.tfB,
+              leadingAccessory: {
+                  type: "icon",
+                  icon: a.tfB,
+              },
           });
 }

@@ -93,7 +93,7 @@ function O(e) {
     return (0, r.jsx)("div", {
         className: h.li,
         children: (0, r.jsxs)(o.W1t, {
-            "data-menu-migration-ready": !0,
+            "data-menu-migrated": !0,
             navId: "guild-product-context",
             onClose: g,
             "aria-label": _.intl.string(_.t.Z146dM),
@@ -105,6 +105,11 @@ function O(e) {
                             (0, r.jsx)(o.Drp, {
                                 id: "guild-product-edit",
                                 label: _.intl.string(_.t.EEfce4),
+                                icon: o.R2l,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: o.R2l,
+                                },
                                 action: c,
                             }),
                         i &&
@@ -112,6 +117,10 @@ function O(e) {
                                 id: "guild-product-copy-link",
                                 label: _.intl.string(_.t.XR26uj),
                                 icon: o.qYV,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: o.qYV,
+                                },
                                 action: f,
                             }),
                         a &&
@@ -119,6 +128,10 @@ function O(e) {
                                 id: "guild-product-test-download",
                                 label: _.intl.string(_.t.aXoI6U),
                                 icon: o.s3U,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: o.s3U,
+                                },
                                 action: p,
                             }),
                     ],

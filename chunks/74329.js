@@ -58,7 +58,7 @@ function p(e, t, d) {
             },
             g,
         ),
-        b = () => {
+        y = () => {
             null == d || d(),
                 null != e &&
                     (0, a.mMO)(async () => {
@@ -82,7 +82,11 @@ function p(e, t, d) {
         id: "report-stream-problem",
         color: "danger",
         label: u.intl.string(u.t.sdnCxV),
-        action: b,
+        action: y,
         icon: a.EpV,
+        leadingAccessory: {
+            type: "icon",
+            icon: a.EpV,
+        },
     });
 }

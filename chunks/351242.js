@@ -6,10 +6,9 @@ n(64700);
 var i = n(397927),
     a = n(985018);
 let s = (e) => {
-    let { onChangeAvatar: t, onChangeAvatarDecoration: n, onClose: s, className: o } = e;
+    let { onChangeAvatar: t, onChangeAvatarDecoration: n, onClose: s } = e;
     return (0, r.jsxs)(i.W1t, {
-        "data-menu-migration-ready": !0,
-        className: o,
+        "data-menu-needs-review": !0,
         onClose: s,
         onSelect: void 0,
         navId: "user-settings-change-avatar",

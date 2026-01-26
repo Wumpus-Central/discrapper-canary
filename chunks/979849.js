@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => A,
+    A: () => v,
 });
 var r = n(627968),
     i = n(64700),
@@ -47,7 +47,7 @@ function E(e) {
     return e;
 }
 
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,12 +60,12 @@ function b(e, t) {
     return n;
 }
 
-function y(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -73,38 +73,38 @@ function y(e, t) {
 }
 let O = f.Ay.getEnableHardwareAcceleration() ? l.JsQ : l.euF;
 
-function A(e) {
+function v(e) {
     let {
             user: t,
             guild: n,
             displayProfile: a,
             canUsePremiumCustomization: f,
             previewAvatar: g,
-            previewAvatarDecorationSrc: b,
-            previewTheme: A,
-            previewPrimaryColor: v,
-            className: S,
-            disabledInputs: I,
+            previewAvatarDecorationSrc: y,
+            previewTheme: v,
+            previewPrimaryColor: A,
+            className: I,
+            disabledInputs: S,
             isTryItOut: T,
             onUpsellClick: C,
         } = e,
         N = i.useRef(null),
-        { analyticsLocations: R, newestAnalyticsLocation: w } = (0, c.Ay)(),
+        { analyticsLocations: w, newestAnalyticsLocation: R } = (0, c.Ay)(),
         P = (0, o.bG)([d.A], () => d.A.getStatus(t.id)),
         D = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || f,
         x = (0, r.jsx)(O, {
             src: g,
-            avatarDecoration: b,
-            imageClassName: s()(S, {
-                [m.Lw]: !I,
+            avatarDecoration: y,
+            imageClassName: s()(I, {
+                [m.Lw]: !S,
             }),
             size: l._3J.SIZE_80,
             "aria-label": t.username,
             status: P,
             statusTooltip: !1,
-            statusBackdropColor: null != v ? (0, l.C$5)(A) : void 0,
+            statusBackdropColor: null != A ? (0, l.C$5)(v) : void 0,
         });
-    return I
+    return S
         ? (0, r.jsx)("div", {
               className: m.my,
               children: x,
@@ -115,19 +115,18 @@ function A(e) {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsx)(p.A, {
-                        className: m.MK,
                         onClose: t,
                         onChangeAvatar: () =>
                             (0, _.XD)({
                                 uploadType: h.HL.AVATAR,
                                 guildId: null == n ? void 0 : n.id,
-                                analyticsSource: w,
+                                analyticsSource: R,
                                 isTryItOut: T,
                             }),
                         onChangeAvatarDecoration: () => {
                             (0, u.L)({
                                 guild: null == n ? void 0 : n,
-                                analyticsLocations: R,
+                                analyticsLocations: w,
                             });
                         },
                     });
@@ -135,7 +134,7 @@ function A(e) {
                 children: (e) =>
                     (0, r.jsxs)(
                         l.DUT,
-                        y(E({}, e), {
+                        b(E({}, e), {
                             innerRef: N,
                             className: s()(m.my, m.vk),
                             children: [

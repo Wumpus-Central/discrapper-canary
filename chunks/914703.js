@@ -16,7 +16,7 @@ function u(e) {
         f = (0, s.A)(t),
         g = (0, o.X)(t);
     return (0, r.jsxs)(l.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated-auto": !0,
         navId: d,
         onClose: n,
         "aria-label": p,

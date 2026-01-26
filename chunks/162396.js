@@ -17,7 +17,7 @@ var n = r(627968),
 function p(e) {
     let { onClose: t } = e;
     return (0, n.jsx)(i.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated-auto": !0,
         navId: "settings-footer-more-menu",
         onClose: t,
         onSelect: () => {},

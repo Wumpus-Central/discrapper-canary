@@ -1,23 +1,22 @@
 n.d(t, {
-    A: () => m,
+    A: () => f,
+    AddQuestionsContextMenu: () => u,
 });
 var r = n(627968);
 n(64700);
 var i = n(397927),
     l = n(442433),
-    s = n(828208),
-    a = n(513461),
-    o = n(557420),
-    c = n(322388),
-    d = n(985018),
-    u = n(369529);
+    o = n(828208),
+    c = n(513461),
+    s = n(557420),
+    a = n(322388),
+    d = n(985018);
 
-function g(e) {
-    let { addFormField: t, onSelect: n, guild: o, allowTerms: g } = e;
+function u(e) {
+    let { addFormField: t, onSelect: n, guild: s, allowTerms: u } = e;
     return (0, r.jsx)(i.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated": !0,
         navId: "add-questions",
-        className: u.M,
         onClose: l.Z_,
         "aria-label": d.intl.string(d.t.liqwPJ),
         onSelect: n,
@@ -25,45 +24,61 @@ function g(e) {
             children: [
                 (0, r.jsx)(i.Drp, {
                     id: "text-input",
-                    icon: (0, i.kHD)(s.A),
+                    icon: (0, i.kHD)(o.A),
+                    leadingAccessory: {
+                        type: "icon",
+                        icon: (0, i.kHD)(o.A),
+                    },
                     label: d.intl.string(d.t.w6Q9wz),
-                    action: () => (0, c.PV)(a.rX.TEXT_INPUT, t, o),
+                    action: () => (0, a.PV)(c.rX.TEXT_INPUT, t, s),
                 }),
                 (0, r.jsx)(i.Drp, {
                     id: "paragraph",
                     icon: i.$tc,
+                    leadingAccessory: {
+                        type: "icon",
+                        icon: i.$tc,
+                    },
                     label: d.intl.string(d.t.gG0JBN),
-                    action: () => (0, c.PV)(a.rX.PARAGRAPH, t, o),
+                    action: () => (0, a.PV)(c.rX.PARAGRAPH, t, s),
                 }),
                 (0, r.jsx)(i.Drp, {
                     id: "multiple-choice",
                     icon: i.jsc,
+                    leadingAccessory: {
+                        type: "icon",
+                        icon: i.jsc,
+                    },
                     label: d.intl.string(d.t.ooKh3m),
-                    action: () => (0, c.PV)(a.rX.MULTIPLE_CHOICE, t, o),
+                    action: () => (0, a.PV)(c.rX.MULTIPLE_CHOICE, t, s),
                 }),
-                g &&
+                u &&
                     (0, r.jsx)(i.Drp, {
                         id: "terms",
                         icon: i.B8Q,
+                        leadingAccessory: {
+                            type: "icon",
+                            icon: i.B8Q,
+                        },
                         label: d.intl.string(d.t["3pz9t3"]),
-                        action: () => (0, c.PV)(a.rX.TERMS, t, o),
+                        action: () => (0, a.PV)(c.rX.TERMS, t, s),
                     }),
             ],
         }),
     });
 }
-let m = function (e) {
+let f = function (e) {
     let { addFormField: t, guild: n, allowTerms: i } = e;
-    return (0, r.jsx)(o.d, {
+    return (0, r.jsx)(s.d, {
         text: d.intl.string(d.t.CoHdoG),
         tooltipText: d.intl.string(d.t.nsI4dU),
         onClick: (e) => {
             (0, l.jA)(
                 e,
                 (e) => {
-                    var l, s;
+                    var l, o;
                     return (0, r.jsx)(
-                        g,
+                        u,
                         ((l = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -89,14 +104,14 @@ let m = function (e) {
                             }
                             return e;
                         })({}, e)),
-                        (s = s =
+                        (o = o =
                             {
                                 addFormField: t,
                                 guild: n,
                                 allowTerms: i,
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
+                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -104,8 +119,8 @@ let m = function (e) {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(s)).forEach(function (e) {
-                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
+                              })(Object(o)).forEach(function (e) {
+                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
                               }),
                         l),
                     );

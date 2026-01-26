@@ -76,64 +76,66 @@ function O(e) {
     let {
             color: t = "default",
             label: n,
-            checked: a,
-            subtext: g,
-            leftIcon: y,
-            leadingAccessory: O,
-            disabled: v,
-            isFocused: A,
-            menuItemProps: I,
-            action: S,
-            className: T,
-            focusedClassName: C,
+            void_label: a,
+            checked: g,
+            subtext: y,
+            subtextLineClamp: O,
+            leftIcon: v,
+            leadingAccessory: A,
+            disabled: I,
+            isFocused: S,
+            menuItemProps: T,
+            action: C,
+            className: N,
+            focusedClassName: w,
         } = e,
-        { onInteraction: N } = i.useContext(c.x),
-        w = (0, f.Y)("MenuCheckboxItem"),
-        R = i.useRef(null);
+        { onInteraction: R } = i.useContext(c.x),
+        P = (0, f.Y)("MenuCheckboxItem"),
+        D = i.useRef(null);
     i.useEffect(() => {
-        A && (0, u.Y)(R);
-    }, [A]);
-    let P = i.useCallback(
+        S && (0, u.Y)(D);
+    }, [S]);
+    let x = i.useCallback(
         (e) => {
-            S(e),
-                null == N ||
-                    N({
+            C(e),
+                null == R ||
+                    R({
                         type: c.Q.CHECKBOX,
                     });
         },
-        [S, N],
+        [C, R],
     );
     return (0, r.jsxs)(
         o.DUT,
         b(
             E(
                 {
-                    innerRef: R,
-                    className: s()(m.item, m.checkboxContainer, m.labelContainer, h.jV[t], T, {
-                        [m.disabled]: v,
-                        [m.focused]: A,
-                        [null != C ? C : ""]: A,
+                    innerRef: D,
+                    className: s()(m.item, m.checkboxContainer, m.labelContainer, h.jV[t], N, {
+                        [m.disabled]: I,
+                        [m.focused]: S,
+                        [null != w ? w : ""]: S,
                     }),
-                    onClick: v ? void 0 : P,
+                    onClick: I ? void 0 : x,
                 },
-                I,
+                T,
             ),
             {
-                "aria-checked": a,
-                "aria-disabled": v,
+                "aria-checked": g,
+                "aria-disabled": I,
                 children: [
-                    w
-                        ? null != O &&
+                    P
+                        ? null != A &&
                           (0, r.jsx)(_.B, {
-                              accessory: O,
-                              isFocused: A,
+                              accessory: A,
+                              isFocused: S,
                           })
-                        : (0, d.O)(y)
-                          ? y
-                          : null != y &&
+                        : (0, d.O)(v)
+                          ? v
+                          : null != v &&
                             (0, r.jsx)("div", {
                                 className: m.iconContainerLeft,
-                                children: (0, r.jsx)(y, {
+                                children: (0, r.jsx)(v, {
                                     color: "currentColor",
                                     className: m.icon,
                                 }),
@@ -142,21 +144,27 @@ function O(e) {
                         className: m.label,
                         children: [
                             (0, r.jsx)(p.V, {
-                                children: (0, l.J)(n, e),
+                                children: (0, l.J)(null != a ? a : n, {
+                                    isFocused: S,
+                                    disabled: I,
+                                }),
                             }),
-                            null != g &&
+                            null != y &&
                                 (0, r.jsx)(o.EYj, {
                                     variant: "text-xs/normal",
-                                    className: m.subtext,
-                                    children: g,
+                                    className: s()(m.subtext, {
+                                        [m.subtextLineClamp]: null != O,
+                                    }),
+                                    lineClamp: O,
+                                    children: y,
                                 }),
                         ],
                     }),
                     (0, r.jsx)("div", {
                         className: m.iconContainer,
                         children: (0, r.jsx)(o.P7L, {
-                            checked: a,
-                            disabled: v,
+                            checked: g,
+                            disabled: I,
                             size: 20,
                         }),
                     }),

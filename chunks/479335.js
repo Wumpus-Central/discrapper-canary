@@ -39,5 +39,11 @@ function f(e) {
               label: A.intl.string(A.t["8ErYvY"]),
               action: j,
               icon: b ? a.V1C : null,
+              leadingAccessory: b
+                  ? {
+                        type: "icon",
+                        icon: a.V1C,
+                    }
+                  : void 0,
           });
 }

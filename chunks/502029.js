@@ -19,7 +19,7 @@ function o(e) {
         context: n,
         object: l.ZSU.CONTEXT_MENU,
         children: (0, i.jsxs)(r.W1t, {
-            "data-menu-migration-ready": !0,
+            "data-menu-migrated": !0,
             navId: "user-context",
             onClose: d.Z_,
             "aria-label": u.intl.string(u.t.liqwPJ),

@@ -70,7 +70,7 @@ let h = (e) => {
         let { closePopout: t } = e,
             i = (0, a.bG)([l.A], () => l.A.hidden);
         return (0, r.jsx)(s.W1t, {
-            "data-menu-migration-ready": !0,
+            "data-menu-needs-migration": !0,
             onSelect: () => {},
             navId: "member-list-settings-menu",
             onClose: null != t ? t : c.tEg,
@@ -80,6 +80,10 @@ let h = (e) => {
                     (0, r.jsx)(s.Drp, {
                         id: "about",
                         label: u.intl.string(u.t.pWLGnF),
+                        leadingAccessory: {
+                            type: "icon",
+                            icon: s.mir,
+                        },
                         icon: s.mir,
                         action: () => {
                             (0, s.mMO)(async () => {

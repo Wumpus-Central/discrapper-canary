@@ -1,28 +1,32 @@
-a.d(t, {
-    A: () => i,
+t.d(n, {
+    A: () => _,
 });
-var c = a(627968),
-    n = a(311907),
-    l = a(397927),
-    d = a(928658),
-    r = a(734057),
-    o = a(985018);
+var r = t(627968),
+    o = t(311907),
+    a = t(397927),
+    i = t(928658),
+    l = t(734057),
+    c = t(985018);
 
-function i(e, t, a) {
-    let i = (0, n.bG)([r.A], () => r.A.getChannel(t)),
-        f = null == i ? void 0 : i.getGuildId();
-    return (0, c.jsx)(l.Drp, {
+function _(e, n, t) {
+    let _ = (0, o.bG)([l.A], () => l.A.getChannel(n)),
+        s = null == _ ? void 0 : _.getGuildId();
+    return (0, r.jsx)(a.Drp, {
         id: "report-app",
         color: "danger",
-        label: o.intl.string(o.t.NgA5vp),
+        label: c.intl.string(c.t.NgA5vp),
         action: () =>
-            (0, d.r3)({
+            (0, i.r3)({
                 application: e,
                 entrypoint: "activity_ui_popout",
-                contextualGuildId: null != f ? f : void 0,
-                contextualChannelId: null == i ? void 0 : i.id,
-                appContext: a,
+                contextualGuildId: null != s ? s : void 0,
+                contextualChannelId: null == _ ? void 0 : _.id,
+                appContext: t,
             }),
-        icon: l.iFK,
+        icon: a.iFK,
+        leadingAccessory: {
+            type: "icon",
+            icon: a.iFK,
+        },
     });
 }

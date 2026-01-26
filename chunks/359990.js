@@ -1,6 +1,6 @@
 n.d(t, {
     A: () => P,
-    RegisterWebAuthnCredentialModal: () => R,
+    RegisterWebAuthnCredentialModal: () => w,
 }),
     n(896048),
     n(457529),
@@ -84,7 +84,7 @@ function N(e, t) {
     );
 }
 
-function R(e) {
+function w(e) {
     let {
             transitionState: t,
             onClose: s,
@@ -95,8 +95,8 @@ function R(e) {
         } = e,
         S = (0, u.GV)(),
         [T, C] = i.useState(A.intl.string(A.t["I/sJtJ"])),
-        [N, R] = i.useState(!1),
-        [w, P] = i.useState(b),
+        [N, w] = i.useState(!1),
+        [R, P] = i.useState(b),
         [D, x] = i.useState(""),
         [L, j] = i.useState(null),
         M = async () => {
@@ -127,10 +127,10 @@ function R(e) {
                         id: S,
                         variant: "heading-lg/semibold",
                         children: [
-                            w === O.C.INIT && A.intl.string(A.t.vrOCCk),
-                            w === O.C.REGISTER && A.intl.string(A.t.wePEBF),
-                            w === O.C.NAME && A.intl.string(A.t["cY/IOu"]),
-                            w === O.C.SUCCESS && d.A.parse(A.intl.string(A.t.FXC7ZC)),
+                            R === O.C.INIT && A.intl.string(A.t.vrOCCk),
+                            R === O.C.REGISTER && A.intl.string(A.t.wePEBF),
+                            R === O.C.NAME && A.intl.string(A.t["cY/IOu"]),
+                            R === O.C.SUCCESS && d.A.parse(A.intl.string(A.t.FXC7ZC)),
                         ],
                     }),
                     (0, r.jsx)(o.s_y, {
@@ -140,7 +140,7 @@ function R(e) {
                 ],
             }),
             (0, r.jsxs)(o.tN_, {
-                activeSlide: w,
+                activeSlide: R,
                 width: 440,
                 children: [
                     (0, r.jsxs)(o.q7S, {
@@ -247,7 +247,7 @@ function R(e) {
                                                 (0, r.jsx)(o.ksK, {
                                                     value: T,
                                                     onChange: (e) => {
-                                                        C(e), R(0 === e.length);
+                                                        C(e), w(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1,
@@ -332,10 +332,10 @@ function R(e) {
     });
 }
 
-function w(e) {
+function R(e) {
     let { onSelect: t, credential: i } = e;
     return (0, r.jsxs)(o.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated": !0,
         navId: "webauthn-credential-actions",
         onClose: l.Z_,
         "aria-label": A.intl.string(A.t["+nrTbK"]),
@@ -400,7 +400,7 @@ function P() {
                         let { ticket: t, challenge: n } = e;
                         (0, o.qfG)((e) =>
                             (0, r.jsx)(
-                                R,
+                                w,
                                 N(T({}, e), {
                                     ticket: t,
                                     challenge: n,
@@ -472,7 +472,7 @@ function x(e) {
                     onClick: (t) => {
                         (0, l.jA)(t, (t) =>
                             (0, r.jsx)(
-                                w,
+                                R,
                                 N(T({}, t), {
                                     credential: e,
                                 }),

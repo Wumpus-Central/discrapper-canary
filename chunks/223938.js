@@ -632,7 +632,7 @@ function et(e) {
         a = null == (t = null == s ? void 0 : s.createThread) || t,
         o = null == (n = null == s ? void 0 : s.publish) || n;
     return (0, r.jsxs)(f.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated": !0,
         "aria-label": q.intl.string(q.t["9WnJyo"]),
         navId: "send-announcement-options",
         onClose: z.tEg,

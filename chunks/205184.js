@@ -9,7 +9,7 @@ var r = n(64700),
     o = n(475450),
     l = n(661191),
     c = n(424994);
-let u = new Set([s.I.PLAYED_GAME, s.I.LAUNCHED_ACTIVITY]),
+let u = new Set([s.ContentInventoryEntryType.PLAYED_GAME, s.ContentInventoryEntryType.LAUNCHED_ACTIVITY]),
     d = (e) => u.has(e.content_type);
 
 function f(e) {

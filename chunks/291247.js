@@ -74,14 +74,14 @@ function I(e, t) {
     );
 }
 
-function D(e, t, D, x, T) {
+function D(e, t, D, T, x) {
     let N = l.useMemo(
             () => ({
                 [t]: [e.id],
             }),
             [t, e.id],
         ),
-        w = null != x ? [x] : [];
+        w = null != T ? [T] : [];
     (0, s.E)(N, "useAdminActionItems"), (0, a.bG)([E.A], () => E.A.getGuildVersion(t), [t]);
     let G = (0, a.bG)([p.A], () => p.A.getGuild(t), [t]),
         R = (0, a.bG)([j.default], () => {
@@ -89,14 +89,14 @@ function D(e, t, D, x, T) {
             return (null == (t = j.default.getCurrentUser()) ? void 0 : t.id) === e.id;
         }, [e.id]),
         U = (0, a.bG)([y.Ay], () => y.Ay.isGuestOrLurker(t, e.id), [t, e.id]),
-        B = (0, a.bG)([g.A], () => g.A.getChannel(D), [D]),
-        [, L] = (0, b.Ay)(e.id, t),
-        k = null == B ? void 0 : B.isGuildStageVoice(),
+        L = (0, a.bG)([g.A], () => g.A.getChannel(D), [D]),
+        [, B] = (0, b.Ay)(e.id, t),
+        k = null == L ? void 0 : L.isGuildStageVoice(),
         {
             muted: V,
             deafened: F,
             suppressed: H,
-            voiceChannelId: Y,
+            voiceChannelId: K,
         } = (0, a.cf)([m.A], () => {
             var n, r, l;
             let i = m.A.getVoiceState(t, e.id);
@@ -107,24 +107,24 @@ function D(e, t, D, x, T) {
                 voiceChannelId: null == i ? void 0 : i.channelId,
             };
         }),
-        K = (0, a.bG)([y.Ay], () => y.Ay.getMember(t, e.id)),
+        Y = (0, a.bG)([y.Ay], () => y.Ay.getMember(t, e.id)),
         W = (0, _.A)({
             userId: e.id,
             guildId: t,
             channelId: D,
-            location: x,
-            appContext: T,
+            location: T,
+            appContext: x,
         }),
         X = (0, O.$9)(t, {
-            location: x,
+            location: T,
             targetUserId: e.id,
         }),
         Z = (0, A.A)(t, e.id),
         $ =
-            null != Y &&
+            null != K &&
             null != D &&
             E.A.canWithPartialContext(h.xBc.VIEW_CHANNEL, {
-                channelId: Y,
+                channelId: K,
             }) &&
             !U
                 ? [
@@ -189,7 +189,7 @@ function D(e, t, D, x, T) {
                         r,
                         S.DisableCommunicationDuration.DURATION_60_SEC,
                         null,
-                        x,
+                        T,
                     ),
                         X(O.Nj.TIMEOUT),
                         (0, o.showToast)(
@@ -214,13 +214,13 @@ function D(e, t, D, x, T) {
     if (
         !R &&
         null != G &&
-        null != K &&
-        null != K.joinedAt &&
+        null != Y &&
+        null != Y.joinedAt &&
         (Q || J) &&
         G.features.has(h.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED)
     ) {
         var ee;
-        z = (0, i.Lt)(null != (ee = K.flags) ? ee : 0, M.D.BYPASSES_VERIFICATION)
+        z = (0, i.Lt)(null != (ee = Y.flags) ? ee : 0, M.D.BYPASSES_VERIFICATION)
             ? (0, r.jsx)(
                   o.Drp,
                   {
@@ -231,7 +231,7 @@ function D(e, t, D, x, T) {
                           return c.A.setMemberFlags(
                               G.id,
                               e.id,
-                              (0, i.lA)(null != (t = K.flags) ? t : 0, M.D.BYPASSES_VERIFICATION, !1),
+                              (0, i.lA)(null != (t = Y.flags) ? t : 0, M.D.BYPASSES_VERIFICATION, !1),
                           );
                       },
                   },
@@ -247,7 +247,7 @@ function D(e, t, D, x, T) {
                           return c.A.setMemberFlags(
                               G.id,
                               e.id,
-                              (0, i.lA)(null != (t = K.flags) ? t : 0, M.D.BYPASSES_VERIFICATION, !0),
+                              (0, i.lA)(null != (t = Y.flags) ? t : 0, M.D.BYPASSES_VERIFICATION, !0),
                           );
                       },
                   },
@@ -256,13 +256,13 @@ function D(e, t, D, x, T) {
     }
     return [
         W,
+        z,
         ...$,
         ...(R || null == G
             ? []
             : [
-                  z,
                   Z && !U
-                      ? L
+                      ? B
                           ? (0, r.jsx)(
                                 o.Drp,
                                 {
@@ -317,7 +317,7 @@ function D(e, t, D, x, T) {
                                             (0, r.jsx)(
                                                 l,
                                                 I(C({}, n), {
-                                                    location: x,
+                                                    location: T,
                                                     guildId: t,
                                                     user: e,
                                                 }),
@@ -343,7 +343,7 @@ function D(e, t, D, x, T) {
                                             (0, r.jsx)(
                                                 l,
                                                 I(C({}, n), {
-                                                    location: x,
+                                                    location: T,
                                                     guildId: t,
                                                     user: e,
                                                 }),

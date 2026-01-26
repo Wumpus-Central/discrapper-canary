@@ -1,5 +1,5 @@
 n.d(t, {
-    default: () => P,
+    default: () => x,
 });
 var r = n(627968);
 n(64700);
@@ -86,11 +86,11 @@ function D(e) {
                 null == _ || _();
             },
         }),
-        x = (0, O.A)({
+        P = (0, O.A)({
             user: t,
             context: I,
         }),
-        P = (0, b.A)({
+        x = (0, b.A)({
             user: t,
             appContext: I,
         }),
@@ -121,7 +121,7 @@ function D(e) {
         G = (0, f.A)(t, n, a),
         B = t.isNonUserBot();
     return (0, r.jsxs)(l.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-migrated-auto": !0,
         navId: "user-context",
         onClose: i.Z_,
         "aria-label": h.intl.string(h.t.liqwPJ),
@@ -134,7 +134,7 @@ function D(e) {
                             children: k,
                         }),
                         (0, r.jsxs)(l.rXV, {
-                            children: [D, x, P, M],
+                            children: [D, P, x, M],
                         }),
                         (0, r.jsx)(l.rXV, {
                             children: C,
@@ -157,7 +157,7 @@ function D(e) {
     });
 }
 
-function x(e) {
+function P(e) {
     let { user: t, mediaEngineContext: n, onSelect: a, onShowProfile: o, onWatchStream: c, appContext: f } = e,
         _ = (0, m.A)({
             onAction: () => {
@@ -173,8 +173,8 @@ function x(e) {
             appContext: f,
         }),
         D = (0, v.A)(t.id, c),
-        x = (0, E.A)(t.id),
-        P = (0, j.A)(t.id, n),
+        P = (0, E.A)(t.id),
+        x = (0, j.A)(t.id, n),
         M = (0, y.A)({
             user: t,
         }),
@@ -198,7 +198,7 @@ function x(e) {
         L = (0, d.A)(t),
         V = t.isNonUserBot();
     return (0, r.jsxs)(l.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-migrated-auto": !0,
         navId: "user-context",
         onClose: i.Z_,
         "aria-label": h.intl.string(h.t.liqwPJ),
@@ -214,13 +214,13 @@ function x(e) {
                             children: [_, S, I, D],
                         }),
                         (0, r.jsx)(l.rXV, {
-                            children: x,
+                            children: P,
                         }),
                         (0, r.jsx)(l.rXV, {
                             children: C,
                         }),
                         (0, r.jsxs)(l.rXV, {
-                            children: [P, M, w, N, T],
+                            children: [x, M, w, N, T],
                         }),
                     ],
                 }),
@@ -230,7 +230,7 @@ function x(e) {
         ],
     });
 }
-let P = (0, o.A)(
+let x = (0, o.A)(
     (0, a.A)(
         function (e) {
             let { guildId: t, channelId: n } = e,
@@ -280,7 +280,7 @@ let P = (0, o.A)(
                       }),
                   )
                 : (0, r.jsx)(
-                      x,
+                      P,
                       I(S({}, l), {
                           guildId: t,
                           channelId: n,

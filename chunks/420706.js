@@ -125,7 +125,7 @@ let U = 72,
 
 function F(e) {
     return (null == e ? void 0 : e.type) === _.S9.CONTENT_INVENTORY
-        ? e.entry.content_type === l.I.PLAYED_GAME && null != e.entry.applicationWidgetPreview
+        ? e.entry.content_type === l.ContentInventoryEntryType.PLAYED_GAME && null != e.entry.applicationWidgetPreview
             ? U + G
             : U
         : 0;
@@ -134,42 +134,42 @@ let B = (e) => {
         let { entry: t } = e,
             n = M(e, ["entry"]);
         switch (t.content_type) {
-            case l.I.PLAYED_GAME:
+            case l.ContentInventoryEntryType.PLAYED_GAME:
                 return (0, r.jsx)(
                     y.A,
                     j(x({}, n), {
                         entry: t,
                     }),
                 );
-            case l.I.WATCHED_MEDIA:
+            case l.ContentInventoryEntryType.WATCHED_MEDIA:
                 return (0, r.jsx)(
                     N.A,
                     j(x({}, n), {
                         entry: t,
                     }),
                 );
-            case l.I.TOP_GAME:
+            case l.ContentInventoryEntryType.TOP_GAME:
                 return (0, r.jsx)(
                     T.Ay,
                     j(x({}, n), {
                         entry: t,
                     }),
                 );
-            case l.I.TOP_ARTIST:
+            case l.ContentInventoryEntryType.TOP_ARTIST:
                 return (0, r.jsx)(
                     I.Ay,
                     j(x({}, n), {
                         entry: t,
                     }),
                 );
-            case l.I.LISTENED_SESSION:
+            case l.ContentInventoryEntryType.LISTENED_SESSION:
                 return (0, r.jsx)(
                     v.Ay,
                     j(x({}, n), {
                         entry: t,
                     }),
                 );
-            case l.I.LAUNCHED_ACTIVITY:
+            case l.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
                 return (0, r.jsx)(
                     g.A,
                     j(x({}, n), {
@@ -184,7 +184,7 @@ let B = (e) => {
         var t;
         let { entry: n, targetElementRef: i } = e,
             a = M(e, ["entry", "targetElementRef"]);
-        return n.content_type !== l.I.PLAYED_GAME
+        return n.content_type !== l.ContentInventoryEntryType.PLAYED_GAME
             ? null
             : (0, r.jsx)(O.A, {
                   entry: n,
@@ -222,42 +222,42 @@ let B = (e) => {
         let { entry: t } = e,
             n = M(e, ["entry"]);
         switch (t.content_type) {
-            case l.I.PLAYED_GAME:
+            case l.ContentInventoryEntryType.PLAYED_GAME:
                 return (0, r.jsx)(
                     b.A,
                     j(x({}, n), {
                         entry: t,
                     }),
                 );
-            case l.I.WATCHED_MEDIA:
+            case l.ContentInventoryEntryType.WATCHED_MEDIA:
                 return (0, r.jsx)(
                     w.A,
                     j(x({}, n), {
                         entry: t,
                     }),
                 );
-            case l.I.TOP_GAME:
+            case l.ContentInventoryEntryType.TOP_GAME:
                 return (0, r.jsx)(
                     C.A,
                     j(x({}, n), {
                         entry: t,
                     }),
                 );
-            case l.I.TOP_ARTIST:
+            case l.ContentInventoryEntryType.TOP_ARTIST:
                 return (0, r.jsx)(
                     S.A,
                     j(x({}, n), {
                         entry: t,
                     }),
                 );
-            case l.I.LISTENED_SESSION:
+            case l.ContentInventoryEntryType.LISTENED_SESSION:
                 return (0, r.jsx)(
                     A.A,
                     j(x({}, n), {
                         entry: t,
                     }),
                 );
-            case l.I.LAUNCHED_ACTIVITY:
+            case l.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
                 return (0, r.jsx)(
                     E.Ay,
                     j(x({}, n), {

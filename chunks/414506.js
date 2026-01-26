@@ -1,35 +1,35 @@
 n.d(t, {
     default: () => _,
 });
-var r = n(627968);
+var l = n(627968);
 n(64700);
-var l = n(397927),
-    i = n(442433),
-    o = n(847767),
-    u = n(358367),
-    a = n(793574),
-    c = n(688810),
+var r = n(397927),
+    o = n(442433),
+    i = n(847767),
+    c = n(358367),
+    u = n(793574),
+    a = n(688810),
     d = n(180798),
     s = n(652215),
     A = n(985018);
-let _ = (0, u.A)(
-    (0, o.A)(
+let _ = (0, c.A)(
+    (0, i.A)(
         function (e) {
             var t;
-            let { user: n, guildId: o, onSelect: u, analyticsLocations: s, onCloseContextMenu: _, isViewOnly: b } = e,
-                { analyticsLocations: E } = (0, c.Ay)(a.A.CONTEXT_MENU),
-                f = null != (t = null == s ? void 0 : s[0]) ? t : E[0],
-                O = (0, d.A)(n.id, o, !0, f, b);
-            return (0, r.jsx)(l.W1t, {
-                "data-menu-migration-ready": !0,
+            let { user: n, guildId: i, onSelect: c, analyticsLocations: s, onCloseContextMenu: _, isViewOnly: b } = e,
+                { analyticsLocations: f } = (0, a.Ay)(u.A.CONTEXT_MENU),
+                E = null != (t = null == s ? void 0 : s[0]) ? t : f[0],
+                g = (0, d.A)(n.id, i, !0, E, b);
+            return (0, l.jsx)(r.W1t, {
+                "data-menu-label-graphic-auto": !0,
                 navId: "guild-moderation-roles",
                 onClose: () => {
-                    (0, i.Z_)(), null == _ || _();
+                    (0, o.Z_)(), null == _ || _();
                 },
                 "aria-label": A.intl.string(A.t.liqwPJ),
-                onSelect: u,
-                children: (0, r.jsx)(l.rXV, {
-                    children: O,
+                onSelect: c,
+                children: (0, l.jsx)(r.rXV, {
+                    children: g,
                 }),
             });
         },
@@ -37,5 +37,5 @@ let _ = (0, u.A)(
             object: s.ZSU.CONTEXT_MENU,
         },
     ),
-    [a.A.CONTEXT_MENU, a.A.GUILD_MODERATION_USER_MENU],
+    [u.A.CONTEXT_MENU, u.A.GUILD_MODERATION_USER_MENU],
 );

@@ -124,7 +124,7 @@ function C(e) {
             }),
         });
     return (0, n.jsxs)(l.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-needs-migration": !0,
         "aria-label": b.intl.string(b.t["+1H47t"]),
         navId: "stream-options",
         onClose: c,
@@ -192,7 +192,7 @@ function C(e) {
                                         group: "resolution",
                                         id: "stream-option-resolution-".concat(t),
                                         checked: R === t,
-                                        label:
+                                        void_label:
                                             t !== g.on.RESOLUTION_720
                                                 ? (0, n.jsx)(w, {
                                                       label: (0, p.b)(t),
@@ -227,7 +227,7 @@ function C(e) {
                                         group: "frame-rate",
                                         id: "stream-option-frame-rate-".concat(e),
                                         checked: P === e,
-                                        label:
+                                        void_label:
                                             e === g.kn.FPS_60
                                                 ? (0, n.jsx)(w, {
                                                       label: "".concat(e, "fps"),

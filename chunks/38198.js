@@ -220,40 +220,25 @@ function L(e) {
             });
         }, [t.guild_id, t.id]),
         (0, r.jsx)(o.W1t, {
-            "data-menu-mixed": !0,
+            "data-menu-needs-migration": !0,
             onSelect: L,
             navId: "channel-attach",
             onClose: j,
             "aria-label": w.intl.string(w.t.Xm41aV),
             className: R.MK,
             children: m.map(function (e) {
-                let n = (0, r.jsxs)("div", {
-                    className: R.ed,
-                    children: [
-                        (0, r.jsx)(e.icon, {
-                            className: R.H9,
-                            color: "currentColor",
-                        }),
-                        (0, r.jsx)("div", {
-                            className: R.fS,
-                            children: e.display,
-                        }),
-                        null != e.badgeVal &&
-                            e.badgeVal > 0 &&
-                            (0, r.jsx)(o.hVq, {
-                                className: R.qS,
-                                color: e.badgeColor,
-                                count: e.badgeVal,
-                            }),
-                    ],
-                });
                 switch (e.type) {
                     case I.v.UPLOAD_A_FILE:
                         return (0, r.jsx)(
                             o.Drp,
                             {
                                 id: "upload-file",
-                                void_label: n,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
                                 action: b,
                             },
                             "upload-file",
@@ -264,7 +249,12 @@ function L(e) {
                             o.Drp,
                             {
                                 id: "upload-text-as-file",
-                                void_label: n,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
                                 action: J,
                             },
                             "upload-text-as-file",
@@ -274,7 +264,18 @@ function L(e) {
                             o.Drp,
                             {
                                 id: "clips",
-                                void_label: n,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
+                                badge:
+                                    null != e.badgeVal && e.badgeVal > 0
+                                        ? {
+                                              text: e.badgeVal.toString(),
+                                          }
+                                        : void 0,
                                 action: Y,
                             },
                             "clips",
@@ -284,7 +285,12 @@ function L(e) {
                             o.Drp,
                             {
                                 id: "poll",
-                                void_label: n,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
                                 action: q,
                             },
                             "poll",
@@ -294,7 +300,12 @@ function L(e) {
                             o.Drp,
                             {
                                 id: "play",
-                                void_label: n,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
                                 action: () => {
                                     var n;
                                     return (
@@ -315,7 +326,12 @@ function L(e) {
                             o.Drp,
                             {
                                 id: "listen",
-                                void_label: n,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
                                 action: () => {
                                     var n;
                                     return (
@@ -336,7 +352,12 @@ function L(e) {
                             o.Drp,
                             {
                                 id: "watch",
-                                void_label: n,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
                                 action: () => {
                                     var n;
                                     return (
@@ -357,7 +378,12 @@ function L(e) {
                             o.Drp,
                             {
                                 id: "THREAD",
-                                void_label: n,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
                                 action: W,
                             },
                             "THREAD",
@@ -367,7 +393,12 @@ function L(e) {
                             o.Drp,
                             {
                                 id: "SLASH_COMMAND",
-                                void_label: n,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
                                 action: z,
                             },
                             "SLASH_COMMAND",
@@ -377,7 +408,12 @@ function L(e) {
                             o.Drp,
                             {
                                 id: "APP_LAUNCHER",
-                                void_label: n,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
                                 action: () => (0, p.R)(h.s4.TEXT, a, void 0, t.id),
                             },
                             "APP_LAUNCHER",
@@ -387,9 +423,14 @@ function L(e) {
                             o.Drp,
                             {
                                 id: "activity",
-                                void_label: n,
-                                action: X,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
                                 hint: (0, r.jsx)(M, {}),
+                                action: X,
                             },
                             "activity",
                         );
@@ -398,7 +439,12 @@ function L(e) {
                             o.Drp,
                             {
                                 id: "scheduled_message",
-                                void_label: n,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
                                 action: () =>
                                     (0, A.e0)({
                                         channel: t,
@@ -412,13 +458,14 @@ function L(e) {
                             o.Drp,
                             {
                                 id: "summarize_thread",
-                                void_label: n,
+                                label: e.display,
+                                iconLeft: e.icon,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: e.icon,
+                                },
                                 action: () => y.A.summarizeThread(t),
-                                icon: K
-                                    ? (0, r.jsx)(o.y$y, {
-                                          type: o.tVU.PULSING_ELLIPSIS,
-                                      })
-                                    : null,
+                                loading: K,
                                 disabled: K,
                                 children: K
                                     ? null

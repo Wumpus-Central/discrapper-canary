@@ -21,7 +21,7 @@ let f = (0, a.A)(
                 l = (0, s.A)(t, r),
                 O = (0, u.A)(t, r);
             return (0, n.jsxs)(o.W1t, {
-                "data-menu-migration-ready": !0,
+                "data-menu-migrated-auto": !0,
                 navId: "moderation-raid-context",
                 onClose: c.Z_,
                 "aria-label": p.intl.string(p.t.liqwPJ),

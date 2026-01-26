@@ -6,8 +6,8 @@ var t = n(627968);
 n(64700);
 var s = n(503698),
     i = n.n(s),
-    l = n(681154),
-    r = n(696292),
+    r = n(681154),
+    l = n(696292),
     c = n(397927),
     o = n(688810),
     d = n(939341),
@@ -20,8 +20,8 @@ var s = n(503698),
     A = n(977001),
     h = n(514243),
     _ = n(506326),
-    f = n(299846),
-    E = n(915089),
+    E = n(299846),
+    f = n(915089),
     I = n(409626),
     v = n(692969),
     b = n(753845),
@@ -66,13 +66,13 @@ function U(e) {
 
 function V(e) {
     let { user: a, entry: n, header: s, className: x, onClose: p } = e,
-        j = (0, E.GV)(),
+        j = (0, f.GV)(),
         { themeType: y } = (0, C.E)(),
         { largeImage: h } = (0, d.nO)({
             entry: n,
             showCoverImage: !1,
         }),
-        { appName: g, activity: k } = (0, f.u)(n),
+        { appName: g, activity: k } = (0, E.u)(n),
         U = (0, v.A)({
             location: "UserProfileRecentActivityCard",
             applicationId: n.extra.application_id,
@@ -136,7 +136,7 @@ function V(e) {
                   s,
                   (0, t.jsx)(b.A, {
                       applicationId: n.extra.application_id,
-                      questContent: r.u.USER_PROFILE_ACTIVITY,
+                      questContent: l.u.USER_PROFILE_ACTIVITY,
                       children: (e) =>
                           (0, t.jsx)("div", {
                               className: L.rf,
@@ -180,7 +180,7 @@ function V(e) {
                                                   location: _.N5.USER_PROFILE,
                                                   className: L.jp,
                                                   children:
-                                                      n.content_type === l.I.TOP_GAME
+                                                      n.content_type === r.ContentInventoryEntryType.TOP_GAME
                                                           ? A.ac.map((e, a) =>
                                                                 (0, t.jsx)(
                                                                     e,
@@ -217,8 +217,8 @@ function V(e) {
 }
 
 function z(e) {
-    let { user: a, entry: n, header: s, className: i, onClose: l } = e,
-        r = (0, E.GV)(),
+    let { user: a, entry: n, header: s, className: i, onClose: r } = e,
+        l = (0, f.GV)(),
         { largeImage: x } = (0, d.nO)({
             entry: n,
         }),
@@ -239,8 +239,8 @@ function z(e) {
         className: i,
         profileModalScrollTarget: M.bk.RECENT_ACTIVITY,
         onAction: y,
-        onClose: l,
-        "aria-labelledby": r,
+        onClose: r,
+        "aria-labelledby": l,
         children: [
             s,
             (0, t.jsx)("div", {
@@ -277,7 +277,7 @@ function z(e) {
                                               (0, t.jsx)(P.Q, {
                                                   variant: "heading-sm/semibold",
                                                   text: n.extra.media_title,
-                                                  id: r,
+                                                  id: l,
                                               }),
                                               (0, t.jsx)(P.A, {
                                                   variant: "text-xs/normal",
@@ -298,7 +298,7 @@ function z(e) {
                                               (0, t.jsx)(P.Q, {
                                                   variant: "heading-sm/semibold",
                                                   text: n.extra.media_title,
-                                                  id: r,
+                                                  id: l,
                                               }),
                                               (0, t.jsx)(P.A, {
                                                   variant: "text-xs/normal",
@@ -330,8 +330,8 @@ function z(e) {
 
 function G(e) {
     var a, n;
-    let { user: s, entry: i, header: l, className: r, onClose: c } = e,
-        x = (0, E.GV)(),
+    let { user: s, entry: i, header: r, className: l, onClose: c } = e,
+        x = (0, f.GV)(),
         { largeImage: j } = (0, d.nO)({
             entry: i,
         }),
@@ -346,18 +346,18 @@ function G(e) {
             userId: s.id,
             onAction: A,
         }),
-        f = null == (a = i.extra.entries[0]) ? void 0 : a.media;
-    return null == f
+        E = null == (a = i.extra.entries[0]) ? void 0 : a.media;
+    return null == E
         ? null
         : (0, t.jsxs)(R.A, {
               ref: h,
-              className: r,
+              className: l,
               profileModalScrollTarget: M.bk.RECENT_ACTIVITY,
               onAction: A,
               onClose: c,
               "aria-labelledby": x,
               children: [
-                  l,
+                  r,
                   (0, t.jsx)("div", {
                       className: L.rf,
                       children: (0, t.jsxs)("div", {
@@ -372,7 +372,7 @@ function G(e) {
                                           A({
                                               action: "OPEN_SPOTIFY_ALBUM",
                                           }),
-                                          (0, p.n)(k.M0.ALBUM, f.external_parent_id);
+                                          (0, p.n)(k.M0.ALBUM, E.external_parent_id);
                                   },
                               }),
                               (0, t.jsxs)("div", {
@@ -382,18 +382,18 @@ function G(e) {
                                           children: [
                                               (0, t.jsx)(P.Q, {
                                                   variant: "heading-sm/semibold",
-                                                  text: f.title,
+                                                  text: E.title,
                                                   onClick: () => {
                                                       A({
                                                           action: "OPEN_SPOTIFY_TRACK",
                                                       }),
-                                                          (0, p.n)(k.M0.TRACK, f.external_id);
+                                                          (0, p.n)(k.M0.TRACK, E.external_id);
                                                   },
                                                   id: x,
                                               }),
                                               (0, t.jsx)(P.A, {
                                                   variant: "text-xs/normal",
-                                                  text: null == (n = f.artists[0]) ? void 0 : n.name,
+                                                  text: null == (n = E.artists[0]) ? void 0 : n.name,
                                                   onClick: () => {
                                                       var e;
                                                       A({
@@ -401,7 +401,7 @@ function G(e) {
                                                       }),
                                                           (0, p.n)(
                                                               k.M0.ARTIST,
-                                                              null == (e = f.artists[0]) ? void 0 : e.external_id,
+                                                              null == (e = E.artists[0]) ? void 0 : e.external_id,
                                                           );
                                                   },
                                               }),
@@ -430,8 +430,8 @@ function G(e) {
 }
 
 function Q(e) {
-    let { user: a, entry: n, header: s, className: i, onClose: l } = e,
-        c = (0, E.GV)(),
+    let { user: a, entry: n, header: s, className: i, onClose: r } = e,
+        c = (0, f.GV)(),
         { largeImage: x } = (0, d.nO)({
             entry: n,
             showCoverImage: !1,
@@ -449,20 +449,20 @@ function Q(e) {
         }),
         A = (0, g.A)({
             applicationId: n.extra.application_id,
-            onClose: l,
+            onClose: r,
         });
     return (0, t.jsxs)(R.A, {
         ref: y,
         className: i,
         profileModalScrollTarget: M.bk.RECENT_ACTIVITY,
         onAction: u,
-        onClose: l,
+        onClose: r,
         "aria-labelledby": c,
         children: [
             s,
             (0, t.jsx)(b.A, {
                 applicationId: n.extra.application_id,
-                questContent: r.u.USER_PROFILE_ACTIVITY,
+                questContent: l.u.USER_PROFILE_ACTIVITY,
                 children: (e) =>
                     (0, t.jsx)("div", {
                         className: L.rf,

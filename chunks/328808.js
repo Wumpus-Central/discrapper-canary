@@ -133,7 +133,7 @@ function N(e) {
         L = j.SY.useSetting(),
         k = (0, a.bG)([v.A], () => !s().isEmpty(v.A.getVoiceStatesForChannel(t.id)));
     return (0, r.jsxs)(o.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-needs-review": !0,
         navId: "thread-context",
         onClose: n,
         "aria-label": E.intl.string(E.t["1NBjqb"]),

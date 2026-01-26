@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => A,
+    A: () => v,
 });
 var r = n(627968);
 n(64700);
@@ -18,9 +18,9 @@ var i = n(503698),
     m = n(747926),
     g = n(652215),
     E = n(985018),
-    b = n(868320);
+    y = n(868320);
 
-function y(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,25 +45,25 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
 
-function A(e) {
+function v(e) {
     let { message: t, compact: n } = e,
         i = (0, s.bG)([u.A], () => u.A.getChannel(d.default.castMessageIdAsChannelId(t.id)));
     return null == i
         ? null
-        : (0, r.jsx)(v, {
+        : (0, r.jsx)(A, {
               channel: i,
               compact: n,
               isSystemMessage: (0, c.A)(t),
           });
 }
 
-function v(e) {
+function A(e) {
     let { channel: t, compact: i, isSystemMessage: c } = e;
 
     function u(e) {
@@ -79,7 +79,7 @@ function v(e) {
 
     function _(e) {
         (0, l.L3)(e, async () => {
-            let { default: e } = await Promise.all([n.e("99011"), n.e("88974"), n.e("98865")]).then(n.bind(n, 44536));
+            let { default: e } = await Promise.all([n.e("99011"), n.e("88974"), n.e("9282")]).then(n.bind(n, 44536));
             return (n) =>
                 (0, r.jsx)(
                     e,
@@ -93,14 +93,14 @@ function v(e) {
         });
     }
     let h = (0, s.bG)([p.A], () => p.A.getCount(t.id)),
-        y = S(t),
-        A = null != h && h > 0;
+        b = I(t),
+        v = null != h && h > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: a()(b.GI, {
-                    [b.E]: !i,
-                    [b.E_]: c,
+                className: a()(y.GI, {
+                    [y.E]: !i,
+                    [y.E_]: c,
                 }),
             }),
             (0, r.jsx)(o.DUT, {
@@ -108,24 +108,24 @@ function v(e) {
                 onKeyDown: d,
                 onContextMenu: _,
                 "aria-roledescription": E.intl.string(E.t["8ipxiY"]),
-                className: a()(b.kL, {
-                    [b.og]: c,
+                className: a()(y.kL, {
+                    [y.og]: c,
                 }),
                 children: (0, r.jsxs)(o.RDc, {
                     children: [
                         (0, r.jsxs)("div", {
-                            className: b.kq,
+                            className: y.kq,
                             children: [
                                 (0, r.jsx)(o.AC4, {
                                     children: E.intl.string(E.t["7Xm5QI"]),
                                 }),
                                 (0, r.jsx)("span", {
-                                    className: b.UU,
+                                    className: y.UU,
                                     children: t.name,
                                 }),
                                 (0, r.jsx)("span", {
-                                    className: b.lO,
-                                    "aria-hidden": !A,
+                                    className: y.lO,
+                                    "aria-hidden": !v,
                                     children: (0, f.ub)(h, t.id),
                                 }),
                             ],
@@ -135,8 +135,8 @@ function v(e) {
                             "aria-hidden": !0,
                             lineClamp: 1,
                             color: "text-default",
-                            className: b.sb,
-                            children: y,
+                            className: y.sb,
+                            children: b,
                         }),
                     ],
                 }),
@@ -145,7 +145,7 @@ function v(e) {
     });
 }
 
-function S(e) {
+function I(e) {
     var t;
     let n = (0, s.bG)([p.A], () => p.A.getMostRecentMessage(e.id)),
         i = (0, s.bG)([p.A], () => p.A.getCount(e.id)),
@@ -161,7 +161,7 @@ function S(e) {
                           children: E.intl.string(E.t.ZTo4HS),
                       }),
                       (0, r.jsx)("span", {
-                          className: b.vE,
+                          className: y.vE,
                           children: (0, _.aK)(a),
                       }),
                   ],
@@ -173,7 +173,7 @@ function S(e) {
                           channel: e,
                       }),
                       (0, r.jsx)("span", {
-                          className: b.vE,
+                          className: y.vE,
                           children: (0, _.aK)(a),
                       }),
                   ],

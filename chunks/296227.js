@@ -25,7 +25,7 @@ function f(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(o.W1t, {
-                "data-menu-mixed": !0,
+                "data-menu-migrated": !0,
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
                     (0, s.Z_)(), t();
@@ -34,6 +34,7 @@ function f(e) {
                 "aria-label": u.intl.string(u.t.xpSHSk),
                 children: (0, r.jsxs)(o.rXV, {
                     children: [
+                        f,
                         (0, r.jsx)(
                             o.Drp,
                             {
@@ -42,10 +43,13 @@ function f(e) {
                                 action: g,
                                 color: "danger",
                                 icon: o.iFK,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: o.iFK,
+                                },
                             },
                             "flag-widget",
                         ),
-                        f,
                     ],
                 }),
             });

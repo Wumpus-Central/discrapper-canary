@@ -128,11 +128,11 @@ function R(e, t) {
     return i;
 }
 let P = {
-    [c.I.TOP_ARTIST]: [K],
-    [c.I.PLAYED_GAME]: [U, G, k, q, F, Y, z, H, B],
-    [c.I.TOP_GAME]: [W],
-    [c.I.WATCHED_MEDIA]: [Z, X],
-    [c.I.LAUNCHED_ACTIVITY]: [U, G, k, q, z, B],
+    [c.ContentInventoryEntryType.TOP_ARTIST]: [K],
+    [c.ContentInventoryEntryType.PLAYED_GAME]: [U, G, k, q, F, Y, z, H, B],
+    [c.ContentInventoryEntryType.TOP_GAME]: [W],
+    [c.ContentInventoryEntryType.WATCHED_MEDIA]: [Z, X],
+    [c.ContentInventoryEntryType.LAUNCHED_ACTIVITY]: [U, G, k, q, z, B],
 };
 var D = (function (e) {
     return (
@@ -523,7 +523,7 @@ function J(e) {
 
 function $(e) {
     switch (e.content_type) {
-        case c.I.TOP_ARTIST:
+        case c.ContentInventoryEntryType.TOP_ARTIST:
             return P[e.content_type].map((t, n) =>
                 (0, r.jsx)(
                     t,
@@ -533,7 +533,7 @@ function $(e) {
                     n,
                 ),
             );
-        case c.I.PLAYED_GAME:
+        case c.ContentInventoryEntryType.PLAYED_GAME:
             return P[e.content_type].map((t, n) =>
                 (0, r.jsx)(
                     t,
@@ -543,7 +543,7 @@ function $(e) {
                     n,
                 ),
             );
-        case c.I.TOP_GAME:
+        case c.ContentInventoryEntryType.TOP_GAME:
             return P[e.content_type].map((t, n) =>
                 (0, r.jsx)(
                     t,
@@ -553,7 +553,7 @@ function $(e) {
                     n,
                 ),
             );
-        case c.I.WATCHED_MEDIA:
+        case c.ContentInventoryEntryType.WATCHED_MEDIA:
             return P[e.content_type].map((t, n) =>
                 (0, r.jsx)(
                     t,
@@ -563,7 +563,7 @@ function $(e) {
                     n,
                 ),
             );
-        case c.I.LAUNCHED_ACTIVITY:
+        case c.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
             return P[e.content_type].map((t, n) =>
                 (0, r.jsx)(
                     t,

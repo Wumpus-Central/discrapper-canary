@@ -97,7 +97,7 @@ let _ = (0, c.A)(
         return (0, i.jsx)(d.f5, {
             value: G,
             children: (0, i.jsxs)(l.W1t, {
-                "data-menu-migration-ready": !0,
+                "data-menu-migrated": !0,
                 navId: "user-settings-cog",
                 onClose: a.Z_,
                 "aria-label": D.intl.string(D.t.opYYHn),

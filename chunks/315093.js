@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => b,
+    A: () => y,
 });
 var r = n(681154),
     i = n(808380),
@@ -75,7 +75,7 @@ let g = {
         [u.Z.EMBED]: s.Ob.Embed,
     };
 
-function b(e) {
+function y(e) {
     let t,
         n,
         { entry: i, location: s, baseEntryData: c } = e,
@@ -89,13 +89,16 @@ function b(e) {
                 type: e,
             });
     }
-    n = i.content_type === r.I.PLAYED_GAME && (0, l.JM)(i) && !(0, l.I5)(i) ? f.t.vPg1JT : f.t.rPqqts;
-    let b = E[s],
-        y = {
+    n =
+        i.content_type === r.ContentInventoryEntryType.PLAYED_GAME && (0, l.JM)(i) && !(0, l.I5)(i)
+            ? f.t.vPg1JT
+            : f.t.rPqqts;
+    let y = E[s],
+        b = {
             onClick: (0, o.A)({
-                location: b,
+                location: y,
                 applicationId: i.extra.application_id,
-                source: b,
+                source: y,
                 trackEntryPointImpression: !0,
                 sourceUserId: i.author_id,
             }),
@@ -106,8 +109,8 @@ function b(e) {
     return m(_({}, c), {
         thumbnailUrl: p,
         title: h,
-        titleClickable: y,
-        thumbnailClickable: y,
+        titleClickable: b,
+        thumbnailClickable: b,
         userDescription: n,
         providerIconProps: t,
     });

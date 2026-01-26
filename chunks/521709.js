@@ -16,7 +16,7 @@ let p = (0, a.A)(
         let { onSelect: t } = e,
             r = (0, c.bG)([l.A], () => l.A.favoriteServerMuted);
         return (0, n.jsx)(o.W1t, {
-            "data-menu-migration-ready": !0,
+            "data-menu-migrated": !0,
             navId: "favorite-server-context",
             onClose: i.Z_,
             "aria-label": b.intl.string(b.t.liqwPJ),

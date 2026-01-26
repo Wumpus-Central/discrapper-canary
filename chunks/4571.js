@@ -1,24 +1,24 @@
-n.d(i, {
+e.d(i, {
     default: () => s,
 });
-var e = n(627968);
-n(64700);
-var a = n(397927),
-    l = n(442433),
-    o = n(272613),
-    d = n(819638),
-    r = n(985018);
+var n = e(627968);
+e(64700);
+var a = e(397927),
+    l = e(442433),
+    o = e(272613),
+    d = e(819638),
+    r = e(985018);
 
 function s(t) {
     let { onSelect: i } = t;
-    return (0, e.jsxs)(a.W1t, {
-        "data-menu-migration-ready": !0,
+    return (0, n.jsxs)(a.W1t, {
+        "data-menu-migrated": !0,
         navId: "guild-context",
         "aria-label": r.intl.string(r.t.HpQykc),
         onClose: l.Z_,
         onSelect: i,
         children: [
-            (0, e.jsx)(a.Drp, {
+            (0, n.jsx)(a.Drp, {
                 id: "join",
                 label: r.intl.string(r.t.yRjK4p),
                 action: () =>
@@ -27,7 +27,7 @@ function s(t) {
                         location: "Guild List - ContextMenu",
                     }),
             }),
-            (0, e.jsx)(a.Drp, {
+            (0, n.jsx)(a.Drp, {
                 id: "create",
                 label: r.intl.string(r.t.B44MTm),
                 action: () =>

@@ -44,7 +44,7 @@ let d = () =>
 function p(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(l.W1t, {
-        "data-menu-all-icons": !0,
+        "data-menu-migrated": !0,
         onSelect: () => {},
         navId: "staff-help-popout",
         variant: "fixed",
@@ -56,12 +56,24 @@ function p(e) {
                     id: "staff-help-bug-reporter",
                     label: c.intl.string(c.t["5LqopY"]),
                     icon: l.Q5O,
+                    leadingAccessory: {
+                        type: "icon",
+                        icon: l.Q5O,
+                    },
                     action: d,
                 }),
                 (0, r.jsx)(l.Drp, {
                     id: "staff-help-center",
                     label: "Go to Help Center",
-                    icon: l.tfB,
+                    icon: l.I9m,
+                    leadingAccessory: {
+                        type: "icon",
+                        icon: l.cBN,
+                    },
+                    trailingIndicator: {
+                        type: "icon",
+                        icon: l.I9m,
+                    },
                     action: () => (0, a.A)(s.C),
                 }),
             ],

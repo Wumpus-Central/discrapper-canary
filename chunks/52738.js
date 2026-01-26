@@ -1,5 +1,5 @@
 n.d(t, {
-    B: () => E,
+    B: () => y,
 });
 var r = n(627968),
     i = n(64700),
@@ -7,10 +7,11 @@ var r = n(627968),
     s = n.n(a),
     o = n(158954),
     l = n(545442),
-    c = n(486020),
-    u = n(658122);
+    c = n(935154),
+    u = n(486020),
+    d = n(658122);
 
-function d(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +25,7 @@ function d(e, t, n) {
     );
 }
 
-function f(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,13 +36,13 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
 
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,19 +55,19 @@ function p(e, t) {
     return n;
 }
 
-function _(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,13 +78,13 @@ function h(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = m(e, t)), Object.getOwnPropertySymbols))
+    if (((a = g(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function m(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -94,10 +95,10 @@ function m(e, t) {
     return i;
 }
 
-function g(e, t, n) {
+function E(e, t, n) {
     let { emojiId: r, src: i, animated: a = !1 } = e;
     return null != r
-        ? c.Ay.getEmojiURL({
+        ? u.Ay.getEmojiURL({
               id: r,
               animated: a && (!n || t),
               size: 18,
@@ -105,19 +106,19 @@ function g(e, t, n) {
         : i;
 }
 
-function E(e) {
+function y(e) {
     let { accessory: t, isFocused: n } = e,
         { reducedMotion: a } = i.useContext(o.CZY);
     switch (t.type) {
         case "icon": {
             let { type: e, icon: n, color: i = "currentColor", className: a } = t,
-                o = h(t, ["type", "icon", "color", "className"]);
+                o = m(t, ["type", "icon", "color", "className"]);
             return (0, r.jsx)("div", {
-                className: u.iconContainerLeft,
+                className: d.iconContainerLeft,
                 children: (0, r.jsx)(
                     n,
-                    _(
-                        f(
+                    h(
+                        p(
                             {
                                 "aria-hidden": !0,
                                 color: i,
@@ -125,21 +126,21 @@ function E(e) {
                             o,
                         ),
                         {
-                            className: s()(u.icon, a),
+                            className: s()(d.icon, a),
                         },
                     ),
                 ),
             });
         }
         case "emoji": {
-            let e = g(t, n, a.enabled);
+            let e = E(t, n, a.enabled);
             return (0, r.jsx)("div", {
-                className: u.iconContainerLeft,
+                className: d.iconContainerLeft,
                 children: (0, r.jsx)("img", {
                     "aria-hidden": !0,
                     alt: "",
                     src: e,
-                    className: u.icon,
+                    className: d.icon,
                 }),
             });
         }
@@ -148,19 +149,19 @@ function E(e) {
                 "aria-hidden": !0,
                 alt: "",
                 src: t.src,
-                className: u.imageAccessory,
+                className: d.imageAccessory,
             });
         case "avatar":
             return (0, r.jsx)("img", {
                 "aria-hidden": !0,
                 alt: "",
                 src: t.src,
-                className: u.avatarAccessory,
+                className: d.avatarAccessory,
             });
         case "roleDot": {
             let { variant: e, color: n, colors: i } = t;
             return (0, r.jsx)("div", {
-                className: u.roleDotAccessory,
+                className: d.roleDotAccessory,
                 children:
                     "dot" === e
                         ? (0, r.jsx)(l.W, {
@@ -173,6 +174,17 @@ function E(e) {
                               color: n,
                               colors: null != i ? i : null,
                           }),
+            });
+        }
+        case "status": {
+            let { status: e } = t;
+            return (0, r.jsx)("div", {
+                className: d.statusAccessory,
+                children: (0, r.jsx)(c.nW, {
+                    status: e,
+                    size: 10,
+                    color: n ? "currentColor" : void 0,
+                }),
             });
         }
     }

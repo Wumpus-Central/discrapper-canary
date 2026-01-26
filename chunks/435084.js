@@ -29,7 +29,7 @@ function f(e) {
             };
         });
     return (0, r.jsxs)(a.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated-auto": !0,
         navId: "mentions-filter",
         "aria-label": h.intl.string(h.t.pEasFX),
         onClose: t,

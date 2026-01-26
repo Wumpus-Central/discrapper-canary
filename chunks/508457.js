@@ -4,8 +4,8 @@ r.d(t, {
 var a = r(627968),
     n = r(64700),
     o = r(942381),
-    i = r(397927),
-    c = r(442433),
+    c = r(397927),
+    i = r(442433),
     l = r(259788),
     u = r(985018);
 
@@ -60,13 +60,13 @@ function b(e) {
         { onSelect: b, onClose: f } = e,
         y =
             ((t = l.Ay.useState((e) => e.timeToLiveMs, o.x)),
-            (0, a.jsx)(i.aK1, {
+            (0, a.jsx)(c.aK1, {
                 id: "opacity",
                 "aria-haspopup": !0,
                 label: "Time To Live",
                 control: (e, r) =>
                     (0, a.jsx)(
-                        i.i42,
+                        c.i42,
                         s(p({}, e), {
                             ref: r,
                             value: t,
@@ -80,13 +80,13 @@ function b(e) {
             })),
         O =
             ((r = l.Ay.useState((e) => e.reappearTimeMs, o.x)),
-            (0, a.jsx)(i.aK1, {
+            (0, a.jsx)(c.aK1, {
                 id: "opacity",
                 "aria-haspopup": !0,
                 label: "Time To Reappear",
                 control: (e, t) =>
                     (0, a.jsx)(
-                        i.i42,
+                        c.i42,
                         s(p({}, e), {
                             ref: t,
                             value: r,
@@ -110,10 +110,10 @@ function b(e) {
             },
             [],
         ),
-        (0, a.jsxs)(i.W1t, {
-            "data-menu-migration-ready": !0,
+        (0, a.jsxs)(c.W1t, {
+            "data-menu-migrated-auto": !0,
             navId: "overlay-click-zone-debug-context-menu",
-            onClose: c.Z_,
+            onClose: i.Z_,
             "aria-label": u.intl.string(u.t.tPfVWi),
             onSelect: b,
             children: [y, O],

@@ -12,18 +12,18 @@ var r = n(627968),
     d = n(961350),
     A = n(696451),
     b = n(71393),
-    O = n(576705),
-    f = n(287809),
+    f = n(576705),
+    O = n(287809),
     g = n(652215),
     y = n(985018);
 
 function p(e) {
-    let { guildId: t, userId: p, analyticsLocation: E, analyticsLocations: m, context: j, icon: v } = e,
+    let { guildId: t, userId: p, analyticsLocation: E, analyticsLocations: j, context: m, icon: v } = e,
         _ = b.A.getGuild(t),
         h = d.default.getId(),
-        S = (0, i.bG)([f.default], () => f.default.getUser(p)),
+        S = (0, i.bG)([O.default], () => O.default.getUser(p)),
         M = (0, i.bG)([A.Ay], () => A.Ay.isGuestOrLurker(t, p), [t, p]);
-    (0, i.bG)([O.A], () => O.A.getGuildVersion(t), [t]);
+    (0, i.bG)([f.A], () => f.A.getGuildVersion(t), [t]);
     let P = l.useMemo(
         () => ({
             [t]: [p],
@@ -31,23 +31,30 @@ function p(e) {
         [t, p],
     );
     (0, o.E)(P, "useChangeIdentityItem");
-    let C = j === g.BRT.POPOUT,
+    let C = m === g.BRT.POPOUT,
         I = (0, c.A)({
             guild: _,
-            analyticsLocations: m,
+            analyticsLocations: j,
         }),
         D = (0, u.aL)();
     if (null == _ || C) return null;
-    let T = h === p && (O.A.can(g.xBc.CHANGE_NICKNAME, _) || O.A.can(g.xBc.MANAGE_NICKNAMES, _)),
+    let T = h === p && (f.A.can(g.xBc.CHANGE_NICKNAME, _) || f.A.can(g.xBc.MANAGE_NICKNAMES, _)),
         x = h === p,
-        w = O.A.canManageUser(g.xBc.MANAGE_NICKNAMES, p, _);
-    if (!(T || w || x) || null == S || M) return null;
-    let N = _.features.has(g.GuildFeatures.HUB) ? y.intl.string(y.t["+MWrWt"]) : y.intl.string(y.t["PKQB/H"]),
-        G = x ? N : y.intl.string(y.t.dilOF6);
+        N = f.A.canManageUser(g.xBc.MANAGE_NICKNAMES, p, _);
+    if (!(T || N || x) || null == S || M) return null;
+    let w = _.features.has(g.GuildFeatures.HUB) ? y.intl.string(y.t["+MWrWt"]) : y.intl.string(y.t["PKQB/H"]),
+        G = x ? w : y.intl.string(y.t.dilOF6);
     return (0, r.jsx)(a.Drp, {
         id: "change-nickname",
         label: G,
         icon: v,
+        leadingAccessory:
+            null != v
+                ? {
+                      type: "icon",
+                      icon: v,
+                  }
+                : void 0,
         action: () => {
             x
                 ? ((0, s.A)(S.id, S.getAvatarURL(t, 80), {
@@ -92,7 +99,7 @@ function p(e) {
                                       guildId: t,
                                       user: S,
                                       analyticsSource: E,
-                                      analyticsLocations: m,
+                                      analyticsLocations: j,
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))

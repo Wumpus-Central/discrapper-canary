@@ -90,12 +90,12 @@ function T(e) {
         }),
         C = (0, a.bG)([f.A, d.A], () => d.A.getChannel(f.A.getChannelId())),
         N = (0, o.A)(C),
-        R = t.id,
-        w = i.useCallback(() => {
+        w = t.id,
+        R = i.useCallback(() => {
             null != T &&
                 (N
                     ? ((0, l.hg)(T.id),
-                      (0, s.OoC)((0, E.n)(R, null == C ? void 0 : C.guild_id)),
+                      (0, s.OoC)((0, E.n)(w, null == C ? void 0 : C.guild_id)),
                       null == n || n(),
                       p.default.track(b.HAw.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, {
                           application_id: T.id,
@@ -108,7 +108,7 @@ function T(e) {
                               T,
                           ),
                       ));
-        }, [T, N, R, null == C ? void 0 : C.guild_id, n]),
+        }, [T, N, w, null == C ? void 0 : C.guild_id, n]),
         P = N ? O.intl.string(O.t["Cia+A8"]) : O.intl.string(O.t.NgXl3C);
     if (null == T || !(0, u.Ie)(T)) return null;
     let { customInstallUrl: D } = T,
@@ -120,7 +120,7 @@ function T(e) {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(s.W1t, {
-                      "data-menu-migration-ready": !0,
+                      "data-menu-migrated-auto": !0,
                       navId: "user-bot-profile-add-app",
                       onClose: t,
                       "aria-label": O.intl.string(O.t.dbkxVm),
@@ -146,7 +146,7 @@ function T(e) {
                               text: P,
                               icon: L,
                               onContextMenu: t,
-                              onClick: w,
+                              onClick: R,
                           },
                           n,
                           v,
@@ -161,7 +161,7 @@ function T(e) {
                       action: "PRESS_ADD_APP",
                       text: P,
                       icon: L,
-                      onClick: w,
+                      onClick: R,
                       variant: "primary",
                   },
                   v,

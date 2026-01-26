@@ -1,26 +1,26 @@
-n.d(d, {
+a.d(d, {
     default: () => o,
 });
-var a = n(627968);
-n(64700);
-var i = n(397927),
-    t = n(442433),
-    l = n(734057),
-    r = n(954571),
-    s = n(863922),
-    u = n(652215),
-    c = n(985018);
+var n = a(627968);
+a(64700);
+var t = a(397927),
+    i = a(442433),
+    l = a(734057),
+    r = a(954571),
+    s = a(863922),
+    u = a(652215),
+    c = a(985018);
 
 function o(e) {
-    let { summary: d, onSelect: n } = e;
-    return (0, a.jsx)(i.W1t, {
-        "data-menu-migration-ready": !0,
-        onSelect: n,
+    let { summary: d, onSelect: a } = e;
+    return (0, n.jsx)(t.W1t, {
+        "data-menu-migrated-auto": !0,
+        onSelect: a,
         navId: "channel-summaries-context-menu",
         "aria-label": c.intl.string(c.t.ogxXGq),
-        onClose: t.Z_,
-        children: (0, a.jsx)(i.rXV, {
-            children: (0, a.jsx)(i.Drp, {
+        onClose: i.Z_,
+        children: (0, n.jsx)(t.rXV, {
+            children: (0, n.jsx)(t.Drp, {
                 id: "delete-summary",
                 color: "danger",
                 label: c.intl.string(c.t["5AwUIg"]),

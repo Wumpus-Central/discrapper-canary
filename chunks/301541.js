@@ -28,5 +28,12 @@ function A(e, t, n) {
                       (0, i.s7G)();
               },
               icon: n,
+              leadingAccessory:
+                  null != n
+                      ? {
+                            type: "icon",
+                            icon: n,
+                        }
+                      : void 0,
           });
 }

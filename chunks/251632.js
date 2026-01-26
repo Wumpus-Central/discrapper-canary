@@ -501,7 +501,7 @@ function w(e) {
                                             ),
                                     });
                                 return (0, t.jsxs)(o.W1t, {
-                                    "data-menu-all-icons": !0,
+                                    "data-menu-needs-migration": !0,
                                     navId: "set-image-for-action",
                                     "aria-label": "upload",
                                     onClose: () => !1,

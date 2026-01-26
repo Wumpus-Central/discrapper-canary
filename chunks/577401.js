@@ -3,5 +3,4 @@ e.exports = {
     Lw: "overlay_d28e10",
     QY: "overlayIcon_d28e10",
     vk: "clickable_d28e10",
-    MK: "menu_d28e10",
 };

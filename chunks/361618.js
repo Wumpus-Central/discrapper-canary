@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => I,
+    A: () => S,
 });
 var r = n(627968),
     i = n(64700),
@@ -17,9 +17,9 @@ var r = n(627968),
     m = n(652215),
     g = n(753070),
     E = n(731854),
-    b = n(985018);
+    y = n(985018);
 
-function y(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,13 +44,13 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
 
-function A(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -63,26 +63,26 @@ function A(e, t) {
     return n;
 }
 
-function v(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function S(e, t) {
+function I(e, t) {
     (0, s.mMO)(
         async () => {
             let { default: e } = await n.e("18630").then(n.bind(n, 826789));
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    v(O({}, n), {
+                    A(O({}, n), {
                         analyticsSource: t,
                     }),
                 );
@@ -93,16 +93,16 @@ function S(e, t) {
     );
 }
 
-function I(e, t) {
-    let { preset: n, resolution: y, fps: A, soundshareEnabled: I } = (0, a.cf)([u.A], () => u.A.getState()),
+function S(e, t) {
+    let { preset: n, resolution: b, fps: v, soundshareEnabled: S } = (0, a.cf)([u.A], () => u.A.getState()),
         T = (0, a.bG)([p.A], () => p.A.getGoLiveSource()),
         C = (0, a.bG)([h.default], () => h.default.getCurrentUser()),
         N = (0, a.bG)([f.A], () => {
             var t;
             return null == (t = f.A.getGuild(null == e ? void 0 : e.guildId)) ? void 0 : t.premiumTier;
         }),
-        { location: R } = (0, l.p)(),
-        w = (0, a.bG)([_.A, d.A], () => d.A.getChannel(_.A.getVoiceChannelId())),
+        { location: w } = (0, l.p)(),
+        R = (0, a.bG)([_.A, d.A], () => d.A.getChannel(_.A.getVoiceChannelId())),
         P = i.useCallback(
             (e, n, r, i) => {
                 if (e) {
@@ -118,7 +118,7 @@ function I(e, t) {
                         null != T.desktopSource
                             ? (e.desktopSettings = {
                                   sourceId: T.desktopSource.id,
-                                  sound: I,
+                                  sound: S,
                               })
                             : null != T.cameraSource &&
                               (e.cameraSettings = {
@@ -128,44 +128,46 @@ function I(e, t) {
                             o.A.setGoLiveSource(e);
                     }
                 } else
-                    S(
+                    I(
                         t,
-                        v(O({}, R), {
+                        A(O({}, w), {
                             object: m.ZSU.RADIO_ITEM,
                             objectType: i,
                         }),
                     );
             },
-            [t, R, I, T],
+            [t, w, S, T],
         );
     if (null == e) return null;
-    let D = n === g.jQ.PRESET_DOCUMENTS ? g.kn.FPS_30 : A,
+    let D = n === g.jQ.PRESET_DOCUMENTS ? g.kn.FPS_30 : v,
         x = g.ce.map((e) => {
-            let { value: t, label: n } = e,
-                i = (0, c.A)(g.jQ.PRESET_CUSTOM, y, t, C, N, w);
+            let { value: t, label: n, subtext: i } = e,
+                a = (0, c.A)(g.jQ.PRESET_CUSTOM, b, t, C, N, R);
             return (0, r.jsx)(
                 s.iDA,
                 {
                     group: "stream-settings-fps",
                     id: "stream-settings-fps-".concat(t),
                     label: n,
-                    checked: t === A,
-                    action: () => P(i, y, t, m.AnalyticsObjectTypes.RESOLUTION),
+                    subtext: i,
+                    checked: t === v,
+                    action: () => P(a, b, t, m.AnalyticsObjectTypes.RESOLUTION),
                 },
                 "stream-settings-fps-".concat(t),
             );
         }),
         L = g.Jk.map((e) => {
-            let { value: t, label: n } = e,
-                i = (0, c.A)(g.jQ.PRESET_CUSTOM, t, D, C, N, w);
+            let { value: t, label: n, subtext: i } = e,
+                a = (0, c.A)(g.jQ.PRESET_CUSTOM, t, D, C, N, R);
             return (0, r.jsx)(
                 s.iDA,
                 {
                     group: "stream-settings-resolution",
                     id: "stream-settings-resolution-".concat(t),
                     label: n,
-                    checked: t === y,
-                    action: () => P(i, t, D, m.AnalyticsObjectTypes.RESOLUTION),
+                    subtext: i,
+                    checked: t === b,
+                    action: () => P(a, t, D, m.AnalyticsObjectTypes.RESOLUTION),
                 },
                 "stream-settings-resolution-".concat(t),
             );
@@ -173,11 +175,11 @@ function I(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.rXV, {
-                label: b.intl.string(b.t.SkkeIt),
+                label: y.intl.string(y.t.SkkeIt),
                 children: x,
             }),
             (0, r.jsx)(s.rXV, {
-                label: b.intl.string(b.t.rHyPXg),
+                label: y.intl.string(y.t.rHyPXg),
                 children: L,
             }),
         ],

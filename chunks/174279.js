@@ -85,7 +85,7 @@ function P(e) {
         _ = t.isProvisional,
         O = l ? T.intl.string(T.t.RLcE6x) : T.intl.string(T.t.cvSt1J);
     return (0, r.jsxs)(o.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated-auto": !0,
         navId: "friend-row",
         "aria-label": T.intl.string(T.t.liqwPJ),
         onClose: d.Z_,

@@ -4,12 +4,12 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(397927),
-    o = n(348417),
-    c = n(985018);
+    c = n(348417),
+    o = n(985018);
 
 function s(e) {
     let { onClose: t } = e,
-        { showSuggestions: s, showActivityTicker: l, setShowSuggestions: u, setShowActivityTicker: b } = (0, o.A)(),
+        { showSuggestions: s, showActivityTicker: l, setShowSuggestions: u, setShowActivityTicker: b } = (0, c.A)(),
         d = i.useCallback(() => {
             (0, a.mMO)(async () => {
                 let { default: e } = await n.e("51080").then(n.bind(n, 519528));
@@ -46,10 +46,10 @@ function s(e) {
                 t();
         }, [t]);
     return (0, r.jsxs)(a.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated": !0,
         navId: "friends-popout-settings",
         onClose: t,
-        "aria-label": c.intl.string(c.t["3D5yo/"]),
+        "aria-label": o.intl.string(o.t["3D5yo/"]),
         onSelect: () => {},
         children: [
             (0, r.jsx)(a.Drp, {

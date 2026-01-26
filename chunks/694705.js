@@ -1,6 +1,6 @@
 n.d(t, {
-    f: () => A,
-    v: () => y,
+    f: () => v,
+    v: () => b,
 }),
     n(65821);
 var r = n(627968),
@@ -74,10 +74,10 @@ function E(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-let b = i.createContext(void 0);
+let y = i.createContext(void 0);
 
-function y() {
-    let e = i.useContext(b);
+function b() {
+    let e = i.useContext(y);
     return s()(null != e, "useEntryDataContext must be used within a EntryDataContextProvider"), e;
 }
 
@@ -94,17 +94,7 @@ function O(e) {
             n,
         );
     switch (t.content_type) {
-        case o.I.TOP_ARTIST:
-            return (0, r.jsx)(
-                S,
-                m(
-                    {
-                        entry: t,
-                    },
-                    i,
-                ),
-            );
-        case o.I.TOP_GAME:
+        case o.ContentInventoryEntryType.TOP_ARTIST:
             return (0, r.jsx)(
                 I,
                 m(
@@ -114,7 +104,17 @@ function O(e) {
                     i,
                 ),
             );
-        case o.I.PLAYED_GAME:
+        case o.ContentInventoryEntryType.TOP_GAME:
+            return (0, r.jsx)(
+                S,
+                m(
+                    {
+                        entry: t,
+                    },
+                    i,
+                ),
+            );
+        case o.ContentInventoryEntryType.PLAYED_GAME:
             return (0, r.jsx)(
                 T,
                 m(
@@ -124,7 +124,7 @@ function O(e) {
                     i,
                 ),
             );
-        case o.I.WATCHED_MEDIA:
+        case o.ContentInventoryEntryType.WATCHED_MEDIA:
             return (0, r.jsx)(
                 C,
                 m(
@@ -134,7 +134,7 @@ function O(e) {
                     i,
                 ),
             );
-        case o.I.LISTENED_SESSION:
+        case o.ContentInventoryEntryType.LISTENED_SESSION:
             return (0, r.jsx)(
                 N,
                 m(
@@ -144,9 +144,9 @@ function O(e) {
                     i,
                 ),
             );
-        case o.I.LAUNCHED_ACTIVITY:
+        case o.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
             return (0, r.jsx)(
-                v,
+                A,
                 m(
                     {
                         entry: t,
@@ -159,7 +159,7 @@ function O(e) {
     }
 }
 
-function A(e) {
+function v(e) {
     let { errorFallback: t } = e,
         n = g(e, ["errorFallback"]);
     return (0, r.jsx)(l.t, {
@@ -168,7 +168,7 @@ function A(e) {
     });
 }
 
-function v(e) {
+function A(e) {
     let { entry: t, children: n } = e,
         i = g(e, ["entry", "children"]),
         a = (0, c.A)(
@@ -179,29 +179,7 @@ function v(e) {
                 i,
             ),
         );
-    return (0, r.jsx)(b.Provider, {
-        value: m(
-            {
-                parsedEntry: a,
-            },
-            i,
-        ),
-        children: n,
-    });
-}
-
-function S(e) {
-    let { entry: t, children: n } = e,
-        i = g(e, ["entry", "children"]),
-        a = (0, p.A)(
-            m(
-                {
-                    entry: t,
-                },
-                i,
-            ),
-        );
-    return (0, r.jsx)(b.Provider, {
+    return (0, r.jsx)(y.Provider, {
         value: m(
             {
                 parsedEntry: a,
@@ -215,6 +193,28 @@ function S(e) {
 function I(e) {
     let { entry: t, children: n } = e,
         i = g(e, ["entry", "children"]),
+        a = (0, p.A)(
+            m(
+                {
+                    entry: t,
+                },
+                i,
+            ),
+        );
+    return (0, r.jsx)(y.Provider, {
+        value: m(
+            {
+                parsedEntry: a,
+            },
+            i,
+        ),
+        children: n,
+    });
+}
+
+function S(e) {
+    let { entry: t, children: n } = e,
+        i = g(e, ["entry", "children"]),
         a = (0, d.A)(
             m(
                 {
@@ -223,7 +223,7 @@ function I(e) {
                 i,
             ),
         );
-    return (0, r.jsx)(b.Provider, {
+    return (0, r.jsx)(y.Provider, {
         value: m(
             {
                 parsedEntry: a,
@@ -245,7 +245,7 @@ function T(e) {
                 i,
             ),
         );
-    return (0, r.jsx)(b.Provider, {
+    return (0, r.jsx)(y.Provider, {
         value: m(
             {
                 parsedEntry: a,
@@ -267,7 +267,7 @@ function C(e) {
                 i,
             ),
         );
-    return (0, r.jsx)(b.Provider, {
+    return (0, r.jsx)(y.Provider, {
         value: m(
             {
                 parsedEntry: a,
@@ -289,7 +289,7 @@ function N(e) {
                 i,
             ),
         );
-    return (0, r.jsx)(b.Provider, {
+    return (0, r.jsx)(y.Provider, {
         value: m(
             {
                 parsedEntry: a,

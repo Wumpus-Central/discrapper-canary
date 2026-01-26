@@ -108,45 +108,48 @@ function _(t) {
                       : null,
                   E.map((r) => {
                       let { setting: s, label: o } = r;
-                      return (0, i.jsx)(
-                          l.iDA,
-                          {
-                              group: "channel-notifications",
-                              id: "".concat(s),
-                              label: o,
-                              subtext:
-                                  s === u.orn.NULL
-                                      ? (function (t, e) {
-                                            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                                            switch (t) {
-                                                case u.orn.ALL_MESSAGES:
-                                                    return e.type === u.rbe.GUILD_VOICE && n
-                                                        ? c.intl.string(c.t["9sGJkt"])
-                                                        : c.intl.string(c.t["n/bTaY"]);
-                                                case u.orn.ONLY_MENTIONS:
-                                                    return c.intl.format(c.t.L2hmYy, {});
-                                                case u.orn.NO_MESSAGES:
-                                                    return c.intl.string(c.t.CtVGyQ);
-                                                case u.orn.NULL:
-                                                default:
-                                                    return;
-                                            }
-                                        })(_, t, N)
-                                      : void 0,
-                              action: () => {
-                                  null != e &&
-                                      a.A.updateChannelOverrideSettings(
-                                          e,
-                                          n,
-                                          {
-                                              message_notifications: s,
-                                          },
-                                          d.G_.notifications(s),
-                                      );
+                      return (
+                          null != o &&
+                          (0, i.jsx)(
+                              l.iDA,
+                              {
+                                  group: "channel-notifications",
+                                  id: "".concat(s),
+                                  label: o,
+                                  subtext:
+                                      s === u.orn.NULL
+                                          ? (function (t, e) {
+                                                let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                                                switch (t) {
+                                                    case u.orn.ALL_MESSAGES:
+                                                        return e.type === u.rbe.GUILD_VOICE && n
+                                                            ? c.intl.string(c.t["9sGJkt"])
+                                                            : c.intl.string(c.t["n/bTaY"]);
+                                                    case u.orn.ONLY_MENTIONS:
+                                                        return c.intl.format(c.t.L2hmYy, {});
+                                                    case u.orn.NO_MESSAGES:
+                                                        return c.intl.string(c.t.CtVGyQ);
+                                                    case u.orn.NULL:
+                                                    default:
+                                                        return;
+                                                }
+                                            })(_, t, N)
+                                          : void 0,
+                                  action: () => {
+                                      null != e &&
+                                          a.A.updateChannelOverrideSettings(
+                                              e,
+                                              n,
+                                              {
+                                                  message_notifications: s,
+                                              },
+                                              d.G_.notifications(s),
+                                          );
+                                  },
+                                  checked: s === f,
                               },
-                              checked: s === f,
-                          },
-                          s,
+                              s,
+                          )
                       );
                   }),
               ],

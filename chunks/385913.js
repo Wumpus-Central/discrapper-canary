@@ -1,5 +1,5 @@
 n.d(t, {
-    default: () => B,
+    default: () => Y,
 });
 var r = n(627968);
 n(64700);
@@ -9,8 +9,8 @@ var i = n(397927),
     o = n(358367),
     s = n(155718),
     d = n(468389),
-    u = n(793574),
-    c = n(810845),
+    c = n(793574),
+    u = n(810845),
     A = n(854182),
     f = n(734337),
     b = n(855187),
@@ -18,8 +18,8 @@ var i = n(397927),
     p = n(343328),
     h = n(848977),
     j = n(995102),
-    O = n(50268),
-    y = n(133238),
+    y = n(50268),
+    O = n(133238),
     v = n(795144),
     m = n(671470),
     _ = n(222311),
@@ -34,16 +34,16 @@ var i = n(397927),
     T = n(631637),
     U = n(984894),
     w = n(399476),
-    N = n(889460),
-    V = n(460597),
+    V = n(889460),
+    N = n(460597),
     L = n(313998),
     R = n(198229),
     G = n(243949),
     k = n(972432),
     X = n(77544),
     F = n(652215),
-    Y = n(985018);
-let B = (0, o.A)(
+    B = n(985018);
+let Y = (0, o.A)(
     (0, a.A)(
         function (e) {
             let {
@@ -51,9 +51,9 @@ let B = (0, o.A)(
                     channel: n,
                     channelSelected: a = !1,
                     showMute: o = !0,
-                    showMediaItems: u = !1,
+                    showMediaItems: c = !1,
                     showChannelCallItems: F = !1,
-                    showModalItems: B = !0,
+                    showModalItems: Y = !0,
                     targetIsUser: W = !1,
                     context: J,
                     onSelect: K,
@@ -78,7 +78,7 @@ let B = (0, o.A)(
                 }),
                 ee = (0, X.A)(t.id),
                 et = (0, M.A)(n.id, a),
-                en = (0, N.A)({
+                en = (0, V.A)({
                     user: t,
                 }),
                 er = (0, d.A)(null, t),
@@ -91,11 +91,11 @@ let B = (0, o.A)(
                 es = (0, E.A)({
                     user: t,
                 }),
-                ed = (0, V.A)({
+                ed = (0, N.A)({
                     user: t,
                 }),
-                eu = (0, R.A)(t.id),
-                ec = (0, g.u)({
+                ec = (0, R.A)(t.id),
+                eu = (0, g.u)({
                     userId: t.id,
                     channelId: n.id,
                     guildId: n.getGuildId(),
@@ -110,20 +110,20 @@ let B = (0, o.A)(
                     location: "DMUserContextMenu",
                 }),
                 eg = (0, j.Ay)(n),
-                ep = (0, O.A)({
+                ep = (0, y.A)({
                     id: t.id,
-                    label: Y.intl.string(Y.t["/AXYnE"]),
+                    label: B.intl.string(B.t["/AXYnE"]),
                 }),
-                eh = (0, O.A)({
+                eh = (0, y.A)({
                     id: n.id,
-                    label: Y.intl.string(Y.t.gFHI3k),
+                    label: B.intl.string(B.t.gFHI3k),
                 }),
                 ej = (0, h.A)(n),
-                eO = (0, f.A)(t.id),
-                ey = (0, A.A)(n.id),
+                ey = (0, f.A)(t.id),
+                eO = (0, A.A)(n.id),
                 ev = (0, _.A)(t),
                 em = (0, b.A)(t.id),
-                e_ = (0, c.A)(n.id, t.id),
+                e_ = (0, u.A)(n.id, t.id),
                 ex = (0, I.A)({
                     commandType: s.kc.USER,
                     commandTargetId: t.id,
@@ -131,8 +131,8 @@ let B = (0, o.A)(
                     guildId: void 0,
                     onHeightUpdate: H,
                 }),
-                eD = (0, y.m)(n),
-                eE = (0, y.y)(n),
+                eD = (0, O.m)(n),
+                eE = (0, O.y)(n),
                 eP = (0, v.A)(n),
                 eI = (0, m.A)(n),
                 eC = (0, T.A)({
@@ -141,10 +141,10 @@ let B = (0, o.A)(
                 eS = n.isManaged(),
                 eM = t.isNonUserBot();
             return (0, r.jsxs)(i.W1t, {
-                "data-menu-mixed": !0,
+                "data-menu-needs-review": !0,
                 navId: "user-context",
                 onClose: l.Z_,
-                "aria-label": Y.intl.string(Y.t.liqwPJ),
+                "aria-label": B.intl.string(B.t.liqwPJ),
                 onSelect: K,
                 onInteraction: q,
                 children: [
@@ -161,7 +161,7 @@ let B = (0, o.A)(
                         children: [
                             !eM &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [B && z, Z, !eS && ea, B && Q, B && $, ee],
+                                    children: [Y && z, Z, !eS && ea, Y && Q, Y && $, ee],
                                 }),
                             (0, p.A)(n.id) && z,
                             et,
@@ -171,24 +171,24 @@ let B = (0, o.A)(
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(i.rXV, {
-                                    children: u && ei,
+                                    children: c && ei,
                                 }),
                                 (0, r.jsx)(i.rXV, {
-                                    children: B && er,
+                                    children: Y && er,
                                 }),
                                 (0, r.jsxs)(i.rXV, {
                                     children: [
-                                        u && eu,
-                                        B && ec,
-                                        u && eA,
                                         ex,
-                                        B && en,
+                                        c && em,
+                                        c && ec,
+                                        Y && eu,
+                                        c && eA,
+                                        Y && en,
                                         eo,
                                         es,
                                         ed,
-                                        B && eb,
-                                        B && ef,
-                                        u && em,
+                                        Y && eb,
+                                        Y && ef,
                                     ],
                                 }),
                                 (0, r.jsx)(i.rXV, {
@@ -196,7 +196,7 @@ let B = (0, o.A)(
                                 }),
                                 F &&
                                     (0, r.jsxs)(i.rXV, {
-                                        children: [e_, ey, eO],
+                                        children: [e_, eO, ey],
                                     }),
                             ],
                         }),
@@ -220,5 +220,5 @@ let B = (0, o.A)(
             object: F.ZSU.CONTEXT_MENU,
         },
     ),
-    [u.A.CONTEXT_MENU, u.A.DM_USER_MENU],
+    [c.A.CONTEXT_MENU, c.A.DM_USER_MENU],
 );

@@ -4,8 +4,8 @@ n.d(t, {
     n(896048);
 var a = n(627968),
     l = n(64700),
-    i = n(503698),
-    r = n.n(i),
+    r = n(503698),
+    i = n.n(r),
     s = n(735438),
     o = n.n(s),
     c = n(681154),
@@ -14,37 +14,37 @@ var a = n(627968),
     m = n(506774),
     p = n(397927),
     h = n(73153),
-    f = n(587895),
-    x = n(429913),
-    b = n(303054),
-    g = n(409626),
+    x = n(587895),
+    g = n(429913),
+    f = n(303054),
+    b = n(409626),
     v = n(692969),
     j = n(760751),
-    y = n(403362),
-    _ = n(603047),
+    _ = n(403362),
+    y = n(603047),
     A = n(435738),
     C = n(99753),
     S = n(868068),
     O = n(476398),
-    E = n(405311),
-    N = n(424994),
-    T = n(750100),
-    I = n(661251);
-let w = [
+    T = n(405311),
+    E = n(424994),
+    N = n(750100),
+    w = n(661251);
+let I = [
     {
         key: "type",
-        cellClassName: r()(T.Hn, T.T$),
+        cellClassName: i()(N.Hn, N.T$),
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(p.Text, {
                 variant: "text-md/semibold",
-                children: c.I[t],
+                children: c.ContentInventoryEntryType[t],
             });
         },
     },
     {
         key: "count",
-        cellClassName: r()(T.Hn, T.MX),
+        cellClassName: i()(N.Hn, N.MX),
         render(e) {
             let { entries: t } = e;
             return (0, a.jsx)("div", {
@@ -57,7 +57,7 @@ let w = [
     },
     {
         key: "only?",
-        cellClassName: T.Hn,
+        cellClassName: N.Hn,
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(k, {
@@ -70,12 +70,12 @@ let w = [
 function k(e) {
     var t, n;
     let { type: l } = e,
-        i = (0, u.bG)([C.A], () => C.A.getFilters()),
-        r = null != (t = null == i || null == (n = i.types) ? void 0 : n.has(l)) && t;
+        r = (0, u.bG)([C.A], () => C.A.getFilters()),
+        i = null != (t = null == r || null == (n = r.types) ? void 0 : n.has(l)) && t;
     return (0, a.jsx)(p.dOG, {
-        checked: r,
+        checked: i,
         onChange: function () {
-            r
+            i
                 ? h.h.dispatch({
                       type: "CONTENT_INVENTORY_SET_FILTERS",
                       filters: void 0,
@@ -92,14 +92,14 @@ function k(e) {
 
 function P() {
     var e, t, n;
-    let i,
-        r = (0, u.bG)([C.A], () => C.A.getFeed(N.X1.GLOBAL_FEED)),
+    let r,
+        i = (0, u.bG)([C.A], () => C.A.getFeed(E.X1.GLOBAL_FEED)),
         s = (0, u.bG)([C.A], () => C.A.getDebugImpressionCappingDisabled()),
         c = (0, u.bG)([A.A], () => A.A.getDebugFastImpressionCappingEnabled()),
         k =
-            ((n = null == r || null == (t = r.entries) ? void 0 : t.map((e) => e.content)),
-            Object.keys((i = o().groupBy(n, (e) => e.content_type))).map((e) => {
-                let t = i[e];
+            ((n = null == i || null == (t = i.entries) ? void 0 : t.map((e) => e.content)),
+            Object.keys((r = o().groupBy(n, (e) => e.content_type))).map((e) => {
+                let t = r[e];
                 return {
                     key: "".concat(e),
                     type: t[0].content_type,
@@ -108,23 +108,23 @@ function P() {
             })),
         P = (0, u.bG)([C.A], () => {
             var e;
-            return (null == (e = C.A.getFeedState(N.X1.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = C.A.getFeedState(E.X1.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
         [D, M] = l.useState(""),
-        L = (0, u.bG)([j.A, f.A], () => {
+        L = (0, u.bG)([j.A, x.A], () => {
             var e, t, n;
             return parseInt(D) > 0
                 ? D
                 : null != (e = null == (t = j.A.getGameByName(D)) ? void 0 : t.id)
                   ? e
-                  : null == (n = f.A.getApplicationByName(D))
+                  : null == (n = x.A.getApplicationByName(D))
                     ? void 0
                     : n.id;
         }, [D]),
         U = (0, v.A)({
             applicationId: L,
             location: "DevToolsContentInventory",
-            source: g.Ob.DevTools,
+            source: b.Ob.DevTools,
         }),
         B = Object.entries(null != (e = m.w.get("GameProfileModal")) ? e : {})
             .filter((e) => {
@@ -135,12 +135,12 @@ function P() {
                 let [t] = e;
                 return t;
             }),
-        G = (0, x.A)(B).filter(y.Vq),
-        F = (0, u.bG)([_.A], () => _.A.getFakeGameToShow());
+        G = (0, g.A)(B).filter(_.Vq),
+        F = (0, u.bG)([y.A], () => y.A.getFakeGameToShow());
     return (0, a.jsx)("div", {
-        className: I.nd,
+        className: w.nd,
         children: (0, a.jsxs)(p.IpV, {
-            className: T.Qs,
+            className: N.Qs,
             children: [
                 (0, a.jsxs)(p.BJc, {
                     gap: 8,
@@ -150,11 +150,11 @@ function P() {
                             children: "Inventory",
                         }),
                         k.length > 0 &&
-                            (0, a.jsx)(b.A, {
-                                columns: w,
+                            (0, a.jsx)(f.A, {
+                                columns: I,
                                 data: k,
                             }),
-                        (0, a.jsx)(E.A, {}),
+                        (0, a.jsx)(T.A, {}),
                         (0, a.jsx)(p.Button, {
                             variant: "primary",
                             text: "Refresh Now",
@@ -162,7 +162,7 @@ function P() {
                             onClick: function () {
                                 h.h.dispatch({
                                     type: "CONTENT_INVENTORY_MANUAL_REFRESH",
-                                    feedId: N.X1.GLOBAL_FEED,
+                                    feedId: E.X1.GLOBAL_FEED,
                                     feature: d.M.INBOX,
                                 });
                             },
@@ -291,7 +291,7 @@ let R = (e) => {
         n = (0, v.A)({
             applicationId: t.id,
             location: "DevToolsContentInventory",
-            source: g.Ob.DevTools,
+            source: b.Ob.DevTools,
         });
     return (0, a.jsx)(p.DUT, {
         onClick: n,

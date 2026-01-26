@@ -12,7 +12,7 @@ var l = a(397927),
 function o(t) {
     let { attachmentUrl: n, attachmentName: a, onSelect: o } = t;
     return (0, i.jsx)(l.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated-auto": !0,
         navId: "attachment-link-context",
         onClose: e.Z_,
         onSelect: o,

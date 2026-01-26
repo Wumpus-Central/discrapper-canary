@@ -11,8 +11,8 @@ var r = n(627968),
     d = n(365003),
     u = n(843095),
     m = n(800007),
-    f = n(294726),
-    g = n(985018),
+    g = n(294726),
+    f = n(985018),
     _ = n(396936);
 let x = {
     steps: {
@@ -41,12 +41,12 @@ function v(e) {
               renderPopout: (e) => {
                   let { closePopout: a } = e;
                   return (0, r.jsx)(i.W1t, {
-                      "data-menu-migration-ready": !0,
+                      "data-menu-migrated": !0,
                       navId: "game_server-popout-context-menu",
                       onClose: () => {
                           (0, l.Z_)(), a();
                       },
-                      "aria-label": g.intl.string(f.default["yb+ork"]),
+                      "aria-label": f.intl.string(g.default["yb+ork"]),
                       onSelect: void 0,
                       children: (0, r.jsxs)(i.rXV, {
                           children: [
@@ -54,7 +54,11 @@ function v(e) {
                                   (0, r.jsx)(i.Drp, {
                                       id: "get-support",
                                       icon: i.oyn,
-                                      label: g.intl.string(f.default.bBkeMs),
+                                      leadingAccessory: {
+                                          type: "icon",
+                                          icon: i.oyn,
+                                      },
+                                      label: f.intl.string(g.default.bBkeMs),
                                       action: () => {
                                           (0, o.h)({
                                               href: v,
@@ -64,7 +68,11 @@ function v(e) {
                               (0, r.jsx)(i.Drp, {
                                   id: "settings",
                                   icon: i.Zes,
-                                  label: g.intl.string(f.default["feUiM/"]),
+                                  leadingAccessory: {
+                                      type: "icon",
+                                      icon: i.Zes,
+                                  },
+                                  label: f.intl.string(g.default["feUiM/"]),
                                   action: () => {
                                       (0, u.A)({
                                           guildId: t,
@@ -108,7 +116,7 @@ function v(e) {
                           return e;
                       })(
                           {
-                              "aria-label": g.intl.string(g.t["UKOtz+"]),
+                              "aria-label": f.intl.string(f.t["UKOtz+"]),
                               className: _.v,
                           },
                           e,

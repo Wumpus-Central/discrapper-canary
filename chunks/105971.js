@@ -45,7 +45,8 @@ let c = (e) => {
             case "guildEvent":
                 return "guild_event";
             case "contentInventory":
-                if (e.data.content.content_type === r.I.CUSTOM_STATUS) return "hotwheels_custom_status";
+                if (e.data.content.content_type === r.ContentInventoryEntryType.CUSTOM_STATUS)
+                    return "hotwheels_custom_status";
                 return "hotwheels_gaming_activity";
             case "recommendedGuilds":
                 return "recommended_guilds";

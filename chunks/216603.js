@@ -49,7 +49,7 @@ function d(t) {
               ]
             : null;
     return (0, r.jsxs)(c.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated": !0,
         navId: "textarea-context",
         onClose: f,
         "aria-label": p.intl.string(p.t.NWlDSI),

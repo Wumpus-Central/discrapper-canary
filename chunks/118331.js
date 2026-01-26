@@ -5,12 +5,12 @@ n.d(t, {
 var r = n(681154),
     i = n(155718);
 let a = new Set([
-    r.I.TOP_ARTIST,
-    r.I.TOP_GAME,
-    r.I.PLAYED_GAME,
-    r.I.WATCHED_MEDIA,
-    r.I.LISTENED_SESSION,
-    r.I.LAUNCHED_ACTIVITY,
+    r.ContentInventoryEntryType.TOP_ARTIST,
+    r.ContentInventoryEntryType.TOP_GAME,
+    r.ContentInventoryEntryType.PLAYED_GAME,
+    r.ContentInventoryEntryType.WATCHED_MEDIA,
+    r.ContentInventoryEntryType.LISTENED_SESSION,
+    r.ContentInventoryEntryType.LAUNCHED_ACTIVITY,
 ]);
 
 function s(e) {

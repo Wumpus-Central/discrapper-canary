@@ -95,5 +95,12 @@ function h(e) {
                 g.dispatch(c.jej.POPOUT_CLOSE);
         },
         icon: d,
+        leadingAccessory:
+            null != d
+                ? {
+                      type: "icon",
+                      icon: d,
+                  }
+                : void 0,
     });
 }

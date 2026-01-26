@@ -1,24 +1,24 @@
 n.d(e, {
-    default: () => c,
+    default: () => s,
 });
 var l = n(627968);
 n(64700);
 var i = n(397927),
-    r = n(442433),
-    a = n(723702),
+    a = n(442433),
+    r = n(723702),
     o = n(777933),
-    s = n(985018);
+    c = n(985018);
 
-function c(t) {
-    let { href: e, textContent: n, onSelect: c } = t,
+function s(t) {
+    let { href: e, textContent: n, onSelect: s } = t,
         u = (0, o.A)(e, n);
-    return a.isPlatformEmbedded && null != u
+    return r.isPlatformEmbedded && null != u
         ? (0, l.jsx)(i.W1t, {
-              "data-menu-migration-ready": !0,
+              "data-menu-mixed-auto": !0,
               navId: "image-context",
-              onClose: r.Z_,
-              "aria-label": s.intl.string(s.t.Zow2V5),
-              onSelect: c,
+              onClose: a.Z_,
+              "aria-label": c.intl.string(c.t.Zow2V5),
+              onSelect: s,
               children: (0, l.jsx)(i.rXV, {
                   children: u,
               }),

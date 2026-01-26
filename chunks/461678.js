@@ -21,7 +21,7 @@ function h(e) {
         O = (0, c.A)(_),
         j = (0, u.os)("ChannelNotificationSettingsPopoutMenu") && d.B4.has(t.type);
     return (0, r.jsxs)(i.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated": !0,
         navId: f,
         onClose: n,
         "aria-label": g,

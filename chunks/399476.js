@@ -95,7 +95,6 @@ function h(e) {
         ? null
         : (0, r.jsx)(a.Drp, {
               id: "ignore",
-              color: "default",
               label: v ? u.intl.string(u.t["8wXU9B"]) : u.intl.string(u.t.ytCpKs),
               action: v
                   ? () => {

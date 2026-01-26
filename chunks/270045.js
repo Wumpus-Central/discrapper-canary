@@ -215,7 +215,7 @@ function U(e) {
         }, [e.quest.id]),
         en = e.shouldShowDisclosure && e.quest.id !== N.Fw;
     return (0, r.jsxs)(s.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-migrated": !0,
         variant: "fixed",
         onSelect: z,
         navId: "quests-entry",
@@ -231,6 +231,10 @@ function U(e) {
                             label: j,
                             action: H,
                             icon: s.We5,
+                            leadingAccessory: {
+                                type: "icon",
+                                icon: s.We5,
+                            },
                         }),
                         M &&
                             (0, r.jsx)(s.Drp, {
@@ -238,6 +242,10 @@ function U(e) {
                                 label: P.intl.string(P.t.RDE0Sc),
                                 action: Y,
                                 icon: s.TdU,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: s.TdU,
+                                },
                             }),
                         $ && ee,
                     ],
@@ -254,6 +262,10 @@ function U(e) {
                                 label: P.intl.string(P.t["Ws2Bl+"]),
                                 action: K,
                                 icon: s.r2v,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: s.r2v,
+                                },
                             }),
                         en &&
                             (0, r.jsx)(s.Drp, {

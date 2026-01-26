@@ -72,12 +72,13 @@ let h = (e) => {
                 label: c.intl.string(c.t["+NP/b2"]),
             });
         return (0, r.jsxs)(a.W1t, {
-            "data-menu-mixed": !0,
+            "data-menu-needs-review": !0,
             navId: "authorized-app-action-menu",
             onClose: n,
             "aria-label": c.intl.string(c.t.tKobzb),
             onSelect: void 0,
             children: [
+                u,
                 (0, r.jsx)(a.Drp, {
                     id: "report",
                     label: c.intl.string(c.t["+78Pfm"]),
@@ -90,7 +91,6 @@ let h = (e) => {
                             contextualChannelId: l,
                         }),
                 }),
-                u,
                 d,
             ],
         });

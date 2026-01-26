@@ -4,16 +4,16 @@ n.d(t, {
 var i = n(627968),
     a = n(64700),
     l = n(397927),
-    o = n(442433),
-    s = n(486503),
-    c = n(253932),
-    u = n(957565),
-    r = n(985018);
+    c = n(442433),
+    o = n(486503),
+    s = n(253932),
+    r = n(957565),
+    u = n(985018);
 
 function d(e) {
     let { imageUrl: t, onSelect: n } = e,
-        d = c.Q_.useSetting(),
-        { tidaWebformEnabled: p } = s.A.useExperiment(
+        d = s.Q_.useSetting(),
+        { tidaWebformEnabled: p } = o.A.useExperiment(
             {
                 location: "GuildEventImageContextMenu",
             },
@@ -21,22 +21,26 @@ function d(e) {
                 autoTrackExposure: !1,
             },
         ),
-        x = a.useCallback(() => {
-            (0, u.C)(t);
+        g = a.useCallback(() => {
+            (0, r.C)(t);
         }, [t]);
-    return u.p5 && d && p
+    return r.p5 && d && p
         ? (0, i.jsx)(l.W1t, {
-              "data-menu-all-icons": !0,
+              "data-menu-migrated": !0,
               navId: "guild-event-image-context",
-              onClose: o.Z_,
+              onClose: c.Z_,
               onSelect: n,
-              "aria-label": r.intl.string(r.t.Zow2V5),
+              "aria-label": u.intl.string(u.t.Zow2V5),
               children: (0, i.jsx)(l.rXV, {
                   children: (0, i.jsx)(l.Drp, {
                       id: "copy-image-link",
-                      label: r.intl.string(r.t["8xHmxo"]),
-                      action: x,
+                      label: u.intl.string(u.t["8xHmxo"]),
+                      action: g,
                       icon: l.qYV,
+                      leadingAccessory: {
+                          type: "icon",
+                          icon: l.qYV,
+                      },
                   }),
               }),
           })

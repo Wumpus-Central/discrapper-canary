@@ -11,7 +11,7 @@ function c(e) {
     let { onClose: n, onSelect: t, application: c, channelId: _ } = e,
         s = (0, a.A)(c, _, i.BRT.POPOUT);
     return (0, r.jsx)(o.W1t, {
-        "data-menu-all-icons": !0,
+        "data-menu-migrated": !0,
         navId: "activity-popout-overflow-popout",
         onClose: n,
         onSelect: t,

@@ -93,7 +93,7 @@ function I(e) {
     let { url: t, onSelect: n } = e;
     return p.p5 && null != t
         ? (0, r.jsx)(l.W1t, {
-              "data-menu-migration-ready": !0,
+              "data-menu-migrated-auto": !0,
               navId: "component-button",
               onClose: c.Z_,
               "aria-label": g.intl.string(g.t.tvTXy8),
@@ -114,13 +114,13 @@ function S(e) {
         { label: n, style: i, disabled: p, emoji: g, url: y, skuId: O } = e,
         { executeStateUpdate: S, visualState: T, isDisabled: C } = (0, h.At)(e),
         N = (0, f.Q)(O),
-        R = null != O && i === d.in.PREMIUM,
-        w = R && (null == N ? void 0 : N.disabled),
-        P = R ? (null == N ? void 0 : N.label) : n,
+        w = null != O && i === d.in.PREMIUM,
+        R = w && (null == N ? void 0 : N.disabled),
+        P = w ? (null == N ? void 0 : N.label) : n,
         D = null != g,
         x = null != P && P.length > 0,
         L = i === d.in.LINK && null != y && y.length > 0,
-        j = T === m.BB.LOADING || (R && null == N);
+        j = T === m.BB.LOADING || (w && null == N);
     return (
         (t = L
             ? () => {
@@ -129,7 +129,7 @@ function S(e) {
                       shouldConfirm: !0,
                   });
               }
-            : R
+            : w
               ? null != N && !1 === N.disabled
                   ? N.onClick
                   : s.noop
@@ -138,7 +138,7 @@ function S(e) {
             "data-migration-pending": !0,
             color: A(i),
             size: o.$n.Sizes.SMALL,
-            disabled: p || T === m.BB.DISABLED || C || w,
+            disabled: p || T === m.BB.DISABLED || C || R,
             onClick: t,
             onContextMenu: (e) => {
                 L &&
@@ -156,11 +156,11 @@ function S(e) {
                 (0, r.jsxs)("div", {
                     className: a()(E.Qs, {
                         [E.R]: j,
-                        [E.M2]: R,
+                        [E.M2]: w,
                     }),
                     "aria-hidden": j,
                     children: [
-                        R
+                        w
                             ? (0, r.jsx)("div", {
                                   className: E.sV,
                                   children: (0, r.jsx)(l.U1X, {

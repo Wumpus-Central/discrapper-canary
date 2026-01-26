@@ -1,5 +1,5 @@
 n.d(t, {
-    $: () => b,
+    $: () => y,
     A: () => T,
 }),
     n(896048);
@@ -30,17 +30,17 @@ function m(e, t, n) {
         e
     );
 }
-let g = new Set([o.I.LISTENED_SESSION]),
+let g = new Set([o.ContentInventoryEntryType.LISTENED_SESSION]),
     E = new Map();
 
-function b(e) {
+function y(e) {
     return "".concat(e.author_id, ":").concat(e.id);
 }
 
-function y(e) {
+function b(e) {
     return (0, _.I5)(e)
         ? null
-        : (0, _.JM)(e) && e.author_type === s.t.USER
+        : (0, _.JM)(e) && e.author_type === s.ContentInventoryAuthorType.USER
           ? u.A.getActivities(e.author_id).find((t) =>
                 t.type === h.$pd.PLAYING && (0, f.P)(e)
                     ? (0, p.fp)(e, t)
@@ -53,9 +53,9 @@ function O(e) {
     let t = new Set(),
         n = new Set();
     for (let r of e) {
-        let e = y(r.content);
+        let e = b(r.content);
         if (void 0 !== e) {
-            let i = b(r.content);
+            let i = y(r.content);
             n.add(i), e !== E.get(i) && (t.add(i), E.set(i, e));
         }
     }
@@ -65,24 +65,24 @@ function O(e) {
     };
 }
 
-function A(e) {
+function v(e) {
     let { feed: t } = e,
         { updatedKeys: n } = O(t.entries);
     return n.size > 0;
 }
 
-function v() {
+function A() {
     E.clear();
 }
 
-function S() {
+function I() {
     let e = !1,
         t = Array.from(E.keys()),
         n = new Set(),
         r = new Set();
     for (let t of d.A.getFeeds().values()) {
         let { updatedKeys: i, matchedKeys: a } = O(
-            n.size > 0 ? t.entries.filter((e) => !n.has(b(e.content))) : t.entries,
+            n.size > 0 ? t.entries.filter((e) => !n.has(y(e.content))) : t.entries,
         );
         for (let e of i) n.add(e);
         for (let e of a) r.add(e);
@@ -91,12 +91,12 @@ function S() {
     for (let n of a().difference(t, [...r])) E.delete(n), (e = !0);
     return e;
 }
-class I extends (r = l.Ay.Store) {
+class S extends (r = l.Ay.Store) {
     initialize() {
-        this.waitFor(d.A, u.A), this.syncWith([u.A], S);
+        this.waitFor(d.A, u.A), this.syncWith([u.A], I);
     }
     getMatchingActivity(e) {
-        return (0, _.I5)(e) ? null : E.get(b(e));
+        return (0, _.I5)(e) ? null : E.get(y(e));
     }
     constructor(...e) {
         super(...e),
@@ -107,8 +107,8 @@ class I extends (r = l.Ay.Store) {
             );
     }
 }
-m(I, "displayName", "ContentInventoryActivityStore");
-let T = new I(c.h, {
-    CONNECTION_OPEN: v,
-    CONTENT_INVENTORY_SET_FEED: A,
+m(S, "displayName", "ContentInventoryActivityStore");
+let T = new S(c.h, {
+    CONNECTION_OPEN: A,
+    CONTENT_INVENTORY_SET_FEED: v,
 });

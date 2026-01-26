@@ -24,12 +24,12 @@ function c(e) {
             });
         case "contentInventory":
             switch (t.data.content.content_type) {
-                case i.I.CUSTOM_STATUS:
+                case i.ContentInventoryEntryType.CUSTOM_STATUS:
                     return (0, r.jsx)(l.A, {
                         item: t,
                     });
-                case i.I.PLAYED_GAME:
-                case i.I.TOP_GAME:
+                case i.ContentInventoryEntryType.PLAYED_GAME:
+                case i.ContentInventoryEntryType.TOP_GAME:
                     return (0, r.jsx)(a.A, {
                         item: t,
                     });

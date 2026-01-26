@@ -107,7 +107,11 @@ function S(e, t) {
             var n;
             return null !=
                 (n =
-                    null == e ? void 0 : e.filter((e) => e.content_type === a.I.PLAYED_GAME).filter((e) => t.has(e.id)))
+                    null == e
+                        ? void 0
+                        : e
+                              .filter((e) => e.content_type === a.ContentInventoryEntryType.PLAYED_GAME)
+                              .filter((e) => t.has(e.id)))
                 ? n
                 : [];
         }, [e, t]),
@@ -162,7 +166,7 @@ function S(e, t) {
             if (!M && void 0 !== e)
                 return e.map((e) => {
                     var t, r, i, s;
-                    if (e.content_type !== a.I.PLAYED_GAME || null == j) return e;
+                    if (e.content_type !== a.ContentInventoryEntryType.PLAYED_GAME || null == j) return e;
                     let o = e.extra.application_id in C ? C[e.extra.application_id] : null;
                     if (null == o) return e;
                     let l = o.id in j ? j[o.id] : null;

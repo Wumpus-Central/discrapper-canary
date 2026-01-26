@@ -67,7 +67,7 @@ function u(e) {
             i.A.deleteGroup(t), (0, a.Z_)();
         }, [t]);
     return (0, n.jsxs)(c.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated": !0,
         "aria-label": "Group Context Menu",
         navId: "group-context-menu",
         onClose: a.Z_,

@@ -15,7 +15,7 @@ var r = n(311907),
 function p(e) {
     let t = (0, f.JM)(e),
         n = (0, r.bG)([d.A, l.A, c.A], () => {
-            if (!t || e.author_type !== i.t.USER) return null;
+            if (!t || e.author_type !== i.ContentInventoryAuthorType.USER) return null;
             let n = d.A.getVoiceStateForUser(e.author_id),
                 r = l.A.getChannel(null == n ? void 0 : n.channelId),
                 s = "channel_id" in e ? e.channel_id : null;

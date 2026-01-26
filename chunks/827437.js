@@ -66,7 +66,7 @@ function p(e) {
                   return (0, r.jsx)("div", {
                       onClick: (e) => e.stopPropagation(),
                       children: (0, r.jsx)(a.W1t, {
-                          "data-menu-migration-ready": !0,
+                          "data-menu-migrated-auto": !0,
                           navId: l.n,
                           onClose: () => {
                               t(), v(!1);

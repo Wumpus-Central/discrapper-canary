@@ -64,6 +64,7 @@ n.d(t, {
     ExpressiveModal: () => G.k,
     Exy: () => l.E,
     F2Z: () => m.F,
+    FD6: () => z.RemoveReactionIcon,
     FHP: () => z.MoreVerticalIcon,
     FON: () => ev.F,
     FVN: () => z.ThemeLightIcon,

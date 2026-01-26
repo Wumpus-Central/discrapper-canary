@@ -39134,10 +39134,6 @@ div.mobilePushContainer__3d3b0 {
     margin-inline-end: 4px
 }
 
-.popoutMenu_c37c25 {
-    width: 268px
-}
-
 .lottieIconColors__5eb9b :not(defs *)[fill][fill-opacity] {
     fill: var(--__lottieIconColor, var(--interactive-text-default))
 }
@@ -56140,8 +56136,13 @@ h2.title_feb59c {
 
 .roleDotAccessory_c1e9c4 {
     align-items: center;
-    display: flex
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    width: 20px
 }
+
+.statusAccessory_c1e9c4 {}
 
 .avatarAccessory_c1e9c4 {
     border-radius: var(--radius-round);
@@ -56477,6 +56478,19 @@ svg.radioIcon_c1e9c4 {
 
 .dotBorderBase__4f569 {
     fill: var(--text-strong)
+}
+
+.mask_a423bd {
+    display: block
+}
+
+.status_a423bd {
+    height: 100%;
+    width: 100%
+}
+
+.enable-forced-colors .status_a423bd {
+    forced-color-adjust: none !important
 }
 
 .wrapper__6e9f8 {
@@ -57332,19 +57346,6 @@ svg.radioIcon_c1e9c4 {
 
 .dots__5ad89.themed__5ad89 {
     color: var(--text-default)
-}
-
-.mask_a423bd {
-    display: block
-}
-
-.status_a423bd {
-    height: 100%;
-    width: 100%
-}
-
-.enable-forced-colors .status_a423bd {
-    forced-color-adjust: none !important
 }
 
 .wrapper__44b0c {

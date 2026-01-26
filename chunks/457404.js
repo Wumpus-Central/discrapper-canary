@@ -10,7 +10,7 @@ var r = n(627968),
 let c = (e) => {
         let { item: t, closePopout: n } = e;
         return (0, r.jsx)(s.W1t, {
-            "data-menu-all-icons": !0,
+            "data-menu-migrated": !0,
             navId: "notification-actions",
             onClose: n,
             onSelect: n,
@@ -19,6 +19,10 @@ let c = (e) => {
                 id: "delete",
                 label: o.intl.string(o.t.oyYWHE),
                 icon: s.ucK,
+                leadingAccessory: {
+                    type: "icon",
+                    icon: s.ucK,
+                },
                 action: async () => {
                     await (0, a.VP)(t);
                 },

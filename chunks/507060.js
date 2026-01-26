@@ -12,13 +12,13 @@ var r,
     u = n(73939),
     d = n(397927),
     p = n(398590),
-    f = n(390435),
-    h = n(775121),
-    A = n(268218),
-    g = n(361158),
-    m = n(97469),
-    b = n(186111),
-    _ = n(203982),
+    h = n(390435),
+    g = n(775121),
+    f = n(268218),
+    m = n(361158),
+    A = n(97469),
+    _ = n(186111),
+    b = n(203982),
     E = n(652215),
     O = n(985018),
     y = n(136042);
@@ -72,28 +72,28 @@ function S(e, t) {
         e
     );
 }
-let C = (0, A.Fe)({
+let C = (0, f.Fe)({
         createPromise: () => n.e("67878").then(n.bind(n, 655297)),
         webpackId: 655297,
         name: "UserSettings",
     }),
-    N = (0, A.Fe)({
+    N = (0, f.Fe)({
         createPromise: () => Promise.resolve().then(n.bind(n, 944771)),
         webpackId: 944771,
         name: "ComponentPlayground",
     }),
-    T = (0, A.Fe)({
+    T = (0, f.Fe)({
         createPromise: () =>
             Promise.all([n.e("68587"), n.e("43600"), n.e("21968"), n.e("78888")]).then(n.bind(n, 667587)),
         webpackId: 667587,
         name: "ChannelSettings",
     }),
-    j = (0, A.Fe)({
+    j = (0, f.Fe)({
         createPromise: () => n.e("59275").then(n.bind(n, 737630)),
         webpackId: 737630,
         name: "CollectiblesShop",
     }),
-    x = (0, A.Fe)({
+    x = (0, f.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("68587"),
@@ -106,8 +106,9 @@ let C = (0, A.Fe)({
                 n.e("21968"),
                 n.e("35894"),
                 n.e("50796"),
+                n.e("11810"),
                 n.e("8458"),
-                n.e("47841"),
+                n.e("39048"),
                 n.e("98700"),
             ]).then(n.bind(n, 422559)),
         webpackId: 422559,
@@ -128,7 +129,7 @@ let C = (0, A.Fe)({
     };
 
 function D() {
-    return l.useEffect(() => (h.A.enable(), h.A.enableTemp(f.w), () => h.A.disableTemp()), []), null;
+    return l.useEffect(() => (g.A.enable(), g.A.enableTemp(h.w), () => g.A.disableTemp()), []), null;
 }
 class M extends (r = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
@@ -214,7 +215,7 @@ class M extends (r = l.PureComponent) {
                 ),
             ),
         ]).start(() => {
-            e(), _._.dispatch(E.jej.LAYER_POP_COMPLETE);
+            e(), b._.dispatch(E.jej.LAYER_POP_COMPLETE);
         });
     }
     animateUnder() {
@@ -288,8 +289,8 @@ class M extends (r = l.PureComponent) {
             })(t, ["name", "mode", "children", "baseLayer"]),
             u = r === L,
             p = e || u ? this.getAnimatedStyle() : null,
-            f = !u && !a,
-            h = (0, i.jsx)(
+            h = !u && !a,
+            g = (0, i.jsx)(
                 o.A.div,
                 S(
                     v(
@@ -297,8 +298,8 @@ class M extends (r = l.PureComponent) {
                             ref: (e) => (this.containerRef.current = null != e ? e.componentRef : void 0),
                             "data-layer": null != n ? n : "base",
                             "aria-hidden": u,
-                            "aria-modal": f,
-                            "aria-label": f
+                            "aria-modal": h,
+                            "aria-label": h
                                 ? (function (e) {
                                       switch (e) {
                                           case E.zgK.USER_SETTINGS:
@@ -314,7 +315,7 @@ class M extends (r = l.PureComponent) {
                                       }
                                   })(n)
                                 : void 0,
-                            role: f ? "dialog" : void 0,
+                            role: h ? "dialog" : void 0,
                             className: s()(y.qd, {
                                 [y.n3]: a,
                                 [y.bW]: e,
@@ -330,10 +331,10 @@ class M extends (r = l.PureComponent) {
                 ),
             );
         return a
-            ? h
+            ? g
             : (0, i.jsx)(d.Oky, {
                   containerRef: this.containerRef,
-                  children: h,
+                  children: g,
               });
     }
     getAnimatedStyle() {
@@ -374,10 +375,10 @@ I(M, "defaultProps", {
     I(M, "contextType", d.CZY);
 class k extends l.PureComponent {
     componentDidMount() {
-        _._.subscribe(E.jej.LAYER_POP_ESCAPE_KEY, p.jH);
+        b._.subscribe(E.jej.LAYER_POP_ESCAPE_KEY, p.jH);
     }
     componentWillUnmount() {
-        _._.unsubscribe(E.jej.LAYER_POP_ESCAPE_KEY, p.jH);
+        b._.unsubscribe(E.jej.LAYER_POP_ESCAPE_KEY, p.jH);
     }
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,
@@ -438,9 +439,9 @@ class k extends l.PureComponent {
 }
 
 function U(e) {
-    let t = (0, m.NC)(),
-        n = (0, c.bG)([b.A], () => b.A.getLayers()),
-        r = (0, g.xr)(
+    let t = (0, A.NC)(),
+        n = (0, c.bG)([_.A], () => _.A.getLayers()),
+        r = (0, m.xr)(
             (e) => e.fullScreenLayers.length > 0 && !e.fullScreenLayers.some((e) => e.options.showAppUnderLayer),
         );
     return (0, i.jsx)(

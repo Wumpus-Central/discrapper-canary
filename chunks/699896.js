@@ -1,35 +1,35 @@
-e.d(t, {
+n.d(e, {
     default: () => o,
 });
-var i = e(627968);
-e(64700);
-var r = e(397927),
-    a = e(442433),
-    l = e(985018);
+var i = n(627968);
+n(64700);
+var r = n(397927),
+    l = n(442433),
+    a = n(985018);
 
-function o(n) {
-    let { roleId: t, onLeaveRole: e, onSelect: o } = n;
+function o(t) {
+    let { roleId: e, onLeaveRole: n, onSelect: o } = t;
     return (0, i.jsx)(
         r.W1t,
         {
-            "data-menu-migration-ready": !0,
+            "data-menu-migrated": !0,
             navId: "guild-role-connections-context",
-            "aria-label": l.intl.string(l.t.vytvJF),
-            onClose: a.Z_,
+            "aria-label": a.intl.string(a.t.vytvJF),
+            onClose: l.Z_,
             onSelect: o,
             children: (0, i.jsx)(r.rXV, {
                 children: (0, i.jsx)(
                     r.Drp,
                     {
                         id: "guild-role-connections-leave-role",
-                        label: l.intl.string(l.t.vytvJF),
-                        action: e,
+                        label: a.intl.string(a.t.vytvJF),
+                        action: n,
                         color: "danger",
                     },
-                    t,
+                    e,
                 ),
             }),
         },
-        t,
+        e,
     );
 }

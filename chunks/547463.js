@@ -462,8 +462,8 @@ function et(e) {
                                                 : e.game.id,
                                         fake_inventory_item: !0,
                                     },
-                                    content_type: s.I.PLAYED_GAME,
-                                    author_type: o.t.USER,
+                                    content_type: s.ContentInventoryEntryType.PLAYED_GAME,
+                                    author_type: o.ContentInventoryAuthorType.USER,
                                     participants: e.playingMembers.map((e) => e.id),
                                     traits: [
                                         {

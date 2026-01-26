@@ -40,7 +40,7 @@ function f(e) {
             });
         }),
         (0, r.jsxs)(i.W1t, {
-            "data-menu-mixed": !0,
+            "data-menu-migrated": !0,
             navId: "now-playing-menu",
             onClose: n,
             "aria-label": g.intl.string(g.t.ogxXGq),

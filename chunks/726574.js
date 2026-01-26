@@ -171,7 +171,7 @@ function b(e) {
         N = n.useMemo(() => (null != b ? b : void 0), [b]),
         _ = n.useMemo(() => (null != y ? String(y) : void 0), [y]);
     return (0, l.jsxs)(o.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated": !0,
         navId: "clips-filters-context",
         "aria-label": p.intl.string(p.t.X7yRDm),
         onClose: s.Z_,

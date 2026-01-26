@@ -144,7 +144,7 @@ function v(e) {
                 {
                     "data-menu-item": "true",
                     children: [
-                        Y
+                        Y || (null == v ? void 0 : v.type) === "status"
                             ? null != v &&
                               (0, r.jsx)(_.B, {
                                   accessory: v,

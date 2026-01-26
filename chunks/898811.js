@@ -1,34 +1,34 @@
-e.d(t, {
+t.d(e, {
     default: () => s,
 });
-var l = e(627968);
-e(64700);
-var a = e(397927),
-    o = e(442433),
-    r = e(723702),
-    i = e(837921),
-    c = e(826308),
-    d = e(985018);
+var l = t(627968);
+t(64700);
+var o = t(397927),
+    a = t(442433),
+    c = t(723702),
+    i = t(837921),
+    r = t(826308),
+    d = t(985018);
 
 function s(n) {
-    let { text: t, onSelect: e } = n,
-        s = (0, c.A)(t);
-    return r.isPlatformEmbedded
-        ? (0, l.jsxs)(a.W1t, {
-              "data-menu-migration-ready": !0,
+    let { text: e, onSelect: t } = n,
+        s = (0, r.A)(e);
+    return c.isPlatformEmbedded
+        ? (0, l.jsxs)(o.W1t, {
+              "data-menu-mixed-auto": !0,
               navId: "text-context",
-              onClose: o.Z_,
+              onClose: a.Z_,
               "aria-label": d.intl.string(d.t.s285pq),
-              onSelect: e,
+              onSelect: t,
               children: [
-                  (0, l.jsx)(a.rXV, {
+                  (0, l.jsx)(o.rXV, {
                       children: s,
                   }),
-                  (0, l.jsx)(a.rXV, {
-                      children: (0, l.jsx)(a.Drp, {
+                  (0, l.jsx)(o.rXV, {
+                      children: (0, l.jsx)(o.Drp, {
                           id: "copy",
                           label: d.intl.string(d.t.OpuAlK),
-                          action: () => i.Ay.copy(t),
+                          action: () => i.Ay.copy(e),
                       }),
                   }),
               ],

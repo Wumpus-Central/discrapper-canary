@@ -12,12 +12,12 @@ var r = n(64700),
     u = n(475450),
     d = n(424994);
 let f = new Set([
-    i.I.PLAYED_GAME,
-    i.I.WATCHED_MEDIA,
-    i.I.TOP_GAME,
-    i.I.TOP_ARTIST,
-    i.I.LISTENED_SESSION,
-    i.I.LAUNCHED_ACTIVITY,
+    i.ContentInventoryEntryType.PLAYED_GAME,
+    i.ContentInventoryEntryType.WATCHED_MEDIA,
+    i.ContentInventoryEntryType.TOP_GAME,
+    i.ContentInventoryEntryType.TOP_ARTIST,
+    i.ContentInventoryEntryType.LISTENED_SESSION,
+    i.ContentInventoryEntryType.LAUNCHED_ACTIVITY,
 ]);
 
 function p(e) {

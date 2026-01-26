@@ -24,7 +24,7 @@ let x = l.memo(function (e) {
         onClick: (e) => l(c, e.shiftKey),
         onContextMenu: (e) =>
             (0, o.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("99011"), n.e("88974"), n.e("98865")]).then(
+                let { default: e } = await Promise.all([n.e("99011"), n.e("88974"), n.e("9282")]).then(
                     n.bind(n, 44536),
                 );
                 return (t) => {

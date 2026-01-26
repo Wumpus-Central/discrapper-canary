@@ -26,8 +26,8 @@ var a = n(627968),
     C = n(657331),
     S = n(718019),
     O = n(31432),
-    E = n(915614),
-    T = n(223330),
+    T = n(915614),
+    E = n(223330),
     N = n(559506),
     w = n(646986),
     I = n(379654),
@@ -51,8 +51,8 @@ var a = n(627968),
     Y = n(33042),
     J = n(347853),
     X = n(652215),
-    Z = n(49999),
-    $ = n(996988),
+    $ = n(49999),
+    Z = n(996988),
     ee = n(985018),
     et = n(423648),
     en = n(183959);
@@ -126,8 +126,8 @@ function el(e) {
             location: "UserProfileAccountPopout",
         }),
         eO = l.useRef(null),
-        eE = l.useRef(null),
-        eT = l.useRef((0, W.A)((e) => e.shouldRenderTenureLevelUp)),
+        eT = l.useRef(null),
+        eE = l.useRef((0, W.A)((e) => e.shouldRenderTenureLevelUp)),
         eN = l.useMemo(() => (0, g.A)(), []),
         [ew, eI] = l.useState(!0);
     l.useEffect(() => {
@@ -153,7 +153,7 @@ function el(e) {
         [eD, eM] = (0, f.kn)(eR),
         eL = eD === o.M.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE,
         eU = l.useCallback(() => {
-            eM(Z.i.USER_DISMISS), n();
+            eM($.i.USER_DISMISS), n();
         }, [eM, n]),
         eB = l.useCallback(() => {
             eA(), eU();
@@ -187,26 +187,26 @@ function el(e) {
                         className: et.BK,
                         user: t,
                         displayProfile: eo,
-                        themeType: $.d.POPOUT,
+                        themeType: Z.d.POPOUT,
                         children: [
                             (0, a.jsxs)("div", {
                                 className: en.wx,
                                 children: [
-                                    (0, a.jsx)(E.A, {
+                                    (0, a.jsx)(T.A, {
                                         user: t,
                                         displayProfile: eo,
-                                        themeType: $.d.POPOUT,
+                                        themeType: Z.d.POPOUT,
                                     }),
                                     (0, a.jsx)(S.A, {
                                         user: t,
                                         displayProfile: eo,
-                                        themeType: $.d.POPOUT,
+                                        themeType: Z.d.POPOUT,
                                         onOpenProfile: es ? void 0 : ek,
                                     }),
                                     (0, a.jsx)(D.A, {
                                         ref: eO,
                                         user: t,
-                                        themeType: $.d.POPOUT,
+                                        themeType: Z.d.POPOUT,
                                         onCloseProfile: n,
                                         prompt: eS ? eN : null,
                                     }),
@@ -229,10 +229,10 @@ function el(e) {
                                         pronouns: null == eo ? void 0 : eo.pronouns,
                                         tags: (0, a.jsx)(O.A, {
                                             displayProfile: eo,
-                                            themeType: $.d.POPOUT,
+                                            themeType: Z.d.POPOUT,
                                             onClose: n,
                                             shouldOpenBadgeTooltip: null != er ? (e) => e === er : void 0,
-                                            shouldGlowTenureBadge: eT.current,
+                                            shouldGlowTenureBadge: eE.current,
                                         }),
                                         nicknameIcons: (0, a.jsx)(R.A, {
                                             user: t,
@@ -251,7 +251,7 @@ function el(e) {
                                             widgets: null == eo ? void 0 : eo.widgets,
                                             onOpenUserProfileModal: ek,
                                         }),
-                                    (0, a.jsx)(T.A, {
+                                    (0, a.jsx)(E.A, {
                                         isPremiumUser: eC,
                                         onInteraction: n,
                                     }),
@@ -278,7 +278,7 @@ function el(e) {
                                                                       text: ee.intl.string(ee.t.y2b7CA),
                                                                   })
                                                                 : void 0,
-                                                            ref: eE,
+                                                            ref: eT,
                                                         }),
                                                         (0, a.jsx)(z.N3, {
                                                             action: "PRESS_SET_STATUS",
@@ -442,7 +442,7 @@ function el(e) {
                                                                                                           ),
                                                                                                       children: (0,
                                                                                                       a.jsx)(c.W1t, {
-                                                                                                          "data-menu-migration-ready":
+                                                                                                          "data-menu-needs-review":
                                                                                                               !0,
                                                                                                           navId: "set-status-submenu-mobile-web",
                                                                                                           variant:
@@ -452,8 +452,6 @@ function el(e) {
                                                                                                                   ee.t
                                                                                                                       .E13trI,
                                                                                                               ),
-                                                                                                          className:
-                                                                                                              et.YS,
                                                                                                           hideScroller:
                                                                                                               !0,
                                                                                                           onClose: l,
@@ -552,7 +550,7 @@ function el(e) {
                                 ],
                             }),
                             (null == eo ? void 0 : eo.profileEffect) != null &&
-                                !eT.current &&
+                                !eE.current &&
                                 (0, a.jsx)(_.A, {
                                     skuId: eo.profileEffect.skuId,
                                     isHovering: eh,
@@ -561,7 +559,7 @@ function el(e) {
                     }),
                     eG && eF
                         ? (0, a.jsx)(K.A, {
-                              targetElementRef: eE,
+                              targetElementRef: eT,
                               onClose: n,
                           })
                         : null,

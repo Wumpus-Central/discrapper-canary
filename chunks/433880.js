@@ -46,16 +46,16 @@ function h(e) {
 
 function m(e) {
     let { menuItemId: t, user: n, label: o, gameRelationships: f, onClick: m, color: g } = e,
-        { id: E, bot: b } = n,
-        y =
+        { id: E, bot: y } = n,
+        b =
             (0, a.bG)([u.default], () => {
                 var e;
                 return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
-            }) || b,
-        O = y ? p : f,
-        [A, v] = i.useState(!1),
-        S = i.useCallback(() => v(!0), []),
-        I = i.useMemo(
+            }) || y,
+        O = b ? p : f,
+        [v, A] = i.useState(!1),
+        I = i.useCallback(() => A(!0), []),
+        S = i.useMemo(
             () =>
                 O.map((e) => {
                     let { applicationId: t } = e;
@@ -64,8 +64,8 @@ function m(e) {
             [O],
         ),
         T = (0, a.bG)([c.A], () => c.A.getRelationshipType(E), [E]),
-        C = _(I, A || 1 === O.length);
-    if (y || 0 === O.length || T === d.eA$.FRIEND) return null;
+        C = _(S, v || 1 === O.length);
+    if (b || 0 === O.length || T === d.eA$.FRIEND) return null;
     if (1 === O.length) {
         let { applicationId: e } = O[0],
             n = C.get(e);
@@ -78,7 +78,7 @@ function m(e) {
                   subtext: (0, r.jsx)(h, {
                       application: n,
                   }),
-                  onFocus: S,
+                  onFocus: I,
                   action: () => m(n),
               });
     }
@@ -86,7 +86,8 @@ function m(e) {
     return (O.forEach((e) => {
         let { applicationId: t } = e,
             n = C.get(t);
-        null != n &&
+        if (null != n) {
+            let e = n.getIconURL(16);
             N.push(
                 (0, r.jsx)(
                     s.Drp,
@@ -97,11 +98,19 @@ function m(e) {
                             game: n,
                             size: l.M.XXSMALL,
                         }),
+                        leadingAccessory:
+                            null != e
+                                ? {
+                                      type: "image",
+                                      src: e,
+                                  }
+                                : void 0,
                         action: () => m(n),
                     },
                     t,
                 ),
             );
+        }
     }),
     0 === N.length)
         ? null
@@ -109,7 +118,7 @@ function m(e) {
               color: g,
               id: t,
               label: o,
-              onFocus: S,
+              onFocus: I,
               children: N,
           });
 }

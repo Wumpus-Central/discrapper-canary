@@ -40,9 +40,9 @@ let O = (0, a.A)(
                     id: t.id,
                     label: g.intl.string(g.t["/AXYnE"]),
                 }),
-                x = (0, d.A)(t.id, n);
+                T = (0, d.A)(t.id, n);
             return (0, r.jsx)(i.W1t, {
-                "data-menu-mixed": !0,
+                "data-menu-migrated-auto": !0,
                 navId: "user-context",
                 onClose: l.Z_,
                 "aria-label": g.intl.string(g.t.liqwPJ),
@@ -56,7 +56,7 @@ let O = (0, a.A)(
                             (0, r.jsxs)(i.rXV, {
                                 children: [p, y],
                             }),
-                            x,
+                            T,
                             S,
                             !v &&
                                 (0, r.jsx)(i.rXV, {

@@ -6,8 +6,8 @@ n(64700);
 var e = n(311907),
     a = n(397927),
     r = n(442433),
-    o = n(780964),
-    s = n(840065),
+    s = n(780964),
+    o = n(840065),
     c = n(274372),
     u = n(692329),
     d = n(399925),
@@ -18,7 +18,7 @@ function g(t) {
         { clipsLength: n } = (0, e.cf)([c.A], () => c.A.getSettings()),
         g = (0, u.A)();
     return (0, l.jsxs)(a.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated": !0,
         navId: "clips-context",
         "aria-label": p.intl.string(p.t.J1hsY2),
         onClose: r.Z_,
@@ -48,7 +48,7 @@ function g(t) {
                 children: (0, l.jsx)(a.Drp, {
                     id: "clips-settings",
                     label: p.intl.string(p.t.J1hsY2),
-                    action: () => (0, s.openUserSettings)(o.X.CLIPS_PANEL),
+                    action: () => (0, o.openUserSettings)(s.X.CLIPS_PANEL),
                 }),
             }),
         ],
