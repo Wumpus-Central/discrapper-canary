@@ -78562,6 +78562,11 @@ screen and (max-width:485px) {
     object-fit: cover
 }
 
+.boxContainer_b0db00.large_b0db00.overlayImageMode_b0db00 {
+    overflow: hidden;
+    padding: 0
+}
+
 .textBox_b0db00.large_b0db00 {
     display: flex;
     flex: 1;
@@ -78593,7 +78598,8 @@ screen and (max-width:485px) {
 }
 
 .overlayTextBox_b0db00 {
-    inset-inline-start: var(--space-12)
+    inset-inline-start: var(--space-12);
+    z-index: 1
 }
 
 .backgroundVideoContainer_b0db00 {
@@ -82460,7 +82466,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 }
 
 .glowAnimation_c43912 {
-    filter: blur(var(--custom-blur-amount)) saturate(var(--saturation-factor, 1));
+    filter: blur(var(--custom-blur-amount)) saturate(var(--saturation-factor, 1)) hue-rotate(var(--custom-hue-rotate, 0deg));
     height: calc(100% + var(--custom-glow-amount)*2 + 2px);
     inset-inline-start: calc(var(--custom-glow-amount)*-1 - 1px);
     pointer-events: none;
@@ -82516,10 +82522,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 }
 
 .betaBadge__67013 {
-    inset-inline-end: var(--space-48);
-    position: absolute;
-    top: -6px;
-    z-index: 1
+    margin-bottom: 12px
 }
 
 .progressContainer__67013 {
@@ -82541,12 +82544,13 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     object-fit: cover;
     object-position: center;
     position: absolute;
+    transform: scaleX(-1);
     width: 100%
 }
 
 .textContainer__67013 {
     align-items: flex-start;
-    background-color: var(--background-mod-normal);
+    background-color: var(--card-background-default);
     display: flex;
     flex: 1 1 100%;
     flex-direction: column;
@@ -82561,18 +82565,19 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 }
 
 .actionButtonContainer__67013 {
-    margin-top: var(--space-32)
+    margin-top: var(--space-24)
 }
 
 .totalLifetimeRewardsContainer__67013 {
     align-items: center;
+    color: var(--text-muted);
     display: flex;
     gap: var(--space-4);
     margin-top: var(--space-12)
 }
 
 .stackedGradientOverlay__67013 {
-    background: linear-gradient(to bottom, transparent 0, color-mix(in srgb, var(--background-mod-normal) 70%, transparent) 50%, var(--background-mod-normal) 100%);
+    background: linear-gradient(to bottom, transparent 0, color-mix(in srgb, var(--card-background-default) 70%, transparent) 50%, var(--card-background-default) 100%);
     position: absolute;
     top: auto;
     inset-inline: 0;
@@ -82582,29 +82587,29 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 
 @container premium-marketing-page-container (min-width: 720px) {
     .card__67013 {
-        flex-direction: row
+        flex-direction: row;
+        height: 350px
     }
 
     .bannerImageContainer__67013 {
-        flex: 1;
         height: auto;
-        min-width: 0
+        min-width: 0;
+        width: 50%;
+        -webkit-margin-end: 0;
+        margin-inline-end: 0;
+        z-index: 0
     }
 
     .bannerImage__67013 {
-        object-position: right center
+        object-position: center
     }
 
     .textContainer__67013 {
         background-color: transparent;
-        flex: 0 0 45%;
-        max-width: 45%;
         padding-block: var(--space-48);
-        z-index: auto;
-        -webkit-padding-start: var(--space-24);
-        padding-inline-start: var(--space-24);
-        -webkit-padding-end: var(--space-128);
-        padding-inline-end: var(--space-128)
+        padding-inline: var(--space-32);
+        width: 50%;
+        z-index: auto
     }
 
     .heading__67013,
@@ -82612,19 +82617,35 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
         color: var(--white)
     }
 
-    .bodyText__67013 {
+    .bodyText__67013,
+    .totalLifetimeRewardsContainer__67013 {
         color: hsl(var(--white-hsl)/.6)
     }
 
     .stackedGradientOverlay__67013 {
         display: none
     }
+
+    .betaBadge__67013 [class*=badge] {
+        background-color: var(--neutral-1);
+        color: var(--neutral-71)
+    }
 }
 
 @container premium-marketing-page-container (min-width: 960px) {
     .textContainer__67013 {
         flex: 0 0 40%;
-        max-width: 40%
+        max-width: 40%;
+        padding-inline: var(--space-24)
+    }
+
+    .bannerImage__67013 {
+        object-position: calc(100% + 250px) center
+    }
+
+    .bannerImageContainer__67013 {
+        -webkit-margin-end: 0;
+        margin-inline-end: 0
     }
 }
 
