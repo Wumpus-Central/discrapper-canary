@@ -1,5 +1,5 @@
 i.d(e, {
-    r: () => S,
+    r: () => d,
 }),
     i(228524);
 var n = i(311907),
@@ -22,7 +22,6 @@ function A(t) {
         usePredicate: t.usePredicate,
     });
 }
-let S = (0, r.FW)(u.X.OVERLAY_NOTIFICATIONS_LIST, {
-    variant: "separators",
+let d = (0, r.FW)(u.X.OVERLAY_NOTIFICATIONS_LIST, {
     buildLayout: () => T.map(A),
 });

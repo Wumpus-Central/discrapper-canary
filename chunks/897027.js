@@ -1,5 +1,5 @@
 i.d(e, {
-    H: () => d,
+    H: () => E,
 });
 var n = i(419954),
     l = i(780964),
@@ -10,10 +10,9 @@ var n = i(419954),
     o = i(534771),
     T = i(549093),
     A = i(334218),
-    S = i(803119),
-    E = i(985018);
-let d = (0, n.FW)(l.X.NOTIFICATION_SELECTION_FIELD_SET, {
-    useTitle: () => E.intl.string(E.t.FEVRDV),
-    variant: "separators",
-    buildLayout: () => [a.L, S.q, s.Z, r.E, A.N, u.M, o.q, T.q],
+    d = i(803119),
+    S = i(985018);
+let E = (0, n.FW)(l.X.NOTIFICATION_SELECTION_FIELD_SET, {
+    useTitle: () => S.intl.string(S.t.FEVRDV),
+    buildLayout: () => [a.L, d.q, s.Z, r.E, A.N, u.M, o.q, T.q],
 });

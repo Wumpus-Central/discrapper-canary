@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => p,
+    A: () => f,
 });
 var r = n(627968),
     i = n(64700),
@@ -7,59 +7,53 @@ var r = n(627968),
     s = n.n(a),
     o = n(397927),
     l = n(641324),
-    c = n(46373),
-    u = n(112715),
-    d = n(702421);
+    c = n(112715),
+    u = n(702421);
 
-function f(e) {
+function d(e) {
     let { node: t } = e,
-        { useTitle: n, useSubtitle: a, variant: f = "default", layout: p, initialize: _ } = t,
-        h = null == n ? void 0 : n(),
-        m = null == a ? void 0 : a(),
-        g = i.useId(),
-        E = null != h && "" !== h,
-        y = null != m && "" !== m;
+        { useTitle: n, useSubtitle: a, layout: d, initialize: f } = t,
+        p = null == n ? void 0 : n(),
+        _ = null == a ? void 0 : a(),
+        h = i.useId(),
+        m = null != p && "" !== p,
+        g = null != _ && "" !== _;
     return (
-        (0, u.Z)(_),
+        (0, c.Z)(f),
         (0, r.jsxs)("fieldset", {
-            "aria-describedby": y ? g : void 0,
+            "aria-describedby": g ? h : void 0,
             children: [
-                E
+                m
                     ? (0, r.jsx)(o.Text, {
                           tag: "legend",
                           variant: "text-md/semibold",
                           color: "text-strong",
-                          className: s()(d.DD, {
-                              [d.mU]: !y,
-                              [d.jS]: !y,
+                          className: s()(u.DD, {
+                              [u.h0]: g,
                           }),
-                          children: h,
+                          children: p,
                       })
                     : null,
-                y
+                g
                     ? (0, r.jsx)(o.Text, {
                           variant: "text-sm/normal",
                           color: "text-default",
-                          id: g,
-                          className: s()(d.VA, d.mU, {
-                              [d.jS]: !E,
-                          }),
-                          children: m,
+                          id: h,
+                          className: u.VA,
+                          children: _,
                       })
                     : null,
                 (0, r.jsx)(o.BJc, {
                     direction: "vertical",
                     gap: 8,
-                    children: p.map((e, t) =>
-                        (0, r.jsxs)(
-                            i.Fragment,
+                    padding: {
+                        top: 16,
+                    },
+                    children: d.map((e) =>
+                        (0, r.jsx)(
+                            l.A,
                             {
-                                children: [
-                                    (0, r.jsx)(l.A, {
-                                        node: e,
-                                    }),
-                                    "separators" === f && t !== p.length - 1 && (0, r.jsx)(c.A, {}),
-                                ],
+                                node: e,
                             },
                             e.key,
                         ),
@@ -69,4 +63,4 @@ function f(e) {
         })
     );
 }
-let p = i.memo(f);
+let f = i.memo(d);
