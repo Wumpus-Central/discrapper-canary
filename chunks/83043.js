@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"FToh6D":["FToh6D"],"abzHgN":["abzHgN"]}');
+e.exports = JSON.parse(
+    '{"FToh6D":["Opnieuw abonneren"],"abzHgN":[[8,"$link",["Meer informatie"],[[1,"helpdeskArticle"]]]]}',
+);
