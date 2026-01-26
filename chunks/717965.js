@@ -213,7 +213,7 @@ function ef(e) {
                   let { closePopout: l } = e;
                   return (0, r.jsx)(M.A, {
                       children: (0, r.jsx)(a.W1t, {
-                          "data-menu-all-icons": !0,
+                          "data-menu-migrated": !0,
                           navId: "exit-options",
                           "aria-label": eo.intl.string(eo.t["3Uj+2p"]),
                           onClose: l,
@@ -227,6 +227,10 @@ function ef(e) {
                               action: () => (0, W.$q)(t, s),
                               label: eo.intl.string(eo.t["Fmx5y/"]),
                               icon: a.aXh,
+                              leadingAccessory: {
+                                  type: "icon",
+                                  icon: a.aXh,
+                              },
                           }),
                       }),
                   });

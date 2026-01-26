@@ -1,20 +1,20 @@
 n.d(t, {
-    A: () => f,
+    A: () => g,
 });
 var r = n(627968),
-    l = n(64700),
-    i = n(397927),
-    o = n(975807),
-    a = n(486503),
+    i = n(64700),
+    l = n(397927),
+    a = n(975807),
+    o = n(486503),
     c = n(253932),
     s = n(957565),
     d = n(723702),
     u = n(985018);
 
-function f(e) {
-    let { messageId: t, itemId: n, type: f, imageSrc: g } = e,
-        p = c.Q_.useSetting(),
-        { tidaWebformEnabled: b } = a.A.useExperiment(
+function g(e) {
+    let { messageId: t, itemId: n, type: g, imageSrc: p } = e,
+        f = c.Q_.useSetting(),
+        { tidaWebformEnabled: y } = o.A.useExperiment(
             {
                 location: "useMessageDetailsItem",
             },
@@ -22,52 +22,68 @@ function f(e) {
                 autoTrackExposure: !1,
             },
         ),
-        m = l.useCallback(() => {
+        b = i.useCallback(() => {
             (0, s.C)(t);
         }, [t]),
-        y = l.useCallback(() => {
+        A = i.useCallback(() => {
             null != n && (0, s.C)(n);
         }, [n]),
-        O = l.useCallback(() => {
-            null != g && (0, s.C)(g);
-        }, [g]),
-        A = l.useCallback(() => {
-            null != g && (0, o.A)(g);
-        }, [g]),
-        v = "sticker" === f;
-    if (!p || !s.p5 || !b || ("emoji" !== f && !v) || null == n) return null;
+        m = i.useCallback(() => {
+            null != p && (0, s.C)(p);
+        }, [p]),
+        O = i.useCallback(() => {
+            null != p && (0, a.A)(p);
+        }, [p]),
+        v = "sticker" === g;
+    if (!f || !s.p5 || !y || ("emoji" !== g && !v) || null == n) return null;
     let j = v ? u.intl.string(u.t.SJ3249) : u.intl.string(u.t.Ap2oVy);
-    return (0, r.jsxs)(i.Drp, {
+    return (0, r.jsxs)(l.Drp, {
         id: "message-details",
         label: u.intl.string(u.t.IqqJNI),
         children: [
-            (0, r.jsx)(i.Drp, {
+            (0, r.jsx)(l.Drp, {
                 id: "copy-message-id",
                 label: u.intl.string(u.t.zBoHlf),
-                action: m,
-                icon: i.L9S,
+                action: b,
+                leadingAccessory: {
+                    type: "icon",
+                    icon: l.L9S,
+                },
+                icon: l.L9S,
             }),
-            (0, r.jsx)(i.Drp, {
+            (0, r.jsx)(l.Drp, {
                 id: "copy-item-id",
                 label: j,
-                action: y,
-                icon: i.L9S,
+                action: A,
+                leadingAccessory: {
+                    type: "icon",
+                    icon: l.L9S,
+                },
+                icon: l.L9S,
             }),
-            null != g &&
+            null != p &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(i.Drp, {
+                        (0, r.jsx)(l.Drp, {
                             id: "copy-image-link",
                             label: u.intl.string(u.t["8xHmxo"]),
-                            action: O,
-                            icon: i.qYV,
+                            action: m,
+                            leadingAccessory: {
+                                type: "icon",
+                                icon: l.qYV,
+                            },
+                            icon: l.qYV,
                         }),
                         d.isPlatformEmbedded &&
-                            (0, r.jsx)(i.Drp, {
+                            (0, r.jsx)(l.Drp, {
                                 id: "open-image-link",
                                 label: u.intl.string(u.t.w8ldGK),
-                                action: A,
-                                icon: i.qYV,
+                                action: O,
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: l.qYV,
+                                },
+                                icon: l.qYV,
                             }),
                     ],
                 }),

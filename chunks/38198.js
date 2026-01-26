@@ -429,6 +429,7 @@ function L(e) {
                                                   {
                                                       id: "summarize_thread_for_everyone",
                                                       label: w.intl.string(w.t.eCzSdd),
+                                                      iconLeft: o.nFg,
                                                       leadingAccessory: {
                                                           type: "icon",
                                                           icon: o.nFg,
@@ -442,6 +443,7 @@ function L(e) {
                                                   {
                                                       id: "summarize_thread_for_me",
                                                       label: w.intl.string(w.t["HOe+Hq"]),
+                                                      iconLeft: o.nys,
                                                       leadingAccessory: {
                                                           type: "icon",
                                                           icon: o.nys,

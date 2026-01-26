@@ -1,27 +1,31 @@
 n.d(t, {
-    A: () => a,
+    A: () => o,
 });
 var r = n(627968);
 n(64700);
-var l = n(397927),
-    i = n(969632),
-    o = n(985018);
+var i = n(397927),
+    l = n(969632),
+    a = n(985018);
 
-function a(e) {
-    return null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, i.Gh)(e))
+function o(e) {
+    return null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, l.Gh)(e))
         ? null
-        : (0, r.jsx)(l.Drp, {
+        : (0, r.jsx)(i.Drp, {
               id: "reactions",
-              label: o.intl.string(o.t.wikODq),
-              icon: l.nm2,
+              label: a.intl.string(a.t.wikODq),
+              leadingAccessory: {
+                  type: "icon",
+                  icon: i.ShF,
+              },
+              icon: i.nm2,
               action: () =>
-                  (0, l.mMO)(async () => {
+                  (0, i.mMO)(async () => {
                       let { default: t } = await Promise.resolve().then(n.bind(n, 112753));
                       return (n) => {
-                          var l, i;
+                          var i, l;
                           return (0, r.jsx)(
                               t,
-                              ((l = (function (e) {
+                              ((i = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
@@ -46,12 +50,12 @@ function a(e) {
                                   }
                                   return e;
                               })({}, n)),
-                              (i = i =
+                              (l = l =
                                   {
                                       message: e,
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -59,10 +63,10 @@ function a(e) {
                                             n.push.apply(n, r);
                                         }
                                         return n;
-                                    })(Object(i)).forEach(function (e) {
-                                        Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
-                              l),
+                              i),
                           );
                       };
                   }),

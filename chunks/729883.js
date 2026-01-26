@@ -3,19 +3,23 @@ n.d(t, {
 });
 var r = n(627968);
 n(64700);
-var l = n(397927),
-    i = n(406704),
-    o = n(519222),
-    a = n(985018);
+var i = n(397927),
+    l = n(406704),
+    a = n(519222),
+    o = n(985018);
 
 function c(e, t) {
-    return (0, i.n)(t, e)
-        ? (0, r.jsx)(l.Drp, {
+    return (0, l.n)(t, e)
+        ? (0, r.jsx)(i.Drp, {
               id: "thread",
-              label: a.intl.string(a.t.rBIGBL),
-              icon: l.ysw,
+              label: o.intl.string(o.t.rBIGBL),
+              leadingAccessory: {
+                  type: "icon",
+                  icon: i.ysw,
+              },
+              icon: i.ysw,
               action: () => {
-                  (0, o.Nw)(t, e);
+                  (0, a.Nw)(t, e);
               },
           })
         : null;

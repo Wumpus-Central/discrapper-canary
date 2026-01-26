@@ -3,34 +3,34 @@ n.d(t, {
 });
 var r = n(627968);
 n(64700);
-var l = n(397927),
-    i = n(930125),
-    o = n(282108),
-    a = n(985018);
+var i = n(397927),
+    l = n(930125),
+    a = n(282108),
+    o = n(985018);
 
 function c(e, t) {
-    let c = (0, o.Fg)(e),
+    let c = (0, a.Fg)(e),
         s =
             null != t &&
-            (0, o.qo)(
+            (0, a.qo)(
                 {
-                    type: i.D.GenericMedia,
+                    type: l.D.GenericMedia,
                     media: t,
                 },
                 c,
             );
     return null != t && s
         ? (0, r.jsx)(
-              l.Drp,
+              i.Drp,
               {
                   id: "report-image-false-positive",
-                  label: a.intl.string(a.t.ZH7P2h),
+                  label: o.intl.string(o.t.ZH7P2h),
                   action: () => {
-                      (0, l.mMO)(async () => {
-                          let { default: l } = await n(652442);
+                      (0, i.mMO)(async () => {
+                          let { default: i } = await n(652442);
                           return (n) =>
                               (0, r.jsx)(
-                                  l,
+                                  i,
                                   (function (e) {
                                       for (var t = 1; t < arguments.length; t++) {
                                           var n = null != arguments[t] ? arguments[t] : {},
@@ -66,7 +66,11 @@ function c(e, t) {
                               );
                       });
                   },
-                  icon: l.DAq,
+                  leadingAccessory: {
+                      type: "icon",
+                      icon: i.DAq,
+                  },
+                  icon: i.DAq,
               },
               "report-image-false-positive",
           )

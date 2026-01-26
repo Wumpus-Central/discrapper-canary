@@ -1,36 +1,40 @@
 n.d(t, {
-    A: () => m,
-    P: () => y,
+    A: () => b,
+    P: () => A,
 }),
     n(896048);
 var r = n(627968),
-    l = n(64700),
-    i = n(311907),
-    o = n(397927),
-    a = n(404374),
+    i = n(64700),
+    l = n(311907),
+    a = n(397927),
+    o = n(404374),
     c = n(966597),
     s = n(164684),
     d = n(704456),
     u = n(85109),
-    f = n(226017),
-    g = n(49678),
-    p = n(927813),
-    b = n(985018);
+    g = n(226017),
+    p = n(49678),
+    f = n(927813),
+    y = n(985018);
 
-function m(e) {
+function b(e) {
     let { enabled: t } = c.A.useExperiment({
             location: "LongPressMessageActionSheet",
         }),
-        n = (0, i.bG)([u.A], () => u.A.getSavedMessage(e.channel_id, e.id)),
-        l = y({
+        n = (0, l.bG)([u.A], () => u.A.getSavedMessage(e.channel_id, e.id)),
+        i = A({
             message: e,
             savedMessage: n,
         });
     return t
-        ? null != n || (0, f.A)()
-            ? (0, r.jsxs)(o.Drp, {
+        ? null != n || (0, g.A)()
+            ? (0, r.jsxs)(a.Drp, {
                   id: "save-for-later",
-                  label: b.intl.string(b.t.tpxJto),
+                  label: y.intl.string(y.t.tpxJto),
+                  leadingAccessory: {
+                      type: "icon",
+                      icon: null != n ? a.cFy : a.c$8,
+                  },
                   action: () =>
                       null == n
                           ? (0, s.Y)({
@@ -46,10 +50,14 @@ function m(e) {
                             }),
                   children: [
                       null != n
-                          ? (0, r.jsx)(o.Drp, {
+                          ? (0, r.jsx)(a.Drp, {
                                 id: "remove-from-for-later",
-                                label: b.intl.string(b.t.SvXS1Z),
-                                icon: o.cFy,
+                                label: y.intl.string(y.t.SvXS1Z),
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: a.cFy,
+                                },
+                                icon: a.cFy,
                                 action: () =>
                                     (0, s.x)({
                                         channelId: e.channel_id,
@@ -58,10 +66,14 @@ function m(e) {
                                         displayToast: !0,
                                     }),
                             })
-                          : (0, r.jsx)(o.Drp, {
+                          : (0, r.jsx)(a.Drp, {
                                 id: "create-bookmark",
-                                label: b.intl.string(b.t["9p3D9p"]),
-                                icon: o.c$8,
+                                label: y.intl.string(y.t["9p3D9p"]),
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: a.c$8,
+                                },
+                                icon: a.c$8,
                                 action: () =>
                                     (0, s.Y)({
                                         channelId: e.channel_id,
@@ -69,16 +81,21 @@ function m(e) {
                                         displayToast: !0,
                                     }),
                             }),
-                      (0, r.jsx)(o.bXX, {}),
-                      l,
+                      (0, r.jsx)(a.bXX, {}),
+                      i,
                   ],
               })
-            : (0, r.jsx)(o.Drp, {
+            : (0, r.jsx)(a.Drp, {
                   id: "save-for-later-upsell",
-                  label: b.intl.string(b.t.tpxJto),
-                  icon: o.tvc,
+                  label: y.intl.string(y.t.tpxJto),
+                  leadingAccessory: {
+                      type: "icon",
+                      icon: a.tvc,
+                      color: o.k0.PREMIUM_TIER_2,
+                  },
+                  icon: a.tvc,
                   iconProps: {
-                      color: a.k0.PREMIUM_TIER_2,
+                      color: o.k0.PREMIUM_TIER_2,
                   },
                   action: () =>
                       (0, s.Y)({
@@ -90,16 +107,16 @@ function m(e) {
         : null;
 }
 
-function y(e) {
+function A(e) {
     let { message: t, savedMessage: n } = e,
-        [i, a] = l.useState(new Date());
-    l.useEffect(() => {
-        let e = setInterval(() => a(new Date()), p.A.Millis.MINUTE);
+        [l, o] = i.useState(new Date());
+    i.useEffect(() => {
+        let e = setInterval(() => o(new Date()), f.A.Millis.MINUTE);
         return () => {
             clearInterval(e);
         };
     }, []);
-    let c = l.useCallback(
+    let c = i.useCallback(
             (e) =>
                 (0, s.Y)({
                     channelId: t.channel_id,
@@ -109,26 +126,30 @@ function y(e) {
                 }),
             [t.channel_id, t.id],
         ),
-        u = (0, g.S)({
+        u = (0, p.S)({
             createReminder: c,
         }),
-        { dueInText: f } = (0, d.Ce)({
+        { dueInText: g } = (0, d.Ce)({
             dueAt: null == n ? void 0 : n.saveData.dueAt,
-            now: i,
+            now: l,
             type: d.kh.LONG,
         });
     return (null == n ? void 0 : n.saveData.dueAt) == null
-        ? (0, r.jsx)(o.rXV, {
-              label: b.intl.string(b.t.roMu1H),
+        ? (0, r.jsx)(a.rXV, {
+              label: y.intl.string(y.t.roMu1H),
               children: u,
           })
-        : (0, r.jsxs)(o.rXV, {
-              label: f,
+        : (0, r.jsxs)(a.rXV, {
+              label: g,
               children: [
-                  (0, r.jsx)(o.Drp, {
+                  (0, r.jsx)(a.Drp, {
                       id: "mark-complete",
-                      label: b.intl.string(b.t.yjGtdJ),
-                      icon: o.Uzd,
+                      label: y.intl.string(y.t.yjGtdJ),
+                      leadingAccessory: {
+                          type: "icon",
+                          icon: a.Uzd,
+                      },
+                      icon: a.Uzd,
                       action: () =>
                           (0, s.Y)({
                               channelId: t.channel_id,
@@ -136,9 +157,9 @@ function y(e) {
                               dueAt: void 0,
                           }),
                   }),
-                  (0, r.jsx)(o.Drp, {
+                  (0, r.jsx)(a.Drp, {
                       id: "edit-reminder",
-                      label: b.intl.string(b.t.vrbqs1),
+                      label: y.intl.string(y.t.vrbqs1),
                       children: u,
                   }),
               ],
