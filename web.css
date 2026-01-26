@@ -56180,7 +56180,7 @@ h2.title_feb59c {
 }
 
 .submenu_c1e9c4 {
-    max-height: var(--custom-floating-layer-max-height);
+    max-height: var(--custom-floating-layer-max-height, var(--reference-position-layer-max-height));
     max-width: 320px;
     min-width: 188px
 }
@@ -60972,9 +60972,9 @@ screen and (max-width:485px) {
     border-radius: 3px;
     color: var(--white);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: var(--font-weight-bold);
-    line-height: 29px;
+    line-height: 1.8125rem;
     margin-top: 20px;
     padding: 10px 20px;
     text-transform: uppercase
