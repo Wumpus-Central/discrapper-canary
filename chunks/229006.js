@@ -1,6 +1,6 @@
 n.d(t, {
     Dv: () => O,
-    Em: () => I,
+    Em: () => S,
     Rd: () => g,
     S: () => m,
     Yn: () => l,
@@ -204,7 +204,7 @@ function E(e) {
     }
 }
 
-function b(e) {
+function y(e) {
     return {
         eventName: e.event_name,
         title: e.title,
@@ -213,7 +213,7 @@ function b(e) {
     };
 }
 
-function y(e) {
+function b(e) {
     return {
         skuId: e.sku_id,
         tenantMetadata: E(e.tenant_metadata),
@@ -224,12 +224,12 @@ function y(e) {
 function O(e) {
     return {
         claimedAt: e.claimed_at,
-        items: e.entitlements.map(y),
+        items: e.entitlements.map(b),
         errors: e.errors,
     };
 }
 
-function A(e) {
+function v(e) {
     return {
         altText: e.alt_text,
         assetType: e.asset_type,
@@ -237,7 +237,7 @@ function A(e) {
     };
 }
 
-function v(e) {
+function A(e) {
     return {
         ctaType: e.cta_type,
         title: e.title,
@@ -245,7 +245,7 @@ function v(e) {
     };
 }
 
-function S(e) {
+function I(e) {
     return {
         ctaType: e.cta_type,
         title: e.title,
@@ -253,21 +253,21 @@ function S(e) {
     };
 }
 
-function I(e) {
+function S(e) {
     if (1 !== e.version || !(a.gh.QUEST_HOME_BANNER in e.placements)) return null;
     let t = e.placements[a.gh.QUEST_HOME_BANNER];
-    return null == t
-        ? null
-        : {
-              placementType: a.gh.QUEST_HOME_BANNER,
-              campaignId: t.campaign_id,
-              labelTitle: t.label_title,
-              labelSubtitle: t.label_subtitle,
-              assetHeroImage: A(t.asset_hero_image),
-              assetSponsorImage: A(t.asset_sponsor_image),
-              ctaSponsorUrl: v(t.cta_sponsor_url),
-              ctaQuests: t.cta_quests.map(S),
-              startsAt: t.starts_at,
-              expiresAt: t.expires_at,
-          };
+    if (null == t) return null;
+    let n = {
+        placementType: a.gh.QUEST_HOME_BANNER,
+        campaignId: t.campaign_id,
+        labelTitle: t.label_title,
+        labelSubtitle: t.label_subtitle,
+        assetHeroImage: v(t.asset_hero_image),
+        assetSponsorImage: v(t.asset_sponsor_image),
+        ctaSponsorUrl: A(t.cta_sponsor_url),
+        ctaQuests: t.cta_quests.map(I),
+        startsAt: t.starts_at,
+        expiresAt: t.expires_at,
+    };
+    return null != t.asset_hero_video && (n.assetHeroVideo = v(t.asset_hero_video)), n;
 }

@@ -35964,11 +35964,6 @@ div.modalHeader_c28af8 {
     padding-bottom: 12px
 }
 
-.hidden__7d7b6 {
-    opacity: 0;
-    transition: opacity .35s ease-in-out
-}
-
 .image__7d7b6 {
     border-radius: inherit;
     height: 100%;
@@ -35977,10 +35972,6 @@ div.modalHeader_c28af8 {
     position: absolute;
     top: 0;
     width: 100%
-}
-
-.video__7d7b6 {
-    transition: opacity .35s ease-in-out
 }
 
 .nitroRewardTileAssetContainer_a92e89 {
