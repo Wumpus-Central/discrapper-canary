@@ -15,7 +15,7 @@ var i = n(311907),
     p = n(652215),
     _ = n(985018),
     h = n(111314);
-let m = [d.oU.NORMAL, d.oU.SIDEBAR, d.oU.CREATE_FORUM_POST];
+let m = [d.oU.NORMAL, d.oU.SIDEBAR];
 
 function g(e) {
     let { disabled: t, channel: n, inputType: d } = e,

@@ -1,6 +1,6 @@
 n.d(t, {
-    A: () => I,
-    L: () => A,
+    A: () => S,
+    L: () => v,
 });
 var r = n(627968),
     i = n(64700),
@@ -60,7 +60,7 @@ function E(e, t) {
     return n;
 }
 
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function b(e, t) {
     );
 }
 
-function y(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -99,7 +99,7 @@ function O(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-var A = (function (e) {
+var v = (function (e) {
     return (
         (e[(e.SMALL = 0)] = "SMALL"),
         (e[(e.MEDIUM = 1)] = "MEDIUM"),
@@ -110,42 +110,49 @@ var A = (function (e) {
     );
 })({});
 
-function v(e) {
+function A(e) {
     e.stopPropagation();
 }
 
-function S(e, t) {
+function I(e, t) {
     let {
             id: n,
-            channelId: i,
-            className: a,
-            children: m,
-            actions: E,
-            handleEditModal: O,
-            keyboardModeEnabled: A,
+            channelId: a,
+            className: m,
+            children: E,
+            actions: O,
+            handleEditModal: v,
+            keyboardModeEnabled: I,
             onKeyDown: S,
-            draftType: I,
-            size: T = 1,
+            draftType: T,
+            size: C = 1,
         } = e,
-        C = (0, o.rm)(n),
-        { onFocus: N } = C,
-        R = y(C, ["onFocus"]),
-        { handleFocus: w, handleBlur: P } = (0, f.G)(N),
-        D = 0 === T,
-        x = null != E,
-        L = (e) => {
-            if (A) {
+        N = i.useRef(null),
+        w = (0, o.rm)(n),
+        { onFocus: R } = w,
+        P = b(w, ["onFocus"]),
+        { handleFocus: D, handleBlur: x } = (0, f.G)(R),
+        L = 0 === C,
+        j = null != O,
+        M = (e) => {
+            if (0 === e.detail && null != N.current) {
+                let e = N.current.querySelector('[role="button"], button');
+                null == e || e.click();
+            }
+        },
+        k = (e) => {
+            if (I) {
                 switch (e.which) {
                     case p.Ks6.D:
-                        e.preventDefault(), c.A.remove(i, n, I);
+                        e.preventDefault(), c.A.remove(a, n, T);
                         return;
                     case p.Ks6.E:
-                        null != O && (e.preventDefault(), O(e));
+                        null != v && (e.preventDefault(), v(e));
                         return;
                     case p.Ks6.BACKSPACE:
                         e.ctrlKey
-                            ? (e.preventDefault(), c.A.clearAll(i, I))
-                            : (e.preventDefault(), c.A.remove(i, n, I));
+                            ? (e.preventDefault(), c.A.clearAll(a, T))
+                            : (e.preventDefault(), c.A.remove(a, n, T));
                         return;
                     case p.Ks6.ARROW_UP:
                         let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
@@ -161,32 +168,34 @@ function S(e, t) {
     return (0, r.jsx)(l.vN3, {
         children: (0, r.jsx)(
             "li",
-            b(g({}, R), {
-                onFocus: w,
-                onBlur: P,
-                onKeyDown: L,
-                className: s()(h.Se, a, {
-                    [h.oi]: 2 === T,
+            y(g({}, P), {
+                onFocus: D,
+                onBlur: x,
+                onClick: M,
+                onKeyDown: k,
+                className: s()(h.Se, m, {
+                    [h.oi]: 2 === C,
                 }),
                 ref: t,
                 children: (0, r.jsxs)("div", {
                     className: h.PO,
+                    ref: N,
                     children: [
-                        m,
-                        x
+                        E,
+                        j
                             ? (0, r.jsx)("div", {
                                   className: h.TC,
                                   children: (0, r.jsx)("div", {
                                       className: s()(h.KY, {
-                                          [h.BN]: D,
+                                          [h.BN]: L,
                                       }),
-                                      onContextMenu: v,
+                                      onContextMenu: A,
                                       "aria-label": _.intl.string(_.t["8Lu3Du"]),
                                       children: (0, r.jsx)(u.Ay, {
                                           className: s()({
-                                              [h.BX]: D,
+                                              [h.BX]: L,
                                           }),
-                                          children: E,
+                                          children: O,
                                       }),
                                   }),
                               })
@@ -197,4 +206,4 @@ function S(e, t) {
         ),
     });
 }
-let I = i.forwardRef(S);
+let S = i.forwardRef(I);

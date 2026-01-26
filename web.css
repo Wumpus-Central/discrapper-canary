@@ -48708,6 +48708,11 @@ div.mobilePushContainer__3d3b0 {
     position: relative
 }
 
+.upload_aa605f:focus .smallActionBar_aa605f,
+.upload_aa605f:focus-within .smallActionBar_aa605f {
+    opacity: 1
+}
+
 .upload_aa605f.sizeClip_aa605f {
     background-color: var(--background-mod-subtle);
     flex: 1;
