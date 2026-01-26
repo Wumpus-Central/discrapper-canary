@@ -1,18 +1,19 @@
 n.d(t, {
-    A: () => p,
+    A: () => y,
 }),
+    n(228524),
     n(896048),
-    n(938796),
-    n(228524);
+    n(938796);
 var r = n(989349),
     i = n.n(r),
-    a = n(665260),
-    s = n(315069),
-    o = n(871123),
-    l = n(611010),
-    c = n(652215);
+    a = n(575593),
+    s = n(665260),
+    o = n(315069),
+    l = n(871123),
+    c = n(611010),
+    u = n(652215);
 
-function u(e, t, n) {
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,23 +26,122 @@ function u(e, t, n) {
         e
     );
 }
-let d = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
+let f = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
 
-function f(e) {
-    if (null != e && null != e.social_layer)
+function p(e) {
+    if (null != e)
         return {
-            socialLayer: (0, o.M$)(e.social_layer),
+            staticImagePath: e.static_image_path,
+            animatedImagePath: e.animated_image_path,
+            videoPath: e.video_path,
         };
 }
-class p extends s.A {
+
+function _(e) {
+    var t, n, r;
+    return {
+        src: e.src,
+        loop: e.loop,
+        height: e.height,
+        width: e.width,
+        duration: null != (t = e.duration) ? t : 0,
+        start: null != (n = e.start) ? n : 0,
+        loopDelay: e.loop_delay,
+        position: e.position,
+        zIndex: e.z_index,
+        randomizedSources:
+            null == (r = e.randomized_sources)
+                ? void 0
+                : r.map((e) => ({
+                      src: e.src,
+                  })),
+    };
+}
+
+function h(e) {
+    if (null != e) {
+        if (e.type === a.R.AVATAR_DECORATION)
+            return {
+                id: e.id,
+                type: e.type,
+                asset: e.asset,
+                assets: p(e.assets),
+                label: e.label,
+                labelLocalized: e.label_localized,
+            };
+        if (e.type === a.R.NAMEPLATE)
+            return {
+                id: e.id,
+                type: e.type,
+                asset: e.asset,
+                assets: p(e.assets),
+                label: e.label,
+                labelLocalized: e.label_localized,
+                palette: e.palette,
+            };
+        if (e.type === a.R.PROFILE_EFFECT) {
+            var t;
+            return {
+                id: e.id,
+                type: e.type,
+                title: e.title,
+                titleLocalized: e.title_localized,
+                description: e.description,
+                descriptionLocalized: e.description_localized,
+                accessibilityLabel: e.accessibility_label,
+                accessibilityLabelLocalized: e.accessibility_label_localized,
+                animationType: e.animation_type,
+                staticFrameSrc: e.static_frame_src,
+                thumbnailPreviewSrc: e.thumbnail_preview_src,
+                reducedMotionSrc: e.reduced_motion_src,
+                effects: null == (t = e.effects) ? void 0 : t.map(_),
+            };
+        }
+    }
+}
+
+function m(e) {
+    if (null != e)
+        return {
+            role: e.role,
+            baseVariantSkuId: e.base_variant_sku_id,
+            baseVariantName: e.base_variant_name,
+            value: e.value,
+            label: e.label,
+            collapseUnder: e.collapse_under,
+        };
+}
+
+function g(e) {
+    if (null != e)
+        return {
+            type: e.type,
+            item: h(e.item),
+            categorySkuId: e.category_sku_id,
+            premiumType: e.premium_type,
+            expiresSecondsAfterClaim: e.expires_seconds_after_claim,
+            expiresAt: null != e.expires_at ? new Date(1e3 * e.expires_at) : void 0,
+            variant: m(e.variant),
+            optionSelectorDisplayValue: e.option_selector_display_value,
+        };
+}
+
+function E(e) {
+    if (null != e)
+        return {
+            socialLayer: (0, l.M$)(e.social_layer),
+            collectibles: g(e.collectibles),
+        };
+}
+class y extends o.A {
     static createFromServer(e) {
-        var t, n, r, a, s, o, c;
-        let { price: u } = e;
-        return new p({
+        var t, n, r, a, s, o, l, u, d;
+        let { price: f } = e;
+        return new y({
             id: e.id,
             type: e.type,
             applicationId: e.application_id,
-            application: null != e.application ? l.Ay.createFromServer(e.application) : null,
+            application: null != e.application ? c.Ay.createFromServer(e.application) : null,
             eligiblePaymentGateways: null != (t = e.eligible_payment_gateways) ? t : null,
             productLine: e.product_line,
             name: null != (n = e.name) ? n : "",
@@ -60,13 +160,13 @@ class p extends s.A {
             contentRatingAgency: e.content_rating_agency,
             legalNotice: e.legal_notice,
             price:
-                null != u
+                null != f
                     ? {
-                          amount: u.amount,
-                          currency: u.currency,
-                          saleAmount: u.sale_amount,
-                          salePercentage: u.sale_percentage,
-                          premium: u.premium,
+                          amount: f.amount,
+                          currency: f.currency,
+                          saleAmount: f.sale_amount,
+                          salePercentage: f.sale_percentage,
+                          premium: f.premium,
                       }
                     : null,
             premium: null != (r = e.premium) && r,
@@ -78,15 +178,17 @@ class p extends s.A {
             flags: e.flags,
             externalPurchaseUrl: e.external_purchase_url,
             deleted: null != (o = e.deleted) && o,
-            bundledSkuIds: null != (c = e.bundled_sku_ids) ? c : [],
-            tenantMetadata: f(e.tenant_metadata),
+            bundledSkuIds: null != (l = e.bundled_sku_ids) ? l : [],
+            bundledSkus:
+                null != (u = null == (d = e.bundled_skus) ? void 0 : d.map((e) => y.createFromServer(e))) ? u : [],
+            tenantMetadata: E(e.tenant_metadata),
             thumbnailAssetId: e.thumbnail_asset_id,
             description: e.description,
         });
     }
     get supportedOperatingSystems() {
         let e = null != this.systemRequirements ? Object.keys(this.systemRequirements) : [];
-        return e.length > 0 ? e : [c.uje.WINDOWS];
+        return e.length > 0 ? e : [u.uje.WINDOWS];
     }
     get isOnSale() {
         return null != this.price && null != this.price.saleAmount;
@@ -94,11 +196,11 @@ class p extends s.A {
     isGiftable() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.price;
         return (
-            this.type === c.Puh.DURABLE_PRIMARY &&
+            this.type === u.Puh.DURABLE_PRIMARY &&
             this.available &&
             this.requiresPayment &&
             null != e &&
-            c.Ly6.has(e.currency) &&
+            u.Ly6.has(e.currency) &&
             null == this.externalPurchaseUrl
         );
     }
@@ -136,26 +238,26 @@ class p extends s.A {
         return !this.premium && null != e && e.amount > 0;
     }
     get isTheGameAwardsWinner() {
-        return d.includes(this.id);
+        return f.includes(this.id);
     }
     get available() {
-        return (0, a.Lt)(this.flags, c.d68.AVAILABLE) || null != this.externalPurchaseUrl;
+        return (0, s.Lt)(this.flags, u.d68.AVAILABLE) || null != this.externalPurchaseUrl;
     }
     isAvailableForDistribution() {
         return (
             this.available &&
             null != this.getPrice() &&
             null == this.externalPurchaseUrl &&
-            (!this.premium || (0, a.Lt)(this.flags, c.d68.PREMIUM_AND_DISTRIBUTION))
+            (!this.premium || (0, s.Lt)(this.flags, u.d68.PREMIUM_AND_DISTRIBUTION))
         );
     }
     isAvailable() {
-        return (0, a.Lt)(this.flags, c.d68.AVAILABLE);
+        return (0, s.Lt)(this.flags, u.d68.AVAILABLE);
     }
     isPremiumPerk() {
         return (
             this.premium &&
-            ((0, a.Lt)(this.flags, c.d68.PREMIUM_PURCHASE) || (0, a.Lt)(this.flags, c.d68.PREMIUM_AND_DISTRIBUTION))
+            ((0, s.Lt)(this.flags, u.d68.PREMIUM_PURCHASE) || (0, s.Lt)(this.flags, u.d68.PREMIUM_AND_DISTRIBUTION))
         );
     }
     hasFeature(e) {
@@ -166,41 +268,42 @@ class p extends s.A {
     }
     constructor(e) {
         super(),
-            u(this, "id", void 0),
-            u(this, "type", void 0),
-            u(this, "applicationId", void 0),
-            u(this, "application", void 0),
-            u(this, "eligiblePaymentGateways", void 0),
-            u(this, "productLine", void 0),
-            u(this, "name", void 0),
-            u(this, "releaseDate", void 0),
-            u(this, "preorderReleaseAt", void 0),
-            u(this, "preorderApproximateReleaseDate", void 0),
-            u(this, "summary", void 0),
-            u(this, "features", void 0),
-            u(this, "genres", void 0),
-            u(this, "dependentSkuId", void 0),
-            u(this, "manifests", void 0),
-            u(this, "availableRegions", void 0),
-            u(this, "accessType", void 0),
-            u(this, "systemRequirements", void 0),
-            u(this, "contentRating", void 0),
-            u(this, "contentRatingAgency", void 0),
-            u(this, "legalNotice", void 0),
-            u(this, "price", void 0),
-            u(this, "premium", void 0),
-            u(this, "showAgeGate", void 0),
-            u(this, "restricted", void 0),
-            u(this, "slug", void 0),
-            u(this, "exclusive", void 0),
-            u(this, "locales", void 0),
-            u(this, "flags", void 0),
-            u(this, "externalPurchaseUrl", void 0),
-            u(this, "deleted", void 0),
-            u(this, "bundledSkuIds", void 0),
-            u(this, "tenantMetadata", void 0),
-            u(this, "thumbnailAssetId", void 0),
-            u(this, "description", void 0),
+            d(this, "id", void 0),
+            d(this, "type", void 0),
+            d(this, "applicationId", void 0),
+            d(this, "application", void 0),
+            d(this, "eligiblePaymentGateways", void 0),
+            d(this, "productLine", void 0),
+            d(this, "name", void 0),
+            d(this, "releaseDate", void 0),
+            d(this, "preorderReleaseAt", void 0),
+            d(this, "preorderApproximateReleaseDate", void 0),
+            d(this, "summary", void 0),
+            d(this, "features", void 0),
+            d(this, "genres", void 0),
+            d(this, "dependentSkuId", void 0),
+            d(this, "manifests", void 0),
+            d(this, "availableRegions", void 0),
+            d(this, "accessType", void 0),
+            d(this, "systemRequirements", void 0),
+            d(this, "contentRating", void 0),
+            d(this, "contentRatingAgency", void 0),
+            d(this, "legalNotice", void 0),
+            d(this, "price", void 0),
+            d(this, "premium", void 0),
+            d(this, "showAgeGate", void 0),
+            d(this, "restricted", void 0),
+            d(this, "slug", void 0),
+            d(this, "exclusive", void 0),
+            d(this, "locales", void 0),
+            d(this, "flags", void 0),
+            d(this, "externalPurchaseUrl", void 0),
+            d(this, "deleted", void 0),
+            d(this, "bundledSkuIds", void 0),
+            d(this, "bundledSkus", void 0),
+            d(this, "tenantMetadata", void 0),
+            d(this, "thumbnailAssetId", void 0),
+            d(this, "description", void 0),
             (this.id = e.id),
             (this.type = e.type),
             (this.applicationId = e.applicationId),
@@ -233,6 +336,7 @@ class p extends s.A {
             (this.externalPurchaseUrl = e.externalPurchaseUrl || null),
             (this.deleted = e.deleted),
             (this.bundledSkuIds = e.bundledSkuIds),
+            (this.bundledSkus = e.bundledSkus),
             (this.tenantMetadata = e.tenantMetadata),
             (this.thumbnailAssetId = e.thumbnailAssetId),
             (this.description = e.description);

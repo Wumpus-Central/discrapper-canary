@@ -1,9 +1,10 @@
 n.d(t, {
-    A: () => u,
+    A: () => d,
 });
-var r = n(315069);
+var r = n(315069),
+    i = n(731935);
 
-function i(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +18,7 @@ function i(e, t, n) {
     );
 }
 
-function a(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,13 +29,13 @@ function a(e) {
                 }),
             )),
             r.forEach(function (t) {
-                i(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
 }
 
-function s(e, t) {
+function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,19 +48,19 @@ function s(e, t) {
     return n;
 }
 
-function o(e, t) {
+function l(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
+            : o(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function l(e, t) {
+function c(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -70,13 +71,13 @@ function l(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = c(e, t)), Object.getOwnPropertySymbols))
+    if (((a = u(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function c(e, t) {
+function u(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,30 +87,33 @@ function c(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-class u extends r.A {
+class d extends r.A {
     static fromServer(e) {
-        let { sku_id: t, sku_product_line: n, sku_name: r, is_owned: i, gifter_user_id: s } = e;
-        return new u(
-            o(a({}, l(e, ["sku_id", "sku_product_line", "sku_name", "is_owned", "gifter_user_id"])), {
+        let { sku_id: t, sku_product_line: n, sku_name: r, is_owned: a, gifter_user_id: o, sku: u } = e;
+        return new d(
+            l(s({}, c(e, ["sku_id", "sku_product_line", "sku_name", "is_owned", "gifter_user_id", "sku"])), {
                 sku_id: t,
                 sku_product_line: n,
                 sku_name: r,
-                is_owned: i,
-                gifter_user_id: s,
+                is_owned: a,
+                gifter_user_id: o,
+                sku: null != u ? i.A.createFromServer(u) : void 0,
             }),
         );
     }
     constructor(e) {
         super(),
-            i(this, "skuId", void 0),
-            i(this, "skuProductLine", void 0),
-            i(this, "skuName", void 0),
-            i(this, "isOwned", void 0),
-            i(this, "gifterUserId", void 0),
+            a(this, "skuId", void 0),
+            a(this, "skuProductLine", void 0),
+            a(this, "skuName", void 0),
+            a(this, "isOwned", void 0),
+            a(this, "gifterUserId", void 0),
+            a(this, "sku", void 0),
             (this.skuId = e.sku_id),
             (this.skuProductLine = e.sku_product_line),
             (this.skuName = e.sku_name),
             (this.isOwned = e.is_owned),
-            (this.gifterUserId = e.gifter_user_id);
+            (this.gifterUserId = e.gifter_user_id),
+            (this.sku = e.sku);
     }
 }
