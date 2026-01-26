@@ -422,7 +422,7 @@ function J(e) {
             return s && null != (e = null == f ? void 0 : f.id) ? e : null;
         }, [f, s]);
     l.useEffect(() => {
-        null == e.previewQuest && null != g && (0, A.yO)([g], v.uF.QUEST_LIVE_STREAM);
+        null == e.previewQuest && null != g && (0, A.yO)([g], v.uF.QUEST_LIVE_STREAM, "quest_channel_call_header");
     }, [g, e.previewQuest]);
     let h = (0, a.bG)([x.A], () => {
             var e;

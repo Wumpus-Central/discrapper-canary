@@ -4114,6 +4114,7 @@ var na = (function (e) {
             (e.QUEST_DECISION_ROUNDTRIP = "quest_decision_roundtrip"),
             (e.QUEST_DECISION_ROUNDTRIP_ERROR = "quest_decision_roundtrip_error"),
             (e.QUEST_DECISION_RECEIVED = "quest_decision_received"),
+            (e.EARNED_DECISION_ROUNDTRIP = "earned_decision_roundtrip"),
             (e.QUEST_ASSET_LOADING_FAILURE = "quest_asset_loading_failure"),
             (e.QUEST_CONTENT_RENDERING_FAILURE = "quest_content_rendering_failure"),
             (e.QUEST_BAR_RENDER_PERFORMANCE_MEASURED = "quest_bar_render_performance_measured"),
