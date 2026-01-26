@@ -21,6 +21,7 @@ var r = (function (e) {
             (e[(e.VOICE_CHANNEL_PREVIEWED = 7)] = "VOICE_CHANNEL_PREVIEWED"),
             (e[(e.OPENED_GAME_PROFILE = 8)] = "OPENED_GAME_PROFILE"),
             (e[(e.COPIED_LEADERBOARD_ROW = 9)] = "COPIED_LEADERBOARD_ROW"),
+            (e[(e.APPLICATION_WIDGET_PREVIEW_VIEW_MORE = 10)] = "APPLICATION_WIDGET_PREVIEW_VIEW_MORE"),
             e
         );
     })({});

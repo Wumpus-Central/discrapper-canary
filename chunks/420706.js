@@ -412,6 +412,7 @@ let B = (e) => {
                                         j(x({}, _), {
                                             selected: n,
                                             hovered: C.current,
+                                            trackRankingItemInteraction: F,
                                         }),
                                     ),
                                 }),
