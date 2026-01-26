@@ -99,8 +99,10 @@ class d {
                     t && ((this.routeChangeCount = 0), this.executeRouteRewrites((0, o.JK)().location, "REPLACE"));
             }),
             c(this, "handleRouteChange", (e, t) => {
-                if (this.executeRouteRewrites(e, t)) return;
-                if (!(0, s.o)(e)) return void (0, o.bG)(l.BVt.ME);
+                if ("POP" !== t) {
+                    if (this.executeRouteRewrites(e, t)) return;
+                    if (!(0, s.o)(e)) return void (0, o.bG)(l.BVt.ME);
+                }
                 let n = a.A.getState();
                 for (let r of (n.basePath !== e.pathname && n.resetPath(e.pathname), this.listeners))
                     try {

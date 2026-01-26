@@ -7,28 +7,28 @@ n.d(t, {
 var r = n(627968),
     l = n(64700),
     i = n(503698),
-    a = n.n(i),
-    s = n(108531),
+    s = n.n(i),
+    a = n(108531),
     o = n(311907),
     c = n(827734);
 n(990078);
 var u = n(397927),
     d = n(73153),
-    f = n(334738),
-    p = n(964486);
+    p = n(334738),
+    h = n(964486);
 n(793574), n(688810);
-var h = n(952790),
-    b = n(85109),
-    g = n(734057),
-    m = n(71393),
+var f = n(952790),
+    g = n(85109),
+    m = n(734057),
+    b = n(71393),
     A = n(320501),
     y = n(222823),
-    O = n(661191),
-    j = n(851109),
-    v = n(706341),
-    x = n(932883),
-    E = n(599486),
-    _ = n(320697),
+    _ = n(661191),
+    O = n(851109),
+    j = n(706341),
+    v = n(932883),
+    x = n(599486),
+    E = n(320697),
     C = n(394953),
     S = n(628325),
     I = n(524628),
@@ -65,8 +65,8 @@ function M(e) {
     return e;
 }
 let L = [],
-    G = {
-        controller: new s.Controller({
+    k = {
+        controller: new a.Controller({
             value: 1,
             immediate: !0,
         }),
@@ -79,13 +79,13 @@ let L = [],
         disableBannerAnimation: !0,
     };
 
-function k(e) {
+function G(e) {
     let { includePanelSpacing: t } = e,
-        n = (0, x.op)(),
-        { selectedFilter: i } = (0, E.A)(),
-        s = (0, o.bG)([_.A], () => _.A.oldestDisplayedMessageId),
-        c = (0, o.yK)([_.A], () => _.A.getInboxMessages()),
-        S = (0, o.yK)([y.Ay, m.A, _.A], () =>
+        n = (0, v.op)(),
+        { selectedFilter: i } = (0, x.A)(),
+        a = (0, o.bG)([E.A], () => E.A.oldestDisplayedMessageId),
+        c = (0, o.yK)([E.A], () => E.A.getInboxMessages()),
+        S = (0, o.yK)([y.Ay, b.A, E.A], () =>
             c.filter(
                 (e) =>
                     !(0, C.EJ)({
@@ -93,11 +93,11 @@ function k(e) {
                         channelId: e.channelId,
                         guildId: e.guildId,
                         ReadStateStore_: y.Ay,
-                        GuildStore_: m.A,
-                    }) && !(0, C.zo)(e, _.A.selectedItemInfo),
+                        GuildStore_: b.A,
+                    }) && !(0, C.zo)(e, E.A.selectedItemInfo),
             ),
         ),
-        I = (0, o.yK)([y.Ay, m.A, _.A], () =>
+        I = (0, o.yK)([y.Ay, b.A, E.A], () =>
             c.filter(
                 (e) =>
                     (0, C.EJ)({
@@ -105,27 +105,27 @@ function k(e) {
                         channelId: e.channelId,
                         guildId: e.guildId,
                         ReadStateStore_: y.Ay,
-                        GuildStore_: m.A,
-                    }) || (0, C.zo)(e, _.A.selectedItemInfo),
+                        GuildStore_: b.A,
+                    }) || (0, C.zo)(e, E.A.selectedItemInfo),
             ),
         ),
         N = l.useCallback(
             (e) => {
                 i !== P.Io.BOOKMARKS &&
-                    v.A.loadMoreInbox({
+                    j.A.loadMoreInbox({
                         viewId: n,
                         loadingTrigger: e,
                     });
             },
             [i, n],
         ),
-        { hasLoadedEver: R, canLoadMore: k } = (0, o.cf)([_.A], () => ({
-            hasLoadedEver: _.A.hasLoadedEver,
-            canLoadMore: _.A.canLoadMore({}),
+        { hasLoadedEver: R, canLoadMore: G } = (0, o.cf)([E.A], () => ({
+            hasLoadedEver: E.A.hasLoadedEver,
+            canLoadMore: E.A.canLoadMore({}),
         }));
     l.useEffect(() => {
-        k && !R && N(P.VA.ON_OPEN);
-    }, [k, R, N]),
+        G && !R && N(P.VA.ON_OPEN);
+    }, [G, R, N]),
         (function (e) {
             let { unreadChannelIds: t } = (0, C.U4)();
             l.useEffect(() => {
@@ -139,8 +139,8 @@ function k(e) {
                         null != r &&
                             null != l &&
                             i &&
-                            O.default.compare(l, r) >= 0 &&
-                            f.ack(
+                            _.default.compare(l, r) >= 0 &&
+                            p.ack(
                                 e,
                                 {
                                     section: w.JJy.NOTIFICATIONS_INBOX,
@@ -152,7 +152,7 @@ function k(e) {
                     });
             }, [e, t]);
         })(R ? I : null);
-    let U = (0, o.yK)([b.A], () => b.A.getSavedMessages()),
+    let U = (0, o.yK)([g.A], () => g.A.getSavedMessages()),
         K = l.useMemo(
             () =>
                 U.flatMap((e) => {
@@ -164,7 +164,7 @@ function k(e) {
                               {
                                   id: n.id,
                                   channelId: n.channel_id,
-                                  guildId: null == (t = g.A.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
+                                  guildId: null == (t = m.A.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
                                   kind: P.yL.BOOKMARK,
                                   message: n,
                               },
@@ -172,29 +172,29 @@ function k(e) {
                 }),
             [U],
         ),
-        W = V(S, i, s),
-        z = V(I, i, null);
-    (0, p.Ay)(() => {
+        W = B(S, i, a),
+        z = B(I, i, null);
+    (0, h.Ay)(() => {
         var e;
         d.h.dispatch({
             type: "NOTIFICATIONS_INBOX_OPEN",
         });
-        let t = (0, j.GE)({
+        let t = (0, O.GE)({
                 location: "NotificationsInboxSidebar",
             }).notificationCenterVariant,
-            r = null == (e = _.A.getDevOverrides().navOnClick) || e;
-        if (t !== j.U5.SIDEBAR || !1 === r) return;
+            r = null == (e = E.A.getDevOverrides().navOnClick) || e;
+        if (t !== O.U5.SIDEBAR || !1 === r) return;
         let { message: l, isUnread: i } = (function (e, t) {
             var n, r, l;
             let i = null == (r = e[e.length - 1]) ? void 0 : r.message,
-                a = null == (l = t[t.length - 1]) ? void 0 : l.message,
-                s = null != a ? a : i;
-            if (null != s)
+                s = null == (l = t[t.length - 1]) ? void 0 : l.message,
+                a = null != s ? s : i;
+            if (null != a)
                 return {
-                    message: s,
-                    isUnread: null != a,
+                    message: a,
+                    isUnread: null != s,
                 };
-            let o = _.A.getNotifyingChannelIds();
+            let o = E.A.getNotifyingChannelIds();
             if (null == o || 0 === o.length)
                 return {
                     message: null,
@@ -209,14 +209,14 @@ function k(e) {
                   }
                 : {
                       message: {
-                          id: O.default.atNextMillisecond(u),
+                          id: _.default.atNextMillisecond(u),
                           channel_id: c,
                       },
                       isUnread: null != (n = y.Ay.hasUnread(c)) && n,
                   };
         })(W, z);
         null != l &&
-            v.A.inboxItemClick({
+            j.A.inboxItemClick({
                 message: l,
                 channel: {
                     id: l.channel_id,
@@ -224,38 +224,39 @@ function k(e) {
                 isUnread: i,
                 isSidebar: !0,
                 track: !1,
+                autoTriggeredOnInboxOpen: !0,
                 viewId: n,
             });
     }),
-        (0, p.l0)(() => {
+        (0, h.l0)(() => {
             d.h.dispatch({
                 type: "NOTIFICATIONS_INBOX_CLOSE",
             });
         });
-    let { filterStyle: Y } = (0, j.X8)({
+    let { filterStyle: Y } = (0, O.X8)({
             location: "NotificationsInboxSidebar",
         }),
-        q = Y === j.yF.DROPDOWN && i !== P.Io.ALL,
+        q = Y === O.yF.DROPDOWN && i !== P.Io.ALL,
         X = (0, P.Yw)(i);
     return (0, r.jsx)("nav", {
-        className: a()(D.kL, {
+        className: s()(D.kL, {
             [D.Yu]: t,
         }),
         children: (0, r.jsxs)(u.Fmo, {
             forceLevel: 1,
             component: (0, r.jsx)(
-                h.Ay,
+                f.Ay,
                 M(
                     {
                         hasSubheader: !0,
                         guild: X,
                     },
-                    G,
+                    k,
                 ),
             ),
             children: [
                 i === P.Io.ALL &&
-                    (0, r.jsx)(B, {
+                    (0, r.jsx)(H, {
                         hideBanner: !R || i !== P.Io.ALL,
                     }),
                 q &&
@@ -264,11 +265,11 @@ function k(e) {
                     }),
                 (0, r.jsx)(T.A, {
                     className: D.cl,
-                    renderMessageGroup: H,
+                    renderMessageGroup: F,
                     messages: i === P.Io.BOOKMARKS ? K : W,
                     unreadMessages: i === P.Io.BOOKMARKS ? [] : z,
                     listName: "notifications-inbox",
-                    renderLoadingState: F,
+                    renderLoadingState: V,
                     ignoreGrouping: i === P.Io.BOOKMARKS,
                     loadMore: N,
                 }),
@@ -278,12 +279,12 @@ function k(e) {
 }
 
 function U(e) {
-    return (0, r.jsx)(x.GM, {
-        children: (0, r.jsx)(k, M({}, e)),
+    return (0, r.jsx)(v.GM, {
+        children: (0, r.jsx)(G, M({}, e)),
     });
 }
 
-function V(e, t, n) {
+function B(e, t, n) {
     return l.useMemo(
         () =>
             0 === e.length || t === P.Io.BOOKMARKS
@@ -291,18 +292,18 @@ function V(e, t, n) {
                 : e.filter((e) => {
                       let { id: r } = e;
                       return (
-                          !(O.default.age(r) > P.V$ || (null != n && 0 >= O.default.compare(r, n))) && t === P.Io.ALL
+                          !(_.default.age(r) > P.V$ || (null != n && 0 >= _.default.compare(r, n))) && t === P.Io.ALL
                       );
                   }),
         [e, t, n],
     );
 }
 
-function F() {
+function V() {
     return (0, r.jsx)(I.A, {});
 }
 
-function H(e, t) {
+function F(e, t) {
     return (0, r.jsx)(
         N.A,
         {
@@ -314,11 +315,11 @@ function H(e, t) {
     );
 }
 
-function B(e) {
+function H(e) {
     let { hideBanner: t } = e,
         n = (0, S.S)((e) => e.shouldHide());
     return (0, r.jsx)("div", {
-        className: a()(D.dl, {
+        className: s()(D.dl, {
             [D.jD]: n || t,
         }),
         children: (0, r.jsxs)("div", {

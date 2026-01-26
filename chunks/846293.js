@@ -1,8 +1,8 @@
 n.d(t, {
-    Ay: () => ev,
-    Pq: () => eA,
+    Ay: () => eA,
+    Pq: () => ev,
     he: () => eO,
-    rq: () => ey,
+    rq: () => eb,
 }),
     n(938796),
     n(65821);
@@ -22,18 +22,18 @@ var r = n(481613),
     m = n(178253),
     g = n(811024),
     E = n(983057),
-    b = n(612200),
-    y = n(323073),
+    y = n(612200),
+    b = n(323073),
     O = n(392054),
-    A = n(197111),
-    v = n(507263),
-    S = n(202384),
-    I = n(51758),
+    v = n(197111),
+    A = n(507263),
+    I = n(202384),
+    S = n(51758),
     T = n(473529),
     C = n(707592),
     N = n(698441),
-    R = n(610101),
-    w = n(224536),
+    w = n(610101),
+    R = n(224536),
     P = n(21599),
     D = n(970163),
     x = n(700241),
@@ -52,11 +52,11 @@ var r = n(481613),
     K = n(287809),
     z = n(954571),
     q = n(927813),
-    X = n(499785),
-    Z = n(877062),
+    Z = n(499785),
+    X = n(877062),
     Q = n(827343),
-    $ = n(686956),
-    J = n(401843),
+    J = n(686956),
+    $ = n(401843),
     ee = n(652215),
     et = n(204925),
     en = n(746080),
@@ -176,7 +176,10 @@ function eh(e, t) {
         };
     return (
         null != i && (o.welcomeModalChannelId = i),
-        s && (o.state = ea.J2),
+        s &&
+            (o.state = {
+                stageInviteKey: ea.J2,
+            }),
         null != a && (o.guildScheduledEventId = a.id),
         (e) => (null != r ? r(e, o) : (0, j.pX)(e, o))
     );
@@ -197,24 +200,24 @@ function em(e) {
     let { type: _ } = r,
         h = G.A.getChannel(r.id),
         m = e_(t, r, i),
-        b = _ === ee.rbe.GUILD_STAGE_VOICE,
-        y = ee.BVt.CHANNEL(t, m);
+        y = _ === ee.rbe.GUILD_STAGE_VOICE,
+        b = ee.BVt.CHANNEL(t, m);
     (0, k.QE)(_)
-        ? (0, v.B)(() => {
+        ? (0, A.B)(() => {
               Promise.resolve()
                   .then(n.bind(n, 956793))
                   .then((e) => {
                       let { default: n } = e,
                           s = () => {
-                              if (b) {
-                                  (0, M.av)(r instanceof k.YB ? r : (0, k.createChannelRecord)(r)), (0, j.pX)(y);
+                              if (y) {
+                                  (0, M.av)(r instanceof k.YB ? r : (0, k.createChannelRecord)(r)), (0, j.pX)(b);
                                   return;
                               }
                               (null == i ? void 0 : i.muteOnJoinVoiceChannel) && Q.A.setSelfMute(f.x.DEFAULT, !0),
                                   n.selectVoiceChannel(m),
                                   c === ei.yV.STREAM &&
                                       null != l &&
-                                      J.Nl({
+                                      $.Nl({
                                           streamType: er.U4.GUILD,
                                           ownerId: l,
                                           guildId: t,
@@ -232,7 +235,7 @@ function em(e) {
                                           commandOrigin: O.iw.CHAT,
                                       }));
                           };
-                      !d && (0, I.V)(t, [B.A, K.default, F.Ay]) ? (0, S.Ze)(t, s) : s();
+                      !d && (0, S.V)(t, [B.A, K.default, F.Ay]) ? (0, I.Ze)(t, s) : s();
                   });
           })
         : (0, g.AX)(h) &&
@@ -247,13 +250,13 @@ function em(e) {
               analyticsLocations: a,
               commandOrigin: O.iw.CHAT,
           })),
-        eh(r, i)(y);
+        eh(r, i)(b);
 }
 
 function eg(e) {
     let { guildScheduledEvent: t, welcomeModalChannelId: n } = e;
     null != t &&
-        (0, v.B)(() => {
+        (0, A.B)(() => {
             let e = {
                 guildScheduledEventId: t.id,
             };
@@ -289,7 +292,7 @@ function eE(e, t, n) {
               );
           }));
 }
-let eb = function (e, t) {
+let ey = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
         G.A.addConditionalChangeListener(() => {
             var r;
@@ -298,7 +301,7 @@ let eb = function (e, t) {
             return (
                 null == i ||
                 null == a ||
-                (!((i.nsfw && !a.nsfwAllowed) || (i.isGuildVocalOrThread() && (0, y.Tv)(e))) &&
+                (!((i.nsfw && !a.nsfwAllowed) || (i.isGuildVocalOrThread() && (0, b.Tv)(e))) &&
                     ((null == t ? void 0 : t.guildScheduledEvent) != null
                         ? eg(t)
                         : em({
@@ -311,9 +314,9 @@ let eb = function (e, t) {
             );
         });
     },
-    ey = async (e) => {
+    eb = async (e) => {
         let { guild_id: t, channel_id: n } = e;
-        (0, N.Fd)(e) && null != n ? eb(n) : await $.A.transitionToGuildSync(t);
+        (0, N.Fd)(e) && null != n ? ey(n) : await J.A.transitionToGuildSync(t);
     };
 
 function eO(e, t) {
@@ -329,14 +332,14 @@ function eO(e, t) {
     });
 }
 
-function eA(e, t, n) {
+function ev(e, t, n) {
     z.default.track(ee.HAw.INVITE_SERVER_CLICKED, {
         guild_id: e,
         action: t,
         location_stack: null != n ? n : null,
     });
 }
-let ev = {
+let eA = {
     resolveInvite: eE,
     getInviteContext: (e, t) => ({
         location: e,
@@ -473,7 +476,7 @@ let ev = {
         }),
     async fetchFriendMembers(e) {
         try {
-            let { body: t } = await X.A.get({
+            let { body: t } = await Z.A.get({
                 url: ee.Rsh.INVITE_FRIEND_MEMBERS(e),
                 trackedActionData: {
                     event: a.NetworkActionNames.INVITE_FRIEND_MEMBERS_FETCH,
@@ -514,7 +517,7 @@ let ev = {
     },
     revokeInvite(e) {
         let { code: t, channel: n } = e;
-        return X.A.delete({
+        return Z.A.delete({
             url: ee.Rsh.INVITE(t),
             oldFormErrors: !0,
             trackedActionData: {
@@ -588,7 +591,7 @@ let ev = {
                       throw (
                           ((null == (t = e.body) ? void 0 : t.code) ===
                               ee.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
-                              (0, b.yO)(et.w_.JOIN_LARGE_GUILD_UNDERAGE),
+                              (0, y.yO)(et.w_.JOIN_LARGE_GUILD_UNDERAGE),
                           _.h.dispatch({
                               type: "INVITE_ACCEPT_FAILURE",
                               code: l,
@@ -611,7 +614,7 @@ let ev = {
             callback: (e) => {
                 if (null != e.channel) {
                     let t = ef(e);
-                    eb(e.channel.id, t, null != r ? r : []);
+                    ey(e.channel.id, t, null != r ? r : []);
                 }
                 null != i && i(e);
             },
@@ -621,9 +624,9 @@ let ev = {
         var r, i;
         let { channel: a, guild: l } = e;
         if (null != l && (null == (i = l.features) ? void 0 : i.includes(ee.GuildFeatures.HUB)))
-            return void w.A.onOpenHubInvite(e);
+            return void R.A.onOpenHubInvite(e);
         let c = (0, o.Lt)(null != (r = e.flags) ? r : 0, s.Q.IS_APPLICATION_BYPASS);
-        if (null != l && !c && e.new_member && (0, R.h)(l)) return void (0, R.W)(l.id);
+        if (null != l && !c && e.new_member && (0, w.h)(l)) return void (0, w.W)(l.id);
         if (null == a) return;
         let u = ef(e);
         null != t && (u.transitionTo = t),
@@ -648,7 +651,7 @@ let ev = {
         }
     },
     openNativeAppModal(e) {
-        A.A.openNativeAppModal(e, ee.e$_.INVITE_BROWSER);
+        v.A.openNativeAppModal(e, ee.e$_.INVITE_BROWSER);
     },
     openApp(e, t, n, r, a) {
         var s, o;
@@ -688,7 +691,7 @@ let ev = {
                 });
         } else
             "#" === (d = null != t ? ee.BVt.INVITE_PROXY(t) : "")[0] && (d = d.slice(1)), (d = "discord://".concat(d));
-        Z.A.launch(d, (t) => {
+        X.A.launch(d, (t) => {
             _.h.dispatch(
                 t
                     ? {
@@ -702,6 +705,6 @@ let ev = {
             );
         });
     },
-    transitionToInviteChannelSync: eb,
-    trackInviteServerClicked: eA,
+    transitionToInviteChannelSync: ey,
+    trackInviteServerClicked: ev,
 };

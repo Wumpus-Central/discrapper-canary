@@ -22,67 +22,68 @@ function f(e) {
             alignment: m,
             style: g,
             eventTargetRef: E,
-            artboard: b,
-            withReducedMotion: y = "halt",
+            artboard: y,
+            withReducedMotion: b = "halt",
             ref: O,
-            artboardProperties: A,
-            dataBinding: v,
-            onDataBindingChange: S,
-            touchScrollEnabled: I = !0,
+            artboardProperties: v,
+            dataBinding: A,
+            onDataBindingChange: I,
+            touchScrollEnabled: S = !0,
             dynamicDataBinding: T,
             listenOnDocumentBody: C,
             eventCapture: N,
-            assetLoader: R,
-            onLoad: w,
+            assetLoader: w,
+            onLoad: R,
+            stateMachine: P,
         } = e,
-        P = i.useContext(l.C),
-        D = (0, o.R)(),
-        x = null != (t = null == (n = (a = (0, c.G9)()).isWindowFocused) ? void 0 : n.call(a)) ? t : D,
-        [L, j] = i.useState(void 0),
-        M = i.useRef(null),
-        { rive: k, RiveComponent: U } = (0, s.useRive)({
+        D = i.useContext(l.C),
+        x = (0, o.R)(),
+        L = null != (t = null == (n = (a = (0, c.G9)()).isWindowFocused) ? void 0 : n.call(a)) ? t : x,
+        [j, M] = i.useState(void 0),
+        k = i.useRef(null),
+        { rive: U, RiveComponent: G } = (0, s.useRive)({
             eventTarget: null == E ? void 0 : E.current,
             buffer: f,
             autoplay: p,
-            stateMachines: L,
-            artboard: b,
+            stateMachines: null != P ? [P] : j,
+            artboard: y,
             useOffscreenRenderer: !0,
             layout: new s.Layout({
                 fit: null != h ? u.i[h] : s.Fit.Cover,
                 alignment: null != m ? u.y[m] : s.Alignment.Center,
             }),
-            isTouchScrollEnabled: I,
+            isTouchScrollEnabled: S,
             listenOnDocumentBody: C,
             eventCapture: N,
-            assetLoader: R,
-            onLoad: w,
+            assetLoader: w,
+            onLoad: R,
         });
     i.useImperativeHandle(
         O,
         () => ({
-            play: () => (null == k ? void 0 : k.play()),
-            pause: () => (null == k ? void 0 : k.pause()),
-            stop: () => (null == k ? void 0 : k.stop()),
+            play: () => (null == U ? void 0 : U.play()),
+            pause: () => (null == U ? void 0 : U.pause()),
+            stop: () => (null == U ? void 0 : U.stop()),
             getProperties: () => {
                 var e, t;
                 return null !=
                     (e =
-                        null == k || null == (t = k.viewModelInstance)
+                        null == U || null == (t = U.viewModelInstance)
                             ? void 0
                             : t.properties.reduce((e, t) => {
                                   var n, r, i, a, s;
                                   return (
                                       "viewModel" === t.type &&
-                                          (null == k ||
-                                              null == (s = k.viewModelInstance) ||
+                                          (null == U ||
+                                              null == (s = U.viewModelInstance) ||
                                               null == (a = s.viewModel(t.name)) ||
                                               a.properties.forEach((n) => {
                                                   var r, i, a;
                                                   e[t.name + "/" + n.name] = {
                                                       type: n.type,
                                                       value:
-                                                          null == k ||
-                                                          null == (a = k.viewModelInstance) ||
+                                                          null == U ||
+                                                          null == (a = U.viewModelInstance) ||
                                                           null == (i = a[n.type]) ||
                                                           null == (r = i.call(a, "".concat(t.name, "/").concat(n.name)))
                                                               ? void 0
@@ -92,8 +93,8 @@ function f(e) {
                                       (e[t.name] = {
                                           type: t.type,
                                           value:
-                                              null == k ||
-                                              null == (i = k.viewModelInstance) ||
+                                              null == U ||
+                                              null == (i = U.viewModelInstance) ||
                                               null == (r = i[t.type]) ||
                                               null == (n = r.call(i, t.name))
                                                   ? void 0
@@ -106,9 +107,9 @@ function f(e) {
                     : {};
             },
             getArtboards: () => {
-                if (null == k) return [];
+                if (null == U) return [];
                 let e = new Set(),
-                    t = k.riveFile.getInstance();
+                    t = U.riveFile.getInstance();
                 for (let n = 0; n < t.artboardCount(); n++) {
                     let r = t.artboardByIndex(n);
                     e.add(r.name);
@@ -116,91 +117,92 @@ function f(e) {
                 return Array.from(e);
             },
         }),
-        [k],
+        [U],
     ),
         (0, d.J)({
-            rive: k,
-            artboard: b,
-            artboardProperties: A,
-            dataBinding: v,
+            rive: U,
+            artboard: y,
+            artboardProperties: v,
+            dataBinding: A,
             dynamicDataBinding: T,
-            onDataBindingChange: S,
+            onDataBindingChange: I,
         }),
         i.useEffect(() => {
-            if (null != k && "short-loop" === y && P.reducedMotion.enabled) {
+            if (null != U && "short-loop" === b && D.reducedMotion.enabled) {
                 let e = () => {
-                        k.isPlaying &&
-                            (M.current = setTimeout(() => {
-                                k.pause();
+                        U.isPlaying &&
+                            (k.current = setTimeout(() => {
+                                U.pause();
                             }, 5e3));
                     },
                     t = () => {
-                        clearTimeout(M.current);
+                        clearTimeout(k.current);
                     };
                 return (
-                    k.on(s.EventType.Play, e),
-                    k.on(s.EventType.Pause, t),
-                    k.on(s.EventType.Stop, t),
+                    U.on(s.EventType.Play, e),
+                    U.on(s.EventType.Pause, t),
+                    U.on(s.EventType.Stop, t),
                     () => {
-                        k.off(s.EventType.Play, e), k.off(s.EventType.Pause, t), k.off(s.EventType.Stop, t);
+                        U.off(s.EventType.Play, e), U.off(s.EventType.Pause, t), U.off(s.EventType.Stop, t);
                     }
                 );
             }
-        }, [k, y, P.reducedMotion.enabled]),
+        }, [U, b, D.reducedMotion.enabled]),
         i.useLayoutEffect(() => {
-            if (null != k && "layout" === h) {
-                k.resizeDrawingSurfaceToCanvas();
+            if (null != U && "layout" === h) {
+                U.resizeDrawingSurfaceToCanvas();
                 let e = setTimeout(() => {
-                    null != k.canvas && k.resizeDrawingSurfaceToCanvas();
+                    null != U.canvas && U.resizeDrawingSurfaceToCanvas();
                 }, 100);
                 return () => clearTimeout(e);
             }
-        }, [k, h]),
+        }, [U, h]),
         i.useEffect(() => {
-            null != k &&
-                null == L &&
-                (j(k.stateMachineNames),
-                k.reset({
-                    stateMachines: k.stateMachineNames,
+            null != U &&
+                null == j &&
+                null == P &&
+                (M(U.stateMachineNames),
+                U.reset({
+                    stateMachines: U.stateMachineNames,
                     autoplay: p,
-                    artboard: b,
+                    artboard: y,
                     autoBind: !0,
                 }),
-                k.setupRiveListeners());
-        }, [k, p, L, b]);
-    let G = i.useRef(0);
+                U.setupRiveListeners());
+        }, [U, p, j, y, P]);
+    let V = i.useRef(0);
     i.useEffect(() => {
-        if (null == k) return;
+        if (null == U) return;
         let e = (t) => {
             null != t.data &&
                 "number" == typeof t.data &&
-                ((G.current = t.data),
+                ((V.current = t.data),
                 t.data > 0 &&
-                    ("halt" === y && P.reducedMotion.enabled && k.isPlaying && k.pause(),
-                    k.off(s.EventType.Advance, e)));
+                    ("halt" === b && D.reducedMotion.enabled && U.isPlaying && U.pause(),
+                    U.off(s.EventType.Advance, e)));
         };
         return (
-            k.on(s.EventType.Advance, e),
-            p && k.play(),
+            U.on(s.EventType.Advance, e),
+            p && U.play(),
             () => {
-                k.off(s.EventType.Advance, e);
+                U.off(s.EventType.Advance, e);
             }
         );
-    }, [k, P.reducedMotion.enabled, y, p]);
-    let V = i.useRef(!1);
+    }, [U, D.reducedMotion.enabled, b, p]);
+    let F = i.useRef(!1);
     return (
         i.useEffect(() => {
-            if (null != k)
+            if (null != U)
                 return (
-                    !x && V.current && k.isPlaying && G.current > 0
-                        ? k.pause()
-                        : x && !k.isPlaying && V.current && k.play(),
+                    !L && F.current && U.isPlaying && V.current > 0
+                        ? U.pause()
+                        : L && !U.isPlaying && F.current && U.play(),
                     () => {
-                        null != k && x && (V.current = null != k.frameRequestId);
+                        null != U && L && (F.current = null != U.frameRequestId);
                     }
                 );
-        }, [k, x]),
-        (0, r.jsx)(U, {
+        }, [U, L]),
+        (0, r.jsx)(G, {
             className: _,
             style: g,
         })

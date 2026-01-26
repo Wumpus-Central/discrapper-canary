@@ -1,18 +1,18 @@
 let r, i, a;
 n.d(t, {
     EL: () => O,
-    JK: () => v,
+    JK: () => A,
     MX: () => N,
-    PR: () => S,
+    PR: () => I,
     SB: () => C,
     TX: () => g,
-    UC: () => I,
-    aX: () => R,
-    bG: () => A,
+    UC: () => S,
+    aX: () => w,
+    bG: () => v,
     m: () => T,
-    pX: () => b,
-    sY: () => w,
-    uh: () => y,
+    pX: () => y,
+    sY: () => R,
+    uh: () => b,
 }),
     n(321073),
     n(896048),
@@ -87,13 +87,12 @@ function E(e, t) {
     );
 }
 
-function b(e, t) {
+function y(e, t) {
     if (E(e, "assign")) return;
     p.log("transitionTo - Transitioning to ".concat(e));
-    let n = null == t ? void 0 : t.source;
-    null == t || delete t.source;
-    let s = null == t ? void 0 : t.sourceLocationStack;
-    if ((null == t || delete t.sourceLocationStack, null == t)) r.push(e);
+    let n = null == t ? void 0 : t.source,
+        s = null == t ? void 0 : t.sourceLocationStack;
+    if (null == t) r.push(e);
     else {
         let n = new URL(e, "https:".concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT));
         r.push(
@@ -110,7 +109,7 @@ function b(e, t) {
     (i = n), (a = s);
 }
 
-function y(e, t, n, r) {
+function b(e, t, n, r) {
     p.log(
         "transitionToGuild - Transitioning to ".concat(
             JSON.stringify({
@@ -120,27 +119,27 @@ function y(e, t, n, r) {
             }),
         ),
     ),
-        b(u.BVt.CHANNEL(e, t, n), r);
+        y(u.BVt.CHANNEL(e, t, n), r);
 }
 
 function O() {
     return null != i && c.n.has(i);
 }
 
-function A(e, t, n) {
+function v(e, t, n) {
     E(e, "replace") ||
         (p.log("Replacing route with ".concat(e)), "string" == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
 }
 
-function v() {
+function A() {
     return r;
 }
 
-function S() {
+function I() {
     return i;
 }
 
-function I() {
+function S() {
     return a;
 }
 
@@ -179,10 +178,10 @@ function N() {
     return h;
 }
 
-function R() {
+function w() {
     g() && ((i = null), r.goBack());
 }
 
-function w() {
+function R() {
     g() && ((i = null), r.goForward());
 }

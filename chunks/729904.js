@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => O,
+    A: () => E,
 }),
     n(65821),
     n(896048),
@@ -8,8 +8,8 @@ var r,
     i = n(960488),
     a = n(311907),
     s = n(73153),
-    o = n(626584),
-    l = n(463347),
+    o = n(463347),
+    l = n(824865),
     c = n(652215);
 
 function u(e, t, n) {
@@ -25,32 +25,31 @@ function u(e, t, n) {
         e
     );
 }
-let d = new o.A("BackForwardNavStore"),
-    f = 20,
-    p = [
+let d = 20,
+    f = [
         c.BVt.CHANNEL_THREAD_VIEW(
-            l.pv.guildId(),
-            l.pv.channelId({
+            o.pv.guildId(),
+            o.pv.channelId({
                 optional: !0,
             }),
             ":threadId",
             ":messageId?",
         ),
         c.BVt.CHANNEL(
-            l.pv.guildId(),
-            l.pv.channelId({
+            o.pv.guildId(),
+            o.pv.channelId({
                 optional: !0,
             }),
             ":messageId?",
         ),
         c.BVt.VOICE_CHAT_CHANNEL_PARTIAL(
-            l.pv.guildId(),
-            l.pv.channelId({
+            o.pv.guildId(),
+            o.pv.channelId({
                 optional: !0,
             }),
             ":messageId?",
         ),
-        c.BVt.CHANNELS_GAME_SHOP(l.pv.guildId(), ":pageIndex", ":skuId?", ":slug?"),
+        c.BVt.CHANNELS_GAME_SHOP(o.pv.guildId(), ":pageIndex", ":skuId?", ":slug?"),
         c.BVt.NOTIFICATIONS,
         c.BVt.FRIENDS,
         c.BVt.ME,
@@ -65,10 +64,10 @@ let d = new o.A("BackForwardNavStore"),
         c.BVt.GLOBAL_DISCOVERY_SERVERS,
         c.BVt.GLOBAL_DISCOVERY_APPS,
     ],
-    _ = [],
-    h = 0;
+    p = [],
+    _ = 0;
 
-function m(e, t) {
+function h(e, t) {
     if (t < 0 || t >= e.length) throw RangeError("index out of bounds");
     let n = 0,
         r = t;
@@ -76,62 +75,64 @@ function m(e, t) {
     return e;
 }
 
-function g(e) {
-    let { path: t, isReplace: n } = e,
-        r = (0, i.B6)(t, p);
-    if (null == r) return !1;
-    if (r.params.guildId === c.gNP && void 0 === r.params.messageId)
-        return d.verbose("Ignoring weird notification sidebar route lacking messageId"), !1;
-    if (n && _.length > 0)
+function m(e) {
+    let { location: t, action: n } = e;
+    if ("POP" === n) {
+        let e = p.findIndex((e) => e.path === t.pathname);
+        if (-1 !== e) return (_ = e), !0;
+    }
+    if (t.source === l.A.USER_NAVIGATED_BACK) {
+        _ < p.length - 1 && _++;
+        return;
+    }
+    if (t.source === l.A.USER_NAVIGATED_FORWARD) {
+        _ > 0 && _--;
+        return;
+    }
+    let { pathname: r } = t,
+        a = "REPLACE" === n,
+        s = (0, i.B6)(r, f);
+    if (null == s) return !1;
+    if (a && p.length > 0)
         return (
-            (_[h] = {
-                path: t,
-                params: r.params,
+            (p[_] = {
+                path: r,
+                params: s.params,
             }),
             !0
         );
-    if (_.length > 0) {
-        if (t === _[h].path) return !1;
-        let e = _.findIndex((e) => e.path === t);
-        -1 !== e && (h >= e && (h -= 1), _.splice(e, 1));
+    if (p.length > 0) {
+        if (r === p[_].path) return !1;
+        let e = p.findIndex((e) => e.path === r);
+        -1 !== e && (p.splice(e, 1), _ >= e && (_ -= 1));
     }
-    for (r.params.guildId !== c.gNP && (h > 0 && m(_, h), (h = 0)); _.length > f; ) _.pop();
-    _.unshift({
-        path: t,
-        params: r.params,
+    for (_ > 0 && h(p, _), _ = 0; p.length > d; ) p.pop();
+    p.unshift({
+        path: r,
+        params: s.params,
     });
 }
-
-function E(e) {
-    h < _.length - 1 && h++;
-}
-
-function b(e) {
-    h > 0 && h--;
-}
-class y extends (r = a.Ay.Store) {
+class g extends (r = a.Ay.Store) {
     initialize() {
-        (_ = []), (h = 0);
+        (p = []), (_ = 0);
     }
     get pastPlaces() {
-        return _;
+        return p;
     }
     get canGoBack() {
-        return h < _.length - 1;
+        return _ < p.length - 1;
     }
     get canGoForward() {
-        return h > 0;
+        return _ > 0;
     }
     get backDestination() {
-        return this.canGoBack ? _[h + 1] : null;
+        return this.canGoBack ? p[_ + 1] : null;
     }
     get forwardDestination() {
-        return this.canGoForward ? _[h - 1] : null;
+        return this.canGoForward ? p[_ - 1] : null;
     }
 }
-u(y, "displayName", "BackForwardNavStore");
-let O = new y(s.h, {
-    ROUTE_CHANGED: g,
-    GO_BACK: E,
-    GO_FORWARD: b,
+u(g, "displayName", "BackForwardNavStore");
+let E = new g(s.h, {
+    ROUTE_CHANGED: m,
 });

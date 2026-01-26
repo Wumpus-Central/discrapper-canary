@@ -99,11 +99,11 @@ let p = {
 };
 
 function _(e) {
-    let { artboard: t = "Icon Unlock" } = e,
-        n = d(e, ["artboard"]),
-        { status: o, buffer: c } = (0, s.CE)(i.A),
-        f = (0, s.m2)(i.A);
-    return o === s.BW.Loading
+    let { artboard: t = "Icon Unlock", stateMachine: n } = e,
+        o = d(e, ["artboard", "stateMachine"]),
+        { status: c, buffer: f } = (0, s.CE)(i.A),
+        _ = (0, s.m2)(i.A);
+    return c === s.BW.Loading
         ? null
         : (0, r.jsx)(
               a.w,
@@ -111,19 +111,20 @@ function _(e) {
                   u(
                       l(
                           {},
-                          f
+                          _
                               ? {
                                     key: "override",
                                 }
                               : {},
                       ),
                       {
-                          buffer: c,
+                          buffer: f,
                           artboard: t,
+                          stateMachine: n,
                           artboardProperties: p,
                       },
                   ),
-                  n,
+                  o,
               ),
           );
 }
