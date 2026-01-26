@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => f,
+    A: () => g,
 });
 var r = n(627968),
     i = n(64700),
@@ -7,25 +7,23 @@ var r = n(627968),
     a = n(732955),
     s = n(397927),
     o = n(976860),
-    c = n(84483),
-    u = n(652215),
-    d = n(49999),
-    p = n(49370),
-    h = n(985018),
-    g = n(880055);
+    c = n(652215),
+    u = n(49999),
+    d = n(49370),
+    p = n(985018),
+    h = n(880055);
 
-function f(e) {
-    let { targetElementRef: t, dismissPopover: n, children: f } = e,
-        { orbsRewardAmount: m } = (0, c.uX)("PremiumOrbRewardsOrbDropPopover"),
-        A = i.useCallback(() => {
-            n(d.i.TAKE_ACTION), (0, o.pX)("".concat(u.BVt.NITRO_HOME, "?section=orbs"));
+function g(e) {
+    let { targetElementRef: t, dismissPopover: n, lastGrantedRewardAmount: g, children: f } = e,
+        m = i.useCallback(() => {
+            n(u.i.TAKE_ACTION), (0, o.pX)("".concat(c.BVt.NITRO_HOME, "?section=orbs"));
         }, [n]),
-        _ = (0, r.jsx)(l.AM, {
+        A = (0, r.jsx)(l.AM, {
             targetElementRef: t,
-            onRequestClose: () => n(d.i.USER_DISMISS),
+            onRequestClose: () => n(u.i.USER_DISMISS),
             graphic: {
                 type: "image",
-                src: g.A,
+                src: h.A,
             },
             badge: {
                 type: "beta",
@@ -38,15 +36,15 @@ function f(e) {
                 align: "start",
             },
             size: "md",
-            title: h.intl.string(p.default["78+gLr"]),
-            body: h.intl.formatToPlainString(p.default.Ry1TXC, {
-                orbsCount: m,
+            title: p.intl.string(d.default["78+gLr"]),
+            body: p.intl.formatToPlainString(d.default.Ry1TXC, {
+                orbsCount: g,
             }),
             actions: [
                 {
-                    text: h.intl.string(h.t.RzWDqY),
+                    text: p.intl.string(p.t.RzWDqY),
                     icon: a.tvc,
-                    onClick: A,
+                    onClick: m,
                 },
             ],
             gradientColor: {
@@ -60,7 +58,7 @@ function f(e) {
             (0, r.jsx)("div", {
                 children: f,
             }),
-            _,
+            A,
         ],
     });
 }
