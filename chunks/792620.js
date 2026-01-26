@@ -2,24 +2,25 @@ n.d(t, {
     BS: () => T,
     Cr: () => O,
     F9: () => d,
-    IO: () => v,
-    JC: () => H,
+    IO: () => A,
+    JC: () => Y,
     TP: () => p,
-    YL: () => R,
-    Yh: () => F,
+    Xi: () => V,
+    YL: () => w,
+    Yh: () => B,
     _3: () => c,
     a2: () => _,
     fE: () => g,
     g5: () => C,
-    hL: () => w,
+    hL: () => R,
     pU: () => u,
     t: () => m,
-    uD: () => A,
+    uD: () => v,
     vS: () => f,
     vl: () => E,
-    vv: () => I,
-    xZ: () => b,
-    xm: () => K,
+    vv: () => S,
+    xZ: () => y,
+    xm: () => z,
 }),
     n(896048),
     n(65821),
@@ -89,7 +90,7 @@ function E(e) {
     return null != e.config.taskConfigV2.tasks[i.n.PLAY_ACTIVITY];
 }
 
-function b(e) {
+function y(e) {
     return (
         null != e &&
         m({
@@ -97,19 +98,19 @@ function b(e) {
         })
     );
 }
-let y = (e) => (t) => e.some((e) => null != t.config.taskConfigV2.tasks[e]);
+let b = (e) => (t) => e.some((e) => null != t.config.taskConfigV2.tasks[e]);
 
 function O(e) {
     return Array.from(i.o.IN_GAME).some((t) => null != e.config.taskConfigV2.tasks[t]);
 }
-let A = y([i.n.PLAY_ON_XBOX, i.n.PLAY_ON_PLAYSTATION]),
-    v = y([i.n.WATCH_VIDEO]),
-    S = y([i.n.WATCH_VIDEO_ON_MOBILE]),
-    I = y([i.n.WATCH_VIDEO, i.n.WATCH_VIDEO_ON_MOBILE]),
-    T = (e) => S(e) && !v(e);
+let v = b([i.n.PLAY_ON_XBOX, i.n.PLAY_ON_PLAYSTATION]),
+    A = b([i.n.WATCH_VIDEO]),
+    I = b([i.n.WATCH_VIDEO_ON_MOBILE]),
+    S = b([i.n.WATCH_VIDEO, i.n.WATCH_VIDEO_ON_MOBILE]),
+    T = (e) => I(e) && !A(e);
 
 function C(e) {
-    return A(e);
+    return v(e);
 }
 let N = (e, t) => {
     var n, r;
@@ -119,11 +120,11 @@ let N = (e, t) => {
     return !isNaN(a) && a > Date.now();
 };
 
-function R(e) {
+function w(e) {
     return null != e.userStatus && (N(e.userStatus, i.n.PLAY_ON_XBOX) || N(e.userStatus, i.n.PLAY_ON_PLAYSTATION));
 }
 
-function w(e) {
+function R(e) {
     return new Set(Object.keys(e.config.taskConfigV2.tasks));
 }
 
@@ -131,7 +132,7 @@ function P(e) {
     return (null == e ? void 0 : e.type) === i.n.PLAY_ON_DESKTOP;
 }
 let D = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
-    x = (e) => R(e) || o.A.isProgressingOnDesktop(e.id),
+    x = (e) => w(e) || o.A.isProgressingOnDesktop(e.id),
     L = (e, t) => {
         var n, i, s, o;
         let l =
@@ -158,7 +159,7 @@ let D = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
                           : s.streamProgressSeconds)
                     ? n
                     : 0;
-        if (I(e)) {
+        if (S(e)) {
             let n = o.A.getOptimisticProgress(e.id, t.type);
             return null == n || n < c ? c : n;
         }
@@ -192,8 +193,15 @@ let D = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
             applications: h,
         };
     },
-    G = (e) => (i.o.ALL.has(e) ? e : null),
-    V = (e) => {
+    G = (e) => (i.o.ALL.has(e) ? e : null);
+
+function V(e) {
+    var t;
+    let n = e.taskConfigV2.tasks[i.n.WATCH_VIDEO],
+        r = e.taskConfigV2.tasks[i.n.WATCH_VIDEO_ON_MOBILE];
+    return null != n && null != r ? n : null != (t = null != r ? r : n) ? t : null;
+}
+let F = (e) => {
         var t, n;
         let { quest: r, includeTaskTypes: a = i.o.ALL } = e;
         for (let e of Object.values(null != (t = null == (n = r.userStatus) ? void 0 : n.progress) ? t : {})
@@ -230,7 +238,7 @@ let D = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
             includeTaskTypes: a,
         });
     },
-    F = (e, t) => {
+    B = (e, t) => {
         if (O(e))
             return {
                 progressSeconds: 0,
@@ -239,23 +247,19 @@ let D = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
                 percentComplete: 0,
                 taskType: i.n.STREAM_ON_DESKTOP,
             };
-        if (A(e))
-            return V({
+        if (v(e))
+            return F({
                 quest: e,
-                includeTaskTypes: null != t ? t : R(e) ? i.o.CONSOLE : i.o.ALL,
+                includeTaskTypes: null != t ? t : w(e) ? i.o.CONSOLE : i.o.ALL,
             });
-        if (I(e))
-            if (S(e))
-                return U({
-                    quest: e,
-                    taskType: i.n.WATCH_VIDEO_ON_MOBILE,
-                });
-            else
-                return U({
-                    quest: e,
-                    taskType: i.n.WATCH_VIDEO,
-                });
-        return b(e)
+        if (S(e)) {
+            var n;
+            return U({
+                quest: e,
+                taskType: null == (n = V(e.config)) ? void 0 : n.type,
+            });
+        }
+        return y(e)
             ? U({
                   quest: e,
                   taskType: i.n.PLAY_ON_DESKTOP,
@@ -271,7 +275,7 @@ let D = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
                 });
     };
 
-function B(e) {
+function H(e) {
     var t;
     let n = e.taskConfigV2.tasks,
         r = n[i.n.ACHIEVEMENT_IN_ACTIVITY],
@@ -279,9 +283,9 @@ function B(e) {
     return null != (t = null != r ? r : a) ? t : null;
 }
 
-function H(e) {
+function Y(e) {
     var t, n, r, i;
-    let a = B(e.config);
+    let a = H(e.config);
     if (null == a) return null;
     let s =
             null !=
@@ -298,22 +302,22 @@ function H(e) {
     };
 }
 
-function Y(e) {
-    return W(e.targetSeconds - e.progressSeconds);
+function W(e) {
+    return K(e.targetSeconds - e.progressSeconds);
 }
 
-function W(e) {
+function K(e) {
     return {
         minutes: Math.max(0, Math.floor(e / 60)),
         seconds: Math.max(0, Math.floor(e % 60)),
     };
 }
 
-function K(e) {
-    let t = Y(e);
-    return z(t.minutes, t.seconds);
+function z(e) {
+    let t = W(e);
+    return q(t.minutes, t.seconds);
 }
 
-function z(e, t) {
+function q(e, t) {
     return "".concat(String(e).padStart(2, "0"), ":").concat(String(t).padStart(2, "0"));
 }
