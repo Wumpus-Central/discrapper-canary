@@ -11,7 +11,7 @@ var r = n(627968),
     l = n(633075),
     c = n(289173),
     u = n(80330),
-    d = n(274900),
+    d = n(139730),
     f = n(783256),
     p = n(518477),
     _ = n(985018);
@@ -50,10 +50,11 @@ function m(e) {
 function g(e) {
     let { user: t, widgets: n = [], onOpenUserProfileModal: h } = e,
         g = i.useMemo(() => n.filter((e) => e instanceof l.R), [n]),
-        { analyticsLocations: E } = (0, a.Ay)(),
+        E = i.useMemo(() => g.map((e) => e.applicationId), [g]),
+        { analyticsLocations: y } = (0, a.Ay)(),
         { trackUserProfileAction: b } = (0, o.NJ)(),
-        y = (0, s.A)(t.id, g),
-        O = i.useCallback(() => {
+        O = (0, s.A)(t.id, E),
+        v = i.useCallback(() => {
             null == h ||
                 h({
                     tabSection: p.RP.WIDGETS,
@@ -65,14 +66,14 @@ function g(e) {
                     i = [];
                 for (let a of n)
                     a instanceof l.R
-                        ? null != y[a.applicationId] &&
+                        ? null != O[a.applicationId] &&
                           i.push(
                               (0, r.jsx)(
                                   d.A,
                                   m(
                                       {
-                                          previewData: y[a.applicationId],
-                                          onClick: O,
+                                          previewData: O[a.applicationId],
+                                          onClick: v,
                                       },
                                       e,
                                   ),
@@ -87,7 +88,7 @@ function g(e) {
                                   m(
                                       {
                                           widgets: n,
-                                          onClick: O,
+                                          onClick: v,
                                       },
                                       e,
                                   ),
@@ -97,7 +98,7 @@ function g(e) {
                           (t = !0));
                 return i;
             },
-            [y, O, n],
+            [O, v, n],
         );
     return 0 === n.length
         ? null
@@ -107,9 +108,9 @@ function g(e) {
               onExpand: () => {
                   b({
                       action: "PRESS_SHOW_MORE_WIDGETS",
-                      analyticsLocations: E,
+                      analyticsLocations: y,
                   }),
-                      O();
+                      v();
               },
           });
 }

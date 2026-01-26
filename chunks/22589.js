@@ -1,4 +1,5 @@
 e.exports = {
-    D: "cloudPlaySection__1692d",
-    t: "cloudPlaySectionTextContainer__1692d",
+    DK: "cloudPlaySection__1692d",
+    tJ: "cloudPlaySectionTextContainer__1692d",
+    AB: "appWidgetPreview__1692d",
 };

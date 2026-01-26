@@ -5,4 +5,5 @@ e.exports = {
     u3: "badgesContainerCard__635ed",
     DY: "badgesContainerGameProfile__635ed",
     BQ: "badgesContainerPopout__635ed",
+    dQ: "appWidgetPreviewIcon__635ed",
 };

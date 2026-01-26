@@ -1,5 +1,6 @@
 n.d(t, {
-    P: () => u,
+    A: () => u,
+    P: () => d,
 });
 var r = n(311907),
     i = n(562465),
@@ -39,7 +40,8 @@ let c = {
             }
         },
     },
-    u = (0, r.UT)(o.A, {
+    u = c,
+    d = (0, r.UT)(o.A, {
         getQueryId: l.fic.USER_APPLICATION_IDENTITIES,
         get: (e) => o.A.getUserIdentities(e),
         load: (e) => c.fetchUserApplicationIdentitiesWithProfiles(e),

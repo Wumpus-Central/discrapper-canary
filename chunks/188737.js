@@ -1,16 +1,17 @@
 n.d(t, {
-    A: () => f,
+    A: () => p,
 }),
     n(896048);
 var r = n(64700),
     i = n(681154),
     a = n(311907),
-    s = n(99753),
-    o = n(903790),
-    l = n(929509),
-    c = n(475450),
-    u = n(424994);
-let d = new Set([
+    s = n(941726),
+    o = n(99753),
+    l = n(903790),
+    c = n(929509),
+    u = n(475450),
+    d = n(424994);
+let f = new Set([
     i.I.PLAYED_GAME,
     i.I.WATCHED_MEDIA,
     i.I.TOP_GAME,
@@ -19,21 +20,21 @@ let d = new Set([
     i.I.LAUNCHED_ACTIVITY,
 ]);
 
-function f(e) {
-    let t = (0, c.A)({
-        id: u.X1.GLOBAL_FEED,
+function p(e) {
+    let t = (0, u.A)({
+        id: d.X1.GLOBAL_FEED,
     });
-    (t = (0, o.A)({
+    (t = (0, l.A)({
         entries: t,
         channelId: e,
     })),
-        (t = r.useMemo(() => (null == t ? void 0 : t.filter((e) => d.has(e.content_type))), [t]));
-    let { entries: n, filteredIds: i } = (0, l.A)(t);
+        (t = r.useMemo(() => (null == t ? void 0 : t.filter((e) => f.has(e.content_type))), [t]));
+    let { entries: n, filteredIds: i } = (0, c.A)(t);
     return (
         (t = n),
         {
-            requestId: (0, a.bG)([s.A], () => s.A.getFeedRequestId(u.X1.GLOBAL_FEED)),
-            entries: t,
+            requestId: (0, a.bG)([o.A], () => o.A.getFeedRequestId(d.X1.GLOBAL_FEED)),
+            entries: (t = (0, s.Ay)(t)),
             impressionCappedEntryIds: i,
         }
     );
