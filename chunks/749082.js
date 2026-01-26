@@ -35,32 +35,34 @@ let p = {
                 fit: m = "layout",
                 glowAmount: g = 8,
                 blurAmount: E = 30,
+                hueRotate: y = 0,
                 isReducedMotion: b,
             } = e,
-            y = i.useRef(null),
             O = i.useRef(null),
-            { status: A, buffer: v } = (0, u.CE)(o.A),
+            v = i.useRef(null),
+            { status: A, buffer: I } = (0, u.CE)(o.A),
             S = i.useContext(l.C),
-            I = null != b ? b : S.reducedMotion.enabled,
-            T = {
+            T = null != b ? b : S.reducedMotion.enabled,
+            C = {
                 "--custom-glow-amount": "".concat(g, "px"),
                 "--custom-blur-amount": "".concat(E, "px"),
+                "--custom-hue-rotate": "".concat(y, "deg"),
             };
         return (0, r.jsxs)("div", {
-            ref: y,
+            ref: O,
             className: s()(f.kL, n),
-            style: T,
+            style: C,
             children: [
                 A !== u.BW.Loading &&
                     (0, r.jsx)(c.w, {
-                        buffer: v,
+                        buffer: I,
                         artboard: h,
                         artboardProperties: p,
-                        eventTargetRef: y,
+                        eventTargetRef: O,
                         className: f.Q_,
-                        ref: O,
+                        ref: v,
                         fit: m,
-                        withReducedMotion: I ? "halt" : "play",
+                        withReducedMotion: T ? "halt" : "play",
                     }),
                 (0, r.jsx)(d.ZpM, {
                     type: null != _ ? _ : d.sl2.CUSTOM,
