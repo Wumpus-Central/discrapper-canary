@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => g,
+    A: () => m,
 }),
     n(228524),
     n(896048),
@@ -7,12 +7,11 @@ n.d(t, {
     n(321073);
 var r = n(810531),
     i = n(7584),
-    a = n(548965),
-    s = n(952526),
-    o = n(71393),
-    l = n(842086);
+    a = n(952526),
+    s = n(71393),
+    o = n(842086);
 
-function c(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +25,7 @@ function c(e, t, n) {
     );
 }
 
-function u(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,13 +36,13 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
 
-function d(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,19 +55,19 @@ function d(e, t) {
     return n;
 }
 
-function f(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function p(e) {
+function f(e) {
     return {
         id: e.id,
         tags: e.tags,
@@ -84,54 +83,54 @@ function p(e) {
     };
 }
 
-function _(e) {
+function p(e) {
     let t = {};
-    for (let n of e) t[n.id] = p(n);
+    for (let n of e) t[n.id] = f(n);
     return t;
 }
 
-function h(e, t) {
+function _(e, t) {
     let n = [],
         { tags: r } = t,
         a = {
-            type: l.cG.STICKER_NAME,
+            type: o.cG.STICKER_NAME,
             value: t.name.trim().toLocaleLowerCase(),
         };
     if ((n.push(a), null != r)) {
         let t = {
-            type: l.cG.TAG,
+            type: o.cG.TAG,
             value: r.trim().toLocaleLowerCase(),
         };
         n.push(t);
-        let a = o.A.getGuild(e);
+        let a = s.A.getGuild(e);
         if (null != a) {
             let e = a.name.trim().toLocaleLowerCase();
             null != e &&
                 "" !== e &&
                 n.push({
-                    type: l.cG.GUILD_NAME,
+                    type: o.cG.GUILD_NAME,
                     value: e,
                 });
         }
-        let s = i.Ay.getByName(r);
-        null != s &&
+        let l = i.Ay.getByName(r);
+        null != l &&
             (n.push({
-                type: l.cG.CORRELATED_EMOJI,
-                value: s.surrogates,
+                type: o.cG.CORRELATED_EMOJI,
+                value: l.surrogates,
             }),
-            s.forEachDiversity((e) =>
+            l.forEachDiversity((e) =>
                 n.push({
-                    type: l.cG.CORRELATED_EMOJI,
+                    type: o.cG.CORRELATED_EMOJI,
                     value: e.surrogates,
                 }),
             ));
     }
     return n;
 }
-class m extends s.U {
+class h extends a.U {
     constructor(...e) {
         super(...e),
-            c(
+            l(
                 this,
                 "getAllGuildStickers",
                 this.memoized((e) => {
@@ -140,71 +139,67 @@ class m extends s.U {
                     return t;
                 }),
             ),
-            c(
+            l(
                 this,
                 "getStickersByGuildId",
                 this.memoizedPartition((e, t) => Object.values(t)),
             ),
-            c(
+            l(
                 this,
                 "getStickerMetadataMap",
                 this.memoized((e) => {
                     let t = new Map();
-                    for (let n in e) for (let [r, i] of Object.entries(e[n].root)) t.set(r, h(n, i));
+                    for (let n in e) for (let [r, i] of Object.entries(e[n].root)) t.set(r, _(n, i));
                     return t;
                 }),
             ),
-            c(this, "getStickerById", this.memoizedSecondaryIndex());
+            l(this, "getStickerById", this.memoizedSecondaryIndex());
     }
 }
-c(m, "displayName", "GuildStickersStore");
-let g = new m(
-    {
-        LOGOUT: (e, t) => t.reset(),
-        BACKGROUND_SYNC: (e, t) => t.reset(),
-        CONNECTION_OPEN: (e, t) => {
-            let n = new Set(t.getPartitionKeys());
-            for (let r of e.guilds)
-                n.delete(r.id), null != r.stickers.items && t.setPartition(r.id, _(r.stickers.items));
-            for (let t of e.unavailableGuilds) n.delete(t);
-            for (let e of n) t.removePartition(e);
-        },
-        GUILD_CREATE: (e, t) => {
-            var n;
-            if (null == e.guild.joined_at || null == e.guild.stickers.items) return !1;
-            t.setPartition(e.guild.id, _(null != (n = e.guild.stickers.items) ? n : []));
-        },
-        GUILD_DELETE: (e, t) => {
-            t.removePartition(e.guild.id);
-        },
-        GUILD_STICKERS_CREATE_SUCCESS: (e, t) => {
-            t.set(e.guildId, e.sticker.id, p(e.sticker));
-        },
-        GUILD_STICKER_FETCH_SUCCESS: (e, t) => {
-            t.set(e.sticker.guild_id, e.sticker.id, p(e.sticker));
-        },
-        GUILD_STICKERS_UPDATE: (e, t) => {
-            let n = t.getPartition(e.guildId),
-                r = _(e.stickers);
-            if (null != n)
-                for (let e in r) {
-                    let t = r[e],
-                        i = n[e];
-                    null != i &&
-                        null == t.user_id &&
-                        null != i.user_id &&
-                        (r[e] = f(u({}, t), {
-                            user_id: i.user_id,
-                        }));
-                }
-            t.setPartition(e.guildId, r);
-        },
-        CACHED_STICKERS_LOADED: (e, t) => {
-            for (let [n, r] of e.stickers) t.setPartition(n, _(r));
-        },
-        GUILD_STICKERS_FETCH_SUCCESS: (e, t) => {
-            t.setPartition(e.guildId, _(e.stickers));
-        },
+l(h, "displayName", "GuildStickersStore");
+let m = new h({
+    LOGOUT: (e, t) => t.reset(),
+    BACKGROUND_SYNC: (e, t) => t.reset(),
+    CONNECTION_OPEN: (e, t) => {
+        let n = new Set(t.getPartitionKeys());
+        for (let r of e.guilds) n.delete(r.id), null != r.stickers.items && t.setPartition(r.id, p(r.stickers.items));
+        for (let t of e.unavailableGuilds) n.delete(t);
+        for (let e of n) t.removePartition(e);
     },
-    a.aL.getCachedBridgedStoreMode(),
-);
+    GUILD_CREATE: (e, t) => {
+        var n;
+        if (null == e.guild.joined_at || null == e.guild.stickers.items) return !1;
+        t.setPartition(e.guild.id, p(null != (n = e.guild.stickers.items) ? n : []));
+    },
+    GUILD_DELETE: (e, t) => {
+        t.removePartition(e.guild.id);
+    },
+    GUILD_STICKERS_CREATE_SUCCESS: (e, t) => {
+        t.set(e.guildId, e.sticker.id, f(e.sticker));
+    },
+    GUILD_STICKER_FETCH_SUCCESS: (e, t) => {
+        t.set(e.sticker.guild_id, e.sticker.id, f(e.sticker));
+    },
+    GUILD_STICKERS_UPDATE: (e, t) => {
+        let n = t.getPartition(e.guildId),
+            r = p(e.stickers);
+        if (null != n)
+            for (let e in r) {
+                let t = r[e],
+                    i = n[e];
+                null != i &&
+                    null == t.user_id &&
+                    null != i.user_id &&
+                    (r[e] = d(c({}, t), {
+                        user_id: i.user_id,
+                    }));
+            }
+        t.setPartition(e.guildId, r);
+    },
+    CACHED_STICKERS_LOADED: (e, t) => {
+        for (let [n, r] of e.stickers) t.setPartition(n, p(r));
+    },
+    GUILD_STICKERS_FETCH_SUCCESS: (e, t) => {
+        t.setPartition(e.guildId, p(e.stickers));
+    },
+});

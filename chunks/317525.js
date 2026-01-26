@@ -75,73 +75,70 @@ class c extends r.U {
     }
 }
 o(c, "displayName", "GuildRoleStore");
-let u = new c(
-    {
-        BACKGROUND_SYNC: (e, t) => {
-            let { guilds: n } = e;
-            for (let e of n) {
-                let n = t.getPartition(e.id);
-                null != n &&
-                    "unavailable" !== e.data_mode &&
-                    t.setPartition(
-                        e.id,
-                        "partial" === e.data_mode
-                            ? s.ly(e.id, n, e.partial_updates.roles, e.partial_updates.deleted_role_ids)
-                            : a.hd(e.id, e.roles),
-                    );
-            }
-        },
-        OVERLAY_INITIALIZE: (e, t) => {
-            t.reset((t) => {
-                for (let { partitionKey: n, values: r } of e.serializedGuildRoles) t[n] = a.lj(n, r);
-            });
-        },
-        CONNECTION_OPEN: (e, t) => {
-            let { guilds: n } = e;
-            return t.reset((e) => {
-                for (let { id: t, roles: r } of n) e[t] = Array.isArray(r) ? a.hd(t, r) : r;
-            });
-        },
-        CACHE_LOADED: (e, t) => {
-            let { guilds: n } = e;
-            t.reset((e) => {
-                for (let { id: t, roles: r } of n) e[t] = a.lj(t, r);
-            });
-        },
-        CACHE_LOADED_LAZY: (e, t) => {
-            0 !== e.guilds.length &&
-                t.reset((t) => {
-                    for (let { id: n, roles: r } of e.guilds) t[n] = a.lj(n, r);
-                });
-        },
-        GUILD_CREATE: (e, t) => {
-            let {
-                guild: { id: n, roles: r },
-            } = e;
-            t.setPartition(n, Array.isArray(r) ? a.hd(n, r) : r);
-        },
-        GUILD_UPDATE: (e, t) => {
-            let {
-                guild: { id: n, roles: r },
-            } = e;
-            t.setPartition(n, a.hd(n, r));
-        },
-        GUILD_DELETE: (e, t) => {
-            let {
-                guild: { id: n, unavailable: r },
-            } = e;
-            r || t.removePartition(n);
-        },
-        GUILD_ROLE_CREATE: (e, t) => {
-            t.set(e.guildId, e.role.id, a.Wj(e.guildId, e.role));
-        },
-        GUILD_ROLE_UPDATE: (e, t) => {
-            t.set(e.guildId, e.role.id, a.Wj(e.guildId, e.role));
-        },
-        GUILD_ROLE_DELETE: (e, t) => {
-            let { guildId: n, roleId: r } = e;
-            t.remove(n, r);
-        },
+let u = new c({
+    BACKGROUND_SYNC: (e, t) => {
+        let { guilds: n } = e;
+        for (let e of n) {
+            let n = t.getPartition(e.id);
+            null != n &&
+                "unavailable" !== e.data_mode &&
+                t.setPartition(
+                    e.id,
+                    "partial" === e.data_mode
+                        ? s.ly(e.id, n, e.partial_updates.roles, e.partial_updates.deleted_role_ids)
+                        : a.hd(e.id, e.roles),
+                );
+        }
     },
-    "libdiscore",
-);
+    OVERLAY_INITIALIZE: (e, t) => {
+        t.reset((t) => {
+            for (let { partitionKey: n, values: r } of e.serializedGuildRoles) t[n] = a.lj(n, r);
+        });
+    },
+    CONNECTION_OPEN: (e, t) => {
+        let { guilds: n } = e;
+        return t.reset((e) => {
+            for (let { id: t, roles: r } of n) e[t] = Array.isArray(r) ? a.hd(t, r) : r;
+        });
+    },
+    CACHE_LOADED: (e, t) => {
+        let { guilds: n } = e;
+        t.reset((e) => {
+            for (let { id: t, roles: r } of n) e[t] = a.lj(t, r);
+        });
+    },
+    CACHE_LOADED_LAZY: (e, t) => {
+        0 !== e.guilds.length &&
+            t.reset((t) => {
+                for (let { id: n, roles: r } of e.guilds) t[n] = a.lj(n, r);
+            });
+    },
+    GUILD_CREATE: (e, t) => {
+        let {
+            guild: { id: n, roles: r },
+        } = e;
+        t.setPartition(n, Array.isArray(r) ? a.hd(n, r) : r);
+    },
+    GUILD_UPDATE: (e, t) => {
+        let {
+            guild: { id: n, roles: r },
+        } = e;
+        t.setPartition(n, a.hd(n, r));
+    },
+    GUILD_DELETE: (e, t) => {
+        let {
+            guild: { id: n, unavailable: r },
+        } = e;
+        r || t.removePartition(n);
+    },
+    GUILD_ROLE_CREATE: (e, t) => {
+        t.set(e.guildId, e.role.id, a.Wj(e.guildId, e.role));
+    },
+    GUILD_ROLE_UPDATE: (e, t) => {
+        t.set(e.guildId, e.role.id, a.Wj(e.guildId, e.role));
+    },
+    GUILD_ROLE_DELETE: (e, t) => {
+        let { guildId: n, roleId: r } = e;
+        t.remove(n, r);
+    },
+});

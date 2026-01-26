@@ -1,13 +1,12 @@
 n.d(t, {
-    A: () => u,
+    A: () => c,
 }),
     n(896048);
 var r = n(810531),
-    i = n(548965),
-    a = n(952526),
-    s = n(770335);
+    i = n(952526),
+    a = n(770335);
 
-function o(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +20,7 @@ function o(e, t, n) {
     );
 }
 
-function l(e, t) {
+function o(e, t) {
     let n = {};
     for (let i of t)
         n[i.id] = {
@@ -35,49 +34,46 @@ function l(e, t) {
             roles: i.roles,
             managed: i.managed,
             version: i.version,
-            type: s.i.GUILD,
+            type: a.i.GUILD,
         };
     return n;
 }
-class c extends a.U {
+class l extends i.U {
     getGuildEmojis(e) {
         return this.getNullablePartition(e);
     }
 }
-o(c, "displayName", "RawGuildEmojiStore");
-let u = new c(
-    {
-        LOGOUT: (e, t) => t.reset(),
-        BACKGROUND_SYNC: (e, t) => t.reset(),
-        CONNECTION_OPEN: (e, t) => {
-            t.reset((t) => {
-                for (let n of e.guilds) null != n.emojis.items && (t[n.id] = l(n.id, n.emojis.items));
-            });
-        },
-        OVERLAY_INITIALIZE: (e, t) => {
-            t.reset((t) => {
-                Object.entries(e.emojis).forEach((e) => {
-                    let [n, r] = e;
-                    t[n] = l(n, r);
-                });
-            });
-        },
-        CACHED_EMOJIS_LOADED: (e, t) => {
-            for (let [n, r] of e.emojis) t.setPartition(n, l(n, r));
-        },
-        GUILD_CREATE: (e, t) => {
-            var n;
-            t.setPartition(e.guild.id, l(e.guild.id, null != (n = e.guild.emojis.items) ? n : []));
-        },
-        GUILD_UPDATE: (e, t) => {
-            t.setPartition(e.guild.id, l(e.guild.id, e.guild.emojis));
-        },
-        GUILD_EMOJIS_UPDATE: (e, t) => {
-            t.setPartition(e.guildId, l(e.guildId, e.emojis));
-        },
-        GUILD_DELETE: (e, t) => {
-            t.removePartition(e.guild.id);
-        },
+s(l, "displayName", "RawGuildEmojiStore");
+let c = new l({
+    LOGOUT: (e, t) => t.reset(),
+    BACKGROUND_SYNC: (e, t) => t.reset(),
+    CONNECTION_OPEN: (e, t) => {
+        t.reset((t) => {
+            for (let n of e.guilds) null != n.emojis.items && (t[n.id] = o(n.id, n.emojis.items));
+        });
     },
-    i.ys.getCachedBridgedStoreMode(),
-);
+    OVERLAY_INITIALIZE: (e, t) => {
+        t.reset((t) => {
+            Object.entries(e.emojis).forEach((e) => {
+                let [n, r] = e;
+                t[n] = o(n, r);
+            });
+        });
+    },
+    CACHED_EMOJIS_LOADED: (e, t) => {
+        for (let [n, r] of e.emojis) t.setPartition(n, o(n, r));
+    },
+    GUILD_CREATE: (e, t) => {
+        var n;
+        t.setPartition(e.guild.id, o(e.guild.id, null != (n = e.guild.emojis.items) ? n : []));
+    },
+    GUILD_UPDATE: (e, t) => {
+        t.setPartition(e.guild.id, o(e.guild.id, e.guild.emojis));
+    },
+    GUILD_EMOJIS_UPDATE: (e, t) => {
+        t.setPartition(e.guildId, o(e.guildId, e.emojis));
+    },
+    GUILD_DELETE: (e, t) => {
+        t.removePartition(e.guild.id);
+    },
+});

@@ -113,26 +113,23 @@ function g(e, t, n) {
     l.set(e.id, e), n && c.set(e.id, e), t.setPartition(e.id, _(e.stickers));
 }
 o(m, "displayName", "StickersPackStore");
-let E = new m(
-    {
-        LOGOUT: (e, t) => {
-            l.clear(), c.clear(), t.reset();
-        },
-        STICKER_PACK_FETCH_SUCCESS: (e, t) => {
-            let { pack: n } = e;
-            g(n, t, !1);
-        },
-        STICKER_PACKS_FETCH_START: (e, t) => {
-            u = !0;
-        },
-        STICKER_PACKS_FETCH_SUCCESS: (e, t) => {
-            let { packs: n } = e;
-            for (let e of ((u = !1), (d = performance.now()), n)) g(e, t, !0);
-        },
-        PACK_STICKER_FETCH_SUCCESS: (e, t) => {
-            let { sticker: n } = e;
-            t.set(n.pack_id, n.id, p(n));
-        },
+let E = new m({
+    LOGOUT: (e, t) => {
+        l.clear(), c.clear(), t.reset();
     },
-    "typescript",
-);
+    STICKER_PACK_FETCH_SUCCESS: (e, t) => {
+        let { pack: n } = e;
+        g(n, t, !1);
+    },
+    STICKER_PACKS_FETCH_START: (e, t) => {
+        u = !0;
+    },
+    STICKER_PACKS_FETCH_SUCCESS: (e, t) => {
+        let { packs: n } = e;
+        for (let e of ((u = !1), (d = performance.now()), n)) g(e, t, !0);
+    },
+    PACK_STICKER_FETCH_SUCCESS: (e, t) => {
+        let { sticker: n } = e;
+        t.set(n.pack_id, n.id, p(n));
+    },
+});

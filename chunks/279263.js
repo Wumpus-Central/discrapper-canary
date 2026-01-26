@@ -24,28 +24,25 @@ class o extends i.f {
     }
 }
 a(o, "displayName", "NoteStore");
-let l = new o(
-    {
-        CONNECTION_OPEN: (e, t) => t.reset(),
-        OVERLAY_INITIALIZE: (e, t) => t.reset(),
-        USER_NOTE_UPDATE: (e, t) => {
-            t.set(
-                e.id,
-                (0, r.yE)(s, {
-                    loading: !1,
-                    note: e.note,
-                }),
-            );
-        },
-        USER_NOTE_LOAD_START: (e, t) => {
-            t.set(
-                e.userId,
-                (0, r.yE)(s, {
-                    loading: !0,
-                    note: null,
-                }),
-            );
-        },
+let l = new o({
+    CONNECTION_OPEN: (e, t) => t.reset(),
+    OVERLAY_INITIALIZE: (e, t) => t.reset(),
+    USER_NOTE_UPDATE: (e, t) => {
+        t.set(
+            e.id,
+            (0, r.yE)(s, {
+                loading: !1,
+                note: e.note,
+            }),
+        );
     },
-    "libdiscore",
-);
+    USER_NOTE_LOAD_START: (e, t) => {
+        t.set(
+            e.userId,
+            (0, r.yE)(s, {
+                loading: !0,
+                note: null,
+            }),
+        );
+    },
+});
