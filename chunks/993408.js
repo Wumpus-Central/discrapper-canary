@@ -1,32 +1,32 @@
 n.d(t, {
     $W: () => B,
     $b: () => z,
-    Br: () => A,
+    Br: () => v,
     Bs: () => eo,
     CE: () => el,
     Ee: () => ee,
-    G0: () => y,
+    G0: () => b,
     H1: () => en,
-    HF: () => Z,
+    HF: () => X,
     P_: () => P,
-    R8: () => v,
+    R8: () => A,
     V6: () => ea,
-    WU: () => X,
+    WU: () => Z,
     Zu: () => ei,
     aT: () => Q,
-    aw: () => $,
+    aw: () => J,
     bf: () => es,
     c7: () => et,
     f6: () => L,
     fT: () => N,
     gA: () => O,
     hU: () => W,
-    l8: () => S,
-    oj: () => J,
+    l8: () => I,
+    oj: () => $,
     ps: () => k,
     rr: () => C,
     sz: () => F,
-    tt: () => R,
+    tt: () => w,
     wo: () => V,
     x9: () => j,
     yt: () => T,
@@ -93,7 +93,7 @@ function E(e, t) {
     return n;
 }
 
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -104,20 +104,20 @@ function b(e, t) {
         e
     );
 }
-let y = (e) => (null == e ? void 0 : e.premiumType) != null,
+let b = (e) => (null == e ? void 0 : e.premiumType) != null,
     O = (e) => (null == e ? void 0 : e.purchaseType) === _.zF_.PREMIUM_PURCHASE,
-    A = (e, t, n) => {
+    v = (e, t, n) => {
         let r;
         return T(
             e,
             (r = n ? (t ? _.lid.MOBILE_PREMIUM_TIER_2 : _.lid.MOBILE) : t ? _.lid.PREMIUM_TIER_2 : _.lid.DEFAULT),
         );
     },
-    v = (e, t, n) => {
-        let r = A(e, t, n);
+    A = (e, t, n) => {
+        let r = v(e, t, n);
         return null == r ? "" : (0, o.$g)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency);
     },
-    S = (e) =>
+    I = (e) =>
         (0, s.isAndroid)() || (0, s.isIOS)()
             ? e
                 ? _.lid.MOBILE_PREMIUM_TIER_2
@@ -125,10 +125,10 @@ let y = (e) => (null == e ? void 0 : e.premiumType) != null,
             : e
               ? _.lid.PREMIUM_TIER_2
               : _.lid.DEFAULT,
-    I = (e) => {
+    S = (e) => {
         let t = e.bundledProducts;
         if (null == t) return 0;
-        let n = S(!1);
+        let n = I(!1);
         return t.reduce((e, t) => {
             var r;
             let i = T(t, n);
@@ -145,9 +145,10 @@ let y = (e) => (null == e ? void 0 : e.premiumType) != null,
         discountPercentage: -1,
     },
     N = (e, t) => {
-        let n = I(e);
+        if (null == e) return C;
+        let n = S(e);
         if (n <= 0) return C;
-        let r = T(e, S(t));
+        let r = T(e, I(t));
         return null == r
             ? C
             : {
@@ -155,18 +156,18 @@ let y = (e) => (null == e ? void 0 : e.premiumType) != null,
                   discountPercentage: Math.round(((n - r.amount) / n) * 100),
               };
     },
-    R = (e) => {
+    w = (e) => {
         var t;
         return (null == (t = T(e, _.lid.DEFAULT)) ? void 0 : t.amount) === 0;
     },
-    w = (e) =>
+    R = (e) =>
         e.reduce(
             (e, t) =>
                 null != t && t.type === i.R.VARIANTS_GROUP && null != t.variants
                     ? (0, r.concat)(
                           e,
                           t.variants.map((e) =>
-                              b(g({}, e), {
+                              y(g({}, e), {
                                   variantGroupStoreListingId: t.storeListingId,
                                   eligibleOffers: t.eligibleOffers,
                               }),
@@ -177,7 +178,7 @@ let y = (e) => (null == e ? void 0 : e.premiumType) != null,
         ),
     P = (e, t) => {
         let n = (0, r.flatMap)([...e.values()], "products");
-        return (0, r.uniqBy)(t ? w(n) : n, "storeListingId");
+        return (0, r.uniqBy)(t ? R(n) : n, "storeListingId");
     },
     D = (e, t) => {
         if (t === i.R.AVATAR_DECORATION) {
@@ -235,18 +236,18 @@ let y = (e) => (null == e ? void 0 : e.premiumType) != null,
     K = 3.8,
     z = (e) => K * e,
     q = 864e5,
-    X = (e) => {
+    Z = (e) => {
         let t = new Date(),
             n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
         return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / q);
     },
-    Z = (e) => null != e && X(e) <= p.x3,
+    X = (e) => null != e && Z(e) <= p.x3,
     Q = (e) => {
         let t = p.Tq[e];
         return null != t && new Date().getTime() < t;
     },
-    $ = (e) => (null == e ? void 0 : e.type) === i.R.BUNDLE,
-    J = (e) => {
+    J = (e) => (null == e ? void 0 : e.type) === i.R.BUNDLE,
+    $ = (e) => {
         var t, n;
         if (null != e)
             return e.type === i.R.BUNDLE ? i.R.BUNDLE : null == (n = e.items) || null == (t = n[0]) ? void 0 : t.type;
@@ -275,7 +276,7 @@ let y = (e) => (null == e ? void 0 : e.premiumType) != null,
         h.Yr.NGN,
         h.Yr.EGP,
         (e, t, n) => {
-            if ($(e)) return I(e);
+            if (J(e)) return S(e);
             let r = T(
                 e,
                 t ? (n ? _.lid.MOBILE : _.lid.DEFAULT) : n ? _.lid.MOBILE_PREMIUM_TIER_2 : _.lid.PREMIUM_TIER_2,
@@ -289,7 +290,7 @@ let y = (e) => (null == e ? void 0 : e.premiumType) != null,
             if (null != e)
                 for (let r of e) {
                     let e = t.get(r);
-                    if (null != e && !$(e) && (n.push(r), n.length >= p.Bn)) return n;
+                    if (null != e && !J(e) && (n.push(r), n.length >= p.Bn)) return n;
                 }
         }
         return er(n);
@@ -333,13 +334,13 @@ let y = (e) => (null == e ? void 0 : e.premiumType) != null,
                           product: e,
                           isPremiumUser: t,
                       })
-                    : A(e, t, !1),
+                    : v(e, t, !1),
                 o = n
                     ? (0, f.CW)({
                           product: r,
                           isPremiumUser: t,
                       })
-                    : A(r, t, !1);
+                    : v(r, t, !1);
             return (
                 (null != (i = null == s ? void 0 : s.amount) ? i : 0) -
                 (null != (a = null == o ? void 0 : o.amount) ? a : 0)
