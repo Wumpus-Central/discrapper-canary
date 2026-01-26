@@ -3,27 +3,27 @@ n.d(t, {
 });
 var r = n(627968),
     i = n(64700),
-    l = n(342494),
-    a = n(732955),
-    s = n(397927),
-    o = n(976860),
-    c = n(652215),
-    u = n(49999),
-    d = n(49370),
-    p = n(985018),
-    h = n(880055);
+    l = n(362599),
+    a = n(342494),
+    s = n(732955),
+    o = n(397927),
+    c = n(976860),
+    u = n(652215),
+    d = n(49999),
+    p = n(49370),
+    h = n(985018);
 
 function g(e) {
     let { targetElementRef: t, dismissPopover: n, lastGrantedRewardAmount: g, children: f } = e,
         m = i.useCallback(() => {
-            n(u.i.TAKE_ACTION), (0, o.pX)("".concat(c.BVt.NITRO_HOME, "?section=orbs"));
+            n(d.i.TAKE_ACTION), (0, c.pX)("".concat(u.BVt.NITRO_HOME, "?section=orbs"));
         }, [n]),
-        A = (0, r.jsx)(l.AM, {
+        A = (0, r.jsx)(a.AM, {
             targetElementRef: t,
-            onRequestClose: () => n(u.i.USER_DISMISS),
+            onRequestClose: () => n(d.i.USER_DISMISS),
             graphic: {
-                type: "image",
-                src: h.A,
+                type: "rive",
+                rive: l.Z,
             },
             badge: {
                 type: "beta",
@@ -36,21 +36,21 @@ function g(e) {
                 align: "start",
             },
             size: "md",
-            title: p.intl.string(d.default["78+gLr"]),
-            body: p.intl.formatToPlainString(d.default.Ry1TXC, {
+            title: h.intl.string(p.default["78+gLr"]),
+            body: h.intl.formatToPlainString(p.default.Ry1TXC, {
                 orbsCount: g,
             }),
             actions: [
                 {
-                    text: p.intl.string(p.t.RzWDqY),
-                    icon: a.tvc,
+                    text: h.intl.string(h.t.RzWDqY),
+                    icon: s.tvc,
                     onClick: m,
                 },
             ],
             gradientColor: {
                 type: "custom",
-                start: s.LU0.colors.EXPRESSIVE_GRADIENT_PURPLE_START,
-                end: s.LU0.colors.EXPRESSIVE_GRADIENT_PURPLE_END,
+                start: o.LU0.colors.EXPRESSIVE_GRADIENT_PURPLE_START,
+                end: o.LU0.colors.EXPRESSIVE_GRADIENT_PURPLE_END,
             },
         });
     return (0, r.jsxs)(r.Fragment, {
