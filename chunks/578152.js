@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => y,
+    A: () => b,
 }),
     n(896048),
     n(321073);
@@ -32,7 +32,7 @@ let _ = +c.A.Millis.HOUR,
     m = +c.A.Millis.DAY,
     g = i.w.get("lastNonRequiredUpdateShown", Date.now()),
     E = new l.A("AutoUpdateManager");
-class b extends s.A {
+class y extends s.A {
     _initialize() {
         u.isPlatformEmbedded &&
             (f.Ay.on("CHECKING_FOR_UPDATES", this._handleCheckingForUpdates),
@@ -56,10 +56,8 @@ class b extends s.A {
     isNewUpdater() {
         return "win32" === (0, u.getPlatformName)();
     }
-    async handlePostConnectionOpen() {
-        let e = !0;
-        this.isNewUpdater() && e !== (await f.Ay.getOptionalUpdates()) && (await f.Ay.setOptionalUpdates(e)),
-            this.checkForUpdates(),
+    handlePostConnectionOpen() {
+        this.checkForUpdates(),
             clearInterval(this._checkInterval),
             (this._checkInterval = setInterval(this.checkForUpdates, _));
     }
@@ -142,7 +140,7 @@ class b extends s.A {
                         rejectWithError: !0,
                     }).then(
                         (e) => {
-                            if (null == e.body || "61528d3e3435ecbee37bf641aa64b9de561b202c" === e.body.hash)
+                            if (null == e.body || "ea49cabb21fad909d38c0c8524dd5b0c3e41f2ba" === e.body.hash)
                                 return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, o.kK)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? h : m;
@@ -195,4 +193,4 @@ class b extends s.A {
             });
     }
 }
-let y = new b();
+let b = new y();
