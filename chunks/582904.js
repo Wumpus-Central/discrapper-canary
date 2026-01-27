@@ -1,6 +1,6 @@
 n.d(t, {
     L7: () => g,
-    Z0: () => b,
+    Z0: () => f,
     kt: () => h,
 }),
     n(896048),
@@ -9,93 +9,87 @@ n.d(t, {
 var r = n(64700),
     l = n(311907),
     i = n(775602),
-    a = n(400634),
     s = n(21119),
-    o = n(696451),
-    c = n(287809),
-    u = n(607567),
-    d = n(403362),
-    f = n(605431),
+    a = n(696451),
+    o = n(287809),
+    c = n(607567),
+    u = n(403362),
+    d = n(605431),
     p = n(366251);
 
 function h(e) {
     let { channel: t } = e,
         n = (0, l.bG)([s.A], () => s.A.getUserAffinitiesMap(), []),
         i = null == t ? void 0 : t.guild_id,
-        a = new Set(
-            (0, l.bG)([u.Ay], () => (null == t ? [] : u.Ay.getVoiceStatesForChannel(t).map((e) => e.user.id)), [t]),
+        d = new Set(
+            (0, l.bG)([c.Ay], () => (null == t ? [] : c.Ay.getVoiceStatesForChannel(t).map((e) => e.user.id)), [t]),
         ),
-        f = (0, l.yK)(
-            [o.Ay, c.default],
+        p = (0, l.yK)(
+            [a.Ay, o.default],
             () =>
-                o.Ay.getMembers(i)
-                    .map((e) => c.default.getUser(e.userId))
-                    .filter(d.Vq)
-                    .filter((e) => !a.has(e.id)),
-            [i, a],
+                a.Ay.getMembers(i)
+                    .map((e) => o.default.getUser(e.userId))
+                    .filter(u.Vq)
+                    .filter((e) => !d.has(e.id)),
+            [i, d],
         );
     return r
         .useMemo(
             () =>
-                f.toSorted((e, t) => {
-                    var r, l, i, a;
-                    let { id: s } = e,
+                p.toSorted((e, t) => {
+                    var r, l, i, s;
+                    let { id: a } = e,
                         { id: o } = t;
                     return (
                         (null != (r = null == (i = n.get(o)) ? void 0 : i.vcProbability) ? r : 0) -
-                        (null != (l = null == (a = n.get(s)) ? void 0 : a.vcProbability) ? l : 0)
+                        (null != (l = null == (s = n.get(a)) ? void 0 : s.vcProbability) ? l : 0)
                     );
                 }),
-            [f, n],
+            [p, n],
         )
         .slice(0, 5);
 }
 
-function b(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { enabled: n } = (0, a.B)({
-            autoTrackExposure: !1,
-            guildId: e.guild_id,
-            location: "VoiceInviteSuggestionsUtils",
-        }),
-        { collapsed: i = !1 } = t,
-        s = (0, l.bG)([p.A], () => p.A.getShouldShowPopover(e.id), [e.id]);
+        { collapsed: n = !1 } = t,
+        i = (0, l.bG)([p.A], () => p.A.getShouldShowPopover(e.id), [e.id]);
     return {
-        shouldShow: n && s && !i,
+        shouldShow: i && !n,
         dismiss: r.useCallback(() => {
-            (0, f.w)(e.id);
+            (0, d.w)(e.id);
         }, [e]),
     };
 }
 
 function g(e) {
     let [t, n] = r.useState(!1),
-        [a, s] = r.useState(!1),
+        [s, a] = r.useState(!1),
         o = (0, l.bG)([i.A], () => i.A.keyboardModeEnabled);
     r.useEffect(() => {
         let t = e.current;
         if (null == t) return;
-        n(!1), s(!1);
+        n(!1), a(!1);
         let r = () => n(!0),
             l = () => n(!1),
-            i = () => s(!0),
-            a = (e) => {
-                t.contains(e.relatedTarget) || s(!1);
+            i = () => a(!0),
+            s = (e) => {
+                t.contains(e.relatedTarget) || a(!1);
             };
         return (
             t.addEventListener("mouseenter", r),
             t.addEventListener("mouseleave", l),
             t.addEventListener("focusin", i),
-            t.addEventListener("focusout", a),
+            t.addEventListener("focusout", s),
             () => {
                 t.removeEventListener("mouseenter", r),
                     t.removeEventListener("mouseleave", l),
                     t.removeEventListener("focusin", i),
-                    t.removeEventListener("focusout", a);
+                    t.removeEventListener("focusout", s);
             }
         );
     }, [e]);
-    let c = o && a;
+    let c = o && s;
     return {
         isHovering: t,
         isFocusing: c,

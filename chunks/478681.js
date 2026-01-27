@@ -1,56 +1,53 @@
-n.d(t, {
-    pq: () => l,
-    vF: () => u,
+r.d(e, {
+    pq: () => a,
+    vF: () => c,
 });
-var r = n(919015),
-    i = n(588522);
-let a = "Sentry Logger ",
-    s = ["debug", "info", "warn", "error", "log", "assert", "trace"],
+var n = r(919015),
+    s = r(588522);
+let i = ["debug", "info", "warn", "error", "log", "assert", "trace"],
     o = {};
 
-function l(e) {
-    if (!("console" in i.O)) return e();
-    let t = i.O.console,
-        n = {},
-        r = Object.keys(o);
-    r.forEach((e) => {
-        let r = o[e];
-        (n[e] = t[e]), (t[e] = r);
+function a(t) {
+    if (!("console" in s.O)) return t();
+    let e = s.O.console,
+        r = {},
+        n = Object.keys(o);
+    n.forEach((t) => {
+        let n = o[t];
+        (r[t] = e[t]), (e[t] = n);
     });
     try {
-        return e();
+        return t();
     } finally {
-        r.forEach((e) => {
-            t[e] = n[e];
+        n.forEach((t) => {
+            e[t] = r[t];
         });
     }
 }
-
-function c() {
-    let e = !1,
-        t = {
+let c = (0, s.B)("logger", function () {
+    let t = !1,
+        e = {
             enable: () => {
-                e = !0;
+                t = !0;
             },
             disable: () => {
-                e = !1;
+                t = !1;
             },
-            isEnabled: () => e,
+            isEnabled: () => t,
         };
     return (
-        r.T
-            ? s.forEach((n) => {
-                  t[n] = (...t) => {
-                      e &&
-                          l(() => {
-                              i.O.console[n](`${a}[${n}]:`, ...t);
+        n.T
+            ? i.forEach((r) => {
+                  e[r] = (...e) => {
+                      t &&
+                          a(() => {
+                              s.O.console[r](`Sentry Logger [${r}]:`, ...e);
                           });
                   };
               })
-            : s.forEach((e) => {
-                  t[e] = () => void 0;
+            : i.forEach((t) => {
+                  e[t] = () => void 0;
               }),
-        t
+        e
     );
-}
-let u = (0, i.B)("logger", c);
+});

@@ -1,20 +1,16 @@
-n.d(t, {
+r.d(e, {
     KU: () => o,
-    rm: () => s,
+    rm: () => i,
 });
-var r = n(924251),
-    i = n(628227);
+var n = r(924251),
+    s = r(628227);
 
-function a() {
-    let e = (0, i.E)();
-    return (0, r.h)(e).getCurrentScope();
-}
-
-function s() {
-    let e = (0, i.E)();
-    return (0, r.h)(e).getIsolationScope();
+function i() {
+    let t = (0, s.E)();
+    return (0, n.h)(t).getIsolationScope();
 }
 
 function o() {
-    return a().getClient();
+    let t;
+    return ((t = (0, s.E)()), (0, n.h)(t).getCurrentScope()).getClient();
 }

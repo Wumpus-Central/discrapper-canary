@@ -1,186 +1,185 @@
-n(861169);
-var r,
-    i = n(557939),
-    a = n(257943),
-    s = n(39911),
-    o = n(860511),
-    l = n(221015),
-    c = n(410323),
-    u = n(693655),
-    d = n(485155),
-    f = n(61132),
-    p = n(210140),
-    _ = n(783842),
-    h = n(500829),
-    m = n(192819),
-    g = n(992366).codeAt,
-    E = n(766260),
-    b = n(304880),
-    y = n(174168),
-    O = n(627),
-    A = n(985729),
-    v = n(883972),
-    S = v.set,
-    I = v.getterFor("URL"),
-    T = A.URLSearchParams,
-    C = A.getState,
-    N = o.URL,
-    R = o.TypeError,
-    w = o.parseInt,
-    P = Math.floor,
-    D = Math.pow,
-    x = c("".charAt),
-    L = c(/./.exec),
-    j = c([].join),
-    M = c((1).toString),
-    k = c([].pop),
-    U = c([].push),
-    G = c("".replace),
-    V = c([].shift),
-    F = c("".split),
-    B = c("".slice),
-    H = c("".toLowerCase),
-    Y = c([].unshift),
-    W = "Invalid authority",
-    K = "Invalid scheme",
-    z = "Invalid host",
-    q = "Invalid port",
-    X = /[a-z]/i,
-    Z = /[\d+-.a-z]/i,
-    Q = /\d/,
-    $ = /^0x/i,
-    J = /^[0-7]+$/,
-    ee = /^\d+$/,
-    et = /^[\da-f]+$/i,
-    en = /[\0\t\n\r #%/:<>?@[\\\]^|]/,
+r(861169);
+var n,
+    s = r(557939),
+    i = r(257943),
+    a = r(39911),
+    h = r(860511),
+    o = r(221015),
+    u = r(410323),
+    f = r(693655),
+    l = r(485155),
+    c = r(61132),
+    p = r(210140),
+    g = r(783842),
+    v = r(500829),
+    d = r(192819),
+    m = r(992366).codeAt,
+    w = r(766260),
+    b = r(304880),
+    y = r(174168),
+    k = r(627),
+    S = r(985729),
+    P = r(883972),
+    U = P.set,
+    R = P.getterFor("URL"),
+    L = S.URLSearchParams,
+    x = S.getState,
+    q = h.URL,
+    H = h.TypeError,
+    A = h.parseInt,
+    B = Math.floor,
+    C = Math.pow,
+    z = u("".charAt),
+    O = u(/./.exec),
+    j = u([].join),
+    E = u((1).toString),
+    I = u([].pop),
+    F = u([].push),
+    N = u("".replace),
+    $ = u([].shift),
+    T = u("".split),
+    J = u("".slice),
+    M = u("".toLowerCase),
+    Q = u([].unshift),
+    D = "Invalid scheme",
+    G = "Invalid host",
+    _ = "Invalid port",
+    K = /[a-z]/i,
+    V = /[\d+-.a-z]/i,
+    W = /\d/,
+    X = /^0x/i,
+    Y = /^[0-7]+$/,
+    Z = /^\d+$/,
+    ee = /^[\da-f]+$/i,
+    et = /[\0\t\n\r #%/:<>?@[\\\]^|]/,
     er = /[\0\t\n\r #/:<>?@[\\\]^|]/,
-    ei = /^[\u0000-\u0020]+/,
-    ea = /(^|[^\u0000-\u0020])[\u0000-\u0020]+$/,
-    es = /[\t\n\r]/g,
-    eo = function (e) {
+    en = /^[\u0000-\u0020]+/,
+    es = /(^|[^\u0000-\u0020])[\u0000-\u0020]+$/,
+    ei = /[\t\n\r]/g,
+    ea = function (e) {
         var t,
-            n,
             r,
+            n,
+            s,
             i,
             a,
-            s,
-            o,
-            l = F(e, ".");
-        if ((l.length && "" === l[l.length - 1] && l.length--, (t = l.length) > 4)) return e;
-        for (r = 0, n = []; r < t; r++) {
-            if ("" === (i = l[r])) return e;
+            h,
+            o = T(e, ".");
+        if ((o.length && "" === o[o.length - 1] && o.length--, (t = o.length) > 4)) return e;
+        for (n = 0, r = []; n < t; n++) {
+            if ("" === (s = o[n])) return e;
             if (
-                ((a = 10),
-                i.length > 1 && "0" === x(i, 0) && ((a = L($, i) ? 16 : 8), (i = B(i, 8 === a ? 1 : 2))),
-                "" === i)
+                ((i = 10),
+                s.length > 1 && "0" === z(s, 0) && ((i = O(X, s) ? 16 : 8), (s = J(s, 8 === i ? 1 : 2))),
+                "" === s)
             )
-                s = 0;
+                a = 0;
             else {
-                if (!L(10 === a ? ee : 8 === a ? J : et, i)) return e;
-                s = w(i, a);
+                if (!O(10 === i ? Z : 8 === i ? Y : ee, s)) return e;
+                a = A(s, i);
             }
-            U(n, s);
+            F(r, a);
         }
-        for (r = 0; r < t; r++)
-            if (((s = n[r]), r === t - 1)) {
-                if (s >= D(256, 5 - t)) return null;
-            } else if (s > 255) return null;
-        for (r = 0, o = k(n); r < n.length; r++) o += n[r] * D(256, 3 - r);
-        return o;
+        for (n = 0; n < t; n++)
+            if (((a = r[n]), n === t - 1)) {
+                if (a >= C(256, 5 - t)) return null;
+            } else if (a > 255) return null;
+        for (n = 0, h = I(r); n < r.length; n++) h += r[n] * C(256, 3 - n);
+        return h;
     },
-    el = function (e) {
+    eh = function (e) {
         var t,
-            n,
             r,
+            n,
+            s,
             i,
             a,
-            s,
-            o,
-            l = [0, 0, 0, 0, 0, 0, 0, 0],
-            c = 0,
-            u = null,
-            d = 0,
-            f = function () {
-                return x(e, d);
+            h,
+            o = [0, 0, 0, 0, 0, 0, 0, 0],
+            u = 0,
+            f = null,
+            l = 0,
+            c = function () {
+                return z(e, l);
             };
-        if (":" === f()) {
-            if (":" !== x(e, 1)) return;
-            (d += 2), (u = ++c);
+        if (":" === c()) {
+            if (":" !== z(e, 1)) return;
+            (l += 2), (f = ++u);
         }
-        for (; f(); ) {
-            if (8 === c) return;
-            if (":" === f()) {
-                if (null !== u) return;
-                d++, (u = ++c);
+        for (; c(); ) {
+            if (8 === u) return;
+            if (":" === c()) {
+                if (null !== f) return;
+                l++, (f = ++u);
                 continue;
             }
-            for (t = n = 0; n < 4 && L(et, f()); ) (t = 16 * t + w(f(), 16)), d++, n++;
-            if ("." === f()) {
-                if (0 === n || ((d -= n), c > 6)) return;
-                for (r = 0; f(); ) {
-                    if (((i = null), r > 0))
-                        if ("." !== f() || !(r < 4)) return;
-                        else d++;
-                    if (!L(Q, f())) return;
-                    for (; L(Q, f()); ) {
-                        if (((a = w(f(), 10)), null === i)) i = a;
+            for (t = r = 0; r < 4 && O(ee, c()); ) (t = 16 * t + A(c(), 16)), l++, r++;
+            if ("." === c()) {
+                if (0 === r || ((l -= r), u > 6)) return;
+                for (n = 0; c(); ) {
+                    if (((s = null), n > 0))
+                        if ("." !== c() || !(n < 4)) return;
+                        else l++;
+                    if (!O(W, c())) return;
+                    for (; O(W, c()); ) {
+                        if (((i = A(c(), 10)), null === s)) s = i;
                         else {
-                            if (0 === i) return;
-                            i = 10 * i + a;
+                            if (0 === s) return;
+                            s = 10 * s + i;
                         }
-                        if (i > 255) return;
-                        d++;
+                        if (s > 255) return;
+                        l++;
                     }
-                    (l[c] = 256 * l[c] + i), (2 == ++r || 4 === r) && c++;
+                    (o[u] = 256 * o[u] + s), (2 == ++n || 4 === n) && u++;
                 }
-                if (4 !== r) return;
+                if (4 !== n) return;
                 break;
             }
-            if (":" === f()) {
-                if ((d++, !f())) return;
-            } else if (f()) return;
-            l[c++] = t;
+            if (":" === c()) {
+                if ((l++, !c())) return;
+            } else if (c()) return;
+            o[u++] = t;
         }
-        if (null !== u)
-            for (s = c - u, c = 7; 0 !== c && s > 0; ) (o = l[c]), (l[c--] = l[u + s - 1]), (l[u + --s] = o);
-        else if (8 !== c) return;
-        return l;
+        if (null !== f)
+            for (a = u - f, u = 7; 0 !== u && a > 0; ) (h = o[u]), (o[u--] = o[f + a - 1]), (o[f + --a] = h);
+        else if (8 !== u) return;
+        return o;
     },
-    ec = function (e) {
-        for (var t = null, n = 1, r = null, i = 0, a = 0; a < 8; a++)
-            0 !== e[a] ? (i > n && ((t = r), (n = i)), (r = null), (i = 0)) : (null === r && (r = a), ++i);
-        return i > n ? r : t;
+    eo = function (e) {
+        for (var t = null, r = 1, n = null, s = 0, i = 0; i < 8; i++)
+            0 !== e[i] ? (s > r && ((t = n), (r = s)), (n = null), (s = 0)) : (null === n && (n = i), ++s);
+        return s > r ? n : t;
     },
     eu = function (e) {
-        var t, n, r, i;
+        var t, r, n, s;
         if ("number" == typeof e) {
-            for (n = 0, t = []; n < 4; n++) Y(t, e % 256), (e = P(e / 256));
+            for (r = 0, t = []; r < 4; r++) Q(t, e % 256), (e = B(e / 256));
             return j(t, ".");
         }
         if ("object" == typeof e) {
-            for (n = 0, t = "", r = ec(e); n < 8; n++)
-                (!i || 0 !== e[n]) &&
-                    (i && (i = !1),
-                    r === n ? ((t += n ? ":" : "::"), (i = !0)) : ((t += M(e[n], 16)), n < 7 && (t += ":")));
+            for (r = 0, t = "", n = eo(e); r < 8; r++)
+                (!s || 0 !== e[r]) &&
+                    (s && (s = !1),
+                    n === r ? ((t += r ? ":" : "::"), (s = !0)) : ((t += E(e[r], 16)), r < 7 && (t += ":")));
             return "[" + t + "]";
         }
         return e;
     },
-    ed = {},
-    ef = _({}, ed, {
+    ef = {},
+    el = g({}, ef, {
         " ": 1,
         '"': 1,
         "<": 1,
         ">": 1,
         "`": 1,
     }),
-    ep = _({}, ef, {
+    ec = g({}, el, {
         "#": 1,
         "?": 1,
         "{": 1,
         "}": 1,
     }),
-    e_ = _({}, ep, {
+    ep = g({}, ec, {
         "/": 1,
         ":": 1,
         ";": 1,
@@ -192,11 +191,11 @@ var r,
         "^": 1,
         "|": 1,
     }),
-    eh = function (e, t) {
-        var n = g(e, 0);
-        return n > 32 && n < 127 && !p(t, e) ? e : encodeURIComponent(e);
+    eg = function (e, t) {
+        var r = m(e, 0);
+        return r > 32 && r < 127 && !p(t, e) ? e : encodeURIComponent(e);
     },
-    em = {
+    ev = {
         ftp: 21,
         file: null,
         http: 80,
@@ -204,382 +203,373 @@ var r,
         ws: 80,
         wss: 443,
     },
-    eg = function (e, t) {
-        var n;
-        return 2 === e.length && L(X, x(e, 0)) && (":" === (n = x(e, 1)) || (!t && "|" === n));
+    ed = function (e, t) {
+        var r;
+        return 2 === e.length && O(K, z(e, 0)) && (":" === (r = z(e, 1)) || (!t && "|" === r));
     },
-    eE = function (e) {
+    em = function (e) {
         var t;
         return (
             e.length > 1 &&
-            eg(B(e, 0, 2)) &&
-            (2 === e.length || "/" === (t = x(e, 2)) || "\\" === t || "?" === t || "#" === t)
+            ed(J(e, 0, 2)) &&
+            (2 === e.length || "/" === (t = z(e, 2)) || "\\" === t || "?" === t || "#" === t)
         );
     },
-    eb = function (e) {
-        return "." === e || "%2e" === H(e);
-    },
-    ey = function (e) {
-        return ".." === (e = H(e)) || "%2e." === e || ".%2e" === e || "%2e%2e" === e;
-    },
-    eO = {},
-    eA = {},
-    ev = {},
-    eS = {},
-    eI = {},
-    eT = {},
-    eC = {},
-    eN = {},
-    eR = {},
     ew = {},
-    eP = {},
-    eD = {},
-    ex = {},
-    eL = {},
-    ej = {},
-    eM = {},
+    eb = {},
+    ey = {},
     ek = {},
+    eS = {},
+    eP = {},
     eU = {},
-    eG = {},
-    eV = {},
+    eR = {},
+    eL = {},
+    ex = {},
+    eq = {},
+    eH = {},
+    eA = {},
+    eB = {},
+    eC = {},
+    ez = {},
+    eO = {},
+    ej = {},
+    eE = {},
+    eI = {},
     eF = {},
-    eB = function (e, t, n) {
-        var r,
+    eN = function (e, t, r) {
+        var n,
+            s,
             i,
-            a,
-            s = b(e);
+            a = b(e);
         if (t) {
-            if ((i = this.parse(s))) throw new R(i);
+            if ((s = this.parse(a))) throw new H(s);
             this.searchParams = null;
         } else {
-            if ((void 0 !== n && (r = new eB(n, !0)), (i = this.parse(s, null, r)))) throw new R(i);
-            (a = C(new T())).bindURL(this), (this.searchParams = a);
+            if ((void 0 !== r && (n = new eN(r, !0)), (s = this.parse(a, null, n)))) throw new H(s);
+            (i = x(new L())).bindURL(this), (this.searchParams = i);
         }
     };
-eB.prototype = {
+eN.prototype = {
     type: "URL",
-    parse: function (e, t, n) {
-        var i,
-            a,
-            s,
-            o,
-            l = this,
-            c = t || eO,
-            u = 0,
-            d = "",
-            f = !1,
-            _ = !1,
-            g = !1;
+    parse: function (e, t, r) {
+        var s = t || ew,
+            i = 0,
+            a = "",
+            h = !1,
+            o = !1,
+            u = !1;
         for (
             e = b(e),
                 t ||
-                    ((l.scheme = ""),
-                    (l.username = ""),
-                    (l.password = ""),
-                    (l.host = null),
-                    (l.port = null),
-                    (l.path = []),
-                    (l.query = null),
-                    (l.fragment = null),
-                    (l.cannotBeABaseURL = !1),
-                    (e = G(e, ei, "")),
-                    (e = G(e, ea, "$1"))),
-                i = h((e = G(e, es, "")));
-            u <= i.length;
+                    ((this.scheme = ""),
+                    (this.username = ""),
+                    (this.password = ""),
+                    (this.host = null),
+                    (this.port = null),
+                    (this.path = []),
+                    (this.query = null),
+                    (this.fragment = null),
+                    (this.cannotBeABaseURL = !1),
+                    (e = N(e, en, "")),
+                    (e = N(e, es, "$1"))),
+                f = v((e = N(e, ei, "")));
+            i <= f.length;
         ) {
-            switch (((a = i[u]), c)) {
-                case eO:
-                    if (a && L(X, a)) (d += H(a)), (c = eA);
+            switch (((l = f[i]), s)) {
+                case ew:
+                    if (l && O(K, l)) (a += M(l)), (s = eb);
                     else {
-                        if (t) return K;
-                        c = ev;
+                        if (t) return D;
+                        s = ey;
                         continue;
+                    }
+                    break;
+                case eb:
+                    if (l && (O(V, l) || "+" === l || "-" === l || "." === l)) a += M(l);
+                    else if (":" === l) {
+                        if (
+                            t &&
+                            (this.isSpecial() !== p(ev, a) ||
+                                ("file" === a && (this.includesCredentials() || null !== this.port)) ||
+                                ("file" === this.scheme && !this.host))
+                        )
+                            return;
+                        if (((this.scheme = a), t)) {
+                            this.isSpecial() && ev[this.scheme] === this.port && (this.port = null);
+                            return;
+                        }
+                        (a = ""),
+                            "file" === this.scheme
+                                ? (s = eB)
+                                : this.isSpecial() && r && r.scheme === this.scheme
+                                  ? (s = ek)
+                                  : this.isSpecial()
+                                    ? (s = eR)
+                                    : "/" === f[i + 1]
+                                      ? ((s = eS), i++)
+                                      : ((this.cannotBeABaseURL = !0), F(this.path, ""), (s = eE));
+                    } else {
+                        if (t) return D;
+                        (a = ""), (s = ey), (i = 0);
+                        continue;
+                    }
+                    break;
+                case ey:
+                    if (!r || (r.cannotBeABaseURL && "#" !== l)) return D;
+                    if (r.cannotBeABaseURL && "#" === l) {
+                        (this.scheme = r.scheme),
+                            (this.path = d(r.path)),
+                            (this.query = r.query),
+                            (this.fragment = ""),
+                            (this.cannotBeABaseURL = !0),
+                            (s = eF);
+                        break;
+                    }
+                    s = "file" === r.scheme ? eB : eP;
+                    continue;
+                case ek:
+                    if ("/" === l && "/" === f[i + 1]) (s = eL), i++;
+                    else {
+                        s = eP;
+                        continue;
+                    }
+                    break;
+                case eS:
+                    if ("/" === l) {
+                        s = ex;
+                        break;
+                    }
+                    s = ej;
+                    continue;
+                case eP:
+                    if (((this.scheme = r.scheme), l === n))
+                        (this.username = r.username),
+                            (this.password = r.password),
+                            (this.host = r.host),
+                            (this.port = r.port),
+                            (this.path = d(r.path)),
+                            (this.query = r.query);
+                    else if ("/" === l || ("\\" === l && this.isSpecial())) s = eU;
+                    else if ("?" === l)
+                        (this.username = r.username),
+                            (this.password = r.password),
+                            (this.host = r.host),
+                            (this.port = r.port),
+                            (this.path = d(r.path)),
+                            (this.query = ""),
+                            (s = eI);
+                    else if ("#" === l)
+                        (this.username = r.username),
+                            (this.password = r.password),
+                            (this.host = r.host),
+                            (this.port = r.port),
+                            (this.path = d(r.path)),
+                            (this.query = r.query),
+                            (this.fragment = ""),
+                            (s = eF);
+                    else {
+                        (this.username = r.username),
+                            (this.password = r.password),
+                            (this.host = r.host),
+                            (this.port = r.port),
+                            (this.path = d(r.path)),
+                            this.path.length--,
+                            (s = ej);
+                        continue;
+                    }
+                    break;
+                case eU:
+                    if (this.isSpecial() && ("/" === l || "\\" === l)) s = eL;
+                    else if ("/" === l) s = ex;
+                    else {
+                        (this.username = r.username),
+                            (this.password = r.password),
+                            (this.host = r.host),
+                            (this.port = r.port),
+                            (s = ej);
+                        continue;
+                    }
+                    break;
+                case eR:
+                    if (((s = eL), "/" !== l || "/" !== z(a, i + 1))) continue;
+                    i++;
+                    break;
+                case eL:
+                    if ("/" !== l && "\\" !== l) {
+                        s = ex;
+                        continue;
+                    }
+                    break;
+                case ex:
+                    if ("@" === l) {
+                        h && (a = "%40" + a), (h = !0), (c = v(a));
+                        for (var f, l, c, g, m, w, y = 0; y < c.length; y++) {
+                            var k = c[y];
+                            if (":" === k && !u) {
+                                u = !0;
+                                continue;
+                            }
+                            var S = eg(k, ep);
+                            u ? (this.password += S) : (this.username += S);
+                        }
+                        a = "";
+                    } else if (l === n || "/" === l || "?" === l || "#" === l || ("\\" === l && this.isSpecial())) {
+                        if (h && "" === a) return "Invalid authority";
+                        (i -= v(a).length + 1), (a = ""), (s = eq);
+                    } else a += l;
+                    break;
+                case eq:
+                case eH:
+                    if (t && "file" === this.scheme) {
+                        s = ez;
+                        continue;
+                    }
+                    if (":" !== l || o)
+                        if (l === n || "/" === l || "?" === l || "#" === l || ("\\" === l && this.isSpecial())) {
+                            if (this.isSpecial() && "" === a) return G;
+                            if (t && "" === a && (this.includesCredentials() || null !== this.port)) return;
+                            if ((g = this.parseHost(a))) return g;
+                            if (((a = ""), (s = eO), t)) return;
+                            continue;
+                        } else "[" === l ? (o = !0) : "]" === l && (o = !1), (a += l);
+                    else {
+                        if ("" === a) return G;
+                        if ((g = this.parseHost(a))) return g;
+                        if (((a = ""), (s = eA), t === eH)) return;
                     }
                     break;
                 case eA:
-                    if (a && (L(Z, a) || "+" === a || "-" === a || "." === a)) d += H(a);
-                    else if (":" === a) {
-                        if (
-                            t &&
-                            (l.isSpecial() !== p(em, d) ||
-                                ("file" === d && (l.includesCredentials() || null !== l.port)) ||
-                                ("file" === l.scheme && !l.host))
-                        )
-                            return;
-                        if (((l.scheme = d), t)) {
-                            l.isSpecial() && em[l.scheme] === l.port && (l.port = null);
-                            return;
+                    if (O(W, l)) a += l;
+                    else {
+                        if (!(l === n || "/" === l || "?" === l || "#" === l || ("\\" === l && this.isSpecial())) && !t)
+                            return _;
+                        if ("" !== a) {
+                            var P = A(a, 10);
+                            if (P > 65535) return _;
+                            (this.port = this.isSpecial() && P === ev[this.scheme] ? null : P), (a = "");
                         }
-                        (d = ""),
-                            "file" === l.scheme
-                                ? (c = eL)
-                                : l.isSpecial() && n && n.scheme === l.scheme
-                                  ? (c = eS)
-                                  : l.isSpecial()
-                                    ? (c = eN)
-                                    : "/" === i[u + 1]
-                                      ? ((c = eI), u++)
-                                      : ((l.cannotBeABaseURL = !0), U(l.path, ""), (c = eG));
-                    } else {
-                        if (t) return K;
-                        (d = ""), (c = ev), (u = 0);
+                        if (t) return;
+                        s = eO;
                         continue;
                     }
                     break;
-                case ev:
-                    if (!n || (n.cannotBeABaseURL && "#" !== a)) return K;
-                    if (n.cannotBeABaseURL && "#" === a) {
-                        (l.scheme = n.scheme),
-                            (l.path = m(n.path)),
-                            (l.query = n.query),
-                            (l.fragment = ""),
-                            (l.cannotBeABaseURL = !0),
-                            (c = eF);
-                        break;
-                    }
-                    c = "file" === n.scheme ? eL : eT;
-                    continue;
-                case eS:
-                    if ("/" === a && "/" === i[u + 1]) (c = eR), u++;
+                case eB:
+                    if (((this.scheme = "file"), "/" === l || "\\" === l)) s = eC;
+                    else if (r && "file" === r.scheme)
+                        switch (l) {
+                            case n:
+                                (this.host = r.host), (this.path = d(r.path)), (this.query = r.query);
+                                break;
+                            case "?":
+                                (this.host = r.host), (this.path = d(r.path)), (this.query = ""), (s = eI);
+                                break;
+                            case "#":
+                                (this.host = r.host),
+                                    (this.path = d(r.path)),
+                                    (this.query = r.query),
+                                    (this.fragment = ""),
+                                    (s = eF);
+                                break;
+                            default:
+                                em(j(d(f, i), "")) ||
+                                    ((this.host = r.host), (this.path = d(r.path)), this.shortenPath()),
+                                    (s = ej);
+                                continue;
+                        }
                     else {
-                        c = eT;
-                        continue;
-                    }
-                    break;
-                case eI:
-                    if ("/" === a) {
-                        c = ew;
-                        break;
-                    }
-                    c = eU;
-                    continue;
-                case eT:
-                    if (((l.scheme = n.scheme), a === r))
-                        (l.username = n.username),
-                            (l.password = n.password),
-                            (l.host = n.host),
-                            (l.port = n.port),
-                            (l.path = m(n.path)),
-                            (l.query = n.query);
-                    else if ("/" === a || ("\\" === a && l.isSpecial())) c = eC;
-                    else if ("?" === a)
-                        (l.username = n.username),
-                            (l.password = n.password),
-                            (l.host = n.host),
-                            (l.port = n.port),
-                            (l.path = m(n.path)),
-                            (l.query = ""),
-                            (c = eV);
-                    else if ("#" === a)
-                        (l.username = n.username),
-                            (l.password = n.password),
-                            (l.host = n.host),
-                            (l.port = n.port),
-                            (l.path = m(n.path)),
-                            (l.query = n.query),
-                            (l.fragment = ""),
-                            (c = eF);
-                    else {
-                        (l.username = n.username),
-                            (l.password = n.password),
-                            (l.host = n.host),
-                            (l.port = n.port),
-                            (l.path = m(n.path)),
-                            l.path.length--,
-                            (c = eU);
+                        s = ej;
                         continue;
                     }
                     break;
                 case eC:
-                    if (l.isSpecial() && ("/" === a || "\\" === a)) c = eR;
-                    else if ("/" === a) c = ew;
-                    else {
-                        (l.username = n.username),
-                            (l.password = n.password),
-                            (l.host = n.host),
-                            (l.port = n.port),
-                            (c = eU);
-                        continue;
-                    }
-                    break;
-                case eN:
-                    if (((c = eR), "/" !== a || "/" !== x(d, u + 1))) continue;
-                    u++;
-                    break;
-                case eR:
-                    if ("/" !== a && "\\" !== a) {
-                        c = ew;
-                        continue;
-                    }
-                    break;
-                case ew:
-                    if ("@" === a) {
-                        f && (d = "%40" + d), (f = !0), (s = h(d));
-                        for (var E = 0; E < s.length; E++) {
-                            var y = s[E];
-                            if (":" === y && !g) {
-                                g = !0;
-                                continue;
-                            }
-                            var O = eh(y, e_);
-                            g ? (l.password += O) : (l.username += O);
-                        }
-                        d = "";
-                    } else if (a === r || "/" === a || "?" === a || "#" === a || ("\\" === a && l.isSpecial())) {
-                        if (f && "" === d) return W;
-                        (u -= h(d).length + 1), (d = ""), (c = eP);
-                    } else d += a;
-                    break;
-                case eP:
-                case eD:
-                    if (t && "file" === l.scheme) {
-                        c = eM;
-                        continue;
-                    }
-                    if (":" !== a || _)
-                        if (a === r || "/" === a || "?" === a || "#" === a || ("\\" === a && l.isSpecial())) {
-                            if (l.isSpecial() && "" === d) return z;
-                            if (t && "" === d && (l.includesCredentials() || null !== l.port)) return;
-                            if ((o = l.parseHost(d))) return o;
-                            if (((d = ""), (c = ek), t)) return;
-                            continue;
-                        } else "[" === a ? (_ = !0) : "]" === a && (_ = !1), (d += a);
-                    else {
-                        if ("" === d) return z;
-                        if ((o = l.parseHost(d))) return o;
-                        if (((d = ""), (c = ex), t === eD)) return;
-                    }
-                    break;
-                case ex:
-                    if (L(Q, a)) d += a;
-                    else {
-                        if (!(a === r || "/" === a || "?" === a || "#" === a || ("\\" === a && l.isSpecial())) && !t)
-                            return q;
-                        if ("" !== d) {
-                            var A = w(d, 10);
-                            if (A > 65535) return q;
-                            (l.port = l.isSpecial() && A === em[l.scheme] ? null : A), (d = "");
-                        }
-                        if (t) return;
-                        c = ek;
-                        continue;
-                    }
-                    break;
-                case eL:
-                    if (((l.scheme = "file"), "/" === a || "\\" === a)) c = ej;
-                    else if (n && "file" === n.scheme)
-                        switch (a) {
-                            case r:
-                                (l.host = n.host), (l.path = m(n.path)), (l.query = n.query);
-                                break;
-                            case "?":
-                                (l.host = n.host), (l.path = m(n.path)), (l.query = ""), (c = eV);
-                                break;
-                            case "#":
-                                (l.host = n.host),
-                                    (l.path = m(n.path)),
-                                    (l.query = n.query),
-                                    (l.fragment = ""),
-                                    (c = eF);
-                                break;
-                            default:
-                                eE(j(m(i, u), "")) || ((l.host = n.host), (l.path = m(n.path)), l.shortenPath()),
-                                    (c = eU);
-                                continue;
-                        }
-                    else {
-                        c = eU;
-                        continue;
-                    }
-                    break;
-                case ej:
-                    if ("/" === a || "\\" === a) {
-                        c = eM;
+                    if ("/" === l || "\\" === l) {
+                        s = ez;
                         break;
                     }
-                    n &&
-                        "file" === n.scheme &&
-                        !eE(j(m(i, u), "")) &&
-                        (eg(n.path[0], !0) ? U(l.path, n.path[0]) : (l.host = n.host)),
-                        (c = eU);
+                    r &&
+                        "file" === r.scheme &&
+                        !em(j(d(f, i), "")) &&
+                        (ed(r.path[0], !0) ? F(this.path, r.path[0]) : (this.host = r.host)),
+                        (s = ej);
                     continue;
-                case eM:
-                    if (a === r || "/" === a || "\\" === a || "?" === a || "#" === a) {
-                        if (!t && eg(d)) c = eU;
-                        else if ("" === d) {
-                            if (((l.host = ""), t)) return;
-                            c = ek;
+                case ez:
+                    if (l === n || "/" === l || "\\" === l || "?" === l || "#" === l) {
+                        if (!t && ed(a)) s = ej;
+                        else if ("" === a) {
+                            if (((this.host = ""), t)) return;
+                            s = eO;
                         } else {
-                            if ((o = l.parseHost(d))) return o;
-                            if (("localhost" === l.host && (l.host = ""), t)) return;
-                            (d = ""), (c = ek);
+                            if ((g = this.parseHost(a))) return g;
+                            if (("localhost" === this.host && (this.host = ""), t)) return;
+                            (a = ""), (s = eO);
                         }
                         continue;
                     }
-                    d += a;
+                    a += l;
                     break;
-                case ek:
-                    if (l.isSpecial()) {
-                        if (((c = eU), "/" !== a && "\\" !== a)) continue;
-                    } else if (t || "?" !== a)
-                        if (t || "#" !== a) {
-                            if (a !== r && ((c = eU), "/" !== a)) continue;
-                        } else (l.fragment = ""), (c = eF);
-                    else (l.query = ""), (c = eV);
+                case eO:
+                    if (this.isSpecial()) {
+                        if (((s = ej), "/" !== l && "\\" !== l)) continue;
+                    } else if (t || "?" !== l)
+                        if (t || "#" !== l) {
+                            if (l !== n && ((s = ej), "/" !== l)) continue;
+                        } else (this.fragment = ""), (s = eF);
+                    else (this.query = ""), (s = eI);
                     break;
-                case eU:
-                    if (a === r || "/" === a || ("\\" === a && l.isSpecial()) || (!t && ("?" === a || "#" === a))) {
+                case ej:
+                    if (l === n || "/" === l || ("\\" === l && this.isSpecial()) || (!t && ("?" === l || "#" === l))) {
                         if (
-                            (ey(d)
-                                ? (l.shortenPath(), "/" === a || ("\\" === a && l.isSpecial()) || U(l.path, ""))
-                                : eb(d)
-                                  ? "/" === a || ("\\" === a && l.isSpecial()) || U(l.path, "")
-                                  : ("file" === l.scheme &&
-                                        !l.path.length &&
-                                        eg(d) &&
-                                        (l.host && (l.host = ""), (d = x(d, 0) + ":")),
-                                    U(l.path, d)),
-                            (d = ""),
-                            "file" === l.scheme && (a === r || "?" === a || "#" === a))
+                            (".." === (m = M((m = a))) || "%2e." === m || ".%2e" === m || "%2e%2e" === m
+                                ? (this.shortenPath(),
+                                  "/" === l || ("\\" === l && this.isSpecial()) || F(this.path, ""))
+                                : "." === (w = a) || "%2e" === M(w)
+                                  ? "/" === l || ("\\" === l && this.isSpecial()) || F(this.path, "")
+                                  : ("file" === this.scheme &&
+                                        !this.path.length &&
+                                        ed(a) &&
+                                        (this.host && (this.host = ""), (a = z(a, 0) + ":")),
+                                    F(this.path, a)),
+                            (a = ""),
+                            "file" === this.scheme && (l === n || "?" === l || "#" === l))
                         )
-                            for (; l.path.length > 1 && "" === l.path[0]; ) V(l.path);
-                        "?" === a ? ((l.query = ""), (c = eV)) : "#" === a && ((l.fragment = ""), (c = eF));
-                    } else d += eh(a, ep);
+                            for (; this.path.length > 1 && "" === this.path[0]; ) $(this.path);
+                        "?" === l ? ((this.query = ""), (s = eI)) : "#" === l && ((this.fragment = ""), (s = eF));
+                    } else a += eg(l, ec);
                     break;
-                case eG:
-                    "?" === a
-                        ? ((l.query = ""), (c = eV))
-                        : "#" === a
-                          ? ((l.fragment = ""), (c = eF))
-                          : a !== r && (l.path[0] += eh(a, ed));
+                case eE:
+                    "?" === l
+                        ? ((this.query = ""), (s = eI))
+                        : "#" === l
+                          ? ((this.fragment = ""), (s = eF))
+                          : l !== n && (this.path[0] += eg(l, ef));
                     break;
-                case eV:
-                    t || "#" !== a
-                        ? a !== r &&
-                          ("'" === a && l.isSpecial()
-                              ? (l.query += "%27")
-                              : "#" === a
-                                ? (l.query += "%23")
-                                : (l.query += eh(a, ed)))
-                        : ((l.fragment = ""), (c = eF));
+                case eI:
+                    t || "#" !== l
+                        ? l !== n &&
+                          ("'" === l && this.isSpecial()
+                              ? (this.query += "%27")
+                              : "#" === l
+                                ? (this.query += "%23")
+                                : (this.query += eg(l, ef)))
+                        : ((this.fragment = ""), (s = eF));
                     break;
                 case eF:
-                    a !== r && (l.fragment += eh(a, ef));
+                    l !== n && (this.fragment += eg(l, el));
             }
-            u++;
+            i++;
         }
     },
     parseHost: function (e) {
-        var t, n, r;
-        if ("[" === x(e, 0)) {
-            if ("]" !== x(e, e.length - 1) || !(t = el(B(e, 1, -1)))) return z;
+        var t, r, n;
+        if ("[" === z(e, 0)) {
+            if ("]" !== z(e, e.length - 1) || !(t = eh(J(e, 1, -1)))) return G;
             this.host = t;
         } else if (this.isSpecial()) {
-            if (L(en, (e = E(e))) || null === (t = eo(e))) return z;
+            if (O(et, (e = w(e))) || null === (t = ea(e))) return G;
             this.host = t;
         } else {
-            if (L(er, e)) return z;
-            for (r = 0, t = "", n = h(e); r < n.length; r++) t += eh(n[r], ed);
+            if (O(er, e)) return G;
+            for (n = 0, t = "", r = v(e); n < r.length; n++) t += eg(r[n], ef);
             this.host = t;
         }
     },
@@ -590,40 +580,39 @@ eB.prototype = {
         return "" !== this.username || "" !== this.password;
     },
     isSpecial: function () {
-        return p(em, this.scheme);
+        return p(ev, this.scheme);
     },
     shortenPath: function () {
         var e = this.path,
             t = e.length;
-        t && ("file" !== this.scheme || 1 !== t || !eg(e[0], !0)) && e.length--;
+        t && ("file" !== this.scheme || 1 !== t || !ed(e[0], !0)) && e.length--;
     },
     serialize: function () {
-        var e = this,
-            t = e.scheme,
-            n = e.username,
-            r = e.password,
-            i = e.host,
-            a = e.port,
-            s = e.path,
-            o = e.query,
-            l = e.fragment,
-            c = t + ":";
+        var e = this.scheme,
+            t = this.username,
+            r = this.password,
+            n = this.host,
+            s = this.port,
+            i = this.path,
+            a = this.query,
+            h = this.fragment,
+            o = e + ":";
         return (
-            null !== i
-                ? ((c += "//"),
-                  e.includesCredentials() && (c += n + (r ? ":" + r : "") + "@"),
-                  (c += eu(i)),
-                  null !== a && (c += ":" + a))
-                : "file" === t && (c += "//"),
-            (c += e.cannotBeABaseURL ? s[0] : s.length ? "/" + j(s, "/") : ""),
-            null !== o && (c += "?" + o),
-            null !== l && (c += "#" + l),
-            c
+            null !== n
+                ? ((o += "//"),
+                  this.includesCredentials() && (o += t + (r ? ":" + r : "") + "@"),
+                  (o += eu(n)),
+                  null !== s && (o += ":" + s))
+                : "file" === e && (o += "//"),
+            (o += this.cannotBeABaseURL ? i[0] : i.length ? "/" + j(i, "/") : ""),
+            null !== a && (o += "?" + a),
+            null !== h && (o += "#" + h),
+            o
         );
     },
     setHref: function (e) {
         var t = this.parse(e);
-        if (t) throw new R(t);
+        if (t) throw new H(t);
         this.searchParams.update();
     },
     getOrigin: function () {
@@ -631,7 +620,7 @@ eB.prototype = {
             t = this.port;
         if ("blob" === e)
             try {
-                return new eH(e.path[0]).origin;
+                return new e$(e.path[0]).origin;
             } catch (e) {
                 return "null";
             }
@@ -641,26 +630,26 @@ eB.prototype = {
         return this.scheme + ":";
     },
     setProtocol: function (e) {
-        this.parse(b(e) + ":", eO);
+        this.parse(b(e) + ":", ew);
     },
     getUsername: function () {
         return this.username;
     },
     setUsername: function (e) {
-        var t = h(b(e));
+        var t = v(b(e));
         if (!this.cannotHaveUsernamePasswordPort()) {
             this.username = "";
-            for (var n = 0; n < t.length; n++) this.username += eh(t[n], e_);
+            for (var r = 0; r < t.length; r++) this.username += eg(t[r], ep);
         }
     },
     getPassword: function () {
         return this.password;
     },
     setPassword: function (e) {
-        var t = h(b(e));
+        var t = v(b(e));
         if (!this.cannotHaveUsernamePasswordPort()) {
             this.password = "";
-            for (var n = 0; n < t.length; n++) this.password += eh(t[n], e_);
+            for (var r = 0; r < t.length; r++) this.password += eg(t[r], ep);
         }
     },
     getHost: function () {
@@ -669,28 +658,28 @@ eB.prototype = {
         return null === e ? "" : null === t ? eu(e) : eu(e) + ":" + t;
     },
     setHost: function (e) {
-        this.cannotBeABaseURL || this.parse(e, eP);
+        this.cannotBeABaseURL || this.parse(e, eq);
     },
     getHostname: function () {
         var e = this.host;
         return null === e ? "" : eu(e);
     },
     setHostname: function (e) {
-        this.cannotBeABaseURL || this.parse(e, eD);
+        this.cannotBeABaseURL || this.parse(e, eH);
     },
     getPort: function () {
         var e = this.port;
         return null === e ? "" : b(e);
     },
     setPort: function (e) {
-        this.cannotHaveUsernamePasswordPort() || ("" === (e = b(e)) ? (this.port = null) : this.parse(e, ex));
+        this.cannotHaveUsernamePasswordPort() || ("" === (e = b(e)) ? (this.port = null) : this.parse(e, eA));
     },
     getPathname: function () {
         var e = this.path;
         return this.cannotBeABaseURL ? e[0] : e.length ? "/" + j(e, "/") : "";
     },
     setPathname: function (e) {
-        this.cannotBeABaseURL || ((this.path = []), this.parse(e, ek));
+        this.cannotBeABaseURL || ((this.path = []), this.parse(e, eO));
     },
     getSearch: function () {
         var e = this.query;
@@ -699,7 +688,7 @@ eB.prototype = {
     setSearch: function (e) {
         "" === (e = b(e))
             ? (this.query = null)
-            : ("?" === x(e, 0) && (e = B(e, 1)), (this.query = ""), this.parse(e, eV)),
+            : ("?" === z(e, 0) && (e = J(e, 1)), (this.query = ""), this.parse(e, eI)),
             this.searchParams.update();
     },
     getSearchParams: function () {
@@ -714,94 +703,94 @@ eB.prototype = {
             this.fragment = null;
             return;
         }
-        "#" === x(e, 0) && (e = B(e, 1)), (this.fragment = ""), this.parse(e, eF);
+        "#" === z(e, 0) && (e = J(e, 1)), (this.fragment = ""), this.parse(e, eF);
     },
     update: function () {
         this.query = this.searchParams.serialize() || null;
     },
 };
-var eH = function (e) {
-        var t = f(this, eY),
-            n = O(arguments.length, 1) > 1 ? arguments[1] : void 0,
-            r = S(t, new eB(e, !1, n));
-        a ||
-            ((t.href = r.serialize()),
-            (t.origin = r.getOrigin()),
-            (t.protocol = r.getProtocol()),
-            (t.username = r.getUsername()),
-            (t.password = r.getPassword()),
-            (t.host = r.getHost()),
-            (t.hostname = r.getHostname()),
-            (t.port = r.getPort()),
-            (t.pathname = r.getPathname()),
-            (t.search = r.getSearch()),
-            (t.searchParams = r.getSearchParams()),
-            (t.hash = r.getHash()));
+var e$ = function (e) {
+        var t = c(this, eT),
+            r = k(arguments.length, 1) > 1 ? arguments[1] : void 0,
+            n = U(t, new eN(e, !1, r));
+        i ||
+            ((t.href = n.serialize()),
+            (t.origin = n.getOrigin()),
+            (t.protocol = n.getProtocol()),
+            (t.username = n.getUsername()),
+            (t.password = n.getPassword()),
+            (t.host = n.getHost()),
+            (t.hostname = n.getHostname()),
+            (t.port = n.getPort()),
+            (t.pathname = n.getPathname()),
+            (t.search = n.getSearch()),
+            (t.searchParams = n.getSearchParams()),
+            (t.hash = n.getHash()));
     },
-    eY = eH.prototype,
-    eW = function (e, t) {
+    eT = e$.prototype,
+    eJ = function (e, t) {
         return {
             get: function () {
-                return I(this)[e]();
+                return R(this)[e]();
             },
             set:
                 t &&
                 function (e) {
-                    return I(this)[t](e);
+                    return R(this)[t](e);
                 },
             configurable: !0,
             enumerable: !0,
         };
     };
 if (
-    (a &&
-        (d(eY, "href", eW("serialize", "setHref")),
-        d(eY, "origin", eW("getOrigin")),
-        d(eY, "protocol", eW("getProtocol", "setProtocol")),
-        d(eY, "username", eW("getUsername", "setUsername")),
-        d(eY, "password", eW("getPassword", "setPassword")),
-        d(eY, "host", eW("getHost", "setHost")),
-        d(eY, "hostname", eW("getHostname", "setHostname")),
-        d(eY, "port", eW("getPort", "setPort")),
-        d(eY, "pathname", eW("getPathname", "setPathname")),
-        d(eY, "search", eW("getSearch", "setSearch")),
-        d(eY, "searchParams", eW("getSearchParams")),
-        d(eY, "hash", eW("getHash", "setHash"))),
-    u(
-        eY,
+    (i &&
+        (l(eT, "href", eJ("serialize", "setHref")),
+        l(eT, "origin", eJ("getOrigin")),
+        l(eT, "protocol", eJ("getProtocol", "setProtocol")),
+        l(eT, "username", eJ("getUsername", "setUsername")),
+        l(eT, "password", eJ("getPassword", "setPassword")),
+        l(eT, "host", eJ("getHost", "setHost")),
+        l(eT, "hostname", eJ("getHostname", "setHostname")),
+        l(eT, "port", eJ("getPort", "setPort")),
+        l(eT, "pathname", eJ("getPathname", "setPathname")),
+        l(eT, "search", eJ("getSearch", "setSearch")),
+        l(eT, "searchParams", eJ("getSearchParams")),
+        l(eT, "hash", eJ("getHash", "setHash"))),
+    f(
+        eT,
         "toJSON",
         function () {
-            return I(this).serialize();
+            return R(this).serialize();
         },
         {
             enumerable: !0,
         },
     ),
-    u(
-        eY,
+    f(
+        eT,
         "toString",
         function () {
-            return I(this).serialize();
+            return R(this).serialize();
         },
         {
             enumerable: !0,
         },
     ),
-    N)
+    q)
 ) {
-    var eK = N.createObjectURL,
-        ez = N.revokeObjectURL;
-    eK && u(eH, "createObjectURL", l(eK, N)), ez && u(eH, "revokeObjectURL", l(ez, N));
+    var eM = q.createObjectURL,
+        eQ = q.revokeObjectURL;
+    eM && f(e$, "createObjectURL", o(eM, q)), eQ && f(e$, "revokeObjectURL", o(eQ, q));
 }
-y(eH, "URL"),
-    i(
+y(e$, "URL"),
+    s(
         {
             global: !0,
             constructor: !0,
-            forced: !s,
-            sham: !a,
+            forced: !a,
+            sham: !i,
         },
         {
-            URL: eH,
+            URL: e$,
         },
     );
