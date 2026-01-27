@@ -7,9 +7,9 @@ n.d(t, {
     n(321073);
 var r = n(810531),
     i = n(7584),
-    a = n(952526),
-    s = n(71393),
-    o = n(842086);
+    a = n(942269),
+    o = n(71393),
+    s = n(842086);
 
 function l(e, t, n) {
     return (
@@ -93,73 +93,87 @@ function _(e, t) {
     let n = [],
         { tags: r } = t,
         a = {
-            type: o.cG.STICKER_NAME,
+            type: s.cG.STICKER_NAME,
             value: t.name.trim().toLocaleLowerCase(),
         };
     if ((n.push(a), null != r)) {
         let t = {
-            type: o.cG.TAG,
+            type: s.cG.TAG,
             value: r.trim().toLocaleLowerCase(),
         };
         n.push(t);
-        let a = s.A.getGuild(e);
+        let a = o.A.getGuild(e);
         if (null != a) {
             let e = a.name.trim().toLocaleLowerCase();
             null != e &&
                 "" !== e &&
                 n.push({
-                    type: o.cG.GUILD_NAME,
+                    type: s.cG.GUILD_NAME,
                     value: e,
                 });
         }
         let l = i.Ay.getByName(r);
         null != l &&
             (n.push({
-                type: o.cG.CORRELATED_EMOJI,
+                type: s.cG.CORRELATED_EMOJI,
                 value: l.surrogates,
             }),
             l.forEachDiversity((e) =>
                 n.push({
-                    type: o.cG.CORRELATED_EMOJI,
+                    type: s.cG.CORRELATED_EMOJI,
                     value: e.surrogates,
                 }),
             ));
     }
     return n;
 }
-class h extends a.U {
+class h extends a.yW {
+    getStickerById(e) {
+        var t;
+        return null != (t = this.stickerByIdIndex.get(e)) ? t : void 0;
+    }
+    stateWrapper() {
+        return this.database;
+    }
     constructor(...e) {
         super(...e),
+            l(this, "database", this.addKKVDatabase("guildStickers")),
+            l(this, "stickerByIdIndex", this.database.addSecondaryKVIndex("id")),
             l(
                 this,
                 "getAllGuildStickers",
-                this.memoized((e) => {
+                this.database.memoized((e) => {
                     let t = new Map();
-                    for (let n in e) t.set(n, Object.values(e[n].root));
+                    for (let n in e) {
+                        let r = n;
+                        t.set(r, Object.values(e[r].root));
+                    }
+                    return t;
+                }),
+            ),
+            l(
+                this,
+                "getStickerMetadataMap",
+                this.database.memoized((e) => {
+                    let t = new Map();
+                    for (let n in e) {
+                        let r = n;
+                        for (let [n, i] of Object.entries(e[r].root)) t.set(n, _(r, i));
+                    }
                     return t;
                 }),
             ),
             l(
                 this,
                 "getStickersByGuildId",
-                this.memoizedPartition((e, t) => Object.values(t)),
-            ),
-            l(
-                this,
-                "getStickerMetadataMap",
-                this.memoized((e) => {
-                    let t = new Map();
-                    for (let n in e) for (let [r, i] of Object.entries(e[n].root)) t.set(r, _(n, i));
-                    return t;
-                }),
-            ),
-            l(this, "getStickerById", this.memoizedSecondaryIndex());
+                this.database.memoizedPartition((e, t) => Object.values(t)),
+            );
     }
 }
 l(h, "displayName", "GuildStickersStore");
 let m = new h({
-    LOGOUT: (e, t) => t.reset(),
-    BACKGROUND_SYNC: (e, t) => t.reset(),
+    LOGOUT: (e, t) => t.clear(),
+    BACKGROUND_SYNC: (e, t) => t.clear(),
     CONNECTION_OPEN: (e, t) => {
         let n = new Set(t.getPartitionKeys());
         for (let r of e.guilds) n.delete(r.id), null != r.stickers.items && t.setPartition(r.id, p(r.stickers.items));
@@ -175,10 +189,10 @@ let m = new h({
         t.removePartition(e.guild.id);
     },
     GUILD_STICKERS_CREATE_SUCCESS: (e, t) => {
-        t.set(e.guildId, e.sticker.id, f(e.sticker));
+        t.setRecord(e.guildId, e.sticker.id, f(e.sticker));
     },
     GUILD_STICKER_FETCH_SUCCESS: (e, t) => {
-        t.set(e.sticker.guild_id, e.sticker.id, f(e.sticker));
+        t.setRecord(e.sticker.guild_id, e.sticker.id, f(e.sticker));
     },
     GUILD_STICKERS_UPDATE: (e, t) => {
         let n = t.getPartition(e.guildId),
