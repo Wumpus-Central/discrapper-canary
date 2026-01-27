@@ -1,18 +1,22 @@
 n.d(t, {
-    d: () => _,
+    d: () => E,
 });
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(108531),
-    o = n(397927),
-    l = n(766708),
-    c = n(857586),
-    u = n(788868),
-    d = n(732591);
+    o = n(108531),
+    s = n(397927),
+    l = n(565645),
+    c = n(736653),
+    u = n(766708),
+    d = n(71393),
+    f = n(857586),
+    p = n(788868),
+    _ = n(985018),
+    h = n(732591);
 
-function f(e, t, n) {
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +30,7 @@ function f(e, t, n) {
     );
 }
 
-function p(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,78 +41,123 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
 
-function _(e) {
+function E(e) {
     let {
             showUpsell: t,
             text: n,
             textVariant: i,
-            button: f,
-            buttonAnalyticsObject: _,
-            className: m,
-            onSubscribeModalClose: g,
-            position: E = "floating",
+            button: c,
+            buttonAnalyticsObject: m,
+            className: E,
+            onSubscribeModalClose: b,
+            position: O = "floating",
+            hoveredNitroLockedSound: v,
         } = e,
-        b = l.r.useConfig({
+        A = u.r.useConfig({
             location: "PremiumFloatingPickerUpsell",
         }).enabled,
-        y = (0, o.zhh)({
+        I = (0, s.zhh)({
             transform: t ? "translateY(0%)" : "translateY(120%)",
             opacity: +!!t,
             config: {
                 tension: 120,
                 friction: 14,
             },
+        }),
+        S = A && null != v,
+        T = (null == v ? void 0 : v.emojiId) != null || (null == v ? void 0 : v.emojiName) != null,
+        C = n;
+    if (S) {
+        var N;
+        let e = d.A.getGuild(v.guildId);
+        C = _.intl.format(_.t.eku049, {
+            serverName: null != (N = null == e ? void 0 : e.name) ? N : _.intl.string(_.t.DmIUGK),
         });
-    return (0, r.jsx)(s.animated.div, {
-        style: p({}, y),
+    }
+    return (0, r.jsx)(o.animated.div, {
+        style: g({}, I),
         className: a()(
-            d.Zj,
-            b && d.g9,
+            h.Zj,
+            A && h.g9,
             {
-                [d.tO]: "floating" === E,
-                [d.Kx]: "inline" === E,
+                [h.tO]: "floating" === O,
+                [h.Kx]: "inline" === O,
             },
-            m,
+            E,
         ),
-        children: (0, r.jsxs)(h, {
+        children: (0, r.jsxs)(y, {
+            hasPreviewSound: S,
             children: [
-                (0, r.jsx)(o.Text, {
-                    variant: null != i ? i : "text-sm/medium",
-                    color: "text-strong",
-                    className: d.tD,
-                    children: n,
-                }),
-                "string" == typeof f
-                    ? (0, r.jsx)(c.A, {
+                S &&
+                    (0, r.jsxs)("div", {
+                        className: h.Ed,
+                        children: [
+                            (0, r.jsxs)("div", {
+                                className: h.vg,
+                                children: [
+                                    T &&
+                                        (0, r.jsx)(l.A, {
+                                            emojiId: v.emojiId,
+                                            emojiName: v.emojiName,
+                                        }),
+                                    (0, r.jsx)(s.Text, {
+                                        variant: "text-sm/semibold",
+                                        color: "text-strong",
+                                        children: v.name,
+                                    }),
+                                ],
+                            }),
+                            (0, r.jsx)(s.Text, {
+                                variant: "text-xs/normal",
+                                color: "text-muted",
+                                className: h.Fr,
+                                children: null != C ? C : n,
+                            }),
+                        ],
+                    }),
+                !S &&
+                    (0, r.jsx)(s.Text, {
+                        variant: null != i ? i : "text-sm/medium",
+                        color: "text-strong",
+                        className: h.tD,
+                        children: n,
+                    }),
+                "string" == typeof c
+                    ? (0, r.jsx)(f.A, {
                           size: "sm",
-                          subscriptionTier: u.pe.TIER_2,
-                          buttonTextOverride: f,
-                          premiumModalAnalyticsLocation: _,
+                          subscriptionTier: p.pe.TIER_2,
+                          buttonTextOverride: c,
+                          premiumModalAnalyticsLocation: m,
                           tabIndex: t ? 0 : -1,
-                          onSubscribeModalClose: g,
+                          onSubscribeModalClose: b,
                       })
-                    : f,
+                    : c,
             ],
         }),
     });
 }
 
-function h(e) {
-    let { children: t } = e;
-    return l.r.useConfig({
-        location: "PremiumFloatingPickerUpsell",
-    }).enabled
-        ? (0, r.jsx)(o.hLv, {
+function y(e) {
+    let { hasPreviewSound: t, children: n } = e,
+        i = u.r.useConfig({
+            location: "PremiumFloatingPickerUpsell",
+        }).enabled,
+        o = (0, c.Ay)();
+    return i
+        ? (0, r.jsx)(s.hLv, {
               color: "nitro-pink",
               offsetBottom: -3,
-              className: d.mk,
-              children: t,
+              className: a()(h.nC, {
+                  [h.Ay]: (0, s.Mwr)(o),
+                  [h.u8]: t,
+              }),
+              children: n,
           })
-        : t;
+        : n;
 }
