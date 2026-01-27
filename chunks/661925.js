@@ -1,28 +1,28 @@
 n.d(e, {
-    default: () => p,
+    default: () => m,
 }),
     n(896048),
     n(492834);
 var r = n(627968),
-    l = n(64700),
-    a = n(284009),
-    i = n.n(a),
-    s = n(158954),
-    c = n(311907),
-    o = n(397927),
-    u = n(452357),
-    b = n(287809),
-    d = n(985018),
-    f = n(143021);
-let p = function (t) {
-    let { onClose: e, transitionState: a } = t,
-        p = (0, c.bG)([b.default], () => b.default.getCurrentUser()),
-        [m, y] = l.useState(!1),
-        g = l.useCallback(() => (null == e || e(), Promise.resolve()), [e]),
-        k = l.useCallback(() => {
+    i = n(64700),
+    l = n(284009),
+    a = n.n(l),
+    o = n(158954),
+    s = n(311907),
+    u = n(397927),
+    c = n(452357),
+    d = n(287809),
+    f = n(985018),
+    b = n(143021);
+let m = function (t) {
+    let { onClose: e, transitionState: l } = t,
+        m = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
+        [g, y] = i.useState(!1),
+        p = i.useCallback(() => (null == e || e(), Promise.resolve()), [e]),
+        v = i.useCallback(() => {
             null == e || e(),
-                (0, o.mMO)(async () => {
-                    let { default: t } = await n.e("83269").then(n.bind(n, 350116));
+                (0, u.mMO)(async () => {
+                    let { default: t } = await Promise.all([n.e("83269"), n.e("17726")]).then(n.bind(n, 350116));
                     return (e) =>
                         (0, r.jsx)(
                             t,
@@ -54,50 +54,50 @@ let p = function (t) {
                         );
                 });
         }, [e]),
-        v = l.useCallback(() => {
+        k = i.useCallback(() => {
             null == e || e(),
-                i()(null != p, "ResendEmailVerificationButton: currentUser cannot be undefined"),
+                a()(null != m, "ResendEmailVerificationButton: currentUser cannot be undefined"),
                 y(!0),
-                (0, u.S)(p).finally(() => y(!1));
-        }, [p, e]),
-        h = l.useMemo(
+                (0, c.S)(m).finally(() => y(!1));
+        }, [m, e]),
+        O = i.useMemo(
             () =>
-                (null == p ? void 0 : p.email) == null
+                (null == m ? void 0 : m.email) == null
                     ? [
                           {
-                              text: d.intl.string(d.t.ydw5nX),
-                              onClick: k,
+                              text: f.intl.string(f.t.ydw5nX),
+                              onClick: v,
                               variant: "primary",
                           },
                       ]
                     : [
                           {
-                              text: d.intl.string(d.t.Vm8akB),
-                              onClick: k,
+                              text: f.intl.string(f.t.Vm8akB),
+                              onClick: v,
                               variant: "secondary",
                           },
                           {
-                              text: d.intl.string(d.t.lm1UKt),
-                              onClick: v,
+                              text: f.intl.string(f.t.lm1UKt),
+                              onClick: k,
                               variant: "primary",
-                              loading: m,
+                              loading: g,
                           },
                       ],
-            [p, k, v, m],
+            [m, v, k, g],
         );
-    return (0, r.jsxs)(s.Modal, {
-        title: d.intl.string(d.t.UZLrY1),
-        transitionState: a,
-        onClose: g,
-        actions: h,
+    return (0, r.jsxs)(o.Modal, {
+        title: f.intl.string(f.t.UZLrY1),
+        transitionState: l,
+        onClose: p,
+        actions: O,
         children: [
             (0, r.jsx)("div", {
-                className: f.p,
+                className: b.p,
             }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(u.Text, {
                 variant: "text-md/normal",
-                className: f.i,
-                children: d.intl.string(d.t["0LgOKH"]),
+                className: b.i,
+                children: f.intl.string(f.t["0LgOKH"]),
             }),
         ],
     });

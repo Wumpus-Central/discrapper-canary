@@ -1,307 +1,296 @@
 n.d(t, {
-    A: () => eE,
+    A: () => eA,
     c: () => em,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(989349),
-    l = n.n(o),
+    l = n(503698),
+    s = n.n(l),
+    a = n(989349),
+    o = n.n(a),
     c = n(877624),
-    u = n(311907),
-    d = n(230109),
-    f = n(732955),
+    d = n(311907),
+    u = n(230109),
+    _ = n(732955),
     p = n(582754),
-    _ = n(421380),
-    h = n(397927),
-    m = n(73153),
-    g = n(384904),
-    E = n(73825),
-    y = n(974544),
-    b = n(736653),
-    O = n(793574),
-    v = n(688810),
-    A = n(86379),
+    m = n(421380),
+    g = n(397927),
+    A = n(73153),
+    f = n(384904),
+    h = n(73825),
+    b = n(974544),
+    E = n(736653),
+    x = n(793574),
+    O = n(688810),
+    C = n(86379),
     I = n(531260),
-    S = n(160946),
-    T = n(459793),
-    C = n(721668),
-    N = n(976860),
-    w = n(780964),
-    R = n(12901),
+    T = n(160946),
+    S = n(459793),
+    j = n(721668),
+    v = n(976860),
+    N = n(780964),
+    y = n(12901),
     P = n(840065),
-    D = n(351906),
-    x = n(287809),
-    L = n(166403),
-    j = n(224016),
+    R = n(351906),
+    D = n(287809),
+    w = n(166403),
+    L = n(224016),
     M = n(954571),
-    k = n(975571),
-    U = n(927578),
-    G = n(526292),
+    U = n(975571),
+    G = n(927578),
+    k = n(526292),
     V = n(637073),
-    F = n(411268),
+    H = n(411268),
     B = n(810498),
-    H = n(807098),
+    F = n(807098),
     Y = n(412260),
     W = n(103411),
-    K = n(190187),
-    z = n(194509),
-    q = n(65470),
-    Z = n(857586),
-    X = n(795269),
-    Q = n(501007),
-    J = n(156601),
+    z = n(190187),
+    K = n(194509),
+    Z = n(65470),
+    X = n(857586),
+    q = n(795269),
+    J = n(501007),
+    Q = n(156601),
     $ = n(244778),
     ee = n(659533),
     et = n(788868),
     en = n(88001),
     er = n(652215),
     ei = n(985018),
-    ea = n(95252),
+    el = n(95252),
     es = n(396785),
-    eo = n(956537);
-let el = "to_subscriptions_button",
-    ec = "subscriptions settings",
-    eu = "to_premium_home_button",
-    ed = "premium home page",
-    ef = "gifting_button",
-    ep = "payment modal";
+    ea = n(956537);
+let eo = "to_premium_home_button",
+    ec = "premium home page",
+    ed = "gifting_button",
+    eu = "payment modal";
 
 function e_(e) {
-    let { premiumSubscription: t, isDiscountApplied: n, activeDiscountInfo: i, theme: a } = e,
+    let { premiumSubscription: t, isDiscountApplied: n, activeDiscountInfo: i, theme: l } = e,
         s = t.hasActiveTrial,
-        o = t.planIdFromItems === et.gD.PREMIUM_YEAR_TIER_2,
+        a = t.planIdFromItems === et.gD.PREMIUM_YEAR_TIER_2,
         c = n || s,
-        u = null != t.trialEndsAt ? l()(t.trialEndsAt).diff(l()(), "d") : 0,
-        d = et.hd[t.planIdFromItems],
-        f = U.Ay.formatPriceString(U.Ay.getDefaultPrice(d.id), d.interval),
-        { enabled: _ } = F.K.getCurrentConfig({
+        d = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), "d") : 0,
+        u = et.hd[t.planIdFromItems],
+        _ = G.Ay.formatPriceString(G.Ay.getDefaultPrice(u.id), u.interval),
+        { enabled: m } = H.K.getCurrentConfig({
             location: "SubscriptionUserHeroSubheader",
-        }),
-        m = () => {
-            var e, t, n;
-            return _
-                ? ""
-                : s
-                  ? ei.intl.format(ei.t["2CGBri"], {
-                        remainingTime: u,
-                        price: f,
-                    })
-                  : o
-                    ? ei.intl.format(ei.t["+qqh6g"], {
-                          percent: null != (e = null == i ? void 0 : i.percentage) ? e : et.Cq,
-                          regularPrice: f,
-                      })
-                    : ei.intl.formatToPlainString(ei.t["3ZiutU"], {
-                          percent: null != (t = null == i ? void 0 : i.percentage) ? t : et._$,
-                          regularPrice: f,
-                          numMonths: null != (n = null == i ? void 0 : i.duration) ? n : et.OJ,
-                      });
-        };
-    return c
-        ? (0, r.jsxs)(r.Fragment, {
-              children: [
-                  (s || !o) &&
-                      (0, r.jsx)(X.ir, {
-                          text: s ? ei.intl.string(ei.t.qYKftX) : ei.intl.string(ei.t.EyjDRE),
-                          className: ea.uS,
-                          colorOptions: (0, p.Mw)(a)
-                              ? X.at.PREMIUM_TIER_2_WHITE_FILL
-                              : X.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
-                      }),
-                  (s || !o) &&
-                      (0, r.jsx)("div", {
-                          className: ea.on,
-                      }),
-                  (0, r.jsx)(h.Heading, {
-                      variant: "heading-md/normal",
-                      color: "always-white",
-                      className: ea.KB,
-                      children: m(),
-                  }),
-              ],
+        });
+    if (c) {
+        var A, f, h;
+        return (0, r.jsxs)(r.Fragment, {
+            children: [
+                (s || !a) &&
+                    (0, r.jsx)(q.ir, {
+                        text: s ? ei.intl.string(ei.t.qYKftX) : ei.intl.string(ei.t.EyjDRE),
+                        className: el.uS,
+                        colorOptions: (0, p.Mw)(l)
+                            ? q.at.PREMIUM_TIER_2_WHITE_FILL
+                            : q.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
+                    }),
+                (s || !a) &&
+                    (0, r.jsx)("div", {
+                        className: el.on,
+                    }),
+                (0, r.jsx)(g.Heading, {
+                    variant: "heading-md/normal",
+                    color: "always-white",
+                    className: el.KB,
+                    children: m
+                        ? ""
+                        : s
+                          ? ei.intl.format(ei.t["2CGBri"], {
+                                remainingTime: d,
+                                price: _,
+                            })
+                          : a
+                            ? ei.intl.format(ei.t["+qqh6g"], {
+                                  percent: null != (A = null == i ? void 0 : i.percentage) ? A : et.Cq,
+                                  regularPrice: _,
+                              })
+                            : ei.intl.formatToPlainString(ei.t["3ZiutU"], {
+                                  percent: null != (f = null == i ? void 0 : i.percentage) ? f : et._$,
+                                  regularPrice: _,
+                                  numMonths: null != (h = null == i ? void 0 : i.duration) ? h : et.OJ,
+                              }),
+                }),
+            ],
+        });
+    }
+    return m
+        ? (0, r.jsx)("div", {
+              style: {
+                  marginBottom: "18px",
+              },
           })
-        : _
-          ? (0, r.jsx)("div", {
-                style: {
-                    marginBottom: "18px",
-                },
-            })
-          : (0, r.jsx)(J.A, {
-                variant: void 0,
-                subscriptionTier: et.pe.TIER_2,
-                interval: d.interval,
-            });
+        : (0, r.jsx)(Q.A, {
+              variant: void 0,
+              subscriptionTier: et.pe.TIER_2,
+              interval: u.interval,
+          });
 }
 
-function eh() {
-    let e = (0, G.k5)(),
-        t = (0, G.nf)(),
-        n = (0, b.Ay)(),
-        i = (0, u.bG)([L.A], () => L.A.getPremiumTypeSubscription()),
-        a = (0, u.bG)([x.default], () => x.default.getCurrentUser()),
-        o = null == a ? void 0 : a.isPremiumWithPremiumGroup(),
-        l = (0, I.A)(),
+function ep() {
+    let e = (0, k.k5)(),
+        t = (0, k.nf)(),
+        n = (0, E.Ay)(),
+        i = (0, d.bG)([w.A], () => w.A.getPremiumTypeSubscription()),
+        l = (0, d.bG)([D.default], () => D.default.getCurrentUser()),
+        a = null == l ? void 0 : l.isPremiumWithPremiumGroup(),
+        o = (0, I.A)(),
         c = (0, V.d)(),
-        d = null !== i && null !== i.planIdFromItems;
-    if (!d && !l.isFractionalPremiumActive && !o) return null;
-    let _ = l.isFractionalPremiumActive,
-        m = null !== i && i.hasActiveTrial,
-        g = e || m,
-        E = () =>
-            (null == a ? void 0 : a.isPremiumGroupPrimary())
-                ? Q.Nz.PREMIUM_GROUP_PRIMARY
-                : (null == a ? void 0 : a.isPremiumGroupMember())
-                  ? Q.Nz.PREMIUM_GROUP_MEMBER
-                  : _
-                    ? Q.Nz.FRACTIONAL_PREMIUM
-                    : Q.Nz.DEFAULT,
-        y = () =>
-            o
-                ? (0, r.jsx)(h.Heading, {
-                      variant: "display-md",
-                      color: "always-white",
-                      className: ea._K,
-                      children: (0, en.DP)(),
-                  })
-                : (0, r.jsx)(j.A, {
-                      className: ea.TJ,
-                  }),
-        O = () =>
-            o
-                ? (0, r.jsx)("div", {
-                      style: {
-                          marginBottom: "18px",
-                      },
-                  })
-                : _ && !c
-                  ? (0, r.jsxs)(r.Fragment, {
-                        children: [
-                            (0, r.jsx)(X.R, {
-                                text: ei.intl.string(ei.t.uXF4c4),
-                                className: ea.rd,
-                                colorOptions: X.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
-                            }),
-                            (0, r.jsx)(h.Heading, {
-                                variant: "heading-md/normal",
-                                color: "always-white",
-                                className: ea.sQ,
-                                children: ei.intl.format(ei.t.sK7fGl, {
-                                    helpCenterLink: k.A.getArticleURL(er.MVz.FRACTIONAL_PREMIUM_ABOUT),
-                                }),
-                            }),
-                        ],
-                    })
-                  : d
-                    ? (0, r.jsx)(e_, {
-                          premiumSubscription: i,
-                          isDiscountApplied: e,
-                          activeDiscountInfo: t,
-                          theme: n,
-                      })
-                    : c
-                      ? (0, r.jsxs)(r.Fragment, {
-                            children: [
-                                (0, r.jsx)(X.ir, {
-                                    text: ei.intl.string(ei.t.qYKftX),
-                                    className: ea.uS,
-                                    colorOptions: (0, p.Mw)(n)
-                                        ? X.at.PREMIUM_TIER_2_WHITE_FILL
-                                        : X.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
-                                }),
-                                (0, r.jsx)(h.Heading, {
-                                    variant: "heading-md/normal",
-                                    color: "always-white",
-                                    className: ea.KB,
-                                    children: ei.intl.format(ei.t["/SfHwl"], {
-                                        weeks: 1,
-                                    }),
-                                }),
-                            ],
-                        })
-                      : null,
-        v = () =>
-            _ && !d
-                ? (0, r.jsxs)(f.e2v, {
-                      fullWidth: !0,
-                      direction: "vertical",
-                      children: [
-                          (0, r.jsx)(Z.A, {
-                              defaultTextOverride: c ? ei.intl.string(ei.t.YScQSF) : ei.intl.string(ei.t["0b3YRn"]),
-                          }),
-                          (0, r.jsx)(f.$nd, {
-                              onClick: () => {
-                                  M.default.track(er.HAw.PREMIUM_SETTINGS_INTERACTED, {
-                                      cta_type: eu,
-                                      target: ed,
-                                  }),
-                                      (0, R.default)(),
-                                      (0, N.pX)(er.BVt.APPLICATION_STORE);
-                              },
-                              variant: "overlay-secondary",
-                              fullWidth: !0,
-                              size: "md",
-                              text: c ? ei.intl.string(ei.t.VR2iVB) : ei.intl.string(ei.t.T1aUAX),
-                          }),
-                      ],
-                  })
-                : (0, r.jsxs)(f.e2v, {
-                      fullWidth: !0,
-                      direction: "vertical",
-                      children: [
-                          (0, r.jsx)(f.$nd, {
-                              variant: "overlay-primary",
-                              fullWidth: !0,
-                              onClick: () => {
-                                  M.default.track(er.HAw.PREMIUM_SETTINGS_INTERACTED, {
-                                      cta_type: eu,
-                                      target: ed,
-                                  }),
-                                      (0, R.default)(),
-                                      (0, N.pX)(er.BVt.APPLICATION_STORE);
-                              },
-                              text: ei.intl.string(ei.t.VR2iVB),
-                              size: "md",
-                          }),
-                          (0, r.jsx)(f.$nd, {
-                              variant: "overlay-secondary",
-                              onClick: () => {
-                                  M.default.track(er.HAw.PREMIUM_SETTINGS_INTERACTED, {
-                                      cta_type: el,
-                                      target: ec,
-                                  }),
-                                      (0, P.openUserSettings)(w.X.SUBSCRIPTIONS_PANEL, {
-                                          section: er.nc_.SUBSCRIPTIONS,
-                                      });
-                              },
-                              text: ei.intl.string(ei.t["9uDy6C"]),
-                              fullWidth: !0,
-                              size: "md",
-                          }),
-                      ],
-                  });
+        u = null !== i && null !== i.planIdFromItems;
+    if (!u && !o.isFractionalPremiumActive && !a) return null;
+    let m = o.isFractionalPremiumActive,
+        A = null !== i && i.hasActiveTrial;
     return (0, r.jsxs)("div", {
-        className: s()(ea.$Y, {
-            [ea.J5]: g,
+        className: s()(el.$Y, {
+            [el.J5]: e || A,
         }),
         children: [
             (0, r.jsxs)("div", {
-                className: ea.jp,
+                className: el.jp,
                 children: [
-                    y(),
-                    O(),
-                    (0, r.jsx)(Q.ZP, {
-                        featureSet: E(),
+                    a
+                        ? (0, r.jsx)(g.Heading, {
+                              variant: "display-md",
+                              color: "always-white",
+                              className: el._K,
+                              children: (0, en.DP)(),
+                          })
+                        : (0, r.jsx)(L.A, {
+                              className: el.TJ,
+                          }),
+                    a
+                        ? (0, r.jsx)("div", {
+                              style: {
+                                  marginBottom: "18px",
+                              },
+                          })
+                        : m && !c
+                          ? (0, r.jsxs)(r.Fragment, {
+                                children: [
+                                    (0, r.jsx)(q.R, {
+                                        text: ei.intl.string(ei.t.uXF4c4),
+                                        className: el.rd,
+                                        colorOptions: q.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
+                                    }),
+                                    (0, r.jsx)(g.Heading, {
+                                        variant: "heading-md/normal",
+                                        color: "always-white",
+                                        className: el.sQ,
+                                        children: ei.intl.format(ei.t.sK7fGl, {
+                                            helpCenterLink: U.A.getArticleURL(er.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                                        }),
+                                    }),
+                                ],
+                            })
+                          : u
+                            ? (0, r.jsx)(e_, {
+                                  premiumSubscription: i,
+                                  isDiscountApplied: e,
+                                  activeDiscountInfo: t,
+                                  theme: n,
+                              })
+                            : c
+                              ? (0, r.jsxs)(r.Fragment, {
+                                    children: [
+                                        (0, r.jsx)(q.ir, {
+                                            text: ei.intl.string(ei.t.qYKftX),
+                                            className: el.uS,
+                                            colorOptions: (0, p.Mw)(n)
+                                                ? q.at.PREMIUM_TIER_2_WHITE_FILL
+                                                : q.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
+                                        }),
+                                        (0, r.jsx)(g.Heading, {
+                                            variant: "heading-md/normal",
+                                            color: "always-white",
+                                            className: el.KB,
+                                            children: ei.intl.format(ei.t["/SfHwl"], {
+                                                weeks: 1,
+                                            }),
+                                        }),
+                                    ],
+                                })
+                              : null,
+                    (0, r.jsx)(J.ZP, {
+                        featureSet: (null == l ? void 0 : l.isPremiumGroupPrimary())
+                            ? J.Nz.PREMIUM_GROUP_PRIMARY
+                            : (null == l ? void 0 : l.isPremiumGroupMember())
+                              ? J.Nz.PREMIUM_GROUP_MEMBER
+                              : m
+                                ? J.Nz.FRACTIONAL_PREMIUM
+                                : J.Nz.DEFAULT,
                     }),
-                    v(),
+                    m && !u
+                        ? (0, r.jsxs)(_.e2v, {
+                              fullWidth: !0,
+                              direction: "vertical",
+                              children: [
+                                  (0, r.jsx)(X.A, {
+                                      defaultTextOverride: c
+                                          ? ei.intl.string(ei.t.YScQSF)
+                                          : ei.intl.string(ei.t["0b3YRn"]),
+                                  }),
+                                  (0, r.jsx)(_.$nd, {
+                                      onClick: () => {
+                                          M.default.track(er.HAw.PREMIUM_SETTINGS_INTERACTED, {
+                                              cta_type: eo,
+                                              target: ec,
+                                          }),
+                                              (0, y.default)(),
+                                              (0, v.pX)(er.BVt.APPLICATION_STORE);
+                                      },
+                                      variant: "overlay-secondary",
+                                      fullWidth: !0,
+                                      size: "md",
+                                      text: c ? ei.intl.string(ei.t.VR2iVB) : ei.intl.string(ei.t.T1aUAX),
+                                  }),
+                              ],
+                          })
+                        : (0, r.jsxs)(_.e2v, {
+                              fullWidth: !0,
+                              direction: "vertical",
+                              children: [
+                                  (0, r.jsx)(_.$nd, {
+                                      variant: "overlay-primary",
+                                      fullWidth: !0,
+                                      onClick: () => {
+                                          M.default.track(er.HAw.PREMIUM_SETTINGS_INTERACTED, {
+                                              cta_type: eo,
+                                              target: ec,
+                                          }),
+                                              (0, y.default)(),
+                                              (0, v.pX)(er.BVt.APPLICATION_STORE);
+                                      },
+                                      text: ei.intl.string(ei.t.VR2iVB),
+                                      size: "md",
+                                  }),
+                                  (0, r.jsx)(_.$nd, {
+                                      variant: "overlay-secondary",
+                                      onClick: () => {
+                                          M.default.track(er.HAw.PREMIUM_SETTINGS_INTERACTED, {
+                                              cta_type: "to_subscriptions_button",
+                                              target: "subscriptions settings",
+                                          }),
+                                              (0, P.openUserSettings)(N.X.SUBSCRIPTIONS_PANEL, {
+                                                  section: er.nc_.SUBSCRIPTIONS,
+                                              });
+                                      },
+                                      text: ei.intl.string(ei.t["9uDy6C"]),
+                                      fullWidth: !0,
+                                      size: "md",
+                                  }),
+                              ],
+                          }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: ea.ah,
+                className: el.ah,
                 children: (0, r.jsx)("img", {
-                    className: ea.ah,
+                    className: el.ah,
                     alt: "",
                     src: es,
                 }),
@@ -312,9 +301,9 @@ function eh() {
 
 function em(e) {
     let { className: t, config: n } = e,
-        a = (0, H.T)(n.asset),
-        o = (0, H.T)(n.backgroundAsset),
-        l = (0, B.gc)(null != o ? o : void 0),
+        l = (0, F.T)(n.asset),
+        a = (0, F.T)(n.backgroundAsset),
+        o = (0, B.gc)(null != a ? a : void 0),
         c = i.useMemo(() => {
             let e = n.gradient;
             if (null != e && null != e.colors && !(e.colors.length < 2))
@@ -328,50 +317,50 @@ function em(e) {
                     },
                 );
         }, [n.gradient]),
-        u = (0, B.x)(l, c),
-        d = {
+        d = (0, B.x)(o, c),
+        u = {
             color: null != n.textColor && "" !== n.textColor ? n.textColor : "var(--always-white)",
         };
     return (0, r.jsxs)("div", {
-        className: s()(ea.WR, t),
-        style: u,
+        className: s()(el.WR, t),
+        style: d,
         children: [
-            null != a &&
+            null != l &&
                 (0, r.jsx)("img", {
                     alt: "",
-                    className: ea.TB,
+                    className: el.TB,
                     "aria-hidden": !0,
-                    src: a,
+                    src: l,
                 }),
             (0, r.jsxs)("div", {
-                className: ea.QT,
+                className: el.QT,
                 children: [
-                    (0, r.jsx)(h.Heading, {
-                        className: ea.u_,
-                        style: d,
+                    (0, r.jsx)(g.Heading, {
+                        className: el.u_,
+                        style: u,
                         variant: "heading-lg/extrabold",
                         children: n.header,
                     }),
-                    (0, r.jsx)(h.Text, {
-                        className: ea.Oi,
-                        style: d,
+                    (0, r.jsx)(g.Text, {
+                        className: el.Oi,
+                        style: u,
                         variant: "text-xs/medium",
                         children: n.body,
                     }),
                     null != n.additionalTerms &&
-                        (0, r.jsx)(h.Text, {
-                            className: ea.KW,
-                            style: d,
+                        (0, r.jsx)(g.Text, {
+                            className: el.KW,
+                            style: u,
                             variant: "text-xxs/normal",
                             children: n.additionalTerms,
                         }),
-                    (0, r.jsx)(q.A, {
+                    (0, r.jsx)(Z.A, {
                         variant: "primary",
                         size: "md",
                         onClick: () => {
                             M.default.track(er.HAw.PREMIUM_SETTINGS_INTERACTED, {
-                                cta_type: ef,
-                                target: ep,
+                                cta_type: ed,
+                                target: eu,
                             });
                         },
                     }),
@@ -383,37 +372,37 @@ function em(e) {
 
 function eg() {
     return (0, r.jsxs)("div", {
-        className: ea.T1,
+        className: el.T1,
         children: [
             (0, r.jsx)("img", {
-                className: ea.GY,
+                className: el.GY,
                 alt: "",
-                src: eo,
+                src: ea,
             }),
             (0, r.jsxs)("div", {
-                className: ea.b4,
+                className: el.b4,
                 children: [
-                    (0, r.jsx)(h.Heading, {
-                        className: ea.Vz,
+                    (0, r.jsx)(g.Heading, {
+                        className: el.Vz,
                         variant: "heading-xl/extrabold",
                         children: ei.intl.string(ei.t["3KomGa"]),
                     }),
-                    (0, r.jsx)(h.Text, {
-                        className: ea.Oi,
+                    (0, r.jsx)(g.Text, {
+                        className: el.Oi,
                         variant: "text-sm/normal",
                         children: ei.intl.string(ei.t.yQ06u1),
                     }),
-                    (0, r.jsx)(z.A, {
-                        className: s()(ea.Tp, ea._c),
+                    (0, r.jsx)(K.A, {
+                        className: s()(el.Tp, el._c),
                         textOptions: {
                             textOverride: ei.intl.string(ei.t.Ve9Ge6),
-                            textClassName: ea.VV,
+                            textClassName: el.VV,
                         },
-                        color: _.$n.Colors.CUSTOM,
+                        color: m.$n.Colors.CUSTOM,
                         onClick: () => {
                             M.default.track(er.HAw.PREMIUM_SETTINGS_INTERACTED, {
-                                cta_type: ef,
-                                target: ep,
+                                cta_type: ed,
+                                target: eu,
                             });
                         },
                     }),
@@ -422,83 +411,83 @@ function eg() {
         ],
     });
 }
-let eE = function () {
-    let e = (0, A.H)(),
-        { analyticsLocations: t } = (0, v.Ay)(O.A.PREMIUM_SETTINGS),
-        n = (0, u.bG)([x.default], () => x.default.getCurrentUser()),
-        a = (0, u.bG)([L.A], () => L.A.getPremiumTypeSubscription()),
-        s = (0, u.bG)([L.A], () => L.A.hasFetchedSubscriptions()),
-        o = (0, S.Y)(et.T7),
-        [l, f] = i.useState(!0),
+let eA = function () {
+    let e = (0, C.H)(),
+        { analyticsLocations: t } = (0, O.Ay)(x.A.PREMIUM_SETTINGS),
+        n = (0, d.bG)([D.default], () => D.default.getCurrentUser()),
+        l = (0, d.bG)([w.A], () => w.A.getPremiumTypeSubscription()),
+        s = (0, d.bG)([w.A], () => w.A.hasFetchedSubscriptions()),
+        a = (0, T.Y)(et.T7),
+        [o, _] = i.useState(!0),
         p = (0, I.A)({
             forceFetch: !0,
         }),
-        _ = (0, u.bG)([Y.A], () => {
+        m = (0, d.bG)([Y.A], () => {
             let e = Y.A.getMarketingComponentByType(c.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
             return null == e || "billingSettingsNitroGiftBanner" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.billingSettingsNitroGiftBanner;
         }),
-        b = (0, u.bG)([D.A], () => D.A.enabled),
-        N = i.useRef(null);
-    (0, K.i)();
-    let w = (0, W.m)();
+        E = (0, d.bG)([R.A], () => R.A.enabled),
+        v = i.useRef(null);
+    (0, z.i)();
+    let N = (0, W.m)();
     i.useEffect(() => {
-        m.h.wait(async () => {
-            b || e || (await Promise.all([g.hP(), g.$o(), (0, E.zS)(null, null, er.tF5.DISCOVERY)])), f(!1);
+        A.h.wait(async () => {
+            E || e || (await Promise.all([f.hP(), f.$o(), (0, h.zS)(null, null, er.tF5.DISCOVERY)])), _(!1);
         });
-    }, [b, e]);
-    let [R, P] = i.useState(!1);
-    if (b) return (0, r.jsx)(y.A, {});
-    if (e) return (0, r.jsx)(T.uK, {});
-    let j = s && null !== a && o,
-        k = p.fetched && p.isFractionalPremiumActive,
-        U = null == n ? void 0 : n.isPremiumWithPremiumGroup();
-    if (!j && !k && !l && !U)
-        return (0, r.jsx)(C.A, {
+    }, [E, e]);
+    let [y, P] = i.useState(!1);
+    if (E) return (0, r.jsx)(b.A, {});
+    if (e) return (0, r.jsx)(S.uK, {});
+    let L = s && null !== l && a,
+        U = p.fetched && p.isFractionalPremiumActive,
+        G = null == n ? void 0 : n.isPremiumWithPremiumGroup();
+    if (!L && !U && !o && !G)
+        return (0, r.jsx)(j.A, {
             title: ei.intl.string(ei.t.dyq9TR),
             note: null,
         });
-    if ((!j && !k && !U) || l) return (0, r.jsx)(h.y$y, {});
-    let G = !!(null == a ? void 0 : a.hasActiveTrial);
-    return (0, r.jsx)(v.f5, {
+    if ((!L && !U && !G) || o) return (0, r.jsx)(g.y$y, {});
+    let k = !!(null == l ? void 0 : l.hasActiveTrial);
+    return (0, r.jsx)(O.f5, {
         value: t,
         children: (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
                     children: [
-                        null != _ &&
+                        null != m &&
                             (0, r.jsx)(em, {
-                                config: _,
+                                config: m,
                             }),
-                        (0, r.jsx)(eh, {}),
-                        w &&
+                        (0, r.jsx)(ep, {}),
+                        N &&
                             (0, r.jsx)(ee.A, {
                                 isInSettings: !0,
                             }),
-                        null == _ && (0, r.jsx)(eg, {}),
+                        null == m && (0, r.jsx)(eg, {}),
                         (0, r.jsx)($.A, {
                             hideCTAs: !0,
                             headingOverride: ei.intl.string(ei.t.dnVvQS),
-                            hidePill: !G,
-                            selectedPlanColumnClassName: ea.JG,
+                            hidePill: !k,
+                            selectedPlanColumnClassName: el.JG,
                             selectedPlanTier: et.PremiumTypes.TIER_2,
                         }),
                     ],
                 }),
-                (0, r.jsx)(d.L, {
-                    innerRef: N,
+                (0, r.jsx)(u.L, {
+                    innerRef: v,
                     onChange: (e) => {
                         e &&
-                            !R &&
+                            !y &&
                             (M.default.track(er.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                                 location_stack: t,
                             }),
                             P(!0));
                     },
                     children: (0, r.jsx)("div", {
-                        ref: N,
-                        className: ea._Z,
+                        ref: v,
+                        className: el._Z,
                     }),
                 }),
             ],

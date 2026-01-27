@@ -1,179 +1,164 @@
 n.d(t, {
-    A: () => I,
+    A: () => S,
 });
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(397927),
-    o = n(263063),
-    l = n(134413),
+    l = n(311907),
+    o = n(397927),
+    a = n(263063),
+    s = n(134413),
     c = n(221950),
     u = n(71393),
-    d = n(309010),
-    f = n(967198),
-    p = n(954571),
-    _ = n(585510),
-    h = n(834409),
-    m = n(903093),
-    g = n(652215),
-    E = n(746080),
-    b = n(985018),
-    y = n(858411);
+    E = n(309010),
+    d = n(967198),
+    _ = n(954571),
+    T = n(585510),
+    A = n(834409),
+    I = n(903093),
+    O = n(652215),
+    N = n(746080),
+    p = n(985018),
+    R = n(858411);
 
-function O(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function A(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                O(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function v(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function S(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function I(e) {
-    var t, O;
-    let { onDismiss: v } = e,
-        I = (0, a.bG)([f.A], () => f.A.getGuildId()),
-        T = (0, a.bG)([d.A], () => (null != I ? d.A.getChannelId(I) : null), [I]),
-        C = null != I ? I : null,
-        N = (0, a.bG)([u.A], () => (null != C ? u.A.getGuild(C) : null), [C]),
-        { shouldShowIncidentActions: R, incidentData: w, isUnderLockdown: P } = (0, _.Li)(C),
-        D = (0, l.fw)(null != (t = null == N ? void 0 : N.id) ? t : g.dJq),
-        x = i.useCallback(() => null != N && (0, c.aZ)(N.id), [N]);
-    if (null == N || null == w || !R) return null;
-    let L = (e) => {
-            e && D && T !== E.VV.MEMBER_SAFETY && x()
-                ? p.default.track(g.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
-                      notice_type: g.kqX.GUILD_RAID_NOTIFICATION,
-                      guild_id: N.id,
+function S(e) {
+    var t, S;
+    let { onDismiss: P } = e,
+        y = (0, l.bG)([d.A], () => d.A.getGuildId()),
+        f = (0, l.bG)([E.A], () => (null != y ? E.A.getChannelId(y) : null), [y]),
+        C = null != y ? y : null,
+        D = (0, l.bG)([u.A], () => (null != C ? u.A.getGuild(C) : null), [C]),
+        { shouldShowIncidentActions: m, incidentData: g, isUnderLockdown: h } = (0, T.Li)(C),
+        U = (0, s.fw)(null != (t = null == D ? void 0 : D.id) ? t : O.dJq),
+        b = i.useCallback(() => null != D && (0, c.aZ)(D.id), [D]);
+    if (null == D || null == g || !m) return null;
+    let M = (e) => {
+            e && U && f !== N.VV.MEMBER_SAFETY && b()
+                ? _.default.track(O.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                      notice_type: O.kqX.GUILD_RAID_NOTIFICATION,
+                      guild_id: D.id,
                   })
-                : (0, s.mMO)(async () => {
+                : (0, o.mMO)(async () => {
                       let e = {
-                              source: h.Eo.NAGBAR,
-                              alertType: (0, m.$5)(w),
+                              source: A.Eo.NAGBAR,
+                              alertType: (0, I.$5)(g),
                           },
                           { default: t } = await n.e("43233").then(n.bind(n, 671576));
-                      return (n) =>
-                          (0, r.jsx)(
+                      return (n) => {
+                          var i, l;
+                          return (0, r.jsx)(
                               t,
-                              S(A({}, n), {
-                                  guildId: N.id,
-                                  analyticsData: e,
-                              }),
+                              ((i = (function (e) {
+                                  for (var t = 1; t < arguments.length; t++) {
+                                      var n = null != arguments[t] ? arguments[t] : {},
+                                          r = Object.keys(n);
+                                      "function" == typeof Object.getOwnPropertySymbols &&
+                                          (r = r.concat(
+                                              Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                              }),
+                                          )),
+                                          r.forEach(function (t) {
+                                              var r;
+                                              (r = n[t]),
+                                                  t in e
+                                                      ? Object.defineProperty(e, t, {
+                                                            value: r,
+                                                            enumerable: !0,
+                                                            configurable: !0,
+                                                            writable: !0,
+                                                        })
+                                                      : (e[t] = r);
+                                          });
+                                  }
+                                  return e;
+                              })({}, n)),
+                              (l = l =
+                                  {
+                                      guildId: D.id,
+                                      analyticsData: e,
+                                  }),
+                              Object.getOwnPropertyDescriptors
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                  : (function (e, t) {
+                                        var n = Object.keys(e);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var r = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, r);
+                                        }
+                                        return n;
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                    }),
+                              i),
                           );
+                      };
                   });
         },
-        j = (0, r.jsx)(o.A, {
-            className: y.$f,
-            guild: N,
-            size: o.A.Sizes.MINI,
+        j = (0, r.jsx)(a.A, {
+            className: R.$f,
+            guild: D,
+            size: a.A.Sizes.MINI,
         }),
-        M = (0, m.ql)(w, N.name);
-    if (null != (null != (O = w.dmsDisabledUntil) ? O : w.invitesDisabledUntil) && P)
-        return (0, r.jsxs)(s.$Td, {
-            className: y.lm,
-            color: s.Hv$.NEUTRAL,
+        k = (0, I.ql)(g, D.name);
+    if (null != (null != (S = g.dmsDisabledUntil) ? S : g.invitesDisabledUntil) && h)
+        return (0, r.jsxs)(o.$Td, {
+            className: R.lm,
+            color: o.Hv$.NEUTRAL,
             children: [
-                (0, r.jsx)(s.PMB, {
-                    onClick: v,
-                    noticeType: g.kqX.GUILD_RAID_NOTIFICATION,
+                (0, r.jsx)(o.PMB, {
+                    onClick: P,
+                    noticeType: O.kqX.GUILD_RAID_NOTIFICATION,
                 }),
                 j,
-                M,
-                (0, r.jsx)(s.zr9, {
-                    className: y.hP,
-                    onClick: () => L(!1),
+                k,
+                (0, r.jsx)(o.zr9, {
+                    className: R.hP,
+                    onClick: () => M(!1),
                     children: (0, r.jsxs)("div", {
-                        className: y.rx,
+                        className: R.rx,
                         children: [
-                            (0, r.jsx)(s.XAi, {
+                            (0, r.jsx)(o.XAi, {
                                 size: "xs",
                                 color: "currentColor",
                             }),
                             (0, r.jsx)("span", {
-                                children: b.intl.string(b.t["c+7oa7"]),
+                                children: p.intl.string(p.t["c+7oa7"]),
                             }),
                         ],
                     }),
                 }),
             ],
         });
-    let k = (0, m.P$)(w)
-            ? b.intl.formatToPlainString(b.t.tZTx2E, {
-                  guildName: N.name,
+    let v = (0, I.P$)(g)
+            ? p.intl.formatToPlainString(p.t.tZTx2E, {
+                  guildName: D.name,
               })
-            : (0, m.Qm)(w)
-              ? b.intl.formatToPlainString(b.t["1bSmxr"], {
-                    guildName: N.name,
+            : (0, I.Qm)(g)
+              ? p.intl.formatToPlainString(p.t["1bSmxr"], {
+                    guildName: D.name,
                 })
-              : b.intl.formatToPlainString(b.t.W87xDE, {
-                    guildName: N.name,
+              : p.intl.formatToPlainString(p.t.W87xDE, {
+                    guildName: D.name,
                 }),
-        U = D && T === E.VV.MEMBER_SAFETY;
-    return (0, r.jsxs)(s.$Td, {
-        className: y.lm,
-        color: s.Hv$.WARNING,
+        L = U && f === N.VV.MEMBER_SAFETY;
+    return (0, r.jsxs)(o.$Td, {
+        className: R.lm,
+        color: o.Hv$.WARNING,
         children: [
-            (0, r.jsx)(s.PMB, {
-                onClick: v,
-                noticeType: g.kqX.GUILD_RAID_NOTIFICATION,
+            (0, r.jsx)(o.PMB, {
+                onClick: P,
+                noticeType: O.kqX.GUILD_RAID_NOTIFICATION,
             }),
             j,
-            k,
-            !U &&
-                (0, r.jsx)(s.zr9, {
-                    className: y.hP,
-                    onClick: () => L(!0),
+            v,
+            !L &&
+                (0, r.jsx)(o.zr9, {
+                    className: R.hP,
+                    onClick: () => M(!0),
                     children: (0, r.jsx)("div", {
-                        className: y.rx,
+                        className: R.rx,
                         children: (0, r.jsx)("span", {
-                            children: b.intl.string(b.t.zDJDhr),
+                            children: p.intl.string(p.t.zDJDhr),
                         }),
                     }),
                 }),

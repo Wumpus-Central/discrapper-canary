@@ -1,56 +1,42 @@
 n.d(t, {
-    A: () => Y,
+    A: () => V,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(284009),
-    s = n.n(a),
-    o = n(311907),
-    l = n(230109),
+    l = n(284009),
+    s = n.n(l),
+    a = n(311907),
+    o = n(230109),
     c = n(397927),
-    u = n(73153),
-    d = n(631670),
-    f = n(974544),
+    d = n(73153),
+    u = n(631670),
+    _ = n(974544),
     p = n(793574),
-    _ = n(688810),
-    h = n(429619),
-    m = n(451909),
-    g = n(550111),
-    E = n(202639),
+    m = n(688810),
+    g = n(429619),
+    A = n(451909),
+    f = n(550111),
+    h = n(202639),
     b = n(407217),
-    y = n(919395),
-    O = n(884546),
-    A = n(287070),
-    v = n(158358),
-    S = n(196291),
-    I = n(101058),
-    T = n(814390),
-    C = n(351906),
-    N = n(752319),
-    R = n(287809),
-    w = n(954571),
+    E = n(919395),
+    x = n(884546),
+    O = n(287070),
+    C = n(158358),
+    I = n(196291),
+    T = n(101058),
+    S = n(814390),
+    j = n(351906),
+    v = n(752319),
+    N = n(287809),
+    y = n(954571),
     P = n(927578),
-    D = n(897358),
-    x = n(606532),
-    L = n(161290),
-    j = n(652215),
+    R = n(897358),
+    D = n(606532),
+    w = n(161290),
+    L = n(652215),
     M = n(985018),
-    k = n(166378);
-
-function U(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    U = n(166378);
 
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -63,160 +49,165 @@ function G(e) {
                 }),
             )),
             r.forEach(function (t) {
-                U(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function V(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function F(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : V(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function B(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = H(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function H(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function Y() {
+function V() {
     var e;
-    let t = (0, o.bG)([R.default], () => {
-            let e = R.default.getCurrentUser();
+    let t = (0, a.bG)([N.default], () => {
+            let e = N.default.getCurrentUser();
             return s()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
-        n = (0, o.bG)([C.A], () => C.A.hidePersonalInformation),
-        a = (0, o.cf)([N.A], () => N.A.getAllPending()),
-        { pendingBio: U, pendingAvatar: V, pendingNameplate: H } = a,
-        Y = B(a, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
-        W = (0, I.V7)({
+        n = (0, a.bG)([j.A], () => j.A.hidePersonalInformation),
+        l = (0, a.cf)([v.A], () => v.A.getAllPending()),
+        { pendingBio: V, pendingAvatar: H, pendingNameplate: B } = l,
+        F = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i,
+                l = {};
+            if ("u" > typeof Reflect && Reflect.ownKeys) {
+                for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                return l;
+            }
+            if (
+                ((l = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.getOwnPropertyNames(e);
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    return i;
+                })(e, t)),
+                Object.getOwnPropertySymbols)
+            )
+                for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+            return l;
+        })(l, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
+        Y = (0, T.V7)({
             userId: t.id,
-            image: V,
+            image: H,
         }),
-        K = (0, y.lw)({
-            pendingValue: H,
+        W = (0, E.lw)({
+            pendingValue: B,
             userValue: null == t || null == (e = t.collectibles) ? void 0 : e.nameplate,
         }),
-        z = (0, o.bG)([N.A], () => N.A.showNotice()),
-        q = (0, T.A)() && null != U ? m.Ay.parse(void 0, U).content : U,
-        X = P.Ay.canUsePremiumProfileCustomization(t),
-        { analyticsLocations: Z, newestAnalyticsLocation: Q } = (0, _.Ay)(p.A.USER_SETTINGS_USER_PROFILE);
-    i.useEffect(() => () => u.h.wait(d.IM), []);
-    let [$, J] = i.useState(!1),
-        { showRedesign: ee } = D.X.useExperiment({
+        z = (0, a.bG)([v.A], () => v.A.showNotice()),
+        K = (0, S.A)() && null != V ? A.Ay.parse(void 0, V).content : V,
+        Z = P.Ay.canUsePremiumProfileCustomization(t),
+        { analyticsLocations: X, newestAnalyticsLocation: q } = (0, m.Ay)(p.A.USER_SETTINGS_USER_PROFILE);
+    i.useEffect(() => () => d.h.wait(u.IM), []);
+    let [J, Q] = i.useState(!1),
+        { showRedesign: $ } = R.X.useExperiment({
             location: "profile customization",
         }),
-        et = !X,
-        en = i.useRef(null);
+        ee = !Z,
+        et = i.useRef(null);
     return n
-        ? (0, r.jsx)(f.A, {})
-        : (0, r.jsxs)(_.f5, {
-              value: Z,
+        ? (0, r.jsx)(_.A, {})
+        : (0, r.jsxs)(m.f5, {
+              value: X,
               children: [
-                  (0, r.jsx)(h.A, {}),
-                  (0, r.jsx)(O.A, {
+                  (0, r.jsx)(g.A, {}),
+                  (0, r.jsx)(x.A, {
                       profilePreview: (0, r.jsx)(
-                          A.A,
-                          F(
+                          O.A,
+                          k(
                               G(
                                   {
                                       user: t,
-                                      canUsePremiumCustomization: X,
-                                      onUpsellClick: x.A,
-                                      pendingBio: q,
+                                      canUsePremiumCustomization: Z,
+                                      onUpsellClick: D.A,
+                                      pendingBio: K,
                                   },
-                                  Y,
+                                  F,
                               ),
                               {
-                                  pendingAvatar: W,
+                                  pendingAvatar: Y,
                               },
                           ),
                       ),
                       nameplatePreview: (0, r.jsx)(
-                          g.A,
-                          F(
+                          f.A,
+                          k(
                               G(
                                   {
                                       user: t,
-                                      nameplate: K,
+                                      nameplate: W,
                                   },
-                                  Y,
+                                  F,
                               ),
                               {
-                                  className: null == K ? k.t : void 0,
+                                  className: null == W ? U.t : void 0,
                                   isHighlighted: !0,
                               },
                           ),
                       ),
-                      children: (0, r.jsx)(L.A, {}),
+                      children: (0, r.jsx)(w.A, {}),
                   }),
-                  ee && (0, r.jsx)(v.A, {}),
-                  (0, r.jsx)(l.L, {
-                      innerRef: en,
-                      onChange: (e) => J(e),
+                  $ && (0, r.jsx)(C.A, {}),
+                  (0, r.jsx)(o.L, {
+                      innerRef: et,
+                      onChange: (e) => Q(e),
                       threshold: 0.25,
-                      active: et,
+                      active: ee,
                       children: (0, r.jsx)("div", {
-                          ref: en,
-                          children: (0, r.jsx)(S.A, {
+                          ref: et,
+                          children: (0, r.jsx)(I.A, {
                               user: t,
-                              shouldShow: et,
-                              isVisible: $,
+                              shouldShow: ee,
+                              isVisible: J,
                           }),
                       }),
                   }),
-                  et &&
+                  ee &&
                       !z &&
-                      (0, r.jsx)(E.d, {
-                          className: k.E,
-                          showUpsell: et && !$,
+                      (0, r.jsx)(h.d, {
+                          className: U.E,
+                          showUpsell: ee && !J,
                           text: M.intl.format(M.t.TmfgI2, {
                               onClick: () =>
                                   (0, b.K)({
-                                      analyticsSource: Q,
+                                      analyticsSource: q,
                                   }),
                           }),
                           textVariant: "heading-md/medium",
@@ -224,11 +215,11 @@ function Y() {
                               variant: "expressive",
                               onClick: () => {
                                   var e;
-                                  w.default.track(j.HAw.TRY_IT_OUT_PRESET_CLICKED, {
+                                  y.default.track(L.HAw.TRY_IT_OUT_PRESET_CLICKED, {
                                       cta_variant: "floating_action_button",
                                   }),
-                                      null == en ||
-                                          null == (e = en.current) ||
+                                      null == et ||
+                                          null == (e = et.current) ||
                                           e.scrollIntoView({
                                               behavior: "smooth",
                                           });

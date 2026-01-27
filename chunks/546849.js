@@ -1,37 +1,34 @@
 n.d(t, {
-    A: () => l,
+    A: () => a,
 });
 var r = n(627968);
 n(64700);
 var i = n(397927),
-    a = n(128450),
+    l = n(128450),
     s = n(985018);
-let o = 40;
 
-function l(e) {
+function a(e) {
     let {
         sectionTitle: t,
         errors: n,
-        onPronounsChange: l,
-        pendingPronouns: c,
-        placeholder: u,
+        onPronounsChange: a,
+        pendingPronouns: o,
+        placeholder: c,
         currentPronouns: d,
-        disabled: f = !1,
+        disabled: u = !1,
     } = e;
-
-    function p(e) {
-        l(e === d ? void 0 : e);
-    }
-    return (0, r.jsx)(a.A, {
+    return (0, r.jsx)(l.A, {
         title: t,
         errors: n,
-        disabled: f,
+        disabled: u,
         children: (0, r.jsx)(i.ksK, {
-            placeholder: null != u ? u : s.intl.string(s.t.NPEUUu),
-            maxLength: o,
-            value: null != c ? c : d,
-            onChange: p,
-            disabled: f,
+            placeholder: null != c ? c : s.intl.string(s.t.NPEUUu),
+            maxLength: 40,
+            value: null != o ? o : d,
+            onChange: function (e) {
+                a(e === d ? void 0 : e);
+            },
+            disabled: u,
         }),
     });
 }

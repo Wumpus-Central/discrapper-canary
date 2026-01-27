@@ -1,185 +1,183 @@
 n.d(t, {
-    A: () => h,
+    A: () => g,
 }),
     n(228524);
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
-    o = n(915089),
-    l = n(308234),
+    l = n.n(i),
+    a = n(397927),
+    s = n(915089),
+    o = n(308234),
     c = n(724609),
     u = n(411342),
     d = n(985018),
-    f = n(721960);
+    p = n(721960);
 
-function p(e) {
-    let { hidePurchaseToUnlockBadge: t, showDraftBadge: n, className: i, children: o } = e;
+function m(e) {
+    let { hidePurchaseToUnlockBadge: t, showDraftBadge: n, className: i, children: s } = e;
     return (0, r.jsxs)("div", {
-        className: a()(f.v0, i),
+        className: l()(p.v0, i),
         children: [
-            o,
+            s,
             !t &&
                 (0, r.jsxs)("div", {
-                    className: f.su,
+                    className: p.su,
                     children: [
-                        (0, r.jsx)(s.XAi, {
+                        (0, r.jsx)(a.XAi, {
                             size: "xs",
-                            className: f.hz,
+                            className: p.hz,
                             color: "currentColor",
                             "aria-hidden": !0,
                         }),
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             color: "always-white",
-                            className: f.__invalid_unlockText,
+                            className: p.__invalid_unlockText,
                             children: d.intl.string(d.t.YmIiSe),
                         }),
                     ],
                 }),
             n &&
                 (0, r.jsx)("div", {
-                    className: f.vW,
+                    className: p.vW,
                     children: (0, r.jsx)(c.k, {}),
                 }),
         ],
     });
 }
 
-function _(e) {
+function f(e) {
     let { onShowFullDescription: t, variant: n } = e,
         i = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(a.Text, {
                     variant: n,
                     color: null != t ? "text-link" : "interactive-text-hover",
                     children: d.intl.string(d.t["5fmYjW"]),
                 }),
-                (0, r.jsx)(s.EdP, {
+                (0, r.jsx)(a.EdP, {
                     size: "xs",
                     color: "currentColor",
-                    className: f.D6,
+                    className: p.D6,
                 }),
             ],
-        }),
-        o = (e) => {
-            e.stopPropagation(), null != t && t();
-        };
+        });
     return null == t
         ? (0, r.jsx)("div", {
-              className: f.dO,
+              className: p.dO,
               children: i,
           })
-        : (0, r.jsx)(s.DUT, {
-              className: a()(f.dO, f.hY),
-              onClick: o,
+        : (0, r.jsx)(a.DUT, {
+              className: l()(p.dO, p.hY),
+              onClick: (e) => {
+                  e.stopPropagation(), null != t && t();
+              },
               children: i,
           });
 }
 
-function h(e) {
+function g(e) {
     let {
             imageUrl: t,
             name: n,
             description: i,
             formattedPrice: c,
-            role: h,
-            ctaComponent: m,
-            shouldShowFullDescriptionButton: g = !0,
-            onShowFullDescription: E,
-            productType: b,
+            role: g,
+            ctaComponent: h,
+            shouldShowFullDescriptionButton: _ = !0,
+            onShowFullDescription: b,
+            productType: A,
             onTapCard: y,
-            actionMenu: O,
-            showOpaqueBackground: A = !1,
-            hideRoleTag: v = !1,
-            lineClamp: S = 1,
-            cardWidth: I = 332,
-            cardHeight: T,
-            thumbnailHeight: C = 187,
-            descriptionTextVariant: N = "text-sm/normal",
-            isDraft: R = !1,
+            actionMenu: v,
+            showOpaqueBackground: x = !1,
+            hideRoleTag: O = !1,
+            lineClamp: E = 1,
+            cardWidth: j = 332,
+            cardHeight: C,
+            thumbnailHeight: I = 187,
+            descriptionTextVariant: S = "text-sm/normal",
+            isDraft: T = !1,
         } = e,
-        w = (0, o.Ld)(),
-        P = (e) => {
-            e.stopPropagation();
-        },
-        D = (0, r.jsxs)(r.Fragment, {
+        N = (0, s.Ld)(),
+        P = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(p, {
-                    showDraftBadge: R,
+                (0, r.jsx)(m, {
+                    showDraftBadge: T,
                     hidePurchaseToUnlockBadge: !0,
                     children: (0, r.jsx)("img", {
                         alt: "",
                         src: t,
-                        className: f.K_,
+                        className: p.K_,
                         style: {
-                            height: C,
+                            height: I,
                         },
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: f.MS,
+                    className: p.MS,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: f.Ag,
+                            className: p.Ag,
                             children: [
-                                (0, r.jsx)(s.Heading, {
+                                (0, r.jsx)(a.Heading, {
                                     variant: "text-md/medium",
                                     color: "text-strong",
-                                    className: f.tZ,
-                                    id: w,
+                                    className: p.tZ,
+                                    id: N,
                                     children: n,
                                 }),
-                                (0, r.jsx)(s.M1G, {
-                                    children: (0, r.jsx)(l.A, {
-                                        variant: N,
+                                (0, r.jsx)(a.M1G, {
+                                    children: (0, r.jsx)(o.A, {
+                                        variant: S,
                                         color: "text-muted",
-                                        lineClamp: S,
+                                        lineClamp: E,
                                         text: i,
                                     }),
                                 }),
-                                g &&
-                                    (0, r.jsx)(_, {
-                                        onShowFullDescription: E,
-                                        variant: N,
+                                _ &&
+                                    (0, r.jsx)(f, {
+                                        onShowFullDescription: b,
+                                        variant: S,
                                     }),
-                                v || null == h || "" === h.name
+                                O || null == g || "" === g.name
                                     ? null
                                     : (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)(s.hKd, {
+                                              (0, r.jsx)(a.hKd, {
                                                   size: 16,
                                               }),
                                               (0, r.jsx)(u.A, {
-                                                  role: h,
+                                                  role: g,
                                               }),
                                           ],
                                       }),
                             ],
                         }),
-                        O,
+                        v,
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: f.kP,
+                    className: p.kP,
                     children: [
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: "text-md/medium",
                             color: "interactive-text-active",
-                            className: f.__invalid_productPrice,
+                            className: p.__invalid_productPrice,
                             children: null != c ? c : d.intl.string(d.t["4uLhAp"]),
                         }),
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: "text-xxs/normal",
                             color: "text-default",
-                            className: f.__invalid_productType,
-                            children: b,
+                            className: p.__invalid_productType,
+                            children: A,
                         }),
                         (0, r.jsx)("div", {
-                            className: f.QW,
-                            onClick: P,
-                            children: m,
+                            className: p.QW,
+                            onClick: (e) => {
+                                e.stopPropagation();
+                            },
+                            children: h,
                         }),
                     ],
                 }),
@@ -187,23 +185,23 @@ function h(e) {
         });
     return null == y
         ? (0, r.jsx)("article", {
-              className: a()(f.Um, A ? f.sG : f.Wi),
-              "aria-labelledby": w,
-              children: D,
+              className: l()(p.Um, x ? p.sG : p.Wi),
+              "aria-labelledby": N,
+              children: P,
           })
         : (0, r.jsx)("div", {
               style: {
-                  width: I,
-                  height: T,
+                  width: j,
+                  height: C,
               },
-              children: (0, r.jsx)(s.sqX, {
+              children: (0, r.jsx)(a.sqX, {
                   tag: "article",
                   "aria-label": d.intl.formatToPlainString(d.t["e+TmJa"], {
                       productName: n,
                   }),
-                  className: a()(f.Um, A ? f.sG : f.Wi, f.GA),
+                  className: l()(p.Um, x ? p.sG : p.Wi, p.GA),
                   onClick: y,
-                  children: D,
+                  children: P,
               }),
           });
 }

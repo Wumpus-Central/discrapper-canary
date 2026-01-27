@@ -5,8 +5,8 @@ var r = n(627968);
 n(64700);
 var i = n(442433),
     a = n(593284),
-    s = n(288539),
-    o = n(734057);
+    o = n(288539),
+    s = n(734057);
 
 function l(e, t, n) {
     return (
@@ -64,17 +64,20 @@ function d(e, t) {
     );
 }
 let f = {
-    handleUserContextMenu(e, t, a, s) {
-        let l = o.A.getChannel(t);
+    handleUserContextMenu(e, t, a, o) {
+        let l = s.A.getChannel(t);
         null != l &&
-            (0, i.L3)(s, async () => {
+            (0, i.L3)(o, async () => {
                 let { default: t } = await Promise.all([
+                    n.e("54809"),
                     n.e("97262"),
+                    n.e("3795"),
+                    n.e("97283"),
                     n.e("29534"),
                     n.e("33818"),
                     n.e("55296"),
                     n.e("84841"),
-                    n.e("9001"),
+                    n.e("2016"),
                 ]).then(n.bind(n, 107632));
                 return (n) =>
                     (0, r.jsx)(
@@ -88,7 +91,7 @@ let f = {
             });
     },
     react(e, t, n) {
-        let { userId: i, channelId: o, parsedUserId: l, roleId: u, roleName: f, viewingChannelId: p } = e;
+        let { userId: i, channelId: s, parsedUserId: l, roleId: u, roleName: f, viewingChannelId: p } = e;
         return null == i && (null != u || "@everyone" === f || "@here" === f)
             ? (0, r.jsx)(
                   a.A,
@@ -106,11 +109,11 @@ let f = {
                   n.key,
               )
             : (0, r.jsx)(
-                  s.A,
+                  o.A,
                   {
                       className: "mention",
                       userId: i,
-                      channelId: o,
+                      channelId: s,
                       viewingChannelId: p,
                       parsedUserId: l,
                       content: t(e.content, n),

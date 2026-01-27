@@ -1,102 +1,46 @@
 n.d(t, {
-    Am: () => F,
-    Ck: () => W,
-    G8: () => Y,
-    Ge: () => M,
-    H9: () => P,
-    I: () => x,
-    Jo: () => j,
-    T0: () => D,
-    UY: () => V,
-    U_: () => K,
-    VL: () => U,
-    Yq: () => k,
-    m: () => w,
-    r4: () => G,
-    ri: () => B,
-    yp: () => H,
+    Am: () => k,
+    Ck: () => F,
+    G8: () => B,
+    Ge: () => w,
+    H9: () => I,
+    I: () => T,
+    Jo: () => P,
+    T0: () => S,
+    UY: () => M,
+    U_: () => H,
+    VL: () => D,
+    Yq: () => R,
+    m: () => C,
+    r4: () => L,
+    ri: () => U,
+    yp: () => G,
 }),
     n(938796),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(621466),
-    s = n(665260),
-    o = n(442433),
-    l = n(843472),
+    l = n(621466),
+    a = n(665260),
+    s = n(442433),
+    o = n(843472),
     c = n(414798),
     u = n(267102),
     d = n(594061),
-    f = n(734057),
-    p = n(580745),
-    _ = n(320501),
-    h = n(287809),
-    m = n(954571),
-    g = n(203982),
-    E = n(723702),
-    b = n(427262),
+    p = n(734057),
+    m = n(580745),
+    f = n(320501),
+    g = n(287809),
+    h = n(954571),
+    _ = n(203982),
+    b = n(723702),
+    A = n(427262),
     y = n(841549),
-    O = n(439147),
-    A = n(81437),
-    v = n(652215);
+    v = n(439147),
+    x = n(81437),
+    O = n(652215);
 
-function S(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function I(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                S(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function T(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function C(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function N(e, t, n) {
+function E(e, t, n) {
     return i.useCallback(() => {
         n({
             [e]: !t,
@@ -104,21 +48,21 @@ function N(e, t, n) {
     }, [e, n, t]);
 }
 
-function R(e, t, n) {
+function j(e, t, n) {
     return i.useCallback(
         (r) => {
-            let i = h.default.getUser(e);
+            let i = g.default.getUser(e);
             if (null == i) return;
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
-            let a = "@".concat(
-                    b.Ay.getUserTag(i, {
+            let l = "@".concat(
+                    A.Ay.getUserTag(i, {
                         decoration: "never",
                     }),
                 ),
-                s = "<@".concat(e, ">");
-            g._.dispatchToLastSubscribed(v.jej.INSERT_TEXT, {
-                plainText: a,
-                rawText: s,
+                a = "<@".concat(e, ">");
+            _._.dispatchToLastSubscribed(O.jej.INSERT_TEXT, {
+                plainText: l,
+                rawText: a,
             }),
                 c.A.startTyping(t);
         },
@@ -126,27 +70,27 @@ function R(e, t, n) {
     );
 }
 
-function w(e, t, n, r) {
-    let i = N("usernameProfile", n, r);
-    return R(e.author.id, t.id, i);
+function C(e, t, n, r) {
+    let i = E("usernameProfile", n, r);
+    return j(e.author.id, t.id, i);
 }
 
-function P(e, t, n, r) {
-    let i = N("referencedUsernameProfile", n, r);
-    return R(null == e ? void 0 : e.author.id, t.id, i);
+function I(e, t, n, r) {
+    let i = E("referencedUsernameProfile", n, r);
+    return j(null == e ? void 0 : e.author.id, t.id, i);
 }
 
-function D(e, t, n, r) {
-    let i = N("interactionUsernameProfile", n, r);
-    return R(null == e ? void 0 : e.user.id, t.id, i);
+function S(e, t, n, r) {
+    let i = E("interactionUsernameProfile", n, r);
+    return j(null == e ? void 0 : e.user.id, t.id, i);
 }
 
-function x(e, t, n, r) {
-    let i = N("referencedUsernameProfile", n, r);
-    return R(e, t.id, i);
+function T(e, t, n, r) {
+    let i = E("referencedUsernameProfile", n, r);
+    return j(e, t.id, i);
 }
 
-function L(e) {
+function N(e) {
     return i.useCallback(
         (t) => {
             t.preventDefault(), t.stopPropagation(), e();
@@ -155,47 +99,47 @@ function L(e) {
     );
 }
 
-function j(e, t) {
-    return L(N("avatarProfile", e, t));
+function P(e, t) {
+    return N(E("avatarProfile", e, t));
 }
 
-function M(e, t) {
-    return L(N("referencedAvatarProfile", e, t));
+function w(e, t) {
+    return N(E("referencedAvatarProfile", e, t));
 }
 
-function k(e, t) {
-    return L(N("interactionAvatarProfile", e, t));
+function R(e, t) {
+    return N(E("interactionAvatarProfile", e, t));
 }
 
-function U(e, t, a, l) {
+function D(e, t, l, o) {
     let { id: c } = t,
-        { id: d, flags: h } = e,
-        g = (0, s.Lt)(h, v.pr7.EPHEMERAL),
-        b = (0, u.Us)();
+        { id: d, flags: g } = e,
+        _ = (0, a.Lt)(g, O.pr7.EPHEMERAL),
+        A = (0, u.Us)();
     return i.useCallback(
         (e, t) => {
-            if (g) return;
-            if (!E.isPlatformEmbedded) {
+            if (_) return;
+            if (!b.isPlatformEmbedded) {
                 let t = e.target;
                 if (("A" === t.tagName && "" !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
                 if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return;
             }
-            let i = f.A.getChannel(c),
-                s = _.A.getMessage(c, d),
-                u = p.A.isEditing(c, d);
+            let i = p.A.getChannel(c),
+                a = f.A.getMessage(c, d),
+                u = m.A.isEditing(c, d);
             null == i ||
-                null == s ||
+                null == a ||
                 u ||
-                (m.default.track(v.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                (h.default.track(O.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: d,
                     channel: c,
                     location: "right_click",
                 }),
-                a({
+                l({
                     contextMenu: !0,
                 }),
-                (0, o.L3)(
+                (0, s.L3)(
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
@@ -203,54 +147,95 @@ function U(e, t, a, l) {
                             n.e("6502"),
                             n.e("1636"),
                             n.e("27687"),
-                            n.e("42897"),
+                            n.e("92750"),
                         ]).then(n.bind(n, 547983));
-                        return (n) =>
-                            (0, r.jsx)(
+                        return (n) => {
+                            var l, s;
+                            return (0, r.jsx)(
                                 e,
-                                C(I({}, n), {
-                                    message: s,
-                                    channel: i,
-                                    mediaItem: t,
-                                    shouldHideMediaOptions: l,
-                                }),
+                                ((l = (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        "function" == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                }),
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0,
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({}, n)),
+                                (s = s =
+                                    {
+                                        message: a,
+                                        channel: i,
+                                        mediaItem: t,
+                                        shouldHideMediaOptions: o,
+                                    }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(s)).forEach(function (e) {
+                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
+                                      }),
+                                l),
                             );
+                        };
                     },
                     {
                         onClose: () =>
-                            a({
+                            l({
                                 contextMenu: !1,
                             }),
-                        context: b,
+                        context: A,
                     },
                 ));
         },
-        [g, c, d, a, b, l],
+        [_, c, d, l, A, o],
     );
 }
 
-function G(e, t) {
+function L(e, t) {
     return i.useCallback(
         (n) => {
-            let r = h.default.getUser(e),
-                i = f.A.getChannel(t);
+            let r = g.default.getUser(e),
+                i = p.A.getChannel(t);
             null != r && null != i && (n.stopPropagation(), (0, y.wQ)(n, r, i));
         },
         [e, t],
     );
 }
 
-function V(e, t, n) {
+function M(e, t, n) {
     return i.useCallback(
         (r) => {
-            let i = h.default.getUser(e),
-                a = f.A.getChannel(t);
+            let i = g.default.getUser(e),
+                l = p.A.getChannel(t);
             null != i &&
-                null != a &&
+                null != l &&
                 (r.stopPropagation(),
                 (0, y.B8)(r, {
                     user: i,
-                    channel: a,
+                    channel: l,
                     moderationAlertId: n,
                 }));
         },
@@ -258,91 +243,91 @@ function V(e, t, n) {
     );
 }
 
-function F(e, t) {
+function k(e, t) {
     return i.useCallback(
         (n) => {
-            let r = h.default.getUser(e),
-                i = f.A.getChannel(t);
+            let r = g.default.getUser(e),
+                i = p.A.getChannel(t);
             null != r && null != i && (n.stopPropagation(), (0, y.pB)(n, r, i.guild_id));
         },
         [e, t],
     );
 }
 
-function B(e, t) {
+function U(e, t) {
     let { id: n } = e,
         { id: r } = t;
     return i.useCallback(
         (e) => {
-            e.altKey && (e.preventDefault(), (0, O.A)(r, n));
+            e.altKey && (e.preventDefault(), (0, v.A)(r, n));
         },
         [r, n],
     );
 }
 
-function H(e) {
+function G(e) {
     let { groupId: t, message: n, defaultValue: r } = e,
-        a = n.author.id,
-        s = "".concat(t, ":").concat(a),
-        o = i.useRef(r),
-        [l, c] = i.useState(r);
-    o.current = l || o.current;
+        l = n.author.id,
+        a = "".concat(t, ":").concat(l),
+        s = i.useRef(r),
+        [o, c] = i.useState(r);
+    s.current = o || s.current;
     let u = i.useCallback(() => {
-            (0, d.cE)(), l || (g._.dispatchKeyed(v.zOV.ANIMATE_CHAT_AVATAR, s, !0), c(!0));
-        }, [l, s]),
-        f = i.useCallback(() => {
-            g._.dispatchKeyed(v.zOV.ANIMATE_CHAT_AVATAR, s, !1), c(!1);
-        }, [s]);
+            (0, d.cE)(), o || (_._.dispatchKeyed(O.zOV.ANIMATE_CHAT_AVATAR, a, !0), c(!0));
+        }, [o, a]),
+        p = i.useCallback(() => {
+            _._.dispatchKeyed(O.zOV.ANIMATE_CHAT_AVATAR, a, !1), c(!1);
+        }, [a]);
     return {
-        hasHovered: o.current,
-        isHovered: l,
+        hasHovered: s.current,
+        isHovered: o,
         handleMouseEnter: u,
-        handleMouseLeave: f,
+        handleMouseLeave: p,
     };
 }
 
-function Y(e, t) {
+function B(e, t) {
     let [n, r] = i.useState(!1),
-        [s, o] = i.useState(!1);
+        [a, s] = i.useState(!1);
     return {
         handleFocus: i.useCallback(
             (t) => {
                 var n, i;
-                let s = null != (n = null == (i = (0, a.BF)(t)) ? void 0 : i.activeElement) ? n : null;
-                (t.target === t.currentTarget || t.currentTarget.contains(s)) && (o(!0), r(!0)), null != e && e(t);
+                let a = null != (n = null == (i = (0, l.BF)(t)) ? void 0 : i.activeElement) ? n : null;
+                (t.target === t.currentTarget || t.currentTarget.contains(a)) && (s(!0), r(!0)), null != e && e(t);
             },
             [e],
         ),
         handleBlur: i.useCallback(
             (e) => {
                 var n, i;
-                let s = null != (n = null == (i = (0, a.BF)(e)) ? void 0 : i.activeElement) ? n : null;
-                (e.target !== e.currentTarget && e.currentTarget.contains(s)) || r(!1), null != t && t(e);
+                let a = null != (n = null == (i = (0, l.BF)(e)) ? void 0 : i.activeElement) ? n : null;
+                (e.target !== e.currentTarget && e.currentTarget.contains(a)) || r(!1), null != t && t(e);
             },
             [t],
         ),
         isFocused: n,
-        hasFocused: s,
+        hasFocused: a,
     };
 }
 
-function W(e, t) {
+function F(e, t) {
     return i.useCallback(() => {
         let { messageReference: n } = e,
             r = () => {
-                l.A.jumpToMessage({
+                o.A.jumpToMessage({
                     channelId: n.channel_id,
                     messageId: n.message_id,
                     flash: !0,
                     returnMessageId: e.id,
                 });
             };
-        (null == t || (0, A.A)(t, r)) && r();
+        (null == t || (0, x.A)(t, r)) && r();
     }, [t, e]);
 }
 
-function K(e, t) {
-    let n = N("interactionData", e, t);
+function H(e, t) {
+    let n = E("interactionData", e, t);
     return i.useCallback(
         (e) => {
             e.preventDefault(), e.stopPropagation(), n();

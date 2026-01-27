@@ -1,13 +1,13 @@
 n.d(t, {
-    A: () => v,
+    A: () => _,
 }),
     n(896048);
 var r,
     i = n(311907),
-    a = n(73153),
-    s = n(49463),
-    o = n(617617),
-    l = n(71393),
+    l = n(73153),
+    a = n(49463),
+    s = n(617617),
+    o = n(71393),
     c = n(576705),
     u = n(903093);
 
@@ -24,32 +24,30 @@ function d(e, t, n) {
         e
     );
 }
-
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
 let p = {},
-    _ = {};
+    m = {};
 
-function h() {
+function f() {
     var e;
-    let t = null != (e = o.A.getGuildsProto()) ? e : {},
-        n = l.A.getGuildsArray();
-    for (let e of ((_ = {}), n))
-        _[e.id] = f(
+    let t = null != (e = s.A.getGuildsProto()) ? e : {},
+        n = o.A.getGuildsArray();
+    for (let e of ((m = {}), n))
+        m[e.id] = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        d(e, t, n[t]);
+                    });
+            }
+            return e;
+        })(
             {
                 guildId: e.id,
                 guildName: e.name,
@@ -58,7 +56,7 @@ function h() {
         );
 }
 
-function m(e) {
+function g(e) {
     return null != e && Object.keys(e).length > 0
         ? {
               raidDetectedAt: e.raid_detected_at,
@@ -68,39 +66,9 @@ function m(e) {
           }
         : null;
 }
-
-function g(e) {
-    for (let n of ((p = {}), e.guilds)) {
-        var t;
-        let e = m(null == (t = n.properties) ? void 0 : t.incidents_data);
-        null != e && ((0, u.k$)(e) || (0, u._J)(e)) && (p[n.id] = e);
-    }
-}
-
-function E(e) {
-    var t;
-    let { guild: n } = e,
-        r = m(null == (t = n.properties) ? void 0 : t.incidents_data);
-    null != r && ((0, u.k$)(r) || (0, u._J)(r)) && (p[n.id] = r);
-}
-
-function b(e) {
-    let { guild: t } = e,
-        n = m(t.incidents_data);
-    null != n && ((0, u.k$)(n) || (0, u._J)(n)) ? (p[t.id] = n) : delete p[t.id];
-}
-
-function y(e) {
-    let { guild: t } = e;
-    delete p[t.id];
-}
-
-function O(e) {
-    p = {};
-}
-class A extends (r = i.Ay.Store) {
+class h extends (r = i.Ay.Store) {
     initialize() {
-        this.waitFor(o.A, l.A, c.A, s.A), this.syncWith([o.A, l.A, c.A, s.A], h);
+        this.waitFor(s.A, o.A, c.A, a.A), this.syncWith([s.A, o.A, c.A, a.A], f);
     }
     getGuildIncident(e) {
         return p[e];
@@ -109,14 +77,34 @@ class A extends (r = i.Ay.Store) {
         return p;
     }
     getGuildAlertSettings() {
-        return _;
+        return m;
     }
 }
-d(A, "displayName", "GuildIncidentsStore");
-let v = new A(a.h, {
-    CONNECTION_OPEN: g,
-    GUILD_CREATE: E,
-    GUILD_UPDATE: b,
-    GUILD_DELETE: y,
-    LOGOUT: O,
+d(h, "displayName", "GuildIncidentsStore");
+let _ = new h(l.h, {
+    CONNECTION_OPEN: function (e) {
+        for (let n of ((p = {}), e.guilds)) {
+            var t;
+            let e = g(null == (t = n.properties) ? void 0 : t.incidents_data);
+            null != e && ((0, u.k$)(e) || (0, u._J)(e)) && (p[n.id] = e);
+        }
+    },
+    GUILD_CREATE: function (e) {
+        var t;
+        let { guild: n } = e,
+            r = g(null == (t = n.properties) ? void 0 : t.incidents_data);
+        null != r && ((0, u.k$)(r) || (0, u._J)(r)) && (p[n.id] = r);
+    },
+    GUILD_UPDATE: function (e) {
+        let { guild: t } = e,
+            n = g(t.incidents_data);
+        null != n && ((0, u.k$)(n) || (0, u._J)(n)) ? (p[t.id] = n) : delete p[t.id];
+    },
+    GUILD_DELETE: function (e) {
+        let { guild: t } = e;
+        delete p[t.id];
+    },
+    LOGOUT: function (e) {
+        p = {};
+    },
 });

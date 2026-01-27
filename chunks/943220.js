@@ -1,72 +1,16 @@
 n.d(t, {
-    A: () => d,
+    A: () => a,
 });
 var r = n(627968);
 n(64700);
 var i = n(763754),
-    a = n(635071),
-    s = n(812299);
+    l = n(635071),
+    o = n(812299);
 
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function d(e) {
-    var t, n;
-    let o = (0, i.Ay)(e.message),
-        c = (0, s.y)({
+function a(e) {
+    var t, n, a, s;
+    let c = (0, i.Ay)(e.message),
+        u = (0, o.y)({
             message: e.message,
             channel: e.channel,
             user: null != (t = null == (n = e.message) ? void 0 : n.author) ? t : e.userOverride,
@@ -75,13 +19,52 @@ function d(e) {
         }),
         d = {};
     return (
-        null != c && (d[a.w.SYSTEM_TAG] = c),
+        null != u && (d[l.w.SYSTEM_TAG] = u),
         (0, r.jsx)(
-            a.A,
-            u(l({}, e), {
-                author: o,
-                decorations: d,
-            }),
+            l.A,
+            ((a = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    "function" == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            }),
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0,
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })({}, e)),
+            (s = s =
+                {
+                    author: c,
+                    decorations: d,
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(s))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(s)).forEach(function (e) {
+                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(s, e));
+                  }),
+            a),
         )
     );
 }

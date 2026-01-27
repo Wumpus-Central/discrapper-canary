@@ -4,8 +4,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(607399),
-    s = n(311907),
-    o = n(442433),
+    o = n(311907),
+    s = n(442433),
     l = n(793574),
     c = n(688810),
     u = n(9588),
@@ -75,7 +75,7 @@ function v(e, t) {
 }
 
 function A(e) {
-    let { userId: t, className: a, children: s } = e,
+    let { userId: t, className: a, children: o } = e,
         l = i.useCallback(() => {
             (0, u.K)({
                 kind: "user",
@@ -84,7 +84,7 @@ function A(e) {
         c = i.useCallback(
             (e) => {
                 null != t &&
-                    (0, o.L3)(e, async () => {
+                    (0, s.L3)(e, async () => {
                         let { default: e } = await n.e("60829").then(n.bind(n, 446828));
                         return (n) =>
                             (0, r.jsx)(
@@ -101,7 +101,7 @@ function A(e) {
         className: a,
         onClick: l,
         onContextMenu: c,
-        children: s,
+        children: o,
     });
 }
 
@@ -117,22 +117,25 @@ function I(e) {
         } = e,
         C = i.useRef(null),
         { analyticsLocations: N } = (0, c.Ay)(l.A.USER_MENTION),
-        w = (0, s.bG)([m.default], () => m.default.getUser(u)),
-        R = (0, s.bG)([p.A], () => p.A.getChannel(y)),
+        w = (0, o.bG)([m.default], () => m.default.getUser(u)),
+        R = (0, o.bG)([p.A], () => p.A.getChannel(y)),
         P = null != R ? R.getGuildId() : null,
         D =
             S || null == w || null == P || null == y
                 ? void 0
                 : (e) => {
                       null != R &&
-                          (0, o.L3)(e, async () => {
+                          (0, s.L3)(e, async () => {
                               let { default: e } = await Promise.all([
+                                  n.e("54809"),
                                   n.e("97262"),
+                                  n.e("3795"),
+                                  n.e("97283"),
                                   n.e("29534"),
                                   n.e("33818"),
                                   n.e("55296"),
                                   n.e("84841"),
-                                  n.e("9001"),
+                                  n.e("2016"),
                               ]).then(n.bind(n, 107632));
                               return (t) =>
                                   (0, r.jsx)(
@@ -146,15 +149,15 @@ function I(e) {
                                   );
                           });
                   },
-        x = E.Ay.useName(w),
-        L = (0, s.bG)([p.A, _.Ay, h.A], () => g.Ay.getNickname(P, y, w));
+        L = E.Ay.useName(w),
+        x = (0, o.bG)([p.A, _.Ay, h.A], () => g.Ay.getNickname(P, y, w));
     if (null == w)
         return (0, r.jsx)(A, {
             userId: O,
             className: t,
             children: I,
         });
-    let j = (e) =>
+    let M = (e) =>
         (0, r.jsx)(
             d.A,
             v(
@@ -167,14 +170,14 @@ function I(e) {
                     e,
                 ),
                 {
-                    children: "@".concat(null != L ? L : x),
+                    children: "@".concat(null != x ? x : L),
                 },
             ),
         );
     return S
         ? (0, r.jsx)(c.f5, {
               value: N,
-              children: j(),
+              children: M(),
           })
         : (0, r.jsx)(c.f5, {
               value: N,
@@ -185,7 +188,7 @@ function I(e) {
                   channelId: y,
                   position: a.Fr ? "top" : "right",
                   clickTrap: !0,
-                  children: (e) => j(e),
+                  children: (e) => M(e),
               }),
           });
 }

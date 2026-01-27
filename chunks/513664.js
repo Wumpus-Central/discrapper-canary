@@ -1,105 +1,104 @@
 n.d(t, {
-    Ay: () => g,
-    dd: () => m,
-    lD: () => O,
+    Ay: () => m,
+    dd: () => p,
+    lD: () => S,
 });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(873298),
-    a = n(397927),
-    s = n(285058),
-    o = n(195043),
-    l = n(723702),
+var s = n(873298),
+    l = n(397927),
+    r = n(285058),
+    a = n(195043),
+    o = n(723702),
     c = n(253932),
-    u = n(790174),
-    d = n(531525),
-    f = n(652215),
-    p = n(985018),
-    _ = n(536482),
-    h = n(208746);
+    d = n(790174),
+    u = n(531525),
+    g = n(652215),
+    h = n(985018),
+    x = n(536482),
+    A = n(208746);
 
-function m() {
+function p() {
     let e = c.tz.useSetting();
-    return (0, r.jsxs)("div", {
-        className: h.QF,
+    return (0, i.jsxs)("div", {
+        className: A.QF,
         children: [
-            (0, r.jsxs)("div", {
-                className: h.v_,
+            (0, i.jsxs)("div", {
+                className: A.v_,
                 children: [
-                    (0, r.jsx)(a.Heading, {
-                        className: h.n7,
+                    (0, i.jsx)(l.Heading, {
+                        className: A.n7,
                         variant: "heading-md/medium",
                         color: "text-strong",
-                        children: p.intl.string(p.t.TqdOvC),
+                        children: h.intl.string(h.t.TqdOvC),
                     }),
                     !e &&
-                        (0, r.jsx)("div", {
-                            className: h.ZT,
-                            children: (0, r.jsx)(a.wx6, {
+                        (0, i.jsx)("div", {
+                            className: A.ZT,
+                            children: (0, i.jsx)(l.wx6, {
                                 type: "warning",
-                                children: p.intl.string(_.default["xxI0/W"]),
+                                children: h.intl.string(x.default["xxI0/W"]),
                             }),
                         }),
                 ],
             }),
-            (0, r.jsx)(s.A, {}),
+            (0, i.jsx)(r.A, {}),
         ],
     });
 }
 
-function g(e) {
+function m(e) {
     let { className: t } = e;
-    return (0, r.jsxs)(u.A, {
+    return (0, i.jsxs)(d.A, {
         className: t,
-        title: p.intl.string(p.t.Cq98yL),
+        title: h.intl.string(h.t.Cq98yL),
         children: [
-            (0, r.jsx)(y, {}),
-            (0, r.jsx)(a.cGx, {
+            (0, i.jsx)(O, {}),
+            (0, i.jsx)(l.cGx, {
                 gap: 32,
             }),
-            (0, r.jsx)(E, {}),
-            (0, r.jsx)(a.cGx, {
+            (0, i.jsx)(j, {}),
+            (0, i.jsx)(l.cGx, {
                 gap: 32,
             }),
-            (0, r.jsx)(b, {}),
-            (0, r.jsx)(a.cGx, {
+            (0, i.jsx)(b, {}),
+            (0, i.jsx)(l.cGx, {
                 gap: 32,
             }),
-            (0, r.jsx)(O, {}),
+            (0, i.jsx)(S, {}),
         ],
     });
 }
 
-function E() {
+function j() {
     let e = c._Z.useSetting(),
-        t = (e) => {
-            c._Z.updateSetting(e);
-        },
-        n = [
+        t = [
             {
-                value: i.Qd.ACTIVITY_STATUS_ON,
-                name: p.intl.string(p.t.UzGMH9),
+                value: s.Qd.ACTIVITY_STATUS_ON,
+                name: h.intl.string(h.t.UzGMH9),
             },
             {
-                value: i.Qd.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
-                name: p.intl.string(_.default["/sAeRY"]),
+                value: s.Qd.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
+                name: h.intl.string(x.default["/sAeRY"]),
             },
             {
-                value: i.Qd.ACTIVITY_STATUS_OFF,
-                name: p.intl.string(_.default.m3oL7Q),
+                value: s.Qd.ACTIVITY_STATUS_OFF,
+                name: h.intl.string(x.default.m3oL7Q),
             },
         ];
-    return (0, r.jsxs)(a.nVY, {
-        label: p.intl.string(_.default.TG0QsS),
-        description: p.intl.string(_.default.OO17Lg),
+    return (0, i.jsxs)(l.nVY, {
+        label: h.intl.string(x.default.TG0QsS),
+        description: h.intl.string(x.default.OO17Lg),
         children: [
-            (0, r.jsx)(a.z6M, {
-                label: p.intl.string(_.default["/LHVbt"]),
-                options: n,
+            (0, i.jsx)(l.z6M, {
+                label: h.intl.string(x.default["/LHVbt"]),
+                options: t,
                 value: e,
-                onChange: (e) => t(e),
+                onChange: (e) => {
+                    c._Z.updateSetting(e);
+                },
             }),
-            (0, r.jsx)(m, {}),
+            (0, i.jsx)(p, {}),
         ],
     });
 }
@@ -107,21 +106,21 @@ function E() {
 function b() {
     let e = c.e.useSetting(),
         t = c.UM.useSetting();
-    return (0, r.jsx)(o.x, {
-        setting: d.H.ACTIVITY_PRIVACY_RICH_PRESENCE,
-        children: (0, r.jsxs)(a.nVY, {
-            label: p.intl.string(_.default["5rYBAQ"]),
+    return (0, i.jsx)(a.x, {
+        setting: u.H.ACTIVITY_PRIVACY_RICH_PRESENCE,
+        children: (0, i.jsxs)(l.nVY, {
+            label: h.intl.string(x.default["5rYBAQ"]),
             children: [
-                (0, r.jsx)(a.dOG, {
-                    label: p.intl.string(_.default.khuuzv),
-                    description: p.intl.string(_.default["8EWsJ8"]),
+                (0, i.jsx)(l.dOG, {
+                    label: h.intl.string(x.default.khuuzv),
+                    description: h.intl.string(x.default["8EWsJ8"]),
                     id: "allow-friends-to-join-my-game",
                     checked: e,
                     onChange: (e) => c.e.updateSetting(e),
                 }),
-                (0, r.jsx)(a.dOG, {
-                    label: p.intl.string(_.default.Uz5Ipi),
-                    description: p.intl.string(_.default.CZI2Gb),
+                (0, i.jsx)(l.dOG, {
+                    label: h.intl.string(x.default.Uz5Ipi),
+                    description: h.intl.string(x.default.CZI2Gb),
                     id: "allow-vc-join-without-request",
                     checked: t,
                     onChange: (e) => c.UM.updateSetting(e),
@@ -131,19 +130,19 @@ function b() {
     });
 }
 
-function y() {
+function O() {
     let e = c.tz.useSetting(),
-        t = l.isPlatformEmbedded ? p.intl.string(_.default.UQ9RHJ) : p.intl.string(p.t.oKqC4t);
-    return (0, r.jsx)(o.x, {
-        setting: d.H.ACTIVITY_PRIVACY_STATUS,
-        children: (0, r.jsxs)(a.BJc, {
+        t = o.isPlatformEmbedded ? h.intl.string(x.default.UQ9RHJ) : h.intl.string(h.t.oKqC4t);
+    return (0, i.jsx)(a.x, {
+        setting: u.H.ACTIVITY_PRIVACY_STATUS,
+        children: (0, i.jsxs)(l.BJc, {
             gap: 32,
             children: [
-                (0, r.jsx)("div", {
-                    children: p.intl.string(_.default.t2YsrV),
+                (0, i.jsx)("div", {
+                    children: h.intl.string(x.default.t2YsrV),
                 }),
-                (0, r.jsx)(a.dOG, {
-                    label: p.intl.string(_.default.WhdCGP),
+                (0, i.jsx)(l.dOG, {
+                    label: h.intl.string(x.default.WhdCGP),
                     description: t,
                     id: "share-my-activity",
                     checked: e,
@@ -154,17 +153,17 @@ function y() {
     });
 }
 
-function O() {
-    return (0, r.jsx)(o.x, {
-        setting: d.H.ACTIVITY_PRIVACY_TOS,
-        children: (0, r.jsx)(a.ZpM, {
-            type: a.ZpM.Types.PRIMARY,
-            className: h.AX,
-            children: (0, r.jsx)(a.Text, {
+function S() {
+    return (0, i.jsx)(a.x, {
+        setting: u.H.ACTIVITY_PRIVACY_TOS,
+        children: (0, i.jsx)(l.ZpM, {
+            type: l.ZpM.Types.PRIMARY,
+            className: A.AX,
+            children: (0, i.jsx)(l.Text, {
                 variant: "text-sm/normal",
-                children: p.intl.format(p.t.xvCsx4, {
-                    termsLink: f.X7G.TERMS,
-                    privacyLink: f.X7G.PRIVACY,
+                children: h.intl.format(h.t.xvCsx4, {
+                    termsLink: g.X7G.TERMS,
+                    privacyLink: g.X7G.PRIVACY,
                 }),
             }),
         }),

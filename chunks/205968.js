@@ -1,180 +1,173 @@
-function r(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+function n(t) {
+    for (var e = 1; e < arguments.length; e++) {
+        var r = null != arguments[e] ? arguments[e] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(r, t).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                i(e, t, n[t]);
+            n.forEach(function (e) {
+                var n, i, o;
+                (n = t),
+                    (i = e),
+                    (o = r[e]),
+                    i in n
+                        ? Object.defineProperty(n, i, {
+                              value: o,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (n[i] = o);
             });
     }
-    return e;
+    return t;
 }
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-var a = n(68055),
-    s = n(617179),
-    o = n(244767),
-    l = n(45069),
-    c = n(144531);
-n(9011);
-var u = n(225758),
-    d = n(190346),
-    f = n(622114),
-    p = n(185607),
-    _ = n(279998),
-    h = n(661551),
-    m = n(116740),
-    g = n(797686),
-    E = h("draft_tree_data_support"),
-    b = m.List,
-    y = m.Map,
-    O = m.OrderedMap,
-    A = function (e, t) {
-        var n = e.key,
-            r = e.type,
-            i = e.data;
+var i = r(68055),
+    o = r(617179),
+    a = r(244767),
+    s = r(45069),
+    u = r(144531);
+r(9011);
+var c = r(225758),
+    l = r(190346),
+    f = r(622114),
+    p = r(185607),
+    h = r(279998),
+    d = r(661551),
+    g = r(116740),
+    y = r(797686),
+    v = d("draft_tree_data_support"),
+    m = g.List,
+    _ = g.Map,
+    b = g.OrderedMap,
+    S = function (t, e) {
+        var r = t.key,
+            n = t.type,
+            i = t.data;
         return {
-            text: e.text,
-            depth: e.depth || 0,
-            type: r || "unstyled",
-            key: n || _(),
-            data: y(i),
-            characterList: v(e, t),
+            text: t.text,
+            depth: t.depth || 0,
+            type: n || "unstyled",
+            key: r || h(),
+            data: _(i),
+            characterList: w(t, e),
         };
     },
-    v = function (e, t) {
-        var n = e.text,
-            i = e.entityRanges,
-            a = e.inlineStyleRanges,
-            s = i || [];
-        return d(
-            p(n, a || []),
+    w = function (t, e) {
+        var r = t.text,
+            i = t.entityRanges;
+        return l(
+            p(r, t.inlineStyleRanges || []),
             f(
-                n,
-                s
-                    .filter(function (e) {
-                        return t.hasOwnProperty(e.key);
+                r,
+                (i || [])
+                    .filter(function (t) {
+                        return e.hasOwnProperty(t.key);
                     })
-                    .map(function (e) {
-                        return r({}, e, {
-                            key: t[e.key],
+                    .map(function (t) {
+                        return n({}, t, {
+                            key: e[t.key],
                         });
                     }),
             ),
         );
     },
-    S = function (e) {
-        return r({}, e, {
-            key: e.key || _(),
+    k = function (t) {
+        return n({}, t, {
+            key: t.key || h(),
         });
     },
-    I = function (e, t, n) {
-        var i = t.map(function (e) {
-            return r({}, e, {
-                parentRef: n,
+    x = function (t, e, r) {
+        var i = e.map(function (t) {
+            return n({}, t, {
+                parentRef: r,
             });
         });
-        return e.concat(i.reverse());
+        return t.concat(i.reverse());
     },
-    T = function (e, t) {
-        return e.map(S).reduce(function (n, i, a) {
-            Array.isArray(i.children) || g(!1);
-            var o = i.children.map(S),
-                l = new s(
-                    r({}, A(i, t), {
-                        prevSibling: 0 === a ? null : e[a - 1].key,
-                        nextSibling: a === e.length - 1 ? null : e[a + 1].key,
-                        children: b(
-                            o.map(function (e) {
-                                return e.key;
-                            }),
-                        ),
-                    }),
-                );
-            n = n.set(l.getKey(), l);
-            for (var c = I([], o, l); c.length > 0; ) {
-                var u = c.pop(),
-                    d = u.parentRef,
-                    f = d.getChildKeys(),
-                    p = f.indexOf(u.key),
-                    _ = Array.isArray(u.children);
-                if (!_) {
-                    _ || g(!1);
-                    break;
-                }
-                var h = u.children.map(S),
-                    m = new s(
-                        r({}, A(u, t), {
-                            parent: d.getKey(),
-                            children: b(
-                                h.map(function (e) {
-                                    return e.key;
-                                }),
-                            ),
-                            prevSibling: 0 === p ? null : f.get(p - 1),
-                            nextSibling: p === f.size - 1 ? null : f.get(p + 1),
-                        }),
-                    );
-                (n = n.set(m.getKey(), m)), (c = I(c, h, m));
-            }
-            return n;
-        }, O());
-    },
-    C = function (e, t) {
-        return O(
-            e.map(function (e) {
-                var n = new a(A(e, t));
-                return [n.getKey(), n];
+    C = function (t, e) {
+        var r,
+            a = t.blocks.find(function (t) {
+                return Array.isArray(t.children) && t.children.length > 0;
             }),
-        );
+            s = v && !a ? u.fromRawStateToRawTreeState(t).blocks : t.blocks;
+        return v
+            ? s.map(k).reduce(function (t, r, i) {
+                  Array.isArray(r.children) || y(!1);
+                  var a = r.children.map(k),
+                      u = new o(
+                          n({}, S(r, e), {
+                              prevSibling: 0 === i ? null : s[i - 1].key,
+                              nextSibling: i === s.length - 1 ? null : s[i + 1].key,
+                              children: m(
+                                  a.map(function (t) {
+                                      return t.key;
+                                  }),
+                              ),
+                          }),
+                      );
+                  t = t.set(u.getKey(), u);
+                  for (var c = x([], a, u); c.length > 0; ) {
+                      var l = c.pop(),
+                          f = l.parentRef,
+                          p = f.getChildKeys(),
+                          h = p.indexOf(l.key),
+                          d = Array.isArray(l.children);
+                      if (!d) {
+                          d || y(!1);
+                          break;
+                      }
+                      var g = l.children.map(k),
+                          v = new o(
+                              n({}, S(l, e), {
+                                  parent: f.getKey(),
+                                  children: m(
+                                      g.map(function (t) {
+                                          return t.key;
+                                      }),
+                                  ),
+                                  prevSibling: 0 === h ? null : p.get(h - 1),
+                                  nextSibling: h === p.size - 1 ? null : p.get(h + 1),
+                              }),
+                          );
+                      (t = t.set(v.getKey(), v)), (c = x(c, g, v));
+                  }
+                  return t;
+              }, b())
+            : ((r = a ? u.fromRawTreeStateToRawState(t).blocks : s),
+              b(
+                  r.map(function (t) {
+                      var r = new i(S(t, e));
+                      return [r.getKey(), r];
+                  }),
+              ));
     },
-    N = function (e, t) {
-        var n = e.blocks.find(function (e) {
-                return Array.isArray(e.children) && e.children.length > 0;
-            }),
-            r = E && !n ? c.fromRawStateToRawTreeState(e).blocks : e.blocks;
-        return E ? T(r, t) : C(n ? c.fromRawTreeStateToRawState(e).blocks : r, t);
-    },
-    R = function (e) {
-        var t = e.entityMap,
-            n = {};
+    E = function (t) {
+        var e = t.entityMap,
+            r = {};
         return (
-            Object.keys(t).forEach(function (e) {
-                var r = t[e],
-                    i = r.type,
-                    a = r.mutability,
-                    s = r.data;
-                n[e] = l.__create(i, a, s || {});
+            Object.keys(e).forEach(function (t) {
+                var n = e[t],
+                    i = n.type,
+                    o = n.mutability,
+                    a = n.data;
+                r[t] = s.__create(i, o, a || {});
             }),
-            n
+            r
         );
     };
-e.exports = function (e) {
-    Array.isArray(e.blocks) || g(!1);
-    var t = R(e),
-        n = N(e, t),
-        r = n.isEmpty() ? new u() : u.createEmpty(n.first().getKey());
-    return new o({
-        blockMap: n,
-        entityMap: t,
-        selectionBefore: r,
-        selectionAfter: r,
+t.exports = function (t) {
+    Array.isArray(t.blocks) || y(!1);
+    var e = E(t),
+        r = C(t, e),
+        n = r.isEmpty() ? new c() : c.createEmpty(r.first().getKey());
+    return new a({
+        blockMap: r,
+        entityMap: e,
+        selectionBefore: n,
+        selectionAfter: n,
     });
 };

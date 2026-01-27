@@ -1,79 +1,63 @@
-n.d(t, {
-    A: () => E,
+n.d(e, {
+    A: () => c,
 });
-var r,
-    i = n(311907),
+var i,
+    l,
+    r = n(311907),
     a = n(873298),
-    s = n(73153),
-    o = n(761821);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = !1,
-    u = {},
-    d = {};
-
-function f() {
-    c = !0;
-}
-
-function p(e) {
-    let { userId: t, settings: n, consents: r } = e;
-    null != n && (u[t] = (0, o.Gd)(n)), null != r && (d[t] = r), (c = !1);
-}
-
-function _(e) {
-    let { userId: t, consents: n } = e;
-    d[t] = n;
-}
-
-function h(e) {
-    let { userId: t, settings: n } = e,
-        r = (0, o.Gd)(n);
-    u[t] = (0, o.RK)(a.nT, u[t], r);
-}
-
-function m() {
-    (u = {}), (d = {}), (c = !1);
-}
-class g extends (r = i.Ay.Store) {
-    getSettings(e) {
-        return u[e];
+    o = n(73153),
+    u = n(761821);
+let s = !1,
+    d = {},
+    E = {};
+class _ extends (l = r.Ay.Store) {
+    getSettings(t) {
+        return d[t];
     }
-    getControlledSettings(e) {
-        return u[e];
+    getControlledSettings(t) {
+        return d[t];
     }
-    hasSettingsForUser(e) {
-        return null != u[e];
+    hasSettingsForUser(t) {
+        return null != d[t];
     }
-    getConsents(e) {
-        return d[e];
+    getConsents(t) {
+        return E[t];
     }
-    hasConsented(e, t) {
-        if (null == e) return !1;
-        let n = d[e];
-        return null != n && null != n[t] && n[t].consented;
+    hasConsented(t, e) {
+        if (null == t) return !1;
+        let n = E[t];
+        return null != n && null != n[e] && n[e].consented;
     }
     get isLoading() {
-        return c;
+        return s;
     }
 }
-l(g, "displayName", "FamilyCenterControlledSettingsStore");
-let E = new g(s.h, {
-    FAMILY_CENTER_TEEN_SETTINGS_FETCH_START: f,
-    FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS: p,
-    FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS: _,
-    FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS: h,
-    LOGOUT: m,
+(i = "displayName") in _
+    ? Object.defineProperty(_, i, {
+          value: "FamilyCenterControlledSettingsStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (_[i] = "FamilyCenterControlledSettingsStore");
+let c = new _(o.h, {
+    FAMILY_CENTER_TEEN_SETTINGS_FETCH_START: function () {
+        s = !0;
+    },
+    FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS: function (t) {
+        let { userId: e, settings: n, consents: i } = t;
+        null != n && (d[e] = (0, u.Gd)(n)), null != i && (E[e] = i), (s = !1);
+    },
+    FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS: function (t) {
+        let { userId: e, consents: n } = t;
+        E[e] = n;
+    },
+    FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS: function (t) {
+        let { userId: e, settings: n } = t,
+            i = (0, u.Gd)(n);
+        d[e] = (0, u.RK)(a.nT, d[e], i);
+    },
+    LOGOUT: function () {
+        (d = {}), (E = {}), (s = !1);
+    },
 });

@@ -1,6 +1,5 @@
 n.d(t, {
-    R: () => r,
+    R: () => i,
 });
-var r = (function (e) {
-    return (e.HOME = "HOME"), (e.SWITCH_APP_PLANS = "SWITCH_APP_PLANS"), e;
-})({});
+var r,
+    i = (((r = {}).HOME = "HOME"), (r.SWITCH_APP_PLANS = "SWITCH_APP_PLANS"), r);

@@ -1,35 +1,21 @@
 n.d(t, {
-    A: () => b,
+    A: () => A,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(397927),
+    l = n(397927),
     s = n(98207),
-    o = n(557722),
-    l = n(662758),
+    a = n(557722),
+    o = n(662758),
     c = n(615715),
-    u = n(87707),
-    d = n(652215),
-    f = n(53516),
+    d = n(87707),
+    u = n(652215),
+    _ = n(53516),
     p = n(985018),
-    _ = n(139674);
+    m = n(139674);
 
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,141 +26,141 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function g(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function E(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function b(e) {
+function A(e) {
     let t,
         n,
-        { currentUser: h, togglingSMS: g } = e,
-        [b, y] = i.useState(!1),
-        O = i.useCallback(
+        { currentUser: A, togglingSMS: f } = e,
+        [h, b] = i.useState(!1),
+        E = i.useCallback(
             (e) => {
-                e.preventDefault(), y(!b);
+                e.preventDefault(), b(!h);
             },
-            [b],
+            [h],
         ),
-        A = i.useCallback(function () {
+        x = i.useCallback(function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            (0, a.qfG)(
+            (0, l.qfG)(
                 (t) =>
                     (0, r.jsx)(
                         c.default,
-                        m(
+                        g(
                             {
-                                reason: o.d.USER_SETTINGS_UPDATE,
+                                reason: a.d.USER_SETTINGS_UPDATE,
                             },
                             t,
                             e,
                         ),
                     ),
                 {
-                    modalKey: f.V,
+                    modalKey: _.V,
                 },
             );
         }, []),
-        v = i.useCallback(() => {
-            A();
-        }, [A]),
-        S = i.useCallback(() => {
-            null == h.phone
-                ? A({
+        O = i.useCallback(() => {
+            x();
+        }, [x]),
+        C = i.useCallback(() => {
+            null == A.phone
+                ? x({
                       onAddedPhone: s.A.enableSMS,
                   })
                 : s.A.enableSMS();
-        }, [h, A]),
+        }, [A, x]),
         I = i.useCallback(() => {
-            (0, a.qfG)((e) =>
-                (0, r.jsx)(
-                    l.default,
-                    E(m({}, e), {
-                        handleSubmit: s.A.disableSMS,
-                        title: p.intl.string(p.t.KLWnit),
-                        children: p.intl.string(p.t["W0/Duf"]),
-                    }),
-                ),
-            );
+            (0, l.qfG)((e) => {
+                var t, n;
+                return (0, r.jsx)(
+                    o.default,
+                    ((t = g({}, e)),
+                    (n = n =
+                        {
+                            handleSubmit: s.A.disableSMS,
+                            title: p.intl.string(p.t.KLWnit),
+                            children: p.intl.string(p.t["W0/Duf"]),
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          }),
+                    t),
+                );
+            });
         }, []),
         T = i.useCallback((e) => (null == e ? "" : "".concat("*".repeat(e.length - 4)).concat(e.slice(-4))), []),
-        C = null != h.phone,
-        N = h.hasFlag(d.nhx.MFA_SMS);
-    if (C || N) {
-        let e = b ? h.phone : T(h.phone);
-        n = (0, r.jsxs)(a.Text, {
+        S = null != A.phone,
+        j = A.hasFlag(u.nhx.MFA_SMS);
+    if (S || j) {
+        let e = h ? A.phone : T(A.phone);
+        n = (0, r.jsxs)(l.Text, {
             variant: "text-sm/normal",
             children: [
                 p.intl.format(p.t.PXVoEO, {
                     phoneNumber: e,
                 }),
-                (0, r.jsx)(a.MzZ, {
-                    onClick: O,
-                    className: _.vN,
-                    children: b ? p.intl.string(p.t.FfltIN) : p.intl.string(p.t.llArAg),
+                (0, r.jsx)(l.MzZ, {
+                    onClick: E,
+                    className: m.vN,
+                    children: h ? p.intl.string(p.t.FfltIN) : p.intl.string(p.t.llArAg),
                 }),
             ],
         });
     }
-    if (N)
-        t = (0, r.jsx)(a.Button, {
+    if (j)
+        t = (0, r.jsx)(l.Button, {
             variant: "critical-secondary",
             size: "sm",
             text: p.intl.string(p.t.KLWnit),
-            loading: g,
+            loading: f,
             onClick: I,
         });
     else {
-        let e = (0, u.B)(h);
-        t = (0, r.jsxs)(a.ButtonGroup, {
+        let e = (0, d.B)(A);
+        t = (0, r.jsxs)(l.ButtonGroup, {
             size: "sm",
             children: [
-                (0, r.jsx)(a.Button, {
+                (0, r.jsx)(l.Button, {
                     variant: "primary",
                     size: "sm",
                     text: null != e ? e : p.intl.string(p.t.DZQe23),
-                    onClick: S,
-                    loading: g,
+                    onClick: C,
+                    loading: f,
                     disabled: null != e,
                 }),
-                C
-                    ? (0, r.jsx)(a.Button, {
+                S
+                    ? (0, r.jsx)(l.Button, {
                           variant: "secondary",
                           size: "sm",
                           text: p.intl.string(p.t.Ulqq6K),
-                          onClick: v,
+                          onClick: O,
                       })
                     : null,
             ],
         });
     }
-    return (0, r.jsxs)(a.D0$, {
+    return (0, r.jsxs)(l.D0$, {
         label: p.intl.string(p.t.uHAJ5v),
         description: p.intl.string(p.t.fspJ4H),
         children: [n, t],

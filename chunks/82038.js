@@ -1,20 +1,19 @@
 n.d(t, {
-    c: () => g,
+    c: () => A,
 }),
     n(896048),
     n(747238);
 var r = n(621466),
     i = n(158954),
-    a = n(775602),
+    l = n(775602),
     s = n(186111),
-    o = n(430452),
-    l = n(383501),
+    a = n(430452),
+    o = n(383501),
     c = n(203982),
-    u = n(350535),
-    d = n(652215);
-let f = "BODY",
-    p = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
-    _ = new Set([
+    d = n(350535),
+    u = n(652215);
+let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
+    p = new Set([
         "Alt",
         "AltGraph",
         "CapsLock",
@@ -31,7 +30,7 @@ let f = "BODY",
         "Symbol",
         "SymbolLock",
     ]),
-    h = new Set([
+    m = new Set([
         "F1",
         "F2",
         "F3",
@@ -58,7 +57,7 @@ let f = "BODY",
         "ZoomIn",
         "ZoomOut",
     ]),
-    m = new Set([
+    g = new Set([
         "ChannelDown",
         "ChannelUp",
         "MediaFastForward",
@@ -89,36 +88,36 @@ let f = "BODY",
         "VolumeDown",
         "VolumeMute",
     ]),
-    g = {
+    A = {
         binds: ["any-character"],
         keydown(e, t) {
             var n;
-            let g = null == (n = (0, r.BF)(e)) ? void 0 : n.activeElement;
-            if ((0, r.Cw)(g) || i.rxt.isActive() || _.has(t) || h.has(t) || m.has(t)) return !1;
-            let E = null != g && g.tagName === f;
+            let A = null == (n = (0, r.BF)(e)) ? void 0 : n.activeElement;
+            if ((0, r.Cw)(A) || i.rxt.isActive() || p.has(t) || m.has(t) || g.has(t)) return !1;
+            let f = null != A && "BODY" === A.tagName;
             return (
                 !(
-                    (a.A.keyboardModeEnabled && !E && !/^[a-zA-Z0-9]$/.test(t)) ||
-                    c._.hasSubscribers(d.jej.MODAL_CLOSE) ||
+                    (l.A.keyboardModeEnabled && !f && !/^[a-zA-Z0-9]$/.test(t)) ||
+                    c._.hasSubscribers(u.jej.MODAL_CLOSE) ||
                     s.A.hasLayers()
                 ) &&
                 ("Tab" === t &&
-                c._.hasSubscribers(d.jej.TEXTAREA_FOCUS) &&
+                c._.hasSubscribers(u.jej.TEXTAREA_FOCUS) &&
                 null != document.querySelector('[data-can-focus="true"]')
-                    ? (e.preventDefault(), c._.dispatch(d.jej.TEXTAREA_FOCUS), !1)
+                    ? (e.preventDefault(), c._.dispatch(u.jej.TEXTAREA_FOCUS), !1)
                     : !(
-                          l.A.isConnected() &&
-                          o.A.getMode() === d.TBI.PUSH_TO_TALK &&
-                          !o.A.isSelfMute() &&
-                          Object.values(o.A.getShortcuts())
-                              .map(u.pi)
+                          o.A.isConnected() &&
+                          a.A.getMode() === u.TBI.PUSH_TO_TALK &&
+                          !a.A.isSelfMute() &&
+                          Object.values(a.A.getShortcuts())
+                              .map(d.pi)
                               .some((t) => t.map((e) => e.keyCode).includes(e.keyCode))
                       ) &&
                       void (
                           !e.metaKey &&
                           !e.ctrlKey &&
-                          !p.has(t) &&
-                          c._.dispatchToLastSubscribed(d.jej.TEXTAREA_FOCUS)
+                          !_.has(t) &&
+                          c._.dispatchToLastSubscribed(u.jej.TEXTAREA_FOCUS)
                       ))
             );
         },

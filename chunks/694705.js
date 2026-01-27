@@ -1,36 +1,22 @@
 n.d(t, {
     f: () => v,
-    v: () => b,
+    v: () => x,
 }),
     n(65821);
 var r = n(627968),
-    i = n(64700),
+    l = n(64700),
     a = n(284009),
-    s = n.n(a),
-    o = n(681154),
-    l = n(61259),
+    i = n.n(a),
+    s = n(681154),
+    o = n(61259),
     c = n(380349),
     u = n(420009),
     d = n(315093),
-    f = n(438414),
-    p = n(873498),
-    _ = n(653826);
+    m = n(438414),
+    f = n(873498),
+    p = n(653826);
 
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,50 +27,60 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function g(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i,
+        l,
         a = {};
     if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+        for (l = 0, n = Reflect.ownKeys(e); l < n.length; l++)
+            (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = E(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+    if (
+        ((a = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                l = {},
+                a = Object.getOwnPropertyNames(e);
+            for (r = 0; r < a.length; r++)
+                (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+            return l;
+        })(e, t)),
+        Object.getOwnPropertySymbols)
+    )
+        for (l = 0, n = Object.getOwnPropertySymbols(e); l < n.length; l++)
+            (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
+let g = l.createContext(void 0);
 
-function E(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let y = i.createContext(void 0);
-
-function b() {
-    let e = i.useContext(y);
-    return s()(null != e, "useEntryDataContext must be used within a EntryDataContextProvider"), e;
+function x() {
+    let e = l.useContext(g);
+    return i()(null != e, "useEntryDataContext must be used within a EntryDataContextProvider"), e;
 }
 
-function O(e) {
+function y(e) {
     let { entry: t } = e,
-        n = g(e, ["entry"]),
-        i = m(
+        n = b(e, ["entry"]),
+        l = h(
             {
                 baseEntryData: (0, u.A)({
                     entry: t,
@@ -94,64 +90,64 @@ function O(e) {
             n,
         );
     switch (t.content_type) {
-        case o.ContentInventoryEntryType.TOP_ARTIST:
-            return (0, r.jsx)(
-                I,
-                m(
-                    {
-                        entry: t,
-                    },
-                    i,
-                ),
-            );
-        case o.ContentInventoryEntryType.TOP_GAME:
-            return (0, r.jsx)(
-                S,
-                m(
-                    {
-                        entry: t,
-                    },
-                    i,
-                ),
-            );
-        case o.ContentInventoryEntryType.PLAYED_GAME:
-            return (0, r.jsx)(
-                T,
-                m(
-                    {
-                        entry: t,
-                    },
-                    i,
-                ),
-            );
-        case o.ContentInventoryEntryType.WATCHED_MEDIA:
+        case s.ContentInventoryEntryType.TOP_ARTIST:
             return (0, r.jsx)(
                 C,
-                m(
+                h(
                     {
                         entry: t,
                     },
-                    i,
+                    l,
                 ),
             );
-        case o.ContentInventoryEntryType.LISTENED_SESSION:
+        case s.ContentInventoryEntryType.TOP_GAME:
             return (0, r.jsx)(
-                N,
-                m(
+                _,
+                h(
                     {
                         entry: t,
                     },
-                    i,
+                    l,
                 ),
             );
-        case o.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
+        case s.ContentInventoryEntryType.PLAYED_GAME:
             return (0, r.jsx)(
                 A,
-                m(
+                h(
                     {
                         entry: t,
                     },
-                    i,
+                    l,
+                ),
+            );
+        case s.ContentInventoryEntryType.WATCHED_MEDIA:
+            return (0, r.jsx)(
+                O,
+                h(
+                    {
+                        entry: t,
+                    },
+                    l,
+                ),
+            );
+        case s.ContentInventoryEntryType.LISTENED_SESSION:
+            return (0, r.jsx)(
+                E,
+                h(
+                    {
+                        entry: t,
+                    },
+                    l,
+                ),
+            );
+        case s.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
+            return (0, r.jsx)(
+                j,
+                h(
+                    {
+                        entry: t,
+                    },
+                    l,
                 ),
             );
         default:
@@ -161,96 +157,30 @@ function O(e) {
 
 function v(e) {
     let { errorFallback: t } = e,
-        n = g(e, ["errorFallback"]);
-    return (0, r.jsx)(l.t, {
+        n = b(e, ["errorFallback"]);
+    return (0, r.jsx)(o.t, {
         fallback: t,
-        children: (0, r.jsx)(O, m({}, n)),
+        children: (0, r.jsx)(y, h({}, n)),
     });
 }
 
-function A(e) {
+function j(e) {
     let { entry: t, children: n } = e,
-        i = g(e, ["entry", "children"]),
+        l = b(e, ["entry", "children"]),
         a = (0, c.A)(
-            m(
+            h(
                 {
                     entry: t,
                 },
-                i,
+                l,
             ),
         );
-    return (0, r.jsx)(y.Provider, {
-        value: m(
+    return (0, r.jsx)(g.Provider, {
+        value: h(
             {
                 parsedEntry: a,
             },
-            i,
-        ),
-        children: n,
-    });
-}
-
-function I(e) {
-    let { entry: t, children: n } = e,
-        i = g(e, ["entry", "children"]),
-        a = (0, p.A)(
-            m(
-                {
-                    entry: t,
-                },
-                i,
-            ),
-        );
-    return (0, r.jsx)(y.Provider, {
-        value: m(
-            {
-                parsedEntry: a,
-            },
-            i,
-        ),
-        children: n,
-    });
-}
-
-function S(e) {
-    let { entry: t, children: n } = e,
-        i = g(e, ["entry", "children"]),
-        a = (0, d.A)(
-            m(
-                {
-                    entry: t,
-                },
-                i,
-            ),
-        );
-    return (0, r.jsx)(y.Provider, {
-        value: m(
-            {
-                parsedEntry: a,
-            },
-            i,
-        ),
-        children: n,
-    });
-}
-
-function T(e) {
-    let { entry: t, children: n } = e,
-        i = g(e, ["entry", "children"]),
-        a = (0, d.A)(
-            m(
-                {
-                    entry: t,
-                },
-                i,
-            ),
-        );
-    return (0, r.jsx)(y.Provider, {
-        value: m(
-            {
-                parsedEntry: a,
-            },
-            i,
+            l,
         ),
         children: n,
     });
@@ -258,43 +188,109 @@ function T(e) {
 
 function C(e) {
     let { entry: t, children: n } = e,
-        i = g(e, ["entry", "children"]),
-        a = (0, _.A)(
-            m(
+        l = b(e, ["entry", "children"]),
+        a = (0, f.A)(
+            h(
                 {
                     entry: t,
                 },
-                i,
+                l,
             ),
         );
-    return (0, r.jsx)(y.Provider, {
-        value: m(
+    return (0, r.jsx)(g.Provider, {
+        value: h(
             {
                 parsedEntry: a,
             },
-            i,
+            l,
         ),
         children: n,
     });
 }
 
-function N(e) {
+function _(e) {
     let { entry: t, children: n } = e,
-        i = g(e, ["entry", "children"]),
-        a = (0, f.A)(
-            m(
+        l = b(e, ["entry", "children"]),
+        a = (0, d.A)(
+            h(
                 {
                     entry: t,
                 },
-                i,
+                l,
             ),
         );
-    return (0, r.jsx)(y.Provider, {
-        value: m(
+    return (0, r.jsx)(g.Provider, {
+        value: h(
             {
                 parsedEntry: a,
             },
-            i,
+            l,
+        ),
+        children: n,
+    });
+}
+
+function A(e) {
+    let { entry: t, children: n } = e,
+        l = b(e, ["entry", "children"]),
+        a = (0, d.A)(
+            h(
+                {
+                    entry: t,
+                },
+                l,
+            ),
+        );
+    return (0, r.jsx)(g.Provider, {
+        value: h(
+            {
+                parsedEntry: a,
+            },
+            l,
+        ),
+        children: n,
+    });
+}
+
+function O(e) {
+    let { entry: t, children: n } = e,
+        l = b(e, ["entry", "children"]),
+        a = (0, p.A)(
+            h(
+                {
+                    entry: t,
+                },
+                l,
+            ),
+        );
+    return (0, r.jsx)(g.Provider, {
+        value: h(
+            {
+                parsedEntry: a,
+            },
+            l,
+        ),
+        children: n,
+    });
+}
+
+function E(e) {
+    let { entry: t, children: n } = e,
+        l = b(e, ["entry", "children"]),
+        a = (0, m.A)(
+            h(
+                {
+                    entry: t,
+                },
+                l,
+            ),
+        );
+    return (0, r.jsx)(g.Provider, {
+        value: h(
+            {
+                parsedEntry: a,
+            },
+            l,
         ),
         children: n,
     });

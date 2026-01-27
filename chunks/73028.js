@@ -1,61 +1,30 @@
 n.d(t, {
-    U: () => u,
+    U: () => s,
 });
 var r = n(627968);
 n(64700);
 var i = n(397927),
-    a = n(157559),
-    s = n(818348),
-    o = n(985018);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let u = (e, t) => {
-    let l = "group-dm-edit-modal-".concat(e),
-        u = !1,
-        d = (e) => {
-            u = e;
+    l = n(157559),
+    o = n(818348),
+    a = n(985018);
+let s = (e, t) => {
+    let s = "group-dm-edit-modal-".concat(e),
+        c = !1,
+        u = (e) => {
+            c = e;
         },
-        f = () => {
-            u
-                ? a.A.show({
-                      title: o.intl.string(o.t.pvRCSu),
-                      body: o.intl.string(o.t.DRi46S),
-                      confirmText: o.intl.string(o.t["6GQDFu"]),
+        E = () => {
+            c
+                ? l.A.show({
+                      title: a.intl.string(a.t.pvRCSu),
+                      body: a.intl.string(a.t.DRi46S),
+                      confirmText: a.intl.string(a.t["6GQDFu"]),
                       confirmVariant: "critical-primary",
-                      cancelText: o.intl.string(o.t.DmDzZB),
-                      onConfirm: () => (0, i.OoC)(l),
-                      onCancel: s.tE,
+                      cancelText: a.intl.string(a.t.DmDzZB),
+                      onConfirm: () => (0, i.OoC)(s),
+                      onCancel: o.tE,
                   })
-                : (0, i.OoC)(l);
+                : (0, i.OoC)(s);
         };
     (0, i.mMO)(
         async () => {
@@ -63,10 +32,34 @@ let u = (e, t) => {
             return (n) =>
                 (0, r.jsx)(
                     i,
-                    c(
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })(
                         {
-                            closeOrShowDiscardChangesAlert: f,
-                            setHasPendingChanges: d,
+                            closeOrShowDiscardChangesAlert: E,
+                            setHasPendingChanges: u,
                             channelId: e,
                             location: t,
                         },
@@ -75,8 +68,8 @@ let u = (e, t) => {
                 );
         },
         {
-            modalKey: l,
-            onCloseRequest: f,
+            modalKey: s,
+            onCloseRequest: E,
         },
     );
 };

@@ -1,6 +1,5 @@
 n.d(t, {
-    p: () => r,
+    p: () => i,
 });
-var r = (function (e) {
-    return (e.JOIN_RAID = "JOIN_RAID"), (e.DM_RAID = "DM_RAID"), (e.MENTION_RAID = "MENTION_RAID"), e;
-})({});
+var r,
+    i = (((r = {}).JOIN_RAID = "JOIN_RAID"), (r.DM_RAID = "DM_RAID"), (r.MENTION_RAID = "MENTION_RAID"), r);

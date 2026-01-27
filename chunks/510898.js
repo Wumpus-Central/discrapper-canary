@@ -1,17 +1,17 @@
 n.d(t, {
-    A: () => O,
+    A: () => f,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(397927),
+    l = n(397927),
     s = n(403362),
-    o = n(143582),
-    l = n(915043),
+    a = n(143582),
+    o = n(915043),
     c = n(888848),
-    u = n(331441),
-    d = n(20770),
-    f = n(985018);
+    d = n(331441),
+    u = n(20770),
+    _ = n(985018);
 
 function p(e, t, n) {
     return (
@@ -27,7 +27,7 @@ function p(e, t, n) {
     );
 }
 
-function _(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,60 +44,25 @@ function _(e) {
     return e;
 }
 
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-
-function g(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = E(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function E(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let b = "https://support.discord.com/hc/en-us";
-class y extends i.PureComponent {
+class A extends i.PureComponent {
     static getDerivedStateFromError(e) {
         return {
             hasError: !0,
@@ -105,18 +70,18 @@ class y extends i.PureComponent {
     }
     render() {
         return this.state.hasError
-            ? (0, r.jsxs)(a.$Td, {
-                  color: a.Hv$.DANGER,
+            ? (0, r.jsxs)(l.$Td, {
+                  color: l.Hv$.DANGER,
                   style: {
                       borderRadius: 0,
                   },
                   children: [
-                      f.intl.format(f.t.IIHUUF, {
+                      _.intl.format(_.t.IIHUUF, {
                           subscriptionId: this.props.subscription.id,
                       }),
                       " ",
-                      f.intl.format(f.t.fh65ES, {
-                          helpLink: b,
+                      _.intl.format(_.t.fh65ES, {
+                          helpLink: "https://support.discord.com/hc/en-us",
                       }),
                   ],
               })
@@ -130,87 +95,123 @@ class y extends i.PureComponent {
     }
 }
 
-function O(e) {
+function f(e) {
     let { subscriptions: t, updateHeader: n } = e,
-        [a, p] = i.useState({
-            route: u.R.HOME,
+        [l, p] = i.useState({
+            route: d.R.HOME,
         }),
-        { route: h } = a,
-        E = () => {
+        { route: f } = l,
+        h = () => {
             p({
-                route: u.R.HOME,
+                route: d.R.HOME,
             });
         },
         b = (e) => {
             p(
-                _(
+                m(
                     {
-                        route: u.R.SWITCH_APP_PLANS,
+                        route: d.R.SWITCH_APP_PLANS,
                     },
                     e,
                 ),
             ),
-                n(f.intl.string(f.t.VFqtkP), E);
+                n(_.intl.string(_.t.VFqtkP), h);
         },
-        [O, A] = i.useState({});
+        [E, x] = i.useState({});
     i.useEffect(() => {
         for (let n of t) {
             var e;
             let t = null == (e = n.items[0]) ? void 0 : e.planId;
             null != t &&
-                (A((e) =>
-                    m(_({}, e), {
+                (x((e) =>
+                    g(m({}, e), {
                         [n.id]: c.G.LOADING,
                     }),
                 ),
-                (0, o._R)(t)
+                (0, a._R)(t)
                     .then(() => {
-                        A((e) =>
-                            m(_({}, e), {
+                        x((e) =>
+                            g(m({}, e), {
                                 [n.id]: c.G.DONE,
                             }),
                         );
                     })
                     .catch(() => {
-                        A((e) =>
-                            m(_({}, e), {
+                        x((e) =>
+                            g(m({}, e), {
                                 [n.id]: c.G.ERROR,
                             }),
                         );
                     }));
         }
     }, [t]);
-    let { loadState: v } = (0, l.E)(),
-        S = v !== l.mJ.LOADED;
-    switch (h) {
-        case u.R.HOME:
+    let { loadState: O } = (0, o.E)(),
+        C = O !== o.mJ.LOADED;
+    switch (f) {
+        case d.R.HOME:
             return (0, r.jsx)(r.Fragment, {
                 children: t.map((e) => {
                     var t;
                     return (0, r.jsx)(
-                        y,
+                        A,
                         {
                             subscription: e,
                             children: (0, r.jsx)(c.A, {
                                 subscription: e,
                                 navigateToSwitchPlan: b,
-                                loadingState: S ? c.G.LOADING : null != (t = O[e.id]) ? t : c.G.LOADING,
+                                loadingState: C ? c.G.LOADING : null != (t = E[e.id]) ? t : c.G.LOADING,
                             }),
                         },
                         e.id,
                     );
                 }),
             });
-        case u.R.SWITCH_APP_PLANS:
-            let { route: I } = a,
-                T = g(a, ["route"]);
+        case d.R.SWITCH_APP_PLANS:
+            let { route: I } = l,
+                T = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i,
+                        l = {};
+                    if ("u" > typeof Reflect && Reflect.ownKeys) {
+                        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+                            (r = n[i]),
+                                !(t.indexOf(r) >= 0) &&
+                                    Object.prototype.propertyIsEnumerable.call(e, r) &&
+                                    (l[r] = e[r]);
+                        return l;
+                    }
+                    if (
+                        ((l = (function (e, t) {
+                            if (null == e) return {};
+                            var n,
+                                r,
+                                i = {},
+                                l = Object.getOwnPropertyNames(e);
+                            for (r = 0; r < l.length; r++)
+                                (n = l[r]),
+                                    !(t.indexOf(n) >= 0) &&
+                                        Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                        (i[n] = e[n]);
+                            return i;
+                        })(e, t)),
+                        Object.getOwnPropertySymbols)
+                    )
+                        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+                            (r = n[i]),
+                                !(t.indexOf(r) >= 0) &&
+                                    Object.prototype.propertyIsEnumerable.call(e, r) &&
+                                    (l[r] = e[r]);
+                    return l;
+                })(l, ["route"]);
             return (0, r.jsx)(
-                d.A,
-                m(_({}, T), {
-                    navigateToHome: E,
+                u.A,
+                g(m({}, T), {
+                    navigateToHome: h,
                 }),
             );
         default:
-            (0, s.xb)(h);
+            (0, s.xb)(f);
     }
 }

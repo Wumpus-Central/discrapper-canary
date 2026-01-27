@@ -1,61 +1,63 @@
-n.d(t, {
-    A: () => u,
+r.d(t, {
+    A: () => o,
 });
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    a = n(397927),
-    s = n(478063),
-    o = n(287809);
-
-function l(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = c(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function c(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let u = function (e) {
-    let { recipients: t, size: n, status: c, isTyping: u, className: d } = e,
-        f = l(e, ["recipients", "size", "status", "isTyping", "className"]),
-        p = a.vCh[n],
-        _ = (0, i.yK)(
-            [o.default],
+var n = r(627968);
+r(64700);
+var l = r(311907),
+    s = r(397927),
+    a = r(478063),
+    i = r(287809);
+let o = function (e) {
+    let { recipients: t, size: r, status: o, isTyping: c, className: u } = e,
+        d = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                l,
+                s = {};
+            if ("u" > typeof Reflect && Reflect.ownKeys) {
+                for (l = 0, r = Reflect.ownKeys(e); l < r.length; l++)
+                    (n = r[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
+                return s;
+            }
+            if (
+                ((s = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        l = {},
+                        s = Object.getOwnPropertyNames(e);
+                    for (n = 0; n < s.length; n++)
+                        (r = s[n]),
+                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                    return l;
+                })(e, t)),
+                Object.getOwnPropertySymbols)
+            )
+                for (l = 0, r = Object.getOwnPropertySymbols(e); l < r.length; l++)
+                    (n = r[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
+            return s;
+        })(e, ["recipients", "size", "status", "isTyping", "className"]),
+        h = s.vCh[r],
+        p = (0, l.yK)(
+            [i.default],
             () =>
                 t.slice(0, 2).map((e) => {
-                    let t = o.default.getUser(e);
-                    if (null != t) return t.getAvatarURL(void 0, p.size, !1);
+                    let t = i.default.getUser(e);
+                    if (null != t) return t.getAvatarURL(void 0, h.size, !1);
                 }),
-            [t, p.size],
+            [t, h.size],
         );
-    return (0, r.jsx)(s.A, {
-        "aria-label": f["aria-label"],
-        "aria-hidden": f["aria-hidden"],
-        backSrc: _[0],
-        frontSrc: _[1],
-        size: n,
-        status: c,
-        isTyping: null != u && u,
-        className: d,
+    return (0, n.jsx)(a.A, {
+        "aria-label": d["aria-label"],
+        "aria-hidden": d["aria-hidden"],
+        backSrc: p[0],
+        frontSrc: p[1],
+        size: r,
+        status: o,
+        isTyping: null != c && c,
+        className: u,
     });
 };

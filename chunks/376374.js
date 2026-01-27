@@ -1,222 +1,204 @@
-n.d(t, {
+n.d(e, {
     $P: () => I,
-    rc: () => S,
-    wF: () => A,
+    rc: () => g,
+    wF: () => O,
 });
-var r = n(627968);
+var l,
+    r = n(627968);
 n(64700);
 var i = n(323125),
-    a = n(397927),
-    s = n(793574),
-    o = n(688810),
-    l = n(897100),
+    u = n(397927),
+    o = n(793574),
+    s = n(688810),
+    a = n(897100),
     c = n(638643),
-    u = n(976860),
-    d = n(954571),
+    d = n(976860),
+    p = n(954571),
     f = n(580630),
-    p = n(56754),
-    _ = n(652215),
-    h = n(985018);
+    S = n(56754),
+    A = n(652215),
+    b = n(985018),
+    O =
+        (((l = {})[(l.AVAILABLE = 0)] = "AVAILABLE"),
+        (l[(l.LOADING = 1)] = "LOADING"),
+        (l[(l.UPCOMING_PLAN = 2)] = "UPCOMING_PLAN"),
+        (l[(l.SUBSCRIBED = 3)] = "SUBSCRIBED"),
+        (l[(l.UNAVAILABLE = 4)] = "UNAVAILABLE"),
+        l);
 
-function m(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                m(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function E(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function y(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = O(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function O(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-var A = (function (e) {
-    return (
-        (e[(e.AVAILABLE = 0)] = "AVAILABLE"),
-        (e[(e.LOADING = 1)] = "LOADING"),
-        (e[(e.UPCOMING_PLAN = 2)] = "UPCOMING_PLAN"),
-        (e[(e.SUBSCRIBED = 3)] = "SUBSCRIBED"),
-        (e[(e.UNAVAILABLE = 4)] = "UNAVAILABLE"),
-        e
-    );
-})({});
-
-function v(e, t) {
-    switch (e) {
-        case 2:
-            return h.intl.formatToPlainString(h.t.k1ew5N, {
-                rate: t,
-            });
-        case 3:
-            return h.intl.formatToPlainString(h.t["Hs3Y+I"], {
-                rate: t,
-            });
-        case 4:
-            return h.intl.string(h.t.DLAKbi);
-    }
-}
-
-function S(e) {
-    let { appId: t, onClick: n, onHasClicked: i, skuId: a, subscriptionPlan: s, icon: o, state: l = 0 } = e,
-        c = (e) => {
-            n(e), null == i || i();
-        },
-        u = null != s ? (0, f._J)(s) : null,
-        d = 1 === l;
-    return 0 === l || d
-        ? (0, r.jsx)(T, {
-              appId: t,
-              skuId: a,
-              onClick: c,
-              loading: d,
+function g(t) {
+    let { appId: e, onClick: n, onHasClicked: l, skuId: i, subscriptionPlan: u, icon: o, state: s = 0 } = t,
+        a = null != u ? (0, f._J)(u) : null,
+        c = 1 === s;
+    return 0 === s || c
+        ? (0, r.jsx)(m, {
+              appId: e,
+              skuId: i,
+              onClick: (t) => {
+                  n(t), null == l || l();
+              },
+              loading: c,
               icon: o,
               text:
-                  null != u
-                      ? h.intl.formatToPlainString(h.t.i4T8vz, {
-                            rate: u,
+                  null != a
+                      ? b.intl.formatToPlainString(b.t.i4T8vz, {
+                            rate: a,
                         })
-                      : h.intl.string(h.t.uuzaAK),
+                      : b.intl.string(b.t.uuzaAK),
           })
-        : (0, r.jsx)(C, {
-              text: v(l, null != u ? u : ""),
+        : (0, r.jsx)(v, {
+              text: (function (t, e) {
+                  switch (t) {
+                      case 2:
+                          return b.intl.formatToPlainString(b.t.k1ew5N, {
+                              rate: e,
+                          });
+                      case 3:
+                          return b.intl.formatToPlainString(b.t["Hs3Y+I"], {
+                              rate: e,
+                          });
+                      case 4:
+                          return b.intl.string(b.t.DLAKbi);
+                  }
+              })(s, null != a ? a : ""),
           });
 }
 
-function I(e) {
-    let { appId: t, onClick: n, onHasClicked: i, sku: a, icon: l } = e,
-        { analyticsLocations: u } = (0, o.Ay)(s.A.APP_STOREFRONT),
-        d = () => {
-            (0, c.k)({
-                appId: t,
-                skuId: a.id,
-                analyticsLocations: u,
-            });
-        },
-        m = (0, p.L)(a.id),
-        g = a.type === _.Puh.DURABLE && m,
-        { price: E } = a;
-    if (null == E) return null;
-    let b = (e) => {
-        (null != n ? n : d)(e), null == i || i();
-    };
-    return g
-        ? (0, r.jsx)(C, {
-              text: h.intl.string(h.t["6cfuDj"]),
-          })
-        : (0, r.jsx)(T, {
-              appId: t,
-              skuId: a.id,
-              onClick: b,
-              text: h.intl.format(h.t.Xp5WTn, {
-                  price: (0, f.$g)(E.amount, E.currency),
-              }),
-              icon: l,
-          });
-}
-
-function T(e) {
-    let { appId: t, skuId: n, onClick: s } = e,
-        o = y(e, ["appId", "skuId", "onClick"]),
-        c = (0, l.A)(),
-        f = (e) => {
-            if (
-                (d.default.track(_.HAw.STOREFRONT_PURCHASE_CLICKED, {
-                    application_id: t,
-                    sku_id: n,
+function I(t) {
+    let { appId: e, onClick: n, onHasClicked: l, sku: i, icon: u } = t,
+        { analyticsLocations: a } = (0, s.Ay)(o.A.APP_STOREFRONT),
+        d = (0, S.L)(i.id),
+        p = i.type === A.Puh.DURABLE && d,
+        { price: O } = i;
+    return null == O
+        ? null
+        : p
+          ? (0, r.jsx)(v, {
+                text: b.intl.string(b.t["6cfuDj"]),
+            })
+          : (0, r.jsx)(m, {
+                appId: e,
+                skuId: i.id,
+                onClick: (t) => {
+                    (null != n
+                        ? n
+                        : () => {
+                              (0, c.k)({
+                                  appId: e,
+                                  skuId: i.id,
+                                  analyticsLocations: a,
+                              });
+                          })(t),
+                        null == l || l();
+                },
+                text: b.intl.format(b.t.Xp5WTn, {
+                    price: (0, f.$g)(O.amount, O.currency),
                 }),
-                !c)
-            ) {
-                e.preventDefault(), e.stopPropagation();
-                let r = _.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t, n),
-                    a = (0, i.T2)(r, !1);
-                (0, u.pX)(a);
-                return;
+                icon: u,
+            });
+}
+
+function m(t) {
+    var e, n;
+    let { appId: l, skuId: o, onClick: s } = t,
+        c = (function (t, e) {
+            if (null == t) return {};
+            var n,
+                l,
+                r,
+                i = {};
+            if ("u" > typeof Reflect && Reflect.ownKeys) {
+                for (r = 0, n = Reflect.ownKeys(t); r < n.length; r++)
+                    (l = n[r]),
+                        !(e.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(t, l) && (i[l] = t[l]);
+                return i;
             }
-            null == s || s(e);
-        };
+            if (
+                ((i = (function (t, e) {
+                    if (null == t) return {};
+                    var n,
+                        l,
+                        r = {},
+                        i = Object.getOwnPropertyNames(t);
+                    for (l = 0; l < i.length; l++)
+                        (n = i[l]),
+                            !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (r[n] = t[n]);
+                    return r;
+                })(t, e)),
+                Object.getOwnPropertySymbols)
+            )
+                for (r = 0, n = Object.getOwnPropertySymbols(t); r < n.length; r++)
+                    (l = n[r]),
+                        !(e.indexOf(l) >= 0) && Object.prototype.propertyIsEnumerable.call(t, l) && (i[l] = t[l]);
+            return i;
+        })(t, ["appId", "skuId", "onClick"]),
+        f = (0, a.A)();
     return (0, r.jsx)(
-        a.Button,
-        b(g({}, o), {
-            onClick: f,
-        }),
+        u.Button,
+        ((e = (function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+                var n = null != arguments[e] ? arguments[e] : {},
+                    l = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (l = l.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (t) {
+                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                        }),
+                    )),
+                    l.forEach(function (e) {
+                        var l;
+                        (l = n[e]),
+                            e in t
+                                ? Object.defineProperty(t, e, {
+                                      value: l,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (t[e] = l);
+                    });
+            }
+            return t;
+        })({}, c)),
+        (n = n =
+            {
+                onClick: (t) => {
+                    if (
+                        (p.default.track(A.HAw.STOREFRONT_PURCHASE_CLICKED, {
+                            application_id: l,
+                            sku_id: o,
+                        }),
+                        !f)
+                    ) {
+                        t.preventDefault(), t.stopPropagation();
+                        let e = A.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(l, o),
+                            n = (0, i.T2)(e, !1);
+                        (0, d.pX)(n);
+                        return;
+                    }
+                    null == s || s(t);
+                },
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+            : (function (t, e) {
+                  var n = Object.keys(t);
+                  if (Object.getOwnPropertySymbols) {
+                      var l = Object.getOwnPropertySymbols(t);
+                      n.push.apply(n, l);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (t) {
+                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+              }),
+        e),
     );
 }
 
-function C(e) {
-    let { text: t } = e;
-    return (0, r.jsx)(a.Button, {
-        text: t,
+function v(t) {
+    let { text: e } = t;
+    return (0, r.jsx)(u.Button, {
+        text: e,
         disabled: !0,
         variant: "primary",
     });

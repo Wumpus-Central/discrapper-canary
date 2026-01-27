@@ -111,7 +111,7 @@ let k = r.memo(function (e) {
                         userId: null == l ? void 0 : l.id,
                     }),
                         (0, c.L3)(r, async () => {
-                            let { default: e } = await Promise.all([n.e("97262"), n.e("87997")]).then(
+                            let { default: e } = await Promise.all([n.e("97262"), n.e("3795"), n.e("87997")]).then(
                                 n.bind(n, 180812),
                             );
                             return (n) =>

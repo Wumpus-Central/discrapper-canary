@@ -1,67 +1,66 @@
 n.d(t, {
-    Mg: () => o,
+    Mg: () => s,
     RZ: () => c,
 }),
     n(65821),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(403362);
-let s = i.createContext(void 0);
+    l = n(403362);
+let a = i.createContext(void 0);
 
-function o() {
-    let e = i.useContext(s);
+function s() {
+    let e = i.useContext(a);
     if (null == e) throw Error("No PollFocusContextProvider found");
     return e;
 }
 
-function l(e) {
-    let { children: t, actionButtonRef: n, pollAnswerRef: a, manageFocusOnAction: o } = e,
-        l = i.useMemo(
+function o(e) {
+    let { children: t, actionButtonRef: n, pollAnswerRef: l, manageFocusOnAction: s } = e,
+        o = i.useMemo(
             () => ({
                 actionButtonRef: n,
-                pollAnswerRef: a,
-                manageFocusOnAction: o,
+                pollAnswerRef: l,
+                manageFocusOnAction: s,
             }),
-            [n, a, o],
+            [n, l, s],
         );
-    return (0, r.jsx)(s.Provider, {
-        value: l,
+    return (0, r.jsx)(a.Provider, {
+        value: o,
         children: t,
     });
 }
 
 function c(e) {
     let { children: t } = e,
-        [n, s] = i.useState(),
-        o = i.useRef(null),
-        c = i.useRef(null),
-        u = (e) => {
-            switch (e) {
-                case "submit":
-                case "cancel":
-                    s("ACTION_BUTTON");
-                    break;
-                case "remove":
-                case "showVotes":
-                    s("POLL_ANSWERS");
-                    break;
-                case "showVoterDetails":
-                    break;
-                default:
-                    (0, a.xb)(e);
-            }
-        };
+        [n, a] = i.useState(),
+        s = i.useRef(null),
+        c = i.useRef(null);
     return (
         i.useEffect(() => {
             var e, t, r;
             "POLL_ANSWERS" === n && null != c.current && (null == (t = c.current) || null == (e = t.ref) || e.focus()),
-                "ACTION_BUTTON" === n && null != o.current && (null == (r = o.current) || r.focus());
+                "ACTION_BUTTON" === n && null != s.current && (null == (r = s.current) || r.focus());
         }, [n]),
-        (0, r.jsx)(l, {
+        (0, r.jsx)(o, {
             pollAnswerRef: c,
-            actionButtonRef: o,
-            manageFocusOnAction: u,
+            actionButtonRef: s,
+            manageFocusOnAction: (e) => {
+                switch (e) {
+                    case "submit":
+                    case "cancel":
+                        a("ACTION_BUTTON");
+                        break;
+                    case "remove":
+                    case "showVotes":
+                        a("POLL_ANSWERS");
+                        break;
+                    case "showVoterDetails":
+                        break;
+                    default:
+                        (0, l.xb)(e);
+                }
+            },
             children: t,
         })
     );

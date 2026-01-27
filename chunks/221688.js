@@ -1,35 +1,34 @@
 n.d(t, {
-    X8: () => u,
+    X8: () => c,
     dB: () => d,
-    gr: () => c,
+    gr: () => o,
 });
 var r = n(554146),
     i = n(826673),
-    a = n(103411),
+    l = n(103411),
     s = n(664654),
-    o = n(985018);
-let l = (e) => {
-        let { hasSentAll: t, hasSentAtLeastOne: n, helpdeskArticle: r } = e;
-        return t
-            ? o.intl.format(o.t["TYu+MH"], {
-                  helpdeskArticle: r,
-              })
-            : o.intl.format(o.t["omMr+V"], {
-                  helpdeskArticle: r,
-              });
-    },
-    c = () => {
-        let e = (0, a.m)(),
+    a = n(985018);
+let o = () => {
+        let e = (0, l.m)(),
             t = (0, i.JZ)(r.M.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return e && !t;
     },
-    u = (e) => {
+    c = (e) => {
         let { hasSentAll: t } = e;
-        return o.intl.string(o.t.USo4s7);
+        return a.intl.string(a.t.USo4s7);
     },
     d = (e) => {
         let { helpdeskArticle: t, referralsStatuses: n } = e;
-        return l({
+        return ((e) => {
+            let { hasSentAll: t, hasSentAtLeastOne: n, helpdeskArticle: r } = e;
+            return t
+                ? a.intl.format(a.t["TYu+MH"], {
+                      helpdeskArticle: r,
+                  })
+                : a.intl.format(a.t["omMr+V"], {
+                      helpdeskArticle: r,
+                  });
+        })({
             hasSentAll: n.sent >= s.Z,
             hasSentAtLeastOne: n.sent >= 1,
             helpdeskArticle: t,

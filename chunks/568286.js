@@ -1,123 +1,123 @@
 n.d(t, {
-    q: () => A,
+    q: () => h,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(989349),
-    s = n.n(a),
-    o = n(158954),
-    l = n(397927),
+    l = n(989349),
+    s = n.n(l),
+    a = n(158954),
+    o = n(397927),
     c = n(384904),
-    u = n(793574),
-    d = n(688810),
-    f = n(915089),
+    d = n(793574),
+    u = n(688810),
+    _ = n(915089),
     p = n(250253),
-    _ = n(2242),
-    h = n(985018),
-    m = n(289324);
-
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function E(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                g(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let b = "MMMM Do, YYYY",
-    y = (e) => {
-        let [t, n] = i.useState(!1),
-            [r, a] = i.useState(null);
-        return {
-            cancelSubscription: async (t) => {
-                try {
-                    return n(!0), await c.M2(t, e), !0;
-                } catch (e) {
-                    a(e);
-                } finally {
-                    n(!1);
-                }
+    m = n(2242),
+    g = n(985018),
+    A = n(289324);
+let f = (e) => {
+        let { transitionState: t, groupListing: n, listing: l, subscription: f, onClose: h } = e,
+            b = (0, _.GV)(),
+            { analyticsLocations: E } = (0, u.Ay)(d.A.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
+            {
+                cancelSubscription: x,
+                error: O,
+                submitting: C,
+            } = ((e) => {
+                let [t, n] = i.useState(!1),
+                    [r, l] = i.useState(null);
+                return {
+                    cancelSubscription: async (t) => {
+                        try {
+                            return n(!0), await c.M2(t, e), !0;
+                        } catch (e) {
+                            l(e);
+                        } finally {
+                            n(!1);
+                        }
+                    },
+                    error: r,
+                    submitting: t,
+                };
+            })(E),
+            I = async () => {
+                (await x(f.id)) && h();
             },
-            error: r,
-            submitting: t,
-        };
-    },
-    O = (e) => {
-        let { transitionState: t, groupListing: n, listing: i, subscription: a, onClose: c } = e,
-            g = (0, f.GV)(),
-            { analyticsLocations: E } = (0, d.Ay)(u.A.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: O, error: A, submitting: v } = y(E),
-            S = async () => {
-                (await O(a.id)) && c();
-            },
-            I = i.role_benefits.benefits.filter((e) => e.ref_type === _.bN.CHANNEL),
-            T = i.role_benefits.benefits.filter((e) => e.ref_type === _.bN.INTANGIBLE),
-            C = s()(a.currentPeriodEnd).format(b),
-            N = h.intl.formatToPlainString(h.t.KsMRP5, {
-                numChannels: I.length,
-                numAdditionalBenefits: T.length,
-                subscriptionEndDate: C,
+            T = l.role_benefits.benefits.filter((e) => e.ref_type === m.bN.CHANNEL),
+            S = l.role_benefits.benefits.filter((e) => e.ref_type === m.bN.INTANGIBLE),
+            j = s()(f.currentPeriodEnd).format("MMMM Do, YYYY"),
+            v = g.intl.formatToPlainString(g.t.KsMRP5, {
+                numChannels: T.length,
+                numAdditionalBenefits: S.length,
+                subscriptionEndDate: j,
             });
-        return (0, r.jsx)(o.Modal, {
+        return (0, r.jsx)(a.Modal, {
             transitionState: t,
-            "aria-labelledby": g,
+            "aria-labelledby": b,
             actions: [
                 {
-                    text: h.intl.string(h.t.EP6EPb),
+                    text: g.intl.string(g.t.EP6EPb),
                     variant: "secondary",
-                    onClick: c,
+                    onClick: h,
                 },
                 {
                     variant: "critical-primary",
-                    text: h.intl.string(h.t.F6lUDF),
-                    onClick: S,
-                    loading: v,
+                    text: g.intl.string(g.t.F6lUDF),
+                    onClick: I,
+                    loading: C,
                 },
             ],
-            title: h.intl.string(h.t.O6l5tM),
-            subtitle: N,
-            onClose: c,
-            children: (0, r.jsxs)(l.BJc, {
+            title: g.intl.string(g.t.O6l5tM),
+            subtitle: v,
+            onClose: h,
+            children: (0, r.jsxs)(o.BJc, {
                 gap: 8,
                 children: [
-                    null != A
-                        ? (0, r.jsx)(l.wx6, {
+                    null != O
+                        ? (0, r.jsx)(o.wx6, {
                               type: "critical",
-                              children: A.message,
+                              children: O.message,
                           })
                         : null,
                     (0, r.jsx)(p.x, {
-                        listingId: i.id,
+                        listingId: l.id,
                         guildId: n.guild_id,
-                        className: m.P,
+                        className: A.P,
                     }),
                 ],
             }),
         });
     },
-    A = (e) => {
-        (0, l.qfG)((t) => (0, r.jsx)(O, E({}, t, e)));
+    h = (e) => {
+        (0, o.qfG)((t) =>
+            (0, r.jsx)(
+                f,
+                (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, t, e),
+            ),
+        );
     };

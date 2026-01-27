@@ -1,42 +1,41 @@
 n.d(t, {
-    l: () => u,
+    l: () => c,
 }),
     n(938796);
 var r = n(665260),
     i = n(134861),
-    a = n(528767),
-    s = n(723702),
-    o = n(182892),
-    l = n(652215);
+    l = n(528767),
+    a = n(723702),
+    s = n(182892),
+    o = n(652215);
 
 function c(e) {
-    let { platform: t } = e;
-    return (
-        !!(0, o.e)(e) ||
-        ((0, s.isAndroid)()
-            ? t === l.yTV.ANDROID
-            : (0, s.isIOS)()
-              ? t === l.yTV.IOS
-              : (0, s.isWeb)()
-                ? t === l.yTV.DESKTOP
-                : !!(0, s.isDesktop)() &&
-                  null != e.application_id &&
-                  i.A.isConnected(e.application_id) &&
-                  t === l.yTV.DESKTOP)
-    );
-}
-
-function u(e) {
-    var t, n, i;
+    var t, n, c;
     if (null == e) return null;
-    let s = e.application_id;
-    if (null == s || !(0, r.Lt)(null != (t = e.flags) ? t : 0, l.jUm.SUPPORTS_GATEWAY_ACTIVITY_ACTION_JOIN))
+    let u = e.application_id;
+    if (null == u || !(0, r.Lt)(null != (t = e.flags) ? t : 0, o.jUm.SUPPORTS_GATEWAY_ACTIVITY_ACTION_JOIN))
         return null;
-    let o = a.A.getRemoteApplicationActivity(s);
-    return null == o || c(o)
+    let d = l.A.getRemoteApplicationActivity(u);
+    return null == d ||
+        (function (e) {
+            let { platform: t } = e;
+            return (
+                !!(0, s.e)(e) ||
+                ((0, a.isAndroid)()
+                    ? t === o.yTV.ANDROID
+                    : (0, a.isIOS)()
+                      ? t === o.yTV.IOS
+                      : (0, a.isWeb)()
+                        ? t === o.yTV.DESKTOP
+                        : !!(0, a.isDesktop)() &&
+                          null != e.application_id &&
+                          i.A.isConnected(e.application_id) &&
+                          t === o.yTV.DESKTOP)
+            );
+        })(d)
         ? null
-        : (0, r.Lt)(null != (n = o.flags) ? n : 0, l.jUm.SUPPORTS_GATEWAY_ACTIVITY_ACTION_JOIN) &&
-            null != (i = o.platform)
-          ? i
+        : (0, r.Lt)(null != (n = d.flags) ? n : 0, o.jUm.SUPPORTS_GATEWAY_ACTIVITY_ACTION_JOIN) &&
+            null != (c = d.platform)
+          ? c
           : null;
 }

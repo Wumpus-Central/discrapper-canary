@@ -1,45 +1,41 @@
-function r(e, t) {
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
-}
-var i = n(64700),
-    a = n(550835);
-e.exports = (function (e) {
-    function t() {
-        return e.apply(this, arguments) || this;
+var n = r(64700),
+    i = r(550835);
+t.exports = (function (t) {
+    function e() {
+        return t.apply(this, arguments) || this;
     }
-    r(t, e);
-    var n = t.prototype;
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    var r = e.prototype;
     return (
-        (n.shouldComponentUpdate = function (e) {
+        (r.shouldComponentUpdate = function (t) {
             return (
-                this.props.text !== e.text ||
-                this.props.editorState.getSelection().getHasFocus() !== e.editorState.getSelection().getHasFocus()
+                this.props.text !== t.text ||
+                this.props.editorState.getSelection().getHasFocus() !== t.editorState.getSelection().getHasFocus()
             );
         }),
-        (n.render = function () {
-            var e = a({
-                    "public/DraftEditorPlaceholder/root": !0,
-                    "public/DraftEditorPlaceholder/hasFocus": this.props.editorState.getSelection().getHasFocus(),
-                }),
-                t = {
-                    whiteSpace: "pre-wrap",
-                };
-            return i.createElement(
+        (r.render = function () {
+            var t = i({
+                "public/DraftEditorPlaceholder/root": !0,
+                "public/DraftEditorPlaceholder/hasFocus": this.props.editorState.getSelection().getHasFocus(),
+            });
+            return n.createElement(
                 "div",
                 {
-                    className: e,
+                    className: t,
                 },
-                i.createElement(
+                n.createElement(
                     "div",
                     {
-                        className: a("public/DraftEditorPlaceholder/inner"),
+                        className: i("public/DraftEditorPlaceholder/inner"),
                         id: this.props.accessibilityID,
-                        style: t,
+                        style: {
+                            whiteSpace: "pre-wrap",
+                        },
                     },
                     this.props.text,
                 ),
             );
         }),
-        t
+        e
     );
-})(i.Component);
+})(n.Component);

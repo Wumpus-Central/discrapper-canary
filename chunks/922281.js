@@ -1,98 +1,83 @@
-n.d(t, {
-    A: () => p,
+r.d(t, {
+    A: () => c,
 });
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    a = n(58736),
-    s = n(851580),
-    o = n(44022),
-    l = n(985018);
+var n = r(627968);
+r(64700);
+var l = r(397927),
+    s = r(58736),
+    a = r(851580),
+    i = r(44022),
+    o = r(985018);
 
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function p(e) {
-    let { onOpen: t, onClose: n, className: c } = e;
-    return (0, r.jsx)(o.$, {
+function c(e) {
+    let { onOpen: t, onClose: r, className: c } = e;
+    return (0, n.jsx)(i.$, {
         onOpen: t,
-        onClose: n,
+        onClose: r,
         popoutPosition: "bottom",
         popoutAlign: "right",
-        children: (e, t, n, o, d) =>
-            (0, r.jsxs)(r.Fragment, {
+        children: (e, t, r, i, u) => {
+            var d, h;
+            return (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, r.jsx)(
-                        a.In,
-                        f(u({}, n), {
-                            ref: d,
-                            className: c,
-                            onClick: e,
-                            icon: i.cFy,
-                            "aria-label": l.intl.string(l.t["2pAkDA"]),
-                            tooltip: t ? null : l.intl.string(l.t["2pAkDA"]),
-                            selected: t,
-                            showBadge: o,
-                        }),
+                    (0, n.jsx)(
+                        s.In,
+                        ((d = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var r = null != arguments[t] ? arguments[t] : {},
+                                    n = Object.keys(r);
+                                "function" == typeof Object.getOwnPropertySymbols &&
+                                    (n = n.concat(
+                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                        }),
+                                    )),
+                                    n.forEach(function (t) {
+                                        var n;
+                                        (n = r[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: n,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0,
+                                                  })
+                                                : (e[t] = n);
+                                    });
+                            }
+                            return e;
+                        })({}, r)),
+                        (h = h =
+                            {
+                                ref: u,
+                                className: c,
+                                onClick: e,
+                                icon: l.cFy,
+                                "aria-label": o.intl.string(o.t["2pAkDA"]),
+                                tooltip: t ? null : o.intl.string(o.t["2pAkDA"]),
+                                selected: t,
+                                showBadge: i,
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(h))
+                            : (function (e, t) {
+                                  var r = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var n = Object.getOwnPropertySymbols(e);
+                                      r.push.apply(r, n);
+                                  }
+                                  return r;
+                              })(Object(h)).forEach(function (e) {
+                                  Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(h, e));
+                              }),
+                        d),
                     ),
-                    (0, r.jsx)(s.v, {
+                    (0, n.jsx)(a.v, {
                         location: "bookmarks-button",
-                        targetElementRef: d,
+                        targetElementRef: u,
                     }),
                 ],
-            }),
+            });
+        },
     });
 }

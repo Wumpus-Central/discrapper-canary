@@ -1,45 +1,47 @@
 n.d(t, {
-    A: () => h,
+    A: () => p,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(989349),
-    s = n.n(a),
-    o = n(384904),
-    l = n(793574),
+    l = n(989349),
+    s = n.n(l),
+    a = n(384904),
+    o = n(793574),
     c = n(688810),
-    u = n(599941),
-    d = n(322092),
-    f = n(985018);
-let p = "MMM DD, YYYY",
-    _ = (e) => {
-        let [t, n] = i.useState(!1),
-            [r, a] = i.useState(null);
-        return {
-            resetRenewalMutation: async (t) => {
-                n(!0), a(null);
-                try {
-                    await (0, o.ZK)(t, e);
-                } catch (e) {
-                    a(e);
-                } finally {
-                    n(!1);
-                }
-            },
-            submitting: t,
-            error: r,
-        };
-    };
+    d = n(599941),
+    u = n(322092),
+    _ = n(985018);
 
-function h(e) {
-    let { groupListingId: t, subscription: n, className: a } = e,
-        { analyticsLocations: o } = (0, c.Ay)(l.A.PENDING_PLAN_CHANGE_NOTICE),
-        { resetRenewalMutation: h, submitting: m, error: g } = _(o),
-        E = (0, u.cY)(t, {
+function p(e) {
+    let { groupListingId: t, subscription: n, className: l } = e,
+        { analyticsLocations: p } = (0, c.Ay)(o.A.PENDING_PLAN_CHANGE_NOTICE),
+        {
+            resetRenewalMutation: m,
+            submitting: g,
+            error: A,
+        } = ((e) => {
+            let [t, n] = i.useState(!1),
+                [r, l] = i.useState(null);
+            return {
+                resetRenewalMutation: async (t) => {
+                    n(!0), l(null);
+                    try {
+                        await (0, a.ZK)(t, e);
+                    } catch (e) {
+                        l(e);
+                    } finally {
+                        n(!1);
+                    }
+                },
+                submitting: t,
+                error: r,
+            };
+        })(p),
+        f = (0, d.cY)(t, {
             includeSoftDeleted: !0,
         }),
-        { currentListing: b, nextListing: y } = i.useMemo(() => {
+        { currentListing: h, nextListing: b } = i.useMemo(() => {
             if ((null == n ? void 0 : n.renewalMutations) == null)
                 return {
                     currentListing: void 0,
@@ -48,23 +50,22 @@ function h(e) {
             let e = n.items[0].planId,
                 t = n.renewalMutations.items[0].planId;
             return {
-                currentListing: E.find((t) => t.subscription_plans[0].id === e),
-                nextListing: E.find((e) => e.subscription_plans[0].id === t),
+                currentListing: f.find((t) => t.subscription_plans[0].id === e),
+                nextListing: f.find((e) => e.subscription_plans[0].id === t),
             };
-        }, [n, E]);
-    if (null == n || null == b || null == y) return null;
-    let O = () => h(n),
-        A = s()(n.currentPeriodEnd).format(p);
-    return (0, r.jsx)(d.A, {
-        message: f.intl.format(f.t.chw89X, {
-            currentListing: b.name,
-            nextListing: y.name,
-            changeDate: A,
+        }, [n, f]);
+    if (null == n || null == h || null == b) return null;
+    let E = s()(n.currentPeriodEnd).format("MMM DD, YYYY");
+    return (0, r.jsx)(u.A, {
+        message: _.intl.format(_.t.chw89X, {
+            currentListing: h.name,
+            nextListing: b.name,
+            changeDate: E,
         }),
-        error: null == g ? void 0 : g.message,
-        onClick: O,
-        submitting: m,
-        ctaMessage: f.intl.string(f.t.De4wI8),
-        className: a,
+        error: null == A ? void 0 : A.message,
+        onClick: () => m(n),
+        submitting: g,
+        ctaMessage: _.intl.string(_.t.De4wI8),
+        className: l,
     });
 }

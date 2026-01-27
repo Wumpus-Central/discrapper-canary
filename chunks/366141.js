@@ -1,180 +1,179 @@
-n.d(t, {
-    A: () => g,
+s.d(e, {
+    A: () => j,
 }),
-    n(896048),
-    n(228524);
-var r = n(627968),
-    i = n(64700),
-    a = n(735438),
-    s = n(311907),
-    o = n(827734),
-    l = n(397927),
-    c = n(287809),
-    u = n(739010),
-    d = n(335891),
-    f = n(645376),
-    p = n(239093),
-    _ = n(985018),
-    h = n(941708);
-let m = 36;
+    s(896048),
+    s(228524);
+var i = s(627968),
+    n = s(64700),
+    a = s(735438),
+    l = s(311907),
+    r = s(827734),
+    c = s(397927),
+    o = s(287809),
+    d = s(739010),
+    u = s(335891),
+    m = s(645376),
+    x = s(239093),
+    h = s(985018),
+    g = s(941708);
 
-function g() {
-    let e = (0, d.K)(),
-        t = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
-        [n, g] = i.useState(m),
-        E = i.useRef({
-            [u.PN.ALL_GOOD]: null,
-            [u.PN.LIMITED]: null,
-            [u.PN.VERY_LIMITED]: null,
-            [u.PN.AT_RISK]: null,
-            [u.PN.SUSPENDED]: null,
+function j() {
+    let t = (0, u.K)(),
+        e = (0, l.bG)([o.default], () => o.default.getCurrentUser()),
+        [s, j] = n.useState(36),
+        v = n.useRef({
+            [d.PN.ALL_GOOD]: null,
+            [d.PN.LIMITED]: null,
+            [d.PN.VERY_LIMITED]: null,
+            [d.PN.AT_RISK]: null,
+            [d.PN.SUSPENDED]: null,
         }),
-        b = i.useCallback(() => {
-            g(
+        N = n.useCallback(() => {
+            j(
                 Math.max(
                     Math.max(
-                        ...Object.values(E.current).map((e) => {
-                            var t;
-                            return null != (t = null == e ? void 0 : e.getBoundingClientRect().height) ? t : m;
+                        ...Object.values(v.current).map((t) => {
+                            var e;
+                            return null != (e = null == t ? void 0 : t.getBoundingClientRect().height) ? e : 36;
                         }),
                     ),
-                    m,
+                    36,
                 ),
             );
         }, []);
-    i.useEffect(() => {
-        b();
-        let e = (0, a.debounce)(b, 100);
-        return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
-    }, [b]);
-    let y = {
-            [u.PN.ALL_GOOD]: {
-                title: _.t.uaKrRi,
-                description: _.intl.format(_.t.pEdBD4, {
-                    termsOfService: p.d$.TOS_LINK,
-                    communityGuidelines: p.d$.COMMUNITY_GUIDELINES,
+    n.useEffect(() => {
+        N();
+        let t = (0, a.debounce)(N, 100);
+        return window.addEventListener("resize", t), () => window.removeEventListener("resize", t);
+    }, [N]);
+    let f = {
+            [d.PN.ALL_GOOD]: {
+                title: h.t.uaKrRi,
+                description: h.intl.format(h.t.pEdBD4, {
+                    termsOfService: x.d$.TOS_LINK,
+                    communityGuidelines: x.d$.COMMUNITY_GUIDELINES,
                 }),
-                status: _.t["/Idfao"],
-                Icon: l.yr3,
-                color: o.A.colors.STATUS_POSITIVE,
+                status: h.t["/Idfao"],
+                Icon: c.yr3,
+                color: r.A.colors.STATUS_POSITIVE,
             },
-            [u.PN.LIMITED]: {
-                title: _.t.epkcmS,
-                description: _.intl.string(_.t["774juc"]),
-                status: _.t.umleq4,
-                Icon: l.EpV,
-                color: o.A.colors.STATUS_WARNING,
+            [d.PN.LIMITED]: {
+                title: h.t.epkcmS,
+                description: h.intl.string(h.t["774juc"]),
+                status: h.t.umleq4,
+                Icon: c.EpV,
+                color: r.A.colors.STATUS_WARNING,
             },
-            [u.PN.VERY_LIMITED]: {
-                title: _.t.crzE2X,
-                description: _.intl.string(_.t["T/Ufh9"]),
-                status: _.t.WBtMHf,
-                Icon: l.EpV,
-                color: o.A.unsafe_rawColors.ORANGE_345,
+            [d.PN.VERY_LIMITED]: {
+                title: h.t.crzE2X,
+                description: h.intl.string(h.t["T/Ufh9"]),
+                status: h.t.WBtMHf,
+                Icon: c.EpV,
+                color: r.A.unsafe_rawColors.ORANGE_345,
             },
-            [u.PN.AT_RISK]: {
-                title: _.t.XRNVzO,
-                description: _.intl.string(_.t["hbH+9S"]),
-                status: _.t["7f+4Lg"],
-                Icon: l.EpV,
-                color: o.A.colors.ICON_FEEDBACK_CRITICAL,
+            [d.PN.AT_RISK]: {
+                title: h.t.XRNVzO,
+                description: h.intl.string(h.t["hbH+9S"]),
+                status: h.t["7f+4Lg"],
+                Icon: c.EpV,
+                color: r.A.colors.ICON_FEEDBACK_CRITICAL,
             },
-            [u.PN.SUSPENDED]: {
-                title: _.t.MExFkz,
-                description: _.intl.string(_.t["2liUvt"]),
-                status: _.t["0OONGB"],
-                Icon: l.aXh,
-                color: o.A.colors.ICON_MUTED,
+            [d.PN.SUSPENDED]: {
+                title: h.t.MExFkz,
+                description: h.intl.string(h.t["2liUvt"]),
+                status: h.t["0OONGB"],
+                Icon: c.aXh,
+                color: r.A.colors.ICON_MUTED,
             },
         },
-        { title: O, description: A, color: v, Icon: S } = y[e.state],
-        I = Object.keys(y).length;
-    return (0, r.jsxs)(l.ZpM, {
-        className: h.kL,
+        { title: p, description: E, color: b, Icon: O } = f[t.state],
+        T = Object.keys(f).length;
+    return (0, i.jsxs)(c.ZpM, {
+        className: g.kL,
         outline: !1,
         children: [
-            (0, r.jsx)("div", {
-                className: h.ME,
-                children: (0, r.jsx)(f.A, {
-                    user: t,
-                    size: l._3J.SIZE_80,
+            (0, i.jsx)("div", {
+                className: g.ME,
+                children: (0, i.jsx)(m.A, {
+                    user: e,
+                    size: c._3J.SIZE_80,
                 }),
             }),
-            (0, r.jsxs)("div", {
-                className: h.h5,
+            (0, i.jsxs)("div", {
+                className: g.h5,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: h.DD,
+                    (0, i.jsxs)("div", {
+                        className: g.DD,
                         children: [
-                            (0, r.jsx)(l.Heading, {
+                            (0, i.jsx)(c.Heading, {
                                 color: "text-strong",
                                 variant: "heading-lg/normal",
-                                children: _.intl.format(O, {
-                                    hook: (e) =>
-                                        (0, r.jsx)(l.Text, {
+                                children: h.intl.format(p, {
+                                    hook: (t) =>
+                                        (0, i.jsx)(c.Text, {
                                             style: {
-                                                color: v.css,
+                                                color: b.css,
                                             },
                                             variant: "heading-lg/bold",
                                             tag: "span",
-                                            children: e,
+                                            children: t,
                                         }),
                                 }),
                             }),
-                            (0, r.jsx)(l.Text, {
+                            (0, i.jsx)(c.Text, {
                                 color: "text-default",
                                 variant: "text-sm/normal",
-                                children: A,
+                                children: E,
                             }),
                         ],
                     }),
-                    (0, r.jsxs)("div", {
-                        className: h.vK,
+                    (0, i.jsxs)("div", {
+                        className: g.vK,
                         style: {
-                            height: n,
+                            height: s,
                         },
                         children: [
-                            (0, r.jsx)("div", {
-                                className: h.n8,
+                            (0, i.jsx)("div", {
+                                className: g.n8,
                             }),
-                            Object.entries(y).map((t, n) => {
-                                let [i, a] = t,
-                                    s = parseInt(i) === e.state;
-                                return (0, r.jsxs)(
+                            Object.entries(f).map((e, s) => {
+                                let [n, a] = e,
+                                    l = parseInt(n) === t.state;
+                                return (0, i.jsxs)(
                                     "div",
                                     {
-                                        className: h.Kx,
-                                        ref: (e) => {
-                                            E.current[parseInt(i)] = e;
+                                        className: g.Kx,
+                                        ref: (t) => {
+                                            v.current[parseInt(n)] = t;
                                         },
                                         children: [
-                                            s
-                                                ? (0, r.jsx)(S, {
-                                                      className: h.xL,
+                                            l
+                                                ? (0, i.jsx)(O, {
+                                                      className: g.xL,
                                                       color: a.color,
                                                   })
-                                                : (0, r.jsx)("div", {
-                                                      className: h.xL,
+                                                : (0, i.jsx)("div", {
+                                                      className: g.xL,
                                                       style: {
-                                                          marginLeft: 0 === n ? -6 : 0,
-                                                          marginRight: n === I - 1 ? -6 : 0,
+                                                          marginLeft: 0 === s ? -6 : 0,
+                                                          marginRight: s === T - 1 ? -6 : 0,
                                                       },
-                                                      children: (0, r.jsx)("div", {
-                                                          className: h.Ie,
+                                                      children: (0, i.jsx)("div", {
+                                                          className: g.Ie,
                                                       }),
                                                   }),
-                                            _.intl.format(a.status, {
-                                                hook: (e) =>
-                                                    (0, r.jsx)(l.Text, {
+                                            h.intl.format(a.status, {
+                                                hook: (t) =>
+                                                    (0, i.jsx)(c.Text, {
                                                         color: "text-default",
                                                         variant: "text-sm/normal",
-                                                        className: h.Rh,
-                                                        children: e,
+                                                        className: g.Rh,
+                                                        children: t,
                                                     }),
                                             }),
                                         ],
                                     },
-                                    n,
+                                    s,
                                 );
                             }),
                         ],

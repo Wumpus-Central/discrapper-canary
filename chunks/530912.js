@@ -1,96 +1,89 @@
 n.d(t, {
-    Jf: () => _,
-    TA: () => p,
-    VF: () => m,
-    hH: () => f,
-    nL: () => h,
-    pp: () => d,
+    Jf: () => m,
+    TA: () => d,
+    VF: () => p,
+    hH: () => u,
+    nL: () => f,
+    pp: () => c,
 });
 var r = n(64700),
-    i = n(735438),
+    l = n(735438),
     a = n(58149),
-    s = n(734057),
-    o = n(954571),
-    l = n(652215);
+    i = n(734057),
+    s = n(954571),
+    o = n(652215);
 
 function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function d(e, t, n) {
-    o.default.track(l.HAw.FORWARD_MESSAGE_STARTED, {
+    s.default.track(o.HAw.FORWARD_MESSAGE_STARTED, {
         channel_id: e,
         message_id: t,
         source: n,
     });
 }
 
-function f(e) {
-    let { channelId: t, messageId: n, numDestinationChanges: r, numQueryChanges: i } = e;
-    o.default.track(l.HAw.FORWARD_MESSAGE_CANCELLED, {
+function u(e) {
+    let { channelId: t, messageId: n, numDestinationChanges: r, numQueryChanges: l } = e;
+    s.default.track(o.HAw.FORWARD_MESSAGE_CANCELLED, {
         channel_id: t,
         message_id: n,
         num_destination_changes: r,
-        num_query_changes: i,
+        num_query_changes: l,
     });
 }
 
-function p(e) {
+function d(e) {
     let {
         channelId: t,
         messageId: n,
         hasError: r,
-        hasContextMessage: i,
+        hasContextMessage: l,
         numDestinations: c,
-        numDestinationChanges: d,
-        numQueryChanges: f,
-        anyDestinationHasSlowmode: p,
-        source: _,
+        numDestinationChanges: u,
+        numQueryChanges: d,
+        anyDestinationHasSlowmode: m,
+        source: f,
     } = e;
     if (
-        (o.default.track(l.HAw.FORWARD_MESSAGE_SENT, {
+        (s.default.track(o.HAw.FORWARD_MESSAGE_SENT, {
             channel_id: t,
             message_id: n,
             has_error: r,
-            has_context_message: i,
+            has_context_message: l,
             num_destinations: c,
-            num_destination_changes: d,
-            num_query_changes: f,
-            any_destination_has_slowmode: p,
+            num_destination_changes: u,
+            num_query_changes: d,
+            any_destination_has_slowmode: m,
         }),
-        "message-shortcut" === _)
+        "message-shortcut" === f)
     ) {
-        let e = s.A.getChannel(t);
-        o.default.track(
-            l.HAw.MESSAGE_SHORTCUT_ACTION_SENT,
-            u(
+        let e = i.A.getChannel(t);
+        s.default.track(
+            o.HAw.MESSAGE_SHORTCUT_ACTION_SENT,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    "function" == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            }),
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0,
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })(
                 {
                     action: "forward",
                     original_message_id: n,
@@ -102,11 +95,11 @@ function p(e) {
     }
 }
 
-function _() {
+function m() {
     return r.useMemo(
         () =>
-            (0, i.once)((e, t, n) => {
-                o.default.track(l.HAw.FORWARD_ADD_RECIPIENT, {
+            (0, l.once)((e, t, n) => {
+                s.default.track(o.HAw.FORWARD_ADD_RECIPIENT, {
                     channel_id: e,
                     message_id: t,
                     has_query: n,
@@ -116,11 +109,11 @@ function _() {
     );
 }
 
-function h() {
+function f() {
     return r.useMemo(
         () =>
-            (0, i.once)((e, t) => {
-                o.default.track(l.HAw.FORWARD_EDIT_SEARCH, {
+            (0, l.once)((e, t) => {
+                s.default.track(o.HAw.FORWARD_EDIT_SEARCH, {
                     channel_id: e,
                     message_id: t,
                 });
@@ -129,11 +122,11 @@ function h() {
     );
 }
 
-function m() {
+function p() {
     return r.useMemo(
         () =>
-            (0, i.once)((e, t) => {
-                o.default.track(l.HAw.FORWARD_EDIT_CONTEXT_MESSAGE, {
+            (0, l.once)((e, t) => {
+                s.default.track(o.HAw.FORWARD_EDIT_CONTEXT_MESSAGE, {
                     channel_id: e,
                     message_id: t,
                 });

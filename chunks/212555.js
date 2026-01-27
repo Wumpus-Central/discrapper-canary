@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => _,
+    A: () => d,
 }),
     n(747238),
     n(896048),
@@ -7,25 +7,11 @@ n.d(t, {
 var r = n(627968);
 n(64700);
 var i = n(397927),
-    a = n(597864),
-    s = n(880652),
-    o = n(710871);
+    l = n(597864),
+    a = n(880652),
+    s = n(710871);
 
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function c(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,39 +22,23 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function f(e) {
-    let { question: t, questionId: n, value: s, onValueChange: l } = e,
+function c(e) {
+    let { question: t, questionId: n, value: a, onValueChange: o } = e,
         { selectedChoice: c, textInputs: u } = ((e) => {
             if (null == e || "" === e)
                 return {
@@ -85,36 +55,36 @@ function f(e) {
                     textInputs: r,
                 }
             );
-        })(s),
+        })(a),
         d = (e) => {
             var r;
             let i = u[e];
             null == i || "" === i
-                ? l(n, e)
+                ? o(n, e)
                 : null != t.Choices && (null == (r = t.Choices[e]) ? void 0 : r.TextEntry) === "true"
-                  ? l(n, "".concat(e, ":TEXT:").concat(i))
-                  : l(n, e);
+                  ? o(n, "".concat(e, ":TEXT:").concat(i))
+                  : o(n, e);
         },
-        f = (e, t) => {
-            l(n, null != t && "" !== t ? "".concat(e, ":TEXT:").concat(t) : e);
+        p = (e, t) => {
+            o(n, null != t && "" !== t ? "".concat(e, ":TEXT:").concat(t) : e);
         };
     return null == t.Choices
         ? (0, r.jsx)("div", {
-              className: o.kL,
+              className: s.kL,
               children: (0, r.jsx)(i.Text, {
                   variant: "text-sm/medium",
-                  className: o.WN,
+                  className: s.WN,
                   children: "No choices available for this question",
               }),
           })
         : (0, r.jsx)("div", {
-              className: o.kL,
+              className: s.kL,
               children: (0, r.jsx)("div", {
-                  className: o.Me,
+                  className: s.Me,
                   children: Object.entries(t.Choices).map((e) => {
                       let [t, n] = e;
                       return (0, r.jsx)(
-                          a.B,
+                          l.B,
                           {
                               choiceId: t,
                               choice: n,
@@ -122,7 +92,7 @@ function f(e) {
                               onSelectionChange: d,
                               inputType: "radio",
                               textInputValue: u[t],
-                              onTextInputChange: f,
+                              onTextInputChange: p,
                           },
                           t,
                       );
@@ -131,9 +101,9 @@ function f(e) {
           });
 }
 
-function p(e) {
-    let { question: t, questionId: n, value: s, onValueChange: l } = e,
-        { selectedChoices: u, textInputs: f } = ((e) => {
+function u(e) {
+    let { question: t, questionId: n, value: a, onValueChange: c } = e,
+        { selectedChoices: u, textInputs: d } = ((e) => {
             if (null == e || "" === e)
                 return {
                     selectedChoices: [],
@@ -153,7 +123,7 @@ function p(e) {
                     textInputs: r,
                 }
             );
-        })(s),
+        })(a),
         p = (e, t) =>
             e
                 .map((e) => {
@@ -161,47 +131,63 @@ function p(e) {
                     return null != n && "" !== n ? "".concat(e, ":TEXT:").concat(n) : e;
                 })
                 .join(","),
-        _ = (e) => {
+        m = (e) => {
             let t = u.includes(e) ? u.filter((t) => t !== e) : [...u, e],
-                r = c({}, f);
-            t.includes(e) || delete r[e], l(n, p(t, r));
+                r = o({}, d);
+            t.includes(e) || delete r[e], c(n, p(t, r));
         },
-        h = (e, t) => {
-            l(
+        f = (e, t) => {
+            var r, i;
+            c(
                 n,
                 p(
                     u,
-                    d(c({}, f), {
-                        [e]: t,
-                    }),
+                    ((r = o({}, d)),
+                    (i = i =
+                        {
+                            [e]: t,
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(i)).forEach(function (e) {
+                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                          }),
+                    r),
                 ),
             );
         };
     return null == t.Choices || 0 === Object.keys(t.Choices).length
         ? (0, r.jsx)("div", {
-              className: o.kL,
+              className: s.kL,
               children: (0, r.jsx)(i.Text, {
                   variant: "text-sm/medium",
-                  className: o.WN,
+                  className: s.WN,
                   children: "No choices available for this question",
               }),
           })
         : (0, r.jsx)("div", {
-              className: o.kL,
+              className: s.kL,
               children: (0, r.jsx)("div", {
-                  className: o.Me,
+                  className: s.Me,
                   children: Object.entries(t.Choices).map((e) => {
                       let [t, n] = e;
                       return (0, r.jsx)(
-                          a.B,
+                          l.B,
                           {
                               choiceId: t,
                               choice: n,
                               isSelected: u.includes(t),
-                              onSelectionChange: _,
+                              onSelectionChange: m,
                               inputType: "checkbox",
-                              textInputValue: f[t],
-                              onTextInputChange: h,
+                              textInputValue: d[t],
+                              onTextInputChange: f,
                           },
                           t,
                       );
@@ -210,19 +196,19 @@ function p(e) {
           });
 }
 
-function _(e) {
-    let { question: t, questionId: n, value: i, onValueChange: a } = e;
-    return t.Selector === s.BO.SINGLE_ANSWER
-        ? (0, r.jsx)(f, {
+function d(e) {
+    let { question: t, questionId: n, value: i, onValueChange: l } = e;
+    return t.Selector === a.BO.SINGLE_ANSWER
+        ? (0, r.jsx)(c, {
               question: t,
               questionId: n,
               value: i,
-              onValueChange: a,
+              onValueChange: l,
           })
-        : (0, r.jsx)(p, {
+        : (0, r.jsx)(u, {
               question: t,
               questionId: n,
               value: i,
-              onValueChange: a,
+              onValueChange: l,
           });
 }

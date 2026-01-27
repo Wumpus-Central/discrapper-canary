@@ -1,175 +1,113 @@
 n.d(t, {
-    j: () => x,
+    j: () => C,
 }),
     n(896048),
     n(801541);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(126031),
-    l = n(108531),
+    l = n(503698),
+    a = n.n(l),
+    s = n(126031),
+    o = n(108531),
     c = n(889137),
     u = n(615300),
     d = n(990078),
-    f = n(397927),
-    p = n(915089),
-    _ = n(956703),
-    h = n(180662),
-    m = n(969632),
-    g = n(438437),
-    E = n(306417),
-    b = n(290794),
+    p = n(397927),
+    m = n(915089),
+    f = n(956703),
+    g = n(180662),
+    h = n(969632),
+    _ = n(438437),
+    b = n(306417),
+    A = n(290794),
     y = n(985018),
-    O = n(121272);
+    v = n(121272);
 
-function A(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function v(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                A(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function S(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = I(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function I(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let T = 24,
-    C = 24,
-    N = 20;
-
-function R(e) {
-    let { percentage: t, label: n, canShowVoterDetails: a, answerId: s } = e,
-        l = (0, p.GV)(),
-        { channelId: c, messageId: u } = (0, b.Tu)(),
-        [g, E] = i.useState(""),
-        [y, A] = i.useState(!1),
-        v = "" !== g && y,
-        S = i.useCallback(() => {
-            E((0, m.$m)(u, c, s));
-        }, [u, c, s]),
-        I = i.useCallback(() => {
-            S(), A(!0);
-        }, [S]),
-        T = i.useCallback(() => {
-            A(!1);
-        }, []),
+function x(e) {
+    let { percentage: t, label: n, canShowVoterDetails: l, answerId: a } = e,
+        o = (0, m.GV)(),
+        { channelId: c, messageId: u } = (0, A.Tu)(),
+        [_, b] = i.useState(""),
+        [y, x] = i.useState(!1),
+        O = "" !== _ && y,
+        E = i.useCallback(() => {
+            b((0, h.$m)(u, c, a));
+        }, [u, c, a]),
+        j = i.useCallback(() => {
+            E(), x(!0);
+        }, [E]),
         C = i.useCallback(() => {
-            (0, h.e)({
+            x(!1);
+        }, []),
+        I = i.useCallback(() => {
+            (0, g.e)({
                 channelId: c,
                 messageId: u,
-                answerId: s,
+                answerId: a,
             });
-        }, [c, u, s]);
+        }, [c, u, a]);
     return (
         i.useEffect(() => {
             if (y)
                 return (
-                    _.A.addReactChangeListener(S),
+                    f.A.addReactChangeListener(E),
                     () => {
-                        _.A.removeReactChangeListener(S);
+                        f.A.removeReactChangeListener(E);
                     }
                 );
-        }, [y, S]),
+        }, [y, E]),
         (0, r.jsxs)("div", {
-            className: O.AA,
+            className: v.AA,
             children: [
-                a
+                l
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              "" !== g
+                              "" !== _
                                   ? (0, r.jsx)(d.m, {
-                                        __unsupportedReactNodeAsText: (0, r.jsx)(f.Text, {
+                                        __unsupportedReactNodeAsText: (0, r.jsx)(p.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
                                             scaleFontToUserSetting: !0,
-                                            children: g,
+                                            children: _,
                                         }),
-                                        forceOpen: v,
+                                        forceOpen: O,
                                         "aria-label": !1,
-                                        children: (0, r.jsx)(f.QWc, {
-                                            onMouseEnter: I,
-                                            onMouseLeave: T,
-                                            onFocus: I,
-                                            onBlur: T,
-                                            onClick: C,
-                                            "aria-describedby": v ? l : void 0,
+                                        children: (0, r.jsx)(p.QWc, {
+                                            onMouseEnter: j,
+                                            onMouseLeave: C,
+                                            onFocus: j,
+                                            onBlur: C,
+                                            onClick: I,
+                                            "aria-describedby": O ? o : void 0,
                                             text: n,
                                             variant: "secondary",
                                             textVariant: "text-xs/semibold",
                                         }),
                                     })
-                                  : (0, r.jsx)(f.QWc, {
-                                        onMouseEnter: I,
-                                        onMouseLeave: T,
-                                        onFocus: I,
-                                        onBlur: T,
-                                        onClick: C,
+                                  : (0, r.jsx)(p.QWc, {
+                                        onMouseEnter: j,
+                                        onMouseLeave: C,
+                                        onFocus: j,
+                                        onBlur: C,
+                                        onClick: I,
                                         text: n,
                                         variant: "secondary",
                                         textVariant: "text-xs/semibold",
                                     }),
-                              v &&
-                                  (0, r.jsx)(o.s, {
-                                      id: l,
-                                      children: g,
+                              O &&
+                                  (0, r.jsx)(s.s, {
+                                      id: o,
+                                      children: _,
                                   }),
                           ],
                       })
-                    : (0, r.jsx)(f.Text, {
+                    : (0, r.jsx)(p.Text, {
                           variant: "text-xs/semibold",
                           color: "none",
                           scaleFontToUserSetting: !0,
                           children: n,
                       }),
-                (0, r.jsxs)(f.Text, {
+                (0, r.jsxs)(p.Text, {
                     variant: "text-md/bold",
                     color: "none",
                     scaleFontToUserSetting: !0,
@@ -180,9 +118,9 @@ function R(e) {
     );
 }
 
-function w(e) {
+function O(e) {
     let { percentage: t, shouldAnimate: n } = e,
-        i = (0, f.zhh)(
+        i = (0, p.zhh)(
             {
                 from: {
                     width: n ? "0%" : "".concat(t, "%"),
@@ -197,131 +135,185 @@ function w(e) {
             },
             "animate-always",
         );
-    return (0, r.jsx)(l.animated.span, {
-        className: O.an,
+    return (0, r.jsx)(o.animated.span, {
+        className: v.an,
         style: i,
         "aria-hidden": !0,
     });
 }
 
-function P(e) {
-    let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: a, isExpired: s, className: o } = e;
+function E(e) {
+    let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: l, isExpired: a, className: s } = e;
     return (0, c.YW)({
         answersInteraction: t,
         didSelfVote: i,
     })
         .with(
             {
-                answersInteraction: g.CQ.RADIO_BUTTONS,
+                answersInteraction: _.CQ.RADIO_BUTTONS,
             },
             () =>
-                (0, r.jsx)(E.k$, {
+                (0, r.jsx)(b.k$, {
                     isSelected: n,
-                    size: C,
-                    className: o,
+                    size: 24,
+                    className: s,
                 }),
         )
         .with(
             {
-                answersInteraction: g.CQ.CHECKBOXES,
+                answersInteraction: _.CQ.CHECKBOXES,
             },
             () =>
-                (0, r.jsx)(E.e5, {
+                (0, r.jsx)(b.e5, {
                     isSelected: n,
-                    size: N,
-                    className: o,
+                    size: 20,
+                    className: s,
                 }),
         )
         .with(
             {
-                answersInteraction: g.CQ.LIST,
+                answersInteraction: _.CQ.LIST,
                 didSelfVote: !0,
             },
             () =>
-                (0, r.jsx)(E.Vx, {
-                    isVictor: a,
-                    isExpired: s,
-                    size: T,
-                    className: o,
+                (0, r.jsx)(b.Vx, {
+                    isVictor: l,
+                    isExpired: a,
+                    size: 24,
+                    className: s,
                 }),
         )
         .otherwise(() => null);
 }
 
-function D(e) {
-    let { answer: t, isExpired: n, answersInteraction: i, canShowVoteCounts: a, canShowVoterDetails: l } = e,
+function j(e) {
+    let { answer: t, isExpired: n, answersInteraction: i, canShowVoteCounts: l, canShowVoterDetails: o } = e,
         c = !0 === t.isSelected,
         u = !0 === t.didSelfVote,
         d = !0 === t.isVictor,
-        p = t.shouldAnimateTransition;
+        m = t.shouldAnimateTransition;
     return (0, r.jsxs)("div", {
-        className: s()(O.Fk, {
-            [O.EK]: i !== g.CQ.LIST,
-            [O.wH]: c,
+        className: a()(v.Fk, {
+            [v.EK]: i !== _.CQ.LIST,
+            [v.wH]: c,
         }),
         children: [
-            a
-                ? (0, r.jsx)(w, {
+            l
+                ? (0, r.jsx)(O, {
                       percentage: t.votesPercentage,
-                      shouldAnimate: p,
+                      shouldAnimate: m,
                   })
                 : null,
             null != t.pollMedia.emoji &&
-                (0, r.jsx)(E.Fb, {
-                    className: O.Zg,
+                (0, r.jsx)(b.Fb, {
+                    className: v.Zg,
                     emoji: t.pollMedia.emoji,
                 }),
-            (0, r.jsx)(f.Text, {
-                className: O.Pf,
+            (0, r.jsx)(p.Text, {
+                className: v.Pf,
                 variant: "text-sm/semibold",
                 color: "none",
                 scaleFontToUserSetting: !0,
                 children: t.pollMedia.text,
             }),
             t.didSelfVote &&
-                (0, r.jsx)(o.s, {
+                (0, r.jsx)(s.s, {
                     children: y.intl.string(y.t["8DAM+5"]),
                 }),
-            a &&
-                (0, r.jsx)(R, {
+            l &&
+                (0, r.jsx)(x, {
                     percentage: t.votesPercentage,
                     label: t.votes,
-                    canShowVoterDetails: l,
+                    canShowVoterDetails: o,
                     answerId: t.answerId,
                 }),
-            (0, r.jsx)(P, {
+            (0, r.jsx)(E, {
                 answersInteraction: i,
                 isSelected: c,
                 didSelfVote: u,
                 isVictor: d,
                 isExpired: n,
-                className: O.ck,
+                className: v.ck,
             }),
         ],
     });
 }
 
-function x(e) {
-    let { isExpired: t, answersInteraction: n, canShowVoteCounts: i, canTapAnswers: a } = e,
-        s = S(e, ["isExpired", "answersInteraction", "canShowVoteCounts", "canTapAnswers"]);
+function C(e) {
+    let { isExpired: t, answersInteraction: n, canShowVoteCounts: i, canTapAnswers: l } = e,
+        a = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i,
+                l = {};
+            if ("u" > typeof Reflect && Reflect.ownKeys) {
+                for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                return l;
+            }
+            if (
+                ((l = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.getOwnPropertyNames(e);
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    return i;
+                })(e, t)),
+                Object.getOwnPropertySymbols)
+            )
+                for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+            return l;
+        })(e, ["isExpired", "answersInteraction", "canShowVoteCounts", "canTapAnswers"]);
     return (0, r.jsx)(
-        E.Fh,
-        v(
+        b.Fh,
+        (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
             {
-                className: O.ry,
-                answerClassName: O.ZF,
+                className: v.ry,
+                answerClassName: v.ZF,
                 answersInteraction: n,
-                canTapAnswers: a,
+                canTapAnswers: l,
                 renderAnswerContent: (e) =>
-                    (0, r.jsx)(D, {
+                    (0, r.jsx)(j, {
                         answer: e,
                         isExpired: t,
                         answersInteraction: n,
                         canShowVoteCounts: i,
-                        canShowVoterDetails: a,
+                        canShowVoterDetails: l,
                     }),
             },
-            s,
+            a,
         ),
     );
 }

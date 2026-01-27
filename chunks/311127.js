@@ -1,168 +1,165 @@
 n.d(t, {
-    A: () => T,
+    A: () => E,
 }),
     n(896048),
     n(321073);
 var r = n(627968),
     i = n(64700),
-    a = n(136722),
-    s = n(311907),
-    o = n(389723),
-    l = n(332661),
+    l = n(136722),
+    a = n(311907),
+    s = n(389723),
+    o = n(332661),
     c = n(397927),
     u = n(260509),
     d = n(34457),
-    f = n(696451),
-    p = n(317525),
-    _ = n(71393),
-    h = n(287809),
-    m = n(488926),
-    g = n(661191),
-    E = n(529942),
-    b = n(164956),
+    p = n(696451),
+    m = n(317525),
+    f = n(71393),
+    g = n(287809),
+    h = n(488926),
+    _ = n(661191),
+    b = n(529942),
+    A = n(164956),
     y = n(209700),
-    O = n(652215),
-    A = n(985018),
-    v = n(110927);
+    v = n(652215),
+    x = n(985018),
+    O = n(110927);
 
-function S(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function I(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                S(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function T(e) {
+function E(e) {
     let { guildId: t } = e,
-        n = (0, s.bG)([h.default], () => h.default.getCurrentUser()),
-        S = (0, s.bG)([_.A], () => _.A.getGuild(t)),
-        T = (0, s.bG)([p.A], () => p.A.getRolesSnapshot(t)),
-        N = (0, s.bG)([p.A], () => p.A.getSortedRoles(t)),
-        { impersonateType: R, viewingRoles: w } = (0, s.cf)([b.A], () => ({
-            impersonateType: b.A.getImpersonateType(t),
-            viewingRoles: b.A.getViewingRoles(t),
+        n = (0, a.bG)([g.default], () => g.default.getCurrentUser()),
+        E = (0, a.bG)([f.A], () => f.A.getGuild(t)),
+        C = (0, a.bG)([m.A], () => m.A.getRolesSnapshot(t)),
+        I = (0, a.bG)([m.A], () => m.A.getSortedRoles(t)),
+        { impersonateType: S, viewingRoles: T } = (0, a.cf)([A.A], () => ({
+            impersonateType: A.A.getImpersonateType(t),
+            viewingRoles: A.A.getViewingRoles(t),
         })),
-        P = R === y._.SERVER_SHOP,
-        D = (0, s.bG)([f.Ay], () => (null != n ? f.Ay.getTrueMember(t, n.id) : null)),
-        x = null != S ? T[(0, u.af)(S)] : null,
-        [L, j] = i.useState(() => {
-            let e = null == w ? [] : g.default.keys(w);
-            return null != x && e.push(x.id), e;
+        N = S === y._.SERVER_SHOP,
+        P = (0, a.bG)([p.Ay], () => (null != n ? p.Ay.getTrueMember(t, n.id) : null)),
+        w = null != E ? C[(0, u.af)(E)] : null,
+        [R, D] = i.useState(() => {
+            let e = null == T ? [] : _.default.keys(T);
+            return null != w && e.push(w.id), e;
         }),
-        M = i.useRef(S);
+        L = i.useRef(E);
     i.useEffect(() => {
         let e = {},
-            t = M.current;
-        if (null != t && null != R) {
-            for (let t of L) {
-                let n = T[t];
+            t = L.current;
+        if (null != t && null != S) {
+            for (let t of R) {
+                let n = C[t];
                 null != n && (e[t] = n);
             }
-            (0, E.IA)(t.id, {
-                type: R,
+            (0, b.IA)(t.id, {
+                type: S,
                 roles: e,
             });
         }
-    }, [L, R, T]);
-    let k = null != S && null != n && null != D ? N.find((e) => D.roles.includes(e.id)) : void 0,
-        U = i.useMemo(
+    }, [R, S, C]);
+    let M = null != E && null != n && null != P ? I.find((e) => P.roles.includes(e.id)) : void 0,
+        k = i.useMemo(
             () =>
-                null != S && null != n
-                    ? N.filter((e) => !(0, d.Oy)(e))
+                null != E && null != n
+                    ? I.filter((e) => !(0, d.Oy)(e))
                           .filter((e) => {
                               var t;
-                              return !P || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
+                              return !N || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == k ? void 0 : k.id) === e.id || m.wO(S, n.id, k, e))
+                          .filter((e) => (null == M ? void 0 : M.id) === e.id || h.wO(E, n.id, M, e))
                     : [],
-            [S, n, P, k, N],
+            [E, n, N, M, I],
         ),
-        G = i.useMemo(() => {
-            let e = Array.from(U).map((e) => ({
-                leading: C(e),
+        U = i.useMemo(() => {
+            let e = Array.from(k).map((e) => ({
+                leading: j(e),
                 value: e.id,
                 label: e.name,
                 id: e.id.toString(),
                 disabled: !1,
             }));
             return (
-                null != S &&
-                    null != x &&
+                null != E &&
+                    null != w &&
                     e.push({
-                        leading: C(x),
-                        value: x.id,
-                        label: x.name,
-                        id: x.id.toString(),
+                        leading: j(w),
+                        value: w.id,
+                        label: w.name,
+                        id: w.id.toString(),
                         disabled: !0,
                     }),
                 e
             );
-        }, [U, S, x]);
-    if (null == n || null == S || null == D) return null;
-    let V = {};
-    return (D.roles.forEach((e) => {
-        let t = T[e];
-        null != t && (V[t.id] = t);
+        }, [k, E, w]);
+    if (null == n || null == E || null == P) return null;
+    let G = {};
+    return (P.roles.forEach((e) => {
+        let t = C[e];
+        null != t && (G[t.id] = t);
     }),
-    a.zy(
-        m.aH({
-            forceRoles: V,
-            context: S,
+    l.zy(
+        h.aH({
+            forceRoles: G,
+            context: E,
         }),
-        a.kg(O.xBc.MANAGE_GUILD, O.xBc.MANAGE_ROLES),
-    ) || (0, u.bM)(S, n))
+        l.kg(v.xBc.MANAGE_GUILD, v.xBc.MANAGE_ROLES),
+    ) || (0, u.bM)(E, n))
         ? (0, r.jsx)("div", {
-              className: v.kL,
-              children: (0, r.jsxs)(o.iS, {
+              className: O.kL,
+              children: (0, r.jsxs)(s.iS, {
                   selectionMode: "multiple",
-                  options: G,
-                  value: L,
+                  options: U,
+                  value: R,
                   onSelectionChange: (e) => {
-                      j(e);
+                      D(e);
                   },
                   children: [
-                      (0, r.jsx)(o.a3, {
+                      (0, r.jsx)(s.a3, {
                           hideTags: !0,
                           autoFocus: !0,
-                          placeholder: A.intl.string(A.t.Sojqsr),
+                          placeholder: x.intl.string(x.t.Sojqsr),
                       }),
-                      (0, r.jsx)(o.X2, {
-                          renderListItem: (e) => (0, r.jsx)(l.c, I({}, e)),
+                      (0, r.jsx)(s.X2, {
+                          renderListItem: (e) =>
+                              (0, r.jsx)(
+                                  o.c,
+                                  (function (e) {
+                                      for (var t = 1; t < arguments.length; t++) {
+                                          var n = null != arguments[t] ? arguments[t] : {},
+                                              r = Object.keys(n);
+                                          "function" == typeof Object.getOwnPropertySymbols &&
+                                              (r = r.concat(
+                                                  Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                  }),
+                                              )),
+                                              r.forEach(function (t) {
+                                                  var r;
+                                                  (r = n[t]),
+                                                      t in e
+                                                          ? Object.defineProperty(e, t, {
+                                                                value: r,
+                                                                enumerable: !0,
+                                                                configurable: !0,
+                                                                writable: !0,
+                                                            })
+                                                          : (e[t] = r);
+                                              });
+                                      }
+                                      return e;
+                                  })({}, e),
+                              ),
                       }),
                   ],
               }),
           })
         : (0, r.jsx)(c.Text, {
               variant: "text-md/medium",
-              children: A.intl.string(A.t.MNSTbY),
+              children: x.intl.string(x.t.MNSTbY),
           });
 }
 
-function C(e) {
+function j(e) {
     return () => {
         var t;
         return (0, r.jsx)("svg", {

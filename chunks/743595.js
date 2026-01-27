@@ -1,53 +1,52 @@
-var r = n(924905),
-    i = n(743032),
-    a = n(675427),
-    s = RegExp("\r\n", "g"),
-    o = "\n",
-    l = {
+var n = r(924905),
+    i = r(743032),
+    o = r(675427),
+    a = RegExp("\r\n", "g"),
+    s = {
         "text/rtf": 1,
         "text/html": 1,
     };
 
-function c(e) {
-    if ("file" == e.kind) return e.getAsFile();
+function u(t) {
+    if ("file" == t.kind) return t.getAsFile();
 }
-e.exports = (function () {
-    function e(e) {
-        (this.data = e), (this.types = e.types ? i(e.types) : []);
+t.exports = (function () {
+    function t(t) {
+        (this.data = t), (this.types = t.types ? i(t.types) : []);
     }
-    var t = e.prototype;
+    var e = t.prototype;
     return (
-        (t.isRichText = function () {
+        (e.isRichText = function () {
             return (
                 !!(this.getHTML() && this.getText()) ||
                 (!this.isImage() &&
-                    this.types.some(function (e) {
-                        return l[e];
+                    this.types.some(function (t) {
+                        return s[t];
                     }))
             );
         }),
-        (t.getText = function () {
-            var e;
+        (e.getText = function () {
+            var t;
             return (
                 this.data.getData &&
                     (this.types.length
-                        ? -1 != this.types.indexOf("text/plain") && (e = this.data.getData("text/plain"))
-                        : (e = this.data.getData("Text"))),
-                e ? e.replace(s, o) : null
+                        ? -1 != this.types.indexOf("text/plain") && (t = this.data.getData("text/plain"))
+                        : (t = this.data.getData("Text"))),
+                t ? t.replace(a, "\n") : null
             );
         }),
-        (t.getHTML = function () {
+        (e.getHTML = function () {
             if (this.data.getData) {
                 if (!this.types.length) return this.data.getData("Text");
                 else if (-1 != this.types.indexOf("text/html")) return this.data.getData("text/html");
             }
         }),
-        (t.isLink = function () {
-            return this.types.some(function (e) {
-                return -1 != e.indexOf("Url") || -1 != e.indexOf("text/uri-list") || e.indexOf("text/x-moz-url");
+        (e.isLink = function () {
+            return this.types.some(function (t) {
+                return -1 != t.indexOf("Url") || -1 != t.indexOf("text/uri-list") || t.indexOf("text/x-moz-url");
             });
         }),
-        (t.getLink = function () {
+        (e.getLink = function () {
             return this.data.getData
                 ? -1 != this.types.indexOf("text/x-moz-url")
                     ? this.data.getData("text/x-moz-url").split("\n")[0]
@@ -56,20 +55,20 @@ e.exports = (function () {
                       : this.data.getData("url")
                 : null;
         }),
-        (t.isImage = function () {
+        (e.isImage = function () {
             if (
-                this.types.some(function (e) {
-                    return -1 != e.indexOf("application/x-moz-file");
+                this.types.some(function (t) {
+                    return -1 != t.indexOf("application/x-moz-file");
                 })
             )
                 return !0;
-            for (var e = this.getFiles(), t = 0; t < e.length; t++) {
-                var n = e[t].type;
-                if (!r.isImage(n)) return !1;
+            for (var t = this.getFiles(), e = 0; e < t.length; e++) {
+                var r = t[e].type;
+                if (!n.isImage(r)) return !1;
             }
             return !0;
         }),
-        (t.getCount = function () {
+        (e.getCount = function () {
             return this.data.hasOwnProperty("items")
                 ? this.data.items.length
                 : this.data.hasOwnProperty("mozItemCount")
@@ -78,16 +77,16 @@ e.exports = (function () {
                     ? this.data.files.length
                     : null;
         }),
-        (t.getFiles = function () {
+        (e.getFiles = function () {
             return this.data.items
-                ? Array.prototype.slice.call(this.data.items).map(c).filter(a.thatReturnsArgument)
+                ? Array.prototype.slice.call(this.data.items).map(u).filter(o.thatReturnsArgument)
                 : this.data.files
                   ? Array.prototype.slice.call(this.data.files)
                   : [];
         }),
-        (t.hasFiles = function () {
+        (e.hasFiles = function () {
             return this.getFiles().length > 0;
         }),
-        e
+        t
     );
 })();

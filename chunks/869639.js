@@ -1,42 +1,25 @@
-function r(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                i(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function i(e, t, n) {
+function n(t, e, r) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
-        e
+            : (t[e] = r),
+        t
     );
 }
-var a = n(630332),
-    s = n(244767),
-    o = n(187047),
-    l = n(225758),
-    c = n(116740),
-    u = c.OrderedSet,
-    d = c.Record,
-    f = c.Stack,
-    p = d({
+var i = r(630332),
+    o = r(244767),
+    a = r(187047),
+    s = r(225758),
+    u = r(116740),
+    c = u.OrderedSet,
+    l = u.Record,
+    f = u.Stack,
+    p = l({
         allowUndo: !0,
         currentContent: null,
         decorator: null,
@@ -51,197 +34,289 @@ var a = n(630332),
         treeMap: null,
         undoStack: f(),
     }),
-    _ = (function () {
-        (t.createEmpty = function (e) {
-            return t.createWithContent(s.createFromText(""), e);
+    h = (function () {
+        (e.createEmpty = function (t) {
+            return e.createWithContent(o.createFromText(""), t);
         }),
-            (t.createWithContent = function (e, n) {
-                if (0 === e.getBlockMap().count()) return t.createEmpty(n);
-                var r = e.getBlockMap().first().getKey();
-                return t.create({
-                    currentContent: e,
+            (e.createWithContent = function (t, r) {
+                if (0 === t.getBlockMap().count()) return e.createEmpty(r);
+                var n = t.getBlockMap().first().getKey();
+                return e.create({
+                    currentContent: t,
                     undoStack: f(),
                     redoStack: f(),
-                    decorator: n || null,
-                    selection: l.createEmpty(r),
+                    decorator: r || null,
+                    selection: s.createEmpty(n),
                 });
             }),
-            (t.create = function (e) {
-                var n = e.currentContent,
-                    i = e.decorator;
-                return new t(
+            (e.create = function (t) {
+                var r = t.currentContent,
+                    i = t.decorator;
+                return new e(
                     new p(
-                        r({}, e, {
-                            treeMap: m(n, i),
-                            directionMap: o.getDirectionMap(n),
+                        (function (t) {
+                            for (var e = 1; e < arguments.length; e++) {
+                                var r = null != arguments[e] ? arguments[e] : {},
+                                    i = Object.keys(r);
+                                "function" == typeof Object.getOwnPropertySymbols &&
+                                    (i = i.concat(
+                                        Object.getOwnPropertySymbols(r).filter(function (t) {
+                                            return Object.getOwnPropertyDescriptor(r, t).enumerable;
+                                        }),
+                                    )),
+                                    i.forEach(function (e) {
+                                        n(t, e, r[e]);
+                                    });
+                            }
+                            return t;
+                        })({}, t, {
+                            treeMap: g(r, i),
+                            directionMap: a.getDirectionMap(r),
                         }),
                     ),
                 );
             }),
-            (t.set = function (e, n) {
-                return new t(
-                    e.getImmutable().withMutations(function (t) {
-                        var r = t.get("decorator"),
-                            i = r;
-                        null === n.decorator ? (i = null) : n.decorator && (i = n.decorator);
-                        var a = n.currentContent || e.getCurrentContent();
-                        if (i !== r) {
-                            var s,
-                                o = t.get("treeMap");
-                            (s = i && r ? E(a, a.getBlockMap(), o, i, r) : m(a, i)),
-                                t.merge({
-                                    decorator: i,
-                                    treeMap: s,
+            (e.set = function (t, r) {
+                return new e(
+                    t.getImmutable().withMutations(function (e) {
+                        var n,
+                            o,
+                            a,
+                            s,
+                            u,
+                            c,
+                            l = e.get("decorator"),
+                            f = l;
+                        null === r.decorator ? (f = null) : r.decorator && (f = r.decorator);
+                        var p = r.currentContent || t.getCurrentContent();
+                        if (f !== l) {
+                            var h,
+                                d,
+                                y,
+                                v,
+                                m,
+                                _,
+                                b = e.get("treeMap");
+                            (_ =
+                                f && l
+                                    ? ((h = p),
+                                      (d = p.getBlockMap()),
+                                      (y = b),
+                                      (v = f),
+                                      (m = l),
+                                      y.merge(
+                                          d
+                                              .toSeq()
+                                              .filter(function (t) {
+                                                  return v.getDecorations(t, h) !== m.getDecorations(t, h);
+                                              })
+                                              .map(function (t) {
+                                                  return i.generate(h, t, v);
+                                              }),
+                                      ))
+                                    : g(p, f)),
+                                e.merge({
+                                    decorator: f,
+                                    treeMap: _,
                                     nativelyRenderedContent: null,
                                 });
                             return;
                         }
-                        a !== e.getCurrentContent() && t.set("treeMap", g(e, a.getBlockMap(), a.getEntityMap(), i)),
-                            t.merge(n);
+                        p !== t.getCurrentContent() &&
+                            e.set(
+                                "treeMap",
+                                ((n = t),
+                                (o = p.getBlockMap()),
+                                (a = p.getEntityMap()),
+                                (s = f),
+                                (c = (u = n.getCurrentContent().set("entityMap", a)).getBlockMap()),
+                                n
+                                    .getImmutable()
+                                    .get("treeMap")
+                                    .merge(
+                                        o
+                                            .toSeq()
+                                            .filter(function (t, e) {
+                                                return t !== c.get(e);
+                                            })
+                                            .map(function (t) {
+                                                return i.generate(u, t, s);
+                                            }),
+                                    )),
+                            ),
+                            e.merge(r);
                     }),
                 );
             });
-        var e = t.prototype;
+        var t = e.prototype;
 
-        function t(e) {
-            i(this, "_immutable", void 0), (this._immutable = e);
+        function e(t) {
+            n(this, "_immutable", void 0), (this._immutable = t);
         }
         return (
-            (e.toJS = function () {
+            (t.toJS = function () {
                 return this.getImmutable().toJS();
             }),
-            (e.getAllowUndo = function () {
+            (t.getAllowUndo = function () {
                 return this.getImmutable().get("allowUndo");
             }),
-            (e.getCurrentContent = function () {
+            (t.getCurrentContent = function () {
                 return this.getImmutable().get("currentContent");
             }),
-            (e.getUndoStack = function () {
+            (t.getUndoStack = function () {
                 return this.getImmutable().get("undoStack");
             }),
-            (e.getRedoStack = function () {
+            (t.getRedoStack = function () {
                 return this.getImmutable().get("redoStack");
             }),
-            (e.getSelection = function () {
+            (t.getSelection = function () {
                 return this.getImmutable().get("selection");
             }),
-            (e.getDecorator = function () {
+            (t.getDecorator = function () {
                 return this.getImmutable().get("decorator");
             }),
-            (e.isInCompositionMode = function () {
+            (t.isInCompositionMode = function () {
                 return this.getImmutable().get("inCompositionMode");
             }),
-            (e.mustForceSelection = function () {
+            (t.mustForceSelection = function () {
                 return this.getImmutable().get("forceSelection");
             }),
-            (e.getNativelyRenderedContent = function () {
+            (t.getNativelyRenderedContent = function () {
                 return this.getImmutable().get("nativelyRenderedContent");
             }),
-            (e.getLastChangeType = function () {
+            (t.getLastChangeType = function () {
                 return this.getImmutable().get("lastChangeType");
             }),
-            (e.getInlineStyleOverride = function () {
+            (t.getInlineStyleOverride = function () {
                 return this.getImmutable().get("inlineStyleOverride");
             }),
-            (t.setInlineStyleOverride = function (e, n) {
-                return t.set(e, {
-                    inlineStyleOverride: n,
+            (e.setInlineStyleOverride = function (t, r) {
+                return e.set(t, {
+                    inlineStyleOverride: r,
                 });
             }),
-            (e.getCurrentInlineStyle = function () {
-                var e = this.getInlineStyleOverride();
-                if (null != e) return e;
-                var t = this.getCurrentContent(),
-                    n = this.getSelection();
-                return n.isCollapsed() ? y(t, n) : O(t, n);
+            (t.getCurrentInlineStyle = function () {
+                var t,
+                    e,
+                    r,
+                    n,
+                    i,
+                    o,
+                    a,
+                    s,
+                    u,
+                    c,
+                    l = this.getInlineStyleOverride();
+                if (null != l) return l;
+                var f = this.getCurrentContent(),
+                    p = this.getSelection();
+                return p.isCollapsed()
+                    ? ((t = f),
+                      (r = (e = p).getStartKey()),
+                      (n = e.getStartOffset()),
+                      (i = t.getBlockForKey(r)),
+                      n > 0 ? i.getInlineStyleAt(n - 1) : i.getLength() ? i.getInlineStyleAt(0) : y(t, r))
+                    : ((o = f),
+                      (s = (a = p).getStartKey()),
+                      (u = a.getStartOffset()),
+                      u < (c = o.getBlockForKey(s)).getLength()
+                          ? c.getInlineStyleAt(u)
+                          : u > 0
+                            ? c.getInlineStyleAt(u - 1)
+                            : y(o, s));
             }),
-            (e.getBlockTree = function (e) {
-                return this.getImmutable().getIn(["treeMap", e]);
+            (t.getBlockTree = function (t) {
+                return this.getImmutable().getIn(["treeMap", t]);
             }),
-            (e.isSelectionAtStartOfContent = function () {
-                var e = this.getCurrentContent().getBlockMap().first().getKey();
-                return this.getSelection().hasEdgeWithin(e, 0, 0);
+            (t.isSelectionAtStartOfContent = function () {
+                var t = this.getCurrentContent().getBlockMap().first().getKey();
+                return this.getSelection().hasEdgeWithin(t, 0, 0);
             }),
-            (e.isSelectionAtEndOfContent = function () {
-                var e = this.getCurrentContent().getBlockMap().last(),
-                    t = e.getLength();
-                return this.getSelection().hasEdgeWithin(e.getKey(), t, t);
+            (t.isSelectionAtEndOfContent = function () {
+                var t = this.getCurrentContent().getBlockMap().last(),
+                    e = t.getLength();
+                return this.getSelection().hasEdgeWithin(t.getKey(), e, e);
             }),
-            (e.getDirectionMap = function () {
+            (t.getDirectionMap = function () {
                 return this.getImmutable().get("directionMap");
             }),
-            (t.acceptSelection = function (e, t) {
-                return h(e, t, !1);
+            (e.acceptSelection = function (t, e) {
+                return d(t, e, !1);
             }),
-            (t.forceSelection = function (e, t) {
-                return t.getHasFocus() || (t = t.set("hasFocus", !0)), h(e, t, !0);
+            (e.forceSelection = function (t, e) {
+                return e.getHasFocus() || (e = e.set("hasFocus", !0)), d(t, e, !0);
             }),
-            (t.moveSelectionToEnd = function (e) {
-                var n = e.getCurrentContent().getLastBlock(),
-                    r = n.getKey(),
-                    i = n.getLength();
-                return t.acceptSelection(
-                    e,
-                    new l({
-                        anchorKey: r,
+            (e.moveSelectionToEnd = function (t) {
+                var r = t.getCurrentContent().getLastBlock(),
+                    n = r.getKey(),
+                    i = r.getLength();
+                return e.acceptSelection(
+                    t,
+                    new s({
+                        anchorKey: n,
                         anchorOffset: i,
-                        focusKey: r,
+                        focusKey: n,
                         focusOffset: i,
                         isBackward: !1,
                     }),
                 );
             }),
-            (t.moveFocusToEnd = function (e) {
-                var n = t.moveSelectionToEnd(e);
-                return t.forceSelection(n, n.getSelection());
+            (e.moveFocusToEnd = function (t) {
+                var r = e.moveSelectionToEnd(t);
+                return e.forceSelection(r, r.getSelection());
             }),
-            (t.push = function (e, n, r) {
-                var i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-                if (e.getCurrentContent() === n) return e;
-                var a = o.getDirectionMap(n, e.getDirectionMap());
-                if (!e.getAllowUndo())
-                    return t.set(e, {
-                        currentContent: n,
-                        directionMap: a,
-                        lastChangeType: r,
-                        selection: n.getSelectionAfter(),
-                        forceSelection: i,
+            (e.push = function (t, r, n) {
+                var i,
+                    o,
+                    s = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
+                if (t.getCurrentContent() === r) return t;
+                var u = a.getDirectionMap(r, t.getDirectionMap());
+                if (!t.getAllowUndo())
+                    return e.set(t, {
+                        currentContent: r,
+                        directionMap: u,
+                        lastChangeType: n,
+                        selection: r.getSelectionAfter(),
+                        forceSelection: s,
                         inlineStyleOverride: null,
                     });
-                var s = e.getSelection(),
-                    l = e.getCurrentContent(),
-                    c = e.getUndoStack(),
-                    u = n;
-                s !== l.getSelectionAfter() || b(e, r)
-                    ? ((c = c.push(l)), (u = u.set("selectionBefore", s)))
-                    : ("insert-characters" === r || "backspace-character" === r || "delete-character" === r) &&
-                      (u = u.set("selectionBefore", l.getSelectionBefore()));
-                var d = e.getInlineStyleOverride();
-                -1 === ["adjust-depth", "change-block-type", "split-block"].indexOf(r) && (d = null);
-                var p = {
-                    currentContent: u,
-                    directionMap: a,
-                    undoStack: c,
+                var c = t.getSelection(),
+                    l = t.getCurrentContent(),
+                    p = t.getUndoStack(),
+                    h = r;
+                c !== l.getSelectionAfter() ||
+                ((i = t),
+                (o = n) !== i.getLastChangeType() ||
+                    ("insert-characters" !== o && "backspace-character" !== o && "delete-character" !== o))
+                    ? ((p = p.push(l)), (h = h.set("selectionBefore", c)))
+                    : ("insert-characters" === n || "backspace-character" === n || "delete-character" === n) &&
+                      (h = h.set("selectionBefore", l.getSelectionBefore()));
+                var d = t.getInlineStyleOverride();
+                -1 === ["adjust-depth", "change-block-type", "split-block"].indexOf(n) && (d = null);
+                var g = {
+                    currentContent: h,
+                    directionMap: u,
+                    undoStack: p,
                     redoStack: f(),
-                    lastChangeType: r,
-                    selection: n.getSelectionAfter(),
-                    forceSelection: i,
+                    lastChangeType: n,
+                    selection: r.getSelectionAfter(),
+                    forceSelection: s,
                     inlineStyleOverride: d,
                 };
-                return t.set(e, p);
+                return e.set(t, g);
             }),
-            (t.undo = function (e) {
-                if (!e.getAllowUndo()) return e;
-                var n = e.getUndoStack(),
-                    r = n.peek();
-                if (!r) return e;
-                var i = e.getCurrentContent(),
-                    a = o.getDirectionMap(r, e.getDirectionMap());
-                return t.set(e, {
-                    currentContent: r,
-                    directionMap: a,
-                    undoStack: n.shift(),
-                    redoStack: e.getRedoStack().push(i),
+            (e.undo = function (t) {
+                if (!t.getAllowUndo()) return t;
+                var r = t.getUndoStack(),
+                    n = r.peek();
+                if (!n) return t;
+                var i = t.getCurrentContent(),
+                    o = a.getDirectionMap(n, t.getDirectionMap());
+                return e.set(t, {
+                    currentContent: n,
+                    directionMap: o,
+                    undoStack: r.shift(),
+                    redoStack: t.getRedoStack().push(i),
                     forceSelection: !0,
                     inlineStyleOverride: null,
                     lastChangeType: "undo",
@@ -249,114 +324,62 @@ var a = n(630332),
                     selection: i.getSelectionBefore(),
                 });
             }),
-            (t.redo = function (e) {
-                if (!e.getAllowUndo()) return e;
-                var n = e.getRedoStack(),
-                    r = n.peek();
-                if (!r) return e;
-                var i = e.getCurrentContent(),
-                    a = o.getDirectionMap(r, e.getDirectionMap());
-                return t.set(e, {
-                    currentContent: r,
-                    directionMap: a,
-                    undoStack: e.getUndoStack().push(i),
-                    redoStack: n.shift(),
+            (e.redo = function (t) {
+                if (!t.getAllowUndo()) return t;
+                var r = t.getRedoStack(),
+                    n = r.peek();
+                if (!n) return t;
+                var i = t.getCurrentContent(),
+                    o = a.getDirectionMap(n, t.getDirectionMap());
+                return e.set(t, {
+                    currentContent: n,
+                    directionMap: o,
+                    undoStack: t.getUndoStack().push(i),
+                    redoStack: r.shift(),
                     forceSelection: !0,
                     inlineStyleOverride: null,
                     lastChangeType: "redo",
                     nativelyRenderedContent: null,
-                    selection: r.getSelectionAfter(),
+                    selection: n.getSelectionAfter(),
                 });
             }),
-            (e.getImmutable = function () {
+            (t.getImmutable = function () {
                 return this._immutable;
             }),
-            t
+            e
         );
     })();
 
-function h(e, t, n) {
-    return _.set(e, {
-        selection: t,
-        forceSelection: n,
+function d(t, e, r) {
+    return h.set(t, {
+        selection: e,
+        forceSelection: r,
         nativelyRenderedContent: null,
         inlineStyleOverride: null,
     });
 }
 
-function m(e, t) {
-    return e
+function g(t, e) {
+    return t
         .getBlockMap()
-        .map(function (n) {
-            return a.generate(e, n, t);
+        .map(function (r) {
+            return i.generate(t, r, e);
         })
         .toOrderedMap();
 }
 
-function g(e, t, n, r) {
-    var i = e.getCurrentContent().set("entityMap", n),
-        s = i.getBlockMap();
-    return e
-        .getImmutable()
-        .get("treeMap")
-        .merge(
-            t
-                .toSeq()
-                .filter(function (e, t) {
-                    return e !== s.get(t);
-                })
-                .map(function (e) {
-                    return a.generate(i, e, r);
-                }),
-        );
-}
-
-function E(e, t, n, r, i) {
-    return n.merge(
-        t
-            .toSeq()
-            .filter(function (t) {
-                return r.getDecorations(t, e) !== i.getDecorations(t, e);
-            })
-            .map(function (t) {
-                return a.generate(e, t, r);
-            }),
-    );
-}
-
-function b(e, t) {
-    return (
-        t !== e.getLastChangeType() ||
-        ("insert-characters" !== t && "backspace-character" !== t && "delete-character" !== t)
-    );
-}
-
-function y(e, t) {
-    var n = t.getStartKey(),
-        r = t.getStartOffset(),
-        i = e.getBlockForKey(n);
-    return r > 0 ? i.getInlineStyleAt(r - 1) : i.getLength() ? i.getInlineStyleAt(0) : A(e, n);
-}
-
-function O(e, t) {
-    var n = t.getStartKey(),
-        r = t.getStartOffset(),
-        i = e.getBlockForKey(n);
-    return r < i.getLength() ? i.getInlineStyleAt(r) : r > 0 ? i.getInlineStyleAt(r - 1) : A(e, n);
-}
-
-function A(e, t) {
-    var n = e
+function y(t, e) {
+    var r = t
         .getBlockMap()
         .reverse()
-        .skipUntil(function (e, n) {
-            return n === t;
+        .skipUntil(function (t, r) {
+            return r === e;
         })
         .skip(1)
-        .skipUntil(function (e, t) {
-            return e.getLength();
+        .skipUntil(function (t, e) {
+            return t.getLength();
         })
         .first();
-    return n ? n.getInlineStyleAt(n.getLength() - 1) : u();
+    return r ? r.getInlineStyleAt(r.getLength() - 1) : c();
 }
-e.exports = _;
+t.exports = h;

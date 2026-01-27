@@ -1,48 +1,34 @@
 n.d(t, {
-    Cr: () => I,
-    I1: () => T,
-    Nj: () => C,
-    R6: () => R,
-    SX: () => N,
-    UB: () => w,
-    YE: () => P,
+    Cr: () => O,
+    I1: () => E,
+    Nj: () => j,
+    R6: () => I,
+    SX: () => C,
+    UB: () => S,
+    YE: () => T,
 }),
     n(228524),
     n(938796);
 var r = n(627968),
     i = n(64700),
-    a = n(665260),
-    s = n(311907),
-    o = n(571356),
-    l = n(990078),
+    l = n(665260),
+    a = n(311907),
+    s = n(571356),
+    o = n(990078),
     c = n(397927),
     u = n(458517),
     d = n(713021),
-    f = n(121489),
-    p = n(734057),
-    _ = n(644447),
-    h = n(998218),
-    m = n(465856),
-    g = n(652176),
-    E = n(652215),
-    b = n(985018),
+    p = n(121489),
+    m = n(734057),
+    f = n(644447),
+    g = n(998218),
+    h = n(465856),
+    _ = n(652176),
+    b = n(652215),
+    A = n(985018),
     y = n(928438);
 
-function O(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function A(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,44 +39,47 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function v(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function S(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function I(e) {
+function O(e) {
     var t;
     let n = e.item.originalItem;
-    return (0, g.LL)(
-        S(A({}, e), {
+    return (0, _.LL)(
+        x(v({}, e), {
             alt: n.description,
-            src: (0, _.E)({
+            src: (0, f.E)({
                 proxyURL: n.proxy_url,
                 url: n.url,
             }),
@@ -99,7 +88,7 @@ function I(e) {
             placeholderVersion: n.placeholder_version,
             contentType: n.content_type,
             originalContentType: n.original_content_type,
-            srcIsAnimated: (0, a.Lt)(null != (t = n.flags) ? t : 0, E.sbO.IS_ANIMATED),
+            srcIsAnimated: (0, l.Lt)(null != (t = n.flags) ? t : 0, b.sbO.IS_ANIMATED),
             sourceMetadata: {
                 message: e.message,
                 identifier: {
@@ -115,14 +104,14 @@ function I(e) {
     );
 }
 
-function T(e) {
+function E(e) {
     var t;
     let n = e.item.originalItem,
-        s = i.useCallback(() => {
+        a = i.useCallback(() => {
             var e;
-            return (0, a.Lt)(null != (e = n.flags) ? e : 0, E.sbO.IS_CLIP)
-                ? (0, r.jsx)(l.m, {
-                      text: b.intl.string(b.t["/fgfWh"]),
+            return (0, l.Lt)(null != (e = n.flags) ? e : 0, b.sbO.IS_CLIP)
+                ? (0, r.jsx)(o.m, {
+                      text: A.intl.string(A.t["/fgfWh"]),
                       children: (0, r.jsxs)("div", {
                           className: y.M,
                           children: [
@@ -130,31 +119,31 @@ function T(e) {
                                   size: "xs",
                                   color: "currentColor",
                               }),
-                              (0, r.jsx)(o.E, {
+                              (0, r.jsx)(s.E, {
                                   variant: "text-xs/semibold",
                                   color: "always-white",
-                                  children: b.intl.string(b.t.oA4afG),
+                                  children: A.intl.string(A.t.oA4afG),
                               }),
                           ],
                       }),
                   })
                 : null;
         }, [n]),
-        u = h.A.toURLSafe(n.proxy_url);
+        u = g.A.toURLSafe(n.proxy_url);
     return null == u
         ? null
         : (u.searchParams.append("format", "webp"),
-          (0, g.$o)(
-              S(A({}, e), {
+          (0, _.$o)(
+              x(v({}, e), {
                   alt: n.description,
                   poster: u.toString(),
                   fileSize: n.size,
-                  fileName: (0, m.A)(n),
+                  fileName: (0, h.A)(n),
                   src: n.url,
                   placeholder: n.placeholder,
                   placeholderVersion: n.placeholder_version,
-                  srcIsAnimated: (0, a.Lt)(null != (t = n.flags) ? t : 0, E.sbO.IS_ANIMATED),
-                  renderOverlayContent: s,
+                  srcIsAnimated: (0, l.Lt)(null != (t = n.flags) ? t : 0, b.sbO.IS_ANIMATED),
+                  renderOverlayContent: a,
                   sourceMetadata: {
                       message: e.message,
                       identifier: {
@@ -168,100 +157,100 @@ function T(e) {
           ));
 }
 
-function C(e) {
+function j(e) {
     let t = e.item.originalItem;
-    return (0, g.gL)(
-        S(A({}, e), {
+    return (0, _.gL)(
+        x(v({}, e), {
             fileSize: t.size,
-            fileName: (0, m.A)(t),
+            fileName: (0, h.A)(t),
             src: t.url,
         }),
     );
 }
 
-function N(e) {
+function C(e) {
     let { message: t, item: n } = e,
         r = n.originalItem,
-        a = (0, d.dx)(d.k0.VOICE_MESSAGE, r.id),
-        s = i.useCallback(
+        l = (0, d.dx)(d.k0.VOICE_MESSAGE, r.id),
+        a = i.useCallback(
             (e, n, i) => {
-                var a;
-                (0, f.wQ)(t.id, null != (a = r.duration_secs) ? a : null, n, t.author.id);
+                var l;
+                (0, p.wQ)(t.id, null != (l = r.duration_secs) ? l : null, n, t.author.id);
+            },
+            [t, r.duration_secs],
+        ),
+        s = i.useCallback(
+            (e, n) => {
+                var i;
+                (0, p.dP)(t.id, null != (i = r.duration_secs) ? i : null, e, t.author.id, n);
             },
             [t, r.duration_secs],
         ),
         o = i.useCallback(
-            (e, n) => {
-                var i;
-                (0, f.dP)(t.id, null != (i = r.duration_secs) ? i : null, e, t.author.id, n);
-            },
-            [t, r.duration_secs],
-        ),
-        l = i.useCallback(
             (e) => {
                 var n;
-                (0, f._O)(t.id, null != (n = null == e ? void 0 : e.message) ? n : null);
+                (0, p._O)(t.id, null != (n = null == e ? void 0 : e.message) ? n : null);
             },
             [t],
         );
-    return (0, g.P$)(
-        S(A({}, e), {
+    return (0, _.P$)(
+        x(v({}, e), {
             fileSize: r.size,
-            fileName: (0, m.A)(r),
+            fileName: (0, h.A)(r),
             src: r.url,
             durationSecs: r.duration_secs,
             waveform: r.waveform,
-            onPlay: s,
-            onPause: o,
-            onError: l,
-            playbackCacheKey: a,
+            onPlay: a,
+            onPause: s,
+            onError: o,
+            playbackCacheKey: l,
         }),
     );
 }
 
-function R(e) {
+function I(e) {
     let t = e.item.originalItem;
-    return (0, g._d)(
-        S(A({}, e), {
+    return (0, _._d)(
+        x(v({}, e), {
             url: t.url,
-            fileName: (0, m.A)(t),
+            fileName: (0, h.A)(t),
             fileSize: t.size,
             contentType: t.content_type,
         }),
     );
 }
 
-function w(e) {
+function S(e) {
     let t = e.item.originalItem;
-    return (0, g.Dk)(
-        S(A({}, e), {
+    return (0, _.Dk)(
+        x(v({}, e), {
             url: t.url,
-            fileName: (0, m.A)(t),
+            fileName: (0, h.A)(t),
             fileSize: t.size,
         }),
     );
 }
 
-function P(e) {
+function T(e) {
     return "CLIP" === e.item.type
-        ? (0, r.jsx)(D, {
+        ? (0, r.jsx)(N, {
               attachment: e.item.originalItem,
               message: e.message,
           })
         : null;
 }
 
-function D(e) {
+function N(e) {
     var t;
     let { attachment: n, message: i } = e,
-        a = i.channel_id,
-        o = (0, s.bG)([p.A], () => {
+        l = i.channel_id,
+        s = (0, a.bG)([m.A], () => {
             var e;
-            return null == (e = p.A.getBasicChannel(a)) ? void 0 : e.guild_id;
+            return null == (e = m.A.getBasicChannel(l)) ? void 0 : e.guild_id;
         }),
-        { clip_created_at: l, clip_participants: c, title: d, application: f } = n;
+        { clip_created_at: o, clip_participants: c, title: d, application: p } = n;
     return (0, r.jsx)(u.A, {
-        createdAt: null != l ? Date.parse(l) : void 0,
+        createdAt: null != o ? Date.parse(o) : void 0,
         participantIds:
             null !=
             (t =
@@ -273,8 +262,8 @@ function D(e) {
                       }))
                 ? t
                 : [],
-        applicationId: null == f ? void 0 : f.id,
+        applicationId: null == p ? void 0 : p.id,
         title: d,
-        guildId: o,
+        guildId: s,
     });
 }

@@ -1,61 +1,47 @@
 n.d(t, {
-    A: () => E,
+    A: () => f,
 });
 var r,
-    i = n(311907),
+    i,
+    l = n(311907),
     a = n(506774),
     s = n(73153),
     o = n(785796);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
 let c = "MaintenanceStore",
     u = null,
     d = null,
-    f = null;
-
-function p() {
-    (u = null), o.A.checkScheduledMaintenances();
-}
-
-function _(e) {
-    u = e.incident;
-}
-
-function h(e) {
-    d = e.maintenance;
-}
-
-function m() {
-    if (null == d) return !1;
-    (f = d.id), a.w.set(c, f);
-}
-class g extends (r = i.Ay.Store) {
+    p = null;
+class m extends (i = l.Ay.Store) {
     initialize() {
-        f = a.w.get(c);
+        p = a.w.get(c);
     }
     getIncident() {
         return u;
     }
     getScheduledMaintenance() {
-        return null != d && d.id !== f ? d : null;
+        return null != d && d.id !== p ? d : null;
     }
 }
-l(g, "displayName", "MaintenanceStore");
-let E = new g(s.h, {
-    CONNECTION_OPEN: p,
-    STATUS_PAGE_INCIDENT: _,
-    STATUS_PAGE_SCHEDULED_MAINTENANCE: h,
-    STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: m,
+(r = "displayName") in m
+    ? Object.defineProperty(m, r, {
+          value: "MaintenanceStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (m[r] = "MaintenanceStore");
+let f = new m(s.h, {
+    CONNECTION_OPEN: function () {
+        (u = null), o.A.checkScheduledMaintenances();
+    },
+    STATUS_PAGE_INCIDENT: function (e) {
+        u = e.incident;
+    },
+    STATUS_PAGE_SCHEDULED_MAINTENANCE: function (e) {
+        d = e.maintenance;
+    },
+    STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: function () {
+        if (null == d) return !1;
+        (p = d.id), a.w.set(c, p);
+    },
 });

@@ -1,50 +1,49 @@
 n.d(t, {
     F: () => y,
-    t: () => O,
+    t: () => v,
 });
 var r = n(64700),
     i = n(311907),
-    a = n(735991),
-    s = n(297486),
-    o = n(837057),
-    l = n(310419),
+    l = n(735991),
+    a = n(297486),
+    s = n(837057),
+    o = n(310419),
     c = n(734057),
     u = n(576705),
     d = n(309010),
-    f = n(967198),
-    p = n(692848),
-    _ = n(204776),
-    h = n(354287),
-    m = n(652215),
-    g = n(488995),
-    E = n(985018);
+    p = n(967198),
+    m = n(692848),
+    f = n(204776),
+    g = n(354287),
+    h = n(652215),
+    _ = n(488995),
+    b = n(985018);
 
-function b(e) {
-    let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: s } = e,
-        o = (0, _.Ie)({
+function A(e) {
+    let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: a } = e,
+        s = (0, f.Ie)({
             customInstallUrl: n,
             installParams: r,
-            integrationTypesConfig: s,
+            integrationTypesConfig: a,
         }),
-        l = (0, i.bG)([f.A], () => {
+        o = (0, i.bG)([p.A], () => {
             var e;
-            return null != (e = f.A.getGuildId()) ? e : void 0;
+            return null != (e = p.A.getGuildId()) ? e : void 0;
         }),
-        p = (0, i.bG)([c.A, u.A, d.A], () => {
+        m = (0, i.bG)([c.A, u.A, d.A], () => {
             let e = c.A.getChannel(d.A.getChannelId());
-            return null != e && (e.isPrivate() || u.A.can(m.xBc.SEND_MESSAGES, e));
+            return null != e && (e.isPrivate() || u.A.can(h.xBc.SEND_MESSAGES, e));
         }, []),
-        h = (0, a.V1)(e, l) && p,
-        g = t || h;
+        g = (0, l.V1)(e, o) && m;
     return {
         isDiscoverable: t,
         customInstallUrl: n,
         installParams: r,
-        integrationTypesConfig: s,
-        canViewApp: g,
-        canOpenAppLauncher: h,
-        isInstallable: o,
-        selectedGuildId: l,
+        integrationTypesConfig: a,
+        canViewApp: t || g,
+        canOpenAppLauncher: g,
+        isInstallable: s,
+        selectedGuildId: o,
     };
 }
 
@@ -52,62 +51,62 @@ function y(e, t) {
     let {
         canViewApp: n,
         canOpenAppLauncher: i,
-        isInstallable: a,
+        isInstallable: l,
         customInstallUrl: c,
         installParams: u,
         integrationTypesConfig: d,
-        selectedGuildId: f,
-    } = b(e);
+        selectedGuildId: p,
+    } = A(e);
     return r.useMemo(
         () =>
             n
                 ? () => {
                       (null == t || t(), i)
-                          ? (0, s.hg)(e.id)
-                          : (0, o.transitionToGlobalDiscovery)({
-                                tab: g.GlobalDiscoveryTab.APPS,
+                          ? (0, a.hg)(e.id)
+                          : (0, s.transitionToGlobalDiscovery)({
+                                tab: _.GlobalDiscoveryTab.APPS,
                                 applicationId: e.id,
                                 newSessionState: {
                                     entrypoint: {
-                                        name: l.sW.APPLICATION_MESSAGE_EMBED,
+                                        name: o.sW.APPLICATION_MESSAGE_EMBED,
                                     },
                                 },
                             });
                   }
-                : a
+                : l
                   ? () => {
                         null == t || t(),
-                            (0, p.o)({
+                            (0, m.o)({
                                 applicationId: e.id,
                                 customInstallUrl: c,
                                 installParams: u,
                                 integrationTypesConfig: d,
-                                guildId: f,
+                                guildId: p,
                                 source: "app_message_embed",
                             });
                     }
                   : void 0,
-        [e.id, i, n, c, u, d, a, t, f],
+        [e.id, i, n, c, u, d, l, t, p],
     );
 }
 
-function O(e) {
-    let { canViewApp: t, isInstallable: n } = b(e),
+function v(e) {
+    let { canViewApp: t, isInstallable: n } = A(e),
         i = y(e);
     return r.useMemo(
         () =>
             t && null != i
                 ? {
-                      label: E.intl.string(E.t.hvVgAZ),
-                      trackingArea: h.kY.VIEW,
+                      label: b.intl.string(b.t.hvVgAZ),
+                      trackingArea: g.kY.VIEW,
                       onClick() {
                           i();
                       },
                   }
                 : n && null != i
                   ? {
-                        label: E.intl.string(E.t.NgXl3C),
-                        trackingArea: h.kY.ADD_APP,
+                        label: b.intl.string(b.t.NgXl3C),
+                        trackingArea: g.kY.ADD_APP,
                         onClick() {
                             i();
                         },

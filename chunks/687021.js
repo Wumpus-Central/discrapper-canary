@@ -1,48 +1,48 @@
 n.d(t, {
-    A: () => g,
-    v: () => E,
+    A: () => f,
+    v: () => h,
 }),
     n(667532);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(444550),
+    l = n(503698),
+    s = n.n(l),
+    a = n(311907),
+    o = n(444550),
     c = n(263063),
-    u = n(128450),
-    d = n(71393),
-    f = n(711014),
+    d = n(128450),
+    u = n(71393),
+    _ = n(711014),
     p = n(403362),
-    _ = n(833336),
-    h = n(985018),
-    m = n(306505);
+    m = n(833336),
+    g = n(985018),
+    A = n(306505);
 
-function g(e) {
-    let { guildId: t, className: n, globalOption: i, hideDivider: a = !1, onChange: o, renderOptionSuffix: l } = e;
-    return (0, r.jsx)(u.A, {
-        className: s()(m.u, n),
-        title: h.intl.string(h.t.ref7Ki),
-        hideDivider: a,
+function f(e) {
+    let { guildId: t, className: n, globalOption: i, hideDivider: l = !1, onChange: a, renderOptionSuffix: o } = e;
+    return (0, r.jsx)(d.A, {
+        className: s()(A.u, n),
+        title: g.intl.string(g.t.ref7Ki),
+        hideDivider: l,
         forcedDivider: !0,
-        children: (0, r.jsx)(E, {
+        children: (0, r.jsx)(h, {
             guildId: t,
-            onChange: o,
-            renderOptionSuffix: l,
+            onChange: a,
+            renderOptionSuffix: o,
             globalOption: i,
         }),
     });
 }
 
-function E(e) {
-    let { guildId: t, globalOption: n, onChange: a, renderOptionSuffix: s } = e,
-        u = (0, o.bG)([_.A], () => _.A.showNotice()),
-        g = (0, o.bG)([f.Ay], () => f.Ay.getFlattenedGuildIds()),
-        E = (0, o.bG)([d.A], () => d.A.getGuilds()),
+function h(e) {
+    let { guildId: t, globalOption: n, onChange: l, renderOptionSuffix: s } = e,
+        d = (0, a.bG)([m.A], () => m.A.showNotice()),
+        f = (0, a.bG)([_.Ay], () => _.Ay.getFlattenedGuildIds()),
+        h = (0, a.bG)([u.A], () => u.A.getGuilds()),
         b = i.useMemo(() => {
-            let e = g
+            let e = f
                 .map((e) => {
-                    let t = E[e];
+                    let t = h[e];
                     return null == t
                         ? null
                         : {
@@ -52,8 +52,8 @@ function E(e) {
                 })
                 .filter(p.Vq);
             return null != n && e.unshift(n), e;
-        }, [g, E, n]),
-        y = i.useCallback(
+        }, [f, h, n]),
+        E = i.useCallback(
             (e) => {
                 let t =
                     (null == e ? void 0 : e.label) === (null == n ? void 0 : n.label) &&
@@ -61,27 +61,26 @@ function E(e) {
                 return null == e || "" === e.value || t
                     ? null
                     : (0, r.jsx)(c.A, {
-                          className: m.c,
-                          guild: E[e.value],
+                          className: A.c,
+                          guild: h[e.value],
                           size: c.A.Sizes.SMOL,
                           active: !0,
                       });
             },
-            [E, n],
-        ),
-        O = (e) => {
-            if ("" === e || e === (null == n ? void 0 : n.value)) return void a(null);
-            let t = E[e];
-            null != t && a(t);
-        };
-    return (0, r.jsx)(l.p, {
-        isDisabled: u,
-        onChange: O,
+            [h, n],
+        );
+    return (0, r.jsx)(o.p, {
+        isDisabled: d,
+        onChange: (e) => {
+            if ("" === e || e === (null == n ? void 0 : n.value)) return void l(null);
+            let t = h[e];
+            null != t && l(t);
+        },
         value: t,
         options: b,
-        renderOptionPrefix: y,
+        renderOptionPrefix: E,
         renderOptionSuffix: s,
-        placeholder: h.intl.string(h.t["kMgj+e"]),
+        placeholder: g.intl.string(g.t["kMgj+e"]),
         "data-migration-pending": !0,
     });
 }

@@ -1,96 +1,96 @@
 n.d(t, {
-    A: () => G,
-    p: () => U,
+    A: () => M,
+    p: () => V,
 });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(607399),
-    l = n(417597),
+var i = n(627968),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(607399),
+    o = n(417597),
     c = n(397927),
-    u = n(944791),
-    d = n(793574),
-    f = n(688810),
-    p = n(726249),
-    _ = n(915089),
-    h = n(742589),
-    m = n(544028),
-    g = n(253932),
-    E = n(899847),
+    d = n(944791),
+    u = n(793574),
+    g = n(688810),
+    h = n(726249),
+    x = n(915089),
+    A = n(742589),
+    p = n(544028),
+    m = n(253932),
+    j = n(899847),
     b = n(695515),
-    y = n(945276),
-    O = n(834981),
-    A = n(102615),
-    v = n(246109),
-    S = n(452141),
-    I = n(888772),
-    T = n(614749),
-    C = n(768985),
+    O = n(438732),
+    S = n(834981),
+    E = n(102615),
+    f = n(246109),
+    v = n(452141),
+    T = n(888772),
+    C = n(614749),
+    y = n(768985),
     N = n(191627),
-    R = n(652215),
-    w = n(842130),
+    I = n(652215),
+    _ = n(842130),
     P = n(985018),
-    D = n(914280);
-let x = {
-        [N.u9.REQUESTS]: I.A,
-        [N.u9.ACTIVITY]: S.A,
-        [N.u9.SETTINGS]: T.A,
-        [N.u9.CONTENT_AND_SOCIAL]: A.A,
-        [N.u9.DATA_AND_PRIVACY]: v.A,
+    G = n(914280);
+let R = {
+        [N.u9.REQUESTS]: T.A,
+        [N.u9.ACTIVITY]: v.A,
+        [N.u9.SETTINGS]: C.A,
+        [N.u9.CONTENT_AND_SOCIAL]: E.A,
+        [N.u9.DATA_AND_PRIVACY]: f.A,
     },
-    L = {
-        [N.u9.REQUESTS]: I.A,
-        [N.u9.ACTIVITY]: S.A,
-        [N.u9.CONTENT_AND_SOCIAL]: A.A,
-        [N.u9.DATA_AND_PRIVACY]: v.A,
+    D = {
+        [N.u9.REQUESTS]: T.A,
+        [N.u9.ACTIVITY]: v.A,
+        [N.u9.CONTENT_AND_SOCIAL]: E.A,
+        [N.u9.DATA_AND_PRIVACY]: f.A,
     };
 
-function j() {
-    return (0, r.jsx)(c.BJc, {
+function L() {
+    return (0, i.jsx)(c.BJc, {
         justify: "center",
         align: "center",
-        className: D.g4,
-        children: (0, r.jsx)(c.y$y, {}),
+        className: G.g4,
+        children: (0, i.jsx)(c.y$y, {}),
     });
 }
 
-function M(e) {
+function k(e) {
     let { section: t, handleItemSelect: n } = e,
-        i = (0, O.VT)(),
-        a = (0, y.A)();
+        s = (0, S.VT)(),
+        l = (0, O.A)();
     return t === N.u9.CONTENT_AND_SOCIAL || t === N.u9.DATA_AND_PRIVACY
         ? null
-        : (0, r.jsxs)(c.VQ0, {
-              className: D.c5,
-              "aria-label": P.intl.string(w.default.RZqaJn),
+        : (0, i.jsxs)(c.VQ0, {
+              className: G.c5,
+              "aria-label": P.intl.string(_.default.RZqaJn),
               selectedItem: t,
               type: "top",
               look: "brand",
               onItemSelect: n,
               children: [
-                  (0, r.jsx)(c.VQ0.Item, {
-                      className: D.jA,
+                  (0, i.jsx)(c.VQ0.Item, {
+                      className: G.jA,
                       id: N.u9.ACTIVITY,
-                      children: P.intl.string(w.default.bdBmqy),
+                      children: P.intl.string(_.default.bdBmqy),
                   }),
-                  (0, r.jsxs)(c.VQ0.Item, {
-                      className: D.jA,
+                  (0, i.jsxs)(c.VQ0.Item, {
+                      className: G.jA,
                       id: N.u9.REQUESTS,
-                      "aria-label": P.intl.string(w.default["gVWG+6"]),
+                      "aria-label": P.intl.string(_.default["gVWG+6"]),
                       children: [
-                          P.intl.string(w.default["gVWG+6"]),
-                          i > 0
-                              ? (0, r.jsx)(c.hVq, {
-                                    className: D.qS,
-                                    count: i,
+                          P.intl.string(_.default["gVWG+6"]),
+                          s > 0
+                              ? (0, i.jsx)(c.hVq, {
+                                    className: G.qS,
+                                    count: s,
                                 })
                               : null,
                       ],
                   }),
-                  a
-                      ? (0, r.jsx)(c.VQ0.Item, {
-                            className: D.jA,
+                  l
+                      ? (0, i.jsx)(c.VQ0.Item, {
+                            className: G.jA,
                             id: N.u9.SETTINGS,
                             children: P.intl.string(P.t["3D5yo/"]),
                         })
@@ -99,50 +99,50 @@ function M(e) {
           });
 }
 
-function k(e) {
-    let { theme: t, section: n, handleItemSelect: i } = e,
-        a = (0, _.GV)(),
-        l = (0, O.VT)();
-    return (0, r.jsx)(c.NPJ, {
+function w(e) {
+    let { theme: t, section: n, handleItemSelect: s } = e,
+        l = (0, x.GV)(),
+        o = (0, S.VT)();
+    return (0, i.jsx)(c.NPJ, {
         theme: t,
         children: (e) =>
-            (0, r.jsxs)(h.A, {
-                className: s()(e, D.ZB),
-                scrollable: o.Fr,
+            (0, i.jsxs)(A.A, {
+                className: r()(e, G.ZB),
+                scrollable: a.Fr,
                 role: "navigation",
-                "aria-labelledby": a,
+                "aria-labelledby": l,
                 toolbar: !0,
                 children: [
-                    (0, r.jsx)(h.A.Icon, {
+                    (0, i.jsx)(A.A.Icon, {
                         icon: c.nFg,
                         "aria-hidden": !0,
                     }),
-                    (0, r.jsx)(h.A.Title, {
-                        id: a,
-                        children: P.intl.string(w.default.RZqaJn),
+                    (0, i.jsx)(A.A.Title, {
+                        id: l,
+                        children: P.intl.string(_.default.RZqaJn),
                     }),
-                    (0, r.jsx)(h.A.Divider, {}),
-                    (0, r.jsxs)(c.VQ0, {
-                        "aria-label": P.intl.string(w.default.RZqaJn),
+                    (0, i.jsx)(A.A.Divider, {}),
+                    (0, i.jsxs)(c.VQ0, {
+                        "aria-label": P.intl.string(_.default.RZqaJn),
                         selectedItem: n,
                         type: "top-pill",
-                        onItemSelect: i,
+                        onItemSelect: s,
                         children: [
-                            (0, r.jsx)(c.VQ0.Item, {
+                            (0, i.jsx)(c.VQ0.Item, {
                                 id: N.u9.ACTIVITY,
-                                className: D.AS,
-                                children: P.intl.string(w.default.bdBmqy),
+                                className: G.AS,
+                                children: P.intl.string(_.default.bdBmqy),
                             }),
-                            (0, r.jsxs)(c.VQ0.Item, {
+                            (0, i.jsxs)(c.VQ0.Item, {
                                 id: N.u9.REQUESTS,
-                                className: D.AS,
-                                "aria-label": P.intl.string(w.default["gVWG+6"]),
+                                className: G.AS,
+                                "aria-label": P.intl.string(_.default["gVWG+6"]),
                                 children: [
-                                    P.intl.string(w.default["gVWG+6"]),
-                                    l > 0
-                                        ? (0, r.jsx)(c.hVq, {
-                                              className: D.qS,
-                                              count: l,
+                                    P.intl.string(_.default["gVWG+6"]),
+                                    o > 0
+                                        ? (0, i.jsx)(c.hVq, {
+                                              className: G.qS,
+                                              count: o,
                                           })
                                         : null,
                                 ],
@@ -154,94 +154,95 @@ function k(e) {
     });
 }
 
-function U() {
-    let e = (0, _.GV)(),
+function V() {
+    let e = (0, x.GV)(),
         {
             isLoading: t,
             selectedTab: n,
-            handleTabChange: i,
-            showAgeGateModal: a,
-        } = (0, C.j)({
+            handleTabChange: s,
+            showAgeGateModal: l,
+        } = (0, y.j)({
             location: N.MH.SETTINGS,
             onMountEffect: () => {
-                E.Ay.initialPageLoad();
+                j.Ay.initialPageLoad();
             },
-        }),
-        s = (e) => {
-            i(e);
-        };
-    if (a) return null;
-    let o = x[n];
-    return (0, r.jsxs)("main", {
-        className: D.kL,
-        "aria-label": P.intl.string(w.default.RZqaJn),
+        });
+    if (l) return null;
+    let r = R[n];
+    return (0, i.jsxs)("main", {
+        className: G.kL,
+        "aria-label": P.intl.string(_.default.RZqaJn),
         children: [
-            (0, r.jsx)(p.HI, {
-                location: P.intl.string(w.default.RZqaJn),
+            (0, i.jsx)(h.HI, {
+                location: P.intl.string(_.default.RZqaJn),
             }),
-            (0, r.jsx)(M, {
+            (0, i.jsx)(k, {
                 section: n,
-                handleItemSelect: s,
+                handleItemSelect: (e) => {
+                    s(e);
+                },
             }),
-            (0, r.jsx)(c.VQ0.Panel, {
+            (0, i.jsx)(c.VQ0.Panel, {
                 id: n,
                 "aria-labelledby": e,
-                className: D.Us,
-                children: t ? (0, r.jsx)(j, {}) : (0, r.jsx)(o, {}),
+                className: G.Us,
+                children: t ? (0, i.jsx)(L, {}) : (0, i.jsx)(r, {}),
             }),
         ],
     });
 }
 
-function G() {
-    let { analyticsLocations: e } = (0, f.Ay)(d.A.FAMILY_CENTER),
-        t = (0, y.A)(),
-        n = (0, l.bG)([b.A], () => b.A.getIsInitialized()),
-        a = (0, l.bG)([m.A], () => m.A.theme),
-        o = (0, _.GV)(),
+function M() {
+    let { analyticsLocations: e } = (0, g.Ay)(u.A.FAMILY_CENTER),
+        t = (0, O.A)(),
+        n = (0, o.bG)([b.A], () => b.A.getIsInitialized()),
+        l = (0, o.bG)([p.A], () => p.A.theme),
+        a = (0, x.GV)(),
         {
-            isLoading: h,
-            selectedTab: O,
-            handleTabChange: A,
-            showAgeGateModal: v,
-        } = (0, C.j)({
+            isLoading: A,
+            selectedTab: S,
+            handleTabChange: E,
+            showAgeGateModal: f,
+        } = (0, y.j)({
             location: N.MH.SIDENAV,
             onMountEffect: () => {
-                u.I(R.BVt.FAMILY_CENTER), !b.A.isLoading() && b.A.canRefetch() && E.Ay.initialPageLoad();
+                d.I(I.BVt.FAMILY_CENTER), !b.A.isLoading() && b.A.canRefetch() && j.Ay.initialPageLoad();
             },
         });
-    i.useEffect(() => {
-        let e = g.dm.getSetting();
-        n && t && void 0 === e && g.dm.updateSetting(!0);
-    }, [n, t]);
-    let S = (e) => {
-        A(e);
-    };
-    if (v) return null;
-    let I = O !== N.u9.SETTINGS ? O : N.u9.ACTIVITY,
-        T = L[I];
-    return (0, r.jsx)(f.f5, {
+    if (
+        (s.useEffect(() => {
+            let e = m.dm.getSetting();
+            n && t && void 0 === e && m.dm.updateSetting(!0);
+        }, [n, t]),
+        f)
+    )
+        return null;
+    let v = S !== N.u9.SETTINGS ? S : N.u9.ACTIVITY,
+        T = D[v];
+    return (0, i.jsx)(g.f5, {
         value: e,
-        children: (0, r.jsxs)("main", {
-            className: s()(D.kL, D.ei),
-            "aria-label": P.intl.string(w.default.RZqaJn),
+        children: (0, i.jsxs)("main", {
+            className: r()(G.kL, G.ei),
+            "aria-label": P.intl.string(_.default.RZqaJn),
             children: [
-                (0, r.jsx)(p.HI, {
-                    location: P.intl.string(w.default.RZqaJn),
+                (0, i.jsx)(h.HI, {
+                    location: P.intl.string(_.default.RZqaJn),
                 }),
-                (0, r.jsx)(k, {
-                    theme: a,
-                    section: I,
-                    handleItemSelect: S,
+                (0, i.jsx)(w, {
+                    theme: l,
+                    section: v,
+                    handleItemSelect: (e) => {
+                        E(e);
+                    },
                 }),
-                (0, r.jsx)(c.VQ0.Panel, {
-                    id: I,
-                    "aria-labelledby": o,
-                    className: D.Om,
-                    children: (0, r.jsx)(c.HOs, {
-                        children: (0, r.jsx)("div", {
-                            className: D.O4,
-                            children: h ? (0, r.jsx)(j, {}) : (0, r.jsx)(T, {}),
+                (0, i.jsx)(c.VQ0.Panel, {
+                    id: v,
+                    "aria-labelledby": a,
+                    className: G.Om,
+                    children: (0, i.jsx)(c.HOs, {
+                        children: (0, i.jsx)("div", {
+                            className: G.O4,
+                            children: A ? (0, i.jsx)(L, {}) : (0, i.jsx)(T, {}),
                         }),
                     }),
                 }),

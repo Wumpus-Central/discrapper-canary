@@ -1,11 +1,10 @@
 n.d(t, {
-    p: () => s,
+    p: () => l,
 });
 var r = n(659051),
     i = n(652215);
-let a = 25;
 
-function s(e, t, n, s) {
+function l(e, t, n, l) {
     return !t.hasAnyAfter(
         e,
         (e) => {
@@ -14,9 +13,9 @@ function s(e, t, n, s) {
                 null != e.activity &&
                 (null == (t = e.application) ? void 0 : t.id) === n &&
                 e.activity.type === i.xL.JOIN &&
-                !(0, r.A)(s, e, n)
+                !(0, r.A)(l, e, n)
             );
         },
-        a,
+        25,
     );
 }

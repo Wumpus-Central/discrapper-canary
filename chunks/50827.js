@@ -1,12 +1,12 @@
 n.d(t, {
-    A: () => u,
+    A: () => d,
 }),
     n(896048);
-var r,
-    i = n(311907),
-    a = n(73153);
+var i,
+    s = n(311907),
+    r = n(73153);
 
-function s(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,12 +20,7 @@ function s(e, t, n) {
     );
 }
 let o = new Set();
-
-function l(e) {
-    let { guildId: t, collapsed: n } = e;
-    n ? o.add(t) : o.delete(t);
-}
-class c extends (r = i.Ay.PersistedStore) {
+class a extends (i = s.Ay.PersistedStore) {
     initialize(e) {
         o.clear(), null == e || e.guilds.forEach((e) => o.add(e));
     }
@@ -38,7 +33,10 @@ class c extends (r = i.Ay.PersistedStore) {
         };
     }
 }
-s(c, "displayName", "RecentlyActiveCollapseStore"), s(c, "persistKey", "RecentlyActiveCollapseStore");
-let u = new c(a.h, {
-    SET_RECENTLY_ACTIVE_COLLAPSED: l,
+l(a, "displayName", "RecentlyActiveCollapseStore"), l(a, "persistKey", "RecentlyActiveCollapseStore");
+let d = new a(r.h, {
+    SET_RECENTLY_ACTIVE_COLLAPSED: function (e) {
+        let { guildId: t, collapsed: n } = e;
+        n ? o.add(t) : o.delete(t);
+    },
 });

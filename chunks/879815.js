@@ -1,70 +1,39 @@
 n.d(t, {
-    A: () => A,
+    A: () => y,
 }),
     n(896048);
 var r = n(627968),
-    i = n(64700),
+    l = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(108531),
-    l = n(311907),
+    i = n.n(a),
+    s = n(108531),
+    o = n(311907),
     c = n(397927),
     u = n(796104),
     d = n(719718),
-    f = n(113493),
-    p = n(101492),
-    _ = n(532294),
+    m = n(113493),
+    f = n(101492),
+    p = n(532294),
     h = n(420627);
-
-function m(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function g(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                m(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let E = {
+let b = {
         tension: 1200,
         friction: 70,
     },
-    b = {
-        [_.P7.WELCOME]: c.fAJ,
-        [_.P7.MESSAGES]: c.oyn,
-        [_.P7.EMOJIS]: c.nm2,
-        [_.P7.VOICE]: c.cNw,
-        [_.P7.GUILDS]: c.RR9,
-        [_.P7.FRIENDS]: c.$yI,
-        [_.P7.GAMING]: c._xR,
-        [_.P7.QUESTS]: c.r2v,
-        [_.P7.END]: c.MZT,
+    g = {
+        [p.P7.WELCOME]: c.fAJ,
+        [p.P7.MESSAGES]: c.oyn,
+        [p.P7.EMOJIS]: c.nm2,
+        [p.P7.VOICE]: c.cNw,
+        [p.P7.GUILDS]: c.RR9,
+        [p.P7.FRIENDS]: c.$yI,
+        [p.P7.GAMING]: c._xR,
+        [p.P7.QUESTS]: c.r2v,
+        [p.P7.END]: c.MZT,
     };
 
-function y(e) {
-    let { isSelected: t, icon: n, color: a, onClick: s } = e,
-        [l, u] = i.useState(!1),
+function x(e) {
+    let { isSelected: t, icon: n, color: a, onClick: i } = e,
+        [o, u] = l.useState(!1),
         d = (0, c.zhh)({
             from: {
                 scale: 0,
@@ -72,57 +41,78 @@ function y(e) {
             to: {
                 scale: 1,
             },
-            config: E,
-        }),
-        f = n;
-    return (0, r.jsx)(o.animated.div, {
-        style: g({}, d),
+            config: b,
+        });
+    return (0, r.jsx)(s.animated.div, {
+        style: (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({}, d),
         children: (0, r.jsx)(c.DUT, {
-            onClick: s,
+            onClick: i,
             className: h.vk,
             onMouseEnter: () => u(!0),
             onMouseLeave: () => u(!1),
-            children: (0, r.jsx)(f, {
+            children: (0, r.jsx)(n, {
                 colorClass: h.gM,
                 color: a,
                 style: {
-                    opacity: t || l ? 1 : 0.5,
+                    opacity: t || o ? 1 : 0.5,
                 },
             }),
         }),
     });
 }
 
-function O() {
-    let e = (0, p.A)();
-    return (0, f.A)(e).map((e) => ({
-        slide: e,
-        icon: b[e],
-    }));
-}
-
-function A(e) {
-    let { activeSlide: t, setActiveSlide: n, color: a, className: o } = e,
-        c = Number.parseInt(t.toString(), 10),
-        f = (0, l.bG)([d.A], () => Number.parseInt(d.A.highestSlideSeen)),
-        p = O();
+function y(e) {
+    let t,
+        { activeSlide: n, setActiveSlide: a, color: s, className: c } = e,
+        p = Number.parseInt(n.toString(), 10),
+        b = (0, o.bG)([d.A], () => Number.parseInt(d.A.highestSlideSeen)),
+        y =
+            ((t = (0, f.A)()),
+            (0, m.A)(t).map((e) => ({
+                slide: e,
+                icon: g[e],
+            })));
     return (
-        i.useEffect(() => {
-            c > f && (0, u.Rq)("".concat(c));
-        }, [c, f]),
+        l.useEffect(() => {
+            p > b && (0, u.Rq)("".concat(p));
+        }, [p, b]),
         (0, r.jsx)("div", {
-            className: s()(h.kL, o),
-            children: p.map((e, t) => {
-                let { icon: i, slide: s } = e,
-                    o = Number.parseInt(s, 10);
-                return f >= o
+            className: i()(h.kL, c),
+            children: y.map((e, t) => {
+                let { icon: n, slide: l } = e,
+                    i = Number.parseInt(l, 10);
+                return b >= i
                     ? (0, r.jsx)(
-                          y,
+                          x,
                           {
-                              isSelected: c === o,
-                              icon: i,
-                              onClick: () => n(s),
-                              color: a,
+                              isSelected: p === i,
+                              icon: n,
+                              onClick: () => a(l),
+                              color: s,
                           },
                           "step-indicator-".concat(t),
                       )
@@ -131,7 +121,7 @@ function A(e) {
                           {
                               className: h.Gc,
                               style: {
-                                  borderColor: a,
+                                  borderColor: s,
                                   opacity: 0.5,
                               },
                           },

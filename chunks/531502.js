@@ -1,225 +1,193 @@
 n.d(t, {
-    A: () => z,
+    A: () => W,
 }),
     n(896048);
 var r = n(627968),
-    i = n(64700),
+    l = n(64700),
     a = n(735438),
-    s = n.n(a),
-    o = n(108531),
-    l = n(158954),
+    i = n.n(a),
+    s = n(108531),
+    o = n(158954),
     c = n(311907),
     u = n(499979),
     d = n(397927),
-    f = n(565645),
-    p = n(775602),
-    _ = n(291661),
+    m = n(565645),
+    f = n(775602),
+    p = n(291661),
     h = n(7584),
-    m = n(263063),
+    b = n(263063),
     g = n(71393),
-    E = n(287809),
-    b = n(486020),
-    y = n(998304),
-    O = n(854987),
-    A = n(719718),
-    v = n(57882),
-    S = n(40333),
-    I = n(612082),
-    T = n(46192),
-    C = n(573138),
+    x = n(287809),
+    y = n(486020),
+    v = n(998304),
+    j = n(854987),
+    C = n(719718),
+    _ = n(57882),
+    A = n(40333),
+    O = n(612082),
+    E = n(46192),
+    S = n(573138),
     N = n(182417),
-    R = n(877272),
-    w = n(398225),
-    P = n(532294),
-    D = n(622865),
-    x = n(985018),
+    I = n(877272),
+    P = n(398225),
+    w = n(532294),
+    T = n(622865),
+    R = n(985018),
     L = n(308021),
-    j = n(597260);
-
-function M(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function k(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                M(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let U = {
-        [P.c8.ZERO]: "Bonsai",
-        [P.c8.ONE]: "Donut",
-        [P.c8.TWO]: "Capybara",
-        [P.c8.THREE]: "Disco",
-        [P.c8.FOUR]: "Origami",
-        [P.c8.FIVE]: "Snail",
-        [P.c8.SIX]: "Duck",
-        [P.c8.SEVEN]: "Banana",
-        [P.c8.EIGHT]: "Cat",
-        [P.c8.NINE]: "Cassette",
+    D = n(597260);
+let k = {
+        [w.c8.ZERO]: "Bonsai",
+        [w.c8.ONE]: "Donut",
+        [w.c8.TWO]: "Capybara",
+        [w.c8.THREE]: "Disco",
+        [w.c8.FOUR]: "Origami",
+        [w.c8.FIVE]: "Snail",
+        [w.c8.SIX]: "Duck",
+        [w.c8.SEVEN]: "Banana",
+        [w.c8.EIGHT]: "Cat",
+        [w.c8.NINE]: "Cassette",
     },
-    G = {
-        [P.c8.ZERO]: "Bonsai Icon",
-        [P.c8.ONE]: "Donut Icon",
-        [P.c8.TWO]: "Capybara Icon",
-        [P.c8.THREE]: "Disco Icon",
-        [P.c8.FOUR]: "Origami Icon",
-        [P.c8.FIVE]: "Snail Icon",
-        [P.c8.SIX]: "Duck Icon",
-        [P.c8.SEVEN]: "Banana Icon",
-        [P.c8.EIGHT]: "Cat Icon",
-        [P.c8.NINE]: "Cassette Icon",
+    M = {
+        [w.c8.ZERO]: "Bonsai Icon",
+        [w.c8.ONE]: "Donut Icon",
+        [w.c8.TWO]: "Capybara Icon",
+        [w.c8.THREE]: "Disco Icon",
+        [w.c8.FOUR]: "Origami Icon",
+        [w.c8.FIVE]: "Snail Icon",
+        [w.c8.SIX]: "Duck Icon",
+        [w.c8.SEVEN]: "Banana Icon",
+        [w.c8.EIGHT]: "Cat Icon",
+        [w.c8.NINE]: "Cassette Icon",
     },
-    V = 429 / 462,
-    F = 200;
+    H = 429 / 462;
 
-function B(e) {
+function U(e) {
     var t;
     let { step: n, onNext: a } = e,
         {
             powerLevel: u = 0,
-            powerLevelPercentile: f = 0,
-            cardId: _ = 0,
-        } = (0, c.bG)([A.A], () => A.A.getCheckpointData()),
-        h = (0, c.bG)([E.default], () => E.default.getCurrentUser()),
-        m = (0, i.useContext)(O.P),
-        g = (0, S.A)((0, d.rdh)(m.primaryColor).hex()),
-        b = (0, y.j5)(g),
-        T = (0, c.bG)([p.A], () => p.A.useReducedMotion),
-        C = (0, i.useRef)(null),
-        [N, w] = (0, i.useState)(void 0),
-        M = (0, i.useMemo)(() => (n <= P.Wf.END_REWARD ? 1 : n === P.Wf.END_CLAIM ? 2 : 3), [n]),
-        k = (0, i.useMemo)(
+            powerLevelPercentile: m = 0,
+            cardId: p = 0,
+        } = (0, c.bG)([C.A], () => C.A.getCheckpointData()),
+        h = (0, c.bG)([x.default], () => x.default.getCurrentUser()),
+        b = (0, l.useContext)(j.P),
+        g = (0, A.A)((0, d.rdh)(b.primaryColor).hex()),
+        y = (0, v.j5)(g),
+        E = (0, c.bG)([f.A], () => f.A.useReducedMotion),
+        S = (0, l.useRef)(null),
+        [N, P] = (0, l.useState)(void 0),
+        U = (0, l.useMemo)(() => (n <= w.Wf.END_REWARD ? 1 : n === w.Wf.END_CLAIM ? 2 : 3), [n]),
+        F = (0, l.useMemo)(
             () =>
-                s().throttle(() => {
-                    null != C.current && w(C.current.clientWidth);
-                }, F),
+                i().throttle(() => {
+                    null != S.current && P(S.current.clientWidth);
+                }, 200),
             [],
         ),
-        B = (0, i.useCallback)(() => (n <= P.Wf.END_REWARD ? "100%" : n === P.Wf.END_CLAIM ? "50%" : "30%"), [n]),
-        H = (0, l.zhh)({
-            onChange: k,
+        G = (0, l.useCallback)(() => (n <= w.Wf.END_REWARD ? "100%" : n === w.Wf.END_CLAIM ? "50%" : "30%"), [n]),
+        V = (0, o.zhh)({
+            onChange: F,
             to: {
-                width: B(),
+                width: G(),
             },
         }),
-        Y = (0, l.zhh)({
+        B = (0, o.zhh)({
             to: {
-                width: n === P.Wf.END_SUMMARY ? "140%" : "100%",
-                height: null != N ? N * V : void 0,
-                left: n === P.Wf.END_SUMMARY ? "40px" : "0px",
+                width: n === w.Wf.END_SUMMARY ? "140%" : "100%",
+                height: null != N ? N * H : void 0,
+                left: n === w.Wf.END_SUMMARY ? "40px" : "0px",
             },
         }),
-        W = (0, l.zhh)({
+        W = (0, o.zhh)({
             to: {
-                opacity: +(n !== P.Wf.END_SUMMARY),
-                transform: n === P.Wf.END_SUMMARY ? "translate3d(0, -200px, 0)" : "translate3d(0, 0px, 0)",
+                opacity: +(n !== w.Wf.END_SUMMARY),
+                transform: n === w.Wf.END_SUMMARY ? "translate3d(0, -200px, 0)" : "translate3d(0, 0px, 0)",
             },
         });
     return (
-        (0, i.useEffect)(
+        (0, l.useEffect)(
             () => (
-                k(),
-                window.addEventListener("resize", k),
+                F(),
+                window.addEventListener("resize", F),
                 () => {
-                    window.removeEventListener("resize", k), k.cancel();
+                    window.removeEventListener("resize", F), F.cancel();
                 }
             ),
-            [k],
+            [F],
         ),
-        (0, r.jsxs)(o.animated.div, {
-            className: j.UO,
-            style: H,
+        (0, r.jsxs)(s.animated.div, {
+            className: D.UO,
+            style: V,
             children: [
-                (0, r.jsx)(o.animated.div, {
+                (0, r.jsx)(s.animated.div, {
                     style: W,
                     children: (0, r.jsxs)("div", {
-                        className: j.Qs,
+                        className: D.Qs,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: L.DD,
                                 children: [
-                                    (0, r.jsx)(l.MZT, {
+                                    (0, r.jsx)(o.MZT, {
                                         size: "refresh_sm",
                                         color: g,
                                         colorClass: L.d7,
                                         className: L.gr,
                                     }),
-                                    (0, r.jsx)(R.A, {
+                                    (0, r.jsx)(I.A, {
                                         variant: "eyebrow",
                                         className: L.UP,
-                                        children: x.intl.string(D.default.ir6nEQ),
+                                        children: R.intl.string(T.default.ir6nEQ),
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(R.A, {
+                            (0, r.jsx)(I.A, {
                                 variant: "display-lg",
-                                className: j.Vy,
+                                className: D.Vy,
                                 children: "DECO",
                             }),
                         ],
                     }),
                 }),
-                (0, r.jsx)(o.animated.div, {
-                    ref: C,
-                    className: j.Zl,
-                    style: Y,
+                (0, r.jsx)(s.animated.div, {
+                    ref: S,
+                    className: D.Zl,
+                    style: B,
                     children: (0, r.jsx)(
-                        l.hW8,
+                        o.hW8,
                         {
                             fit: "contain",
                             dataBinding: {
                                 "id#": null != (t = null == h ? void 0 : h.id.substring(0, 4)) ? t : "0000",
                                 LVL: "".concat(Math.round(u)),
-                                Outof: "".concat(_, "/10"),
-                                PersonaName: P.J4[_],
-                                AnimationState: M,
+                                Outof: "".concat(p, "/10"),
+                                PersonaName: w.J4[p],
+                                AnimationState: U,
                                 FillColor: {
-                                    r: b.r,
-                                    g: b.g,
-                                    b: b.b,
-                                    a: 255 * b.a,
+                                    r: y.r,
+                                    g: y.g,
+                                    b: y.b,
+                                    a: 255 * y.a,
                                 },
-                                PowerMeter: (0, v._V)(f),
-                                Icon: G[_],
-                                Illustration: U[_],
-                                reducedMotion: T,
+                                PowerMeter: (0, _._V)(m),
+                                Icon: M[p],
+                                Illustration: k[p],
+                                reducedMotion: E,
                             },
                             withReducedMotion: "play",
                         },
                         "rive",
                     ),
                 }),
-                n <= P.Wf.END_REWARD &&
+                n <= w.Wf.END_REWARD &&
                     (0, r.jsx)("div", {
-                        className: j.Qs,
-                        children: (0, r.jsx)(I.A, {
+                        className: D.Qs,
+                        children: (0, r.jsx)(O.A, {
                             onClick: a,
                             muteSound: !0,
-                            children: (0, r.jsx)(R.A, {
+                            children: (0, r.jsx)(I.A, {
                                 variant: "eyebrow",
-                                className: j.HL,
-                                children: x.intl.string(x.t.dcztdU),
+                                className: D.HL,
+                                children: R.intl.string(R.t.dcztdU),
                             }),
                         }),
                     }),
@@ -228,34 +196,34 @@ function B(e) {
     );
 }
 
-function H() {
-    let e = (0, c.bG)([E.default], () => E.default.getCurrentUser()),
-        { avatarDecoration: t } = (0, c.bG)([A.A], () => A.A.getCheckpointData());
+function F() {
+    let e = (0, c.bG)([x.default], () => x.default.getCurrentUser()),
+        { avatarDecoration: t } = (0, c.bG)([C.A], () => C.A.getCheckpointData());
     return (0, r.jsxs)("div", {
-        className: j.ZG,
+        className: D.ZG,
         children: [
-            (0, r.jsx)(R.A, {
+            (0, r.jsx)(I.A, {
                 variant: "eyebrow",
-                children: x.intl.string(D.default["4R3VzK"]),
+                children: R.intl.string(T.default["4R3VzK"]),
             }),
-            (0, r.jsx)(R.A, {
+            (0, r.jsx)(I.A, {
                 variant: "heading-lg/medium",
-                className: j.$2,
-                children: x.intl.string(D.default["94azAy"]),
+                className: D.$2,
+                children: R.intl.string(T.default["94azAy"]),
             }),
             null != e &&
-                (0, r.jsx)(_.A, {
+                (0, r.jsx)(p.A, {
                     user: e,
                     guildId: null,
                     avatarDecorationOverride: t,
                 }),
-            (0, r.jsx)(T.A, {
-                className: j.Hk,
+            (0, r.jsx)(E.A, {
+                className: D.Hk,
             }),
-            (0, r.jsx)(R.A, {
+            (0, r.jsx)(I.A, {
                 variant: "heading-sm/medium",
-                children: x.intl.format(x.t.eZSTa5, {
-                    date: new Date("2026-01-15").toLocaleDateString(x.intl.currentLocale, {
+                children: R.intl.format(R.t.eZSTa5, {
+                    date: new Date("2026-01-15").toLocaleDateString(R.intl.currentLocale, {
                         month: "long",
                         day: "numeric",
                         year: "numeric",
@@ -267,7 +235,7 @@ function H() {
     });
 }
 
-function Y(e) {
+function G(e) {
     let { primaryColor: t } = e,
         {
             messages: { numMessagesSent: n } = {
@@ -276,106 +244,106 @@ function Y(e) {
             voice: { totalVoiceMinutes: a } = {
                 totalVoiceMinutes: 0,
             },
-            emojis: { numEmojisSent: s, emojis: o } = {
+            emojis: { numEmojisSent: i, emojis: s } = {
                 numEmojisSent: 0,
                 emojis: [],
             },
             guilds: { guilds: d } = {
                 guilds: [],
             },
-            applications: { applications: _ } = {
+            applications: { applications: p } = {
                 applications: [],
             },
-        } = (0, c.bG)([A.A], () => A.A.getCheckpointData()),
-        E = (0, c.bG)([p.A], () => p.A.useReducedMotion),
-        y = o.length > 0 ? o[0] : null,
-        O = d.length > 0 ? d[0].guild : null,
-        S = _.length > 0 ? _[0].game : null,
-        { unit: I, duration: T } = (0, v.oO)(a),
-        C = (0, c.bG)([g.A], () => g.A.getGuild(null == O ? void 0 : O.id)),
+        } = (0, c.bG)([C.A], () => C.A.getCheckpointData()),
+        x = (0, c.bG)([f.A], () => f.A.useReducedMotion),
+        v = s.length > 0 ? s[0] : null,
+        j = d.length > 0 ? d[0].guild : null,
+        A = p.length > 0 ? p[0].game : null,
+        { unit: O, duration: E } = (0, _.oO)(a),
+        S = (0, c.bG)([g.A], () => g.A.getGuild(null == j ? void 0 : j.id)),
         N =
-            null != S && null != S.icon
-                ? b.Ay.getApplicationIconURL({
-                      id: S.id,
-                      icon: S.icon,
+            null != A && null != A.icon
+                ? y.Ay.getApplicationIconURL({
+                      id: A.id,
+                      icon: A.icon,
                   })
                 : null,
-        P = (0, w.HL)(),
-        M = (0, i.useMemo)(
+        w = (0, P.HL)(),
+        k = (0, l.useMemo)(
             () => [
                 {
-                    icon: l.oyn,
-                    title: x.intl.string(D.default.wWKySP),
-                    content: (0, r.jsx)(R.A, {
+                    icon: o.oyn,
+                    title: R.intl.string(T.default.wWKySP),
+                    content: (0, r.jsx)(I.A, {
                         variant: "heading-xxl/medium",
                         className: L.sH,
                         children: n,
                     }),
                 },
                 {
-                    icon: l.cNw,
+                    icon: o.cNw,
                     title:
-                        I === u.pJ.HOURS
-                            ? x.intl.formatToPlainString(D.default.Xu0QsX, {
-                                  numHours: T,
+                        O === u.pJ.HOURS
+                            ? R.intl.formatToPlainString(T.default.Xu0QsX, {
+                                  numHours: E,
                               })
-                            : x.intl.string(D.default.RmVTph),
-                    content: (0, r.jsx)(R.A, {
+                            : R.intl.string(T.default.RmVTph),
+                    content: (0, r.jsx)(I.A, {
                         variant: "heading-xxl/medium",
                         className: L.sH,
-                        children: T,
+                        children: E,
                     }),
                 },
                 {
-                    icon: l.nm2,
-                    title: x.intl.string(D.default.zcbFu1),
-                    content: (0, r.jsx)(R.A, {
+                    icon: o.nm2,
+                    title: R.intl.string(T.default.zcbFu1),
+                    content: (0, r.jsx)(I.A, {
                         variant: "heading-xxl/medium",
                         className: L.sH,
-                        children: s,
+                        children: i,
                     }),
                 },
                 {
-                    icon: l.Gg5,
-                    title: x.intl.string(D.default["3sARW7"]),
+                    icon: o.Gg5,
+                    title: R.intl.string(T.default["3sARW7"]),
                     content: (0, r.jsxs)("div", {
                         className: L.DD,
                         children: [
-                            null != y
+                            null != v
                                 ? (0, r.jsxs)("div", {
                                       className: L.DD,
                                       children: [
-                                          (0, r.jsx)(f.A, {
-                                              emojiName: null == y.id ? y.name : "",
-                                              emojiId: y.id,
-                                              animated: !E && y.animated,
-                                              className: j.Gl,
+                                          (0, r.jsx)(m.A, {
+                                              emojiName: null == v.id ? v.name : "",
+                                              emojiId: v.id,
+                                              animated: !x && v.animated,
+                                              className: D.Gl,
                                           }),
-                                          (0, r.jsx)(R.A, {
+                                          (0, r.jsx)(I.A, {
                                               variant: "text-md/medium",
                                               children:
-                                                  null == y.id
-                                                      ? h.Ay.convertSurrogateToName(y.name)
-                                                      : ":".concat(y.name, ":"),
+                                                  null == v.id
+                                                      ? h.Ay.convertSurrogateToName(v.name)
+                                                      : ":".concat(v.name, ":"),
                                           }),
                                       ],
                                   })
-                                : (0, r.jsx)(l._7Z, {
+                                : (0, r.jsx)(o._7Z, {
                                       color: t,
                                       size: "md",
-                                      className: j.Gl,
+                                      className: D.Gl,
                                   }),
-                            null == y &&
-                                (0, r.jsx)(R.A, {
+                            null == v &&
+                                (0, r.jsx)(I.A, {
                                     variant: "text-md/medium",
-                                    children: x.intl.string(x.t.PoWNfe),
+                                    children: R.intl.string(R.t.PoWNfe),
                                 }),
                         ],
                     }),
                 },
                 {
-                    icon: l._xR,
-                    title: x.intl.string(D.default.RbT4Zq),
+                    icon: o._xR,
+                    title: R.intl.string(T.default.RbT4Zq),
                     content: (0, r.jsxs)("div", {
                         className: L.DD,
                         children: [
@@ -383,77 +351,107 @@ function Y(e) {
                                 ? (0, r.jsx)("img", {
                                       src: N,
                                       alt: "",
-                                      className: j.Gl,
+                                      className: D.Gl,
                                   })
-                                : (0, r.jsx)(l._7Z, {
+                                : (0, r.jsx)(o._7Z, {
                                       color: t,
                                       size: "md",
-                                      className: j.Gl,
+                                      className: D.Gl,
                                   }),
-                            (0, r.jsx)(R.A, {
+                            (0, r.jsx)(I.A, {
                                 variant: "text-md/medium",
-                                children: null != S ? S.name : x.intl.string(x.t.PoWNfe),
+                                children: null != A ? A.name : R.intl.string(R.t.PoWNfe),
                             }),
                         ],
                     }),
                 },
                 {
-                    icon: l.RR9,
-                    title: x.intl.string(D.default["8XPMJj"]),
+                    icon: o.RR9,
+                    title: R.intl.string(T.default["8XPMJj"]),
                     content: (0, r.jsxs)("div", {
                         className: L.DD,
                         children: [
-                            null != C
-                                ? (0, r.jsx)(m.A, {
-                                      guild: C,
-                                      className: j.Gl,
+                            null != S
+                                ? (0, r.jsx)(b.A, {
+                                      guild: S,
+                                      className: D.Gl,
                                   })
-                                : (0, r.jsx)(l._7Z, {
+                                : (0, r.jsx)(o._7Z, {
                                       color: t,
                                       size: "md",
-                                      className: j.Gl,
+                                      className: D.Gl,
                                   }),
-                            (0, r.jsx)(R.A, {
+                            (0, r.jsx)(I.A, {
                                 variant: "text-md/medium",
-                                children: null != C ? C.name : x.intl.string(x.t.PoWNfe),
+                                children: null != S ? S.name : R.intl.string(R.t.PoWNfe),
                             }),
                         ],
                     }),
                 },
             ],
-            [n, T, I, s, y, E, t, N, S, C],
+            [n, E, O, i, v, x, t, N, A, S],
         );
-    return (0, r.jsx)(w.gy.Provider, {
-        value: P,
+    return (0, r.jsx)(P.gy.Provider, {
+        value: w,
         children: (0, r.jsx)("div", {
-            className: j.Fo,
+            className: D.Fo,
             children: (0, r.jsxs)("div", {
-                className: j.pv,
+                className: D.pv,
                 children: [
                     (0, r.jsxs)("div", {
                         className: L.DD,
                         children: [
-                            (0, r.jsx)(l.MZT, {
+                            (0, r.jsx)(o.MZT, {
                                 size: "refresh_sm",
                                 color: t,
                                 colorClass: L.d7,
                                 className: L.gr,
                             }),
-                            (0, r.jsx)(R.A, {
+                            (0, r.jsx)(I.A, {
                                 variant: "eyebrow",
                                 className: L.UP,
-                                children: x.intl.string(D.default.ir6nEQ),
+                                children: R.intl.string(T.default.ir6nEQ),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(R.A, {
+                    (0, r.jsx)(I.A, {
                         variant: "display-lg",
-                        className: j.Vy,
-                        children: x.intl.string(D.default.y4M1na),
+                        className: D.Vy,
+                        children: R.intl.string(T.default.y4M1na),
                     }),
                     (0, r.jsx)("div", {
-                        className: j.M1,
-                        children: M.map((e, t) => (0, r.jsx)(K, k({}, e), t)),
+                        className: D.M1,
+                        children: k.map((e, t) =>
+                            (0, r.jsx)(
+                                B,
+                                (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        "function" == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                }),
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0,
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({}, e),
+                                t,
+                            ),
+                        ),
                     }),
                 ],
             }),
@@ -461,26 +459,26 @@ function Y(e) {
     });
 }
 
-function W(e) {
+function V(e) {
     let { step: t } = e,
-        n = (0, i.useContext)(O.P),
+        n = (0, l.useContext)(j.P),
         a = (0, d.rdh)(n.primaryColor).hex(),
-        s = (0, d.rdh)(n.backgroundOverlayColor).hex();
+        i = (0, d.rdh)(n.backgroundOverlayColor).hex();
     return (0, r.jsx)("div", {
-        className: t === P.Wf.END_CLAIM ? j.Ly : j.jK,
+        className: t === w.Wf.END_CLAIM ? D.Ly : D.jK,
         style: {
-            backgroundColor: s,
+            backgroundColor: i,
         },
         children: (0, r.jsxs)(N.Ay, {
             activeSlide: t,
             children: [
                 (0, r.jsx)(d.q7S, {
-                    id: P.Wf.END_CLAIM,
-                    children: (0, r.jsx)(H, {}),
+                    id: w.Wf.END_CLAIM,
+                    children: (0, r.jsx)(F, {}),
                 }),
                 (0, r.jsx)(d.q7S, {
-                    id: P.Wf.END_SUMMARY,
-                    children: (0, r.jsx)(Y, {
+                    id: w.Wf.END_SUMMARY,
+                    children: (0, r.jsx)(G, {
                         primaryColor: a,
                     }),
                 }),
@@ -489,27 +487,27 @@ function W(e) {
     });
 }
 
-function K(e) {
+function B(e) {
     let { icon: t, title: n, content: a } = e,
-        s = (0, i.useContext)(O.P),
-        o = (0, d.rdh)(s.primaryColor).hex(),
-        l = (0, w.vy)(),
-        c = (0, w.vy)();
+        i = (0, l.useContext)(j.P),
+        s = (0, d.rdh)(i.primaryColor).hex(),
+        o = (0, P.vy)(),
+        c = (0, P.vy)();
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(w.vw, {
-                spring: l,
-                className: j.NX,
+            (0, r.jsx)(P.vw, {
+                spring: o,
+                className: D.NX,
                 children: (0, r.jsxs)("div", {
                     className: L.DD,
                     children: [
                         (0, r.jsx)(t, {
                             size: "refresh_sm",
-                            color: o,
+                            color: s,
                             colorClass: L.d7,
                             className: L.gr,
                         }),
-                        (0, r.jsx)(R.A, {
+                        (0, r.jsx)(I.A, {
                             variant: "eyebrow",
                             className: L.UP,
                             children: n,
@@ -517,7 +515,7 @@ function K(e) {
                     ],
                 }),
             }),
-            (0, r.jsx)(w.vw, {
+            (0, r.jsx)(P.vw, {
                 spring: c,
                 children: a,
             }),
@@ -525,18 +523,18 @@ function K(e) {
     });
 }
 
-function z(e) {
+function W(e) {
     let { step: t, onNext: n } = e;
-    return (0, r.jsxs)(C.A, {
+    return (0, r.jsxs)(S.A, {
         noPadding: !0,
         centered: !1,
-        className: j.kL,
+        className: D.kL,
         children: [
-            (0, r.jsx)(B, {
+            (0, r.jsx)(U, {
                 step: t,
                 onNext: n,
             }),
-            (0, r.jsx)(W, {
+            (0, r.jsx)(V, {
                 step: t,
             }),
         ],

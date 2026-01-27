@@ -1,14 +1,12 @@
 n.d(t, {
-    t: () => r,
+    t: () => l,
 });
-var r = (function (e) {
-    return (
-        (e.ACCENT = "accent"),
-        (e.GREEN = "statusGreen"),
-        (e.YELLOW = "statusYellow"),
-        (e.ORANGE = "statusOrange"),
-        (e.RED = "statusRed"),
-        (e.NONE = "transparent"),
-        e
-    );
-})({});
+var r,
+    l =
+        (((r = {}).ACCENT = "accent"),
+        (r.GREEN = "statusGreen"),
+        (r.YELLOW = "statusYellow"),
+        (r.ORANGE = "statusOrange"),
+        (r.RED = "statusRed"),
+        (r.NONE = "transparent"),
+        r);

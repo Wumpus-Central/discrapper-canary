@@ -1,89 +1,73 @@
 n.d(t, {
-    A: () => S,
+    A: () => A,
 }),
     n(896048),
     n(938796);
 var r,
-    i = n(665260),
+    i,
+    l = n(665260),
     a = n(311907),
     s = n(506774),
     o = n(73153),
-    l = n(961350),
-    c = n(734057),
-    u = n(576705),
-    d = n(287809),
-    f = n(812930),
-    p = n(652215);
-
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let h = "ChannelFollowingBumpChannels",
-    m = new Set(),
-    g = new Set();
-
-function E(e) {
-    var t;
-    let { channelId: n, message: r, optimistic: a } = e;
-    if (a || m.has(n)) return !1;
-    let s = c.A.getChannel(n),
-        o = d.default.getCurrentUser();
-    if (
-        !(
-            null != s &&
-            s.type === p.rbe.GUILD_ANNOUNCEMENT &&
-            (0, f.A)(r) &&
-            (null != o && (null == (t = r.author) ? void 0 : t.id) === o.id
-                ? u.A.can(p.xBc.SEND_MESSAGES, s)
-                : u.A.can(p.xBc.MANAGE_MESSAGES, s)) &&
-            !i.Lt(Number(r.flags), p.pr7.CROSSPOSTED)
-        )
-    )
-        return !1;
-    g.add(r.id);
-}
-
-function b(e) {
-    let { message: t } = e;
-    g.has(t.id) && i.Lt(Number(t.flags), p.pr7.CROSSPOSTED) && g.delete(t.id);
-}
-
-function y(e) {
-    let { messageId: t } = e;
-    g.delete(t);
-}
-
-function O(e) {
-    let { channelId: t } = e;
-    m.add(t), s.w.set(h, m), g.clear();
-}
-
-function A(e) {
-    g.clear();
-}
-class v extends (r = a.Ay.Store) {
+    c = n(961350),
+    u = n(734057),
+    d = n(576705),
+    p = n(287809),
+    m = n(812930),
+    f = n(652215);
+let g = "ChannelFollowingBumpChannels",
+    h = new Set(),
+    _ = new Set();
+class b extends (r = a.Ay.Store) {
     initialize() {
-        this.waitFor(l.default, c.A, u.A, d.default), (m = new Set(s.w.get(h)));
+        this.waitFor(c.default, u.A, d.A, p.default), (h = new Set(s.w.get(g)));
     }
     shouldShowBump(e) {
-        return g.has(e);
+        return _.has(e);
     }
 }
-_(v, "displayName", "ChannelFollowingPublishBumpStore");
-let S = new v(o.h, {
-    MESSAGE_CREATE: E,
-    MESSAGE_UPDATE: b,
-    CHANNEL_SELECT: A,
-    CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED: y,
-    CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY: O,
+(i = "displayName") in b
+    ? Object.defineProperty(b, i, {
+          value: "ChannelFollowingPublishBumpStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (b[i] = "ChannelFollowingPublishBumpStore");
+let A = new b(o.h, {
+    MESSAGE_CREATE: function (e) {
+        var t;
+        let { channelId: n, message: r, optimistic: i } = e;
+        if (i || h.has(n)) return !1;
+        let a = u.A.getChannel(n),
+            s = p.default.getCurrentUser();
+        if (
+            !(
+                null != a &&
+                a.type === f.rbe.GUILD_ANNOUNCEMENT &&
+                (0, m.A)(r) &&
+                (null != s && (null == (t = r.author) ? void 0 : t.id) === s.id
+                    ? d.A.can(f.xBc.SEND_MESSAGES, a)
+                    : d.A.can(f.xBc.MANAGE_MESSAGES, a)) &&
+                !l.Lt(Number(r.flags), f.pr7.CROSSPOSTED)
+            )
+        )
+            return !1;
+        _.add(r.id);
+    },
+    MESSAGE_UPDATE: function (e) {
+        let { message: t } = e;
+        _.has(t.id) && l.Lt(Number(t.flags), f.pr7.CROSSPOSTED) && _.delete(t.id);
+    },
+    CHANNEL_SELECT: function (e) {
+        _.clear();
+    },
+    CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED: function (e) {
+        let { messageId: t } = e;
+        _.delete(t);
+    },
+    CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY: function (e) {
+        let { channelId: t } = e;
+        h.add(t), s.w.set(g, h), _.clear();
+    },
 });

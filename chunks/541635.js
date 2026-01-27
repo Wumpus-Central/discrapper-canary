@@ -1,59 +1,58 @@
-var r = n(617179),
-    i = n(279998),
-    a = n(116740).OrderedMap,
-    s = function (e) {
-        var t,
-            n = {};
-        return a(
-            e
-                .withMutations(function (e) {
-                    e.forEach(function (r, a) {
-                        var s = r.getKey(),
-                            o = r.getNextSiblingKey(),
-                            l = r.getPrevSiblingKey(),
-                            c = r.getChildKeys(),
-                            u = r.getParentKey(),
-                            d = i();
+var n = r(617179),
+    i = r(279998),
+    o = r(116740).OrderedMap,
+    a = function (t) {
+        var e,
+            r = {};
+        return o(
+            t
+                .withMutations(function (t) {
+                    t.forEach(function (n, o) {
+                        var a = n.getKey(),
+                            s = n.getNextSiblingKey(),
+                            u = n.getPrevSiblingKey(),
+                            c = n.getChildKeys(),
+                            l = n.getParentKey(),
+                            f = i();
                         if (
-                            ((n[s] = d),
-                            o && (e.get(o) ? e.setIn([o, "prevSibling"], d) : e.setIn([s, "nextSibling"], null)),
-                            l && (e.get(l) ? e.setIn([l, "nextSibling"], d) : e.setIn([s, "prevSibling"], null)),
-                            u && e.get(u))
+                            ((r[a] = f),
+                            s && (t.get(s) ? t.setIn([s, "prevSibling"], f) : t.setIn([a, "nextSibling"], null)),
+                            u && (t.get(u) ? t.setIn([u, "nextSibling"], f) : t.setIn([a, "prevSibling"], null)),
+                            l && t.get(l))
                         ) {
-                            var f = e.get(u).getChildKeys();
-                            e.setIn([u, "children"], f.set(f.indexOf(r.getKey()), d));
+                            var p = t.get(l).getChildKeys();
+                            t.setIn([l, "children"], p.set(p.indexOf(n.getKey()), f));
                         } else
-                            e.setIn([s, "parent"], null),
-                                t &&
-                                    (e.setIn([t.getKey(), "nextSibling"], d),
-                                    e.setIn([s, "prevSibling"], n[t.getKey()])),
-                                (t = e.get(s));
-                        c.forEach(function (t) {
-                            e.get(t)
-                                ? e.setIn([t, "parent"], d)
-                                : e.setIn(
-                                      [s, "children"],
-                                      r.getChildKeys().filter(function (e) {
-                                          return e !== t;
+                            t.setIn([a, "parent"], null),
+                                e &&
+                                    (t.setIn([e.getKey(), "nextSibling"], f),
+                                    t.setIn([a, "prevSibling"], r[e.getKey()])),
+                                (e = t.get(a));
+                        c.forEach(function (e) {
+                            t.get(e)
+                                ? t.setIn([e, "parent"], f)
+                                : t.setIn(
+                                      [a, "children"],
+                                      n.getChildKeys().filter(function (t) {
+                                          return t !== e;
                                       }),
                                   );
                         });
                     });
                 })
                 .toArray()
-                .map(function (e) {
-                    return [n[e.getKey()], e.set("key", n[e.getKey()])];
+                .map(function (t) {
+                    return [r[t.getKey()], t.set("key", r[t.getKey()])];
                 }),
         );
-    },
-    o = function (e) {
-        return a(
-            e.toArray().map(function (e) {
-                var t = i();
-                return [t, e.set("key", t)];
-            }),
-        );
     };
-e.exports = function (e) {
-    return e.first() instanceof r ? s(e) : o(e);
+t.exports = function (t) {
+    return t.first() instanceof n
+        ? a(t)
+        : o(
+              t.toArray().map(function (t) {
+                  var e = i();
+                  return [e, t.set("key", e)];
+              }),
+          );
 };

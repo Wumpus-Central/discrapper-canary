@@ -1,25 +1,11 @@
 n.d(t, {
     $: () => o,
-    u: () => l,
+    u: () => a,
 });
 var r = n(627968),
     i = n(397927);
 
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function s(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,7 +16,16 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
@@ -39,13 +34,13 @@ function s(e) {
 function o() {
     (0, i.mMO)(async () => {
         let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("38008")]).then(n.bind(n, 307750));
-        return (t) => (0, r.jsx)(e, s({}, t));
+        return (t) => (0, r.jsx)(e, l({}, t));
     });
 }
 
-function l() {
+function a() {
     (0, i.mMO)(async () => {
         let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("40433")]).then(n.bind(n, 976627));
-        return (t) => (0, r.jsx)(e, s({}, t));
+        return (t) => (0, r.jsx)(e, l({}, t));
     });
 }

@@ -6,22 +6,8 @@ var r = n(627968);
 n(64700);
 var i = n(314116),
     a = n(397927),
-    s = n(652215),
-    o = n(985018);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    o = n(652215),
+    l = n(985018);
 
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -34,7 +20,16 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
@@ -56,7 +51,7 @@ let u = {
                 );
         });
     },
-    openSecureFramesUserVerificationModal: function (e, t, i, o) {
+    openSecureFramesUserVerificationModal: function (e, t, i, l) {
         i() &&
             (0, a.mMO)(
                 async () => {
@@ -74,12 +69,12 @@ let u = {
                         );
                 },
                 {
-                    contextKey: o === s.BRT.POPOUT ? a.KX8 : a.SYi,
+                    contextKey: l === o.BRT.POPOUT ? a.KX8 : a.SYi,
                 },
             );
     },
     openSecureFramesUpdateConfirmation: function (e) {
-        let { title: t, subtitle: n, confirmText: r = o.intl.string(o.t["cY+Oob"]), onConfirm: a } = e;
+        let { title: t, subtitle: n, confirmText: r = l.intl.string(l.t["cY+Oob"]), onConfirm: a } = e;
         (0, i.A)({
             title: t,
             subtitle: n,

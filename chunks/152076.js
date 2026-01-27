@@ -1,13 +1,12 @@
 n.d(t, {
-    w: () => o,
+    w: () => a,
 });
 var r = n(687123),
     i = n(36149),
-    a = n(207560),
+    l = n(207560),
     s = n(64313);
-let o = () => {
+let a = () => {
     let e = (0, s.o)("shouldAgeVerifyForDMDefaultOff"),
-        t = (0, a.d6)(r.t.DM_PRIVACY_SETTINGS),
-        n = e || t;
-    return (0, i.p9)() && n;
+        t = (0, l.d6)(r.t.DM_PRIVACY_SETTINGS);
+    return (0, i.p9)() && (e || t);
 };

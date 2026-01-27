@@ -1,180 +1,171 @@
-var r = n(724039);
+var n = r(724039);
 
 function i() {
     return (i =
-        r ||
-        function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+        n ||
+        function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+                var r = arguments[e];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (t[n] = r[n]);
             }
-            return e;
+            return t;
         }).apply(this, arguments);
 }
-
-function a(e) {
-    if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return e;
-}
-
-function s(e, t) {
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
-}
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-var l = n(423758),
-    c = n(595042),
-    u = n(64700),
-    d = n(251577),
-    f = n(448567),
-    p = n(679443),
-    _ = n(181038),
-    h = n(550835),
-    m = n(919743),
-    g = n(423856),
-    E = n(460249),
-    b = n(797686),
-    y = n(537578),
-    O = n(670200),
-    A = 10,
-    v = function (e, t) {
-        return e.getAnchorKey() === t || e.getFocusKey() === t;
+var o = r(423758),
+    a = r(595042),
+    s = r(64700),
+    u = r(251577),
+    c = r(448567),
+    l = r(679443),
+    f = r(181038),
+    p = r(550835),
+    h = r(919743),
+    d = r(423856),
+    g = r(460249),
+    y = r(797686),
+    v = r(537578),
+    m = r(670200),
+    _ = function (t, e) {
+        return t.getAnchorKey() === e || t.getFocusKey() === e;
     };
-e.exports = (function (e) {
-    function t() {
-        for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-        return o(a((t = e.call.apply(e, [this].concat(r)) || this)), "_node", void 0), t;
+t.exports = (function (t) {
+    function e() {
+        for (var e, r, n, i, o = arguments.length, a = Array(o), s = 0; s < o; s++) a[s] = arguments[s];
+        return (
+            (r = (function (t) {
+                if (void 0 === t) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return t;
+            })((e = t.call.apply(t, [this].concat(a)) || this))),
+            (i = void 0),
+            (n = "_node") in r
+                ? Object.defineProperty(r, n, {
+                      value: i,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0,
+                  })
+                : (r[n] = i),
+            e
+        );
     }
-    s(t, e);
-    var n = t.prototype;
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    var r = e.prototype;
     return (
-        (n.shouldComponentUpdate = function (e) {
+        (r.shouldComponentUpdate = function (t) {
             return (
-                this.props.block !== e.block ||
-                this.props.tree !== e.tree ||
-                this.props.direction !== e.direction ||
-                (v(e.selection, e.block.getKey()) && e.forceSelection)
+                this.props.block !== t.block ||
+                this.props.tree !== t.tree ||
+                this.props.direction !== t.direction ||
+                (_(t.selection, t.block.getKey()) && t.forceSelection)
             );
         }),
-        (n.componentDidMount = function () {
+        (r.componentDidMount = function () {
             if (!this.props.preventScroll) {
-                var e,
-                    t = this.props.selection,
-                    n = t.getEndKey();
-                if (t.getHasFocus() && n === this.props.block.getKey()) {
-                    var r = this._node;
-                    if (null != r) {
-                        var i = f.getScrollParent(r),
-                            a = g(i);
+                var t,
+                    e = this.props.selection,
+                    r = e.getEndKey();
+                if (e.getHasFocus() && r === this.props.block.getKey()) {
+                    var n = this._node;
+                    if (null != n) {
+                        var i = c.getScrollParent(n),
+                            o = d(i);
                         if (i === window) {
-                            var s = m(r);
-                            (e = s.y + s.height - E().height) > 0 && window.scrollTo(a.x, a.y + e + A);
+                            var a = h(n);
+                            (t = a.y + a.height - g().height) > 0 && window.scrollTo(o.x, o.y + t + 10);
                         } else
-                            y(r) || b(!1),
-                                (e = r.offsetHeight + r.offsetTop - (i.offsetTop + i.offsetHeight + a.y)) > 0 &&
-                                    d.setTop(i, d.getTop(i) + e + A);
+                            v(n) || y(!1),
+                                (t = n.offsetHeight + n.offsetTop - (i.offsetTop + i.offsetHeight + o.y)) > 0 &&
+                                    u.setTop(i, u.getTop(i) + t + 10);
                     }
                 }
             }
         }),
-        (n._renderChildren = function () {
-            var e = this,
-                t = this.props.block,
-                n = t.getKey(),
-                r = t.getText(),
-                a = this.props.tree.size - 1,
-                s = v(this.props.selection, n);
+        (r._renderChildren = function () {
+            var t = this,
+                e = this.props.block,
+                r = e.getKey(),
+                n = e.getText(),
+                u = this.props.tree.size - 1,
+                c = _(this.props.selection, r);
             return this.props.tree
-                .map(function (o, d) {
-                    var f = o.get("leaves");
-                    if (0 === f.size) return null;
-                    var h = f.size - 1,
-                        m = f
-                            .map(function (i, o) {
-                                var f = c.encode(n, d, o),
+                .map(function (p, h) {
+                    var d = p.get("leaves");
+                    if (0 === d.size) return null;
+                    var g = d.size - 1,
+                        y = d
+                            .map(function (i, l) {
+                                var f = a.encode(r, h, l),
                                     p = i.get("start"),
-                                    _ = i.get("end");
-                                return u.createElement(l, {
+                                    d = i.get("end");
+                                return s.createElement(o, {
                                     key: f,
                                     offsetKey: f,
-                                    block: t,
+                                    block: e,
                                     start: p,
-                                    selection: s ? e.props.selection : null,
-                                    forceSelection: e.props.forceSelection,
-                                    text: r.slice(p, _),
-                                    styleSet: t.getInlineStyleAt(p),
-                                    customStyleMap: e.props.customStyleMap,
-                                    customStyleFn: e.props.customStyleFn,
-                                    isLast: d === a && o === h,
+                                    selection: c ? t.props.selection : null,
+                                    forceSelection: t.props.forceSelection,
+                                    text: n.slice(p, d),
+                                    styleSet: e.getInlineStyleAt(p),
+                                    customStyleMap: t.props.customStyleMap,
+                                    customStyleFn: t.props.customStyleFn,
+                                    isLast: h === u && l === g,
                                 });
                             })
                             .toArray(),
-                        g = o.get("decoratorKey");
-                    if (null == g || !e.props.decorator) return m;
-                    var E = O(e.props.decorator),
-                        b = E.getComponentForKey(g);
-                    if (!b) return m;
-                    var y = E.getPropsForKey(g),
-                        A = c.encode(n, d, 0),
-                        v = f.first().get("start"),
-                        S = f.last().get("end"),
-                        I = r.slice(v, S),
-                        T = t.getEntityAt(o.get("start")),
-                        C = _.getHTMLDirIfDifferent(p.getDirection(I), e.props.direction),
-                        N = {
-                            contentState: e.props.contentState,
-                            decoratedText: I,
-                            dir: C,
-                            start: v,
-                            end: S,
-                            blockKey: n,
-                            entityKey: T,
-                            offsetKey: A,
+                        v = p.get("decoratorKey");
+                    if (null == v || !t.props.decorator) return y;
+                    var _ = m(t.props.decorator),
+                        b = _.getComponentForKey(v);
+                    if (!b) return y;
+                    var S = _.getPropsForKey(v),
+                        w = a.encode(r, h, 0),
+                        k = d.first().get("start"),
+                        x = d.last().get("end"),
+                        C = n.slice(k, x),
+                        E = e.getEntityAt(p.get("start")),
+                        O = f.getHTMLDirIfDifferent(l.getDirection(C), t.props.direction),
+                        D = {
+                            contentState: t.props.contentState,
+                            decoratedText: C,
+                            dir: O,
+                            start: k,
+                            end: x,
+                            blockKey: r,
+                            entityKey: E,
+                            offsetKey: w,
                         };
-                    return u.createElement(
+                    return s.createElement(
                         b,
-                        i({}, y, N, {
-                            key: A,
+                        i({}, S, D, {
+                            key: w,
                         }),
-                        m,
+                        y,
                     );
                 })
                 .toArray();
         }),
-        (n.render = function () {
-            var e = this,
-                t = this.props,
-                n = t.direction,
-                r = t.offsetKey,
-                i = h({
+        (r.render = function () {
+            var t = this,
+                e = this.props,
+                r = e.direction,
+                n = e.offsetKey,
+                i = p({
                     "public/DraftStyleDefault/block": !0,
-                    "public/DraftStyleDefault/ltr": "LTR" === n,
-                    "public/DraftStyleDefault/rtl": "RTL" === n,
+                    "public/DraftStyleDefault/ltr": "LTR" === r,
+                    "public/DraftStyleDefault/rtl": "RTL" === r,
                 });
-            return u.createElement(
+            return s.createElement(
                 "div",
                 {
-                    "data-offset-key": r,
+                    "data-offset-key": n,
                     className: i,
-                    ref: function (t) {
-                        return (e._node = t);
+                    ref: function (e) {
+                        return (t._node = e);
                     },
                 },
                 this._renderChildren(),
             );
         }),
-        t
+        e
     );
-})(u.Component);
+})(s.Component);

@@ -1,26 +1,23 @@
-function r(e, t) {
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
-}
-e.exports = (function (e) {
-    function t() {
-        return e.apply(this, arguments) || this;
+t.exports = (function (t) {
+    function e() {
+        return t.apply(this, arguments) || this;
     }
-    r(t, e);
-    var n = t.prototype;
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    var r = e.prototype;
     return (
-        (n.getType = function () {
+        (r.getType = function () {
             return this.get("type");
         }),
-        (n.getMutability = function () {
+        (r.getMutability = function () {
             return this.get("mutability");
         }),
-        (n.getData = function () {
+        (r.getData = function () {
             return this.get("data");
         }),
-        t
+        e
     );
 })(
-    (0, n(116740).Record)({
+    (0, r(116740).Record)({
         type: "TOKEN",
         mutability: "IMMUTABLE",
         data: Object,

@@ -1,13 +1,13 @@
 n.d(t, {
-    A: () => L,
+    A: () => v,
 }),
     n(896048);
 var r,
     i = n(448761),
-    a = n(311907),
-    s = n(73153),
-    o = n(661191),
-    l = n(677185),
+    l = n(311907),
+    a = n(73153),
+    s = n(661191),
+    o = n(677185),
     c = n(88001),
     u = n(652215);
 
@@ -25,7 +25,7 @@ function d(e, t, n) {
     );
 }
 
-function f(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,188 +42,62 @@ function f(e) {
     return e;
 }
 
-function p(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function _(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = new Map(),
-    m = !1,
-    g = !1;
+let f = new Map(),
+    g = !1,
+    h = !1;
 
-function E() {
-    (h = new Map()), (m = !1), (g = !1);
-}
-
-function b() {
-    g = !0;
-}
-
-function y(e) {
-    let { invites: t } = e;
-    for (let e of ((g = !1), (m = !0), t))
-        h.set(e.id, {
-            state: v(e),
-            invite: e,
-            errorStatus: null,
-        });
-}
-
-function O() {
-    g = !1;
-}
-
-function A(e) {
-    let { subscriptionGroupMemberId: t } = e;
-    h.set(t, {
-        state: c.xI.FETCHING,
-        invite: null,
-        errorStatus: null,
-    });
-}
-
-function v(e) {
+function _(e) {
     return null != e.removed_at ? c.xI.REMOVED : null != e.accepted_at ? c.xI.ACCEPTED : c.xI.PENDING;
 }
 
-function S(e) {
-    let { subscriptionGroupMemberId: t, invite: n } = e;
-    h.set(t, {
-        state: v(n),
-        invite: n,
-        errorStatus: null,
-    });
-}
-
-function I(e) {
-    let { subscriptionGroupMemberId: t, status: n } = e,
-        r = 404 === n ? c.xI.NOT_FOUND : c.xI.ERROR;
-    h.set(t, {
-        state: r,
-        invite: null,
-        errorStatus: n,
-    });
-}
-
-function T(e) {
-    let { subscriptionGroupMemberId: t } = e,
-        n = h.get(t);
-    if ((null == n ? void 0 : n.invite) == null) return !1;
-    h.set(t, {
-        state: c.xI.ACCEPTED,
-        invite: _(f({}, n.invite), {
-            accepted_at: new Date().toISOString(),
-        }),
-        errorStatus: null,
-    });
-}
-
-function C(e) {
-    let { subscriptionGroupMemberId: t } = e,
-        n = h.get(t);
-    if ((null == n ? void 0 : n.invite) == null) return !1;
-    h.set(t, {
-        state: c.xI.PENDING,
-        invite: _(f({}, n.invite), {
-            accepted_at: null,
-        }),
-        errorStatus: null,
-    });
-}
-
-function N(e) {
-    let { subscriptionGroupMemberId: t } = e;
-    if (null == t) return !1;
-    let n = h.get(t);
-    if ((null == n ? void 0 : n.invite) == null) return !1;
-    h.set(t, {
-        state: c.xI.REMOVED,
-        invite: _(f({}, n.invite), {
-            removed_at: new Date().toISOString(),
-        }),
-        errorStatus: null,
-    });
-}
-
-function R(e) {
-    let { subscriptionGroupMemberId: t, errorCode: n } = e;
-    if (null == t) return !1;
-    let r = h.get(t);
-    return (
-        (null == r ? void 0 : r.invite) != null &&
-        (n === c.Hy.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED
-            ? (h.set(t, {
-                  state: c.xI.ACCEPTED,
-                  invite: _(f({}, r.invite), {
-                      accepted_at: new Date().toISOString(),
-                  }),
-                  errorStatus: null,
-              }),
-              !0)
-            : void h.set(t, {
-                  state: c.xI.PENDING,
-                  invite: _(f({}, r.invite), {
-                      removed_at: null,
-                  }),
-                  errorStatus: null,
-              }))
-    );
-}
-
-function w(e) {
-    let { message: t } = e;
-    return D(t);
-}
-
-function P(e) {
+function b(e) {
     let { messages: t } = e;
-    return t.map((e) => D(e)).some(Boolean);
+    return t.map((e) => A(e)).some(Boolean);
 }
 
-function D(e) {
+function A(e) {
     if (e.type !== i.l.PREMIUM_GROUP_INVITE) return !1;
     let t = e.content;
-    if (null == t || "" === t || !o.default.isProbablyAValidSnowflake(t)) return !1;
-    let n = h.get(t);
+    if (null == t || "" === t || !s.default.isProbablyAValidSnowflake(t)) return !1;
+    let n = f.get(t);
     return (
         (null == n || n.state === c.xI.UNKNOWN) &&
-        (h.set(t, {
+        (f.set(t, {
             state: c.xI.FETCHING,
             invite: null,
             errorStatus: null,
         }),
-        s.h.wait(() => (0, l.el)(t).catch(u.FXj)),
+        a.h.wait(() => (0, o.el)(t).catch(u.FXj)),
         !0)
     );
 }
-class x extends (r = a.Ay.Store) {
+class y extends (r = l.Ay.Store) {
     getInvite(e) {
         var t;
-        return null != (t = h.get(e)) ? t : null;
+        return null != (t = f.get(e)) ? t : null;
     }
     getInviteByUserId(e) {
         var t;
         return null !=
-            (t = Array.from(h.values()).find((t) => {
+            (t = Array.from(f.values()).find((t) => {
                 var n;
                 return (null == (n = t.invite) ? void 0 : n.user_id) === e;
             }))
@@ -232,38 +106,134 @@ class x extends (r = a.Ay.Store) {
     }
     getInviteState(e) {
         var t, n;
-        return null != (t = null == (n = h.get(e)) ? void 0 : n.state) ? t : c.xI.UNKNOWN;
+        return null != (t = null == (n = f.get(e)) ? void 0 : n.state) ? t : c.xI.UNKNOWN;
     }
     shouldFetch(e) {
-        let t = h.get(e);
+        let t = f.get(e);
         return null == t || t.state === c.xI.UNKNOWN;
     }
     isFetching(e) {
         var t;
-        return (null == (t = h.get(e)) ? void 0 : t.state) === c.xI.FETCHING;
+        return (null == (t = f.get(e)) ? void 0 : t.state) === c.xI.FETCHING;
     }
     hasFetchedAllInvites() {
-        return m;
-    }
-    isFetchingAllInvites() {
         return g;
     }
+    isFetchingAllInvites() {
+        return h;
+    }
 }
-d(x, "displayName", "PremiumGroupInviteStore");
-let L = new x(s.h, {
-    PREMIUM_GROUP_INVITES_FETCH_START: b,
-    PREMIUM_GROUP_INVITES_FETCH_SUCCESS: y,
-    PREMIUM_GROUP_INVITES_FETCH_FAIL: O,
-    PREMIUM_GROUP_INVITE_FETCH_START: A,
-    PREMIUM_GROUP_INVITE_FETCH_SUCCESS: S,
-    PREMIUM_GROUP_INVITE_FETCH_FAIL: I,
-    PREMIUM_GROUP_ACCEPT_INVITE_START: T,
-    PREMIUM_GROUP_ACCEPT_INVITE_FAIL: C,
-    PREMIUM_GROUP_REMOVE_INVITE_START: N,
-    PREMIUM_GROUP_REMOVE_INVITE_FAILURE: R,
-    MESSAGE_CREATE: w,
-    LOCAL_MESSAGES_LOADED: P,
-    LOAD_MESSAGES_SUCCESS: P,
-    LOAD_MESSAGES_AROUND_SUCCESS: P,
-    LOGOUT: E,
+d(y, "displayName", "PremiumGroupInviteStore");
+let v = new y(a.h, {
+    PREMIUM_GROUP_INVITES_FETCH_START: function () {
+        h = !0;
+    },
+    PREMIUM_GROUP_INVITES_FETCH_SUCCESS: function (e) {
+        let { invites: t } = e;
+        for (let e of ((h = !1), (g = !0), t))
+            f.set(e.id, {
+                state: _(e),
+                invite: e,
+                errorStatus: null,
+            });
+    },
+    PREMIUM_GROUP_INVITES_FETCH_FAIL: function () {
+        h = !1;
+    },
+    PREMIUM_GROUP_INVITE_FETCH_START: function (e) {
+        let { subscriptionGroupMemberId: t } = e;
+        f.set(t, {
+            state: c.xI.FETCHING,
+            invite: null,
+            errorStatus: null,
+        });
+    },
+    PREMIUM_GROUP_INVITE_FETCH_SUCCESS: function (e) {
+        let { subscriptionGroupMemberId: t, invite: n } = e;
+        f.set(t, {
+            state: _(n),
+            invite: n,
+            errorStatus: null,
+        });
+    },
+    PREMIUM_GROUP_INVITE_FETCH_FAIL: function (e) {
+        let { subscriptionGroupMemberId: t, status: n } = e,
+            r = 404 === n ? c.xI.NOT_FOUND : c.xI.ERROR;
+        f.set(t, {
+            state: r,
+            invite: null,
+            errorStatus: n,
+        });
+    },
+    PREMIUM_GROUP_ACCEPT_INVITE_START: function (e) {
+        let { subscriptionGroupMemberId: t } = e,
+            n = f.get(t);
+        if ((null == n ? void 0 : n.invite) == null) return !1;
+        f.set(t, {
+            state: c.xI.ACCEPTED,
+            invite: m(p({}, n.invite), {
+                accepted_at: new Date().toISOString(),
+            }),
+            errorStatus: null,
+        });
+    },
+    PREMIUM_GROUP_ACCEPT_INVITE_FAIL: function (e) {
+        let { subscriptionGroupMemberId: t } = e,
+            n = f.get(t);
+        if ((null == n ? void 0 : n.invite) == null) return !1;
+        f.set(t, {
+            state: c.xI.PENDING,
+            invite: m(p({}, n.invite), {
+                accepted_at: null,
+            }),
+            errorStatus: null,
+        });
+    },
+    PREMIUM_GROUP_REMOVE_INVITE_START: function (e) {
+        let { subscriptionGroupMemberId: t } = e;
+        if (null == t) return !1;
+        let n = f.get(t);
+        if ((null == n ? void 0 : n.invite) == null) return !1;
+        f.set(t, {
+            state: c.xI.REMOVED,
+            invite: m(p({}, n.invite), {
+                removed_at: new Date().toISOString(),
+            }),
+            errorStatus: null,
+        });
+    },
+    PREMIUM_GROUP_REMOVE_INVITE_FAILURE: function (e) {
+        let { subscriptionGroupMemberId: t, errorCode: n } = e;
+        if (null == t) return !1;
+        let r = f.get(t);
+        return (
+            (null == r ? void 0 : r.invite) != null &&
+            (n === c.Hy.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED
+                ? (f.set(t, {
+                      state: c.xI.ACCEPTED,
+                      invite: m(p({}, r.invite), {
+                          accepted_at: new Date().toISOString(),
+                      }),
+                      errorStatus: null,
+                  }),
+                  !0)
+                : void f.set(t, {
+                      state: c.xI.PENDING,
+                      invite: m(p({}, r.invite), {
+                          removed_at: null,
+                      }),
+                      errorStatus: null,
+                  }))
+        );
+    },
+    MESSAGE_CREATE: function (e) {
+        let { message: t } = e;
+        return A(t);
+    },
+    LOCAL_MESSAGES_LOADED: b,
+    LOAD_MESSAGES_SUCCESS: b,
+    LOAD_MESSAGES_AROUND_SUCCESS: b,
+    LOGOUT: function () {
+        (f = new Map()), (g = !1), (h = !1);
+    },
 });

@@ -1,9 +1,9 @@
 n.d(t, {
-    A: () => m,
+    A: () => p,
 });
 var r,
-    i = n(311907),
-    a = n(73153);
+    l = n(311907),
+    i = n(73153);
 
 function s(e, t, n) {
     return (
@@ -19,7 +19,7 @@ function s(e, t, n) {
     );
 }
 
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,83 +36,71 @@ function o(e) {
     return e;
 }
 
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function c(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let u = {
+let c = {
         speechRate: 1,
         currentMessage: null,
     },
-    d = u;
-
-function f(e) {
-    let { messageId: t, channelId: n } = e;
-    d = c(o({}, d), {
-        currentMessage: {
-            messageId: t,
-            channelId: n,
-        },
-    });
-}
-
-function p() {
-    d = c(o({}, d), {
-        currentMessage: null,
-    });
-}
-
-function _(e) {
-    d = c(o({}, d), {
-        speechRate: e.speechRate,
-    });
-}
-class h extends (r = i.Ay.DeviceSettingsStore) {
+    u = c;
+class d extends (r = l.Ay.DeviceSettingsStore) {
     initialize(e) {
-        d = o({}, u, null != e ? e : null);
+        u = a({}, c, null != e ? e : null);
     }
     isSpeakingMessage(e, t) {
-        let { currentMessage: n } = d;
+        let { currentMessage: n } = u;
         return null !== n && n.channelId === e && n.messageId === t;
     }
     get currentMessage() {
-        return d.currentMessage;
+        return u.currentMessage;
     }
     get speechRate() {
-        return d.speechRate;
+        return u.speechRate;
     }
     getUserAgnosticState() {
-        return d;
+        return u;
     }
 }
-s(h, "displayName", "TTSStore"), s(h, "persistKey", "TTSStore"), s(h, "migrations", []);
-let m = new h(
-    a.h,
+s(d, "displayName", "TTSStore"), s(d, "persistKey", "TTSStore"), s(d, "migrations", []);
+let p = new d(
+    i.h,
     __OVERLAY__
         ? {}
         : {
-              SPEAKING_MESSAGE: f,
-              STOP_SPEAKING: p,
-              SET_TTS_SPEECH_RATE: _,
+              SPEAKING_MESSAGE: function (e) {
+                  let { messageId: t, channelId: n } = e;
+                  u = o(a({}, u), {
+                      currentMessage: {
+                          messageId: t,
+                          channelId: n,
+                      },
+                  });
+              },
+              STOP_SPEAKING: function () {
+                  u = o(a({}, u), {
+                      currentMessage: null,
+                  });
+              },
+              SET_TTS_SPEECH_RATE: function (e) {
+                  u = o(a({}, u), {
+                      speechRate: e.speechRate,
+                  });
+              },
           },
 );

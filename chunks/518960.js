@@ -1,168 +1,163 @@
 n.d(t, {
-    R: () => I,
-    V: () => S,
+    R: () => E,
+    V: () => T,
 }),
     n(896048),
     n(65821);
-var r = n(367513),
-    i = n(843472),
-    a = n(608299),
-    s = n(23658),
-    o = n(743445),
-    l = n(565150),
-    c = n(58149),
-    u = n(313961),
+var i = n(367513),
+    l = n(843472),
+    r = n(608299),
+    o = n(23658),
+    a = n(743445),
+    s = n(565150),
+    u = n(58149),
+    c = n(313961),
     d = n(301169),
-    f = n(522602),
-    p = n(287809),
-    _ = n(954571),
-    h = n(453771),
-    m = n(927578),
-    g = n(382287),
-    E = n(652215),
-    b = n(381941),
-    y = n(788868),
-    O = n(985018);
+    p = n(522602),
+    h = n(287809),
+    m = n(954571),
+    f = n(453771),
+    g = n(927578),
+    b = n(382287),
+    y = n(652215),
+    O = n(381941),
+    v = n(788868),
+    j = n(985018);
 
-function A(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function v(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                A(e, t, n[t]);
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = i);
             });
     }
     return e;
 }
 
-function S(e, t, n) {
-    let r = p.default.getCurrentUser(),
-        i = e.guild_id,
-        a = h.o2(i),
-        o = Array.from(t).map((e) => e.size),
-        l = Array.from(t).map((e) => (null != e.type ? e.type : "unknown")),
-        u = o.reduce((e, t) => e + t, 0),
-        d = o.length > 0 ? Math.max(...o) : 0,
-        f = o.length;
-    if (d > a) {
+function T(e, t, n) {
+    let i = h.default.getCurrentUser(),
+        l = e.guild_id,
+        r = f.o2(l),
+        a = Array.from(t).map((e) => e.size),
+        s = Array.from(t).map((e) => (null != e.type ? e.type : "unknown")),
+        c = a.reduce((e, t) => e + t, 0),
+        d = a.length > 0 ? Math.max(...a) : 0,
+        p = a.length;
+    if (d > r) {
         let t = null == n ? void 0 : n.reduce((e, t) => e + t, 0);
-        (0, c.zV)(E.HAw.FILE_SIZE_LIMIT_EXCEEDED, {
+        (0, u.zV)(y.HAw.FILE_SIZE_LIMIT_EXCEEDED, {
             channel_id: e.id,
-            guild_id: i,
-            user_individual_file_size_limit: a,
-            pre_compression_file_sizes: o,
-            pre_compression_aggregate_file_size: u,
-            num_attachments: f,
-            error_type: b.ty.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
-            attachment_mimetypes: l,
+            guild_id: l,
+            user_individual_file_size_limit: r,
+            pre_compression_file_sizes: a,
+            pre_compression_aggregate_file_size: c,
+            num_attachments: p,
+            error_type: O.ty.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
+            attachment_mimetypes: s,
             post_compression_file_sizes: n,
             post_compression_aggregate_file_size: t,
         }),
-            (0, s.openUploadError)({
-                title: O.intl.string(O.t["/tGlcj"]),
-                help: (0, g.WQ)(r, i),
-                showPremiumUpsell: !(0, m.YE)(r, y.PremiumTypes.TIER_2),
+            (0, o.openUploadError)({
+                title: j.intl.string(j.t["/tGlcj"]),
+                help: (0, b.WQ)(i, l),
+                showPremiumUpsell: !(0, g.YE)(i, v.PremiumTypes.TIER_2),
                 fileSize: d,
             });
         return;
     }
-    (0, s.openUploadError)({
-        title: O.intl.string(O.t["/tGlcj"]),
-        help: O.intl.formatToPlainString(O.t.tUOJdH, {
-            maxSize: h.Hb(h.bB()),
+    (0, o.openUploadError)({
+        title: j.intl.string(j.t["/tGlcj"]),
+        help: j.intl.formatToPlainString(j.t.tUOJdH, {
+            maxSize: f.Hb(f.bB()),
         }),
     });
 }
-async function I(e, t, n) {
+async function E(e, t, n) {
     let {
-        filesMetadata: c,
-        requireConfirm: p = !0,
-        isThumbnail: h = !1,
-        origin: m,
+        filesMetadata: u,
+        requireConfirm: h = !0,
+        isThumbnail: f = !1,
+        origin: g,
     } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (e.length < 1) return;
-    if (null != c && c.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
-    let y = t.getGuildId(),
-        A = Array.from(e),
-        I = A.map((e) => ({
+    if (null != u && u.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
+    let v = t.getGuildId(),
+        E = Array.from(e),
+        I = E.map((e) => ({
             originalContentType: e.type,
             preCompressionSize: e.size,
         }));
-    if ((await Promise.resolve(), (0, g.fJ)(A, y))) return void S(t, A);
-    if (f.A.getUploadCount(t.id, n) + A.length > E.XgB) {
-        (0, s.openUploadError)({
-            title: O.intl.string(O.t.wOr6hB),
-            help: O.intl.formatToPlainString(O.t["qqyp/e"], {
-                limit: E.XgB,
+    if ((await Promise.resolve(), (0, b.fJ)(E, v))) return void T(t, E);
+    if (p.A.getUploadCount(t.id, n) + E.length > y.XgB) {
+        (0, o.openUploadError)({
+            title: j.intl.string(j.t.wOr6hB),
+            help: j.intl.formatToPlainString(j.t["qqyp/e"], {
+                limit: y.XgB,
             }),
         }),
-            _.default.track(E.HAw.UPLOAD_FILE_LIMIT_ERROR, {
-                existing_count: f.A.getUploadCount(t.id, n),
-                new_count: A.length,
+            m.default.track(y.HAw.UPLOAD_FILE_LIMIT_ERROR, {
+                existing_count: p.A.getUploadCount(t.id, n),
+                new_count: E.length,
             });
         return;
     }
     if (
-        ((t.type !== E.rbe.GUILD_VOICE && t.type !== E.rbe.GUILD_STAGE_VOICE) ||
-            u.A.getChatOpen(t.id) ||
-            r.A.updateChatOpen(t.id, !0),
-        p)
+        ((t.type !== y.rbe.GUILD_VOICE && t.type !== y.rbe.GUILD_STAGE_VOICE) ||
+            c.A.getChatOpen(t.id) ||
+            i.A.updateChatOpen(t.id, !0),
+        h)
     ) {
-        let e = A.map((e, t) =>
-            v(
+        let e = E.map((e, t) =>
+            A(
                 {
                     file: e,
-                    platform: l.xz.WEB,
-                    isThumbnail: h,
-                    origin: m,
+                    platform: s.xz.WEB,
+                    isThumbnail: f,
+                    origin: g,
                     compressionMetadata: I[t],
                 },
-                null == c ? void 0 : c[t],
+                null == u ? void 0 : u[t],
             ),
         );
-        a.A.addFiles({
+        r.A.addFiles({
             files: e,
             channelId: t.id,
             draftType: n,
         });
     } else {
-        let e = A.map((e, n) => {
-            let r = null != c ? c[n] : {};
-            return new o.bK(
-                v(
+        let e = E.map((e, n) => {
+            let i = null != u ? u[n] : {};
+            return new a.bK(
+                A(
                     {
                         file: e,
-                        platform: l.xz.WEB,
-                        isThumbnail: h,
-                        origin: m,
+                        platform: s.xz.WEB,
+                        isThumbnail: f,
+                        origin: g,
                         compressionMetadata: I[n],
                     },
-                    r,
+                    i,
                 ),
                 t.id,
             );
         });
-        i.A.sendMessage(
+        l.A.sendMessage(
             t.id,
             {
                 content: "",
@@ -174,14 +169,14 @@ async function I(e, t, n) {
             {
                 eagerDispatch: !1,
                 attachmentsToUpload: e,
-                location: b.Hx.INSTANT_UPLOAD,
-                onAttachmentUploadError: (e, n, r) => {
+                location: O.Hx.INSTANT_UPLOAD,
+                onAttachmentUploadError: (e, n, i) => {
                     (0, d.k)({
                         file: e,
                         guildId: t.getGuildId(),
                         analyticsLocations: [],
                         code: n,
-                        reason: r,
+                        reason: i,
                     });
                 },
             },

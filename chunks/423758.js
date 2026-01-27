@@ -1,105 +1,97 @@
-var r = n(724039);
-
-function i(e) {
-    if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return e;
-}
-
-function a(e, t) {
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
-}
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-var o = n(719609),
-    l = n(64700),
-    c = n(797686),
-    u = n(882586),
-    d = n(439145).setDraftEditorSelection;
-e.exports = (function (e) {
-    function t() {
-        for (var t, n = arguments.length, r = Array(n), a = 0; a < n; a++) r[a] = arguments[a];
-        return s(i((t = e.call.apply(e, [this].concat(r)) || this)), "leaf", void 0), t;
+var n = r(724039),
+    i = r(719609),
+    o = r(64700),
+    a = r(797686),
+    s = r(882586),
+    u = r(439145).setDraftEditorSelection;
+t.exports = (function (t) {
+    function e() {
+        for (var e, r, n, i, o = arguments.length, a = Array(o), s = 0; s < o; s++) a[s] = arguments[s];
+        return (
+            (r = (function (t) {
+                if (void 0 === t) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return t;
+            })((e = t.call.apply(t, [this].concat(a)) || this))),
+            (i = void 0),
+            (n = "leaf") in r
+                ? Object.defineProperty(r, n, {
+                      value: i,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0,
+                  })
+                : (r[n] = i),
+            e
+        );
     }
-    a(t, e);
-    var n = t.prototype;
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    var r = e.prototype;
     return (
-        (n._setSelection = function () {
-            var e,
-                t = this.props.selection;
-            if (null != t && t.getHasFocus()) {
-                var n = this.props,
-                    r = n.block,
-                    i = n.start,
-                    a = n.text,
-                    s = r.getKey(),
-                    o = i + a.length;
-                if (t.hasEdgeWithin(s, i, o)) {
-                    var l = this.leaf;
-                    l || c(!1);
-                    var f = l.firstChild;
-                    f || c(!1),
-                        f.nodeType === Node.TEXT_NODE ? (e = f) : u(f) ? (e = l) : (e = f.firstChild) || c(!1),
-                        d(t, e, s, i, o);
+        (r._setSelection = function () {
+            var t,
+                e = this.props.selection;
+            if (null != e && e.getHasFocus()) {
+                var r = this.props,
+                    n = r.block,
+                    i = r.start,
+                    o = r.text,
+                    c = n.getKey(),
+                    l = i + o.length;
+                if (e.hasEdgeWithin(c, i, l)) {
+                    var f = this.leaf;
+                    f || a(!1);
+                    var p = f.firstChild;
+                    p || a(!1),
+                        p.nodeType === Node.TEXT_NODE ? (t = p) : s(p) ? (t = f) : (t = p.firstChild) || a(!1),
+                        u(e, t, c, i, l);
                 }
             }
         }),
-        (n.shouldComponentUpdate = function (e) {
-            var t = this.leaf;
-            return t || c(!1), t.textContent !== e.text || e.styleSet !== this.props.styleSet || e.forceSelection;
+        (r.shouldComponentUpdate = function (t) {
+            var e = this.leaf;
+            return e || a(!1), e.textContent !== t.text || t.styleSet !== this.props.styleSet || t.forceSelection;
         }),
-        (n.componentDidUpdate = function () {
+        (r.componentDidUpdate = function () {
             this._setSelection();
         }),
-        (n.componentDidMount = function () {
+        (r.componentDidMount = function () {
             this._setSelection();
         }),
-        (n.render = function () {
-            var e = this,
-                t = this.props.block,
-                n = this.props.text;
-            n.endsWith("\n") && this.props.isLast && (n += "\n");
-            var i = this.props,
-                a = i.customStyleMap,
-                s = i.customStyleFn,
-                c = i.offsetKey,
-                u = i.styleSet,
-                d = u.reduce(function (e, t) {
-                    var n = {},
-                        i = a[t];
+        (r.render = function () {
+            var t = this,
+                e = this.props.block,
+                r = this.props.text;
+            r.endsWith("\n") && this.props.isLast && (r += "\n");
+            var a = this.props,
+                s = a.customStyleMap,
+                u = a.customStyleFn,
+                c = a.offsetKey,
+                l = a.styleSet,
+                f = l.reduce(function (t, e) {
+                    var r = {},
+                        i = s[e];
                     return (
                         void 0 !== i &&
-                            e.textDecoration !== i.textDecoration &&
-                            (n.textDecoration = [e.textDecoration, i.textDecoration].join(" ").trim()),
-                        r(e, i, n)
+                            t.textDecoration !== i.textDecoration &&
+                            (r.textDecoration = [t.textDecoration, i.textDecoration].join(" ").trim()),
+                        n(t, i, r)
                     );
                 }, {});
             return (
-                s && (d = r(d, s(u, t))),
-                l.createElement(
+                u && (f = n(f, u(l, e))),
+                o.createElement(
                     "span",
                     {
                         "data-offset-key": c,
-                        ref: function (t) {
-                            return (e.leaf = t);
+                        ref: function (e) {
+                            return (t.leaf = e);
                         },
-                        style: d,
+                        style: f,
                     },
-                    l.createElement(o, null, n),
+                    o.createElement(i, null, r),
                 )
             );
         }),
-        t
+        e
     );
-})(l.Component);
+})(o.Component);

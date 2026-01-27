@@ -1,160 +1,142 @@
 n.d(t, {
-    Ay: () => C,
-    DS: () => T,
-    yW: () => S,
+    A: () => O,
+    D: () => b,
 }),
     n(896048);
-var r = n(627968),
-    i = n(64700),
-    a = n(311907),
-    s = n(506774),
-    o = n(314116),
-    l = n(397927),
-    c = n(271866),
-    u = n(724122),
-    d = n(195043),
-    f = n(147964),
-    p = n(837921),
-    _ = n(253932),
+var i = n(627968),
+    s = n(64700),
+    l = n(311907),
+    r = n(314116),
+    a = n(397927),
+    o = n(271866),
+    c = n(195043),
+    d = n(147964),
+    u = n(837921),
+    g = n(253932),
     h = n(801264),
-    m = n(912615),
-    g = n(790174),
-    E = n(531525),
-    b = n(652215),
-    y = n(985018);
+    x = n(912615),
+    A = n(790174),
+    p = n(531525),
+    m = n(652215),
+    j = n(985018);
 
-function O(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function A(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                O(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let v = "AppHardwareAcceleration";
-
-function S() {
-    if ((0, u.W)("DesktopNativeUtils")) {
-        let e = s.w.get(v);
-        if ("boolean" == typeof e) return e;
-    }
-    return p.Ay.getEnableHardwareAcceleration();
-}
-
-function I(e) {
-    (0, u.W)("DesktopNativeUtils")
-        ? (s.w.set(v, e), p.Ay.setEnableHardwareAcceleration(!0))
-        : p.Ay.setEnableHardwareAcceleration(e);
-}
-
-function T() {
-    let [e] = i.useState(() => S()),
-        t = i.useCallback((e) => {
-            let t = e ? y.intl.format(y.t.LYXRxL, {}) : y.intl.format(y.t.uDP3Kz, {});
-            (0, o.A)({
-                title: y.intl.string(y.t.aqpAvn),
+function b() {
+    let [e] = s.useState(() => u.Ay.getEnableHardwareAcceleration()),
+        t = s.useCallback((e) => {
+            let t = e ? j.intl.format(j.t.LYXRxL, {}) : j.intl.format(j.t.uDP3Kz, {});
+            (0, r.A)({
+                title: j.intl.string(j.t.aqpAvn),
                 subtitle: t,
-                confirmText: y.intl.string(y.t.vT7ckk),
-                onConfirm: () => I(e),
+                confirmText: j.intl.string(j.t.vT7ckk),
+                onConfirm: () => u.Ay.setEnableHardwareAcceleration(e),
             });
         }, []);
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(l.dOG, {
-                label: y.intl.string(y.t["eOC/F2"]),
-                description: y.intl.string(y.t.Afc7l6),
+            (0, i.jsx)(a.dOG, {
+                label: j.intl.string(j.t["eOC/F2"]),
+                description: j.intl.string(j.t.Afc7l6),
                 checked: e,
                 onChange: t,
             }),
             !e &&
-                (0, r.jsx)(h.A, {
+                (0, i.jsx)(h.A, {
                     look: h.k.WARNING,
-                    children: y.intl.string(y.t.j7S6IX),
+                    children: j.intl.string(j.t.j7S6IX),
                 }),
         ],
     });
 }
 
-function C() {
-    let e = _.l_.useSetting(),
-        t = _.Q_.useSetting(),
-        n = (0, a.bG)([f.A], () => f.A.testModeApplicationId),
-        s = i.useCallback((e) => {
-            _.l_.updateSetting(!e);
+function O() {
+    let e = g.l_.useSetting(),
+        t = g.Q_.useSetting(),
+        n = (0, l.bG)([d.A], () => d.A.testModeApplicationId),
+        r = s.useCallback((e) => {
+            g.l_.updateSetting(!e);
         }, []),
-        o = i.useCallback((e) => {
-            e ? (0, l.qfG)((e) => (0, r.jsx)(m.A, A({}, e))) : c.cL();
+        u = s.useCallback((e) => {
+            e
+                ? (0, a.qfG)((e) =>
+                      (0, i.jsx)(
+                          x.A,
+                          (function (e) {
+                              for (var t = 1; t < arguments.length; t++) {
+                                  var n = null != arguments[t] ? arguments[t] : {},
+                                      i = Object.keys(n);
+                                  "function" == typeof Object.getOwnPropertySymbols &&
+                                      (i = i.concat(
+                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                          }),
+                                      )),
+                                      i.forEach(function (t) {
+                                          var i;
+                                          (i = n[t]),
+                                              t in e
+                                                  ? Object.defineProperty(e, t, {
+                                                        value: i,
+                                                        enumerable: !0,
+                                                        configurable: !0,
+                                                        writable: !0,
+                                                    })
+                                                  : (e[t] = i);
+                                      });
+                              }
+                              return e;
+                          })({}, e),
+                      ),
+                  )
+                : o.cL();
         }, []);
-    return (0, r.jsx)(g.A, {
-        title: y.intl.string(y.t["8/udY0"]),
-        children: (0, r.jsxs)(l.BJc, {
+    return (0, i.jsx)(A.A, {
+        title: j.intl.string(j.t["8/udY0"]),
+        children: (0, i.jsxs)(a.BJc, {
             gap: 16,
             children: [
-                (0, r.jsxs)(d.x, {
-                    setting: E.H.SETTINGS_ADVANCED_DEVELOPER_MODE,
+                (0, i.jsxs)(c.x, {
+                    setting: p.H.SETTINGS_ADVANCED_DEVELOPER_MODE,
                     children: [
-                        (0, r.jsx)(l.dOG, {
-                            label: y.intl.string(y.t.ObIb1Q),
-                            description: y.intl.format(y.t["CY6q/Q"], {
-                                apiDocsUrl: b.X7G.API_DOCS,
+                        (0, i.jsx)(a.dOG, {
+                            label: j.intl.string(j.t.ObIb1Q),
+                            description: j.intl.format(j.t["CY6q/Q"], {
+                                apiDocsUrl: m.X7G.API_DOCS,
                             }),
                             checked: t,
-                            onChange: _.Q_.updateSetting,
+                            onChange: g.Q_.updateSetting,
                         }),
-                        (0, r.jsx)(l.cGx, {}),
+                        (0, i.jsx)(a.cGx, {}),
                     ],
                 }),
-                (0, r.jsx)(d.x, {
-                    setting: E.H.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
-                    children: (0, r.jsxs)(l.BJc, {
+                (0, i.jsx)(c.x, {
+                    setting: p.H.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
+                    children: (0, i.jsxs)(a.BJc, {
                         gap: 16,
-                        children: [(0, r.jsx)(T, {}), (0, r.jsx)(l.cGx, {})],
+                        children: [(0, i.jsx)(b, {}), (0, i.jsx)(a.cGx, {})],
                     }),
                 }),
-                (0, r.jsxs)(d.x, {
-                    setting: E.H.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
+                (0, i.jsxs)(c.x, {
+                    setting: p.H.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
                     children: [
-                        (0, r.jsx)(l.dOG, {
-                            label: y.intl.string(y.t.fi3UQN),
-                            description: y.intl.string(y.t["8mYp37"]),
+                        (0, i.jsx)(a.dOG, {
+                            label: j.intl.string(j.t.fi3UQN),
+                            description: j.intl.string(j.t["8mYp37"]),
                             checked: !e,
-                            onChange: s,
+                            onChange: r,
                         }),
-                        (0, r.jsx)(l.cGx, {}),
+                        (0, i.jsx)(a.cGx, {}),
                     ],
                 }),
-                (0, r.jsxs)(d.x, {
-                    setting: E.H.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
+                (0, i.jsxs)(c.x, {
+                    setting: p.H.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
                     children: [
-                        (0, r.jsx)(l.dOG, {
-                            label: y.intl.string(y.t.erOqlh),
-                            description: y.intl.string(y.t["52hMnD"]),
+                        (0, i.jsx)(a.dOG, {
+                            label: j.intl.string(j.t.erOqlh),
+                            description: j.intl.string(j.t["52hMnD"]),
                             checked: null != n,
-                            onChange: o,
+                            onChange: u,
                         }),
-                        (0, r.jsx)(l.cGx, {}),
+                        (0, i.jsx)(a.cGx, {}),
                     ],
                 }),
             ],

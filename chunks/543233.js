@@ -1,11 +1,11 @@
 n.d(t, {
-    Q: () => l,
+    Q: () => o,
 });
 var r = n(311907),
     i = n(775602),
-    a = n(322631),
+    l = n(322631),
     s = n(227191);
-let o = {
+let a = {
         subtitle: {
             onlyShowOnHover: !1,
         },
@@ -17,11 +17,11 @@ let o = {
             onlyShowOnHover: !0,
         },
     },
-    l = (e) => {
-        let t = !(0, r.bG)([i.A], () => i.A.useReducedMotion),
+    o = (e) => {
+        let t = (0, r.bG)([i.A], () => i.A.useReducedMotion),
             n = {
-                [a.PJ.DEFAULT]: o,
-                [a.PJ.REWARD]: {
+                [l.PJ.DEFAULT]: a,
+                [l.PJ.REWARD]: {
                     subtitle: {
                         onlyShowOnHover: !0,
                         textVariant: "text-sm/semibold",
@@ -36,10 +36,10 @@ let o = {
                         className: s.LV,
                     },
                     cardContainer: {
-                        className: t ? s.tk : void 0,
+                        className: t ? void 0 : s.tk,
                     },
                 },
-                [a.PJ.PROMOTION_REDEMPTION]: {
+                [l.PJ.PROMOTION_REDEMPTION]: {
                     cardContainer: {
                         className: s.tk,
                     },
@@ -48,11 +48,11 @@ let o = {
                         className: s.y8,
                     },
                 },
-                [a.PJ.NITRO_GRADIENT_HOVER_BORDER]: {
+                [l.PJ.NITRO_GRADIENT_HOVER_BORDER]: {
                     cardContainer: {
                         className: s.tk,
                     },
                 },
             };
-        return null != e ? n[e] : n[a.PJ.DEFAULT];
+        return null != e ? n[e] : n[l.PJ.DEFAULT];
     };

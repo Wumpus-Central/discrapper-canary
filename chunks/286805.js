@@ -1,36 +1,28 @@
 n.d(t, {
-    A: () => u,
+    A: () => c,
 });
 var r,
-    i = n(311907),
+    i,
+    l = n(311907),
     a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = {
+let s = {
     matureAgree: !1,
 };
-
-function l() {
-    o.matureAgree = !0;
-}
-class c extends (r = i.Ay.Store) {
+class o extends (i = l.Ay.Store) {
     get didMatureAgree() {
-        return o.matureAgree;
+        return s.matureAgree;
     }
 }
-s(c, "displayName", "ApplicationStoreSettingsStore");
-let u = new c(a.h, {
-    APPLICATION_STORE_MATURE_AGREE: l,
+(r = "displayName") in o
+    ? Object.defineProperty(o, r, {
+          value: "ApplicationStoreSettingsStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (o[r] = "ApplicationStoreSettingsStore");
+let c = new o(a.h, {
+    APPLICATION_STORE_MATURE_AGREE: function () {
+        s.matureAgree = !0;
+    },
 });

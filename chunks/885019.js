@@ -1,48 +1,45 @@
-var r = n(1140),
-    i = n(265930),
-    a = function (e, t) {
-        return e === t;
+var n = r(1140),
+    i = r(265930),
+    o = function (t, e) {
+        return t === e;
     },
-    s = function (e) {
-        return !!e;
+    a = function (t) {
+        return !!t;
     },
-    o = [];
-
-function l(e, t, n) {
-    var o = [];
-    return (
-        i(
-            t
-                .map(function (e) {
-                    return e.has(n);
-                })
-                .toList(),
-            a,
-            s,
-            function (t, i) {
-                var a = e.getText();
-                o.push({
-                    offset: r.strlen(a.slice(0, t)),
-                    length: r.strlen(a.slice(t, i)),
-                    style: n,
-                });
-            },
-        ),
-        o
-    );
-}
-e.exports = function (e) {
-    var t = e
+    s = [];
+t.exports = function (t) {
+    var e = t
             .getCharacterList()
-            .map(function (e) {
-                return e.getStyle();
+            .map(function (t) {
+                return t.getStyle();
             })
             .toList(),
-        n = t
+        r = e
             .flatten()
             .toSet()
-            .map(function (n) {
-                return l(e, t, n);
+            .map(function (r) {
+                var s;
+                return (
+                    (s = []),
+                    i(
+                        e
+                            .map(function (t) {
+                                return t.has(r);
+                            })
+                            .toList(),
+                        o,
+                        a,
+                        function (e, i) {
+                            var o = t.getText();
+                            s.push({
+                                offset: n.strlen(o.slice(0, e)),
+                                length: n.strlen(o.slice(e, i)),
+                                style: r,
+                            });
+                        },
+                    ),
+                    s
+                );
             });
-    return Array.prototype.concat.apply(o, n.toJS());
+    return Array.prototype.concat.apply(s, r.toJS());
 };

@@ -4,24 +4,23 @@ n.d(t, {
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
+    l = n.n(i),
     s = n(990078),
-    o = n(397927),
-    l = n(290223);
+    a = n(397927),
+    o = n(290223);
 
 function c(e) {
-    let { icon: t, tooltip: n, onClick: i, className: c } = e,
-        u = (e) => {
-            e.preventDefault(), e.stopPropagation(), i(e);
-        };
+    let { icon: t, tooltip: n, onClick: i, className: c } = e;
     return (0, r.jsx)(s.m, {
         text: n,
-        children: (0, r.jsx)(o.DUT, {
+        children: (0, r.jsx)(a.DUT, {
             "aria-label": n,
-            onClick: u,
-            className: a()(l.hP, c),
+            onClick: (e) => {
+                e.preventDefault(), e.stopPropagation(), i(e);
+            },
+            className: l()(o.hP, c),
             children: (0, r.jsx)(t, {
-                className: l.Kk,
+                className: o.Kk,
                 color: "currentColor",
             }),
         }),

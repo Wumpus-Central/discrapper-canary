@@ -1,32 +1,32 @@
 n.d(t, {
-    A: () => d,
+    A: () => u,
 }),
     n(638769),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
+    l = n(311907),
     s = n(397927),
-    o = n(166403),
-    l = n(510898),
+    a = n(166403),
+    o = n(510898),
     c = n(985018),
-    u = n(104579);
+    d = n(104579);
 
-function d(e) {
+function u(e) {
     let { onGoBack: t } = e,
-        n = (0, a.yK)([o.A], () => {
+        n = (0, l.yK)([a.A], () => {
             var e, t;
             return null !=
                 (e =
-                    null == (t = o.A.getActiveApplicationSubscriptions())
+                    null == (t = a.A.getActiveApplicationSubscriptions())
                         ? void 0
                         : t.slice().sort((e, t) => {
-                              var n, r, i, a;
+                              var n, r, i, l;
                               return (
                                   (null != (n = null == (i = e.createdAt) ? void 0 : i.getTime())
                                       ? n
                                       : e.currentPeriodStart.getTime()) -
-                                  (null != (r = null == (a = t.createdAt) ? void 0 : a.getTime())
+                                  (null != (r = null == (l = t.createdAt) ? void 0 : l.getTime())
                                       ? r
                                       : t.currentPeriodStart.getTime())
                               );
@@ -34,40 +34,41 @@ function d(e) {
                 ? e
                 : [];
         }),
-        [s, d] = i.useState();
-    null == s &&
-        (s = (0, r.jsx)(f, {
-            onBack: t,
-            title: c.intl.string(c.t["DB/m9a"]),
-        }));
-    let p = (e, t) => {
-        d(
-            (0, r.jsx)(f, {
-                title: e,
-                onBack: () => {
-                    t(), d(void 0);
-                },
-            }),
-        );
-    };
-    return (0, r.jsxs)("div", {
-        children: [
-            s,
-            (0, r.jsx)("div", {
-                className: u.A,
-                children: (0, r.jsx)(l.A, {
-                    subscriptions: n,
-                    updateHeader: p,
+        [s, u] = i.useState();
+    return (
+        null == s &&
+            (s = (0, r.jsx)(_, {
+                onBack: t,
+                title: c.intl.string(c.t["DB/m9a"]),
+            })),
+        (0, r.jsxs)("div", {
+            children: [
+                s,
+                (0, r.jsx)("div", {
+                    className: d.A,
+                    children: (0, r.jsx)(o.A, {
+                        subscriptions: n,
+                        updateHeader: (e, t) => {
+                            u(
+                                (0, r.jsx)(_, {
+                                    title: e,
+                                    onBack: () => {
+                                        t(), u(void 0);
+                                    },
+                                }),
+                            );
+                        },
+                    }),
                 }),
-            }),
-        ],
-    });
+            ],
+        })
+    );
 }
 
-function f(e) {
+function _(e) {
     let { onBack: t, title: n } = e;
     return (0, r.jsxs)("div", {
-        className: u.D,
+        className: d.D,
         children: [
             (0, r.jsx)(s.K0, {
                 "aria-label": c.intl.string(c.t["13/7kX"]),

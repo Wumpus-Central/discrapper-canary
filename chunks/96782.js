@@ -1,7 +1,7 @@
 n.d(t, {
-    Ay: () => V,
-    rC: () => M,
-    zB: () => k,
+    Ay: () => W,
+    rC: () => S,
+    zB: () => E,
 }),
     n(938796),
     n(896048),
@@ -10,44 +10,30 @@ n.d(t, {
     n(65821);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    l = n(503698),
+    s = n.n(l),
     o = n(665260),
-    l = n(990078),
-    c = n(397927),
-    u = n(765671),
+    a = n(990078),
+    u = n(397927),
+    c = n(765671),
     d = n(384015),
-    f = n(390248),
-    p = n(338717),
-    _ = n(33358),
-    h = n(643612),
-    m = n(207133),
+    m = n(390248),
+    h = n(338717),
+    p = n(33358),
+    y = n(643612),
+    f = n(207133),
     g = n(302031),
-    E = n(734057),
-    b = n(954571),
-    y = n(515718),
-    O = n(448381),
-    A = n(838541),
-    v = n(652215),
-    S = n(985018),
-    I = n(422436),
-    T = n(295260);
+    j = n(734057),
+    x = n(954571),
+    O = n(515718),
+    b = n(448381),
+    v = n(838541),
+    w = n(652215),
+    P = n(985018),
+    C = n(422436),
+    I = n(295260);
 
-function C(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function N(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,108 +44,77 @@ function N(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function R(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function w(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function P(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = D(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function D(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let x = 200,
-    L = 50;
-
-function j(e) {
-    return "IMAGE" === e || "VIDEO" === e;
-}
-
-function M(e, t) {
+function S(e, t) {
     var n;
     return {
         uniqueId: e.id,
         originalItem: e,
-        type: (0, O.NI)(e, t),
+        type: (0, b.NI)(e, t),
         downloadUrl: e.url,
         height: e.height,
         width: e.width,
         spoiler: e.spoiler,
         contentType: e.content_type,
-        srcIsAnimated: (0, o.Lt)(null != (n = e.flags) ? n : 0, v.sbO.IS_ANIMATED),
+        srcIsAnimated: (0, o.Lt)(null != (n = e.flags) ? n : 0, w.sbO.IS_ANIMATED),
     };
 }
-let k = (e) => {
-    let { mimeType: t, downloadURL: n, onRemoveItem: a, showDownload: o, isVisualMediaType: f } = e,
-        p = i.useRef(null),
-        [_, h] = i.useState(0);
-    (0, u.i4)(p, (e) => {
+let E = (e) => {
+    let { mimeType: t, downloadURL: n, onRemoveItem: l, showDownload: o, isVisualMediaType: m } = e,
+        h = i.useRef(null),
+        [p, y] = i.useState(0);
+    (0, c.i4)(h, (e) => {
         let { width: t } = e;
-        null != t && h(Math.floor((t - 8) / 32));
+        null != t && y(Math.floor((t - 8) / 32));
     });
-    let m = [];
-    null != a &&
-        m.push(
+    let f = [];
+    null != l &&
+        f.push(
             (0, r.jsx)(
-                l.m,
+                a.m,
                 {
-                    text: S.intl.string(S.t["/XT3ij"]),
-                    children: (0, r.jsx)(c.DUT, {
-                        className: s()(T.HF, I.GC),
+                    text: P.intl.string(P.t["/XT3ij"]),
+                    children: (0, r.jsx)(u.DUT, {
+                        className: s()(I.HF, C.GC),
                         focusProps: {
                             offset: 2,
                         },
-                        onClick: a,
-                        "aria-label": S.intl.string(S.t["0+xZH0"]),
-                        children: (0, r.jsx)(c.ucK, {
+                        onClick: l,
+                        "aria-label": P.intl.string(P.t["0+xZH0"]),
+                        children: (0, r.jsx)(u.ucK, {
                             size: "custom",
                             color: "currentColor",
                             width: 20,
@@ -171,16 +126,16 @@ let k = (e) => {
             ),
         ),
         o &&
-            m.push(
+            f.push(
                 (0, r.jsx)(
-                    l.m,
+                    a.m,
                     {
-                        text: S.intl.string(S.t["1WjMbC"]),
+                        text: P.intl.string(P.t["1WjMbC"]),
                         children: (0, r.jsx)(d.A, {
                             target: "_blank",
                             rel: "noreferrer noopener",
-                            className: T.HF,
-                            iconClassName: I.qG,
+                            className: I.HF,
+                            iconClassName: C.qG,
                             focusProps: {
                                 offset: 2,
                             },
@@ -191,153 +146,153 @@ let k = (e) => {
                     "download",
                 ),
             );
-    let g = Math.max(0, m.length - _);
+    let g = Math.max(0, f.length - p);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            _ > 0 &&
-                m.length > 0 &&
+            p > 0 &&
+                f.length > 0 &&
                 (0, r.jsx)("div", {
-                    className: s()(T.aq, {
-                        [T.XE]: !f,
+                    className: s()(I.aq, {
+                        [I.XE]: !m,
                     }),
-                    children: m.slice(g),
+                    children: f.slice(g),
                 }),
             (0, r.jsx)("div", {
-                ref: p,
-                className: T.St,
+                ref: h,
+                className: I.St,
             }),
         ],
     });
 };
 
-function U(e) {
+function M(e) {
     let {
             message: t,
             item: n,
-            autoPlayGif: a,
+            autoPlayGif: l,
             canRemoveItem: o,
-            onRemoveItem: l,
-            onClick: u,
+            onRemoveItem: a,
+            onClick: c,
             handlePreloadImage: d,
-            onContextMenu: f,
-            onPlay: p,
-            renderImageComponent: _,
+            onContextMenu: m,
+            onPlay: h,
+            renderImageComponent: p,
             renderVideoComponent: g,
-            renderAudioComponent: O,
-            renderPlaintextFilePreview: T,
-            renderGenericFileComponent: C,
+            renderAudioComponent: b,
+            renderPlaintextFilePreview: I,
+            renderGenericFileComponent: A,
             renderVisualPlaceholderComponent: N,
-            className: R,
-            imgContainerClassName: w,
-            imgClassName: P,
+            className: S,
+            imgContainerClassName: M,
+            imgClassName: W,
             focusable: D,
-            hiddenSpoilers: x,
-            mediaLayoutType: L,
-            maxWidth: j,
-            maxHeight: M,
-            hasFooter: U,
+            hiddenSpoilers: T,
+            mediaLayoutType: k,
+            maxWidth: L,
+            maxHeight: F,
+            hasFooter: _,
             useFullWidth: G,
-            isVisualMediaType: V,
-            onVideoControlsShow: F,
-            onVideoControlsHide: B,
-            forcePlaceholder: H,
+            isVisualMediaType: H,
+            onVideoControlsShow: R,
+            onVideoControlsHide: V,
+            forcePlaceholder: U,
         } = e,
-        { width: Y, height: W, spoiler: K, type: z, contentType: q } = n,
-        [X, Z] = i.useState(!1),
-        Q = t.getChannelId(),
-        $ = E.A.getChannel(Q),
-        J = (0, m.A)(Q),
-        ee = i.useMemo(() => (null != q && -1 !== q.indexOf("/") ? q.split("/") : ["unknown", "unknown"]), [q]),
+        { width: q, height: X, spoiler: K, type: z, contentType: Q } = n,
+        [B, Y] = i.useState(!1),
+        Z = t.getChannelId(),
+        $ = j.A.getChannel(Z),
+        J = (0, f.A)(Z),
+        ee = i.useMemo(() => (null != Q && -1 !== Q.indexOf("/") ? Q.split("/") : ["unknown", "unknown"]), [Q]),
         et = !1;
-    if (V) {
-        (null == Y || null == W) && (et = !0);
-        let e = (0, y.U8)({
-            width: null != Y ? Y : 0,
-            height: null != W ? W : 0,
-            maxWidth: null != j ? j : A.k6,
-            maxHeight: null != M ? M : A.Rk,
+    if (H) {
+        (null == q || null == X) && (et = !0);
+        let e = (0, O.U8)({
+            width: null != q ? q : 0,
+            height: null != X ? X : 0,
+            maxWidth: null != L ? L : v.k6,
+            maxHeight: null != F ? F : v.Rk,
         });
-        !G && (e * (null != Y ? Y : 0) < A.ie || e * (null != W ? W : 0) < A.ie) && (et = !0);
+        !G && (e * (null != q ? q : 0) < v.ie || e * (null != X ? X : 0) < v.ie) && (et = !0);
     }
     let en = i.useCallback(() => {
-            l(n);
-        }, [n, l]),
+            a(n);
+        }, [n, a]),
         er = i.useCallback(() => {
-            b.default.track(v.HAw.IMAGE_HOVERED, {
+            x.default.track(w.HAw.IMAGE_HOVERED, {
                 guild_id: null == $ ? void 0 : $.guild_id,
                 channel_id: null == $ ? void 0 : $.id,
                 image_recommendations_shown: !1,
             });
         }, [$]),
         ei = i.useCallback(() => {
-            if (L === A.dG.MOSAIC) {
+            if (k === v.dG.MOSAIC) {
                 let e = (!J && ["VIDEO", "CLIP", "AUDIO"].includes(z)) || "OTHER" === z;
                 return et
                     ? null
-                    : !X &&
-                          (0, r.jsx)(k, {
+                    : !B &&
+                          (0, r.jsx)(E, {
                               mimeType: ee,
                               downloadURL: n.downloadUrl,
                               showDownload: e,
                               onRemoveItem: o ? en : void 0,
-                              isVisualMediaType: V,
+                              isVisualMediaType: H,
                           });
             }
             return (
                 o &&
-                (0, r.jsx)(c.DUT, {
-                    className: K ? I.yR : I.Yg,
+                (0, r.jsx)(u.DUT, {
+                    className: K ? C.yR : C.Yg,
                     focusProps: {
                         offset: {
                             bottom: 4,
                         },
                     },
-                    onClick: () => l(n),
-                    "aria-label": S.intl.string(S.t["0+xZH0"]),
-                    children: (0, r.jsx)(c.PGe, {
+                    onClick: () => a(n),
+                    "aria-label": P.intl.string(P.t["0+xZH0"]),
+                    children: (0, r.jsx)(u.PGe, {
                         size: "xs",
                         color: "currentColor",
                     }),
                 })
             );
-        }, [L, o, K, J, z, et, X, ee, n, en, V, l]);
-    if (H)
-        return (0, r.jsx)(c._V3, {
-            className: R,
-            readyState: v.Rv1.READY,
+        }, [k, o, K, J, z, et, B, ee, n, en, H, a]);
+    if (U)
+        return (0, r.jsx)(u._V3, {
+            className: S,
+            readyState: w.Rv1.READY,
             src: "",
-            width: null != Y ? Y : 350,
-            height: null != W ? W : 350,
-            maxWidth: j,
-            maxHeight: M,
-            mediaLayoutType: L,
+            width: null != q ? q : 350,
+            height: null != X ? X : 350,
+            maxWidth: L,
+            maxHeight: F,
+            mediaLayoutType: k,
             useFullWidth: G,
             zoomable: !1,
         });
     switch (z) {
         case "IMAGE":
-            return (0, r.jsx)(h.G.Consumer, {
+            return (0, r.jsx)(y.G.Consumer, {
                 children: (e) =>
-                    (0, r.jsx)(_, {
+                    (0, r.jsx)(p, {
                         item: n,
                         message: t,
-                        width: Y,
-                        height: W,
-                        autoPlay: a && !x,
-                        onClick: u,
-                        onContextMenu: f,
+                        width: q,
+                        height: X,
+                        autoPlay: l && !T,
+                        onClick: c,
+                        onContextMenu: m,
                         shouldHideMediaOptions: J,
                         renderAccessory: e,
                         renderAdjacentContent: ei,
-                        containerClassName: R,
-                        className: w,
-                        imageClassName: P,
+                        containerClassName: S,
+                        className: M,
+                        imageClassName: W,
                         shouldLink: D,
-                        hiddenSpoilers: x,
+                        hiddenSpoilers: T,
                         responsive: !0,
-                        mediaLayoutType: L,
-                        maxWidth: j,
-                        maxHeight: M,
+                        mediaLayoutType: k,
+                        maxWidth: L,
+                        maxHeight: F,
                         useFullWidth: G,
                         handlePreloadImage: d,
                         onMouseEnter: er,
@@ -348,114 +303,117 @@ function U(e) {
             return (0, r.jsx)(g, {
                 item: n,
                 message: t,
-                width: Y,
-                height: W,
-                onClick: u,
-                onContextMenu: f,
+                width: q,
+                height: X,
+                onClick: c,
+                onContextMenu: m,
                 renderAdjacentContent: ei,
-                naturalWidth: Y,
-                naturalHeight: W,
-                className: s()(R, {
-                    [I.yq]: U,
+                naturalWidth: q,
+                naturalHeight: X,
+                className: s()(S, {
+                    [C.yq]: _,
                 }),
                 playable: D,
                 responsive: !0,
-                mediaLayoutType: L,
-                maxWidth: j,
-                maxHeight: M,
+                mediaLayoutType: k,
+                maxWidth: L,
+                maxHeight: F,
                 useFullWidth: G,
                 mimeType: ee,
-                onControlsShow: F,
-                onControlsHide: B,
+                onControlsShow: R,
+                onControlsHide: V,
                 downloadable: !J,
-                mediaPlayerClassName: U ? I.yq : void 0,
+                mediaPlayerClassName: _ ? C.yq : void 0,
             });
         case "VISUAL_PLACEHOLDER":
             if (null == N) return null;
             return (0, r.jsx)(N, {
                 item: n,
                 message: t,
-                className: w,
-                imageClassName: P,
-                maxWidth: j,
-                maxHeight: M,
-                mediaLayoutType: L,
+                className: M,
+                imageClassName: W,
+                maxWidth: L,
+                maxHeight: F,
+                mediaLayoutType: k,
                 useFullWidth: G,
             });
         case "AUDIO":
-            return (0, r.jsx)(O, {
+            return (0, r.jsx)(b, {
                 item: n,
                 message: t,
-                className: R,
+                className: S,
                 playable: D,
                 mimeType: ee,
                 renderAdjacentContent: ei,
-                onVolumeShow: () => Z(!0),
-                onVolumeHide: () => Z(!1),
-                onPlay: p,
+                onVolumeShow: () => Y(!0),
+                onVolumeHide: () => Y(!1),
+                onPlay: h,
             });
         case "PLAINTEXT_PREVIEW":
-            return (0, r.jsx)(T, {
+            return (0, r.jsx)(I, {
                 item: n,
                 message: t,
-                className: R,
-                onClick: u,
-                onContextMenu: f,
+                className: S,
+                onClick: c,
+                onContextMenu: m,
                 renderAdjacentContent: ei,
             });
         case "OTHER":
-            return (0, r.jsx)(C, {
+            return (0, r.jsx)(A, {
                 item: n,
                 message: t,
-                className: R,
-                onClick: u,
-                onContextMenu: f,
+                className: S,
+                onClick: c,
+                onContextMenu: m,
                 renderAdjacentContent: ei,
             });
         case "INVALID":
             return null;
     }
 }
-
-function G(e, t, n) {
-    if (!t) return;
-    let r = e.width;
-    if (void 0 !== e.width && void 0 !== e.height) {
-        let { width: t } = (0, y.Uj)({
-            width: e.width,
-            height: e.height,
-            maxWidth: 400,
-            maxHeight: 300,
-        });
-        r = t;
-    }
-    return w(
-        N(
-            {},
-            n !== A.dG.MOSAIC && {
-                maxWidth: null != r ? r : "400px",
-            },
-        ),
-        {
-            width: "100%",
-            height: "100%",
-            justifySelf: "auto",
-        },
-    );
-}
-let V = function (e) {
+let W = function (e) {
     let {
             className: t,
             item: n,
-            message: a,
+            message: l,
             getObscureReason: o,
-            useFullWidth: l,
-            mediaLayoutType: c,
-            isSingleMosaicItem: u,
+            useFullWidth: a,
+            mediaLayoutType: u,
+            isSingleMosaicItem: c,
             footer: d,
-            displayGridItem: h,
+            displayGridItem: y,
         } = e,
-        m = P(e, [
+        f = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i,
+                l = {};
+            if ("u" > typeof Reflect && Reflect.ownKeys) {
+                for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                return l;
+            }
+            if (
+                ((l = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.getOwnPropertyNames(e);
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    return i;
+                })(e, t)),
+                Object.getOwnPropertySymbols)
+            )
+                for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+            return l;
+        })(e, [
             "className",
             "item",
             "message",
@@ -466,79 +424,104 @@ let V = function (e) {
             "footer",
             "displayGridItem",
         ]),
-        { width: E, height: b, type: y } = n,
-        v = o(n, (0, _.P)(a)),
-        [S, T] = i.useState(null != v),
-        C = (0, f.qZ)(v),
-        R = c === A.dG.MOSAIC,
-        D = !R && ((null != E && E < x) || (null != b && b < L)),
-        M = j(y),
-        k = (0, O.Xg)(y),
-        V = u && null != v && (0, f.j8)(E, b),
-        [F, B] = i.useState(!1),
+        { width: j, height: x, type: w } = n,
+        P = o(n, (0, p.P)(l)),
+        [I, S] = i.useState(null != P),
+        E = (0, m.qZ)(P),
+        W = u === v.dG.MOSAIC,
+        D = !W && ((null != j && j < 200) || (null != x && x < 50)),
+        T = "IMAGE" === w || "VIDEO" === w,
+        k = (0, b.Xg)(w),
+        L = c && null != P && (0, m.j8)(j, x),
+        [F, _] = i.useState(!1),
+        G = () => {
+            _(!0);
+        },
         H = () => {
-            B(!0);
+            _(!1);
         },
-        Y = () => {
-            B(!1);
-        },
-        W = function () {
+        R = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             return (0, r.jsx)(
-                U,
-                w(N({}, m), {
+                M,
+                N(A({}, f), {
                     item: n,
-                    message: a,
+                    message: l,
                     getObscureReason: o,
                     hiddenSpoilers: e,
-                    className: s()(t, I.bq, {
-                        [I.cd]: S && !D,
-                        [I.rP]: S && v === p.Oc.SPOILER,
-                        [I.xu]: S && null != v && p._K.has(v),
-                        [I.sC]: S && e,
-                        [I.mG]: S && D,
+                    className: s()(t, C.bq, {
+                        [C.cd]: I && !D,
+                        [C.rP]: I && P === h.Oc.SPOILER,
+                        [C.xu]: I && null != P && h._K.has(P),
+                        [C.sC]: I && e,
+                        [C.mG]: I && D,
                     }),
                     focusable: !e,
-                    mediaLayoutType: c,
+                    mediaLayoutType: u,
                     hasFooter: null != d,
-                    useFullWidth: (!!V && !!e) || l,
+                    useFullWidth: (!!L && !!e) || a,
                     isVisualMediaType: k,
-                    onVideoControlsShow: H,
-                    onVideoControlsHide: Y,
-                    forcePlaceholder: C && S,
+                    onVideoControlsShow: G,
+                    onVideoControlsHide: H,
+                    forcePlaceholder: E && I,
                 }),
             );
         };
     return (0, r.jsxs)("div", {
-        style: h
+        style: y
             ? {
                   minWidth: 0,
-                  width: "".concat(m.maxWidth, "px"),
+                  width: "".concat(f.maxWidth, "px"),
               }
             : void 0,
-        className: s()(I.wO, {
-            [I.xV]: M,
-            [I.D$]: l,
-            [I.UI]: R,
-            [I.JP]: R && k,
-            [I.hU]: null != d,
+        className: s()(C.wO, {
+            [C.xV]: T,
+            [C.D$]: a,
+            [C.UI]: W,
+            [C.JP]: W && k,
+            [C.hU]: null != d,
         }),
         children: [
-            null != v
+            null != P
                 ? (0, r.jsx)(g.Ay, {
                       type: g.Ay.Types.ATTACHMENT,
                       inline: D,
-                      reason: v,
-                      isSingleMosaicItem: u,
-                      obscured: S,
-                      containerStyles: G(n, M, c),
+                      reason: P,
+                      isSingleMosaicItem: c,
+                      obscured: I,
+                      containerStyles: (function (e, t, n) {
+                          if (!t) return;
+                          let r = e.width;
+                          if (void 0 !== e.width && void 0 !== e.height) {
+                              let { width: t } = (0, O.Uj)({
+                                  width: e.width,
+                                  height: e.height,
+                                  maxWidth: 400,
+                                  maxHeight: 300,
+                              });
+                              r = t;
+                          }
+                          return N(
+                              A(
+                                  {},
+                                  n !== v.dG.MOSAIC && {
+                                      maxWidth: null != r ? r : "400px",
+                                  },
+                              ),
+                              {
+                                  width: "100%",
+                                  height: "100%",
+                                  justifySelf: "auto",
+                              },
+                          );
+                      })(n, T, u),
                       obscurityControlClassName: s()({
-                          [I.yi]: "VIDEO" === y && u && !S && F,
+                          [C.yi]: "VIDEO" === w && c && !I && F,
                       }),
-                      onToggleObscurity: () => T((e) => !e),
-                      children: (e) => W(e),
+                      onToggleObscurity: () => S((e) => !e),
+                      children: (e) => R(e),
                   })
-                : W(),
+                : R(),
             d,
         ],
     });

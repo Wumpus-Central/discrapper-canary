@@ -1,94 +1,91 @@
-function r(e, t) {
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
-}
-var i = n(387739),
-    a = n(265930),
-    s = n(116740),
-    o = s.List,
-    l = s.Map,
-    c = s.OrderedSet,
-    u = s.Record,
-    d = s.Repeat,
-    f = c(),
+var n = r(387739),
+    i = r(265930),
+    o = r(116740),
+    a = o.List,
+    s = o.Map,
+    u = o.OrderedSet,
+    c = o.Record,
+    l = o.Repeat,
+    f = u(),
     p = {
         parent: null,
-        characterList: o(),
-        data: l(),
+        characterList: a(),
+        data: s(),
         depth: 0,
         key: "",
         text: "",
         type: "unstyled",
-        children: o(),
+        children: a(),
         prevSibling: null,
         nextSibling: null,
     },
-    _ = function (e, t) {
-        return e.getStyle() === t.getStyle();
+    h = function (t, e) {
+        return t.getStyle() === e.getStyle();
     },
-    h = function (e, t) {
-        return e.getEntity() === t.getEntity();
+    d = function (t, e) {
+        return t.getEntity() === e.getEntity();
     },
-    m = function (e) {
-        if (!e) return e;
-        var t = e.characterList,
-            n = e.text;
-        return n && !t && (e.characterList = o(d(i.EMPTY, n.length))), e;
+    g = function (t) {
+        if (!t) return t;
+        var e = t.characterList,
+            r = t.text;
+        return r && !e && (t.characterList = a(l(n.EMPTY, r.length))), t;
     };
-e.exports = (function (e) {
-    function t() {
-        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p;
-        return e.call(this, m(t)) || this;
+t.exports = (function (t) {
+    function e() {
+        var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p;
+        return t.call(this, g(e)) || this;
     }
-    r(t, e);
-    var n = t.prototype;
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    var r = e.prototype;
     return (
-        (n.getKey = function () {
+        (r.getKey = function () {
             return this.get("key");
         }),
-        (n.getType = function () {
+        (r.getType = function () {
             return this.get("type");
         }),
-        (n.getText = function () {
+        (r.getText = function () {
             return this.get("text");
         }),
-        (n.getCharacterList = function () {
+        (r.getCharacterList = function () {
             return this.get("characterList");
         }),
-        (n.getLength = function () {
+        (r.getLength = function () {
             return this.getText().length;
         }),
-        (n.getDepth = function () {
+        (r.getDepth = function () {
             return this.get("depth");
         }),
-        (n.getData = function () {
+        (r.getData = function () {
             return this.get("data");
         }),
-        (n.getInlineStyleAt = function (e) {
-            var t = this.getCharacterList().get(e);
-            return t ? t.getStyle() : f;
+        (r.getInlineStyleAt = function (t) {
+            var e = this.getCharacterList().get(t);
+            return e ? e.getStyle() : f;
         }),
-        (n.getEntityAt = function (e) {
-            var t = this.getCharacterList().get(e);
-            return t ? t.getEntity() : null;
+        (r.getEntityAt = function (t) {
+            var e = this.getCharacterList().get(t);
+            return e ? e.getEntity() : null;
         }),
-        (n.getChildKeys = function () {
+        (r.getChildKeys = function () {
             return this.get("children");
         }),
-        (n.getParentKey = function () {
+        (r.getParentKey = function () {
             return this.get("parent");
         }),
-        (n.getPrevSiblingKey = function () {
+        (r.getPrevSiblingKey = function () {
             return this.get("prevSibling");
         }),
-        (n.getNextSiblingKey = function () {
+        (r.getNextSiblingKey = function () {
             return this.get("nextSibling");
         }),
-        (n.findStyleRanges = function (e, t) {
-            a(this.getCharacterList(), _, e, t);
+        (r.findStyleRanges = function (t, e) {
+            i(this.getCharacterList(), h, t, e);
         }),
-        (n.findEntityRanges = function (e, t) {
-            a(this.getCharacterList(), h, e, t);
+        (r.findEntityRanges = function (t, e) {
+            i(this.getCharacterList(), d, t, e);
         }),
-        t
+        e
     );
-})(u(p));
+})(c(p));

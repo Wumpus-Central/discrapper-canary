@@ -1,37 +1,34 @@
-function r(e) {
-    if (!Number.isSafeInteger(e) || e < 0) throw Error(`positive integer expected, not ${e}`);
+function s(t) {
+    if (!Number.isSafeInteger(t) || t < 0) throw Error(`positive integer expected, not ${t}`);
 }
 
-function i(e) {
-    return e instanceof Uint8Array || (null != e && "object" == typeof e && "Uint8Array" === e.constructor.name);
+function i(t, ...e) {
+    if (!(t instanceof Uint8Array || (null != t && "object" == typeof t && "Uint8Array" === t.constructor.name)))
+        throw Error("Uint8Array expected");
+    if (e.length > 0 && !e.includes(t.length))
+        throw Error(`Uint8Array expected of length ${e}, not of length=${t.length}`);
 }
 
-function a(e, ...t) {
-    if (!i(e)) throw Error("Uint8Array expected");
-    if (t.length > 0 && !t.includes(e.length))
-        throw Error(`Uint8Array expected of length ${t}, not of length=${e.length}`);
-}
-
-function s(e) {
-    if ("function" != typeof e || "function" != typeof e.create)
+function n(t) {
+    if ("function" != typeof t || "function" != typeof t.create)
         throw Error("Hash should be wrapped by utils.wrapConstructor");
-    r(e.outputLen), r(e.blockLen);
+    s(t.outputLen), s(t.blockLen);
 }
 
-function o(e, t = !0) {
-    if (e.destroyed) throw Error("Hash instance has been destroyed");
-    if (t && e.finished) throw Error("Hash#digest() has already been called");
+function o(t, e = !0) {
+    if (t.destroyed) throw Error("Hash instance has been destroyed");
+    if (e && t.finished) throw Error("Hash#digest() has already been called");
 }
 
-function l(e, t) {
-    a(e);
-    let n = t.outputLen;
-    if (e.length < n) throw Error(`digestInto() expects output buffer of length at least ${n}`);
+function a(t, e) {
+    i(t);
+    let r = e.outputLen;
+    if (t.length < r) throw Error(`digestInto() expects output buffer of length at least ${r}`);
 }
-n.d(t, {
-    CG: () => l,
-    ai: () => r,
-    ee: () => a,
+r.d(e, {
+    CG: () => a,
+    ai: () => s,
+    ee: () => i,
     t2: () => o,
-    tW: () => s,
+    tW: () => n,
 });

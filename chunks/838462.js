@@ -104,7 +104,7 @@ function O(e) {
                 null != H &&
                 H.hasAnyPremiumGroup &&
                 (0, o.mMO)(async () => {
-                    let { default: e } = await t.e("73987").then(t.bind(t, 773486));
+                    let { default: e } = await Promise.all([t.e("73987"), t.e("6593")]).then(t.bind(t, 773486));
                     return (n) => {
                         var t, r;
                         return (0, l.jsx)(

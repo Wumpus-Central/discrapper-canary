@@ -1,27 +1,13 @@
 n.d(t, {
-    A: () => p,
+    A: () => c,
 });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
+    l = n.n(i),
     s = n(808020);
 
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,76 +18,81 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function u(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-
-function d(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = f(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function f(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let p = (e) => {
-    let { value: t = 0, text: n, className: i, lowImportance: o } = e,
-        c = d(e, ["value", "text", "className", "lowImportance"]);
+let c = (e) => {
+    let { value: t = 0, text: n, className: i, lowImportance: c } = e,
+        d = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i,
+                l = {};
+            if ("u" > typeof Reflect && Reflect.ownKeys) {
+                for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                return l;
+            }
+            if (
+                ((l = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.getOwnPropertyNames(e);
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    return i;
+                })(e, t)),
+                Object.getOwnPropertySymbols)
+            )
+                for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+            return l;
+        })(e, ["value", "text", "className", "lowImportance"]);
     return null != n
         ? (0, r.jsx)(
               "div",
-              u(
-                  l(
+              o(
+                  a(
                       {
-                          className: a()(s.i, i, o && s.H),
+                          className: l()(s.i, i, c && s.H),
                       },
-                      c,
+                      d,
                   ),
                   {
                       children: n,
@@ -111,12 +102,12 @@ let p = (e) => {
         : t > 0
           ? (0, r.jsx)(
                 "div",
-                u(
-                    l(
+                o(
+                    a(
                         {
-                            className: a()(s.i, i, o && s.H),
+                            className: l()(s.i, i, c && s.H),
                         },
-                        c,
+                        d,
                     ),
                     {
                         children: t,

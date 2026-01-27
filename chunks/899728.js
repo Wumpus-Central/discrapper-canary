@@ -1,59 +1,59 @@
 n.d(t, {
-    A: () => g,
+    A: () => p,
 });
 var r = n(311907),
     i = n(988506),
-    a = n(97352),
+    l = n(97352),
     s = n(166403),
-    o = n(927578),
-    l = n(580630),
+    a = n(927578),
+    o = n(580630),
     c = n(231855),
-    u = n(88001),
-    d = n(519412),
-    f = n(985018);
-let p = (e) => {
-        if (null == e) return null;
-        let t = e.planIdFromItems;
-        if (null == t) return null;
-        let n = a.A.get(t);
-        if (null == n) return null;
-        let r = o.Ay.getPrice(t),
-            i = (0, l.$g)(r.amount, r.currency),
-            s = n.interval,
-            c = n.intervalCount;
-        return (0, l.CE)(i, s, c);
-    },
-    _ = (e) =>
-        null == e
-            ? null
-            : f.intl.format(d.default.Nu9LNm, {
-                  primaryName: e,
-                  premiumGroupProductName: (0, u.DP)(),
-              }),
-    h = (e, t, n) => {
-        let r = e === i.qT.PRIMARY ? p(n) : _(t);
-        return null == r ? "..." : r;
-    },
-    m = (e, t) =>
-        e === i.qT.PRIMARY
-            ? f.intl.format(d.default["+R/K74"], {
-                  helpCenterLink: u.TE,
-                  premiumGroupProductName: (0, u.DP)(),
-              })
-            : f.intl.format(t ? d.default["xF+upx"] : d.default.qqfnOm, {
-                  helpCenterLink: u.TE,
-              }),
-    g = (e, t) => {
-        let n = e === i.qT.MEMBER,
-            a = (0, c.A)({
-                useCachedData: !0,
-                fetch: n,
-            }),
-            o = (0, r.bG)([s.A], () => s.A.getPremiumGroupSubscription());
-        return e === i.qT.UNSPECIFIED
-            ? null
-            : {
-                  subheaderString: h(e, a, o),
-                  bodyString: m(e, t),
-              };
-    };
+    d = n(88001),
+    u = n(519412),
+    _ = n(985018);
+let p = (e, t) => {
+    let n,
+        p = e === i.qT.MEMBER,
+        m = (0, c.A)({
+            useCachedData: !0,
+            fetch: p,
+        }),
+        g = (0, r.bG)([s.A], () => s.A.getPremiumGroupSubscription());
+    return e === i.qT.UNSPECIFIED
+        ? null
+        : {
+              subheaderString:
+                  null ==
+                  (n =
+                      e === i.qT.PRIMARY
+                          ? ((e) => {
+                                if (null == e) return null;
+                                let t = e.planIdFromItems;
+                                if (null == t) return null;
+                                let n = l.A.get(t);
+                                if (null == n) return null;
+                                let r = a.Ay.getPrice(t),
+                                    i = (0, o.$g)(r.amount, r.currency),
+                                    s = n.interval,
+                                    c = n.intervalCount;
+                                return (0, o.CE)(i, s, c);
+                            })(g)
+                          : null == m
+                            ? null
+                            : _.intl.format(u.default.Nu9LNm, {
+                                  primaryName: m,
+                                  premiumGroupProductName: (0, d.DP)(),
+                              }))
+                      ? "..."
+                      : n,
+              bodyString:
+                  e === i.qT.PRIMARY
+                      ? _.intl.format(u.default["+R/K74"], {
+                            helpCenterLink: d.TE,
+                            premiumGroupProductName: (0, d.DP)(),
+                        })
+                      : _.intl.format(t ? u.default["xF+upx"] : u.default.qqfnOm, {
+                            helpCenterLink: d.TE,
+                        }),
+          };
+};

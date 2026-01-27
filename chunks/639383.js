@@ -1,30 +1,16 @@
 n.d(t, {
-    A: () => h,
+    A: () => _,
 }),
     n(896048);
 var r = n(627968);
 n(64700);
 var i = n(843282),
-    a = n(435371),
+    l = n(435371),
     s = n(397927),
-    o = n(371509),
-    l = n(721267);
+    a = n(371509),
+    o = n(721267);
 
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function u(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,84 +21,95 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function d(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = f(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function f(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function p(e) {
-    let { title: t, value: n, onChange: a, options: c, isDisabled: u = !1 } = e;
+function d(e) {
+    let { title: t, value: n, onChange: l, options: c, isDisabled: d = !1 } = e;
     return (0, r.jsxs)("div", {
-        className: l.ar,
+        className: o.ar,
         children: [
             (0, r.jsx)(s.Text, {
                 variant: "text-md/medium",
-                color: u ? "text-muted" : "text-strong",
-                className: l.DD,
+                color: d ? "text-muted" : "text-strong",
+                className: o.DD,
                 children: t,
             }),
             (0, r.jsx)(i.Te, {
                 variant: "text-only",
-                className: l.Lt,
+                className: o.Lt,
                 options: c,
                 value: n,
-                onChange: (e) => a(e),
+                onChange: (e) => l(e),
                 renderOptionValue: (e) => {
                     let [t] = e;
-                    return (0, r.jsx)(o.A, {
+                    return (0, r.jsx)(a.A, {
                         option: t,
                     });
                 },
                 renderOptionLabel: (e) =>
-                    (0, r.jsx)(o.A, {
+                    (0, r.jsx)(a.A, {
                         option: e,
                     }),
-                isDisabled: u,
+                isDisabled: d,
                 "data-migration-pending": !0,
             }),
         ],
     });
 }
 
-function _(e) {
+function u(e) {
     let { tooltipText: t } = e,
-        n = d(e, ["tooltipText"]);
-    return (0, r.jsx)(a.m_, {
+        n = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i,
+                l = {};
+            if ("u" > typeof Reflect && Reflect.ownKeys) {
+                for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                return l;
+            }
+            if (
+                ((l = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.getOwnPropertyNames(e);
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    return i;
+                })(e, t)),
+                Object.getOwnPropertySymbols)
+            )
+                for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+            return l;
+        })(e, ["tooltipText"]);
+    return (0, r.jsx)(l.m_, {
         text: t,
         asContainer: !0,
-        children: (0, r.jsx)(p, u({}, n)),
+        children: (0, r.jsx)(d, c({}, n)),
     });
 }
 
-function h(e) {
-    return "tooltipText" in e && null != e.tooltipText ? (0, r.jsx)(_, u({}, e)) : (0, r.jsx)(p, u({}, e));
+function _(e) {
+    return "tooltipText" in e && null != e.tooltipText ? (0, r.jsx)(u, c({}, e)) : (0, r.jsx)(d, c({}, e));
 }

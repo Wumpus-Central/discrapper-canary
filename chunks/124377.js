@@ -1,108 +1,104 @@
-function r(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                i(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-var a = n(68055),
-    s = n(617179),
-    o = n(367932),
-    l = n(176486),
-    c = n(885019),
-    u = n(797686),
-    d = function (e, t) {
+var n = r(68055),
+    i = r(617179),
+    o = r(367932),
+    a = r(176486),
+    s = r(885019),
+    u = r(797686),
+    c = function (t, e) {
         return {
-            key: e.getKey(),
-            text: e.getText(),
-            type: e.getType(),
-            depth: e.getDepth(),
-            inlineStyleRanges: c(e),
-            entityRanges: l(e, t),
-            data: e.getData().toObject(),
+            key: t.getKey(),
+            text: t.getText(),
+            type: t.getType(),
+            depth: t.getDepth(),
+            inlineStyleRanges: s(t),
+            entityRanges: a(t, e),
+            data: t.getData().toObject(),
         };
     },
-    f = function (e, t, n, i) {
-        if (e instanceof a) return void n.push(d(e, t));
-        e instanceof s || u(!1);
-        var o = e.getParentKey(),
-            l = (i[e.getKey()] = r({}, d(e, t), {
+    l = function (t, e, r, o) {
+        if (t instanceof n) return void r.push(c(t, e));
+        t instanceof i || u(!1);
+        var a = t.getParentKey(),
+            s = (o[t.getKey()] = (function (t) {
+                for (var e = 1; e < arguments.length; e++) {
+                    var r = null != arguments[e] ? arguments[e] : {},
+                        n = Object.keys(r);
+                    "function" == typeof Object.getOwnPropertySymbols &&
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(r).filter(function (t) {
+                                return Object.getOwnPropertyDescriptor(r, t).enumerable;
+                            }),
+                        )),
+                        n.forEach(function (e) {
+                            var n, i, o;
+                            (n = t),
+                                (i = e),
+                                (o = r[e]),
+                                i in n
+                                    ? Object.defineProperty(n, i, {
+                                          value: o,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0,
+                                      })
+                                    : (n[i] = o);
+                        });
+                }
+                return t;
+            })({}, c(t, e), {
                 children: [],
             }));
-        o ? i[o].children.push(l) : n.push(l);
+        a ? o[a].children.push(s) : r.push(s);
     },
-    p = function (e, t) {
-        var n = t.entityMap,
-            r = [],
+    f = function (t, e) {
+        var r = e.entityMap,
+            n = [],
             i = {},
             a = {},
             s = 0;
         return (
-            e.getBlockMap().forEach(function (e) {
-                e.findEntityRanges(
-                    function (e) {
-                        return null !== e.getEntity();
-                    },
+            t.getBlockMap().forEach(function (t) {
+                t.findEntityRanges(
                     function (t) {
-                        var r = e.getEntityAt(t),
-                            i = o.stringify(r);
-                        !a[i] && ((a[i] = r), (n[i] = "".concat(s)), s++);
+                        return null !== t.getEntity();
+                    },
+                    function (e) {
+                        var n = t.getEntityAt(e),
+                            i = o.stringify(n);
+                        !a[i] && ((a[i] = n), (r[i] = "".concat(s)), s++);
                     },
                 ),
-                    f(e, n, r, i);
-            }),
-            {
-                blocks: r,
-                entityMap: n,
-            }
-        );
-    },
-    _ = function (e, t) {
-        var n = t.blocks,
-            r = t.entityMap,
-            i = {};
-        return (
-            Object.keys(r).forEach(function (t, n) {
-                var r = e.getEntity(o.unstringify(t));
-                i[n] = {
-                    type: r.getType(),
-                    mutability: r.getMutability(),
-                    data: r.getData(),
-                };
+                    l(t, r, n, i);
             }),
             {
                 blocks: n,
+                entityMap: r,
+            }
+        );
+    },
+    p = function (t, e) {
+        var r = e.blocks,
+            n = e.entityMap,
+            i = {};
+        return (
+            Object.keys(n).forEach(function (e, r) {
+                var n = t.getEntity(o.unstringify(e));
+                i[r] = {
+                    type: n.getType(),
+                    mutability: n.getMutability(),
+                    data: n.getData(),
+                };
+            }),
+            {
+                blocks: r,
                 entityMap: i,
             }
         );
     };
-e.exports = function (e) {
-    var t = {
+t.exports = function (t) {
+    var e = {
         entityMap: {},
         blocks: [],
     };
-    return (t = p(e, t)), (t = _(e, t));
+    return (e = f(t, e)), (e = p(t, e));
 };

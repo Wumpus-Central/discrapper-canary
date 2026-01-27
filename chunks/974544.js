@@ -1,32 +1,31 @@
 n.d(t, {
-    A: () => d,
+    A: () => u,
 });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
-    o = n(780964),
-    l = n(840065),
+var s = n(503698),
+    l = n.n(s),
+    r = n(397927),
+    a = n(780964),
+    o = n(840065),
     c = n(985018),
-    u = n(391870);
+    d = n(391870);
 
-function d(e) {
-    let { disableButton: t } = e,
-        n = () => {
-            !0 !== t && (0, l.openUserSettings)(o.X.STREAMER_MODE_PANEL);
-        };
-    return (0, r.jsxs)("div", {
-        className: u.IG,
+function u(e) {
+    let { disableButton: t } = e;
+    return (0, i.jsxs)("div", {
+        className: d.IG,
         children: [
-            (0, r.jsx)("div", {
-                className: u.TE,
+            (0, i.jsx)("div", {
+                className: d.TE,
             }),
-            (0, r.jsx)(s.DUT, {
-                className: a()(u.Ac, {
-                    [u.r9]: t,
+            (0, i.jsx)(r.DUT, {
+                className: l()(d.Ac, {
+                    [d.r9]: t,
                 }),
-                onClick: n,
+                onClick: () => {
+                    !0 !== t && (0, o.openUserSettings)(a.X.STREAMER_MODE_PANEL);
+                },
                 children: c.intl.string(c.t.Br1ls3),
             }),
         ],

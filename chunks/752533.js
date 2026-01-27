@@ -1,93 +1,86 @@
 n.d(t, {
-    Bs: () => y,
-    MT: () => E,
+    Bs: () => h,
+    MT: () => A,
     U4: () => g,
-    XN: () => O,
-    YF: () => b,
+    XN: () => b,
+    YF: () => f,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(827734),
-    l = n(397927),
+    l = n(503698),
+    s = n.n(l),
+    a = n(827734),
+    o = n(397927),
     c = n(854627),
-    u = n(427262),
-    d = n(519412),
-    f = n(985018),
+    d = n(427262),
+    u = n(519412),
+    _ = n(985018),
     p = n(75717);
-
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
-    }
-    return e;
-}
 let m = (e) => {
-        let { user: t, isOwnUser: n, label: a, removeButton: o, isFaded: d } = e,
-            { avatarSrc: _, eventHandlers: m } = (0, c.A)({
+        let { user: t, isOwnUser: n, label: l, removeButton: a, isFaded: u } = e,
+            { avatarSrc: m, eventHandlers: g } = (0, c.A)({
                 userId: null == t ? void 0 : t.id,
-                size: l._3J.SIZE_24,
+                size: o._3J.SIZE_24,
             }),
-            g = (0, u.$3)(t),
-            [E, b] = i.useState(!1);
+            A = (0, d.$3)(t),
+            [f, h] = i.useState(!1);
         return (0, r.jsxs)("div", {
             className: s()(p.kL, {
-                [p.RE]: null != o,
+                [p.RE]: null != a,
             }),
-            onMouseEnter: () => b(!0),
-            onMouseLeave: () => b(!1),
+            onMouseEnter: () => h(!0),
+            onMouseLeave: () => h(!1),
             children: [
                 (0, r.jsxs)("div", {
                     className: s()(p.TT, {
-                        [p.zj]: d,
+                        [p.zj]: u,
                     }),
                     children: [
                         (0, r.jsx)(
-                            l.euF,
-                            h(
+                            o.euF,
+                            (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    "function" == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            }),
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0,
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })(
                                 {
                                     className: p.my,
-                                    src: _,
-                                    "aria-label": g,
-                                    size: l._3J.SIZE_24,
+                                    src: m,
+                                    "aria-label": A,
+                                    size: o._3J.SIZE_24,
                                 },
-                                m,
+                                g,
                             ),
                         ),
-                        (0, r.jsxs)(l.Text, {
+                        (0, r.jsxs)(o.Text, {
                             className: p.Xh,
                             variant: "text-sm/medium",
                             color: "text-strong",
-                            children: [g, !!n && " (".concat(f.intl.string(f.t.LuZzxn), ")")],
+                            children: [A, !!n && " (".concat(_.intl.string(_.t.LuZzxn), ")")],
                         }),
-                        null != a &&
-                            (0, r.jsxs)(l.Text, {
+                        null != l &&
+                            (0, r.jsxs)(o.Text, {
                                 className: p.Pf,
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
@@ -96,20 +89,20 @@ let m = (e) => {
                                         className: p.me,
                                         children: "\xb7",
                                     }),
-                                    a,
+                                    l,
                                 ],
                             }),
                     ],
                 }),
-                null != o &&
-                    E &&
+                null != a &&
+                    f &&
                     (0, r.jsx)("div", {
                         className: p.dM,
-                        children: (0, r.jsx)(l.QWc, {
+                        children: (0, r.jsx)(o.QWc, {
                             textVariant: "text-sm/medium",
                             variant: "secondary",
-                            text: o.label,
-                            onClick: o.onRemove,
+                            text: a.label,
+                            onClick: a.onRemove,
                         }),
                     }),
             ],
@@ -120,43 +113,43 @@ let m = (e) => {
         return (0, r.jsx)(m, {
             user: t,
             isOwnUser: n,
-            label: f.intl.string(d.default.vc2xys),
+            label: _.intl.string(u.default.vc2xys),
         });
     },
-    E = (e) => {
+    A = (e) => {
         let { user: t, onRemove: n } = e;
         return (0, r.jsx)(m, {
             user: t,
-            label: f.intl.string(d.default.mnt50A),
+            label: _.intl.string(u.default.mnt50A),
             removeButton: {
                 onRemove: n,
-                label: f.intl.string(f.t.N86XcP),
+                label: _.intl.string(_.t.N86XcP),
             },
         });
     },
-    b = (e) => {
+    f = (e) => {
         let { user: t, isOwnUser: n } = e;
         return (0, r.jsx)(m, {
             user: t,
             isOwnUser: n,
-            label: f.intl.string(d.default.mnt50A),
+            label: _.intl.string(u.default.mnt50A),
         });
     },
-    y = (e) => {
+    h = (e) => {
         let { user: t, onRemove: n } = e;
         return (0, r.jsx)(m, {
             user: t,
-            label: f.intl.string(d.default["1RH5t9"]),
+            label: _.intl.string(u.default["1RH5t9"]),
             isFaded: !0,
             removeButton: {
                 onRemove: n,
-                label: f.intl.string(d.default["2blqtw"]),
+                label: _.intl.string(u.default["2blqtw"]),
             },
         });
     },
-    O = (e) => {
+    b = (e) => {
         let { onInvite: t, canInvite: n } = e,
-            [a, c] = i.useState(!1);
+            [l, c] = i.useState(!1);
         return (0, r.jsxs)("div", {
             className: s()(p.kL, {
                 [p.RE]: n,
@@ -169,27 +162,27 @@ let m = (e) => {
                     children: [
                         (0, r.jsx)("div", {
                             className: s()(p.vG, p.my),
-                            children: (0, r.jsx)(l.nys, {
+                            children: (0, r.jsx)(o.nys, {
                                 size: "xxs",
-                                color: o.A.colors.ICON_SUBTLE,
+                                color: a.A.colors.ICON_SUBTLE,
                             }),
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(o.Text, {
                             className: p.Xh,
                             variant: "text-sm/medium",
                             color: "text-strong",
-                            children: f.intl.string(d.default["/x7DVG"]),
+                            children: _.intl.string(u.default["/x7DVG"]),
                         }),
                     ],
                 }),
-                a &&
+                l &&
                     n &&
                     (0, r.jsx)("div", {
                         className: p.dM,
-                        children: (0, r.jsx)(l.QWc, {
+                        children: (0, r.jsx)(o.QWc, {
                             textVariant: "text-sm/medium",
                             variant: "secondary",
-                            text: f.intl.string(d.default.O15JWp),
+                            text: _.intl.string(u.default.O15JWp),
                             onClick: t,
                         }),
                     }),

@@ -1,5 +1,5 @@
 n.d(t, {
-    Q: () => y,
+    Q: () => b,
 }),
     n(896048),
     n(864466),
@@ -7,85 +7,83 @@ n.d(t, {
     n(638769);
 var r = n(843472),
     i = n(508675),
-    a = n(451909),
-    s = n(361670),
-    o = n(631576),
-    l = n(679382),
+    l = n(451909),
+    a = n(361670),
+    s = n(631576),
+    o = n(679382),
     c = n(842086),
     u = n(71393),
     d = n(287809),
-    f = n(690521),
-    p = n(661191),
-    _ = n(652215),
-    h = n(307731),
-    m = n(381941);
-let g = 5,
-    E = 10;
+    p = n(690521),
+    m = n(661191),
+    f = n(652215),
+    g = n(307731),
+    h = n(381941);
 
-function b(e) {
+function _(e) {
     let t = u.A.getGuild(e);
-    return null != t && (t.nsfwLevel === _.ftr.DEFAULT || t.nsfwLevel === _.ftr.SAFE);
+    return null != t && (t.nsfwLevel === f.ftr.DEFAULT || t.nsfwLevel === f.ftr.SAFE);
 }
-async function y(e, t) {
-    var n, _, y;
-    let O = t.getGuildId();
-    if (null == O || null == u.A.getGuild(O)) return;
-    let A = d.default.getCurrentUser();
-    if (null == A) return;
-    await (0, o.YB)();
-    let v = Array.from(l.A.getAllGuildStickers().values())
+async function b(e, t) {
+    var n, f, b;
+    let A = t.getGuildId();
+    if (null == A || null == u.A.getGuild(A)) return;
+    let y = d.default.getCurrentUser();
+    if (null == y) return;
+    await (0, s.YB)();
+    let v = Array.from(o.A.getAllGuildStickers().values())
         .flat()
-        .filter((e) => b(e.guild_id) && (0, s.G7)(e, A, t))
-        .sort((e, t) => -p.default.compare(e.id, t.id));
-    if (v.length > g) {
+        .filter((e) => _(e.guild_id) && (0, a.G7)(e, y, t))
+        .sort((e, t) => -m.default.compare(e.id, t.id));
+    if (v.length > 5) {
         let n = [v[Math.floor(Math.pow(Math.random(), 2) * v.length)].id];
         r.A.sendStickers(t.id, n, "", {
             messageReference: {
-                guild_id: null != (_ = t.getGuildId()) ? _ : void 0,
+                guild_id: null != (f = t.getGuildId()) ? f : void 0,
                 channel_id: t.id,
                 message_id: e,
             },
-            location: m.Hx.CHANNEL_PROMPT,
+            location: h.Hx.CHANNEL_PROMPT,
         });
         return;
     }
-    let S = u.A.getGuildIds()
-        .filter(b)
+    let x = u.A.getGuildIds()
+        .filter(_)
         .map((e) => i.Ay.getUsableGuildEmoji(e))
         .flat()
         .filter(
             (e) =>
                 null ==
-                f.Ay.getEmojiUnavailableReason({
+                p.Ay.getEmojiUnavailableReason({
                     emoji: e,
                     channel: t,
-                    guildId: O,
-                    intention: h.b_.CHAT,
+                    guildId: A,
+                    intention: g.b_.CHAT,
                 }),
         )
-        .sort((e, t) => -p.default.compare(e.id, t.id));
-    if (S.length > E) {
-        let n = S[Math.floor(Math.pow(Math.random(), 2) * S.length)];
-        r.A.sendMessage(t.id, a.Ay.parse(t, (0, f.N)(n)), !1, {
-            location: m.Hx.CHANNEL_PROMPT,
+        .sort((e, t) => -m.default.compare(e.id, t.id));
+    if (x.length > 10) {
+        let n = x[Math.floor(Math.pow(Math.random(), 2) * x.length)];
+        r.A.sendMessage(t.id, l.Ay.parse(t, (0, p.N)(n)), !1, {
+            location: h.Hx.CHANNEL_PROMPT,
             messageReference: {
-                guild_id: null != (y = t.getGuildId()) ? y : void 0,
+                guild_id: null != (b = t.getGuildId()) ? b : void 0,
                 channel_id: t.id,
                 message_id: e,
             },
         });
         return;
     }
-    let I = Array.from(l.A.getAllPackStickers().values())
+    let O = Array.from(o.A.getAllPackStickers().values())
             .flat()
             .filter((e) => e.type === c.NL.STANDARD),
-        T = [I[Math.floor(Math.random() * I.length)].id];
-    r.A.sendStickers(t.id, T, "", {
+        E = [O[Math.floor(Math.random() * O.length)].id];
+    r.A.sendStickers(t.id, E, "", {
         messageReference: {
             guild_id: null != (n = t.getGuildId()) ? n : void 0,
             channel_id: t.id,
             message_id: e,
         },
-        location: m.Hx.CHANNEL_PROMPT,
+        location: h.Hx.CHANNEL_PROMPT,
     });
 }

@@ -1,12 +1,12 @@
 n.d(t, {
-    A: () => d,
+    A: () => u,
 }),
     n(896048);
-var r,
-    i = n(311907),
-    a = n(73153);
+var i,
+    s = n(311907),
+    r = n(73153);
 
-function s(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,42 +27,40 @@ let o = {
         show_icymi_debug_scores: "Show ICYMI debug scores",
         channel_list_scrim: "Dim the channel list when chat appears",
     },
-    l = {};
-
-function c(e) {
-    l[e.toggle] = e.value;
-}
-class u extends (r = i.Ay.DeviceSettingsStore) {
+    a = {};
+class d extends (i = s.Ay.DeviceSettingsStore) {
     getUserAgnosticState() {
         return {
-            toggleStates: l,
+            toggleStates: a,
         };
     }
     initialize(e) {
         for (var t in o) {
-            var n, r;
-            let i = null != (n = null == e || null == (r = e.toggleStates) ? void 0 : r[t]) && n;
-            l[t] = i;
+            var n, i;
+            let s = null != (n = null == e || null == (i = e.toggleStates) ? void 0 : i[t]) && n;
+            a[t] = s;
         }
     }
     get(e) {
         var t;
-        return null != (t = l[e]) && t;
+        return null != (t = a[e]) && t;
     }
     set(e, t) {
-        return (l[e] = t), t;
+        return (a[e] = t), t;
     }
     all() {
-        return l;
+        return a;
     }
     allWithDescriptions() {
-        return Object.entries(l).map((e) => {
+        return Object.entries(a).map((e) => {
             let [t, n] = e;
             return [t, n, o[t]];
         });
     }
 }
-s(u, "displayName", "DevToolsDesignTogglesStore"), s(u, "persistKey", "DevToolsDesignTogglesStore");
-let d = new u(a.h, {
-    DEV_TOOLS_DESIGN_TOGGLE_SET: c,
+l(d, "displayName", "DevToolsDesignTogglesStore"), l(d, "persistKey", "DevToolsDesignTogglesStore");
+let u = new d(r.h, {
+    DEV_TOOLS_DESIGN_TOGGLE_SET: function (e) {
+        a[e.toggle] = e.value;
+    },
 });

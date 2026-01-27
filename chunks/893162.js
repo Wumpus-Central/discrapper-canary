@@ -1,34 +1,32 @@
-n.d(t, {
-    R: () => c,
+r.d(t, {
+    R: () => o,
 }),
-    n(321073),
-    n(896048);
-var r = n(64700),
-    i = n(311907),
-    a = n(351906),
-    s = n(822382),
-    o = n(652215);
+    r(321073),
+    r(896048);
+var n = r(64700),
+    l = r(311907),
+    s = r(351906),
+    a = r(822382),
+    i = r(652215);
 
-function l(e) {
-    let t = (0, i.bG)([a.A], () => a.A.hidePersonalInformation);
-    return r.useMemo(() => {
-        let n = (0, s.Wg)(e),
-            r = [];
-        return (
-            t || (r.push(o.LWr.FILTER_FROM), r.push(o.LWr.FILTER_MENTIONS)),
-            r.push(o.LWr.FILTER_HAS),
-            n && r.push(o.LWr.FILTER_IN),
-            r.push(o.LWr.FILTER_ON),
-            r.push(o.LWr.FILTER_BEFORE),
-            r.push(o.LWr.FILTER_AFTER),
-            r.push(o.LWr.FILTER_PINNED),
-            r.push(o.LWr.FILTER_AUTHOR_TYPE),
-            r
-        );
-    }, [t, e]);
-}
-
-function c(e) {
-    let t = l(e);
-    return r.useMemo(() => new Set(t), [t]);
+function o(e) {
+    let t,
+        r =
+            ((t = (0, l.bG)([s.A], () => s.A.hidePersonalInformation)),
+            n.useMemo(() => {
+                let r = (0, a.Wg)(e),
+                    n = [];
+                return (
+                    t || (n.push(i.LWr.FILTER_FROM), n.push(i.LWr.FILTER_MENTIONS)),
+                    n.push(i.LWr.FILTER_HAS),
+                    r && n.push(i.LWr.FILTER_IN),
+                    n.push(i.LWr.FILTER_ON),
+                    n.push(i.LWr.FILTER_BEFORE),
+                    n.push(i.LWr.FILTER_AFTER),
+                    n.push(i.LWr.FILTER_PINNED),
+                    n.push(i.LWr.FILTER_AUTHOR_TYPE),
+                    n
+                );
+            }, [t, e]));
+    return n.useMemo(() => new Set(r), [r]);
 }

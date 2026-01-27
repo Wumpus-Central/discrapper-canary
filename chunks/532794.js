@@ -5,8 +5,8 @@ var r = n(627968);
 n(64700);
 var i = n(296489),
     a = n.n(i),
-    s = n(835245),
-    o = n(397927),
+    o = n(835245),
+    s = n(397927),
     l = n(73153),
     c = n(391048),
     u = n(158032),
@@ -18,8 +18,8 @@ var i = n(296489),
     m = n(927578),
     g = n(925847),
     E = n(639289),
-    b = n(652215),
-    y = n(788868);
+    y = n(652215),
+    b = n(788868);
 
 function O(e, t, n) {
     return (
@@ -35,7 +35,7 @@ function O(e, t, n) {
     );
 }
 
-function A(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function A(e) {
     return e;
 }
 
-function v(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,19 +65,19 @@ function v(e, t) {
     return n;
 }
 
-function S(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -110,23 +110,23 @@ function C(e) {
     let {
             initialPlanId: i,
             followupSKUInfo: O,
-            onClose: v,
+            onClose: A,
             onComplete: T,
             onSubscriptionConfirmation: C,
             analyticsLocations: N,
-            analyticsObject: R,
-            analyticsLocation: w,
+            analyticsObject: w,
+            analyticsLocation: R,
             analyticsSourceLocation: P,
             confirmationFooter: D,
-            isGift: x = !1,
-            giftMessage: L,
-            giftStyle: j,
-            giftingOrigin: M,
+            isGift: L = !1,
+            giftMessage: x,
+            giftStyle: M,
+            giftingOrigin: j,
             subscriptionTier: k,
             trialId: U,
             postSuccessGuild: G,
-            openInvoiceId: V,
-            applicationId: F,
+            openInvoiceId: F,
+            applicationId: V,
             referralTrialOfferId: B,
             giftRecipient: H,
             returnRef: Y,
@@ -134,39 +134,44 @@ function C(e) {
             skipConfirm: K,
         } = null != e ? e : {},
         z = !1,
-        q = null != (t = (0, g.A)()) ? t : (0, s.A)(),
-        X = p.default.getCurrentUser(),
-        Z = (0, m.YE)(X, y.PremiumTypes.TIER_2),
-        Q = a()("payment-modal"),
-        $ = (0, m.mH)(k),
-        J = !1;
-    return (0, o.mMO)(
+        q = null != (t = (0, g.A)()) ? t : (0, o.A)(),
+        Z = p.default.getCurrentUser(),
+        Q = (0, m.YE)(Z, b.PremiumTypes.TIER_2),
+        X = a()("payment-modal"),
+        J = (0, m.mH)(k),
+        $ = !1;
+    return (0, s.mMO)(
         async () => {
-            let { default: e } = await Promise.all([n.e("14704"), n.e("29716"), n.e("2824"), n.e("58846")]).then(
-                n.bind(n, 674619),
-            );
+            let { default: e } = await Promise.all([
+                n.e("62175"),
+                n.e("2292"),
+                n.e("14704"),
+                n.e("29716"),
+                n.e("2824"),
+                n.e("96126"),
+            ]).then(n.bind(n, 674619));
             return (t) => {
                 let { onClose: n } = t,
-                    a = I(t, ["onClose"]);
+                    a = S(t, ["onClose"]);
                 return (0, r.jsx)(
                     e,
-                    S(A({}, a), {
+                    I(v({}, a), {
                         loadId: q,
                         subscriptionTier: k,
-                        skuId: $,
-                        isGift: x,
-                        giftMessage: L,
-                        giftStyle: j,
-                        giftingOrigin: M,
+                        skuId: J,
+                        isGift: L,
+                        giftMessage: x,
+                        giftStyle: M,
+                        giftingOrigin: j,
                         giftRecipient: H,
                         initialPlanId: i,
                         followupSKUInfo: O,
                         onClose: (e) => {
-                            if (J) return;
-                            (J = !0), h._.dispatch(b.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED);
+                            if ($) return;
+                            ($ = !0), h._.dispatch(y.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED);
                             let t = () => {
                                 n(),
-                                    null == v || v(e),
+                                    null == A || A(e),
                                     e && (null == C || C()),
                                     l.h.dispatch({
                                         type: "PREMIUM_PAYMENT_MODAL_CLOSE",
@@ -184,54 +189,54 @@ function C(e) {
                         },
                         onSubscriptionConfirmation: C,
                         analyticsLocations: N,
-                        analyticsObject: R,
-                        analyticsLocation: w,
+                        analyticsObject: w,
+                        analyticsLocation: R,
                         analyticsSourceLocation: P,
                         confirmationFooter: D,
                         trialId: U,
                         postSuccessGuild: G,
-                        planGroup: y.LE,
-                        openInvoiceId: V,
-                        applicationId: F,
+                        planGroup: b.LE,
+                        openInvoiceId: F,
+                        applicationId: V,
                         referralTrialOfferId: B,
                         returnRef: Y,
                         subscription: W,
                         skipConfirm: !!K,
-                        wasTier2PremiumBeforePurchase: Z,
+                        wasTier2PremiumBeforePurchase: Q,
                     }),
                 );
             };
         },
         {
             onCloseRequest: () => {
-                J ||
-                    ((J = !0),
-                    h._.dispatch(b.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+                $ ||
+                    (($ = !0),
+                    h._.dispatch(y.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                     f.A.isDisplayingWowMomentConfirmation && f.A.isAnimated
                         ? setTimeout(() => {
-                              (0, o.OoC)(Q);
+                              (0, s.OoC)(X);
                           }, E.K)
-                        : (0, o.OoC)(Q));
+                        : (0, s.OoC)(X));
             },
-            modalKey: Q,
+            modalKey: X,
             onCloseCallback: () => {
                 z ||
-                    _.default.track(b.HAw.PAYMENT_FLOW_CANCELED, {
+                    _.default.track(y.HAw.PAYMENT_FLOW_CANCELED, {
                         load_id: q,
-                        payment_type: b.frM[b.VVm.SUBSCRIPTION],
-                        location: null != w ? w : R,
+                        payment_type: y.frM[y.VVm.SUBSCRIPTION],
+                        location: null != R ? R : w,
                         source: P,
-                        subscription_type: b.rzx.PREMIUM,
-                        is_gift: x,
-                        sku_id: $,
+                        subscription_type: y.rzx.PREMIUM,
+                        is_gift: L,
+                        sku_id: J,
                         eligible_for_trial: null != U,
-                        application_id: F,
+                        application_id: V,
                         location_stack: N,
                     }),
                     (0, u.ET)(),
                     (0, c.ET)(),
                     (0, d.z)(),
-                    null == v || v(z),
+                    null == A || A(z),
                     z && (null == C || C());
             },
         },

@@ -2,18 +2,16 @@ n.d(t, {
     _f: () => s,
     xC: () => a,
 });
-var r = n(36149),
-    i = n(941977),
-    a = (function (e) {
-        return (
-            (e.MARK_AS_FALSE_POSITIVE = "mark_as_false_positive"),
-            (e.AGE_VERIFICATION_RETRY = "age_verification_retry"),
-            e
-        );
-    })({});
+var r,
+    i = n(36149),
+    l = n(941977),
+    a =
+        (((r = {}).MARK_AS_FALSE_POSITIVE = "mark_as_false_positive"),
+        (r.AGE_VERIFICATION_RETRY = "age_verification_retry"),
+        r);
 
 function s(e, t) {
-    let n = (0, i.r)(e),
-        a = (0, r.YU)(t, e);
-    return n ? "mark_as_false_positive" : a ? "age_verification_retry" : void 0;
+    let n = (0, l.r)(e),
+        r = (0, i.YU)(t, e);
+    return n ? "mark_as_false_positive" : r ? "age_verification_retry" : void 0;
 }

@@ -1,149 +1,150 @@
 n.d(t, {
-    f: () => T,
+    f: () => C,
 }),
     n(747238);
 var r = n(627968),
     i = n(64700),
-    a = n(735438),
-    s = n(110259),
-    o = n(239947),
-    l = n(934551),
+    l = n(735438),
+    a = n(110259),
+    s = n(239947),
+    o = n(934551),
     c = n(97808),
     u = n(732955),
     d = n(397927),
-    f = n(139286),
-    p = n(520117),
-    _ = n(793943),
-    h = n(763754),
-    m = n(973654),
-    g = n(954571),
-    E = n(467135),
-    b = n(644235),
+    p = n(139286),
+    m = n(520117),
+    f = n(793943),
+    g = n(763754),
+    h = n(973654),
+    _ = n(954571),
+    b = n(467135),
+    A = n(644235),
     y = n(153469),
-    O = n(652215),
-    A = n(520650),
-    v = n(985018),
-    S = n(294456);
-let I = (e) => e.map((e) => "#".concat(e)),
-    T = (e) => {
+    v = n(652215),
+    x = n(520650),
+    O = n(985018),
+    E = n(294456);
+let j = (e) => e.map((e) => "#".concat(e)),
+    C = (e) => {
         let { message: t } = e,
             { sharedClientTheme: n } = t,
-            { setAll: i } = (0, E.ko)();
+            { setAll: i } = (0, b.ko)();
         return void 0 === n
             ? null
             : (0, r.jsxs)("div", {
-                  className: S.kL,
+                  className: E.kL,
                   children: [
-                      (0, r.jsx)(N, {
+                      (0, r.jsx)(I, {
                           message: t,
                       }),
                       (0, r.jsx)(u.$nd, {
-                          text: v.intl.string(v.t.SKNnqq),
+                          text: O.intl.string(O.t.SKNnqq),
                           fullWidth: !0,
                           variant: "primary",
                           onClick: () => {
-                              g.default.track(O.HAw.CUSTOM_THEME_SHARE_PREVIEWED, {}),
-                                  (0, _.nf)(_.HP.CUSTOM_THEME, {
-                                      from: _.xv.SHARE_MESSAGE,
+                              _.default.track(v.HAw.CUSTOM_THEME_SHARE_PREVIEWED, {}),
+                                  (0, f.nf)(f.HP.CUSTOM_THEME, {
+                                      from: f.xv.SHARE_MESSAGE,
                                   }),
                                   i({
-                                      colors: I(n.colors),
+                                      colors: j(n.colors),
                                       chassisMixAmount: n.base_mix,
                                       gradientAngle: n.gradient_angle,
                                   }),
-                                  (0, m.GQ)((0, b.PC)(n.base_theme));
+                                  (0, h.GQ)((0, A.PC)(n.base_theme));
                           },
                       }),
                   ],
               });
     },
-    C = (e, t, n) =>
-        e.split(" ").map((e, a) =>
-            "__USERNAME__" !== e
-                ? (0, r.jsxs)(
-                      i.Fragment,
-                      {
-                          children: [e, " "],
-                      },
-                      a,
-                  )
-                : (0, r.jsxs)(
-                      "span",
-                      {
-                          className: S.H,
-                          children: [
-                              (0, r.jsx)(c.eu, {
-                                  "aria-label": n,
-                                  src: t.getAvatarURL(null, 20),
-                                  size: d._3J.SIZE_20,
-                              }),
-                              " ",
-                              n,
-                              " ",
-                          ],
-                      },
-                      a,
-                  ),
-        ),
-    N = (e) => {
-        let { message: t } = e,
-            { sharedClientTheme: n } = t,
-            c = (0, h.Ay)(t),
-            u = i.useMemo(
+    I = (e) => {
+        let t,
+            n,
+            u,
+            { message: f } = e,
+            { sharedClientTheme: h } = f,
+            _ = (0, g.Ay)(f),
+            b = i.useMemo(
                 () =>
-                    (0, a.once)(() => {
-                        (0, f.x)({
-                            type: s.ImpressionTypes.VIEW,
-                            name: o.I.CUSTOM_THEME_SHARE,
+                    (0, l.once)(() => {
+                        (0, p.x)({
+                            type: a.ImpressionTypes.VIEW,
+                            name: s.I.CUSTOM_THEME_SHARE,
                             properties: {},
                         });
                     }),
                 [],
             ),
-            _ = (0, p.A)({
+            A = (0, m.A)({
                 onVisible: () => {
-                    u();
+                    b();
                 },
                 threshold: 1,
                 minTimeVisibleMs: 200,
             }),
-            m = i.useMemo(() => {
+            v = i.useMemo(() => {
                 var e;
-                return void 0 === n ? "" : (0, y.V9)(I(n.colors), null != (e = n.gradient_angle) ? e : 0);
-            }, [n]);
-        return void 0 === n
+                return void 0 === h ? "" : (0, y.V9)(j(h.colors), null != (e = h.gradient_angle) ? e : 0);
+            }, [h]);
+        return void 0 === h
             ? null
             : (0, r.jsxs)("div", {
-                  className: S.pS,
-                  ref: _,
+                  className: E.pS,
+                  ref: A,
                   children: [
                       (0, r.jsx)("div", {
-                          className: S.sl,
+                          className: E.sl,
                           style: {
-                              background: "".concat(m),
+                              background: "".concat(v),
                           },
                       }),
                       (0, r.jsxs)("div", {
-                          className: S.Ix,
+                          className: E.Ix,
                           children: [
                               (0, r.jsxs)(d.Heading, {
                                   variant: "heading-md/semibold",
-                                  className: S.qP,
-                                  children: [v.intl.string(A.default.KSBBpC), " ", (0, r.jsx)(l.NitroWheelIcon, {})],
+                                  className: E.qP,
+                                  children: [O.intl.string(x.default.KSBBpC), " ", (0, r.jsx)(o.NitroWheelIcon, {})],
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: "text-sm/medium",
                                   color: "text-subtle",
-                                  className: S.Tb,
-                                  children: C(
-                                      "".concat(
-                                          v.intl.format(A.default.fQPSEf, {
+                                  className: E.Tb,
+                                  children:
+                                      ((t = "".concat(
+                                          O.intl.format(x.default.fQPSEf, {
                                               username: "__USERNAME__",
                                           }),
-                                      ),
-                                      t.author,
-                                      c.nick,
-                                  ),
+                                      )),
+                                      (n = f.author),
+                                      (u = _.nick),
+                                      t.split(" ").map((e, t) =>
+                                          "__USERNAME__" !== e
+                                              ? (0, r.jsxs)(
+                                                    i.Fragment,
+                                                    {
+                                                        children: [e, " "],
+                                                    },
+                                                    t,
+                                                )
+                                              : (0, r.jsxs)(
+                                                    "span",
+                                                    {
+                                                        className: E.H,
+                                                        children: [
+                                                            (0, r.jsx)(c.eu, {
+                                                                "aria-label": u,
+                                                                src: n.getAvatarURL(null, 20),
+                                                                size: d._3J.SIZE_20,
+                                                            }),
+                                                            " ",
+                                                            u,
+                                                            " ",
+                                                        ],
+                                                    },
+                                                    t,
+                                                ),
+                                      )),
                               }),
                           ],
                       }),

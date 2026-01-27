@@ -1,6 +1,5 @@
-n.d(t, {
-    e: () => a,
+s.d(e, {
+    e: () => n,
 });
-var r = n(661191);
-let i = 864e5,
-    a = (e) => Math.abs(r.default.extractTimestamp(e.id) - new Date().getTime()) < i;
+var i = s(661191);
+let n = (t) => 864e5 > Math.abs(i.default.extractTimestamp(t.id) - new Date().getTime());

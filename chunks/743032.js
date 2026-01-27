@@ -1,31 +1,28 @@
-var r = n(797686);
-
-function i(e) {
-    var t = e.length;
+var n = r(797686);
+t.exports = function (t) {
     if (
-        ((Array.isArray(e) || ("object" != typeof e && "function" != typeof e)) && r(!1),
-        "number" != typeof t && r(!1),
-        0 === t || t - 1 in e || r(!1),
-        "function" == typeof e.callee && r(!1),
-        e.hasOwnProperty)
+        !(
+            t &&
+            ("object" == typeof t || "function" == typeof t) &&
+            "length" in t &&
+            !("setInterval" in t) &&
+            "number" != typeof t.nodeType &&
+            (Array.isArray(t) || "callee" in t || "item" in t)
+        )
+    )
+        return [t];
+    if (Array.isArray(t)) return t.slice();
+    var e = t.length;
+    if (
+        ((Array.isArray(t) || ("object" != typeof t && "function" != typeof t)) && n(!1),
+        "number" != typeof e && n(!1),
+        0 === e || e - 1 in t || n(!1),
+        "function" == typeof t.callee && n(!1),
+        t.hasOwnProperty)
     )
         try {
-            return Array.prototype.slice.call(e);
-        } catch (e) {}
-    for (var n = Array(t), i = 0; i < t; i++) n[i] = e[i];
-    return n;
-}
-
-function a(e) {
-    return (
-        !!e &&
-        ("object" == typeof e || "function" == typeof e) &&
-        "length" in e &&
-        !("setInterval" in e) &&
-        "number" != typeof e.nodeType &&
-        (Array.isArray(e) || "callee" in e || "item" in e)
-    );
-}
-e.exports = function (e) {
-    return a(e) ? (Array.isArray(e) ? e.slice() : i(e)) : [e];
+            return Array.prototype.slice.call(t);
+        } catch (t) {}
+    for (var r = Array(e), i = 0; i < e; i++) r[i] = t[i];
+    return r;
 };

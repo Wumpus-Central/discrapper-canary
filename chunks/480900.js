@@ -16,13 +16,13 @@ var r = n(627968),
     u = n(397927),
     d = n(442433),
     p = n(686956),
-    f = n(736653),
-    h = n(573648),
-    A = n(104171),
-    g = n(58149),
-    m = n(427157),
-    b = n(961350),
-    _ = n(696451),
+    h = n(736653),
+    g = n(573648),
+    f = n(104171),
+    m = n(58149),
+    A = n(427157),
+    _ = n(961350),
+    b = n(696451),
     E = n(317525),
     O = n(954571),
     y = n(975571),
@@ -60,7 +60,7 @@ function T(e) {
 
 function j(e, t) {
     (0, u.mMO)(async () => {
-        let { default: i } = await n.e("80971").then(n.bind(n, 488358));
+        let { default: i } = await Promise.all([n.e("49282"), n.e("58481")]).then(n.bind(n, 488358));
         return (n) =>
             (0, r.jsx)(
                 i,
@@ -77,10 +77,10 @@ function j(e, t) {
 let x = function (e) {
     let { guildId: t, transitionState: l, onClose: x } = e,
         P = (0, o.bG)([E.A], () => E.A.getSortedRoles(t)),
-        w = (0, o.bG)([b.default], () => b.default.getId()),
-        L = (0, o.bG)([_.Ay], () => _.Ay.getMember(t, w)),
+        w = (0, o.bG)([_.default], () => _.default.getId()),
+        L = (0, o.bG)([b.Ay], () => b.Ay.getMember(t, w)),
         [R, D] = i.useState([]),
-        M = (0, f.Ay)();
+        M = (0, h.Ay)();
     if (
         (i.useEffect(() => {
             0 !== R.length &&
@@ -93,7 +93,7 @@ let x = function (e) {
                                 return t;
                             }),
                         },
-                        (0, g.H$)(t),
+                        (0, m.H$)(t),
                     ),
                 );
         }, [t, R]),
@@ -130,13 +130,13 @@ let x = function (e) {
                                 s =
                                     (null == i ? void 0 : i.bot) != null
                                         ? (0, r.jsx)("img", {
-                                              src: new m.A(i.bot).getAvatarURL(t, 24),
+                                              src: new A.A(i.bot).getAvatarURL(t, 24),
                                               alt: "",
                                               className: a()(C.ZN, N.my),
                                           })
                                         : null;
                             } else {
-                                let t = h.A.get(e.connection_type);
+                                let t = g.A.get(e.connection_type);
                                 s = (0, r.jsx)("img", {
                                     src: (0, c.qB)(M) ? t.icon.lightSVG : t.icon.darkSVG,
                                     alt: "",
@@ -226,7 +226,7 @@ let x = function (e) {
                                         : null,
                                 ],
                             }),
-                            (0, r.jsx)(A.Ay, {
+                            (0, r.jsx)(f.Ay, {
                                 showUserPopout: !1,
                                 guildId: t,
                                 users: s.map(() => null),

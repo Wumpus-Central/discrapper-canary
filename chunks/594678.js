@@ -2,109 +2,108 @@ n.d(t, {
     A: () => N,
 });
 var r = n(627968),
-    i = n(64700),
+    l = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(158954),
-    l = n(311907),
+    i = n.n(a),
+    s = n(158954),
+    o = n(311907),
     c = n(397927),
     u = n(975807),
     d = n(975571),
-    f = n(854987),
-    p = n(719718),
-    _ = n(368327),
+    m = n(854987),
+    f = n(719718),
+    p = n(368327),
     h = n(818947),
-    m = n(155286),
+    b = n(155286),
     g = n(573138),
-    E = n(877272),
-    b = n(359588),
-    y = n(532294),
-    O = n(652215),
-    A = n(622865),
-    v = n(985018),
-    S = n(308021),
-    I = n(829252),
-    T = n(416397),
-    C = n(582165);
+    x = n(877272),
+    y = n(359588),
+    v = n(532294),
+    j = n(652215),
+    C = n(622865),
+    _ = n(985018),
+    A = n(308021),
+    O = n(829252),
+    E = n(416397),
+    S = n(582165);
 
 function N() {
-    let e = (0, i.useContext)(f.P),
+    let e = (0, l.useContext)(m.P),
         t = (0, c.rdh)(e.primaryColor).hex(),
         {
             quests: { numOrbs: n, numCompleted: a } = {
                 numOrbs: 0,
                 numCompleted: 0,
             },
-        } = (0, l.bG)([p.A], () => p.A.getCheckpointData()),
+        } = (0, o.bG)([f.A], () => f.A.getCheckpointData()),
         N = 0 === a,
-        R = n > 0 || 0 === a,
-        w = () => {
-            (0, u.A)(d.A.getArticleURL(O.MVz.QUESTS_LEARN_MORE));
+        I = () => {
+            (0, u.A)(d.A.getArticleURL(j.MVz.QUESTS_LEARN_MORE));
         };
     return (0, r.jsxs)(g.A, {
-        className: I.kL,
+        className: O.kL,
         children: [
-            (0, r.jsx)(_.A, {
-                className: I.Ki,
-                slide: y.P7.QUESTS,
-                videoEntrySrc: T.A,
-                videoLoopSrc: C.A,
+            (0, r.jsx)(p.A, {
+                className: O.Ki,
+                slide: v.P7.QUESTS,
+                videoEntrySrc: E.A,
+                videoLoopSrc: S.A,
             }),
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: s()(S.DD, {
-                            [I.p$]: N,
+                        className: i()(A.DD, {
+                            [O.p$]: N,
                         }),
                         children: [
-                            (0, r.jsx)(o.r2v, {
+                            (0, r.jsx)(s.r2v, {
                                 size: "refresh_sm",
                                 color: t,
-                                colorClass: S.d7,
-                                className: S.gr,
+                                colorClass: A.d7,
+                                className: A.gr,
                             }),
-                            (0, r.jsx)(E.A, {
+                            (0, r.jsx)(x.A, {
                                 variant: "eyebrow",
-                                className: S.UP,
-                                children: N ? v.intl.string(A.default.QkdNzt) : v.intl.string(A.default.qsFkSO),
+                                className: A.UP,
+                                children: N ? _.intl.string(C.default.QkdNzt) : _.intl.string(C.default.qsFkSO),
                             }),
                         ],
                     }),
                     !N &&
-                        (0, r.jsx)(b.A, {
+                        (0, r.jsx)(y.A, {
                             end: a,
                         }),
-                    R &&
-                        (0, r.jsx)(E.A, {
+                    (n > 0 || 0 === a) &&
+                        (0, r.jsx)(x.A, {
                             variant: "heading-xxl/medium",
-                            className: I.VA,
+                            className: O.VA,
                             children:
                                 0 === a
-                                    ? v.intl.format(A.default.UYTBoT, {
+                                    ? _.intl.format(C.default.UYTBoT, {
                                           learnMoreHook: (e, t) =>
                                               (0, r.jsx)(
-                                                  o.DUT,
+                                                  s.DUT,
                                                   {
-                                                      onClick: w,
-                                                      className: I.C2,
-                                                      children: (0, r.jsx)(E.A, {
+                                                      onClick: I,
+                                                      className: O.C2,
+                                                      children: (0, r.jsx)(x.A, {
                                                           variant: "heading-xxl/medium",
-                                                          className: I.nf,
+                                                          className: O.nf,
                                                           children: e,
                                                       }),
                                                   },
                                                   t,
                                               ),
                                       })
-                                    : v.intl.format(A.default["gd+Olh"], {
+                                    : _.intl.format(C.default["gd+Olh"], {
                                           numOrbs: n,
                                           orbsHook: (e, t) =>
                                               (0, r.jsxs)(
                                                   h.A,
                                                   {
                                                       children: [
-                                                          (0, r.jsx)(o.Cp8, {
-                                                              className: I.Uu,
+                                                          (0, r.jsx)(s.Cp8, {
+                                                              className: O.Uu,
                                                               color: c.LU0.colors.BLACK,
                                                           }),
                                                           e,
@@ -114,8 +113,8 @@ function N() {
                                               ),
                                       }),
                         }),
-                    (0, r.jsx)(m.e, {
-                        slide: y.P7.QUESTS,
+                    (0, r.jsx)(b.e, {
+                        slide: v.P7.QUESTS,
                     }),
                 ],
             }),

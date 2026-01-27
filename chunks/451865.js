@@ -1,105 +1,104 @@
-var r = n(617179),
-    i = n(279998),
-    a = n(116740),
-    s = n(797686),
-    o = n(728601),
-    l = a.List,
-    c = a.Map,
-    u = function (e, t, n) {
-        if (e) {
-            var r = t.get(e);
-            r && t.set(e, n(r));
+var n = r(617179),
+    i = r(279998),
+    o = r(116740),
+    a = r(797686),
+    s = r(728601),
+    u = o.List,
+    c = o.Map,
+    l = function (t, e, r) {
+        if (t) {
+            var n = e.get(t);
+            n && e.set(t, r(n));
         }
-    },
-    d = function (e, t, n) {
-        return e.withMutations(function (e) {
-            var r = t.getKey(),
-                i = n.getKey();
-            u(t.getParentKey(), e, function (e) {
-                var t = e.getChildKeys(),
-                    n = t.indexOf(r) + 1,
-                    a = t.toArray();
-                return (
-                    a.splice(n, 0, i),
-                    e.merge({
-                        children: l(a),
-                    })
-                );
-            }),
-                u(t.getNextSiblingKey(), e, function (e) {
-                    return e.merge({
-                        prevSibling: i,
-                    });
-                }),
-                u(r, e, function (e) {
-                    return e.merge({
-                        nextSibling: i,
-                    });
-                }),
-                u(i, e, function (e) {
-                    return e.merge({
-                        prevSibling: r,
-                    });
-                });
-        });
     };
-e.exports = function (e, t) {
-    t.isCollapsed() || s(!1);
-    var n = t.getAnchorKey(),
-        a = e.getBlockMap(),
-        l = a.get(n),
-        u = l.getText();
-    if (!u) {
-        var f = l.getType();
-        if ("unordered-list-item" === f || "ordered-list-item" === f)
-            return o(e, t, function (e) {
-                return e.merge({
+t.exports = function (t, e) {
+    e.isCollapsed() || a(!1);
+    var r = e.getAnchorKey(),
+        o = t.getBlockMap(),
+        f = o.get(r),
+        p = f.getText();
+    if (!p) {
+        var h = f.getType();
+        if ("unordered-list-item" === h || "ordered-list-item" === h)
+            return s(t, e, function (t) {
+                return t.merge({
                     type: "unstyled",
                     depth: 0,
                 });
             });
     }
-    var p = t.getAnchorOffset(),
-        _ = l.getCharacterList(),
-        h = i(),
-        m = l instanceof r,
-        g = l.merge({
-            text: u.slice(0, p),
-            characterList: _.slice(0, p),
+    var d = e.getAnchorOffset(),
+        g = f.getCharacterList(),
+        y = i(),
+        v = f instanceof n,
+        m = f.merge({
+            text: p.slice(0, d),
+            characterList: g.slice(0, d),
         }),
-        E = g.merge({
-            key: h,
-            text: u.slice(p),
-            characterList: _.slice(p),
+        _ = m.merge({
+            key: y,
+            text: p.slice(d),
+            characterList: g.slice(d),
             data: c(),
         }),
-        b = a.toSeq().takeUntil(function (e) {
-            return e === l;
+        b = o.toSeq().takeUntil(function (t) {
+            return t === f;
         }),
-        y = a
+        S = o
             .toSeq()
-            .skipUntil(function (e) {
-                return e === l;
+            .skipUntil(function (t) {
+                return t === f;
             })
             .rest(),
-        O = b
+        w = b
             .concat(
                 [
-                    [n, g],
-                    [h, E],
+                    [r, m],
+                    [y, _],
                 ],
-                y,
+                S,
             )
             .toOrderedMap();
     return (
-        m && (l.getChildKeys().isEmpty() || s(!1), (O = d(O, g, E))),
-        e.merge({
-            blockMap: O,
-            selectionBefore: t,
-            selectionAfter: t.merge({
-                anchorKey: h,
+        v &&
+            (f.getChildKeys().isEmpty() || a(!1),
+            (w = w.withMutations(function (t) {
+                var e = m.getKey(),
+                    r = _.getKey();
+                l(m.getParentKey(), t, function (t) {
+                    var n = t.getChildKeys(),
+                        i = n.indexOf(e) + 1,
+                        o = n.toArray();
+                    return (
+                        o.splice(i, 0, r),
+                        t.merge({
+                            children: u(o),
+                        })
+                    );
+                }),
+                    l(m.getNextSiblingKey(), t, function (t) {
+                        return t.merge({
+                            prevSibling: r,
+                        });
+                    }),
+                    l(e, t, function (t) {
+                        return t.merge({
+                            nextSibling: r,
+                        });
+                    }),
+                    l(r, t, function (t) {
+                        return t.merge({
+                            prevSibling: e,
+                        });
+                    });
+            }))),
+        t.merge({
+            blockMap: w,
+            selectionBefore: e,
+            selectionAfter: e.merge({
+                anchorKey: y,
                 anchorOffset: 0,
-                focusKey: h,
+                focusKey: y,
                 focusOffset: 0,
                 isBackward: !1,
             }),

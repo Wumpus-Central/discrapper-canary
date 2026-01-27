@@ -1,9 +1,8 @@
 n.d(t, {
-    G: () => a,
+    G: () => i,
 });
 var r = n(652215);
-let i = 25;
 
-function a(e, t) {
-    return !t.hasAnyAfter(e, (e) => null != e.activity && e.activity.type === r.xL.JOIN, i);
+function i(e, t) {
+    return !t.hasAnyAfter(e, (e) => null != e.activity && e.activity.type === r.xL.JOIN, 25);
 }

@@ -1,82 +1,72 @@
-(t.byteLength = c), (t.toByteArray = d), (t.fromByteArray = _);
+(t.byteLength = function (e) {
+    var t = o(e),
+        n = t[0],
+        i = t[1];
+    return ((n + i) * 3) / 4 - i;
+}),
+    (t.toByteArray = function (e) {
+        var t,
+            n,
+            l = o(e),
+            r = l[0],
+            a = l[1],
+            c = new s(((r + a) * 3) / 4 - a),
+            d = 0,
+            u = a > 0 ? r - 4 : r;
+        for (n = 0; n < u; n += 4)
+            (t =
+                (i[e.charCodeAt(n)] << 18) |
+                (i[e.charCodeAt(n + 1)] << 12) |
+                (i[e.charCodeAt(n + 2)] << 6) |
+                i[e.charCodeAt(n + 3)]),
+                (c[d++] = (t >> 16) & 255),
+                (c[d++] = (t >> 8) & 255),
+                (c[d++] = 255 & t);
+        return (
+            2 === a && ((t = (i[e.charCodeAt(n)] << 2) | (i[e.charCodeAt(n + 1)] >> 4)), (c[d++] = 255 & t)),
+            1 === a &&
+                ((t = (i[e.charCodeAt(n)] << 10) | (i[e.charCodeAt(n + 1)] << 4) | (i[e.charCodeAt(n + 2)] >> 2)),
+                (c[d++] = (t >> 8) & 255),
+                (c[d++] = 255 & t)),
+            c
+        );
+    }),
+    (t.fromByteArray = function (e) {
+        for (var t, i = e.length, s = i % 3, l = [], r = 0, a = i - s; r < a; r += 16383)
+            l.push(
+                (function (e, t, i) {
+                    for (var s, l = [], r = t; r < i; r += 3)
+                        (s = ((e[r] << 16) & 0xff0000) + ((e[r + 1] << 8) & 65280) + (255 & e[r + 2])),
+                            l.push(n[(s >> 18) & 63] + n[(s >> 12) & 63] + n[(s >> 6) & 63] + n[63 & s]);
+                    return l.join("");
+                })(e, r, r + 16383 > a ? a : r + 16383),
+            );
+        return (
+            1 === s
+                ? l.push(n[(t = e[i - 1]) >> 2] + n[(t << 4) & 63] + "==")
+                : 2 === s &&
+                  l.push(n[(t = (e[i - 2] << 8) + e[i - 1]) >> 10] + n[(t >> 4) & 63] + n[(t << 2) & 63] + "="),
+            l.join("")
+        );
+    });
 for (
     var n = [],
-        r = [],
-        i = "u" > typeof Uint8Array ? Uint8Array : Array,
-        a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
-        s = 0,
-        o = a.length;
-    s < o;
-    ++s
+        i = [],
+        s = "u" > typeof Uint8Array ? Uint8Array : Array,
+        l = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
+        r = 0,
+        a = l.length;
+    r < a;
+    ++r
 )
-    (n[s] = a[s]), (r[a.charCodeAt(s)] = s);
+    (n[r] = l[r]), (i[l.charCodeAt(r)] = r);
 
-function l(e) {
+function o(e) {
     var t = e.length;
     if (t % 4 > 0) throw Error("Invalid string. Length must be a multiple of 4");
     var n = e.indexOf("=");
     -1 === n && (n = t);
-    var r = n === t ? 0 : 4 - (n % 4);
-    return [n, r];
+    var i = n === t ? 0 : 4 - (n % 4);
+    return [n, i];
 }
-
-function c(e) {
-    var t = l(e),
-        n = t[0],
-        r = t[1];
-    return ((n + r) * 3) / 4 - r;
-}
-
-function u(e, t, n) {
-    return ((t + n) * 3) / 4 - n;
-}
-
-function d(e) {
-    var t,
-        n,
-        a = l(e),
-        s = a[0],
-        o = a[1],
-        c = new i(u(e, s, o)),
-        d = 0,
-        f = o > 0 ? s - 4 : s;
-    for (n = 0; n < f; n += 4)
-        (t =
-            (r[e.charCodeAt(n)] << 18) |
-            (r[e.charCodeAt(n + 1)] << 12) |
-            (r[e.charCodeAt(n + 2)] << 6) |
-            r[e.charCodeAt(n + 3)]),
-            (c[d++] = (t >> 16) & 255),
-            (c[d++] = (t >> 8) & 255),
-            (c[d++] = 255 & t);
-    return (
-        2 === o && ((t = (r[e.charCodeAt(n)] << 2) | (r[e.charCodeAt(n + 1)] >> 4)), (c[d++] = 255 & t)),
-        1 === o &&
-            ((t = (r[e.charCodeAt(n)] << 10) | (r[e.charCodeAt(n + 1)] << 4) | (r[e.charCodeAt(n + 2)] >> 2)),
-            (c[d++] = (t >> 8) & 255),
-            (c[d++] = 255 & t)),
-        c
-    );
-}
-
-function f(e) {
-    return n[(e >> 18) & 63] + n[(e >> 12) & 63] + n[(e >> 6) & 63] + n[63 & e];
-}
-
-function p(e, t, n) {
-    for (var r = [], i = t; i < n; i += 3)
-        r.push(f(((e[i] << 16) & 0xff0000) + ((e[i + 1] << 8) & 65280) + (255 & e[i + 2])));
-    return r.join("");
-}
-
-function _(e) {
-    for (var t, r = e.length, i = r % 3, a = [], s = 16383, o = 0, l = r - i; o < l; o += s)
-        a.push(p(e, o, o + s > l ? l : o + s));
-    return (
-        1 === i
-            ? a.push(n[(t = e[r - 1]) >> 2] + n[(t << 4) & 63] + "==")
-            : 2 === i && a.push(n[(t = (e[r - 2] << 8) + e[r - 1]) >> 10] + n[(t >> 4) & 63] + n[(t << 2) & 63] + "="),
-        a.join("")
-    );
-}
-(r[45] = 62), (r[95] = 63);
+(i[45] = 62), (i[95] = 63);

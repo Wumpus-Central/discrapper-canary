@@ -1,15 +1,12 @@
-var r = n(494277);
-
-function i(e) {
-    if (r(e)) {
-        var t = e,
-            n = t.getAttribute("data-offset-key");
-        if (n) return n;
-        for (var a = 0; a < t.childNodes.length; a++) {
-            var s = i(t.childNodes[a]);
-            if (s) return s;
+var n = r(494277);
+t.exports = function t(e) {
+    if (n(e)) {
+        var r = e.getAttribute("data-offset-key");
+        if (r) return r;
+        for (var i = 0; i < e.childNodes.length; i++) {
+            var o = t(e.childNodes[i]);
+            if (o) return o;
         }
     }
     return null;
-}
-e.exports = i;
+};

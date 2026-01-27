@@ -1,29 +1,29 @@
 n.d(t, {
-    A: () => S,
+    A: () => A,
 });
 var r = n(627968),
-    i = n(64700),
+    l = n(64700),
     a = n(158954),
-    s = n(311907),
-    o = n(397927),
-    l = n(854987),
+    i = n(311907),
+    s = n(397927),
+    o = n(854987),
     c = n(719718),
     u = n(57882),
     d = n(368327),
-    f = n(818947),
-    p = n(155286),
-    _ = n(573138),
+    m = n(818947),
+    f = n(155286),
+    p = n(573138),
     h = n(877272),
-    m = n(359588),
+    b = n(359588),
     g = n(532294),
-    E = n(622865),
-    b = n(985018),
-    y = n(308021),
-    O = n(881493),
-    A = n(485508),
-    v = n(656122);
+    x = n(622865),
+    y = n(985018),
+    v = n(308021),
+    j = n(881493),
+    C = n(485508),
+    _ = n(656122);
 
-function S() {
+function A() {
     let {
             messages: {
                 numMessagesSent: e,
@@ -36,71 +36,71 @@ function S() {
                     month: 0,
                 },
             },
-        } = (0, s.bG)([c.A], () => c.A.getCheckpointData()),
-        S = i.useContext(l.P),
-        I = (0, o.rdh)(S.primaryColor).hex(),
-        { monthName: T } = (0, u.od)(n, b.intl.currentLocale),
-        C = null != t;
-    return (0, r.jsxs)(_.A, {
-        className: O.kL,
+        } = (0, i.bG)([c.A], () => c.A.getCheckpointData()),
+        A = l.useContext(o.P),
+        O = (0, s.rdh)(A.primaryColor).hex(),
+        { monthName: E } = (0, u.od)(n, y.intl.currentLocale);
+    return (0, r.jsxs)(p.A, {
+        className: j.kL,
         children: [
             (0, r.jsx)(d.A, {
-                className: O.Ki,
+                className: j.Ki,
                 slide: g.P7.MESSAGES,
-                videoEntrySrc: A.A,
-                videoLoopSrc: v.A,
+                videoEntrySrc: C.A,
+                videoLoopSrc: _.A,
             }),
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: y.DD,
+                        className: v.DD,
                         children: [
                             (0, r.jsx)(a.oyn, {
                                 size: "refresh_sm",
-                                color: I,
-                                colorClass: y.d7,
-                                className: y.gr,
+                                color: O,
+                                colorClass: v.d7,
+                                className: v.gr,
                             }),
                             (0, r.jsx)(h.A, {
                                 variant: "eyebrow",
-                                className: y.UP,
-                                children: b.intl.format(E.default.nPTMHj, {
+                                className: v.UP,
+                                children: y.intl.format(x.default.nPTMHj, {
                                     numMessages: e,
                                 }),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(m.A, {
+                    (0, r.jsx)(b.A, {
                         end: e,
                     }),
                     (0, r.jsx)(h.A, {
                         variant: "heading-xxl/medium",
-                        className: O.VA,
-                        children: C
-                            ? b.intl.format(E.default.ixvOza, {
-                                  percent: 100 - t,
-                                  percentHook: (e, t) =>
-                                      (0, r.jsx)(
-                                          f.A,
-                                          {
-                                              children: e,
-                                          },
-                                          t,
-                                      ),
-                              })
-                            : b.intl.format(E.default["Zd+Ej+"], {
-                                  month: T,
-                                  monthHook: (e, t) =>
-                                      (0, r.jsx)(
-                                          f.A,
-                                          {
-                                              children: e,
-                                          },
-                                          t,
-                                      ),
-                              }),
+                        className: j.VA,
+                        children:
+                            null != t
+                                ? y.intl.format(x.default.ixvOza, {
+                                      percent: 100 - t,
+                                      percentHook: (e, t) =>
+                                          (0, r.jsx)(
+                                              m.A,
+                                              {
+                                                  children: e,
+                                              },
+                                              t,
+                                          ),
+                                  })
+                                : y.intl.format(x.default["Zd+Ej+"], {
+                                      month: E,
+                                      monthHook: (e, t) =>
+                                          (0, r.jsx)(
+                                              m.A,
+                                              {
+                                                  children: e,
+                                              },
+                                              t,
+                                          ),
+                                  }),
                     }),
-                    (0, r.jsx)(p.e, {
+                    (0, r.jsx)(f.e, {
                         slide: g.P7.MESSAGES,
                     }),
                 ],

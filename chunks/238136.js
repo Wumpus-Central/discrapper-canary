@@ -1,6 +1,5 @@
 n.d(t, {
-    i: () => r,
+    i: () => l,
 });
-var r = (function (e) {
-    return (e.USER = "user"), (e.ROLE = "role"), (e.CHANNEL = "channel"), e;
-})({});
+var r,
+    l = (((r = {}).USER = "user"), (r.ROLE = "role"), (r.CHANNEL = "channel"), r);

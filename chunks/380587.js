@@ -1,59 +1,57 @@
 n.d(t, {
-    Ev: () => E,
+    Ev: () => h,
     Ow: () => b,
-    aK: () => y,
-    m3: () => O,
+    aK: () => E,
+    m3: () => x,
 });
 var r = n(627968),
     i = n(64700),
-    a = n(397927),
+    l = n(397927),
     s = n(935649),
-    o = n(847599),
-    l = n(444802),
+    a = n(847599),
+    o = n(444802),
     c = n(207560),
-    u = n(558001),
-    d = n(866945),
-    f = n(840387),
+    d = n(558001),
+    u = n(866945),
+    _ = n(840387),
     p = n(933297),
-    _ = n(975571),
-    h = n(64313),
-    m = n(835002),
-    g = n(985018);
+    m = n(975571),
+    g = n(64313),
+    A = n(835002),
+    f = n(985018);
 
-function E() {
-    let e = (0, l.WX)(),
-        t = () => {
-            window.open(_.A.getArticleURL(e), "_blank");
-        };
-    return (0, r.jsx)(d.e, {
-        label: g.t.EUo0yj,
-        labelHook: t,
-        noticeType: m.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
+function h() {
+    let e = (0, o.WX)();
+    return (0, r.jsx)(u.e, {
+        label: f.t.EUo0yj,
+        labelHook: () => {
+            window.open(m.A.getArticleURL(e), "_blank");
+        },
+        noticeType: A.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
     });
 }
 
 function b() {
-    let e = () => {
-        s.A.showAgeVerificationGetStartedModal({
-            entryPoint: o.q1.CONTENT_AND_SOCIAL_NOTICE,
-        });
-    };
-    return (0, r.jsx)(d.e, {
-        label: g.t.OX4ybh,
-        labelHook: e,
-        noticeType: m.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE,
+    return (0, r.jsx)(u.e, {
+        label: f.t.OX4ybh,
+        labelHook: () => {
+            s.A.showAgeVerificationGetStartedModal({
+                entryPoint: a.q1.CONTENT_AND_SOCIAL_NOTICE,
+            });
+        },
+        noticeType: A.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE,
     });
 }
 
-function y() {
-    let e = (0, f.Z)(),
-        t = (0, l.WX)(),
+function E() {
+    let e = (0, _.Z)(),
+        t = (0, o.WX)(),
         n = i.useCallback(() => {
-            window.open(_.A.getArticleURL(t), "_blank"),
-                (0, u.N)(m.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, m.YX.LEARN_MORE);
+            window.open(m.A.getArticleURL(t), "_blank"),
+                (0, d.N)(A.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, A.YX.LEARN_MORE);
         }, [t]),
         s = i.useCallback(() => {
-            (0, u.N)(m.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, m.YX.VIEWED);
+            (0, d.N)(A.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, A.YX.VIEWED);
         }, []);
     return i.useMemo(() => {
         if (e)
@@ -62,10 +60,10 @@ function y() {
                 noticeType: "info",
                 trackView: s,
                 useText: () =>
-                    g.intl.format(g.t.EUo0yj, {
+                    f.intl.format(f.t.EUo0yj, {
                         hook: (e, t) =>
                             (0, r.jsx)(
-                                a.MzZ,
+                                l.MzZ,
                                 {
                                     onClick: n,
                                     children: e,
@@ -77,37 +75,37 @@ function y() {
     }, [n, e, s]);
 }
 
-function O() {
+function x() {
     let e = (0, c.SJ)(),
-        t = (0, h.j)("useContentAndSocialAgeVerificationInlineNotice"),
+        t = (0, g.j)("useContentAndSocialAgeVerificationInlineNotice"),
         n = e || t,
-        l = i.useCallback(() => {
+        o = i.useCallback(() => {
             s.A.showAgeVerificationGetStartedModal({
-                entryPoint: o.q1.CONTENT_AND_SOCIAL_NOTICE,
+                entryPoint: a.q1.CONTENT_AND_SOCIAL_NOTICE,
             }),
-                (0, u.N)(m.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, m.YX.LEARN_MORE);
+                (0, d.N)(A.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, A.YX.LEARN_MORE);
         }, []),
-        d = i.useCallback(() => {
-            (0, u.N)(m.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, m.YX.VIEWED);
+        u = i.useCallback(() => {
+            (0, d.N)(A.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, A.YX.VIEWED);
         }, []);
     return i.useMemo(() => {
         if (n)
             return {
                 type: p.W.INLINE_NOTICE,
                 noticeType: "info",
-                trackView: d,
+                trackView: u,
                 useText: () =>
-                    g.intl.format(g.t.OX4ybh, {
+                    f.intl.format(f.t.OX4ybh, {
                         hook: (e, t) =>
                             (0, r.jsx)(
-                                a.MzZ,
+                                l.MzZ,
                                 {
-                                    onClick: l,
+                                    onClick: o,
                                     children: e,
                                 },
                                 t,
                             ),
                     }),
             };
-    }, [l, n, d]);
+    }, [o, n, u]);
 }

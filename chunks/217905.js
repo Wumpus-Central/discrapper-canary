@@ -1,82 +1,81 @@
 n.d(t, {
-    F: () => l,
+    F: () => s,
 }),
     n(228524);
 var r = n(627968);
 n(64700);
-var i = n(855522),
+var l = n(855522),
     a = n(158954),
-    s = n(183377);
-let o = 96;
+    i = n(183377);
 
-function l(e) {
-    let { benefits: t, description: n, imgSrc: l, title: c, tag: u, FallbackIcon: d } = e,
-        f =
-            null != l
+function s(e) {
+    let { benefits: t, description: n, imgSrc: s, title: o, tag: c, FallbackIcon: u } = e,
+        d =
+            null != s
                 ? {
-                      "--custom-background-url": "url(".concat(l.toString(), ")"),
+                      "--custom-background-url": "url(".concat(s.toString(), ")"),
                   }
-                : void 0,
-        p = null != n && "" !== n;
+                : void 0;
     return (0, r.jsxs)("div", {
-        className: s.kL,
+        className: i.kL,
         children: [
             (0, r.jsxs)("div", {
-                className: s.wx,
+                className: i.wx,
                 children: [
                     (0, r.jsx)("div", {
-                        className: s.y2,
-                        style: f,
+                        className: i.y2,
+                        style: d,
                     }),
                     (0, r.jsx)("div", {
-                        className: s.F0,
+                        className: i.F0,
                         children:
-                            null != l
+                            null != s
                                 ? (0, r.jsx)("img", {
-                                      src: l.toString(),
+                                      src: s.toString(),
                                       alt: "",
                                   })
-                                : (0, r.jsx)(d, {
+                                : (0, r.jsx)(u, {
                                       size: "custom",
                                       color: "var(--text-muted)",
-                                      height: o,
-                                      width: o,
+                                      height: 96,
+                                      width: 96,
                                   }),
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: s.Qs,
+                className: i.Qs,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: s.zH,
+                        className: i.zH,
                         children: [
-                            null != u &&
+                            null != c &&
                                 (0, r.jsx)("div", {
-                                    children: u,
+                                    children: c,
                                 }),
                             (0, r.jsx)(a.DZT, {
                                 color: "text-strong",
                                 variant: "heading-xl/semibold",
-                                children: c,
+                                children: o,
                             }),
-                            p &&
+                            null != n &&
+                                "" !== n &&
                                 (0, r.jsx)(a.EYj, {
                                     color: "text-default",
                                     variant: "text-md/normal",
-                                    className: s.h_,
+                                    className: i.h_,
                                     children: n,
                                 }),
                         ],
                     }),
                     null != t &&
                         (0, r.jsxs)("div", {
-                            className: s.PX,
+                            className: i.PX,
                             children: [
                                 (0, r.jsx)(a.EYj, {
                                     color: "text-default",
                                     variant: "eyebrow",
-                                    children: i.A.Messages.STOREFRONT_BENEFITS_TITLE,
+                                    children: l.A.Messages.STOREFRONT_BENEFITS_TITLE,
                                 }),
                                 t,
                             ],

@@ -1,26 +1,25 @@
-function r(e) {
+n.d(t, {
+    A: () => i,
+});
+
+function i(e) {
     let {
             channel: t,
             canChat: n,
-            renderReactions: r,
-            canAddNewReactions: i,
-            isLurking: a,
-            isGuest: s,
-            communicationDisabled: o,
-            isActiveChannelOrUnarchivableThread: l,
-            isAutomodQuarantined: c,
+            renderReactions: i,
+            canAddNewReactions: l,
+            isLurking: r,
+            isGuest: o,
+            communicationDisabled: a,
+            isActiveChannelOrUnarchivableThread: s,
+            isAutomodQuarantined: u,
         } = e,
-        u = t.isPrivate(),
+        c = t.isPrivate(),
         d = t.isSystemDM(),
-        f = (!0 === i || u) && !d && l,
-        p = (n || u) && l,
-        _ = a || s || !p || !0 === o || !0 === c;
+        p = (n || c) && s;
     return {
-        disableReactionReads: !r,
-        disableReactionCreates: a || s || !p || !f,
-        disableReactionUpdates: _,
+        disableReactionReads: !i,
+        disableReactionCreates: r || o || !p || !((!0 === l || c) && !d && s),
+        disableReactionUpdates: r || o || !p || !0 === a || !0 === u,
     };
 }
-n.d(t, {
-    A: () => r,
-});

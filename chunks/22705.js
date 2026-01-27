@@ -1,3 +1,7 @@
+n.d(t, {
+    A: () => r,
+});
+
 function r(e) {
     var t;
     return null != e
@@ -7,6 +11,3 @@ function r(e) {
           }
         : null;
 }
-n.d(t, {
-    A: () => r,
-});

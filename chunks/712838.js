@@ -8,8 +8,8 @@ var l = n(627968),
     i = n(397927),
     s = n(442433),
     o = n(636922),
-    c = n(734057),
-    u = n(985018),
+    u = n(734057),
+    c = n(985018),
     E = n(641548);
 
 function d(e, t, n) {
@@ -64,7 +64,7 @@ function g(e, t) {
 class A extends r.PureComponent {
     render() {
         let { message: e, listItemProps: t, searchOffset: n, index: r, totalResults: a } = this.props,
-            s = c.A.getChannel(e.channel_id);
+            s = u.A.getChannel(e.channel_id);
         if (null == s) return null;
         let d = "search-result-".concat(e.id);
         return (0, l.jsx)(i.vN3, {
@@ -117,7 +117,7 @@ class A extends r.PureComponent {
                                 children: (0, l.jsx)(i.DUT, {
                                     className: E.x6,
                                     onClick: this.jumpTo,
-                                    children: u.intl.string(u.t.k5WiPf),
+                                    children: c.intl.string(c.t.k5WiPf),
                                 }),
                             }),
                         ],
@@ -131,11 +131,11 @@ class A extends r.PureComponent {
             d(this, "containerRef", r.createRef()),
             d(this, "hitRef", r.createRef()),
             d(this, "handleContextMenu", (e, t) => {
-                let r = c.A.getChannel(t.channel_id);
+                let r = u.A.getChannel(t.channel_id);
                 null != r &&
                     (e.stopPropagation(),
                     (0, s.L3)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("6502"), n.e("27687"), n.e("4948")]).then(
+                        let { default: e } = await Promise.all([n.e("6502"), n.e("27687"), n.e("95336")]).then(
                             n.bind(n, 847342),
                         );
                         return (n) =>

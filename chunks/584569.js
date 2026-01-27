@@ -1,49 +1,36 @@
 n.d(t, {
-    A: () => D,
+    A: () => E,
 }),
     n(896048);
 var r,
-    i = n(311907),
+    i,
+    l = n(311907),
     a = n(205693),
     s = n(73153),
     o = n(194862),
-    l = n(357046),
-    c = n(288737),
-    u = n(562153),
-    d = n(734057),
+    c = n(357046),
+    u = n(288737),
+    d = n(562153),
+    p = n(734057),
     f = n(383501),
-    p = n(287809),
-    _ = n(977997),
-    h = n(607567),
-    m = n(652215),
-    g = n(806931);
+    m = n(287809),
+    g = n(977997),
+    y = n(607567),
+    _ = n(652215),
+    b = n(806931);
+let A = new o.A(),
+    h = new o.A(),
+    v = new Set();
 
-function E(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let b = new o.A(),
-    y = new o.A(),
-    O = new Set();
-
-function A(e, t, n) {
-    let r = new c.A({
+function O(e, t, n) {
+    let r = new u.A({
             userId: e.id,
             channelId: n,
         }),
-        i = (0, h.RQ)(r, null != t ? t : m.ME, e.id);
-    b.set(e.id, i);
-    let a = {
-        type: g.lp.USER,
+        i = (0, y.RQ)(r, null != t ? t : _.ME, e.id);
+    A.set(e.id, i);
+    let l = {
+        type: b.lp.USER,
         user: e,
         id: e.id,
         streamId: null,
@@ -54,18 +41,18 @@ function A(e, t, n) {
         lastSpoke: 0,
         soundsharing: !1,
         ringing: !1,
-        userNick: u.Ay.getName(t, n, e),
-        userAvatarDecoration: (0, l.U)(e, t),
+        userNick: d.Ay.getName(t, n, e),
+        userAvatarDecoration: (0, c.U)(e, t),
         localVideoDisabled: !1,
         isPoppedOut: !1,
     };
-    y.set(e.id, a);
+    h.set(e.id, l);
 }
 
-function v(e) {
-    let t = b.delete(e),
-        n = y.delete(e),
-        r = O.delete(e);
+function j(e) {
+    let t = A.delete(e),
+        n = h.delete(e),
+        r = v.delete(e);
     return t || n || r;
 }
 
@@ -73,83 +60,80 @@ function S() {
     var e;
     let t = f.A.getChannelId();
     if (null == t) return !1;
-    let n = null == (e = d.A.getChannel(t)) ? void 0 : e.getGuildId(),
+    let n = null == (e = p.A.getChannel(t)) ? void 0 : e.getGuildId(),
         r = !1;
     return (
-        O.forEach((e) => {
-            if (null != _.A.getVoiceStateForChannel(t, e)) return void O.delete(e);
-            let i = p.default.getUser(e);
-            null != i && ((r = !0), O.delete(e), A(i, n, t));
+        v.forEach((e) => {
+            if (null != g.A.getVoiceStateForChannel(t, e)) return void v.delete(e);
+            let i = m.default.getUser(e);
+            null != i && ((r = !0), v.delete(e), O(i, n, t));
         }),
         r
     );
 }
 
 function I() {
-    b.clear(), y.clear(), O.clear();
+    A.clear(), h.clear(), v.clear();
 }
-
-function T() {
-    I();
-}
-
-function C(e) {
-    let { state: t, context: n } = e;
-    if (n !== a.x.DEFAULT || t !== m.S7L.DISCONNECTED) return !1;
-    I();
-}
-
-function N(e) {
-    let { voiceStates: t } = e,
-        n = f.A.getChannelId();
-    return (
-        null != n &&
-        t.reduce((e, t) => {
-            let { userId: r, channelId: i } = t;
-            return (i === n && !!v(r)) || e;
-        }, !1)
-    );
-}
-
-function R(e) {
-    let { userIds: t, guildId: n, channelId: r, context: i } = e;
-    return (
-        i === a.x.DEFAULT &&
-        t.reduce((e, t) => {
-            if (null != _.A.getVoiceStateForChannel(r, t)) return e;
-            let i = p.default.getUser(t);
-            return null == i ? (O.add(t), e) : (A(i, n, r), !0);
-        }, !1)
-    );
-}
-
-function w(e) {
-    let { userId: t, context: n } = e;
-    return n === a.x.DEFAULT && v(t);
-}
-class P extends (r = i.Ay.Store) {
+class x extends (r = l.Ay.Store) {
     initialize() {
-        this.waitFor(_.A, p.default, d.A, f.A), this.syncWith([p.default], S);
+        this.waitFor(g.A, m.default, p.A, f.A), this.syncWith([m.default], S);
     }
     get desyncedVoiceStatesCount() {
-        return b.size();
+        return A.size();
     }
     getDesyncedUserIds() {
-        return b.keys();
+        return A.keys();
     }
     getDesyncedVoiceStates() {
-        return b.values();
+        return A.values();
     }
     getDesyncedParticipants() {
-        return y.values();
+        return h.values();
     }
 }
-E(P, "displayName", "RTCConnectionDesyncStore");
-let D = new P(s.h, {
-    CONNECTION_OPEN: T,
+(i = "displayName") in x
+    ? Object.defineProperty(x, i, {
+          value: "RTCConnectionDesyncStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (x[i] = "RTCConnectionDesyncStore");
+let E = new x(s.h, {
+    CONNECTION_OPEN: function () {
+        I();
+    },
     VOICE_CHANNEL_SELECT: I,
-    RTC_CONNECTION_STATE: C,
-    VOICE_STATE_UPDATES: N,
-    RTC_CONNECTION_CLIENT_CONNECT: R,
-    RTC_CONNECTION_CLIENT_DISCONNECT: w,
+    RTC_CONNECTION_STATE: function (e) {
+        let { state: t, context: n } = e;
+        if (n !== a.x.DEFAULT || t !== _.S7L.DISCONNECTED) return !1;
+        I();
+    },
+    VOICE_STATE_UPDATES: function (e) {
+        let { voiceStates: t } = e,
+            n = f.A.getChannelId();
+        return (
+            null != n &&
+            t.reduce((e, t) => {
+                let { userId: r, channelId: i } = t;
+                return (i === n && !!j(r)) || e;
+            }, !1)
+        );
+    },
+    RTC_CONNECTION_CLIENT_CONNECT: function (e) {
+        let { userIds: t, guildId: n, channelId: r, context: i } = e;
+        return (
+            i === a.x.DEFAULT &&
+            t.reduce((e, t) => {
+                if (null != g.A.getVoiceStateForChannel(r, t)) return e;
+                let i = m.default.getUser(t);
+                return null == i ? (v.add(t), e) : (O(i, n, r), !0);
+            }, !1)
+        );
+    },
+    RTC_CONNECTION_CLIENT_DISCONNECT: function (e) {
+        let { userId: t, context: n } = e;
+        return n === a.x.DEFAULT && j(t);
+    },
 });

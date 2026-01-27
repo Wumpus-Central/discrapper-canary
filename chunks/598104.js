@@ -1,59 +1,59 @@
-n.d(t, {
-    A: () => d,
+r.d(t, {
+    A: () => o,
 });
-var r = n(627968),
-    i = n(64700),
-    a = n(397927),
-    s = n(571694),
-    o = n(954376);
-
-function l(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = c(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function c(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function u(e) {
-    let { channel: t, size: n, facepileSizeOverride: i, isTyping: c, status: u, className: d, animated: f = !1 } = e,
-        p = l(e, ["channel", "size", "facepileSizeOverride", "isTyping", "status", "className", "animated"]);
+var n = r(627968),
+    l = r(64700),
+    s = r(397927),
+    a = r(571694),
+    i = r(954376);
+let o = l.memo(function (e) {
+    let { channel: t, size: r, facepileSizeOverride: l, isTyping: o, status: c, className: u, animated: d = !1 } = e,
+        h = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                l,
+                s = {};
+            if ("u" > typeof Reflect && Reflect.ownKeys) {
+                for (l = 0, r = Reflect.ownKeys(e); l < r.length; l++)
+                    (n = r[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
+                return s;
+            }
+            if (
+                ((s = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        l = {},
+                        s = Object.getOwnPropertyNames(e);
+                    for (n = 0; n < s.length; n++)
+                        (r = s[n]),
+                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                    return l;
+                })(e, t)),
+                Object.getOwnPropertySymbols)
+            )
+                for (l = 0, r = Object.getOwnPropertySymbols(e); l < r.length; l++)
+                    (n = r[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
+            return s;
+        })(e, ["channel", "size", "facepileSizeOverride", "isTyping", "status", "className", "animated"]);
     return t.recipients.length >= 2 && null == t.icon
-        ? (0, r.jsx)(o.A, {
-              "aria-label": p["aria-label"],
-              "aria-hidden": p["aria-hidden"],
-              className: d,
+        ? (0, n.jsx)(i.A, {
+              "aria-label": h["aria-label"],
+              "aria-hidden": h["aria-hidden"],
+              className: u,
               recipients: t.recipients,
-              size: null != i ? i : n,
-              isTyping: c,
-              status: u,
+              size: null != l ? l : r,
+              isTyping: o,
+              status: c,
           })
-        : (0, r.jsx)(a.euF, {
-              "aria-hidden": p["aria-hidden"],
-              "aria-label": p["aria-label"],
-              className: d,
-              size: n,
-              src: (0, s.Y)(t, 80, f),
+        : (0, n.jsx)(s.euF, {
+              "aria-hidden": h["aria-hidden"],
+              "aria-label": h["aria-label"],
+              className: u,
+              size: r,
+              src: (0, a.Y)(t, 80, d),
           });
-}
-let d = i.memo(u);
+});

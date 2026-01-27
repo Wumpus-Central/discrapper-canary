@@ -1,21 +1,20 @@
-n.d(t, {
-    A: () => o,
-    b: () => s,
+t.d(l, {
+    A: () => s,
+    b: () => i,
 });
-var r = n(567243),
-    i = n(652215);
-let a = "open.spotify.com";
+var r = t(567243),
+    n = t(652215);
 
-function s(e) {
-    return null != e && e === a;
+function i(e) {
+    return null != e && "open.spotify.com" === e;
 }
 
-function o(e) {
-    var t;
-    if (null == e.url || (null == (t = e.provider) ? void 0 : t.name) !== "Spotify" || e.type !== i.Auw.LINK) return !1;
+function s(e) {
+    var l;
+    if (null == e.url || (null == (l = e.provider) ? void 0 : l.name) !== "Spotify" || e.type !== n.Auw.LINK) return !1;
     try {
-        let t = r.parse(e.url, !0).host;
-        return s(t);
+        let l = r.parse(e.url, !0).host;
+        return i(l);
     } catch (e) {
         return !1;
     }

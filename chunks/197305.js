@@ -3,12 +3,12 @@ n.d(t, {
 }),
     n(321073);
 var r,
-    i = n(311907),
+    l = n(311907),
     a = n(73153),
-    s = n(213012),
-    o = n(71393);
+    i = n(213012),
+    s = n(71393);
 
-function l(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,60 +21,53 @@ function l(e, t, n) {
         e
     );
 }
-let c = 864e5,
-    u = {},
-    d = () => {
-        u = {
+let c = {},
+    u = () => {
+        c = {
             guildAffinitiesByGuildId: {},
             guildAffinities: [],
             lastFetched: 0,
         };
     };
-
-function f(e) {
-    let { guildAffinities: t } = e;
-    (u.guildAffinities = []),
-        (u.guildAffinitiesByGuildId = {}),
-        (u.lastFetched = Date.now()),
-        t.forEach((e, t) => {
-            let { affinity: n, guild_id: r } = e,
-                i = {
-                    score: n,
-                    guildId: r,
-                    index: t,
-                };
-            (u.guildAffinitiesByGuildId[r] = i), u.guildAffinities.push(i);
-        });
-}
-
-function p() {
-    return Date.now() - u.lastFetched > c && (0, s.I)(), !1;
-}
-
-function _() {
-    d();
-}
-d();
-class h extends (r = i.Ay.PersistedStore) {
+u();
+class d extends (r = l.Ay.PersistedStore) {
     initialize(e) {
-        null != e && (u = e), this.waitFor(o.A);
+        null != e && (c = e), this.waitFor(s.A);
     }
     getState() {
-        return u;
+        return c;
     }
     getGuildAffinity(e) {
-        return u.guildAffinitiesByGuildId[e];
+        return c.guildAffinitiesByGuildId[e];
     }
     get affinities() {
-        return u.guildAffinities;
+        return c.guildAffinities;
     }
     get hasRequestResolved() {
-        return 0 !== u.lastFetched;
+        return 0 !== c.lastFetched;
     }
 }
-l(h, "displayName", "GuildAffinitiesStore"), l(h, "persistKey", "GuildAffinitiesStore");
-let m = new h(a.h, {
-    CONNECTION_OPEN: p,
-    LOAD_GUILD_AFFINITIES_SUCCESS: f,
-    LOGOUT: _,
+o(d, "displayName", "GuildAffinitiesStore"), o(d, "persistKey", "GuildAffinitiesStore");
+let m = new d(a.h, {
+    CONNECTION_OPEN: function () {
+        return Date.now() - c.lastFetched > 864e5 && (0, i.I)(), !1;
+    },
+    LOAD_GUILD_AFFINITIES_SUCCESS: function (e) {
+        let { guildAffinities: t } = e;
+        (c.guildAffinities = []),
+            (c.guildAffinitiesByGuildId = {}),
+            (c.lastFetched = Date.now()),
+            t.forEach((e, t) => {
+                let { affinity: n, guild_id: r } = e,
+                    l = {
+                        score: n,
+                        guildId: r,
+                        index: t,
+                    };
+                (c.guildAffinitiesByGuildId[r] = l), c.guildAffinities.push(l);
+            });
+    },
+    LOGOUT: function () {
+        u();
+    },
 });

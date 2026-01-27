@@ -1,21 +1,21 @@
 n.d(t, {
-    A: () => y,
+    A: () => h,
 }),
     n(896048),
     n(65821);
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
+    l = n(311907),
     s = n(397927),
-    o = n(869038),
-    l = n(499454),
+    a = n(869038),
+    o = n(499454),
     c = n(351906),
-    u = n(954571),
-    d = n(45938),
-    f = n(652215),
+    d = n(954571),
+    u = n(45938),
+    _ = n(652215),
     p = n(985018);
 
-function _(e, t, n) {
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function _(e, t, n) {
     );
 }
 
-function h(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,49 +40,42 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
 
-function m(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function g(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let E = "WUMP-AAAAA-BBBBB-CCCCC";
-class b extends i.Component {
+class f extends i.Component {
     get analyticsLocation() {
         let {
             analyticsContext: { location: e },
         } = this.props;
-        return g(h({}, e), {
-            object: f.ZSU.BUTTON_CTA,
+        return A(g({}, e), {
+            object: _.ZSU.BUTTON_CTA,
         });
     }
     render() {
         let { obscureInput: e } = this.props,
-            { codeInput: t, submitting: n, hasError: i, isPromoCode: a } = this.state;
+            { codeInput: t, submitting: n, hasError: i, isPromoCode: l } = this.state;
         return (0, r.jsx)(s.nVY, {
             label: p.intl.string(p.t["il+VCo"]),
             children: (0, r.jsx)("form", {
@@ -94,9 +87,9 @@ class b extends i.Component {
                             type: e ? "password" : "text",
                             value: t,
                             onChange: this.handleChange,
-                            placeholder: E,
-                            error: !a && i ? p.intl.string(p.t.Y11a2u) : null,
-                            helperText: a
+                            placeholder: "WUMP-AAAAA-BBBBB-CCCCC",
+                            error: !l && i ? p.intl.string(p.t.Y11a2u) : null,
+                            helperText: l
                                 ? p.intl.format(p.t.gPt3PE, {
                                       promoLink: () => {
                                           window.open("https://discord.com/billing/promotions/".concat(t));
@@ -118,23 +111,23 @@ class b extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            _(this, "state", {
+            m(this, "state", {
                 codeInput: "",
                 submitting: !1,
                 hasError: !1,
                 isPromoCode: !1,
             }),
-            _(this, "handleChange", (e) => {
+            m(this, "handleChange", (e) => {
                 this.setState({
                     codeInput: e,
                     hasError: !1,
                 });
             }),
-            _(this, "handleSubmit", async (e) => {
+            m(this, "handleSubmit", async (e) => {
                 e.preventDefault();
                 let { codeInput: t } = this.state;
                 if ("" === t) return;
-                let n = (0, d.Vd)(t);
+                let n = (0, u.Vd)(t);
                 if (null == n)
                     return void this.setState({
                         hasError: !0,
@@ -143,7 +136,7 @@ class b extends i.Component {
                     submitting: !0,
                 });
                 try {
-                    let e = await o.A.resolveGiftCode(n);
+                    let e = await a.A.resolveGiftCode(n);
                     if (null != e && null != e.giftCode.promotion)
                         throw (
                             (this.setState({
@@ -151,13 +144,13 @@ class b extends i.Component {
                             }),
                             Error("Cannnot redeem promotion code as gift"))
                         );
-                    u.default.track(f.HAw.OPEN_MODAL, {
+                    d.default.track(_.HAw.OPEN_MODAL, {
                         type: "gift_accept",
-                        location: g(h({}, this.analyticsLocation), {
-                            object: f.ZSU.BUTTON_CTA,
+                        location: A(g({}, this.analyticsLocation), {
+                            object: _.ZSU.BUTTON_CTA,
                         }),
                     }),
-                        (0, l.h)({
+                        (0, o.h)({
                             processedCode: n,
                         }),
                         this.setState({
@@ -176,10 +169,10 @@ class b extends i.Component {
     }
 }
 
-function y() {
-    let e = i.useContext(u.AnalyticsContext),
-        t = (0, a.bG)([c.A], () => c.A.enabled);
-    return (0, r.jsx)(b, {
+function h() {
+    let e = i.useContext(d.AnalyticsContext),
+        t = (0, l.bG)([c.A], () => c.A.enabled);
+    return (0, r.jsx)(f, {
         analyticsContext: e,
         obscureInput: t,
     });

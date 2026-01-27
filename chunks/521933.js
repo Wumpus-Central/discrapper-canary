@@ -1,27 +1,13 @@
 n.d(t, {
-    A: () => c,
+    A: () => o,
 });
 var r = n(627968);
 n(64700);
 var i = n(397927),
-    a = n(204925),
+    l = n(204925),
     s = n(818348);
 
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,20 +18,29 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-let c = {
+let o = {
     openNewUserAgeGateModal: (e) => {
         (0, i.mMO)(
             async () => {
                 let { default: e } = await n.e("1143").then(n.bind(n, 284778));
-                return (t) => (0, r.jsx)(e, l({}, t));
+                return (t) => (0, r.jsx)(e, a({}, t));
             },
             {
-                modalKey: a.jc,
+                modalKey: l.jc,
                 onCloseRequest: s.tE,
                 onCloseCallback: e,
             },
@@ -60,7 +55,7 @@ let c = {
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        l(
+                        a(
                             {
                                 claimRequired: e,
                             },

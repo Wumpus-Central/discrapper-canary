@@ -1,60 +1,53 @@
 n.d(t, {
-    A: () => c,
+    A: () => s,
 }),
     n(896048);
 var r = n(64700),
     i = n(203982),
-    a = n(652215);
+    l = n(652215);
 
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function l(e) {
+function a(e) {
     return Object.keys(e).some((t) => e[t]);
 }
 
-function c(e, t) {
+function s(e, t) {
     let [n, s] = r.useState(t),
-        [c, u] = r.useState(l(n)),
-        d = r.useRef(c),
-        f = r.useRef(null),
+        [o, c] = r.useState(a(n)),
+        u = r.useRef(o),
+        d = r.useRef(null),
         p = r.useCallback((e) => {
             s((t) => {
-                let n = o({}, t, e),
-                    r = l(n);
+                let n = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, t, e),
+                    r = a(n);
                 return (
-                    r !== d.current &&
-                        ((d.current = r),
-                        null != f.current && (cancelAnimationFrame(f.current), (f.current = null)),
-                        r ? u(!0) : (f.current = requestAnimationFrame(() => u(!1)))),
+                    r !== u.current &&
+                        ((u.current = r),
+                        null != d.current && (cancelAnimationFrame(d.current), (d.current = null)),
+                        r ? c(!0) : (d.current = requestAnimationFrame(() => c(!1)))),
                     n
                 );
             });
@@ -69,14 +62,14 @@ function c(e, t) {
                 });
             };
             return (
-                i._.subscribeKeyed(a.zOV.TOGGLE_REACTION_POPOUT, e, t),
-                () => void i._.unsubscribeKeyed(a.zOV.TOGGLE_REACTION_POPOUT, e, t)
+                i._.subscribeKeyed(l.zOV.TOGGLE_REACTION_POPOUT, e, t),
+                () => void i._.unsubscribeKeyed(l.zOV.TOGGLE_REACTION_POPOUT, e, t)
             );
         }, [e, p]),
         {
             popouts: n,
             setPopout: p,
-            selected: c,
+            selected: o,
         }
     );
 }

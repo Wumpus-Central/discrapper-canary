@@ -1,61 +1,56 @@
 n.d(t, {
-    A: () => g,
+    A: () => m,
 }),
     n(896048);
 var r = n(64700),
     i = n(989349),
-    a = n.n(i),
+    l = n.n(i),
     s = n(311907),
-    o = n(71393),
-    l = n(580630),
+    a = n(71393),
+    o = n(580630),
     c = n(599941),
-    u = n(636194),
-    d = n(624456),
-    f = n(652215),
+    d = n(636194),
+    u = n(624456),
+    _ = n(652215),
     p = n(985018);
-let _ = "M/D/YY",
-    h = "M/D/YY";
 
 function m(e) {
-    let { subscription: t } = e,
-        n = a()(t.currentPeriodEnd).format(_),
-        r = null != t.price ? (0, l.$g)(t.price, t.currency) : "",
-        i = a()(t.createdAt).format(h),
-        s = t.status === f.Dmq.CANCELED,
-        o = t.status === f.Dmq.PAST_DUE,
-        c = t.hasActiveTrial;
-    return {
-        memberSince: i,
-        nextRenewalDate: n,
-        nextRenewalLabel: s ? p.intl.string(p.t.UAfot2) : p.intl.string(p.t.CVjLcM),
-        subscriptionPrice: r,
-        isCancelled: s,
-        isPastDue: o,
-        isTrial: c,
-    };
-}
-
-function g(e) {
-    let t = (0, d.M)(e),
-        n = (0, s.bG)([u.A], () => u.A.getSubscriptionListingForPlan(t)),
-        i = (0, s.bG)([u.A], () => (null != n ? u.A.getSubscriptionGroupListingForSubscriptionListing(n.id) : null)),
-        a = (0, s.bG)([o.A], () => o.A.getGuild(null == i ? void 0 : i.guild_id)),
-        [l, f] = r.useState(!1),
-        p = () => f((e) => !e),
-        { fetchSubscriptionsSettings: _ } = (0, c.XE)();
+    let t = (0, u.M)(e),
+        n = (0, s.bG)([d.A], () => d.A.getSubscriptionListingForPlan(t)),
+        i = (0, s.bG)([d.A], () => (null != n ? d.A.getSubscriptionGroupListingForSubscriptionListing(n.id) : null)),
+        m = (0, s.bG)([a.A], () => a.A.getGuild(null == i ? void 0 : i.guild_id)),
+        [g, A] = r.useState(!1),
+        { fetchSubscriptionsSettings: f } = (0, c.XE)();
     r.useEffect(() => {
-        l && null != a && null == u.A.getSubscriptionSettings(a.id) && _(a.id);
-    }, [l, a, _]);
+        g && null != m && null == d.A.getSubscriptionSettings(m.id) && f(m.id);
+    }, [g, m, f]);
     let h =
         null == n
             ? void 0
-            : m({
+            : (function (e) {
+                  let { subscription: t } = e,
+                      n = l()(t.currentPeriodEnd).format("M/D/YY"),
+                      r = null != t.price ? (0, o.$g)(t.price, t.currency) : "",
+                      i = l()(t.createdAt).format("M/D/YY"),
+                      s = t.status === _.Dmq.CANCELED,
+                      a = t.status === _.Dmq.PAST_DUE,
+                      c = t.hasActiveTrial;
+                  return {
+                      memberSince: i,
+                      nextRenewalDate: n,
+                      nextRenewalLabel: s ? p.intl.string(p.t.UAfot2) : p.intl.string(p.t.CVjLcM),
+                      subscriptionPrice: r,
+                      isCancelled: s,
+                      isPastDue: a,
+                      isTrial: c,
+                  };
+              })({
                   subscription: e,
               });
     return {
-        guild: a,
-        expanded: l,
-        handleToggleExpanded: p,
+        guild: m,
+        expanded: g,
+        handleToggleExpanded: () => A((e) => !e),
         listing: n,
         groupListing: i,
         subscriptionInfo: h,

@@ -1,114 +1,112 @@
 n.d(t, {
     BE: () => d,
-    SJ: () => f,
+    SJ: () => p,
     Wf: () => c,
     YC: () => u,
-    n$: () => l,
+    n$: () => o,
 });
 var r = n(287809),
     i = n(562153),
-    a = n(652215),
-    s = n(985018),
-    o = n(426127);
+    l = n(652215),
+    a = n(985018),
+    s = n(426127);
 
-function l(e, t, n) {
+function o(e, t, n) {
     switch (t) {
-        case a.xL.LISTEN:
-            return s.intl.formatToPlainString(s.t["/8czH4"], {
+        case l.xL.LISTEN:
+            return a.intl.formatToPlainString(a.t["/8czH4"], {
                 name: e,
             });
-        case a.xL.WATCH:
-            return s.intl.formatToPlainString(s.t.BBJXVk, {
+        case l.xL.WATCH:
+            return a.intl.formatToPlainString(a.t.BBJXVk, {
                 name: e,
             });
-        case a.xL.JOIN:
-            return n ? void 0 : s.intl.string(s.t.pkq6Vq);
-        case a.xL.STREAM_REQUEST:
-            return s.intl.string(o.default.DKHhec);
-        case a.xL.JOIN_REQUEST:
+        case l.xL.JOIN:
+            return n ? void 0 : a.intl.string(a.t.pkq6Vq);
+        case l.xL.STREAM_REQUEST:
+            return a.intl.string(s.default.DKHhec);
+        case l.xL.JOIN_REQUEST:
         default:
-            return s.intl.string(s.t.Ckxb6j);
+            return a.intl.string(a.t.Ckxb6j);
     }
 }
 
 function c(e, t, n) {
     return e.author.id === n
-        ? s.intl.string(o.default["8B3U5O"])
-        : s.intl.formatToPlainString(o.default["d/qbC0"], {
+        ? a.intl.string(s.default["8B3U5O"])
+        : a.intl.formatToPlainString(s.default["d/qbC0"], {
               username: (0, i.mG)(t.guild_id, t.id, e.author),
           });
 }
 
-function u(e, t, n, i, a) {
+function u(e, t, n, i, l) {
     if (e.author.id === i) {
         if (n.isPrivate()) {
             let e = r.default.getUser(n.getRecipientId());
             if (null != e)
-                return a
-                    ? s.intl.formatToPlainString(s.t.JddpN2, {
+                return l
+                    ? a.intl.formatToPlainString(a.t.JddpN2, {
                           username: e.globalName,
                           appName: t,
                       })
-                    : s.intl.formatToPlainString(s.t.gYVkSW, {
+                    : a.intl.formatToPlainString(a.t.gYVkSW, {
                           username: e.globalName,
                           appName: t,
                       });
         }
-        return a
-            ? s.intl.formatToPlainString(s.t["2N1kNS"], {
+        return l
+            ? a.intl.formatToPlainString(a.t["2N1kNS"], {
                   appName: t,
               })
-            : s.intl.formatToPlainString(s.t.IA6uDV, {
+            : a.intl.formatToPlainString(a.t.IA6uDV, {
                   appName: t,
               });
     }
-    return a
-        ? s.intl.formatToPlainString(s.t.XE8axA, {
+    return l
+        ? a.intl.formatToPlainString(a.t.XE8axA, {
               username: e.author.globalName,
               appName: t,
           })
-        : s.intl.formatToPlainString(s.t.hgcjOn, {
+        : a.intl.formatToPlainString(a.t.hgcjOn, {
               username: e.author.globalName,
               appName: t,
           });
 }
 
 function d(e, t, n, r, i) {
-    var o;
-    switch (null == (o = e.activity) ? void 0 : o.type) {
-        case a.xL.LISTEN:
-        case a.xL.WATCH:
-        case a.xL.JOIN:
-            return s.intl.string(i ? s.t.x1UXGR : s.t["Ek+51n"]);
-        case a.xL.STREAM_REQUEST:
+    var s;
+    switch (null == (s = e.activity) ? void 0 : s.type) {
+        case l.xL.LISTEN:
+        case l.xL.WATCH:
+        case l.xL.JOIN:
+            return a.intl.string(i ? a.t.x1UXGR : a.t["Ek+51n"]);
+        case l.xL.STREAM_REQUEST:
             return c(e, n, r);
-        case a.xL.JOIN_REQUEST:
+        case l.xL.JOIN_REQUEST:
         default:
             return u(e, t, n, r, !0);
     }
 }
 
-function f(e) {
-    let t,
-        { activityActionType: n, maxPartySize: r, partySize: i } = e;
-    return n === a.xL.STREAM_REQUEST
+function p(e) {
+    let { activityActionType: t, maxPartySize: n, partySize: r } = e;
+    return t === l.xL.STREAM_REQUEST
         ? ""
-        : (t =
-              n === a.xL.LISTEN
-                  ? r > 0
-                      ? s.intl.formatToPlainString(s.t.Zogoou, {
-                            partySize: i,
-                            maxPartySize: r,
-                        })
-                      : s.intl.formatToPlainString(s.t.UGei0j, {
-                            partySize: i,
-                        })
-                  : r > 0
-                    ? s.intl.formatToPlainString(s.t.gLu7NU, {
-                          partySize: i,
-                          maxPartySize: r,
-                      })
-                    : s.intl.formatToPlainString(s.t["65JnWC"], {
-                          partySize: i,
-                      }));
+        : t === l.xL.LISTEN
+          ? n > 0
+              ? a.intl.formatToPlainString(a.t.Zogoou, {
+                    partySize: r,
+                    maxPartySize: n,
+                })
+              : a.intl.formatToPlainString(a.t.UGei0j, {
+                    partySize: r,
+                })
+          : n > 0
+            ? a.intl.formatToPlainString(a.t.gLu7NU, {
+                  partySize: r,
+                  maxPartySize: n,
+              })
+            : a.intl.formatToPlainString(a.t["65JnWC"], {
+                  partySize: r,
+              });
 }

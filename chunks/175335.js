@@ -1,105 +1,102 @@
 n.d(t, {
-    A: () => N,
+    A: () => C,
 }),
     n(896048),
     n(228524);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(110259),
-    l = n(311907),
+    l = n(503698),
+    a = n.n(l),
+    s = n(110259),
+    o = n(311907),
     c = n(827734),
     u = n(732955),
     d = n(397927),
-    f = n(58149),
-    p = n(139286),
-    _ = n(263063),
-    h = n(250627),
-    m = n(22007),
-    g = n(813516),
-    E = n(71393),
-    b = n(954571),
+    p = n(58149),
+    m = n(139286),
+    f = n(263063),
+    g = n(250627),
+    h = n(22007),
+    _ = n(813516),
+    b = n(71393),
+    A = n(954571),
     y = n(722888),
-    O = n(43136),
-    A = n(575926),
-    v = n(652215),
-    S = n(985018),
-    I = n(266847);
-
-function T(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    v = n(43136),
+    x = n(575926),
+    O = n(652215),
+    E = n(985018),
+    j = n(266847);
 
 function C(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                T(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function N(e) {
     var t;
     let { guildId: n } = e,
-        a = (0, l.bG)([E.A], () => E.A.getGuild(n)),
-        { loading: T, subscriptionsSettings: N } = (0, y.G)(n),
-        { listingsLoaded: R } = (0, h.bb)(n),
-        w = (0, h.fZ)(n, {
+        l = (0, o.bG)([b.A], () => b.A.getGuild(n)),
+        { loading: C, subscriptionsSettings: I } = (0, y.G)(n),
+        { listingsLoaded: S } = (0, g.bb)(n),
+        T = (0, g.fZ)(n, {
             publishedOnly: !0,
         }),
-        P = i.useCallback(async () => {
-            b.default.track(v.HAw.GUILD_SHOP_EMBED_CLICKED, C({}, (0, f.H$)(n))), await (0, m.A)(v.BVt.SERVER_SHOP(n));
+        N = i.useCallback(async () => {
+            A.default.track(
+                O.HAw.GUILD_SHOP_EMBED_CLICKED,
+                (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, (0, p.H$)(n)),
+            ),
+                await (0, h.A)(O.BVt.SERVER_SHOP(n));
         }, [n]);
-    (0, p.A)(
+    (0, m.A)(
         {
-            type: o.ImpressionTypes.VIEW,
-            name: o.ImpressionNames.GUILD_SHOP_EMBED,
+            type: s.ImpressionTypes.VIEW,
+            name: s.ImpressionNames.GUILD_SHOP_EMBED,
         },
         {
-            disableTrack: null == a,
+            disableTrack: null == l,
         },
     );
-    let D = w.length > 0 ? new Date(Math.min(...w.map((e) => Date.parse(e.published_at)))) : void 0;
-    return T || !R
+    let P = T.length > 0 ? new Date(Math.min(...T.map((e) => Date.parse(e.published_at)))) : void 0;
+    return C || !S
         ? (0, r.jsx)("div", {
-              className: s()(I.lm, I.dc),
+              className: a()(j.lm, j.dc),
               children: (0, r.jsx)(d.y$y, {}),
           })
-        : null == a || null == N
+        : null == l || null == I
           ? null
           : (0, r.jsxs)("div", {
-                className: I.lm,
+                className: j.lm,
                 children: [
-                    (0, r.jsx)(O.C, {
-                        coverImageAsset: null != (t = N.cover_image_asset) ? t : null,
+                    (0, r.jsx)(v.C, {
+                        coverImageAsset: null != (t = I.cover_image_asset) ? t : null,
                     }),
                     (0, r.jsx)(d.hKd, {
                         size: 16,
                     }),
                     (0, r.jsxs)("div", {
-                        className: I.qs,
+                        className: j.qs,
                         children: [
-                            (0, r.jsx)(A.h, {
+                            (0, r.jsx)(x.h, {
                                 height: "16px",
                                 width: "16px",
                                 color: c.A.colors.INTERACTIVE_TEXT_DEFAULT.css,
@@ -107,8 +104,8 @@ function N(e) {
                             (0, r.jsx)(d.Heading, {
                                 variant: "heading-sm/semibold",
                                 color: "interactive-text-default",
-                                className: I.Nl,
-                                children: S.intl.string(S.t.al5EXL),
+                                className: j.Nl,
+                                children: E.intl.string(E.t.al5EXL),
                             }),
                         ],
                     }),
@@ -118,8 +115,8 @@ function N(e) {
                     (0, r.jsx)(d.Heading, {
                         variant: "heading-md/semibold",
                         color: "text-default",
-                        children: S.intl.format(S.t.NZeik9, {
-                            guildName: a.name,
+                        children: E.intl.format(E.t.NZeik9, {
+                            guildName: l.name,
                         }),
                     }),
                     (0, r.jsx)(d.hKd, {
@@ -129,51 +126,51 @@ function N(e) {
                         variant: "text-sm/normal",
                         color: "text-muted",
                         lineClamp: 2,
-                        children: N.description,
+                        children: I.description,
                     }),
                     (0, r.jsx)(d.hKd, {
                         size: 16,
                     }),
-                    (0, r.jsx)(g.A, {}),
+                    (0, r.jsx)(_.A, {}),
                     (0, r.jsx)(d.hKd, {
                         size: 16,
                     }),
                     (0, r.jsxs)("div", {
-                        className: I.kS,
+                        className: j.kS,
                         children: [
-                            (0, r.jsx)(_.A, {
-                                guild: a,
+                            (0, r.jsx)(f.A, {
+                                guild: l,
                             }),
                             (0, r.jsxs)("ul", {
-                                className: I.q6,
+                                className: j.q6,
                                 children: [
                                     (0, r.jsx)("li", {
                                         children: (0, r.jsx)(d.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
-                                            children: S.intl.format(S.t.tKZNlb, {
-                                                listingCount: w.length,
+                                            children: E.intl.format(E.t.tKZNlb, {
+                                                listingCount: T.length,
                                             }),
                                         }),
                                     }),
-                                    null != D &&
+                                    null != P &&
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(d.Text, {
                                                 variant: "text-sm/normal",
                                                 color: "text-muted",
-                                                children: S.intl.format(S.t["kXr8+b"], {
-                                                    createdYear: D.getFullYear(),
+                                                children: E.intl.format(E.t["kXr8+b"], {
+                                                    createdYear: P.getFullYear(),
                                                 }),
                                             }),
                                         }),
                                 ],
                             }),
                             (0, r.jsx)("div", {
-                                className: I.$h,
+                                className: j.$h,
                                 children: (0, r.jsx)(u.$nd, {
-                                    onClick: P,
-                                    icon: A.A,
-                                    text: S.intl.string(S.t.jXx1CC),
+                                    onClick: N,
+                                    icon: x.A,
+                                    text: E.intl.string(E.t.jXx1CC),
                                 }),
                             }),
                         ],

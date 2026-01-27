@@ -1,104 +1,103 @@
 n.d(t, {
-    default: () => u,
+    default: () => E,
 }),
     n(896048),
     n(492834);
-var r = n(627968),
-    i = n(64700),
+var l = n(627968),
+    s = n(64700),
     a = n(732955),
-    s = n(397927),
+    i = n(397927),
     o = n(985018),
-    l = n(574592);
+    r = n(574592);
 
-function c(e) {
+function u(e) {
     let {
             title: t,
             actionText: n,
-            children: c,
-            transitionState: u,
-            onClose: d,
-            handleSubmit: f,
-            onError: p,
-            skipErrorMsgAbortCode: _,
-            onPasswordChange: h,
+            children: u,
+            transitionState: E,
+            onClose: c,
+            handleSubmit: d,
+            onError: h,
+            skipErrorMsgAbortCode: R,
+            onPasswordChange: I,
         } = e,
-        [m, g] = i.useState(""),
-        [E, b] = i.useState(null),
-        [y, O] = i.useState(!1),
-        A = (e) => null != _ && (null == e ? void 0 : e.code) === _,
-        v = (e) => {
-            e.preventDefault(),
-                O(!0),
-                f(m)
-                    .then(
-                        (e) => d(null != e ? e : void 0),
-                        (e) => {
-                            null == e.body ||
-                                (null == p || p(e.body),
-                                !A(e.body) &&
-                                    (e.body.password
-                                        ? (b(e.body.password), O(!1))
-                                        : e.body.message && (b(e.body.message), O(!1))));
-                        },
-                    )
-                    .finally(() => O(!1));
-        },
-        S = (e) => {
-            null == h || h(e), g(e);
-        },
-        I = i.useCallback(async () => {
-            await d();
-        }, [d]),
-        T =
-            i.Children.count(c) > 0
-                ? (0, r.jsx)(s.ZpM, {
-                      type: s.ZpM.Types.WARNING,
-                      className: l.Nr,
-                      children: (0, r.jsx)(s.Text, {
+        [p, _] = s.useState(""),
+        [f, g] = s.useState(null),
+        [C, m] = s.useState(!1),
+        b = s.useCallback(async () => {
+            await c();
+        }, [c]),
+        A =
+            s.Children.count(u) > 0
+                ? (0, l.jsx)(i.ZpM, {
+                      type: i.ZpM.Types.WARNING,
+                      className: r.Nr,
+                      children: (0, l.jsx)(i.Text, {
                           color: "currentColor",
                           variant: "text-md/normal",
-                          children: c,
+                          children: u,
                       }),
                   })
                 : null;
-    return (0, r.jsx)("form", {
-        onSubmit: v,
-        children: (0, r.jsxs)(a.aFV, {
+    return (0, l.jsx)("form", {
+        onSubmit: (e) => {
+            e.preventDefault(),
+                m(!0),
+                d(p)
+                    .then(
+                        (e) => c(null != e ? e : void 0),
+                        (e) => {
+                            let t;
+                            null != e.body &&
+                                (null == h || h(e.body),
+                                (t = e.body),
+                                (null == R || (null == t ? void 0 : t.code) !== R) &&
+                                    (e.body.password
+                                        ? (g(e.body.password), m(!1))
+                                        : e.body.message && (g(e.body.message), m(!1))));
+                        },
+                    )
+                    .finally(() => m(!1));
+        },
+        children: (0, l.jsxs)(a.aFV, {
             title: t,
             actions: [
                 {
                     text: o.intl.string(o.t["ETE/oC"]),
-                    onClick: I,
+                    onClick: b,
                     variant: "secondary",
                 },
                 {
                     text: null != n ? n : o.intl.string(o.t["cY+Oob"]),
                     type: "submit",
-                    disabled: y || 0 === m.length,
+                    disabled: C || 0 === p.length,
                 },
             ],
-            onClose: I,
-            transitionState: u,
+            onClose: b,
+            transitionState: E,
             children: [
-                T,
-                (0, r.jsxs)("div", {
-                    className: l.YK,
+                A,
+                (0, l.jsxs)("div", {
+                    className: r.YK,
                     children: [
-                        (0, r.jsx)(s.ksK, {
+                        (0, l.jsx)(i.ksK, {
                             type: "password",
                             label: o.intl.string(o.t["CIGa+7"]),
                             autoComplete: "current-password",
                             autoFocus: !0,
-                            value: m,
-                            onChange: S,
+                            value: p,
+                            onChange: (e) => {
+                                null == I || I(e), _(e);
+                            },
                             required: !0,
                         }),
-                        null != E && "" !== E
-                            ? (0, r.jsxs)(s.Text, {
+                        null != f && "" !== f
+                            ? (0, l.jsxs)(i.Text, {
                                   variant: "text-xs/normal",
                                   color: "text-feedback-critical",
-                                  className: l.z3,
-                                  children: [" ", E, " "],
+                                  className: r.z3,
+                                  children: [" ", f, " "],
                               })
                             : null,
                     ],
@@ -107,5 +106,5 @@ function c(e) {
         }),
     });
 }
-c.key = () => "password-confirm-modal";
-let u = c;
+u.key = () => "password-confirm-modal";
+let E = u;

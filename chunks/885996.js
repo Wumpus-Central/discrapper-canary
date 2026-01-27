@@ -1,129 +1,128 @@
-n.d(t, {
-    FY: () => h,
+n.d(e, {
+    FY: () => S,
     GS: () => p,
-    OP: () => _,
+    OP: () => f,
 }),
     n(228524);
-var r = n(627968);
+var l = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(187322),
+var r = n(503698),
+    i = n.n(r),
+    u = n(187322),
     o = n(855522),
-    l = n(158954),
-    c = n(827734),
-    u = n(596678),
+    s = n(158954),
+    a = n(827734),
+    c = n(596678),
     d = n(671816);
-let f = 48,
-    p = 5;
+let p = 5;
 
-function _(e) {
+function f(t) {
     let {
-        description: t,
+        description: e,
         imgSrc: n,
-        renderPurchaseButton: i,
-        onPurchase: _,
-        title: h,
-        onDetails: m,
-        benefitItems: g,
-        benefitsSummary: E,
-        subtitle: b,
-        maxBenefits: y = p,
-    } = e;
-    return (0, r.jsx)(s.vN, {
-        children: (0, r.jsxs)("div", {
-            className: a()(u.kL, d.t),
+        renderPurchaseButton: r,
+        onPurchase: f,
+        title: S,
+        onDetails: A,
+        benefitItems: b,
+        benefitsSummary: O,
+        subtitle: g,
+        maxBenefits: I = p,
+    } = t;
+    return (0, l.jsx)(u.vN, {
+        children: (0, l.jsxs)("div", {
+            className: i()(c.kL, d.t),
             tabIndex: 0,
             onClick: () => {
-                null != m ? m() : null != _ && _();
+                null != A ? A() : null != f && f();
             },
-            onKeyUp: (e) => {
-                "Enter" === e.key && (e.stopPropagation(), e.preventDefault(), null != m ? m() : null != _ && _());
+            onKeyUp: (t) => {
+                "Enter" === t.key && (t.stopPropagation(), t.preventDefault(), null != A ? A() : null != f && f());
             },
             children: [
-                (0, r.jsx)("div", {
-                    className: u.Nr,
-                    children: (0, r.jsxs)("div", {
-                        className: u.rf,
+                (0, l.jsx)("div", {
+                    className: c.Nr,
+                    children: (0, l.jsxs)("div", {
+                        className: c.rf,
                         children: [
-                            (0, r.jsx)(l.EYj, {
+                            (0, l.jsx)(s.EYj, {
                                 tag: "div",
                                 variant: "heading-lg/semibold",
-                                children: h,
+                                children: S,
                             }),
-                            (0, r.jsx)("div", {
-                                className: u.Sl,
+                            (0, l.jsx)("div", {
+                                className: c.Sl,
                                 children:
                                     null != n
-                                        ? (0, r.jsx)("img", {
+                                        ? (0, l.jsx)("img", {
                                               src: n.toString(),
                                               alt: "",
                                           })
-                                        : (0, r.jsx)(l.bhD, {
-                                              color: c.A.colors.ICON_STRONG,
+                                        : (0, l.jsx)(s.bhD, {
+                                              color: a.A.colors.ICON_STRONG,
                                               size: "custom",
-                                              height: f,
-                                              width: f,
+                                              height: 48,
+                                              width: 48,
                                           }),
                             }),
-                            null != i
-                                ? i({
-                                      onClick: (e) => {
-                                          e.stopPropagation(), null == _ || _();
+                            null != r
+                                ? r({
+                                      onClick: (t) => {
+                                          t.stopPropagation(), null == f || f();
                                       },
                                   })
                                 : null,
-                            b,
-                            null != t &&
-                                "" !== t &&
-                                (0, r.jsx)(l.EYj, {
-                                    className: u.h_,
+                            g,
+                            null != e &&
+                                "" !== e &&
+                                (0, l.jsx)(s.EYj, {
+                                    className: c.h_,
                                     color: "text-default",
                                     variant: "text-sm/medium",
-                                    children: t,
+                                    children: e,
                                 }),
                         ],
                     }),
                 }),
-                null != E &&
-                    (0, r.jsx)("div", {
-                        className: u.xl,
-                        children: (0, r.jsx)(l.EYj, {
+                null != O &&
+                    (0, l.jsx)("div", {
+                        className: c.xl,
+                        children: (0, l.jsx)(s.EYj, {
                             color: "interactive-text-default",
                             variant: "text-sm/medium",
                             children: o.A.Messages.STOREFRONT_BENEFITS_SUMMARY.format({
-                                count: E,
+                                count: O,
                             }),
                         }),
                     }),
-                null != g &&
-                    g.length > 0 &&
-                    (0, r.jsx)("div", {
-                        className: u.PX,
-                        children: (0, r.jsx)("div", {
-                            className: u.iq,
-                            children: (0, r.jsxs)("div", {
-                                className: u.Pp,
+                null != b &&
+                    b.length > 0 &&
+                    (0, l.jsx)("div", {
+                        className: c.PX,
+                        children: (0, l.jsx)("div", {
+                            className: c.iq,
+                            children: (0, l.jsxs)("div", {
+                                className: c.Pp,
                                 children: [
-                                    (0, r.jsx)(l.EYj, {
+                                    (0, l.jsx)(s.EYj, {
                                         color: "text-default",
                                         variant: "eyebrow",
                                         children: o.A.Messages.STOREFRONT_BENEFITS_TITLE,
                                     }),
-                                    g.length > y
-                                        ? (0, r.jsxs)(r.Fragment, {
+                                    b.length > I
+                                        ? (0, l.jsxs)(l.Fragment, {
                                               children: [
-                                                  g.slice(0, y),
-                                                  (0, r.jsx)(l.EYj, {
+                                                  b.slice(0, I),
+                                                  (0, l.jsx)(s.EYj, {
                                                       variant: "text-md/semibold",
                                                       color: "text-subtle",
                                                       children: o.A.Messages.STOREFRONT_MORE_BENEFITS.format({
-                                                          count: g.length - y,
+                                                          count: b.length - I,
                                                       }),
                                                   }),
                                               ],
                                           })
-                                        : g,
+                                        : b,
                                 ],
                             }),
                         }),
@@ -133,26 +132,26 @@ function _(e) {
     });
 }
 
-function h(e) {
-    let { icon: t, header: n, description: i } = e;
-    return (0, r.jsxs)("div", {
-        className: u.w2,
+function S(t) {
+    let { icon: e, header: n, description: r } = t;
+    return (0, l.jsxs)("div", {
+        className: c.w2,
         children: [
-            (0, r.jsx)("div", {
-                className: u.z8,
-                children: t,
+            (0, l.jsx)("div", {
+                className: c.z8,
+                children: e,
             }),
-            (0, r.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 children: [
                     null != n &&
-                        (0, r.jsx)(l.EYj, {
+                        (0, l.jsx)(s.EYj, {
                             variant: "text-md/semibold",
                             color: "text-strong",
                             children: n,
                         }),
-                    (0, r.jsx)(l.EYj, {
+                    (0, l.jsx)(s.EYj, {
                         variant: "text-sm/normal",
-                        children: i,
+                        children: r,
                     }),
                 ],
             }),

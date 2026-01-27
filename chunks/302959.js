@@ -1,41 +1,27 @@
 n.d(t, {
-    A: () => w,
-    M: () => R,
+    A: () => I,
+    M: () => S,
 });
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(833349),
-    o = n(153331),
-    l = n(592182),
+    l = n(311907),
+    a = n(833349),
+    s = n(153331),
+    o = n(592182),
     c = n(587895),
     u = n(806246),
     d = n(890330),
-    f = n(172710),
-    p = n(616356),
-    _ = n(734057),
-    h = n(71393),
-    m = n(977997),
-    g = n(954571),
-    E = n(821589),
-    b = n(652215),
-    y = n(654471);
+    p = n(172710),
+    f = n(616356),
+    m = n(734057),
+    g = n(71393),
+    y = n(977997),
+    _ = n(954571),
+    b = n(821589),
+    A = n(652215),
+    h = n(654471);
 
-function O(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function A(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,164 +32,169 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function v(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function S(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function I(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = T(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function T(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function C(e) {
-    let { type: t, source: n, activity: i, applicationStream: a, user: s, guildId: o, channelId: c, onAction: u } = e;
-    return (0, r.jsx)(l.A, {
-        className: (0, E.t)(y, "actions", t),
+function j(e) {
+    let { type: t, source: n, activity: i, applicationStream: l, user: a, guildId: s, channelId: c, onAction: u } = e;
+    return (0, r.jsx)(o.A, {
+        className: (0, b.t)(h, "actions", t),
         type: t,
         source: n,
         activity: i,
-        applicationStream: a,
-        user: s,
-        guildId: o,
+        applicationStream: l,
+        user: a,
+        guildId: s,
         buttonVariant: "primary",
         channelId: c,
         onAction: u,
     });
 }
-
-function N(e) {
-    let {
-            activity: t,
-            user: n,
-            useStoreStream: l = !0,
-            showActions: E = !0,
-            hideHeader: y = !1,
-            showChannelDetails: O = !1,
-        } = e,
-        v = I(e, ["activity", "user", "useStoreStream", "showActions", "hideHeader", "showChannelDetails"]),
-        T = (0, a.bG)([m.A, _.A], () => {
-            var e;
-            return _.A.getChannel(null == (e = m.A.getVoiceStateForUser(n.id)) ? void 0 : e.channelId);
-        }),
-        N = (0, d.v)("UserActivityContainer", T),
-        R = (0, a.bG)([p.A], () => (l ? p.A.getAnyStreamForUser(n.id) : null)),
-        w = (null == t ? void 0 : t.type) === b.$pd.HANG_STATUS && N ? T : null,
-        P = (0, a.bG)([h.A, m.A, _.A], () => {
-            var e, r;
-            return (0, s.A)(t, b.jUm.EMBEDDED)
-                ? h.A.getGuild(
-                      null ==
-                          (e = _.A.getChannel(
-                              null == (r = m.A.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id))
-                                  ? void 0
-                                  : r.channelId,
-                          ))
-                          ? void 0
-                          : e.getGuildId(),
-                  )
-                : null != w
-                  ? h.A.getGuild(w.getGuildId())
-                  : null;
-        }),
-        D = (0, a.bG)([h.A], () => (null != R ? h.A.getGuild(R.guildId) : null)),
-        x = (0, a.bG)([c.A], () => {
-            if (null != t)
-                if (null != t.application_id) return c.A.getApplication(t.application_id);
-                else return c.A.getApplicationByName(t.name);
-            return null;
-        });
-    return (i.useEffect(() => {
-        (null == t ? void 0 : t.type) === b.$pd.HANG_STATUS &&
-            N &&
-            g.default.track(
-                b.HAw.VIEW_HANG_STATUS,
-                A(
-                    {
-                        source: "UserActivity",
-                        other_user_id: n.id,
-                    },
-                    (0, u.A)(null == w ? void 0 : w.id),
-                ),
-            );
-    }, [null == t ? void 0 : t.type, N, w, n.id]),
-    (null == t ? void 0 : t.type) !== b.$pd.HANG_STATUS || N)
-        ? (0, r.jsx)(
-              o.A,
-              S(A({}, v), {
-                  activity: t,
-                  user: n,
-                  application: x,
-                  hideHeader: y,
-                  activityGuild: null != P ? P : D,
-                  showChannelDetails: O,
-                  channel: O ? T : void 0,
-                  renderActions: E
-                      ? () =>
-                            (0, r.jsx)(
-                                C,
-                                S(A({}, v), {
-                                    applicationStream: R,
-                                    activity: t,
-                                    user: n,
-                                }),
-                            )
-                      : null,
-                  onOpenSpotifyTrack: f.Mp,
-                  onOpenSpotifyArtist: f.mN,
-                  onOpenSpotifyAlbum: f.QX,
-              }),
-          )
-        : null;
-}
-let R = o.A.Types,
-    w = N;
+let S = s.A.Types,
+    I = function (e) {
+        let {
+                activity: t,
+                user: n,
+                useStoreStream: o = !0,
+                showActions: b = !0,
+                hideHeader: h = !1,
+                showChannelDetails: S = !1,
+            } = e,
+            I = (function (e, t) {
+                if (null == e) return {};
+                var n,
+                    r,
+                    i,
+                    l = {};
+                if ("u" > typeof Reflect && Reflect.ownKeys) {
+                    for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+                        (r = n[i]),
+                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                    return l;
+                }
+                if (
+                    ((l = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            r,
+                            i = {},
+                            l = Object.getOwnPropertyNames(e);
+                        for (r = 0; r < l.length; r++)
+                            (n = l[r]),
+                                !(t.indexOf(n) >= 0) &&
+                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                    (i[n] = e[n]);
+                        return i;
+                    })(e, t)),
+                    Object.getOwnPropertySymbols)
+                )
+                    for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+                        (r = n[i]),
+                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                return l;
+            })(e, ["activity", "user", "useStoreStream", "showActions", "hideHeader", "showChannelDetails"]),
+            x = (0, l.bG)([y.A, m.A], () => {
+                var e;
+                return m.A.getChannel(null == (e = y.A.getVoiceStateForUser(n.id)) ? void 0 : e.channelId);
+            }),
+            E = (0, d.v)("UserActivityContainer", x),
+            P = (0, l.bG)([f.A], () => (o ? f.A.getAnyStreamForUser(n.id) : null)),
+            T = (null == t ? void 0 : t.type) === A.$pd.HANG_STATUS && E ? x : null,
+            N = (0, l.bG)([g.A, y.A, m.A], () => {
+                var e, r;
+                return (0, a.A)(t, A.jUm.EMBEDDED)
+                    ? g.A.getGuild(
+                          null ==
+                              (e = m.A.getChannel(
+                                  null == (r = y.A.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id))
+                                      ? void 0
+                                      : r.channelId,
+                              ))
+                              ? void 0
+                              : e.getGuildId(),
+                      )
+                    : null != T
+                      ? g.A.getGuild(T.getGuildId())
+                      : null;
+            }),
+            w = (0, l.bG)([g.A], () => (null != P ? g.A.getGuild(P.guildId) : null)),
+            C = (0, l.bG)([c.A], () => {
+                if (null != t)
+                    if (null != t.application_id) return c.A.getApplication(t.application_id);
+                    else return c.A.getApplicationByName(t.name);
+                return null;
+            });
+        return (i.useEffect(() => {
+            (null == t ? void 0 : t.type) === A.$pd.HANG_STATUS &&
+                E &&
+                _.default.track(
+                    A.HAw.VIEW_HANG_STATUS,
+                    v(
+                        {
+                            source: "UserActivity",
+                            other_user_id: n.id,
+                        },
+                        (0, u.A)(null == T ? void 0 : T.id),
+                    ),
+                );
+        }, [null == t ? void 0 : t.type, E, T, n.id]),
+        (null == t ? void 0 : t.type) !== A.$pd.HANG_STATUS || E)
+            ? (0, r.jsx)(
+                  s.A,
+                  O(v({}, I), {
+                      activity: t,
+                      user: n,
+                      application: C,
+                      hideHeader: h,
+                      activityGuild: null != N ? N : w,
+                      showChannelDetails: S,
+                      channel: S ? x : void 0,
+                      renderActions: b
+                          ? () =>
+                                (0, r.jsx)(
+                                    j,
+                                    O(v({}, I), {
+                                        applicationStream: P,
+                                        activity: t,
+                                        user: n,
+                                    }),
+                                )
+                          : null,
+                      onOpenSpotifyTrack: p.Mp,
+                      onOpenSpotifyArtist: p.mN,
+                      onOpenSpotifyAlbum: p.QX,
+                  }),
+              )
+            : null;
+    };

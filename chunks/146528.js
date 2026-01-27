@@ -1,123 +1,123 @@
 n.d(t, {
-    A: () => G,
+    A: () => k,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(827734),
+    l = n(503698),
+    s = n.n(l),
+    a = n(311907),
+    o = n(827734),
     c = n(990078),
-    u = n(397927),
-    d = n(384904),
-    f = n(912851),
+    d = n(397927),
+    u = n(384904),
+    _ = n(912851),
     p = n(793574),
-    _ = n(688810),
-    h = n(178856),
-    m = n(915089),
-    g = n(465932),
-    E = n(263063),
+    m = n(688810),
+    g = n(178856),
+    A = n(915089),
+    f = n(465932),
+    h = n(263063),
     b = n(543767),
-    y = n(420139),
-    O = n(976860),
-    A = n(780964),
-    v = n(12901),
-    S = n(840065),
-    I = n(295405),
-    T = n(379082),
-    C = n(710144),
-    N = n(815332),
-    R = n(568286),
-    w = n(638182),
+    E = n(420139),
+    x = n(976860),
+    O = n(780964),
+    C = n(12901),
+    I = n(840065),
+    T = n(295405),
+    S = n(379082),
+    j = n(710144),
+    v = n(815332),
+    N = n(568286),
+    y = n(638182),
     P = n(652215),
-    D = n(746080),
-    x = n(355097),
-    L = n(985018),
-    j = n(185814);
+    R = n(746080),
+    D = n(355097),
+    w = n(985018),
+    L = n(185814);
 let M = (e) => {
-        let { label: t, value: n, showInfoIcon: i, infoIconTooltipText: a } = e;
+        let { label: t, value: n, showInfoIcon: i, infoIconTooltipText: l } = e;
         return (0, r.jsxs)("div", {
-            className: j.L0,
+            className: L.L0,
             children: [
                 (0, r.jsxs)("div", {
-                    className: j.a5,
+                    className: L.a5,
                     children: [
-                        (0, r.jsx)(u.Heading, {
+                        (0, r.jsx)(d.Heading, {
                             variant: "heading-deprecated-12/semibold",
-                            className: j.HU,
+                            className: L.HU,
                             children: t,
                         }),
                         i &&
                             (0, r.jsx)(c.m, {
-                                text: a,
-                                children: (0, r.jsx)(u.mir, {
+                                text: l,
+                                children: (0, r.jsx)(d.mir, {
                                     size: "xs",
                                     color: "currentColor",
-                                    className: j.Mo,
+                                    className: L.Mo,
                                 }),
                             }),
                     ],
                 }),
-                (0, r.jsx)(u.Heading, {
+                (0, r.jsx)(d.Heading, {
                     variant: "heading-xl/semibold",
-                    className: j.sx,
+                    className: L.sx,
                     children: n,
                 }),
             ],
         });
     },
-    k = (e) => {
+    U = (e) => {
         let { subscription: t } = e,
-            { analyticsLocations: n } = (0, _.Ay)(),
+            { analyticsLocations: n } = (0, m.Ay)(),
             [i] = (0, b.Kq)({
                 subscriptionId: t.id,
                 renewal: !0,
                 analyticsLocations: n,
                 analyticsLocation: p.A.GUILD_ROLE_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE,
             }),
-            a = (0, o.bG)([I.A], () => I.A.hasFetchedPaymentSources);
-        return null != i && a
-            ? (0, r.jsx)(y.A, {
+            l = (0, a.bG)([T.A], () => T.A.hasFetchedPaymentSources);
+        return null != i && l
+            ? (0, r.jsx)(E.A, {
                   subscription: t,
                   currentInvoicePreview: i,
-                  dropdownClassName: j.Nw,
+                  dropdownClassName: L.Nw,
               })
-            : (0, r.jsx)(u.y$y, {});
+            : (0, r.jsx)(d.y$y, {});
     },
-    U = (e) => {
+    G = (e) => {
         let {
             isTrial: t,
             isCancelled: n,
             isResubscribing: i,
-            shouldHideRoleSubscriptionEntryPoints: a,
+            shouldHideRoleSubscriptionEntryPoints: l,
             onCancelSubscriptionClick: s,
-            onResubscribeClick: o,
-            onChangePlanClick: l,
+            onResubscribeClick: a,
+            onChangePlanClick: o,
         } = e;
-        return n && (t || a)
+        return n && (t || l)
             ? null
-            : (0, r.jsx)(u.D0$, {
-                  label: L.intl.string(L.t["4neDM+"]),
+            : (0, r.jsx)(d.D0$, {
+                  label: w.intl.string(w.t["4neDM+"]),
                   children: (0, r.jsx)("div", {
-                      className: j.__invalid_rowButtons,
+                      className: L.__invalid_rowButtons,
                       children: n
-                          ? (0, r.jsx)(u.Button, {
+                          ? (0, r.jsx)(d.Button, {
                                 variant: "primary",
-                                text: L.intl.string(L.t.y3mAE4),
-                                onClick: o,
+                                text: w.intl.string(w.t.y3mAE4),
+                                onClick: a,
                                 loading: i,
                             })
                           : (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     !t &&
-                                        !a &&
-                                        (0, r.jsx)(h.A, {
-                                            label: L.intl.string(L.t.FRbWR8),
-                                            onClick: l,
+                                        !l &&
+                                        (0, r.jsx)(g.A, {
+                                            label: w.intl.string(w.t.FRbWR8),
+                                            onClick: o,
                                         }),
-                                    (0, r.jsx)(h.A, {
-                                        label: L.intl.string(L.t.Dx0lF7),
+                                    (0, r.jsx)(g.A, {
+                                        label: w.intl.string(w.t.Dx0lF7),
                                         onClick: s,
                                     }),
                                 ],
@@ -125,199 +125,120 @@ let M = (e) => {
                   }),
               });
     },
-    G = (e) => {
+    k = (e) => {
         let { subscription: t } = e,
             {
                 listing: n,
-                groupListing: a,
-                guild: o,
+                groupListing: l,
+                guild: a,
                 expanded: p,
-                handleToggleExpanded: h,
+                handleToggleExpanded: g,
                 subscriptionInfo: b,
-            } = (0, T.A)(t),
-            [y, I] = i.useState(!1),
-            G = (0, m.GV)(),
-            { analyticsLocations: V } = (0, _.Ay)(),
-            { shouldHideGuildPurchaseEntryPoints: F } = (0, g.MH)(null == o ? void 0 : o.id),
+            } = (0, S.A)(t),
+            [E, T] = i.useState(!1),
+            k = (0, A.GV)(),
+            { analyticsLocations: V } = (0, m.Ay)(),
+            { shouldHideGuildPurchaseEntryPoints: H } = (0, f.MH)(null == a ? void 0 : a.id),
             B = null == t ? void 0 : t.isPurchasedViaAppleGeneric;
-        if (null == a || null == n || null == b) return null;
-        let H = () => {
-                null != o &&
-                    ((0, O.pX)(P.BVt.CHANNEL(o.id, D.VV.ROLE_SUBSCRIPTIONS)),
-                    (0, v.default)(),
-                    f.A.show(P.kqX.BACK_TO_PREVIOUS_SCREEN, void 0, L.intl.string(L.t.DvbaM4), () =>
-                        (0, S.openUserSettings)(A.X.SUBSCRIPTIONS_PANEL, {
-                            section: P.nc_.SUBSCRIPTIONS,
-                            subsection: x.nR,
-                        }),
-                    ));
-            },
-            Y = () => {
-                null != o &&
-                    (0, R.q)({
-                        groupListing: a,
-                        listing: n,
-                        subscription: t,
-                    });
-            },
-            W = async () => {
+        if (null == l || null == n || null == b) return null;
+        let F = async () => {
                 try {
-                    I(!0), await d.QP(t, V), (0, w.q)();
+                    T(!0), await u.QP(t, V), (0, y.q)();
                 } finally {
-                    I(!1);
+                    T(!1);
                 }
             },
             {
-                isCancelled: K,
-                isPastDue: z,
-                subscriptionPrice: q,
-                memberSince: X,
+                isCancelled: Y,
+                isPastDue: W,
+                subscriptionPrice: z,
+                memberSince: K,
                 nextRenewalDate: Z,
-                nextRenewalLabel: Q,
-                isTrial: $,
+                nextRenewalLabel: X,
+                isTrial: q,
             } = b,
-            J = n.soft_deleted || null == o || B,
-            ee = () =>
-                p
-                    ? (0, r.jsxs)("div", {
-                          id: G,
-                          children: [
-                              (0, r.jsx)("div", {
-                                  className: j.yF,
-                              }),
-                              (0, r.jsx)(N.A, {
-                                  groupListingId: a.id,
-                                  subscription: t,
-                                  className: j.kE,
-                              }),
-                              (0, r.jsxs)("div", {
-                                  className: j.Zx,
-                                  children: [
-                                      (0, r.jsx)(M, {
-                                          label: Q,
-                                          value: Z,
-                                      }),
-                                      (0, r.jsx)(M, {
-                                          label: L.intl.string(L.t.dltUMH),
-                                          value: q,
-                                          showInfoIcon: $,
-                                          infoIconTooltipText: $ ? L.intl.string(L.t["/q6fpa"]) : void 0,
-                                      }),
-                                      (0, r.jsx)(M, {
-                                          label: L.intl.string(L.t.AOcwWB),
-                                          value: X,
-                                      }),
-                                  ],
-                              }),
-                              (0, r.jsx)(u.hKd, {
-                                  size: 16,
-                              }),
-                              !K &&
-                                  !B &&
-                                  (0, r.jsx)(u.D0$, {
-                                      label: L.intl.string(L.t.wmMFvA),
-                                      children: (0, r.jsx)(k, {
-                                          subscription: t,
-                                      }),
-                                  }),
-                              !J &&
-                                  (0, r.jsx)(U, {
-                                      isTrial: $,
-                                      isCancelled: K,
-                                      isResubscribing: y,
-                                      shouldHideRoleSubscriptionEntryPoints: F,
-                                      onCancelSubscriptionClick: Y,
-                                      onChangePlanClick: H,
-                                      onResubscribeClick: W,
-                                  }),
-                          ],
-                      })
-                    : null,
-            et = () =>
-                K
-                    ? (0, r.jsx)(u.LpS, {
-                          text: L.intl.string(L.t["7uFZGt"]),
-                      })
-                    : $
-                      ? (0, r.jsx)(u.LpS, {
-                            text: L.intl.string(L.t["6anton"]),
-                            color: l.A.unsafe_rawColors.BRAND_500.css,
-                        })
-                      : z
-                        ? (0, r.jsx)(c.m, {
-                              text: L.intl.string(L.t.eSuJE2),
-                              children: (0, r.jsx)("div", {
-                                  children: (0, r.jsx)(u.LpS, {
-                                      className: j.qc,
-                                      text: L.intl.string(L.t.NrRwIl),
-                                      color: l.A.unsafe_rawColors.YELLOW_300.css,
-                                  }),
-                              }),
-                          })
-                        : null,
-            en = () =>
-                B
-                    ? (0, r.jsx)(c.m, {
-                          text: L.intl.string(L.t.nv1IqK),
-                          children: (0, r.jsx)("div", {
-                              children: (0, r.jsx)(u.LpS, {
-                                  text: L.intl.string(L.t["sBl3X/"]),
-                                  color: l.A.colors.BACKGROUND_MOD_MUTED.css,
-                              }),
-                          }),
-                      })
-                    : null;
+            J = n.soft_deleted || null == a || B;
         return (0, r.jsxs)("div", {
-            className: j.kL,
+            className: L.kL,
             children: [
-                (0, r.jsx)(C.A, {
-                    onClick: h,
-                    className: j.N1,
+                (0, r.jsx)(j.A, {
+                    onClick: g,
+                    className: L.N1,
                     children: (e) => {
                         let { areaRef: t, handleStopPropagation: i } = e;
                         return (0, r.jsxs)(r.Fragment, {
                             children: [
-                                null != o &&
-                                    (0, r.jsx)(E.A, {
-                                        guild: o,
+                                null != a &&
+                                    (0, r.jsx)(h.A, {
+                                        guild: a,
                                         active: !0,
-                                        size: E.A.Sizes.MEDIUM,
+                                        size: h.A.Sizes.MEDIUM,
                                     }),
                                 (0, r.jsxs)("div", {
-                                    className: j.if,
+                                    className: L.if,
                                     children: [
-                                        (0, r.jsx)(u.Text, {
+                                        (0, r.jsx)(d.Text, {
                                             variant: "text-md/medium",
-                                            className: j.J5,
-                                            children: null != o ? o.name : L.intl.string(L.t["He+cmd"]),
+                                            className: L.J5,
+                                            children: null != a ? a.name : w.intl.string(w.t["He+cmd"]),
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: j.xp,
+                                            className: L.xp,
                                             children: [
-                                                (0, r.jsx)(u.Text, {
+                                                (0, r.jsx)(d.Text, {
                                                     variant: "text-sm/normal",
-                                                    className: j.KR,
+                                                    className: L.KR,
                                                     children: n.name,
                                                 }),
-                                                et(),
-                                                en(),
+                                                Y
+                                                    ? (0, r.jsx)(d.LpS, {
+                                                          text: w.intl.string(w.t["7uFZGt"]),
+                                                      })
+                                                    : q
+                                                      ? (0, r.jsx)(d.LpS, {
+                                                            text: w.intl.string(w.t["6anton"]),
+                                                            color: o.A.unsafe_rawColors.BRAND_500.css,
+                                                        })
+                                                      : W
+                                                        ? (0, r.jsx)(c.m, {
+                                                              text: w.intl.string(w.t.eSuJE2),
+                                                              children: (0, r.jsx)("div", {
+                                                                  children: (0, r.jsx)(d.LpS, {
+                                                                      className: L.qc,
+                                                                      text: w.intl.string(w.t.NrRwIl),
+                                                                      color: o.A.unsafe_rawColors.YELLOW_300.css,
+                                                                  }),
+                                                              }),
+                                                          })
+                                                        : null,
+                                                B
+                                                    ? (0, r.jsx)(c.m, {
+                                                          text: w.intl.string(w.t.nv1IqK),
+                                                          children: (0, r.jsx)("div", {
+                                                              children: (0, r.jsx)(d.LpS, {
+                                                                  text: w.intl.string(w.t["sBl3X/"]),
+                                                                  color: o.A.colors.BACKGROUND_MOD_MUTED.css,
+                                                              }),
+                                                          }),
+                                                      })
+                                                    : null,
                                             ],
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(u.DUT, {
-                                    onClick: i(h),
-                                    "aria-label": L.intl.string(L.t.e5eQOy),
-                                    "aria-controls": G,
+                                (0, r.jsx)(d.DUT, {
+                                    onClick: i(g),
+                                    "aria-label": w.intl.string(w.t.e5eQOy),
+                                    "aria-controls": k,
                                     "aria-expanded": p,
                                     focusProps: {
                                         ringTarget: t,
                                     },
-                                    children: (0, r.jsx)(u.abt, {
+                                    children: (0, r.jsx)(d.abt, {
                                         size: "md",
                                         color: "currentColor",
-                                        className: s()(j.D6, {
-                                            [j.S7]: p,
+                                        className: s()(L.D6, {
+                                            [L.S7]: p,
                                         }),
                                     }),
                                 }),
@@ -325,7 +246,82 @@ let M = (e) => {
                         });
                     },
                 }),
-                ee(),
+                p
+                    ? (0, r.jsxs)("div", {
+                          id: k,
+                          children: [
+                              (0, r.jsx)("div", {
+                                  className: L.yF,
+                              }),
+                              (0, r.jsx)(v.A, {
+                                  groupListingId: l.id,
+                                  subscription: t,
+                                  className: L.kE,
+                              }),
+                              (0, r.jsxs)("div", {
+                                  className: L.Zx,
+                                  children: [
+                                      (0, r.jsx)(M, {
+                                          label: X,
+                                          value: Z,
+                                      }),
+                                      (0, r.jsx)(M, {
+                                          label: w.intl.string(w.t.dltUMH),
+                                          value: z,
+                                          showInfoIcon: q,
+                                          infoIconTooltipText: q ? w.intl.string(w.t["/q6fpa"]) : void 0,
+                                      }),
+                                      (0, r.jsx)(M, {
+                                          label: w.intl.string(w.t.AOcwWB),
+                                          value: K,
+                                      }),
+                                  ],
+                              }),
+                              (0, r.jsx)(d.hKd, {
+                                  size: 16,
+                              }),
+                              !Y &&
+                                  !B &&
+                                  (0, r.jsx)(d.D0$, {
+                                      label: w.intl.string(w.t.wmMFvA),
+                                      children: (0, r.jsx)(U, {
+                                          subscription: t,
+                                      }),
+                                  }),
+                              !J &&
+                                  (0, r.jsx)(G, {
+                                      isTrial: q,
+                                      isCancelled: Y,
+                                      isResubscribing: E,
+                                      shouldHideRoleSubscriptionEntryPoints: H,
+                                      onCancelSubscriptionClick: () => {
+                                          null != a &&
+                                              (0, N.q)({
+                                                  groupListing: l,
+                                                  listing: n,
+                                                  subscription: t,
+                                              });
+                                      },
+                                      onChangePlanClick: () => {
+                                          null != a &&
+                                              ((0, x.pX)(P.BVt.CHANNEL(a.id, R.VV.ROLE_SUBSCRIPTIONS)),
+                                              (0, C.default)(),
+                                              _.A.show(
+                                                  P.kqX.BACK_TO_PREVIOUS_SCREEN,
+                                                  void 0,
+                                                  w.intl.string(w.t.DvbaM4),
+                                                  () =>
+                                                      (0, I.openUserSettings)(O.X.SUBSCRIPTIONS_PANEL, {
+                                                          section: P.nc_.SUBSCRIPTIONS,
+                                                          subsection: D.nR,
+                                                      }),
+                                              ));
+                                      },
+                                      onResubscribeClick: F,
+                                  }),
+                          ],
+                      })
+                    : null,
             ],
         });
     };

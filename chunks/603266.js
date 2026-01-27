@@ -1,19 +1,16 @@
 n.d(t, {
-    Rj: () => i,
-    m4: () => r,
+    Rj: () => o,
+    m4: () => a,
 });
-var r = (function (e) {
-        return (
-            (e.MATCH = "match"),
-            (e.OTHER_USER_ALREADY_VERIFIED = "other_user_already_verified"),
-            (e.OTHER_USER_INCONSISTENT_KEYS = "other_user_inconsistent_keys"),
-            (e.FINGERPRINT_MISMATCH = "fingerprint_mismatch"),
-            (e.UNABLE_TO_VERIFY = "unable_to_verify"),
-            (e.OTHER_USER_DISCONNECTED = "other_user_disconnected"),
-            (e.CURRENT_USER_DISCONNECTED = "current_user_disconnected"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (e.RTC_DEBUG_PANEL = "rtc_debug_panel"), (e.RTC_SECURE_FRAMES = "rtc_secure_frames"), e;
-    })({});
+var r,
+    i,
+    a =
+        (((r = {}).MATCH = "match"),
+        (r.OTHER_USER_ALREADY_VERIFIED = "other_user_already_verified"),
+        (r.OTHER_USER_INCONSISTENT_KEYS = "other_user_inconsistent_keys"),
+        (r.FINGERPRINT_MISMATCH = "fingerprint_mismatch"),
+        (r.UNABLE_TO_VERIFY = "unable_to_verify"),
+        (r.OTHER_USER_DISCONNECTED = "other_user_disconnected"),
+        (r.CURRENT_USER_DISCONNECTED = "current_user_disconnected"),
+        r),
+    o = (((i = {}).RTC_DEBUG_PANEL = "rtc_debug_panel"), (i.RTC_SECURE_FRAMES = "rtc_secure_frames"), i);

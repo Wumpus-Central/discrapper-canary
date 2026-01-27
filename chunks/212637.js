@@ -6,8 +6,8 @@ var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(157559),
-    s = n(384904),
-    o = n(73825),
+    o = n(384904),
+    s = n(73825),
     l = n(166403),
     c = n(954571),
     u = n(927578),
@@ -22,15 +22,15 @@ async function _(e) {
             guildId: m,
             closeLayer: g,
             onCloseModal: E,
-            totalNumberOfSlotsToAssign: b = 1,
-            disablePremiumUpsell: y,
+            totalNumberOfSlotsToAssign: y = 1,
+            disablePremiumUpsell: b,
             onSubscribeComplete: O,
-            onSubscriptionConfirmation: A,
-            inPopout: v,
-            applicationId: S,
-            intent: I,
+            onSubscriptionConfirmation: v,
+            inPopout: A,
+            applicationId: I,
+            intent: S,
         } = e,
-        T = v ? i.KX8 : i.SYi,
+        T = A ? i.KX8 : i.SYi,
         C = l.A.getPremiumTypeSubscription();
     if (null != C && C.isPurchasedExternally && null != C.paymentGateway) {
         null != g && g(),
@@ -45,7 +45,7 @@ async function _(e) {
             });
         return;
     }
-    Promise.all([(0, s.$o)(), (0, o.zS)()]);
+    Promise.all([(0, o.$o)(), (0, s.zS)()]);
     let N = () => {
         c.default.track(d.HAw.MODAL_DISMISSED, {
             type: d.JJy.PREMIUM_GUILD_PURCHASE_MODAL,
@@ -54,7 +54,9 @@ async function _(e) {
     };
     await (0, i.mMO)(
         async () => {
-            let { default: e } = await n.e("48982").then(n.bind(n, 34645));
+            let { default: e } = await Promise.all([n.e("62175"), n.e("62733"), n.e("67646"), n.e("24665")]).then(
+                n.bind(n, 34645),
+            );
             return (n) => {
                 let { transitionState: i, onClose: a } = n;
                 return (0, r.jsx)(e, {
@@ -66,13 +68,13 @@ async function _(e) {
                     analyticsLocation: _,
                     analyticsSourceLocation: null != h ? h : _,
                     guildId: m,
-                    totalNumberOfSlotsToAssign: b,
+                    totalNumberOfSlotsToAssign: y,
                     closeGuildPerksModal: g,
-                    disablePremiumUpsell: y,
-                    onSubscriptionConfirmation: A,
+                    disablePremiumUpsell: b,
+                    onSubscriptionConfirmation: v,
                     onSubscribeComplete: O,
-                    applicationId: S,
-                    intent: I,
+                    applicationId: I,
+                    intent: S,
                 });
             };
         },

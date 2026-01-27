@@ -1,10 +1,10 @@
 n.d(t, {
-    K7: () => _,
-    Os: () => A,
-    V3: () => O,
-    cC: () => y,
-    d4: () => h,
-    tn: () => b,
+    K7: () => h,
+    Os: () => m,
+    V3: () => f,
+    cC: () => _,
+    d4: () => p,
+    tn: () => g,
 }),
     n(927092),
     n(212978),
@@ -23,25 +23,11 @@ n.d(t, {
     n(733351);
 var r,
     i,
-    a,
-    s = n(704101),
-    o = n(728458);
+    s,
+    l = n(704101),
+    a = n(728458);
 
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function c(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,78 +38,76 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function d(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let f = null != (r = null == (i = window) ? void 0 : i.crypto) ? r : null == (a = window) ? void 0 : a.msCrypto,
-    p = "Uint8Array" in window,
-    _ = null != f && "getRandomValues" in f && p,
-    h = "PublicKeyCredential" in window && p,
-    m = 20;
+let d = null != (r = null == (i = window) ? void 0 : i.crypto) ? r : null == (s = window) ? void 0 : s.msCrypto,
+    u = "Uint8Array" in window,
+    h = null != d && "getRandomValues" in d && u,
+    p = "PublicKeyCredential" in window && u;
 
-function g(e) {
-    return f.getRandomValues(new Uint8Array(e));
+function g() {
+    var e;
+    return (
+        (e = d.getRandomValues(new Uint8Array(20))),
+        l
+            .encode(e)
+            .toString("utf8")
+            .replace(/=/g, "")
+            .toLowerCase()
+            .replace(/(\w{4})/g, "$1 ")
+            .trim()
+    );
 }
 
-function E(e) {
-    return s
-        .encode(e)
-        .toString("utf8")
-        .replace(/=/g, "")
-        .toLowerCase()
-        .replace(/(\w{4})/g, "$1 ")
-        .trim();
-}
-
-function b() {
-    return E(g(m));
-}
-
-function y(e) {
+function _(e) {
     return e.replace(/[\s._-]+/g, "").toUpperCase();
 }
 
-function O(e, t) {
+function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "Discord";
     return "otpauth://totp/"
         .concat(encodeURI(n), ":")
         .concat(encodeURI(e), "?secret=")
-        .concat(y(t), "&issuer=")
+        .concat(_(t), "&issuer=")
         .concat(encodeURIComponent(n));
 }
 
-function A(e, t) {
-    o.A.captureException(
+function m(e, t) {
+    a.A.captureException(
         e,
-        d(c({}, t), {
-            tags: d(c({}, null == t ? void 0 : t.tags), {
+        c(o({}, t), {
+            tags: c(o({}, null == t ? void 0 : t.tags), {
                 app_context: "webauthn",
             }),
         }),

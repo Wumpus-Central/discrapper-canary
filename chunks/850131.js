@@ -1,91 +1,31 @@
 n.d(t, {
-    A: () => w,
+    A: () => E,
 }),
     n(228524);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(23339),
-    l = n(827734),
+    l = n(503698),
+    a = n.n(l),
+    s = n(23339),
+    o = n(827734),
     c = n(397927),
     u = n(843472),
     d = n(565645),
-    f = n(763754),
-    p = n(447215),
-    _ = n(888675),
-    h = n(533567),
-    m = n(306417),
-    g = n(412136),
-    E = n(985018),
-    b = n(782635);
+    p = n(763754),
+    m = n(447215),
+    f = n(888675),
+    g = n(533567),
+    h = n(306417),
+    _ = n(412136),
+    b = n(985018),
+    A = n(782635);
 
-function y(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function O(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                y(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function A(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = v(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function v(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let S = 16;
-
-function I() {
+function y() {
     return (0, r.jsx)("svg", {
         width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        fill: l.A.colors.INTERACTIVE_TEXT_DEFAULT.css,
+        fill: o.A.colors.INTERACTIVE_TEXT_DEFAULT.css,
         "aria-hidden": !0,
         children: (0, r.jsx)("path", {
             fillRule: "evenodd",
@@ -96,10 +36,10 @@ function I() {
     });
 }
 
-function T(e) {
+function v(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, r.jsx)(I, {});
+    if (n) t = (0, r.jsx)(y, {});
     else if (null != i) {
         let e = "" !== i.name ? i.name : i.displayName;
         t = (0, r.jsx)(d.A, {
@@ -110,62 +50,73 @@ function T(e) {
     }
     return null != t
         ? (0, r.jsx)("div", {
-              className: b.ZS,
+              className: A.ZS,
               children: t,
           })
         : null;
 }
 
-function C(e) {
-    if (0 === e.totalVotes)
-        return {
-            type: "NO_VOTES",
-        };
-    let t = null != e.victorAnswerId,
-        n = e.totalVotes > 0 ? Math.round((e.victorAnswerVotes / e.totalVotes) * 100) : 0;
-    return t
-        ? {
-              type: "VICTOR",
-              victorAnswerText: e.victorAnswerText,
-              victorVotePercentage: n,
-          }
-        : {
-              type: "TIE",
-              tiedVotePercentage: n,
-          };
-}
-
-function N(e) {
+function x(e) {
     let t,
         { type: n } = e,
-        i = A(e, ["type"]),
-        a = "text-muted";
+        i = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i,
+                l = {};
+            if ("u" > typeof Reflect && Reflect.ownKeys) {
+                for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                return l;
+            }
+            if (
+                ((l = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.getOwnPropertyNames(e);
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    return i;
+                })(e, t)),
+                Object.getOwnPropertySymbols)
+            )
+                for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+            return l;
+        })(e, ["type"]),
+        l = "text-muted";
     switch (n) {
         case "NO_VOTES":
             t = (0, r.jsx)(c.Text, {
                 variant: "text-sm/semibold",
                 color: "text-default",
                 scaleFontToUserSetting: !0,
-                children: E.intl.string(E.t["a+lSZ/"]),
+                children: b.intl.string(b.t["a+lSZ/"]),
             });
             break;
         case "VICTOR":
-            let { victorAnswerText: s, victorVotePercentage: o } = i;
+            let { victorAnswerText: a, victorVotePercentage: s } = i;
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: b.sj,
+                        className: A.sj,
                         children: [
                             (0, r.jsx)(c.Text, {
                                 variant: "text-sm/semibold",
                                 color: "text-default",
-                                className: b.Dq,
+                                className: A.Dq,
                                 scaleFontToUserSetting: !0,
-                                children: s,
+                                children: a,
                             }),
-                            (0, r.jsx)(m.Vx, {
-                                size: S,
-                                className: b.To,
+                            (0, r.jsx)(h.Vx, {
+                                size: 16,
+                                className: A.To,
                                 isVictor: !0,
                                 isExpired: !0,
                             }),
@@ -173,111 +124,159 @@ function N(e) {
                     }),
                     (0, r.jsxs)(c.Text, {
                         variant: "text-xs/medium",
-                        color: a,
+                        color: l,
                         scaleFontToUserSetting: !0,
-                        children: [E.intl.string(E.t.ufIDIx), " • ", o, "%"],
+                        children: [b.intl.string(b.t.ufIDIx), " • ", s, "%"],
                     }),
                 ],
             });
             break;
         case "TIE":
-            let { tiedVotePercentage: l } = i;
+            let { tiedVotePercentage: o } = i;
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.Text, {
                         variant: "text-sm/semibold",
                         color: "text-default",
                         scaleFontToUserSetting: !0,
-                        children: E.intl.string(E.t.kPN9si),
+                        children: b.intl.string(b.t.kPN9si),
                     }),
                     (0, r.jsxs)(c.Text, {
                         variant: "text-xs/medium",
-                        color: a,
+                        color: l,
                         scaleFontToUserSetting: !0,
-                        children: [l, "%"],
+                        children: [o, "%"],
                     }),
                 ],
             });
     }
     return (0, r.jsx)("div", {
-        className: b.h_,
+        className: A.h_,
         children: t,
     });
 }
 
-function R(e) {
-    let { className: t, data: n, onClickPollLink: a } = e,
-        o = i.useMemo(() => C(n), [n]),
-        l = null != n.victorEmoji || "NO_VOTES" === o.type;
+function O(e) {
+    let { className: t, data: n, onClickPollLink: l } = e,
+        s = i.useMemo(
+            () =>
+                (function (e) {
+                    if (0 === e.totalVotes)
+                        return {
+                            type: "NO_VOTES",
+                        };
+                    let t = null != e.victorAnswerId,
+                        n = e.totalVotes > 0 ? Math.round((e.victorAnswerVotes / e.totalVotes) * 100) : 0;
+                    return t
+                        ? {
+                              type: "VICTOR",
+                              victorAnswerText: e.victorAnswerText,
+                              victorVotePercentage: n,
+                          }
+                        : {
+                              type: "TIE",
+                              tiedVotePercentage: n,
+                          };
+                })(n),
+            [n],
+        ),
+        o = null != n.victorEmoji || "NO_VOTES" === s.type;
     return (0, r.jsxs)("div", {
-        className: s()(
-            b.kL,
+        className: a()(
+            A.kL,
             {
-                [b.FS]: l,
+                [A.FS]: o,
             },
             t,
         ),
         children: [
-            (0, r.jsx)(T, {
-                hasNoVotes: "NO_VOTES" === o.type,
+            (0, r.jsx)(v, {
+                hasNoVotes: "NO_VOTES" === s.type,
                 victorEmoji: n.victorEmoji,
             }),
-            (0, r.jsx)(N, O({}, o)),
-            null != a &&
+            (0, r.jsx)(
+                x,
+                (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, s),
+            ),
+            null != l &&
                 (0, r.jsx)(c.Button, {
                     size: "sm",
-                    onClick: a,
+                    onClick: l,
                     variant: "secondary",
-                    text: E.intl.string(E.t.Jw7Vbf),
+                    text: b.intl.string(b.t.Jw7Vbf),
                 }),
         ],
     });
 }
 
-function w(e) {
+function E(e) {
     var t;
-    let { message: n, channel: a, compact: s, disableInteraction: l = !1 } = e,
+    let { message: n, channel: l, compact: a, disableInteraction: o = !1 } = e,
         d = n.embeds[0],
-        m = i.useMemo(() => (0, h.A)(d), [d]),
-        y = (0, o.EJ)(null != (t = null == m ? void 0 : m.questionText) ? t : "", g.TU),
-        O = (0, f.Ay)(n),
-        A = (0, p.P)({
+        h = i.useMemo(() => (0, g.A)(d), [d]),
+        y = (0, s.EJ)(null != (t = null == h ? void 0 : h.questionText) ? t : "", _.TU),
+        v = (0, p.Ay)(n),
+        x = (0, m.P)({
             user: n.author,
-            channelId: a.id,
-            guildId: a.guild_id,
+            channelId: l.id,
+            guildId: l.guild_id,
             messageId: n.id,
         }),
-        v = n.messageReference,
-        S = i.useCallback(() => {
-            null != v &&
+        E = n.messageReference,
+        j = i.useCallback(() => {
+            null != E &&
                 u.A.jumpToMessage({
-                    channelId: v.channel_id,
-                    messageId: v.message_id,
+                    channelId: E.channel_id,
+                    messageId: E.message_id,
                     flash: !0,
                     returnMessageId: n.id,
                 });
-        }, [n.id, v]);
-    return null == m
+        }, [n.id, E]);
+    return null == h
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(_.A, {
+                  (0, r.jsx)(f.A, {
                       iconNode: (0, r.jsx)(c.YRe, {
                           size: "xs",
                       }),
                       timestamp: n.timestamp,
-                      compact: s,
-                      children: E.intl.format(E.t.VJcK41, {
-                          username: O.nick,
-                          usernameHook: A(O),
+                      compact: a,
+                      children: b.intl.format(b.t.VJcK41, {
+                          username: v.nick,
+                          usernameHook: x(v),
                           title: y,
-                          titleOnClick: S,
+                          titleOnClick: j,
                       }),
                   }),
-                  (0, r.jsx)(R, {
-                      className: b.E6,
-                      data: m,
-                      onClickPollLink: l ? void 0 : S,
+                  (0, r.jsx)(O, {
+                      className: A.E6,
+                      data: h,
+                      onClickPollLink: o ? void 0 : j,
                   }),
               ],
           });

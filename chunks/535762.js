@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => u,
+    A: () => a,
 }),
     n(896048),
     n(321073),
@@ -7,7 +7,7 @@ n.d(t, {
     n(747238);
 var r = n(91871),
     i = n.n(r),
-    a = n(18108);
+    l = n(18108);
 
 function s(e, t, n) {
     return (
@@ -22,10 +22,7 @@ function s(e, t, n) {
         e
     );
 }
-let o = 1,
-    l = 0.95,
-    c = 0.8;
-class u {
+class a {
     search(e) {
         return new Promise((t) => {
             t(this.getMatchingSettings(e));
@@ -38,8 +35,8 @@ class u {
             let t = [];
             return (
                 this.terms.forEach((n) => {
-                    let [r, a] = n;
-                    for (let n of a)
+                    let [r, l] = n;
+                    for (let n of l)
                         if (i()(e.toLowerCase(), n.toLowerCase())) {
                             t.push(r);
                             break;
@@ -59,20 +56,20 @@ class u {
         return (
             this.preprocessed.forEach((e) => {
                 let [n, { normalizedTokens: i, normalizedSearchTerms: s }] = e,
-                    u = 0;
+                    a = 0;
                 s.some((e) => e === t)
-                    ? (u = o)
+                    ? (a = 1)
                     : i.some((e) => e.startsWith(t))
-                      ? (u = l)
+                      ? (a = 0.95)
                       : s.forEach((e) => {
                             let n = 0,
-                                r = (0, a.g)(t, e);
-                            r >= c && (n = r), (u = Math.max(u, n));
+                                r = (0, l.g)(t, e);
+                            r >= 0.8 && (n = r), (a = Math.max(a, n));
                         }),
-                    u > 0 &&
+                    a > 0 &&
                         r.push({
                             setting: n,
-                            score: u,
+                            score: a,
                         });
             }),
             this.cacheScored.set(t, r),
@@ -92,13 +89,13 @@ class u {
                 let [t, n] = e,
                     r = [],
                     i = [],
-                    a = new Set();
+                    l = new Set();
                 n.forEach((e) => {
                     r.push(e.toLocaleLowerCase()),
                         e.includes(" ") &&
                             e.split(/\s+/).forEach((e) => {
                                 let t = e.toLocaleLowerCase();
-                                a.has(t) || (i.push(t), a.add(t));
+                                l.has(t) || (i.push(t), l.add(t));
                             });
                 }),
                     this.preprocessed.push([

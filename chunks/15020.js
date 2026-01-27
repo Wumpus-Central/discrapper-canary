@@ -1,60 +1,62 @@
-n.d(t, {
-    $h: () => p,
+r.d(e, {
+    $h: () => u,
     DH: () => i,
-    Fc: () => u,
-    O8: () => a,
-    Ow: () => s,
-    Vw: () => m,
-    ZJ: () => h,
-    aZ: () => o,
-    ld: () => b,
-    qv: () => l,
-    tY: () => E,
+    Fc: () => c,
+    O8: () => n,
+    Ow: () => o,
+    Vw: () => x,
+    ZJ: () => d,
+    aZ: () => a,
+    ld: () => w,
+    qv: () => h,
+    tY: () => p,
 });
-var r = n(294946);
-let i = (e) => new Uint32Array(e.buffer, e.byteOffset, Math.floor(e.byteLength / 4)),
-    a = (e) => new DataView(e.buffer, e.byteOffset, e.byteLength),
-    s = (e, t) => (e << (32 - t)) | (e >>> t),
-    o = (e, t) => (e << t) | ((e >>> (32 - t)) >>> 0),
-    l = 68 === new Uint8Array(new Uint32Array([0x11223344]).buffer)[0],
-    c = (e) => ((e << 24) & 0xff000000) | ((e << 8) & 0xff0000) | ((e >>> 8) & 65280) | ((e >>> 24) & 255);
+var s = r(294946);
+let i = (t) => new Uint32Array(t.buffer, t.byteOffset, Math.floor(t.byteLength / 4)),
+    n = (t) => new DataView(t.buffer, t.byteOffset, t.byteLength),
+    o = (t, e) => (t << (32 - e)) | (t >>> e),
+    a = (t, e) => (t << e) | ((t >>> (32 - e)) >>> 0),
+    h = 68 === new Uint8Array(new Uint32Array([0x11223344]).buffer)[0],
+    f = (t) => ((t << 24) & 0xff000000) | ((t << 8) & 0xff0000) | ((t >>> 8) & 65280) | ((t >>> 24) & 255);
 
-function u(e) {
-    for (let t = 0; t < e.length; t++) e[t] = c(e[t]);
+function c(t) {
+    for (let e = 0; e < t.length; e++) t[e] = f(t[e]);
 }
-let d = null,
-    f = async () => {};
-async function p(e, t, n) {
-    let r = Date.now();
-    for (let i = 0; i < e; i++) {
-        n(i);
-        let e = Date.now() - r;
-        (e >= 0 && e < t) || (await f(), (r += e));
+let l = async () => {};
+async function u(t, e, r) {
+    let s = Date.now();
+    for (let i = 0; i < t; i++) {
+        r(i);
+        let t = Date.now() - s;
+        (t >= 0 && t < e) || (await l(), (s += t));
     }
 }
 
-function _(e) {
-    if ("string" != typeof e) throw Error(`utf8ToBytes expected string, got ${typeof e}`);
-    return new Uint8Array(new TextEncoder().encode(e));
+function d(t) {
+    return (
+        "string" == typeof t &&
+            (t = (function (t) {
+                if ("string" != typeof t) throw Error(`utf8ToBytes expected string, got ${typeof t}`);
+                return new Uint8Array(new TextEncoder().encode(t));
+            })(t)),
+        (0, s.ee)(t),
+        t
+    );
 }
-
-function h(e) {
-    return "string" == typeof e && (e = _(e)), (0, r.ee)(e), e;
-}
-class m {
+class x {
     clone() {
         return this._cloneInto();
     }
 }
-let g = {}.toString;
+let b = {}.toString;
 
-function E(e, t) {
-    if (void 0 !== t && "[object Object]" !== g.call(t)) throw Error("Options should be object or undefined");
-    return Object.assign(e, t);
+function p(t, e) {
+    if (void 0 !== e && "[object Object]" !== b.call(e)) throw Error("Options should be object or undefined");
+    return Object.assign(t, e);
 }
 
-function b(e) {
-    let t = (t) => e().update(h(t)).digest(),
-        n = e();
-    return (t.outputLen = n.outputLen), (t.blockLen = n.blockLen), (t.create = () => e()), t;
+function w(t) {
+    let e = (e) => t().update(d(e)).digest(),
+        r = t();
+    return (e.outputLen = r.outputLen), (e.blockLen = r.blockLen), (e.create = () => t()), e;
 }

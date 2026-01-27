@@ -9,5 +9,5 @@ var n = i(574381),
 let a = (0, l.E2)(s.X.ADVANCED_HARDWARE_ACCELERATION, {
     usePredicate: () => n.Av,
     useSearchTerms: () => [u.intl.string(u.t["eOC/F2"]), u.intl.string(u.t.Afc7l6)],
-    Component: r.DS,
+    Component: r.D,
 });

@@ -1,25 +1,23 @@
 n.d(t, {
-    A: () => p,
+    A: () => d,
 }),
     n(896048);
 var r = n(627968),
-    i = n(64700),
+    l = n(64700),
     a = n(108531),
-    s = n(615300),
-    o = n(397927),
-    l = n(854987),
+    i = n(615300),
+    s = n(397927),
+    o = n(854987),
     c = n(639797);
-let u = 400,
-    d = s.A.Easing.bezier(0.4, 0, 0, 1),
-    f = 500;
+let u = i.A.Easing.bezier(0.4, 0, 0, 1);
 
-function p(e) {
-    let { playEntryAnimation: t, children: n, isLeaving: s, onRest: p } = e,
-        [_, h] = i.useState(!1),
-        m = i.useContext(l.P),
-        g = (0, o.rdh)(m.primaryColor).hex(),
-        E = (0, o.zhh)({
-            from: s
+function d(e) {
+    let { playEntryAnimation: t, children: n, isLeaving: i, onRest: d } = e,
+        [m, f] = l.useState(!1),
+        p = l.useContext(o.P),
+        h = (0, s.rdh)(p.primaryColor).hex(),
+        b = (0, s.zhh)({
+            from: i
                 ? {
                       height: "100%",
                       blurHeight: "110%",
@@ -28,7 +26,7 @@ function p(e) {
                       height: "0%",
                       blurHeight: "0%",
                   },
-            to: s
+            to: i
                 ? {
                       height: "0%",
                       blurHeight: "0%",
@@ -38,36 +36,36 @@ function p(e) {
                       blurHeight: "110%",
                   },
             config: {
-                duration: u,
-                easing: d,
+                duration: 400,
+                easing: u,
             },
             pause: !t,
         }),
-        b = (0, o.zhh)({
+        g = (0, s.zhh)({
             from: {
-                background: s ? "rgba(0, 0, 0, 0.8)" : "rgba(0, 0, 0, 0)",
+                background: i ? "rgba(0, 0, 0, 0.8)" : "rgba(0, 0, 0, 0)",
             },
             to: {
-                background: s ? "rgba(0, 0, 0, 0)" : "rgba(0, 0, 0, 0.8)",
+                background: i ? "rgba(0, 0, 0, 0)" : "rgba(0, 0, 0, 0.8)",
             },
             config: {
-                duration: s ? u : u / 2,
-                easing: d,
+                duration: i ? 400 : 200,
+                easing: u,
             },
-            onRest: p,
+            onRest: d,
         });
     return (
-        i.useEffect(() => {
+        l.useEffect(() => {
             if (t) return;
             let e = setTimeout(() => {
-                h(!0);
-            }, f);
+                f(!0);
+            }, 500);
             return () => clearTimeout(e);
         }, [t]),
         (0, r.jsx)(a.animated.div, {
             className: c.iE,
             style: {
-                background: b.background,
+                background: g.background,
             },
             children: t
                 ? (0, r.jsxs)(r.Fragment, {
@@ -75,14 +73,14 @@ function p(e) {
                           (0, r.jsx)(a.animated.div, {
                               className: c.Ge,
                               style: {
-                                  height: E.blurHeight,
-                                  color: g,
+                                  height: b.blurHeight,
+                                  color: h,
                               },
                           }),
                           (0, r.jsx)(a.animated.div, {
                               className: c.PJ,
                               style: {
-                                  height: E.height,
+                                  height: b.height,
                               },
                               children: (0, r.jsx)("div", {
                                   className: c.TQ,
@@ -91,8 +89,8 @@ function p(e) {
                           }),
                       ],
                   })
-                : _
-                  ? (0, r.jsx)(o.y$y, {
+                : m
+                  ? (0, r.jsx)(s.y$y, {
                         className: c.u1,
                     })
                   : null,

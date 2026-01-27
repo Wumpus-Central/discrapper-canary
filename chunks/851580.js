@@ -1,20 +1,20 @@
-n.d(t, {
-    v: () => f,
+r.d(t, {
+    v: () => h,
 }),
-    n(896048);
-var r = n(627968),
-    i = n(554146),
-    a = n(342494),
-    s = n(379848),
-    o = n(966597),
-    l = n(49999),
-    c = n(985018),
-    u = n(936037);
-let d = i.M.FOR_LATER_POPOUT_COACHMARK;
+    r(896048);
+var n = r(627968),
+    l = r(554146),
+    s = r(342494),
+    a = r(379848),
+    i = r(966597),
+    o = r(49999),
+    c = r(985018),
+    u = r(936037);
+let d = l.M.FOR_LATER_POPOUT_COACHMARK;
 
-function f(e) {
-    let { location: t, targetElementRef: n } = e,
-        { enabled: i, inInbox: f } = o.A.useExperiment(
+function h(e) {
+    let { location: t, targetElementRef: r } = e,
+        { enabled: l, inInbox: h } = i.A.useExperiment(
             {
                 location: "ForLaterCoachmarkWeb",
             },
@@ -22,13 +22,11 @@ function f(e) {
                 autoTrackExposure: !1,
             },
         ),
-        p = t === (f ? "inbox-button" : "bookmarks-button"),
-        _ = i && p ? [d] : [],
-        [h, m] = (0, s.kn)(_, void 0);
-    return h !== d
+        [p, f] = (0, a.kn)(l && t === (h ? "inbox-button" : "bookmarks-button") ? [d] : [], void 0);
+    return p !== d
         ? null
-        : (0, r.jsx)(a.AM, {
-              targetElementRef: n,
+        : (0, n.jsx)(s.AM, {
+              targetElementRef: r,
               gradientColor: "purple",
               position: "bottom",
               align: "right",
@@ -36,13 +34,13 @@ function f(e) {
               caretConfig: {
                   align: "end",
               },
-              onRequestClose: () => m(l.i.USER_DISMISS),
+              onRequestClose: () => f(o.i.USER_DISMISS),
               title: c.intl.string(c.t.qPbFK2),
               body: c.intl.string(c.t.URrJq1),
               actions: [
                   {
                       text: c.intl.string(c.t["NX+WJN"]),
-                      onClick: () => m(l.i.USER_DISMISS),
+                      onClick: () => f(o.i.USER_DISMISS),
                   },
               ],
               graphic: {

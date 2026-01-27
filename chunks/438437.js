@@ -1,11 +1,9 @@
 n.d(t, {
-    CQ: () => r,
+    CQ: () => i,
 });
-var r = (function (e) {
-    return (
-        (e[(e.LIST = 1)] = "LIST"),
-        (e[(e.CHECKBOXES = 2)] = "CHECKBOXES"),
-        (e[(e.RADIO_BUTTONS = 3)] = "RADIO_BUTTONS"),
-        e
-    );
-})({});
+var r,
+    i =
+        (((r = {})[(r.LIST = 1)] = "LIST"),
+        (r[(r.CHECKBOXES = 2)] = "CHECKBOXES"),
+        (r[(r.RADIO_BUTTONS = 3)] = "RADIO_BUTTONS"),
+        r);

@@ -1,57 +1,56 @@
 n.d(t, {
-    A: () => f,
+    A: () => u,
 });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(397927),
-    l = n(641324),
+    l = n(503698),
+    s = n.n(l),
+    a = n(397927),
+    o = n(641324),
     c = n(112715),
-    u = n(702421);
-
-function d(e) {
+    d = n(702421);
+let u = i.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, useSubtitle: a, layout: d, initialize: f } = t,
+        { useTitle: n, useSubtitle: l, layout: u, initialize: _ } = t,
         p = null == n ? void 0 : n(),
-        _ = null == a ? void 0 : a(),
-        h = i.useId(),
-        m = null != p && "" !== p,
-        g = null != _ && "" !== _;
+        m = null == l ? void 0 : l(),
+        g = i.useId(),
+        A = null != p && "" !== p,
+        f = null != m && "" !== m;
     return (
-        (0, c.Z)(f),
+        (0, c.Z)(_),
         (0, r.jsxs)("fieldset", {
-            "aria-describedby": g ? h : void 0,
+            "aria-describedby": f ? g : void 0,
             children: [
-                m
-                    ? (0, r.jsx)(o.Text, {
+                A
+                    ? (0, r.jsx)(a.Text, {
                           tag: "legend",
                           variant: "text-md/semibold",
                           color: "text-strong",
-                          className: s()(u.DD, {
-                              [u.h0]: g,
+                          className: s()(d.DD, {
+                              [d.h0]: f,
                           }),
                           children: p,
                       })
                     : null,
-                g
-                    ? (0, r.jsx)(o.Text, {
+                f
+                    ? (0, r.jsx)(a.Text, {
                           variant: "text-sm/normal",
                           color: "text-default",
-                          id: h,
-                          className: u.VA,
-                          children: _,
+                          id: g,
+                          className: d.VA,
+                          children: m,
                       })
                     : null,
-                (0, r.jsx)(o.BJc, {
+                (0, r.jsx)(a.BJc, {
                     direction: "vertical",
                     gap: 8,
                     padding: {
                         top: 16,
                     },
-                    children: d.map((e) =>
+                    children: u.map((e) =>
                         (0, r.jsx)(
-                            l.A,
+                            o.A,
                             {
                                 node: e,
                             },
@@ -62,5 +61,4 @@ function d(e) {
             ],
         })
     );
-}
-let f = i.memo(d);
+});

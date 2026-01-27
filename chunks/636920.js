@@ -1,42 +1,28 @@
 n.d(t, {
-    Z: () => C,
+    Z: () => S,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(435371),
-    o = n(397927),
-    l = n(956793),
+    l = n(311907),
+    a = n(435371),
+    s = n(397927),
+    o = n(956793),
     c = n(576705),
     u = n(309010),
     d = n(954571),
-    f = n(69555),
-    p = n(886019),
-    _ = n(846218),
-    h = n(806246),
-    m = n(358957),
-    g = n(559405),
-    E = n(708455),
-    y = n(652215),
-    b = n(985018),
-    O = n(334994);
+    p = n(69555),
+    f = n(886019),
+    m = n(846218),
+    g = n(806246),
+    y = n(358957),
+    _ = n(559405),
+    b = n(708455),
+    A = n(652215),
+    h = n(985018),
+    v = n(334994);
 
-function v(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function A(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,146 +33,148 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function I(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function S(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let T = 32;
 
-function C(e) {
+function S(e) {
     let {
             hangStatusActivity: t,
             channel: n,
-            userId: v,
+            userId: S,
             isSelf: I = !1,
-            analyticsSource: C,
-            onAction: N,
-            className: w,
-            iconClassName: R,
-            textClassName: P,
+            analyticsSource: x,
+            onAction: E,
+            className: P,
+            iconClassName: T,
+            textClassName: N,
         } = e,
-        D = (0, a.bG)([u.A], () => u.A.getVoiceChannelId() === n.id, [n]),
-        x = (0, a.bG)([c.A], () => c.A.can(y.xBc.CONNECT, n), [n]),
-        L = null == t.emoji || (0, _.n)(t.emoji, n);
+        w = (0, l.bG)([u.A], () => u.A.getVoiceChannelId() === n.id, [n]),
+        C = (0, l.bG)([c.A], () => c.A.can(A.xBc.CONNECT, n), [n]),
+        D = null == t.emoji || (0, m.n)(t.emoji, n);
     i.useEffect(() => {
         d.default.track(
-            y.HAw.VIEW_HANG_STATUS,
-            A(
+            A.HAw.VIEW_HANG_STATUS,
+            O(
                 {
-                    source: C,
-                    other_user_id: v,
+                    source: x,
+                    other_user_id: S,
                 },
-                (0, h.A)(n.id),
+                (0, g.A)(n.id),
             ),
         );
-    }, [C, n.id, v]);
-    let j = i.useCallback(() => {
-            !D &&
-                x &&
-                (l.default.selectVoiceChannel(n.id),
-                null == N || N(),
+    }, [x, n.id, S]);
+    let L = i.useCallback(() => {
+            !w &&
+                C &&
+                (o.default.selectVoiceChannel(n.id),
+                null == E || E(),
                 d.default.track(
-                    y.HAw.HANG_STATUS_CTA_CLICKED,
-                    S(
-                        A(
+                    A.HAw.HANG_STATUS_CTA_CLICKED,
+                    j(
+                        O(
                             {
-                                source: C,
+                                source: x,
                             },
-                            (0, h.A)(n.id),
+                            (0, g.A)(n.id),
                         ),
                         {
-                            other_user_id: v,
+                            other_user_id: S,
                             cta_type: "join",
                         },
                     ),
                 ));
-        }, [D, x, n.id, v, C, N]),
-        M = i.useCallback(() => {
-            if (!D || !L || null == t.state) return;
-            let [e] = (0, m.e)(v, t.state);
+        }, [w, C, n.id, S, x, E]),
+        k = i.useCallback(() => {
+            if (!w || !D || null == t.state) return;
+            let [e] = (0, y.e)(S, t.state);
             if (null != e) {
-                if (e === E.Kk.CUSTOM) {
+                if (e === b.Kk.CUSTOM) {
                     if (null == t.details || null == t.emoji) return;
-                    (0, f.hS)(t.details, t.emoji, !0);
-                } else (0, f.Iq)(e, !0);
-                null == N || N(),
+                    (0, p.hS)(t.details, t.emoji, !0);
+                } else (0, p.Iq)(e, !0);
+                null == E || E(),
                     d.default.track(
-                        y.HAw.HANG_STATUS_CTA_CLICKED,
-                        S(
-                            A(
+                        A.HAw.HANG_STATUS_CTA_CLICKED,
+                        j(
+                            O(
                                 {
-                                    source: C,
+                                    source: x,
                                 },
-                                (0, h.A)(n.id),
+                                (0, g.A)(n.id),
                             ),
                             {
-                                other_user_id: v,
+                                other_user_id: S,
                                 cta_type: "swipe",
                             },
                         ),
                     );
             }
-        }, [D, L, t, n.id, v, C, N]);
+        }, [w, D, t, n.id, S, x, E]);
     return (0, r.jsxs)("div", {
-        className: null != w ? w : O.kL,
+        className: null != P ? P : v.kL,
         children: [
-            (0, r.jsx)(g.A, {
-                userId: v,
-                size: T,
-                className: null != R ? R : O.Kk,
+            (0, r.jsx)(_.A, {
+                userId: S,
+                size: 32,
+                className: null != T ? T : v.Kk,
                 hangStatusActivity: t,
             }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: "text-md/medium",
-                className: null != P ? P : O.qS,
-                children: (0, p.Au)(v, t),
+                className: null != N ? N : v.qS,
+                children: (0, f.Au)(S, t),
             }),
-            D && !I
-                ? (0, r.jsx)(s.m_, {
-                      text: L ? void 0 : b.intl.string(b.t["0LMpW+"]),
+            w && !I
+                ? (0, r.jsx)(a.m_, {
+                      text: D ? void 0 : h.intl.string(h.t["0LMpW+"]),
                       children: (0, r.jsx)("div", {
-                          children: (0, r.jsx)(o.Button, {
+                          children: (0, r.jsx)(s.Button, {
                               size: "sm",
                               variant: "secondary",
-                              text: b.intl.string(b.t["0eHzpm"]),
-                              onClick: M,
-                              disabled: !L,
+                              text: h.intl.string(h.t["0eHzpm"]),
+                              onClick: k,
+                              disabled: !D,
                           }),
                       }),
                   })
                 : !I &&
-                  x &&
-                  (0, r.jsx)(o.Button, {
+                  C &&
+                  (0, r.jsx)(s.Button, {
                       size: "sm",
                       variant: "secondary",
-                      text: b.intl.string(b.t["B/dHXL"]),
-                      onClick: j,
+                      text: h.intl.string(h.t["B/dHXL"]),
+                      onClick: L,
                   }),
         ],
     });

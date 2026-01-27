@@ -1,11 +1,11 @@
 n.d(t, {
-    A: () => o,
+    A: () => a,
 });
 var r = n(562465),
     i = n(73153),
-    a = n(670492),
+    l = n(670492),
     s = n(652215);
-let o = {
+let a = {
     enable(e) {
         let { code: t, secret: n } = e;
         return r.Bo.post({
@@ -114,13 +114,12 @@ let o = {
             },
         ),
     confirmViewBackupCodes(e, t) {
-        let { viewNonce: n, regenerateNonce: o } = a.A.getNonces(),
-            l = t ? o : n;
+        let { viewNonce: n, regenerateNonce: a } = l.A.getNonces();
         return r.Bo.post({
             url: s.Rsh.MFA_CODES_VERIFICATION,
             body: {
                 key: e,
-                nonce: l,
+                nonce: t ? a : n,
                 regenerate: t,
             },
             oldFormErrors: !0,

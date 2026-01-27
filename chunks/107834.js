@@ -1,53 +1,54 @@
 n.d(t, {
-    A: () => y,
+    A: () => b,
 });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
+    l = n.n(i),
     s = n(311907),
-    o = n(582754),
-    l = n(397927),
+    a = n(582754),
+    o = n(397927),
     c = n(820284),
-    u = n(490415),
-    d = n(736653),
-    f = n(742589),
+    d = n(490415),
+    u = n(736653),
+    _ = n(742589),
     p = n(287809),
-    _ = n(927578),
-    h = n(652215),
-    m = n(788868),
-    g = n(985018),
-    E = n(187585);
-let b = (e) => {
+    m = n(927578),
+    g = n(652215),
+    A = n(788868),
+    f = n(985018),
+    h = n(187585);
+let b = s.Ay.connectStores([p.default], () => ({
+    user: p.default.getCurrentUser(),
+}))(
+    (0, d.A)((e) => {
         let { isAuthenticated: t, user: n } = e,
-            i = (0, _.TW)(n, m.PremiumTypes.TIER_2),
-            s = (0, d.Ay)();
+            i = (0, m.TW)(n, A.PremiumTypes.TIER_2),
+            s = (0, u.Ay)();
         return (0, r.jsx)(c.A, {
-            section: h.JJy.NAVIGATION,
-            children: (0, r.jsx)(l.NPJ, {
+            section: g.JJy.NAVIGATION,
+            children: (0, r.jsx)(o.NPJ, {
                 theme: s,
                 children: (e) =>
-                    (0, r.jsxs)(f.A, {
+                    (0, r.jsxs)(_.A, {
                         isAuthenticated: t,
-                        className: a()(e, {
-                            [E.xD]: !i && !(0, o.Mw)(s),
-                            [E.lO]: !i && (0, o.Mw)(s),
+                        className: l()(e, {
+                            [h.xD]: !i && !(0, a.Mw)(s),
+                            [h.lO]: !i && (0, a.Mw)(s),
                         }),
                         role: "navigation",
                         children: [
-                            (0, r.jsx)(f.A.Icon, {
-                                icon: l.tvc,
+                            (0, r.jsx)(_.A.Icon, {
+                                icon: o.tvc,
                                 "aria-hidden": !0,
-                                color: i ? void 0 : l.LU0.unsafe_rawColors.PREMIUM_TIER_2_PINK.css,
+                                color: i ? void 0 : o.LU0.unsafe_rawColors.PREMIUM_TIER_2_PINK.css,
                             }),
-                            (0, r.jsx)(f.A.Title, {
-                                children: g.intl.string(g.t.Ipxkog),
+                            (0, r.jsx)(_.A.Title, {
+                                children: f.intl.string(f.t.Ipxkog),
                             }),
                         ],
                     }),
             }),
         });
-    },
-    y = s.Ay.connectStores([p.default], () => ({
-        user: p.default.getCurrentUser(),
-    }))((0, u.A)(b));
+    }),
+);

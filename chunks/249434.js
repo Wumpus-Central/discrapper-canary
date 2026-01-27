@@ -1,29 +1,29 @@
 n.d(t, {
-    A: () => g,
+    A: () => m,
 });
 var r = n(627968),
     i = n(64700),
     l = n(311907),
     s = n(397927),
     a = n(946274),
-    c = n(555337),
-    o = n(339984),
+    o = n(555337),
+    c = n(339984),
     d = n(985018),
     u = n(577332);
 
-function f(e) {
-    let { profile: t, handleIconChange: l, canManageGuild: c } = e,
-        f = i.useCallback(() => {
+function g(e) {
+    let { profile: t, handleIconChange: l, canManageGuild: o } = e,
+        g = i.useCallback(() => {
             l(null);
         }, [l]),
-        g = i.useCallback(
+        m = i.useCallback(
             (e, t) => {
                 (0, s.mMO)(async () => {
                     let { default: i } = await Promise.all([
-                        n.e("35929"),
                         n.e("79149"),
+                        n.e("35929"),
                         n.e("74571"),
-                        n.e("94073"),
+                        n.e("1580"),
                     ]).then(n.bind(n, 142630));
                     return (n) =>
                         (0, r.jsx)(
@@ -54,7 +54,7 @@ function f(e) {
                                 return e;
                             })(
                                 {
-                                    uploadType: o.HL.GUILD_ICON,
+                                    uploadType: c.HL.GUILD_ICON,
                                     imageUri: e,
                                     file: t,
                                     onCrop: (e) => {
@@ -81,13 +81,13 @@ function f(e) {
                             tabIndex: -1,
                             size: "sm",
                             variant: "primary",
-                            disabled: !c,
+                            disabled: !o,
                             text: d.intl.string(d.t.r3JdsT),
                         }),
                         (0, r.jsx)(a.Ay, {
                             tabIndex: 0,
-                            onChange: g,
-                            disabled: !c,
+                            onChange: m,
+                            disabled: !o,
                         }),
                     ],
                 }),
@@ -97,24 +97,24 @@ function f(e) {
                       variant: "critical-secondary",
                       size: "sm",
                       text: d.intl.string(d.t.x8AlTm),
-                      onClick: f,
-                      disabled: !c,
+                      onClick: g,
+                      disabled: !o,
                   })
                 : null,
         ],
     });
 }
 
-function g(e) {
+function m(e) {
     let { profile: t, canManageGuild: n, onIconChange: i } = e,
-        a = (0, l.bG)([c.A], () => c.A.getError("icon"));
+        a = (0, l.bG)([o.A], () => o.A.getError("icon"));
     return (0, r.jsx)("section", {
         className: u.kL,
         children: (0, r.jsx)(s.D0$, {
             label: d.intl.string(d.t.FkQnxJ),
             description: d.intl.string(d.t.KjkA0W),
             errorMessage: a,
-            children: (0, r.jsx)(f, {
+            children: (0, r.jsx)(g, {
                 profile: t,
                 canManageGuild: n,
                 handleIconChange: i,

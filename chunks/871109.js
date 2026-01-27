@@ -1,150 +1,119 @@
 n.d(t, {
-    A: () => D,
-    e: () => u,
+    A: () => v,
+    e: () => d,
 }),
     n(321073),
     n(896048);
 var r,
-    i = n(311907),
-    a = n(713402),
-    s = n(73153),
-    o = n(927813),
-    l = n(661191);
-
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-var u = (function (e) {
-    return (
-        (e[(e.NOT_FETCHED = 0)] = "NOT_FETCHED"),
-        (e[(e.FETCHING = 1)] = "FETCHING"),
-        (e[(e.FETCHED = 2)] = "FETCHED"),
-        e
-    );
-})({});
-let d = {},
+    i,
+    l,
+    a = n(311907),
+    s = n(713402),
+    o = n(73153),
+    c = n(927813),
+    u = n(661191),
+    d =
+        (((i = {})[(i.NOT_FETCHED = 0)] = "NOT_FETCHED"),
+        (i[(i.FETCHING = 1)] = "FETCHING"),
+        (i[(i.FETCHED = 2)] = "FETCHED"),
+        i);
+let p = {},
+    m = {},
     f = {},
-    p = {},
-    _ = 10 * o.A.Millis.MINUTE,
-    h = 1e12;
+    g = 10 * c.A.Millis.MINUTE;
 
-function m(e) {
+function h(e) {
     return "guild:".concat(e);
 }
 
-function g(e) {
+function _(e) {
     return "guild:".concat(e, ":published");
 }
-
-function E(e) {
-    let t = l.default.extractTimestamp(e.id);
-    return e.published ? -t : -t + h;
-}
-let b = new a.J(
+let b = new s.J(
         (e) => {
-            let t = [m(e.guild_id)];
-            return e.published && t.push(g(e.guild_id)), t;
+            let t = [h(e.guild_id)];
+            return e.published && t.push(_(e.guild_id)), t;
         },
-        (e) => E(e),
+        (e) => {
+            let t;
+            return (t = u.default.extractTimestamp(e.id)), e.published ? -t : -t + 1e12;
+        },
     ),
-    y = [];
-
-function O() {
-    b.clear(), (d = {}), (f = {}), (p = {});
-}
-
-function A(e) {
-    let { guildId: t } = e;
-    (d[t] = 1),
-        [...b.values(m(t))].forEach((e) => {
-            b.delete(e.id);
-        });
-}
-
-function v(e) {
-    let { guildId: t, products: n } = e;
-    (d[t] = 2),
-        (p[t] = Date.now()),
-        n.forEach((e) => {
-            b.set(e.id, e), (f[e.id] = 2);
-        });
-}
-
-function S(e) {
-    let { guildId: t } = e;
-    d[t] = 2;
-}
-
-function I(e) {
-    let { productId: t } = e;
-    f[t] = 1;
-}
-
-function T(e) {
-    let { product: t } = e;
-    (f[t.id] = 2), b.set(t.id, t);
-}
-
-function C(e) {
-    let { productId: t, error: n } = e;
-    (f[t] = 2), 404 === n.status && b.delete(t);
-}
-
-function N(e) {
-    let { product: t } = e;
-    b.set(t.id, t);
-}
-
-function R(e) {
-    let { product: t } = e;
-    b.set(t.id, t);
-}
-
-function w(e) {
-    let { productId: t } = e;
-    b.delete(t);
-}
-class P extends (r = i.Ay.Store) {
+    A = [];
+class y extends (r = a.Ay.Store) {
     getGuildProductsForGuildFetchState(e) {
         var t;
-        return null != (t = d[e]) ? t : 0;
+        return null != (t = p[e]) ? t : 0;
     }
     getGuildProduct(e) {
         return b.get(e);
     }
     getGuildProductsForGuild(e, t) {
         let { publishedOnly: n } = t;
-        return null == e ? y : b.values(n ? g(e) : m(e));
+        return null == e ? A : b.values(n ? _(e) : h(e));
     }
     getGuildProductFetchState(e) {
         var t;
-        return null != (t = f[e]) ? t : 0;
+        return null != (t = m[e]) ? t : 0;
     }
     isGuildProductsCacheExpired(e) {
         var t;
-        return Date.now() - (null != (t = p[e]) ? t : 0) > _;
+        return Date.now() - (null != (t = f[e]) ? t : 0) > g;
     }
 }
-c(P, "displayName", "GuildProductsStore");
-let D = new P(s.h, {
-    CONNECTION_OPEN: O,
-    GUILD_PRODUCTS_FETCH: A,
-    GUILD_PRODUCTS_FETCH_SUCCESS: v,
-    GUILD_PRODUCTS_FETCH_FAILURE: S,
-    GUILD_PRODUCT_CREATE: N,
-    GUILD_PRODUCT_UPDATE: R,
-    GUILD_PRODUCT_DELETE: w,
-    GUILD_PRODUCT_FETCH: I,
-    GUILD_PRODUCT_FETCH_SUCCESS: T,
-    GUILD_PRODUCT_FETCH_FAILURE: C,
+(l = "displayName") in y
+    ? Object.defineProperty(y, l, {
+          value: "GuildProductsStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (y[l] = "GuildProductsStore");
+let v = new y(o.h, {
+    CONNECTION_OPEN: function () {
+        b.clear(), (p = {}), (m = {}), (f = {});
+    },
+    GUILD_PRODUCTS_FETCH: function (e) {
+        let { guildId: t } = e;
+        (p[t] = 1),
+            [...b.values(h(t))].forEach((e) => {
+                b.delete(e.id);
+            });
+    },
+    GUILD_PRODUCTS_FETCH_SUCCESS: function (e) {
+        let { guildId: t, products: n } = e;
+        (p[t] = 2),
+            (f[t] = Date.now()),
+            n.forEach((e) => {
+                b.set(e.id, e), (m[e.id] = 2);
+            });
+    },
+    GUILD_PRODUCTS_FETCH_FAILURE: function (e) {
+        let { guildId: t } = e;
+        p[t] = 2;
+    },
+    GUILD_PRODUCT_CREATE: function (e) {
+        let { product: t } = e;
+        b.set(t.id, t);
+    },
+    GUILD_PRODUCT_UPDATE: function (e) {
+        let { product: t } = e;
+        b.set(t.id, t);
+    },
+    GUILD_PRODUCT_DELETE: function (e) {
+        let { productId: t } = e;
+        b.delete(t);
+    },
+    GUILD_PRODUCT_FETCH: function (e) {
+        let { productId: t } = e;
+        m[t] = 1;
+    },
+    GUILD_PRODUCT_FETCH_SUCCESS: function (e) {
+        let { product: t } = e;
+        (m[t.id] = 2), b.set(t.id, t);
+    },
+    GUILD_PRODUCT_FETCH_FAILURE: function (e) {
+        let { productId: t, error: n } = e;
+        (m[t] = 2), 404 === n.status && b.delete(t);
+    },
 });

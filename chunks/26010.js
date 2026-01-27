@@ -1,33 +1,19 @@
 n.d(t, {
-    Ct: () => E,
-    oO: () => b,
+    Ct: () => g,
+    oO: () => A,
 });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(397927),
-    l = n(57978),
+    l = n(503698),
+    s = n.n(l),
+    a = n(397927),
+    o = n(57978),
     c = n(964003),
-    u = n(985018),
-    d = n(157895),
-    f = n(847652);
+    d = n(985018),
+    u = n(157895),
+    _ = n(847652);
 
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,124 +24,121 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function g(e) {
+function m(e) {
     let {
             className: t,
             boxLayout: n,
             title: i,
-            shouldLoadVideo: a,
-            isReducedMotion: u,
-            includeSideGradient: p = !1,
-            startLeftAligned: h = !1,
-            enablePremiumBrandRefreshDesign: g,
+            shouldLoadVideo: l,
+            isReducedMotion: d,
+            includeSideGradient: m = !1,
+            startLeftAligned: g = !1,
+            enablePremiumBrandRefreshDesign: A,
         } = e,
-        E = g ? f : d;
+        f = A ? _ : u;
     return (0, r.jsxs)("div", {
-        className: s()(E.boxBackdrop, t),
+        className: s()(f.boxBackdrop, t),
         children: [
-            (0, r.jsx)(o.Heading, {
-                className: E.bentoSectionHeader,
+            (0, r.jsx)(a.Heading, {
+                className: f.bentoSectionHeader,
                 variant: "display-md",
                 color: "text-strong",
                 children: i,
             }),
             (0, r.jsx)("div", {
-                className: E.bentoBoxesGrid,
+                className: f.bentoBoxesGrid,
                 children: n.map((e, t) => {
                     let n;
                     switch (e.length) {
                         case 3:
-                            n = l.A0.SMALL;
+                            n = o.A0.SMALL;
                             break;
                         case 2:
-                            n = l.A0.MEDIUM;
+                            n = o.A0.MEDIUM;
                             break;
                         default:
-                            n = l.A0.LARGE;
+                            n = o.A0.LARGE;
                     }
                     return (0, r.jsx)(r.Fragment, {
-                        children: e.map((e) =>
-                            (0, r.jsx)(
+                        children: e.map((e) => {
+                            var i, s;
+                            return (0, r.jsx)(
                                 c.A,
-                                m(
-                                    _(
-                                        {
-                                            index: t + +!!h,
-                                        },
-                                        e,
-                                    ),
+                                ((i = p(
+                                    {
+                                        index: t + +!!g,
+                                    },
+                                    e,
+                                )),
+                                (s = s =
                                     {
                                         size: n,
-                                        shouldLoadVideo: a,
-                                        isReducedMotion: u,
-                                    },
-                                ),
+                                        shouldLoadVideo: l,
+                                        isReducedMotion: d,
+                                    }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(s)).forEach(function (e) {
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                                      }),
+                                i),
                                 e.name,
-                            ),
-                        ),
+                            );
+                        }),
                     });
                 }),
             }),
-            p &&
+            m &&
                 (0, r.jsx)("div", {
-                    className: d.bentoSideGradient,
+                    className: u.bentoSideGradient,
                 }),
         ],
     });
 }
-let E = i.memo(function (e) {
-        let { whatsNewBoxes: t } = (0, l.Ay)();
+let g = i.memo(function (e) {
+        let { whatsNewBoxes: t } = (0, o.Ay)();
         return (0, r.jsx)(
-            g,
-            _(
+            m,
+            p(
                 {
                     boxLayout: t,
-                    title: u.intl.string(u.t.LRmNAl),
+                    title: d.intl.string(d.t.LRmNAl),
                     startLeftAligned: e.enablePremiumBrandRefreshDesign,
                 },
                 e,
             ),
         );
     }),
-    b = i.memo(function (e) {
-        let { bestOfBoxes: t } = (0, l.Ay)();
+    A = i.memo(function (e) {
+        let { bestOfBoxes: t } = (0, o.Ay)();
         return (0, r.jsx)(
-            g,
-            _(
+            m,
+            p(
                 {
                     boxLayout: t,
-                    title: u.intl.string(u.t.EnzW2H),
+                    title: d.intl.string(d.t.EnzW2H),
                     includeSideGradient: !e.enablePremiumBrandRefreshDesign,
                     startLeftAligned: !0,
                 },

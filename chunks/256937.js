@@ -1,137 +1,126 @@
-var r = n(797686),
+var n = r(797686),
     i = /\./,
-    a = /\|\|/,
-    s = /\s+\-\s+/,
-    o = /^(<=|<|=|>=|~>|~|>|)?\s*(.+)/,
-    l = /^(\d*)(.*)/;
+    o = /\|\|/,
+    a = /\s+\-\s+/,
+    s = /^(<=|<|=|>=|~>|~|>|)?\s*(.+)/,
+    u = /^(\d*)(.*)/;
 
-function c(e, t) {
-    var n = e.split(a);
-    return n.length > 1
-        ? n.some(function (e) {
-              return T.contains(e, t);
-          })
-        : u((e = n[0].trim()), t);
-}
-
-function u(e, t) {
-    var n = e.split(s);
-    if (((n.length > 0 && n.length <= 2) || r(!1), 1 === n.length)) return d(n[0], t);
-    var i = n[0],
-        a = n[1];
-    return (y(i) && y(a)) || r(!1), d(">=" + i, t) && d("<=" + a, t);
-}
-
-function d(e, t) {
-    if ("" === (e = e.trim())) return !0;
-    var n = t.split(i),
-        r = E(e),
-        a = r.modifier,
-        s = r.rangeComponents;
-    switch (a) {
+function c(t, e) {
+    if ("" === (t = t.trim())) return !0;
+    var r,
+        n,
+        o,
+        a,
+        s,
+        u,
+        c,
+        h = e.split(i),
+        d = f(t),
+        g = d.modifier,
+        v = d.rangeComponents;
+    switch (g) {
         case "<":
-            return f(n, s);
+            return -1 === y(h, v);
         case "<=":
-            return p(n, s);
+            return -1 === (r = y(h, v)) || 0 === r;
         case ">=":
-            return h(n, s);
+            return l(h, v);
         case ">":
-            return m(n, s);
+            return 1 === y(h, v);
         case "~":
         case "~>":
-            return g(n, s);
+            return (
+                (n = h),
+                (a = (o = v).slice()),
+                (s = o.slice()).length > 1 && s.pop(),
+                (u = s.length - 1),
+                p((c = parseInt(s[u], 10))) && (s[u] = c + 1 + ""),
+                l(n, a) && -1 === y(n, s)
+            );
         default:
-            return _(n, s);
+            return 0 === y(h, v);
     }
 }
 
-function f(e, t) {
-    return -1 === I(e, t);
+function l(t, e) {
+    var r = y(t, e);
+    return 1 === r || 0 === r;
 }
 
-function p(e, t) {
-    var n = I(e, t);
-    return -1 === n || 0 === n;
-}
-
-function _(e, t) {
-    return 0 === I(e, t);
-}
-
-function h(e, t) {
-    var n = I(e, t);
-    return 1 === n || 0 === n;
-}
-
-function m(e, t) {
-    return 1 === I(e, t);
-}
-
-function g(e, t) {
-    var n = t.slice(),
-        r = t.slice();
-    r.length > 1 && r.pop();
-    var i = r.length - 1,
-        a = parseInt(r[i], 10);
-    return b(a) && (r[i] = a + 1 + ""), h(e, n) && f(e, r);
-}
-
-function E(e) {
-    var t = e.split(i),
-        n = t[0].match(o);
+function f(t) {
+    var e = t.split(i),
+        r = e[0].match(s);
     return (
-        n || r(!1),
+        r || n(!1),
         {
-            modifier: n[1],
-            rangeComponents: [n[2]].concat(t.slice(1)),
+            modifier: r[1],
+            rangeComponents: [r[2]].concat(e.slice(1)),
         }
     );
 }
 
-function b(e) {
-    return !isNaN(e) && isFinite(e);
+function p(t) {
+    return !isNaN(t) && isFinite(t);
 }
 
-function y(e) {
-    return !E(e).modifier;
+function h(t) {
+    return !f(t).modifier;
 }
 
-function O(e, t) {
-    for (var n = e.length; n < t; n++) e[n] = "0";
+function d(t, e) {
+    for (var r = t.length; r < e; r++) t[r] = "0";
 }
 
-function A(e, t) {
-    O((e = e.slice()), (t = t.slice()).length);
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n].match(/^[x*]$/i);
-        if (r && ((t[n] = e[n] = "0"), "*" === r[0] && n === t.length - 1))
-            for (var i = n; i < e.length; i++) e[i] = "0";
-    }
-    return O(t, e.length), [e, t];
+function g(t, e) {
+    return (typeof t != typeof e && n(!1), t > e) ? 1 : t < e ? -1 : 0;
 }
 
-function v(e, t) {
-    var n = e.match(l)[1],
-        r = t.match(l)[1],
-        i = parseInt(n, 10),
-        a = parseInt(r, 10);
-    return b(i) && b(a) && i !== a ? S(i, a) : S(e, t);
-}
-
-function S(e, t) {
-    return (typeof e != typeof t && r(!1), e > t) ? 1 : e < t ? -1 : 0;
-}
-
-function I(e, t) {
-    for (var n = A(e, t), r = n[0], i = n[1], a = 0; a < i.length; a++) {
-        var s = v(r[a], i[a]);
-        if (s) return s;
+function y(t, e) {
+    for (
+        var r = (function (t, e) {
+                d((t = t.slice()), (e = e.slice()).length);
+                for (var r = 0; r < e.length; r++) {
+                    var n = e[r].match(/^[x*]$/i);
+                    if (n && ((e[r] = t[r] = "0"), "*" === n[0] && r === e.length - 1))
+                        for (var i = r; i < t.length; i++) t[i] = "0";
+                }
+                return d(e, t.length), [t, e];
+            })(t, e),
+            n = r[0],
+            i = r[1],
+            o = 0;
+        o < i.length;
+        o++
+    ) {
+        var a = (function (t, e) {
+            var r = t.match(u)[1],
+                n = e.match(u)[1],
+                i = parseInt(r, 10),
+                o = parseInt(n, 10);
+            return p(i) && p(o) && i !== o ? g(i, o) : g(t, e);
+        })(n[o], i[o]);
+        if (a) return a;
     }
     return 0;
 }
-var T = {
-    contains: function (e, t) {
-        return c(e.trim(), t.trim());
+var v = {
+    contains: function (t, e) {
+        var r, i, s;
+        return (
+            (r = t.trim()),
+            (i = e.trim()),
+            (s = r.split(o)).length > 1
+                ? s.some(function (t) {
+                      return v.contains(t, i);
+                  })
+                : (function (t, e) {
+                      var r = t.split(a);
+                      if (((r.length > 0 && r.length <= 2) || n(!1), 1 === r.length)) return c(r[0], e);
+                      var i = r[0],
+                          o = r[1];
+                      return (h(i) && h(o)) || n(!1), c(">=" + i, e) && c("<=" + o, e);
+                  })((r = s[0].trim()), i)
+        );
     },
 };
-e.exports = T;
+t.exports = v;

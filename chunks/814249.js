@@ -1,37 +1,23 @@
 n.d(t, {
-    K: () => y,
-    default: () => O,
+    K: () => N,
+    default: () => p,
 }),
     n(896048),
     n(733351);
 var r = n(627968),
     i = n(64700),
-    a = n(158954),
-    s = n(311907),
-    o = n(397927),
-    l = n(236698),
+    l = n(158954),
+    o = n(311907),
+    a = n(397927),
+    s = n(236698),
     c = n(668131),
     u = n(797632),
-    d = n(468035),
-    f = n(304937),
-    p = n(985018),
-    _ = n(158677);
+    E = n(468035),
+    d = n(304937),
+    _ = n(985018),
+    T = n(158677);
 
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function m(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,70 +28,73 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function g(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function E(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function b(e) {
-    let { surveyId: t, survey: n, onClose: s, transitionState: u } = e,
-        { getSurveyResponses: h, setResponse: g, trackDisplayedQuestions: b } = (0, c.i)(),
-        y = h(t),
-        O = (0, d.i)(n),
-        [A, v] = i.useState(O.blockId),
-        [S, I] = i.useState(O.pageIndex),
-        [T, C] = i.useState(!1),
-        N = (e, n) => {
-            g(t, e, n);
+function O(e) {
+    let { surveyId: t, survey: n, onClose: o, transitionState: u } = e,
+        { getSurveyResponses: O, setResponse: N, trackDisplayedQuestions: p } = (0, c.i)(),
+        R = O(t),
+        S = (0, E.i)(n),
+        [P, y] = i.useState(S.blockId),
+        [f, C] = i.useState(S.pageIndex),
+        [D, m] = i.useState(!1),
+        g = (e, n) => {
+            N(t, e, n);
         },
-        R = i.useCallback(
+        h = i.useCallback(
             () => (
-                T
-                    ? s()
-                    : (0, o.qfG)((e) =>
+                D
+                    ? o()
+                    : (0, a.qfG)((e) =>
                           (0, r.jsx)(
-                              a.Modal,
-                              E(
-                                  m(
+                              l.Modal,
+                              I(
+                                  A(
                                       {
-                                          title: p.intl.string(p.t.T9Sx3z),
+                                          title: _.intl.string(_.t.T9Sx3z),
                                           actions: [
                                               {
                                                   variant: "secondary",
-                                                  text: p.intl.string(p.t.oEAioF),
+                                                  text: _.intl.string(_.t.oEAioF),
                                                   onClick: e.onClose,
                                               },
                                               {
                                                   variant: "critical-primary",
-                                                  text: p.intl.string(p.t.p89ACt),
+                                                  text: _.intl.string(_.t.p89ACt),
                                                   onClick: () => {
-                                                      e.onClose(), s();
+                                                      e.onClose(), o();
                                                   },
                                               },
                                           ],
@@ -113,9 +102,9 @@ function b(e) {
                                       e,
                                   ),
                                   {
-                                      children: (0, r.jsx)(o.Text, {
+                                      children: (0, r.jsx)(a.Text, {
                                           variant: "text-md/normal",
-                                          children: p.intl.string(p.t.iCK6G0),
+                                          children: _.intl.string(_.t.iCK6G0),
                                       }),
                                   },
                               ),
@@ -123,122 +112,121 @@ function b(e) {
                       ),
                 Promise.resolve()
             ),
-            [s, T],
+            [o, D],
         ),
-        w = i.useMemo(
+        U = i.useMemo(
             () =>
-                null == A
+                null == P
                     ? []
-                    : (0, d.uy)(n, {
-                          blockId: A,
-                          pageIndex: S,
-                          responses: y,
+                    : (0, E.uy)(n, {
+                          blockId: P,
+                          pageIndex: f,
+                          responses: R,
                       }),
-            [n, A, S, y],
+            [n, P, f, R],
         ),
-        P = i.useCallback(() => {
-            if (null == n || null == A) return;
-            let e = (0, d.vt)(n, {
-                blockId: A,
-                pageIndex: S,
-                responses: y,
+        b = i.useCallback(() => {
+            if (null == n || null == P) return;
+            let e = (0, E.vt)(n, {
+                blockId: P,
+                pageIndex: f,
+                responses: R,
             });
-            b(t, w), e.isComplete && l.Ay.submitSurveyResponse(t, y), v(e.blockId), I(e.pageIndex), C(e.isComplete);
-        }, [n, A, S, y, t, w, b]);
+            p(t, U), e.isComplete && s.Ay.submitSurveyResponse(t, R), y(e.blockId), C(e.pageIndex), m(e.isComplete);
+        }, [n, P, f, R, t, U, p]);
     i.useEffect(() => {
-        0 === w.length && P();
-    }, [w, P]);
-    let D = (e) =>
-            0 === w.length
-                ? null
-                : (0, r.jsx)("div", {
-                      className: _.Qs,
-                      children: w.map((t) => {
-                          let n = e.Questions[t];
-                          return null == n
-                              ? null
-                              : (0, r.jsx)(
-                                    f.A,
-                                    {
-                                        question: n,
-                                        questionId: t,
-                                        responses: y,
-                                        onResponseChange: N,
-                                    },
-                                    t,
-                                );
-                      }),
-                  }),
-        x = i.useMemo(() => {
-            if (T) return !1;
-            for (let r of w) {
-                var e, t;
-                let i = n.Questions[r];
-                if (
-                    (null == i || null == (t = i.Validation) || null == (e = t.Settings) ? void 0 : e.ForceResponse) ===
-                    "ON"
-                ) {
-                    let e = y[r];
-                    if (null == e || "" === e.trim()) return !1;
-                }
+        0 === U.length && b();
+    }, [U, b]);
+    let M = i.useMemo(() => {
+        if (D) return !1;
+        for (let r of U) {
+            var e, t;
+            let i = n.Questions[r];
+            if (
+                (null == i || null == (t = i.Validation) || null == (e = t.Settings) ? void 0 : e.ForceResponse) ===
+                "ON"
+            ) {
+                let e = R[r];
+                if (null == e || "" === e.trim()) return !1;
             }
-            return !0;
-        }, [T, w, n, y]);
-    return T
-        ? (0, r.jsxs)(a.Modal, {
+        }
+        return !0;
+    }, [D, U, n, R]);
+    return D
+        ? (0, r.jsxs)(l.Modal, {
               transitionState: u,
-              onClose: s,
+              onClose: o,
               size: "md",
-              title: p.intl.string(p.t.OSqLUF),
+              title: _.intl.string(_.t.OSqLUF),
               actions: [
                   {
                       variant: "primary",
-                      text: p.intl.string(p.t.i4jeWR),
-                      onClick: s,
+                      text: _.intl.string(_.t.i4jeWR),
+                      onClick: o,
                   },
               ],
               children: [
-                  (0, r.jsx)(o.Text, {
+                  (0, r.jsx)(a.Text, {
                       variant: "text-md/normal",
-                      children: p.intl.string(p.t["2scvdw"]),
+                      children: _.intl.string(_.t["2scvdw"]),
                   }),
-                  (0, r.jsx)(o.Text, {
+                  (0, r.jsx)(a.Text, {
                       variant: "text-md/normal",
-                      children: p.intl.string(p.t.chZxOD),
+                      children: _.intl.string(_.t.chZxOD),
                   }),
               ],
           })
-        : (0, r.jsx)(a.Modal, {
+        : (0, r.jsx)(l.Modal, {
               transitionState: u,
-              onClose: R,
-              title: p.intl.string(p.t.OSqLUF),
+              onClose: h,
+              title: _.intl.string(_.t.OSqLUF),
               size: "md",
               actions: [
                   {
                       variant: "primary",
-                      text: p.intl.string(p.t.PDTjLN),
-                      onClick: P,
-                      disabled: !x,
+                      text: _.intl.string(_.t.PDTjLN),
+                      onClick: b,
+                      disabled: !M,
                   },
               ],
               children: (0, r.jsx)("div", {
                   style: {
                       width: "100%",
                   },
-                  children: D(n),
+                  children:
+                      0 === U.length
+                          ? null
+                          : (0, r.jsx)("div", {
+                                className: T.Qs,
+                                children: U.map((e) => {
+                                    let t = n.Questions[e];
+                                    return null == t
+                                        ? null
+                                        : (0, r.jsx)(
+                                              d.A,
+                                              {
+                                                  question: t,
+                                                  questionId: e,
+                                                  responses: R,
+                                                  onResponseChange: g,
+                                              },
+                                              e,
+                                          );
+                                }),
+                            }),
               }),
           });
 }
-async function y(e) {
-    null != (await l.Ay.fetchSurveyDetails(e)) &&
+async function N(e) {
+    null != (await s.Ay.fetchSurveyDetails(e)) &&
         (c.i.getState().clearSurveyResponses(e),
-        (0, o.mMO)(
+        (0, a.mMO)(
             async () => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 814249));
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        E(m({}, n), {
+                        I(A({}, n), {
                             surveyId: e,
                         }),
                     );
@@ -249,18 +237,18 @@ async function y(e) {
         ));
 }
 
-function O(e) {
+function p(e) {
     let { surveyId: t, onClose: n, transitionState: i } = e,
-        a = (0, s.bG)([u.A], () => u.A.getSurvey(t));
-    return null == a
-        ? (0, r.jsx)(o.Text, {
+        l = (0, o.bG)([u.A], () => u.A.getSurvey(t));
+    return null == l
+        ? (0, r.jsx)(a.Text, {
               variant: "text-md/medium",
-              className: _.Lq,
-              children: p.intl.string(p.t.MKDeyL),
+              className: T.Lq,
+              children: _.intl.string(_.t.MKDeyL),
           })
-        : (0, r.jsx)(b, {
+        : (0, r.jsx)(O, {
               surveyId: t,
-              survey: a,
+              survey: l,
               onClose: n,
               transitionState: i,
           });

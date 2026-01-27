@@ -1,55 +1,54 @@
 n.d(t, {
-    A: () => f,
+    A: () => _,
 });
 var r = n(627968),
     i = n(64700),
-    a = n(397927),
+    l = n(397927),
     s = n(688810),
-    o = n(590547),
-    l = n(919395),
+    a = n(590547),
+    o = n(919395),
     c = n(128450),
-    u = n(985018),
-    d = n(888920);
+    d = n(985018),
+    u = n(888920);
 
-function f(e) {
-    let { user: t, guild: n, titleIcon: f } = e,
+function _(e) {
+    let { user: t, guild: n, titleIcon: _ } = e,
         { analyticsLocations: p } = (0, s.Ay)(),
-        _ = null != n,
+        m = null != n,
         {
-            userNameplate: h,
-            guildNameplate: m,
-            pendingNameplate: g,
-            pendingErrors: E,
-        } = (0, l.rv)(t, null == n ? void 0 : n.id),
-        b = void 0 === g ? (_ ? m : h) != null : null != g,
-        y = i.useCallback(() => {
-            (0, o.p)({
+            userNameplate: g,
+            guildNameplate: A,
+            pendingNameplate: f,
+            pendingErrors: h,
+        } = (0, o.rv)(t, null == n ? void 0 : n.id),
+        b = i.useCallback(() => {
+            (0, a.p)({
                 analyticsLocations: p,
                 guildId: null == n ? void 0 : n.id,
             });
         }, [p, null == n ? void 0 : n.id]),
-        O = i.useCallback(() => {
-            (0, l.pX)(null, null == n ? void 0 : n.id);
+        E = i.useCallback(() => {
+            (0, o.pX)(null, null == n ? void 0 : n.id);
         }, [null == n ? void 0 : n.id]);
     return (0, r.jsx)(c.A, {
-        title: u.intl.string(u.t.x5CoXR),
-        titleIcon: f,
-        errors: E,
+        title: d.intl.string(d.t.x5CoXR),
+        titleIcon: _,
+        errors: h,
         children: (0, r.jsxs)("div", {
-            className: d.u,
+            className: u.u,
             children: [
-                (0, r.jsx)(a.Button, {
+                (0, r.jsx)(l.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: u.intl.string(u.t.BwdeM1),
-                    onClick: y,
+                    text: d.intl.string(d.t.BwdeM1),
+                    onClick: b,
                 }),
-                b &&
-                    (0, r.jsx)(a.Button, {
+                (void 0 === f ? (m ? A : g) != null : null != f) &&
+                    (0, r.jsx)(l.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: _ ? u.intl.string(u.t.CHf9iJ) : u.intl.string(u.t["9zwziY"]),
-                        onClick: O,
+                        text: m ? d.intl.string(d.t.CHf9iJ) : d.intl.string(d.t["9zwziY"]),
+                        onClick: E,
                     }),
             ],
         }),

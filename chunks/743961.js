@@ -3,53 +3,51 @@ n.d(t, {
 });
 var r = n(627968),
     i = n(64700),
-    a = n(397927),
+    l = n(397927),
     s = n(641324),
-    o = n(112715),
-    l = n(577806),
+    a = n(112715),
+    o = n(577806),
     c = n(279423);
-
-function u(e) {
+let d = i.memo(function (e) {
     let { node: t } = e,
         {
             useTitle: n,
             useTitleTrailingIcon: i,
-            useSubnavLabel: u,
-            useSubtitle: d,
-            layout: f,
+            useSubnavLabel: d,
+            useSubtitle: u,
+            layout: _,
             initialize: p,
-            useNotice: _,
+            useNotice: m,
         } = t,
-        h = null == n ? void 0 : n(),
-        m = null == i ? void 0 : i(),
-        g = null == d ? void 0 : d(),
-        E = null == _ ? void 0 : _(),
-        b = null != n || null != u;
+        g = null == n ? void 0 : n(),
+        A = null == i ? void 0 : i(),
+        f = null == u ? void 0 : u(),
+        h = null == m ? void 0 : m();
     return (
-        (0, o.Z)(p),
+        (0, a.Z)(p),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                null != h &&
-                    (0, r.jsx)(l._, {
-                        title: h,
-                        titleTrailingIcon: m,
-                        subtitle: g,
+                null != g &&
+                    (0, r.jsx)(o._, {
+                        title: g,
+                        titleTrailingIcon: A,
+                        subtitle: f,
                     }),
                 (0, r.jsx)("div", {
-                    "data-settings-category-key": b ? t.key : void 0,
+                    "data-settings-category-key": null != n || null != d ? t.key : void 0,
                     "aria-hidden": !0,
                     style: {
                         height: 1,
                     },
                 }),
-                (0, r.jsxs)(a.BJc, {
+                (0, r.jsxs)(l.BJc, {
                     gap: 16,
                     children: [
-                        null != E &&
+                        null != h &&
                             (0, r.jsx)(c.A, {
-                                notice: E,
+                                notice: h,
                             }),
-                        f.map((e) =>
+                        _.map((e) =>
                             (0, r.jsx)(
                                 s.A,
                                 {
@@ -63,5 +61,4 @@ function u(e) {
             ],
         })
     );
-}
-let d = i.memo(u);
+});

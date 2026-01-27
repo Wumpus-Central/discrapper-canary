@@ -1,130 +1,126 @@
-var r = n(724039);
+var n = r(724039);
 
 function i() {
     return (i =
-        r ||
-        function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+        n ||
+        function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+                var r = arguments[e];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (t[n] = r[n]);
             }
-            return e;
+            return t;
         }).apply(this, arguments);
 }
-
-function a(e, t) {
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
-}
-var s = n(868715),
-    o = n(595042),
-    l = n(64700),
-    c = n(670200);
-e.exports = (function (e) {
-    function t() {
-        return e.apply(this, arguments) || this;
+var o = r(868715),
+    a = r(595042),
+    s = r(64700),
+    u = r(670200);
+t.exports = (function (t) {
+    function e() {
+        return t.apply(this, arguments) || this;
     }
-    a(t, e);
-    var n = t.prototype;
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+    var r = e.prototype;
     return (
-        (n.shouldComponentUpdate = function (e) {
-            var t = this.props.editorState,
-                n = e.editorState;
+        (r.shouldComponentUpdate = function (t) {
+            var e = this.props.editorState,
+                r = t.editorState;
             if (
-                t.getDirectionMap() !== n.getDirectionMap() ||
-                t.getSelection().getHasFocus() !== n.getSelection().getHasFocus()
+                e.getDirectionMap() !== r.getDirectionMap() ||
+                e.getSelection().getHasFocus() !== r.getSelection().getHasFocus()
             )
                 return !0;
-            var r = n.getNativelyRenderedContent(),
-                i = t.isInCompositionMode(),
-                a = n.isInCompositionMode();
-            if (t === n || (null !== r && n.getCurrentContent() === r) || (i && a)) return !1;
-            var s = t.getCurrentContent(),
-                o = n.getCurrentContent(),
-                l = t.getDecorator(),
-                c = n.getDecorator();
-            return i !== a || s !== o || l !== c || n.mustForceSelection();
+            var n = r.getNativelyRenderedContent(),
+                i = e.isInCompositionMode(),
+                o = r.isInCompositionMode();
+            if (e === r || (null !== n && r.getCurrentContent() === n) || (i && o)) return !1;
+            var a = e.getCurrentContent(),
+                s = r.getCurrentContent(),
+                u = e.getDecorator(),
+                c = r.getDecorator();
+            return i !== o || a !== s || u !== c || r.mustForceSelection();
         }),
-        (n.render = function () {
+        (r.render = function () {
             for (
-                var e = this.props,
-                    t = e.blockRenderMap,
-                    n = e.blockRendererFn,
-                    r = e.blockStyleFn,
-                    a = e.customStyleMap,
-                    u = e.customStyleFn,
-                    d = e.editorState,
-                    f = e.editorKey,
-                    p = e.textDirectionality,
-                    _ = d.getCurrentContent(),
-                    h = d.getSelection(),
-                    m = d.mustForceSelection(),
-                    g = d.getDecorator(),
-                    E = c(d.getDirectionMap()),
-                    b = _.getBlocksAsArray()[0],
-                    y = [],
-                    O = b;
-                O;
+                var t = this.props,
+                    e = t.blockRenderMap,
+                    r = t.blockRendererFn,
+                    n = t.blockStyleFn,
+                    c = t.customStyleMap,
+                    l = t.customStyleFn,
+                    f = t.editorState,
+                    p = t.editorKey,
+                    h = t.textDirectionality,
+                    d = f.getCurrentContent(),
+                    g = f.getSelection(),
+                    y = f.mustForceSelection(),
+                    v = f.getDecorator(),
+                    m = u(f.getDirectionMap()),
+                    _ = d.getBlocksAsArray()[0],
+                    b = [],
+                    S = _;
+                S;
             ) {
-                var A = O.getKey(),
-                    v = {
-                        blockRenderMap: t,
-                        blockRendererFn: n,
-                        blockStyleFn: r,
-                        contentState: _,
-                        customStyleFn: u,
-                        customStyleMap: a,
-                        decorator: g,
-                        editorKey: f,
-                        editorState: d,
-                        forceSelection: m,
-                        selection: h,
-                        block: O,
-                        direction: p || E.get(A),
-                        tree: d.getBlockTree(A),
+                var w = S.getKey(),
+                    k = {
+                        blockRenderMap: e,
+                        blockRendererFn: r,
+                        blockStyleFn: n,
+                        contentState: d,
+                        customStyleFn: l,
+                        customStyleMap: c,
+                        decorator: v,
+                        editorKey: p,
+                        editorState: f,
+                        forceSelection: y,
+                        selection: g,
+                        block: S,
+                        direction: h || m.get(w),
+                        tree: f.getBlockTree(w),
                     },
-                    S = (t.get(O.getType()) || t.get("unstyled")).wrapper;
-                y.push({
-                    block: l.createElement(
-                        s,
+                    x = (e.get(S.getType()) || e.get("unstyled")).wrapper;
+                b.push({
+                    block: s.createElement(
+                        o,
                         i(
                             {
-                                key: A,
+                                key: w,
                             },
-                            v,
+                            k,
                         ),
                     ),
-                    wrapperTemplate: S,
-                    key: A,
-                    offsetKey: o.encode(A, 0, 0),
+                    wrapperTemplate: x,
+                    key: w,
+                    offsetKey: a.encode(w, 0, 0),
                 });
-                var I = O.getNextSiblingKey();
-                O = I ? _.getBlockForKey(I) : null;
+                var C = S.getNextSiblingKey();
+                S = C ? d.getBlockForKey(C) : null;
             }
-            for (var T = [], C = 0; C < y.length; ) {
-                var N = y[C];
-                if (N.wrapperTemplate) {
-                    var R = [];
-                    do R.push(y[C].block), C++;
-                    while (C < y.length && y[C].wrapperTemplate === N.wrapperTemplate);
-                    var w = l.cloneElement(
-                        N.wrapperTemplate,
+            for (var E = [], O = 0; O < b.length; ) {
+                var D = b[O];
+                if (D.wrapperTemplate) {
+                    var K = [];
+                    do K.push(b[O].block), O++;
+                    while (O < b.length && b[O].wrapperTemplate === D.wrapperTemplate);
+                    var T = s.cloneElement(
+                        D.wrapperTemplate,
                         {
-                            key: N.key + "-wrap",
-                            "data-offset-key": N.offsetKey,
+                            key: D.key + "-wrap",
+                            "data-offset-key": D.offsetKey,
                         },
-                        R,
+                        K,
                     );
-                    T.push(w);
-                } else T.push(N.block), C++;
+                    E.push(T);
+                } else E.push(D.block), O++;
             }
-            return l.createElement(
+            return s.createElement(
                 "div",
                 {
                     "data-contents": "true",
                 },
-                T,
+                E,
             );
         }),
-        t
+        e
     );
-})(l.Component);
+})(s.Component);

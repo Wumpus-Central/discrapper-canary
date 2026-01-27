@@ -1,85 +1,29 @@
 n.d(t, {
-    A: () => I,
+    A: () => x,
 });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(397927),
+    l = n(503698),
+    s = n.n(l),
+    a = n(311907),
+    o = n(397927),
     c = n(531260),
-    u = n(287809),
-    d = n(637073),
-    f = n(398523),
+    d = n(287809),
+    u = n(637073),
+    _ = n(398523),
     p = n(612669),
-    _ = n(513570),
-    h = n(975662),
-    m = n(322631),
-    g = n(17307),
-    E = n(180022),
+    m = n(513570),
+    g = n(975662),
+    A = n(322631),
+    f = n(17307),
+    h = n(180022),
     b = n(128906);
-
-function y(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function O(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                y(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function A(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function v(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let S = (e) => {
-        let { showAllPerksButton: t, leftAlignHeaders: n, title: i, headerClassname: a } = e,
-            s = (0, r.jsx)(l.Heading, {
+let E = (e) => {
+        let { showAllPerksButton: t, leftAlignHeaders: n, title: i, headerClassname: l } = e,
+            s = (0, r.jsx)(o.Heading, {
                 variant: "heading-xxl/extrabold",
                 color: "text-strong",
-                className: null != a ? a : b.R_,
+                className: null != l ? l : b.R_,
                 children: i,
             });
         return null == t
@@ -104,90 +48,130 @@ let S = (e) => {
                     }),
                 });
     },
-    I = (e) => {
+    x = (e) => {
         let {
                 className: t,
                 variant: n,
-                noBackground: a = !1,
-                leftAlignHeaders: y = !1,
-                showAllPerksButton: A,
-                headerClassname: I,
+                noBackground: l = !1,
+                leftAlignHeaders: x = !1,
+                showAllPerksButton: O,
+                headerClassname: C,
             } = e,
-            T = i.useRef(null),
-            C = n === m.cJ.WHATS_NEW,
-            N = (0, o.bG)([u.default], () => u.default.getCurrentUser()),
-            R = (0, _.E)();
+            I = i.useRef(null),
+            T = n === A.cJ.WHATS_NEW,
+            S = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
+            j = (0, m.E)();
         i.useEffect(() => {
-            C && R();
-        }, [R, C]);
-        let w = (0, g.G4)(C),
-            P = (0, h.A)(),
-            D = (0, g.LQ)(),
-            { fractionalState: x } = (0, c.A)(),
-            L = (0, d.d)(),
-            j = f.A.useExperiment({
+            T && j();
+        }, [j, T]);
+        let v = (0, f.G4)(T),
+            N = (0, g.A)(),
+            y = (0, f.LQ)(),
+            { fractionalState: P } = (0, c.A)(),
+            R = (0, u.d)(),
+            D = _.A.useExperiment({
                 location: "PremiumPerks",
             }).enabled,
-            M = (0, p.O9)(),
-            k = (0, g.vx)({
-                perksCards: P,
+            w = (0, p.O9)(),
+            L = (0, f.vx)({
+                perksCards: N,
                 variant: n,
                 hideCardsOnNarrowScreen: !1,
-                isPremiumSubscriber: D,
-                fractionalState: x,
-                isInReverseTrial: L,
-                recurring3PPromotionExperiment: j,
-                showPremiumGroup: M,
-                isPremiumGroupMember: null == N ? void 0 : N.isPremiumGroupMember(),
+                isPremiumSubscriber: y,
+                fractionalState: P,
+                isInReverseTrial: R,
+                recurring3PPromotionExperiment: D,
+                showPremiumGroup: w,
+                isPremiumGroupMember: null == S ? void 0 : S.isPremiumGroupMember(),
             }),
-            U = k.some((e) => null != e.pillText);
+            M = L.some((e) => null != e.pillText);
         return (0, r.jsxs)("div", {
-            ref: T,
+            ref: I,
             className: s()(
                 b.uW,
                 {
-                    [b.qO]: !y,
-                    [b.Uv]: y,
+                    [b.qO]: !x,
+                    [b.Uv]: x,
                 },
                 t,
             ),
             children: [
-                (0, r.jsx)(S, {
-                    showAllPerksButton: A,
-                    leftAlignHeaders: y,
-                    title: w.title,
-                    headerClassname: I,
+                (0, r.jsx)(E, {
+                    showAllPerksButton: O,
+                    leftAlignHeaders: x,
+                    title: v.title,
+                    headerClassname: C,
                 }),
-                (0, r.jsx)(l.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: "text-lg/normal",
                     color: "text-strong",
                     className: s()(b.VA, {
-                        [b.VA]: null == A || y,
-                        [b.Xx]: null != A && !y,
-                        [b.Ij]: C || y,
-                        [b.Ob]: U,
-                        [b.dO]: y,
-                        [b.br]: !y,
+                        [b.VA]: null == O || x,
+                        [b.Xx]: null != O && !x,
+                        [b.Ij]: T || x,
+                        [b.Ob]: M,
+                        [b.dO]: x,
+                        [b.br]: !x,
                     }),
-                    children: w.subtitle,
+                    children: v.subtitle,
                 }),
-                !y &&
-                    null != A &&
+                !x &&
+                    null != O &&
                     (0, r.jsx)("div", {
                         className: b.xk,
-                        children: A,
+                        children: O,
                     }),
                 (0, r.jsx)("div", {
                     className: b.Ui,
-                    children: k.map((e, t) =>
-                        (0, r.jsx)(
-                            E.A,
-                            v(O({}, e), {
-                                forceShadow: a,
-                            }),
+                    children: L.map((e, t) => {
+                        var n, i;
+                        return (0, r.jsx)(
+                            h.A,
+                            ((n = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    "function" == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            }),
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0,
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, e)),
+                            (i = i =
+                                {
+                                    forceShadow: l,
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(i)).forEach(function (e) {
+                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                  }),
+                            n),
                             "".concat(e.name, "_").concat(t),
-                        ),
-                    ),
+                        );
+                    }),
                 }),
             ],
         });

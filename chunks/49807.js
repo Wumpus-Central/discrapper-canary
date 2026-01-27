@@ -6,7 +6,7 @@ n(64700);
 var i = n(397927),
     a = n(73153);
 
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ function s(e, t, n) {
     );
 }
 
-function o(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,7 +31,7 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -39,8 +39,8 @@ function o(e) {
 async function l(e) {
     let t = await (0, i.mMO)(
         async () => {
-            let { default: t } = await n.e("18687").then(n.bind(n, 144482));
-            return (n) => (0, r.jsx)(t, o({}, n, e));
+            let { default: t } = await Promise.all([n.e("28936"), n.e("18687")]).then(n.bind(n, 144482));
+            return (n) => (0, r.jsx)(t, s({}, n, e));
         },
         {
             onCloseCallback: () => {

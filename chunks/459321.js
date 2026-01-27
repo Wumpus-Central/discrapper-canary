@@ -4,23 +4,22 @@ n.d(t, {
 var r = n(627968);
 n(64700);
 var i = n(397927),
-    a = n(780964),
-    s = n(840065),
-    o = n(652215),
-    l = n(985018);
+    l = n(780964),
+    o = n(840065),
+    a = n(652215),
+    s = n(985018);
 
 function c() {
-    function e() {
-        (0, s.openUserSettings)(a.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING);
-    }
     return (0, r.jsxs)(i.$Td, {
         color: i.Hv$.DANGER,
         children: [
-            l.intl.string(l.t.lQiCJ6),
+            s.intl.string(s.t.lQiCJ6),
             (0, r.jsx)(i.Z_L, {
-                noticeType: o.kqX.PTT_NO_KEYBIND_WARNING,
-                onClick: e,
-                children: l.intl.string(l.t["UgQN+9"]),
+                noticeType: a.kqX.PTT_NO_KEYBIND_WARNING,
+                onClick: function () {
+                    (0, o.openUserSettings)(l.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING);
+                },
+                children: s.intl.string(s.t["UgQN+9"]),
             }),
         ],
     });

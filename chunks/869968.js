@@ -1,54 +1,40 @@
 n.d(t, {
-    A: () => h,
+    A: () => d,
 });
 var r,
-    i = n(311907),
+    i,
+    l = n(311907),
     a = n(73153);
-
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let o = !1,
-    l = !1,
+let s = !1,
+    o = !1,
     c = !1;
-
-function u(e) {
-    (l = !0), (o = !1), (c = e.isTargeted);
-}
-
-function d() {
-    (l = !0), (o = !1);
-}
-
-function f() {
-    o = !0;
-}
-
-function p() {
-    (o = !1), (l = !1), (c = !1);
-}
-class _ extends (r = i.Ay.Store) {
+class u extends (i = l.Ay.Store) {
     getIsTargeted() {
         return c;
     }
     shouldFetchCheckoutRecovery() {
-        return !o && !l;
+        return !s && !o;
     }
 }
-s(_, "displayName", "CheckoutRecoveryStore");
-let h = new _(a.h, {
-    CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS: u,
-    CHECKOUT_RECOVERY_STATUS_FETCH_FAILURE: d,
-    CHECKOUT_RECOVERY_STATUS_FETCH: f,
-    LOGOUT: p,
+(r = "displayName") in u
+    ? Object.defineProperty(u, r, {
+          value: "CheckoutRecoveryStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (u[r] = "CheckoutRecoveryStore");
+let d = new u(a.h, {
+    CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS: function (e) {
+        (o = !0), (s = !1), (c = e.isTargeted);
+    },
+    CHECKOUT_RECOVERY_STATUS_FETCH_FAILURE: function () {
+        (o = !0), (s = !1);
+    },
+    CHECKOUT_RECOVERY_STATUS_FETCH: function () {
+        s = !0;
+    },
+    LOGOUT: function () {
+        (s = !1), (o = !1), (c = !1);
+    },
 });

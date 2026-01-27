@@ -1,12 +1,12 @@
 n.d(t, {
-    A: () => L,
+    A: () => x,
 }),
     n(938796);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(665260),
+    o = n.n(a),
+    s = n(665260),
     l = n(311907),
     c = n(397927),
     u = n(58149),
@@ -28,9 +28,9 @@ var r = n(627968),
     T = n(60809),
     C = n(652215),
     N = n(985018),
-    R = n(415097);
+    w = n(415097);
 
-function w(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -55,7 +55,7 @@ function P(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -74,7 +74,7 @@ function D(e, t) {
     return n;
 }
 
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -86,22 +86,22 @@ function x(e, t) {
     );
 }
 
-function L(e) {
+function x(e) {
     var t;
-    let { application: a, context: w, className: D, sectionName: L } = e,
-        j = i.useRef(null),
-        M = (0, l.bG)([A.A], () => A.A.entrypoint()),
+    let { application: a, context: R, className: D, sectionName: x } = e,
+        M = i.useRef(null),
+        j = (0, l.bG)([A.A], () => A.A.entrypoint()),
         k = (0, I.Pp)(a),
         U = (0, _.Ie)(k),
         G = (0, f.G)(a.id),
-        V = (0, l.bG)([E.A], () => {
+        F = (0, l.bG)([E.A], () => {
             var e;
             return null != (e = E.A.getGuildId()) ? e : void 0;
         }, []),
-        F = {
+        V = {
             location: d.Oh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: a.id,
-            section_name: L,
+            section_name: x,
             source: A.A.lastShownEntrypoint(),
         },
         B = y.default.getCurrentUser(),
@@ -112,10 +112,10 @@ function L(e) {
         Y = (0, S.r)({
             application: a,
         }),
-        W = (0, o.Lt)(null != (t = a.flags) ? t : 0, C.gfo.EMBEDDED),
-        K = "channel" === w.type ? w.channel : void 0;
+        W = (0, s.Lt)(null != (t = a.flags) ? t : 0, C.gfo.EMBEDDED),
+        K = "channel" === R.type ? R.channel : void 0;
     return (0, r.jsxs)("div", {
-        className: R.k,
+        className: w.k,
         children: [
             (0, r.jsx)(c.DUT, {
                 onClick: () => {
@@ -137,10 +137,10 @@ function L(e) {
                     ),
                         b.default.track(C.HAw.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: a.id,
-                            source: M,
+                            source: j,
                         });
                 },
-                className: s()(R.v, D),
+                className: o()(w.v, D),
                 "aria-label": N.intl.string(N.t.WqhZss),
                 children: (0, r.jsx)(c.qYV, {
                     size: "sm",
@@ -148,7 +148,7 @@ function L(e) {
                 }),
             }),
             (0, r.jsx)(c.YNO, {
-                targetElementRef: j,
+                targetElementRef: M,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsxs)(c.W1t, {
@@ -168,15 +168,16 @@ function L(e) {
                                             action: () => {
                                                 (0, c.mMO)(async () => {
                                                     let { default: e } = await Promise.all([
+                                                        n.e("13088"),
                                                         n.e("33563"),
-                                                        n.e("80212"),
+                                                        n.e("92201"),
                                                     ]).then(n.bind(n, 719847));
                                                     return (t) =>
                                                         (0, r.jsx)(e, {
                                                             transitionState: t.transitionState,
                                                             onClose: t.onClose,
                                                             appId: a.id,
-                                                            guildId: V,
+                                                            guildId: F,
                                                         });
                                                 });
                                             },
@@ -187,15 +188,15 @@ function L(e) {
                                               label: N.intl.string(N.t.NgXl3C),
                                               action: () => {
                                                   null == k.customInstallUrl &&
-                                                      (0, u.zV)(C.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, F),
+                                                      (0, u.zV)(C.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, V),
                                                       (0, v.o)(
-                                                          x(P({}, k), {
+                                                          L(P({}, k), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t &&
                                                                       (0, u.zV)(
                                                                           C.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED,
-                                                                          F,
+                                                                          V,
                                                                       );
                                                               },
                                                               source: "app_launcher_app_details",
@@ -237,16 +238,16 @@ function L(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         c.DUT,
-                        x(
+                        L(
                             P(
                                 {
-                                    innerRef: j,
+                                    innerRef: M,
                                 },
                                 e,
                             ),
                             {
                                 onClick: e.onClick,
-                                className: s()(R.v, D),
+                                className: o()(w.v, D),
                                 "aria-label": N.intl.string(N.t["UKOtz+"]),
                                 children: (0, r.jsx)(c.jNK, {
                                     size: "sm",

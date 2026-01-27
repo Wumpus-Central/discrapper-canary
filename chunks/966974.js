@@ -1,11 +1,9 @@
 n.d(t, {
-    Z: () => r,
+    Z: () => i,
 });
-var r = (function (e) {
-    return (
-        (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
-        (e[(e.DEFAULT = 1)] = "DEFAULT"),
-        (e[(e.IMAGE_ONLY_ANSWERS = 2)] = "IMAGE_ONLY_ANSWERS"),
-        e
-    );
-})({});
+var r,
+    i =
+        (((r = {})[(r.UNKNOWN = 0)] = "UNKNOWN"),
+        (r[(r.DEFAULT = 1)] = "DEFAULT"),
+        (r[(r.IMAGE_ONLY_ANSWERS = 2)] = "IMAGE_ONLY_ANSWERS"),
+        r);

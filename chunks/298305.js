@@ -1,75 +1,72 @@
-n.d(t, {
-    A: () => g,
+r.d(t, {
+    A: () => x,
 });
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    a = n(397927),
-    s = n(775602),
-    o = n(920064),
-    l = n(674658),
-    c = n(898461),
-    u = n(287809),
-    d = n(504721),
-    f = n(513653),
-    p = n(180391);
-let _ = 1.5,
-    h = 0.321;
+var n = r(627968);
+r(64700);
+var i = r(311907),
+    l = r(397927),
+    a = r(775602),
+    s = r(920064),
+    o = r(674658),
+    c = r(898461),
+    u = r(287809),
+    d = r(504721),
+    m = r(513653),
+    p = r(180391);
 
-function m(e) {
-    let { skuId: t, size: n, src: d, className: f } = e,
+function g(e) {
+    let { skuId: t, size: r, src: d, className: m } = e,
         p = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
-        _ = (0, i.bG)([s.A], () => s.A.useReducedMotion),
-        { product: h, isFetching: m } = (0, l.q)(t);
-    if (m || null == h)
-        return (0, r.jsx)(a.y$y, {
-            type: a.tVU.PULSING_ELLIPSIS,
+        g = (0, i.bG)([a.A], () => a.A.useReducedMotion),
+        { product: x, isFetching: C } = (0, o.q)(t);
+    if (C || null == x)
+        return (0, n.jsx)(l.y$y, {
+            type: l.tVU.PULSING_ELLIPSIS,
         });
-    let g = h.items[0];
-    if (null == g || !(0, c.T)(g)) return null;
-    let E = (0, o.A)(g.asset, n, !_);
-    return (0, r.jsx)(a.JsQ, {
+    let f = x.items[0];
+    if (null == f || !(0, c.T)(f)) return null;
+    let T = (0, s.A)(f.asset, r, !g);
+    return (0, n.jsx)(l.JsQ, {
         "aria-label": null == p ? void 0 : p.username,
-        size: n,
-        className: f,
-        src: null != d ? d : null == p ? void 0 : p.getAvatarURL(void 0, (0, a.FT9)(n), !_),
-        avatarDecoration: E,
+        size: r,
+        className: m,
+        src: null != d ? d : null == p ? void 0 : p.getAvatarURL(void 0, (0, l.FT9)(r), !g),
+        avatarDecoration: T,
     });
 }
 
-function g(e) {
-    let { maxRewardImageSrc: t, claimableRewards: n, size: o, imageScaling: l = _ } = e,
+function x(e) {
+    let { maxRewardImageSrc: t, claimableRewards: r, size: s, imageScaling: o = 1.5 } = e,
         c = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
-        g = (0, i.bG)([s.A], () => s.A.useReducedMotion),
-        E = (0, a.FT9)(o),
-        y = {
-            height: E * l,
-        };
-    return n.length > 0
-        ? (0, r.jsx)("img", {
+        x = (0, i.bG)([a.A], () => a.A.useReducedMotion),
+        C = (0, l.FT9)(s);
+    return r.length > 0
+        ? (0, n.jsx)("img", {
               alt: "",
               src: t,
-              style: y,
+              style: {
+                  height: C * o,
+              },
           })
-        : (0, r.jsxs)("div", {
+        : (0, n.jsxs)("div", {
               className: d.kL,
               children: [
-                  (1 === n.length || 2 === n.length) &&
-                      (0, r.jsx)(m, {
-                          skuId: n[0],
-                          size: o,
+                  (1 === r.length || 2 === r.length) &&
+                      (0, n.jsx)(g, {
+                          skuId: r[0],
+                          size: s,
                           className: d.M8,
-                          src: 1 === n.length ? (null == c ? void 0 : c.getAvatarURL(void 0, (0, a.FT9)(o), !g)) : p,
+                          src: 1 === r.length ? (null == c ? void 0 : c.getAvatarURL(void 0, (0, l.FT9)(s), !x)) : p,
                       }),
-                  2 === n.length &&
-                      (0, r.jsx)("div", {
+                  2 === r.length &&
+                      (0, n.jsx)("div", {
                           style: {
-                              marginRight: -Math.round(E * h),
+                              marginRight: -Math.round(0.321 * C),
                           },
-                          children: (0, r.jsx)(m, {
-                              skuId: n[1],
-                              size: o,
-                              src: f,
+                          children: (0, n.jsx)(g, {
+                              skuId: r[1],
+                              size: s,
+                              src: m,
                           }),
                       }),
               ],

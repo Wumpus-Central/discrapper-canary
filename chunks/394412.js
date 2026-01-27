@@ -5,52 +5,52 @@ var r = n(627968);
 n(64700);
 var l = n(311907),
     i = n(827734),
-    a = n(397927),
-    s = n(931991),
+    s = n(397927),
+    a = n(931991),
     o = n(734057),
     c = n(87401),
     u = n(707592),
     d = n(698441),
-    f = n(935159),
-    p = n(508654),
-    h = n(974930),
-    b = n(47868),
-    g = n(985018),
-    m = n(19801);
+    p = n(935159),
+    h = n(508654),
+    f = n(974930),
+    g = n(47868),
+    m = n(985018),
+    b = n(242182);
 
 function A(e) {
     let { channelId: t, showDismiss: A = !0 } = e,
         y = (0, l.bG)([o.A], () => o.A.getChannel(t), [t]),
-        O = (0, p.RO)(t),
-        j = null != (0, p.Qs)(t),
-        { canManageGuildEvent: v } = (0, s.nr)(y),
-        x = (0, l.bG)([c.A], () => O.filter((e) => !c.A.isEventDismissed(e.id)), [O]),
-        E = (0, l.cf)([d.Ay], () => x.reduce((e, t) => ((e[t.id] = d.Ay.getUserCount(t.id, (0, h.G3)(t))), e), {}), [
-            x,
+        _ = (0, h.RO)(t),
+        O = null != (0, h.Qs)(t),
+        { canManageGuildEvent: j } = (0, a.nr)(y),
+        v = (0, l.bG)([c.A], () => _.filter((e) => !c.A.isEventDismissed(e.id)), [_]),
+        x = (0, l.cf)([d.Ay], () => v.reduce((e, t) => ((e[t.id] = d.Ay.getUserCount(t.id, (0, f.G3)(t))), e), {}), [
+            v,
         ]);
-    return x.length < 1 || j
+    return v.length < 1 || O
         ? null
         : (0, r.jsx)(r.Fragment, {
-              children: x.map((e) =>
+              children: v.map((e) =>
                   (0, r.jsx)(
-                      b.A,
+                      g.A,
                       {
-                          icon: (0, r.jsx)(a.CTc, {
+                          icon: (0, r.jsx)(s.CTc, {
                               size: "custom",
                               color: "currentColor",
                               height: 20,
                               width: 20,
                           }),
                           color: i.A.unsafe_rawColors.GREEN_360.css,
-                          title: g.intl.formatToPlainString(v(e) ? g.t["1vGXqM"] : g.t.xMJyla, {
+                          title: m.intl.formatToPlainString(j(e) ? m.t["1vGXqM"] : m.t.xMJyla, {
                               eventName: e.name,
                           }),
-                          description: g.intl.formatToPlainString(g.t.PTebCR, {
-                              startTime: (0, h.CC)(e.scheduled_start_time).startDateTimeString,
+                          description: m.intl.formatToPlainString(m.t.PTebCR, {
+                              startTime: (0, f.CC)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
-                              v(e)
-                                  ? (0, a.mMO)(async () => {
+                              j(e)
+                                  ? (0, s.mMO)(async () => {
                                         let { default: t } = await Promise.all([
                                             n.e("51354"),
                                             n.e("77223"),
@@ -117,11 +117,11 @@ function A(e) {
                           onDismiss: A
                               ? () => {
                                     var t;
-                                    return (t = e.id), void (0, f.Nt)(t);
+                                    return (t = e.id), void (0, p.Nt)(t);
                                 }
                               : void 0,
-                          userCount: E[e.id],
-                          className: m.f,
+                          userCount: x[e.id],
+                          className: b.f,
                       },
                       e.id,
                   ),

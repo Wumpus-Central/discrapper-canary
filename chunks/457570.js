@@ -1,93 +1,89 @@
 n.d(t, {
-    A: () => p,
+    A: () => d,
 }),
     n(747238),
     n(896048);
-var r = n(627968),
-    i = n(64700),
+var l = n(627968),
+    s = n(64700),
     a = n(503698),
-    s = n.n(a),
+    i = n.n(a),
     o = n(96337),
-    l = n(397927),
-    c = n(333074),
-    u = n(985018),
-    d = n(250640);
-
-function f(e) {
-    return String.fromCodePoint(
-        ...e
-            .toUpperCase()
-            .split("")
-            .map((e) => 127397 + e.charCodeAt(0)),
-    );
-}
-let p = function (e) {
-    let { className: t, submitting: n, errorMessage: a, onChange: p } = e,
-        _ = i.useRef(null),
-        { countriesMap: h, countryCodeOptions: m } = (0, c.E)(),
-        [g, E] = i.useState(() => {
+    r = n(397927),
+    u = n(333074),
+    E = n(985018),
+    c = n(250640);
+let d = function (e) {
+    let { className: t, submitting: n, errorMessage: a, onChange: d } = e,
+        h = s.useRef(null),
+        { countriesMap: R, countryCodeOptions: I } = (0, u.E)(),
+        [p, _] = s.useState(() => {
             let e = o.A.find((e) => "United States" === e.name);
             return "".concat(e.alpha2, "-").concat(e.phoneCountryCode);
         }),
-        [b, y] = i.useState(() => {
+        [f, g] = s.useState(() => {
             let [e, t] = o.A.find((e) => "United States" === e.name).phoneCountryCode.split(" ");
             return null != t ? t : "";
         }),
-        O = i.useCallback(
+        C = s.useCallback(
             (e, t) => {
                 var n;
-                let r = null == (n = h.get(e)) ? void 0 : n.code;
-                null == p || p("".concat(r).concat(t));
+                let l = null == (n = R.get(e)) ? void 0 : n.code;
+                null == d || d("".concat(l).concat(t));
             },
-            [h, p],
+            [R, d],
         ),
-        A = i.useCallback(
+        m = s.useCallback(
             (e) => {
                 var t;
-                E(e), null == (t = _.current) || t.focus(), O(e, b);
+                _(e), null == (t = h.current) || t.focus(), C(e, f);
             },
-            [b, O],
+            [f, C],
         ),
-        v = i.useCallback(
+        b = s.useCallback(
             (e) => {
-                y(e), O(g, e);
+                g(e), C(p, e);
             },
-            [g, O],
+            [p, C],
         ),
-        S = h.get(g);
-    return (0, r.jsx)("fieldset", {
-        children: (0, r.jsxs)("div", {
-            className: s()(d.B, t),
+        A = R.get(p);
+    return (0, l.jsx)("fieldset", {
+        children: (0, l.jsxs)("div", {
+            className: i()(c.B, t),
             children: [
-                (0, r.jsx)(l.D0$, {
-                    label: u.intl.string(u.t["k+bvrB"]),
-                    children: (0, r.jsx)(l.ZiE, {
+                (0, l.jsx)(r.D0$, {
+                    label: E.intl.string(E.t["k+bvrB"]),
+                    children: (0, l.jsx)(r.ZiE, {
                         selectionMode: "single",
-                        value: null != g ? g : void 0,
-                        onSelectionChange: A,
-                        options: m,
+                        value: null != p ? p : void 0,
+                        onSelectionChange: m,
+                        options: I,
                         formatOption: (e) => {
-                            let { value: t, label: n, alpha2: r } = e;
+                            let { value: t, label: n, alpha2: l } = e;
                             return {
                                 id: t,
                                 value: t,
                                 label: n,
-                                leading: f(null != r ? r : ""),
+                                leading: String.fromCodePoint(
+                                    ...(null != l ? l : "")
+                                        .toUpperCase()
+                                        .split("")
+                                        .map((e) => 127397 + e.charCodeAt(0)),
+                                ),
                             };
                         },
                         disabled: n,
                     }),
                 }),
-                (0, r.jsx)(l.ksK, {
-                    label: u.intl.string(u.t["64bX0M"]),
+                (0, l.jsx)(r.ksK, {
+                    label: E.intl.string(E.t["64bX0M"]),
                     error: a,
-                    leading: null == S ? void 0 : S.code,
+                    leading: null == A ? void 0 : A.code,
                     type: "tel",
-                    onChange: v,
+                    onChange: b,
                     autoFocus: !0,
-                    inputRef: _,
+                    inputRef: h,
                     disabled: n,
-                    value: b,
+                    value: f,
                 }),
             ],
         }),

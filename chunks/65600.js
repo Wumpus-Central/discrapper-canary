@@ -1,33 +1,19 @@
-n.d(t, {
-    A: () => A,
+r.d(t, {
+    A: () => p,
 }),
-    n(896048);
-var r,
-    i = n(311907),
-    a = n(73153),
-    s = n(921242);
+    r(896048);
+var n,
+    l,
+    s = r(311907),
+    a = r(73153),
+    i = r(921242);
+let o = new Map(),
+    c = !1;
 
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let l = 0.05,
-    c = new Map(),
-    u = !1;
-
-function d(e) {
+function u(e) {
     var t;
-    let n =
-        null != (t = c.get(e))
+    let r =
+        null != (t = o.get(e))
             ? t
             : {
                   editorState: null,
@@ -36,94 +22,85 @@ function d(e) {
                   searchResultsQueryString: null,
                   searchResultsQuery: null,
                   searchResultsOffset: null,
-                  searchMode: s.z,
+                  searchMode: i.z,
               };
-    return c.set(e, n), n;
+    return o.set(e, r), r;
 }
 
-function f(e, t) {
-    let n = c.get(e);
-    return null == n ? null : t(n);
+function d(e, t) {
+    let r = o.get(e);
+    return null == r ? null : t(r);
 }
-
-function p(e) {
-    let { id: t, editorState: n } = e;
-    d(t).editorState = n;
-}
-
-function _(e) {
-    let { id: t } = e;
-    d(t);
-}
-
-function h(e) {
-    let { id: t } = e;
-    return c.delete(t);
-}
-
-function m(e) {
-    let { id: t, showBlocked: n } = e;
-    d(t).showBlockedResults = n;
-}
-
-function g(e) {
-    let { id: t } = e;
-    d(t).showNoResultsAlt = Math.random() < l;
-}
-
-function E(e) {
-    let { id: t, queryString: n, query: r, offset: i } = e,
-        a = d(t);
-    (a.searchResultsQueryString = n), (a.searchResultsQuery = r), (a.searchResultsOffset = null != i ? i : 0);
-}
-
-function b(e) {
-    let { id: t, searchMode: n } = e;
-    d(t).searchMode = n;
-}
-
-function y() {
-    u = !0;
-}
-class O extends (r = i.Ay.Store) {
+class h extends (n = s.Ay.Store) {
     getEditorState(e) {
-        return f(e, (e) => e.editorState);
+        return d(e, (e) => e.editorState);
     }
     shouldShowBlockedResults(e) {
         var t;
-        return null != (t = f(e, (e) => e.showBlockedResults)) && t;
+        return null != (t = d(e, (e) => e.showBlockedResults)) && t;
     }
     shouldShowNoResultsAlt(e) {
         var t;
-        return null != (t = f(e, (e) => e.showNoResultsAlt)) && t;
+        return null != (t = d(e, (e) => e.showNoResultsAlt)) && t;
     }
     getSearchResultsQueryString(e) {
-        return f(e, (e) => e.searchResultsQueryString);
+        return d(e, (e) => e.searchResultsQueryString);
     }
     getSearchResultsQuery(e) {
-        return f(e, (e) => e.searchResultsQuery);
+        return d(e, (e) => e.searchResultsQuery);
     }
     getSearchMode(e) {
-        return f(e, (e) => e.searchMode);
+        return d(e, (e) => e.searchMode);
     }
     getSearchResultsOffset(e) {
-        return f(e, (e) => e.searchResultsOffset);
+        return d(e, (e) => e.searchResultsOffset);
     }
     getIsSearchTokensInitialized() {
-        return u;
+        return c;
     }
     getSearchStateIds() {
-        return Array.from(c.keys());
+        return Array.from(o.keys());
     }
 }
-o(O, "displayName", "SearchQueryStore");
-let A = new O(a.h, {
-    SEARCH_RESULTS_QUERY_UPDATE: E,
-    SEARCH_EDITOR_STATE_CLEAR: h,
-    SEARCH_ENSURE_SEARCH_STATE: _,
-    SEARCH_EDITOR_STATE_CHANGE: p,
-    SEARCH_SET_SHOW_BLOCKED_RESULTS: m,
-    SEARCH_SET_SHOW_NO_RESULTS_ALT: g,
-    SEARCH_SEARCH_MODE_UPDATE: b,
-    SEARCH_TOKENS_REFRESHED: y,
+(l = "displayName") in h
+    ? Object.defineProperty(h, l, {
+          value: "SearchQueryStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (h[l] = "SearchQueryStore");
+let p = new h(a.h, {
+    SEARCH_RESULTS_QUERY_UPDATE: function (e) {
+        let { id: t, queryString: r, query: n, offset: l } = e,
+            s = u(t);
+        (s.searchResultsQueryString = r), (s.searchResultsQuery = n), (s.searchResultsOffset = null != l ? l : 0);
+    },
+    SEARCH_EDITOR_STATE_CLEAR: function (e) {
+        let { id: t } = e;
+        return o.delete(t);
+    },
+    SEARCH_ENSURE_SEARCH_STATE: function (e) {
+        let { id: t } = e;
+        u(t);
+    },
+    SEARCH_EDITOR_STATE_CHANGE: function (e) {
+        let { id: t, editorState: r } = e;
+        u(t).editorState = r;
+    },
+    SEARCH_SET_SHOW_BLOCKED_RESULTS: function (e) {
+        let { id: t, showBlocked: r } = e;
+        u(t).showBlockedResults = r;
+    },
+    SEARCH_SET_SHOW_NO_RESULTS_ALT: function (e) {
+        let { id: t } = e;
+        u(t).showNoResultsAlt = 0.05 > Math.random();
+    },
+    SEARCH_SEARCH_MODE_UPDATE: function (e) {
+        let { id: t, searchMode: r } = e;
+        u(t).searchMode = r;
+    },
+    SEARCH_TOKENS_REFRESHED: function () {
+        c = !0;
+    },
 });

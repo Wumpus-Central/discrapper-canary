@@ -1,31 +1,17 @@
 n.d(t, {
-    A: () => g,
+    A: () => p,
 });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(763754),
-    o = n(491182),
-    l = n(291812),
+    l = n.n(i),
+    a = n(763754),
+    s = n(491182),
+    o = n(291812),
     c = n(643204),
     u = n(759522);
 
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function f(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,132 +22,125 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function p(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function h(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = m(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function m(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function g(e) {
+function p(e) {
+    var t, n;
     let {
-            message: t,
-            channel: n,
-            content: i,
-            className: d,
-            compact: p,
-            popoutProps: m,
-            hideTimestamp: g = !1,
-            withFooter: E = !1,
+            message: i,
+            channel: p,
+            content: m,
+            className: f,
+            compact: g,
+            popoutProps: h,
+            hideTimestamp: _ = !1,
+            withFooter: b = !1,
         } = e,
-        b = h(e, [
-            "message",
-            "channel",
-            "content",
-            "className",
-            "compact",
-            "popoutProps",
-            "hideTimestamp",
-            "withFooter",
-        ]),
-        y = (0, s.Ay)(t);
+        A = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i,
+                l = {};
+            if ("u" > typeof Reflect && Reflect.ownKeys) {
+                for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                return l;
+            }
+            if (
+                ((l = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.getOwnPropertyNames(e);
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    return i;
+                })(e, t)),
+                Object.getOwnPropertySymbols)
+            )
+                for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+            return l;
+        })(e, ["message", "channel", "content", "className", "compact", "popoutProps", "hideTimestamp", "withFooter"]),
+        y = (0, a.Ay)(i);
     return (0, r.jsx)("div", {
-        className: a()(
+        className: l()(
             {
-                [u.Ym]: E,
+                [u.Ym]: b,
             },
             u.gD,
             {
-                [u.oE]: p,
+                [u.oE]: g,
             },
-            d,
+            f,
         ),
         children: (0, r.jsx)(
-            o.A,
-            _(f({}, b), {
-                className: a()(u.zC, {
-                    [u.oE]: p,
-                }),
-                childrenMessageContent: (0, r.jsx)(l.Ay, {
-                    className: a()(u.__invalid_messageContent, {
-                        [u.oE]: p,
+            s.A,
+            ((t = d({}, A)),
+            (n = n =
+                {
+                    className: l()(u.zC, {
+                        [u.oE]: g,
                     }),
-                    message: t,
-                    content: i,
-                    compact: null != p && p,
-                }),
-                childrenHeader: (0, r.jsx)(
-                    c.Ay,
-                    f(
-                        {
-                            message: t,
-                            channel: n,
-                            author: y,
-                            guildId: null == n ? void 0 : n.guild_id,
-                            compact: p,
-                            hideTimestamp: g,
-                            className: a()(u.wx, {
-                                [u.oE]: p,
-                            }),
-                        },
-                        null != m ? m : {},
+                    childrenMessageContent: (0, r.jsx)(o.Ay, {
+                        className: l()(u.__invalid_messageContent, {
+                            [u.oE]: g,
+                        }),
+                        message: i,
+                        content: m,
+                        compact: null != g && g,
+                    }),
+                    childrenHeader: (0, r.jsx)(
+                        c.Ay,
+                        d(
+                            {
+                                message: i,
+                                channel: p,
+                                author: y,
+                                guildId: null == p ? void 0 : p.guild_id,
+                                compact: g,
+                                hideTimestamp: _,
+                                className: l()(u.wx, {
+                                    [u.oE]: g,
+                                }),
+                            },
+                            null != h ? h : {},
+                        ),
                     ),
-                ),
-                compact: p,
-                author: y,
-            }),
+                    compact: g,
+                    author: y,
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  }),
+            t),
         ),
     });
 }

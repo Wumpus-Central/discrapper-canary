@@ -1,40 +1,26 @@
 n.d(t, {
-    A: () => T,
+    A: () => O,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(990078),
-    s = n(319060),
-    o = n(397927),
-    l = n(793574),
+    l = n(990078),
+    a = n(319060),
+    s = n(397927),
+    o = n(793574),
     c = n(58149),
     u = n(688810),
     d = n(652176),
-    f = n(240248),
-    p = n(256449),
-    _ = n(842086),
-    h = n(148355),
-    m = n(552117),
-    g = n(652215),
-    E = n(788868),
-    b = n(444736);
+    p = n(240248),
+    m = n(256449),
+    f = n(842086),
+    g = n(148355),
+    h = n(552117),
+    _ = n(652215),
+    b = n(788868),
+    A = n(444736);
 
-function y(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,23 +31,19 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
-}
-
-function A(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
 }
 
 function v(e, t) {
@@ -69,82 +51,87 @@ function v(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = (0, f.xI)(s.A.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    I = (e) => {
-        null != e &&
-            c.Ay.trackWithMetadata(g.HAw.EXPRESSION_TOOLTIP_VIEWED, {
-                type: E.e.STICKER_IN_MESSAGE_HOVER,
-                expression_id: e.id,
-                expression_name: e.name,
-                is_animated: (0, _.Tw)(e.format_type),
-                is_custom: (0, _.zN)(e.type),
-            });
-    },
-    T = (e) => {
-        let { renderableSticker: t, channel: n, isInteracting: s } = e,
-            c = i.useRef(null),
-            [f, _] = i.useState(!0),
-            [g, E] = i.useState(String(Date.now())),
-            [y] = (0, p.Zq)(t, s),
-            { analyticsLocations: A } = (0, u.Ay)(l.A.STICKER_MESSAGE),
+let x = (0, p.xI)(a.A.STICKERS_CONSTANTS_STICKER_DIMENSION),
+    O = (e) => {
+        let { renderableSticker: t, channel: n, isInteracting: a } = e,
+            p = i.useRef(null),
+            [O, E] = i.useState(!0),
+            [j, C] = i.useState(String(Date.now())),
+            [I] = (0, m.Zq)(t, a),
+            { analyticsLocations: S } = (0, u.Ay)(o.A.STICKER_MESSAGE),
             T = (0, r.jsxs)("span", {
-                className: b.Zl,
+                className: A.Zl,
                 children: [
-                    (0, r.jsx)(o.s2T, {
+                    (0, r.jsx)(s.s2T, {
                         size: "xs",
                         color: "currentColor",
-                        className: b.lA,
+                        className: A.lA,
                     }),
-                    (null != y ? y : t).name,
+                    (null != I ? I : t).name,
                 ],
             });
         return (0, r.jsx)(u.f5, {
-            value: A,
-            children: (0, r.jsx)(o.YNO, {
+            value: S,
+            children: (0, r.jsx)(s.YNO, {
                 align: "center",
-                animation: o.YNO.Animation.TRANSLATE,
-                positionKey: g,
+                animation: s.YNO.Animation.TRANSLATE,
+                positionKey: j,
                 onRequestClose: () => {
-                    _(!0);
+                    E(!0);
                 },
                 renderPopout: (e) =>
                     (0, r.jsx)(
-                        m.A,
-                        v(O({}, e), {
+                        h.A,
+                        v(y({}, e), {
                             renderableSticker: t,
                             channel: n,
-                            refreshPositionKey: () => E(String(Date.now())),
+                            refreshPositionKey: () => C(String(Date.now())),
                         }),
                     ),
-                targetElementRef: c,
+                targetElementRef: p,
                 children: (e) => {
                     let { onClick: n } = e;
                     return (0, r.jsx)(
-                        a.m,
-                        v(O({}, d.Uk), {
-                            shouldShow: f,
+                        l.m,
+                        v(y({}, d.Uk), {
+                            shouldShow: O,
                             __unsupportedReactNodeAsText: (0, d.yR)(T),
                             "aria-label": !1,
                             onTooltipShow: () => {
-                                I(y);
+                                var e;
+                                null != (e = I) &&
+                                    c.Ay.trackWithMetadata(_.HAw.EXPRESSION_TOOLTIP_VIEWED, {
+                                        type: b.e.STICKER_IN_MESSAGE_HOVER,
+                                        expression_id: e.id,
+                                        expression_name: e.name,
+                                        is_animated: (0, f.Tw)(e.format_type),
+                                        is_custom: (0, f.zN)(e.type),
+                                    });
                             },
-                            children: (0, r.jsx)(o.DUT, {
-                                innerRef: c,
-                                className: b.q7,
+                            children: (0, r.jsx)(s.DUT, {
+                                innerRef: p,
+                                className: A.q7,
                                 onClick: (e) => {
-                                    _(!f), n(e);
+                                    E(!O), n(e);
                                 },
                                 tag: "span",
-                                children: (0, r.jsx)(h.A, {
-                                    isInteracting: s,
-                                    size: S,
-                                    sticker: null != y ? y : t,
+                                children: (0, r.jsx)(g.A, {
+                                    isInteracting: a,
+                                    size: x,
+                                    sticker: null != I ? I : t,
                                 }),
                             }),
                         }),

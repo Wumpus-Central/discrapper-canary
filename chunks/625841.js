@@ -1,159 +1,71 @@
 n.d(t, {
-    U: () => P,
+    U: () => S,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(843282),
+    l = n(503698),
+    a = n.n(l),
+    s = n(311907),
+    o = n(843282),
     c = n(582754),
     u = n(397927),
     d = n(827343),
-    f = n(688810),
-    p = n(544028),
-    _ = n(825468),
-    h = n(347481),
-    m = n(430452),
-    g = n(954571),
-    E = n(74848),
-    b = n(652215),
-    y = n(731854),
-    O = n(985018),
-    A = n(534393);
-
-function v(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    p = n(688810),
+    f = n(544028),
+    m = n(825468),
+    g = n(347481),
+    y = n(430452),
+    _ = n(954571),
+    b = n(74848),
+    A = n(652215),
+    h = n(731854),
+    v = n(985018),
+    O = n(534393);
+let j = "SHOW_MORE";
 
 function S(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                v(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function I(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function T(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function C(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = N(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function N(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-let R = "SHOW_MORE";
-
-function w(e) {
-    return {
-        [y.oh.AUDIO_INPUT]: {
-            setDevice: d.A.setInputDevice,
-            Icon: u.cNw,
-            getCanSetDevice: (e) => e.supports(y.O5.AUDIO_INPUT_DEVICE),
-            getWarningMessage: () =>
-                O.intl.format(O.t["1iK6UW"], {
-                    onDownloadClick: () => (0, _._)("Help Text Input Devices"),
-                }),
-            getLocation: (e) => "".concat(e, ".SingleSelectInputDevices"),
-        },
-        [y.oh.AUDIO_OUTPUT]: {
-            setDevice: d.A.setOutputDevice,
-            Icon: u.LoC,
-            getCanSetDevice: (e) => e.supports(y.O5.AUDIO_OUTPUT_DEVICE),
-            getWarningMessage: () =>
-                O.intl.format(O.t.Ow0dbF, {
-                    onDownloadClick: () => (0, _._)("Help Text Output Devices"),
-                }),
-            getLocation: (e) => "".concat(e, ".SingleSelectOutputDevices"),
-        },
-        [y.oh.VIDEO_INPUT]: {
-            setDevice: d.A.setVideoDevice,
-            Icon: u.xpe,
-            getCanSetDevice: (e) => e.isVideoAvailable(),
-            getWarningMessage: () =>
-                O.intl.format(O.t["1iK6UW"], {
-                    onDownloadClick: () => (0, _._)("Help Text Video Devices"),
-                }),
-            getLocation: (e) => "".concat(e, ".SingleSelectVideoDevices"),
-        },
-    }[e];
-}
-
-function P(e) {
+    var t, l;
     let {
-            deviceType: t,
-            location: a,
-            showAllDevices: d = !1,
-            selectedDeviceId: _,
-            onSelectDevice: y,
-            hideDeviceTypeIcon: v = !1,
-            label: I,
+            deviceType: S,
+            location: I,
+            showAllDevices: x = !1,
+            selectedDeviceId: E,
+            onSelectDevice: P,
+            hideDeviceTypeIcon: T = !1,
+            label: N,
         } = e,
-        N = C(e, [
+        w = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i,
+                l = {};
+            if ("u" > typeof Reflect && Reflect.ownKeys) {
+                for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                return l;
+            }
+            if (
+                ((l = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.getOwnPropertyNames(e);
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    return i;
+                })(e, t)),
+                Object.getOwnPropertySymbols)
+            )
+                for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
+                    (r = n[i]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+            return l;
+        })(e, [
             "deviceType",
             "location",
             "showAllDevices",
@@ -162,69 +74,105 @@ function P(e) {
             "hideDeviceTypeIcon",
             "label",
         ]),
-        { setDevice: P, Icon: D, getCanSetDevice: x, getWarningMessage: L, getLocation: j } = w(t),
-        { analyticsLocations: M } = (0, f.Ay)(),
-        k = (0, o.bG)([p.A], () => p.A.theme),
-        [U, G] = i.useState(d),
-        V = j(a),
-        [F, B] = (0, E.tR)(t, {
-            location: V,
+        {
+            setDevice: C,
+            Icon: D,
+            getCanSetDevice: L,
+            getWarningMessage: k,
+            getLocation: G,
+        } = {
+            [h.oh.AUDIO_INPUT]: {
+                setDevice: d.A.setInputDevice,
+                Icon: u.cNw,
+                getCanSetDevice: (e) => e.supports(h.O5.AUDIO_INPUT_DEVICE),
+                getWarningMessage: () =>
+                    v.intl.format(v.t["1iK6UW"], {
+                        onDownloadClick: () => (0, m._)("Help Text Input Devices"),
+                    }),
+                getLocation: (e) => "".concat(e, ".SingleSelectInputDevices"),
+            },
+            [h.oh.AUDIO_OUTPUT]: {
+                setDevice: d.A.setOutputDevice,
+                Icon: u.LoC,
+                getCanSetDevice: (e) => e.supports(h.O5.AUDIO_OUTPUT_DEVICE),
+                getWarningMessage: () =>
+                    v.intl.format(v.t.Ow0dbF, {
+                        onDownloadClick: () => (0, m._)("Help Text Output Devices"),
+                    }),
+                getLocation: (e) => "".concat(e, ".SingleSelectOutputDevices"),
+            },
+            [h.oh.VIDEO_INPUT]: {
+                setDevice: d.A.setVideoDevice,
+                Icon: u.xpe,
+                getCanSetDevice: (e) => e.isVideoAvailable(),
+                getWarningMessage: () =>
+                    v.intl.format(v.t["1iK6UW"], {
+                        onDownloadClick: () => (0, m._)("Help Text Video Devices"),
+                    }),
+                getLocation: (e) => "".concat(e, ".SingleSelectVideoDevices"),
+            },
+        }[S],
+        { analyticsLocations: R } = (0, p.Ay)(),
+        M = (0, s.bG)([f.A], () => f.A.theme),
+        [V, U] = i.useState(x),
+        W = G(I),
+        [F, K] = (0, b.tR)(S, {
+            location: W,
         }),
-        { id: H } = (0, E.x5)(t),
-        Y = null != _ ? _ : H,
-        W = (0, o.bG)([m.A], () => x(m.A)),
-        K = (0, r.jsx)(u.po8, {
+        { id: z } = (0, b.x5)(S),
+        H = (0, s.bG)([y.A], () => L(y.A)),
+        Y = (0, r.jsx)(u.po8, {
             messageType: u.YCn.WARNING,
-            children: L(),
+            children: k(),
         }),
-        z = i.useCallback(
+        B = i.useCallback(
             (e) => {
-                if (e === R)
-                    G(!0),
-                        g.default.track(b.HAw.DEVICES_LIST_SHOW_MORE_CLICKED, {
-                            device_type: t,
-                            location: V,
-                            location_stack: M,
+                if (e === j)
+                    U(!0),
+                        _.default.track(A.HAw.DEVICES_LIST_SHOW_MORE_CLICKED, {
+                            device_type: S,
+                            location: W,
+                            location_stack: R,
                             shown_device_count: F.length,
-                            hidden_device_count: B.length,
+                            hidden_device_count: K.length,
                         });
                 else {
-                    var n;
-                    (null == (n = null == y ? void 0 : y(e)) || n) &&
-                        P(e, {
-                            location: V,
-                            analyticsLocations: M,
+                    var t;
+                    (null == (t = null == P ? void 0 : P(e)) || t) &&
+                        C(e, {
+                            location: W,
+                            analyticsLocations: R,
                         });
                 }
             },
-            [t, V, F.length, B.length, M, y, P],
+            [S, W, F.length, K.length, R, P, C],
         );
 
-    function q(e) {
+    function J(e) {
         let t,
             i,
-            { label: a, value: o } = e,
-            l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            d = a,
-            f = (0, E.d)(a);
-        null != f && ((d = f.prefix), (t = f.subName));
-        let p = h.A.getCertifiedDeviceName(o, d);
-        if (h.A.isCertified(o)) {
-            let e = (0, c.qB)(k) ? n(961392) : n(848672);
+            { label: l, value: s } = e,
+            o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            d = l,
+            p = (0, b.d)(l);
+        null != p && ((d = p.prefix), (t = p.subName));
+        let f = g.A.getCertifiedDeviceName(s, d);
+        if (g.A.isCertified(s)) {
+            let e = (0, c.qB)(M) ? n(961392) : n(848672);
             i = (0, r.jsx)("img", {
                 src: e,
-                alt: O.intl.string(O.t.smSKsj),
+                alt: v.intl.string(v.t.smSKsj),
             });
         }
         return (0, r.jsxs)("div", {
-            className: s()(A.Mg, {
-                [A.S2]: l && null != t,
-                [A.Sy]: !v,
+            className: a()(O.Mg, {
+                [O.S2]: o && null != t,
+                [O.Sy]: !T,
             }),
             children: [
-                !v &&
+                !T &&
                     (0, r.jsx)("div", {
-                        className: A.Kt,
+                        className: O.Kt,
                         children: (0, r.jsx)(D, {
                             size: "custom",
                             width: 20,
@@ -235,77 +183,111 @@ function P(e) {
                 (0, r.jsx)(u.Text, {
                     lineClamp: 2,
                     variant: "text-md/medium",
-                    color: l ? "text-subtle" : "text-default",
-                    className: A.hV,
-                    children: p,
+                    color: o ? "text-subtle" : "text-default",
+                    className: O.hV,
+                    children: f,
                 }),
                 null != t &&
                     (0, r.jsx)(u.Text, {
                         lineClamp: 2,
-                        variant: l ? "text-xs/medium" : "text-md/medium",
+                        variant: o ? "text-xs/medium" : "text-md/medium",
                         color: "text-muted",
-                        className: A.VT,
+                        className: O.VT,
                         children: t,
                     }),
                 null != i &&
                     (0, r.jsx)("div", {
-                        className: A.pN,
+                        className: O.pN,
                         children: i,
                     }),
             ],
         });
     }
-
-    function X() {
-        let e = (e) => {
-                let { id: t, name: n } = e;
-                return {
-                    value: t,
-                    label: n,
-                };
-            },
-            t = F.map(e);
-        if (U || 0 === B.length) {
-            let n = B.map(e);
-            return t.concat(n);
-        }
-        {
-            let e = {
-                value: R,
-                label: O.intl.string(O.t.E99UMh),
-                preventCloseOnSelect: !0,
-            };
-            return t.concat(e);
-        }
-    }
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(
-                l.Te,
-                T(
-                    S(
-                        {
-                            label: I,
-                            value: Y,
-                            onChange: z,
-                            options: X(),
-                            isDisabled: !W,
-                            popoutPosition: "bottom",
-                            renderOptionLabel: (e) => q(e, !0),
-                            renderOptionValue: (e) => {
-                                let [t] = e;
-                                return q(t);
-                            },
-                            optionClassName: A.OS,
+                o.Te,
+                ((t = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })(
+                    {
+                        label: N,
+                        value: null != E ? E : z,
+                        onChange: B,
+                        options: (function () {
+                            let e = (e) => {
+                                    let { id: t, name: n } = e;
+                                    return {
+                                        value: t,
+                                        label: n,
+                                    };
+                                },
+                                t = F.map(e);
+                            if (V || 0 === K.length) {
+                                let n = K.map(e);
+                                return t.concat(n);
+                            }
+                            {
+                                let e = {
+                                    value: j,
+                                    label: v.intl.string(v.t.E99UMh),
+                                    preventCloseOnSelect: !0,
+                                };
+                                return t.concat(e);
+                            }
+                        })(),
+                        isDisabled: !H,
+                        popoutPosition: "bottom",
+                        renderOptionLabel: (e) => J(e, !0),
+                        renderOptionValue: (e) => {
+                            let [t] = e;
+                            return J(t);
                         },
-                        N,
-                    ),
+                        optionClassName: O.OS,
+                    },
+                    w,
+                )),
+                (l = l =
                     {
                         "data-migration-pending": !0,
-                    },
-                ),
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(l)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(l, e));
+                      }),
+                t),
             ),
-            !W && K,
+            !H && Y,
         ],
     });
 }

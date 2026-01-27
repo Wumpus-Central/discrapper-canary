@@ -1,62 +1,24 @@
 n.d(t, {
-    HL: () => m,
-    gy: () => f,
-    vw: () => h,
-    vy: () => _,
+    HL: () => d,
+    gy: () => o,
+    vw: () => u,
+    vy: () => c,
 }),
     n(896048),
     n(142703);
 var r = n(627968),
-    i = n(64700),
+    l = n(64700),
     a = n(108531),
-    s = n(397927);
-
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let c = -n(182417).pt.duration / 1e3 / 2,
-    u = 4,
-    d = 0.2,
-    f = (0, i.createContext)({
+    i = n(397927);
+let s = -n(182417).pt.duration / 1e3 / 2,
+    o = (0, l.createContext)({
         addSpringRef: () => {},
         removeSpringRef: () => {},
     });
 
-function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-    return 1 - Math.pow(1 - e, t);
-}
-
-function _() {
-    let e = (0, i.useRef)(null),
-        t = (0, s.zhh)({
+function c() {
+    let e = (0, l.useRef)(null),
+        t = (0, i.zhh)({
             ref: e,
             from: {
                 transform: "translate3d(0, 50px, 0)",
@@ -67,13 +29,13 @@ function _() {
                 opacity: 1,
             },
             config: {
-                duration: 1e3 * d,
+                duration: 200,
                 easing: (e) => e * e,
             },
         }),
-        { addSpringRef: n, removeSpringRef: r } = (0, i.useContext)(f);
+        { addSpringRef: n, removeSpringRef: r } = (0, l.useContext)(o);
     return (
-        (0, i.useEffect)(
+        (0, l.useEffect)(
             () => (
                 n(e),
                 () => {
@@ -86,34 +48,68 @@ function _() {
     );
 }
 
-function h(e) {
-    let { children: t, spring: n, className: i, style: s } = e;
+function u(e) {
+    let { children: t, spring: n, className: l, style: i } = e;
     return (0, r.jsx)(a.animated.div, {
-        className: i,
-        style: l({}, n, s),
+        className: l,
+        style: (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })({}, n, i),
         children: t,
     });
 }
 
-function m() {
-    let e = (0, i.useRef)(new Set()),
-        [t, n] = (0, i.useState)([]),
-        r = t.map((e, n) => (t.length <= 1 ? -c : Math.max(0, p((n / (t.length - 1)) * d, u) - c)));
+function d() {
+    let e = (0, l.useRef)(new Set()),
+        [t, n] = (0, l.useState)([]),
+        r = t.map((e, n) =>
+            t.length <= 1
+                ? -s
+                : Math.max(
+                      0,
+                      (function (e) {
+                          let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                          return 1 - Math.pow(1 - e, t);
+                      })((n / (t.length - 1)) * 0.2, 4) - s,
+                  ),
+        );
     (0, a.useChain)(t, r);
-    let s = (0, i.useCallback)((t) => {
+    let i = (0, l.useCallback)((t) => {
         e.current.add(t);
     }, []);
-    (0, i.useEffect)(() => {
+    (0, l.useEffect)(() => {
         setImmediate(() => n(Array.from(e.current)));
     }, []);
-    let o = (0, i.useCallback)((t) => {
+    let o = (0, l.useCallback)((t) => {
         e.current.delete(t);
     }, []);
-    return (0, i.useMemo)(
+    return (0, l.useMemo)(
         () => ({
-            addSpringRef: s,
+            addSpringRef: i,
             removeSpringRef: o,
         }),
-        [s, o],
+        [i, o],
     );
 }

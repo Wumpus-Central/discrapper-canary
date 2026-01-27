@@ -1,109 +1,106 @@
-function r(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+function n(t) {
+    for (var e = 1; e < arguments.length; e++) {
+        var r = null != arguments[e] ? arguments[e] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(r, t).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                i(e, t, n[t]);
+            n.forEach(function (e) {
+                var n, i, o;
+                (n = t),
+                    (i = e),
+                    (o = r[e]),
+                    i in n
+                        ? Object.defineProperty(n, i, {
+                              value: o,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (n[i] = o);
             });
     }
-    return e;
+    return t;
 }
-
-function i(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-var a = n(414501),
-    s = n(387739),
-    o = n(68055),
-    l = n(617179),
-    c = n(954055),
-    u = n(869639),
-    d = n(279998),
-    f = n(661551),
-    p = n(116740),
-    _ = n(311610),
-    h = f("draft_tree_data_support"),
-    m = h ? l : o,
-    g = p.List,
-    E = p.Repeat;
-e.exports = {
-    insertAtomicBlock: function (e, t, n) {
-        var i = e.getCurrentContent(),
-            o = e.getSelection(),
-            l = c.removeRange(i, o, "backward"),
-            f = l.getSelectionAfter(),
-            p = c.splitBlock(l, f),
-            _ = p.getSelectionAfter(),
-            b = c.setBlockType(p, _, "atomic"),
-            y = s.create({
-                entity: t,
+var i = r(414501),
+    o = r(387739),
+    a = r(68055),
+    s = r(617179),
+    u = r(954055),
+    c = r(869639),
+    l = r(279998),
+    f = r(661551),
+    p = r(116740),
+    h = r(311610),
+    d = f("draft_tree_data_support"),
+    g = d ? s : a,
+    y = p.List,
+    v = p.Repeat;
+t.exports = {
+    insertAtomicBlock: function (t, e, r) {
+        var a = t.getCurrentContent(),
+            s = t.getSelection(),
+            f = u.removeRange(a, s, "backward"),
+            p = f.getSelectionAfter(),
+            h = u.splitBlock(f, p),
+            m = h.getSelectionAfter(),
+            _ = u.setBlockType(h, m, "atomic"),
+            b = o.create({
+                entity: e,
             }),
-            O = {
-                key: d(),
+            S = {
+                key: l(),
                 type: "atomic",
-                text: n,
-                characterList: g(E(y, n.length)),
+                text: r,
+                characterList: y(v(b, r.length)),
             },
-            A = {
-                key: d(),
+            w = {
+                key: l(),
                 type: "unstyled",
             };
-        h &&
-            ((O = r({}, O, {
-                nextSibling: A.key,
+        d &&
+            ((S = n({}, S, {
+                nextSibling: w.key,
             })),
-            (A = r({}, A, {
-                prevSibling: O.key,
+            (w = n({}, w, {
+                prevSibling: S.key,
             })));
-        var v = [new m(O), new m(A)],
-            S = a.createFromArray(v),
-            I = c.replaceWithFragment(b, _, S),
-            T = I.merge({
-                selectionBefore: o,
-                selectionAfter: I.getSelectionAfter().set("hasFocus", !0),
+        var k = [new g(S), new g(w)],
+            x = i.createFromArray(k),
+            C = u.replaceWithFragment(_, m, x),
+            E = C.merge({
+                selectionBefore: s,
+                selectionAfter: C.getSelectionAfter().set("hasFocus", !0),
             });
-        return u.push(e, T, "insert-fragment");
+        return c.push(t, E, "insert-fragment");
     },
-    moveAtomicBlock: function (e, t, n, r) {
+    moveAtomicBlock: function (t, e, r, n) {
         var i,
-            a = e.getCurrentContent(),
-            s = e.getSelection();
-        if ("before" === r || "after" === r) {
-            var o = a.getBlockForKey("before" === r ? n.getStartKey() : n.getEndKey());
-            i = _(a, t, o, r);
+            o = t.getCurrentContent(),
+            a = t.getSelection();
+        if ("before" === n || "after" === n) {
+            var s = o.getBlockForKey("before" === n ? r.getStartKey() : r.getEndKey());
+            i = h(o, e, s, n);
         } else {
-            var l = c.removeRange(a, n, "backward"),
-                d = l.getSelectionAfter(),
-                f = l.getBlockForKey(d.getFocusKey());
-            if (0 === d.getStartOffset()) i = _(l, t, f, "before");
-            else if (d.getEndOffset() === f.getLength()) i = _(l, t, f, "after");
+            var l = u.removeRange(o, r, "backward"),
+                f = l.getSelectionAfter(),
+                p = l.getBlockForKey(f.getFocusKey());
+            if (0 === f.getStartOffset()) i = h(l, e, p, "before");
+            else if (f.getEndOffset() === p.getLength()) i = h(l, e, p, "after");
             else {
-                var p = c.splitBlock(l, d),
-                    h = p.getSelectionAfter(),
-                    m = p.getBlockForKey(h.getFocusKey());
-                i = _(p, t, m, "before");
+                var d = u.splitBlock(l, f),
+                    g = d.getSelectionAfter(),
+                    y = d.getBlockForKey(g.getFocusKey());
+                i = h(d, e, y, "before");
             }
         }
-        var g = i.merge({
-            selectionBefore: s,
+        var v = i.merge({
+            selectionBefore: a,
             selectionAfter: i.getSelectionAfter().set("hasFocus", !0),
         });
-        return u.push(e, g, "move-block");
+        return c.push(t, v, "move-block");
     },
 };

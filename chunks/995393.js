@@ -1,37 +1,31 @@
 n.d(t, {
-    Jq: () => i,
-    Ng: () => a,
-    ST: () => s,
-    bB: () => r,
+    Jq: () => o,
+    Ng: () => c,
+    ST: () => u,
+    bB: () => s,
 });
-var r = (function (e) {
-        return (
-            (e.CARD = "card"),
-            (e.BUY_BUTTON = "buy_button"),
-            (e.GIFT_BUTTON = "gift_button"),
-            (e.WISHLIST_BUTTON = "wishlist_button"),
-            (e.FORWARD_BUTTON = "forward_button"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (
-            (e.BUY_BUTTON = "buy_button"),
-            (e.GIFT_BUTTON = "gift_button"),
-            (e.WISHLIST_BUTTON = "wishlist_button"),
-            (e.COPY_LINK_BUTTON = "copy_link_button"),
-            (e.VISIT_SHOP = "visit_shop"),
-            (e.CAROUSEL_ITEM = "carousel_item"),
-            (e.CAROUSEL_NEXT = "carousel_next"),
-            (e.CAROUSEL_PREV = "carousel_prev"),
-            (e.MUTE_BUTTON = "mute_button"),
-            (e.FORWARD_BUTTON = "forward_button"),
-            e
-        );
-    })({}),
-    a = (function (e) {
-        return (e.COPY_LINK_BUTTON = "copy_link_button"), e;
-    })({}),
-    s = (function (e) {
-        return (e.LEARN_MORE = "learn_more"), e;
-    })({});
+var r,
+    i,
+    l,
+    a,
+    s =
+        (((r = {}).CARD = "card"),
+        (r.BUY_BUTTON = "buy_button"),
+        (r.GIFT_BUTTON = "gift_button"),
+        (r.WISHLIST_BUTTON = "wishlist_button"),
+        (r.FORWARD_BUTTON = "forward_button"),
+        r),
+    o =
+        (((i = {}).BUY_BUTTON = "buy_button"),
+        (i.GIFT_BUTTON = "gift_button"),
+        (i.WISHLIST_BUTTON = "wishlist_button"),
+        (i.COPY_LINK_BUTTON = "copy_link_button"),
+        (i.VISIT_SHOP = "visit_shop"),
+        (i.CAROUSEL_ITEM = "carousel_item"),
+        (i.CAROUSEL_NEXT = "carousel_next"),
+        (i.CAROUSEL_PREV = "carousel_prev"),
+        (i.MUTE_BUTTON = "mute_button"),
+        (i.FORWARD_BUTTON = "forward_button"),
+        i),
+    c = (((l = {}).COPY_LINK_BUTTON = "copy_link_button"), l),
+    u = 21552 == n.j ? (((a = {}).LEARN_MORE = "learn_more"), a) : null;

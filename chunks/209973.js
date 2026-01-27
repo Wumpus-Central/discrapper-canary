@@ -1,35 +1,33 @@
 n.d(t, {
-    A: () => w,
+    A: () => N,
 });
 var r = n(627968),
-    i = n(64700),
+    l = n(64700),
     a = n(299619),
-    s = n(158954),
-    o = n(311907),
-    l = n(499979),
+    i = n(158954),
+    s = n(311907),
+    o = n(499979),
     c = n(397927),
     u = n(775602),
     d = n(854987),
-    f = n(719718),
-    p = n(57882),
-    _ = n(109138),
+    m = n(719718),
+    f = n(57882),
+    p = n(109138),
     h = n(771273),
-    m = n(818947),
+    b = n(818947),
     g = n(155286),
-    E = n(573138),
-    b = n(182417),
-    y = n(877272),
-    O = n(359588),
-    A = n(532294),
-    v = n(622865),
-    S = n(985018),
-    I = n(308021),
-    T = n(86369),
-    C = n(65e4);
-let N = 100,
-    R = 1;
+    x = n(573138),
+    y = n(182417),
+    v = n(877272),
+    j = n(359588),
+    C = n(532294),
+    _ = n(622865),
+    A = n(985018),
+    O = n(308021),
+    E = n(86369),
+    S = n(65e4);
 
-function w() {
+function N() {
     let {
             voice: {
                 totalVoiceMinutes: e,
@@ -42,128 +40,128 @@ function w() {
                     month: 0,
                 },
             },
-        } = (0, o.bG)([f.A], () => f.A.getCheckpointData()),
-        { duration: w, unit: P } = (0, p.oO)(e),
-        D = P === l.pJ.HOURS,
-        x = i.useContext(h.GD),
-        L = i.useRef(null),
-        j = i.useContext(b.Aq),
-        M = i.useContext(d.P),
-        k = (0, c.rdh)(M.primaryColor).hex(),
-        U = (0, o.bG)([u.A], () => u.A.useReducedMotion),
-        G = i.useCallback(
+        } = (0, s.bG)([m.A], () => m.A.getCheckpointData()),
+        { duration: N, unit: I } = (0, f.oO)(e),
+        P = I === o.pJ.HOURS,
+        w = l.useContext(h.GD),
+        T = l.useRef(null),
+        R = l.useContext(y.Aq),
+        L = l.useContext(d.P),
+        D = (0, c.rdh)(L.primaryColor).hex(),
+        k = (0, s.bG)([u.A], () => u.A.useReducedMotion),
+        M = l.useCallback(
             (e) => {
-                let t = L.current;
+                let t = T.current;
                 if (null == t || t.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) return;
                 let n = 0,
                     r = 1,
-                    i = 0;
-                null == j ||
-                    j(
+                    l = 0;
+                null == R ||
+                    R(
                         (e, t) => (
-                            t === A.P7.VOICE &&
+                            t === C.P7.VOICE &&
                                 ((n = Math.max(e.opacity.get(), 0)),
                                 (r = e.backgroundScale.get()),
-                                (i = e.backgroundY.get())),
+                                (l = e.backgroundY.get())),
                             null
                         ),
                     );
-                let { canvas: a, context: s } = e.detail;
-                s.save(), (s.globalAlpha = n), (s.globalCompositeOperation = "screen");
-                let o = a.width / 2,
-                    l = a.height / 2;
-                s.translate(o, l),
-                    s.scale(r, r),
-                    s.translate(-o, -l),
-                    s.translate(0, i),
-                    (0, _.A)(t, a, s, N),
-                    s.restore();
+                let { canvas: a, context: i } = e.detail;
+                i.save(), (i.globalAlpha = n), (i.globalCompositeOperation = "screen");
+                let s = a.width / 2,
+                    o = a.height / 2;
+                i.translate(s, o),
+                    i.scale(r, r),
+                    i.translate(-s, -o),
+                    i.translate(0, l),
+                    (0, p.A)(t, a, i, 100),
+                    i.restore();
             },
-            [j],
+            [R],
         );
-    i.useEffect(() => (x.addEventListener("frame", G), () => x.removeEventListener("frame", G)), [x, G]),
-        i.useEffect(() => {
-            null != L.current && U && (L.current.currentTime = R);
-        }, [U]);
-    let { monthName: V } = (0, p.od)(n, S.intl.currentLocale),
-        F = null != t;
-    return (0, r.jsxs)(E.A, {
+    l.useEffect(() => (w.addEventListener("frame", M), () => w.removeEventListener("frame", M)), [w, M]),
+        l.useEffect(() => {
+            null != T.current && k && (T.current.currentTime = 1);
+        }, [k]);
+    let { monthName: H } = (0, f.od)(n, A.intl.currentLocale);
+    return (0, r.jsxs)(x.A, {
         children: [
             (0, r.jsx)(a.A, {
-                autoPlay: !U,
+                autoPlay: !k,
                 muted: !0,
                 loop: !0,
                 playsInline: !0,
-                className: T.R,
-                ref: L,
+                className: E.R,
+                ref: T,
                 "aria-hidden": !0,
                 children: (0, r.jsx)("source", {
-                    src: C.A,
+                    src: S.A,
                     type: "video/webm",
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: T.Qs,
+                className: E.Qs,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: I.DD,
+                        className: O.DD,
                         children: [
-                            (0, r.jsx)(s.cNw, {
+                            (0, r.jsx)(i.cNw, {
                                 size: "refresh_sm",
-                                color: k,
-                                className: I.gr,
-                                colorClass: I.d7,
+                                color: D,
+                                className: O.gr,
+                                colorClass: O.d7,
                             }),
-                            D
-                                ? (0, r.jsx)(y.A, {
+                            P
+                                ? (0, r.jsx)(v.A, {
                                       variant: "eyebrow",
-                                      className: I.UP,
-                                      children: S.intl.format(v.default.Xu0QsX, {
-                                          numHours: w,
+                                      className: O.UP,
+                                      children: A.intl.format(_.default.Xu0QsX, {
+                                          numHours: N,
                                       }),
                                   })
-                                : (0, r.jsx)(y.A, {
+                                : (0, r.jsx)(v.A, {
                                       variant: "eyebrow",
-                                      className: I.UP,
-                                      children: S.intl.format(v.default.UZbUtl, {
-                                          numMinutes: w,
+                                      className: O.UP,
+                                      children: A.intl.format(_.default.UZbUtl, {
+                                          numMinutes: N,
                                       }),
                                   }),
                         ],
                     }),
-                    (0, r.jsx)(O.A, {
-                        end: w,
+                    (0, r.jsx)(j.A, {
+                        end: N,
                         alignment: "center",
                     }),
-                    (0, r.jsx)(y.A, {
+                    (0, r.jsx)(v.A, {
                         variant: "heading-xxl/medium",
-                        className: T.VA,
-                        children: F
-                            ? S.intl.format(v.default["36PZwu"], {
-                                  percent: 100 - t,
-                                  percentHook: (e, t) =>
-                                      (0, r.jsx)(
-                                          m.A,
-                                          {
-                                              children: e,
-                                          },
-                                          t,
-                                      ),
-                              })
-                            : S.intl.format(v.default.VaydtR, {
-                                  month: V,
-                                  monthHook: (e, t) =>
-                                      (0, r.jsx)(
-                                          m.A,
-                                          {
-                                              children: e,
-                                          },
-                                          t,
-                                      ),
-                              }),
+                        className: E.VA,
+                        children:
+                            null != t
+                                ? A.intl.format(_.default["36PZwu"], {
+                                      percent: 100 - t,
+                                      percentHook: (e, t) =>
+                                          (0, r.jsx)(
+                                              b.A,
+                                              {
+                                                  children: e,
+                                              },
+                                              t,
+                                          ),
+                                  })
+                                : A.intl.format(_.default.VaydtR, {
+                                      month: H,
+                                      monthHook: (e, t) =>
+                                          (0, r.jsx)(
+                                              b.A,
+                                              {
+                                                  children: e,
+                                              },
+                                              t,
+                                          ),
+                                  }),
                     }),
                     (0, r.jsx)(g.e, {
-                        slide: A.P7.VOICE,
+                        slide: C.P7.VOICE,
                     }),
                 ],
             }),

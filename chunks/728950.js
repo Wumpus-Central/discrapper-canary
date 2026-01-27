@@ -5,8 +5,8 @@ var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(937008),
-    s = n(491057),
-    o = n(652215);
+    o = n(491057),
+    s = n(652215);
 
 function l(e, t, n) {
     return (
@@ -103,46 +103,51 @@ function _(e) {
         analyticsLocation: m,
         analyticsLocations: g,
         analyticsSubscriptionType: E,
-        renderHeader: b,
-        renderPurchaseConfirmation: y,
+        renderHeader: y,
+        renderPurchaseConfirmation: b,
         planGroup: O,
-        reviewWarningMessage: A,
-        skuId: v,
+        reviewWarningMessage: v,
+        skuId: A,
     } = e;
     (0, i.mMO)(
         async () => {
             let { PaymentContextProvider: e } = await Promise.resolve().then(n.bind(n, 156312)),
                 { PaymentModal: i } = await Promise.resolve().then(n.bind(n, 546042)),
-                { STEPS: o } = await Promise.all([n.e("14704"), n.e("29716"), n.e("2824"), n.e("58846")]).then(
-                    n.bind(n, 674619),
-                );
+                { STEPS: s } = await Promise.all([
+                    n.e("62175"),
+                    n.e("2292"),
+                    n.e("14704"),
+                    n.e("29716"),
+                    n.e("2824"),
+                    n.e("96126"),
+                ]).then(n.bind(n, 674619));
             return (n) => {
-                let { onClose: S } = n,
-                    I = f(n, ["onClose"]);
+                let { onClose: I } = n,
+                    S = f(n, ["onClose"]);
                 return (0, r.jsx)(e, {
                     activeSubscription: l,
-                    stepConfigs: o,
-                    skuIDs: [v],
-                    children: (0, r.jsx)(s.Qt, {
+                    stepConfigs: s,
+                    skuIDs: [A],
+                    children: (0, r.jsx)(o.Qt, {
                         children: (0, r.jsx)(a.dX, {
                             children: (0, r.jsx)(
                                 i,
-                                d(c({}, I), {
+                                d(c({}, S), {
                                     initialPlanId: t,
                                     onClose: (e) => {
-                                        S(), null == _ || _(e);
+                                        I(), null == _ || _(e);
                                     },
                                     analyticsLocations: g,
                                     analyticsObject: h,
                                     analyticsLocation: m,
                                     analyticsSubscriptionType: E,
-                                    skuId: v,
-                                    renderHeader: b,
-                                    renderPurchaseConfirmation: y,
+                                    skuId: A,
+                                    renderHeader: y,
+                                    renderPurchaseConfirmation: b,
                                     planGroup: O,
                                     trialId: u,
                                     trialFooterMessageOverride: p,
-                                    reviewWarningMessage: A,
+                                    reviewWarningMessage: v,
                                 }),
                             ),
                         }),
@@ -154,7 +159,7 @@ function _(e) {
             onCloseCallback: () => {
                 null == _ || _(!1);
             },
-            onCloseRequest: o.tEg,
+            onCloseRequest: s.tEg,
         },
     );
 }

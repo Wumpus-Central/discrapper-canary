@@ -1,44 +1,44 @@
 n.d(t, {
-    A: () => j,
+    A: () => O,
 });
 var r = n(627968),
     l = n(64700),
     i = n(311907),
-    a = n(397927),
-    s = n(442433),
+    s = n(397927),
+    a = n(442433),
     o = n(297413),
     c = n(439547),
     u = n(714114),
     d = n(729551),
-    f = n(178418),
-    p = n(87664),
-    h = n(290863),
-    b = n(939496),
-    g = n(652215),
-    m = n(996988),
+    p = n(178418),
+    h = n(87664),
+    f = n(290863),
+    g = n(939496),
+    m = n(652215),
+    b = n(996988),
     A = n(794904);
-let y = a._3J.SIZE_40,
-    O = (0, a.FT9)(y);
+let y = s._3J.SIZE_40,
+    _ = (0, s.FT9)(y);
 
-function j(e) {
-    let { user: t, status: j, guildId: v, channelId: x, onSelect: E } = e,
-        { theme: _, themeType: C } = (0, b.E)(),
-        S = l.useMemo(() => t.isNonUserBot() || (0, f.c)(t, x), [t, x]),
-        { activities: I, isMobileOnline: N } = (0, i.cf)([h.A], () => ({
-            activities: h.A.getActivities(t.id),
-            isMobileOnline: h.A.isMobileOnline(t.id),
+function O(e) {
+    let { user: t, status: O, guildId: j, channelId: v, onSelect: x } = e,
+        { theme: E, themeType: C } = (0, g.E)(),
+        S = l.useMemo(() => t.isNonUserBot() || (0, p.c)(t, v), [t, v]),
+        { activities: I, isMobileOnline: N } = (0, i.cf)([f.A], () => ({
+            activities: f.A.getActivities(t.id),
+            isMobileOnline: f.A.isMobileOnline(t.id),
         })),
-        T = (0, p.A)(t.id),
+        T = (0, h.A)(t.id),
         { voiceActivityStatusEnabled: P } = (0, c.g)({
             location: "UserProfileMutualFriendRow",
         }),
         { voiceChannel: w } = (0, u.A)({
             userId: P ? t.id : void 0,
-            guildId: v,
+            guildId: j,
         });
-    return (0, r.jsxs)(a.DUT, {
+    return (0, r.jsxs)(s.DUT, {
         focusProps:
-            C === m.d.MODAL_V2
+            C === b.d.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -52,10 +52,10 @@ function j(e) {
                       },
                   },
         className: A.nM,
-        onClick: E,
+        onClick: x,
         onContextMenu: (e) => {
-            (0, s.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("8893")]).then(
+            (0, a.L3)(e, async () => {
+                let { default: e } = await Promise.all([n.e("97262"), n.e("3795"), n.e("32418"), n.e("16938")]).then(
                     n.bind(n, 668569),
                 );
                 return (n) => {
@@ -109,12 +109,12 @@ function j(e) {
             });
         },
         children: [
-            (0, r.jsx)(a.euF, {
-                src: t.getAvatarURL(v, O),
+            (0, r.jsx)(s.euF, {
+                src: t.getAvatarURL(j, _),
                 "aria-label": t.username,
                 size: y,
-                status: S ? g.clD.UNKNOWN : j,
-                statusBackdropColor: S ? void 0 : (0, a.C$5)(_),
+                status: S ? m.clD.UNKNOWN : O,
+                statusBackdropColor: S ? void 0 : (0, s.C$5)(E),
                 isMobile: N,
                 className: A.my,
             }),

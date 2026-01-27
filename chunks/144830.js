@@ -1,52 +1,38 @@
 n.d(t, {
-    A: () => W,
+    A: () => k,
 }),
     n(896048),
     n(638769);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(990078),
+    l = n(503698),
+    s = n.n(l),
+    a = n(311907),
+    o = n(990078),
     c = n(397927),
-    u = n(442433),
-    d = n(212245),
-    f = n(964486),
+    d = n(442433),
+    u = n(212245),
+    _ = n(964486),
     p = n(793574),
-    _ = n(688810),
-    h = n(607470),
-    m = n(421838),
-    g = n(891540),
-    E = n(738011),
+    m = n(688810),
+    g = n(607470),
+    A = n(421838),
+    f = n(891540),
+    h = n(738011),
     b = n(954571),
-    y = n(486020),
-    O = n(661191),
-    A = n(965162),
-    v = n(957153),
-    S = n(577718),
-    I = n(652215),
-    T = n(897513),
-    C = n(339984),
-    N = n(788868),
-    R = n(985018),
-    w = n(151e3);
+    E = n(486020),
+    x = n(661191),
+    O = n(965162),
+    C = n(957153),
+    I = n(577718),
+    T = n(652215),
+    S = n(897513),
+    j = n(339984),
+    v = n(788868),
+    N = n(985018),
+    y = n(151e3);
 
-function P(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function D(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,90 +43,63 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function x(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function L(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let j = 25,
-    M = 720;
-
-function k() {
-    return [
-        {
-            name: R.intl.string(R.t["Sp2NF+"]),
-            extensions: ["jpg", "jpeg", "png", "gif", "mp4"],
-        },
-    ];
-}
-
-function U(e) {
+function R(e) {
     let {
         icon: t,
         onClick: n,
         text: i,
-        children: a,
-        className: o,
-        selected: l = !1,
-        disabled: u = !1,
-        onMouseLeave: d,
-        onBlur: f,
+        children: l,
+        className: a,
+        selected: o = !1,
+        disabled: d = !1,
+        onMouseLeave: u,
+        onBlur: _,
     } = e;
     return (0, r.jsxs)(c.DUT, {
-        className: s()(o, w.gf, {
-            [w.JI]: l,
-            [w.A7]: u,
+        className: s()(a, y.gf, {
+            [y.JI]: o,
+            [y.A7]: d,
         }),
-        onMouseLeave: d,
-        onBlur: f,
-        onClick: u ? void 0 : n,
+        onMouseLeave: u,
+        onBlur: _,
+        onClick: d ? void 0 : n,
         children: [
-            l
+            o
                 ? (0, r.jsx)("div", {
-                      className: w.SH,
+                      className: y.SH,
                   })
                 : null,
             (0, r.jsxs)("div", {
-                className: w.kV,
+                className: y.kV,
                 children: [
-                    a,
+                    l,
                     (0, r.jsxs)("div", {
-                        className: w.fP,
+                        className: y.fP,
                         children: [
                             (0, r.jsx)(t, {
-                                className: w.ob,
+                                className: y.ob,
                                 color: "currentColor",
                                 size: "custom",
                                 width: 18,
                                 height: 18,
                             }),
                             (0, r.jsx)(c.Text, {
-                                className: w.V7,
+                                className: y.V7,
                                 color: "none",
                                 variant: "text-sm/normal",
                                 children: i,
@@ -153,336 +112,356 @@ function U(e) {
     });
 }
 
-function G(e) {
-    let { option: t, source: n, isAnimated: a } = e,
-        [s, o] = i.useState(!1);
+function D(e) {
+    let { option: t, source: n, isAnimated: l } = e,
+        [s, a] = i.useState(!1);
     if (
         (i.useEffect(() => {
             new Image().src = n;
         }, [n]),
-        !a || null == t)
+        !l || null == t)
     )
         return (0, r.jsx)("div", {
-            className: w.PQ,
+            className: y.PQ,
             style: {
                 backgroundImage: "url(".concat(n, ")"),
             },
         });
-    let l = (0, y.Bo)({
+    let o = (0, E.Bo)({
         userId: t.user_id,
         assetId: t.id,
         assetHash: t.asset,
-        size: M,
+        size: 720,
         canAnimate: !1,
     });
     return (0, r.jsx)("img", {
-        onMouseMove: () => o(!0),
-        onMouseLeave: () => o(!1),
-        className: w.PQ,
-        src: s ? n : l,
+        onMouseMove: () => a(!0),
+        onMouseLeave: () => a(!1),
+        className: y.PQ,
+        src: s ? n : o,
         alt: t.id,
     });
 }
 
-function V(e) {
+function w(e) {
     let {
             option: t,
-            source: a,
-            selected: l = !1,
-            onSelectOption: f,
-            isAnimatedImage: y,
-            isVideo: O,
-            hotspotLocation: v,
+            source: l,
+            selected: o = !1,
+            onSelectOption: _,
+            isAnimatedImage: E,
+            isVideo: x,
+            hotspotLocation: C,
         } = e,
-        S = (0, d.p)(),
-        { analyticsLocations: T } = (0, _.Ay)(p.A.VIDEO_BACKGROUND_IMAGE_OPTION),
-        C = (0, o.bG)([g.A], () => null != v && g.A.hasHotspot(v)),
-        P = i.useCallback((e) => {
-            if (!(0, E.u)(e)) throw e;
+        I = (0, u.p)(),
+        { analyticsLocations: S } = (0, m.Ay)(p.A.VIDEO_BACKGROUND_IMAGE_OPTION),
+        j = (0, a.bG)([f.A], () => null != C && f.A.hasHotspot(C)),
+        R = i.useCallback((e) => {
+            if (!(0, h.u)(e)) throw e;
         }, []),
-        x = O
-            ? (0, r.jsx)(h.A, {
-                  className: w.PQ,
-                  src: a,
+        w = x
+            ? (0, r.jsx)(g.A, {
+                  className: y.PQ,
+                  src: l,
                   loop: !0,
                   playOnHover: !0,
                   muted: !0,
-                  onPlayError: P,
+                  onPlayError: R,
               })
-            : (0, r.jsx)(G, {
-                  isAnimated: y,
-                  option: (0, A.d1)(t) ? t : void 0,
-                  source: a,
+            : (0, r.jsx)(D, {
+                  isAnimated: E,
+                  option: (0, O.d1)(t) ? t : void 0,
+                  source: l,
               });
 
-    function j() {
-        null != v &&
-            C &&
-            (m.sF(v),
-            b.default.track(I.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: N.e.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
-                location: S.location,
-                location_stack: T,
+    function L() {
+        null != C &&
+            j &&
+            (A.sF(C),
+            b.default.track(T.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: v.e.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
+                location: I.location,
+                location_stack: S,
             }));
     }
     return (0, r.jsxs)(c.DUT, {
-        className: s()(w.gf, {
-            [w.JI]: l,
+        className: s()(y.gf, {
+            [y.JI]: o,
         }),
-        onClick: () => f(t),
+        onClick: () => _(t),
         onContextMenu: (e) =>
-            (0, u.L3)(e, async () => {
+            (0, d.L3)(e, async () => {
                 let { default: e } = await n.e("22305").then(n.bind(n, 5752));
-                return (n) =>
-                    (0, r.jsx)(
+                return (n) => {
+                    var i, l;
+                    return (0, r.jsx)(
                         e,
-                        L(D({}, n), {
-                            backgroundOption: t,
-                            optionIsInUse: l,
-                        }),
+                        ((i = P({}, n)),
+                        (l = l =
+                            {
+                                backgroundOption: t,
+                                optionIsInUse: o,
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(l)).forEach(function (e) {
+                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                              }),
+                        i),
                     );
+                };
             }),
         children: [
-            l
+            o
                 ? (0, r.jsx)("div", {
-                      className: w.SH,
+                      className: y.SH,
                   })
                 : null,
             (0, r.jsx)("div", {
-                onFocus: j,
-                onMouseEnter: j,
-                className: w.kV,
-                children: x,
+                onFocus: L,
+                onMouseEnter: L,
+                className: y.kV,
+                children: w,
             }),
-            O || y
+            x || E
                 ? (0, r.jsx)("div", {
-                      className: w.uZ,
+                      className: y.uZ,
                       children: (0, r.jsx)(c.udU, {
                           size: "xxs",
                           color: "currentColor",
                       }),
                   })
                 : null,
-            C &&
+            j &&
                 (0, r.jsx)(c.LpS, {
-                    text: R.intl.string(R.t.y2b7CA),
-                    className: w.$5,
+                    text: N.intl.string(N.t.y2b7CA),
+                    className: y.$5,
                 }),
         ],
     });
 }
 
-function F() {
+function L() {
     return (0, r.jsxs)("div", {
-        className: w.j1,
+        className: y.j1,
         children: [
             (0, r.jsx)(c.tvc, {
                 size: "md",
                 color: "currentColor",
-                className: w.eo,
+                className: y.eo,
             }),
             (0, r.jsx)(c.Text, {
                 variant: "text-sm/normal",
-                children: R.intl.string(R.t["T+yRY3"]),
+                children: N.intl.string(N.t["T+yRY3"]),
             }),
         ],
     });
 }
 
-function B(e) {
+function M(e) {
     let { onClick: t, tooltipText: n, disabled: i = !1 } = e,
-        a = (0, o.bG)([g.A], () => g.A.hasHotspot(T._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
+        l = (0, a.bG)([f.A], () => f.A.hasHotspot(S._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
 
     function s() {
-        m.sF(T._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
+        A.sF(S._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
-    let u = a ? R.intl.string(R.t["5TUJOv"]) : n;
-    return (0, r.jsx)(l.m, {
-        text: u,
+    let d = l ? N.intl.string(N.t["5TUJOv"]) : n;
+    return (0, r.jsx)(o.m, {
+        text: d,
         children: (0, r.jsxs)("div", {
-            className: w.$g,
+            className: y.$g,
             children: [
-                (0, r.jsxs)(U, {
-                    className: w.__invalid_backgroundOptionBlurred,
+                (0, r.jsxs)(R, {
+                    className: y.__invalid_backgroundOptionBlurred,
                     disabled: i,
                     icon: c.XGR,
                     onClick: t,
                     onMouseLeave: s,
                     onBlur: s,
                     text: (0, r.jsxs)("div", {
-                        className: w.Us,
+                        className: y.Us,
                         children: [
                             (0, r.jsx)(c.tvc, {
                                 size: "md",
                                 color: "currentColor",
-                                className: w.PK,
+                                className: y.PK,
                             }),
                             (0, r.jsx)("div", {
-                                className: w.kr,
-                                children: R.intl.string(R.t["1t7U8W"]),
+                                className: y.kr,
+                                children: N.intl.string(N.t["1t7U8W"]),
                             }),
                         ],
                     }),
                     children: [
                         (0, r.jsx)("div", {
-                            className: w.eD,
+                            className: y.eD,
                         }),
                         (0, r.jsx)("div", {
-                            className: w.G5,
+                            className: y.G5,
                         }),
                     ],
                 }),
-                a &&
+                l &&
                     (0, r.jsx)(c.LpS, {
-                        text: R.intl.string(R.t.y2b7CA),
-                        className: w.$5,
+                        text: N.intl.string(N.t.y2b7CA),
+                        className: y.$5,
                     }),
             ],
         }),
     });
 }
 
-function H(e) {
+function U(e) {
     let { onClick: t } = e,
-        n = (0, d.p)(),
-        { analyticsLocations: i } = (0, _.Ay)(p.A.VIDEO_BACKGROUND_CUSTOM_UPSELL);
+        n = (0, u.p)(),
+        { analyticsLocations: i } = (0, m.Ay)(p.A.VIDEO_BACKGROUND_CUSTOM_UPSELL);
     return (
-        (0, f.Ay)(() => {
-            b.default.track(I.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: N.e.VIDEO_BACKGROUNDS_INLINE,
+        (0, _.Ay)(() => {
+            b.default.track(T.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: v.e.VIDEO_BACKGROUNDS_INLINE,
                 location: n.location,
                 location_stack: i,
             });
         }),
-        (0, r.jsx)(B, {
+        (0, r.jsx)(M, {
             onClick: t,
-            tooltipText: R.intl.string(R.t["IqE0T/"]),
+            tooltipText: N.intl.string(N.t["IqE0T/"]),
         })
     );
 }
 
-function Y(e) {
+function G(e) {
     let { onAddBackgroundImage: t, disabled: i } = e,
-        a = (0, c.k34)(),
+        l = (0, c.k34)(),
         s = i
-            ? R.intl.formatToPlainString(R.t.ykGFeD, {
-                  maxCustomBackgrounds: j,
+            ? N.intl.formatToPlainString(N.t.ykGFeD, {
+                  maxCustomBackgrounds: 25,
               })
-            : R.intl.string(R.t.Qx0tFc),
-        o = k();
-
-    function l() {
-        (0, c.mMO)(
-            async () => {
-                let { default: e } = await Promise.all([n.e("79149"), n.e("53653"), n.e("92812")]).then(
-                    n.bind(n, 551028),
-                );
-                return (n) =>
-                    (0, r.jsx)(
-                        e,
-                        D(
-                            {
-                                maxFileSizeBytes: S.G9,
-                                onComplete: (e) => {
-                                    let { imageUri: n, file: r, isFromTenor: i } = e;
-                                    return t(n, r, i);
-                                },
-                                uploadType: C.HL.VIDEO_BACKGROUND,
-                                filters: o,
-                                modalTitle: R.intl.string(R.t.yG2pUi),
-                                imageSpecifications: R.intl.string(R.t["72OaxN"]),
-                                uploadOptionTitle: R.intl.string(R.t.xsW8u6),
-                                showUpsellHeader: !0,
-                            },
-                            n,
-                        ),
-                    );
-            },
+            : N.intl.string(N.t.Qx0tFc),
+        a = [
             {
-                contextKey: a,
+                name: N.intl.string(N.t["Sp2NF+"]),
+                extensions: ["jpg", "jpeg", "png", "gif", "mp4"],
             },
-        );
-    }
-    return (0, r.jsx)(B, {
+        ];
+    return (0, r.jsx)(M, {
         disabled: i,
-        onClick: l,
+        onClick: function () {
+            (0, c.mMO)(
+                async () => {
+                    let { default: e } = await Promise.all([n.e("79149"), n.e("53653"), n.e("92812")]).then(
+                        n.bind(n, 551028),
+                    );
+                    return (n) =>
+                        (0, r.jsx)(
+                            e,
+                            P(
+                                {
+                                    maxFileSizeBytes: I.G9,
+                                    onComplete: (e) => {
+                                        let { imageUri: n, file: r, isFromTenor: i } = e;
+                                        return t(n, r, i);
+                                    },
+                                    uploadType: j.HL.VIDEO_BACKGROUND,
+                                    filters: a,
+                                    modalTitle: N.intl.string(N.t.yG2pUi),
+                                    imageSpecifications: N.intl.string(N.t["72OaxN"]),
+                                    uploadOptionTitle: N.intl.string(N.t.xsW8u6),
+                                    showUpsellHeader: !0,
+                                },
+                                n,
+                            ),
+                        );
+                },
+                {
+                    contextKey: l,
+                },
+            );
+        },
         tooltipText: s,
     });
 }
 
-function W(e) {
+function k(e) {
     let {
             canUseCustomBackgrounds: t,
             customBackgroundOptions: n,
-            selectedOption: a,
-            onSelectOption: o,
-            onUpsellClick: u,
-            onAddBackgroundImage: d,
-            responsive: f = !0,
+            selectedOption: l,
+            onSelectOption: a,
+            onUpsellClick: d,
+            onAddBackgroundImage: u,
+            responsive: _ = !0,
         } = e,
-        h = i.useMemo(
+        g = i.useMemo(
             () =>
                 n.sort((e, t) =>
                     null == e.last_used || null == t.last_used
-                        ? O.default.compare(t.id, e.id)
+                        ? x.default.compare(t.id, e.id)
                         : new Date(t.last_used).getTime() - new Date(e.last_used).getTime(),
                 ),
             [n],
         ),
-        m = h.length >= j,
-        { analyticsLocations: g } = (0, _.Ay)(p.A.VIDEO_BACKGROUND_OPTIONS),
-        E = Object.values((0, v.A)()).sort((e, t) => S.sl[e.id] - S.sl[t.id]);
-    return (0, r.jsx)(_.f5, {
-        value: g,
+        A = g.length >= 25,
+        { analyticsLocations: f } = (0, m.Ay)(p.A.VIDEO_BACKGROUND_OPTIONS),
+        h = Object.values((0, C.A)()).sort((e, t) => I.sl[e.id] - I.sl[t.id]);
+    return (0, r.jsx)(m.f5, {
+        value: f,
         children: (0, r.jsxs)("div", {
-            className: s()(w.to, !f && w.mK),
+            className: s()(y.to, !_ && y.mK),
             children: [
-                (0, r.jsx)(U, {
-                    selected: null == a,
+                (0, r.jsx)(R, {
+                    selected: null == l,
                     icon: c.KTN,
-                    onClick: () => o(null),
-                    text: R.intl.string(R.t.fUdMeO),
+                    onClick: () => a(null),
+                    text: N.intl.string(N.t.fUdMeO),
                 }),
-                (0, r.jsx)(U, {
-                    selected: "blur" === a,
+                (0, r.jsx)(R, {
+                    selected: "blur" === l,
                     icon: c.fBX,
-                    onClick: () => o("blur"),
-                    text: R.intl.string(R.t.LhSyL8),
+                    onClick: () => a("blur"),
+                    text: N.intl.string(N.t.LhSyL8),
                     children: (0, r.jsx)("div", {
-                        className: w.LJ,
+                        className: y.LJ,
                     }),
                 }),
                 t
-                    ? (0, r.jsx)(Y, {
-                          onAddBackgroundImage: d,
-                          disabled: m,
+                    ? (0, r.jsx)(G, {
+                          onAddBackgroundImage: u,
+                          disabled: A,
                       })
-                    : (0, r.jsx)(H, {
-                          onClick: u,
+                    : (0, r.jsx)(U, {
+                          onClick: d,
                       }),
-                h.map((e) => {
-                    let t = (0, y.Bo)({
+                g.map((e) => {
+                    let t = (0, E.Bo)({
                         userId: e.user_id,
                         assetId: e.id,
                         assetHash: e.asset,
-                        size: M,
+                        size: 720,
                     });
                     return null == t
                         ? null
                         : (0, r.jsx)(
-                              l.m,
+                              o.m,
                               {
-                                  __unsupportedReactNodeAsText: (0, r.jsx)(F, {}),
-                                  "aria-label": R.intl.string(R.t["T+yRY3"]),
+                                  __unsupportedReactNodeAsText: (0, r.jsx)(L, {}),
+                                  "aria-label": N.intl.string(N.t["T+yRY3"]),
                                   children: (0, r.jsx)(
-                                      V,
+                                      w,
                                       {
                                           option: e,
                                           source: t,
-                                          selected: (0, A.d1)(a) && a.id === e.id,
-                                          onSelectOption: o,
-                                          isVideo: (0, y.q6)(e.asset),
-                                          isAnimatedImage: (0, y.VI)(e.asset),
+                                          selected: (0, O.d1)(l) && l.id === e.id,
+                                          onSelectOption: a,
+                                          isVideo: (0, E.q6)(e.asset),
+                                          isAnimatedImage: (0, E.VI)(e.asset),
                                       },
                                       e.id,
                                   ),
@@ -490,20 +469,20 @@ function W(e) {
                               e.id,
                           );
                 }),
-                E.map((e) => {
+                h.map((e) => {
                     let t = !0 === e.isVideo;
                     return (0, r.jsx)(
-                        l.m,
+                        o.m,
                         {
                             text: e.name,
                             "aria-label": e.name,
                             children: (0, r.jsx)(
-                                V,
+                                w,
                                 {
                                     option: e.id,
                                     source: e.source,
-                                    selected: a === e.id,
-                                    onSelectOption: o,
+                                    selected: l === e.id,
+                                    onSelectOption: a,
                                     isVideo: t,
                                     isAnimatedImage: !1,
                                     hotspotLocation: e.hotspotLocation,

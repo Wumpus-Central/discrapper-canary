@@ -5,31 +5,17 @@ n.d(t, {
     n(321073);
 var r = n(143236),
     i = n(723702),
-    a = n(837921),
+    l = n(837921),
     s = n(350535),
-    o = n(650583);
-
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let c = [],
-    u = (e, t, n) => {
+    a = n(650583);
+let o = [],
+    c = (e, t, n) => {
         let r = +!(0, i.isWindows)();
-        (e !== o.zY.MOUSE_BUTTON || n !== r) && c.forEach((r) => r._handleEvent(e, t, n));
+        (e !== a.zY.MOUSE_BUTTON || n !== r) && o.forEach((r) => r._handleEvent(e, t, n));
     };
 class d extends r.EventEmitter {
     destroy() {
-        this.removeAllListeners(), 0 === (c = c.filter((e) => e !== this)).length && a.Ay.setOnInputEventCallback(null);
+        this.removeAllListeners(), 0 === (o = o.filter((e) => e !== this)).length && l.Ay.setOnInputEventCallback(null);
     }
     toString() {
         return (0, s.dI)(this.combo);
@@ -43,6 +29,18 @@ class d extends r.EventEmitter {
             : (this.combo.push([e, n, (0, s._$)()]), this.emit("change", this));
     }
     constructor() {
-        super(), l(this, "combo", []), c.push(this), 1 === c.length && a.Ay.setOnInputEventCallback(u);
+        super(),
+            (function (e, t, n) {
+                t in e
+                    ? Object.defineProperty(e, t, {
+                          value: n,
+                          enumerable: !0,
+                          configurable: !0,
+                          writable: !0,
+                      })
+                    : (e[t] = n);
+            })(this, "combo", []),
+            o.push(this),
+            1 === o.length && l.Ay.setOnInputEventCallback(c);
     }
 }

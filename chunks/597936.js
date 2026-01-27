@@ -1,22 +1,21 @@
 n.d(t, {
     BN: () => c,
-    li: () => f,
+    li: () => E,
 });
 var r = n(989349),
     i = n.n(r),
-    a = n(335871),
-    s = n(594061),
-    o = n(617617),
-    l = n(431162);
+    l = n(335871),
+    o = n(594061),
+    a = n(617617),
+    s = n(431162);
 let c = (e) => {
         var t;
-        if (!d(e)) return !1;
-        let n = null == (t = o.A.settings.userContent) ? void 0 : t.safetyUserSentimentNoticeDismissedAt,
-            r = null != n ? a.D.toDate(n) : void 0,
-            s = null != r ? i()().diff(r, "days") : null,
-            c = null != s && s > 30;
-        if (null != n && !c) return !1;
-        let { isEligible: u } = l.O.getCurrentConfig(
+        if (!u(e)) return !1;
+        let n = null == (t = a.A.settings.userContent) ? void 0 : t.safetyUserSentimentNoticeDismissedAt,
+            r = null != n ? l.D.toDate(n) : void 0,
+            o = null != r ? i()().diff(r, "days") : null;
+        if (null != n && !(null != o && o > 30)) return !1;
+        let { isEligible: c } = s.O.getCurrentConfig(
             {
                 location: "657a81_1",
             },
@@ -24,17 +23,16 @@ let c = (e) => {
                 autoTrackExposure: !0,
             },
         );
-        return u;
+        return c;
     },
-    u = 2592e6,
-    d = (e) => null != e && Date.now() - e.createdAt.getTime() > u,
-    f = () => {
-        let e = a.D.now();
-        s.wc.updateAsync(
+    u = (e) => null != e && Date.now() - e.createdAt.getTime() > 2592e6,
+    E = () => {
+        let e = l.D.now();
+        o.wc.updateAsync(
             "userContent",
             (t) => {
                 t.safetyUserSentimentNoticeDismissedAt = e;
             },
-            s.Sb.INFREQUENT_USER_ACTION,
+            o.Sb.INFREQUENT_USER_ACTION,
         );
     };

@@ -1,80 +1,52 @@
 n.d(t, {
-    A: () => _,
+    A: () => p,
 });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
+    l = n.n(i),
     s = n(397927),
-    o = n(366999),
-    l = n(927578),
+    a = n(366999),
+    o = n(927578),
     c = n(788868),
-    u = n(985018),
-    d = n(802937);
+    d = n(985018),
+    u = n(802937);
 
-function f(e) {
-    return (0, r.jsxs)("div", {
-        className: d.Bh,
-        children: [
-            (0, r.jsx)("div", {
-                className: d.xt,
-                children: (0, r.jsx)(s.tvc, {
-                    size: "md",
-                    color: "white",
-                    className: d.T8,
-                }),
-            }),
-            (0, r.jsx)("div", {
-                className: d.pt,
-                children: (0, r.jsx)(s.Heading, {
-                    variant: "heading-md/semibold",
-                    children: u.intl.string(u.t.DFMPWS),
-                }),
-            }),
-            (0, r.jsx)(s.Text, {
-                className: d.PJ,
-                variant: "text-md/semibold",
-                children: e.length > 0 ? e : u.intl.string(u.t["B66Z+f"]),
-            }),
-        ],
-    });
-}
-
-function p(e) {
-    let { showChargingUpState: t, rowValueText: n, endsAt: i, fractionalState: o, activationDate: l } = e,
-        f = t ? u.intl.string(u.t["hT6i/0"]) : u.intl.string(u.t["3G0CTC"]),
+function _(e) {
+    let { showChargingUpState: t, rowValueText: n, endsAt: i, fractionalState: a, activationDate: o } = e,
+        _ = t ? d.intl.string(d.t["hT6i/0"]) : d.intl.string(d.t["3G0CTC"]),
         p = t
-            ? void 0 === l
+            ? void 0 === o
                 ? null
-                : u.intl.format(u.t["0Vwb/l"], {
-                      activateDate: l,
+                : d.intl.format(d.t["0Vwb/l"], {
+                      activateDate: o,
                   })
-            : o === c.xc.FP_SUB_PAUSED
-              ? u.intl.format(u.t.MMvaIG, {
+            : a === c.xc.FP_SUB_PAUSED
+              ? d.intl.format(d.t.MMvaIG, {
                     resumeDate: i.toDate(),
                 })
               : null,
-        _ = a()({
-            [d.Hs]: t,
-            [d.mT]: !t,
+        m = l()({
+            [u.Hs]: t,
+            [u.mT]: !t,
         }),
-        h = a()({
-            [d.CQ]: t,
-            [d.ZM]: !t,
+        g = l()({
+            [u.CQ]: t,
+            [u.ZM]: !t,
         }),
-        m = a()({
-            [d.EM]: !t,
+        A = l()({
+            [u.EM]: !t,
         });
     return (0, r.jsxs)("div", {
-        className: d.r6,
+        className: u.r6,
         children: [
             (0, r.jsxs)("div", {
-                className: d.Nv,
+                className: u.Nv,
                 children: [
                     (0, r.jsx)(s.Heading, {
                         variant: "heading-md/semibold",
-                        className: m,
-                        children: f,
+                        className: A,
+                        children: _,
                     }),
                     null !== p &&
                         (0, r.jsx)(s.Text, {
@@ -84,12 +56,12 @@ function p(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: d.ZS,
+                className: u.ZS,
                 children: (0, r.jsx)("div", {
-                    className: _,
+                    className: m,
                     children: (0, r.jsx)(s.Text, {
                         variant: "text-sm/semibold",
-                        className: h,
+                        className: g,
                         children: n,
                     }),
                 }),
@@ -97,23 +69,47 @@ function p(e) {
         ],
     });
 }
-let _ = function (e) {
+let p = function (e) {
     let { fractionalPremiumInfo: t, className: n, activationDate: i } = e,
-        s = (0, l.kX)(t),
-        c = s.length > 0,
-        u = (0, o.Ay)(t.endsAt, o.yE.SHORT_TIME),
-        _ = c ? s : u;
+        c = (0, o.kX)(t),
+        p = c.length > 0,
+        m = (0, a.Ay)(t.endsAt, a.yE.SHORT_TIME),
+        g = p ? c : m;
     return (0, r.jsx)("div", {
         children: (0, r.jsxs)("div", {
-            className: a()(n, d.f8),
+            className: l()(n, u.f8),
             children: [
                 (0, r.jsx)("div", {
-                    className: d.J_,
-                    children: f(s),
+                    className: u.J_,
+                    children: (0, r.jsxs)("div", {
+                        className: u.Bh,
+                        children: [
+                            (0, r.jsx)("div", {
+                                className: u.xt,
+                                children: (0, r.jsx)(s.tvc, {
+                                    size: "md",
+                                    color: "white",
+                                    className: u.T8,
+                                }),
+                            }),
+                            (0, r.jsx)("div", {
+                                className: u.pt,
+                                children: (0, r.jsx)(s.Heading, {
+                                    variant: "heading-md/semibold",
+                                    children: d.intl.string(d.t.DFMPWS),
+                                }),
+                            }),
+                            (0, r.jsx)(s.Text, {
+                                className: u.PJ,
+                                variant: "text-md/semibold",
+                                children: c.length > 0 ? c : d.intl.string(d.t["B66Z+f"]),
+                            }),
+                        ],
+                    }),
                 }),
-                (0, r.jsx)(p, {
-                    showChargingUpState: c,
-                    rowValueText: _,
+                (0, r.jsx)(_, {
+                    showChargingUpState: p,
+                    rowValueText: g,
                     endsAt: t.endsAt,
                     fractionalState: t.fractionalState,
                     activationDate: i,

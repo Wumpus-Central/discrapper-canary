@@ -18,7 +18,7 @@ function a(e, t, n) {
     );
 }
 
-function s(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function s(e) {
     return e;
 }
 
-function o(e, t) {
+function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function l(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : o(Object(t)).forEach(function (n) {
+            : s(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -65,20 +65,22 @@ function u(e) {
     let {
         giftRecipient: t,
         onClose: a,
-        analyticsLocations: o,
+        analyticsLocations: s,
         analyticsLocation: u,
         analyticsObject: d,
         giftMessage: f,
     } = e;
     return (0, i.mMO)(
         async () => {
-            let { default: e } = await Promise.all([n.e("29716"), n.e("13696"), n.e("55926")]).then(n.bind(n, 653813));
+            let { default: e } = await Promise.all([n.e("2292"), n.e("29716"), n.e("13696"), n.e("91075")]).then(
+                n.bind(n, 653813),
+            );
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    l(s({}, n), {
+                    l(o({}, n), {
                         giftRecipient: t,
-                        analyticsLocations: o,
+                        analyticsLocations: s,
                         analyticsLocation: u,
                         analyticsObject: d,
                         giftMessage: f,

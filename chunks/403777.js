@@ -7,8 +7,8 @@ var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(73153),
-    s = n(272355),
-    o = n(267102),
+    o = n(272355),
+    s = n(267102),
     l = n(287809),
     c = n(958805),
     u = n(61881),
@@ -81,7 +81,7 @@ async function E(e) {
     var t;
     let {
             userId: a,
-            tabSection: s,
+            tabSection: o,
             scrollTarget: f,
             guildId: h,
             channelId: E,
@@ -112,11 +112,13 @@ async function E(e) {
                 let e = (
                     await Promise.all([
                         n.e("10614"),
-                        n.e("42944"),
+                        n.e("28936"),
+                        n.e("17122"),
                         n.e("10117"),
                         n.e("13696"),
-                        n.e("38663"),
-                        n.e("64228"),
+                        n.e("94682"),
+                        n.e("49282"),
+                        n.e("63974"),
                     ]).then(n.bind(n, 293071))
                 ).default;
                 return (t) =>
@@ -127,7 +129,7 @@ async function E(e) {
                                 user: I,
                                 currentUser: S,
                                 guildId: h,
-                                initialTabSection: s,
+                                initialTabSection: o,
                                 initialScrollTarget: f,
                                 channelId: E,
                                 showGuildProfile: y,
@@ -141,7 +143,7 @@ async function E(e) {
             },
             {
                 modalKey: T,
-                contextKey: (0, i.TId)(null != (t = null != b ? b : (0, o.zd)()) ? t : d.BRT.APP),
+                contextKey: (0, i.TId)(null != (t = null != b ? b : (0, s.zd)()) ? t : d.BRT.APP),
                 onCloseRequest: () => {
                     u.A.hasUnsavedChanges()
                         ? c.A.notifyUnsavedWidgets()
@@ -158,7 +160,7 @@ function y() {
         m.clear(), c.A.clearPendingWidgets();
     }
 }
-class b extends s.A {
+class b extends o.A {
     _initialize() {
         a.h.subscribe("USER_PROFILE_MODAL_OPEN", E), a.h.subscribe("USER_PROFILE_MODAL_CLOSE", y);
     }

@@ -1,126 +1,127 @@
 n.d(t, {
-    A: () => S,
+    A: () => P,
 }),
     n(321073),
     n(896048);
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(960488),
-    o = n(311907),
-    l = n(314116),
+    l = n.n(i);
+if (21552 == n.j) var o = n(960488);
+var a = n(311907),
+    s = n(314116),
     c = n(397927),
     u = n(71393),
-    d = n(967198),
-    f = n(624458),
-    p = n(202384),
-    _ = n(513461),
-    h = n(709977),
-    m = n(212455),
-    g = n(652215),
-    E = n(746080),
-    b = n(985018),
-    y = n(121615),
-    O = n(1624);
-
-function A(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function v(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                A(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let S = () => {
-    var e, t;
-    let i = (0, o.bG)([d.A], () => d.A.getGuildId(), []),
-        A = (0, o.bG)([u.A], () => u.A.getGuild(i), [i]),
-        S = (0, o.bG)([m.A], () => (null != i ? m.A.getRequest(i) : null), [i]),
-        I = (0, s.zy)(),
-        T =
-            (null == (t = (0, s.B6)(I.pathname, g.BVt.CHANNEL(null == A ? void 0 : A.id, E.VV.GUILD_ONBOARDING)))
-                ? void 0
-                : t.isExact) === !0;
-    if (null == A || !(0, h.Qd)(A) || T) return null;
-    let C = () => {
-            (0, p.Ze)(A.id);
-        },
-        N = () => {
-            (0, l.A)({
-                title: b.intl.string(b.t.aIz1oV),
-                subtitle: b.intl.string(b.t["13tjTU"]),
-                variant: "primary",
-                confirmText: b.intl.string(b.t["cY+Oob"]),
-                onConfirm: () => f.A.removeGuildJoinRequest(A.id),
-            });
-        },
-        R = () => {
-            (0, c.mMO)(async () => {
-                let { default: e } = await n.e("37548").then(n.bind(n, 856103));
-                return (t) =>
-                    (0, r.jsx)(
-                        e,
-                        v(
-                            {
-                                guildId: A.id,
-                            },
-                            t,
-                        ),
-                    );
-            });
-        },
-        w = null != (e = null == S ? void 0 : S.applicationStatus) ? e : _.B5.STARTED,
-        P = null,
-        D = null,
-        x = null,
-        L = [y.lm, O.lm];
-    switch (w) {
-        case _.B5.SUBMITTED:
-            (P = b.intl.string(b.t["5iLvSx"])), (D = b.intl.string(b.t.mqtdmQ)), (x = N);
-            break;
-        case _.B5.REJECTED:
-            (P = b.intl.string(b.t.lk30cY)), (D = b.intl.string(b.t["8RrsHr"])), (x = R), L.push(y.z3);
-            break;
-        default:
-            (P = b.intl.string(b.t.G5YKXP)), (D = b.intl.string(b.t["r8/DT+"])), (x = C);
-    }
-    return (0, r.jsxs)("div", {
-        className: a()(...L),
-        children: [
-            (0, r.jsx)(c.Text, {
-                className: y.wx,
-                variant: "text-sm/normal",
-                children: P,
-            }),
-            (0, r.jsx)(c.Button, {
-                variant: "overlay-primary",
-                size: "sm",
-                onClick: x,
-                text: D,
-            }),
-        ],
-    });
-};
+    E = n(967198),
+    d = n(624458),
+    _ = n(202384),
+    T = n(513461),
+    A = n(709977),
+    I = n(212455),
+    O = n(652215),
+    N = n(746080),
+    p = n(985018),
+    R = n(121615),
+    S = n(1624);
+let P =
+    21552 == n.j
+        ? () => {
+              var e, t;
+              let i = (0, a.bG)([E.A], () => E.A.getGuildId(), []),
+                  P = (0, a.bG)([u.A], () => u.A.getGuild(i), [i]),
+                  y = (0, a.bG)([I.A], () => (null != i ? I.A.getRequest(i) : null), [i]),
+                  f = (0, o.zy)(),
+                  C =
+                      (null ==
+                      (t = (0, o.B6)(f.pathname, O.BVt.CHANNEL(null == P ? void 0 : P.id, N.VV.GUILD_ONBOARDING)))
+                          ? void 0
+                          : t.isExact) === !0;
+              if (null == P || !(0, A.Qd)(P) || C) return null;
+              let D = null != (e = null == y ? void 0 : y.applicationStatus) ? e : T.B5.STARTED,
+                  m = null,
+                  g = null,
+                  h = null,
+                  U = [R.lm, S.lm];
+              switch (D) {
+                  case T.B5.SUBMITTED:
+                      (m = p.intl.string(p.t["5iLvSx"])),
+                          (g = p.intl.string(p.t.mqtdmQ)),
+                          (h = () => {
+                              (0, s.A)({
+                                  title: p.intl.string(p.t.aIz1oV),
+                                  subtitle: p.intl.string(p.t["13tjTU"]),
+                                  variant: "primary",
+                                  confirmText: p.intl.string(p.t["cY+Oob"]),
+                                  onConfirm: () => d.A.removeGuildJoinRequest(P.id),
+                              });
+                          });
+                      break;
+                  case T.B5.REJECTED:
+                      (m = p.intl.string(p.t.lk30cY)),
+                          (g = p.intl.string(p.t["8RrsHr"])),
+                          (h = () => {
+                              (0, c.mMO)(async () => {
+                                  let { default: e } = await n.e("37548").then(n.bind(n, 856103));
+                                  return (t) =>
+                                      (0, r.jsx)(
+                                          e,
+                                          (function (e) {
+                                              for (var t = 1; t < arguments.length; t++) {
+                                                  var n = null != arguments[t] ? arguments[t] : {},
+                                                      r = Object.keys(n);
+                                                  "function" == typeof Object.getOwnPropertySymbols &&
+                                                      (r = r.concat(
+                                                          Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                          }),
+                                                      )),
+                                                      r.forEach(function (t) {
+                                                          var r;
+                                                          (r = n[t]),
+                                                              t in e
+                                                                  ? Object.defineProperty(e, t, {
+                                                                        value: r,
+                                                                        enumerable: !0,
+                                                                        configurable: !0,
+                                                                        writable: !0,
+                                                                    })
+                                                                  : (e[t] = r);
+                                                      });
+                                              }
+                                              return e;
+                                          })(
+                                              {
+                                                  guildId: P.id,
+                                              },
+                                              t,
+                                          ),
+                                      );
+                              });
+                          }),
+                          U.push(R.z3);
+                      break;
+                  default:
+                      (m = p.intl.string(p.t.G5YKXP)),
+                          (g = p.intl.string(p.t["r8/DT+"])),
+                          (h = () => {
+                              (0, _.Ze)(P.id);
+                          });
+              }
+              return (0, r.jsxs)("div", {
+                  className: l()(...U),
+                  children: [
+                      (0, r.jsx)(c.Text, {
+                          className: R.wx,
+                          variant: "text-sm/normal",
+                          children: m,
+                      }),
+                      (0, r.jsx)(c.Button, {
+                          variant: "overlay-primary",
+                          size: "sm",
+                          onClick: h,
+                          text: g,
+                      }),
+                  ],
+              });
+          }
+        : null;

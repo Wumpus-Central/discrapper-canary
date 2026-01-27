@@ -3,30 +3,28 @@ n.d(t, {
 });
 var r = n(311907),
     i = n(899847),
-    a = n(842144);
+    l = n(842144);
 
 function s(e, t, n, s) {
-    let { comparator: l = (e, t) => e === t } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-        c = (r) => {
+    var a, o;
+    let { comparator: c = (e, t) => e === t } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+        d = (r) => {
             var i, s;
-            return n(null == (s = a.A.getSettings(r)) || null == (i = s[e]) ? void 0 : i[t]);
-        },
-        u = (e) => (0, r.bG)([a.A], () => c(e), [e], l);
+            return n(null == (s = l.A.getSettings(r)) || null == (i = s[e]) ? void 0 : i[t]);
+        };
     return {
-        getControlledSetting: c,
-        updateControlledSetting: o(c, (n, r) =>
-            null == n
-                ? Promise.resolve()
-                : i.Ay.updateTeenSettings(n, e, (e) => {
-                      e[t] = s(r, e[t]);
-                  }),
-        ),
-        useControlledSetting: u,
-    };
-}
-
-function o(e, t) {
-    return function (n, r) {
-        return "function" == typeof r ? t(n, r(e(n))) : t(n, r);
+        getControlledSetting: d,
+        updateControlledSetting:
+            ((a = d),
+            (o = (n, r) =>
+                null == n
+                    ? Promise.resolve()
+                    : i.Ay.updateTeenSettings(n, e, (e) => {
+                          e[t] = s(r, e[t]);
+                      })),
+            function (e, t) {
+                return "function" == typeof t ? o(e, t(a(e))) : o(e, t);
+            }),
+        useControlledSetting: (e) => (0, r.bG)([l.A], () => d(e), [e], c),
     };
 }

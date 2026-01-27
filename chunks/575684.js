@@ -1,49 +1,50 @@
 n.d(t, {
-    A: () => m,
+    A: () => A,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
+    l = n(311907),
     s = n(212245),
-    o = n(195043),
-    l = n(329551),
+    a = n(195043),
+    o = n(329551),
     c = n(987384),
-    u = n(413339),
-    d = n(520999),
-    f = n(430452),
+    d = n(413339),
+    u = n(520999),
+    _ = n(430452),
     p = n(287809),
-    _ = n(531525),
-    h = n(652215);
+    m = n(531525),
+    g = n(652215);
 
-function m(e) {
+function A(e) {
     let { isRedesign: t = !1 } = e,
         n = (0, s.p)(),
-        m = i.useRef(!1),
-        g = (0, a.bG)([f.A], () => f.A.getVideoDeviceId()),
-        [E, b] = i.useState((0, l.i)(p.default.getCurrentUser())),
-        y = i.useRef(E);
-    i.useEffect(
-        () => () => {
-            m.current && (0, c._C)(y.current);
-        },
-        [],
+        A = i.useRef(!1),
+        f = (0, l.bG)([_.A], () => _.A.getVideoDeviceId()),
+        [h, b] = i.useState((0, o.i)(p.default.getCurrentUser())),
+        E = i.useRef(h);
+    return (
+        i.useEffect(
+            () => () => {
+                A.current && (0, c._C)(E.current);
+            },
+            [],
+        ),
+        (0, r.jsx)(a.x, {
+            setting: m.H.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
+            children: (0, r.jsx)(u.A, {
+                selectedBackgroundOption: h,
+                onSelectBackgroundOption: (e) => {
+                    (A.current = !0),
+                        (E.current = e),
+                        b(e),
+                        (0, d.gB)(e, {
+                            location: n.location,
+                        }).catch(g.tEg);
+                },
+                currentDeviceId: f,
+                responsiveBackgroundOptions: t,
+            }),
+        })
     );
-    let O = (e) => {
-        (m.current = !0),
-            (y.current = e),
-            b(e),
-            (0, u.gB)(e, {
-                location: n.location,
-            }).catch(h.tEg);
-    };
-    return (0, r.jsx)(o.x, {
-        setting: _.H.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
-        children: (0, r.jsx)(d.A, {
-            selectedBackgroundOption: E,
-            onSelectBackgroundOption: O,
-            currentDeviceId: g,
-            responsiveBackgroundOptions: t,
-        }),
-    });
 }

@@ -1,39 +1,39 @@
-n.d(t, {
-    A: () => v,
+l.d(t, {
+    A: () => y,
 }),
-    n(321073),
-    n(896048);
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(158954),
-    l = n(311907),
-    c = n(73939),
-    u = n(397927),
-    d = n(618167),
-    f = n(166403),
-    p = n(661191),
-    _ = n(985018),
-    h = n(199326);
+    l(321073),
+    l(896048);
+var n = l(627968),
+    r = l(64700),
+    i = l(503698),
+    s = l.n(i),
+    a = l(158954),
+    o = l(311907),
+    u = l(73939),
+    c = l(397927),
+    d = l(618167),
+    m = l(166403),
+    x = l(661191),
+    g = l(985018),
+    h = l(199326);
 
-function m(e) {
-    let { imageClass: t, children: n, error: i } = e;
-    return (0, r.jsxs)("div", {
+function j(e) {
+    let { imageClass: t, children: l, error: r } = e;
+    return (0, n.jsxs)("div", {
         className: h.Qs,
         children: [
-            (0, r.jsx)("div", {
+            (0, n.jsx)("div", {
                 className: s()(h.Sl, t),
             }),
-            n,
-            (0, r.jsx)(c.F, {
+            l,
+            (0, n.jsx)(u.F, {
                 children:
-                    null != i
-                        ? (0, r.jsx)(u.FQk, {
+                    null != r
+                        ? (0, n.jsx)(c.FQk, {
                               className: h.z3,
-                              children: (0, r.jsx)(o.wx6, {
+                              children: (0, n.jsx)(a.wx6, {
                                   type: "critical",
-                                  children: i.message,
+                                  children: r.message,
                               }),
                           })
                         : null,
@@ -41,26 +41,26 @@ function m(e) {
         ],
     });
 }
-let g = (e) => {
+let p = (e) => {
     let { canceledCount: t } = e,
-        n = (0, l.bG)([f.A], () => f.A.getPremiumTypeSubscription());
-    return null == n
+        l = (0, o.bG)([m.A], () => m.A.getPremiumTypeSubscription());
+    return null == l
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, n.jsxs)("div", {
               className: h.v,
               children: [
-                  (0, r.jsx)(u.EpV, {
+                  (0, n.jsx)(c.EpV, {
                       size: "custom",
                       width: 20,
                       height: 20,
                       color: "currentColor",
                       className: h.kK,
                   }),
-                  (0, r.jsx)(u.Text, {
+                  (0, n.jsx)(c.Text, {
                       variant: "text-md/normal",
                       className: h.at,
-                      children: _.intl.format(_.t.SFpsCH, {
-                          date: n.currentPeriodEnd,
+                      children: g.intl.format(g.t.SFpsCH, {
+                          date: l.currentPeriodEnd,
                           canceledCount: t,
                       }),
                   }),
@@ -68,198 +68,193 @@ let g = (e) => {
           });
 };
 
-function E(e) {
-    let { imageClass: t, blurb: n, guild: i, warning: a, error: s, slotCount: o = 1, canceledCount: l = 0 } = e;
-    return (0, r.jsxs)(m, {
+function C(e) {
+    let { imageClass: t, blurb: l, guild: r, warning: i, error: s, slotCount: a = 1, canceledCount: o = 0 } = e;
+    return (0, n.jsxs)(j, {
         imageClass: t,
         error: s,
         children: [
-            (0, r.jsx)(u.Text, {
+            (0, n.jsx)(c.Text, {
                 variant: "text-md/normal",
-                children: n,
+                children: l,
             }),
-            (0, r.jsx)(d.A, {
+            (0, n.jsx)(d.A, {
                 className: h.w_,
-                guild: i,
-                subscriptionChange: o,
+                guild: r,
+                subscriptionChange: a,
             }),
-            (0, r.jsx)(u.Text, {
+            (0, n.jsx)(c.Text, {
                 variant: "text-md/normal",
-                children: a,
+                children: i,
             }),
-            l > 0
-                ? (0, r.jsx)(g, {
-                      canceledCount: l,
+            o > 0
+                ? (0, n.jsx)(p, {
+                      canceledCount: o,
                   })
                 : null,
         ],
     });
 }
 
-function b(e) {
-    var t, n;
-    let { imageClass: a, blurb: s, fromGuilds: o, toGuild: l, error: c, slotCount: f = 1, canceledCount: E = 0 } = e,
-        b = i.useRef(o),
-        y = null == (t = b.current) ? void 0 : t.length,
-        O =
-            null == (n = b.current)
+function f(e) {
+    var t, l;
+    let { imageClass: i, blurb: s, fromGuilds: a, toGuild: o, error: u, slotCount: m = 1, canceledCount: C = 0 } = e,
+        f = r.useRef(a),
+        v = null == (t = f.current) ? void 0 : t.length,
+        y =
+            null == (l = f.current)
                 ? void 0
-                : n.reduce((e, t) => (e.hasOwnProperty(t.id) || (e[t.id] = []), e[t.id].push(t), e), {});
-    return (0, r.jsxs)(m, {
-        imageClass: a,
-        error: c,
+                : l.reduce((e, t) => (e.hasOwnProperty(t.id) || (e[t.id] = []), e[t.id].push(t), e), {});
+    return (0, n.jsxs)(j, {
+        imageClass: i,
+        error: u,
         children: [
-            (0, r.jsx)(u.Text, {
+            (0, n.jsx)(c.Text, {
                 variant: "text-md/normal",
                 children: s,
             }),
-            (0, r.jsx)(u.Text, {
+            (0, n.jsx)(c.Text, {
                 variant: "text-xs/bold",
                 className: h._N,
-                children: _.intl.format(_.t["5zQYEz"], {
-                    guildCount: null != y ? y : 0,
+                children: g.intl.format(g.t["5zQYEz"], {
+                    guildCount: null != v ? v : 0,
                 }),
             }),
-            null != O
-                ? p.default.keys(O).map((e) =>
-                      (0, r.jsx)(
+            null != y
+                ? x.default.keys(y).map((e) =>
+                      (0, n.jsx)(
                           d.A,
                           {
                               className: h.vW,
-                              guild: O[e][0],
-                              subscriptionChange: -1 * O[e].length,
+                              guild: y[e][0],
+                              subscriptionChange: -1 * y[e].length,
                           },
                           e,
                       ),
                   )
                 : null,
-            (0, r.jsx)(u.Text, {
+            (0, n.jsx)(c.Text, {
                 variant: "text-xs/normal",
                 className: h._N,
-                children: _.intl.format(_.t.ct6oxD, {
-                    slotCount: f,
+                children: g.intl.format(g.t.ct6oxD, {
+                    slotCount: m,
                 }),
             }),
-            (0, r.jsx)("div", {
+            (0, n.jsx)("div", {
                 className: h.Vh,
-                children: (0, r.jsx)(d.A, {
+                children: (0, n.jsx)(d.A, {
                     className: h.uK,
-                    guild: l,
-                    subscriptionChange: null != o ? o.length : 1,
+                    guild: o,
+                    subscriptionChange: null != a ? a.length : 1,
                 }),
             }),
-            E > 0
-                ? (0, r.jsx)(g, {
-                      canceledCount: E,
+            C > 0
+                ? (0, n.jsx)(p, {
+                      canceledCount: C,
                   })
                 : null,
         ],
     });
 }
-
-function y(e) {
-    let { confirmation: t, confirmationLabel: n, isModifyingSubscription: i, onConfirm: a, onCancel: s } = e;
-    return (0, r.jsx)("div", {
-        className: h.qr,
-        children: (0, r.jsxs)(u.ButtonGroup, {
-            direction: "horizontal-reverse",
-            children: [
-                (0, r.jsx)(u.Button, {
-                    variant: "primary",
-                    text: t,
-                    onClick: a,
-                    loading: i,
-                    "aria-label": n,
-                }),
-                (0, r.jsx)(u.Button, {
-                    variant: "secondary",
-                    text: _.intl.string(_.t["ETE/oC"]),
-                    onClick: s,
-                    disabled: i,
-                }),
-            ],
-        }),
-    });
-}
-
-function O(e, t, n, r, i) {
-    return [
-        {
-            variant: "secondary",
-            text: _.intl.string(_.t["ETE/oC"]),
-            onClick: i,
-            disabled: n,
-        },
-        {
-            variant: "primary",
-            text: e,
-            onClick: r,
-            loading: n,
-            "aria-label": t,
-        },
-    ];
-}
-let A = (e) => {
+let v = (e) => {
     let {
             transitionState: t,
-            onClose: n,
-            title: i,
-            subtitle: a,
+            onClose: l,
+            title: r,
+            subtitle: i,
             imageClass: s,
-            guild: l,
-            warning: c,
-            slotCount: u = 1,
+            guild: o,
+            warning: u,
+            slotCount: c = 1,
             canceledCount: d = 0,
-            isTransfer: f = !1,
-            fromGuilds: p,
-            toGuild: _,
-            confirmation: h,
-            confirmationLabel: m,
-            isModifyingSubscription: g,
+            isTransfer: m = !1,
+            fromGuilds: x,
+            toGuild: h,
+            confirmation: j,
+            confirmationLabel: p,
+            isModifyingSubscription: v,
             onConfirm: y,
-            onCancel: A,
-            error: v,
+            onCancel: b,
+            error: S,
         } = e,
-        S = O(h, m, g, y, A),
-        I = () =>
-            f && null != _
-                ? (0, r.jsx)(b, {
-                      imageClass: null != s ? s : "",
-                      blurb: a,
-                      fromGuilds: p,
-                      toGuild: _,
-                      error: v,
-                      slotCount: u,
-                      canceledCount: d,
-                  })
-                : null != l
-                  ? (0, r.jsx)(E, {
-                        imageClass: null != s ? s : "",
-                        blurb: a,
-                        guild: l,
-                        warning: c,
-                        error: v,
-                        slotCount: u,
-                        canceledCount: d,
-                    })
-                  : null;
-    return (0, r.jsxs)(o.dWK, {
+        O = [
+            {
+                variant: "secondary",
+                text: g.intl.string(g.t["ETE/oC"]),
+                onClick: b,
+                disabled: v,
+            },
+            {
+                variant: "primary",
+                text: j,
+                onClick: y,
+                loading: v,
+                "aria-label": p,
+            },
+        ];
+    return (0, n.jsxs)(a.dWK, {
         transitionState: t,
-        onClose: n,
+        onClose: l,
         size: "sm",
         children: [
-            (0, r.jsx)(o.rQ0, {
-                title: i,
+            (0, n.jsx)(a.rQ0, {
+                title: r,
             }),
-            (0, r.jsx)(o.cwr, {
-                children: I(),
+            (0, n.jsx)(a.cwr, {
+                children:
+                    m && null != h
+                        ? (0, n.jsx)(f, {
+                              imageClass: null != s ? s : "",
+                              blurb: i,
+                              fromGuilds: x,
+                              toGuild: h,
+                              error: S,
+                              slotCount: c,
+                              canceledCount: d,
+                          })
+                        : null != o
+                          ? (0, n.jsx)(C, {
+                                imageClass: null != s ? s : "",
+                                blurb: i,
+                                guild: o,
+                                warning: u,
+                                error: S,
+                                slotCount: c,
+                                canceledCount: d,
+                            })
+                          : null,
             }),
-            (0, r.jsx)(o.H7u, {
-                actions: S,
+            (0, n.jsx)(a.H7u, {
+                actions: O,
                 actionsFullWidth: !1,
             }),
         ],
     });
 };
-(A.ApplyBody = E), (A.TransferBody = b), (A.Footer = y);
-let v = A;
+(v.ApplyBody = C),
+    (v.TransferBody = f),
+    (v.Footer = function (e) {
+        let { confirmation: t, confirmationLabel: l, isModifyingSubscription: r, onConfirm: i, onCancel: s } = e;
+        return (0, n.jsx)("div", {
+            className: h.qr,
+            children: (0, n.jsxs)(c.ButtonGroup, {
+                direction: "horizontal-reverse",
+                children: [
+                    (0, n.jsx)(c.Button, {
+                        variant: "primary",
+                        text: t,
+                        onClick: i,
+                        loading: r,
+                        "aria-label": l,
+                    }),
+                    (0, n.jsx)(c.Button, {
+                        variant: "secondary",
+                        text: g.intl.string(g.t["ETE/oC"]),
+                        onClick: s,
+                        disabled: r,
+                    }),
+                ],
+            }),
+        });
+    });
+let y = v;

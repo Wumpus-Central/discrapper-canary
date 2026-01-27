@@ -1,120 +1,113 @@
-n.d(t, {
-    g: () => A,
+r.d(t, {
+    g: () => m,
 });
-var r = n(627968),
-    i = n(64700),
-    a = n(934551),
-    s = n(158954),
-    o = n(421380),
-    l = n(397927),
-    c = n(793574),
-    u = n(404374),
-    d = n(465794),
-    f = n(927578),
-    p = n(226017),
-    _ = n(652215),
-    h = n(788868),
-    m = n(985018),
-    g = n(316163),
-    E = n(7410),
-    b = n(936037);
+var n = r(627968),
+    l = r(64700),
+    s = r(934551),
+    a = r(158954),
+    i = r(421380),
+    o = r(397927),
+    c = r(793574),
+    u = r(404374),
+    d = r(465794),
+    h = r(927578),
+    p = r(226017),
+    f = r(652215),
+    g = r(788868),
+    S = r(985018),
+    E = r(316163),
+    y = r(7410),
+    _ = r(936037);
 
-function y(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function O(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                y(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function A() {
+function m() {
     return (0, p.A)()
-        ? (0, r.jsx)("div", {
-              className: g.do,
-              children: (0, r.jsxs)("div", {
-                  className: g.U6,
+        ? (0, n.jsx)("div", {
+              className: E.do,
+              children: (0, n.jsxs)("div", {
+                  className: E.U6,
                   children: [
-                      (0, r.jsx)("img", {
-                          src: E,
-                          className: g.Sl,
+                      (0, n.jsx)("img", {
+                          src: y,
+                          className: E.Sl,
                           alt: "",
                       }),
-                      (0, r.jsx)(l.Heading, {
-                          className: g.wx,
+                      (0, n.jsx)(o.Heading, {
+                          className: E.wx,
                           variant: "heading-xl/semibold",
                           color: "text-default",
-                          children: m.intl.string(m.t.erEf2g),
+                          children: S.intl.string(S.t.erEf2g),
                       }),
-                      (0, r.jsx)(s.EYj, {
+                      (0, n.jsx)(a.EYj, {
                           variant: "text-md/medium",
                           color: "text-muted",
-                          children: m.intl.string(m.t.NaRCXT),
+                          children: S.intl.string(S.t.NaRCXT),
                       }),
                   ],
               }),
           })
-        : (0, r.jsxs)("div", {
-              className: g.do,
+        : (0, n.jsxs)("div", {
+              className: E.do,
               children: [
-                  (0, r.jsxs)("div", {
-                      className: g.U6,
+                  (0, n.jsxs)("div", {
+                      className: E.U6,
                       children: [
-                          (0, r.jsx)("img", {
-                              src: b,
-                              className: g.Sl,
+                          (0, n.jsx)("img", {
+                              src: _,
+                              className: E.Sl,
                               alt: "",
                           }),
-                          (0, r.jsx)(l.Heading, {
-                              className: g.wx,
+                          (0, n.jsx)(o.Heading, {
+                              className: E.wx,
                               variant: "heading-xl/semibold",
                               color: "text-default",
-                              children: m.intl.string(m.t.w4DRbZ),
+                              children: S.intl.string(S.t.w4DRbZ),
                           }),
-                          (0, r.jsx)(s.EYj, {
+                          (0, n.jsx)(a.EYj, {
                               variant: "text-md/medium",
                               color: "text-muted",
-                              children: m.intl.string(m.t.F6u3E3),
+                              children: S.intl.string(S.t.F6u3E3),
                           }),
                       ],
                   }),
-                  (0, r.jsx)(v, {}),
+                  (0, n.jsx)(A, {}),
               ],
           });
 }
 
-function v() {
-    let e = (0, f.Dd)(h.PremiumTypes.TIER_2),
-        t = i.useCallback(
+function A() {
+    let e = (0, h.Dd)(g.PremiumTypes.TIER_2),
+        t = l.useCallback(
             () =>
-                (0, l.mMO)(async () => {
-                    let { default: e } = await n.e("22540").then(n.bind(n, 530951));
+                (0, o.mMO)(async () => {
+                    let { default: e } = await r.e("22540").then(r.bind(r, 530951));
                     return (t) =>
-                        (0, r.jsx)(
+                        (0, n.jsx)(
                             e,
-                            O(
+                            (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var r = null != arguments[t] ? arguments[t] : {},
+                                        n = Object.keys(r);
+                                    "function" == typeof Object.getOwnPropertySymbols &&
+                                        (n = n.concat(
+                                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                            }),
+                                        )),
+                                        n.forEach(function (t) {
+                                            var n;
+                                            (n = r[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: n,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0,
+                                                      })
+                                                    : (e[t] = n);
+                                        });
+                                }
+                                return e;
+                            })(
                                 {
                                     source: c.A.FOR_LATER_POPOUT,
                                 },
@@ -124,30 +117,30 @@ function v() {
                 }),
             [],
         ),
-        p = m.intl.format(m.t.qXh3fo, {
+        p = S.intl.format(S.t.qXh3fo, {
             nitroTierName: e,
             onClick: t,
         });
-    return (0, r.jsxs)("div", {
-        className: g.Zj,
+    return (0, n.jsxs)("div", {
+        className: E.Zj,
         children: [
-            (0, r.jsx)(a.NitroWheelIcon, {
+            (0, n.jsx)(s.NitroWheelIcon, {
                 size: "md",
                 color: u.k0.PREMIUM_TIER_2,
             }),
-            (0, r.jsx)(s.EYj, {
+            (0, n.jsx)(a.EYj, {
                 variant: "text-xs/medium",
                 color: "text-strong",
-                className: g.tD,
+                className: E.tD,
                 children: p,
             }),
-            (0, r.jsx)(d.A, {
-                className: g.Oy,
-                size: o.lO.TINY,
-                shinyButtonClassName: g.Oy,
-                subscriptionTier: h.pe.TIER_2,
+            (0, n.jsx)(d.A, {
+                className: E.Oy,
+                size: i.lO.TINY,
+                shinyButtonClassName: E.Oy,
+                subscriptionTier: g.pe.TIER_2,
                 premiumModalAnalyticsLocation: {
-                    section: _.JJy.FOR_LATER_POPOUT_UPSELL,
+                    section: f.JJy.FOR_LATER_POPOUT_UPSELL,
                 },
             }),
         ],

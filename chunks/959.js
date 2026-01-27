@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(627968),
     i = n(311907),
     a = n(397927),
-    s = n(442433),
-    o = n(538451),
+    o = n(442433),
+    s = n(538451),
     l = n(342296),
     c = n(544028),
     u = n(562153),
@@ -74,17 +74,20 @@ function m(e) {
         className: d.S,
         children: t.map((e) =>
             (0, r.jsx)(
-                o.A,
+                s.A,
                 {
                     user: e,
                     guildId: null == i ? void 0 : i.guild_id,
                     channelId: null == i ? void 0 : i.id,
                     nick: u.Ay.getNickname(null == i ? void 0 : i.guild_id, null == i ? void 0 : i.id, e),
                     onContextMenu: (t) => {
-                        (0, s.L3)(t, async () => {
-                            let { default: t } = await Promise.all([n.e("97262"), n.e("32418"), n.e("8893")]).then(
-                                n.bind(n, 668569),
-                            );
+                        (0, o.L3)(t, async () => {
+                            let { default: t } = await Promise.all([
+                                n.e("97262"),
+                                n.e("3795"),
+                                n.e("32418"),
+                                n.e("16938"),
+                            ]).then(n.bind(n, 668569));
                             return (n) =>
                                 (0, r.jsx)(
                                     t,
@@ -102,7 +105,7 @@ function m(e) {
 }
 
 function g(e) {
-    let { children: t, participants: n, channel: s, onPopoutClosed: o, targetElementRef: u } = e,
+    let { children: t, participants: n, channel: o, onPopoutClosed: s, targetElementRef: u } = e,
         d = (0, i.bG)([c.A], () => c.A.theme),
         f = 1 === n.length ? n[0] : null;
     return null != f
@@ -111,9 +114,9 @@ function g(e) {
               children: (0, r.jsx)(l.A, {
                   targetElementRef: u,
                   user: f,
-                  guildId: null == s ? void 0 : s.guild_id,
-                  channelId: null == s ? void 0 : s.id,
-                  onClosePopout: o,
+                  guildId: null == o ? void 0 : o.guild_id,
+                  channelId: null == o ? void 0 : o.id,
+                  onClosePopout: s,
                   children: t,
               }),
           })
@@ -125,7 +128,7 @@ function g(e) {
                       if (null != n)
                           return (0, r.jsx)(m, {
                               participants: n,
-                              channel: s,
+                              channel: o,
                           });
                       throw Error("One of participant or participants is required");
                   },

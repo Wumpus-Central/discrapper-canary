@@ -1,30 +1,16 @@
 n.d(t, {
-    A: () => _,
+    A: () => p,
 });
 var r = n(627968);
 n(64700);
 var i = n(311907),
-    a = n(189081),
-    s = n(67480),
-    o = n(674378),
-    l = n(598429),
+    l = n(189081),
+    a = n(67480),
+    s = n(674378),
+    o = n(598429),
     c = n(979604);
 
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function d(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,84 +21,87 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
 
-function f(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function p(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function _(e) {
+function p(e) {
     let {
             application: t,
             fullWidth: n = !1,
-            size: u = "md",
-            playButtonVariant: f,
-            disabledVariant: _,
-            hideNotLaunchable: h,
-            tooltipPosition: m,
-            onClick: g,
-            className: E,
-            source: b,
+            size: p = "md",
+            playButtonVariant: m,
+            disabledVariant: f,
+            hideNotLaunchable: g,
+            tooltipPosition: h,
+            onClick: _,
+            className: b,
+            source: A,
             hover: y,
-            innerClassName: O,
+            innerClassName: v,
         } = e,
-        A = {
+        x = {
             fullWidth: n,
-            size: u,
-            disabledVariant: _,
-            tooltipPosition: m,
-            onClick: g,
-            className: E,
+            size: p,
+            disabledVariant: f,
+            tooltipPosition: h,
+            onClick: _,
+            className: b,
             hover: y,
-            innerClassName: O,
+            innerClassName: v,
         },
-        v = (0, i.bG)([a.A], () => a.A.getActiveLibraryApplication(t.id)),
-        S = null != v ? v.sku.id : null,
-        I = null != S ? S : t.primarySkuId,
-        T = (0, i.bG)([s.A], () => null != I && !s.A.didFetchingSkuFail(I));
-    return null != v && (0, o.XZ)(v)
+        O = (0, i.bG)([l.A], () => l.A.getActiveLibraryApplication(t.id)),
+        E = null != O ? O.sku.id : null,
+        j = null != E ? E : t.primarySkuId,
+        C = (0, i.bG)([a.A], () => null != j && !a.A.didFetchingSkuFail(j));
+    return null != O && (0, s.XZ)(O)
         ? (0, r.jsx)(
               c.A,
-              p(d({}, A), {
-                  playButtonVariant: f,
-                  libraryApplication: v,
-                  source: b,
+              d(u({}, x), {
+                  playButtonVariant: m,
+                  libraryApplication: O,
+                  source: A,
               }),
           )
-        : T
+        : C
           ? (0, r.jsx)("div", {
                 children: "deprecated!",
             })
           : (0, r.jsx)(
-                l.A,
-                p(d({}, A), {
-                    variant: f,
-                    hideNotLaunchable: h,
+                o.A,
+                d(u({}, x), {
+                    variant: m,
+                    hideNotLaunchable: g,
                     applicationId: t.id,
                 }),
             );
