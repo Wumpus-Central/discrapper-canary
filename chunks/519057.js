@@ -143,6 +143,7 @@ let eM = {
         [eD.kqX.BLOCK_USER_FEEDBACK_NAGBAR]: "hideNagbarBlockUserFeedbackNotice",
         [eD.kqX.MACOS_19_DEPRECATED_MESSAGE]: "hideMacOS19DeprecationMessageNotice",
         [eD.kqX.SYSTEM_SERVICE_WARNING]: "hideSystemServiceWarningNotice",
+        [eD.kqX.E2EE_UPDATE_REQUIRED]: "hideE2EEUpdateRequiredNotice",
     },
     ex = new Set([
         eD.kqX.NO_INPUT_DETECTED,
@@ -210,6 +211,7 @@ let eH = [
     eD.kqX.WIN32_DEPRECATED_MESSAGE,
     eD.kqX.WIN7_8_DEPRECATED_MESSAGE,
     eD.kqX.MACOS_19_DEPRECATED_MESSAGE,
+    eD.kqX.E2EE_UPDATE_REQUIRED,
     eD.kqX.BLOCKED_BY_PROXY,
     eD.kqX.VOICE_CONNECTED_LAST_SESSION,
     eD.kqX.SYSTEM_SERVICE_WARNING,
@@ -782,6 +784,20 @@ let eW = {
             let n = P.Ay.getVisibleGame();
             return null != n && !!n.elevated;
         },
+    },
+    [eD.kqX.E2EE_UPDATE_REQUIRED]: {
+        predicate: () => {
+            var e, t;
+            if (eF(eD.kqX.E2EE_UPDATE_REQUIRED) || !ea.A.isConnected()) return !1;
+            let n = er.A.getMediaEngine();
+            return (
+                1 !==
+                (null != (e = null == (t = n.getSupportedSecureFramesProtocolVersion) ? void 0 : t.call(n)) ? e : 0)
+            );
+        },
+        metadata: () => ({
+            dismissUntil: l()().add(5, "days").toDate(),
+        }),
     },
 };
 
