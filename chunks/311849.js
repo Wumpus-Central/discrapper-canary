@@ -67,7 +67,7 @@ let b = 1048576,
     Y = +f.A.Millis.MINUTE,
     W = 10 * f.A.Millis.MINUTE,
     K = 60 * f.A.Millis.MINUTE,
-    z = 4,
+    z = 12,
     q = 1,
     Z = 1e4;
 
