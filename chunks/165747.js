@@ -5,8 +5,8 @@ l.d(n, {
 var e = l(627968);
 l(64700);
 var i = l(397927),
-    s = l(442433),
-    a = l(50268),
+    a = l(442433),
+    s = l(50268),
     r = l(292024),
     u = l(652215),
     d = l(985018);
@@ -16,17 +16,17 @@ function o(t) {
         p = [],
         c = (0, r.A)(l, n, u.BEX.INTEGRATIONS);
     null != c && p.push(c);
-    let h = (0, a.A)({
+    let h = (0, s.A)({
         id: n.id,
         label: d.intl.string(d.t.sMsaLg),
     });
     return (null != h && p.push(h), 0 === p.length)
         ? null
         : (0, e.jsx)(i.W1t, {
-              "data-menu-mixed": !0,
+              "data-menu-migrated-auto": !0,
               navId: "guild-integrations-permission-role-context",
               "aria-label": d.intl.string(d.t["337Ja9"]),
-              onClose: s.Z_,
+              onClose: a.Z_,
               onSelect: o,
               children: p,
           });

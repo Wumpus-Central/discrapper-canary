@@ -27,5 +27,9 @@ function p(e) {
                 (0, i.A)(e, e === c.BRT.POPOUT);
         },
         icon: o.Zes,
+        leadingAccessory: {
+            type: "icon",
+            icon: o.Zes,
+        },
     });
 }

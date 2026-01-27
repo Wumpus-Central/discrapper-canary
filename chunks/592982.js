@@ -48,7 +48,7 @@ function E(e) {
         W = (0, a.A)(E),
         z = (0, p.f)(N);
     return (0, r.jsxs)(i.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-needs-review": !0,
         className: x.MK,
         onClose: t,
         onSelect: n,
@@ -73,7 +73,7 @@ function E(e) {
                 children: W,
             }),
             (0, r.jsxs)(i.rXV, {
-                children: [!E.isManaged() && E.isPrivate() ? z : null, U],
+                children: [U, !E.isManaged() && E.isPrivate() ? z : null],
             }),
             (0, r.jsxs)(i.rXV, {
                 children: [null != R ? F : null, null != D ? H : null],

@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(990078),
-    s = n(397927),
-    o = n(442433),
+    o = n(397927),
+    s = n(442433),
     l = n(50268),
     c = n(409626),
     u = n(692969),
@@ -89,40 +89,40 @@ function O(e) {
             label: _.intl.string(_.t["/AXYnE"]),
         }),
         N = "application_id" in O.extra ? O.extra.application_id : null,
-        R = (0, l.A)({
+        w = (0, l.A)({
             id: N,
             label: _.intl.string(_.t["FfCL+6"]),
         }),
-        w = (0, f.zD)(O),
+        R = (0, f.zD)(O),
         P = (0, u.A)({
             location: "ContentPopoutContextMenu",
-            applicationId: w && !0 !== A ? (null == (t = O.extra) ? void 0 : t.application_id) : void 0,
+            applicationId: R && !0 !== A ? (null == (t = O.extra) ? void 0 : t.application_id) : void 0,
             source: c.Ob.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: O.author_id,
         });
-    return (0, r.jsx)(s.YNO, {
+    return (0, r.jsx)(o.YNO, {
         targetElementRef: I,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(s.W1t, {
-                "data-menu-mixed": !0,
+            return (0, r.jsx)(o.W1t, {
+                "data-menu-migrated-auto": !0,
                 navId: b,
                 onClose: () => {
-                    (0, o.Z_)(), t();
+                    (0, s.Z_)(), t();
                 },
                 "aria-label": _.intl.string(_.t.liqwPJ),
                 onSelect: v,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsxs)(s.rXV, {
+                        (0, r.jsxs)(o.rXV, {
                             children: [
                                 T,
                                 null != P &&
-                                    (0, r.jsx)(s.Drp, {
+                                    (0, r.jsx)(o.Drp, {
                                         id: "game-profile",
                                         label: _.intl.string(_.t.f7aVGn),
                                         action: (e) => {
@@ -131,8 +131,8 @@ function O(e) {
                                     }),
                             ],
                         }),
-                        (0, r.jsxs)(s.rXV, {
-                            children: [C, R],
+                        (0, r.jsxs)(o.rXV, {
+                            children: [C, w],
                         }),
                     ],
                 }),
@@ -143,7 +143,7 @@ function O(e) {
                 asContainer: !0,
                 text: _.intl.string(_.t["UKOtz+"]),
                 children: (0, r.jsx)(
-                    s.DUT,
+                    o.DUT,
                     y(
                         g(
                             {
@@ -153,7 +153,7 @@ function O(e) {
                             e,
                         ),
                         {
-                            children: (0, r.jsx)(s.jNK, {
+                            children: (0, r.jsx)(o.jNK, {
                                 color: "currentColor",
                                 size: "custom",
                                 width: 16,

@@ -152,7 +152,7 @@ function x(e) {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsxs)(c.W1t, {
-                        "data-menu-mixed": !0,
+                        "data-menu-needs-review": !0,
                         className: T.qp,
                         navId: "app-details-more-menu",
                         onClose: t,
@@ -205,6 +205,11 @@ function x(e) {
                                               },
                                           })
                                         : null,
+                                    Y,
+                                ],
+                            }),
+                            (0, r.jsx)(c.rXV, {
+                                children:
                                     a instanceof g.Ay
                                         ? (0, r.jsx)(c.Drp, {
                                               id: "report-app",
@@ -224,8 +229,6 @@ function x(e) {
                                               },
                                           })
                                         : null,
-                                    Y,
-                                ],
                             }),
                             (0, r.jsx)(c.rXV, {
                                 children: H,

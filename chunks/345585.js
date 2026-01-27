@@ -7,25 +7,25 @@ var l = i(627968),
     a = i(311907),
     r = i(139033),
     d = i(397927),
-    s = i(442433),
-    u = i(820284),
+    u = i(442433),
+    s = i(820284),
     o = i(198982),
     c = i(50268),
     g = i(71393),
     h = i(627794),
     p = i(928348),
     b = i(137207),
-    x = i(268749),
-    T = i(264349),
-    f = i(411335),
-    w = i(652215),
+    T = i(268749),
+    f = i(264349),
+    w = i(411335),
+    x = i(652215),
     M = i(985018);
 
 function j(t) {
     let { rule: e, analyticsContext: i, onSelect: j } = t,
         m = (0, h.wC)(e),
         A = (function (t) {
-            let { editingRule: e, setEditingRule: i } = (0, x.U)();
+            let { editingRule: e, setEditingRule: i } = (0, T.U)();
             return (0, l.jsx)(d.Drp, {
                 id: "edit-automod-rule",
                 label: M.intl.string(M.t.uQq6Px),
@@ -36,15 +36,15 @@ function j(t) {
             });
         })(e),
         I = (function (t) {
-            let { setEditingRule: e } = (0, x.U)(),
-                [i, s] = n.useState(!1),
-                { removeRule: u } = (0, p.wP)(t.guildId),
+            let { setEditingRule: e } = (0, T.U)(),
+                [i, u] = n.useState(!1),
+                { removeRule: s } = (0, p.wP)(t.guildId),
                 c = (0, a.bG)([g.A], () => g.A.getGuild(t.guildId)),
                 h = async () => {
-                    if (!i && (await (0, T.ih)(t.name))) {
-                        s(!0);
+                    if (!i && (await (0, f.ih)(t.name))) {
+                        u(!0);
                         try {
-                            await (0, b.nV)(t.id, t.guildId), e(null), u(t.id, t.guildId);
+                            await (0, b.nV)(t.id, t.guildId), e(null), s(t.id, t.guildId);
                         } catch (e) {
                             var l;
                             let t = new o.LG(e);
@@ -55,14 +55,14 @@ function j(t) {
                                 ),
                             );
                         } finally {
-                            s(!1);
+                            u(!1);
                         }
                     }
                 },
                 j =
-                    t.triggerType === f.uh.MENTION_SPAM &&
+                    t.triggerType === w.uh.MENTION_SPAM &&
                     (null == c ? void 0 : c.features) != null &&
-                    c.features.has(w.GuildFeatures.COMMUNITY);
+                    c.features.has(x.GuildFeatures.COMMUNITY);
             return (0, l.jsx)(d.Drp, {
                 id: "delete-automod-rule",
                 label: M.intl.string(M.t["92m/01"]),
@@ -80,13 +80,13 @@ function j(t) {
             id: e.id,
             label: M.intl.string(M.t.F64hjn),
         });
-    return (0, l.jsx)(u.A, {
+    return (0, l.jsx)(s.A, {
         context: i,
-        object: w.ZSU.CONTEXT_MENU,
+        object: x.ZSU.CONTEXT_MENU,
         children: (0, l.jsxs)(d.W1t, {
-            "data-menu-mixed": !0,
+            "data-menu-migrated-auto": !0,
             navId: "automod-rule-context",
-            onClose: s.Z_,
+            onClose: u.Z_,
             "aria-label": M.intl.string(M.t.uT36So),
             onSelect: j,
             children: [

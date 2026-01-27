@@ -14,7 +14,7 @@ var r = n(627968),
 let d = l.memo(function (e) {
     let { currentTags: t, onTagSelect: n, onNoneSelect: l, onClose: a } = e;
     return (0, r.jsx)(i.W1t, {
-        "data-menu-migration-ready": !0,
+        "data-menu-migrated-auto": !0,
         navId: "widget-game-tags",
         "aria-label": c.intl.string(c.t.r6EJOu),
         onClose: a,

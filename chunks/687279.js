@@ -1,21 +1,25 @@
-t.d(l, {
+l.d(t, {
     A: () => c,
 });
-var i = t(627968);
-t(64700);
-var e = t(397927),
-    a = t(957565),
-    r = t(886393),
-    s = t(985018);
+var i = l(627968);
+l(64700);
+var e = l(397927),
+    a = l(957565),
+    r = l(886393),
+    s = l(985018);
 
-function c(n, l, t) {
+function c(n, t, l) {
     return null != n
-        ? (0, r.A)(n, t, l)
+        ? (0, r.A)(n, l, t)
         : (0, i.jsx)(e.Drp, {
               id: "channel-copy-link",
               label: s.intl.string(s.t.WqhZss),
+              leadingAccessory: {
+                  type: "icon",
+                  icon: e.qYV,
+              },
               action: () => {
-                  (0, a.C)(null != l ? l : "");
+                  (0, a.C)(null != t ? t : "");
               },
           });
 }

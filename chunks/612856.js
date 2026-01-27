@@ -17,7 +17,7 @@ function o(n) {
             label: c.intl.string(c.t.gFHI3k),
         });
     return (0, i.jsxs)(e.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-migrated-auto": !0,
         navId: "channel-mention-context",
         onClose: a.Z_,
         onSelect: u,

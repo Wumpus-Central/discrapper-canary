@@ -4,8 +4,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(311907),
-    s = n(397927),
-    o = n(793574),
+    o = n(397927),
+    s = n(793574),
     l = n(688810),
     c = n(165162),
     u = n(578550),
@@ -52,7 +52,7 @@ function b(e) {
     let { user: t, guildId: n, viewProfileItem: E } = e,
         b = i.useRef(null),
         { trackUserProfileAction: O } = (0, _.NJ)(),
-        { analyticsLocations: v, newestAnalyticsLocation: A } = (0, l.Ay)(o.A.USER_PROFILE_OVERFLOW_MENU),
+        { analyticsLocations: v, newestAnalyticsLocation: A } = (0, l.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
         I = (0, a.bG)([h.A], () => h.A.getUserProfile(t.id)),
         S = null == I ? void 0 : I.application,
         T = (0, f.A)({
@@ -97,7 +97,7 @@ function b(e) {
                 }),
             color: "danger",
         }),
-        R = (0, d.A)({
+        w = (0, d.A)({
             id: null == S ? void 0 : S.id,
             label: g.intl.string(g.t["+NP/b2"]),
             onSuccess: () =>
@@ -106,7 +106,7 @@ function b(e) {
                     analyticsLocations: v,
                 }),
         }),
-        w = [
+        R = [
             [E],
             [C, T, N],
             [
@@ -119,24 +119,24 @@ function b(e) {
                             analyticsLocations: v,
                         }),
                 }),
-                R,
+                w,
             ],
         ];
-    return w.every((e) => e.every((e) => null == e))
+    return R.every((e) => e.every((e) => null == e))
         ? null
-        : (0, r.jsx)(s.YNO, {
+        : (0, r.jsx)(o.YNO, {
               targetElementRef: b,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(s.W1t, {
-                      "data-menu-mixed": !0,
+                  return (0, r.jsx)(o.W1t, {
+                      "data-menu-migrated": !0,
                       navId: "user-bot-profile-overflow-menu",
                       onSelect: void 0,
                       onClose: t,
                       "aria-label": g.intl.string(g.t.AXIHpV),
-                      children: w.map((e, t) =>
+                      children: R.map((e, t) =>
                           (0, r.jsx)(
-                              s.rXV,
+                              o.rXV,
                               {
                                   children: e.map((e) => e),
                               },
@@ -152,7 +152,7 @@ function b(e) {
                           {
                               buttonRef: b,
                               action: "PRESS_OPTIONS",
-                              icon: s.jNK,
+                              icon: o.jNK,
                               tooltipText: g.intl.string(g.t["UKOtz+"]),
                           },
                           e,

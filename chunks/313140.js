@@ -4,17 +4,17 @@ t.d(n, {
 var r = t(627968);
 t(64700);
 var c = t(397927),
-    l = t(442433),
-    i = t(358367),
+    i = t(442433),
+    l = t(358367),
     a = t(793574),
     o = t(50268),
     u = t(307623),
     s = t(317910),
     b = t(475777),
     A = t(985018);
-let d = (0, i.A)(
+let d = (0, l.A)(
     function (e) {
-        let { channel: n, guild: t, onSelect: i } = e,
+        let { channel: n, guild: t, onSelect: l } = e,
             a = (0, s.A)(n),
             d = (0, b.A)(n, t),
             p = (0, u.A)(n),
@@ -23,11 +23,11 @@ let d = (0, i.A)(
                 label: A.intl.string(A.t.gFHI3k),
             });
         return (0, r.jsxs)(c.W1t, {
-            "data-menu-mixed": !0,
+            "data-menu-migrated-auto": !0,
             navId: "channel-context",
-            onClose: l.Z_,
+            onClose: i.Z_,
             "aria-label": A.intl.string(A.t.Xm41aV),
-            onSelect: i,
+            onSelect: l,
             children: [
                 (0, r.jsx)(c.rXV, {
                     children: a,

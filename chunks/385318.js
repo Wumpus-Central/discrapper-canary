@@ -71,7 +71,7 @@ function S(e) {
     return (0, r.jsx)(c.A, {
         object: b.ZSU.CONTEXT_MENU,
         children: (0, r.jsxs)(o.W1t, {
-            "data-menu-mixed": !0,
+            "data-menu-migrated": !0,
             onSelect: P,
             onInteraction: D,
             className: x.MK,

@@ -227,7 +227,7 @@ let R = l.forwardRef(function (e, t) {
         y = l.useCallback(
             (e, t) =>
                 (0, r.jsxs)(c.W1t, {
-                    "data-menu-mixed": !0,
+                    "data-menu-migrated-auto": !0,
                     navId: "application-directory-profile",
                     "aria-label": O.intl.string(O.t["/7I4/C"]),
                     onClose: t,
@@ -240,6 +240,10 @@ let R = l.forwardRef(function (e, t) {
                                       label: O.intl.string(O.t.z4sP5J),
                                       action: h,
                                       icon: c.qYV,
+                                      leadingAccessory: {
+                                          type: "icon",
+                                          icon: c.qYV,
+                                      },
                                   }),
                               })
                             : null,
@@ -248,6 +252,10 @@ let R = l.forwardRef(function (e, t) {
                                 id: "report",
                                 label: O.intl.string(O.t.NgA5vp),
                                 color: "danger",
+                                leadingAccessory: {
+                                    type: "icon",
+                                    icon: c.iFK,
+                                },
                                 action: x,
                             }),
                         }),

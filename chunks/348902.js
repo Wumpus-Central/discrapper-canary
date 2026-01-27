@@ -4,9 +4,9 @@ n.d(t, {
 var r = n(627968);
 n(64700);
 var i = n(397927),
-    c = n(442433),
+    a = n(442433),
     o = n(847767),
-    a = n(358367),
+    c = n(358367),
     l = n(793574),
     u = n(50268),
     s = n(570336),
@@ -14,10 +14,10 @@ var i = n(397927),
     d = n(912025),
     f = n(652215),
     p = n(985018);
-let A = (0, a.A)(
+let A = (0, c.A)(
     (0, o.A)(
         function (e) {
-            let { game: t, guildId: n, context: o, onSelect: a } = e,
+            let { game: t, guildId: n, context: o, onSelect: c } = e,
                 l = (0, b.A)(t.id, t.name),
                 f = (0, d.A)(t),
                 A = (0, s.A)(t, n, o),
@@ -26,11 +26,11 @@ let A = (0, a.A)(
                     label: p.intl.string(p.t["FfCL+6"]),
                 });
             return (0, r.jsxs)(i.W1t, {
-                "data-menu-mixed": !0,
+                "data-menu-migrated-auto": !0,
                 navId: "game-context",
-                onClose: c.Z_,
+                onClose: a.Z_,
                 "aria-label": p.intl.string(p.t.liqwPJ),
-                onSelect: a,
+                onSelect: c,
                 children: [
                     (0, r.jsxs)(i.rXV, {
                         children: [l, f, A],

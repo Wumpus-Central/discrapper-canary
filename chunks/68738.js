@@ -1,19 +1,20 @@
 n.d(t, {
-    A: () => g,
+    A: () => f,
 }),
-    n(638769),
-    n(896048);
+    n(896048),
+    n(638769);
 var a = n(627968),
     l = n(64700),
     r = n(397927),
     i = n(442433),
     s = n(611010),
-    o = n(71393),
-    c = n(287809),
-    d = n(815907),
-    u = n(661251);
+    o = n(734057),
+    c = n(71393),
+    d = n(287809),
+    u = n(815907),
+    m = n(661251);
 
-function m(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -39,7 +40,7 @@ function m(e) {
     return e;
 }
 
-function p(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,10 +58,10 @@ function p(e, t) {
         e
     );
 }
-let h = {
+let x = {
         ClipsContextMenu: async () => {
             let { default: e } = await n.e("44751").then(n.bind(n, 575538));
-            return (t) => (0, a.jsx)(e, m({}, t));
+            return (t) => (0, a.jsx)(e, p({}, t));
         },
         ActivityPopoutHeaderOverflowMenu: async () => {
             let { default: e } = await n.e("33648").then(n.bind(n, 246323)),
@@ -90,13 +91,13 @@ let h = {
         },
         GuildChannelListContextMenu: async () => {
             let { default: e } = await n.e("10758").then(n.bind(n, 455557)),
-                t = Object.values(o.A.getGuilds())[0];
+                t = Object.values(c.A.getGuilds())[0];
             return null == t
                 ? () => null
                 : (n) =>
                       (0, a.jsx)(
                           e,
-                          p(m({}, n), {
+                          h(p({}, n), {
                               guild: t,
                           }),
                       );
@@ -105,9 +106,9 @@ let h = {
             let { default: e } = await Promise.all([
                     n.e("10614"),
                     n.e("49681"),
-                    n.e("68587"),
                     n.e("43600"),
                     n.e("28136"),
+                    n.e("68587"),
                     n.e("63379"),
                     n.e("56026"),
                     n.e("16301"),
@@ -128,13 +129,13 @@ let h = {
                     n.e("54469"),
                     n.e("59461"),
                 ]).then(n.bind(n, 544676)),
-                t = Object.values(o.A.getGuilds())[0];
+                t = Object.values(c.A.getGuilds())[0];
             return null == t
                 ? () => null
                 : (n) =>
                       (0, a.jsx)(
                           e,
-                          p(m({}, n), {
+                          h(p({}, n), {
                               guild: t,
                           }),
                       );
@@ -144,7 +145,7 @@ let h = {
             return (t) =>
                 (0, a.jsx)(
                     e,
-                    p(m({}, t), {
+                    h(p({}, t), {
                         folderId: 1,
                         folderColor: void 0,
                         folderName: void 0,
@@ -157,7 +158,7 @@ let h = {
             return (t) =>
                 (0, a.jsx)(
                     e,
-                    p(m({}, t), {
+                    h(p({}, t), {
                         id: "123456789",
                         label: "Copy Test ID",
                     }),
@@ -165,13 +166,13 @@ let h = {
         },
         UserSettingsCogContextMenu: async () => {
             let { default: e } = await n.e("95153").then(n.bind(n, 50120)),
-                t = c.default.getCurrentUser();
+                t = d.default.getCurrentUser();
             return null == t
                 ? () => null
                 : (n) =>
                       (0, a.jsx)(
                           e,
-                          p(m({}, n), {
+                          h(p({}, n), {
                               user: t,
                               webBuildOverride: null,
                               premiumSubscription: null,
@@ -180,7 +181,7 @@ let h = {
         },
         ExpressionPickerContextMenu: async () => {
             let { default: e } = await n.e("46132").then(n.bind(n, 233503));
-            return (t) => (0, a.jsx)(e, m({}, t));
+            return (t) => (0, a.jsx)(e, p({}, t));
         },
         ForumTagContextMenu: async () => {
             let { default: e } = await n.e("32612").then(n.bind(n, 960015)),
@@ -198,7 +199,7 @@ let h = {
             return (t) =>
                 (0, a.jsx)(
                     e,
-                    p(m({}, t), {
+                    h(p({}, t), {
                         roleId: "123456789",
                         onLeaveRole: () => {
                             console.log("Leave role clicked"), (0, i.Z_)();
@@ -211,7 +212,7 @@ let h = {
             let { default: t } = await n.e("89346").then(n.bind(n, 949881)),
                 { ContentInventoryEntryType: l } = await Promise.resolve().then(n.bind(n, 681154)),
                 { ContentInventoryAuthorType: r } = await Promise.resolve().then(n.bind(n, 6161)),
-                i = c.default.getCurrentUser(),
+                i = d.default.getCurrentUser(),
                 s = {
                     id: "mock-entry-123",
                     author_id: null != (e = null == i ? void 0 : i.id) ? e : "123456789",
@@ -235,13 +236,13 @@ let h = {
             let { AddQuestionsContextMenu: e } = await Promise.all([n.e("10614"), n.e("11810"), n.e("23342")]).then(
                     n.bind(n, 892921),
                 ),
-                t = Object.values(o.A.getGuilds())[0];
+                t = Object.values(c.A.getGuilds())[0];
             return null == t
                 ? () => null
                 : (n) =>
                       (0, a.jsx)(
                           e,
-                          p(m({}, n), {
+                          h(p({}, n), {
                               addFormField: (e) => {
                                   console.log("Add form field:", e), (0, i.Z_)();
                               },
@@ -250,9 +251,33 @@ let h = {
                           }),
                       );
         },
+        ChannelListThreadContextMenu: async () => {
+            let { default: e } = await Promise.all([n.e("99011"), n.e("88974"), n.e("9282")]).then(n.bind(n, 44536)),
+                t = c.A.getGuilds(),
+                l = null;
+            for (let e of Object.values(t)) {
+                for (let t of Object.values(o.A.getMutableGuildChannelsForGuild(e.id))) {
+                    let e = o.A.getAllThreadsForParent(t.id);
+                    if (e.length > 0) {
+                        l = e[0];
+                        break;
+                    }
+                }
+                if (null != l) break;
+            }
+            return null == l
+                ? (console.log("No thread channel found for ChannelListThreadContextMenu"), () => null)
+                : (t) =>
+                      (0, a.jsx)(
+                          e,
+                          h(p({}, t), {
+                              channel: l,
+                          }),
+                      );
+        },
         MembersTableSortContextMenu: async () => {
             let { default: e } = await n.e("73091").then(n.bind(n, 779662)),
-                t = Object.values(o.A.getGuilds())[0];
+                t = Object.values(c.A.getGuilds())[0];
             return null == t
                 ? () => null
                 : () =>
@@ -263,7 +288,7 @@ let h = {
         },
         MembersTableJoinTypeContextMenu: async () => {
             let { default: e } = await n.e("21539").then(n.bind(n, 441358)),
-                t = Object.values(o.A.getGuilds())[0];
+                t = Object.values(c.A.getGuilds())[0];
             return null == t
                 ? () => null
                 : () =>
@@ -273,7 +298,7 @@ let h = {
                       });
         },
     },
-    x = {
+    g = {
         GuildShopSortOptions: l.lazy(async () => {
             let { default: e } = await n.e("50974").then(n.bind(n, 324269)),
                 { default: t } = await n.e("55197").then(n.bind(n, 558060));
@@ -287,19 +312,8 @@ let h = {
         }),
     };
 
-function g() {
+function f() {
     let e = l.useMemo(
-            () =>
-                Object.keys(h)
-                    .map((e) => ({
-                        label: e,
-                        value: e,
-                        id: e,
-                    }))
-                    .sort((e, t) => e.label.localeCompare(t.label)),
-            [],
-        ),
-        t = l.useMemo(
             () =>
                 Object.keys(x)
                     .map((e) => ({
@@ -310,19 +324,30 @@ function g() {
                     .sort((e, t) => e.label.localeCompare(t.label)),
             [],
         ),
+        t = l.useMemo(
+            () =>
+                Object.keys(g)
+                    .map((e) => ({
+                        label: e,
+                        value: e,
+                        id: e,
+                    }))
+                    .sort((e, t) => e.label.localeCompare(t.label)),
+            [],
+        ),
         [n, s] = l.useState(null),
         [o, c] = l.useState(null),
-        m = l.useCallback(
+        d = l.useCallback(
             (e) => {
-                null != n && (0, i.L3)(e, h[n]);
+                null != n && (0, i.L3)(e, x[n]);
             },
             [n],
         ),
-        p = null != o ? x[o] : null;
+        p = null != o ? g[o] : null;
     return (0, a.jsx)(r.IpV, {
-        className: u.nd,
+        className: m.nd,
         children: (0, a.jsxs)(r.BJc, {
-            className: d.l$,
+            className: u.l$,
             gap: 16,
             children: [
                 (0, a.jsxs)(r.BJc, {
@@ -357,7 +382,7 @@ function g() {
                             variant: "primary",
                             text: "Open",
                             disabled: null == n,
-                            onClick: m,
+                            onClick: d,
                         }),
                     ],
                 }),

@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(627968),
     i = n(665260),
     a = n(397927),
-    s = n(735991),
-    o = n(287809),
+    o = n(735991),
+    s = n(287809),
     l = n(957565),
     c = n(342384),
     u = n(652215);
@@ -43,40 +43,43 @@ function f(e) {
 }
 
 function p(e) {
-    let { application: t, label: n, onSuccess: d, showIconFirst: p, focusedClassName: _ } = e;
+    let { application: t, label: n, onSuccess: d, showIconFirst: p } = e;
     if (__OVERLAY__ || !l.p5 || null == t) return null;
-    let h = o.default.getCurrentUser(),
-        m = (0, s.EF)(t);
+    let _ = s.default.getCurrentUser(),
+        h = (0, o.EF)(t);
 
-    function g() {
+    function m() {
         var e;
         if (null == t) return;
         let n = (0, i.Lt)(null != (e = t.flags) ? e : 0, u.gfo.EMBEDDED)
             ? (0, c.W)({
                   applicationId: t.id,
-                  referrerId: null == h ? void 0 : h.id,
+                  referrerId: null == _ ? void 0 : _.id,
               })
             : (0, c.V)(
                   f(
                       {
                           id: t.id,
                       },
-                      m,
+                      h,
                   ),
               );
         null != n && (0, l.C)(n, d);
     }
-    let E = "copy-app-link-".concat(t.id);
+    let g = "copy-app-link-".concat(t.id);
     return (0, r.jsx)(
         a.Drp,
         {
-            id: E,
+            id: g,
             label: n,
-            action: g,
+            action: m,
             icon: p ? void 0 : a.qYV,
             iconLeft: p ? a.qYV : void 0,
-            focusedClassName: _,
+            leadingAccessory: {
+                type: "icon",
+                icon: a.qYV,
+            },
         },
-        E,
+        g,
     );
 }

@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(627968),
     i = n(397927),
     a = n(442433),
-    s = n(50268),
-    o = n(700210),
+    o = n(50268),
+    s = n(700210),
     l = n(253932),
     c = n(967198),
     u = n(211401),
@@ -21,7 +21,7 @@ function _(e) {
         a = () => {
             (0, i.OoC)(f.gS), (0, u.k)(d.Se.DISMISSED);
         };
-    return (0, o.A)({
+    return (0, s.A)({
         application: n,
         guildId: r,
         onItemClick: a,
@@ -30,8 +30,8 @@ function _(e) {
 
 function h(e) {
     let { application: t, onSelect: n } = e,
-        o = l.Q_.useSetting(),
-        c = (0, s.A)({
+        s = l.Q_.useSetting(),
+        c = (0, o.A)({
             id: t.id,
             label: p.intl.string(p.t["+NP/b2"]),
         }),
@@ -39,7 +39,7 @@ function h(e) {
             application: t,
         });
     return (0, r.jsxs)(i.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-migrated-auto": !0,
         navId: "activity-shelf-item-context",
         onClose: a.Z_,
         "aria-label": p.intl.string(p.t.WkcHT9),
@@ -53,7 +53,7 @@ function h(e) {
                     },
                     "manage-app-actions",
                 ),
-            o &&
+            s &&
                 (0, r.jsx)(
                     i.rXV,
                     {

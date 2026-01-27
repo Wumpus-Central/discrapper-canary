@@ -39,8 +39,8 @@ function C(e) {
             renderOutputDevices: E = !1,
             renderOutputVolume: V = !1,
             renderInputDevices: M = !1,
-            renderInputVolume: x = !1,
-            maybeRenderInputMeter: U = !1,
+            renderInputVolume: U = !1,
+            maybeRenderInputMeter: x = !1,
             renderSettingsButton: N = !1,
         } = e,
         { analyticsLocations: L } = (0, s.Ay)();
@@ -67,9 +67,9 @@ function C(e) {
         H = (0, O.A)(L),
         G = (0, d.A)(L),
         J = i.x.DEFAULT,
-        Y = y.A.isSelfDeaf(J),
-        Z = (0, u.bG)([y.A], () => y.A.getMode()),
-        q = Z === A.TBI.VOICE_ACTIVITY ? A.TBI.PUSH_TO_TALK : A.TBI.VOICE_ACTIVITY,
+        Z = y.A.isSelfDeaf(J),
+        Y = (0, u.bG)([y.A], () => y.A.getMode()),
+        q = Y === A.TBI.VOICE_ACTIVITY ? A.TBI.PUSH_TO_TALK : A.TBI.VOICE_ACTIVITY,
         Q = (0, u.bG)([y.A, g.Ay], () => {
             var e;
             let t = (null == (e = y.A.getModeOptions().shortcut) ? void 0 : e.length) > 0,
@@ -81,7 +81,7 @@ function C(e) {
     return (0, n.jsx)(c.A, {
         object: A.ZSU.CONTEXT_MENU,
         children: (0, n.jsxs)(l.W1t, {
-            "data-menu-mixed": !0,
+            "data-menu-migrated": !0,
             onSelect: C,
             onInteraction: r,
             onClose: D,
@@ -95,8 +95,8 @@ function C(e) {
                 }),
                 (0, n.jsxs)(l.rXV, {
                     children: [
-                        x && H,
-                        U &&
+                        U && H,
+                        x &&
                             W &&
                             (0, n.jsx)(l.aK1, {
                                 id: "input-device-meter",
@@ -118,7 +118,7 @@ function C(e) {
                     children: [
                         k && v.isPlatformEmbedded && Q
                             ? (0, n.jsx)(l.sLh, {
-                                  checked: Z === A.TBI.PUSH_TO_TALK,
+                                  checked: Y === A.TBI.PUSH_TO_TALK,
                                   id: "input-mode",
                                   label: _.intl.string(_.t.Q8gkVL),
                                   action: () =>
@@ -139,7 +139,7 @@ function C(e) {
                                             context: J,
                                             location: "AudioDeviceMenu",
                                         }),
-                                    checked: Y,
+                                    checked: Z,
                                 },
                                 "self-deafen",
                             ),

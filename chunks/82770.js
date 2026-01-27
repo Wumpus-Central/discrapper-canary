@@ -1,19 +1,23 @@
-n.d(t, {
+t.d(n, {
     A: () => d,
 });
-var i = n(627968);
-n(64700);
-var r = n(397927),
-    l = n(837057),
-    a = n(310419),
-    o = n(488995),
-    c = n(985018);
+var i = t(627968);
+t(64700);
+var r = t(397927),
+    l = t(837057),
+    a = t(310419),
+    o = t(488995),
+    c = t(985018);
 
 function d(e) {
     return (0, i.jsx)(r.Drp, {
         id: "application-directory",
         label: c.intl.string(c.t.AKcFUj),
         icon: r.k9F,
+        leadingAccessory: {
+            type: "icon",
+            icon: r.k9F,
+        },
         action: () => {
             (0, l.transitionToGlobalDiscovery)({
                 tab: o.GlobalDiscoveryTab.APPS,

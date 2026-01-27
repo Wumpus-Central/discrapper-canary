@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(397927),
-    s = n(793574),
-    o = n(688810),
+    o = n(793574),
+    s = n(688810),
     l = n(239211),
     c = n(34245),
     u = n(399476),
@@ -76,7 +76,7 @@ function b(e, t) {
 function O(e) {
     let { user: t, guildId: n, viewProfileItem: i, appContext: _, popoutTargetRef: g, children: y } = e,
         { trackUserProfileAction: b, context: O } = (0, p.NJ)(),
-        { analyticsLocations: v, newestAnalyticsLocation: A } = (0, o.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
+        { analyticsLocations: v, newestAnalyticsLocation: A } = (0, s.Ay)(o.A.USER_PROFILE_OVERFLOW_MENU),
         I = null != O && O.showGuildProfile ? n : void 0,
         S = {
             action: h.pt.PRESS_OPTIONS,
@@ -179,14 +179,14 @@ function O(e) {
         ];
     return N.every((e) => e.every((e) => null == e))
         ? null
-        : (0, r.jsx)(o.f5, {
+        : (0, r.jsx)(s.f5, {
               value: v,
               children: (0, r.jsx)(a.YNO, {
                   targetElementRef: g,
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
                       return (0, r.jsx)(a.W1t, {
-                          "data-menu-mixed": !0,
+                          "data-menu-migrated-auto": !0,
                           navId: "user-profile-overflow-menu",
                           onSelect: void 0,
                           onClose: t,

@@ -1,5 +1,5 @@
 n.d(t, {
-    N: () => d,
+    N: () => o,
 }),
     n(896048),
     n(321073),
@@ -9,20 +9,11 @@ var a = n(627968),
     l = n(64700),
     r = n(614820),
     i = n(397927),
-    s = n(231643),
-    o = n(890288);
+    s = n(231643);
 
-function c(e) {
-    let { label: t } = e;
-    return (0, a.jsx)("div", {
-        className: o.G,
-        children: t,
-    });
-}
-
-function d(e, t) {
+function o(e, t) {
     let [n, o] = l.useState(""),
-        d = l.useMemo(() => {
+        c = l.useMemo(() => {
             if ("" === n.trim()) return e;
             let t = n.toLowerCase().trim();
             return e.filter((e) => {
@@ -103,7 +94,7 @@ function d(e, t) {
         ),
         ...l.useMemo(() => {
             let e = [];
-            if ("" !== n.trim() && 0 === d.length)
+            if ("" !== n.trim() && 0 === c.length)
                 e.push(
                     (0, a.jsx)(
                         i.Drp,
@@ -116,7 +107,7 @@ function d(e, t) {
                     ),
                 );
             else {
-                let l = d.filter((e) => e.group === s.fu.NONE),
+                let l = c.filter((e) => e.group === s.fu.NONE),
                     o = (function (e) {
                         let t = new Map();
                         for (let a of e) {
@@ -125,20 +116,19 @@ function d(e, t) {
                             e.push(a), t.set(a.group, e);
                         }
                         return t;
-                    })(d.filter((e) => e.group !== s.fu.NONE));
+                    })(c.filter((e) => e.group !== s.fu.NONE));
                 l.forEach((n) => {
-                    let { id: l, name: r } = n;
+                    var l;
+                    let { id: s, name: o } = n;
                     return e.push(
                         (0, a.jsx)(
                             i.Drp,
                             {
-                                id: l,
-                                void_label: (0, a.jsx)(c, {
-                                    label: r,
-                                }),
-                                action: () => t(l),
+                                id: s,
+                                label: null != (l = (0, r.O)(o)) ? l : "",
+                                action: () => t(s),
                             },
-                            l,
+                            s,
                         ),
                     );
                 }),
@@ -157,23 +147,20 @@ function d(e, t) {
                                           i.Drp,
                                           {
                                               id: "devtools-".concat(l),
-                                              void_label: (0, a.jsx)(c, {
-                                                  label: l,
-                                              }),
+                                              label: l,
                                               children: (0, a.jsx)(i.rXV, {
-                                                  children: o.map((e) =>
-                                                      (0, a.jsx)(
+                                                  children: o.map((e) => {
+                                                      var n;
+                                                      return (0, a.jsx)(
                                                           i.Drp,
                                                           {
                                                               id: "devtools-".concat(e.id),
-                                                              void_label: (0, a.jsx)(c, {
-                                                                  label: e.name,
-                                                              }),
+                                                              label: null != (n = (0, r.O)(e.name)) ? n : "",
                                                               action: () => t(e.id),
                                                           },
                                                           e.id,
-                                                      ),
-                                                  ),
+                                                      );
+                                                  }),
                                               }),
                                           },
                                           "devtools-".concat(l),
@@ -184,19 +171,18 @@ function d(e, t) {
                                           i.rXV,
                                           {
                                               label: l,
-                                              children: o.map((e) =>
-                                                  (0, a.jsx)(
+                                              children: o.map((e) => {
+                                                  var n;
+                                                  return (0, a.jsx)(
                                                       i.Drp,
                                                       {
                                                           id: "devtools-filtered-".concat(e.id),
-                                                          void_label: (0, a.jsx)(c, {
-                                                              label: e.name,
-                                                          }),
+                                                          label: null != (n = (0, r.O)(e.name)) ? n : "",
                                                           action: () => t(e.id),
                                                       },
                                                       e.id,
-                                                  ),
-                                              ),
+                                                  );
+                                              }),
                                           },
                                           "devtools-filtered-".concat(l),
                                       ),
@@ -205,6 +191,6 @@ function d(e, t) {
                     });
             }
             return e;
-        }, [d, n, t]),
+        }, [c, n, t]),
     ];
 }

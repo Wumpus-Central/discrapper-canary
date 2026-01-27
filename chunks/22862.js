@@ -13,25 +13,14 @@ var r = n(627968),
     d = n(985018),
     p = n(430556);
 
-function f(e) {
-    let { count: t, categoryId: n } = e,
-        i = (0, o.r)({
-            categoryId: n,
-        });
-    return (0, r.jsx)(a.kR, {
-        count: t,
-        name: i,
-    });
-}
-
 function h(e) {
     let { loadId: t } = e,
         n = s.A.useField("categoryId"),
         h = (0, c.L)(),
-        A = (0, o.r)({
+        g = (0, o.r)({
             categoryId: n,
         }),
-        g = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 (0, u.j)({
                     loadId: t,
@@ -45,16 +34,28 @@ function h(e) {
                 null == h
                     ? []
                     : h.map((e) => {
-                          let [t, n] = e;
-                          return {
-                              id: "".concat(t),
-                              label: (0, r.jsx)(f, {
-                                  categoryId: t,
-                                  count: n,
-                              }),
-                          };
+                          let [t] = e;
+                          return t;
                       }),
             [h],
+        ),
+        A = (0, o.o)({
+            categoryIds: m,
+        }),
+        _ = i.useMemo(
+            () =>
+                null == h
+                    ? []
+                    : h.map((e) => {
+                          var t;
+                          let [n, r] = e;
+                          return {
+                              id: "".concat(n),
+                              name: null != (t = A[n]) ? t : "",
+                              count: r,
+                          };
+                      }),
+            [h, A],
         );
     return null == h
         ? null
@@ -66,13 +67,13 @@ function h(e) {
                       color: "text-subtle",
                       children: d.intl.string(d.t.f09BQJ),
                   }),
-                  (0, r.jsx)(a.Ay, {
-                      items: m,
-                      title: A,
-                      onSelect: g,
+                  (0, r.jsx)(a.A, {
+                      items: _,
+                      title: g,
+                      onSelect: f,
                       selected: "".concat(n),
                       "aria-label": d.intl.string(d.t.Ng5cTK),
-                      variant: a.Hb.FILLED,
+                      variant: a.H.FILLED,
                   }),
               ],
           });

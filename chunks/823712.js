@@ -1,5 +1,5 @@
 l.d(t, {
-    A: () => S,
+    A: () => T,
 }),
     l(896048);
 var n = l(627968),
@@ -23,7 +23,7 @@ var n = l(627968),
 let A = (e) => {
     let { tabs: t, selectedTab: l, onTabSelect: r, onClose: i } = e;
     return (0, n.jsx)(d.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-migrated-auto": !0,
         navId: "members-tabs-overflow-menu",
         "aria-label": v.intl.string(v.t.riPnr0),
         hideScroller: !0,
@@ -40,6 +40,13 @@ let A = (e) => {
                             id: t,
                             label: i,
                             icon: t === l ? d.yr3 : void 0,
+                            leadingAccessory:
+                                t === l
+                                    ? {
+                                          type: "icon",
+                                          icon: d.yr3,
+                                      }
+                                    : void 0,
                             action: () => r(t),
                         },
                         t,
@@ -154,17 +161,17 @@ function p(e) {
     });
 }
 
-function S(e) {
+function T(e) {
     let t,
         { guildId: l, currentTab: i, onTabSelect: s } = e,
         [c, m] = r.useState(0),
         A = r.useRef(null),
-        S = r.useRef(c),
-        T = (0, b.H)({
+        T = r.useRef(c),
+        E = (0, b.H)({
             guildId: l,
         }),
-        E =
-            ((t = null != T ? T : 0),
+        S =
+            ((t = null != E ? E : 0),
             [
                 {
                     id: g.D.ALL_MEMBERS,
@@ -193,7 +200,7 @@ function S(e) {
             onItemLayout: O,
             overflowItemsRef: N,
         } = (0, o.Wv)({
-            items: E,
+            items: S,
             itemGapPx: 16,
             maxLines: 1,
             containerWidth: c - 200,
@@ -203,11 +210,11 @@ function S(e) {
             guildId: l,
         }),
         C = r.useMemo(() => (i === g.D.ALL_MEMBERS ? I : null != R && null != R.user), [i, I, R]),
-        D = r.useMemo(() => E.slice(0, y + 1), [y, E]),
-        P = r.useMemo(() => E.slice(y + 1), [y, E]),
+        D = r.useMemo(() => S.slice(0, y + 1), [y, S]),
+        P = r.useMemo(() => S.slice(y + 1), [y, S]),
         M = (0, x.A)((e) => {
             let t = e.contentRect.width;
-            null != t && S.current !== t && (m(t), (S.current = t));
+            null != t && T.current !== t && (m(t), (T.current = t));
         });
     return (
         (0, u.g)(A, M, [C]),
@@ -223,7 +230,7 @@ function S(e) {
                         (0, n.jsxs)("div", {
                             className: _.Kk,
                             children: [
-                                E.map((e, t) =>
+                                S.map((e, t) =>
                                     (0, n.jsx)(
                                         o.Ae,
                                         {

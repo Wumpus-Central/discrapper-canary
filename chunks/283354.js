@@ -31,7 +31,7 @@ function h(e) {
         (0, a.Z_)(), null == f || f();
     }
     return (0, r.jsxs)(s.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-migrated": !0,
         navId: "guild-entry-context",
         onClose: O,
         "aria-label": p.intl.string(p.t.HpQykc),
@@ -102,6 +102,10 @@ function h(e) {
                                   }),
                                       O();
                               },
+                              leadingAccessory: {
+                                  type: "icon",
+                                  icon: s.R2l,
+                              },
                           })
                         : null,
                     A
@@ -120,6 +124,10 @@ function h(e) {
                                       O();
                               },
                               color: "danger",
+                              leadingAccessory: {
+                                  type: "icon",
+                                  icon: s.ucK,
+                              },
                           })
                         : null,
                     m
@@ -131,6 +139,10 @@ function h(e) {
                                   null != t && ((0, c.sJ)(t), O());
                               },
                               icon: s.iFK,
+                              leadingAccessory: {
+                                  type: "icon",
+                                  icon: s.iFK,
+                              },
                               color: "danger",
                           }),
                 ],

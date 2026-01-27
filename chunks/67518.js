@@ -5,7 +5,7 @@ var r = n(627968),
     i = n(397927),
     a = n(985018);
 
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function s(e, t, n) {
     );
 }
 
-function o(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,7 +30,7 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -69,7 +69,7 @@ function u(e) {
             return (n) =>
                 (0, r.jsx)(
                     t,
-                    c(o({}, n), {
+                    c(s({}, n), {
                         detectedActivity: {
                             application_id: e,
                             name: "",
@@ -81,5 +81,10 @@ function u(e) {
         id: "game-profile-something-wrong",
         label: a.intl.string(a.t.qP2cXd),
         action: t,
+        color: "danger",
+        leadingAccessory: {
+            type: "icon",
+            icon: i.EpV,
+        },
     });
 }

@@ -4,8 +4,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(990078),
-    s = n(397927),
-    o = n(442433),
+    o = n(397927),
+    s = n(442433),
     l = n(50268),
     c = n(67518),
     u = n(985018);
@@ -76,27 +76,27 @@ function h(e) {
         h = (0, c.n)(t);
     return null == p && null == h
         ? null
-        : (0, r.jsx)(s.YNO, {
+        : (0, r.jsx)(o.YNO, {
               targetElementRef: d,
               align: "top",
               position: "right",
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(s.W1t, {
-                      "data-menu-mixed": !0,
+                  return (0, r.jsx)(o.W1t, {
+                      "data-menu-migrated-auto": !0,
                       navId: "game-profile-context",
                       onClose: () => {
-                          (0, o.Z_)(), t();
+                          (0, s.Z_)(), t();
                       },
                       "aria-label": u.intl.string(u.t.PNeFgW),
                       onSelect: () => {},
                       children: (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(s.rXV, {
+                              (0, r.jsx)(o.rXV, {
                                   children: p,
                               }),
-                              (0, r.jsx)(s.rXV, {
+                              (0, r.jsx)(o.rXV, {
                                   children: h,
                               }),
                           ],
@@ -107,7 +107,7 @@ function h(e) {
                   (0, r.jsx)(a.m, {
                       text: u.intl.string(u.t["UKOtz+"]),
                       children: (0, r.jsx)(
-                          s.DUT,
+                          o.DUT,
                           _(
                               f(
                                   {
@@ -117,9 +117,9 @@ function h(e) {
                                   e,
                               ),
                               {
-                                  children: (0, r.jsx)(s.jNK, {
+                                  children: (0, r.jsx)(o.jNK, {
                                       size: "xs",
-                                      color: s.LU0.colors.WHITE,
+                                      color: o.LU0.colors.WHITE,
                                   }),
                               },
                           ),

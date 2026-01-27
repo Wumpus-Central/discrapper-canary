@@ -18,7 +18,6 @@ function u(e) {
         ? (0, r.jsx)(l.Drp, {
               id: "add-channel-to-category",
               icon: l.U1e,
-              color: "brand",
               label: s.intl.string(s.t["6uDHk6"]),
               action: function () {
                   (0, l.mMO)(async () => {

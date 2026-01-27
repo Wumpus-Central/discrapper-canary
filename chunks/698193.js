@@ -13,10 +13,10 @@ var l = e(311907),
     u = e(50268),
     A = e(515610),
     b = e(133238),
-    h = e(795144),
-    g = e(979807),
-    j = e(671470),
-    v = e(690953),
+    g = e(795144),
+    h = e(979807),
+    v = e(671470),
+    j = e(690953),
     p = e(508654),
     x = e(24661),
     f = e(769591),
@@ -73,14 +73,14 @@ function H(n) {
         c = t.isGuildStageVoice(),
         d = (0, l.bG)([y.A], () => (c ? y.A.getStageInstanceByChannel(t.id) : void 0), [c, t.id]),
         A = (0, m.A)(t),
-        v = (0, p.Qs)(t.id),
-        C = (0, x.A)(null == v ? void 0 : v.id, e, t),
+        j = (0, p.Qs)(t.id),
+        C = (0, x.A)(null == j ? void 0 : j.id, e, t),
         V = (0, T.A)(t, d),
         O = (0, b.m)(t),
         X = (0, b.y)(t),
-        N = (0, h.A)(t),
-        S = (0, g.A)(t),
-        P = (0, j.A)(t),
+        N = (0, g.A)(t),
+        S = (0, h.A)(t),
+        P = (0, v.A)(t),
         D = (0, G.A)(t),
         I = (0, _.A)(t),
         B = (0, E.A)(t),
@@ -91,39 +91,39 @@ function H(n) {
         }),
         Y = (0, w.A)(t),
         z = (0, o.A)(t),
-        Q = (0, f.os)("ChannelListVoiceContextMenuFavorite"),
-        R = (0, L.Ay)(t),
-        W = (0, k.A)();
+        F = (0, f.os)("ChannelListVoiceContextMenuFavorite"),
+        Q = (0, L.Ay)(t),
+        R = (0, k.A)();
     return (0, i.jsxs)(r.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-needs-review": !0,
         navId: "channel-context",
         onClose: a.Z_,
         "aria-label": U.intl.string(U.t.Xm41aV),
         onSelect: s,
         children: [
             (0, i.jsx)(r.rXV, {
-                children: null != v ? C : V,
+                children: null != j ? C : V,
             }),
             (0, i.jsxs)(r.rXV, {
                 children: [S, P, N, O],
             }),
             (0, i.jsxs)(r.rXV, {
-                children: [D, Q ? R : I, B],
+                children: [D, F ? Q : I, B],
             }),
             (0, i.jsx)(r.rXV, {
                 children: z,
-            }),
-            (0, i.jsx)(r.rXV, {
-                children: X,
             }),
             (0, i.jsxs)(r.rXV, {
                 children: [Z, A],
             }),
             (0, i.jsx)(r.rXV, {
+                children: X,
+            }),
+            (0, i.jsx)(r.rXV, {
                 children: Y,
             }),
             (0, i.jsxs)(r.rXV, {
-                children: [H, W],
+                children: [H, R],
             }),
         ],
     });
@@ -134,18 +134,18 @@ function Y(n) {
         c = t.isGuildStageVoice(),
         d = (0, l.bG)([y.A], () => (c ? y.A.getStageInstanceByChannel(t.id) : void 0), [c, t.id]),
         A = (0, N.A)(t),
-        h = (0, m.A)(t),
-        g = (0, p.Qs)(t.id),
-        j = (0, x.A)(null == g ? void 0 : g.id, e, t),
+        g = (0, m.A)(t),
+        h = (0, p.Qs)(t.id),
+        v = (0, x.A)(null == h ? void 0 : h.id, e, t),
         B = (0, T.A)(t, d),
         Z = (0, b.m)(t),
         H = (0, b.y)(t),
         Y = (0, G.A)(t),
         z = (0, _.A)(t),
-        Q = (0, E.A)(t),
-        R = (0, X.A)(t, e, d),
-        W = (0, M.A)(t, e),
-        F = (0, D.A)(t, e),
+        F = (0, E.A)(t),
+        Q = (0, X.A)(t, e, d),
+        R = (0, M.A)(t, e),
+        W = (0, D.A)(t, e),
         q = (0, I.A)(t, e.id),
         K = (0, C.A)(t, e),
         J = (0, V.A)(t, e),
@@ -157,20 +157,20 @@ function Y(n) {
         nt = (0, w.A)(t),
         ne = (0, o.A)(t),
         ni = (0, P.A)(t),
-        nl = (0, v.A)(t),
+        nl = (0, j.A)(t),
         nr = (0, S.Ay)(t),
         na = (0, f.os)("ChannelListVoiceContextMenuNormal"),
         ns = (0, L.Ay)(t),
         nc = (0, k.A)();
     return (0, i.jsxs)(r.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-needs-review": !0,
         navId: "channel-context",
         onClose: a.Z_,
         "aria-label": U.intl.string(U.t.Xm41aV),
         onSelect: s,
         children: [
             (0, i.jsx)(r.rXV, {
-                children: null != g ? j : B,
+                children: null != h ? v : B,
             }),
             (0, i.jsxs)(
                 r.rXV,
@@ -182,14 +182,14 @@ function Y(n) {
             (0, i.jsxs)(
                 r.rXV,
                 {
-                    children: [R, ne, ni, h],
+                    children: [Q, ne, ni, g],
                 },
                 "channel-actions",
             ),
             (0, i.jsxs)(
                 r.rXV,
                 {
-                    children: [q, W, F, Y, nl, nt],
+                    children: [q, R, W, Y, nl, nt],
                 },
                 "voice-actions",
             ),
@@ -200,16 +200,16 @@ function Y(n) {
                 },
                 "notifications",
             ),
-            (0, i.jsx)(r.rXV, {
-                children: H,
-            }),
             (0, i.jsxs)(
                 r.rXV,
                 {
-                    children: [Q, K, J, $],
+                    children: [F, K, J, $],
                 },
                 "admin-actions",
             ),
+            (0, i.jsx)(r.rXV, {
+                children: H,
+            }),
             (0, i.jsxs)(
                 r.rXV,
                 {

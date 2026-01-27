@@ -20,9 +20,9 @@ var r = n(627968),
     h = n(572164),
     j = n(399925),
     m = n(643501),
-    E = n(652896),
-    S = n(401901),
-    y = n(670470),
+    y = n(652896),
+    E = n(401901),
+    S = n(670470),
     v = n(972432),
     w = n(616356),
     x = n(961350),
@@ -83,7 +83,7 @@ function N(e, t) {
 function M(e) {
     return (0, o.bG)([w.A], () => {
         let t = w.A.getActiveStreamForApplicationStream(e);
-        return null != t && (0, E._z)(t) === (0, E._z)(e);
+        return null != t && (0, y._z)(t) === (0, y._z)(e);
     });
 }
 
@@ -111,7 +111,7 @@ function U(e) {
                 n = (0, A.A)(P.A),
                 l = (0, h.Et)(),
                 i = e.ownerId === x.default.getId(),
-                { enableViewerClipping: s, ignoreSenderPreference: c } = y.A.useExperiment(
+                { enableViewerClipping: s, ignoreSenderPreference: c } = S.A.useExperiment(
                     {
                         location: "StreamContextMenu",
                     },
@@ -126,7 +126,7 @@ function U(e) {
                       id: "clip-stream",
                       disabled: !l || !(i || d) || u,
                       label: k.intl.string(k.t.U4URzP),
-                      action: () => (i ? (0, j.l0)() : (0, j.yd)((0, E._z)(e))),
+                      action: () => (i ? (0, j.l0)() : (0, j.yd)((0, y._z)(e))),
                   })
                 : null;
         })(W),
@@ -162,7 +162,7 @@ function U(e) {
                       label: U,
                       action: z
                           ? function () {
-                                (0, d.vN)((0, E._z)(W)),
+                                (0, d.vN)((0, y._z)(W)),
                                     (0, D.YX)(_.uss.GO_LIVE, {
                                         type: D.Z5.GO_LIVE,
                                         value: D.IP.DISABLED,
@@ -282,20 +282,20 @@ function U(e) {
                 id: "fit",
                 label: k.intl.string(k.t.mpnvrV),
                 action: () => {
-                    (0, G.CZ)(W, Q === S.$.CONTAIN ? S.$.COVER : S.$.CONTAIN),
+                    (0, G.CZ)(W, Q === E.$.CONTAIN ? E.$.COVER : E.$.CONTAIN),
                         (0, D.YX)(_.uss.GO_LIVE, {
                             type: D.Z5.GO_LIVE,
                             value: D.IP.SETTING_ADJUSTED,
                             userId: W.ownerId,
                         });
                 },
-                checked: Q === S.$.COVER,
+                checked: Q === E.$.COVER,
             }));
     return (0, r.jsx)(b.A, {
         context: ee,
         object: _.ZSU.CONTEXT_MENU,
         children: (0, r.jsxs)(a.W1t, {
-            "data-menu-mixed": !0,
+            "data-menu-migrated-auto": !0,
             navId: "stream-context",
             onClose: c.Z_,
             "aria-label": k.intl.string(k.t.Gl3Q30),

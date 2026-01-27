@@ -1,5 +1,5 @@
 n.d(t, {
-    default: () => E,
+    default: () => x,
 });
 var r = n(627968);
 n(64700);
@@ -65,10 +65,10 @@ function C(e) {
             id: t.id,
             label: _.intl.string(_.t["2visC6"]),
         }),
-        x = (0, b.os)("ChannelCategoryFavoritesMenu"),
-        E = (0, v.Ay)(t);
+        E = (0, b.os)("ChannelCategoryFavoritesMenu"),
+        x = (0, v.Ay)(t);
     return (0, r.jsxs)(i.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-needs-review": !0,
         navId: "channel-context",
         onClose: l.Z_,
         "aria-label": _.intl.string(_.t.Xm41aV),
@@ -78,7 +78,7 @@ function C(e) {
                 children: [a, m, g],
             }),
             (0, r.jsxs)(i.rXV, {
-                children: [c, x ? E : s],
+                children: [c, E ? x : s],
             }),
             (0, r.jsxs)(i.rXV, {
                 children: [y, f],
@@ -93,7 +93,7 @@ function C(e) {
     });
 }
 
-function x(e) {
+function E(e) {
     let { channel: t, guild: n, onSelect: a } = e,
         c = (0, A.A)(t),
         s = (0, j.Ay)(t),
@@ -101,8 +101,8 @@ function x(e) {
         P = (0, O.A)(t),
         w = (0, p.A)(t),
         C = (0, g.A)(t),
-        x = (0, d.A)(t),
-        E = (0, y.A)(t, n),
+        E = (0, d.A)(t),
+        x = (0, y.A)(t, n),
         D = (0, f.A)(t),
         S = (0, o.A)({
             id: t.id,
@@ -112,7 +112,7 @@ function x(e) {
         N = (0, b.os)("ChannelCategoryNormalMenu"),
         T = (0, v.Ay)(t);
     return (0, r.jsxs)(i.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-migrated-auto": !0,
         navId: "channel-context",
         onClose: l.Z_,
         "aria-label": _.intl.string(_.t.Xm41aV),
@@ -142,7 +142,7 @@ function x(e) {
             (0, r.jsxs)(
                 i.rXV,
                 {
-                    children: [C, x, E, D],
+                    children: [C, E, x, D],
                 },
                 "admin-actions",
             ),
@@ -156,9 +156,9 @@ function x(e) {
         ],
     });
 }
-let E = (0, a.A)(
+let x = (0, a.A)(
     function (e) {
-        return (0, s.A)() ? (0, r.jsx)(C, w({}, e)) : (0, r.jsx)(x, w({}, e));
+        return (0, s.A)() ? (0, r.jsx)(C, w({}, e)) : (0, r.jsx)(E, w({}, e));
     },
     [c.A.CONTEXT_MENU, c.A.CHANNEL_CATEGORY_MENU],
 );

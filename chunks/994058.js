@@ -19,7 +19,7 @@ let u = (0, l.A)(
                 label: A.intl.string(A.t.gFHI3k),
             });
         return (0, r.jsxs)(a.W1t, {
-            "data-menu-mixed": !0,
+            "data-menu-migrated-auto": !0,
             navId: "channel-context",
             onClose: c.Z_,
             "aria-label": A.intl.string(A.t.Xm41aV),

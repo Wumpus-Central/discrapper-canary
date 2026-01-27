@@ -1,28 +1,35 @@
-r.d(t, {
-    A: () => O,
+n.d(t, {
+    A: () => h,
 });
-var n = r(627968);
-r(64700);
-var i = r(311907),
-    l = r(397927),
-    o = r(71393),
-    c = r(287809),
-    a = r(234053),
-    u = r(395504),
-    s = r(652215),
-    b = r(985018);
+var i = n(627968);
+n(64700);
+var l = n(311907),
+    r = n(397927),
+    a = n(71393),
+    s = n(287809),
+    d = n(234053),
+    u = n(395504),
+    o = n(652215),
+    c = n(985018);
 
-function O(e) {
-    let t = (0, u.jN)(e),
-        r = (0, i.bG)([o.A], () => o.A.getGuild(e)),
-        O = (0, i.bG)([c.default], () => c.default.getCurrentUser());
-    return null != O && null != r && (r.features.has(s.GuildFeatures.COMMUNITY) || O.isStaff())
-        ? (0, n.jsx)(l.sLh, {
+function h(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = (0, u.jN)(e),
+        h = (0, l.bG)([a.A], () => a.A.getGuild(e)),
+        g = (0, l.bG)([s.default], () => s.default.getCurrentUser());
+    return null != g && null != h && (h.features.has(o.GuildFeatures.COMMUNITY) || g.isStaff())
+        ? (0, i.jsx)(r.sLh, {
               id: "opt-in",
-              label: b.intl.string(b.t.FB2ZZV),
-              checked: !t,
+              label: c.intl.string(c.t.FB2ZZV),
+              leadingAccessory: t
+                  ? {
+                        type: "icon",
+                        icon: r.bMW,
+                    }
+                  : void 0,
+              checked: !n,
               action: () => {
-                  (0, a.Lu)(e);
+                  (0, d.Lu)(e);
               },
           })
         : null;

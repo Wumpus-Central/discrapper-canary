@@ -4,8 +4,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(397927),
-    s = n(793574),
-    o = n(688810),
+    o = n(793574),
+    s = n(688810),
     l = n(50268),
     c = n(183555),
     u = n(993401),
@@ -46,7 +46,7 @@ function _(e) {
     let { user: t, viewProfileItem: n } = e,
         f = i.useRef(null),
         { trackUserProfileAction: _ } = (0, c.NJ)(),
-        { analyticsLocations: h } = (0, o.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
+        { analyticsLocations: h } = (0, s.Ay)(o.A.USER_PROFILE_OVERFLOW_MENU),
         m = [
             [n],
             [
@@ -68,7 +68,7 @@ function _(e) {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(a.W1t, {
-                      "data-menu-mixed": !0,
+                      "data-menu-migrated-auto": !0,
                       navId: "non-user-bot-profile-overflow-menu",
                       onSelect: void 0,
                       onClose: t,

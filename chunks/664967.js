@@ -1,30 +1,30 @@
 r.d(t, {
-    A: () => b,
+    A: () => p,
 });
 var n = r(627968),
     i = r(64700),
-    l = r(397927),
-    o = r(585510),
-    c = r(834409),
+    o = r(397927),
+    c = r(585510),
+    l = r(834409),
     a = r(903093),
     u = r(652215),
     s = r(985018);
 
-function b(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { shouldShowIncidentActions: b, isUnderLockdown: O, incidentData: p } = (0, o.Li)(e.id),
+        { shouldShowIncidentActions: p, isUnderLockdown: b, incidentData: O } = (0, c.Li)(e.id),
         d = i.useCallback(() => {
             let t = {
-                source: c.Eo.CONTEXT_MENU,
-                alertType: (0, a.$5)(p),
+                source: l.Eo.CONTEXT_MENU,
+                alertType: (0, a.$5)(O),
             };
-            (0, l.mMO)(async () => {
+            (0, o.mMO)(async () => {
                 let { default: i } = await r.e("43233").then(r.bind(r, 671576));
                 return (r) => {
-                    var l, o;
+                    var o, c;
                     return (0, n.jsx)(
                         i,
-                        ((l = (function (e) {
+                        ((o = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
                                     n = Object.keys(r);
@@ -49,13 +49,13 @@ function b(e) {
                             }
                             return e;
                         })({}, r)),
-                        (o = o =
+                        (c = c =
                             {
                                 guildId: e.id,
                                 analyticsData: t,
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                            ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(c))
                             : (function (e, t) {
                                   var r = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -63,19 +63,25 @@ function b(e) {
                                       r.push.apply(r, n);
                                   }
                                   return r;
-                              })(Object(o)).forEach(function (e) {
-                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                              })(Object(c)).forEach(function (e) {
+                                  Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(c, e));
                               }),
-                        l),
+                        o),
                     );
                 };
             });
-        }, [e.id, p]);
-    return e.features.has(u.GuildFeatures.COMMUNITY) && b
-        ? (0, n.jsx)(l.Drp, {
+        }, [e.id, O]);
+    return e.features.has(u.GuildFeatures.COMMUNITY) && p
+        ? (0, n.jsx)(o.Drp, {
               id: "server-lockdown",
-              label: O ? s.intl.string(s.t["+tSVi3"]) : s.intl.string(s.t.EPlEdu),
-              icon: t ? (O ? l.wUM : l.XAi) : void 0,
+              label: b ? s.intl.string(s.t["+tSVi3"]) : s.intl.string(s.t.EPlEdu),
+              icon: t ? (b ? o.wUM : o.XAi) : void 0,
+              leadingAccessory: t
+                  ? {
+                        type: "icon",
+                        icon: b ? o.wUM : o.XAi,
+                    }
+                  : void 0,
               action: d,
               color: "danger",
           })

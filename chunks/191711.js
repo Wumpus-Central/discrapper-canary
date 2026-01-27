@@ -1,7 +1,6 @@
 n.d(t, {
-    Ay: () => g,
-    Hb: () => m,
-    kR: () => h,
+    A: () => m,
+    H: () => h,
 });
 var r,
     l = n(627968),
@@ -45,7 +44,7 @@ function p(e) {
     let { items: t, onClose: n, onSelect: r, selected: i } = e,
         a = u(e, ["items", "onClose", "onSelect", "selected"]);
     return (0, l.jsx)(o.W1t, {
-        "data-menu-mixed": !0,
+        "data-menu-migrated-auto": !0,
         className: d.MK,
         navId: "global-discovery-search-filter-options",
         "aria-label": a["aria-label"],
@@ -56,13 +55,21 @@ function p(e) {
             o.rXV,
             {
                 children: t.map((e) => {
-                    let { id: t, label: n } = e;
+                    let { id: t, name: n, count: a } = e;
                     return (0, l.jsx)(
                         o.Drp,
                         {
                             id: t,
-                            void_label: n,
+                            label: n,
+                            subtext: a.toLocaleString(c.default.locale),
                             icon: t === i ? o.yr3 : void 0,
+                            leadingAccessory:
+                                t === i
+                                    ? {
+                                          type: "icon",
+                                          icon: o.yr3,
+                                      }
+                                    : void 0,
                             action: () => r(t),
                         },
                         t,
@@ -73,29 +80,9 @@ function p(e) {
         ),
     });
 }
+var h = (((r = {}).FILLED = "FILLED"), (r.TRANSPARENT = "TRANSPARENT"), r);
 
-function h(e) {
-    let { count: t, name: n } = e,
-        r = t.toLocaleString(c.default.locale);
-    return (0, l.jsxs)("div", {
-        className: d.Jm,
-        children: [
-            (0, l.jsx)(o.Text, {
-                variant: "text-sm/medium",
-                color: "text-strong",
-                children: n,
-            }),
-            (0, l.jsx)(o.Text, {
-                variant: "text-sm/normal",
-                color: "text-muted",
-                children: r,
-            }),
-        ],
-    });
-}
-var m = (((r = {}).FILLED = "FILLED"), (r.TRANSPARENT = "TRANSPARENT"), r);
-
-function g(e) {
+function m(e) {
     let { items: t, title: n, onSelect: r, selected: a, variant: c = "TRANSPARENT" } = e,
         h = u(e, ["items", "title", "onSelect", "selected", "variant"]),
         m = i.useRef(null),

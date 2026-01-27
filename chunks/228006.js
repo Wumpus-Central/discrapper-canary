@@ -5,8 +5,8 @@ var i = n(627968);
 n(64700);
 var r = n(311907),
     l = n(397927),
-    s = n(442433),
-    o = n(847767),
+    o = n(442433),
+    s = n(847767),
     a = n(358367),
     d = n(155718),
     c = n(468389),
@@ -15,16 +15,16 @@ var r = n(311907),
     b = n(854182),
     g = n(734337),
     p = n(855187),
-    m = n(479335),
-    f = n(50268),
+    f = n(479335),
+    m = n(50268),
     h = n(222311),
     j = n(164891),
     v = n(734057),
     x = n(309010),
     O = n(803664),
     y = n(29293),
-    D = n(509302),
-    C = n(497600),
+    C = n(509302),
+    D = n(497600),
     I = n(773699),
     P = n(239211),
     w = n(707378),
@@ -36,20 +36,20 @@ var r = n(311907),
     S = n(301541),
     T = n(460597),
     N = n(635443),
-    k = n(313998),
-    V = n(198229),
+    V = n(313998),
+    k = n(198229),
     G = n(243949),
     B = n(972432),
     R = n(77544),
     X = n(652215),
     F = n(985018);
 let J = (0, a.A)(
-    (0, o.A)(
+    (0, s.A)(
         function (e) {
             var t;
             let {
                     user: n,
-                    channel: o,
+                    channel: s,
                     context: a,
                     showChatItems: u = !0,
                     showMediaItems: X = !1,
@@ -72,30 +72,30 @@ let J = (0, a.A)(
                     guildId: null == q ? void 0 : q.guild_id,
                     location: "GroupDMUserContextMenu",
                 }),
-                $ = Q ? (null == q ? void 0 : q.id) : o.id,
-                ee = (0, k.A)(n, $),
+                $ = Q ? (null == q ? void 0 : q.id) : s.id,
+                ee = (0, V.A)(n, $),
                 et = (0, S.A)(n.id, a),
                 en = (0, w.A)({
                     user: n,
                     context: a,
                 }),
-                ei = (0, C.A)({
+                ei = (0, D.A)({
                     user: n,
-                    channelId: o.id,
+                    channelId: s.id,
                     context: a,
                 }),
                 er = (0, y.A)({
                     user: n,
                 }),
                 el = (0, B.A)(n.id),
-                es = (0, N.A)(n.id, o.id),
-                eo = (0, V.A)(n.id),
-                ea = (0, m.u)({
+                eo = (0, N.A)(n.id, s.id),
+                es = (0, k.A)(n.id),
+                ea = (0, f.u)({
                     userId: n.id,
-                    channelId: o.id,
-                    guildId: o.getGuildId(),
+                    channelId: s.id,
+                    guildId: s.getGuildId(),
                 }),
-                ed = (0, M.A)(n.id, o.id),
+                ed = (0, M.A)(n.id, s.id),
                 ec = (0, L.A)({
                     user: n,
                 }),
@@ -103,7 +103,7 @@ let J = (0, a.A)(
                 eA = (0, O.A)({
                     user: n,
                 }),
-                eb = (0, D.A)({
+                eb = (0, C.A)({
                     user: n,
                 }),
                 eg = (0, T.A)({
@@ -113,35 +113,35 @@ let J = (0, a.A)(
                     user: n,
                     location: "GroupDMUserContextMenu",
                 }),
-                em = (0, U.A)({
+                ef = (0, U.A)({
                     user: n,
                     location: "GroupDMUserContextMenu",
                 }),
-                ef = (0, f.A)({
+                em = (0, m.A)({
                     id: n.id,
                     label: F.intl.string(F.t["/AXYnE"]),
                 }),
                 eh = (0, R.A)(n.id),
                 ej = (0, g.A)(n.id),
-                ev = (0, b.A)(o.id),
+                ev = (0, b.A)(s.id),
                 ex = (0, h.A)(n),
                 eO = (0, p.A)(n.id),
-                ey = (0, A.A)(o.id, n.id),
-                eD = (0, I.A)({
+                ey = (0, A.A)(s.id, n.id),
+                eC = (0, I.A)({
                     commandType: d.kc.USER,
                     commandTargetId: n.id,
-                    channel: o,
+                    channel: s,
                     guildId: void 0,
                     onHeightUpdate: W,
                 }),
-                eC = (0, E.A)(n, o),
+                eD = (0, E.A)(n, s),
                 eI = n.isNonUserBot(),
-                eP = o.isManaged(),
-                ew = null == (t = o.recipients) ? void 0 : t.includes(n.id);
+                eP = s.isManaged(),
+                ew = null == (t = s.recipients) ? void 0 : t.includes(n.id);
             return (0, i.jsxs)(l.W1t, {
-                "data-menu-mixed": !0,
+                "data-menu-migrated": !0,
                 navId: "user-context",
-                onClose: s.Z_,
+                onClose: o.Z_,
                 "aria-label": F.intl.string(F.t.liqwPJ),
                 onSelect: Y,
                 onInteraction: Z,
@@ -161,34 +161,34 @@ let J = (0, a.A)(
                                     }),
                                 ew &&
                                     (0, i.jsxs)(l.rXV, {
-                                        children: [!eP && es, eC],
+                                        children: [!eP && eo, eD],
                                     }),
                                 (0, i.jsx)(l.rXV, {
                                     children: z && eu,
-                                }),
-                                (0, i.jsxs)(l.rXV, {
-                                    children: [
-                                        X && eo,
-                                        X && ea,
-                                        X && ed,
-                                        eD,
-                                        z && ec,
-                                        eA,
-                                        eb,
-                                        eg,
-                                        z && em,
-                                        z && ep,
-                                        X && eO,
-                                    ],
                                 }),
                                 J &&
                                     (0, i.jsxs)(l.rXV, {
                                         children: [ey, ev, ej],
                                     }),
+                                (0, i.jsxs)(l.rXV, {
+                                    children: [
+                                        X && es,
+                                        X && ea,
+                                        X && ed,
+                                        X && eO,
+                                        eC,
+                                        z && ec,
+                                        eA,
+                                        eb,
+                                        eg,
+                                        z && ef,
+                                        z && ep,
+                                    ],
+                                }),
                             ],
                         }),
                     (0, i.jsx)(l.rXV, {
-                        children: ef,
+                        children: em,
                     }),
                 ],
             });

@@ -4,19 +4,25 @@ r.d(t, {
 var n = r(627968);
 r(64700);
 var i = r(397927),
-    l = r(770666),
-    o = r(823508),
-    c = r(985018);
+    o = r(770666),
+    c = r(823508),
+    l = r(985018);
 
 function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        a = (0, l.A)(e),
-        u = (0, o.A)();
+        a = (0, o.A)(e),
+        u = (0, c.A)();
     return a
         ? (0, n.jsx)(i.Drp, {
               id: "create-event",
-              label: c.intl.string(c.t["60lJ0C"]),
+              label: l.intl.string(l.t["60lJ0C"]),
               icon: t ? i.UC$ : void 0,
+              leadingAccessory: t
+                  ? {
+                        type: "icon",
+                        icon: i.UC$,
+                    }
+                  : void 0,
               action: () => {
                   (0, i.mMO)(async () => {
                       let { default: t } = await Promise.all([
@@ -26,7 +32,7 @@ function a(e) {
                           r.e("62106"),
                       ]).then(r.bind(r, 21653));
                       return (r) => {
-                          var i, l;
+                          var i, o;
                           return (0, n.jsx)(
                               t,
                               ((i = (function (e) {
@@ -54,12 +60,12 @@ function a(e) {
                                   }
                                   return e;
                               })({}, r)),
-                              (l = l =
+                              (o = o =
                                   {
                                       guildId: e,
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
                                   : (function (e, t) {
                                         var r = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -67,8 +73,8 @@ function a(e) {
                                             r.push.apply(r, n);
                                         }
                                         return r;
-                                    })(Object(l)).forEach(function (e) {
-                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                    })(Object(o)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
                                     }),
                               i),
                           );

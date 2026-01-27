@@ -1,9 +1,9 @@
 t.d(e, {
     default: () => b,
 });
-var r = t(627968);
+var a = t(627968);
 t(64700);
-var a = t(397927),
+var r = t(397927),
     c = t(442433),
     i = t(398590),
     l = t(358367),
@@ -20,19 +20,19 @@ let b = (0, l.A)(
                 id: e.id,
                 label: d.intl.string(d.t.gFHI3k),
             });
-        return (0, r.jsxs)(a.W1t, {
-            "data-menu-mixed": !0,
+        return (0, a.jsxs)(r.W1t, {
+            "data-menu-migrated-auto": !0,
             navId: "channel-context",
             onClose: c.Z_,
             "aria-label": d.intl.string(d.t.Xm41aV),
             onSelect: t,
             children: [
-                (0, r.jsxs)(a.rXV, {
+                (0, a.jsxs)(r.rXV, {
                     children: [
                         l,
                         e.isCategory()
                             ? null
-                            : (0, r.jsx)(a.Drp, {
+                            : (0, a.jsx)(r.Drp, {
                                   id: "jump-to-channel",
                                   label: d.intl.string(d.t.bQIM40),
                                   action: () => {
@@ -41,7 +41,7 @@ let b = (0, l.A)(
                               }),
                     ],
                 }),
-                (0, r.jsx)(a.rXV, {
+                (0, a.jsx)(r.rXV, {
                     children: s,
                 }),
             ],

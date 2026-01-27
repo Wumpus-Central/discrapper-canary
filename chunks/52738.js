@@ -4,8 +4,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(158954),
+    o = n.n(a),
+    s = n(158954),
     l = n(545442),
     c = n(935154),
     u = n(486020),
@@ -108,11 +108,11 @@ function E(e, t, n) {
 
 function y(e) {
     let { accessory: t, isFocused: n } = e,
-        { reducedMotion: a } = i.useContext(o.CZY);
+        { reducedMotion: a } = i.useContext(s.CZY);
     switch (t.type) {
         case "icon": {
             let { type: e, icon: n, color: i = "currentColor", className: a } = t,
-                o = m(t, ["type", "icon", "color", "className"]);
+                s = m(t, ["type", "icon", "color", "className"]);
             return (0, r.jsx)("div", {
                 className: d.iconContainerLeft,
                 children: (0, r.jsx)(
@@ -123,10 +123,10 @@ function y(e) {
                                 "aria-hidden": !0,
                                 color: i,
                             },
-                            o,
+                            s,
                         ),
                         {
-                            className: s()(d.icon, a),
+                            className: o()(d.icon, a),
                         },
                     ),
                 ),
@@ -187,5 +187,10 @@ function y(e) {
                 }),
             });
         }
+        case "guildTag":
+            return (0, r.jsx)("div", {
+                className: d.guildTagAccessory,
+                children: t.element,
+            });
     }
 }

@@ -4,8 +4,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(284009),
-    s = n.n(a),
-    o = n(397927),
+    o = n.n(a),
+    s = n(397927),
     l = n(50268),
     c = n(486503),
     u = n(950191),
@@ -27,12 +27,12 @@ function m(e) {
                 autoTrackExposure: !1,
             },
         ),
-        b = (0, l.A)({
+        y = (0, l.A)({
             id: t.id,
             label: h.intl.string(h.t["/AXYnE"]),
             onSuccess: a,
         }),
-        y = i.useMemo(
+        b = i.useMemo(
             () =>
                 null == m
                     ? null
@@ -45,39 +45,43 @@ function m(e) {
         O = i.useCallback(() => {
             (0, p.C)(t.id), null == a || a();
         }, [t.id, a]),
-        A = i.useCallback(() => {
-            let e = f.Ay.getUserAvatarURL(t, !0, _.XAf);
-            s()(null != e, "cannot copy null avatar URL"), (0, p.C)(e), null == a || a();
-        }, [t, a]),
         v = i.useCallback(() => {
-            s()(null != y, "cannot copy null banner URL"), (0, p.C)(y), null == a || a();
-        }, [y, a]);
+            let e = f.Ay.getUserAvatarURL(t, !0, _.XAf);
+            o()(null != e, "cannot copy null avatar URL"), (0, p.C)(e), null == a || a();
+        }, [t, a]),
+        A = i.useCallback(() => {
+            o()(null != b, "cannot copy null banner URL"), (0, p.C)(b), null == a || a();
+        }, [b, a]);
     return !__OVERLAY__ && g && p.p5 && null != t.id
         ? E
-            ? (0, r.jsxs)(o.Drp, {
+            ? (0, r.jsxs)(s.Drp, {
                   id: "copy-user-info",
                   label: h.intl.string(h.t.QvQeLv),
                   children: [
-                      (0, r.jsx)(o.Drp, {
+                      (0, r.jsx)(s.Drp, {
                           id: "copy-user-id",
                           label: h.intl.string(h.t["/AXYnE"]),
                           action: O,
-                          icon: o.L9S,
+                          icon: s.L9S,
+                          leadingAccessory: {
+                              type: "icon",
+                              icon: s.L9S,
+                          },
                       }),
                       null != t.avatar &&
-                          (0, r.jsx)(o.Drp, {
+                          (0, r.jsx)(s.Drp, {
                               id: "copy-user-avatar-link",
                               label: h.intl.string(h.t.gERDvM),
-                              action: A,
+                              action: v,
                           }),
-                      null != y &&
-                          (0, r.jsx)(o.Drp, {
+                      null != b &&
+                          (0, r.jsx)(s.Drp, {
                               id: "copy-user-banner-link",
                               label: h.intl.string(h.t.hsNv0R),
-                              action: v,
+                              action: A,
                           }),
                   ],
               })
-            : b
+            : y
         : null;
 }

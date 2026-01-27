@@ -27,7 +27,7 @@ var l = n(627968),
     S = n(421314),
     I = n(516628),
     A = n(150639),
-    N = n(582617),
+    N = n(804998),
     w = n(652215),
     C = n(985018),
     M = n(373149);
@@ -273,7 +273,7 @@ let T = new h.A("EmojiStudio"),
                                       renderPopout: (e) => {
                                           let { closePopout: t } = e;
                                           return (0, l.jsx)(o.W1t, {
-                                              "data-menu-mixed": !0,
+                                              "data-menu-migrated-auto": !0,
                                               navId: "emoji-studio-context-menu",
                                               onClose: t,
                                               onSelect: t,

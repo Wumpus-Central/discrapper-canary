@@ -16,6 +16,10 @@ function c(n) {
               label: s.intl.string(s.t.JGj6Ci),
               action: () => (0, r.pb)(n),
               icon: l.iFK,
+              leadingAccessory: {
+                  type: "icon",
+                  icon: l.iFK,
+              },
               color: "danger",
           })
         : null;
