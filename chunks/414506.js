@@ -21,7 +21,7 @@ let _ = (0, c.A)(
                 E = null != (t = null == s ? void 0 : s[0]) ? t : f[0],
                 g = (0, d.A)(n.id, i, !0, E, b);
             return (0, l.jsx)(r.W1t, {
-                "data-menu-label-graphic-auto": !0,
+                "data-menu-migrated": !0,
                 navId: "guild-moderation-roles",
                 onClose: () => {
                     (0, o.Z_)(), null == _ || _();

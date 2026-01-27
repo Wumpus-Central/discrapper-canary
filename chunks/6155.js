@@ -1,13 +1,13 @@
 n.d(t, {
-    A: () => I,
+    A: () => S,
 }),
     n(321073),
     n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(311907),
-    s = n(827734),
-    o = n(397927),
+    o = n(827734),
+    s = n(397927),
     l = n(367513),
     c = n(31728),
     u = n(933958),
@@ -19,9 +19,9 @@ var r = n(627968),
     m = n(652215),
     g = n(806931),
     E = n(985018),
-    b = n(319567);
+    y = n(319567);
 
-function y(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,13 +46,13 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
 
-function A(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,36 +65,36 @@ function A(e, t) {
     return n;
 }
 
-function v(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function S(e) {
-    let { closePopout: t, idle: n, pipWindows: i, voiceChannelId: s, onSelect: h } = e;
+function I(e) {
+    let { closePopout: t, idle: n, pipWindows: i, voiceChannelId: o, onSelect: h } = e;
     n && t();
-    let b = (0, a.bG)([u.Ay], () => u.Ay.getCurrentEmbeddedActivity()),
-        y = (0, a.bG)([_.A], () => _.A.pipWindow),
-        O = (0, a.bG)([f.A], () => f.A.getSelectedParticipant(s)),
-        A = (0, a.bG)([f.A], () => f.A.getStreamParticipants(s));
+    let y = (0, a.bG)([u.Ay], () => u.Ay.getCurrentEmbeddedActivity()),
+        b = (0, a.bG)([_.A], () => _.A.pipWindow),
+        O = (0, a.bG)([f.A], () => f.A.getSelectedParticipant(o)),
+        v = (0, a.bG)([f.A], () => f.A.getStreamParticipants(o));
 
-    function v(e) {
-        (null == y ? void 0 : y.id) !== e.pipWindow.id && (0, c.mf)(e.pipWindow.id);
+    function A(e) {
+        (null == b ? void 0 : b.id) !== e.pipWindow.id && (0, c.mf)(e.pipWindow.id);
         let t = e.participant;
-        null != t && t.type !== g.lp.ACTIVITY && l.A.selectParticipant(s, t.id);
+        null != t && t.type !== g.lp.ACTIVITY && l.A.selectParticipant(o, t.id);
     }
 
-    function S(e) {
-        if (e.pipWindow.component === m.o1q.ACTIVITY && null != b) {
+    function I(e) {
+        if (e.pipWindow.component === m.o1q.ACTIVITY && null != y) {
             var t;
-            let e = null == (t = d.A.getApplication(b.applicationId)) ? void 0 : t.name;
+            let e = null == (t = d.A.getApplication(y.applicationId)) ? void 0 : t.name;
             return null == e
                 ? E.intl.string(E.t["8raC1P"])
                 : E.intl.formatToPlainString(E.t["a9+V+V"], {
@@ -108,14 +108,14 @@ function S(e) {
               });
     }
 
-    function I() {
+    function S() {
         let e = [],
             t = i.find((e) => e.component === m.o1q.VIDEO);
         return (
             null != t &&
-                A.forEach((n) => {
+                v.forEach((n) => {
                     let r = p.A.getActiveStreamForApplicationStream(n.stream),
-                        i = n.id === (null == O ? void 0 : O.id) && (null == y ? void 0 : y.id) === t.id;
+                        i = n.id === (null == O ? void 0 : O.id) && (null == b ? void 0 : b.id) === t.id;
                     null == r ||
                         i ||
                         e.push({
@@ -132,27 +132,28 @@ function S(e) {
         var t;
         let n = e.pipWindow.id,
             i = null == (t = e.participant) ? void 0 : t.id,
-            a = S(e),
-            s = "".concat(n).concat(null != i ? i : "");
+            a = I(e),
+            o = "".concat(n).concat(null != i ? i : "");
         return (0, r.jsx)(
-            o.Drp,
+            s.Drp,
             {
-                id: s,
+                id: o,
                 label: a,
-                action: () => v(e),
+                action: () => A(e),
             },
-            s,
+            o,
         );
     }
-    return (0, r.jsx)(o.W1t, {
+    return (0, r.jsx)(s.W1t, {
+        "data-menu-migrated": !0,
         navId: "pip-menu",
         "aria-label": "switch PIP",
         onClose: t,
         onSelect: h,
-        children: I().map(T),
+        children: S().map(T),
     });
 }
-let I = function (e) {
+let S = function (e) {
     let { voiceChannelId: t, idle: n } = e,
         l = i.useRef(null),
         c = Array.from((0, a.bG)([_.A], () => _.A.pipWindows).values()).filter((e) => e.component !== m.o1q.ACTIVITY),
@@ -164,12 +165,12 @@ let I = function (e) {
         f = 1 === c.length && u.length <= 1;
     return d || f
         ? null
-        : (0, r.jsx)(o.YNO, {
+        : (0, r.jsx)(s.YNO, {
               targetElementRef: l,
               position: "bottom",
               renderPopout: (e) =>
                   (0, r.jsx)(
-                      S,
+                      I,
                       O(
                           {
                               voiceChannelId: t,
@@ -181,19 +182,19 @@ let I = function (e) {
                   ),
               children: (e) =>
                   (0, r.jsx)(
-                      o.DUT,
-                      v(
+                      s.DUT,
+                      A(
                           O(
                               {
-                                  className: b.ro,
+                                  className: y.ro,
                               },
                               e,
                           ),
                           {
                               innerRef: l,
-                              children: (0, r.jsx)(o.FHP, {
+                              children: (0, r.jsx)(s.FHP, {
                                   size: "md",
-                                  color: s.A.unsafe_rawColors.WHITE.css,
+                                  color: o.A.unsafe_rawColors.WHITE.css,
                               }),
                           },
                       ),

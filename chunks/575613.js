@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => h,
+    A: () => g,
     J: () => p,
 }),
     n(896048);
@@ -31,7 +31,7 @@ let p = {
     Colors: o.A.Colors,
     Looks: o.A.Looks,
 };
-class f extends i.PureComponent {
+class h extends i.PureComponent {
     render() {
         var e, t;
         let n = this.props,
@@ -75,8 +75,8 @@ class f extends i.PureComponent {
                             !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
                 return l;
             })(n, ["storeListings", "primaryStoreListing", "skuId", "onStoreListingSelect", "currentStoreListingId"]),
-            f = +(null != l);
-        return (f += i.length) < 2
+            h = +(null != l);
+        return (h += i.length) < 2
             ? null
             : (0, r.jsx)(
                   o.A,
@@ -143,6 +143,7 @@ class f extends i.PureComponent {
                             : null,
                     );
                 return (0, r.jsx)(a.W1t, {
+                    "data-menu-migrated": !0,
                     onSelect: i,
                     navId: "test-store-listing",
                     "aria-label": u.intl.string(u.t.ogxXGq),
@@ -155,10 +156,10 @@ class f extends i.PureComponent {
             });
     }
 }
-let h = l.Ay.connectStores([c.A], (e) => {
+let g = l.Ay.connectStores([c.A], (e) => {
     let { skuId: t } = e;
     return {
         storeListings: c.A.getUnpublishedForSKU(t),
         primaryStoreListing: c.A.getForSKU(t),
     };
-})(f);
+})(h);

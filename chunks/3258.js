@@ -1,6 +1,6 @@
 n.r(t),
     n.d(t, {
-        Playground: () => j,
+        Playground: () => M,
         PlaygroundStore: () => D,
     }),
     n(896048),
@@ -9,8 +9,8 @@ n.r(t),
 var r = n(627968),
     i = n(64700),
     a = n(934551),
-    s = n(158954),
-    o = n(349288),
+    o = n(158954),
+    s = n(349288),
     l = n(862328),
     c = n(861672),
     u = n(477782),
@@ -22,13 +22,13 @@ var r = n(627968),
     m = n(839214),
     g = n(58736),
     E = n(380450),
-    b = n(227542),
-    y = n(84654),
+    y = n(227542),
+    b = n(84654),
     O = n(957565),
-    A = n(470586),
-    v = n(648339),
-    S = n(97483),
-    I = n(818348),
+    v = n(470586),
+    A = n(648339),
+    I = n(97483),
+    S = n(818348),
     T = n(985018),
     C = n(94576);
 
@@ -46,7 +46,7 @@ function N(e, t, n) {
     );
 }
 
-function R(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function R(e) {
     return e;
 }
 
-function w(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -81,7 +81,7 @@ function P(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -93,12 +93,12 @@ let D = (0, m.D)(() => ({
     controlsLayout: "right",
 }));
 
-function x() {
-    let e = (0, b.A)(),
+function L() {
+    let e = (0, y.A)(),
         t = (0, E.A)(),
-        n = (0, y.A)(),
+        n = (0, b.A)(),
         a = D.useField("controlsLayout"),
-        s = i.useMemo(
+        o = i.useMemo(
             () =>
                 (0, r.jsxs)(
                     u.rX,
@@ -142,15 +142,16 @@ function x() {
             [a],
         );
     return (0, r.jsxs)(c.W, {
-        onSelect: I.tE,
+        "data-menu-migrated": !0,
+        onSelect: S.tE,
         navId: "playground-settings-menu",
-        onClose: I.tE,
+        onClose: S.tE,
         "aria-label": "Playground Settings",
         children: [
             (0, r.jsx)(u.Dr, {
                 id: "appearance",
                 label: T.intl.string(T.t["iHH+ky"]),
-                children: [...e.filter((e) => null != e), s],
+                children: [...e.filter((e) => null != e), o],
             }),
             (0, r.jsx)(u.Dr, {
                 id: "accessibility",
@@ -166,11 +167,11 @@ function x() {
     });
 }
 
-function L() {
+function x() {
     let e = i.useRef(null);
     return (0, r.jsx)(f.Y, {
         targetElementRef: e,
-        renderPopout: () => (0, r.jsx)(x, {}),
+        renderPopout: () => (0, r.jsx)(L, {}),
         position: "bottom",
         align: "center",
         animation: f.Y.Animation.SCALE,
@@ -179,7 +180,7 @@ function L() {
             (0, r.jsx)(
                 h.K0,
                 P(
-                    R(
+                    w(
                         {
                             size: "sm",
                             icon: a.SettingsIcon,
@@ -196,7 +197,7 @@ function L() {
     });
 }
 
-function j(e) {
+function M(e) {
     var t;
     let { configs: n } = e,
         c = D.useField("selectedCollection"),
@@ -205,8 +206,8 @@ function j(e) {
         m = i.useMemo(() => n.flatMap((e) => e.collections), [n]),
         {
             collection: E,
-            group: b,
-            story: y,
+            group: y,
+            story: b,
         } = i.useMemo(() => {
             var e;
             let t = null != c ? m.find((e) => e.id === c) : m[0];
@@ -224,7 +225,7 @@ function j(e) {
                 story: r,
             };
         }, [c, u, m]),
-        I = (e) => {
+        S = (e) => {
             D.setState({
                 selectedCollection: e,
                 selectedStory: null,
@@ -236,15 +237,15 @@ function j(e) {
             });
         },
         N = null != (t = null == E ? void 0 : E.name) ? t : "Design System",
-        R = null == y ? void 0 : y.name,
-        w = () => {
+        w = null == b ? void 0 : b.name,
+        R = () => {
             if (null == E) return;
-            let e = null != y ? "dev://playground/".concat(E.id, "/").concat(y.id) : "dev://playground/".concat(E.id);
+            let e = null != b ? "dev://playground/".concat(E.id, "/").concat(b.id) : "dev://playground/".concat(E.id);
             (0, O.C)(e, () =>
                 (0, p.P0)({
                     id: "playground-link-copied",
                     message: "Copied playground link",
-                    type: S.Ck.SUCCESS,
+                    type: I.Ck.SUCCESS,
                 }),
             );
         };
@@ -264,7 +265,7 @@ function j(e) {
                                 children: (0, r.jsx)(d.j, {
                                     name: e.name,
                                     selected: (null != c ? c : null == (t = m[0]) ? void 0 : t.id) === e.id,
-                                    onClick: () => I(e.id),
+                                    onClick: () => S(e.id),
                                 }),
                             }),
                         },
@@ -283,7 +284,7 @@ function j(e) {
                                       children: N,
                                   })
                                 : null,
-                            null != R
+                            null != w
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           null != N
@@ -292,20 +293,20 @@ function j(e) {
                                                 })
                                               : null,
                                           (0, r.jsx)(g.Ay.Title, {
-                                              children: R,
+                                              children: w,
                                           }),
                                       ],
                                   })
                                 : null,
-                            (null == y ? void 0 : y.docs) != null
+                            (null == b ? void 0 : b.docs) != null
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(g.Ay.Divider, {
                                               className: C.zN,
                                           }),
                                           (0, r.jsx)(g.Ay.Title, {
-                                              children: (0, r.jsx)(o.Anchor, {
-                                                  href: y.docs,
+                                              children: (0, r.jsx)(s.Anchor, {
+                                                  href: b.docs,
                                                   children: "Docs",
                                               }),
                                           }),
@@ -318,24 +319,24 @@ function j(e) {
                                       "aria-label": "Copy Link",
                                       variant: "icon-only",
                                       icon: a.CopyIcon,
-                                      onClick: w,
+                                      onClick: R,
                                   })
                                 : null,
                             (0, r.jsx)("div", {
                                 className: C.IE,
-                                children: (0, r.jsx)(L, {}),
+                                children: (0, r.jsx)(x, {}),
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
                         className: C.MY,
                         children: [
-                            (0, r.jsx)(s.IpV, {
+                            (0, r.jsx)(o.IpV, {
                                 fade: !0,
                                 className: C.pz,
                                 children:
                                     null != E
-                                        ? (0, r.jsx)(A._, {
+                                        ? (0, r.jsx)(v._, {
                                               groups: E.groups,
                                               selectedStory: u,
                                               onStorySelect: T,
@@ -345,10 +346,10 @@ function j(e) {
                             (0, r.jsx)("div", {
                                 className: C.Qs,
                                 children:
-                                    null != y && null != b
-                                        ? (0, r.jsx)(v.z, {
-                                              story: y,
-                                              groupTitle: b.title,
+                                    null != b && null != y
+                                        ? (0, r.jsx)(A.z, {
+                                              story: b,
+                                              groupTitle: y.title,
                                               controlsLayout: f,
                                           })
                                         : null,
