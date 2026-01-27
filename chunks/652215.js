@@ -1905,11 +1905,7 @@ let ed = "",
         QUESTS_PREVIEW_DISMISSIBILITY: (e) => "/quests/".concat(e, "/preview/dismissibility"),
         QUESTS_PREVIEW_COMPLETE: (e) => "/quests/".concat(e, "/preview/complete"),
         QUESTS_RESET_RECENT_QUEST_COMPLETIONS: "/quests/reset-recent-quest-completions",
-        QUEST_FETCH_QUEST_TO_DELIVER: (e, t, n) =>
-            "/quests/decision?placement="
-                .concat(e)
-                .concat(null != t ? "&client_heartbeat_session_id=".concat(t) : "")
-                .concat(null != n ? "&client_ad_session_id=".concat(n) : ""),
+        QUEST_FETCH_QUEST_TO_DELIVER: "/quests/decision",
         QUEST_EARNED_DECISION: (e, t, n) =>
             "/quests/earned-decision?quest_ids="
                 .concat(e, "&content=")
