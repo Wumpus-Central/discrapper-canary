@@ -5,7 +5,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    o = n(108531),
+    o = n(353709),
     s = n(397927),
     l = n(565645),
     c = n(736653),
@@ -88,6 +88,7 @@ function E(e) {
             {
                 [h.tO]: "floating" === O,
                 [h.Kx]: "inline" === O,
+                [h.ik]: "bottom" === O,
             },
             E,
         ),
