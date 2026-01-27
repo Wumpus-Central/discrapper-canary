@@ -4,8 +4,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(158954),
+    o = n.n(a),
+    s = n(158954),
     l = n(86968),
     c = n(900283),
     u = n(563014),
@@ -82,7 +82,7 @@ function v(e) {
             iconLeft: b,
             leadingAccessory: v,
             trailingIndicator: A,
-            hint: I,
+            shortcut: I,
             subtext: S,
             subtextLineClamp: T,
             hasSubmenu: C,
@@ -91,16 +91,16 @@ function v(e) {
             disabled: R,
             isFocused: P,
             menuItemProps: D,
-            action: x,
-            onClose: L,
-            onFocus: j,
-            className: M,
+            action: L,
+            onClose: x,
+            onFocus: M,
+            className: j,
             focusedClassName: k,
             dontCloseOnActionIfHoldingShiftKey: U,
             dontCloseOnAction: G,
-            iconProps: V,
+            iconProps: F,
         } = e,
-        { onSelect: F, onInteraction: B } = i.useContext(c.x),
+        { onSelect: V, onInteraction: B } = i.useContext(c.x),
         H = i.useRef(null),
         Y = (0, f.Y)("MenuItem"),
         W = i.useCallback(
@@ -111,27 +111,27 @@ function v(e) {
                         B({
                             type: c.Q.DEFAULT,
                         }),
-                    null == x)
+                    null == L)
                 )
                     return !1;
-                (e.shiftKey && U) || G || L(),
+                (e.shiftKey && U) || G || x(),
                     e.persist(),
-                    null == F || F(),
-                    (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => x(e));
+                    null == V || V(),
+                    (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => L(e));
             },
-            [x, L, F, U, G, B],
+            [L, x, V, U, G, B],
         );
     return (
         i.useEffect(() => {
-            P && ((0, u.Y)(H), null == j || j());
-        }, [P, j]),
+            P && ((0, u.Y)(H), null == M || M());
+        }, [P, M]),
         (0, r.jsxs)(
-            o.DUT,
+            s.DUT,
             O(
                 y(
                     {
                         innerRef: H,
-                        className: s()(g.item, g.labelContainer, m.jV[t], M, {
+                        className: o()(g.item, g.labelContainer, m.jV[t], j, {
                             [g.disabled]: R,
                             [g.focused]: P,
                             [null != k ? k : ""]: P,
@@ -162,10 +162,10 @@ function v(e) {
                                                 {
                                                     color: "currentColor",
                                                 },
-                                                V,
+                                                F,
                                             ),
                                             {
-                                                className: s()(g.icon, null == V ? void 0 : V.className),
+                                                className: o()(g.icon, null == F ? void 0 : F.className),
                                             },
                                         ),
                                     ),
@@ -177,9 +177,9 @@ function v(e) {
                                     children: (0, l.J)(null != a ? a : n, e),
                                 }),
                                 null != S &&
-                                    (0, r.jsx)(o.EYj, {
+                                    (0, r.jsx)(s.EYj, {
                                         variant: "text-xs/normal",
-                                        className: s()(g.subtext, {
+                                        className: o()(g.subtext, {
                                             [g.subtextLineClamp]: null != T,
                                         }),
                                         lineClamp: T,
@@ -189,21 +189,21 @@ function v(e) {
                         }),
                         null != I &&
                             (0, r.jsx)("div", {
-                                className: g.hintContainer,
-                                children: (0, l.J)(I, e),
+                                className: g.shortcutContainer,
+                                children: I,
                             }),
                         null != w &&
                             (0, r.jsx)("div", {
                                 className: g.badgeContainer,
-                                children: (0, r.jsx)(o.Exy, {
+                                children: (0, r.jsx)(s.Exy, {
                                     type: w,
                                 }),
                             }),
                         N &&
                             (0, r.jsx)("div", {
                                 className: g.iconContainer,
-                                children: (0, r.jsx)(o.y$y, {
-                                    type: o.y$y.Type.PULSING_ELLIPSIS,
+                                children: (0, r.jsx)(s.y$y, {
+                                    type: s.y$y.Type.PULSING_ELLIPSIS,
                                 }),
                             }),
                         Y
@@ -223,10 +223,10 @@ function v(e) {
                                                 {
                                                     color: "currentColor",
                                                 },
-                                                V,
+                                                F,
                                             ),
                                             {
-                                                className: s()(g.icon, null == V ? void 0 : V.className),
+                                                className: o()(g.icon, null == F ? void 0 : F.className),
                                             },
                                         ),
                                     ),
@@ -234,7 +234,7 @@ function v(e) {
                         C &&
                             (0, r.jsx)("div", {
                                 className: g.iconContainer,
-                                children: (0, r.jsx)(o._BQ, {
+                                children: (0, r.jsx)(s._BQ, {
                                     size: "md",
                                     color: "currentColor",
                                     className: g.caret,

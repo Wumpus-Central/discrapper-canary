@@ -24,7 +24,7 @@ var r = {
     imageAccessory: "imageAccessory_c1e9c4",
     roleDotAccessory: "roleDotAccessory_c1e9c4",
     statusAccessory: "statusAccessory_c1e9c4 roleDotAccessory_c1e9c4",
-    hintContainer: "hintContainer_c1e9c4",
+    shortcutContainer: "shortcutContainer_c1e9c4",
     caret: "caret_c1e9c4",
     disabled: "disabled_c1e9c4",
     separator: "separator_c1e9c4",
