@@ -1,25 +1,15 @@
 n.d(t, {
-    y: () => l,
+    y: () => o,
 });
 var r = n(587895),
     i = n(625180),
-    a = n(91242),
-    s = n(207371),
-    o = n(580954);
+    a = n(207371);
 
-function l(e) {
-    let { applicationId: t, leavesCurrentFrame: n = !0 } = e,
-        l = r.A.getApplication(t),
-        c = null != l && (0, s.x)(l);
-    if (n) {
-        let e = a.A.getConnectedFrame();
-        null != e &&
-            (0, o.A)().leaveFrame({
-                applicationId: e.applicationId,
-            });
-    }
+function o(e) {
+    let { applicationId: t } = e,
+        n = r.A.getApplication(t);
     return (
-        !!c &&
+        !!(null != n && (0, a.x)(n)) &&
         (i.A.launchFrame({
             applicationId: t,
         }),

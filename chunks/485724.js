@@ -1,6 +1,6 @@
 n.d(t, {
-    J: () => x.J,
-    W: () => M,
+    J: () => L.J,
+    W: () => U,
 }),
     n(321073),
     n(134528),
@@ -9,142 +9,155 @@ n.d(t, {
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(485845),
-    s = n(379834),
-    o = n(311907),
-    l = n(397927),
+    l = n(485845),
+    a = n(379834),
+    s = n(311907),
+    o = n(397927),
     c = n(795816),
     u = n(574152),
     d = n(793574),
-    f = n(688810),
-    p = n(522305),
-    _ = n(735991),
-    h = n(361926),
-    m = n(583846),
-    g = n(205184),
-    E = n(773669),
-    b = n(961350),
-    y = n(734057),
+    p = n(688810),
+    m = n(522305),
+    f = n(735991),
+    g = n(361926),
+    h = n(583846),
+    _ = n(625180),
+    b = n(207371),
+    A = n(205184),
+    y = n(773669),
+    v = n(961350),
+    x = n(734057),
     O = n(994500),
-    A = n(967198),
-    v = n(287809),
-    S = n(486020),
+    E = n(967198),
+    j = n(287809),
+    C = n(486020),
     I = n(204776),
-    T = n(725606),
-    C = n(572211),
+    S = n(725606),
+    T = n(572211),
     N = n(178910),
-    R = n(354287),
+    P = n(354287),
     w = n(138175),
-    P = n(112150),
+    R = n(112150),
     D = n(574660),
-    x = n(768349),
-    L = n(985018),
-    j = n(22658);
+    L = n(768349),
+    M = n(985018),
+    k = n(22658);
 
-function M(e) {
+function U(e) {
     var t;
-    let { app: n, linkType: a, activityCustomId: s, activityReferrerId: l, message: m, onView: g } = e,
-        { name: E, bot: O } = (n = (0, w.b)(n)),
-        A = null == O ? void 0 : O.id,
-        v = (0, _.Ag)(n),
-        I = S.Ay.getApplicationIconURL({
+    let { app: n, linkType: l, activityCustomId: a, activityReferrerId: o, message: h, onView: A } = e,
+        { name: y, bot: O } = (n = (0, w.b)(n)),
+        E = null == O ? void 0 : O.id,
+        j = (0, f.Ag)(n),
+        I = C.Ay.getApplicationIconURL({
             id: n.id,
             icon: n.icon,
             bot: O,
         }),
-        { staticBannerSrc: N, videoBannerSrc: x, bannerAspectRatio: j } = (0, P.f)(n),
-        M = (0, o.bG)([b.default], () => (null != l ? l : b.default.getId()), [l]),
-        { analyticsLocations: G } = (0, f.Ay)(d.A.APP_MESSAGE_EMBED),
-        { currentChannelId: V, instanceId: F, isCurrentlyInInstance: B, canLaunchInChannel: H } = (0, T.w)(n.id),
-        Y = (0, u.A)(),
-        W = (0, h.Vr)({
+        { staticBannerSrc: N, videoBannerSrc: L, bannerAspectRatio: k } = (0, R.f)(n),
+        U = (0, s.bG)([v.default], () => (null != o ? o : v.default.getId()), [o]),
+        { analyticsLocations: F } = (0, p.Ay)(d.A.APP_MESSAGE_EMBED),
+        { currentChannelId: H, instanceId: V, isCurrentlyInInstance: z, canLaunchInChannel: W } = (0, S.w)(n.id),
+        K = (0, u.A)(),
+        Y = (0, g.Vr)({
             context: {
                 type: "contextless",
             },
             applicationId: n.id,
             botUserId: null == O ? void 0 : O.id,
         }),
-        K = null != A && v && W,
-        z = H && v,
-        q = (0, D.F)(n),
+        q = null != E && j && Y,
+        J = W && j,
+        Q = (0, b.e)(n),
+        Z = (0, D.F)(n),
         X = (0, D.t)(n),
-        Z = i.useMemo(() => {
+        $ = i.useMemo(() => {
             let e = [];
             return (
-                v
-                    ? (z &&
-                          e.push({
-                              label:
-                                  null == F
-                                      ? L.intl.string(L.t.RscU7I)
-                                      : B
-                                        ? L.intl.string(L.t.DPfdsq)
-                                        : L.intl.string(L.t.sqe0hj),
-                              trackingArea: R.kY.PLAY,
+                j
+                    ? Q
+                        ? e.push({
+                              label: M.intl.string(M.t.RscU7I),
+                              trackingArea: P.kY.PLAY,
                               onClick() {
-                                  (0, c.su)({
-                                      channelId: null != V ? V : void 0,
+                                  _.A.launchFrame({
                                       applicationId: n.id,
-                                      isStart: null == F,
-                                      embeddedActivitiesManager: Y,
-                                      customId: s,
-                                      referrerId: M,
-                                      analyticsLocations: G,
                                   });
                               },
-                              disabled: B,
-                          }),
-                      !z &&
-                          K &&
-                          e.push({
-                              label: L.intl.string(L.t.JeK1Wg),
-                              trackingArea: R.kY.PLAY,
-                              onClick() {
-                                  (0, p.Q)({
-                                      appId: n.id,
-                                      botId: A,
-                                      analyticsLocations: G,
-                                      customId: s,
-                                      referrerId: M,
-                                  });
-                              },
-                          }))
+                          })
+                        : (J &&
+                              e.push({
+                                  label:
+                                      null == V
+                                          ? M.intl.string(M.t.RscU7I)
+                                          : z
+                                            ? M.intl.string(M.t.DPfdsq)
+                                            : M.intl.string(M.t.sqe0hj),
+                                  trackingArea: P.kY.PLAY,
+                                  onClick() {
+                                      (0, c.su)({
+                                          channelId: null != H ? H : void 0,
+                                          applicationId: n.id,
+                                          isStart: null == V,
+                                          embeddedActivitiesManager: K,
+                                          customId: a,
+                                          referrerId: U,
+                                          analyticsLocations: F,
+                                      });
+                                  },
+                                  disabled: z,
+                              }),
+                          !J &&
+                              q &&
+                              e.push({
+                                  label: M.intl.string(M.t.JeK1Wg),
+                                  trackingArea: P.kY.PLAY,
+                                  onClick() {
+                                      (0, m.Q)({
+                                          appId: n.id,
+                                          botId: E,
+                                          analyticsLocations: F,
+                                          customId: a,
+                                          referrerId: U,
+                                      });
+                                  },
+                              }))
                     : null != X && e.push(X),
                 e
             );
-        }, [z, K, F, B, V, n.id, Y, s, M, G, v, X, A]),
-        Q = v
-            ? (0, r.jsx)(U, {
+        }, [j, X, Q, n.id, J, q, V, z, H, K, a, U, F, E]),
+        ee = j
+            ? (0, r.jsx)(B, {
                   app: n,
               })
-            : (0, r.jsx)(k, {
+            : (0, r.jsx)(G, {
                   app: n,
               });
-    return (0, r.jsx)(C.h, {
-        title: E,
+    return (0, r.jsx)(T.h, {
+        title: y,
         staticBannerSrc: N,
-        videoBannerSrc: x,
-        onClickBanner: q,
-        bannerAspectRatio: j,
+        videoBannerSrc: L,
+        onClickBanner: Z,
+        bannerAspectRatio: k,
         iconSrc: I,
-        info: Q,
-        actions: Z,
-        onClickContent: q,
+        info: ee,
+        actions: $,
+        onClickContent: Z,
         trackingConfig: {
             id: n.id,
-            linkType: a,
-            referrerId: M,
-            activityCustomId: s,
-            onView: g,
-            guildId: null == (t = y.A.getChannel(m.channel_id)) ? void 0 : t.guild_id,
-            channelId: m.channel_id,
-            messageId: m.id,
+            linkType: l,
+            referrerId: U,
+            activityCustomId: a,
+            onView: A,
+            guildId: null == (t = x.A.getChannel(h.channel_id)) ? void 0 : t.guild_id,
+            channelId: h.channel_id,
+            messageId: h.id,
         },
     });
 }
 
-function k(e) {
-    var t, n, s;
+function G(e) {
+    var t, n, a;
     let { app: c } = e,
         u =
             (0, I.Ie)({
@@ -153,9 +166,9 @@ function k(e) {
                 integrationTypesConfig: c.integrationTypesConfig,
             }) &&
             null != c.integrationTypesConfig &&
-            a.b.GUILD_INSTALL in c.integrationTypesConfig,
-        d = (0, o.bG)([E.default], () => E.default.locale, []),
-        f = i.useMemo(() => {
+            l.b.GUILD_INSTALL in c.integrationTypesConfig,
+        d = (0, s.bG)([y.default], () => y.default.locale, []),
+        p = i.useMemo(() => {
             var e, t;
             if (!u) return null;
             let n = new Intl.NumberFormat(d, {
@@ -165,116 +178,116 @@ function k(e) {
                 r = null != (e = null == (t = c.directoryEntry) ? void 0 : t.guild_count) ? e : 0;
             return 0 === r
                 ? null
-                : L.intl.format(L.t["6IW6Wi"], {
+                : M.intl.format(M.t["6IW6Wi"], {
                       guildCount: n.format(r),
                   });
         }, [null == (t = c.directoryEntry) ? void 0 : t.guild_count, u, d]),
-        p = null == (s = c.categories) || null == (n = s.at(0)) ? void 0 : n.name;
+        m = null == (a = c.categories) || null == (n = a.at(0)) ? void 0 : n.name;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            null != p &&
-                (0, r.jsx)(l.Text, {
+            null != m &&
+                (0, r.jsx)(o.Text, {
                     variant: "text-xs/medium",
-                    className: j.h_,
+                    className: k.h_,
                     color: "none",
-                    children: p,
+                    children: m,
                 }),
-            null != f &&
-                (0, r.jsxs)(l.Text, {
+            null != p &&
+                (0, r.jsxs)(o.Text, {
                     variant: "text-xs/normal",
-                    className: j.dS,
+                    className: k.dS,
                     color: "none",
                     lineClamp: 1,
                     children: [
-                        (0, r.jsx)(l.QGJ, {
+                        (0, r.jsx)(o.QGJ, {
                             size: "xxs",
                             color: "currentColor",
                         }),
-                        f,
+                        p,
                     ],
                 }),
         ],
     });
 }
 
-function U(e) {
+function B(e) {
     let { app: t } = e,
-        { tags: n, maxParticipants: a = 0 } = t,
-        c = (0, o.bG)([A.A], () => {
+        { tags: n, maxParticipants: l = 0 } = t,
+        c = (0, s.bG)([E.A], () => {
             var e;
-            return null != (e = A.A.getGuildId()) ? e : void 0;
+            return null != (e = E.A.getGuildId()) ? e : void 0;
         }, []),
-        u = (0, g.s)(t.id),
-        d = (0, o.yK)([v.default, O.A], () => {
+        u = (0, A.s)(t.id),
+        d = (0, s.yK)([j.default, O.A], () => {
             let e = [];
             for (let [t, n] of u.entries()) {
                 if (t >= 5) break;
-                let r = v.default.getUser(n.author_id),
+                let r = j.default.getUser(n.author_id),
                     i = O.A.isFriend(n.author_id);
                 null != r && i && e.push(r);
             }
             return e;
         }, [u]),
-        f = i.useMemo(() => {
+        p = i.useMemo(() => {
             if (d.length > 0)
                 return (0, r.jsx)(N.$, {
                     activityUsers: d,
                     guildId: c,
-                    activityText: L.intl.formatToPlainString(L.t["IJa+46"], {
+                    activityText: M.intl.formatToPlainString(M.t["IJa+46"], {
                         count: d.length,
                     }),
                 });
-            if (u.some((e) => (0, m.CZ)(e) === s.m.GLOBAL))
+            if (u.some((e) => (0, h.CZ)(e) === a.m.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(l.Y3C, {
+                        (0, r.jsx)(o.Y3C, {
                             size: "xxs",
                             color: "currentColor",
                         }),
-                        L.intl.string(L.t.TsWCdW),
+                        M.intl.string(M.t.TsWCdW),
                     ],
                 });
             let e =
-                a > 0
-                    ? L.intl.format(L.t.z8EAJW, {
-                          count: a,
+                l > 0
+                    ? M.intl.format(M.t.z8EAJW, {
+                          count: l,
                       })
-                    : L.intl.string(L.t.RjceQU);
+                    : M.intl.string(M.t.RjceQU);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(l.nys, {
+                    (0, r.jsx)(o.nys, {
                         size: "xxs",
                         color: "currentColor",
                     }),
                     e,
                 ],
             });
-        }, [u, d, c, a]);
+        }, [u, d, c, l]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n.length > 0 &&
-                (0, r.jsx)(l.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: "text-xs/medium",
-                    className: j.h_,
+                    className: k.h_,
                     color: "none",
                     lineClamp: 1,
                     children: n.map((e, t) =>
                         (0, r.jsx)(
                             "span",
                             {
-                                className: j.Tc,
+                                className: k.Tc,
                                 children: e,
                             },
                             t,
                         ),
                     ),
                 }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: "text-xs/normal",
-                className: j.dS,
+                className: k.dS,
                 color: "none",
                 lineClamp: 1,
-                children: f,
+                children: p,
             }),
         ],
     });
