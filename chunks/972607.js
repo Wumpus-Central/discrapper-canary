@@ -19,18 +19,18 @@ var r = n(627968),
     m = n(841702),
     g = n(769015),
     E = n(242874),
-    b = n(552736),
-    y = n(810498),
+    y = n(552736),
+    b = n(810498),
     O = n(219271),
-    A = n(21119),
-    v = n(7133),
-    S = n(994500),
-    I = n(351906),
+    v = n(21119),
+    A = n(7133),
+    I = n(994500),
+    S = n(351906),
     T = n(287809),
     C = n(957565),
     N = n(45938),
-    R = n(927578),
-    w = n(427262),
+    w = n(927578),
+    R = n(427262),
     P = n(937008),
     D = n(652215),
     x = n(788868),
@@ -51,15 +51,15 @@ function k(e) {
             giftMessageError: E,
             isSendingMessage: O,
         } = e,
-        [A, S] = i.useState(f.e2O.Modes.DEFAULT),
-        T = (0, c.bG)([I.A], () => I.A.enabled),
+        [v, I] = i.useState(f.e2O.Modes.DEFAULT),
+        T = (0, c.bG)([S.A], () => S.A.enabled),
         k = p || (null != l && null != _),
         G = (null == a ? void 0 : a.productLine) === D.EZt.COLLECTIBLES,
-        V = (0, b.A)(),
+        V = (0, y.A)(),
         { selectedGiftingPromotionReward: F } = (0, P.Pv)(),
         B = null == V ? void 0 : V.giftPurchaseConfirmation,
-        H = (0, m.Mv)(null == F ? void 0 : F.skuId),
-        Y = (0, y.Mq)(o) && null != H && null != B,
+        H = (0, m.Mv)(F),
+        Y = (0, b.Mq)(o) && null != H && null != B,
         W = () => (null != o ? o.skuId : null != a ? a.id : null),
         K = () => {
             let e;
@@ -80,7 +80,7 @@ function k(e) {
                                   : L.t.p0pZXP
                               : L.t.bXqk3o),
                     L.intl.format(e, {
-                        skuName: (0, R.RH)(o.id),
+                        skuName: (0, w.RH)(o.id),
                         intervalCount: o.intervalCount,
                     }));
         },
@@ -93,7 +93,7 @@ function k(e) {
         q = (e, t) => {
             null != a &&
                 (0, N.AK)(
-                    new v.A({
+                    new A.A({
                         code: t,
                         maxUses: 1,
                     }),
@@ -101,17 +101,17 @@ function k(e) {
                 ),
                 (0, C.C)(
                     e,
-                    () => S(f.e2O.Modes.SUCCESS),
-                    () => S(f.e2O.Modes.ERROR),
+                    () => I(f.e2O.Modes.SUCCESS),
+                    () => I(f.e2O.Modes.ERROR),
                 ),
                 setTimeout(() => {
-                    S(f.e2O.Modes.DEFAULT);
+                    I(f.e2O.Modes.DEFAULT);
                 }, M);
         },
-        X = () => {
+        Z = () => {
             let e;
             if (null == t) return null;
-            switch (A) {
+            switch (v) {
                 case f.e2O.Modes.SUCCESS:
                     e = L.intl.string(L.t.XVvPjU);
                     break;
@@ -130,7 +130,7 @@ function k(e) {
                             children: (0, r.jsx)(f.e2O, {
                                 hideMessage: T ? L.intl.string(L.t["0RLn47"]) : null,
                                 value: (0, N.Zq)(t),
-                                mode: A,
+                                mode: v,
                                 text: e,
                                 onCopy: (e) => q(e, t),
                                 supportsCopy: C.p5,
@@ -146,7 +146,7 @@ function k(e) {
                 ],
             });
         },
-        Z = () =>
+        X = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
@@ -161,7 +161,7 @@ function k(e) {
                     (0, r.jsx)("div", {
                         className: j.yF,
                     }),
-                    X(),
+                    Z(),
                 ],
             }),
         Q = () =>
@@ -179,11 +179,11 @@ function k(e) {
                                 children: [
                                     (0, r.jsx)(f.Heading, {
                                         variant: "heading-md/semibold",
-                                        children: w.Ay.getName(_),
+                                        children: R.Ay.getName(_),
                                     }),
                                     (0, r.jsxs)("div", {
                                         className: j.Ik,
-                                        children: [" ", w.Ay.getUserTag(_)],
+                                        children: [" ", R.Ay.getUserTag(_)],
                                     }),
                                 ],
                             }),
@@ -233,7 +233,7 @@ function k(e) {
                       }),
                       children: z(),
                   }),
-                  (p && null != _ && null == E) || k ? Q() : Z(),
+                  (p && null != _ && null == E) || k ? Q() : X(),
               ],
           });
 }
@@ -245,17 +245,17 @@ let U = (e) => {
     let [a, s] = i.useState(),
         [o, d] = i.useState(!1),
         [m, g] = i.useState(!1),
-        { userAffinities: b, isLoading: y } = (0, c.cf)([A.A], () => ({
-            userAffinities: A.A.getUserAffinitiesMap(),
-            isLoading: A.A.isFetching(),
+        { userAffinities: y, isLoading: b } = (0, c.cf)([v.A], () => ({
+            userAffinities: v.A.getUserAffinitiesMap(),
+            isLoading: v.A.isFetching(),
         })),
-        v = Array.from(b.keys()).sort((e, t) => A.A.compare(e, t)),
-        I = (0, c.bG)([S.A], () => S.A.getFriendIDs()),
-        C = l().difference(I, v),
-        N = [...v, ...C],
-        R = (0, c.bG)([T.default], () => T.default.filter((e) => N.includes(e.id) && !e.bot), [N]);
-    if (null == R || 0 === R.length) return null;
-    let P = l().sortBy(R, (e) => N.indexOf(e.id));
+        A = Array.from(y.keys()).sort((e, t) => v.A.compare(e, t)),
+        S = (0, c.bG)([I.A], () => I.A.getFriendIDs()),
+        C = l().difference(S, A),
+        N = [...A, ...C],
+        w = (0, c.bG)([T.default], () => T.default.filter((e) => N.includes(e.id) && !e.bot), [N]);
+    if (null == w || 0 === w.length) return null;
+    let P = l().sortBy(w, (e) => N.indexOf(e.id));
     return (0, r.jsxs)("div", {
         className: j.vt,
         children: [
@@ -266,7 +266,7 @@ let U = (e) => {
                         selectionMode: "single",
                         label: L.intl.string(L.t.MJw05f),
                         placeholder: L.intl.string(L.t.J019jZ),
-                        loading: y,
+                        loading: b,
                         value: a,
                         onSelectionChange: (e) => {
                             s(e), d(!1);
@@ -274,7 +274,7 @@ let U = (e) => {
                         options: P.map((e) => ({
                             id: e.id,
                             value: e,
-                            label: "".concat(w.Ay.getUserTag(e)),
+                            label: "".concat(R.Ay.getUserTag(e)),
                             leading: (0, r.jsx)(h.A, {
                                 user: e,
                                 size: f._3J.SIZE_20,

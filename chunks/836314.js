@@ -7,8 +7,6 @@ e.exports = {
     Sf: "claimed_bab2bc",
     j0: "claimedIcon_bab2bc",
     VH: "preview_bab2bc",
-    S1: "previewTrick_bab2bc",
-    LX: "previewTreat_bab2bc",
     tZ: "productName_bab2bc",
     _Q: "avatarPreview_bab2bc",
     M4: "nameplatePreview_bab2bc",

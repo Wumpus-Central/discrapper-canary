@@ -1,8 +1,7 @@
 n.d(t, {
+    JW: () => l,
     K5: () => p,
     Mq: () => f,
-    R_: () => o,
-    V$: () => l,
     gc: () => _,
     kz: () => d,
     px: () => u,
@@ -13,36 +12,27 @@ n.d(t, {
     n(114821),
     n(339614),
     n(264879);
-var r = n(64700);
-n(311907);
-var i = n(841702);
-n(412260);
-var a = n(552736),
-    s = n(788868);
-
-function o() {
-    let [e, t] = r.useState(),
-        n = (0, a.A)(),
-        s = null == n ? void 0 : n.rewards,
-        o = null == n ? void 0 : n.variants;
-    null != o && (s = o.flatMap((e) => e.variants));
-    let { purchases: l, hasPreviouslyFetched: c, fetchPurchasesError: u } = (0, i.Wg)(),
-        d = r.useRef(!1);
-    return (
-        r.useEffect(() => {
-            c &&
-                !d.current &&
-                null != s &&
-                (t(null == u ? s.filter((e) => null == l.get(e.skuId)) : []), (d.current = !0));
-        }, [s, l, c, u]),
-        null != e ? e : void 0
-    );
-}
+var r = n(64700),
+    i = n(311907),
+    a = n(841702),
+    s = n(412260);
+n(552736);
+var o = n(788868);
 
 function l() {
-    var e;
-    let t = (0, a.A)();
-    return null != (e = null == t ? void 0 : t.variants) ? e : void 0;
+    let [e, t] = r.useState(),
+        n = (0, i.bG)([s.A], () => s.A.getGiftPromotionRewardSkuIds()),
+        { purchases: o, hasPreviouslyFetched: l, fetchPurchasesError: c } = (0, a.Wg)(),
+        u = r.useRef(!1);
+    return (
+        r.useEffect(() => {
+            l &&
+                !u.current &&
+                n.length > 0 &&
+                (t(null == c ? n.filter((e) => null == o.get(e)) : []), (u.current = !0));
+        }, [n, o, l, c]),
+        e
+    );
 }
 
 function c(e) {
@@ -62,7 +52,7 @@ function d(e, t, n) {
 }
 
 function f(e) {
-    return [s.gD.PREMIUM_YEAR_TIER_2, s.gD.PREMIUM_MONTH_TIER_2].includes(null == e ? void 0 : e.id);
+    return [o.gD.PREMIUM_YEAR_TIER_2, o.gD.PREMIUM_MONTH_TIER_2].includes(null == e ? void 0 : e.id);
 }
 
 function p(e, t) {

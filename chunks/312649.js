@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => w,
+    A: () => R,
 }),
     n(896048);
 var r = n(627968),
@@ -18,25 +18,25 @@ var r = n(627968),
     m = n(344159),
     g = n(658679),
     E = n(79387),
-    b = n(45938),
-    y = n(927578),
+    y = n(45938),
+    b = n(927578),
     O = n(937008),
-    A = n(156312),
-    v = n(495263),
-    S = n(62590),
-    I = n(224949),
+    v = n(156312),
+    A = n(495263),
+    I = n(62590),
+    S = n(224949),
     T = n(216641),
     C = n(999784),
     N = n(652215),
-    R = n(789129);
+    w = n(789129);
 
-function w(e) {
+function R(e) {
     let {
             premiumSubscription: t,
             setPurchaseState: n,
             onBack: a,
             onNext: o,
-            legalTermsNodeRef: w,
+            legalTermsNodeRef: R,
             flashLegalTerms: P,
             invoiceError: D,
             planError: x,
@@ -57,11 +57,11 @@ function w(e) {
         {
             selectedPlan: z,
             priceOptions: q,
-            setHasAcceptedTerms: X,
-            setPurchaseError: Z,
+            setHasAcceptedTerms: Z,
+            setPurchaseError: X,
             purchaseType: Q,
-            paymentSourceId: $,
-            paymentSources: J,
+            paymentSourceId: J,
+            paymentSources: $,
             selectedSkuId: ee,
             skusById: et,
             skuPricePreviewsById: en,
@@ -70,7 +70,7 @@ function w(e) {
             invoicePreview: ea,
             inReverseTrial: es,
             premiumBrandRefreshBackgroundClassName: eo,
-        } = (0, A.P5)(),
+        } = (0, v.P5)(),
         {
             isGift: el,
             selectedGiftStyle: ec,
@@ -81,11 +81,11 @@ function w(e) {
             selectedGiftingPromotionReward: e_,
         } = (0, O.Pv)(),
         eh = (0, p.Mq)(z),
-        em = (0, b.lo)(ep),
+        em = (0, y.lo)(ep),
         eg = {};
     (eg.gift_style = ec),
-        (eg.reward_sku_ids = eh && (null == e_ ? void 0 : e_.skuId) != null ? [null == e_ ? void 0 : e_.skuId] : []),
-        em === b.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD &&
+        (eg.reward_sku_ids = eh && null != e_ ? [e_] : []),
+        em === y.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD &&
             (l()(null != ep, "Gift recipient must be set at purchase review step for these gift options."),
             (eg.recipient_id = ep.id),
             (eg.custom_message = eu),
@@ -93,16 +93,16 @@ function w(e) {
             (eg.emoji_name = (null == ed ? void 0 : ed.id) == null ? (null == ed ? void 0 : ed.surrogates) : void 0),
             (eg.sound_id = null == ef ? void 0 : ef.soundId));
     let eE = null == z ? void 0 : z.id,
-        eb = (0, S.$o)(k, q.paymentSourceId, eE),
-        { analyticsLocations: ey } = (0, d.Ay)(),
-        eO = (0, T.W)(J, $),
-        [eA, ev] = i.useState(eb),
-        [eS, eI] = i.useState(!1),
+        ey = (0, I.$o)(k, q.paymentSourceId, eE),
+        { analyticsLocations: eb } = (0, d.Ay)(),
+        eO = (0, T.W)($, J),
+        [ev, eA] = i.useState(ey),
+        [eI, eS] = i.useState(!1),
         { hasEntitlements: eT } = (0, m.X)(eE, el),
-        eC = (0, y.J$)(q.paymentSourceId),
-        eN = eT || eb,
-        eR = (0, _.l)(),
-        ew = (0, c.bG)([I.A], () => I.A.currentOrderId),
+        eC = (0, b.J$)(q.paymentSourceId),
+        eN = eT || ey,
+        ew = (0, _.l)(),
+        eR = (0, c.bG)([S.A], () => S.A.currentOrderId),
         eP = null,
         eD = null;
     if (Q === N.VVm.ONE_TIME) {
@@ -111,28 +111,28 @@ function w(e) {
             (eP = null != (ex = et[ee]) ? ex : null),
             l()(null != eP, "SKU must exist and be fetched.");
         let e = en[ee],
-            t = null != $ ? $ : E.B;
+            t = null != J ? J : E.B;
         eD = null != e ? e[t] : null;
     }
     let eL = async () => {
-            await (0, v.l)({
+            await (0, A.l)({
                 setPurchaseState: n,
-                setHasAcceptedTerms: X,
-                setIsSubmitting: ev,
-                setPurchaseError: Z,
-                hasRedirectURL: eS,
-                setHasRedirectURL: eI,
+                setHasAcceptedTerms: Z,
+                setIsSubmitting: eA,
+                setPurchaseError: X,
+                hasRedirectURL: eI,
+                setHasRedirectURL: eS,
                 isGift: el,
                 baseAnalyticsData: j,
                 analyticsLocation: G,
-                analyticsLocations: ey,
+                analyticsLocations: eb,
                 flowStartTime: M,
                 subscriptionPlan: z,
                 planGroup: U,
                 trialId: k,
                 priceOptions: q,
                 paymentSource: eO,
-                isPrepaidPaymentPastDue: eR,
+                isPrepaidPaymentPastDue: ew,
                 openInvoiceId: F,
                 premiumSubscription: t,
                 onNext: o,
@@ -144,7 +144,7 @@ function w(e) {
                 loadId: ei.loadId,
                 giftInfoOptions: eg,
                 invoicePreview: ea,
-                orderId: ew,
+                orderId: eR,
             });
         },
         ej = {
@@ -154,7 +154,7 @@ function w(e) {
             onNext: o,
             onPurchaseError: L,
             paymentSource: eO,
-            paymentSourceId: $,
+            paymentSourceId: J,
             purchaseTokenAuthState: V,
             setPurchaseState: n,
         },
@@ -164,24 +164,24 @@ function w(e) {
     }),
         i.useEffect(() => {
             let { makePurchase: e } = eM.current;
-            eb && !el && null == t && e();
-        }, [eb, el, t]);
+            ey && !el && null == t && e();
+        }, [ey, el, t]);
     let ek = null != F || (Q === N.VVm.ONE_TIME && !el),
         eU = H && !ek;
-    return eb
+    return ey
         ? null
         : (0, r.jsxs)(u.jlY, {
               "data-migration-pending": !0,
               align: f.A.Align.CENTER,
-              className: s()(eo, R.H),
+              className: s()(eo, w.H),
               children: [
                   (0, r.jsx)(g.A, {
-                      legalTermsNodeRef: w,
+                      legalTermsNodeRef: R,
                       invoiceError: D,
                       planError: x,
                       disablePurchase: Y,
                       flashLegalTerms: P,
-                      isSubmitting: eA,
+                      isSubmitting: ev,
                       premiumSubscription: t,
                       isGift: el,
                       planGroup: U,
@@ -196,7 +196,7 @@ function w(e) {
                   (0, r.jsx)(C.A, {}),
                   eU
                       ? (0, r.jsx)("div", {
-                            className: R.a,
+                            className: w.a,
                             children: (0, r.jsx)(h.A, {
                                 onClick: a,
                             }),

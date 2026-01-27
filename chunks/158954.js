@@ -389,7 +389,6 @@ n.d(t, {
     p3p: () => z.XNeutralIcon,
     pPb: () => z.NatureIcon,
     pVd: () => z.ClydeIcon,
-    pZW: () => z.CandyIcon,
     pa$: () => z.PlusLargeIcon,
     pkL: () => K.p,
     pnh: () => et.p,
