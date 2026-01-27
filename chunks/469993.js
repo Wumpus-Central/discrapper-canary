@@ -4,8 +4,7 @@ n.d(t, {
     Li: () => p,
     ME: () => d,
     Sm: () => f,
-    Z1: () => s,
-    Zy: () => m,
+    Z1: () => o,
     oS: () => a,
 });
 var r = n(967245),
@@ -23,7 +22,7 @@ function a() {
     return e;
 }
 
-function s() {
+function o() {
     let { isUserEligibleForCreatorMonetization: e } = r.i$.getCurrentConfig(
         {
             location: "e3bb71_2",
@@ -35,7 +34,7 @@ function s() {
     return e;
 }
 
-function o(e) {
+function s(e) {
     return null != e;
 }
 
@@ -52,7 +51,7 @@ function u(e) {
 }
 
 function d(e) {
-    let t = o(null == e ? void 0 : e.id),
+    let t = s(null == e ? void 0 : e.id),
         n = c(e);
     return t || n;
 }
@@ -92,17 +91,4 @@ function h() {
         },
     );
     return e;
-}
-
-function m(e) {
-    let { hideMonetizatonOnboardingInServerSettings: t } = r.yz.getCurrentConfig(
-        {
-            guildId: null != e ? e : i.dJq,
-            location: "e3bb71_12",
-        },
-        {
-            autoTrackExposure: !1,
-        },
-    );
-    return t;
 }
