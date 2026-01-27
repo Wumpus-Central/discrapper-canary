@@ -4,15 +4,15 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(837381),
+    o = n.n(a),
+    s = n(837381),
     l = n(741918),
-    c = n(317097),
-    u = n(158954),
-    d = n(827734),
-    f = n(990078),
-    p = n(260762),
-    _ = n(298072),
+    c = n(158954),
+    u = n(827734),
+    d = n(990078),
+    f = n(260762),
+    p = n(298072),
+    _ = n(274590),
     h = n(466459),
     m = n(623373),
     g = n(561769),
@@ -105,20 +105,20 @@ function S(e, t) {
 let T = (e) => {
         var t, n;
         let { product: a, onVariantEnter: c, onVariantExit: u, isCollapsed: d } = e,
-            f = (0, _.Q)(a),
+            _ = (0, p.Q)(a),
             h = null != (t = null == (n = a.variants) ? void 0 : n.length) ? t : 0,
             m = i.useCallback(
                 (e, t) => {
-                    e.stopPropagation(), (0, _.n)(a, t);
+                    e.stopPropagation(), (0, p.n)(a, t);
                 },
                 [a],
             ),
-            g = (0, p.A)("shop-variants-group-".concat(a.storeListingId), l.Gl.HORIZONTAL);
+            g = (0, f.A)("shop-variants-group-".concat(a.storeListingId), l.Gl.HORIZONTAL);
         return 0 === h
             ? null
-            : (0, r.jsx)(o.hD, {
+            : (0, r.jsx)(s.hD, {
                   navigator: g,
-                  children: (0, r.jsx)(o.PR, {
+                  children: (0, r.jsx)(s.PR, {
                       children: (e) => {
                           var t;
                           let { ref: n } = e,
@@ -128,7 +128,7 @@ let T = (e) => {
                               A(
                                   O(
                                       {
-                                          className: s()(
+                                          className: o()(
                                               {
                                                   [y.yZ]: d,
                                                   [y.sz]: !d,
@@ -148,10 +148,10 @@ let T = (e) => {
                                                         C,
                                                         {
                                                             variant: e,
-                                                            isSelected: t === f,
+                                                            isSelected: t === _,
                                                             onVariantEnter: () => c(t),
                                                             onVariantExit: u,
-                                                            zIndex: h - Math.abs(f - t),
+                                                            zIndex: h - Math.abs(_ - t),
                                                             onClick: (e) => m(e, t),
                                                         },
                                                         e.variantValue,
@@ -165,16 +165,16 @@ let T = (e) => {
               });
     },
     C = (e) => {
-        let { variant: t, isSelected: n, onClick: i, onVariantEnter: a, onVariantExit: l, zIndex: c } = e,
-            d = (0, o.rm)("shop-variants-group-".concat(t.storeListingId, "-").concat(t.variantLabel)),
-            { onFocus: p } = d,
-            _ = I(d, ["onFocus"]),
+        let { variant: t, isSelected: n, onClick: i, onVariantEnter: a, onVariantExit: l, zIndex: u } = e,
+            f = (0, s.rm)("shop-variants-group-".concat(t.storeListingId, "-").concat(t.variantLabel)),
+            { onFocus: p } = f,
+            _ = I(f, ["onFocus"]),
             { isPurchased: m } = (0, h.h)(t);
-        return (0, r.jsx)(f.m, {
+        return (0, r.jsx)(d.m, {
             text: E.intl.string(E.t["6cfuDj"]),
             shouldShow: m,
             children: (0, r.jsx)(
-                u.DUT,
+                c.DUT,
                 A(
                     O(
                         {
@@ -186,12 +186,12 @@ let T = (e) => {
                             onMouseLeave: l,
                             onFocus: a,
                             onBlur: l,
-                            className: s()(y.bP, {
+                            className: o()(y.bP, {
                                 [y.wH]: n,
                             }),
                             style: {
                                 backgroundColor: t.variantValue,
-                                zIndex: c,
+                                zIndex: u,
                             },
                         },
                         _,
@@ -209,24 +209,18 @@ let T = (e) => {
     },
     N = (e) => {
         let { variant: t } = e,
-            n = i.useMemo(
-                () =>
-                    (0, c.qt)(t.variantValue) && 0.3 > (0, c.OK)((0, c.LX)(t.variantValue))
-                        ? d.A.colors.BLACK.css
-                        : d.A.colors.WHITE.css,
-                [t.variantValue],
-            );
-        return (0, r.jsx)(u.BNr, {
+            n = (0, _.A)(t);
+        return (0, r.jsx)(c.BNr, {
             className: y.U,
-            color: n,
+            color: n ? u.A.colors.BLACK.css : u.A.colors.WHITE.css,
         });
     },
     w = (e) => {
         let { skuId: t, isCollapsed: n = !1, onVariantEnter: i, onVariantExit: a } = e,
-            s = (0, g.Vm)(t);
-        return null != s && (0, m.B1)(s)
+            o = (0, g.Vm)(t);
+        return null != o && (0, m.B1)(o)
             ? (0, r.jsx)(T, {
-                  product: s,
+                  product: o,
                   onVariantEnter: i,
                   onVariantExit: a,
                   isCollapsed: n,
