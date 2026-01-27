@@ -1,7 +1,7 @@
-l.d(t, {
-    $: () => r,
+n.d(t, {
+    $: () => l,
 });
-let n = (0, l(945810).mj)({
+let r = (0, n(945810).mj)({
         name: "2026-01-valentines-day-drop",
         kind: "user",
         defaultConfig: {
@@ -14,9 +14,12 @@ let n = (0, l(945810).mj)({
             1: {
                 enabled: !0,
             },
+            2: {
+                enabled: !0,
+            },
         },
     }),
-    r = (e) =>
-        n.useConfig({
+    l = (e) =>
+        r.useConfig({
             location: e,
         }).enabled;
