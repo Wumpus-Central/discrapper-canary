@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => g,
+    A: () => m,
 }),
     n(896048);
 var r = n(627968),
@@ -12,10 +12,10 @@ var r = n(627968),
     u = n(527901),
     d = n(361908),
     p = n(249584),
-    f = n(791295),
-    h = n(49999);
+    h = n(791295),
+    g = n(49999);
 
-function A(e) {
+function f(e) {
     let { renderPopout: t, renderGuildHeaderDropdownButton: n } = e,
         l = i.useRef(null);
     return (0, r.jsx)(a.YNO, {
@@ -36,81 +36,71 @@ function A(e) {
             }),
     });
 }
-let g = i.memo(function (e) {
+let m = i.memo(function (e) {
     let { contentTypes: t, guild: n, renderGuildHeaderDropdownButton: i } = e,
-        [a, g] = (0, s.kn)(t, h.m.GUILD_HEADER_TOOLTIPS);
+        [a, m] = (0, s.kn)(t, g.m.GUILD_HEADER_TOOLTIPS);
     return (0, r.jsx)(r.Fragment, {
         children: (() => {
             switch (a) {
                 case l.M.GUILD_POWERUP_PERKS_COACHMARK:
-                    return (0, r.jsx)(A, {
+                    return (0, r.jsx)(f, {
                         renderPopout: (e) =>
                             (0, r.jsx)(p.UB, {
                                 guildId: n.id,
-                                markAsDismissed: g,
+                                markAsDismissed: m,
                                 channelRowRef: e,
                             }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK:
-                    return (0, r.jsx)(A, {
+                    return (0, r.jsx)(f, {
                         renderPopout: (e) =>
                             (0, r.jsx)(p.K8, {
                                 guildId: n.id,
-                                markAsDismissed: g,
-                                channelRowRef: e,
-                            }),
-                        renderGuildHeaderDropdownButton: i,
-                    });
-                case l.M.GAME_SERVER_HOSTING_BATCH_RELEASE_V1_COACHMARK:
-                    return (0, r.jsx)(A, {
-                        renderPopout: (e) =>
-                            (0, r.jsx)(p.YX, {
-                                guildId: n.id,
-                                markAsDismissed: g,
+                                markAsDismissed: m,
                                 channelRowRef: e,
                             }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
-                    return (0, r.jsx)(A, {
+                    return (0, r.jsx)(f, {
                         renderPopout: (e) =>
                             (0, r.jsx)(o.A, {
                                 guildId: n.id,
-                                markAsDismissed: g,
+                                markAsDismissed: m,
                                 targetElementRef: e,
                             }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
-                    return (0, r.jsx)(A, {
+                    return (0, r.jsx)(f, {
                         renderPopout: (e) =>
-                            (0, r.jsx)(f.A, {
+                            (0, r.jsx)(h.A, {
                                 guild: n,
-                                markAsDismissed: g,
+                                markAsDismissed: m,
                                 targetElementRef: e,
                             }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
-                    return (0, r.jsx)(A, {
+                    return (0, r.jsx)(f, {
                         renderPopout: (0, r.jsx)(u.A, {
-                            markAsDismissed: g,
+                            markAsDismissed: m,
                         }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.M.MEDIA_CHANNEL_UPSELL:
                     return (0, r.jsx)(d.A, {
                         guildId: n.id,
-                        markAsDismissed: g,
+                        markAsDismissed: m,
                         renderTargetElement: i,
                     });
                 case l.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
-                    return (0, r.jsx)(A, {
+                    return (0, r.jsx)(f, {
                         renderPopout: (e) =>
                             (0, r.jsx)(c.A, {
                                 guildId: n.id,
-                                markAsDismissed: g,
+                                markAsDismissed: m,
                                 targetElementRef: e,
                             }),
                         renderGuildHeaderDropdownButton: i,
