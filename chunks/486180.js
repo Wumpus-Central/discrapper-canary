@@ -3,21 +3,22 @@ n.d(t, {
 });
 var r,
     a,
-    l = n(627968),
-    i = n(64700),
+    i = n(627968),
+    l = n(64700),
     s = n(158954),
-    c = n(311907),
-    o = n(397927),
-    d = n(793574),
-    u = n(665171),
+    o = n(311907),
+    c = n(990078),
+    d = n(397927),
+    u = n(793574),
+    m = n(665171),
     f = n(522055),
-    b = n(895770),
-    m = n(355609),
+    g = n(895770),
+    _ = n(355609),
     x = n(843095),
-    j = n(800007),
-    v = n(294726),
-    g = n(985018),
-    p = n(979402);
+    v = n(800007),
+    j = n(294726),
+    p = n(985018),
+    b = n(979402);
 let h =
     ((r = (function (e) {
         for (var t = 1; t < arguments.length; t++) {
@@ -43,10 +44,10 @@ let h =
                 });
         }
         return e;
-    })({}, j.ZN)),
+    })({}, v.ZN)),
     (a = a =
         {
-            initialStep: j.HS.SERVER_SETTINGS,
+            initialStep: v.HS.SERVER_SETTINGS,
         }),
     Object.getOwnPropertyDescriptors
         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
@@ -64,60 +65,69 @@ let h =
 
 function y(e) {
     let { guildId: t } = e;
-    i.useEffect(() => {
-        (0, u.z9)(t);
+    l.useEffect(() => {
+        (0, m.z9)(t);
     }, [t]);
-    let n = (0, c.bG)([f.A], () => f.A.getStateForGuild(t)),
-        { catalog: r, instances: a } = i.useMemo(() => {
+    let n = (0, o.bG)([f.A], () => f.A.getStateForGuild(t)),
+        { catalog: r, instances: a } = l.useMemo(() => {
             var e, t;
             return {
                 catalog: Object.values(null != (e = null == n ? void 0 : n.catalog) ? e : {}),
                 instances: Object.values(null != (t = null == n ? void 0 : n.instances) ? t : {}),
             };
         }, [null == n ? void 0 : n.catalog, null == n ? void 0 : n.instances]),
-        y = a.length >= j.ZI;
+        y = a.length >= v.ZI;
     return 0 === r.length
-        ? (0, l.jsx)("div", {
-              className: p.kL,
-              children: (0, l.jsx)(o.y$y, {
-                  type: o.tVU.SPINNING_CIRCLE,
-                  className: p.u1,
+        ? (0, i.jsx)("div", {
+              className: b.kL,
+              children: (0, i.jsx)(d.y$y, {
+                  type: d.tVU.SPINNING_CIRCLE,
+                  className: b.u1,
               }),
           })
-        : (0, l.jsxs)("div", {
-              className: p.kL,
+        : (0, i.jsxs)("div", {
+              className: b.kL,
               children: [
-                  (0, l.jsx)(s.DZT, {
-                      className: p.R_,
+                  (0, i.jsx)(s.DZT, {
+                      className: b.R_,
                       variant: "heading-md/semibold",
-                      children: g.intl.string(v.default["3vWDMz"]),
+                      children: p.intl.string(j.default["3vWDMz"]),
                   }),
                   y &&
-                      (0, l.jsx)("div", {
-                          className: p.Bq,
-                          children: (0, l.jsx)(m.k, {}),
+                      (0, i.jsx)("div", {
+                          className: b.Bq,
+                          children: (0, i.jsx)(_.k, {}),
                       }),
-                  (0, l.jsx)(s.IpV, {
-                      className: p.nd,
-                      children: (0, l.jsx)("div", {
-                          className: p.Y_,
+                  (0, i.jsx)(s.IpV, {
+                      className: b.nd,
+                      children: (0, i.jsx)("div", {
+                          className: b.Y_,
                           children: r.map((e, n) =>
-                              (0, l.jsx)(
-                                  b.A,
+                              (0, i.jsx)(
+                                  c.m,
                                   {
-                                      guildId: t,
-                                      game: e,
-                                      onClick: () =>
-                                          (0, x.A)({
-                                              guildId: t,
-                                              stepConfig: h,
-                                              initialGameServerGame: e,
-                                              analyticsLocation: d.A.GAME_SERVER_PAGE_SIDEBAR,
-                                          }),
-                                      imageClassName: p.Sl,
-                                      titleClassName: p.DD,
-                                      disabled: y,
-                                      location: d.A.GAME_SERVER_PAGE_SIDEBAR,
+                                      asContainer: !0,
+                                      text: e.disabled
+                                          ? p.intl.formatToPlainString(j.default.uVpJYf, {
+                                                gameName: e.name,
+                                            })
+                                          : null,
+                                      position: "top",
+                                      children: (0, i.jsx)(g.A, {
+                                          guildId: t,
+                                          game: e,
+                                          onClick: () =>
+                                              (0, x.A)({
+                                                  guildId: t,
+                                                  stepConfig: h,
+                                                  initialGameServerGame: e,
+                                                  analyticsLocation: u.A.GAME_SERVER_PAGE_SIDEBAR,
+                                              }),
+                                          imageClassName: b.Sl,
+                                          titleClassName: b.DD,
+                                          disabled: y || e.disabled,
+                                          location: u.A.GAME_SERVER_PAGE_SIDEBAR,
+                                      }),
                                   },
                                   "sidebar-game-".concat(n, "-").concat(e.id),
                               ),
