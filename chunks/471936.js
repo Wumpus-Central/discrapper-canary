@@ -4,12 +4,13 @@ n.d(t, {
     n(747238),
     n(321073),
     n(65821),
-    n(896048);
+    n(896048),
+    n(733351);
 var r = n(627968),
     i = n(64700),
     a = n(18051),
-    s = n(158954),
-    o = n(116833),
+    o = n(158954),
+    s = n(116833),
     l = n(783878),
     c = n(521489),
     u = n(397927),
@@ -85,7 +86,7 @@ function E(e, t) {
     );
 }
 
-function b(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -96,13 +97,13 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = y(e, t)), Object.getOwnPropertySymbols))
+    if (((a = b(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function y(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -118,7 +119,7 @@ function O(e) {
         n = [],
         i = 0,
         a = /\*\*(.+?)\*\*/g,
-        s = 0;
+        o = 0;
     for (; null !== (t = a.exec(e)); )
         t.index > i && n.push(e.substring(i, t.index)),
             n.push(
@@ -127,14 +128,14 @@ function O(e) {
                     {
                         children: t[1],
                     },
-                    s++,
+                    o++,
                 ),
             ),
             (i = a.lastIndex);
     return i < e.length && n.push(e.substring(i)), n.length > 0 ? n : e;
 }
 
-function A() {
+function v() {
     return (0, r.jsx)(u.Text, {
         variant: "text-sm/normal",
         color: "text-subtle",
@@ -142,10 +143,10 @@ function A() {
     });
 }
 
-function v(e) {
-    let { setIsSafetyAccepted: t } = e,
-        [n, a] = i.useState([]),
-        o = [
+function A(e) {
+    let { setIsSafetyAccepted: t, setIsHelmetSelected: n } = e,
+        [a, s] = i.useState([]),
+        l = [
             {
                 label: "I am wearing a helmet",
                 value: "helmet",
@@ -161,47 +162,110 @@ function v(e) {
         ];
     return (
         i.useEffect(() => {
-            t(n.length === o.length);
-        }, [n, o.length, t]),
-        (0, r.jsx)(s.$QX, {
+            t(a.length === l.length), n(a.includes("helmet"));
+        }, [a, l.length, t, n]),
+        (0, r.jsx)(o.$QX, {
             label: "Safety checklist",
-            options: o,
-            selectedValues: n,
-            onChange: a,
+            options: l,
+            selectedValues: a,
+            onChange: s,
         })
     );
 }
 
-function S(e) {
+function I(e) {
     let { setIsPasscodeValid: t } = e,
         [n, a] = i.useState(""),
-        s = (e) => {
+        o = (e) => {
             a(e), t(e.length > 0);
         };
     return (0, r.jsx)(u.ksK, {
         placeholder: "Enter your passcode...",
         value: n,
-        onChange: s,
+        onChange: o,
     });
 }
 
-function I(e) {
-    let {} = e,
-        t = h({}, e),
-        [n, a] = i.useState("intro"),
-        [o, l] = i.useState(!1),
-        [c, u] = i.useState(!1),
-        d = [
+function S(e) {
+    let {
+            callbackDelay: t,
+            failOnNext: n,
+            failOnComplete: a,
+            onCompleteAlert: s,
+            onNextAlert: l,
+            customErrorNotice: c,
+            errorNoticeType: u,
+        } = e,
+        d = y(e, [
+            "callbackDelay",
+            "failOnNext",
+            "failOnComplete",
+            "onCompleteAlert",
+            "onNextAlert",
+            "customErrorNotice",
+            "errorNoticeType",
+        ]),
+        [f, p] = i.useState("intro"),
+        [_, h] = i.useState(!1),
+        [g, E] = i.useState(!1),
+        [b, O] = i.useState(!1),
+        [S, T] = i.useState(null),
+        C = i.useCallback(async () => {
+            if (
+                (T(null),
+                t > 0 && (await new Promise((e) => setTimeout(e, 1e3 * t))),
+                l && alert("onNext callback fired"),
+                n)
+            ) {
+                if ("" !== c.trim())
+                    return (
+                        T({
+                            message: c,
+                            type: u,
+                        }),
+                        !1
+                    );
+                throw Error("onNext failed");
+            }
+            return !0;
+        }, [t, n, l, c, u]),
+        N = i.useCallback(async () => {
+            if (
+                (T(null),
+                t > 0 && (await new Promise((e) => setTimeout(e, 1e3 * t))),
+                s && alert("onComplete callback fired"),
+                a)
+            ) {
+                if ("" !== c.trim())
+                    throw (
+                        (T({
+                            message: c,
+                            type: u,
+                        }),
+                        Error("Custom error"))
+                    );
+                throw Error("onComplete failed");
+            }
+        }, [t, a, s, c, u]),
+        w = [
             {
                 stepKey: "intro",
                 modalProps: {
                     title: "Verify radness",
                     subtitle: "To verify your radness, we need to ask you a few deep and personal questions.",
+                    notice:
+                        null != S
+                            ? {
+                                  message: S.message,
+                                  type: S.type,
+                              }
+                            : void 0,
                 },
-                body: (0, r.jsx)(A, {}),
+                body: (0, r.jsx)(v, {}),
                 nextButtonProps: {
                     text: "Verify",
                 },
+                onNext: C,
             },
             {
                 stepKey: "safety",
@@ -209,38 +273,60 @@ function I(e) {
                     title: "Safety first",
                     subtitle:
                         "Before we get started verifying your radness, we need to make sure you're safe and sound.",
+                    notice:
+                        null != S
+                            ? {
+                                  message: S.message,
+                                  type: S.type,
+                              }
+                            : b
+                              ? {
+                                    message: "Great job, helmets are important for protecting your brain!",
+                                    type: "warning",
+                                }
+                              : void 0,
                 },
-                body: (0, r.jsx)(v, {
-                    setIsSafetyAccepted: l,
+                body: (0, r.jsx)(A, {
+                    setIsSafetyAccepted: h,
+                    setIsHelmetSelected: O,
                 }),
-                nextEnabled: o,
+                nextEnabled: _,
+                onNext: C,
             },
             {
                 stepKey: "passcode",
                 modalProps: {
                     title: "Enter passcode",
                     subtitle: "Enter your passcode to complete the radness verification process.",
+                    notice:
+                        null != S
+                            ? {
+                                  message: S.message,
+                                  type: S.type,
+                              }
+                            : void 0,
                 },
-                body: (0, r.jsx)(S, {
-                    setIsPasscodeValid: u,
+                body: (0, r.jsx)(I, {
+                    setIsPasscodeValid: E,
                 }),
                 nextButtonProps: {
                     text: "Verify passcode",
                 },
-                nextEnabled: c,
+                nextEnabled: g,
             },
         ],
-        f = d.slice(1).map((e) => e.stepKey);
+        R = w.slice(1).map((e) => e.stepKey);
     return (0, r.jsx)(
-        s.t04,
+        o.t04,
         m(
             {
-                steps: d,
-                currentStepKey: n,
-                numberedSteps: f,
-                onStepChange: a,
+                steps: w,
+                currentStepKey: f,
+                numberedSteps: R,
+                onStepChange: p,
+                onComplete: N,
             },
-            t,
+            d,
         ),
     );
 }
@@ -254,13 +340,13 @@ let T = {
             component: function (e) {
                 var t;
                 let { showPreview: n, showInput: i, subtitleIcon: a } = e,
-                    o = b(e, ["showPreview", "showInput", "subtitleIcon"]),
+                    s = y(e, ["showPreview", "showInput", "subtitleIcon"]),
                     c = a
                         ? {
-                              text: null != (t = o.subtitle) ? t : "Default subtitle",
-                              leadingIcon: s.N$i,
+                              text: null != (t = s.subtitle) ? t : "Default subtitle",
+                              leadingIcon: o.N$i,
                           }
-                        : o.subtitle;
+                        : s.subtitle;
                 return (0, r.jsxs)(u.BJc, {
                     gap: 16,
                     align: "center",
@@ -276,9 +362,9 @@ let T = {
                                 (0, u.qfG)(
                                     (e) =>
                                         (0, r.jsx)(
-                                            s.Modal,
-                                            E(m({}, e, o), {
-                                                title: o.title,
+                                            o.Modal,
+                                            E(m({}, e, s), {
+                                                title: s.title,
                                                 subtitle: c,
                                                 input: i
                                                     ? (0, r.jsx)(u.IWV, {
@@ -381,7 +467,7 @@ let T = {
                                             }),
                                         ),
                                     {
-                                        dismissable: o.dismissable,
+                                        dismissable: s.dismissable,
                                     },
                                 ),
                         }),
@@ -440,9 +526,9 @@ let T = {
             name: "ConfirmModal [Alpha]",
             id: "confirm-modal",
             component: function (e) {
-                let { cancelText: t, confirmDelay: n, confirmError: a, subtitle: s, formatSubtitle: o } = e,
-                    l = b(e, ["cancelText", "confirmDelay", "confirmError", "subtitle", "formatSubtitle"]),
-                    c = i.useMemo(() => (o ? O(s) : s), [s, o]);
+                let { cancelText: t, confirmDelay: n, confirmError: a, subtitle: o, formatSubtitle: s } = e,
+                    l = y(e, ["cancelText", "confirmDelay", "confirmError", "subtitle", "formatSubtitle"]),
+                    c = i.useMemo(() => (s ? O(o) : o), [o, s]);
                 return (0, r.jsxs)(u.BJc, {
                     gap: 16,
                     align: "center",
@@ -538,11 +624,11 @@ let T = {
             component: function (e) {
                 var t;
                 let { graphic: l, subtitleIcon: c } = e,
-                    d = b(e, ["graphic", "subtitleIcon"]),
+                    d = y(e, ["graphic", "subtitleIcon"]),
                     _ = c
                         ? {
                               text: null != (t = d.subtitle) ? t : "Default subtitle",
-                              leadingIcon: s.N$i,
+                              leadingIcon: o.N$i,
                           }
                         : d.subtitle,
                     h = i.useMemo(
@@ -574,7 +660,7 @@ let T = {
                                       : 4 === l
                                         ? {
                                               type: "dynamic",
-                                              component: o.DynamicGraphicComponent.DEMO,
+                                              component: s.DynamicGraphicComponent.DEMO,
                                               aspectRatio: "6/4",
                                               props: {
                                                   text: "Dynamic Content",
@@ -598,7 +684,7 @@ let T = {
                                 (0, u.qfG)(
                                     (e) =>
                                         (0, r.jsx)(
-                                            s.ExpressiveModal,
+                                            o.ExpressiveModal,
                                             E(m({}, e, d), {
                                                 title: d.title,
                                                 subtitle: _,
@@ -730,10 +816,10 @@ let T = {
             id: "dynamic-graphic-modal",
             component: function (e) {
                 let { dynamicText: t } = e,
-                    i = b(e, ["dynamicText"]),
+                    i = y(e, ["dynamicText"]),
                     a = {
                         type: "dynamic",
-                        component: o.DynamicGraphicComponent.DEMO,
+                        component: s.DynamicGraphicComponent.DEMO,
                         aspectRatio: "6/4",
                         props: {
                             text: t,
@@ -899,8 +985,15 @@ let T = {
             name: "MultiStepModal [Alpha]",
             id: "multi-step-modal",
             component: function (e) {
-                let {} = e,
-                    t = h({}, e);
+                let {
+                    callbackDelay: t,
+                    failOnNext: n,
+                    failOnComplete: i,
+                    onCompleteAlert: a,
+                    onNextAlert: o,
+                    customErrorNotice: s,
+                    errorNoticeType: l,
+                } = e;
                 return (0, r.jsxs)(u.BJc, {
                     gap: 16,
                     align: "center",
@@ -913,12 +1006,78 @@ let T = {
                             variant: "primary",
                             text: "Open MultiStepModal",
                             onClick: () =>
-                                (0, u.qfG)((e) => (0, r.jsx)(I, m({}, e)), {
-                                    dismissable: t.dismissable,
-                                }),
+                                (0, u.qfG)((e) =>
+                                    (0, r.jsx)(
+                                        S,
+                                        E(m({}, e), {
+                                            callbackDelay: t,
+                                            failOnNext: n,
+                                            failOnComplete: i,
+                                            onCompleteAlert: a,
+                                            onNextAlert: o,
+                                            customErrorNotice: s,
+                                            errorNoticeType: l,
+                                        }),
+                                    ),
+                                ),
                         }),
                     ],
                 });
+            },
+            controls: {
+                callbackDelay: {
+                    label: "Delay Callbacks (seconds)",
+                    type: "number",
+                    defaultValue: 0,
+                },
+                failOnNext: {
+                    label: "Fail onNext",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+                failOnComplete: {
+                    label: "Fail onComplete",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+                onCompleteAlert: {
+                    label: "onComplete Alert",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+                onNextAlert: {
+                    label: "onNext Alert",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+                customErrorNotice: {
+                    label: "Custom Error Notice",
+                    type: "text",
+                    defaultValue: "",
+                },
+                errorNoticeType: {
+                    label: "Error Notice Type",
+                    type: "select",
+                    defaultValue: "critical",
+                    options: [
+                        {
+                            label: "Critical",
+                            value: "critical",
+                        },
+                        {
+                            label: "Warning",
+                            value: "warning",
+                        },
+                        {
+                            label: "Info",
+                            value: "info",
+                        },
+                        {
+                            label: "Success",
+                            value: "success",
+                        },
+                    ],
+                },
             },
         },
     ],

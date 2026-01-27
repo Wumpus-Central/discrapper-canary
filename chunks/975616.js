@@ -1,13 +1,13 @@
 n.d(t, {
-    e: () => R,
+    e: () => w,
 }),
     n(896048),
     n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(932433),
-    s = n(503698),
-    o = n.n(s),
+    o = n(503698),
+    s = n.n(o),
     l = n(311907),
     c = n(116833),
     u = n(397927),
@@ -19,24 +19,25 @@ var r = n(627968),
     m = n(534409),
     g = n(614738),
     E = n(750506),
-    b = n(869146),
-    y = n(773669),
+    y = n(869146),
+    b = n(773669),
     O = n(544028),
-    A = n(531685),
-    v = n(837921),
-    S = n(418842),
-    I = n(611635),
+    v = n(531685),
+    A = n(837921),
+    I = n(418842),
+    S = n(611635),
     T = n(763600),
     C = n(985018);
 
-function N(e, t, n, r, s) {
-    let o = i.useContext(p.A),
+function N(e, t, n, r, o) {
+    let s = i.useContext(p.A),
         l = i.useCallback(
             () => ({
                 i18n: {
                     CANCEL: C.intl.string(C.t["ETE/oC"]),
                     BACK: C.intl.string(C.t["13/7kX"]),
                     NEXT: C.intl.string(C.t.PDTjLN),
+                    SUBMIT: C.intl.string(C.t.geKm7t),
                     SPINNER_LOADING_LABEL: C.intl.string(C.t.ZTNur7),
                     BUTTON_LOADING_STARTED_LABEL: C.intl.string(C.t.pfChQr),
                     BUTTON_LOADING_FINISHED_LABEL: C.intl.string(C.t.SVParY),
@@ -84,18 +85,18 @@ function N(e, t, n, r, s) {
                             stepCount: t,
                         }),
                 },
-                locale: s,
+                locale: o,
                 theme: e,
                 saturation: t,
                 defaultLayerContext: E.uY,
                 experiments: {
                     enabledExperiments: n,
                 },
-                trackImpression: o,
+                trackImpression: s,
                 isWindowFocused: () => r,
                 dynamicGraphicComponents: c.Q,
             }),
-            [e, t, n, o, r, s],
+            [e, t, n, s, r, o],
         ),
         [u, d] = i.useState(l);
     return (
@@ -109,32 +110,32 @@ function N(e, t, n, r, s) {
     );
 }
 
-function R(e) {
+function w(e) {
     let { windowKey: t, themeOverride: n, children: a } = e,
-        s = null != t,
-        [c] = i.useState(() => v.Ay.getEnableHardwareAcceleration()),
+        o = null != t,
+        [c] = i.useState(() => A.Ay.getEnableHardwareAcceleration()),
         {
             locale: p,
             theme: E,
             focused: T,
             currentWindow: C,
-            fontScale: R,
-            fontScaleClass: w,
+            fontScale: w,
+            fontScaleClass: R,
             keyboardModeEnabled: P,
             saturation: D,
-            desaturateUserColors: x,
-            useForcedColors: L,
-            systemForcedColors: j,
-            useReducedMotion: M,
+            desaturateUserColors: L,
+            useForcedColors: x,
+            systemForcedColors: M,
+            useReducedMotion: j,
             alwaysShowLinkDecorations: k,
             highContrastMode: U,
-        } = (0, l.cf)([y.default, d.A, O.A, b.A, A.A], () => {
+        } = (0, l.cf)([b.default, d.A, O.A, y.A, v.A], () => {
             var e;
             return {
-                locale: y.default.locale,
+                locale: b.default.locale,
                 theme: null != n ? n : O.A.theme,
-                focused: s ? b.A.getWindowFocused(t) : A.A.isFocused(),
-                currentWindow: s && null != (e = b.A.getWindow(t)) ? e : window,
+                focused: o ? y.A.getWindowFocused(t) : v.A.isFocused(),
+                currentWindow: o && null != (e = y.A.getWindow(t)) ? e : window,
                 fontScale: d.A.fontScale,
                 fontScaleClass: d.A.fontScaleClass,
                 keyboardModeEnabled: d.A.keyboardModeEnabled,
@@ -155,16 +156,16 @@ function R(e) {
                 autoTrackExposure: !0,
             },
         ).enabled,
-        V = (0, h.A)(C, __OVERLAY__ || T),
-        F = 0;
-    1 !== D && (F = (0, u.yVx)(F, u.ofu.REDUCE_SATURATION_ENABLED));
-    let B = (0, S.C)(),
+        F = (0, h.A)(C, __OVERLAY__ || T),
+        V = 0;
+    1 !== D && (V = (0, u.yVx)(V, u.ofu.REDUCE_SATURATION_ENABLED));
+    let B = (0, I.C)(),
         H = (0, m.qK)("RootThemeContextProvider"),
         Y = (0, m.k5)("RootThemeContextProvider"),
         W = (0, m.lV)("RootThemeContextProvider"),
         K = (0, g.y)("RootThemeContextProvider"),
         z = (0, _.m2)({
-            isPopoutWindow: s,
+            isPopoutWindow: o,
         }),
         q = N(
             E,
@@ -186,28 +187,28 @@ function R(e) {
         value: q,
         children: (0, r.jsx)(u.eSm, {
             theme: E,
-            flags: F,
+            flags: V,
             saturation: D,
             density: B,
-            children: (0, r.jsx)(I.fs, {
+            children: (0, r.jsx)(S.fs, {
                 lang: p,
                 theme: E,
                 density: B,
                 focused: T,
-                fontScale: R,
-                fontScaleClass: w,
+                fontScale: w,
+                fontScaleClass: R,
                 keyboardModeEnabled: P,
-                mouseMode: V,
+                mouseMode: F,
                 saturation: D,
-                desaturateUserColors: x,
-                useForcedColors: L,
-                systemForcedColors: j,
-                useReducedMotion: M,
+                desaturateUserColors: L,
+                useForcedColors: x,
+                systemForcedColors: M,
+                useReducedMotion: j,
                 alwaysShowLinkDecorations: k,
                 hardwareAccelerationEnabled: c,
                 highContrastMode: G && U,
-                isPopoutWindow: s,
-                rootClassName: o()(z, {
+                isPopoutWindow: o,
+                rootClassName: s()(z, {
                     "refresh-fast-follow-avatars": H,
                     "refresh-fast-follow-guild-bg": Y,
                     "refresh-fast-follow-distinct-borders": W,
