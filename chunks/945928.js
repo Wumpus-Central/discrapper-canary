@@ -1,5 +1,5 @@
 i.d(e, {
-    Q: () => b,
+    Q: () => R,
 });
 var n = i(64700),
     l = i(311907),
@@ -10,21 +10,21 @@ var n = i(64700),
     o = i(347481),
     T = i(430452),
     A = i(780964),
-    S = i(77735),
-    E = i(791460),
-    d = i(53386),
+    d = i(77735),
+    S = i(791460),
+    E = i(53386),
     _ = i(585175),
-    I = i(338145),
-    g = i(77371),
-    c = i(772797),
-    N = i(180491),
-    O = i(903427),
+    g = i(338145),
+    c = i(77371),
+    I = i(772797),
+    O = i(180491),
+    N = i(903427),
     C = i(509381),
     L = i(985018);
-let R = (0, u.Qx)(A.X.VOICE_INPUT_PROFILE_SETTING, {
+let b = (0, u.Qx)(A.X.VOICE_INPUT_PROFILE_SETTING, {
         useTitle: () => L.intl.string(L.t.LM3U3k),
         usePredicate: function () {
-            let { enabledInputProfiles: t } = (0, S._)({
+            let { enabledInputProfiles: t } = (0, d._)({
                 location: "SettingsRendererConfig",
             });
             return t.length > 0;
@@ -43,7 +43,7 @@ let R = (0, u.Qx)(A.X.VOICE_INPUT_PROFILE_SETTING, {
             });
         },
         useOptions: function () {
-            let { enabledInputProfiles: t } = (0, S.d)({
+            let { enabledInputProfiles: t } = (0, d.d)({
                 location: "InputProfileCategory",
             });
             return [
@@ -68,8 +68,8 @@ let R = (0, u.Qx)(A.X.VOICE_INPUT_PROFILE_SETTING, {
             });
         },
     }),
-    b = (0, u.zZ)(A.X.VOICE_INPUT_PROFILE_CATEGORY, {
-        useNotice: function () {
+    R = (0, u.zZ)(A.X.VOICE_INPUT_PROFILE_CATEGORY, {
+        useInlineNotice: function () {
             let t = (0, l.bG)([o.A, T.A], () => {
                 let t = T.A.getInputDeviceId();
                 return (
@@ -86,5 +86,5 @@ let R = (0, u.Qx)(A.X.VOICE_INPUT_PROFILE_SETTING, {
                     };
             }, [t]);
         },
-        buildLayout: () => [R, _.O, I.w, d.h, O.K, g.C, N.m, c.A, E.U],
+        buildLayout: () => [b, _.O, g.w, E.h, N.K, c.C, O.m, I.A, S.U],
     });

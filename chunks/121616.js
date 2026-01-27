@@ -11,7 +11,7 @@ var n = i(64700),
     T = i(985018);
 let A = (0, s.zZ)(u.X.VOICE_SECURITY_CATEGORY, {
     useTitle: () => T.intl.string(T.t.WWaFn5),
-    useNotice: function () {
+    useInlineNotice: function () {
         return n.useMemo(
             () => ({
                 type: r.W.INLINE_NOTICE,

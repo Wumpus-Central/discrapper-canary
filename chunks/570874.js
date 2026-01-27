@@ -1,5 +1,5 @@
 i.d(e, {
-    q: () => d,
+    q: () => E,
 });
 var n = i(419954),
     l = i(780964),
@@ -10,13 +10,13 @@ var n = i(419954),
     o = i(785048),
     T = i(705013),
     A = i(794145),
-    S = i(404096),
-    E = i(985018);
-let d = (0, n.zZ)(l.X.CONTENT_AND_SOCIAL_PERMISSIONS_CATEGORY, {
-    useTitle: () => E.intl.string(E.t["y62Z/d"]),
-    useNotice: function () {
+    d = i(404096),
+    S = i(985018);
+let E = (0, n.zZ)(l.X.CONTENT_AND_SOCIAL_PERMISSIONS_CATEGORY, {
+    useTitle: () => S.intl.string(S.t["y62Z/d"]),
+    useInlineNotice: function () {
         let t = (0, u.I)();
         if ((0, r.Tx)() === s.YG) return t;
     },
-    buildLayout: () => [a.a, A.V, S.w, T.H, o.U],
+    buildLayout: () => [a.a, A.V, d.w, T.H, o.U],
 });

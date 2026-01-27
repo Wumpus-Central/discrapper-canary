@@ -14,7 +14,7 @@ var n = i(64700),
     S = i(985018);
 let E = (0, s.zZ)(a.X.SOUNDS_CATEGORY, {
     useTitle: () => S.intl.string(S.t.MKWyKc),
-    useNotice: function () {
+    useInlineNotice: function () {
         let t = (0, l.bG)([u.A], () => u.A.getDisableAllSounds());
         return n.useMemo(() => {
             if (t)

@@ -1,5 +1,5 @@
 i.d(e, {
-    e: () => E,
+    e: () => S,
 });
 var n = i(419954),
     l = i(780964),
@@ -10,10 +10,10 @@ var n = i(419954),
     o = i(319436),
     T = i(317014),
     A = i(39218),
-    S = i(985018);
-let E = (0, n.zZ)(l.X.CONTENT_AND_SOCIAL_CONTENT_CATEGORY, {
-    useTitle: () => S.intl.string(S.t.xVRG4P),
-    useNotice: function () {
+    d = i(985018);
+let S = (0, n.zZ)(l.X.CONTENT_AND_SOCIAL_CONTENT_CATEGORY, {
+    useTitle: () => d.intl.string(d.t.xVRG4P),
+    useInlineNotice: function () {
         var t;
         let e = (0, r.I)(),
             i = (0, s.aK)(),

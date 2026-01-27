@@ -1,5 +1,5 @@
 i.d(e, {
-    p: () => d,
+    p: () => E,
 });
 var n = i(627968),
     l = i(64700),
@@ -10,23 +10,23 @@ var n = i(627968),
     o = i(902713),
     T = i(428961),
     A = i(639500),
-    S = i(985018);
+    d = i(985018);
 
-function E() {
+function S() {
     return (0, n.jsx)(u.A, {
         sourcePage: "voice",
     });
 }
-let d = (0, s.zZ)(a.X.VOICE_CATEGORY, {
-    useTitle: () => S.intl.string(S.t.K3lovD),
-    useNotice: function () {
+let E = (0, s.zZ)(a.X.VOICE_CATEGORY, {
+    useTitle: () => d.intl.string(d.t.K3lovD),
+    useInlineNotice: function () {
         let t = (0, u.I)("voice");
         return l.useMemo(
             () =>
                 t.canPrompt
                     ? {
                           type: r.W.STRONGLY_DISCOURAGED_CUSTOM,
-                          notice: E,
+                          notice: S,
                       }
                     : null,
             [t.canPrompt],
