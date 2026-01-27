@@ -20,18 +20,18 @@ var r = n(627968),
     m = n(734066),
     g = n(880144),
     E = n(541185),
-    b = n(168943),
-    y = n(680243),
+    y = n(168943),
+    b = n(680243),
     O = n(843401),
-    A = n(430452),
-    v = n(532624),
-    S = n(975571),
-    I = n(723702),
+    v = n(430452),
+    A = n(532624),
+    I = n(975571),
+    S = n(723702),
     T = n(350535),
     C = n(958831),
     N = n(790174),
-    R = n(652215),
-    w = n(650583),
+    w = n(652215),
+    R = n(650583),
     P = n(985018),
     D = n(924348),
     x = n(473169);
@@ -112,11 +112,11 @@ class V extends i.PureComponent {
                   messageType: u.YCn.ERROR,
                   children: P.intl.string(P.t["7lQlw3"]),
               })
-            : w.Yy.has(t)
+            : R.Yy.has(t)
               ? (0, r.jsx)(u.po8, {
                     messageType: u.YCn.ERROR,
                     children: P.intl.format(P.t.MOIaNd, {
-                        keyboardNavArticle: S.A.getArticleURL(R.MVz.KEYBOARD_NAVIGATION),
+                        keyboardNavArticle: I.A.getArticleURL(w.MVz.KEYBOARD_NAVIGATION),
                     }),
                 })
               : (0, r.jsx)(u.Text, {
@@ -185,7 +185,7 @@ class V extends i.PureComponent {
     }
     renderExtraSettings() {
         let { action: e } = this.props.keybind;
-        return e === R.hCu.SWITCH_TO_VOICE_CHANNEL
+        return e === w.hCu.SWITCH_TO_VOICE_CHANNEL
             ? (0, r.jsx)(C.A, {
                   keybind: this.props.keybind,
               })
@@ -240,7 +240,7 @@ class F extends i.PureComponent {
                 ? [
                       {
                           id: "vad-priority",
-                          value: R.hCu.VAD_PRIORITY,
+                          value: w.hCu.VAD_PRIORITY,
                           label: P.intl.string(P.t["49d6Nd"]),
                       },
                   ]
@@ -248,91 +248,91 @@ class F extends i.PureComponent {
             s = [
                 {
                     id: "unassigned",
-                    value: R.hCu.UNASSIGNED,
+                    value: w.hCu.UNASSIGNED,
                     label: P.intl.string(P.t["0Uh579"]),
                 },
                 {
                     id: "push-to-talk",
-                    value: R.hCu.PUSH_TO_TALK,
+                    value: w.hCu.PUSH_TO_TALK,
                     label: P.intl.string(P.t.Y5lgTP),
                 },
                 {
                     id: "push-to-talk-priority",
-                    value: R.hCu.PUSH_TO_TALK_PRIORITY,
+                    value: w.hCu.PUSH_TO_TALK_PRIORITY,
                     label: P.intl.string(P.t.DkSwJ2),
                 },
                 {
                     id: "push-to-mute",
-                    value: R.hCu.PUSH_TO_MUTE,
+                    value: w.hCu.PUSH_TO_MUTE,
                     label: P.intl.string(P.t.hSCRqd),
                 },
                 ...a,
                 {
                     id: "toggle-mute",
-                    value: R.hCu.TOGGLE_MUTE,
+                    value: w.hCu.TOGGLE_MUTE,
                     label: P.intl.string(P.t.PlkYKD),
                 },
                 {
                     id: "toggle-deafen",
-                    value: R.hCu.TOGGLE_DEAFEN,
+                    value: w.hCu.TOGGLE_DEAFEN,
                     label: P.intl.string(P.t.NvGq1K),
                 },
                 {
                     id: "toggle-voice-mode",
-                    value: R.hCu.TOGGLE_VOICE_MODE,
+                    value: w.hCu.TOGGLE_VOICE_MODE,
                     label: P.intl.string(P.t.Wa5H9S),
                 },
                 {
                     id: "toggle-streamer-mode",
-                    value: R.hCu.TOGGLE_STREAMER_MODE,
+                    value: w.hCu.TOGGLE_STREAMER_MODE,
                     label: P.intl.string(P.t.BK0Ncc),
                 },
             ];
         return (
-            (0, b.L)() &&
+            (0, y.L)() &&
                 s.push({
                     id: "toggle-camera",
-                    value: R.hCu.TOGGLE_CAMERA,
+                    value: w.hCu.TOGGLE_CAMERA,
                     label: P.intl.string(P.t.hf8JVT),
                 }),
             e &&
                 (s.push({
                     id: "toggle-overlay-input-lock",
-                    value: R.hCu.TOGGLE_OVERLAY_INPUT_LOCK,
+                    value: w.hCu.TOGGLE_OVERLAY_INPUT_LOCK,
                     label: P.intl.string(P.t.VsAZcC),
                 }),
                 s.push({
                     id: "activate-overlay-region-text-widget",
-                    value: R.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
+                    value: w.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
                     label: P.intl.string(P.t.hurHWo),
                 })),
             t &&
-                ((0, I.isWindows)() || A.A.getUseSystemScreensharePicker()) &&
+                ((0, S.isWindows)() || v.A.getUseSystemScreensharePicker()) &&
                 s.push({
                     id: "toggle-go-live-streaming",
-                    value: R.hCu.TOGGLE_GO_LIVE_STREAMING,
+                    value: w.hCu.TOGGLE_GO_LIVE_STREAMING,
                     label: P.intl.string(P.t.ybdjJD),
                 }),
-            (0, I.isDesktop)() &&
+            (0, S.isDesktop)() &&
                 (s.push(
                     {
                         id: "navigate-back",
-                        value: R.hCu.NAVIGATE_BACK,
+                        value: w.hCu.NAVIGATE_BACK,
                         label: P.intl.string(P.t.gRSaOa),
                     },
                     {
                         id: "navigate-forward",
-                        value: R.hCu.NAVIGATE_FORWARD,
+                        value: w.hCu.NAVIGATE_FORWARD,
                         label: P.intl.string(P.t.zOXpjU),
                     },
                     {
                         id: "switch-to-voice-channel",
-                        value: R.hCu.SWITCH_TO_VOICE_CHANNEL,
+                        value: w.hCu.SWITCH_TO_VOICE_CHANNEL,
                         label: P.intl.string(P.t.ty7Lxy),
                     },
                     {
                         id: "disconnect-from-voice-channel",
-                        value: R.hCu.DISCONNECT_FROM_VOICE_CHANNEL,
+                        value: w.hCu.DISCONNECT_FROM_VOICE_CHANNEL,
                         label: P.intl.string(P.t.CV7mT7),
                     },
                 ),
@@ -340,25 +340,25 @@ class F extends i.PureComponent {
                     s.push(
                         {
                             id: "soundboard",
-                            value: R.hCu.SOUNDBOARD,
+                            value: w.hCu.SOUNDBOARD,
                             label: P.intl.string(P.t.yPH4xm),
                         },
                         {
                             id: "soundboard-hold",
-                            value: R.hCu.SOUNDBOARD_HOLD,
+                            value: w.hCu.SOUNDBOARD_HOLD,
                             label: P.intl.string(P.t["1xFbP/"]),
                         },
                     ),
                 r &&
                     (s.push({
                         id: "save-clip",
-                        value: R.hCu.SAVE_CLIP,
+                        value: w.hCu.SAVE_CLIP,
                         label: P.intl.string(P.t.U4URzP),
                     }),
                     i &&
                         s.push({
                             id: "save-screenshot",
-                            value: R.hCu.SAVE_SCREENSHOT,
+                            value: w.hCu.SAVE_SCREENSHOT,
                             label: P.intl.string(P.t["+WloFH"]),
                         }))),
             s
@@ -367,14 +367,14 @@ class F extends i.PureComponent {
     get keybindDescriptions() {
         let { overlaySupported: e, canGoLive: t, enableClips: n, enableScreenshotKeybind: r } = this.props,
             i = {
-                [R.hCu.UNASSIGNED]: P.intl.string(P.t.rvlNLv),
-                [R.hCu.PUSH_TO_MUTE]: P.intl.string(P.t.xtESim),
-                [R.hCu.PUSH_TO_TALK]: P.intl.string(P.t.wTcBSy),
-                [R.hCu.PUSH_TO_TALK_PRIORITY]: P.intl.string(P.t.FhHvWH),
-                [R.hCu.TOGGLE_MUTE]: P.intl.string(P.t.X2fbUm),
-                [R.hCu.TOGGLE_DEAFEN]: P.intl.string(P.t.MjREZV),
-                [R.hCu.TOGGLE_VOICE_MODE]: P.intl.string(P.t.snm5YW),
-                [R.hCu.TOGGLE_STREAMER_MODE]: P.intl.string(P.t.YszLLx),
+                [w.hCu.UNASSIGNED]: P.intl.string(P.t.rvlNLv),
+                [w.hCu.PUSH_TO_MUTE]: P.intl.string(P.t.xtESim),
+                [w.hCu.PUSH_TO_TALK]: P.intl.string(P.t.wTcBSy),
+                [w.hCu.PUSH_TO_TALK_PRIORITY]: P.intl.string(P.t.FhHvWH),
+                [w.hCu.TOGGLE_MUTE]: P.intl.string(P.t.X2fbUm),
+                [w.hCu.TOGGLE_DEAFEN]: P.intl.string(P.t.MjREZV),
+                [w.hCu.TOGGLE_VOICE_MODE]: P.intl.string(P.t.snm5YW),
+                [w.hCu.TOGGLE_STREAMER_MODE]: P.intl.string(P.t.YszLLx),
             };
         return (
             E.A.getCurrentConfig(
@@ -384,18 +384,18 @@ class F extends i.PureComponent {
                 {
                     autoTrackExposure: !1,
                 },
-            ).separateKeybind && (i[R.hCu.VAD_PRIORITY] = P.intl.string(P.t.rSe8IZ)),
-            (0, b.L)() && (i[R.hCu.TOGGLE_CAMERA] = P.intl.string(P.t.v1JBtL)),
-            e && (i[R.hCu.TOGGLE_OVERLAY_INPUT_LOCK] = P.intl.string(P.t.IoP5vc)),
-            t && (0, I.isWindows)() && (i[R.hCu.TOGGLE_GO_LIVE_STREAMING] = P.intl.string(P.t.s4C238)),
-            (0, I.isDesktop)() &&
-                ((i[R.hCu.NAVIGATE_BACK] = P.intl.string(P.t.nKDlEt)),
-                (i[R.hCu.NAVIGATE_FORWARD] = P.intl.string(P.t.DK0FFk)),
-                (i[R.hCu.SOUNDBOARD] = (0, I.isWindows)() ? P.intl.string(P.t["5wJefL"]) : P.intl.string(P.t.gzjsSP)),
-                (i[R.hCu.SOUNDBOARD_HOLD] = (0, I.isWindows)() ? P.intl.string(P.t.RRkZc9) : P.intl.string(P.t.laNlTl)),
+            ).separateKeybind && (i[w.hCu.VAD_PRIORITY] = P.intl.string(P.t.rSe8IZ)),
+            (0, y.L)() && (i[w.hCu.TOGGLE_CAMERA] = P.intl.string(P.t.v1JBtL)),
+            e && (i[w.hCu.TOGGLE_OVERLAY_INPUT_LOCK] = P.intl.string(P.t.IoP5vc)),
+            t && (0, S.isWindows)() && (i[w.hCu.TOGGLE_GO_LIVE_STREAMING] = P.intl.string(P.t.s4C238)),
+            (0, S.isDesktop)() &&
+                ((i[w.hCu.NAVIGATE_BACK] = P.intl.string(P.t.nKDlEt)),
+                (i[w.hCu.NAVIGATE_FORWARD] = P.intl.string(P.t.DK0FFk)),
+                (i[w.hCu.SOUNDBOARD] = (0, S.isWindows)() ? P.intl.string(P.t["5wJefL"]) : P.intl.string(P.t.gzjsSP)),
+                (i[w.hCu.SOUNDBOARD_HOLD] = (0, S.isWindows)() ? P.intl.string(P.t.RRkZc9) : P.intl.string(P.t.laNlTl)),
                 n &&
-                    ((i[R.hCu.SAVE_CLIP] = P.intl.string(P.t.z3Wbam)),
-                    r && (i[R.hCu.SAVE_SCREENSHOT] = P.intl.string(P.t.m0zd57)))),
+                    ((i[w.hCu.SAVE_CLIP] = P.intl.string(P.t.z3Wbam)),
+                    r && (i[w.hCu.SAVE_SCREENSHOT] = P.intl.string(P.t.m0zd57)))),
             i
         );
     }
@@ -443,16 +443,16 @@ class F extends i.PureComponent {
                 .reject(
                     (e) =>
                         e.managed &&
-                        ![R.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, R.hCu.SAVE_CLIP, R.hCu.SAVE_SCREENSHOT].includes(
+                        ![w.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, w.hCu.SAVE_CLIP, w.hCu.SAVE_SCREENSHOT].includes(
                             e.action,
                         ),
                 )
-                .reject((t) => !e && (t.action === R.hCu.SAVE_CLIP || t.action === R.hCu.SAVE_SCREENSHOT))
-                .reject((e) => !t && e.action === R.hCu.SAVE_SCREENSHOT)
+                .reject((t) => !e && (t.action === w.hCu.SAVE_CLIP || t.action === w.hCu.SAVE_SCREENSHOT))
+                .reject((e) => !t && e.action === w.hCu.SAVE_SCREENSHOT)
                 .reject(
                     (e) =>
                         !this.props.allowSoundboard &&
-                        (e.action === R.hCu.SOUNDBOARD || e.action === R.hCu.SOUNDBOARD_HOLD),
+                        (e.action === w.hCu.SOUNDBOARD || e.action === w.hCu.SOUNDBOARD_HOLD),
                 )
                 .sortBy((e) => e.id)
                 .sortBy((e) => (!0 === e.managed ? -1 : 0))
@@ -462,7 +462,8 @@ class F extends i.PureComponent {
             children: [
                 (0, r.jsx)(N.A, {
                     title: P.intl.string(P.t.T9DA2K),
-                    children: I.isPlatformEmbedded
+                    className: x.IE,
+                    children: S.isPlatformEmbedded
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsxs)("div", {
@@ -488,18 +489,16 @@ class F extends i.PureComponent {
                                       (0, r.jsxs)(r.Fragment, {
                                           children: [(0, r.jsx)(u.cGx, {}), this.renderKeybinds(n)],
                                       }),
+                                  (0, r.jsx)(u.cGx, {}),
                               ],
                           })
                         : (0, r.jsx)(u.po8, {
                               messageType: u.YCn.INFO,
                               className: D.Ly,
                               children: P.intl.format(P.t.mPi3F3, {
-                                  downloadLink: R.X7G.DOWNLOAD,
+                                  downloadLink: w.X7G.DOWNLOAD,
                               }),
                           }),
-                }),
-                (0, r.jsx)(u.cGx, {
-                    className: x.IE,
                 }),
                 (0, r.jsxs)(u.BJc, {
                     gap: 48,
@@ -601,16 +600,16 @@ function B() {
         ),
         [],
     );
-    let e = (0, o.bG)([v.Ay], () => v.Ay.getState()),
-        t = (0, o.bG)([A.A], () => (0, g.A)(A.A)),
-        n = (0, o.bG)([y.A], () => y.A.isSupported),
+    let e = (0, o.bG)([A.Ay], () => A.Ay.getState()),
+        t = (0, o.bG)([v.A], () => (0, g.A)(v.A)),
+        n = (0, o.bG)([b.A], () => b.A.isSupported),
         a = (0, m.sw)(),
         s = (0, m.BW)();
     return (0, r.jsx)(F, {
         keybinds: e,
         canGoLive: t,
         overlaySupported: n,
-        allowSoundboard: (0, I.isWindows)(),
+        allowSoundboard: (0, S.isWindows)(),
         enableClips: a,
         enableScreenshotKeybind: s,
     });

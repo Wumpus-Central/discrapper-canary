@@ -7,6 +7,7 @@ var r = n(627968),
 function a(e) {
     let { children: t } = e;
     return (0, r.jsx)(i.BJc, {
+        gap: 0,
         padding: {
             left: 12,
             right: 12,
