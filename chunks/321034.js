@@ -4,9 +4,9 @@ n.d(t, {
 var r = n(77729),
     i = n(626584),
     a = n(832213),
-    s = n(837921);
+    o = n(837921);
 
-function o(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -67,7 +67,7 @@ class c extends a.D {
     }
     static getCurrentMemoryUsageKBCore() {
         try {
-            let e = s.Ay.getDiscordMemoryUsage();
+            let e = o.Ay.getDiscordMemoryUsage();
             if (null == e) return 0;
             let t = Object.values(e).reduce((e, t) => e + t, 0);
             return Math.ceil(t / 1024);
@@ -76,18 +76,18 @@ class c extends a.D {
         }
     }
     getMemoryUsageDetails() {
-        return s.Ay.getDiscordMemoryUsage();
+        return o.Ay.getDiscordMemoryUsage();
     }
     getMemoryUsageElectronRenderer() {
         try {
-            return s.Ay.getDiscordMemoryUsageElectronRenderer();
+            return o.Ay.getDiscordMemoryUsageElectronRenderer();
         } catch (e) {
             return null;
         }
     }
     getMemoryPrivateUsageElectronRenderer() {
         try {
-            return s.Ay.getDiscordMemoryPrivateUsageElectronRenderer();
+            return o.Ay.getDiscordMemoryPrivateUsageElectronRenderer();
         } catch (e) {
             return null;
         }
@@ -112,45 +112,55 @@ class c extends a.D {
     }
     getMemoryUsageElectronProcessTypeDetails() {
         try {
-            return s.Ay.getDiscordMemoryUsageElectronProcessTypeDetails();
+            return o.Ay.getDiscordMemoryUsageElectronProcessTypeDetails();
         } catch (e) {
             return null;
         }
     }
     enablePerfMemoryHooks(e) {
         try {
-            return s.Ay.enablePerfMemoryHooks(e);
+            return o.Ay.enablePerfMemoryHooks(e);
         } catch (e) {
             return null;
         }
     }
     disablePerfMemoryHooks() {
         try {
-            return s.Ay.disablePerfMemoryHooks();
+            return o.Ay.disablePerfMemoryHooks();
         } catch (e) {
             return null;
         }
     }
     getPerfAttributedMemory() {
         try {
-            return s.Ay.getPerfAttributedMemory();
+            return o.Ay.getPerfAttributedMemory();
         } catch (e) {
             return null;
         }
     }
     getPerfAttributedMemoryCallstacks(e) {
         try {
-            return s.Ay.getPerfAttributedMemoryCallstacks(e);
+            return o.Ay.getPerfAttributedMemoryCallstacks(e);
         } catch (e) {
             return null;
         }
     }
     getPerfAttributedMemoryStats() {
         try {
-            return s.Ay.getPerfAttributedMemoryStats();
+            return o.Ay.getPerfAttributedMemoryStats();
         } catch (e) {
             return null;
         }
+    }
+    startCPUProfiling(e) {
+        try {
+            return o.Ay.startCPUProfiling(e);
+        } catch (e) {
+            return null;
+        }
+    }
+    stopCPUProfiling() {
+        return o.Ay.stopCPUProfiling();
     }
     enablePAMemoryProfiler(e) {
         try {
@@ -255,7 +265,7 @@ class c extends a.D {
     constructor() {
         var e, t;
         super(),
-            o(this, "lastMemoryUsageKB", void 0),
+            s(this, "lastMemoryUsageKB", void 0),
             (this.cpuCoreCount =
                 null === r.A || void 0 === r.A || null == (t = r.A.processUtils) || null == (e = t.getCPUCoreCount)
                     ? void 0
