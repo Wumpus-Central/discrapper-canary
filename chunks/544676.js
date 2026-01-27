@@ -143,8 +143,7 @@ function w(e) {
                                       let { default: e } = await Promise.all([
                                           n.e("54809"),
                                           n.e("38939"),
-                                          n.e("92351"),
-                                          n.e("57490"),
+                                          n.e("94700"),
                                           n.e("62175"),
                                           n.e("97283"),
                                           n.e("2292"),
@@ -220,8 +219,7 @@ function w(e) {
                                             let { default: e } = await Promise.all([
                                                 n.e("54809"),
                                                 n.e("38939"),
-                                                n.e("92351"),
-                                                n.e("57490"),
+                                                n.e("94700"),
                                                 n.e("62175"),
                                                 n.e("97283"),
                                                 n.e("2292"),

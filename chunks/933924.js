@@ -1,58 +1,59 @@
 r.d(t, {
-    a: () => d,
+    a: () => h,
 }),
     r(801460),
     r(508300),
-    r(650828),
-    r(457529);
-var n = r(430370),
-    s = r(73153),
-    i = r(830215),
-    a = r(77729),
+    r(650828);
+var n = r(73153),
+    s = r(830215),
+    i = r(77729),
     l = r(954571),
-    o = r(464477),
-    c = r(917136),
+    a = r(464477),
+    o = r(917136),
+    c = r(293731),
     u = r(652215);
-async function d(e) {
-    let { abortController: t, loginSource: r, giftCodeSKUId: d } = e;
-    try {
-        if (
-            null == a.A &&
-            null != window.PublicKeyCredential &&
-            null != PublicKeyCredential.isConditionalMediationAvailable
-        ) {
-            let e;
+async function h(e) {
+    let { abortController: t, loginSource: r, giftCodeSKUId: h } = e;
+    if (
+        null == i.A &&
+        null != window.PublicKeyCredential &&
+        null != PublicKeyCredential.isConditionalMediationAvailable
+    ) {
+        let e;
+        try {
             if (!(await PublicKeyCredential.isConditionalMediationAvailable())) return;
-            let { challenge: a, ticket: h } = await (0, c.Ud)();
-            try {
-                let r = (0, n.d5)(JSON.parse(a));
-                (r.signal = t.signal), (e = await (0, n.Jt)(r));
-            } catch (e) {
-                if (!(e instanceof DOMException)) throw e;
-                switch (e.name) {
-                    case "AbortError":
-                    case "NotAllowedError":
-                        break;
-                    default:
-                        (0, o.Os)(e);
-                }
-                return;
-            }
-            s.h.dispatch({
-                type: "PASSWORDLESS_START",
-            }),
-                l.default.track(u.HAw.LOGIN_ATTEMPTED, {
-                    source: u.mdB.PASSWORDLESS_CONDITIONAL_UI,
-                    login_method: "passwordless",
-                    login_source: r,
-                    gift_code_sku_id: d,
-                }),
-                await i.A.loginWebAuthn({
-                    ticket: h,
-                    credential: JSON.stringify(e),
-                    source: r,
-                    giftCodeSKUId: d,
-                });
+        } catch (e) {
+            (0, a.Os)(e);
+            return;
         }
-    } catch (e) {}
+        let { challenge: i, ticket: d } = await (0, o.Ud)();
+        try {
+            e = await (0, c.J)(i, t.signal);
+        } catch (e) {
+            if (!(e instanceof DOMException)) throw e;
+            switch (e.name) {
+                case "AbortError":
+                case "NotAllowedError":
+                    break;
+                default:
+                    (0, a.Os)(e);
+            }
+            return;
+        }
+        n.h.dispatch({
+            type: "PASSWORDLESS_START",
+        }),
+            l.default.track(u.HAw.LOGIN_ATTEMPTED, {
+                source: u.mdB.PASSWORDLESS_CONDITIONAL_UI,
+                login_method: "passwordless",
+                login_source: r,
+                gift_code_sku_id: h,
+            }),
+            await s.A.loginWebAuthn({
+                ticket: d,
+                credential: e,
+                source: r,
+                giftCodeSKUId: h,
+            });
+    }
 }
