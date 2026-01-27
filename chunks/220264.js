@@ -1,3 +1,4 @@
 e.exports = {
-    S: "paymentMethodLabel_f630da",
+    J: "paymentMethodContainer_f630da",
+    d: "reviewStepBody_f630da",
 };

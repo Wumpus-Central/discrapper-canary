@@ -24293,6 +24293,16 @@ screen and (max-width:485px) {
     gap: 8px
 }
 
+.paymentIcon__84bdf {
+    height: 24px;
+    object-fit: contain;
+    width: 24px
+}
+
+.clickableContainer__84bdf {
+    cursor: pointer
+}
+
 .paymentSourceLabel_f38e43 {
     -webkit-margin-start: 8px;
     line-height: 22px;
@@ -24873,12 +24883,6 @@ screen and (max-width:485px) {
 
 .icon_da8ac7 .nitroCredit_da8ac7 svg {
     filter: drop-shadow(0 4px 10px var(--shadow-low-hover))
-}
-
-.paymentIcon__84bdf {
-    height: 24px;
-    object-fit: contain;
-    width: 24px
 }
 
 .container__33980 {
@@ -50632,8 +50636,12 @@ div.mobilePushContainer__3d3b0 {
     padding: var(--space-8)
 }
 
-.paymentMethodLabel_f630da {
+.paymentMethodContainer_f630da {
     margin-top: var(--space-24)
+}
+
+.reviewStepBody_f630da {
+    min-height: 440px
 }
 
 .profileEffectContainer_a84142 {

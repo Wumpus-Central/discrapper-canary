@@ -1,26 +1,37 @@
 n.d(t, {
-    v: () => u,
+    a: () => d,
+    v: () => f,
 }),
     n(228524),
     n(321073);
 var r = n(627968),
     i = n(64700),
-    a = n(74818),
+    a = n(158954),
+    o = n(74818),
     s = n(812745),
-    o = n(756366),
-    l = n(985018),
-    c = n(355767);
+    l = n(756366),
+    c = n(985018),
+    u = n(355767);
+let d = "new_payment_source_id";
 
-function u(e) {
-    let { label: t, value: n, options: u, onChange: d, onNew: f, disabled: p = !1, error: _ } = e,
-        h = i.useId(),
-        m = i.useMemo(() => {
-            let e = u.map((e) => {
+function f(e) {
+    let {
+            label: t,
+            value: n,
+            options: f,
+            onChange: p,
+            onNew: _,
+            newPaymentMethodOptionLabel: h,
+            disabled: m = !1,
+            error: g,
+        } = e,
+        E = i.useMemo(() => {
+            let e = f.map((e) => {
                 let t = e.icon
                     ? (0, r.jsx)("img", {
                           src: (0, s.Nj)(e.icon),
                           alt: "",
-                          className: c.s,
+                          className: u.s,
                       })
                     : void 0;
                 return {
@@ -29,34 +40,43 @@ function u(e) {
                     label: e.label,
                     leading: t,
                     description: e.description,
+                    disabled: e.disabled,
                 };
             });
             return (
                 e.push({
-                    id: h,
-                    value: h,
-                    label: l.intl.string(o.default.rNF29q),
+                    id: d,
+                    value: d,
+                    label: null != h ? h : c.intl.string(l.default.rNF29q),
                     leading: void 0,
                     description: void 0,
                 }),
                 e
             );
-        }, [u, h]),
-        g = i.useCallback(
+        }, [f, h]),
+        y = i.useCallback(
             (e) => {
-                e === h ? f() : null != e && d(e);
+                e === d ? _() : null != e && p(e);
             },
-            [f, d, h],
-        );
-    return (0, r.jsx)(a.l, {
-        label: t,
-        placeholder: l.intl.string(o.default.rNF29q),
-        value: n,
-        options: m,
-        onSelectionChange: g,
-        selectionMode: "single",
-        disabled: p,
-        errorMessage: _,
-        fullWidth: !0,
-    });
+            [_, p],
+        ),
+        b = (0, r.jsx)(o.l, {
+            label: t,
+            placeholder: c.intl.string(l.default.rNF29q),
+            value: n,
+            options: E,
+            onSelectionChange: y,
+            selectionMode: "single",
+            disabled: m || 0 === f.length,
+            errorMessage: g,
+            fullWidth: !0,
+        });
+    return 0 !== f.length || m
+        ? b
+        : (0, r.jsx)(a.DUT, {
+              onClick: _,
+              "aria-label": c.intl.string(l.default.rNF29q),
+              className: u.O,
+              children: b,
+          });
 }
