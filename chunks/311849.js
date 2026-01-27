@@ -23,7 +23,7 @@ var r = n(141931),
     g = n(664335),
     E = n(652215);
 
-function b(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,27 +36,27 @@ function b(e, t, n) {
         e
     );
 }
-let y = 1048576,
+let b = 1048576,
     O = 15 * f.A.Millis.MINUTE,
-    A = 2 * y,
-    v = 3 * y,
-    S = 4096,
-    I = 12,
+    v = 2 * b,
+    A = 3 * b,
+    I = 4096,
+    S = 12,
     T = !0,
     C = !0,
     N = 15 * f.A.Millis.MINUTE,
-    R = +y,
-    w = 1.5 * y,
+    w = +b,
+    R = 1.5 * b,
     P = 256,
     D = 12,
     x = !0,
     L = 15 * f.A.Millis.MINUTE,
-    j = 0.75 * y,
-    M = +y,
+    j = 0.75 * b,
+    M = +b,
     k = 64,
-    U = 4 * y,
+    U = 4 * b,
     G = 30 * f.A.Millis.MINUTE,
-    V = 8 * y,
+    V = 8 * b,
     F = 60 * f.A.Millis.MINUTE,
     B = "lastMemoryUsageRestart",
     H = +f.A.Millis.DAY,
@@ -105,9 +105,9 @@ class K extends a.A {
         let r = null != (e = null == (t = n.renderer) ? void 0 : t.wss_priv_kb) ? e : 0;
         !this._nativeHeapHooksInstalled &&
             this._supportedNativeChannel &&
-            r > A &&
+            r > v &&
             _.A.enablePerfMemoryHooks({
-                allocationThresholdKB: I,
+                allocationThresholdKB: S,
                 enableCallStackTracking: T,
             }) &&
             (this._nativeHeapHooksInstalled = !0),
@@ -115,15 +115,16 @@ class K extends a.A {
             this.doRestartIfNeeded(r);
     }
     async trackNativeHeapHookStats(e) {
-        if (e < v) return;
-        let t = _.A.getPerfAttributedMemory();
-        if (null == t) return;
-        let n = [],
-            r = [],
-            i = [],
-            a = [],
-            s = Object.entries(t);
-        for (let [e, t] of (s.sort((e, t) => {
+        var t, n, r, i, a, s;
+        if (e < A) return;
+        let o = _.A.getPerfAttributedMemory();
+        if (null == o) return;
+        let l = [],
+            u = [],
+            f = [],
+            p = [],
+            h = Object.entries(o);
+        for (let [e, i] of (h.sort((e, t) => {
             var n, r;
             let [, i] = e,
                 [, a] = t;
@@ -132,26 +133,24 @@ class K extends a.A {
                 (null != (r = null == i ? void 0 : i.total_allocation_kb) ? r : 0)
             );
         }),
-        s.slice(0, 10)))
-            if (null != t) {
-                var o, l, u;
-                n.push(e),
-                    r.push(null != (o = t.total_allocation_kb) ? o : 0),
-                    i.push(null != (l = t.allocation_count) ? l : 0),
-                    a.push(null != (u = t.module_version) ? u : "");
-            }
-        let f = _.A.getPerfAttributedMemoryStats(),
-            p = null == f ? void 0 : f.events_dropped,
-            h = {
+        h.slice(0, 10)))
+            null != i &&
+                (l.push(e),
+                u.push(null != (t = i.total_allocation_kb) ? t : 0),
+                f.push(null != (n = i.allocation_count) ? n : 0),
+                p.push(null != (r = i.module_version) ? r : ""));
+        let g = _.A.getPerfAttributedMemoryStats(),
+            y = null == g ? void 0 : g.events_dropped,
+            b = {
                 memory_type: "native_heap",
-                module_name: n,
-                allocation_total_size_kb: r,
-                allocation_count: i,
-                module_version: a,
-                events_dropped: p,
+                module_name: l,
+                allocation_total_size_kb: u,
+                allocation_count: f,
+                module_version: p,
+                events_dropped: y,
             };
-        if ((d.default.track(E.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY, h), T)) {
-            let e = s.slice(0, 3).map((e) => e[0]),
+        if ((d.default.track(E.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY, b), T)) {
+            let e = h.slice(0, 3).map((e) => e[0]),
                 t = 3;
             for (let n of e
                 .map((e) => _.A.getPerfAttributedMemoryCallstacks(e))
@@ -164,7 +163,7 @@ class K extends a.A {
                 .slice(0, t)
                 .filter((e) => {
                     var t;
-                    return (null != (t = e.total_alloc_kb) ? t : 0) > S;
+                    return (null != (t = e.total_alloc_kb) ? t : 0) > I;
                 })) {
                 let e = {
                     memory_type: "native_heap",
@@ -173,21 +172,28 @@ class K extends a.A {
                     callstack_frame_module_names: n.frame_module_names,
                     callstack_frame_module_codeids: n.frame_module_codeids,
                     callstack_frame_relative_offsets: n.frame_rel_offsets,
-                    events_dropped: p,
+                    events_dropped: y,
                 };
                 d.default.track(E.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK, e);
             }
         }
-        C &&
-            this._pushedNativeDeadlockMinidumpCount < 5 &&
-            (await m.Ay.submitLiveCrashReport({
+        if (C && this._pushedNativeDeadlockMinidumpCount < 5) {
+            let t = _.A.getMemoryHeapStats(),
+                n = null != (i = null == t ? void 0 : t.usedHeapSize) ? i : -1,
+                r = null != (a = null == t ? void 0 : t.totalAvailableSize) ? a : -1,
+                o = null != (s = null == t ? void 0 : t.peakMallocedMemory) ? s : -1;
+            await m.Ay.submitLiveCrashReport({
                 message: "Desktop Memory Thread State",
                 extra: {
                     renderer_memory_kb: e,
                     gpu_brand: c.A.getGpuBrand(),
+                    used_v8_heap_kb: n,
+                    avail_size_kb: r,
+                    peak_malloc_kb: o,
                 },
             }),
-            (this._pushedNativeDeadlockMinidumpCount += 1));
+                (this._pushedNativeDeadlockMinidumpCount += 1);
+        }
     }
     doRestartIfNeeded(e) {
         if (e < U) return;
@@ -226,7 +232,7 @@ class K extends a.A {
         let r = _.A.getPartitionAllocatorStats();
         if (null == r) return;
         let i = null != (e = r.total_alloc_kb) ? e : 0;
-        if (!this._paHeapHooksInstalled && i > R) {
+        if (!this._paHeapHooksInstalled && i > w) {
             let e = _.A.enablePAMemoryProfiler({
                 allocationThresholdKB: D,
                 enableCallStackTracking: x,
@@ -234,7 +240,7 @@ class K extends a.A {
             null != e && e && (this._paHeapHooksInstalled = !0);
         }
         if (this._paHeapHooksInstalled) {
-            if (i < w) return;
+            if (i < R) return;
             let e = _.A.getPerfAttributedPAMemory();
             if (null == e) return;
             let r = [],
@@ -365,16 +371,16 @@ class K extends a.A {
     }
     constructor(...e) {
         super(...e),
-            b(this, "_checkIntervalNativeHeap", null),
-            b(this, "_checkIntervalPA", null),
-            b(this, "_checkIntervalV8", null),
-            b(this, "_nativeHeapHooksInstalled", !1),
-            b(this, "_paHeapHooksInstalled", !1),
-            b(this, "_v8ProfilerRunning", !1),
-            b(this, "_pushedNativeDeadlockMinidumpCount", 0),
-            b(this, "_startupTime", performance.now()),
-            b(this, "_supportedNativeChannel", !0),
-            b(this, "actions", {
+            y(this, "_checkIntervalNativeHeap", null),
+            y(this, "_checkIntervalPA", null),
+            y(this, "_checkIntervalV8", null),
+            y(this, "_nativeHeapHooksInstalled", !1),
+            y(this, "_paHeapHooksInstalled", !1),
+            y(this, "_v8ProfilerRunning", !1),
+            y(this, "_pushedNativeDeadlockMinidumpCount", 0),
+            y(this, "_startupTime", performance.now()),
+            y(this, "_supportedNativeChannel", !0),
+            y(this, "actions", {
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
             });
     }
