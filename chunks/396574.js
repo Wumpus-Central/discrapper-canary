@@ -12,7 +12,7 @@ var r,
     i = n(214958),
     a = n.n(i);
 let o = parseInt(null != (r = a().version) ? r : "0", 10),
-    s = void 0 !== a().ua && a().ua.indexOf("OculusBrowser") > -1,
+    s = null != a().ua && a().ua.indexOf("OculusBrowser") > -1,
     l = (() => {
         if ("u" > typeof window && null == window.WebSocket) return !1;
         switch (a().name) {
