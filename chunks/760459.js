@@ -7,7 +7,7 @@ var l = n(627968),
 
 function a(e) {
     var t, n;
-    let { entry: a, viewId: s, officialGuildId: o } = e;
+    let { entry: a, viewId: s, officialGuildId: o, source: c } = e;
     return (0, l.jsx)(
         r.A,
         ((t = (function (e) {
@@ -45,6 +45,7 @@ function a(e) {
                         recipientUserId: a.author_id,
                         viewId: s,
                         officialGuildId: o,
+                        source: c,
                     });
                 },
                 onRequestOpen: () => {
@@ -55,6 +56,7 @@ function a(e) {
                         recipientUserId: a.author_id,
                         viewId: s,
                         officialGuildId: o,
+                        source: c,
                     });
                 },
             }),

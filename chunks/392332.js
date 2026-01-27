@@ -9,39 +9,39 @@ var l = n(627968),
     s = n(158954),
     o = n(397927),
     c = n(760459),
-    d = n(985018),
-    u = n(851822),
+    u = n(985018),
+    d = n(851822),
     m = n(491510);
 
 function f(e) {
-    let { entries: t, viewId: n, officialGuildId: i, onClose: f } = e,
+    let { entries: t, viewId: n, officialGuildId: i, onClose: f, source: g } = e,
         x = t.length > 7,
-        [b, p] = r.useState(!1),
-        g = r.useMemo(() => t.slice(0, x && !b ? 6 : void 0), [t, x, b]);
+        [p, j] = r.useState(!1),
+        h = r.useMemo(() => t.slice(0, x && !p ? 6 : void 0), [t, x, p]);
     return (0, l.jsxs)("div", {
         children: [
             (0, l.jsx)(s.DZT, {
-                className: u.bV,
+                className: d.bV,
                 variant: "text-md/semibold",
                 color: "text-strong",
-                children: d.intl.string(d.t.ak8OHk),
+                children: u.intl.string(u.t.ak8OHk),
             }),
             0 === t.length
                 ? (0, l.jsx)(s.EYj, {
                       variant: "text-xs/semibold",
                       color: "text-strong",
                       className: m.p$,
-                      children: d.intl.string(d.t.R5fYVO),
+                      children: u.intl.string(u.t.R5fYVO),
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)("div", {
                               className: a()(m.yz, {
-                                  [m.T6]: x && !b,
+                                  [m.T6]: x && !p,
                               }),
                               children: (0, l.jsx)("div", {
-                                  className: u.fi,
-                                  children: g.map((e) =>
+                                  className: d.fi,
+                                  children: h.map((e) =>
                                       (0, l.jsx)(
                                           c.A,
                                           {
@@ -49,6 +49,7 @@ function f(e) {
                                               viewId: n,
                                               onClose: f,
                                               officialGuildId: i,
+                                              source: g,
                                           },
                                           e.id,
                                       ),
@@ -56,15 +57,15 @@ function f(e) {
                               }),
                           }),
                           x &&
-                              !b &&
+                              !p &&
                               (0, l.jsxs)(o.DUT, {
                                   className: m.ND,
-                                  onClick: () => p(!0),
+                                  onClick: () => j(!0),
                                   children: [
                                       (0, l.jsx)(s.EYj, {
                                           variant: "text-xs/semibold",
                                           color: "interactive-text-default",
-                                          children: d.intl.string(d.t.yohc6E),
+                                          children: u.intl.string(u.t.yohc6E),
                                       }),
                                       (0, l.jsx)(o.abt, {
                                           size: "xs",
