@@ -1,18 +1,14 @@
 n.d(t, {
-    f: () => h,
+    f: () => d,
 }),
-    n(228524),
-    n(65821);
+    n(228524);
 var r = n(284009),
     i = n.n(r),
     a = n(311907),
-    s = n(118356),
     o = n(73153),
-    l = n(867051),
-    c = n(403362),
-    u = n(747465);
+    s = n(867051);
 
-function d(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,58 +21,21 @@ function d(e, t, n) {
         e
     );
 }
-let f = new s.Vy("KvStore"),
-    p = Object.prototype.hasOwnProperty,
-    _ = Symbol("version");
-class h extends a.il {
-    getMode() {
-        return this.mode;
-    }
-    registerWithLibdiscore(e) {
-        let t;
-        switch (this.mode) {
-            case "typescript-libdiscore-dual-read":
-                (this.shadowState = {
-                    root: {},
-                    derived: {
-                        length: 0,
-                        memoized: {},
-                    },
-                }),
-                    (t = (e) => {
-                        this.shadowState = e;
-                    }),
-                    this.addChangeListener(() => {
-                        let e = this.shadowState;
-                        i()(null != e, "Shadow state must be set in dual-read mode before running validation."),
-                            (0, u.R7)(this.getName(), "Kv", (t) => {
-                                t(this.state, e);
-                            });
-                    });
-                break;
-            case "libdiscore":
-                t = this.setKvState.bind(this);
-                break;
-            case "typescript":
-                throw Error("This method should not be called in TypeScript mode.");
-            default:
-                (0, c.xb)(this.mode);
-        }
-        let { state: n, storeToken: r } = e.registerKvStore(this.getName());
-        return t(n), r;
-    }
+let c = Object.prototype.hasOwnProperty,
+    u = Symbol("version");
+class d extends a.il {
     memoized(e) {
         let t = Symbol();
         return () => {
             let { memoized: n } = this.state.derived,
                 r = n[t];
-            return p.call(n, t) || ((r = e(this.state.root)), (n[t] = r)), r;
+            return c.call(n, t) || ((r = e(this.state.root)), (n[t] = r)), r;
         };
     }
     version() {
         let { memoized: e } = this.state.derived,
-            t = e[_];
-        return null == t && (e[_] = t = ++this.nextVersion), t;
+            t = e[u];
+        return null == t && (e[u] = t = ++this.nextVersion), t;
     }
     get(e) {
         return this.state.root[e];
@@ -89,61 +48,55 @@ class h extends a.il {
     length() {
         return this.state.derived.length;
     }
-    constructor(e, t = "typescript") {
-        const n = {};
-        if ("typescript" == (t = "typescript") || "typescript-libdiscore-dual-read" === t) {
-            let t = !1;
-            const r = {
-                reset: (e) => {
-                    let n = {};
-                    "function" == typeof e ? e((n = {}), this.state.root) : null != e && (n = e),
-                        this.setKvState({
-                            root: n,
-                            derived: {
-                                length: Object.keys(n).length,
-                                memoized: {},
-                            },
-                        }),
-                        (t = !0);
-                },
-                get: (e) => this.state.root[e],
-                set: (e, n) => {
-                    let r = this.state.root[e];
-                    if (("function" == typeof n && (n = n(r)), void 0 !== r && (0, l.Kl)(r, n))) return !1;
-                    this.state.root[e] = n;
-                    let { derived: i } = this.state;
-                    return void 0 === r && i.length++, (i.memoized = {}), (t = !0), !0;
-                },
-                remove: (e) => {
-                    let n = p.call(this.state.root, e);
-                    if (n) {
-                        delete this.state.root[e];
-                        let { derived: n } = this.state;
-                        n.length--, (n.memoized = {}), (t = !0);
-                    }
-                    return n;
-                },
-            };
-            for (const i in e) {
-                const a = e[i],
-                    s = (e) => {
-                        if (((t = !1), a(e, r), !t)) return !1;
-                    };
-                n[i] = s;
-            }
+    constructor(e) {
+        const t = {};
+        let n = !1;
+        const r = {
+            reset: (e) => {
+                let t = {};
+                "function" == typeof e ? e((t = {}), this.state.root) : null != e && (t = e),
+                    this.setKvState({
+                        root: t,
+                        derived: {
+                            length: Object.keys(t).length,
+                            memoized: {},
+                        },
+                    }),
+                    (n = !0);
+            },
+            get: (e) => this.state.root[e],
+            set: (e, t) => {
+                let r = this.state.root[e];
+                if (("function" == typeof t && (t = t(r)), void 0 !== r && (0, s.Kl)(r, t))) return !1;
+                this.state.root[e] = t;
+                let { derived: i } = this.state;
+                return void 0 === r && i.length++, (i.memoized = {}), (n = !0), !0;
+            },
+            remove: (e) => {
+                let t = c.call(this.state.root, e);
+                if (t) {
+                    delete this.state.root[e];
+                    let { derived: t } = this.state;
+                    t.length--, (t.memoized = {}), (n = !0);
+                }
+                return t;
+            },
+        };
+        for (const i in e) {
+            const a = e[i],
+                o = (e) => {
+                    if (((n = !1), a(e, r), !n)) return !1;
+                };
+            t[i] = o;
         }
-        super(o.h, n),
-            d(this, "shadowState", null),
-            d(this, "mode", void 0),
-            d(this, "state", {
+        super(o.h, t),
+            l(this, "state", {
                 derived: {
                     length: 0,
                     memoized: {},
                 },
                 root: {},
             }),
-            d(this, "nextVersion", 0),
-            (this.mode = t),
-            f.info("".concat(this.getName(), " initialized in mode: ").concat(this.mode));
+            l(this, "nextVersion", 0);
     }
 }
