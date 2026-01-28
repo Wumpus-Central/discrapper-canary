@@ -467,10 +467,9 @@ class g extends r.il {
                 const r = e[t],
                     i = (e) => {
                         var t;
-                        return (
-                            null != (t = this.wrappedState) || (this.wrappedState = this.stateWrapper()),
-                            r(e, this.wrappedState)
-                        );
+                        null != (t = this.wrappedState) || (this.wrappedState = this.stateWrapper());
+                        let n = this._nextVersion;
+                        if ((r(e, this.wrappedState), this._nextVersion === n)) return !1;
                     };
                 n[t] = i;
             }
