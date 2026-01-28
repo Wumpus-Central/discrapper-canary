@@ -424,6 +424,9 @@ class g extends r.il {
     clearAllDatabases() {
         for (let e in this.state.databases) this.state.databases[e].clear();
     }
+    markDirty() {
+        this._nextVersion++;
+    }
     executeDatabaseChange(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             { databaseName: n, opcodes: r } = e,

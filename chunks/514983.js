@@ -67,6 +67,7 @@ class _ extends i.yW {
             packsDatabase: this.packsDatabase,
             packStickersDatabase: this.packStickersDatabase,
             premiumPacksDatabase: this.premiumPacksDatabase,
+            markDirty: () => this.markDirty(),
             clearAllDBs: () => this.clearAllDatabases(),
         };
     }
@@ -138,12 +139,13 @@ let m = new _({
         h(n, r, i, a, !1);
     },
     STICKER_PACKS_FETCH_START: (e, t) => {
-        l = !0;
+        let { markDirty: n } = t;
+        (l = !0), n();
     },
     STICKER_PACKS_FETCH_SUCCESS: (e, t) => {
         let { packs: n } = e,
-            { packStickersDatabase: r, packsDatabase: i, premiumPacksDatabase: a } = t;
-        for (let e of ((l = !1), (c = performance.now()), n)) h(e, r, i, a, !0);
+            { packStickersDatabase: r, packsDatabase: i, premiumPacksDatabase: a, markDirty: o } = t;
+        for (let e of ((l = !1), o(), (c = performance.now()), n)) h(e, r, i, a, !0);
     },
     PACK_STICKER_FETCH_SUCCESS: (e, t) => {
         let { sticker: n } = e,
