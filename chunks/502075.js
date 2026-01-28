@@ -1,14 +1,15 @@
 n.d(t, {
     $x: () => l,
-    F2: () => g,
+    F2: () => E,
     G1: () => m,
-    P$: () => s,
+    P$: () => o,
     PH: () => d,
     U4: () => h,
-    WZ: () => o,
+    WZ: () => s,
     e: () => a,
     eg: () => _,
     fG: () => u,
+    oe: () => g,
     pj: () => i,
     ws: () => c,
     yg: () => p,
@@ -33,8 +34,8 @@ var r = n(828505),
         );
     })({});
 let a = ">=22.0.0",
-    s = ">=22.0.0",
-    o = ">=24.0.0",
+    o = ">=22.0.0",
+    s = ">=24.0.0",
     l = ">=10.0.17763",
     c = "<10.0.22000",
     u = ">=10.0.26100",
@@ -46,4 +47,5 @@ var h = (function (e) {
     return (e.GUILD = "guild"), (e.CALL = "call"), e;
 })({});
 let m = r.$.StreamNotificationsGuildMaxSize,
-    g = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);
+    g = 30,
+    E = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);

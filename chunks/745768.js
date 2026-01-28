@@ -1,37 +1,26 @@
-let r;
-n.d(t, {
-    lu: () => o,
-    zf: () => s,
+r.d(e, {
+    lu: () => s,
+    zf: () => i,
 });
-var i = n(588522);
-let a = 1e3;
+var n = r(588522);
 
-function o() {
-    return Date.now() / a;
+function s() {
+    return Date.now() / 1e3;
 }
-let s = (function () {
-    let { performance: e } = i.O;
-    if (!e || !e.now) return o;
-    let t = Date.now() - e.now(),
-        n = void 0 == e.timeOrigin ? t : e.timeOrigin;
-    return () => (n + e.now()) / a;
+let i = (function () {
+    let { performance: t } = n.O;
+    if (!t || !t.now) return s;
+    let e = Date.now() - t.now(),
+        r = void 0 == t.timeOrigin ? e : t.timeOrigin;
+    return () => (r + t.now()) / 1e3;
 })();
 (() => {
-    let { performance: e } = i.O;
-    if (!e || !e.now) {
-        r = "none";
-        return;
-    }
-    let t = 36e5,
-        n = e.now(),
-        a = Date.now(),
-        o = e.timeOrigin ? Math.abs(e.timeOrigin + n - a) : t,
-        s = o < t,
-        l = e.timing && e.timing.navigationStart,
-        c = "number" == typeof l ? Math.abs(l + n - a) : t,
-        u = c < t;
-    if (s || u)
-        if (o <= c) return (r = "timeOrigin"), e.timeOrigin;
-        else return (r = "navigationStart");
-    return (r = "dateNow");
+    let { performance: t } = n.O;
+    if (!t || !t.now) return;
+    let e = t.now(),
+        r = Date.now(),
+        s = t.timeOrigin ? Math.abs(t.timeOrigin + e - r) : 36e5,
+        i = t.timing && t.timing.navigationStart,
+        o = "number" == typeof i ? Math.abs(i + e - r) : 36e5;
+    if ((s < 36e5 || o < 36e5) && s <= o) return t.timeOrigin;
 })();

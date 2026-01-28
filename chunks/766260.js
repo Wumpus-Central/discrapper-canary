@@ -1,83 +1,73 @@
-var r = n(410323),
-    i = 0x7fffffff,
-    a = 36,
-    o = 1,
-    s = 26,
-    l = 38,
-    c = 700,
-    u = 72,
-    d = 128,
-    f = "-",
-    p = /[^\0-\u007E]/,
-    _ = /[.\u3002\uFF0E\uFF61]/g,
-    h = "Overflow: input needs wider integers to process",
-    m = 35,
-    g = RangeError,
-    E = r(_.exec),
-    y = Math.floor,
-    b = String.fromCharCode,
-    O = r("".charCodeAt),
-    v = r([].join),
-    A = r([].push),
-    I = r("".replace),
-    S = r("".split),
-    T = r("".toLowerCase),
-    C = function (e) {
-        for (var t = [], n = 0, r = e.length; n < r; ) {
-            var i = O(e, n++);
-            if (i >= 55296 && i <= 56319 && n < r) {
-                var a = O(e, n++);
-                (64512 & a) == 56320 ? A(t, ((1023 & i) << 10) + (1023 & a) + 65536) : (A(t, i), n--);
-            } else A(t, i);
+var n = r(410323),
+    s = /[^\0-\u007E]/,
+    i = /[.\u3002\uFF0E\uFF61]/g,
+    a = "Overflow: input needs wider integers to process",
+    h = RangeError,
+    o = n(i.exec),
+    u = Math.floor,
+    f = String.fromCharCode,
+    l = n("".charCodeAt),
+    c = n([].join),
+    p = n([].push),
+    g = n("".replace),
+    v = n("".split),
+    d = n("".toLowerCase),
+    m = function (e) {
+        for (var t = [], r = 0, n = e.length; r < n; ) {
+            var s = l(e, r++);
+            if (s >= 55296 && s <= 56319 && r < n) {
+                var i = l(e, r++);
+                (64512 & i) == 56320 ? p(t, ((1023 & s) << 10) + (1023 & i) + 65536) : (p(t, s), r--);
+            } else p(t, s);
         }
         return t;
     },
-    N = function (e) {
+    w = function (e) {
         return e + 22 + 75 * (e < 26);
     },
-    w = function (e, t, n) {
-        var r = 0;
-        for (e = n ? y(e / c) : e >> 1, e += y(e / t); e > (m * s) >> 1; ) (e = y(e / m)), (r += a);
-        return y(r + ((m + 1) * e) / (e + l));
+    b = function (e, t, r) {
+        var n = 0;
+        for (e = r ? u(e / 700) : e >> 1, e += u(e / t); e > 455; ) (e = u(e / 35)), (n += 36);
+        return u(n + (36 * e) / (e + 38));
     },
-    R = function (e) {
+    y = function (e) {
         var t,
-            n,
-            r = [],
-            l = (e = C(e)).length,
-            c = d,
-            p = 0,
-            _ = u;
-        for (t = 0; t < e.length; t++) (n = e[t]) < 128 && A(r, b(n));
-        var m = r.length,
-            E = m;
-        for (m && A(r, f); E < l; ) {
-            var O = i;
-            for (t = 0; t < e.length; t++) (n = e[t]) >= c && n < O && (O = n);
-            var I = E + 1;
-            if (O - c > y((i - p) / I)) throw new g(h);
-            for (p += (O - c) * I, c = O, t = 0; t < e.length; t++) {
-                if ((n = e[t]) < c && ++p > i) throw new g(h);
-                if (n === c) {
-                    for (var S = p, T = a; ; ) {
-                        var R = T <= _ ? o : T >= _ + s ? s : T - _;
-                        if (S < R) break;
-                        var P = S - R,
-                            D = a - R;
-                        A(r, b(N(R + (P % D)))), (S = y(P / D)), (T += a);
+            r,
+            n = [],
+            s = (e = m(e)).length,
+            i = 128,
+            o = 0,
+            l = 72;
+        for (t = 0; t < e.length; t++) (r = e[t]) < 128 && p(n, f(r));
+        var g = n.length,
+            v = g;
+        for (g && p(n, "-"); v < s; ) {
+            var d = 0x7fffffff;
+            for (t = 0; t < e.length; t++) (r = e[t]) >= i && r < d && (d = r);
+            var y = v + 1;
+            if (d - i > u((0x7fffffff - o) / y)) throw new h(a);
+            for (o += (d - i) * y, i = d, t = 0; t < e.length; t++) {
+                if ((r = e[t]) < i && ++o > 0x7fffffff) throw new h(a);
+                if (r === i) {
+                    for (var k = o, S = 36; ; ) {
+                        var P = S <= l ? 1 : S >= l + 26 ? 26 : S - l;
+                        if (k < P) break;
+                        var U = k - P,
+                            R = 36 - P;
+                        p(n, f(w(P + (U % R)))), (k = u(U / R)), (S += 36);
                     }
-                    A(r, b(N(S))), (_ = w(p, I, E === m)), (p = 0), E++;
+                    p(n, f(w(k))), (l = b(o, y, v === g)), (o = 0), v++;
                 }
             }
-            p++, c++;
+            o++, i++;
         }
-        return v(r, "");
+        return c(n, "");
     };
 e.exports = function (e) {
     var t,
-        n,
-        r = [],
-        i = S(I(T(e), _, "."), ".");
-    for (t = 0; t < i.length; t++) A(r, E(p, (n = i[t])) ? "xn--" + R(n) : n);
-    return v(r, ".");
+        r,
+        n = [],
+        a = v(g(d(e), i, "."), ".");
+    for (t = 0; t < a.length; t++) p(n, o(s, (r = a[t])) ? "xn--" + y(r) : r);
+    return c(n, ".");
 };

@@ -1,138 +1,131 @@
 n.d(t, {
-    A: () => E,
+    A: () => g,
 }),
     n(65821),
     n(896048),
     n(667532);
-var r,
-    i = n(960488),
-    a = n(311907),
+var i,
+    r,
+    l = n(960488),
+    s = n(311907),
     o = n(73153),
-    s = n(463347),
-    l = n(824865),
-    c = n(652215);
-
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let d = 20,
-    f = [
-        c.BVt.CHANNEL_THREAD_VIEW(
-            s.pv.guildId(),
-            s.pv.channelId({
+    a = n(463347),
+    c = n(824865),
+    u = n(652215);
+let d = [
+        u.BVt.CHANNEL_THREAD_VIEW(
+            a.pv.guildId(),
+            a.pv.channelId({
                 optional: !0,
             }),
             ":threadId",
             ":messageId?",
         ),
-        c.BVt.CHANNEL(
-            s.pv.guildId(),
-            s.pv.channelId({
+        u.BVt.CHANNEL(
+            a.pv.guildId(),
+            a.pv.channelId({
                 optional: !0,
             }),
             ":messageId?",
         ),
-        c.BVt.VOICE_CHAT_CHANNEL_PARTIAL(
-            s.pv.guildId(),
-            s.pv.channelId({
+        u.BVt.VOICE_CHAT_CHANNEL_PARTIAL(
+            a.pv.guildId(),
+            a.pv.channelId({
                 optional: !0,
             }),
             ":messageId?",
         ),
-        c.BVt.CHANNELS_GAME_SHOP(s.pv.guildId(), ":pageIndex", ":skuId?", ":slug?"),
-        c.BVt.NOTIFICATIONS,
-        c.BVt.FRIENDS,
-        c.BVt.ME,
-        c.BVt.MESSAGE_REQUESTS,
-        c.BVt.GUILD_DISCOVERY,
-        c.BVt.APPLICATION_STORE,
-        c.BVt.COLLECTIBLES_SHOP,
-        c.BVt.USERS(":userId"),
-        c.BVt.GUILD_DISCOVERY,
-        c.BVt.GLOBAL_DISCOVERY,
-        c.BVt.QUEST_HOME,
-        c.BVt.GLOBAL_DISCOVERY_SERVERS,
-        c.BVt.GLOBAL_DISCOVERY_APPS,
+        u.BVt.CHANNELS_GAME_SHOP(a.pv.guildId(), ":pageIndex", ":skuId?", ":slug?"),
+        u.BVt.NOTIFICATIONS,
+        u.BVt.FRIENDS,
+        u.BVt.ME,
+        u.BVt.MESSAGE_REQUESTS,
+        u.BVt.GUILD_DISCOVERY,
+        u.BVt.APPLICATION_STORE,
+        u.BVt.COLLECTIBLES_SHOP,
+        u.BVt.USERS(":userId"),
+        u.BVt.GUILD_DISCOVERY,
+        u.BVt.GLOBAL_DISCOVERY,
+        u.BVt.QUEST_HOME,
+        u.BVt.GLOBAL_DISCOVERY_SERVERS,
+        u.BVt.GLOBAL_DISCOVERY_APPS,
     ],
-    p = [],
-    _ = 0;
-
-function h(e, t) {
-    if (t < 0 || t >= e.length) throw RangeError("index out of bounds");
-    let n = 0,
-        r = t;
-    for (; n < r; ) ([e[n], e[r]] = [e[r], e[n]]), n++, r--;
-    return e;
-}
-
-function m(e) {
-    let { location: t, action: n } = e;
-    if ("POP" === n) {
-        let e = p.findIndex((e) => e.path === t.pathname);
-        if (-1 !== e) return (_ = e), !0;
-    }
-    if (t.source === l.A.USER_NAVIGATED_BACK) {
-        _ < p.length - 1 && _++;
-        return;
-    }
-    if (t.source === l.A.USER_NAVIGATED_FORWARD) {
-        _ > 0 && _--;
-        return;
-    }
-    let { pathname: r } = t,
-        a = "REPLACE" === n,
-        o = (0, i.B6)(r, f);
-    if (null == o) return !1;
-    if (a && p.length > 0)
-        return (
-            (p[_] = {
-                path: r,
-                params: o.params,
-            }),
-            !0
-        );
-    if (p.length > 0) {
-        if (r === p[_].path) return !1;
-        let e = p.findIndex((e) => e.path === r);
-        -1 !== e && (p.splice(e, 1), _ >= e && (_ -= 1));
-    }
-    for (_ > 0 && h(p, _), _ = 0; p.length > d; ) p.pop();
-    p.unshift({
-        path: r,
-        params: o.params,
-    });
-}
-class g extends (r = a.Ay.Store) {
+    h = [],
+    p = 0;
+class C extends (i = s.Ay.Store) {
     initialize() {
-        (p = []), (_ = 0);
+        (h = []), (p = 0);
     }
     get pastPlaces() {
-        return p;
+        return h;
     }
     get canGoBack() {
-        return _ < p.length - 1;
+        return p < h.length - 1;
     }
     get canGoForward() {
-        return _ > 0;
+        return p > 0;
     }
     get backDestination() {
-        return this.canGoBack ? p[_ + 1] : null;
+        return this.canGoBack ? h[p + 1] : null;
     }
     get forwardDestination() {
-        return this.canGoForward ? p[_ - 1] : null;
+        return this.canGoForward ? h[p - 1] : null;
     }
 }
-u(g, "displayName", "BackForwardNavStore");
-let E = new g(o.h, {
-    ROUTE_CHANGED: m,
+(r = "displayName") in C
+    ? Object.defineProperty(C, r, {
+          value: "BackForwardNavStore",
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+      })
+    : (C[r] = "BackForwardNavStore");
+let g = new C(o.h, {
+    ROUTE_CHANGED: function (e) {
+        let { location: t, action: n } = e;
+        if ("POP" === n) {
+            let e = h.findIndex((e) => e.path === t.pathname);
+            if (-1 !== e) return (p = e), !0;
+        }
+        if (t.source === c.A.USER_NAVIGATED_BACK) {
+            p < h.length - 1 && p++;
+            return;
+        }
+        if (t.source === c.A.USER_NAVIGATED_FORWARD) {
+            p > 0 && p--;
+            return;
+        }
+        let { pathname: i } = t,
+            r = (0, l.B6)(i, d);
+        if (null == r) return !1;
+        if ("REPLACE" === n && h.length > 0)
+            return (
+                (h[p] = {
+                    path: i,
+                    params: r.params,
+                }),
+                !0
+            );
+        if (h.length > 0) {
+            if (i === h[p].path) return !1;
+            let e = h.findIndex((e) => e.path === i);
+            -1 !== e && (h.splice(e, 1), p >= e && (p -= 1));
+        }
+        for (
+            p > 0 &&
+                (function (e, t) {
+                    if (t < 0 || t >= e.length) throw RangeError("index out of bounds");
+                    let n = 0,
+                        i = t;
+                    for (; n < i; ) ([e[n], e[i]] = [e[i], e[n]]), n++, i--;
+                })(h, p),
+                p = 0;
+            h.length > 20;
+        )
+            h.pop();
+        h.unshift({
+            path: i,
+            params: r.params,
+        });
+    },
 });

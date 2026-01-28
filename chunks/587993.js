@@ -1,17 +1,13 @@
-n.d(t, {
-    Qd: () => a,
-    Qg: () => o,
+r.d(e, {
+    Qd: () => s,
+    Qg: () => i,
 });
-let r = Object.prototype.toString;
+let n = Object.prototype.toString;
 
-function i(e, t) {
-    return r.call(e) === `[object ${t}]`;
+function s(t) {
+    return "[object Object]" === n.call(t);
 }
 
-function a(e) {
-    return i(e, "Object");
-}
-
-function o(e) {
-    return !!(e && e.then && "function" == typeof e.then);
+function i(t) {
+    return !!(t && t.then && "function" == typeof t.then);
 }
