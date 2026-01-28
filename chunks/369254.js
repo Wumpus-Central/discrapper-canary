@@ -1,14 +1,14 @@
 n.d(t, {
     Ay: () => P,
-    Z5: () => w,
+    Z5: () => R,
     t1: () => C,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(397927),
+    o = n.n(a),
+    s = n(397927),
     l = n(930125),
     c = n(338717),
     u = n(282108),
@@ -18,28 +18,28 @@ var r = n(627968),
     _ = n(644447),
     h = n(203982),
     m = n(515718),
-    g = n(793367),
+    g = n(700331),
     E = n(454290),
-    b = n(976247),
-    y = n(358731),
+    y = n(976247),
+    b = n(358731),
     O = n(215050),
-    A = n(597351),
-    v = n(608214),
-    S = n(652215),
-    I = n(985018),
+    v = n(597351),
+    A = n(608214),
+    I = n(652215),
+    S = n(985018),
     T = n(720308);
 
 function C(e) {
     let { src: t, width: n, height: r, hasMultiple: i = !1, options: a } = e,
-        { width: s, height: o } = (0, b.z)(i, {
+        { width: o, height: s } = (0, y.z)(i, {
             width: n,
             height: r,
         });
     f.Ay.preloadImage({
         src: t,
         dimensions: {
-            maxWidth: s,
-            maxHeight: o,
+            maxWidth: o,
+            maxHeight: s,
             imageWidth: n,
             imageHeight: r,
         },
@@ -51,15 +51,15 @@ function N(e, t) {
     return ((e % t) + t) % t;
 }
 
-function R(e) {
+function w(e) {
     let { children: t, isObscured: n, src: a } = e,
-        [o, l] = i.useState(!1),
+        [s, l] = i.useState(!1),
         u = i.useCallback(() => {
             l((e) => !e);
         }, []);
     return n
         ? (0, r.jsx)(p.Bs.Provider, {
-              value: o,
+              value: s,
               children: (0, r.jsx)(
                   p.Ay,
                   {
@@ -70,7 +70,7 @@ function R(e) {
                       onToggleObscurity: u,
                       children: (e) =>
                           (0, r.jsx)("div", {
-                              className: s()(T.JT, {
+                              className: o()(T.JT, {
                                   [T.Qr]: e,
                               }),
                               children: t(e),
@@ -84,7 +84,7 @@ function R(e) {
           });
 }
 
-function w(e, t) {
+function R(e, t) {
     "IMAGE" !== e.type ||
         ((0, m.eJ)(e)
             ? C({
@@ -111,23 +111,23 @@ function P(e) {
         [f, p] = i.useState(a),
         _ = i.useRef(a),
         { zoomed: m, setZoomed: C } = (0, E.Q)(),
-        w = i.useCallback(
+        R = i.useCallback(
             (e) => {
                 p((e = N(e, t.length))), (_.current = e), null == n || n(e), C(!1);
             },
             [n, t, C],
         );
     i.useEffect(() => {
-        let e = () => w(_.current + 1),
-            t = () => w(_.current - 1);
+        let e = () => R(_.current + 1),
+            t = () => R(_.current - 1);
         return (
-            h._.subscribe(S.jej.MODAL_CAROUSEL_NEXT, e),
-            h._.subscribe(S.jej.MODAL_CAROUSEL_PREV, t),
+            h._.subscribe(I.jej.MODAL_CAROUSEL_NEXT, e),
+            h._.subscribe(I.jej.MODAL_CAROUSEL_PREV, t),
             () => {
-                h._.unsubscribe(S.jej.MODAL_CAROUSEL_NEXT, e), h._.unsubscribe(S.jej.MODAL_CAROUSEL_PREV, t);
+                h._.unsubscribe(I.jej.MODAL_CAROUSEL_NEXT, e), h._.unsubscribe(I.jej.MODAL_CAROUSEL_PREV, t);
             }
         );
-    }, [w, C]);
+    }, [R, C]);
     let P = t[f],
         D = (0, u.qo)(
             {
@@ -136,63 +136,63 @@ function P(e) {
             },
             c,
         ),
-        x = d
+        L = d
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
-            : () => (0, g.Yq)(g.NJ.CONTEXT_MENU_OPENED),
-        L = t.length > 1;
+            : () => g.l.markActionPerformed(g.N.CONTEXT_MENU_OPENED),
+        x = t.length > 1;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(y.Ay, {
+            (0, r.jsx)(b.Ay, {
                 children: (e) =>
-                    L
+                    x
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(A.A, {
+                                  (0, r.jsx)(v.A, {
                                       onClick: (e) => {
-                                          e.stopPropagation(), h._.dispatch(S.jej.MODAL_CAROUSEL_PREV);
+                                          e.stopPropagation(), h._.dispatch(I.jej.MODAL_CAROUSEL_PREV);
                                       },
-                                      icon: o.Zge,
-                                      tooltip: I.intl.string(I.t.vgfxaA),
-                                      className: s()(T.vi, e),
+                                      icon: s.Zge,
+                                      tooltip: S.intl.string(S.t.vgfxaA),
+                                      className: o()(T.vi, e),
                                   }),
-                                  (0, r.jsx)(A.A, {
+                                  (0, r.jsx)(v.A, {
                                       onClick: (e) => {
-                                          e.stopPropagation(), h._.dispatch(S.jej.MODAL_CAROUSEL_NEXT);
+                                          e.stopPropagation(), h._.dispatch(I.jej.MODAL_CAROUSEL_NEXT);
                                       },
-                                      icon: o.KS6,
-                                      tooltip: I.intl.string(I.t.XiOHRX),
-                                      className: s()(T.f8, e),
+                                      icon: s.KS6,
+                                      tooltip: S.intl.string(S.t.XiOHRX),
+                                      className: o()(T.f8, e),
                                   }),
                               ],
                           })
                         : void 0,
             }),
-            (0, r.jsx)(b.A, {
+            (0, r.jsx)(y.A, {
                 items: t,
                 currentIndex: f,
                 children: (e, t) =>
-                    (0, r.jsx)(R, {
+                    (0, r.jsx)(w, {
                         isObscured: !m && D,
                         src: P.url,
                         children: (n) =>
-                            (0, r.jsx)(v.Ay, {
+                            (0, r.jsx)(A.Ay, {
                                 media: P,
                                 maxWidth: e,
                                 maxHeight: t,
                                 obscured: n,
-                                onContextMenu: x,
+                                onContextMenu: L,
                             }),
                     }),
             }),
-            L &&
-                (0, r.jsx)(y.Ay, {
+            x &&
+                (0, r.jsx)(b.Ay, {
                     children: (e) =>
                         (0, r.jsx)(O.A, {
                             items: t,
                             currentIndex: f,
-                            onGalleryItemClick: w,
+                            onGalleryItemClick: R,
                             className: e,
                             enabledContentHarmTypeFlags: c,
                         }),

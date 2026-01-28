@@ -1,16 +1,13 @@
 n.d(t, {
-    K: () => p,
-    R: () => _,
+    K: () => u,
+    R: () => d,
 }),
     n(896048);
 var r = n(627968),
     i = n(397927),
-    a = n(734057),
-    s = n(954571),
-    o = n(793367),
-    l = n(652215);
+    a = n(700331);
 
-function c(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +21,7 @@ function c(e, t, n) {
     );
 }
 
-function u(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,13 +32,13 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
 
-function d(e, t) {
+function l(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -52,13 +49,13 @@ function d(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = f(e, t)), Object.getOwnPropertySymbols))
+    if (((a = c(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function f(e, t) {
+function c(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -68,45 +65,35 @@ function f(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-let p = "Media Viewer Modal";
+let u = "Media Viewer Modal";
 
-function _(e, t) {
-    var c, f, _;
-    let [h, ...m] = [e, t],
-        { location: g, contextKey: E } = h,
-        b = d(h, ["location", "contextKey"]),
-        [y] = m,
-        O =
-            null == (_ = b.items[null != (c = b.startingIndex) ? c : 0]) || null == (f = _.sourceMetadata)
+function d(e, t) {
+    var o, c, d;
+    let [f, ...p] = [e, t],
+        { location: _, contextKey: h } = f,
+        m = l(f, ["location", "contextKey"]),
+        [g] = p,
+        E =
+            null == (d = m.items[null != (o = m.startingIndex) ? o : 0]) || null == (c = d.sourceMetadata)
                 ? void 0
-                : f.message,
-        A = a.A.getChannel(null == O ? void 0 : O.channel_id);
-    (0, o.H9)({
-        guildId: null == A ? void 0 : A.guild_id,
-        channelId: null == A ? void 0 : A.id,
-        channelType: null == A ? void 0 : A.type,
-        numMediaItems: b.items.length,
-        source: g,
-        hasMediaOptions: !b.shouldHideMediaOptions,
+                : c.message;
+    a.l.markSessionStarted({
+        channelId: null == E ? void 0 : E.channel_id,
+        numMediaItems: m.items.length,
+        source: _,
+        hasMediaOptions: !m.shouldHideMediaOptions,
     }),
-        s.default.track(l.HAw.OPEN_MODAL, {
-            type: l.JJy.MEDIA_VIEWER,
-            source: g,
-            guild_id: null == A ? void 0 : A.guild_id,
-            channel_id: null == A ? void 0 : A.id,
-            channel_type: null == A ? void 0 : A.type,
-        }),
         (0, i.mMO)(
             async () => {
                 let { default: e } = await n.e("48654").then(n.bind(n, 321565));
-                return (t) => (0, r.jsx)(e, u({}, t, b));
+                return (t) => (0, r.jsx)(e, s({}, t, m));
             },
             {
-                modalKey: p,
-                contextKey: E,
-                onCloseCallback: o.a2,
+                modalKey: u,
+                contextKey: h,
+                onCloseCallback: a.l.markSessionCompleted,
                 backdropStyle: i.F2Z.LIGHTBOX,
-                stackingBehavior: y,
+                stackingBehavior: g,
             },
         );
 }
