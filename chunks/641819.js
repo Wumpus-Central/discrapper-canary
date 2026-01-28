@@ -1,141 +1,131 @@
 t.d(n, {
-    j: () => b,
+    j: () => A,
 }),
     t(896048);
-var l = t(627968),
-    r = t(64700),
+var r = t(627968),
+    l = t(64700),
     i = t(284009),
     s = t.n(i),
     a = t(311907),
     o = t(397927),
     u = t(447784),
     c = t(235986),
-    d = t(552736),
-    p = t(68545),
-    m = t(412260),
-    g = t(446929),
-    f = t(287809),
-    j = t(954571),
+    d = t(68545),
+    p = t(412260),
+    m = t(446929),
+    g = t(287809),
+    f = t(954571),
     E = t(937008),
-    x = t(156312),
-    h = t(166532),
-    T = t(482132),
-    P = t(652215),
+    j = t(156312),
+    x = t(166532),
+    h = t(482132),
+    T = t(652215),
+    P = t(985018),
     S = t(907);
 
-function b(e) {
-    var n, t, i, b, A;
-    let { handleStepChange: y, handleClose: v } = e,
-        { selectedPlan: I, selectedSkuId: O, step: _ } = (0, x.P5)(),
-        { setSelectedGiftingPromotionReward: N, selectedGiftingPromotionReward: C, claimableRewards: M } = (0, E.Pv)(),
-        w = (0, d.A)(),
-        R = (0, a.bG)([f.default], () => f.default.getCurrentUser()),
-        k = (0, a.bG)([m.A], () => m.A.getGiftPromotionRewardSkuIds()),
-        D = (0, p.UY)(M, C),
-        [L, G] = r.useState(D),
-        [U, H] = r.useState(!1);
-    r.useEffect(() => {
-        U || null != C || null == D || (N(D), G(D));
-    }, [D, U, C, N]),
-        s()(null != I, "Expected plan to selected"),
-        s()(null != O, "Expected selectedSkuId"),
-        s()(null != _, "Step should be set");
-    let B = r.useMemo(() => null != L && (null != M ? M : []).includes(L), [L, M]),
-        F = r.useMemo(() => 0 === k.length || null == L || !B, [k, L, B]);
-    r.useEffect(() => {
-        if (0 === k.length) {
-            G(void 0), N(void 0);
+function A(e) {
+    let { handleStepChange: n, handleClose: t } = e,
+        { selectedPlan: i, selectedSkuId: A, step: b } = (0, j.P5)(),
+        { setSelectedGiftingPromotionReward: y, selectedGiftingPromotionReward: I, claimableRewards: O } = (0, E.Pv)(),
+        v = (0, a.bG)([g.default], () => g.default.getCurrentUser()),
+        _ = (0, a.bG)([p.A], () => p.A.getGiftPromotionRewardSkuIds()),
+        N = (0, d.UY)(O, I),
+        [C, M] = l.useState(N),
+        [R, k] = l.useState(!1);
+    l.useEffect(() => {
+        R || null != I || null == N || (y(N), M(N));
+    }, [N, R, I, y]),
+        s()(null != i, "Expected plan to selected"),
+        s()(null != A, "Expected selectedSkuId"),
+        s()(null != b, "Step should be set");
+    let w = l.useMemo(() => null != C && (null != O ? O : []).includes(C), [C, O]),
+        D = l.useMemo(() => 0 === _.length || null == C || !w, [_, C, w]);
+    l.useEffect(() => {
+        if (0 === _.length) {
+            M(void 0), y(void 0);
             return;
         }
-        (null != L && B && k.includes(L)) || null == L || (G(void 0), N(void 0));
-    }, [k, B, L, N]);
-    let W = (e) => {
-            N(e), G(e), H(!0);
+        (null != C && w && _.includes(C)) || null == C || (M(void 0), y(void 0));
+    }, [_, w, C, y]);
+    let L = (e) => {
+            y(e), M(e), k(!0);
         },
-        K = k.map((e) =>
-            (0, l.jsx)(
+        G = _.map((e) =>
+            (0, r.jsx)(
                 u.k,
                 {
                     skuId: e,
-                    claimed: null != M && !M.includes(e),
-                    user: R,
-                    onSelect: W,
-                    selectedSkuId: L,
+                    claimed: null != O && !O.includes(e),
+                    user: v,
+                    onSelect: L,
+                    selectedSkuId: C,
                 },
                 e,
             ),
         ),
-        V = (0, l.jsx)(T.UX, {
-            children: (0, l.jsx)(o.jlY, {
+        U = (0, r.jsx)(h.UX, {
+            children: (0, r.jsx)(o.jlY, {
                 "data-migration-pending": !0,
                 className: S.Hx,
-                children: (0, l.jsx)(g.Z3, {
+                children: (0, r.jsx)(m.Z3, {
                     onStepChange: (e) => {
-                        null != R &&
-                            null != C &&
-                            j.default.track(P.HAw.GIFT_PROMOTION_REWARD_SELECTED, {
-                                user_id: R.id,
-                                reward_sku_id: C,
+                        null != v &&
+                            null != I &&
+                            f.default.track(T.HAw.GIFT_PROMOTION_REWARD_SELECTED, {
+                                user_id: v.id,
+                                reward_sku_id: I,
                             }),
-                            y(e);
+                            n(e);
                     },
-                    onBackClick: () => y(h.pn.PLAN_SELECT),
+                    onBackClick: () => n(x.pn.PLAN_SELECT),
                     shouldRenderUpdatedPaymentModal: !0,
                     showBackButton: !0,
-                    planOptions: [I.id],
-                    selectedPlanId: I.id,
-                    isNextDisabled: F,
+                    planOptions: [i.id],
+                    selectedPlanId: i.id,
+                    isNextDisabled: D,
                 }),
             }),
         });
-    return (0, l.jsxs)(l.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, l.jsxs)(o.rQ0, {
+            (0, r.jsxs)(o.rQ0, {
                 "data-migration-pending": !0,
                 className: S.Hc,
                 direction: c.A.Direction.VERTICAL,
                 align: c.A.Align.START,
                 separator: !1,
                 children: [
-                    (0, l.jsx)(o.Heading, {
+                    (0, r.jsx)(o.Heading, {
                         variant: "heading-lg/semibold",
                         color: "text-strong",
-                        children: null == w || null == (n = w.rewardSelection) ? void 0 : n.heading(),
+                        children: P.intl.string(P.t.OEtqpm),
                     }),
-                    (0, l.jsx)(o.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "text-subtle",
                         className: S.GQ,
-                        children: null == w || null == (t = w.rewardSelection) ? void 0 : t.primarySubtitle(),
+                        children: P.intl.string(P.t.h2nMp0),
                     }),
-                    (null == w || null == (b = w.rewardSelection) || null == (i = b.secondarySubtitle)
-                        ? void 0
-                        : i.call(b)) != null &&
-                        (0, l.jsx)(o.Text, {
-                            variant: "text-md/medium",
-                            color: "text-subtle",
-                            children: null == w || null == (A = w.rewardSelection) ? void 0 : A.secondarySubtitle(),
-                        }),
-                    (0, l.jsx)(o.s_y, {
+                    (0, r.jsx)(o.s_y, {
                         "data-migration-pending": !0,
                         className: S.b,
-                        onClick: v,
+                        onClick: t,
                     }),
                 ],
             }),
-            (0, l.jsx)(o.$mQ, {
+            (0, r.jsx)(o.$mQ, {
                 "data-migration-pending": !0,
-                children: (0, l.jsx)(o.BJc, {
+                children: (0, r.jsx)(o.BJc, {
                     direction: "vertical",
                     justify: "center",
                     align: "center",
-                    children: (0, l.jsx)("div", {
+                    children: (0, r.jsx)("div", {
                         className: S.Dq,
-                        children: K,
+                        children: G,
                     }),
                 }),
             }),
-            V,
+            U,
         ],
     });
 }

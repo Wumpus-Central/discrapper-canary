@@ -1,130 +1,137 @@
 t.d(n, {
-    _: () => O,
+    _: () => N,
 });
-var l = t(627968),
-    r = t(64700),
+var r = t(627968),
+    l = t(64700),
     i = t(284009),
     s = t.n(i),
-    a = t(554146),
-    o = t(397927),
-    u = t(841702),
-    c = t(367727),
-    d = t(552736),
-    p = t(810498),
-    m = t(173834),
-    g = t(380083),
-    f = t(203982),
-    j = t(45938),
-    E = t(615396),
-    x = t(937008),
-    h = t(156312),
-    T = t(491057),
-    P = t(482132),
-    S = t(877156),
-    b = t(216641),
-    A = t(921925),
-    y = t(652215),
+    a = t(877624),
+    o = t(311907),
+    u = t(554146),
+    c = t(397927),
+    d = t(841702),
+    p = t(367727),
+    m = t(810498),
+    g = t(173834),
+    f = t(412260),
+    E = t(380083),
+    j = t(203982),
+    x = t(45938),
+    h = t(615396),
+    T = t(937008),
+    P = t(156312),
+    S = t(491057),
+    A = t(482132),
+    b = t(877156),
+    y = t(216641),
+    I = t(921925),
+    O = t(652215),
     v = t(49999);
 
-function I(e) {
+function _(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
-            l = Object.keys(t);
+            r = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            l.forEach(function (n) {
-                var l;
-                (l = t[n]),
+            r.forEach(function (n) {
+                var r;
+                (r = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
-                              value: l,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[n] = l);
+                        : (e[n] = r);
             });
     }
     return e;
 }
 
-function O(e) {
+function N(e) {
     let n,
         {
             handleClose: i,
-            planGroup: O,
-            onSubscriptionConfirmation: _,
-            renderPurchaseConfirmation: N,
-            postSuccessGuild: C,
-            followupSKUInfo: M,
+            planGroup: N,
+            onSubscriptionConfirmation: C,
+            renderPurchaseConfirmation: M,
+            postSuccessGuild: R,
+            followupSKUInfo: k,
             continueSessionToInitialStep: w,
         } = e,
         {
-            activeSubscription: R,
-            paymentSources: k,
-            paymentSourceId: D,
-            selectedPlan: L,
-            selectedSkuId: G,
-            step: U,
-            updatedSubscription: H,
-            startingPremiumSubscriptionPlanIdRef: B,
-            startingFractionalPremiumEndsAtRef: F,
-            isPremiumGroupPurchase: W,
-        } = (0, h.P5)(),
+            activeSubscription: D,
+            paymentSources: L,
+            paymentSourceId: G,
+            selectedPlan: U,
+            selectedSkuId: H,
+            step: B,
+            updatedSubscription: F,
+            startingPremiumSubscriptionPlanIdRef: W,
+            startingFractionalPremiumEndsAtRef: K,
+            isPremiumGroupPurchase: V,
+        } = (0, P.P5)(),
         {
-            isGift: K,
-            giftRecipient: V,
-            giftCode: z,
-            hasSentMessage: Y,
-            isSendingMessage: Z,
-            sendGiftMessage: Q,
-            claimableRewards: q,
-            selectedGiftingPromotionReward: J,
-        } = (0, x.Pv)(),
-        { confirmationFooter: X } = (0, T.cG)(),
-        $ = (0, p.px)(L, K, q),
-        ee = (0, d.A)(),
-        en = (0, p.Mq)(L),
-        et = (0, u.Mv)(J),
-        el = (0, b.g)(k, D),
-        er = K && null != J && en;
-    s()(null != L, "Expected plan to selected"),
-        s()(null != G, "Expected selectedSkuId"),
-        s()(null != U, "Step should be set");
-    let ei = r.useCallback(() => {
-        i(), null == _ || _();
-    }, [i, _]);
-    r.useEffect(() => {
+            isGift: Y,
+            giftRecipient: z,
+            giftCode: Z,
+            hasSentMessage: Q,
+            isSendingMessage: q,
+            sendGiftMessage: J,
+            claimableRewards: X,
+            selectedGiftingPromotionReward: $,
+        } = (0, T.Pv)(),
+        { confirmationFooter: ee } = (0, S.cG)(),
+        en = (0, m.px)(U, Y, X),
+        et = (0, m.Mq)(U),
+        er = (0, d.Mv)($, !1),
+        el = (0, o.bG)([f.A], () => {
+            let e = f.A.getMarketingComponentByType(a.C.GIFT_REMINDER_NAGBAR);
+            return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
+                ? null
+                : e.properties.properties.giftReminderNagbar;
+        }),
+        ei = (0, y.g)(L, G),
+        es = Y && null != $ && null != er && et;
+    s()(null != U, "Expected plan to selected"),
+        s()(null != H, "Expected selectedSkuId"),
+        s()(null != B, "Step should be set");
+    let ea = l.useCallback(() => {
+        i(), null == C || C();
+    }, [i, C]);
+    l.useEffect(() => {
         function e() {
-            W &&
-                null != H &&
-                H.hasAnyPremiumGroup &&
-                (0, o.mMO)(async () => {
+            V &&
+                null != F &&
+                F.hasAnyPremiumGroup &&
+                (0, c.mMO)(async () => {
                     let { default: e } = await Promise.all([t.e("73987"), t.e("6593")]).then(t.bind(t, 773486));
                     return (n) => {
-                        var t, r;
-                        return (0, l.jsx)(
+                        var t, l;
+                        return (0, r.jsx)(
                             e,
-                            ((t = I({}, n)),
-                            (r = r =
+                            ((t = _({}, n)),
+                            (l = l =
                                 {
-                                    subscription: H,
+                                    subscription: F,
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
                                 : (function (e, n) {
                                       var t = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var l = Object.getOwnPropertySymbols(e);
-                                          t.push.apply(t, l);
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          t.push.apply(t, r);
                                       }
                                       return t;
-                                  })(Object(r)).forEach(function (e) {
-                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                  })(Object(l)).forEach(function (e) {
+                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(l, e));
                                   }),
                             t),
                         );
@@ -132,77 +139,74 @@ function O(e) {
                 });
         }
         return (
-            f._.subscribe(y.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
+            j._.subscribe(O.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
             () => {
-                f._.unsubscribe(y.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
+                j._.unsubscribe(O.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
             }
         );
-    }, [W, H]),
-        r.useEffect(() => {
-            !K ||
-                null == V ||
+    }, [V, F]),
+        l.useEffect(() => {
+            !Y ||
                 null == z ||
-                Y ||
-                Z ||
-                (0, j.Ik)(V) ||
-                Q({
-                    onSubscriptionConfirmation: _,
+                null == Z ||
+                Q ||
+                q ||
+                (0, x.Ik)(z) ||
+                J({
+                    onSubscriptionConfirmation: C,
                 });
-        }, [Q, K, V, z, Y, Z, _]),
-        r.useEffect(() => {
-            null != ee &&
-                null != ee.reminderNotice &&
-                $ &&
-                (0, c.$l)(a.M.GIFTING_PROMOTION_REMINDER, (0, m.p)(), {
+        }, [J, Y, z, Z, Q, q, C]),
+        l.useEffect(() => {
+            en &&
+                null != el &&
+                (0, p.$l)(u.M.GIFTING_PROMOTION_REMINDER, (0, g.p)(), {
                     dismissAction: v.i.INDIRECT_ACTION,
                 });
-        }, [ee, $]);
-    let es = null != w ? g.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
-    if (null != N) n = N(L, ei, H);
-    else if (K)
-        n = (0, l.jsx)(g.fw, {
-            planId: L.id,
-            onClose: ei,
+        }, [el, en]);
+    let eo = null != w ? E.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
+    if (null != M) n = M(U, ea, F);
+    else if (Y)
+        n = (0, r.jsx)(E.fw, {
+            planId: U.id,
+            onClose: ea,
         });
     else {
         let e =
-            B.current === L.id
+            W.current === U.id
                 ? {
-                      postSuccessGuild: C,
+                      postSuccessGuild: R,
                   }
                 : {
-                      followupSKUInfo: M,
-                      startingPremiumSubscriptionPlanId: B.current,
-                      isDowngrade: null != R && (0, E.vT)(R, L.id, O),
+                      followupSKUInfo: k,
+                      startingPremiumSubscriptionPlanId: W.current,
+                      isDowngrade: null != D && (0, h.vT)(D, U.id, N),
                   };
-        n = (0, l.jsx)(
-            g.Ay,
-            I(
+        n = (0, r.jsx)(
+            E.Ay,
+            _(
                 {
-                    planId: L.id,
-                    onClose: ei,
-                    paymentSourceType: el,
-                    hideClose: null != X,
-                    startingFractionalPremiumEndsAt: F.current,
-                    customCTAType: es,
+                    planId: U.id,
+                    onClose: ea,
+                    paymentSourceType: ei,
+                    hideClose: null != ee,
+                    startingFractionalPremiumEndsAt: K.current,
+                    customCTAType: eo,
                 },
                 e,
             ),
         );
     }
-    return (0, l.jsxs)(l.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, l.jsxs)(P.dZ, {
-                children: [(0, l.jsx)(A.A, {}), n],
+            (0, r.jsxs)(A.dZ, {
+                children: [(0, r.jsx)(I.A, {}), n],
             }),
-            null != X && X,
-            er &&
-                null != et &&
-                null != J &&
-                (0, l.jsx)(S.A, {
-                    rewardSkuId: J,
-                    purchase: et,
-                    onClose: ei,
+            null != ee && ee,
+            es &&
+                null != $ &&
+                (0, r.jsx)(b.A, {
+                    rewardSkuId: $,
+                    onClose: ea,
                 }),
         ],
     });
