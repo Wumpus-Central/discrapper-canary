@@ -13,13 +13,13 @@ var i = n(607399),
     u = n(826673),
     d = n(579364),
     p = n(835095),
-    f = n(287809),
-    h = n(816733),
-    A = n(927578),
-    g = n(536194),
-    m = n(661191),
-    b = n(40185),
-    _ = n(89366),
+    h = n(287809),
+    g = n(816733),
+    f = n(927578),
+    m = n(536194),
+    A = n(661191),
+    _ = n(40185),
+    b = n(89366),
     E = n(637073),
     O = n(91435),
     y = n(89465),
@@ -64,7 +64,7 @@ class w extends c.A {
                 for (let t of e)
                     if (null != t.marketingComponents) {
                         if (null != t.trialId) {
-                            let e = h.A.getUserTrialOffer(t.trialId);
+                            let e = g.A.getUserTrialOffer(t.trialId);
                             if (null == e || (null != e.expires_at && Date.parse(e.expires_at) < Date.now())) continue;
                         }
                         for (let e of t.marketingComponents)
@@ -124,17 +124,17 @@ class w extends c.A {
                 this.maybeOpenServerDriveAnnouncementModal(t.id, t.promotion_id, t.properties, !0);
             }),
             x(this, "getOfferFromStore", () => {
-                let e = f.default.getCurrentUser();
-                if ((0, A.TW)(e)) return {};
+                let e = h.default.getCurrentUser();
+                if ((0, f.TW)(e)) return {};
                 let t = [j.TU, j.KG, j.lj, j.HF]
-                    .map((e) => h.A.getUserDiscountOffer(e))
+                    .map((e) => g.A.getUserDiscountOffer(e))
                     .filter((e) => null != e && !(0, d.w)(e))
                     .shift();
                 if (null != t)
                     return {
                         userDiscountOffer: t,
                     };
-                let n = (0, _.qD)();
+                let n = (0, b.qD)();
                 return null != n
                     ? {
                           userTrialOffer: n,
@@ -142,7 +142,7 @@ class w extends c.A {
                     : {};
             }),
             x(this, "mayShowAnnouncementModal", async () => {
-                if ((await (0, b.hb)(), g.P.isDisallowPopupsSet())) return;
+                if ((await (0, _.hb)(), m.P.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = y.A.getCurrentConfig(
                         {
@@ -156,23 +156,23 @@ class w extends c.A {
                         location: "mayShowAnnouncementModal",
                     }),
                     r = (0, u.k8)(a.M.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL),
-                    l = f.default.getCurrentUser();
+                    l = h.default.getCurrentUser();
                 if (
                     (!t ||
                         r ||
                         (0, s.ueM)() ||
-                        (0, A.TW)(l) ||
+                        (0, f.TW)(l) ||
                         ((await (0, E.m)(e.userTrialOffer)) &&
                             (0, N.A)({
                                 upsellType: j.e.REVERSE_TRIAL_FOLLOWUP_UPSELL,
                             })),
                     (null == l || l.verified) && !(0, s.ueM)() && !i.Fr && !n)
                 ) {
-                    for (let t of await (0, I._C)(e))
+                    for (let t of await (0, I._)(e))
                         if (
                             await this.maybeOpenServerDriveAnnouncementModal(
                                 "",
-                                m.default.fromTimestamp(Date.now()),
+                                A.default.fromTimestamp(Date.now()),
                                 t,
                                 !1,
                             )
