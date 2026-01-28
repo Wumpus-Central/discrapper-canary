@@ -2,9 +2,9 @@ n.d(t, {
     Ay: () => u,
     GT: () => f,
     Mz: () => p,
-    fB: () => b,
+    fB: () => g,
     qH: () => d,
-    rs: () => m,
+    rs: () => h,
 }),
     n(896048),
     n(693327),
@@ -13,7 +13,6 @@ n.d(t, {
     n(323874),
     n(14289),
     n(35956),
-    n(733351),
     n(747238),
     n(812715),
     n(457529),
@@ -49,7 +48,7 @@ function a(e, t, n) {
     );
 }
 
-function s(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,7 +64,7 @@ function s(e) {
     }
     return e;
 }
-let o = 22,
+let s = 22,
     l = (e) => i().decode(e),
     c = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
     u = async (e, t, n) => ({
@@ -100,65 +99,42 @@ let f = (e, t) => ({
         }),
             n.readAsDataURL(e);
     },
-    _ = (e) => e.trim().replace(/\s+/g, "_").toLowerCase(),
-    h = (e) => (null != e ? _(e.split("-")[0]) : ""),
-    m = (e, t) => {
-        let n = _(e);
-        return (
-            "PASTE THIS INTO THE DROP JSON:\n\n" +
-            t
-                .map((e) => {
-                    let t = h(e.name);
-                    return JSON.stringify(
-                        s(
-                            {
-                                path: "effects/".concat(n, "/").concat(t, ".png"),
-                                loop: e.loop,
-                                start: e.start,
-                                duration: e.duration,
-                                loop_delay: e.loopDelay,
-                                z_index: e.zIndex,
-                            },
-                            null != e.randomizedSources
-                                ? {
-                                      randomized_paths: e.randomizedSources.map((e) => e.src),
-                                  }
-                                : {},
-                        ),
-                        null,
-                        4,
-                    )
-                        .split("\n")
-                        .map((e) => " ".repeat(o) + e)
-                        .join("\n");
-                })
-                .join(",\n") +
-            "\n\nPASTE THIS INTO profile_effect_metadata.py:\n\n" +
-            g(t)
-        );
+    _ = (e) => {
+        var t;
+        if (null == e) return "";
+        let n = null != (t = e.split("/").pop()) ? t : e;
+        return n.endsWith(".png.png") ? n.replace(/\.png\.png$/, ".png") : n;
     },
-    g = (e) => {
-        let t = "[";
-        return (
-            e.forEach((e) => {
-                let n = h(e.name);
-                t += "\n              ProfileEffectKeyFrame(\n                  src='"
-                    .concat(n, ".png',\n                  loop=")
-                    .concat(e.loop ? "True" : "False", ",\n                  width=")
-                    .concat(e.width, ",\n                  height=")
-                    .concat(e.height, ",\n                  start=")
-                    .concat(e.start, ",\n                  duration=")
-                    .concat(e.duration, ",\n                  loop_delay=")
-                    .concat(
-                        e.loopDelay,
-                        ",\n                  position=ProfileEffectPoint(x=0, y=0),\n                  z_index=",
-                    )
-                    .concat(e.zIndex, ",\n              ),\n          ");
-            }),
-            (t += "\n]")
-        );
-    },
-    E = (e) => {
+    h = (e) =>
+        "PASTE THIS INTO THE DROP JSON:\n\n[\n" +
+        e
+            .map((e) =>
+                JSON.stringify(
+                    o(
+                        {
+                            path: _(e.name),
+                            loop: e.loop,
+                            start: e.start,
+                            duration: e.duration,
+                            loop_delay: e.loopDelay,
+                            z_index: e.zIndex,
+                        },
+                        null != e.randomizedSources
+                            ? {
+                                  randomized_paths: e.randomizedSources.map((e) => e.src),
+                              }
+                            : {},
+                    ),
+                    null,
+                    4,
+                )
+                    .split("\n")
+                    .map((e) => " ".repeat(s) + e)
+                    .join("\n"),
+            )
+            .join(",\n") +
+        "\n]",
+    m = (e) => {
         let [t, n] = e.split(","),
             r = atob(n),
             i = t.split(";")[0],
@@ -168,7 +144,7 @@ let f = (e, t) => ({
             type: i,
         });
     },
-    b = (e) => {
-        let t = E(e);
+    g = (e) => {
+        let t = m(e);
         return URL.createObjectURL(t);
     };
