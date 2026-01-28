@@ -1,9 +1,10 @@
 n.d(t, {
-    C5: () => s,
+    C5: () => o,
     Sk: () => a,
     yX: () => i,
-    yg: () => o,
+    yg: () => s,
 }),
+    n(321073),
     n(228524);
 var r = n(392107);
 
@@ -18,7 +19,9 @@ function i(e) {
         void 0 !== e.pendingProfileEffect)
     ) {
         var n, r;
-        t.profile_effect_sku_id = null != (n = null == (r = e.pendingProfileEffect) ? void 0 : r.skuId) ? n : null;
+        (t.collectibles_sku_ids = null != (n = t.collectibles_sku_ids) ? n : []),
+            (null == (r = e.pendingProfileEffect) ? void 0 : r.skuId) != null &&
+                t.collectibles_sku_ids.push(e.pendingProfileEffect.skuId);
     }
     return t;
 }
@@ -44,7 +47,7 @@ function a(e) {
     );
 }
 
-function s(e) {
+function o(e) {
     let t = {};
     if (void 0 !== e.pendingAvatar) {
         let { pendingAvatar: n } = e;
@@ -66,7 +69,7 @@ function s(e) {
     );
 }
 
-function o(e) {
+function s(e) {
     let t = {};
     return void 0 !== e.pendingPrimaryGuildId && (t.primaryGuildId = e.pendingPrimaryGuildId), t;
 }
