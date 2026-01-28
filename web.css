@@ -65548,7 +65548,7 @@ html.disable-forced-colors * {
         --scrollbar-thin-thumb: color-mix(in oklab, var(--neutral-38) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --scrollbar-thin-track: color-mix(in oklab, hsl(var(--black-hsl)/0) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0) var(--custom-theme-base-color-amount, 0%));
         --slider-track-background: color-mix(in oklab, var(--neutral-47) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --spine-default: color-mix(in oklab, var(--neutral-47) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --spine-default: color-mix(in oklab, var(--neutral-47) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --spoiler-hidden-background: color-mix(in oklab, var(--neutral-36) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-revealed-background: color-mix(in oklab, var(--primary-660) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -65573,8 +65573,6 @@ html.disable-forced-colors * {
         --text-invert: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-link: color-mix(in oklab, var(--blue-new-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-muted: color-mix(in oklab, var(--neutral-23) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --text-overlay-dark: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --text-overlay-light: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-status-dnd: color-mix(in oklab, var(--red-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-status-idle: color-mix(in oklab, var(--yellow-new-22) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-status-offline: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -66207,7 +66205,7 @@ html.disable-forced-colors * {
         --scrollbar-thin-thumb: color-mix(in oklab, var(--neutral-32) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --scrollbar-thin-track: color-mix(in oklab, hsl(var(--black-hsl)/0) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0) var(--custom-theme-base-color-amount, 0%));
         --slider-track-background: color-mix(in oklab, var(--neutral-16) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --spine-default: color-mix(in oklab, var(--neutral-16) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --spine-default: color-mix(in oklab, var(--neutral-16) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --spoiler-hidden-background: color-mix(in oklab, var(--neutral-31) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-revealed-background: color-mix(in oklab, var(--primary-160) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -66232,8 +66230,6 @@ html.disable-forced-colors * {
         --text-invert: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-link: color-mix(in oklab, var(--blue-new-50) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-muted: color-mix(in oklab, var(--neutral-41) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --text-overlay-dark: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --text-overlay-light: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-status-dnd: color-mix(in oklab, var(--red-new-50) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-status-idle: color-mix(in oklab, var(--yellow-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-status-offline: color-mix(in oklab, var(--neutral-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -66866,7 +66862,7 @@ html.disable-forced-colors * {
         --scrollbar-thin-thumb: color-mix(in oklab, var(--neutral-47) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --scrollbar-thin-track: color-mix(in oklab, hsl(var(--black-hsl)/0) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0) var(--custom-theme-base-color-amount, 0%));
         --slider-track-background: color-mix(in oklab, var(--neutral-63) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --spine-default: color-mix(in oklab, var(--neutral-63) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --spine-default: color-mix(in oklab, var(--neutral-63) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --spoiler-hidden-background: color-mix(in oklab, var(--neutral-46) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-37) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-revealed-background: color-mix(in oklab, hsl(var(--plum-11-hsl)/0.16) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.16) var(--custom-theme-base-color-amount, 0%));
@@ -66891,8 +66887,6 @@ html.disable-forced-colors * {
         --text-invert: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-link: color-mix(in oklab, var(--blue-new-42) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-muted: color-mix(in oklab, var(--neutral-33) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --text-overlay-dark: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --text-overlay-light: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-status-dnd: color-mix(in oklab, var(--red-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-status-idle: color-mix(in oklab, var(--yellow-new-22) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-status-offline: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -67525,7 +67519,7 @@ html.disable-forced-colors * {
         --scrollbar-thin-thumb: color-mix(in oklab, var(--neutral-45) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --scrollbar-thin-track: color-mix(in oklab, hsl(var(--black-hsl)/0) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0) var(--custom-theme-base-color-amount, 0%));
         --slider-track-background: color-mix(in oklab, var(--neutral-55) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --spine-default: color-mix(in oklab, var(--neutral-55) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --spine-default: color-mix(in oklab, var(--neutral-55) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --spoiler-hidden-background: color-mix(in oklab, var(--neutral-43) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-34) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-revealed-background: color-mix(in oklab, hsl(var(--plum-11-hsl)/0.16) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.16) var(--custom-theme-base-color-amount, 0%));
@@ -67550,8 +67544,6 @@ html.disable-forced-colors * {
         --text-invert: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-link: color-mix(in oklab, var(--blue-new-37) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-muted: color-mix(in oklab, var(--neutral-29) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --text-overlay-dark: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --text-overlay-light: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-status-dnd: color-mix(in oklab, var(--red-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-status-idle: color-mix(in oklab, var(--yellow-new-22) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-status-offline: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -67808,7 +67800,7 @@ html.disable-forced-colors * {
         --redesign-button-tertiary-text: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-muted-text: color-mix(in oklab, var(--neutral-12) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-text: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --spine-default: color-mix(in oklab, var(--neutral-32) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --spine-default: color-mix(in oklab, var(--neutral-32) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --stage-card-pill-bg: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--brand-300) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--blue-new-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -68055,7 +68047,7 @@ html.disable-forced-colors * {
         --redesign-button-tertiary-text: color-mix(in oklab, var(--neutral-76) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-muted-text: color-mix(in oklab, var(--neutral-50) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-text: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --spine-default: color-mix(in oklab, var(--neutral-32) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --spine-default: color-mix(in oklab, var(--neutral-32) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --stage-card-pill-bg: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--brand-600) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--blue-new-74) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -68302,7 +68294,7 @@ html.disable-forced-colors * {
         --redesign-button-tertiary-text: color-mix(in oklab, var(--neutral-6) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-muted-text: color-mix(in oklab, var(--neutral-24) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-text: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --spine-default: color-mix(in oklab, var(--neutral-42) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --spine-default: color-mix(in oklab, var(--neutral-42) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --stage-card-pill-bg: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--brand-345) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--blue-new-20) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -68549,7 +68541,7 @@ html.disable-forced-colors * {
         --redesign-button-tertiary-text: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-muted-text: color-mix(in oklab, var(--neutral-19) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-text: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --spine-default: color-mix(in oklab, var(--neutral-38) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --spine-default: color-mix(in oklab, var(--neutral-38) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --stage-card-pill-bg: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--brand-330) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--blue-new-14) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
