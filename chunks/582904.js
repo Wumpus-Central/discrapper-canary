@@ -1,7 +1,7 @@
 n.d(t, {
-    L7: () => g,
-    Z0: () => f,
-    kt: () => h,
+    L7: () => m,
+    Z0: () => g,
+    kt: () => f,
 }),
     n(896048),
     n(638769),
@@ -9,60 +9,64 @@ n.d(t, {
 var r = n(64700),
     l = n(311907),
     i = n(775602),
-    s = n(21119),
-    a = n(696451),
-    o = n(287809),
-    c = n(607567),
-    u = n(403362),
-    d = n(605431),
-    p = n(366251);
+    s = n(394577),
+    a = n(21119),
+    o = n(696451),
+    c = n(287809),
+    u = n(607567),
+    d = n(403362),
+    p = n(605431),
+    h = n(366251);
 
-function h(e) {
+function f(e) {
     let { channel: t } = e,
-        n = (0, l.bG)([s.A], () => s.A.getUserAffinitiesMap(), []),
-        i = null == t ? void 0 : t.guild_id,
-        d = new Set(
-            (0, l.bG)([c.Ay], () => (null == t ? [] : c.Ay.getVoiceStatesForChannel(t).map((e) => e.user.id)), [t]),
+        { totalSuggestions: n } = s.A.useConfig({
+            location: "useVoiceInviteSuggestions",
+        }),
+        i = (0, l.bG)([a.A], () => a.A.getUserAffinitiesMap(), []),
+        p = null == t ? void 0 : t.guild_id,
+        h = new Set(
+            (0, l.bG)([u.Ay], () => (null == t ? [] : u.Ay.getVoiceStatesForChannel(t).map((e) => e.user.id)), [t]),
         ),
-        p = (0, l.yK)(
-            [a.Ay, o.default],
+        f = (0, l.yK)(
+            [o.Ay, c.default],
             () =>
-                a.Ay.getMembers(i)
-                    .map((e) => o.default.getUser(e.userId))
-                    .filter(u.Vq)
-                    .filter((e) => !d.has(e.id)),
-            [i, d],
+                o.Ay.getMembers(p)
+                    .map((e) => c.default.getUser(e.userId))
+                    .filter(d.Vq)
+                    .filter((e) => !h.has(e.id)),
+            [p, h],
         );
     return r
         .useMemo(
             () =>
-                p.toSorted((e, t) => {
-                    var r, l, i, s;
+                f.toSorted((e, t) => {
+                    var n, r, l, s;
                     let { id: a } = e,
                         { id: o } = t;
                     return (
-                        (null != (r = null == (i = n.get(o)) ? void 0 : i.vcProbability) ? r : 0) -
-                        (null != (l = null == (s = n.get(a)) ? void 0 : s.vcProbability) ? l : 0)
+                        (null != (n = null == (l = i.get(o)) ? void 0 : l.vcProbability) ? n : 0) -
+                        (null != (r = null == (s = i.get(a)) ? void 0 : s.vcProbability) ? r : 0)
                     );
                 }),
-            [p, n],
+            [f, i],
         )
-        .slice(0, 5);
+        .slice(0, n);
 }
 
-function f(e) {
+function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { collapsed: n = !1 } = t,
-        i = (0, l.bG)([p.A], () => p.A.getShouldShowPopover(e.id), [e.id]);
+        i = (0, l.bG)([h.A], () => h.A.getShouldShowPopover(e.id), [e.id]);
     return {
         shouldShow: i && !n,
         dismiss: r.useCallback(() => {
-            (0, d.w)(e.id);
+            (0, p.w)(e.id);
         }, [e]),
     };
 }
 
-function g(e) {
+function m(e) {
     let [t, n] = r.useState(!1),
         [s, a] = r.useState(!1),
         o = (0, l.bG)([i.A], () => i.A.keyboardModeEnabled);
