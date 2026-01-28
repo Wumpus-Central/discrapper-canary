@@ -186,6 +186,7 @@ function I(e) {
                 ? (0, a.jsxs)(s.e2v, {
                       direction: "horizontal",
                       fullWidth: !0,
+                      wrap: !1,
                       children: [
                           (0, a.jsx)(s.$nd, {
                               variant: "secondary",
@@ -212,6 +213,7 @@ function I(e) {
                   ? (0, a.jsxs)(s.e2v, {
                         direction: "horizontal",
                         fullWidth: !0,
+                        wrap: !1,
                         children: [
                             (0, a.jsx)(s.$nd, {
                                 variant: "secondary",
@@ -352,6 +354,7 @@ function I(e) {
                           ? (0, a.jsxs)(s.e2v, {
                                 direction: "horizontal",
                                 fullWidth: !0,
+                                wrap: !1,
                                 children: [
                                     (0, a.jsx)(s.$nd, {
                                         variant: "secondary",
