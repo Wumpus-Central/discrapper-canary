@@ -1,153 +1,160 @@
-r.d(t, {
-    X: () => p,
+n.d(t, {
+    X: () => _,
 });
-var n = r(627968),
-    l = r(64700),
-    o = r(503698),
-    a = r.n(o),
-    c = r(837381),
-    i = r(397927),
-    s = r(963935),
-    u = r(894858),
-    f = r(942596),
-    b = r(362205),
-    y = r(71862);
+var r = n(627968),
+    o = n(64700),
+    a = n(503698),
+    l = n.n(a),
+    i = n(837381),
+    c = n(397927),
+    s = n(963935),
+    u = n(894858),
+    d = n(942596),
+    b = n(362205),
+    f = n(71862);
 
-function d(e) {
-    var t, r;
-    let { tag: l, onClick: o, active: c, node: s, visibleContent: u, panelKey: b, listItemProps: d, children: p } = e,
-        { icon: g, stronglyDiscouragedCustomComponent: O, trailing: j, useTitle: h } = s,
-        m = null == h ? void 0 : h();
-    return (0, n.jsxs)(l, {
+function p(e) {
+    var t, n;
+    let { tag: o, onClick: a, active: i, node: s, visibleContent: u, panelKey: b, listItemProps: p, children: _ } = e,
+        { icon: y, StronglyDiscouragedCustomComponent: m, trailing: g, useTitle: h } = s,
+        O = null == h ? void 0 : h();
+    return (0, r.jsxs)(o, {
         "data-settings-sidebar-item": b,
-        className: y.DB,
+        className: f.DB,
         children: [
-            (0, n.jsxs)(
-                i.DUT,
+            (0, r.jsxs)(
+                c.DUT,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var r = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(r);
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            n.forEach(function (t) {
-                                var n;
-                                (n = r[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: n,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = n);
+                                        : (e[t] = r);
                             });
                     }
                     return e;
-                })({}, d)),
-                (r = r =
+                })({}, p)),
+                (n = n =
                     {
-                        className: a()(y.AS, {
-                            [y.vu]: c,
+                        className: l()(f.AS, {
+                            [f.vu]: i,
                         }),
-                        onClick: o,
+                        onClick: a,
                         children: [
-                            null != O
-                                ? (0, n.jsx)(O, {})
-                                : (0, n.jsxs)("div", {
-                                      className: y.Ly,
+                            null != m
+                                ? (0, r.jsx)(m, {})
+                                : (0, r.jsxs)("div", {
+                                      className: f.Ly,
                                       children: [
-                                          (0, n.jsx)(g, {
+                                          (0, r.jsx)(y, {
                                               color: "currentColor",
                                               size: "refresh_sm",
-                                              className: y.Kk,
+                                              className: f.Kk,
                                           }),
-                                          (0, n.jsx)(i.Text, {
+                                          (0, r.jsx)(c.Text, {
                                               variant: "text-md/medium",
                                               color: "currentColor",
-                                              children: m,
+                                              children: O,
                                           }),
                                       ],
                                   }),
-                            null != j &&
-                                (0, n.jsx)("div", {
-                                    className: y.Ly,
-                                    children: (0, n.jsx)(f.Z, {
-                                        trailing: j,
+                            null != g &&
+                                (0, r.jsx)("div", {
+                                    className: f.Ly,
+                                    children: (0, r.jsx)(d.Z, {
+                                        trailing: g,
                                         visibleContent: u,
-                                        isSelected: c,
+                                        isSelected: i,
                                     }),
                                 }),
                         ],
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
-                          var r = Object.keys(e);
+                          var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(e);
-                              r.push.apply(r, n);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
-                          return r;
-                      })(Object(r)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
                 t),
             ),
-            p,
+            _,
         ],
     });
 }
 
-function p(e) {
-    let { node: t, visibleContent: r, hoisted: o = !1 } = e,
-        a = l.useMemo(() => t.layout[0], [t]),
-        i = u.A.useField("currentPanelKey"),
-        f = null != i && i === (null == a ? void 0 : a.key),
-        y =
-            null != a
-                ? () =>
+function _(e) {
+    let { node: t, visibleContent: n, hoisted: a = !1 } = e,
+        l = o.useMemo(() => t.layout[0], [t]),
+        c = u.A.useField("currentPanelKey"),
+        d = null != c && c === (null == l ? void 0 : l.key),
+        f = o.useMemo(() => {
+            if (null == l || !(0, s.Iu)(l.layout)) return null;
+            let e = l.layout.filter((e) => null != e.useTitle || null != e.useSubnavLabel);
+            return e.length > 1 ? e : null;
+        }, [l]),
+        _ =
+            null != l
+                ? () => {
+                      let e = c === l.key && null != f ? f[0].key : l.key;
                       u.A.setState({
-                          requestedTargetKey: a.key,
+                          requestedTargetKey: e,
                           showNavigationMobile: !1,
-                      })
+                      });
+                  }
                 : t.onClick,
-        p = l.useMemo(() => {
-            if (!f || null == a || !(0, s.Iu)(a.layout)) return null;
-            let e = a.layout.filter((e) => null != e.useTitle || null != e.useSubnavLabel);
-            return e.length > 1
-                ? (0, n.jsx)(b.A, {
-                      categories: e,
-                  })
-                : null;
-        }, [f, a]),
-        g = o ? "li" : "div";
-    return o
-        ? (0, n.jsx)(d, {
-              tag: g,
-              panelKey: null == a ? void 0 : a.key,
-              onClick: y,
-              active: f,
+        y = o.useMemo(
+            () =>
+                d && null != f
+                    ? (0, r.jsx)(b.A, {
+                          categories: f,
+                      })
+                    : null,
+            [d, f],
+        ),
+        m = a ? "li" : "div";
+    return a
+        ? (0, r.jsx)(p, {
+              tag: m,
+              panelKey: null == l ? void 0 : l.key,
+              onClick: _,
+              active: d,
               node: t,
-              visibleContent: r,
-              children: p,
+              visibleContent: n,
+              children: y,
           })
-        : (0, n.jsx)(c.tG, {
+        : (0, r.jsx)(i.tG, {
               id: t.key,
               children: (e) =>
-                  (0, n.jsx)(d, {
-                      tag: g,
-                      panelKey: null == a ? void 0 : a.key,
-                      onClick: y,
-                      active: f,
+                  (0, r.jsx)(p, {
+                      tag: m,
+                      panelKey: null == l ? void 0 : l.key,
+                      onClick: _,
+                      active: d,
                       node: t,
-                      visibleContent: r,
+                      visibleContent: n,
                       listItemProps: e,
-                      children: p,
+                      children: y,
                   }),
           });
 }
