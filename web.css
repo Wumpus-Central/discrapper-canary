@@ -19028,9 +19028,9 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     margin-top: var(--space-8)
 }
 
-.container_d5200e,
-.headerContainer_d5200e {
-    position: relative
+.container_d5200e {
+    position: relative;
+    z-index: 10
 }
 
 .headerContainer_d5200e {
@@ -19040,7 +19040,8 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     display: flex;
     height: 120px;
     min-height: 120px;
-    padding: 0 var(--space-16) 0
+    padding: 0 var(--space-16) 0;
+    position: relative
 }
 
 .headerContainer_d5200e.containerBottomPadding_d5200e {
@@ -19095,7 +19096,8 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .textContainer_d5200e {
     gap: var(--space-16);
-    max-width: 55%
+    max-width: 55%;
+    position: relative
 }
 
 .headerTextWrapper_d5200e,
@@ -19144,7 +19146,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     height: 48px;
     position: absolute;
     width: 100%;
-    z-index: 1
+    z-index: -1
 }
 
 @media screen and (max-height:550px),
