@@ -185,7 +185,7 @@ let H = l.forwardRef(function (e, t) {
             guild: D,
         }),
         w = (0, f.bG)([g.A], () => g.A.roleStyle),
-        F = (0, R.X_)(b, S, S.colorStrings),
+        F = (0, R.X_)(b, void 0, S.colorStrings),
         N = (null == (a = S.tags) ? void 0 : a.guild_connections) === null,
         K = l.useCallback(
             (e) => {

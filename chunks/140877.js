@@ -4,8 +4,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(417597),
-    s = n(397927),
-    o = n(287809),
+    o = n(397927),
+    s = n(287809),
     l = n(405269),
     c = n(927578),
     u = n(298072),
@@ -21,7 +21,7 @@ var r = n(627968),
     b = n(491153);
 let O = (e) => {
         let { product: t, prioritizedCurrency: n } = e,
-            u = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
+            u = (0, a.bG)([s.default], () => s.default.getCurrentUser()),
             _ = (0, m.sC)(),
             O = c.Ay.canUseCollectibles(u),
             { isDisabled: v } = (0, f.I)(t.skuId),
@@ -33,8 +33,8 @@ let O = (e) => {
             P = null != R,
             {
                 checkoutEligiblePrices: D,
-                hasSufficientOrbs: x,
-                shouldCheckoutWithOrbs: L,
+                hasSufficientOrbs: L,
+                shouldCheckoutWithOrbs: x,
             } = (0, E.FI)({
                 product: t,
                 isPremiumUser: O,
@@ -42,16 +42,16 @@ let O = (e) => {
                 hasDiscountOffer: P,
                 isRental: null != _,
             }),
-            j = C && !O;
+            M = C && !O;
         if (v)
-            return (0, r.jsx)(s.Text, {
+            return (0, r.jsx)(o.Text, {
                 variant: "text-md/medium",
                 color: "text-muted",
                 lineClamp: 1,
                 children: y.intl.string(y.t.wu4gyV),
             });
         if (I)
-            return (0, r.jsx)(s.Text, {
+            return (0, r.jsx)(o.Text, {
                 variant: "text-md/medium",
                 color: "text-muted",
                 lineClamp: 1,
@@ -59,7 +59,7 @@ let O = (e) => {
             });
         if (S && null != T) {
             let e = (0, l.Tf)(Date.now(), T);
-            return (0, r.jsx)(s.Text, {
+            return (0, r.jsx)(o.Text, {
                 variant: "text-md/medium",
                 color: "text-muted",
                 lineClamp: 1,
@@ -68,22 +68,22 @@ let O = (e) => {
                 }),
             });
         }
-        return A && !j
-            ? (0, r.jsx)(s.Text, {
+        return A && !M
+            ? (0, r.jsx)(o.Text, {
                   variant: "text-md/medium",
                   color: "text-muted",
                   lineClamp: 1,
                   children: y.intl.string(y.t["6cfuDj"]),
               })
             : N
-              ? (0, r.jsx)(s.Text, {
+              ? (0, r.jsx)(o.Text, {
                     variant: "text-md/bold",
                     color: "text-strong",
                     lineClamp: 1,
                     children: y.intl.string(y.t.nBtvYB),
                 })
               : C
-                ? (0, r.jsx)(s.Text, {
+                ? (0, r.jsx)(o.Text, {
                       variant: "text-md/bold",
                       color: "text-strong",
                       lineClamp: 1,
@@ -92,12 +92,13 @@ let O = (e) => {
                 : 0 === D.length
                   ? null
                   : (0, r.jsx)(h.x, {
-                        price: D[0],
+                        priceAmount: D[0].amount,
+                        priceCurrency: D[0].currency,
                         discount: w,
                         nitroIconType: O ? "default" : void 0,
                         nitroIconSize: "sm",
                         discountOfferAmount: R,
-                        className: L && !x ? b.c : void 0,
+                        className: x && !L ? b.c : void 0,
                         variant: "text-md/bold",
                     });
     },
@@ -106,9 +107,9 @@ let O = (e) => {
             i = (0, m.Vm)(t),
             a = (0, u.Q)(i);
         if (null == i) return null;
-        let s = (0, _.rb)(i, a);
+        let o = (0, _.rb)(i, a);
         return (0, r.jsx)(O, {
-            product: s,
+            product: o,
             prioritizedCurrency: n,
         });
     };

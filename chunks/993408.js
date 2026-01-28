@@ -2,33 +2,33 @@ n.d(t, {
     $W: () => B,
     $b: () => z,
     Br: () => v,
-    Bs: () => eo,
+    Bs: () => es,
     CE: () => el,
-    Ee: () => ee,
     G0: () => b,
     H1: () => en,
-    HF: () => X,
+    HF: () => Q,
     P_: () => P,
     R8: () => A,
     V6: () => ea,
     WU: () => Z,
     Zu: () => ei,
-    aT: () => Q,
+    aT: () => X,
     aw: () => J,
-    bf: () => es,
+    bf: () => eo,
     c7: () => et,
-    f6: () => L,
+    f6: () => x,
     fT: () => N,
     gA: () => O,
     hU: () => W,
     l8: () => I,
     oj: () => $,
+    pA: () => ee,
     ps: () => k,
     rr: () => C,
-    sz: () => F,
+    sz: () => V,
     tt: () => w,
-    wo: () => V,
-    x9: () => j,
+    wo: () => F,
+    x9: () => M,
     yt: () => T,
     zd: () => Y,
 }),
@@ -38,8 +38,8 @@ n.d(t, {
 var r = n(735438),
     i = n(575593),
     a = n(79387),
-    s = n(723702),
-    o = n(580630),
+    o = n(723702),
+    s = n(580630),
     l = n(898461),
     c = n(837015),
     u = n(203632),
@@ -115,10 +115,10 @@ let b = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     A = (e, t, n) => {
         let r = v(e, t, n);
-        return null == r ? "" : (0, o.$g)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency);
+        return null == r ? "" : (0, s.$g)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency);
     },
     I = (e) =>
-        (0, s.isAndroid)() || (0, s.isIOS)()
+        (0, o.isAndroid)() || (0, o.isIOS)()
             ? e
                 ? _.lid.MOBILE_PREMIUM_TIER_2
                 : _.lid.MOBILE
@@ -195,7 +195,7 @@ let b = (e) => (null == e ? void 0 : e.premiumType) != null,
         }
         return [];
     },
-    x = (e, t) => {
+    L = (e, t) => {
         let n = P(e, !0);
         if (t === i.R.AVATAR_DECORATION) {
             let e = (0, r.flatMap)(n, "items").filter(l.T);
@@ -211,14 +211,14 @@ let b = (e) => (null == e ? void 0 : e.premiumType) != null,
         }
         return [];
     },
-    L = (e) => (null != e ? d.M.fromServer(e) : void 0),
-    j = (e) => D(e, i.R.AVATAR_DECORATION),
-    M = (e) => x(e, i.R.AVATAR_DECORATION),
-    k = (e, t) => (0, r.uniqBy)([...j(e), ...M(t)], "skuId"),
+    x = (e) => (null != e ? d.M.fromServer(e) : void 0),
+    M = (e) => D(e, i.R.AVATAR_DECORATION),
+    j = (e) => L(e, i.R.AVATAR_DECORATION),
+    k = (e, t) => (0, r.uniqBy)([...M(e), ...j(t)], "skuId"),
     U = (e) => D(e, i.R.PROFILE_EFFECT),
-    G = (e) => x(e, i.R.PROFILE_EFFECT),
-    V = (e, t) => (0, r.uniqBy)([...U(e), ...G(t)], "skuId"),
-    F = (e, t) => {
+    G = (e) => L(e, i.R.PROFILE_EFFECT),
+    F = (e, t) => (0, r.uniqBy)([...U(e), ...G(t)], "skuId"),
+    V = (e, t) => {
         let n = U(t),
             r = G(e).filter((e) => {
                 let { skuId: t } = e;
@@ -230,7 +230,7 @@ let b = (e) => (null == e ? void 0 : e.premiumType) != null,
         };
     },
     B = (e) => D(e, i.R.NAMEPLATE),
-    H = (e) => x(e, i.R.NAMEPLATE),
+    H = (e) => L(e, i.R.NAMEPLATE),
     Y = (e, t) => (0, r.uniqBy)([...B(e), ...H(t)], "skuId"),
     W = (e) => e.applicationId === _.FYj,
     K = 3.8,
@@ -241,8 +241,8 @@ let b = (e) => (null == e ? void 0 : e.premiumType) != null,
             n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
         return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / q);
     },
-    X = (e) => null != e && Z(e) <= p.x3,
-    Q = (e) => {
+    Q = (e) => null != e && Z(e) <= p.x3,
+    X = (e) => {
         let t = p.Tq[e];
         return null != t && new Date().getTime() < t;
     },
@@ -256,20 +256,29 @@ let b = (e) => (null == e ? void 0 : e.premiumType) != null,
         var t, n, r;
         let {
                 selectedSkuPricePreview: i,
-                paymentSourceId: s,
-                selectedSkuId: o,
+                paymentSourceId: o,
+                selectedSkuId: s,
                 skuPricePreviewsById: l,
                 skusById: c,
-                formatPrice: u,
             } = e,
-            d = null != i ? i : null != s && null != o ? (null == (t = l[o]) ? void 0 : t[a.B]) : null,
-            f = null == d || null == (r = d.invoice_items) || null == (n = r[0]) ? void 0 : n.unit_price,
-            p = null != f ? u(f.amount, f.currency) : void 0;
-        if (null == p && null != o) {
-            let e = c[o];
-            (null == e ? void 0 : e.price) != null && (p = u(e.price.amount, e.price.currency));
+            u = null != i ? i : null != o && null != s ? (null == (t = l[s]) ? void 0 : t[a.B]) : null,
+            d = null == u || null == (r = u.invoice_items) || null == (n = r[0]) ? void 0 : n.unit_price,
+            f =
+                null != d
+                    ? {
+                          amount: d.amount,
+                          currency: d.currency,
+                      }
+                    : void 0;
+        if (null == f && null != s) {
+            let e = c[s];
+            (null == e ? void 0 : e.price) != null &&
+                (f = {
+                    amount: e.price.amount,
+                    currency: e.price.currency,
+                });
         }
-        return p;
+        return f;
     },
     et =
         (h.Yr.KZT,
@@ -326,33 +335,33 @@ let b = (e) => (null == e ? void 0 : e.premiumType) != null,
                 return "unknown";
         }
     },
-    es = (e, t, n) =>
+    eo = (e, t, n) =>
         e.sort((e, r) => {
             var i, a;
-            let s = n
+            let o = n
                     ? (0, f.CW)({
                           product: e,
                           isPremiumUser: t,
                       })
                     : v(e, t, !1),
-                o = n
+                s = n
                     ? (0, f.CW)({
                           product: r,
                           isPremiumUser: t,
                       })
                     : v(r, t, !1);
             return (
-                (null != (i = null == s ? void 0 : s.amount) ? i : 0) -
-                (null != (a = null == o ? void 0 : o.amount) ? a : 0)
+                (null != (i = null == o ? void 0 : o.amount) ? i : 0) -
+                (null != (a = null == s ? void 0 : s.amount) ? a : 0)
             );
         }),
-    eo = (e, t) => {
+    es = (e, t) => {
         if (0 === t.length || 0 === e.length) return e;
         let n = t.map((e) => e.discountId);
         return e.sort((e, t) => {
-            var r, i, a, s;
-            let o = null != (r = null == (a = e.eligibleOffers) ? void 0 : a.some((e) => n.includes(e))) && r;
-            return (null != (i = null == (s = t.eligibleOffers) ? void 0 : s.some((e) => n.includes(e))) && i) - o;
+            var r, i, a, o;
+            let s = null != (r = null == (a = e.eligibleOffers) ? void 0 : a.some((e) => n.includes(e))) && r;
+            return (null != (i = null == (o = t.eligibleOffers) ? void 0 : o.some((e) => n.includes(e))) && i) - s;
         });
     },
     el = (e) => e.filter((e) => !e.isCategoryReward);

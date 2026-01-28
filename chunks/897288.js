@@ -1,6 +1,7 @@
 r.d(t, {
-    A: () => h,
+    A: () => O,
 }),
+    r(896048),
     r(638769);
 var n = r(627968),
     l = r(64700),
@@ -11,33 +12,32 @@ var n = r(627968),
     c = r(837381),
     u = r(397927),
     d = r(417454),
-    E = r(1659),
-    f = r(9865),
-    p = r(652215),
-    _ = r(985018),
-    O = r(420206);
+    E = r(7864),
+    f = r(652215),
+    p = r(985018),
+    _ = r(420206);
 
-function h(e) {
+function O(e) {
     let { guild: t, roles: r, className: i } = e,
-        h = l.useMemo(() => "invite-roles-".concat((0, s.A)()), []),
-        S = (0, a.Ay)({
-            id: h,
+        O = l.useMemo(() => "invite-roles-".concat((0, s.A)()), []),
+        h = (0, a.Ay)({
+            id: O,
             isEnabled: !0,
-            scrollToStart: p.js$,
-            scrollToEnd: p.js$,
+            scrollToStart: f.js$,
+            scrollToEnd: f.js$,
             wrap: !0,
         }),
-        g = l.useMemo(
-            () => (null == t || null == r || 0 === r.length ? [] : r.map((e) => (0, f.Wj)(t.id, e)).sort(E.m)),
+        S = l.useMemo(
+            () => (null == t || null == r || 0 === r.length ? [] : [...r].sort(E.d6).map((e) => (0, E.ZW)(t.id, e))),
             [t, r],
         );
-    if (null == t || 0 === g.length) return null;
-    let y = g.length,
-        C = _.intl.formatToPlainString(_.t.PCs0oo, {
-            numRoles: y,
+    if (null == t || 0 === S.length) return null;
+    let g = S.length,
+        y = p.intl.formatToPlainString(p.t.PCs0oo, {
+            numRoles: g,
         });
     return (0, n.jsx)(c.hD, {
-        navigator: S,
+        navigator: h,
         children: (0, n.jsx)(c.PR, {
             children: (e) => {
                 var r, l;
@@ -80,13 +80,13 @@ function h(e) {
                         return i;
                     })(e, ["ref"]);
                 return (0, n.jsxs)("div", {
-                    className: o()(O.zr, i),
+                    className: o()(_.zr, i),
                     children: [
                         (0, n.jsx)(u.Text, {
                             variant: "text-sm/semibold",
                             color: "text-default",
-                            className: O.Ed,
-                            children: _.intl.string(_.t.stcSfI),
+                            className: _.Ed,
+                            children: p.intl.string(p.t.stcSfI),
                         }),
                         (0, n.jsx)(
                             "div",
@@ -116,19 +116,19 @@ function h(e) {
                                 return e;
                             })(
                                 {
-                                    className: O.Ei,
-                                    "aria-label": C,
+                                    className: _.Ei,
+                                    "aria-label": y,
                                     ref: s,
                                 },
                                 a,
                             )),
                             (l = l =
                                 {
-                                    children: g.map((e) =>
+                                    children: S.map((e) =>
                                         (0, n.jsx)(
                                             d.b_,
                                             {
-                                                className: O.Yq,
+                                                className: _.Yq,
                                                 role: e,
                                                 canRemove: !1,
                                                 onRemove: () => {},

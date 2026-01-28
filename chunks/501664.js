@@ -1,40 +1,41 @@
 n.d(t, {
-    A: () => u,
+    A: () => d,
 });
 var r = n(627968);
 n(64700);
 var l = n(503698),
-    a = n.n(l),
-    i = n(993408),
+    i = n.n(l),
+    a = n(993408),
     s = n(506742),
-    c = n(219103),
-    o = n(652215),
-    d = n(258470);
+    o = n(219103),
+    c = n(652215),
+    u = n(258470);
 
-function u(e) {
+function d(e) {
     var t, n;
     let {
             product: l,
-            isPremiumUser: u,
+            isPremiumUser: d,
             discount: m,
-            className: f,
-            discountOfferAmount: b,
-            hideStrikethroughPrice: p = !1,
-            nitroIconType: x,
-            nitroIconSize: h = "md",
+            className: p,
+            discountOfferAmount: f,
+            hideStrikethroughPrice: x = !1,
+            nitroIconType: h,
+            nitroIconSize: v = "md",
         } = e,
-        g = (0, i.yt)(l, o.lid.DEFAULT);
+        g = (0, a.yt)(l, c.lid.DEFAULT);
     if (null == g) return null;
     if (g.amount <= 0)
         return (0, r.jsx)("div", {
-            className: a()(d.kG, f),
-            children: (0, r.jsx)(c.x, {
-                price: g,
+            className: i()(u.kG, p),
+            children: (0, r.jsx)(o.x, {
+                priceAmount: g.amount,
+                priceCurrency: g.currency,
             }),
         });
-    let j = (0, i.yt)(l, o.lid.PREMIUM_TIER_2),
-        v =
-            (0, i.aw)(l) && u
+    let b = (0, a.yt)(l, c.lid.PREMIUM_TIER_2),
+        j =
+            (0, a.aw)(l) && d
                 ? ((t = (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                           var n = null != arguments[t] ? arguments[t] : {},
@@ -78,25 +79,27 @@ function u(e) {
                         }),
                   t)
                 : g,
-        O = u && null != j;
+        A = d && null != b,
+        _ = A ? b : j;
     return (0, r.jsxs)("div", {
-        className: a()(d.kG, f),
+        className: i()(u.kG, p),
         children: [
-            p
+            x
                 ? null
                 : (0, r.jsx)(s.a, {
-                      price: v,
-                      className: d.q9,
+                      price: j,
+                      className: u.q9,
                   }),
-            (0, r.jsx)(c.x, {
-                price: O ? j : v,
+            (0, r.jsx)(o.x, {
+                priceAmount: _.amount,
+                priceCurrency: _.currency,
                 discount: m,
-                className: a()({
-                    [d.q9]: null == b,
+                className: i()({
+                    [u.q9]: null == f,
                 }),
-                nitroIconType: O ? x : void 0,
-                nitroIconSize: h,
-                discountOfferAmount: b,
+                nitroIconType: A ? h : void 0,
+                nitroIconSize: v,
+                discountOfferAmount: f,
             }),
         ],
     });
