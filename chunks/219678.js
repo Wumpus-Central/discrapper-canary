@@ -1,13 +1,14 @@
 n.d(t, {
-    A: () => f,
+    A: () => p,
 }),
     n(896048);
 var r = n(439372),
     i = n(217222),
-    a = n(723702),
+    a = n(353835),
+    o = n(723702),
     s = n(751496);
 
-function o(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,46 +21,49 @@ function o(e, t, n) {
         e
     );
 }
-let l = !1,
-    c = null;
-async function u() {
+let c = !1,
+    u = null;
+async function d() {
     var e, t;
     if (
-        (0, a.isWindows)() &&
+        (0, o.isWindows)() &&
         (null == (t = window.DiscordNative) || null == (e = t.settings) ? void 0 : e.set) != null
     ) {
-        let { enabled: e } = (0, s.b)({
-            location: "updateSwitch",
-        });
-        await window.DiscordNative.settings.set("enableH264MFElectron", e), (c = e);
+        let e = a.A.getAppHardwareAccelerationEnabled(),
+            { enabled: t } = (0, s.b)({
+                location: "updateSwitch",
+            }),
+            n = t && !e;
+        await window.DiscordNative.settings.set("enableH264MFElectron", n), (u = n);
     }
 }
-class d extends r.A {
+class f extends r.A {
     constructor(...e) {
         super(...e),
-            o(
+            l(
                 this,
                 "stores",
                 new Map().set(i.A, () => {
-                    if (l) {
-                        let { enabled: e } = (0, s.b)({
-                            location: "experimentStoreUpdate",
-                        });
-                        c !== e && u();
+                    if (c) {
+                        let e = a.A.getAppHardwareAccelerationEnabled(),
+                            { enabled: t } = (0, s.b)({
+                                location: "experimentStoreUpdate",
+                            });
+                        u !== (t && !e) && d();
                     }
                 }),
             ),
-            o(this, "actions", {
+            l(this, "actions", {
                 POST_CONNECTION_OPEN: async () => {
                     var e, t;
-                    l ||
+                    c ||
                         (null == (t = window.DiscordNative) || null == (e = t.settings) ? void 0 : e.set) == null ||
-                        ((0, a.isWindows)() && ((l = !0), await u()));
+                        ((0, o.isWindows)() && ((c = !0), await d()));
                 },
                 LOGOUT: () => {
-                    (l = !1), (c = null);
+                    (c = !1), (u = null);
                 },
             });
     }
 }
-let f = new d();
+let p = new f();
