@@ -31,7 +31,7 @@ function b() {
                 onConfirm: () => u.Ay.setEnableHardwareAcceleration(e),
             });
         }, []);
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, i.jsxs)(a.BJc, {
         children: [
             (0, i.jsx)(a.dOG, {
                 label: j.intl.string(j.t["eOC/F2"]),
