@@ -1,5 +1,5 @@
 n.d(t, {
-    m: () => x,
+    m: () => E,
 });
 var r = n(627968);
 n(64700);
@@ -10,91 +10,87 @@ var i = n(311907),
     o = n(465794),
     c = n(212168),
     d = n(780964),
-    u = n(358776),
-    _ = n(840065),
+    u = n(840065),
     p = n(287809),
-    m = n(927578),
-    g = n(652215),
-    A = n(49999),
+    _ = n(927578),
+    m = n(652215),
+    g = n(49999),
     f = n(788868),
-    h = n(355097),
-    b = n(985018),
-    E = n(956790);
+    b = n(355097),
+    h = n(985018),
+    A = n(956790);
 
-function x(e) {
+function E(e) {
     var t;
-    let { onClose: n, markAsDismissed: x } = e,
-        O = (0, i.bG)([p.default], () => p.default.getCurrentUser()),
-        C =
-            (t = null == O ? void 0 : O.premiumType) === f.PremiumTypes.TIER_2
-                ? b.intl.string(b.t.jqO5Qn)
+    let { onClose: n, markAsDismissed: E } = e,
+        x = (0, i.bG)([p.default], () => p.default.getCurrentUser()),
+        O =
+            (t = null == x ? void 0 : x.premiumType) === f.PremiumTypes.TIER_2
+                ? h.intl.string(h.t.jqO5Qn)
                 : null == t
-                  ? b.intl.string(b.t.f2qjw5)
-                  : b.intl.string(b.t.SblICW),
-        I = m.Ay.canUseCustomCallSounds(O);
+                  ? h.intl.string(h.t.f2qjw5)
+                  : h.intl.string(h.t.SblICW),
+        C = _.Ay.canUseCustomCallSounds(x);
     return (0, r.jsxs)(c.A, {
         isShown: !0,
         type: c.i.PREMIUM,
-        className: E.ne,
-        backgroundClassName: E.u4,
+        className: A.ne,
+        backgroundClassName: A.u4,
         children: [
-            null != x
+            null != E
                 ? (0, r.jsx)(a.DUT, {
-                      className: E.VN,
-                      onClick: () => (null == x ? void 0 : x(A.i.DISMISS)),
-                      "aria-label": b.intl.string(b.t.cpT0Cq),
+                      className: A.VN,
+                      onClick: () => (null == E ? void 0 : E(g.i.DISMISS)),
+                      "aria-label": h.intl.string(h.t.cpT0Cq),
                       children: (0, r.jsx)(a.PGe, {
                           size: "xs",
                           color: "currentColor",
-                          className: E.ut,
+                          className: A.ut,
                       }),
                   })
                 : null,
             (0, r.jsxs)("div", {
-                className: E.ex,
+                className: A.ex,
                 children: [
                     (0, r.jsx)(a.tvc, {
                         size: "sm",
                         color: "currentColor",
-                        className: E.ax,
+                        className: A.ax,
                     }),
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-sm/bold",
-                        children: b.intl.string(b.t.dTbAxx),
+                        children: h.intl.string(h.t.dTbAxx),
                     }),
                 ],
             }),
             (0, r.jsx)(l.E, {
                 variant: "text-sm/normal",
-                children: C,
+                children: O,
             }),
-            I
+            C
                 ? (0, r.jsx)(a.Button, {
                       onClick: function () {
-                          let e = (0, u.qz)("CustomCallSoundUpsell")
-                              ? d.X.SOUNDBOARD_CATEGORY
-                              : d.X.VOICE_AND_VIDEO_PANEL;
-                          (0, _.openUserSettings)(e, {
-                              section: g.nc_.VOICE,
-                              subsection: h.MJ,
+                          (0, u.openUserSettings)(d.X.SOUNDBOARD_CATEGORY, {
+                              section: m.nc_.VOICE,
+                              subsection: b.MJ,
                           }),
                               null == n || n(),
-                              null == x || x(A.i.PRIMARY);
+                              null == E || E(g.i.PRIMARY);
                       },
-                      text: b.intl.string(b.t.RzWDqY),
+                      text: h.intl.string(h.t.RzWDqY),
                       fullWidth: !0,
                   })
                 : (0, r.jsx)(o.A, {
                       textOptions: {
-                          textOverride: b.intl.string(b.t.pj0XBN),
+                          textOverride: h.intl.string(h.t.pj0XBN),
                       },
                       subscriptionTier: f.pe.TIER_2,
                       premiumModalAnalyticsLocation: {
-                          section: g.JJy.SOUNDBOARD_SOUND_PICKER,
-                          object: g.ZSU.BUTTON_CTA,
+                          section: m.JJy.SOUNDBOARD_SOUND_PICKER,
+                          object: m.ZSU.BUTTON_CTA,
                       },
                       color: s.$n.Colors.GREEN,
-                      onSubscribeModalClose: () => (null == x ? void 0 : x(A.i.PRIMARY)),
+                      onSubscribeModalClose: () => (null == E ? void 0 : E(g.i.PRIMARY)),
                   }),
         ],
     });

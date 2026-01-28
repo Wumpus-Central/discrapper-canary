@@ -1,75 +1,73 @@
 n.d(t, {
-    A: () => j,
+    A: () => v,
 });
 var a = n(627968);
 n(64700);
 var l = n(397927),
-    i = n(793574),
-    r = n(688810),
+    r = n(793574),
+    i = n(688810),
     s = n(826673),
     o = n(750506),
     c = n(780964),
-    d = n(358776),
-    u = n(840065),
-    m = n(223567),
-    p = n(552122),
-    h = n(41280),
-    f = n(652215),
+    d = n(840065),
+    u = n(223567),
+    m = n(552122),
+    p = n(41280),
+    h = n(652215),
     x = n(49999),
-    b = n(985018),
-    g = n(653246);
+    g = n(985018),
+    f = n(653246);
 
-function v(e) {
-    let { dismissibleContent: t, backgroundColor: n, specialTextColor: m } = e,
-        v = p.A.useIsEligible(),
-        j = (0, s.JZ)(t),
-        y = null != n,
+function b(e) {
+    let { dismissibleContent: t, backgroundColor: n, specialTextColor: u } = e,
+        b = m.A.useIsEligible(),
+        v = (0, s.JZ)(t),
+        j = null != n,
         _ =
-            null != m
+            null != u
                 ? {
-                      color: m,
+                      color: u,
                   }
                 : void 0,
-        { analyticsLocations: A } = (0, r.Ay)(i.A.HOLIDAY_COACHMARK),
-        C = (e) => {
+        { analyticsLocations: y } = (0, i.Ay)(r.A.HOLIDAY_COACHMARK),
+        A = (e) => {
             (0, s.Dr)(t, {
                 dismissAction: e,
             });
         },
-        S = () => {
-            let e = (0, d.E7)("HolidayCoachmark");
-            (0, u.openUserSettings)(e ? c.X.NOTIFICATIONS_PANEL : c.X.LEGACY_NOTIFICATIONS_SETTINGS_PANEL, {
-                section: f.nc_.NOTIFICATIONS,
-                analyticsLocations: A,
+        C = () => {
+            (0, d.openUserSettings)(c.X.NOTIFICATIONS_PANEL, {
+                section: h.nc_.NOTIFICATIONS,
+                analyticsLocations: y,
             }),
-                C(x.i.TAKE_ACTION);
+                A(x.i.TAKE_ACTION);
         };
-    return v && !j
+    return b && !v
         ? (0, a.jsx)(o.Ay, {
               children: (0, a.jsxs)("div", {
-                  className: g.iE,
+                  className: f.iE,
                   style: {
-                      backgroundColor: y ? n : void 0,
+                      backgroundColor: j ? n : void 0,
                   },
                   children: [
-                      !y &&
+                      !j &&
                           (0, a.jsxs)("div", {
-                              className: g.o5,
+                              className: f.o5,
                               children: [
-                                  (0, a.jsx)(h.A, {
-                                      className: g.iL,
+                                  (0, a.jsx)(p.A, {
+                                      className: f.iL,
                                       pageMultiplier: 5,
                                   }),
                                   (0, a.jsx)("div", {
-                                      className: g.Np,
+                                      className: f.Np,
                                   }),
                               ],
                           }),
                       (0, a.jsx)("div", {
-                          className: g.c8,
+                          className: f.c8,
                       }),
                       (0, a.jsxs)("div", {
-                          className: g.Qs,
+                          className: f.Qs,
                           children: [
                               (0, a.jsxs)("div", {
                                   children: [
@@ -77,20 +75,20 @@ function v(e) {
                                           variant: "heading-md/bold",
                                           color: null != _ ? void 0 : "always-white",
                                           style: _,
-                                          children: b.intl.string(b.t["6CxPoB"]),
+                                          children: g.intl.string(g.t["6CxPoB"]),
                                       }),
                                       (0, a.jsx)(l.Text, {
                                           variant: "text-xs/normal",
                                           color: "always-white",
-                                          children: b.intl.format(b.t.IVzJ8G, {
+                                          children: g.intl.format(g.t.IVzJ8G, {
                                               settingsHook: (e, t) =>
                                                   (0, a.jsx)(
                                                       l.DUT,
                                                       {
                                                           tag: "span",
-                                                          className: g.nf,
+                                                          className: f.nf,
                                                           style: _,
-                                                          onClick: S,
+                                                          onClick: C,
                                                           children: e,
                                                       },
                                                       t,
@@ -100,8 +98,8 @@ function v(e) {
                                   ],
                               }),
                               (0, a.jsx)(l.DUT, {
-                                  className: g.l2,
-                                  onClick: () => C(x.i.USER_DISMISS),
+                                  className: f.l2,
+                                  onClick: () => A(x.i.USER_DISMISS),
                                   children: (0, a.jsx)(l.PGe, {
                                       color: "currentColor",
                                       size: "xs",
@@ -115,12 +113,12 @@ function v(e) {
         : null;
 }
 
-function j() {
-    return null == m.A.coachmarkDismissibleContent
+function v() {
+    return null == u.A.coachmarkDismissibleContent
         ? null
-        : (0, a.jsx)(v, {
-              dismissibleContent: m.A.coachmarkDismissibleContent,
-              backgroundColor: m.A.coachmarkBackgroundColor,
-              specialTextColor: m.A.coachmarkSpecialTextColor,
+        : (0, a.jsx)(b, {
+              dismissibleContent: u.A.coachmarkDismissibleContent,
+              backgroundColor: u.A.coachmarkBackgroundColor,
+              specialTextColor: u.A.coachmarkSpecialTextColor,
           });
 }

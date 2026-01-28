@@ -1,8 +1,7 @@
-n.d(t, {
-    AQ: () => a,
-    ZA: () => i,
+i.d(e, {
+    ZA: () => l,
 });
-let r = (0, n(945810).mj)({
+let n = (0, i(945810).mj)({
     kind: "user",
     name: "2026-01-profile-updates-notification",
     defaultConfig: {
@@ -21,14 +20,8 @@ let r = (0, n(945810).mj)({
     },
 });
 
-function i(e) {
-    return r.useConfig({
-        location: e,
+function l(t) {
+    return n.useConfig({
+        location: t,
     });
-}
-
-function a(e) {
-    return r.getConfig({
-        location: e,
-    }).showSettingsToggle;
 }

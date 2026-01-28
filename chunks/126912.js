@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => b,
+    A: () => v,
 }),
     n(747238),
     n(896048);
@@ -13,14 +13,14 @@ var r,
     u = n(396681),
     d = n(854378),
     h = n(210714),
-    f = n(427157),
-    p = n(650048),
-    g = n(652215),
-    m = n(431144),
-    A = n(985018),
-    x = n(473169);
+    p = n(427157),
+    g = n(650048),
+    f = n(652215),
+    _ = n(431144),
+    m = n(985018),
+    A = n(473169);
 
-function _(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ class E extends (r = s.PureComponent) {
         let e = (0, u.A)(this.props.location),
             t = (0, l.parse)(this.props.location.search);
         o.Bo.post({
-            url: g.Rsh.DISABLE_EMAIL_NOTIFICATIONS,
+            url: f.Rsh.DISABLE_EMAIL_NOTIFICATIONS,
             body: {
                 token: e,
                 pixel_uuid: t.hash,
@@ -53,7 +53,7 @@ class E extends (r = s.PureComponent) {
                 let {
                         body: { user: n },
                     } = e,
-                    r = new f.A(n);
+                    r = new p.A(n);
                 this.setState({
                     success: !0,
                     busy: !1,
@@ -76,32 +76,32 @@ class E extends (r = s.PureComponent) {
     }
     renderCategorySuccess(e, t) {
         let { defaultRoute: n, transitionTo: r } = this.props,
-            s = A.intl.formatToPlainString(A.t.YDAohB, {
+            s = m.intl.formatToPlainString(m.t.YDAohB, {
                 category: t,
             });
         return (0, i.jsxs)(d.Ay, {
             children: [
                 (0, i.jsx)(d.hE, {
-                    className: x.QB,
-                    children: A.intl.string(A.t.f6rdLg),
+                    className: A.QB,
+                    children: m.intl.string(m.t.f6rdLg),
                 }),
                 (0, i.jsx)(d.tK, {
                     children: s,
                 }),
                 (0, i.jsx)("div", {
-                    className: x.QX,
+                    className: A.QX,
                     children: (0, i.jsx)(c.Button, {
-                        text: A.intl.string(A.t.fIv16B),
+                        text: m.intl.string(m.t.fIv16B),
                         fullWidth: !0,
                         onClick: () => r(n),
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: x.Ot,
+                    className: A.Ot,
                     children: (0, i.jsx)(c.QWc, {
-                        text: A.intl.string(A.t.YYTirT),
+                        text: m.intl.string(m.t.YYTirT),
                         textVariant: "text-sm/normal",
-                        onClick: () => r(g.BVt.SETTINGS("notifications", m.oh)),
+                        onClick: () => r(f.BVt.SETTINGS("notifications", "emails")),
                     }),
                 }),
             ],
@@ -111,7 +111,7 @@ class E extends (r = s.PureComponent) {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { user: n, category: r } = this.state;
         if (null != r) {
-            let e = m.px.find((e) => e.category === r);
+            let e = _.px.find((e) => e.category === r);
             if (null != e) return this.renderCategorySuccess(r, e.label());
         }
         return (0, i.jsxs)(d.Ay, {
@@ -119,19 +119,19 @@ class E extends (r = s.PureComponent) {
                 (0, i.jsx)(d.eu, {
                     src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
                     size: c._3J.DEPRECATED_SIZE_100,
-                    className: x.SX,
+                    className: A.SX,
                 }),
                 (0, i.jsx)(d.hE, {
-                    className: x.QB,
-                    children: A.intl.string(A.t["6U6OMQ"]),
+                    className: A.QB,
+                    children: m.intl.string(m.t["6U6OMQ"]),
                 }),
                 (0, i.jsx)(d.tK, {
-                    children: A.intl.string(A.t["yaDJ4/"]),
+                    children: m.intl.string(m.t["yaDJ4/"]),
                 }),
                 (0, i.jsx)("div", {
-                    className: x.eT,
+                    className: A.eT,
                     children: (0, i.jsx)(c.Button, {
-                        text: A.intl.string(A.t.fIv16B),
+                        text: m.intl.string(m.t.fIv16B),
                         fullWidth: !0,
                         onClick: () => t(e),
                     }),
@@ -145,19 +145,19 @@ class E extends (r = s.PureComponent) {
             children: [
                 (0, i.jsx)(d._V, {
                     src: n(37772),
-                    className: x.SX,
+                    className: A.SX,
                 }),
                 (0, i.jsx)(d.hE, {
-                    className: x.QB,
-                    children: A.intl.string(A.t.ox9hIS),
+                    className: A.QB,
+                    children: m.intl.string(m.t.ox9hIS),
                 }),
                 (0, i.jsx)(d.tK, {
-                    children: A.intl.string(A.t["/dcuR5"]),
+                    children: m.intl.string(m.t["/dcuR5"]),
                 }),
                 (0, i.jsx)("div", {
-                    className: x.eT,
+                    className: A.eT,
                     children: (0, i.jsx)(c.Button, {
-                        text: A.intl.string(A.t.fIv16B),
+                        text: m.intl.string(m.t.fIv16B),
                         fullWidth: !0,
                         onClick: () => t(e),
                     }),
@@ -171,7 +171,7 @@ class E extends (r = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, "state", {
+            x(this, "state", {
                 busy: !0,
                 success: !1,
                 user: null,
@@ -179,9 +179,9 @@ class E extends (r = s.PureComponent) {
             });
     }
 }
-_(E, "defaultProps", {
+x(E, "defaultProps", {
     transitionTo: (e) => n.g.location.assign(e),
 });
-let b = a.Ay.connectStores([p.A], () => ({
-    defaultRoute: p.A.defaultRoute,
+let v = a.Ay.connectStores([g.A], () => ({
+    defaultRoute: g.A.defaultRoute,
 }))(E);

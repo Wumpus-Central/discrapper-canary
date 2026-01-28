@@ -152,24 +152,25 @@ async function E(e) {
                           n.e("2292"),
                           n.e("45586"),
                           n.e("62733"),
-                          n.e("22726"),
                           n.e("83518"),
+                          n.e("22726"),
                           n.e("5152"),
-                          n.e("21425"),
                           n.e("52199"),
+                          n.e("78572"),
                           n.e("3911"),
                           n.e("34749"),
                           n.e("44667"),
                           n.e("7803"),
                           n.e("84704"),
                           n.e("67646"),
-                          n.e("60667"),
-                          n.e("35195"),
-                          n.e("5066"),
+                          n.e("5606"),
+                          n.e("44011"),
+                          n.e("72450"),
+                          n.e("23367"),
                           n.e("98797"),
-                          n.e("82575"),
+                          n.e("60449"),
                           n.e("28979"),
-                          n.e("51901"),
+                          n.e("75473"),
                       ]).then(n.bind(n, 796150));
                       return (n) =>
                           (0, r.jsx)(
@@ -208,9 +209,8 @@ function b(e) {
 }
 
 function O() {
-    let e = (0, c.E7)("getWebUserSettingFromSection"),
-        t = (0, c.WJ)("getWebUserSettingFromSection"),
-        n = new Map([
+    let e = (0, c.WJ)("getWebUserSettingFromSection"),
+        t = new Map([
             [u.nc_.ACCOUNT, l.X.ACCOUNT_PANEL],
             [u.nc_.PROFILE_CUSTOMIZATION, l.X.PROFILE_PANEL],
             [u.nc_.CONTENT_AND_SOCIAL, l.X.CONTENT_AND_SOCIAL_PANEL],
@@ -232,7 +232,7 @@ function O() {
             [u.nc_.VOICE, l.X.VOICE_AND_VIDEO_PANEL],
             [u.nc_.POGGERMODE, l.X.POGGERMODE_PANEL],
             [u.nc_.TEXT, l.X.CHAT_PANEL],
-            [u.nc_.NOTIFICATIONS, e ? l.X.NOTIFICATIONS_PANEL : l.X.LEGACY_NOTIFICATIONS_SETTINGS_PANEL],
+            [u.nc_.NOTIFICATIONS, l.X.NOTIFICATIONS_PANEL],
             [u.nc_.KEYBINDS, l.X.KEYBINDS_PANEL],
             [u.nc_.LANGUAGE, l.X.LANGUAGE_AND_TIME_PANEL],
             [u.nc_.WINDOWS, l.X.WINDOWS_PANEL],
@@ -246,8 +246,9 @@ function O() {
             [u.nc_.DEVELOPER_OPTIONS, l.X.DEVELOPER_OPTIONS_PANEL],
             [u.nc_.ACCOUNT_STANDING, l.X.ACCOUNT_STANDING_CATEGORY],
             [u.nc_.CONNECTED_GAMES, l.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_CATEGORY],
+            [u.nc_.EMAILS, l.X.NOTIFICATIONS_EMAIL_CATEGORY],
         ]);
-    return t || n.delete(u.nc_.CONNECTED_GAMES), n;
+    return e || t.delete(u.nc_.CONNECTED_GAMES), t;
 }
 
 function v() {

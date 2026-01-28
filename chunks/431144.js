@@ -1,22 +1,20 @@
 n.d(t, {
-    HO: () => s,
-    Zk: () => a,
-    oh: () => l,
-    px: () => o,
+    HO: () => l,
+    Zk: () => s,
+    px: () => a,
 });
 var r,
-    i = n(985018);
-let l = "emails";
-var s =
-    (((r = {}).COMMUNICATION = "communication"),
-    (r.SOCIAL = "social"),
-    (r.TIPS = "tips"),
-    (r.RECOMMENDATIONS_AND_EVENTS = "recommendations_and_events"),
-    (r.UPDATES_AND_ANNOUNCEMENTS = "updates_and_announcements"),
-    (r.FAMILY_CENTER_DIGEST = "family_center_digest"),
-    r);
-let a = ["tips", "recommendations_and_events", "updates_and_announcements"],
-    o = [
+    i = n(985018),
+    l =
+        (((r = {}).COMMUNICATION = "communication"),
+        (r.SOCIAL = "social"),
+        (r.TIPS = "tips"),
+        (r.RECOMMENDATIONS_AND_EVENTS = "recommendations_and_events"),
+        (r.UPDATES_AND_ANNOUNCEMENTS = "updates_and_announcements"),
+        (r.FAMILY_CENTER_DIGEST = "family_center_digest"),
+        r);
+let s = ["tips", "recommendations_and_events", "updates_and_announcements"],
+    a = [
         {
             category: "communication",
             label: () => i.intl.string(i.t["B75+xe"]),

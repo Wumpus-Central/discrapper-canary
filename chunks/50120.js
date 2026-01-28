@@ -1,14 +1,14 @@
 n.d(t, {
-    default: () => _,
+    default: () => D,
 }),
     n(896048),
     n(667532),
     n(321073),
     n(747238),
     n(812715);
-var i = n(627968),
-    r = n(64700),
-    l = n(397927),
+var r = n(627968),
+    l = n(64700),
+    i = n(397927),
     a = n(442433),
     o = n(361739),
     c = n(358367),
@@ -18,119 +18,110 @@ var i = n(627968),
     g = n(390486),
     p = n(734066),
     b = n(780964),
-    y = n(358776),
-    O = n(360619),
-    f = n(840065),
+    y = n(360619),
+    O = n(840065),
     v = n(380450),
-    E = n(227542),
-    h = n(84654),
-    A = n(8086),
-    j = n(616621),
-    S = n(264124),
-    P = n(850060),
-    x = n(235661),
-    w = n(466410),
-    C = n(652215),
-    D = n(985018);
-let _ = (0, c.A)(
+    f = n(227542),
+    E = n(84654),
+    h = n(8086),
+    A = n(616621),
+    j = n(264124),
+    S = n(850060),
+    P = n(235661),
+    x = n(466410),
+    w = n(652215),
+    C = n(985018);
+let D = (0, c.A)(
     function (e) {
         let { webBuildOverride: t, onSelect: n, onInteraction: c } = e,
-            [s, _] = r.useState(!1),
-            m = (0, A.A)(),
-            L = (0, S.A)(),
-            I = (0, E.A)(),
-            T = (0, v.A)(),
-            N = (0, x.A)(),
-            k = (0, P.A)(),
-            R = (0, h.A)(),
-            V = (0, w.A)(),
-            M = (0, j.A)(),
-            U = (0, p.sw)(),
+            [s, D] = l.useState(!1),
+            _ = (0, h.A)(),
+            m = (0, j.A)(),
+            T = (0, f.A)(),
+            L = (0, v.A)(),
+            I = (0, P.A)(),
+            N = (0, S.A)(),
+            k = (0, E.A)(),
+            R = (0, x.A)(),
+            V = (0, A.A)(),
+            M = (0, p.sw)(),
             { analyticsLocations: G } = (0, d.Ay)(),
-            X = r.useMemo(() => (0, g.H)(), []);
-        async function H() {
+            U = l.useMemo(() => (0, g.H)(), []);
+        async function X() {
             try {
-                _(!0), await (0, u.iD)(), window.location.reload(!0);
+                D(!0), await (0, u.iD)(), window.location.reload(!0);
             } catch (e) {
-                _(!1);
+                D(!1);
             }
         }
-        let F = (0, y.t0)("UserSettingsCogContextMenu"),
-            Y = (0, f.getWebUserSettingsByUserSettingsSections)(),
-            q = (0, O.Lu)(),
-            z = r.useMemo(() => {
+        let H = (0, O.getWebUserSettingsByUserSettingsSections)(),
+            F = (0, y.Lu)(),
+            Y = l.useMemo(() => {
                 let e = [];
-                q.forEach((t) => {
-                    let { section: n, predicate: i } = t;
+                F.forEach((t) => {
+                    let { section: n, predicate: r } = t;
                     n !== o.Fq.HEADER &&
                         n !== o.Fq.CUSTOM &&
                         n !== o.Fq.DIVIDER &&
                         "logout" !== n &&
-                        (null == i || i()) &&
-                        null != Y.get(n) &&
-                        (n === C.nc_.PROFILE_CUSTOMIZATION ? e.unshift(t) : e.push(t));
+                        (null == r || r()) &&
+                        null != H.get(n) &&
+                        (n === w.nc_.PROFILE_CUSTOMIZATION ? e.unshift(t) : e.push(t));
                 });
-                let t = e.findIndex((e) => e.section === C.nc_.ADVANCED);
+                let t = e.findIndex((e) => e.section === w.nc_.ADVANCED);
                 -1 !== t &&
                     e.splice(t, 0, {
-                        section: C.nc_.STREAMER_MODE,
-                        label: D.intl.string(D.t.S5GfOW),
+                        section: w.nc_.STREAMER_MODE,
+                        label: C.intl.string(C.t.S5GfOW),
                     });
-                let n = e.findIndex((e) => e.section === C.nc_.CONNECTIONS);
-                if (U) {
-                    let t = {
-                        section: C.nc_.CLIPS,
-                        label: D.intl.string(D.t.z2jK6X),
-                        onClick: () => (0, f.openUserSettings)(b.X.CLIPS_PANEL),
+                let n = e.findIndex((e) => e.section === w.nc_.CONNECTIONS),
+                    r = {
+                        section: w.nc_.NOTIFICATIONS,
+                        label: C.intl.string(C.t.HcoRu0),
+                    },
+                    l = {
+                        section: w.nc_.CLIPS,
+                        label: C.intl.string(C.t.z2jK6X),
                     };
-                    -1 !== n && e.splice(n + 1, 0, t);
-                }
-                if (F) {
-                    let t = e.findIndex((e) => e.section === C.nc_.NOTIFICATIONS);
-                    if (-1 !== t && -1 !== n && t > n) {
-                        let [i] = e.splice(t, 1);
-                        e.splice(n + 1, 0, i);
-                    }
-                }
-                return e;
-            }, [U, F, Y, q]);
-        return (0, i.jsx)(d.f5, {
+                return -1 !== n && e.splice(n + 1, 0, r, ...(M ? [l] : [])), e;
+            }, [M, H, F]);
+        return (0, r.jsx)(d.f5, {
             value: G,
-            children: (0, i.jsxs)(l.W1t, {
+            children: (0, r.jsxs)(i.W1t, {
                 "data-menu-migrated": !0,
                 navId: "user-settings-cog",
                 onClose: a.Z_,
-                "aria-label": D.intl.string(D.t.opYYHn),
+                "aria-label": C.intl.string(C.t.opYYHn),
                 onSelect: n,
                 onInteraction: c,
                 children: [
-                    z.map((e) => {
+                    Y.map((e) => {
                         var t, n;
-                        let { section: r, label: a, onClick: o } = e,
-                            c = r.replace(/\W/gi, "_");
-                        return (0, i.jsx)(
-                            l.Drp,
+                        let { section: l, label: a, onClick: o } = e,
+                            c = l.replace(/\W/gi, "_");
+                        return (0, r.jsx)(
+                            i.Drp,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
-                                        i = Object.keys(n);
+                                        r = Object.keys(n);
                                     "function" == typeof Object.getOwnPropertySymbols &&
-                                        (i = i.concat(
+                                        (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                             }),
                                         )),
-                                        i.forEach(function (t) {
-                                            var i;
-                                            (i = n[t]),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: i,
+                                                          value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (e[t] = i);
+                                                    : (e[t] = r);
                                         });
                                 }
                                 return e;
@@ -145,10 +136,10 @@ let _ = (0, c.A)(
                                         let n;
                                         return null != o
                                             ? o()
-                                            : ((t = null != (e = Y.get(r)) ? e : b.X.ACCOUNT_PANEL),
+                                            : ((t = null != (e = H.get(l)) ? e : b.X.ACCOUNT_PANEL),
                                               void (
-                                                  null != (n = Object.values(C.nc_).filter((e) => e === r)[0]) &&
-                                                  (0, f.openUserSettings)(t, {
+                                                  null != (n = Object.values(w.nc_).filter((e) => e === l)[0]) &&
+                                                  (0, O.openUserSettings)(t, {
                                                       section: n,
                                                       analyticsLocations: G,
                                                   })
@@ -160,34 +151,34 @@ let _ = (0, c.A)(
                                 {
                                     children: ((e) => {
                                         switch (e) {
-                                            case C.nc_.GAMES:
+                                            case w.nc_.GAMES:
+                                                return _;
+                                            case w.nc_.STREAMER_MODE:
                                                 return m;
-                                            case C.nc_.STREAMER_MODE:
-                                                return L;
-                                            case C.nc_.APPEARANCE:
-                                                return I;
-                                            case C.nc_.ACCESSIBILITY:
+                                            case w.nc_.APPEARANCE:
                                                 return T;
-                                            case C.nc_.VOICE:
+                                            case w.nc_.ACCESSIBILITY:
+                                                return L;
+                                            case w.nc_.VOICE:
+                                                return I;
+                                            case w.nc_.TEXT:
                                                 return N;
-                                            case C.nc_.TEXT:
+                                            case w.nc_.EXPERIMENTS:
                                                 return k;
-                                            case C.nc_.EXPERIMENTS:
+                                            case w.nc_.DEVELOPER_OPTIONS:
                                                 return R;
-                                            case C.nc_.DEVELOPER_OPTIONS:
-                                                return V;
                                             default:
                                                 return null;
                                         }
-                                    })(r),
+                                    })(l),
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var i = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, i);
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
                                       }
                                       return n;
                                   })(Object(n)).forEach(function (e) {
@@ -197,15 +188,15 @@ let _ = (0, c.A)(
                             c,
                         );
                     }),
-                    e.user.isStaff() && M,
-                    e.user.isStaff() && X.length > 0
-                        ? (0, i.jsx)(l.Drp, {
+                    e.user.isStaff() && V,
+                    e.user.isStaff() && U.length > 0
+                        ? (0, r.jsx)(i.Drp, {
                               label: "Build Overrides",
                               id: "build_overrides",
-                              children: (0, i.jsx)(l.rXV, {
-                                  children: X.map((e) =>
-                                      (0, i.jsx)(
-                                          l.iDA,
+                              children: (0, r.jsx)(i.rXV, {
+                                  children: U.map((e) =>
+                                      (0, r.jsx)(
+                                          i.iDA,
                                           {
                                               id: "input-".concat(e.payload),
                                               group: "build_overrides",
@@ -224,12 +215,12 @@ let _ = (0, c.A)(
                           })
                         : null,
                     null != t
-                        ? (0, i.jsx)(l.rXV, {
-                              children: (0, i.jsx)(l.Drp, {
+                        ? (0, r.jsx)(i.rXV, {
+                              children: (0, r.jsx)(i.Drp, {
                                   id: "clear-build-override",
                                   disabled: s,
-                                  label: D.intl.string(D.t["/Nz9rY"]),
-                                  action: H,
+                                  label: C.intl.string(C.t["/Nz9rY"]),
+                                  action: X,
                                   color: "danger",
                               }),
                           })
