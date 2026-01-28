@@ -1,6 +1,5 @@
 n.d(t, {
-    Y: () => r,
+    Y: () => l,
 });
-var r = (function (e) {
-    return (e.SMALL = "small"), (e.MEDIUM = "medium"), e;
-})({});
+var r,
+    l = (((r = {}).SMALL = "small"), (r.MEDIUM = "medium"), r);

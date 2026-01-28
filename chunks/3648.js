@@ -1,120 +1,36 @@
 n.d(t, {
-    A: () => k,
-    Z: () => j,
+    A: () => P,
+    Z: () => N,
 }),
     n(896048);
 var r = n(627968),
-    i = n(64700),
-    a = n(311907),
+    l = n(64700),
+    i = n(311907),
     s = n(554146),
-    o = n(192308),
-    l = n(342494),
+    a = n(192308),
+    o = n(342494),
     c = n(397927),
     u = n(793574),
     d = n(627363),
-    f = n(576030),
-    p = n(379848),
-    _ = n(957785),
-    h = n(594832),
+    p = n(576030),
+    h = n(379848),
+    f = n(957785),
+    g = n(594832),
     m = n(186111),
-    g = n(916023),
-    E = n(533406),
-    b = n(366523),
-    y = n(188275),
+    b = n(916023),
+    A = n(533406),
+    y = n(366523),
+    _ = n(188275),
     O = n(49999),
-    A = n(788868),
+    j = n(788868),
     v = n(985018),
-    S = n(407494),
-    I = n(101616),
-    T = n(585048);
+    x = n(407494),
+    E = n(101616),
+    C = n(585048);
 
-function C(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-
-function N(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                C(e, t, n[t]);
-            });
-    }
-    return e;
-}
-
-function R(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-
-function w(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-
-function P(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = D(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function D(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function x(e) {
-    let { targetElementRef: t, onRequestClose: n, onActionClick: i } = e;
-    return (0, r.jsx)(l.AM, {
+function S(e) {
+    let { targetElementRef: t, onRequestClose: n, onActionClick: l } = e;
+    return (0, r.jsx)(o.AM, {
         size: "lg",
         shouldShow: !0,
         position: "left",
@@ -128,7 +44,7 @@ function x(e) {
             {
                 text: v.intl.string(v.t.uB4Gax),
                 variant: "primary",
-                onClick: i,
+                onClick: l,
             },
         ],
         targetElementRef: t,
@@ -136,140 +52,213 @@ function x(e) {
         body: v.intl.string(v.t.iM6fxV),
         graphic: {
             type: "image",
-            src: T.A,
+            src: C.A,
         },
     });
 }
 
-function L(e) {
-    let { showPopover: t, onViewWishlist: n, onCardClick: l } = e,
-        c = P(e, ["showPopover", "onViewWishlist", "onCardClick"]),
-        u = i.useRef(null),
-        d = (0, o.useHasAnyModalOpen)(),
-        f = (0, a.bG)([m.A], () => m.A.hasLayers()),
-        h = (0, g.Jw)({
+function I(e) {
+    var t, n;
+    let { showPopover: o, onViewWishlist: c, onCardClick: u } = e,
+        d = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                l,
+                i = {};
+            if ("u" > typeof Reflect && Reflect.ownKeys) {
+                for (l = 0, n = Reflect.ownKeys(e); l < n.length; l++)
+                    (r = n[l]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                return i;
+            }
+            if (
+                ((i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        l = {},
+                        i = Object.getOwnPropertyNames(e);
+                    for (r = 0; r < i.length; r++)
+                        (n = i[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                    return l;
+                })(e, t)),
+                Object.getOwnPropertySymbols)
+            )
+                for (l = 0, n = Object.getOwnPropertySymbols(e); l < n.length; l++)
+                    (r = n[l]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+            return i;
+        })(e, ["showPopover", "onViewWishlist", "onCardClick"]),
+        p = l.useRef(null),
+        g = (0, a.useHasAnyModalOpen)(),
+        A = (0, i.bG)([m.A], () => m.A.hasLayers()),
+        y = (0, b.Jw)({
             location: "wishlist-card",
         }),
-        [E, b] = (0, p.kn)(h ? [s.M.GAME_SHOP_WISHLIST_POPOVER] : [], O.m.SIDEBAR, !0),
-        y = i.useCallback(() => {
-            b(O.i.USER_DISMISS), l();
-        }, [l, b]),
-        A = i.useCallback(() => {
-            b(O.i.USER_DISMISS);
-        }, [b]),
-        v = i.useCallback(() => {
-            b(O.i.USER_DISMISS), n();
-        }, [n, b]);
+        [_, j] = (0, h.kn)(y ? [s.M.GAME_SHOP_WISHLIST_POPOVER] : [], O.m.SIDEBAR, !0),
+        v = l.useCallback(() => {
+            j(O.i.USER_DISMISS), u();
+        }, [u, j]),
+        x = l.useCallback(() => {
+            j(O.i.USER_DISMISS);
+        }, [j]),
+        E = l.useCallback(() => {
+            j(O.i.USER_DISMISS), c();
+        }, [c, j]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(
-                _.A,
-                w(N({}, c), {
-                    onCardClick: y,
-                    ref: u,
-                }),
+                f.A,
+                ((t = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, d)),
+                (n = n =
+                    {
+                        onCardClick: v,
+                        ref: p,
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      }),
+                t),
             ),
-            t &&
-                E === s.M.GAME_SHOP_WISHLIST_POPOVER &&
-                !d &&
-                !f &&
-                (0, r.jsx)(x, {
-                    targetElementRef: u,
-                    onRequestClose: A,
-                    onActionClick: v,
+            o &&
+                _ === s.M.GAME_SHOP_WISHLIST_POPOVER &&
+                !g &&
+                !A &&
+                (0, r.jsx)(S, {
+                    targetElementRef: p,
+                    onRequestClose: x,
+                    onActionClick: E,
                 }),
         ],
     });
 }
 
-function j(e, t) {
+function N(e, t) {
     let {
             index: n,
-            moreCount: i,
-            onViewWishlist: a,
+            moreCount: l,
+            onViewWishlist: i,
             isSingleCard: s = !1,
-            profileOwner: o,
-            wishlistId: l,
+            profileOwner: a,
+            wishlistId: o,
             cardSize: c,
             analyticsLocations: d,
-            itemSource: p,
+            itemSource: h,
         } = t,
-        _ = null != i && i > 0,
-        m = p === h.uS.POPULAR ? v.intl.string(v.t.Ig6VDH) : v.intl.string(v.t.ilhtIa),
-        g = {
-            title: _ ? v.intl.string(v.t.TxBQzD) : v.intl.string(v.t["4yiU7x"]),
-            body: _ ? void 0 : m,
-            renderIcon: _ ? void 0 : f.GM,
+        f = null != l && l > 0,
+        m = h === g.uS.POPULAR ? v.intl.string(v.t.Ig6VDH) : v.intl.string(v.t.ilhtIa),
+        b = {
+            title: f ? v.intl.string(v.t.TxBQzD) : v.intl.string(v.t["4yiU7x"]),
+            body: f ? void 0 : m,
+            renderIcon: f ? void 0 : p.GM,
             shouldShow: !0,
-        },
-        O = () => {
-            _
-                ? a()
-                : (0, E.a)(
-                      e.sku,
-                      {
-                          isGift: !0,
-                          giftRecipient: o,
-                          giftingOrigin: A.vQ.USER_PROFILE_WISHLIST,
-                      },
-                      {
-                          analyticsLocations: [...d, u.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON],
-                      },
-                  );
-        },
-        I = () =>
-            (0, r.jsx)(b.e, {
-                containerClassName: S.Nr,
-                backgroundImageClassName: S.GC,
-                foregroundImageClassName: S.wP,
-                sku: e.sku,
-                shape: "custom",
-            });
+        };
     return (0, r.jsx)(
-        L,
+        I,
         {
             wishlistItem: e,
-            onCardClick: O,
-            tooltipConfig: g,
+            onCardClick: () => {
+                f
+                    ? i()
+                    : (0, A.a)(
+                          e.sku,
+                          {
+                              isGift: !0,
+                              giftRecipient: a,
+                              giftingOrigin: j.vQ.USER_PROFILE_WISHLIST,
+                          },
+                          {
+                              analyticsLocations: [
+                                  ...d,
+                                  u.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON,
+                              ],
+                          },
+                      );
+            },
+            tooltipConfig: b,
             shouldScalePreview: !1,
-            renderPreview: I,
-            moreCount: i,
+            renderPreview: () =>
+                (0, r.jsx)(y.e, {
+                    containerClassName: x.Nr,
+                    backgroundImageClassName: x.GC,
+                    foregroundImageClassName: x.wP,
+                    sku: e.sku,
+                    shape: "custom",
+                }),
+            moreCount: l,
             isSingleCard: s,
-            wishlistId: l,
-            showPopover: 0 === n && e.sku.applicationId === y.XR,
-            onViewWishlist: a,
+            wishlistId: o,
+            showPopover: 0 === n && e.sku.applicationId === _.XR,
+            onViewWishlist: i,
             cardSize: c,
-            itemSource: p,
+            itemSource: h,
         },
         e.skuId,
     );
 }
 
-function M(e) {
-    let { item: t, card: n, analyticsLocations: i, profileOwner: a } = e,
-        { data: s } = (0, d.YY)(t.sku.applicationId),
-        o = () => {
-            (0, E.a)(
-                t.sku,
-                {
-                    isGift: !0,
-                    giftRecipient: a,
-                    giftingOrigin: A.vQ.USER_PROFILE_WISHLIST,
-                },
-                {
-                    analyticsLocations: [...i, u.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON],
-                },
-            );
-        };
+function T(e) {
+    let { item: t, card: n, analyticsLocations: l, profileOwner: i } = e,
+        { data: s } = (0, d.YY)(t.sku.applicationId);
     return (0, r.jsxs)("div", {
-        className: I.D5,
+        className: E.D5,
         children: [
             n,
             (0, r.jsx)("div", {
-                className: I.S7,
+                className: E.S7,
                 children: (0, r.jsxs)(c.DUT, {
-                    onClick: o,
-                    className: I.Hh,
+                    onClick: () => {
+                        (0, A.a)(
+                            t.sku,
+                            {
+                                isGift: !0,
+                                giftRecipient: i,
+                                giftingOrigin: j.vQ.USER_PROFILE_WISHLIST,
+                            },
+                            {
+                                analyticsLocations: [
+                                    ...l,
+                                    u.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON,
+                                ],
+                            },
+                        );
+                    },
+                    className: E.Hh,
                     "aria-label": v.intl.string(v.t.pLPjsb),
                     children: [
                         (0, r.jsx)(c.Text, {
@@ -292,20 +281,20 @@ function M(e) {
     });
 }
 
-function k(e, t) {
-    let { profileOwner: n, analyticsLocations: i, wishlistId: a, onViewWishlist: s } = t,
-        o = j(e, {
+function P(e, t) {
+    let { profileOwner: n, analyticsLocations: l, wishlistId: i, onViewWishlist: s } = t,
+        a = N(e, {
             index: 0,
             profileOwner: n,
-            analyticsLocations: i,
+            analyticsLocations: l,
             onViewWishlist: s,
             isSingleCard: !0,
-            wishlistId: a,
+            wishlistId: i,
         });
-    return (0, r.jsx)(M, {
+    return (0, r.jsx)(T, {
         item: e,
-        card: o,
+        card: a,
         profileOwner: n,
-        analyticsLocations: i,
+        analyticsLocations: l,
     });
 }
