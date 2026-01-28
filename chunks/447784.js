@@ -1,8 +1,9 @@
 t.d(n, {
-    k: () => E,
-});
-var l = t(627968),
-    r = t(64700),
+    k: () => j,
+}),
+    t(896048);
+var r = t(627968),
+    l = t(64700),
     i = t(503698),
     s = t.n(i),
     a = t(575593),
@@ -14,84 +15,93 @@ var l = t(627968),
     m = t(929283),
     g = t(761365),
     f = t(985018),
-    j = t(836314);
-let E = (e) => {
+    E = t(836314);
+let j = (e) => {
     var n;
     let t,
         i,
-        { skuId: E, user: x, claimed: h, onSelect: T, selectedSkuId: P } = e,
-        S = r.useRef(null),
-        { isHoveringOrFocusing: b } = (0, u.A)(S),
-        A = !h && b,
-        { product: y } = (0, c.q)(E);
-    if (null == y) return null;
-    let v = y.items[0];
-    return null == v
+        { skuId: j, user: x, claimed: h, onSelect: T, selectedSkuId: P } = e,
+        [S, A] = l.useState(null),
+        b = l.useCallback((e) => {
+            A(e);
+        }, []),
+        y = l.useMemo(
+            () => ({
+                current: S,
+            }),
+            [S],
+        ),
+        { isHoveringOrFocusing: I } = (0, u.A)(y),
+        O = !h && I,
+        { product: v } = (0, c.q)(j);
+    if (null == v) return null;
+    let _ = v.items[0];
+    return null == _
         ? null
-        : ((0, d.T)(v)
+        : ((0, d.T)(_)
               ? ((i = a.R.AVATAR_DECORATION),
-                (t = (0, l.jsx)(m.i, {
-                    item: v,
+                (t = (0, r.jsx)(m.i, {
+                    item: _,
                     user: x,
-                    isHighlighted: A,
+                    isHighlighted: O,
                     avatarSize: o._3J.SIZE_96,
                 })))
-              : (0, p.F)(v) &&
+              : (0, p.F)(_) &&
                 ((i = a.R.NAMEPLATE),
-                (t = (0, l.jsx)(g.A, {
-                    nameplate: v,
+                (t = (0, r.jsx)(g.A, {
+                    nameplate: _,
                     user: x,
-                    isHighlighted: A,
+                    isHighlighted: O,
                     size: "small",
                 }))),
-          (0, l.jsx)(o.vN3, {
-              children: (0, l.jsxs)(o.sqX, {
-                  ref: S,
-                  "aria-label": null != (n = y.name) ? n : "",
+          (0, r.jsx)(o.vN3, {
+              children: (0, r.jsxs)(o.sqX, {
+                  ref: b,
+                  "aria-label": null != (n = v.name) ? n : "",
                   onClick: () => {
-                      null == E || null == T || h || T(E);
+                      null == j || null == T || h || T(j);
                   },
-                  className: s()(j._x, {
-                      [j.Vp]: !h,
-                      [j.mr]: A,
-                      [j.md]: P === E,
+                  className: s()(E._x, {
+                      [E.Vp]: !h,
+                      [E.mr]: O,
+                      [E.md]: P === j,
                   }),
                   children: [
-                      (0, l.jsx)("div", {
-                          className: s()(j.VH, {
-                              [j._Q]: i === a.R.AVATAR_DECORATION,
-                              [j.M4]: i === a.R.NAMEPLATE,
+                      (0, r.jsx)("div", {
+                          className: s()(E.VH, {
+                              [E._Q]: i === a.R.AVATAR_DECORATION,
+                              [E.M4]: i === a.R.NAMEPLATE,
                           }),
                           children:
                               null != t
-                                  ? (0, l.jsxs)(l.Fragment, {
+                                  ? (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, l.jsx)("div", {
-                                                className: s()(j.i1, {
-                                                    [j.Sf]: h,
+                                            (0, r.jsx)("div", {
+                                                className: s()(E.i1, {
+                                                    [E.Sf]: h,
                                                 }),
                                                 children: t,
                                             }),
                                             h &&
-                                                (0, l.jsx)(o.rOg, {
+                                                (0, r.jsx)(o.rOg, {
                                                     size: "custom",
                                                     width: 48,
                                                     height: 48,
                                                     color: o.LU0.colors.INTERACTIVE_TEXT_ACTIVE,
-                                                    className: j.j0,
+                                                    className: E.j0,
                                                 }),
                                         ],
                                     })
                                   : null,
                       }),
-                      (0, l.jsxs)("div", {
-                          className: j.tZ,
+                      (0, r.jsxs)("div", {
+                          className: E.tZ,
                           children: [
-                              (0, l.jsx)(o.Heading, {
+                              (0, r.jsx)(o.Heading, {
                                   variant: "heading-md/extrabold",
-                                  children: y.name,
+                                  children: v.name,
                               }),
-                              (0, l.jsx)(o.Text, {
+                              (0, r.jsx)(o.Text, {
                                   variant: "text-sm/normal",
                                   children: h ? f.intl.string(f.t["6cfuDj"]) : f.intl.string(f.t.QQsaCc),
                               }),
