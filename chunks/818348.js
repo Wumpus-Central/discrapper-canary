@@ -1,74 +1,74 @@
 n.d(t, {
-    AD: () => I,
+    AD: () => S,
     Cm: () => C,
     DY: () => T,
     FX: () => G,
-    Gg: () => b,
+    Gg: () => y,
     Jo: () => et,
-    Kc: () => A,
+    Kc: () => v,
     Kf: () => eh,
     L_: () => em,
     Lt: () => B,
-    Lw: () => X,
+    Lw: () => Z,
     NJ: () => r.NJ,
     Nc: () => N,
-    OL: () => S,
+    OL: () => I,
     Pq: () => er,
     Q7: () => D,
-    Sb: () => es,
+    Sb: () => eo,
     TG: () => eE,
-    Tk: () => eo,
+    Tk: () => es,
     U2: () => l,
-    VV: () => L,
+    VV: () => x,
     Wz: () => ep,
     Xl: () => c,
-    YI: () => Z,
+    YI: () => Q,
     Yr: () => ef,
     ZE: () => q,
     _A: () => h,
-    __: () => w,
+    __: () => R,
     bZ: () => eu,
     cl: () => p,
     dL: () => H,
-    do: () => y,
+    do: () => b,
     e$: () => z,
-    fr: () => j,
-    gx: () => eb,
+    fr: () => M,
+    gx: () => ey,
     hC: () => u,
-    hV: () => M,
+    hV: () => j,
     he: () => O,
-    il: () => $,
-    js: () => V,
+    il: () => J,
+    js: () => F,
     kM: () => m,
-    kv: () => v,
+    kv: () => A,
     mX: () => ed,
     me: () => K,
-    nf: () => F,
+    nf: () => V,
     ps: () => g,
     qF: () => en,
     qm: () => E,
     rE: () => r.rE,
-    rI: () => R,
+    rI: () => w,
     rz: () => P,
     sE: () => ec,
     sJ: () => W,
-    sh: () => Q,
+    sh: () => X,
     tE: () => U,
-    tF: () => x,
+    tF: () => L,
     w7: () => el,
     x0: () => e_,
     xB: () => k,
     xE: () => Y,
     xe: () => eg,
     xf: () => _,
-    zy: () => J,
+    zy: () => $,
 }),
     n(896048);
 var r = n(812743),
     i = n(136722),
     a = n(323125);
-let s = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
-    o = location.protocol + "//discord.gg",
+let o = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
+    s = location.protocol + "//discord.gg",
     l = "discord.com",
     c = "support.discord.com",
     u = "support-dev.discord.com",
@@ -142,7 +142,7 @@ let E = Object.freeze({
         8: "Virtual Currency",
         9: "Apple ACOM",
     }),
-    b = Object.freeze({
+    y = Object.freeze({
         BRAINTREE: {
             KEY: window.GLOBAL_ENV.BRAINTREE_KEY,
             PAYMENT_GATEWAY: "braintree",
@@ -156,7 +156,7 @@ let E = Object.freeze({
             PAYMENT_GATEWAY: "adyen",
         },
     });
-var y = (function (e) {
+var b = (function (e) {
         return (e.GOOGLE_PAY = "google_pay"), (e.APPLE_PAY = "apple_pay"), e;
     })({}),
     O = (function (e) {
@@ -180,11 +180,12 @@ var y = (function (e) {
             (e[(e.IDEAL = 16)] = "IDEAL"),
             (e[(e.CASH_APP = 17)] = "CASH_APP"),
             (e[(e.APPLE = 18)] = "APPLE"),
+            (e[(e.TDS_WALLET = 19)] = "TDS_WALLET"),
             (e[(e.PAYMENT_REQUEST = 99)] = "PAYMENT_REQUEST"),
             e
         );
     })({});
-let A = new Map([
+let v = new Map([
         [7, "paysafecard"],
         [8, "gcash"],
         [9, "grabpay_MY"],
@@ -193,20 +194,20 @@ let A = new Map([
         [12, "gopay_wallet"],
         [17, "cashapp"],
     ]),
-    v = new Map([
+    A = new Map([
         [14, "bancontact"],
         [3, "giropay"],
         [16, "ideal"],
     ]),
-    S = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
-    I = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
+    I = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
+    S = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
     T = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17]),
     C = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
     N = new Set([6]);
-var R = (function (e) {
+var w = (function (e) {
         return (e[(e.NEW = 1)] = "NEW"), e;
     })({}),
-    w = (function (e) {
+    R = (function (e) {
         return (
             (e[(e.PENDING = 0)] = "PENDING"),
             (e[(e.COMPLETED = 1)] = "COMPLETED"),
@@ -235,17 +236,17 @@ Object.freeze({
     CONSTANT: 1,
     APPLE_STICKER: 2,
 });
-var x = (function (e) {
+var L = (function (e) {
         return (e[(e.DISCOVERY = 0)] = "DISCOVERY"), (e[(e.CHECKOUT = 1)] = "CHECKOUT"), e;
     })({}),
-    L = (function (e) {
+    x = (function (e) {
         return (e[(e.SUBSCRIPTION = 0)] = "SUBSCRIPTION"), (e[(e.ONE_TIME = 1)] = "ONE_TIME"), e;
     })({});
-let j = Object.freeze({
+let M = Object.freeze({
     0: "subscription",
     1: "sku",
 });
-var M = (function (e) {
+var j = (function (e) {
     return (
         (e[(e.VIEW_CHANNEL = 1024)] = "VIEW_CHANNEL"),
         (e[(e.READ_MESSAGE_HISTORY = 65536)] = "READ_MESSAGE_HISTORY"),
@@ -311,8 +312,8 @@ let k = Object.freeze({
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
     G = () => null,
-    V = () => Promise.resolve(),
-    F = [
+    F = () => Promise.resolve(),
+    V = [
         k.KICK_MEMBERS,
         k.BAN_MEMBERS,
         k.ADMINISTRATOR,
@@ -323,7 +324,7 @@ let k = Object.freeze({
         k.MANAGE_THREADS,
         k.MODERATE_MEMBERS,
     ],
-    B = i.kg(...F),
+    B = i.kg(...V),
     H = 1,
     Y = 6463,
     W = 10,
@@ -465,7 +466,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    X = (function (e) {
+    Z = (function (e) {
         return (
             (e[(e.UNKNOWN_ERROR = 1e3)] = "UNKNOWN_ERROR"),
             (e[(e.SERVICE_UNAVAILABLE = 1001)] = "SERVICE_UNAVAILABLE"),
@@ -504,7 +505,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    Z = (function (e) {
+    Q = (function (e) {
         return (
             (e[(e.CLOSE_NORMAL = 1e3)] = "CLOSE_NORMAL"),
             (e[(e.CLOSE_UNSUPPORTED = 1003)] = "CLOSE_UNSUPPORTED"),
@@ -518,9 +519,9 @@ var z = (function (e) {
             e
         );
     })({});
-let Q = 250,
-    $ = "token",
-    J = "tokens",
+let X = 250,
+    J = "token",
+    $ = "tokens",
     ee = "status.discord.com",
     et = "https://".concat(ee),
     en = {
@@ -561,32 +562,32 @@ let Q = 250,
         }),
     }),
     ei = Object.freeze({
-        WELCOME: "".concat(s, "/welcome/"),
-        ME: "".concat(s, "/channels/@me"),
+        WELCOME: "".concat(o, "/welcome/"),
+        ME: "".concat(o, "/channels/@me"),
         SETTINGS: (e, t) =>
             ""
-                .concat(s, "/settings/")
+                .concat(o, "/settings/")
                 .concat(e)
                 .concat(t ? "/".concat(t) : ""),
-        CONNECTION: (e) => "".concat(s, "/connections/").concat(e),
-        CHANGELOGS: "".concat(s, "/settings/changelogs"),
-        LOGIN: "".concat(s, "/login"),
-        LOGIN_WITH_REDIRECT: (e) => "".concat(s, "/login?redirect_to=").concat(e),
-        REGISTER: "".concat(s, "/register"),
-        REGISTER_WITH_REDIRECT: (e) => "".concat(s, "/register?redirect_to=").concat(e),
-        CREATE_GUILD: "".concat(s, "/guilds/create"),
-        VANITY_INVITE: (e) => "".concat(o, "/").concat(e),
-        HYPESQUAD_ONLINE: "".concat(s, "/settings/hypesquad-online"),
-        BROWSE_NITRO_TITLES: "".concat(s, "/store/browse?type=nitro"),
+        CONNECTION: (e) => "".concat(o, "/connections/").concat(e),
+        CHANGELOGS: "".concat(o, "/settings/changelogs"),
+        LOGIN: "".concat(o, "/login"),
+        LOGIN_WITH_REDIRECT: (e) => "".concat(o, "/login?redirect_to=").concat(e),
+        REGISTER: "".concat(o, "/register"),
+        REGISTER_WITH_REDIRECT: (e) => "".concat(o, "/register?redirect_to=").concat(e),
+        CREATE_GUILD: "".concat(o, "/guilds/create"),
+        VANITY_INVITE: (e) => "".concat(s, "/").concat(e),
+        HYPESQUAD_ONLINE: "".concat(o, "/settings/hypesquad-online"),
+        BROWSE_NITRO_TITLES: "".concat(o, "/store/browse?type=nitro"),
         SKU_DETAILS: (e, t) =>
             ""
-                .concat(s, "/store/skus/")
+                .concat(o, "/store/skus/")
                 .concat(e)
                 .concat(null != t ? "?store_listing_id=".concat(t) : ""),
         MESSAGE: (e, t, n) => "/channels/".concat(e, "/").concat(t, "/").concat(n),
         CHANNEL: (e, t) => "/channels/".concat(e, "/").concat(t),
-        REPORT: "".concat(s, "/report"),
-        QUEST_PREVIEW_TOOL_2: (e) => "".concat(s, "/quest-preview/").concat(e),
+        REPORT: "".concat(o, "/report"),
+        QUEST_PREVIEW_TOOL_2: (e) => "".concat(o, "/quest-preview/").concat(e),
     });
 var ea = (function (e) {
     return (
@@ -680,8 +681,8 @@ var ea = (function (e) {
         e
     );
 })(ea || {});
-let es = (0, a.dN)(ei),
-    eo = (0, a.dN)(ea),
+let eo = (0, a.dN)(ei),
+    es = (0, a.dN)(ea),
     el = Object.freeze({
         FACEBOOK_URL: "https://www.facebook.com/discord/",
         INSTAGRAM_URL: "https://www.instagram.com/discord/",
@@ -1025,6 +1026,6 @@ var e_ = (function (e) {
     eE = (function (e) {
         return (e.SWIPE = "SWIPE"), (e.BROWSER = "BROWSER"), (e.KEYBIND = "KEYBIND"), e;
     })({}),
-    eb = (function (e) {
+    ey = (function (e) {
         return (e[(e.IN_PROMPT = 1)] = "IN_PROMPT"), e;
     })({});
