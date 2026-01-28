@@ -1,26 +1,23 @@
 n.d(t, {
-    A: () => O,
-    Y: () => y,
+    A: () => E,
+    Y: () => g,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(435371),
-    l = n(397927),
-    c = n(594832),
-    u = n(287809),
-    d = n(954571),
-    f = n(427262),
-    p = n(183555),
-    _ = n(941165),
-    h = n(518477),
-    m = n(652215),
-    g = n(788868),
-    E = n(985018),
-    b = n(752276),
-    y = (function (e) {
+    o = n.n(a),
+    s = n(397927),
+    l = n(594832),
+    c = n(954571),
+    u = n(183555),
+    d = n(941165),
+    f = n(518477),
+    p = n(652215),
+    _ = n(788868),
+    h = n(985018),
+    m = n(752276),
+    g = (function (e) {
         return (
             (e.SMALL = "small"),
             (e.SMALL_SQUARE = "small-square"),
@@ -31,145 +28,123 @@ var r = n(627968),
         );
     })({});
 
-function O(e) {
+function E(e) {
     let {
             item: t,
             wishlistId: n,
             isOwner: a,
-            cardSize: y = "medium",
-            showOverlayButton: O = !0,
-            cardRef: A,
-            renderItemPreview: v,
-            accessibleLabel: S,
-            onCardClick: I,
-            buttonCTALabel: T,
-            buttonIcon: C,
-            isOwned: N = !1,
-            renderSourceIcon: R,
-            dragHandle: w,
-            giftingOrigin: P,
-            source: D,
+            cardSize: g = "medium",
+            showOverlayButton: E = !0,
+            cardRef: y,
+            renderItemPreview: b,
+            accessibleLabel: O,
+            onCardClick: v,
+            buttonCTALabel: A,
+            buttonIcon: I,
+            isOwned: S = !1,
+            renderSourceIcon: T,
+            dragHandle: C,
+            giftingOrigin: N,
+            source: w,
         } = e,
-        x = i.useRef(null),
-        L = i.useRef(null),
-        j = null != A ? A : L,
-        { trackUserProfileWishlistAction: M } = (0, p.NJ)(),
-        k = a && !0 === t.isOwned && null != t.gifterUserId,
-        U = null != t.gifterUserId ? u.default.getUser(t.gifterUserId) : null,
-        G = null != U ? f.Ay.getName(U) : null,
-        V = k && null != U && null != G && "" !== G,
-        F = V
-            ? (0, r.jsx)(l.euF, {
-                  src: U.getAvatarURL(void 0, 48),
-                  size: l._3J.SIZE_48,
-                  "aria-label": G,
-              })
-            : void 0,
-        B = (0, r.jsx)("div", {
-            className: b.Af,
-            children: (0, r.jsx)(l.rOg, {
+        R = i.useRef(null),
+        P = i.useRef(null),
+        D = null != y ? y : P,
+        { trackUserProfileWishlistAction: L } = (0, u.NJ)(),
+        x = (0, r.jsx)("div", {
+            className: m.Af,
+            children: (0, r.jsx)(s.rOg, {
                 size: "custom",
-                color: l.LU0.colors.WHITE,
+                color: s.LU0.colors.WHITE,
                 width: 38,
                 height: 38,
-                className: s()(b.x6, b.AI),
-                "aria-label": E.intl.string(E.t.L5Pt9L),
+                className: o()(m.x6, m.AI),
+                "aria-label": h.intl.string(h.t.L5Pt9L),
             }),
         }),
-        H = (0, r.jsx)("div", {
-            className: b.Lw,
-            children: (0, r.jsx)(l.Button, {
+        M = (0, r.jsx)("div", {
+            className: m.Lw,
+            children: (0, r.jsx)(s.Button, {
                 focusProps: {
-                    ringTarget: j,
+                    ringTarget: D,
                 },
                 variant: "primary",
                 size: "sm",
-                text: T,
-                icon: C,
+                text: A,
+                icon: I,
                 onClick: (e) => {
-                    e.stopPropagation(), Y();
+                    e.stopPropagation(), j();
                 },
                 fullWidth: !0,
             }),
         }),
-        Y = () => {
-            if (P === g.vQ.DM_CHANNEL_WISHLIST) {
-                let e = D === c.uS.WISHLIST ? "wishlist" : "shop";
-                d.default.track(m.HAw.GIFTING_ITEM_CLICKED, {
+        j = () => {
+            if (N === _.vQ.DM_CHANNEL_WISHLIST) {
+                let e = w === l.uS.WISHLIST ? "wishlist" : "shop";
+                c.default.track(p.HAw.GIFTING_ITEM_CLICKED, {
                     sku_id: t.skuId,
                     item_source: e,
-                    wishlist_id: D === c.uS.WISHLIST ? n : null,
+                    wishlist_id: w === l.uS.WISHLIST ? n : null,
                     product_line: t.skuProductLine,
                 });
             } else
                 null != n &&
-                    M({
+                    L({
                         wishlistId: n,
-                        action: h.Mq.WISHLIST_ITEM_CLICKED,
+                        action: f.Mq.WISHLIST_ITEM_CLICKED,
                         skuId: t.skuId,
                         productLines: new Set([t.skuProductLine]),
                     });
-            I();
-        },
-        W = (0, r.jsxs)("div", {
-            ref: x,
-            className: b.kL,
-            children: [
-                (0, r.jsxs)("div", {
-                    ref: j,
-                    className: s()(b.Nr, {
-                        [b.go]: N,
-                        [b.tM]: "small-square" === y,
-                        [b.IU]: "small" === y,
-                        [b.Sd]: "large" === y,
-                        [b.uE]: "flex" === y,
-                    }),
-                    onClick: Y,
-                    children: [
-                        (0, r.jsx)(l.AC4, {
-                            children: (0, r.jsx)(l.H, {
-                                children: S,
-                            }),
-                        }),
-                        (0, r.jsx)("div", {
-                            className: b.ho,
-                            children: v(),
-                        }),
-                        N && B,
-                        O
-                            ? H
-                            : (0, r.jsx)(l.DUT, {
-                                  "aria-label": T,
-                                  focusProps: {
-                                      ringTarget: j,
-                                  },
-                                  onClick: (e) => {
-                                      e.stopPropagation(), Y();
-                                  },
-                              }),
-                    ],
+            v();
+        };
+    return (0, r.jsxs)("div", {
+        ref: R,
+        className: m.kL,
+        children: [
+            (0, r.jsxs)("div", {
+                ref: D,
+                className: o()(m.Nr, {
+                    [m.go]: S,
+                    [m.tM]: "small-square" === g,
+                    [m.IU]: "small" === g,
+                    [m.Sd]: "large" === g,
+                    [m.uE]: "flex" === g,
                 }),
-                null != R && R(),
-                w,
-                a &&
-                    null != n &&
-                    (0, r.jsx)(_.A, {
-                        iconSize: "sm",
-                        item: t,
-                        wishlistId: n,
-                        className: b.eP,
+                onClick: j,
+                children: [
+                    (0, r.jsx)(s.AC4, {
+                        children: (0, r.jsx)(s.H, {
+                            children: O,
+                        }),
                     }),
-            ],
-        });
-    return V
-        ? (0, r.jsx)(o.un, {
-              asContainer: !0,
-              title: E.intl.formatToPlainString(E.t.TL4ktE, {
-                  username: G,
-              }),
-              body: t.skuName,
-              asset: F,
-              children: W,
-          })
-        : W;
+                    (0, r.jsx)("div", {
+                        className: m.ho,
+                        children: b(),
+                    }),
+                    S && x,
+                    E
+                        ? M
+                        : (0, r.jsx)(s.DUT, {
+                              "aria-label": A,
+                              focusProps: {
+                                  ringTarget: D,
+                              },
+                              onClick: (e) => {
+                                  e.stopPropagation(), j();
+                              },
+                          }),
+                ],
+            }),
+            null != T && T(),
+            C,
+            a &&
+                null != n &&
+                (0, r.jsx)(d.A, {
+                    iconSize: "sm",
+                    item: t,
+                    wishlistId: n,
+                    className: m.eP,
+                }),
+        ],
+    });
 }
