@@ -303,13 +303,12 @@ class m {
         );
     }
     setPartition(e, t, n) {
-        null != n || (n = this.nextVersion()),
-            this.removePartition(e, n),
-            this.updateSecondaryIndexes(Object.values(t), void 0, n);
-        let r = this.touchPartition(e, n);
-        r.root = t;
-        let i = Object.keys(t).length;
-        return (r.derived.length = i), (this.state.derived.length += i), !0;
+        null != n || (n = this.nextVersion()), this.removePartition(e, n);
+        let r = Object.keys(t).length;
+        if (0 === r) return !0;
+        this.updateSecondaryIndexes(Object.values(t), void 0, n);
+        let i = this.touchPartition(e, n);
+        return (i.root = t), (i.derived.length = r), (this.state.derived.length += r), !0;
     }
     updateSecondaryIndexes(e, t, n) {
         for (let r of this.secondaryIndexes) {
