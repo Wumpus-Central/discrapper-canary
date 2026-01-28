@@ -28,8 +28,6 @@ e.exports = {
     g_: "textAreaCustomGift__74017",
     Rr: "textAreaDisabled__74017 textArea__74017",
     Uo: "buttons__74017",
-    d5: "reducedGap__74017",
-    jH: "spacer__74017",
     UD: "buttonContainer__74017",
     x6: "button__74017",
     Z8: "emojiButton__74017 button__74017",

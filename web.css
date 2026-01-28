@@ -46983,22 +46983,6 @@ div.mobilePushContainer__3d3b0 {
     margin-inline-end: 6px
 }
 
-.buttons__74017.reducedGap__74017 {
-    gap: var(--space-4)
-}
-
-.spacer__74017 {
-    align-self: center;
-    background-color: var(--border-subtle);
-    height: 22px;
-    margin-inline: var(--space-4);
-    width: 1px
-}
-
-.buttons__74017>.spacer__74017:last-child {
-    display: none
-}
-
 .has-webkit-scrollbar .buttons__74017 {
     -webkit-margin-end: 0;
     margin-inline-end: 0

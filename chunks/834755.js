@@ -1,13 +1,13 @@
 n.d(t, {
-    A: () => $,
+    A: () => X,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(735438),
-    l = n.n(o),
+    o = n.n(a),
+    s = n(735438),
+    l = n.n(s),
     c = n(607399),
     u = n(621466),
     d = n(311907),
@@ -18,31 +18,30 @@ var r = n(627968),
     m = n(820284),
     g = n(761929),
     E = n(58149),
-    b = n(184761),
     y = n(379848),
-    O = n(937773),
-    A = n(855057),
+    b = n(937773),
+    O = n(855057),
     v = n(750506),
-    S = n(267102),
+    A = n(267102),
     I = n(704591),
-    T = n(989799),
-    C = n(256449),
-    N = n(679382),
-    R = n(669201),
+    S = n(989799),
+    T = n(256449),
+    C = n(679382),
+    N = n(669201),
     w = n(964404),
-    P = n(712687),
-    D = n(203982),
-    x = n(151271),
+    R = n(712687),
+    P = n(203982),
+    D = n(151271),
     L = n(698279),
-    j = n(652215),
+    x = n(652215),
     M = n(49999),
-    k = n(732139),
-    U = n(307731),
-    G = n(823894),
-    V = n(985018),
+    j = n(732139),
+    k = n(307731),
+    U = n(823894),
+    G = n(985018),
     F = n(228539);
 
-function B(e, t, n) {
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +55,7 @@ function B(e, t, n) {
     );
 }
 
-function H(e) {
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -67,13 +66,13 @@ function H(e) {
                 }),
             )),
             r.forEach(function (t) {
-                B(e, t, n[t]);
+                V(e, t, n[t]);
             });
     }
     return e;
 }
 
-function Y(e, t) {
+function H(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -86,19 +85,19 @@ function Y(e, t) {
     return n;
 }
 
-function W(e, t) {
+function Y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : Y(Object(t)).forEach(function (n) {
+            : H(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function K(e, t) {
+function W(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -109,13 +108,13 @@ function K(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = z(e, t)), Object.getOwnPropertySymbols))
+    if (((a = K(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function z(e, t) {
+function K(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -125,31 +124,31 @@ function z(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-let q = 498 + k.as.MEDIUM,
-    X = i.memo(function (e) {
-        let { isActive: t, className: n, viewType: i, autoFocus: a = !1, "aria-controls": o } = e,
-            l = K(e, ["isActive", "className", "viewType", "autoFocus", "aria-controls"]);
+let z = 498 + j.as.MEDIUM,
+    q = i.memo(function (e) {
+        let { isActive: t, className: n, viewType: i, autoFocus: a = !1, "aria-controls": s } = e,
+            l = W(e, ["isActive", "className", "viewType", "autoFocus", "aria-controls"]);
         return (0, r.jsx)(
             _.DUT,
-            W(
-                H(
+            Y(
+                B(
                     {
                         role: "tab",
                         autoFocus: a,
-                        "aria-controls": t ? o : void 0,
+                        "aria-controls": t ? s : void 0,
                     },
                     l,
                 ),
                 {
                     onClick: () => {
-                        E.Ay.trackWithMetadata(j.HAw.EXPRESSION_PICKER_TAB_CLICKED, {
+                        E.Ay.trackWithMetadata(x.HAw.EXPRESSION_PICKER_TAB_CLICKED, {
                             tab: i,
                             badged: !1,
                         }),
-                            (0, x.U)(i);
+                            (0, D.U)(i);
                     },
                     "aria-current": t ? "page" : void 0,
-                    className: s()(n, F.oi, F.pc, {
+                    className: o()(n, F.oi, F.pc, {
                         [F.Mv]: t,
                     }),
                 },
@@ -159,7 +158,7 @@ let q = 498 + k.as.MEDIUM,
     Z = (e) => {
         let { positionContainerRef: t, drawerRef: n, orientation: r } = e,
             a = (0, d.bG)([w.Ay], () => w.Ay.expressionPickerWidth),
-            [s, o] = i.useState(window.innerWidth),
+            [o, s] = i.useState(window.innerWidth),
             [c, u] = i.useState(null != a ? a : L.wp.MIN),
             f = i.useMemo(() => {
                 switch (c) {
@@ -173,18 +172,18 @@ let q = 498 + k.as.MEDIUM,
             }, [c]),
             p = i.useCallback(
                 (e) => {
-                    let t = e >= s ? L.wp.MAX : e <= 498 ? L.wp.MIN : e;
+                    let t = e >= o ? L.wp.MAX : e <= 498 ? L.wp.MIN : e;
                     null == t && null != n.current && (n.current.style.width = ""),
                         h.Ay.updatedUnsyncedSettings({
                             expressionPickerWidth: t,
                         }),
                         u(t);
                 },
-                [n, s],
+                [n, o],
             ),
             _ = (0, g.A)({
                 initialElementDimension: f,
-                maxDimension: s,
+                maxDimension: o,
                 minDimension: 498,
                 resizableDomNodeRef: n,
                 onElementResize: p,
@@ -193,7 +192,7 @@ let q = 498 + k.as.MEDIUM,
         return (
             i.useEffect(() => {
                 let e = l().debounce(() => {
-                    null != t.current && o(t.current.offsetWidth);
+                    null != t.current && s(t.current.offsetWidth);
                 }, 500);
                 return (
                     window.addEventListener("resize", e),
@@ -203,13 +202,13 @@ let q = 498 + k.as.MEDIUM,
                 );
             }, [t]),
             i.useLayoutEffect(() => {
-                null != t.current && o(t.current.offsetWidth);
+                null != t.current && s(t.current.offsetWidth);
             }, [t]),
             {
                 drawerWidth: f,
                 handleDrawerResizeHandleMouseDown: i.useCallback(
                     (e) => {
-                        e.stopPropagation(), null != t.current && o(t.current.offsetWidth), _(e);
+                        e.stopPropagation(), null != t.current && s(t.current.offsetWidth), _(e);
                     },
                     [t, _],
                 ),
@@ -218,56 +217,53 @@ let q = 498 + k.as.MEDIUM,
     };
 
 function Q(e) {
-    var t, n, a, o;
+    var t, n, a, s;
     let {
             positionTargetRef: l,
             hideGifFavorites: h,
             onSelectGIF: w,
-            onSelectEmoji: B,
-            onSelectSticker: H,
-            onSelectSound: Y,
-            channel: W,
-            type: K,
-            position: z,
+            onSelectEmoji: V,
+            onSelectSticker: B,
+            onSelectSound: H,
+            channel: Y,
+            type: W,
+            position: K,
             align: Q,
-            positionLayerClassName: $,
+            positionLayerClassName: X,
             closeOnModalOuterClick: J = !1,
-            parentModalKey: ee,
+            parentModalKey: $,
         } = e,
-        et = i.useRef(null),
-        en = i.useRef(!1),
+        ee = i.useRef(null),
+        et = i.useRef(!1),
+        en = i.useRef(null),
         er = i.useRef(null),
-        ei = i.useRef(null),
-        { drawerWidth: ea, handleDrawerResizeHandleMouseDown: es } = Z({
-            positionContainerRef: et,
-            drawerRef: ei,
+        { drawerWidth: ei, handleDrawerResizeHandleMouseDown: ea } = Z({
+            positionContainerRef: ee,
+            drawerRef: er,
             orientation: "left" === Q ? g.R.HORIZONTAL_RIGHT : g.R.HORIZONTAL_LEFT,
         }),
-        eo = (0, x.RQ)((e) => e.activeView),
-        el = (0, C.ZO)(W),
-        { renderWindow: ec, windowDispatch: eu } = i.useContext(S.Ay),
-        ed = (0, d.bG)([N.A], () => !N.A.hasLoadedStickerPacks),
-        ef = (0, I.tj)({
+        eo = (0, D.RQ)((e) => e.activeView),
+        es = (0, T.ZO)(Y),
+        { renderWindow: el, windowDispatch: ec } = i.useContext(A.Ay),
+        eu = (0, d.bG)([C.A], () => !C.A.hasLoadedStickerPacks),
+        ed = (0, I.tj)({
             location: "expression_picker",
         }),
-        ep = (0, d.bG)([P.A], () => P.A.isOpen()),
-        e_ = null != ee,
-        eh = (0, p.useIsModalAtTop)(null != ee ? ee : ""),
-        { reorderExpressionPickerTabs: em } = b.C.useConfig({
-            location: "expression_picker",
-        }),
-        eg = (null == (t = K.gifs) ? void 0 : t.allowSending) && !c.Fr && null != w,
-        eE = (null == (n = K.stickers) ? void 0 : n.allowSending) && null != H,
-        eb = !(null == (a = K.expressionPicker) ? void 0 : a.onlyEmojis) && (eg || eE),
-        ey = i.useCallback(
+        ef = (0, d.bG)([R.A], () => R.A.isOpen()),
+        ep = null != $,
+        e_ = (0, p.useIsModalAtTop)(null != $ ? $ : ""),
+        eh = (null == (t = W.gifs) ? void 0 : t.allowSending) && !c.Fr && null != w,
+        em = (null == (n = W.stickers) ? void 0 : n.allowSending) && null != B,
+        eg = !(null == (a = W.expressionPicker) ? void 0 : a.onlyEmojis) && (eh || em),
+        eE = i.useCallback(
             (e) => {
                 var t;
-                if ((!e_ && (0, p.hasAnyModalOpen)()) || (e_ && !(eh && J)) || ep || e.defaultPrevented) return;
+                if ((!ep && (0, p.hasAnyModalOpen)()) || (ep && !(e_ && J)) || ef || e.defaultPrevented) return;
                 let { target: n } = e;
                 if ((0, u.vq)(n) && null != n.closest("." + L.VQ)) return;
                 for (; (0, u.vq)(n); ) {
                     if (
-                        n === ei.current ||
+                        n === er.current ||
                         "true" === n.getAttribute("data-menu-item") ||
                         "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") ||
                         "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")
@@ -275,111 +271,111 @@ function Q(e) {
                         return;
                     n = n.parentNode;
                 }
-                (0, x.v8)();
+                (0, D.v8)();
                 let r = null == (t = (0, u.BF)(e)) ? void 0 : t.activeElement;
-                (null == r || "BODY" === r.tagName) && D._.dispatchToLastSubscribed(j.jej.TEXTAREA_FOCUS);
+                (null == r || "BODY" === r.tagName) && P._.dispatchToLastSubscribed(x.jej.TEXTAREA_FOCUS);
             },
-            [J, eh, e_, ep],
+            [J, e_, ep, ef],
         ),
-        eO = i.useCallback(() => {
-            (0, x.v8)();
+        ey = i.useCallback(() => {
+            (0, D.v8)();
         }, []);
     i.useLayoutEffect(() => {
         let e = () => {
-            eo === L.kx.GIF && (0, x.v8)();
+            eo === L.kx.GIF && (0, D.v8)();
         };
         return (
-            ec.addEventListener("mousedown", ey),
-            ec.addEventListener("contextmenu", ey),
-            eu.subscribe(j.jej.POPOUT_CLOSE, eO),
-            D._.subscribe(j.jej.CLOSE_GIF_PICKER, e),
+            el.addEventListener("mousedown", eE),
+            el.addEventListener("contextmenu", eE),
+            ec.subscribe(x.jej.POPOUT_CLOSE, ey),
+            P._.subscribe(x.jej.CLOSE_GIF_PICKER, e),
             () => {
-                ec.removeEventListener("mousedown", ey),
-                    ec.removeEventListener("contextmenu", ey),
-                    eu.unsubscribe(j.jej.POPOUT_CLOSE, eO),
-                    D._.unsubscribe(j.jej.CLOSE_GIF_PICKER, e);
+                el.removeEventListener("mousedown", eE),
+                    el.removeEventListener("contextmenu", eE),
+                    ec.unsubscribe(x.jej.POPOUT_CLOSE, ey),
+                    P._.unsubscribe(x.jej.CLOSE_GIF_PICKER, e);
             }
         );
-    }, [eo, eO, ey, ec, eu]),
-        (0, _.tjt)(et);
-    let [eA, ev] = (0, y.kn)(ef ? [f.M.SOUNDMOJI_BADGE] : [], void 0, !1),
-        [eS, eI] = i.useState(!1);
+    }, [eo, ey, eE, el, ec]),
+        (0, _.tjt)(ee);
+    let [eb, eO] = (0, y.kn)(ed ? [f.M.SOUNDMOJI_BADGE] : [], void 0, !1),
+        [ev, eA] = i.useState(!1);
     i.useEffect(() => {
-        eo === L.kx.SOUNDBOARD && eI(!0);
+        eo === L.kx.SOUNDBOARD && eA(!0);
     }, [eo]),
         i.useEffect(
             () => () => {
-                eS && ev(M.i.TAKE_ACTION);
+                ev && eO(M.i.TAKE_ACTION);
             },
-            [eS, ev],
+            [ev, eO],
         ),
         i.useEffect(() => {
-            (0, x.Ri)("");
+            (0, D.Ri)("");
         }, []),
         i.useEffect(() => {
-            ((!e_ && (0, p.hasAnyModalOpen)()) || (e_ && !eh)) && (0, x.v8)();
-        }, [eh, e_]),
+            ((!ep && (0, p.hasAnyModalOpen)()) || (ep && !e_)) && (0, D.v8)();
+        }, [e_, ep]),
         i.useEffect(() => {
-            if (null != ei.current && !en.current) {
+            if (null != er.current && !et.current) {
                 var e, t, n, r;
                 eo === L.kx.EMOJI
-                    ? (null == er || null == (e = er.current) ? void 0 : e.onPickerOpen) != null &&
-                      (null == er || null == (t = er.current) || t.onPickerOpen(), (en.current = !0))
+                    ? (null == en || null == (e = en.current) ? void 0 : e.onPickerOpen) != null &&
+                      (null == en || null == (t = en.current) || t.onPickerOpen(), (et.current = !0))
                     : eo === L.kx.STICKER
-                      ? (null == er || null == (n = er.current) ? void 0 : n.onPickerOpen) == null ||
-                        ed ||
-                        (null == er || null == (r = er.current) || r.onPickerOpen(), (en.current = !0))
-                      : (E.Ay.trackWithMetadata(j.HAw.EXPRESSION_PICKER_OPENED, {
-                            width: ei.current.offsetWidth,
+                      ? (null == en || null == (n = en.current) ? void 0 : n.onPickerOpen) == null ||
+                        eu ||
+                        (null == en || null == (r = en.current) || r.onPickerOpen(), (et.current = !0))
+                      : (E.Ay.trackWithMetadata(x.HAw.EXPRESSION_PICKER_OPENED, {
+                            width: er.current.offsetWidth,
                             tab: eo,
                             badged: !1,
                         }),
-                        (en.current = !0));
+                        (et.current = !0));
             }
         });
-    let eT = i.useCallback((e, t) => (null == Y ? void 0 : Y(e, "emoji_picker", t)), [Y]),
-        eC = i.useCallback((e, t) => (null == Y ? void 0 : Y(e, "soundboard_picker", t)), [Y]),
-        eN = (null == (o = K.soundmoji) ? void 0 : o.allowSending) === !0 && null != Y,
-        eR = "left" === Q ? "right" : "left",
-        ew = null != $ ? $ : "left" === Q ? F.sj : F.Jg,
-        eP = eg
-            ? (0, r.jsx)(X, {
-                  id: k.g9,
-                  "aria-controls": k.ni,
+    let eI = i.useCallback((e, t) => (null == H ? void 0 : H(e, "emoji_picker", t)), [H]),
+        eS = i.useCallback((e, t) => (null == H ? void 0 : H(e, "soundboard_picker", t)), [H]),
+        eT = (null == (s = W.soundmoji) ? void 0 : s.allowSending) === !0 && null != H,
+        eC = "left" === Q ? "right" : "left",
+        eN = null != X ? X : "left" === Q ? F.sj : F.Jg,
+        ew = eh
+            ? (0, r.jsx)(q, {
+                  id: j.g9,
+                  "aria-controls": j.ni,
                   "aria-selected": eo === L.kx.GIF,
                   isActive: eo === L.kx.GIF,
                   viewType: L.kx.GIF,
-                  children: V.intl.string(V.t["6gUTsS"]),
+                  children: G.intl.string(G.t["6gUTsS"]),
               })
             : null,
-        eD = eE
-            ? (0, r.jsx)(X, {
-                  id: G.LD,
-                  "aria-controls": G.GX,
+        eR = em
+            ? (0, r.jsx)(q, {
+                  id: U.LD,
+                  "aria-controls": U.GX,
                   "aria-selected": eo === L.kx.STICKER,
                   isActive: eo === L.kx.STICKER,
-                  autoFocus: !el,
+                  autoFocus: !es,
                   viewType: L.kx.STICKER,
                   children: (0, r.jsx)("div", {
                       className: F.dG,
-                      children: V.intl.string(V.t.nf1s3u),
+                      children: G.intl.string(G.t.nf1s3u),
                   }),
               })
             : null,
-        ex = (0, r.jsx)(X, {
-            id: k.k1,
-            "aria-controls": k.Do,
+        eP = (0, r.jsx)(q, {
+            id: j.k1,
+            "aria-controls": j.Do,
             "aria-selected": eo === L.kx.EMOJI,
             isActive: eo === L.kx.EMOJI,
             viewType: L.kx.EMOJI,
-            children: V.intl.string(V.t.Xu3wE3),
+            children: G.intl.string(G.t.Xu3wE3),
         });
     return (0, r.jsx)(m.A, {
-        section: j.JJy.EXPRESSION_PICKER,
+        section: x.JJy.EXPRESSION_PICKER,
         children: (0, r.jsx)(v.nE, {
-            className: s()(F.T8, ew),
+            className: o()(F.T8, eN),
             targetRef: l,
-            position: z,
+            position: K,
             align: Q,
             spacing: 8,
             autoInvert: !0,
@@ -388,61 +384,57 @@ function Q(e) {
                 var t;
                 let { isPositioned: n } = e;
                 return (0, r.jsx)("section", {
-                    className: s()(F.V6, {
-                        [F.D0]: !eb,
+                    className: o()(F.V6, {
+                        [F.D0]: !eg,
                     }),
-                    ref: et,
+                    ref: ee,
                     role: "dialog",
-                    "aria-label": V.intl.string(V.t.Utlwvi),
+                    "aria-label": G.intl.string(G.t.Utlwvi),
                     children: n
                         ? (0, r.jsxs)("div", {
                               className: F.jP,
                               style: {
-                                  width: null == ea ? void 0 : ea,
+                                  width: null == ei ? void 0 : ei,
                                   [Q]: 0,
                               },
-                              ref: ei,
+                              ref: er,
                               children: [
                                   (0, r.jsx)("div", {
                                       className: F.Di,
-                                      onMouseDown: es,
+                                      onMouseDown: ea,
                                       style: {
-                                          [eR]: -2,
+                                          [eC]: -2,
                                       },
                                   }),
                                   (0, r.jsxs)("div", {
                                       className: F.FG,
                                       children: [
-                                          eb
+                                          eg
                                               ? (0, r.jsx)("nav", {
                                                     className: F.C$,
                                                     children: (0, r.jsxs)("div", {
                                                         className: F.CT,
                                                         role: "tablist",
-                                                        "aria-label": V.intl.string(V.t["2j4Vgd"]),
+                                                        "aria-label": G.intl.string(G.t["2j4Vgd"]),
                                                         children: [
-                                                            em
-                                                                ? (0, r.jsxs)(r.Fragment, {
-                                                                      children: [ex, eP, eD],
-                                                                  })
-                                                                : (0, r.jsxs)(r.Fragment, {
-                                                                      children: [eP, eD, ex],
-                                                                  }),
-                                                            ef &&
-                                                                eN &&
-                                                                (0, r.jsx)(X, {
-                                                                    id: k.N6,
-                                                                    "aria-controls": k.AA,
+                                                            ew,
+                                                            eR,
+                                                            eP,
+                                                            ed &&
+                                                                eT &&
+                                                                (0, r.jsx)(q, {
+                                                                    id: j.N6,
+                                                                    "aria-controls": j.AA,
                                                                     "aria-selected": eo === L.kx.SOUNDBOARD,
                                                                     isActive: eo === L.kx.SOUNDBOARD,
                                                                     viewType: L.kx.SOUNDBOARD,
                                                                     children: (0, r.jsxs)("div", {
                                                                         className: F.sd,
                                                                         children: [
-                                                                            V.intl.string(V.t.EHlAMc),
-                                                                            null != eA &&
+                                                                            G.intl.string(G.t.EHlAMc),
+                                                                            null != eb &&
                                                                                 (0, r.jsx)(_.LpS, {
-                                                                                    text: V.intl.string(V.t.y2b7CA),
+                                                                                    text: G.intl.string(G.t.y2b7CA),
                                                                                 }),
                                                                         ],
                                                                     }),
@@ -451,55 +443,55 @@ function Q(e) {
                                                     }),
                                                 })
                                               : null,
-                                          eo === L.kx.STICKER && eE
-                                              ? (0, r.jsx)(R.A, {
-                                                    isLoading: ed,
-                                                    channel: W,
-                                                    containerWidth: ea,
-                                                    onSelectSticker: H,
-                                                    closePopout: eO,
+                                          eo === L.kx.STICKER && em
+                                              ? (0, r.jsx)(N.A, {
+                                                    isLoading: eu,
+                                                    channel: Y,
+                                                    containerWidth: ei,
+                                                    onSelectSticker: B,
+                                                    closePopout: ey,
                                                     ref: (e) => {
-                                                        er.current = e;
+                                                        en.current = e;
                                                     },
                                                 })
                                               : null,
-                                          eo === L.kx.GIF && eg
-                                              ? (0, r.jsx)(A.A, {
+                                          eo === L.kx.GIF && eh
+                                              ? (0, r.jsx)(O.A, {
                                                     onSelectGIF: w,
                                                     hideFavorites: h,
                                                     persistSearch: !0,
                                                 })
                                               : null,
                                           eo === L.kx.EMOJI
-                                              ? (0, r.jsx)(O.A, {
+                                              ? (0, r.jsx)(b.A, {
                                                     hasTabWrapper: !0,
-                                                    containerContext: eb
-                                                        ? O.f.TABS_EXPRESSION_PICKER
-                                                        : O.f.NO_TABS_EXPRESSION_PICKER,
+                                                    containerContext: eg
+                                                        ? b.f.TABS_EXPRESSION_PICKER
+                                                        : b.f.NO_TABS_EXPRESSION_PICKER,
                                                     persistSearch: !0,
-                                                    channel: W,
-                                                    containerWidth: ea,
-                                                    emojiSize: null != ea && ea < q ? k.as.MEDIUM : k.as.LARGE,
-                                                    pickerIntention: U.b_.CHAT,
-                                                    closePopout: eO,
-                                                    onSelectEmoji: B,
-                                                    onSelectSoundmoji: eT,
+                                                    channel: Y,
+                                                    containerWidth: ei,
+                                                    emojiSize: null != ei && ei < z ? j.as.MEDIUM : j.as.LARGE,
+                                                    pickerIntention: k.b_.CHAT,
+                                                    closePopout: ey,
+                                                    onSelectEmoji: V,
+                                                    onSelectSoundmoji: eI,
                                                     ref: (e) => {
-                                                        er.current = e;
+                                                        en.current = e;
                                                     },
                                                     shouldShowSoundmojiInEmojiPicker:
-                                                        (null == (t = K.soundmoji) ? void 0 : t.allowSending) === !0,
+                                                        (null == (t = W.soundmoji) ? void 0 : t.allowSending) === !0,
                                                 })
                                               : null,
                                           eo === L.kx.SOUNDBOARD
                                               ? (0, r.jsx)("div", {
                                                     className: F.z,
-                                                    children: (0, r.jsx)(T.A, {
-                                                        guildId: W.guild_id,
-                                                        channel: W,
-                                                        containerWidth: ea,
-                                                        onClose: eO,
-                                                        onSelect: eC,
+                                                    children: (0, r.jsx)(S.A, {
+                                                        guildId: Y.guild_id,
+                                                        channel: Y,
+                                                        containerWidth: ei,
+                                                        onClose: ey,
+                                                        onSelect: eS,
                                                         analyticsSource: "expression-picker",
                                                         renderHeader: (e) =>
                                                             (0, r.jsx)("div", {
@@ -521,4 +513,4 @@ function Q(e) {
         }),
     });
 }
-let $ = i.memo(Q);
+let X = i.memo(Q);

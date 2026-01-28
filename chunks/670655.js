@@ -1,25 +1,23 @@
 n.d(t, {
-    A: () => T,
+    A: () => I,
 });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(158954),
+    o = n.n(a),
+    s = n(158954),
     l = n(311907),
     c = n(697744),
-    u = n(435371),
-    d = n(795816),
-    f = n(211401),
-    p = n(989837),
-    _ = n(500049),
-    h = n(184761),
-    m = n(598071),
-    g = n(60809),
-    E = n(985018),
-    b = n(816695);
+    u = n(795816),
+    d = n(211401),
+    f = n(989837),
+    p = n(500049),
+    _ = n(598071),
+    h = n(60809),
+    m = n(985018),
+    g = n(816695);
 
-function y(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +31,7 @@ function y(e, t, n) {
     );
 }
 
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,13 +42,13 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
 
-function A(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -63,87 +61,80 @@ function A(e, t) {
     return n;
 }
 
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = i.forwardRef(function (e, t) {
+let v = i.forwardRef(function (e, t) {
     let { type: n, channelId: a } = e,
-        { tooltipsWithKeybinds: y } = h.C.useConfig({
-            location: "ChannelAppLauncherButton",
-        }),
-        A = (0, l.bG)([p.A], () => p.A.shouldShowPopup() && p.A.activeViewType() === n && p.A.activeChannelId() === a),
-        { Component: S, events: I, play: T } = (0, c.c)(),
-        C = i.useContext(m.Ay);
+        E = (0, l.bG)([f.A], () => f.A.shouldShowPopup() && f.A.activeViewType() === n && f.A.activeChannelId() === a),
+        { Component: b, events: v, play: A } = (0, c.c)(),
+        I = i.useContext(_.Ay);
     i.useEffect(() => {
         let e = () => {
-            I.onMouseEnter();
+            v.onMouseEnter();
         };
         return (
-            C.on("command-sentinel-typed", e),
+            I.on("command-sentinel-typed", e),
             () => {
-                C.off("command-sentinel-typed", e);
+                I.off("command-sentinel-typed", e);
             }
         );
-    }, [C, I]);
-    let N = i.useCallback(() => {
-            A ? f.k(_.Se.DISMISSED) : (f.R(_.s4.TEXT, n, void 0, a), d.LK()), T();
-        }, [A, n, a, T]),
-        R = (0, r.jsx)(S, {
+    }, [I, v]);
+    let S = i.useCallback(() => {
+            E ? d.k(p.Se.DISMISSED) : (d.R(p.s4.TEXT, n, void 0, a), u.LK()), A();
+        }, [E, n, a, A]),
+        T = (0, r.jsx)(b, {
             size: "refresh_sm",
             color: "currentColor",
         });
     return (0, r.jsx)("div", {
-        className: s()(b.UD, g.KG),
+        className: o()(g.UD, h.KG),
         ref: t,
-        children: (0, r.jsx)(u.m_, {
-            text: E.intl.string(E.t.dHDxOF),
-            shouldShow: y,
-            children: (0, r.jsx)(
-                o.DUT,
-                v(
-                    O(
-                        {
-                            tabIndex: 0,
-                            className: s()(b.x6, {
-                                [b.rK]: A,
-                            }),
-                            onClick: N,
-                            "aria-label": E.intl.string(E.t.erHFxI),
-                            "aria-expanded": A,
-                            "aria-haspopup": "dialog",
-                            focusProps: {
-                                offset: {
-                                    top: 4,
-                                    bottom: 4,
-                                    left: -4,
-                                    right: -4,
-                                },
+        children: (0, r.jsx)(
+            s.DUT,
+            O(
+                y(
+                    {
+                        tabIndex: 0,
+                        className: o()(g.x6, {
+                            [g.rK]: E,
+                        }),
+                        onClick: S,
+                        "aria-label": m.intl.string(m.t.erHFxI),
+                        "aria-expanded": E,
+                        "aria-haspopup": "dialog",
+                        focusProps: {
+                            offset: {
+                                top: 4,
+                                bottom: 4,
+                                left: -4,
+                                right: -4,
                             },
                         },
-                        I,
-                    ),
-                    {
-                        children: R,
                     },
+                    v,
                 ),
+                {
+                    children: T,
+                },
             ),
-        }),
+        ),
     });
 });
 
-function I(e) {
+function A(e) {
     let { type: t, channelId: n } = e;
-    return (0, r.jsx)(S, {
+    return (0, r.jsx)(v, {
         type: t,
         channelId: n,
     });
 }
-let T = i.memo(I);
+let I = i.memo(A);

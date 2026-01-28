@@ -6,13 +6,12 @@ n.d(t, {
 var r,
     l = n(827734),
     i = n(397927),
-    a = n(833349),
-    s = n(47167),
+    s = n(833349),
+    a = n(47167),
     o = n(994500),
     c = n(287809),
-    u = n(184761),
-    d = n(652215),
-    f = n(985018),
+    u = n(652215),
+    d = n(985018),
     p =
         (((r = {}).UPLOAD_A_FILE = "UPLOAD_A_FILE"),
         (r.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE"),
@@ -24,7 +23,6 @@ var r,
         (r.CLIPS = "CLIPS"),
         (r.POLL = "POLL"),
         (r.ACTIVITY = "ACTIVITY"),
-        (r.APP_LAUNCHER = "APP_LAUNCHER"),
         (r.SCHEDULED_MESSAGE = "SCHEDULED_MESSAGE"),
         (r.SUMMARIZE_THREAD = "SUMMARIZE_THREAD"),
         r);
@@ -36,123 +34,112 @@ function h(e) {
             useSlate: r,
             canUseApplicationCommands: p,
             hasClips: h,
-            channel: b,
+            channel: f,
             activities: g,
             newClipsCount: m,
-            canPostPolls: A,
-            canLaunchActivities: y,
-            appContext: O,
-            canSendScheduledMessages: j,
-            canSummarizeThreads: v,
-            showAppLauncher: x,
+            canPostPolls: b,
+            canLaunchActivities: A,
+            appContext: y,
+            canSendScheduledMessages: _,
+            canSummarizeThreads: O,
         } = e,
-        E = [];
-    t &&
-        (E.push({
-            type: "UPLOAD_A_FILE",
-            icon: i.H8$,
-            display: f.intl.string(f.t["d3+iYs"]),
-        }),
-        E.push({
-            type: "UPLOAD_TEXT_AS_FILE",
-            icon: i.H8$,
-            display: f.intl.string(f.t["G9s+EM"]),
-        })),
+        j = [];
+    return (
+        t &&
+            (j.push({
+                type: "UPLOAD_A_FILE",
+                icon: i.H8$,
+                display: d.intl.string(d.t["d3+iYs"]),
+            }),
+            j.push({
+                type: "UPLOAD_TEXT_AS_FILE",
+                icon: i.H8$,
+                display: d.intl.string(d.t["G9s+EM"]),
+            })),
         h &&
             t &&
-            O !== d.BRT.POPOUT &&
-            E.push({
+            y !== u.BRT.POPOUT &&
+            j.push({
                 type: "CLIPS",
                 icon: i.xgA,
-                display: f.intl.string(f.t.o034cv),
+                display: d.intl.string(d.t.o034cv),
                 badgeVal: m,
                 badgeColor: l.A.colors.BACKGROUND_BRAND.css,
             }),
         n &&
-            E.push({
+            j.push({
                 type: "CREATE_THREAD",
                 icon: i.G_k,
-                display: f.intl.string(f.t.rBIGBL),
+                display: d.intl.string(d.t.rBIGBL),
             }),
-        A &&
-            E.push({
+        b &&
+            j.push({
                 type: "POLL",
                 icon: i.YRe,
-                display: f.intl.string(f.t.Flr51u),
-            });
-    let { renameAppsToAppCommandsInOverflow: _, moveAppsEntrypointToOverflow: C } = u.C.getConfig({
-        location: "getChannelAttachOptions",
-    });
-    return (
-        C
-            ? x &&
-              E.push({
-                  type: "APP_LAUNCHER",
-                  icon: i.k9F,
-                  display: f.intl.string(f.t.nqswKn),
-              })
-            : r &&
-              p &&
-              E.push({
-                  type: "SLASH_COMMAND",
-                  icon: i.k9F,
-                  display: f.intl.string(_ ? f.t["5Y0Fam"] : f.t.Bbvp6G),
-              }),
-        y &&
-            E.push({
+                display: d.intl.string(d.t.Flr51u),
+            }),
+        r &&
+            p &&
+            j.push({
+                type: "SLASH_COMMAND",
+                icon: i.k9F,
+                display: d.intl.string(d.t.Bbvp6G),
+            }),
+        A &&
+            j.push({
                 type: "ACTIVITY",
                 icon: i.bxf,
-                display: f.intl.string(f.t["16Lfrb"]),
+                display: d.intl.string(d.t["16Lfrb"]),
             }),
         g.forEach((e) => {
-            !(0, a.A)(e, d.jUm.EMBEDDED) &&
-                (e.type === d.$pd.PLAYING &&
-                    (0, a.A)(e, d.jUm.JOIN) &&
-                    E.push({
+            !(0, s.A)(e, u.jUm.EMBEDDED) &&
+                (e.type === u.$pd.PLAYING &&
+                    (0, s.A)(e, u.jUm.JOIN) &&
+                    j.push({
                         type: "INVITE_TO_GAME",
                         icon: i.LVO,
-                        display: f.intl.formatToPlainString(f.t["KHLo+F"], {
-                            channel: (0, s.m1)(b, c.default, o.A, !0),
+                        display: d.intl.formatToPlainString(d.t["KHLo+F"], {
+                            channel: (0, a.m1)(f, c.default, o.A, !0),
                             game: null != e ? e.name : "",
                         }),
                         activity: e,
                     }),
-                e.type === d.$pd.LISTENING &&
-                    (0, a.A)(e, d.jUm.SYNC) &&
-                    E.push({
+                e.type === u.$pd.LISTENING &&
+                    (0, s.A)(e, u.jUm.SYNC) &&
+                    j.push({
                         type: "INVITE_TO_LISTEN",
                         icon: i.J2m,
-                        display: f.intl.formatToPlainString(f.t.I479px, {
-                            channel: (0, s.m1)(b, c.default, o.A, !0),
+                        display: d.intl.formatToPlainString(d.t.I479px, {
+                            channel: (0, a.m1)(f, c.default, o.A, !0),
                             name: null != e ? e.name : "",
                         }),
                         activity: e,
                     }),
-                e.type === d.$pd.WATCHING &&
-                    (0, a.A)(e, d.jUm.SYNC) &&
-                    E.push({
+                e.type === u.$pd.WATCHING &&
+                    (0, s.A)(e, u.jUm.SYNC) &&
+                    j.push({
                         type: "INVITE_TO_WATCH",
                         icon: i.bMW,
-                        display: f.intl.formatToPlainString(f.t["EvCP/g"], {
-                            channel: (0, s.m1)(b, c.default, o.A, !0),
+                        display: d.intl.formatToPlainString(d.t["EvCP/g"], {
+                            channel: (0, a.m1)(f, c.default, o.A, !0),
                             name: null != e ? e.name : "",
                         }),
                         activity: e,
                     }));
         }),
-        j &&
-            E.push({
+        _ &&
+            j.push({
                 type: "SCHEDULED_MESSAGE",
                 icon: i.O4,
-                display: f.intl.string(f.t["3+ii4F"]),
+                display: d.intl.string(d.t["3+ii4F"]),
             }),
-        b.isThread() &&
-            v &&
-            E.push({
+        f.isThread() &&
+            O &&
+            j.push({
                 type: "SUMMARIZE_THREAD",
                 icon: i.Dud,
-                display: f.intl.string(f.t.EXfguE),
+                display: d.intl.string(d.t.EXfguE),
             }),
-        E
+        j
     );
 }
