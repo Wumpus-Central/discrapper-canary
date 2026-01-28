@@ -1,5 +1,5 @@
 n.d(t, {
-    Ym: () => o,
+    Ym: () => s,
     f5: () => l,
     yW: () => c,
 }),
@@ -9,7 +9,7 @@ var r = n(64700),
     i = n(575593),
     a = n(985018);
 
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function s(e, t, n) {
         e
     );
 }
-class o {
+class s {
     get firstAvatarDecoration() {
         return this.getFirstItemByType(i.R.AVATAR_DECORATION);
     }
@@ -44,30 +44,27 @@ class o {
         }, new Map());
     }
     constructor(e) {
-        s(this, "itemsByTypes", void 0), (this.itemsByTypes = this.sortByTypes(e));
+        o(this, "itemsByTypes", void 0), (this.itemsByTypes = this.sortByTypes(e));
     }
 }
-let l = (e) => {
-        let {
-            firstProfileEffect: t,
-            firstAvatarDecoration: n,
-            firstNameplate: i,
-        } = r.useMemo(() => new o(e.items), [e]);
-        return {
-            firstProfileEffect: t,
-            firstAvatarDecoration: n,
-            firstNameplate: i,
-        };
-    },
+let l = (e) =>
+        r.useMemo(() => {
+            let t = new s(e.items);
+            return {
+                firstProfileEffect: t.firstProfileEffect,
+                firstAvatarDecoration: t.firstAvatarDecoration,
+                firstNameplate: t.firstNameplate,
+            };
+        }, [e]),
     c = (e) => {
         let t = a.intl.string(a.t["7v0T9P"]),
             n = a.intl.string(a.t.wR5wOo),
             r = a.intl.string(a.t.x5CoXR);
         if (null != e.bundledProducts) {
-            var i, s, o;
+            var i, o, s;
             e.bundledProducts.length > 0 && (t = null == (i = e.bundledProducts[0]) ? void 0 : i.name),
-                e.bundledProducts.length > 1 && (n = null == (s = e.bundledProducts[1]) ? void 0 : s.name),
-                e.bundledProducts.length > 2 && (r = null == (o = e.bundledProducts[2]) ? void 0 : o.name);
+                e.bundledProducts.length > 1 && (n = null == (o = e.bundledProducts[1]) ? void 0 : o.name),
+                e.bundledProducts.length > 2 && (r = null == (s = e.bundledProducts[2]) ? void 0 : s.name);
         }
         return {
             itemOneName: t,
