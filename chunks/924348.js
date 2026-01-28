@@ -8,6 +8,7 @@ e.exports = {
     jh: "defaultKeybindGroup__740f2",
     yZ: "defaultKeybind__740f2",
     DM: "defaultKeybindShortcutGroup__740f2",
+    LE: "shortcut__740f2",
     Ly: "browserNotice__740f2",
     Qo: "systemServiceUpsell__740f2",
     OQ: "ctaContainer__740f2",

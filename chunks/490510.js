@@ -508,6 +508,7 @@ class M extends s.PureComponent {
                                             className: G.DM,
                                             children: (0, i.jsx)(d.e7I, {
                                                 shortcut: h.z.binds["0"],
+                                                className: G.LE,
                                             }),
                                         }),
                                     ],
@@ -548,6 +549,7 @@ class M extends s.PureComponent {
                                                                                         d.e7I,
                                                                                         {
                                                                                             shortcut: e,
+                                                                                            className: G.LE,
                                                                                         },
                                                                                         e,
                                                                                     ),
