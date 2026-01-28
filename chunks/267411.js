@@ -1,55 +1,36 @@
-n.d(t, {
-    Hv: () => p,
-    Lc: () => h,
-    o7: () => f,
-    zs: () => _,
+n.d(r, {
+    zs: () => l,
 }),
-    n(65821);
-var r = n(214958),
-    i = n.n(r),
-    a = n(118356),
-    o = n(396574);
-let s = new a.Vy("LibDaveManager"),
-    l = null,
-    c = null,
-    u = null,
-    d = {
+    n(65821),
+    n(214958);
+var t = n(118356);
+n(396574);
+let a = new t.Vy("LibDaveManager"),
+    o = null,
+    i = {
         onRuntimeInitialized: () => {
-            s.info("DAVE loaded");
+            a.info("DAVE loaded");
         },
     };
 
-function f() {
-    return ("Firefox" !== i().name || !(o.It < 142)) && o.PF && o.zU;
-}
-
-function p() {
-    return "object" == typeof WebAssembly;
-}
-
-function _() {
-    return null != l
-        ? l
-        : (l = new Promise((e, t) => {
+function l() {
+    return null != o
+        ? o
+        : (o = new Promise((e, r) => {
               Promise.all([n.e("23484"), n.e("42664"), n.e("20074")])
                   .then(n.bind(n, 590641))
                   .then((n) => {
-                      let { DaveModuleFactory: r } = n;
-                      r(d)
-                          .then((t) => {
-                              s.info("Successfully initialized DAVE"), (c = t), e(t);
+                      let { DaveModuleFactory: t } = n;
+                      t(i)
+                          .then((r) => {
+                              a.info("Successfully initialized DAVE"), e(r);
                           })
                           .catch((e) => {
-                              s.error("Failed to initialize DAVE", e), t(e);
+                              a.error("Failed to initialize DAVE", e), r(e);
                           });
                   })
                   .catch((e) => {
-                      s.error("Failed to load DAVE module", e), t(e);
+                      a.error("Failed to load DAVE module", e), r(e);
                   });
           }));
-}
-
-function h() {
-    if (null == c) throw Error("DAVE module not loaded");
-    return null == u && (u = new c.TransientKeys()), u;
 }
