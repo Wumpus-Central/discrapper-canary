@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => u,
+    A: () => d,
 }),
     n(896048),
     n(801460),
@@ -19,49 +19,48 @@ n.d(t, {
     n(65162);
 var a = n(627968),
     l = n(64700),
-    i = n(18051),
-    r = n(158954),
+    r = n(18051),
+    i = n(158954),
     s = n(827734),
-    o = n(783878),
-    c = n(732955),
-    d = n(397927);
+    o = n(732955),
+    c = n(397927);
 
-function u() {
-    let e = Object.keys(i).map((e) =>
+function d() {
+    let e = Object.keys(r).map((e) =>
         (0, a.jsx)(
-            h,
+            p,
             {
                 riveName: e,
             },
             e,
         ),
     );
-    return (0, a.jsx)(r.ArX, {
+    return (0, a.jsx)(i.ArX, {
         style: {
             maxHeight: "100%",
         },
-        children: (0, a.jsxs)(r.BJc, {
+        children: (0, a.jsxs)(i.BJc, {
             gap: 24,
             padding: 8,
             style: {
                 boxSizing: "border-box",
             },
             children: [
-                (0, a.jsx)(r.DZT, {
+                (0, a.jsx)(i.DZT, {
                     variant: "heading-lg/medium",
                     children: "Rive Inspector",
                 }),
-                (0, a.jsx)(r.EYj, {
+                (0, a.jsx)(i.EYj, {
                     variant: "text-md/normal",
                     children:
                         "Upload a .riv file to view the animation and interact with its data binding configuration.",
                 }),
-                (0, a.jsx)(m, {}),
-                (0, a.jsx)(r.DZT, {
+                (0, a.jsx)(u, {}),
+                (0, a.jsx)(i.DZT, {
                     variant: "heading-lg/medium",
                     children: "Rive Overrides",
                 }),
-                (0, a.jsx)(r.EYj, {
+                (0, a.jsx)(i.EYj, {
                     variant: "text-md/normal",
                     children:
                         "Upload a .riv file to replace an existing Rive animation in the app with the new one. Useful for previewing updated versions of existing animations before uploading them via the Rive pipeline.",
@@ -72,27 +71,27 @@ function u() {
     });
 }
 
-function m() {
+function u() {
     let [e, t] = l.useState(null),
-        [n, i] = l.useState(null),
+        [n, r] = l.useState(null),
         [s, o] = l.useState(null),
-        [c, u] = l.useState([]),
-        m = l.useRef(null),
-        [f, x] = l.useState(400),
-        [b, g] = l.useState(400),
+        [d, u] = l.useState([]),
+        h = l.useRef(null),
+        [x, g] = l.useState(400),
+        [f, b] = l.useState(400),
         v = l.useCallback(() => {
             setTimeout(() => {
                 var e, t, n, a;
-                o(null != (e = null == (n = m.current) ? void 0 : n.getProperties()) ? e : {}),
-                    u(null != (t = null == (a = m.current) ? void 0 : a.getArtboards()) ? t : []),
-                    i({});
+                o(null != (e = null == (n = h.current) ? void 0 : n.getProperties()) ? e : {}),
+                    u(null != (t = null == (a = h.current) ? void 0 : a.getArtboards()) ? t : []),
+                    r({});
             }, 1e3);
         }, []),
         j = l.useCallback(
             (e, t) => {
                 null != n &&
-                    i((n) => {
-                        var a, l, i;
+                    r((n) => {
+                        var a, l, r;
                         return (
                             (l = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
@@ -119,7 +118,7 @@ function m() {
                                 }
                                 return e;
                             })({}, n)),
-                            (i = i =
+                            (r = r =
                                 {
                                     [e]: {
                                         type: null == s || null == (a = s[e]) ? void 0 : a.type,
@@ -127,7 +126,7 @@ function m() {
                                     },
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
+                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(r))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -135,8 +134,8 @@ function m() {
                                           n.push.apply(n, a);
                                       }
                                       return n;
-                                  })(Object(i)).forEach(function (e) {
-                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
+                                  })(Object(r)).forEach(function (e) {
+                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(r, e));
                                   }),
                             l
                         );
@@ -144,76 +143,76 @@ function m() {
             },
             [s, n],
         ),
-        y = l.useCallback((e) => {
-            o(null), i(null), t(e);
+        _ = l.useCallback((e) => {
+            o(null), r(null), t(e);
         }, []);
-    return (0, a.jsxs)(r.BJc, {
+    return (0, a.jsxs)(i.BJc, {
         gap: 16,
         children: [
-            (0, a.jsx)(h, {
+            (0, a.jsx)(p, {
                 riveName: "Rive inspector",
-                onRiveLoad: y,
+                onRiveLoad: _,
             }),
             null != e &&
                 (0, a.jsx)("div", {
                     style: {
-                        width: f,
-                        height: b,
+                        width: x,
+                        height: f,
                     },
-                    children: (0, a.jsx)(d._7m, {
+                    children: (0, a.jsx)(c._7m, {
                         src: e,
-                        ref: m,
+                        ref: h,
                         onLoad: v,
                         dynamicDataBinding: null != n ? n : {},
                     }),
                 }),
-            null != e && null == n ? (0, a.jsx)(r.y$y, {}) : null,
+            null != e && null == n ? (0, a.jsx)(i.y$y, {}) : null,
             null != n &&
-                (0, a.jsxs)(r.BJc, {
+                (0, a.jsxs)(i.BJc, {
                     children: [
-                        (0, a.jsxs)(r.BJc, {
+                        (0, a.jsxs)(i.BJc, {
                             gap: 8,
                             children: [
-                                (0, a.jsx)(r.DZT, {
+                                (0, a.jsx)(i.DZT, {
                                     variant: "heading-lg/medium",
                                     children: "Dimensions",
                                 }),
-                                (0, a.jsx)(d.ksK, {
+                                (0, a.jsx)(c.ksK, {
                                     type: "number",
                                     label: "width",
-                                    value: f.toString(),
-                                    onChange: (e) => x(parseInt(e)),
+                                    value: x.toString(),
+                                    onChange: (e) => g(parseInt(e)),
                                 }),
-                                (0, a.jsx)(d.ksK, {
+                                (0, a.jsx)(c.ksK, {
                                     type: "number",
                                     label: "height",
-                                    value: b.toString(),
-                                    onChange: (e) => g(parseInt(e)),
+                                    value: f.toString(),
+                                    onChange: (e) => b(parseInt(e)),
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(r.BJc, {
+                        (0, a.jsxs)(i.BJc, {
                             gap: 8,
                             children: [
-                                (0, a.jsx)(r.DZT, {
+                                (0, a.jsx)(i.DZT, {
                                     variant: "heading-lg/medium",
                                     children: "Data Binding",
                                 }),
                                 Object.keys(null != s ? s : {}).map((e) => {
-                                    var t, l, i, r;
+                                    var t, l, r, i;
                                     return (0, a.jsx)(
-                                        p,
+                                        m,
                                         {
                                             property: e,
                                             type: null == s || null == (l = s[e]) ? void 0 : l.type,
                                             value:
-                                                null != (t = null == n || null == (i = n[e]) ? void 0 : i.value)
+                                                null != (t = null == n || null == (r = n[e]) ? void 0 : r.value)
                                                     ? t
-                                                    : null == s || null == (r = s[e])
+                                                    : null == s || null == (i = s[e])
                                                       ? void 0
-                                                      : r.value,
+                                                      : i.value,
                                             onChange: (t) => j(e, t),
-                                            artboards: c,
+                                            artboards: d,
                                         },
                                         e,
                                     );
@@ -226,44 +225,44 @@ function m() {
     });
 }
 
-function p(e) {
-    let { property: t, type: n, value: l, onChange: i, artboards: c } = e;
+function m(e) {
+    let { property: t, type: n, value: l, onChange: r, artboards: o } = e;
     return "string" === n
-        ? (0, a.jsx)(d.ksK, {
+        ? (0, a.jsx)(c.ksK, {
               label: t,
               value: l,
-              onChange: (e) => i(e),
+              onChange: (e) => r(e),
           })
         : "number" === n
-          ? (0, a.jsx)(d.ksK, {
+          ? (0, a.jsx)(c.ksK, {
                 type: "number",
                 label: t,
                 value: l,
-                onChange: (e) => i(parseInt(e)),
+                onChange: (e) => r(parseInt(e)),
             })
           : "boolean" === n
-            ? (0, a.jsx)(r.dOG, {
+            ? (0, a.jsx)(i.dOG, {
                   label: t,
                   checked: l,
-                  onChange: (e) => i(e),
+                  onChange: (e) => r(e),
               })
             : "trigger" === n
-              ? (0, a.jsx)(r.$nd, {
+              ? (0, a.jsx)(i.$nd, {
                     text: "Trigger ".concat(t),
-                    onClick: () => i(Number.isSafeInteger(l) ? l + 1 : 1),
+                    onClick: () => r(Number.isSafeInteger(l) ? l + 1 : 1),
                 })
               : "image" === n
-                ? (0, a.jsx)(d.ksK, {
+                ? (0, a.jsx)(c.ksK, {
                       label: t,
                       value: l,
-                      onChange: (e) => i(e),
+                      onChange: (e) => r(e),
                   })
                 : "color" === n
-                  ? (0, a.jsx)(o.Z, {
+                  ? (0, a.jsx)(c.ZiE, {
                         selectionMode: "single",
                         label: t,
                         value: l,
-                        onSelectionChange: (e) => i(e),
+                        onSelectionChange: (e) => r(e),
                         closeOnSelect: !0,
                         placeholder: "Select a color...",
                         options: Object.entries(s.A.colors).map((e) => {
@@ -276,14 +275,14 @@ function p(e) {
                         }),
                     })
                   : "artboard" === n
-                    ? (0, a.jsx)(o.Z, {
+                    ? (0, a.jsx)(c.ZiE, {
                           selectionMode: "single",
                           label: t,
                           value: l,
-                          onSelectionChange: (e) => i(e),
+                          onSelectionChange: (e) => r(e),
                           closeOnSelect: !0,
                           placeholder: "Select an artboard...",
-                          options: c.map((e) => ({
+                          options: o.map((e) => ({
                               label: e,
                               value: e,
                               id: e,
@@ -292,22 +291,22 @@ function p(e) {
                     : null;
 }
 
-function h(e) {
+function p(e) {
     var t;
     let { riveName: n, onRiveLoad: s } = e,
-        o = null == (t = i[n]) ? void 0 : t.riveSrc,
-        u = null == o,
+        d = null == (t = r[n]) ? void 0 : t.riveSrc,
+        u = null == d,
         m = l.useRef(null),
-        p = (0, d.GyQ)(o);
+        p = (0, c.GyQ)(d);
     return (0, a.jsxs)(
-        r.BJc,
+        i.BJc,
         {
             gap: 8,
             children: [
                 (0, a.jsx)("label", {
                     children: n,
                 }),
-                (0, a.jsxs)(r.BJc, {
+                (0, a.jsxs)(i.BJc, {
                     justify: "space-between",
                     direction: "horizontal",
                     align: "center",
@@ -323,7 +322,7 @@ function h(e) {
                                 (a.onload = (e) => {
                                     var t;
                                     let n = null == (t = e.target) ? void 0 : t.result;
-                                    null != o && (0, d.DSP)(o, n),
+                                    null != d && (0, c.DSP)(d, n),
                                         null == s ||
                                             s(
                                                 "data:application/octet-stream;base64,".concat(
@@ -340,14 +339,14 @@ function h(e) {
                             },
                             ref: m,
                         }),
-                        (0, a.jsx)(c.K0, {
+                        (0, a.jsx)(o.K0, {
                             "aria-label": "Clear override for ".concat(n),
                             onClick: () => {
                                 null != m.current && (m.current.value = ""),
-                                    null != o && (0, d.DSP)(o, null),
+                                    null != d && (0, c.DSP)(d, null),
                                     null == s || s(null);
                             },
-                            icon: d.ucK,
+                            icon: c.ucK,
                             variant: "critical-primary",
                             size: "sm",
                             disabled: null == p && !u,

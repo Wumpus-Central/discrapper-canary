@@ -1,15 +1,14 @@
-e.d(n, {
-    A: () => r,
-});
-
 function r() {
     return (r = Object.assign
         ? Object.assign.bind()
-        : function (t) {
-              for (var n = 1; n < arguments.length; n++) {
-                  var e = arguments[n];
-                  for (var r in e) ({}).hasOwnProperty.call(e, r) && (t[r] = e[r]);
+        : function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                  var n = arguments[t];
+                  for (var r in n) ({}).hasOwnProperty.call(n, r) && (e[r] = n[r]);
               }
-              return t;
+              return e;
           }).apply(null, arguments);
 }
+n.d(t, {
+    A: () => r,
+});
