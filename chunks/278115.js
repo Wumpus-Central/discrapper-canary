@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => V,
+    A: () => F,
 }),
     n(228524),
     n(896048),
@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(108531),
+    o = n.n(a),
+    s = n(353709),
     l = n(172218),
     c = n(311907),
     u = n(397927),
@@ -20,19 +20,19 @@ var r = n(627968),
     m = n(363487),
     g = n(263215),
     E = n(998418),
-    b = n(828162),
-    y = n(71393),
+    y = n(828162),
+    b = n(71393),
     O = n(975571),
-    A = n(987144),
-    v = n(652215),
-    S = n(800007),
-    I = n(568065),
+    v = n(987144),
+    A = n(652215),
+    I = n(800007),
+    S = n(568065),
     T = n(985018),
     C = n(294726),
     N = n(333354),
-    R = n(826823);
+    w = n(826823);
 
-function w(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function P(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -76,7 +76,7 @@ function D(e, t) {
     return n;
 }
 
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -88,7 +88,7 @@ function x(e, t) {
     );
 }
 
-function L(e) {
+function x(e) {
     let {
             guildId: t,
             activeStatus: n,
@@ -98,113 +98,136 @@ function L(e) {
             costDecorator: g,
             staticImageUrl: E,
             animatedImageUrl: O,
-            powerup: S,
-            isNew: N,
-            onClose: w,
+            powerup: N,
+            isNew: R,
+            onClose: D,
         } = e,
-        { analyticsLocations: D } = (0, p.Ay)(),
-        L = n !== I.b_.INACTIVE,
+        { analyticsLocations: x } = (0, p.Ay)(),
+        M = n !== S.b_.INACTIVE,
         j = (0, m.A)(t),
-        M = (0, c.bG)([d.A], () => d.A.useReducedMotion),
-        [k, U] = i.useState(!1),
-        [G, V] = i.useState(!1),
-        F = G,
-        B = G && null != O && "" !== O && !M ? O : E,
-        H = i.useCallback(() => {
-            let e = y.A.getGuild(t);
+        k = (0, c.bG)([d.A], () => d.A.useReducedMotion),
+        U = i.useRef(null),
+        [G, F] = i.useState(!1),
+        [V, B] = i.useState(!1),
+        H = V,
+        Y = V && null != O && "" !== O && !k ? O : E,
+        W = i.useCallback(() => {
+            let e = b.A.getGuild(t);
             null != e &&
-                (0, A.g)({
+                (0, v.g)({
                     analyticsLocation: {
-                        page: v.liQ.GUILD_POWERUPS_MARKETING,
-                        section: v.JJy.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
+                        page: A.liQ.GUILD_POWERUPS_MARKETING,
+                        section: A.JJy.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
                     },
                     numberOfBoostsToAdd: 1,
-                    analyticsLocations: D,
+                    analyticsLocations: x,
                     guild: e,
                 });
-        }, [t, D]),
-        Y = i.useCallback(() => {
-            w(), (0, b.A)(t, f.A.GUILD_POWERUPS_MARKETING, S.skuId);
-        }, [t, S.skuId, w]),
-        W = {
+        }, [t, x]),
+        K = i.useCallback(() => {
+            D(), (0, y.A)(t, f.A.GUILD_POWERUPS_MARKETING, N.skuId);
+        }, [t, N.skuId, D]),
+        z = {
             tension: 400,
             friction: 30,
         },
-        K = (0, u.zhh)({
-            scale: F ? 0.85 : 1,
-            y: F ? -32 : 0,
-            config: W,
-        }),
-        z = (0, u.zhh)({
-            y: F ? -32 : 0,
-            config: W,
-        }),
         q = (0, u.zhh)({
-            opacity: +!!F,
-            transform: F ? "translateY(0)" : "translateY(16px)",
-            config: W,
+            scale: H ? 0.85 : 1,
+            y: H ? -32 : 0,
+            config: z,
         }),
-        X = i.useCallback((e) => {
-            e && U(!0);
+        Z = (0, u.zhh)({
+            scale: H ? 0.7 : 1,
+            y: H ? -35 : 0,
+            config: z,
+        }),
+        Q = (0, u.zhh)({
+            y: H ? -32 : 0,
+            config: z,
+        }),
+        X = (0, u.zhh)({
+            opacity: +!!H,
+            transform: H ? "translateY(0)" : "translateY(16px)",
+            config: z,
+        }),
+        J = i.useCallback((e) => {
+            e && F(!0);
         }, []),
-        Z = (0, l.K)(X);
+        $ = (0, l.K)(J),
+        ee = N.skuId === I.W5;
     return (0, r.jsxs)("div", {
-        className: s()(R.Nr, {
-            [R.fM]: k,
+        className: o()(w.Nr, {
+            [w.fM]: G,
         }),
-        onMouseEnter: () => V(!0),
-        onMouseLeave: () => V(!1),
+        onMouseEnter: () => B(!0),
+        onMouseLeave: () => B(!1),
         children: [
             (0, r.jsx)("div", {
-                className: R.sL,
-                ref: Z,
+                className: w.sL,
+                ref: $,
             }),
             (0, r.jsx)("div", {
-                className: R.kQ,
-                children: (0, r.jsx)(o.animated.img, {
-                    className: R.bm,
-                    src: B,
-                    alt: "",
-                    style: {
-                        transform: (0, o.to)([K.scale, K.y], (e, t) =>
-                            "scale(".concat(e, ") translateY(").concat(t, "px)"),
-                        ),
-                    },
-                }),
+                className: w.kQ,
+                children: ee
+                    ? (0, r.jsx)(s.animated.div, {
+                          className: w.bm,
+                          style: {
+                              transform: (0, s.to)([Z.scale, Z.y], (e, t) =>
+                                  "scale(".concat(e, ") translateY(").concat(t, "px)"),
+                              ),
+                          },
+                          children: (0, r.jsx)(u.E_w, {
+                              withReducedMotion: "halt",
+                              eventTargetRef: U,
+                              fit: "contain",
+                              className: w.Sq,
+                              stateMachine: "SM_Main_Int",
+                          }),
+                      })
+                    : (0, r.jsx)(s.animated.img, {
+                          className: w.bm,
+                          src: Y,
+                          alt: "",
+                          style: {
+                              transform: (0, s.to)([q.scale, q.y], (e, t) =>
+                                  "scale(".concat(e, ") translateY(").concat(t, "px)"),
+                              ),
+                          },
+                      }),
             }),
-            (0, r.jsxs)(o.animated.div, {
-                style: x(P({}, z), {
-                    transform: z.y.to((e) => "translateY(".concat(e, "px)")),
+            (0, r.jsxs)(s.animated.div, {
+                style: L(P({}, Q), {
+                    transform: Q.y.to((e) => "translateY(".concat(e, "px)")),
                 }),
-                className: R.Qs,
+                className: w.Qs,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: R.P_,
+                        className: w.P_,
                         children: [
                             (0, r.jsx)(u.Heading, {
-                                className: R.DD,
+                                className: w.DD,
                                 variant: "heading-lg/semibold",
                                 children: a,
                             }),
                             (0, r.jsx)(u.Text, {
-                                className: R.h_,
+                                className: w.h_,
                                 variant: "text-md/medium",
                                 children: _,
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: R.jp,
+                        className: w.jp,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: R.qS,
+                                className: w.qS,
                                 children: [
                                     (0, r.jsx)(u._Jp, {
                                         size: "xs",
                                         color: u.LU0.unsafe_rawColors.ILLO_PINK_40,
                                     }),
                                     (0, r.jsx)(u.Text, {
-                                        className: R.Vv,
+                                        className: w.Vv,
                                         variant: "text-sm/semibold",
                                         children: T.intl.formatToPlainString(
                                             null != g ? C.default["G/aTXi"] : C.default.r9pa9K,
@@ -215,16 +238,16 @@ function L(e) {
                                     }),
                                 ],
                             }),
-                            L &&
+                            M &&
                                 (0, r.jsxs)("div", {
-                                    className: s()(R.qS, R.nt),
+                                    className: o()(w.qS, w.nt),
                                     children: [
                                         (0, r.jsx)(u.yr3, {
                                             size: "xs",
                                             color: "currentColor",
                                         }),
                                         (0, r.jsx)(u.Text, {
-                                            className: R.nt,
+                                            className: w.nt,
                                             variant: "text-sm/semibold",
                                             children: T.intl.string(T.t.pCMkDb),
                                         }),
@@ -234,46 +257,46 @@ function L(e) {
                     }),
                 ],
             }),
-            (0, r.jsxs)(o.animated.div, {
-                style: q,
-                className: R.NC,
+            (0, r.jsxs)(s.animated.div, {
+                style: X,
+                className: w.NC,
                 children: [
                     (0, r.jsx)("div", {
-                        className: R.x6,
+                        className: w.x6,
                         children: (0, r.jsx)(u.Button, {
                             variant: "primary",
                             text: T.intl.string(T.t.oPAx73),
-                            onClick: H,
+                            onClick: W,
                             fullWidth: !0,
                         }),
                     }),
                     j &&
                         (0, r.jsx)("div", {
-                            className: R.x6,
+                            className: w.x6,
                             children: (0, r.jsx)(u.Button, {
                                 variant: "secondary",
                                 text: T.intl.string(T.t.GoCQxU),
-                                onClick: Y,
+                                onClick: K,
                                 fullWidth: !0,
                             }),
                         }),
                 ],
             }),
-            N &&
+            R &&
                 (0, r.jsx)(u.LpS, {
-                    className: R.Ad,
+                    className: w.Ad,
                     text: T.intl.string(T.t.y2b7CA),
                 }),
         ],
     });
 }
 
-function j(e) {
-    let { guildId: t, powerup: n, costDecorator: i, isNew: a, onClose: s } = e,
-        o = (0, E.Ay)(t, n).type;
-    return (0, r.jsx)(L, {
+function M(e) {
+    let { guildId: t, powerup: n, costDecorator: i, isNew: a, onClose: o } = e,
+        s = (0, E.Ay)(t, n).type;
+    return (0, r.jsx)(x, {
         guildId: t,
-        activeStatus: o,
+        activeStatus: s,
         title: n.title,
         description: n.description,
         cost: n.cost,
@@ -282,50 +305,50 @@ function j(e) {
         powerup: n,
         costDecorator: i,
         isNew: a,
-        onClose: s,
+        onClose: o,
     });
 }
-let M = 3,
-    k = new Set([S.W5]),
-    U = new Map([[S.W5, "+"]]),
+let j = 3,
+    k = new Set([I.W5]),
+    U = new Map([[I.W5, "+"]]),
     G = i.forwardRef((e, t) => {
         let { guild: n, onClose: a } = e;
         i.useEffect(() => {
             h.A.shouldFetchCatalogForGuild(n.id) && (0, _.AK)(n.id),
                 h.A.shouldFetchPowerupsForGuild(n.id) && (0, _.Xd)(n.id);
         }, [n.id]);
-        let s = (0, g.A)(n.id),
-            o = Array.from(null != s ? s : [])
+        let o = (0, g.A)(n.id),
+            s = Array.from(null != o ? o : [])
                 .reverse()
-                .slice(0, M);
-        return 0 === o.length
+                .slice(0, j);
+        return 0 === s.length
             ? null
             : (0, r.jsxs)("div", {
                   ref: t,
-                  className: R.iE,
+                  className: w.iE,
                   children: [
                       (0, r.jsxs)("div", {
-                          className: R.ND,
+                          className: w.ND,
                           children: [
                               (0, r.jsx)(u.Heading, {
-                                  className: R.R_,
+                                  className: w.R_,
                                   variant: "heading-xxl/semibold",
                                   children: T.intl.string(N.default.wjI18Q),
                               }),
                               (0, r.jsx)(u.Text, {
-                                  className: R.fV,
+                                  className: w.fV,
                                   variant: "text-md/medium",
                                   children: T.intl.format(N.default.S562fn, {
-                                      helpDeskArticle: O.A.getArticleURL(v.MVz.GUILD_BOOSTING_FAQ),
+                                      helpDeskArticle: O.A.getArticleURL(A.MVz.GUILD_BOOSTING_FAQ),
                                   }),
                               }),
                           ],
                       }),
                       (0, r.jsx)("div", {
-                          className: R.vY,
-                          children: o.map((e) =>
+                          className: w.vY,
+                          children: s.map((e) =>
                               (0, r.jsx)(
-                                  j,
+                                  M,
                                   {
                                       guildId: n.id,
                                       powerup: e,
@@ -341,4 +364,4 @@ let M = 3,
               });
     });
 G.displayName = "GuildBoostingMarketingPerkCards";
-let V = G;
+let F = G;

@@ -5,9 +5,9 @@ var r = n(627968);
 n(64700);
 var i = n(790795),
     a = n(786558),
-    s = n(799226);
+    o = n(799226);
 
-function o(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
@@ -91,22 +91,26 @@ function f(e, t) {
     return i;
 }
 let p = {
-    Game_Server_Hosting_Main: {},
-    c_chara_3: {},
-    c_chara_1: {},
-    hytale_gameplay: {},
+    Game_Server_Hosting_Main: {
+        reducedMotion: "boolean",
+    },
     c_chara_5: {},
+    hytale_gameplay: {
+        reducedMotion: "boolean",
+    },
+    gameplay_palworld_nozoom: {},
+    c_chara_1: {},
     c_chara_4: {},
     c_chara_2: {},
-    gameplay_palworld_nozoom: {},
+    c_chara_3: {},
 };
 
 function _(e) {
     let { artboard: t = "Game_Server_Hosting_Main", stateMachine: n } = e,
-        o = d(e, ["artboard", "stateMachine"]),
-        { status: c, buffer: f } = (0, s.CE)(i.A),
-        _ = (0, s.m2)(i.A);
-    return c === s.BW.Loading
+        s = d(e, ["artboard", "stateMachine"]),
+        { status: c, buffer: f } = (0, o.CE)(i.A),
+        _ = (0, o.m2)(i.A);
+    return c === o.BW.Loading
         ? null
         : (0, r.jsx)(
               a.w,
@@ -127,7 +131,7 @@ function _(e) {
                           artboardProperties: p,
                       },
                   ),
-                  o,
+                  s,
               ),
           );
 }

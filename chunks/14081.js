@@ -1,88 +1,90 @@
-l.d(t, {
-    A: () => j,
+n.d(t, {
+    A: () => b,
 }),
-    l(228524);
-var r = l(627968),
-    n = l(503698),
-    i = l.n(n),
-    s = l(158954),
-    o = l(311907),
-    a = l(397927),
-    u = l(793574),
-    d = l(890942),
-    c = l(744201),
-    f = l(522055),
-    p = l(793506),
-    m = l(843095),
-    v = l(294726),
-    A = l(985018),
-    g = l(876380),
-    x = l(291305),
-    b = l(561797),
-    h = l(390175);
+    n(228524);
+var r = n(627968),
+    l = n(64700),
+    i = n(503698),
+    o = n.n(i),
+    s = n(158954),
+    a = n(311907),
+    u = n(397927),
+    d = n(793574),
+    c = n(890942),
+    p = n(744201),
+    m = n(522055),
+    f = n(793506),
+    v = n(204017),
+    g = n(843095),
+    A = n(294726),
+    _ = n(985018),
+    x = n(876380),
+    h = n(561797);
 
-function j(e) {
+function b(e) {
     let { guildId: t } = e,
-        { state: l, lowestGameServerCost: n } = (0, o.cf)([f.A], () => ({
-            state: f.A.getStateForGuild(t),
-            lowestGameServerCost: f.A.getLowestGameCostForGuild(t),
+        n = l.useRef(null),
+        { state: i, lowestGameServerCost: b } = (0, a.cf)([m.A], () => ({
+            state: m.A.getStateForGuild(t),
+            lowestGameServerCost: m.A.getLowestGameCostForGuild(t),
         })),
-        j = (0, p.A)(t),
-        { textColor: _ } = (0, c.A)((null == j ? void 0 : j.type) === "active");
-    return null == l
+        j = (0, f.A)(t),
+        { gameName: E, gameName2: w } = (0, v.A)(),
+        { textColor: y } = (0, p.A)((null == j ? void 0 : j.type) === "active");
+    return null == i
         ? null
-        : (0, r.jsxs)(d.NI, {
-              label: A.intl.string(v.default["B3OfL/"]),
+        : (0, r.jsxs)(c.NI, {
+              label: _.intl.string(A.default["B3OfL/"]),
               badge: "beta",
               isActive: (null == j ? void 0 : j.type) === "active",
               isWarning: (null == j ? void 0 : j.type) === "expiring",
               onClick: () =>
-                  (0, m.A)({
+                  (0, g.A)({
                       guildId: t,
-                      analyticsLocation: u.A.GUILD_POWERUPS_OVERVIEW,
+                      analyticsLocation: d.A.GUILD_POWERUPS_OVERVIEW,
                   }),
               children: [
-                  (0, r.jsxs)("div", {
-                      className: b.ZS,
-                      children: [
-                          (0, r.jsx)("img", {
-                              className: i()(x.T, g.Sl, b.Sl),
-                              src: h.A,
-                              alt: "",
-                          }),
-                          (0, r.jsx)("div", {
-                              className: i()(g.Sl, b.D7),
-                          }),
-                      ],
+                  (0, r.jsx)("div", {
+                      className: o()(h.ZS, x.Sl),
+                      children: (0, r.jsx)(s.E_w, {
+                          withReducedMotion: "halt",
+                          eventTargetRef: n,
+                          className: h.Sl,
+                          fit: "contain",
+                          stateMachine: "SM_Main_Int",
+                      }),
                   }),
-                  (0, r.jsx)(d.Ft, {
-                      title: A.intl.string(v.default["B3OfL/"]),
-                      textColor: _,
-                      footer: (0, r.jsx)(d.$L, {
-                          cost: null != n ? n : 0,
+                  (0, r.jsx)(c.Ft, {
+                      title: _.intl.string(A.default["B3OfL/"]),
+                      textColor: y,
+                      footer: (0, r.jsx)(c.$L, {
+                          cost: null != b ? b : 0,
                           costDecorator: "+",
                           status: j,
                       }),
                       children: (0, r.jsx)(s.EYj, {
-                          className: g.h_,
-                          color: _,
+                          className: x.h_,
+                          color: y,
                           variant: "text-sm/medium",
-                          children: A.intl.string(v.default.EGkJAG),
+                          children: _.intl.format(A.default["+UqyGU"], {
+                              gameName: E,
+                              gameName2: w,
+                          }),
                       }),
                   }),
-                  (0, r.jsx)(d.kd, {
-                      children: (0, r.jsx)(a.Button, {
+                  (0, r.jsx)(c.kd, {
+                      children: (0, r.jsx)(u.Button, {
                           variant: "primary",
                           fullWidth: !0,
                           text:
-                              Object.values(l.entitlements).length > 0
-                                  ? A.intl.string(v.default.PuvU5b)
-                                  : A.intl.string(v.default.b62EHM),
+                              Object.values(i.entitlements).length > 0
+                                  ? _.intl.string(A.default.PuvU5b)
+                                  : _.intl.string(A.default.b62EHM),
                           onClick: (e) => {
                               e.stopPropagation(),
-                                  (0, m.A)({
+                                  (0, g.A)({
                                       guildId: t,
-                                      analyticsLocation: u.A.GUILD_POWERUPS_OVERVIEW,
+                                      analyticsLocation: d.A.GUILD_POWERUPS_OVERVIEW,
                                   });
                           },
                       }),

@@ -1,6 +1,5 @@
 e.exports = {
     ZS: "imageContainer_a1bfef",
     Sl: "image_a1bfef",
-    RV: "gameServerHostingImage_a1bfef",
     SV: "levelImage_a1bfef",
 };

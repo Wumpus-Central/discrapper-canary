@@ -15835,6 +15835,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     position: absolute
 }
 
+.gameServerImage_ef0711 {
+    width: 100%
+}
+
 .contentContainer_ef0711 {
     margin-top: 160px;
     z-index: 1
@@ -17813,7 +17817,12 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .illustration__65e57 {
     object-fit: contain;
-    transform-origin: center center;
+    transform-origin: center center
+}
+
+.animatedAsset__65e57,
+.illustration__65e57 {
+    height: 100%;
     width: 100%
 }
 
@@ -55849,7 +55858,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

@@ -9,6 +9,7 @@ e.exports = {
     sL: "intObserver__65e57",
     kQ: "illustrationWrapper__65e57",
     bm: "illustration__65e57",
+    Sq: "animatedAsset__65e57",
     Qs: "content__65e57",
     P_: "textContent__65e57",
     DD: "title__65e57",
