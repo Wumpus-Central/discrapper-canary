@@ -1,31 +1,34 @@
 n.d(t, {
-    $: () => T,
+    $: () => O,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    l = n(554146),
-    o = n(617108),
-    a = n(745299),
-    s = n(816733),
-    c = n(927578),
-    u = n(160761),
-    E = n(49999),
-    d = n(652215),
-    _ = n(788868);
-let T = (e) => {
+    l = n(989349),
+    o = n.n(l),
+    a = n(554146),
+    s = n(916768),
+    c = n(617108),
+    u = n(745299),
+    E = n(816733),
+    d = n(927578),
+    _ = n(160761),
+    T = n(49999),
+    A = n(652215),
+    I = n(788868);
+let O = (e) => {
     let { dismissibleContent: t, noticeType: n } = e,
-        T = i.useMemo(() => {
+        l = i.useMemo(() => {
             switch (n) {
-                case d.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
-                    let e = s.A.getAlmostExpiringTrialOffers([_.pe.TIER_2]);
+                case A.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
+                    let e = E.A.getAlmostExpiringTrialOffers([I.pe.TIER_2]);
                     return {
-                        cooldownDurationMs: (0, c.e1)(e[0]),
+                        cooldownDurationMs: (0, d.e1)(e[0]),
                     };
-                case d.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
-                    let t = s.A.getAlmostExpiringDiscountOffers([_.pe.TIER_2]);
+                case A.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
+                    let t = E.A.getAlmostExpiringDiscountOffers([I.pe.TIER_2]);
                     return {
-                        cooldownDurationMs: (0, c.e1)(t[0]),
+                        cooldownDurationMs: (0, d.e1)(t[0]),
                     };
                 default:
                     return {
@@ -33,18 +36,23 @@ let T = (e) => {
                     };
             }
         }, [n]),
-        [A, I] = (0, u.Bo)(t, T, E.m.NOTICE_BAR);
-    if (null == A) return null;
-    if (A === l.M.NAGBAR_NOTICE_OFFER_EXPIRING) {
-        if (n === d.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
-            return (0, r.jsx)(a.A, {
-                dismissCurrentNotice: () => I(E.i.USER_DISMISS),
-                subscriptionTier: _.pe.TIER_2,
+        O = o()().add(5, "days").toDate(),
+        [N, p] = (0, _.Bo)(t, l, T.m.NOTICE_BAR);
+    if (null == N) return null;
+    if (N === a.M.NAGBAR_NOTICE_OFFER_EXPIRING) {
+        if (n === A.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
+            return (0, r.jsx)(u.A, {
+                dismissCurrentNotice: () => {
+                    p(T.i.USER_DISMISS), (0, s.w)(O);
+                },
+                subscriptionTier: I.pe.TIER_2,
             });
-        if (n === d.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
-            return (0, r.jsx)(o.A, {
-                dismissCurrentNotice: () => I(E.i.USER_DISMISS),
-                subscriptionTier: _.pe.TIER_2,
+        if (n === A.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
+            return (0, r.jsx)(c.A, {
+                dismissCurrentNotice: () => {
+                    p(T.i.USER_DISMISS), (0, s.w)(O);
+                },
+                subscriptionTier: I.pe.TIER_2,
             });
     }
 };
