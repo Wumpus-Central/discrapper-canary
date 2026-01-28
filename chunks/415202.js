@@ -1,13 +1,15 @@
 n.d(t, {
-    A: () => c,
+    A: () => d,
 }),
     n(896048);
-var r = n(439372),
-    i = n(927813),
-    a = n(961250),
-    s = n(895944);
+var r = n(239266),
+    i = n(439372),
+    a = n(927813),
+    o = n(961250),
+    s = n(895944),
+    l = n(649032);
 
-function o(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,27 +22,28 @@ function o(e, t, n) {
         e
     );
 }
-class l extends r.A {
+class u extends i.A {
+    _initializeProgramRewards() {
+        let e = s.A.getRewardForProgram(l.W.NITRO),
+            t = null == e ? void 0 : e.next_reward_date;
+        null == e || (null != t && (0, r.A)(new Date(t))) ? (0, o.uM)() : (0, o.Ay)(),
+            null != this.intervalId && clearInterval(this.intervalId),
+            (this.intervalId = setInterval(() => {
+                (0, o.Ay)();
+            }, a.A.Millis.HOUR));
+    }
     _terminate() {
         null != this.intervalId && (clearInterval(this.intervalId), (this.intervalId = void 0));
     }
     constructor(...e) {
         super(...e),
-            o(this, "intervalId", void 0),
-            o(this, "actions", {
-                POST_CONNECTION_OPEN: () => {
-                    (0, a.A)(),
-                        null != this.intervalId && clearInterval(this.intervalId),
-                        (this.intervalId = setInterval(() => {
-                            (0, a.A)();
-                        }, i.A.Millis.HOUR));
-                },
-                BILLING_SUBSCRIPTION_UPDATE_SUCCESS: () => this._handleUserStateUpdate(),
-                CURRENT_USER_UPDATE: () => this._handleUserStateUpdate(),
-            }),
-            o(this, "_handleUserStateUpdate", () => {
-                s.A.isInProperTreatments() && s.A.hasNecessaryPremiumSubscriptionStatus() && (0, a.t)();
+            c(this, "intervalId", void 0),
+            c(this, "actions", {
+                POST_CONNECTION_OPEN: () => this._initializeProgramRewards(),
+                BILLING_SUBSCRIPTION_UPDATE_SUCCESS: () => (0, o.uM)(),
+                CURRENT_USER_UPDATE: () => (0, o.uM)(),
+                VIRTUAL_CURRENCY_BALANCE_UPDATE: () => (0, o.uM)(),
             });
     }
 }
-let c = new l();
+let d = new u();

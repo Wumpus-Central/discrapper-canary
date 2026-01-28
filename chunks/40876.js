@@ -425,7 +425,12 @@ let i = {
         inlineRequire: () => n(463398).A,
     },
     ProgramRewardsManager: {
-        actions: ["POST_CONNECTION_OPEN", "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", "CURRENT_USER_UPDATE"],
+        actions: [
+            "POST_CONNECTION_OPEN",
+            "BILLING_SUBSCRIPTION_UPDATE_SUCCESS",
+            "CURRENT_USER_UPDATE",
+            "VIRTUAL_CURRENCY_BALANCE_UPDATE",
+        ],
         inlineRequire: () => n(415202).A,
     },
     RelationshipManager: {

@@ -1,12 +1,14 @@
 n.d(t, {
-    A: () => l,
-    t: () => o,
+    Ay: () => c,
+    tT: () => l,
+    uM: () => u,
 });
 var r = n(562465),
     i = n(73153),
     a = n(895944),
+    o = n(26508),
     s = n(652215);
-async function o() {
+async function l() {
     i.h.dispatch({
         type: "PROGRAM_REWARDS_FETCH",
     });
@@ -32,6 +34,9 @@ async function o() {
         });
     }
 }
-async function l() {
-    a.A.shouldFetch() && (await o());
+async function c() {
+    a.A.shouldFetch() && (await l());
+}
+async function u() {
+    (0, o.T0)("ProgramRewardsActionCreators") && (0, o.mY)() && (await l());
 }
