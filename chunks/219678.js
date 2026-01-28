@@ -27,14 +27,13 @@ async function d() {
     var e, t;
     if (
         (0, o.isWindows)() &&
+        !a.A.getAppHardwareAccelerationEnabled() &&
         (null == (t = window.DiscordNative) || null == (e = t.settings) ? void 0 : e.set) != null
     ) {
-        let e = a.A.getAppHardwareAccelerationEnabled(),
-            { enabled: t } = (0, s.b)({
-                location: "updateSwitch",
-            }),
-            n = t && !e;
-        await window.DiscordNative.settings.set("enableH264MFElectron", n), (u = n);
+        let { enabled: e } = (0, s.b)({
+            location: "updateSwitch",
+        });
+        await window.DiscordNative.settings.set("enableH264MFElectron", e), (u = e);
     }
 }
 class f extends r.A {
@@ -44,12 +43,11 @@ class f extends r.A {
                 this,
                 "stores",
                 new Map().set(i.A, () => {
-                    if (c) {
-                        let e = a.A.getAppHardwareAccelerationEnabled(),
-                            { enabled: t } = (0, s.b)({
-                                location: "experimentStoreUpdate",
-                            });
-                        u !== (t && !e) && d();
+                    if (c && !a.A.getAppHardwareAccelerationEnabled()) {
+                        let { enabled: e } = (0, s.b)({
+                            location: "experimentStoreUpdate",
+                        });
+                        u !== e && d();
                     }
                 }),
             ),
