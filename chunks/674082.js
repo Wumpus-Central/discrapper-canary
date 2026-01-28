@@ -1,5 +1,5 @@
 i.d(e, {
-    Y: () => S,
+    Y: () => d,
 });
 var n = i(311907),
     l = i(419954),
@@ -10,8 +10,8 @@ var n = i(311907),
     o = i(276221),
     T = i(652215),
     A = i(985018);
-let S = (0, l.zZ)(u.X.CONTENT_AND_SOCIAL_RESTRICTED_USERS_CATEGORY, {
-    useTitle: () => A.intl.string(A.t["3wRort"]),
+let d = (0, l.zZ)(u.X.CONTENT_AND_SOCIAL_RESTRICTED_USERS_CATEGORY, {
+    useTitle: () => A.intl.string(A.t.LVwR56),
     useSubtitle: () =>
         A.intl.format(A.t["0aNQo9"], {
             helpArticle: r.A.getArticleURL(T.MVz.STEALTH_REMEDIATION_FEATURE_GUIDE),
