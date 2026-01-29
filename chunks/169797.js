@@ -1,5 +1,8 @@
 n.d(t, {
-    oH: () => E,
+    Jg: () => E,
+    cy: () => g,
+    oH: () => y,
+    s3: () => m,
 });
 var r = n(627968),
     i = n(64700),
@@ -161,6 +164,25 @@ function g(e) {
 }
 
 function E(e) {
+    let { children: t } = e,
+        n = _(e, ["children"]);
+    return (0, r.jsx)(
+        a.dWK,
+        p(
+            d(
+                {
+                    size: "md",
+                },
+                n,
+            ),
+            {
+                children: t,
+            },
+        ),
+    );
+}
+
+function y(e) {
     let {
             title: t,
             gradientColor: n = "purple",
