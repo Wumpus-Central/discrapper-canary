@@ -6,8 +6,8 @@ n.d(t, {
 var l = n(627968),
     i = n(64700),
     s = n(397927),
-    r = n(774300),
-    a = n(571694),
+    a = n(774300),
+    r = n(571694),
     o = n(47167),
     u = n(71393),
     d = n(535820),
@@ -40,24 +40,25 @@ class x extends i.Component {
             this.state.invited !== t.invited ||
             this.state.hovered !== t.hovered ||
             this.props.user !== e.user ||
-            this.props.channel !== e.channel
+            this.props.channel !== e.channel ||
+            this.props.shouldRenameButtonCTA !== e.shouldRenameButtonCTA
         );
     }
     renderUserOrChannel() {
         let e,
             t,
             n,
-            { user: i, channel: r } = this.props;
-        if (null != i) (t = i.getAvatarURL(null == r ? void 0 : r.guild_id, 32)), (n = v.Ay.getName(i));
+            { user: i, channel: a } = this.props;
+        if (null != i) (t = i.getAvatarURL(null == a ? void 0 : a.guild_id, 32)), (n = v.Ay.getName(i));
         else if (
-            null != r &&
-            ((t = (0, a.Y)(r)), (n = (0, o.m1)(r, g.default, c.A)), null == t && null != r.guild_id)
+            null != a &&
+            ((t = (0, r.Y)(a)), (n = (0, o.m1)(a, g.default, c.A)), null == t && null != a.guild_id)
         ) {
-            let n = u.A.getGuild(r.guild_id);
+            let n = u.A.getGuild(a.guild_id);
             null != n &&
                 (null != n.icon
                     ? (t = h.Ay.getGuildIconURL({
-                          id: r.guild_id,
+                          id: a.guild_id,
                           icon: n.icon,
                           size: 32,
                       }))
@@ -82,8 +83,8 @@ class x extends i.Component {
     render() {
         let e,
             t,
-            { user: n, channel: i } = this.props,
-            { sending: r, invited: a } = this.state;
+            { user: n, channel: i, shouldRenameButtonCTA: a } = this.props,
+            { sending: r, invited: u } = this.state;
         if (null != n) {
             let l = v.Ay.getName(n),
                 i = c.A.getNickname(n.id),
@@ -92,13 +93,13 @@ class x extends i.Component {
                 });
             (e = null != i ? i : l), (t = s);
         }
-        let u = (0, l.jsx)(s.Button, {
+        let d = (0, l.jsx)(s.Button, {
             variant: "secondary",
-            text: a ? A.intl.string(A.t.dVT149) : A.intl.string(A.t.jYnGPG),
+            text: u ? A.intl.string(A.t.dVT149) : a ? A.intl.string(A.t.AWLVgR) : A.intl.string(A.t.jYnGPG),
             size: "sm",
             loading: r,
             onClick: this.handleClickInvite,
-            disabled: a,
+            disabled: u,
         });
         return (0, l.jsxs)("div", {
             className: I.Og,
@@ -129,7 +130,7 @@ class x extends i.Component {
                         }),
                     ],
                 }),
-                u,
+                d,
             ],
         });
     }
@@ -165,9 +166,9 @@ class x extends i.Component {
                         ? (this.setState({
                               sending: !0,
                           }),
-                          r.A.enqueue(
+                          a.A.enqueue(
                               {
-                                  type: r.F.GROUP_DM,
+                                  type: a.F.GROUP_DM,
                                   channel: t,
                                   inviteKey: n,
                                   location: l,
@@ -184,9 +185,9 @@ class x extends i.Component {
                           (this.setState({
                               sending: !0,
                           }),
-                          r.A.enqueue(
+                          a.A.enqueue(
                               {
-                                  type: r.F.USER,
+                                  type: a.F.USER,
                                   user: e,
                                   inviteKey: n,
                                   location: l,
