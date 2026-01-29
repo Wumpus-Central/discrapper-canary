@@ -1,6 +1,6 @@
 let r, l, a;
 n.d(t, {
-    A: () => w,
+    A: () => S,
 }),
     n(896048),
     n(321073);
@@ -12,39 +12,39 @@ var i,
     d = n(713402),
     _ = n(73153),
     f = n(695870),
-    p = n(380335),
-    m = n(157550),
-    A = n(493507),
-    b = n(95701),
-    h = n(734057),
-    g = n(71393),
-    y = n(222823),
-    v = n(543465),
-    I = n(287809),
-    C = n(661191);
-let E = new d.J(
+    A = n(380335),
+    p = n(157550),
+    b = n(493507),
+    h = n(95701),
+    m = n(734057),
+    I = n(71393),
+    g = n(222823),
+    E = n(543465),
+    y = n(287809),
+    O = n(661191);
+let C = new d.J(
     (e) => {
         let { isRequest: t, isFavorite: n } = e;
         return t ? [] : [n ? "FAVORITE" : "DEFAULT"];
     },
     (e) => {
         let { lastMessageId: t, nudgeTimestamp: n } = e;
-        return null != n ? -n : -C.default.extractTimestamp(t);
+        return null != n ? -n : -O.default.extractTimestamp(t);
     },
 );
 
-function O(e) {
+function v(e) {
     let t =
         arguments.length > 1 && void 0 !== arguments[1]
             ? arguments[1]
             : (function (e) {
                   var t, n;
-                  let r = null != (t = null != (n = y.Ay.lastMessageId(e.id)) ? n : e.lastMessageId) ? t : e.id,
+                  let r = null != (t = null != (n = g.Ay.lastMessageId(e.id)) ? n : e.lastMessageId) ? t : e.id,
                       l = e.isMessageRequestTimestamp;
                   if (null != l) {
                       let e = c()(l).valueOf(),
-                          t = C.default.fromTimestamp(e);
-                      return C.default.compare(r, t) > 0 ? r : t;
+                          t = O.default.fromTimestamp(e);
+                      return O.default.compare(r, t) > 0 ? r : t;
                   }
                   return r;
               })(e);
@@ -52,29 +52,29 @@ function O(e) {
         channelId: e.id,
         lastMessageId: t,
         isFavorite: !1,
-        isRequest: p.A.isMessageRequest(e.id) || m.A.isSpam(e.id),
-        nudgeTimestamp: A.A.getNudgeTimestamp(e.id),
+        isRequest: A.A.isMessageRequest(e.id) || p.A.isSpam(e.id),
+        nudgeTimestamp: b.A.getNudgeTimestamp(e.id),
     };
 }
 
-function T() {
-    E.clear(),
-        Object.values(h.A.getMutablePrivateChannels()).forEach((e) => {
-            E.set(e.id, O(e));
+function N() {
+    C.clear(),
+        Object.values(m.A.getMutablePrivateChannels()).forEach((e) => {
+            C.set(e.id, v(e));
         });
 }
 
-function N() {
-    let e = h.A.getMutablePrivateChannels();
-    for (let t in e) E.set(t, O(e[t]));
+function T() {
+    let e = m.A.getMutablePrivateChannels();
+    for (let t in e) C.set(t, v(e[t]));
 }
-let x =
+let P =
     ((r = []),
     (l = []),
     (a = []),
     () => {
-        let e = E.values("FAVORITE"),
-            t = E.values("DEFAULT");
+        let e = C.values("FAVORITE"),
+            t = C.values("DEFAULT");
         return (
             (r !== e || l !== t) &&
                 ((a = []),
@@ -91,20 +91,20 @@ let x =
             a
         );
     });
-class P extends (i = u.Ay.Store) {
+class L extends (i = u.Ay.Store) {
     initialize() {
-        this.waitFor(h.A, g.A, p.A, y.Ay, m.A, v.Ay, I.default, A.A), this.syncWith([v.Ay, p.A], T);
+        this.waitFor(m.A, I.A, A.A, g.Ay, p.A, E.Ay, y.default, b.A), this.syncWith([E.Ay, A.A, b.A], N);
     }
     getPrivateChannelIds() {
-        return x();
+        return P();
     }
     getSortedChannels() {
-        return [E.values("FAVORITE"), E.values("DEFAULT")];
+        return [C.values("FAVORITE"), C.values("DEFAULT")];
     }
     serializeForOverlay() {
         let e = {};
         return (
-            E.values().forEach((t) => {
+            C.values().forEach((t) => {
                 let { channelId: n, lastMessageId: r } = t;
                 e[n] = r;
             }),
@@ -112,52 +112,52 @@ class P extends (i = u.Ay.Store) {
         );
     }
 }
-(o = "displayName") in P
-    ? Object.defineProperty(P, o, {
+(o = "displayName") in L
+    ? Object.defineProperty(L, o, {
           value: "PrivateChannelSortStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (P[o] = "PrivateChannelSortStore");
-let w = new P(_.h, {
-    CONNECTION_OPEN: T,
-    CONNECTION_OPEN_SUPPLEMENTAL: T,
-    OVERLAY_INITIALIZE: T,
-    CACHE_LOADED: N,
-    CACHE_LOADED_LAZY: N,
+    : (L[o] = "PrivateChannelSortStore");
+let S = new L(_.h, {
+    CONNECTION_OPEN: N,
+    CONNECTION_OPEN_SUPPLEMENTAL: N,
+    OVERLAY_INITIALIZE: N,
+    CACHE_LOADED: T,
+    CACHE_LOADED_LAZY: T,
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
         t.forEach((e) => {
-            ((0, b.Gw)(e.type) || E.has(e.id)) && E.set(e.id, O(e));
+            ((0, h.Gw)(e.type) || C.has(e.id)) && C.set(e.id, v(e));
         });
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        if (!(0, b.Gw)(t.type) || t.id === f.E) return !1;
-        E.set(t.id, O(t));
+        if (!(0, h.Gw)(t.type) || t.id === f.E) return !1;
+        C.set(t.id, v(t));
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return E.delete(t.id);
+        return C.delete(t.id);
     },
     MESSAGE_CREATE: function (e) {
         let { channelId: t, message: n } = e;
-        if (!E.has(t)) return !1;
-        let r = h.A.getChannel(t);
-        return null != r && E.set(t, O(r, n.id));
+        if (!C.has(t)) return !1;
+        let r = m.A.getChannel(t);
+        return null != r && C.set(t, v(r, n.id));
     },
     REPLY_NUDGE_SET: function (e) {
         let { channelId: t } = e;
-        if (!E.has(t)) return !1;
-        let n = h.A.getChannel(t);
-        return null != n && E.set(t, O(n));
+        if (!C.has(t)) return !1;
+        let n = m.A.getChannel(t);
+        return null != n && C.set(t, v(n));
     },
     GUILD_CREATE: function (e) {
         let t = e.guild.id;
-        return E.delete(t);
+        return C.delete(t);
     },
     LOGOUT: function () {
-        E.clear();
+        C.clear();
     },
 });

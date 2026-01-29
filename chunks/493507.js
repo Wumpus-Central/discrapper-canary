@@ -1,15 +1,18 @@
 n.d(t, {
-    A: () => f,
+    A: () => m,
 }),
     n(896048);
 var r,
     l = n(311907),
     a = n(73153),
-    i = n(961350),
-    o = n(927813),
-    s = n(469679);
+    i = n(217222),
+    o = n(253932),
+    s = n(617617),
+    c = n(961350),
+    u = n(927813),
+    d = n(469679);
 
-function c(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,61 +25,69 @@ function c(e, t, n) {
         e
     );
 }
-let u = 3 * o.A.Millis.DAY,
-    d = {};
-class _ extends (r = l.Ay.PersistedStore) {
+let f = 3 * u.A.Millis.DAY,
+    A = !1,
+    p = {};
+
+function b() {
+    let e =
+        !1 !== o.LJ.getSetting() &&
+        d.T.getConfig({
+            location: "ReplyNudgeStore",
+        }).enabled;
+    if (A === e) return !1;
+    A = e;
+}
+class h extends (r = l.Ay.PersistedStore) {
     initialize(e) {
         var t;
-        (d = (function (e) {
+        (p = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now(),
                 n = {};
-            for (let [r, l] of Object.entries(e)) null != l && t - l < u && (n[r] = l);
+            for (let [r, l] of Object.entries(e)) null != l && t - l < f && (n[r] = l);
             return n;
         })(null != (t = null == e ? void 0 : e.nudgedChannels) ? t : {})),
-            this.waitFor(i.default);
+            this.waitFor(c.default, s.A, i.A),
+            this.syncWith([s.A, i.A], b);
     }
     getState() {
         return {
-            nudgedChannels: d,
+            nudgedChannels: p,
         };
     }
     getNudgeTimestamp(e) {
         var t;
-        return s.T.getConfig({
-            location: "ReplyNudgeStore",
-        }).enabled && null != (t = d[e])
-            ? t
-            : null;
+        return A && null != (t = p[e]) ? t : null;
     }
     isChannelNudged(e) {
         return null != this.getNudgeTimestamp(e);
     }
 }
-c(_, "displayName", "ReplyNudgeStore"), c(_, "persistKey", "ReplyNudgeStore");
-let f = new _(a.h, {
+_(h, "displayName", "ReplyNudgeStore"), _(h, "persistKey", "ReplyNudgeStore");
+let m = new h(a.h, {
     REPLY_NUDGE_SET: function (e) {
         let { channelId: t, timestamp: n } = e;
-        if (t in d) return !1;
-        d[t] = n;
+        if (t in p) return !1;
+        p[t] = n;
     },
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
-        if (!(t.channel_id in d)) return !1;
-        delete d[t.channel_id];
+        if (!(t.channel_id in p)) return !1;
+        delete p[t.channel_id];
     },
     MESSAGE_REACTION_ADD: function (e) {
         let { channelId: t, userId: n } = e;
-        if (n !== i.default.getId() || !(t in d)) return !1;
-        delete d[t];
+        if (n !== c.default.getId() || !(t in p)) return !1;
+        delete p[t];
     },
     CHANNEL_DELETE: function (e) {
         let {
             channel: { id: t },
         } = e;
-        if (!(t in d)) return !1;
-        delete d[t];
+        if (!(t in p)) return !1;
+        delete p[t];
     },
     LOGOUT: function () {
-        d = {};
+        (p = {}), (A = !1);
     },
 });
