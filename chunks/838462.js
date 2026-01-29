@@ -1,54 +1,55 @@
 t.d(n, {
     _: () => N,
 });
-var r = t(627968),
-    l = t(64700),
+var l = t(627968),
+    r = t(64700),
     i = t(284009),
     s = t.n(i),
-    a = t(877624),
-    o = t(311907),
-    u = t(554146),
-    c = t(397927),
-    d = t(841702),
-    p = t(367727),
-    m = t(810498),
-    g = t(173834),
+    a = t(735438),
+    o = t(877624),
+    u = t(311907),
+    c = t(554146),
+    d = t(397927),
+    p = t(841702),
+    m = t(367727),
+    g = t(810498),
+    E = t(173834),
     f = t(412260),
-    E = t(380083),
-    j = t(203982),
+    j = t(380083),
+    h = t(203982),
     x = t(45938),
-    h = t(615396),
+    P = t(615396),
     T = t(937008),
-    P = t(156312),
-    S = t(491057),
-    A = t(482132),
+    S = t(156312),
+    A = t(491057),
+    O = t(482132),
     b = t(877156),
     y = t(216641),
     I = t(921925),
-    O = t(652215),
+    _ = t(652215),
     v = t(49999);
 
-function _(e) {
+function C(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
-            r = Object.keys(t);
+            l = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            r.forEach(function (n) {
-                var r;
-                (r = t[n]),
+            l.forEach(function (n) {
+                var l;
+                (l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
-                              value: r,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[n] = r);
+                        : (e[n] = l);
             });
     }
     return e;
@@ -59,154 +60,166 @@ function N(e) {
         {
             handleClose: i,
             planGroup: N,
-            onSubscriptionConfirmation: C,
-            renderPurchaseConfirmation: M,
-            postSuccessGuild: R,
-            followupSKUInfo: k,
-            continueSessionToInitialStep: w,
+            onSubscriptionConfirmation: M,
+            renderPurchaseConfirmation: R,
+            postSuccessGuild: k,
+            followupSKUInfo: w,
+            continueSessionToInitialStep: D,
         } = e,
         {
-            activeSubscription: D,
-            paymentSources: L,
-            paymentSourceId: G,
-            selectedPlan: U,
-            selectedSkuId: H,
+            activeSubscription: L,
+            paymentSources: G,
+            paymentSourceId: U,
+            selectedPlan: H,
+            selectedSkuId: F,
             step: B,
-            updatedSubscription: F,
-            startingPremiumSubscriptionPlanIdRef: W,
-            startingFractionalPremiumEndsAtRef: K,
-            isPremiumGroupPurchase: V,
-        } = (0, P.P5)(),
+            updatedSubscription: W,
+            startingPremiumSubscriptionPlanIdRef: K,
+            startingFractionalPremiumEndsAtRef: V,
+            isPremiumGroupPurchase: Y,
+        } = (0, S.P5)(),
         {
-            isGift: Y,
-            giftRecipient: z,
+            isGift: z,
+            giftRecipient: q,
             giftCode: Z,
             hasSentMessage: Q,
-            isSendingMessage: q,
-            sendGiftMessage: J,
-            claimableRewards: X,
-            selectedGiftingPromotionReward: $,
+            isSendingMessage: J,
+            sendGiftMessage: X,
+            claimableRewards: $,
+            selectedGiftingPromotionReward: ee,
         } = (0, T.Pv)(),
-        { confirmationFooter: ee } = (0, S.cG)(),
-        en = (0, m.px)(U, Y, X),
-        et = (0, m.Mq)(U),
-        er = (0, d.Mv)($, !1),
-        el = (0, o.bG)([f.A], () => {
-            let e = f.A.getMarketingComponentByType(a.C.GIFT_REMINDER_NAGBAR);
+        { confirmationFooter: en } = (0, A.cG)(),
+        et = (0, g.px)(H, z, $),
+        el = (0, g.Mq)(H),
+        er = (0, p.Mv)(ee, !1),
+        ei = (0, u.bG)([f.A], () => {
+            let e = f.A.getMarketingComponentByType(o.C.GIFT_REMINDER_NAGBAR);
             return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftReminderNagbar;
         }),
-        ei = (0, y.g)(L, G),
-        es = Y && null != $ && null != er && et;
-    s()(null != U, "Expected plan to selected"),
-        s()(null != H, "Expected selectedSkuId"),
+        es = (0, y.g)(G, U),
+        ea = z && null != ee && null != er && el;
+    s()(null != H, "Expected plan to selected"),
+        s()(null != F, "Expected selectedSkuId"),
         s()(null != B, "Step should be set");
-    let ea = l.useCallback(() => {
-        i(), null == C || C();
-    }, [i, C]);
-    l.useEffect(() => {
+    let eo = r.useCallback(() => {
+        i(), null == M || M();
+    }, [i, M]);
+    r.useEffect(() => {
         function e() {
-            V &&
-                null != F &&
-                F.hasAnyPremiumGroup &&
-                (0, c.mMO)(async () => {
-                    let { default: e } = await Promise.all([t.e("73987"), t.e("6593")]).then(t.bind(t, 773486));
-                    return (n) => {
-                        var t, l;
-                        return (0, r.jsx)(
-                            e,
-                            ((t = _({}, n)),
-                            (l = l =
-                                {
-                                    subscription: F,
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
-                                : (function (e, n) {
-                                      var t = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          t.push.apply(t, r);
-                                      }
-                                      return t;
-                                  })(Object(l)).forEach(function (e) {
-                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(l, e));
-                                  }),
-                            t),
-                        );
-                    };
-                });
+            if (Y && null != W && W.hasAnyPremiumGroup) {
+                let e = (0, a.uniqueId)("premium-group-purchase-flow-modal");
+                (0, d.mMO)(
+                    async () => {
+                        let { default: e } = await Promise.all([t.e("73987"), t.e("6593")]).then(t.bind(t, 773486));
+                        return (n) => {
+                            var t, r;
+                            return (0, l.jsx)(
+                                e,
+                                ((t = C({}, n)),
+                                (r = r =
+                                    {
+                                        subscription: W,
+                                        onClose: async () => {
+                                            h._.dispatch(_.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED),
+                                                await n.onClose();
+                                        },
+                                    }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                                    : (function (e, n) {
+                                          var t = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var l = Object.getOwnPropertySymbols(e);
+                                              t.push.apply(t, l);
+                                          }
+                                          return t;
+                                      })(Object(r)).forEach(function (e) {
+                                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                      }),
+                                t),
+                            );
+                        };
+                    },
+                    {
+                        onCloseRequest: () => {
+                            h._.dispatch(_.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED), (0, d.OoC)(e);
+                        },
+                        modalKey: e,
+                    },
+                );
+            }
         }
         return (
-            j._.subscribe(O.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
+            h._.subscribe(_.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
             () => {
-                j._.unsubscribe(O.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
+                h._.unsubscribe(_.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
             }
         );
-    }, [V, F]),
-        l.useEffect(() => {
-            !Y ||
-                null == z ||
+    }, [Y, W]),
+        r.useEffect(() => {
+            !z ||
+                null == q ||
                 null == Z ||
                 Q ||
-                q ||
-                (0, x.Ik)(z) ||
-                J({
-                    onSubscriptionConfirmation: C,
+                J ||
+                (0, x.Ik)(q) ||
+                X({
+                    onSubscriptionConfirmation: M,
                 });
-        }, [J, Y, z, Z, Q, q, C]),
-        l.useEffect(() => {
-            en &&
-                null != el &&
-                (0, p.$l)(u.M.GIFTING_PROMOTION_REMINDER, (0, g.p)(), {
+        }, [X, z, q, Z, Q, J, M]),
+        r.useEffect(() => {
+            et &&
+                null != ei &&
+                (0, m.$l)(c.M.GIFTING_PROMOTION_REMINDER, (0, E.p)(), {
                     dismissAction: v.i.INDIRECT_ACTION,
                 });
-        }, [el, en]);
-    let eo = null != w ? E.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
-    if (null != M) n = M(U, ea, F);
-    else if (Y)
-        n = (0, r.jsx)(E.fw, {
-            planId: U.id,
-            onClose: ea,
+        }, [ei, et]);
+    let eu = null != D ? j.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
+    if (null != R) n = R(H, eo, W);
+    else if (z)
+        n = (0, l.jsx)(j.fw, {
+            planId: H.id,
+            onClose: eo,
         });
     else {
         let e =
-            W.current === U.id
+            K.current === H.id
                 ? {
-                      postSuccessGuild: R,
+                      postSuccessGuild: k,
                   }
                 : {
-                      followupSKUInfo: k,
-                      startingPremiumSubscriptionPlanId: W.current,
-                      isDowngrade: null != D && (0, h.vT)(D, U.id, N),
+                      followupSKUInfo: w,
+                      startingPremiumSubscriptionPlanId: K.current,
+                      isDowngrade: null != L && (0, P.vT)(L, H.id, N),
                   };
-        n = (0, r.jsx)(
-            E.Ay,
-            _(
+        n = (0, l.jsx)(
+            j.Ay,
+            C(
                 {
-                    planId: U.id,
-                    onClose: ea,
-                    paymentSourceType: ei,
-                    hideClose: null != ee,
-                    startingFractionalPremiumEndsAt: K.current,
-                    customCTAType: eo,
+                    planId: H.id,
+                    onClose: eo,
+                    paymentSourceType: es,
+                    hideClose: null != en,
+                    startingFractionalPremiumEndsAt: V.current,
+                    customCTAType: eu,
                 },
                 e,
             ),
         );
     }
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, r.jsxs)(A.dZ, {
-                children: [(0, r.jsx)(I.A, {}), n],
+            (0, l.jsxs)(O.dZ, {
+                children: [(0, l.jsx)(I.A, {}), n],
             }),
-            null != ee && ee,
-            es &&
-                null != $ &&
-                (0, r.jsx)(b.A, {
-                    rewardSkuId: $,
-                    onClose: ea,
+            null != en && en,
+            ea &&
+                null != ee &&
+                (0, l.jsx)(b.A, {
+                    rewardSkuId: ee,
+                    onClose: eo,
                 }),
         ],
     });
