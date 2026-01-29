@@ -5259,6 +5259,8 @@ var na = (function (e) {
             (e.CACHE_STATS_RECORDED = "cache_stats_recorded"),
             (e.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM = "channel_latest_messages_loaded_clickstream"),
             (e.CHANNEL_WITH_UNREAD_MENTIONS_LOADED = "channel_with_unread_mentions_loaded"),
+            (e.REPLY_NUDGES_CREATED = "reply_nudges_created"),
+            (e.REPLY_NUDGE_OPENED = "reply_nudge_opened"),
             e
         );
     })({}),

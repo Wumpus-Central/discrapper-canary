@@ -1,7 +1,7 @@
 n.d(t, {
-    PX: () => A,
-    S1: () => O,
-    gB: () => y,
+    PX: () => I,
+    S1: () => A,
+    gB: () => v,
 }),
     n(927092),
     n(212978),
@@ -18,32 +18,34 @@ n.d(t, {
 var r = n(284009),
     i = n.n(r),
     a = n(205693),
+    o = n(780732),
     s = n(287809),
-    o = n(486020),
-    l = n(329551),
-    c = n(987384),
-    u = n(912630),
-    d = n(965162),
-    f = n(957153),
-    p = n(463951),
-    _ = n(577718),
-    h = n(652215);
+    l = n(486020),
+    c = n(723702),
+    u = n(329551),
+    d = n(987384),
+    f = n(912630),
+    p = n(965162),
+    _ = n(957153),
+    h = n(463951),
+    m = n(577718),
+    g = n(652215);
 
-function m(e) {
+function E(e) {
     return new Promise((t, n) => {
         let r = new Image();
         (r.crossOrigin = "anonymous"),
             (r.onload = () => {
                 let e = document.createElement("canvas");
-                (e.width = _.Im.width), (e.height = _.Im.height);
+                (e.width = m.Im.width), (e.height = m.Im.height);
                 let n = e.getContext("2d");
                 i()(null != n, "Canvas context is missing");
                 let a = r.height / r.width,
-                    s = _.Im.height,
-                    o = _.Im.height / a,
-                    l = (e.width - o) / 2,
-                    c = (e.height - s) / 2;
-                n.drawImage(r, l, c, o, s);
+                    o = m.Im.height,
+                    s = m.Im.height / a,
+                    l = (e.width - s) / 2,
+                    c = (e.height - o) / 2;
+                n.drawImage(r, l, c, s, o);
                 let u = n.getImageData(0, 0, e.width, e.height);
                 t({
                     data: u.data,
@@ -56,65 +58,71 @@ function m(e) {
             (r.src = e);
     });
 }
-async function g(e) {
+async function y(e) {
     let t = await fetch(e),
         n = await t.blob();
     return new Uint8ClampedArray(await n.arrayBuffer());
 }
 
-function E(e, t, n, r, i) {
-    (0, c.wq)({
+function b(e, t, n, r, i) {
+    let a =
+        (0, c.isWindows)() &&
+        (0, o.r)({
+            location: "applyBackgroundMediaFilterSettings",
+        }).enabled;
+    (0, d.wq)({
         [e]: {
             graph: n,
             target: t,
             image: r,
             blob: i,
+            useH264MFDecoder: a,
         },
     });
 }
-async function b(e, t, n) {
+async function O(e, t, n) {
     let r,
         i = !1;
-    if (null == n) return E(e, t, a.gO.NONE);
-    if ("blur" === n) return E(e, t, a.gO.BACKGROUND_BLUR);
+    if (null == n) return b(e, t, a.gO.NONE);
+    if ("blur" === n) return b(e, t, a.gO.BACKGROUND_BLUR);
     if ("string" == typeof n || "number" == typeof n) {
-        var s;
-        let e = (0, f.A)()[n];
-        (i = null != (s = e.isVideo) && s), (r = e.source);
+        var o;
+        let e = (0, _.A)()[n];
+        (i = null != (o = e.isVideo) && o), (r = e.source);
     } else {
         let e = n.asset;
-        (i = (0, o.VI)(e) || (0, o.q6)(e)),
-            (r = (0, o.Bo)({
+        (i = (0, l.VI)(e) || (0, l.q6)(e)),
+            (r = (0, l.Bo)({
                 userId: n.user_id,
                 assetId: n.id,
                 assetHash: e,
-                size: _.Im.width,
+                size: m.Im.width,
             }));
     }
     if (null != r)
         try {
-            let n = i ? void 0 : await m(r),
-                s = i ? await g(r) : void 0;
-            E(e, t, a.gO.BACKGROUND_REPLACEMENT, n, s);
+            let n = i ? void 0 : await E(r),
+                o = i ? await y(r) : void 0;
+            b(e, t, a.gO.BACKGROUND_REPLACEMENT, n, o);
         } catch (e) {
-            (0, c.Mj)();
+            (0, d.Mj)();
         }
 }
-async function y(e, t) {
+async function v(e, t) {
     let { track: n = !0, location: r } = t;
-    await b(
+    await O(
         a.Tr.CAMERA_BACKGROUND_LIVE,
         {
             type: a.Qo.INPUT_DEVICE,
         },
         e,
     ),
-        n && (0, d.Uz)(e, r, "Enabled");
+        n && (0, p.Uz)(e, r, "Enabled");
 }
-async function O(e, t, n) {
+async function A(e, t, n) {
     let { track: r = !0, location: i } = n;
-    (0, c.Oo)(),
-        await b(
+    (0, d.Oo)(),
+        await O(
             a.Tr.CAMERA_BACKGROUND_PREVIEW,
             {
                 type: a.Qo.STREAM,
@@ -122,17 +130,17 @@ async function O(e, t, n) {
             },
             e,
         ),
-        r && (0, d.Uz)(e, i, "Preview");
+        r && (0, p.Uz)(e, i, "Preview");
 }
 
-function A() {
+function I() {
     let e = s.default.getCurrentUser();
     if (null == e) return;
-    let t = (0, l.i)(e);
-    (0, p.A)() &&
-        !u.A.hasBeenApplied &&
+    let t = (0, u.i)(e);
+    (0, h.A)() &&
+        !f.A.hasBeenApplied &&
         null != t &&
-        y(t, {
+        v(t, {
             track: !1,
-        }).catch(h.tEg);
+        }).catch(g.tEg);
 }
