@@ -17,10 +17,11 @@ let l = {
             channelId: e,
         });
     },
-    select(e) {
+    select(e, t) {
         r.h.dispatch({
             type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT",
-            row: e,
+            row: t,
+            section: e,
         });
     },
     addUser(e) {

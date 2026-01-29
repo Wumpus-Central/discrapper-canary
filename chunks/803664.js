@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(311907),
-    s = n(397927),
-    o = n(49229),
+    o = n(397927),
+    s = n(49229),
     l = n(327166),
     c = n(994500),
     u = n(287809),
@@ -44,19 +44,26 @@ function p(e) {
 }
 
 function _(e) {
-    let { user: t, location: f = "ContextMenu", onFriendRequestSent: _, onFriendRemove: h, appContext: m } = e,
-        { id: g, username: E, bot: b } = t,
-        y = (0, a.bG)([u.default], () => {
+    let {
+            user: t,
+            location: f = "ContextMenu",
+            onFriendRequestSent: _,
+            onFriendRemove: h,
+            appContext: m,
+            setLoading: g,
+        } = e,
+        { id: E, username: y, bot: b } = t,
+        O = (0, a.bG)([u.default], () => {
             var e;
-            return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === g;
-        }, [g]),
-        O = (0, l.D)(g),
-        [A, v] = (0, a.yK)([c.A], () => [c.A.isFriend(g), c.A.isBlocked(g)], [g]),
-        [S, I] = i.useState(!1);
-    if (b || y) return null;
+            return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
+        }, [E]),
+        v = (0, l.D)(E),
+        [A, I] = (0, a.yK)([c.A], () => [c.A.isFriend(E), c.A.isBlocked(E)], [E]),
+        [S, T] = i.useState(!1);
+    if (b || O) return null;
 
-    function T() {
-        (0, s.mMO)(
+    function C() {
+        (0, o.mMO)(
             async () => {
                 let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 158954));
                 return (t) =>
@@ -65,18 +72,18 @@ function _(e) {
                         p(
                             {
                                 title: d.intl.formatToPlainString(d.t.fPLvZd, {
-                                    name: E,
+                                    name: y,
                                 }),
                                 subtitle: d.intl.format(d.t.l5FFq6, {
-                                    name: E,
+                                    name: y,
                                 }),
                                 confirmText: d.intl.string(d.t.cvSt1J),
                                 cancelText: d.intl.string(d.t["ETE/oC"]),
                                 onConfirm: () => {
-                                    o.A.removeFriend(g, {
+                                    s.A.removeFriend(E, {
                                         location: f,
                                     }),
-                                        I(!1),
+                                        T(!1),
                                         null == h || h();
                                 },
                             },
@@ -85,30 +92,32 @@ function _(e) {
                     );
             },
             {
-                contextKey: null != m ? (0, s.TId)(m) : void 0,
+                contextKey: null != m ? (0, o.TId)(m) : void 0,
             },
         );
     }
     return A
-        ? (0, r.jsx)(s.Drp, {
+        ? (0, r.jsx)(o.Drp, {
               id: "remove-friend",
               label: d.intl.string(d.t.cvSt1J),
-              action: T,
+              action: C,
           })
-        : (0, r.jsx)(s.Drp, {
+        : (0, r.jsx)(o.Drp, {
               id: "add-friend",
-              label: S ? d.intl.string(d.t.xMH6vD) : O,
-              action: () => {
+              label: S ? d.intl.string(d.t.xMH6vD) : v,
+              action: async () => {
                   S ||
-                      (o.A.addRelationship({
-                          userId: g,
+                      (null == g || g(!0),
+                      await s.A.addRelationship({
+                          userId: E,
                           context: {
                               location: f,
                           },
                       }),
-                      I(!0),
-                      null == _ || _());
+                      T(!0),
+                      null == _ || _(),
+                      null == g || g(!1));
               },
-              disabled: v || (S && !A),
+              disabled: I || (S && !A),
           });
 }
