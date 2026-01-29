@@ -519,8 +519,9 @@ let O = {
     };
 
 function C(e) {
-    let { primaryButtonText: t, primaryButtonIcon: n } = e,
-        i = y(e, ["primaryButtonText", "primaryButtonIcon"]);
+    let { primaryButtonText: t, primaryButtonIcon: n, headerBadgeHasIcon: i } = e,
+        a = y(e, ["primaryButtonText", "primaryButtonIcon", "headerBadgeHasIcon"]),
+        o = i ? l.gqV : void 0;
     return (0, r.jsxs)(l.BJc, {
         gap: 16,
         align: "center",
@@ -537,8 +538,9 @@ function C(e) {
                         (e) =>
                             (0, r.jsx)(
                                 c.oH,
-                                E(m({}, e, i), {
-                                    title: i.title,
+                                E(m({}, e, a), {
+                                    title: a.title,
+                                    headerBadgeIcon: o,
                                     primaryButtonProps: {
                                         onClick: e.onClose,
                                         text: t,
@@ -558,7 +560,7 @@ function C(e) {
                                 }),
                             ),
                         {
-                            dismissable: i.dismissable,
+                            dismissable: a.dismissable,
                         },
                     ),
             }),
@@ -617,10 +619,15 @@ let N = o.A.map((e) => ({
                         defaultValue: s.d.US,
                         options: N,
                     },
-                    headerPillText: {
+                    headerBadgeText: {
                         label: "Header Pill Text",
                         type: "text",
                         defaultValue: "PROMO",
+                    },
+                    headerBadgeHasIcon: {
+                        label: "Header Badge Has Icon",
+                        type: "boolean",
+                        defaultValue: !1,
                     },
                     gradientColor: {
                         label: "Gradient Color",

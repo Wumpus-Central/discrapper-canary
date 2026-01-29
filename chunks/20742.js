@@ -260,8 +260,7 @@ function w(e) {
             variant: null != l ? l : "heading-lg/semibold",
             color: "text-strong",
             children: s,
-        }),
-        x = null != n ? D : L;
+        });
     "end" === a &&
         (L = (0, r.jsxs)(h.B, {
             direction: "horizontal",
@@ -275,45 +274,46 @@ function w(e) {
                 }),
             ],
         }));
-    let M = (0, r.jsx)("header", {
-        className: o()(E.section, E.header, {
-            [E.headerCentered]: m,
-        }),
-        children: (0, r.jsxs)(h.B, {
-            gap: 8,
-            children: [
-                (0, r.jsx)("div", {
-                    className: E.headerLayout,
-                    children: (0, r.jsx)(w, {
-                        leading: y,
-                        trailing: O,
-                        hasGradient: I,
-                        children: (0, r.jsxs)("div", {
-                            className: E.headerMain,
-                            children: [
-                                null != v &&
-                                    (0, r.jsx)("div", {
-                                        className: E.headerStepIndicator,
-                                        children: (0, r.jsx)(_.z, b({}, v)),
-                                    }),
-                                x,
-                            ],
+    let x = null != n ? D : L,
+        M = (0, r.jsx)("header", {
+            className: o()(E.section, E.header, {
+                [E.headerCentered]: m,
+            }),
+            children: (0, r.jsxs)(h.B, {
+                gap: 8,
+                children: [
+                    (0, r.jsx)("div", {
+                        className: E.headerLayout,
+                        children: (0, r.jsx)(w, {
+                            leading: y,
+                            trailing: O,
+                            hasGradient: I,
+                            children: (0, r.jsxs)("div", {
+                                className: E.headerMain,
+                                children: [
+                                    null != v &&
+                                        (0, r.jsx)("div", {
+                                            className: E.headerStepIndicator,
+                                            children: (0, r.jsx)(_.z, b({}, v)),
+                                        }),
+                                    x,
+                                ],
+                            }),
                         }),
                     }),
-                }),
-                "top" === a &&
-                    (0, r.jsx)(R, {
-                        badge: i,
-                        position: a,
-                    }),
-                null != n && null != s && L,
-                null != c &&
-                    (0, r.jsx)(P, {
-                        subtitle: c,
-                    }),
-            ],
-        }),
-    });
+                    "top" === a &&
+                        (0, r.jsx)(R, {
+                            badge: i,
+                            position: a,
+                        }),
+                    null != n && null != s && L,
+                    null != c &&
+                        (0, r.jsx)(P, {
+                            subtitle: c,
+                        }),
+                ],
+            }),
+        });
     return I
         ? (0, r.jsx)(u.h, {
               color: t,
