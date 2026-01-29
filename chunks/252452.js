@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(562465),
     i = n(506774),
     a = n(73153),
-    s = n(624826),
-    o = n(398590),
+    o = n(624826),
+    s = n(398590),
     l = n(652215),
     c = n(516780);
 
@@ -44,12 +44,7 @@ let f = {
     open() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            n =
-                arguments.length > 2 && void 0 !== arguments[2]
-                    ? arguments[2]
-                    : {
-                          openWithoutBackstack: !1,
-                      };
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         a.h.dispatch(
             d(
                 {
@@ -60,7 +55,7 @@ let f = {
                 n,
             ),
         ),
-            (0, o.id)(l.zgK.USER_SETTINGS);
+            (0, s.id)(l.zgK.USER_SETTINGS);
     },
     close() {
         a.h.dispatch({
@@ -113,11 +108,11 @@ let f = {
         a.h.dispatch({
             type: "USER_SETTINGS_MODAL_SUBMIT",
         });
-        let { username: n, email: o, emailToken: u, password: d, avatar: f, newPassword: p, discriminator: _ } = e,
+        let { username: n, email: s, emailToken: u, password: d, avatar: f, newPassword: p, discriminator: _ } = e,
             { close: h } = t,
             m = {
                 username: n,
-                email: o,
+                email: s,
                 email_token: u,
                 password: d,
                 avatar: f,
@@ -127,9 +122,9 @@ let f = {
             g = i.w.get(l.Xlh),
             E = (0, c.oH)();
         null != E && null != g && ((m.push_provider = E), (m.push_token = g));
-        let b = i.w.get(l.Ahp);
+        let y = i.w.get(l.Ahp);
         return (
-            null != c.vz && null != b && ((m.push_voip_provider = c.vz), (m.push_voip_token = b)),
+            null != c.vz && null != y && ((m.push_voip_provider = c.vz), (m.push_voip_token = y)),
             r.Bo.patch({
                 url: l.Rsh.ME,
                 oldFormErrors: !0,
@@ -151,7 +146,7 @@ let f = {
                             user: t,
                         }),
                         void 0 !== f &&
-                            (0, s.t)({
+                            (0, o.t)({
                                 avatarHash: t.avatar,
                             }),
                         null != p &&

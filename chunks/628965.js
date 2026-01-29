@@ -1,11 +1,11 @@
 n.d(t, {
-    A: () => x,
+    A: () => D,
 });
 var r,
     i = n(311907),
     a = n(73153),
-    s = n(287809),
-    o = n(652215);
+    o = n(287809),
+    s = n(652215);
 
 function l(e, t, n) {
     return (
@@ -37,36 +37,34 @@ function c(e) {
     }
     return e;
 }
-let u = o.XlH.CLOSED,
+let u = s.XlH.CLOSED,
     d = null,
     f = {},
     p = {},
     _ = {},
     h = null,
     m = null,
-    g = !1,
-    E = null,
-    b = [],
+    g = null,
+    E = [],
     y = null;
 
-function O(e) {
-    A(e);
+function b(e) {
+    O(e);
 }
 
-function A(e) {
+function O(e) {
     var t, n, r, i;
-    let a = s.default.getCurrentUser();
+    let a = o.default.getCurrentUser();
     if (null == a) return v();
     (d = null != (t = e.section) ? t : d),
         null != e.subsection && null != d && (f[d] = e.subsection),
         null != e.scrollPosition && null != d && (p[d] = e.scrollPosition),
-        (g = !!e.openWithoutBackstack),
-        (u = o.XlH.OPEN),
+        (u = s.XlH.OPEN),
         (_ = {}),
         (m = c(
             {},
             (h = {
-                [o.nc_.ACCOUNT]: {
+                [s.nc_.ACCOUNT]: {
                     userId: a.id,
                     username: a.username,
                     discriminator: a.discriminator,
@@ -78,20 +76,20 @@ function A(e) {
                 },
             }),
         )),
-        (E = null != (n = e.analyticsLocation) ? n : null),
-        (b = null != (r = e.analyticsLocations) ? r : []),
+        (g = null != (n = e.analyticsLocation) ? n : null),
+        (E = null != (r = e.analyticsLocations) ? r : []),
         (y = null != (i = e.searchParams) ? i : null);
 }
 
 function v() {
-    (u = o.XlH.CLOSED), (h = null), (m = null), (d = null), (f = {}), (p = {}), (E = null), (b = []), (y = null);
+    (u = s.XlH.CLOSED), (h = null), (m = null), (d = null), (f = {}), (p = {}), (g = null), (E = []), (y = null);
 }
 
-function S(e) {
+function A(e) {
     var t;
     (d = e.section),
-        (E = null),
-        (b = null != (t = e.analyticsLocations) ? t : []),
+        (g = null),
+        (E = null != (t = e.analyticsLocations) ? t : []),
         null != e.subsection && (f[d] = e.subsection);
 }
 
@@ -100,30 +98,30 @@ function I(e) {
     null != t ? delete f[t] : null != d && delete f[d];
 }
 
-function T(e) {
+function S(e) {
     let { forSection: t } = e;
     null != t ? delete p[t] : null != d && delete p[d];
 }
 
-function C(e) {
+function T(e) {
     let { settings: t } = e;
     null == m && (m = {});
-    let n = m[o.nc_.ACCOUNT];
-    m[o.nc_.ACCOUNT] = c({}, n, t);
+    let n = m[s.nc_.ACCOUNT];
+    m[s.nc_.ACCOUNT] = c({}, n, t);
+}
+
+function C() {
+    u = s.XlH.SUBMITTING;
 }
 
 function N() {
-    u = o.XlH.SUBMITTING;
-}
-
-function R() {
-    let e = s.default.getCurrentUser();
+    let e = o.default.getCurrentUser();
     w(),
         null != e &&
             (m = c(
                 {},
                 (h = {
-                    [o.nc_.ACCOUNT]: {
+                    [s.nc_.ACCOUNT]: {
                         userId: e.id,
                         username: e.username,
                         discriminator: e.discriminator,
@@ -138,17 +136,17 @@ function R() {
 }
 
 function w() {
-    (u = o.XlH.OPEN), (_ = {});
+    (u = s.XlH.OPEN), (_ = {});
 }
 
-function P(e) {
+function R(e) {
     var t;
-    if (u !== o.XlH.SUBMITTING) return !1;
-    (u = o.XlH.OPEN), (d = o.nc_.ACCOUNT), (_ = null != (t = e.errors) ? t : {});
+    if (u !== s.XlH.SUBMITTING) return !1;
+    (u = s.XlH.OPEN), (d = s.nc_.ACCOUNT), (_ = null != (t = e.errors) ? t : {});
 }
-class D extends (r = i.Ay.Store) {
+class P extends (r = i.Ay.Store) {
     initialize() {
-        this.waitFor(s.default);
+        this.waitFor(o.default);
     }
     getSection() {
         return d;
@@ -160,39 +158,36 @@ class D extends (r = i.Ay.Store) {
         return null != d ? p[d] : null;
     }
     getAnalyticsLocation() {
-        return E;
+        return g;
     }
     getAnalyticsLocations() {
-        return b;
+        return E;
     }
     getErrors() {
         return _;
     }
     getSubmitting() {
-        return u === o.XlH.SUBMITTING;
+        return u === s.XlH.SUBMITTING;
     }
     getSettings() {
         return m;
-    }
-    getOpenWithoutBackstack() {
-        return g;
     }
     getSearchParams() {
         return y;
     }
 }
-l(D, "displayName", "UserSettingsModalStore");
-let x = new D(a.h, {
-    USER_SETTINGS_MODAL_OPEN: O,
-    USER_SETTINGS_MODAL_INIT: A,
+l(P, "displayName", "UserSettingsModalStore");
+let D = new P(a.h, {
+    USER_SETTINGS_MODAL_OPEN: b,
+    USER_SETTINGS_MODAL_INIT: O,
     USER_SETTINGS_MODAL_CLOSE: v,
     LOGOUT: v,
-    USER_SETTINGS_MODAL_SUBMIT: N,
-    USER_SETTINGS_MODAL_SUBMIT_FAILURE: P,
-    USER_SETTINGS_MODAL_SET_SECTION: S,
+    USER_SETTINGS_MODAL_SUBMIT: C,
+    USER_SETTINGS_MODAL_SUBMIT_FAILURE: R,
+    USER_SETTINGS_MODAL_SET_SECTION: A,
     USER_SETTINGS_MODAL_CLEAR_SUBSECTION: I,
-    USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: T,
-    USER_SETTINGS_MODAL_UPDATE_ACCOUNT: C,
+    USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: S,
+    USER_SETTINGS_MODAL_UPDATE_ACCOUNT: T,
     USER_SETTINGS_MODAL_SUBMIT_COMPLETE: w,
-    USER_SETTINGS_MODAL_RESET: R,
+    USER_SETTINGS_MODAL_RESET: N,
 });
