@@ -1,11 +1,12 @@
 n.d(t, {
-    R: () => u,
-    j: () => d,
+    R: () => d,
+    j: () => f,
 });
 var r = n(627968),
-    i = n(397927);
+    i = n(397927),
+    a = n(733391);
 
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function a(e, t, n) {
     );
 }
 
-function o(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,13 +31,13 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
 
-function s(e, t) {
+function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,54 +50,55 @@ function s(e, t) {
     return n;
 }
 
-function l(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
+            : l(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let c = "social-layer-storefront-product-details-modal",
-    u = (e) => {
+let u = "social-layer-storefront-product-details-modal",
+    d = (e) => {
         let {
             skuId: t,
-            applicationId: a,
-            guildId: s,
-            isStorefront: u,
-            analyticsLocations: d,
-            analyticsContext: f,
-            onClose: p,
+            applicationId: o,
+            guildId: l,
+            isStorefront: d,
+            analyticsLocations: f,
+            analyticsContext: p,
+            onClose: _,
         } = e;
-        (0, i.mMO)(
-            async () => {
-                let { default: e } = await Promise.all([n.e("40396"), n.e("67851")]).then(n.bind(n, 108105));
-                return (n) =>
-                    (0, r.jsx)(
-                        e,
-                        l(o({}, n), {
-                            skuId: t,
-                            applicationId: a,
-                            guildId: s,
-                            isStorefront: u,
-                            analyticsLocations: d,
-                            analyticsContext: f,
-                        }),
-                    );
-            },
-            {
-                modalKey: c,
-                allowsNavigation: u,
-                onCloseCallback: () => {
-                    null == p || p();
+        (0, a.iR)(l, t, "openSocialLayerStorefrontProductDetailsModal"),
+            (0, i.mMO)(
+                async () => {
+                    let { default: e } = await Promise.all([n.e("40396"), n.e("67851")]).then(n.bind(n, 108105));
+                    return (n) =>
+                        (0, r.jsx)(
+                            e,
+                            c(s({}, n), {
+                                skuId: t,
+                                applicationId: o,
+                                guildId: l,
+                                isStorefront: d,
+                                analyticsLocations: f,
+                                analyticsContext: p,
+                            }),
+                        );
                 },
-            },
-        );
+                {
+                    modalKey: u,
+                    allowsNavigation: d,
+                    onCloseCallback: () => {
+                        null == _ || _();
+                    },
+                },
+            );
     };
 
-function d() {
-    (0, i.kBI)(c) && (0, i.OoC)(c);
+function f() {
+    (0, i.kBI)(u) && (0, i.OoC)(u);
 }

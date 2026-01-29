@@ -1562,6 +1562,8 @@ let ed = "",
             "/partner-sdk/applications/".concat(e, "/skus/recommendations"),
         SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU: (e, t) =>
             "/partner-sdk/guilds/".concat(e, "/application-storefront/skus/").concat(t),
+        SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY: (e, t) =>
+            "/partner-sdk/guilds/".concat(e, "/application-storefront/skus/").concat(t, "/eligibility"),
         SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT: (e) =>
             "/partner-sdk/guilds/".concat(e, "/application-storefront/announcement"),
         ORDER_GET: (e) => "/billing/orders/".concat(e),

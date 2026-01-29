@@ -1,20 +1,22 @@
 n.d(t, {
-    Kh: () => O,
-    Rw: () => g,
+    Kh: () => v,
+    Rw: () => E,
     SP: () => b,
-    Xg: () => y,
-    g9: () => m,
-    qf: () => E,
+    Xg: () => O,
+    g9: () => g,
+    iR: () => A,
+    qf: () => y,
 }),
     n(65821);
 var r = n(562465),
     i = n(73153),
     a = n(927813),
-    s = n(871123),
-    o = n(832163),
-    l = n(652215);
+    o = n(871123),
+    s = n(832163),
+    l = n(179935),
+    c = n(652215);
 
-function c(e, t, n) {
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +30,7 @@ function c(e, t, n) {
     );
 }
 
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,13 +41,13 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
 
-function d(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,34 +60,34 @@ function d(e, t) {
     return n;
 }
 
-function f(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let p = 6,
-    _ = 30 * a.A.Millis.SECOND,
-    h = 30 * a.A.Millis.MINUTE,
-    m = 5;
-async function g(e) {
+let _ = 6,
+    h = 30 * a.A.Millis.SECOND,
+    m = 30 * a.A.Millis.MINUTE,
+    g = 5;
+async function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { eager: n = !1, forceFetch: a = !1 } = t,
-        c = o.A.getStorefrontData(e),
-        u = (null == c ? void 0 : c.state) === "loading",
+        l = s.A.getStorefrontData(e),
+        u = (null == l ? void 0 : l.state) === "loading",
         d =
-            (null == c ? void 0 : c.state) === "error" &&
-            (null == c ? void 0 : c.fetchedAt) != null &&
-            Date.now() - c.fetchedAt < _,
+            (null == l ? void 0 : l.state) === "error" &&
+            (null == l ? void 0 : l.fetchedAt) != null &&
+            Date.now() - l.fetchedAt < h,
         f =
-            (null == c ? void 0 : c.state) === "fetched" &&
-            (null == c ? void 0 : c.fetchedAt) != null &&
-            Date.now() - c.fetchedAt < h;
+            (null == l ? void 0 : l.state) === "fetched" &&
+            (null == l ? void 0 : l.fetchedAt) != null &&
+            Date.now() - l.fetchedAt < m;
     if (!(u || d || f) || a)
         try {
             var p;
@@ -94,14 +96,14 @@ async function g(e) {
                 guildId: e,
             });
             let t = await r.Bo.get({
-                url: l.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT(e),
+                url: c.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT(e),
                 rejectWithError: !0,
                 retries: 3,
             });
             i.h.dispatch({
                 type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
                 guildId: e,
-                storefront: (0, s.sq)(t.body),
+                storefront: (0, o.sq)(t.body),
             }),
                 i.h.dispatch({
                     type: "STORE_LISTINGS_FETCH_SUCCESS",
@@ -115,21 +117,21 @@ async function g(e) {
             });
         }
 }
-async function E(e, t) {
+async function y(e, t) {
     try {
         i.h.dispatch({
             type: "STORE_LISTINGS_FETCH_START",
             skuId: t,
         });
         let n = await r.Bo.get({
-            url: l.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(e, t),
+            url: c.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(e, t),
             rejectWithError: !0,
         });
         if (null == n.body || !n.ok) throw Error("Failed to fetch social layer storefront SKU");
         i.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS",
             guildId: e,
-            storefront: (0, s.sq)({
+            storefront: (0, o.sq)({
                 application_id: n.body.store_listing.sku.application_id,
                 title: "",
                 logo_asset_id: void 0,
@@ -159,13 +161,13 @@ function b(e, t, n) {
         skuId: n,
     });
 }
-async function y(e) {
-    let { applicationId: t, userIds: n, maxRecommendations: a = p, includeWishlists: c = !1 } = e;
+async function O(e) {
+    let { applicationId: t, userIds: n, maxRecommendations: a = _, includeWishlists: l = !1 } = e;
     if (0 === n.length) return;
-    let d = o.A.recommendationsByApplicationsAndUsers(t, n);
+    let u = s.A.recommendationsByApplicationsAndUsers(t, n);
     if (
-        null == d ||
-        ("error" !== d.state && "loading" !== d.state && ("success" !== d.state || !(d.data.numItemsRequested >= a)))
+        null == u ||
+        ("error" !== u.state && "loading" !== u.state && ("success" !== u.state || !(u.data.numItemsRequested >= a)))
     )
         try {
             i.h.dispatch({
@@ -174,23 +176,23 @@ async function y(e) {
                 userIds: n,
             });
             let e = await r.Bo.get({
-                    url: l.Rsh.SOCIAL_LAYER_APPLCIATION_RECOMMENDATIONS(t),
+                    url: c.Rsh.SOCIAL_LAYER_APPLCIATION_RECOMMENDATIONS(t),
                     rejectWithError: !0,
                     query: {
                         user_ids: n,
                         max_recommendations: a,
-                        include_wishlists: c,
+                        include_wishlists: l,
                     },
                 }),
-                o = (0, s.ty)(e.body);
+                s = (0, o.ty)(e.body);
             return (
                 i.h.dispatch(
-                    f(
-                        u(
+                    p(
+                        d(
                             {
                                 type: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS",
                             },
-                            o,
+                            s,
                         ),
                         {
                             userIds: n,
@@ -198,7 +200,7 @@ async function y(e) {
                         },
                     ),
                 ),
-                o
+                s
             );
         } catch (e) {
             return (
@@ -211,11 +213,11 @@ async function y(e) {
             );
         }
 }
-async function O(e) {
+async function v(e) {
     try {
         let t = (
             await r.Bo.get({
-                url: l.Rsh.SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT(e),
+                url: c.Rsh.SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT(e),
                 rejectWithError: !0,
             })
         ).body;
@@ -236,4 +238,38 @@ async function O(e) {
             guildId: e,
         });
     }
+}
+
+function A(e, t, n) {
+    if (
+        !(0, l.T)({
+            location: n,
+        })
+    )
+        return;
+    let a = s.A.getSKUEligibility(t);
+    "checking" !== a &&
+        "eligible" !== a &&
+        "ineligible" !== a &&
+        (i.h.dispatch({
+            type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START",
+            skuId: t,
+        }),
+        r.Bo.post({
+            url: c.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(e, t),
+            rejectWithError: !0,
+        })
+            .then((e) => {
+                i.h.dispatch({
+                    type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE",
+                    skuId: t,
+                    interactionId: e.body.interaction_id,
+                });
+            })
+            .catch(() => {
+                i.h.dispatch({
+                    type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
+                    skuId: t,
+                });
+            }));
 }

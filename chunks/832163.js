@@ -1,15 +1,16 @@
 let r;
 n.d(t, {
-    A: () => R,
+    A: () => F,
 }),
     n(65821),
     n(896048);
 var i,
     a = n(311907),
-    s = n(73153),
-    o = n(773669);
+    o = n(73153),
+    s = n(773669),
+    l = n(961350);
 
-function l(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +24,7 @@ function l(e, t, n) {
     );
 }
 
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,13 +35,13 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
 
-function u(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,69 +54,124 @@ function u(e, t) {
     return n;
 }
 
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function f(e) {
+function p(e) {
     if (0 === e.length) throw Error("No user IDs provided");
     return e.length > 1 ? [...e].join(",") : e[0];
 }
-let p = {},
-    _ = {},
+let _ = {},
     h = {},
-    m = {};
+    m = {},
+    g = {},
+    E = {},
+    y = {};
 
-function g() {
-    h = {};
+function b() {
+    (m = {}), (E = {}), (y = {});
 }
 
-function E(e) {
+function O(e) {
+    let { skuId: t } = e;
+    E = f(u({}, E), {
+        [t]: "checking",
+    });
+}
+
+function v(e) {
+    let { skuId: t, interactionId: n } = e;
+    if ("checking" !== E[t]) return !1;
+    y[n] = t;
+}
+
+function A(e) {
+    let { skuId: t } = e;
+    E = f(u({}, E), {
+        [t]: "error",
+    });
+}
+
+function I(e) {
+    let { skuId: t, recipientId: n, eligible: r } = e;
+    if (l.default.getId() !== n) return !1;
+    E = f(u({}, E), {
+        [t]: r ? "eligible" : "ineligible",
+    });
+}
+
+function S(e) {
+    let { entitlement: t } = e;
+    if (null == E[t.sku_id]) return !1;
+    (E = u({}, E)), delete E[t.sku_id];
+}
+
+function T(e) {
+    let { interactionId: t } = e;
+    if (null == y[t]) return !1;
+    delete y[t];
+}
+
+function C(e) {
+    let { interactionId: t } = e;
+    if (null == t) return !1;
+    let n = y[t];
+    if (null == n) return !1;
+    (E = f(u({}, E), {
+        [n]: "error",
+    })),
+        delete y[t];
+}
+
+function N() {
+    (E = {}), (y = {});
+}
+
+function w(e) {
     var t;
-    let { applicationId: n, userIds: r } = e,
-        i = f(r);
-    h = d(c({}, h), {
-        [n]: d(c({}, null != (t = h[n]) ? t : {}), {
-            [i]: {
+    let { applicationId: n, userIds: r } = e;
+    m = f(u({}, m), {
+        [n]: f(u({}, null != (t = m[n]) ? t : {}), {
+            [p(r)]: {
                 state: "loading",
             },
         }),
     });
 }
 
-function b(e) {
+function R(e) {
     var t;
-    let { skus: n, skusToRecommendationReasons: r, userIds: i, application: a, numItemsRequested: s } = e,
-        o = f(i);
-    h = d(c({}, h), {
-        [a.id]: d(c({}, null != (t = h[a.id]) ? t : {}), {
-            [o]: {
+    let { skus: n, skusToRecommendationReasons: r, userIds: i, application: a, numItemsRequested: o } = e;
+    m = f(u({}, m), {
+        [a.id]: f(u({}, null != (t = m[a.id]) ? t : {}), {
+            [p(i)]: {
                 state: "success",
                 data: {
                     skus: n,
                     skusToRecommendationReasons: r,
-                    numItemsRequested: s,
+                    numItemsRequested: o,
                 },
             },
         }),
     });
 }
 
-function y(e) {
+function P(e) {
     var t;
     let { applicationId: n, userIds: r } = e,
-        i = f(r);
-    if (null != h[n] && null != h[n][i] && "success" === h[n][i].state) return !1;
-    h = d(c({}, h), {
-        [n]: d(c({}, null != (t = h[n]) ? t : {}), {
+        i = p(r);
+    if (null != m[n] && null != m[n][i] && "success" === m[n][i].state) return !1;
+    m = f(u({}, m), {
+        [n]: f(u({}, null != (t = m[n]) ? t : {}), {
             [i]: {
                 state: "error",
             },
@@ -123,106 +179,120 @@ function y(e) {
     });
 }
 
-function O(e) {
+function D(e) {
     let { guildId: t } = e,
-        n = _[t];
-    (_[t] = d(c({}, n), {
+        n = h[t];
+    (h[t] = f(u({}, n), {
         state: "loading",
     })),
-        (_ = c({}, _));
+        (h = u({}, h));
 }
 
-function A(e) {
+function L(e) {
     let { guildId: t, storefront: n } = e;
-    (_[t] = {
+    (h[t] = {
         storefront: n,
         state: "fetched",
         fetchedAt: Date.now(),
     }),
-        (_ = c({}, _));
+        (h = u({}, h));
 }
 
-function v(e) {
+function x(e) {
     let { guildId: t, storefront: n } = e,
-        r = _[t];
+        r = h[t];
     (null == r ? void 0 : r.storefront) != null
-        ? (_[t] = d(c({}, r), {
-              storefront: d(c({}, r.storefront), {
-                  assets: c({}, r.storefront.assets, n.assets),
+        ? (h[t] = f(u({}, r), {
+              storefront: f(u({}, r.storefront), {
+                  assets: u({}, r.storefront.assets, n.assets),
               }),
           }))
-        : (_[t] = {
+        : (h[t] = {
               storefront: n,
               state: "partially-fetched",
               fetchedAt: null,
           }),
-        (_ = c({}, _));
+        (h = u({}, h));
 }
 
-function S(e) {
+function M(e) {
     let { guildId: t, eager: n } = e;
     if (n) {
-        let e = _[t];
+        let e = h[t];
         (null == e ? void 0 : e.state) === "loading" && (null == e ? void 0 : e.storefront) != null
-            ? (_[t] = d(c({}, e), {
+            ? (h[t] = f(u({}, e), {
                   state: "fetched",
               }))
-            : delete _[t];
+            : delete h[t];
     } else
-        _[t] = {
+        h[t] = {
             storefront: null,
             state: "error",
             fetchedAt: Date.now(),
         };
-    _ = c({}, _);
+    h = u({}, h);
 }
 
-function I(e) {
+function j(e) {
     let { guildId: t, pageIndex: n, skuId: r } = e;
-    (p[t] = {
+    (_[t] = {
         activePage: n,
         activeSkuId: r,
     }),
-        (p = c({}, p));
+        (_ = u({}, _));
 }
 
-function T(e) {
+function k(e) {
     let { guildId: t, announcement: n } = e;
-    (m[t] = n), (m = c({}, m));
+    (g[t] = n), (g = u({}, g));
 }
 
-function C() {
-    if (r === o.default.locale) return !1;
-    (r = o.default.locale), (p = {}), (_ = {}), (h = {});
+function U() {
+    if (r === s.default.locale) return !1;
+    (r = s.default.locale), (_ = {}), (h = {}), (m = {});
 }
-class N extends (i = a.Ay.Store) {
+class G extends (i = a.Ay.Store) {
     initialize() {
-        this.waitFor(o.default), this.syncWith([o.default], C), (r = o.default.locale);
+        this.waitFor(l.default, s.default), this.syncWith([s.default], U), (r = s.default.locale);
     }
     getStorefrontData(e) {
-        return _[e];
+        return h[e];
     }
     getStorefrontState(e) {
-        return p[e];
+        return _[e];
     }
     recommendationsByApplicationsAndUsers(e, t) {
         var n;
-        if (null != t && 0 !== t.length) return null == (n = h[e]) ? void 0 : n[f(t)];
+        if (null != t && 0 !== t.length) return null == (n = m[e]) ? void 0 : n[p(t)];
     }
     getAnnouncement(e) {
-        return m[e];
+        return g[e];
+    }
+    getSKUEligibility(e) {
+        return E[e];
+    }
+    getNormalizedSKUEligibility(e) {
+        return "ineligible" !== E[e];
     }
 }
-l(N, "displayName", "SocialLayerStorefrontStore");
-let R = new N(s.h, {
-    LOGOUT: g,
-    SOCIAL_LAYER_STOREFRONT_LOAD: O,
-    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: A,
-    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: v,
-    SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: S,
-    SET_SOCIAL_LAYER_STOREFRONT_STATE: I,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: b,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE: y,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START: E,
-    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: T,
+c(G, "displayName", "SocialLayerStorefrontStore");
+let F = new G(o.h, {
+    LOGOUT: b,
+    POST_CONNECTION_OPEN: N,
+    ENTITLEMENT_CREATE: S,
+    INTERACTION_FAILURE: C,
+    INTERACTION_SUCCESS: T,
+    SOCIAL_LAYER_STOREFRONT_LOAD: D,
+    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: L,
+    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: x,
+    SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: M,
+    SET_SOCIAL_LAYER_STOREFRONT_STATE: j,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: R,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE: P,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START: w,
+    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: k,
+    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START: O,
+    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: v,
+    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE: A,
+    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE: I,
 });
