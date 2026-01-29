@@ -1,5 +1,6 @@
 n.d(t, {
     A: () => h,
+    N: () => m,
 });
 var r = n(627968),
     i = n(64700),
@@ -113,6 +114,68 @@ function h(e) {
                                   {
                                       innerRef: d,
                                       className: n,
+                                  },
+                                  e,
+                              ),
+                              {
+                                  children: (0, r.jsx)(o.jNK, {
+                                      size: "xs",
+                                      color: o.LU0.colors.WHITE,
+                                  }),
+                              },
+                          ),
+                      ),
+                  }),
+          });
+}
+
+function m(e) {
+    let { applicationId: t, className: n } = e,
+        d = i.useRef(null),
+        p = (0, l.A)({
+            id: t,
+            label: u.intl.string(u.t["FfCL+6"]),
+        }),
+        h = (0, c.n)(t);
+    return null == p && null == h
+        ? null
+        : (0, r.jsx)(o.YNO, {
+              targetElementRef: d,
+              align: "top",
+              position: "right",
+              disablePointerEvents: !1,
+              renderPopout: (e) => {
+                  let { closePopout: t } = e;
+                  return (0, r.jsx)(o.W1t, {
+                      navId: "game-profile-context",
+                      onClose: () => {
+                          (0, s.Z_)(), t();
+                      },
+                      "aria-label": u.intl.string(u.t.PNeFgW),
+                      onSelect: () => {},
+                      children: (0, r.jsxs)(r.Fragment, {
+                          children: [
+                              (0, r.jsx)(o.rXV, {
+                                  children: p,
+                              }),
+                              (0, r.jsx)(o.rXV, {
+                                  children: h,
+                              }),
+                          ],
+                      }),
+                  });
+              },
+              children: (e) =>
+                  (0, r.jsx)(a.m, {
+                      text: u.intl.string(u.t["UKOtz+"]),
+                      children: (0, r.jsx)(
+                          o.DUT,
+                          _(
+                              f(
+                                  {
+                                      innerRef: d,
+                                      className: n,
+                                      "aria-label": u.intl.string(u.t["UKOtz+"]),
                                   },
                                   e,
                               ),
