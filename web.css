@@ -53329,11 +53329,6 @@ div.modalOverrideBody__34eac {
     unicode-bidi: plaintext
 }
 
-.cozy_c19a55 .markupBidi_c19a55 {
-    text-align: start;
-    unicode-bidi: plaintext
-}
-
 .edited_c19a55 {
     font-size: .625rem;
     font-weight: var(--font-weight-normal);
@@ -55703,7 +55698,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

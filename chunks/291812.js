@@ -1,68 +1,65 @@
 n.d(t, {
     Ay: () => y,
-    _A: () => g,
-    sP: () => b,
+    _A: () => m,
+    sP: () => E,
 });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(877413),
-    l = n.n(o),
+    o = n.n(a),
+    s = n(877413),
+    l = n.n(s),
     c = n(52133),
-    u = n(693198),
-    d = n(860227),
-    f = n(861986),
-    p = n(652215),
-    _ = n(985018),
-    h = n(679740),
-    m = n(206314);
+    u = n(860227),
+    d = n(861986),
+    f = n(652215),
+    p = n(985018),
+    _ = n(679740),
+    h = n(206314);
 
-function g(e, t) {
-    return e.type === p.lAJ.VOICE_HANGOUT_INVITE
+function m(e, t) {
+    return e.type === f.lAJ.VOICE_HANGOUT_INVITE
         ? ""
-        : e.hasFlag(p.pr7.SOURCE_MESSAGE_DELETED)
-          ? _.intl.string(_.t.JOtgSw)
+        : e.hasFlag(f.pr7.SOURCE_MESSAGE_DELETED)
+          ? p.intl.string(p.t.JOtgSw)
           : t;
 }
 
-function E(e) {
+function g(e) {
     var t;
-    let { className: n, message: a, children: o, content: c, onUpdate: _, contentRef: E, compact: b } = e,
-        y = a.state === p.cmJ.SEND_FAILED,
-        O = a.state === p.cmJ.SENDING,
-        A = a.isCommandType(),
+    let { className: n, message: a, children: s, content: c, onUpdate: p, contentRef: g, compact: E } = e,
+        y = a.state === f.cmJ.SEND_FAILED,
+        b = a.state === f.cmJ.SENDING,
+        O = a.isCommandType(),
         v = null == (t = a.editedTimestamp) ? void 0 : t.toString(),
-        S = i.useRef(!1);
-    i.useLayoutEffect(() => {
-        S.current ? null != _ && _() : (S.current = !0);
-    }, [_, a.content, c, v, o]);
-    let I = u._.useConfig({
-        location: "MessageContent",
-    }).alignMessagesStart;
-    return (0, r.jsxs)("div", {
-        id: (0, d.CJ)(a),
-        ref: E,
-        className: s()(n, m.PT, {
-            [h.BK]: !0,
-            [h.Tn]: O && !A,
-            [h.Dk]: I,
-            [h.nB]: !I && "rtl" === l()(a.content),
-            [h.Ix]: y,
-            [h.w3]: a.isUnsupported,
-        }),
-        children: [
-            null != o ? o : g(a, c),
-            (0, r.jsx)(f.A, {
-                message: a,
-                compact: b,
-                location: f.O.WITH_CONTENT,
+        A = i.useRef(!1);
+    return (
+        i.useLayoutEffect(() => {
+            A.current ? null != p && p() : (A.current = !0);
+        }, [p, a.content, c, v, s]),
+        (0, r.jsxs)("div", {
+            id: (0, u.CJ)(a),
+            ref: g,
+            className: o()(n, h.PT, {
+                [_.BK]: !0,
+                [_.Tn]: b && !O,
+                [_.nB]: "rtl" === l()(a.content),
+                [_.Ix]: y,
+                [_.w3]: a.isUnsupported,
             }),
-        ],
-    });
+            children: [
+                null != s ? s : m(a, c),
+                (0, r.jsx)(d.A, {
+                    message: a,
+                    compact: E,
+                    location: d.O.WITH_CONTENT,
+                }),
+            ],
+        })
+    );
 }
 
-function b(e, t) {
+function E(e, t) {
     var n, r;
     let { message: i } = t,
         { message: a } = e;
@@ -74,4 +71,4 @@ function b(e, t) {
             (null == (r = a.editedTimestamp) ? void 0 : r.toString())
     );
 }
-let y = i.memo(E, b);
+let y = i.memo(g, E);
