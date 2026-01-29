@@ -1,9 +1,9 @@
 t.d(n, {
     _: () => g,
 });
-var r = t(627968);
+var l = t(627968);
 t(64700);
-var l = t(877624),
+var r = t(877624),
     i = t(311907),
     s = t(397927),
     a = t(937008),
@@ -17,46 +17,46 @@ var l = t(877624),
 function g() {
     var e;
     let n = (0, i.bG)([u.A], () => {
-            let e = u.A.getMarketingComponentByType(l.C.GIFT_CUSTOMIZATION_BANNER);
+            let e = u.A.getMarketingComponentByType(r.C.GIFT_CUSTOMIZATION_BANNER);
             return null == e || "giftCustomizationBanner" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftCustomizationBanner;
         }),
         { claimableRewards: t } = (0, a.Pv)(),
         g = (0, o.T)(null == n ? void 0 : n.asset),
-        f = (0, o.T)(null == n ? void 0 : n.backgroundAsset),
-        E = null == n ? void 0 : n.gradient,
+        E = (0, o.T)(null == n ? void 0 : n.backgroundAsset),
+        f = null == n ? void 0 : n.gradient,
         j =
-            null != E && null != E.colors && E.colors.length >= 2
+            null != f && null != f.colors && f.colors.length >= 2
                 ? (0, c.K5)(
                       {
-                          gradient: E.colors,
-                          angle: null != (e = E.angle) ? e : void 0,
+                          gradient: f.colors,
+                          angle: null != (e = f.angle) ? e : void 0,
                       },
                       {
                           colorStops: [0, 12, 100],
                       },
                   )
                 : void 0,
-        x = (0, c.gc)(null != f ? f : void 0);
-    null != x && ((x.backgroundSize = "cover, auto"), (x.backgroundPosition = "right center, 0% 0%"));
-    let h = (0, c.x)(x, j);
+        h = (0, c.gc)(null != E ? E : void 0);
+    null != h && ((h.backgroundSize = "cover, auto"), (h.backgroundPosition = "right center, 0% 0%"));
+    let x = (0, c.x)(h, j);
     return null == n || null == t
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, l.jsxs)("div", {
               className: m.qD,
-              style: h,
+              style: x,
               children: [
-                  (0, r.jsx)("div", {
+                  (0, l.jsx)("div", {
                       className: m.my,
-                      children: (0, r.jsx)(d.A, {
+                      children: (0, l.jsx)(d.A, {
                           claimableRewards: t,
                           maxRewardImageSrc: null != g ? g : "",
                           size: s._3J.SIZE_40,
-                          imageScaling: 1.9,
+                          imageScaling: 1.25,
                       }),
                   }),
-                  (0, r.jsx)(s.Text, {
+                  (0, l.jsx)(s.Text, {
                       variant: "text-md/medium",
                       className: m._M,
                       color: "always-white",
