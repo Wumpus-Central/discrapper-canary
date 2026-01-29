@@ -1,26 +1,26 @@
-i.d(t, {
+r.d(t, {
     init: () => d,
 }),
-    i(457529);
-var r = i(626584),
-    n = i(313320),
-    s = i(711204),
-    a = i(622397);
+    r(457529);
+var i = r(626584),
+    n = r(313320),
+    s = r(711204),
+    a = r(622397);
 
-function o(e, t, i) {
+function o(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: i,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = i),
+            : (e[t] = r),
         e
     );
 }
-let l = new r.A("MeticulousPerformanceReporter"),
+let l = new i.A("MeticulousPerformanceReporter"),
     m = new (class {
         get isInitialized() {
             return null != this.mode;
@@ -36,25 +36,25 @@ let l = new r.A("MeticulousPerformanceReporter"),
             return null == (e = this.mode) ? void 0 : e.baselineUsedMemory;
         }
         init() {
-            var e, t, i;
-            let r;
+            var e, t, r;
+            let i;
             if (this.isInitialized) return !0;
             let n = (0, a.a)();
             return (
                 null != n &&
                 ((this.mode =
-                    ((r = n.native.performance),
+                    ((i = n.native.performance),
                     {
                         name: "meticulous",
                         sessionId: n.sessionBeingReplayed.id,
                         commitSha: null == (e = n.commitUnderTest) ? void 0 : e.sha,
                         branchName: null == (t = n.commitUnderTest) ? void 0 : t.branchName,
-                        commitDate: null == (i = n.commitUnderTest) ? void 0 : i.date,
+                        commitDate: null == (r = n.commitUnderTest) ? void 0 : r.date,
                         PerformanceObserver: n.native.PerformanceObserver,
-                        performanceNow: () => r.now(),
+                        performanceNow: () => i.now(),
                         mark: (e, t) => performance.mark(e, t),
                         getMemory: () => {
-                            let e = r.memory;
+                            let e = i.memory;
                             if (null != e)
                                 return {
                                     jsHeapSizeLimit: e.jsHeapSizeLimit,
@@ -63,8 +63,47 @@ let l = new r.A("MeticulousPerformanceReporter"),
                                 };
                         },
                         sendToIngest: async (e) => {
-                            let t = JSON.stringify(e);
-                            l.log("QP payload", t);
+                            let t = JSON.stringify(e),
+                                { metrics: r } = e,
+                                i = (function (e, t) {
+                                    if (null == e) return {};
+                                    var r,
+                                        i,
+                                        n,
+                                        s = {};
+                                    if ("u" > typeof Reflect && Reflect.ownKeys) {
+                                        for (n = 0, r = Reflect.ownKeys(e); n < r.length; n++)
+                                            (i = r[n]),
+                                                !(t.indexOf(i) >= 0) &&
+                                                    Object.prototype.propertyIsEnumerable.call(e, i) &&
+                                                    (s[i] = e[i]);
+                                        return s;
+                                    }
+                                    if (
+                                        ((s = (function (e, t) {
+                                            if (null == e) return {};
+                                            var r,
+                                                i,
+                                                n = {},
+                                                s = Object.getOwnPropertyNames(e);
+                                            for (i = 0; i < s.length; i++)
+                                                (r = s[i]),
+                                                    !(t.indexOf(r) >= 0) &&
+                                                        Object.prototype.propertyIsEnumerable.call(e, r) &&
+                                                        (n[r] = e[r]);
+                                            return n;
+                                        })(e, t)),
+                                        Object.getOwnPropertySymbols)
+                                    )
+                                        for (n = 0, r = Object.getOwnPropertySymbols(e); n < r.length; n++)
+                                            (i = r[n]),
+                                                !(t.indexOf(i) >= 0) &&
+                                                    Object.prototype.propertyIsEnumerable.call(e, i) &&
+                                                    (s[i] = e[i]);
+                                    return s;
+                                })(e, ["metrics"]);
+                            l.log("QP payload metadata", JSON.stringify(i, null, 2)),
+                                l.log("QP payload metrics", JSON.stringify(r, null, 2));
                             try {
                                 let e = await fetch("https://meticulous-ingest.discord.tools/webhook", {
                                     method: "POST",
