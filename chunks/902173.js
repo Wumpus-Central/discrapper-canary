@@ -37,6 +37,7 @@ var r = (function (e) {
         (e[(e.PACKAGE_NEW_YEARS = 34)] = "PACKAGE_NEW_YEARS"),
         (e[(e.FULL_EPISODE_VIDEO_QUEST = 35)] = "FULL_EPISODE_VIDEO_QUEST"),
         (e[(e.MOBILE_ACTIVITY_QUEST = 36)] = "MOBILE_ACTIVITY_QUEST"),
+        (e[(e.QUEST_BAR_UNFURL = 37)] = "QUEST_BAR_UNFURL"),
         e
     );
 })({});
