@@ -1024,70 +1024,70 @@
     color: var(--chip-gray-dark-text)
 }
 
-.progress__5a6ab {
+.progress__45530 {
     overflow: hidden;
     position: relative;
     transform: translateZ(0)
 }
 
-.progress__5a6ab,
-.progressBar__5a6ab {
+.progress__45530,
+.progressBar__45530 {
     width: 100%
 }
 
-.animating__5a6ab {
+.animating__45530 {
     transition: transform .2s ease-out
 }
 
-.xxsmall__5a6ab {
+.xxsmall__45530 {
     border-radius: 2px;
     height: 2px
 }
 
-.xsmall__5a6ab {
+.xsmall__45530 {
     height: 4px
 }
 
-.small__5a6ab,
-.xsmall__5a6ab {
+.small__45530,
+.xsmall__45530 {
     border-radius: 3px
 }
 
-.small__5a6ab {
+.small__45530 {
     height: 6px
 }
 
-.large__5a6ab {
+.large__45530 {
     border-radius: 4px;
     height: 8px
 }
 
-.indeterminate__5a6ab {
+.indeterminate__45530 {
     position: absolute;
     top: 0;
     width: auto
 }
 
-.indeterminateBar1__5a6ab {
-    animation: indeterminate1__5a6ab 2.1s cubic-bezier(.65, .815, .735, .395) infinite;
+.indeterminateBar1__45530 {
+    animation: indeterminate1__45530 2.1s cubic-bezier(.65, .815, .735, .395) infinite;
     animation-play-state: paused
 }
 
-.indeterminateBar1__5a6ab.animating__5a6ab {
+.indeterminateBar1__45530.animating__45530 {
     animation-play-state: running
 }
 
-.indeterminateBar2__5a6ab {
-    animation: indeterminate2__5a6ab 2.1s cubic-bezier(.165, .84, .44, 1) infinite;
+.indeterminateBar2__45530 {
+    animation: indeterminate2__45530 2.1s cubic-bezier(.165, .84, .44, 1) infinite;
     animation-delay: 1.15s;
     animation-play-state: paused
 }
 
-.indeterminateBar2__5a6ab.animating__5a6ab {
+.indeterminateBar2__45530.animating__45530 {
     animation-play-state: running
 }
 
-@keyframes indeterminate1__5a6ab {
+@keyframes indeterminate1__45530 {
     0% {
         left: -35%;
         right: 100%
@@ -1104,7 +1104,7 @@
     }
 }
 
-@keyframes indeterminate2__5a6ab {
+@keyframes indeterminate2__45530 {
     0% {
         left: -200%;
         right: 100%
@@ -2550,19 +2550,8 @@
 }
 
 .headerStepIndicator__8a031 {
-    background-color: var(--background-mod-subtle);
-    border-radius: var(--radius-xs);
-    height: var(--space-8);
     margin-bottom: var(--space-24);
-    overflow: hidden;
     width: 120px
-}
-
-.progressBar__8a031 {
-    background-color: var(--brand-500);
-    border-radius: var(--radius-xs);
-    display: block;
-    height: 100%
 }
 
 .headerGradient__8a031:before {
@@ -27340,10 +27329,6 @@ img.thumbnail__0f2e8 {
     align-items: center;
     display: flex;
     height: 16px
-}
-
-.progress__0ccae {
-    background-color: hsl(var(--primary-400-hsl)/.3)
 }
 
 .cancelButton__0ccae,
@@ -65099,6 +65084,8 @@ html.disable-forced-colors * {
     --profile-gradient-role-pill-background: hsl(var(--primary-660-hsl)/0.5);
     --profile-gradient-role-pill-border: hsl(var(--white-hsl)/0.2);
     --profile-gradient-section-box: hsl(var(--black-hsl)/0.45);
+    --progressbar-indicator-background: var(--blurple-50);
+    --progressbar-track-background: hsl(var(--opacity-20-hsl)/0.2);
     --radio-background-active: var(--blurple-65);
     --radio-background-default: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
     --radio-background-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
@@ -65354,6 +65341,8 @@ html.disable-forced-colors * {
         --profile-gradient-role-pill-background: color-mix(in oklab, hsl(var(--primary-660-hsl)/0.5) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.5) var(--custom-theme-base-color-amount, 0%));
         --profile-gradient-role-pill-border: color-mix(in oklab, hsl(var(--white-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --profile-gradient-section-box: color-mix(in oklab, hsl(var(--black-hsl)/0.45) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.45) var(--custom-theme-base-color-amount, 0%));
+        --progressbar-indicator-background: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --progressbar-track-background: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-premium-primary-pink-for-gradient: color-mix(in oklab, var(--premium-tier-2-pink-for-gradients) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-premium-primary-pressed-background: color-mix(in oklab, hsl(var(--black-hsl)/0.1) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-premium-primary-purple-for-gradient: color-mix(in oklab, var(--premium-tier-2-purple-for-gradients) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -65756,6 +65745,8 @@ html.disable-forced-colors * {
     --profile-gradient-role-pill-background: hsl(var(--white-hsl)/0.5);
     --profile-gradient-role-pill-border: hsl(var(--primary-660-hsl)/0.2);
     --profile-gradient-section-box: hsl(var(--white-hsl)/0.45);
+    --progressbar-indicator-background: var(--blurple-50);
+    --progressbar-track-background: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --radio-background-active: var(--blurple-65);
     --radio-background-default: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --radio-background-hover: hsl(var(--opacity-4-hsl)/0.0392156862745098);
@@ -66011,6 +66002,8 @@ html.disable-forced-colors * {
         --profile-gradient-role-pill-background: color-mix(in oklab, hsl(var(--white-hsl)/0.5) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.5) var(--custom-theme-base-color-amount, 0%));
         --profile-gradient-role-pill-border: color-mix(in oklab, hsl(var(--primary-660-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --profile-gradient-section-box: color-mix(in oklab, hsl(var(--white-hsl)/0.45) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.45) var(--custom-theme-base-color-amount, 0%));
+        --progressbar-indicator-background: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --progressbar-track-background: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-premium-primary-pink-for-gradient: color-mix(in oklab, var(--premium-tier-2-pink-for-gradients) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-premium-primary-pressed-background: color-mix(in oklab, hsl(var(--black-hsl)/0.1) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-premium-primary-purple-for-gradient: color-mix(in oklab, var(--premium-tier-2-purple-for-gradients) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -66413,6 +66406,8 @@ html.disable-forced-colors * {
     --profile-gradient-role-pill-background: hsl(var(--primary-660-hsl)/0.5);
     --profile-gradient-role-pill-border: hsl(var(--white-hsl)/0.2);
     --profile-gradient-section-box: hsl(var(--black-hsl)/0.45);
+    --progressbar-indicator-background: var(--blurple-50);
+    --progressbar-track-background: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --radio-background-active: var(--blurple-65);
     --radio-background-default: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
     --radio-background-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
@@ -66668,6 +66663,8 @@ html.disable-forced-colors * {
         --profile-gradient-role-pill-background: color-mix(in oklab, hsl(var(--primary-660-hsl)/0.5) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.5) var(--custom-theme-base-color-amount, 0%));
         --profile-gradient-role-pill-border: color-mix(in oklab, hsl(var(--white-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --profile-gradient-section-box: color-mix(in oklab, hsl(var(--black-hsl)/0.45) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.45) var(--custom-theme-base-color-amount, 0%));
+        --progressbar-indicator-background: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --progressbar-track-background: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-premium-primary-pink-for-gradient: color-mix(in oklab, var(--premium-tier-2-pink-for-gradients) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-premium-primary-pressed-background: color-mix(in oklab, hsl(var(--black-hsl)/0.1) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-premium-primary-purple-for-gradient: color-mix(in oklab, var(--premium-tier-2-purple-for-gradients) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -67070,6 +67067,8 @@ html.disable-forced-colors * {
     --profile-gradient-role-pill-background: hsl(var(--primary-660-hsl)/0.5);
     --profile-gradient-role-pill-border: hsl(var(--white-hsl)/0.2);
     --profile-gradient-section-box: hsl(var(--black-hsl)/0.45);
+    --progressbar-indicator-background: var(--blurple-50);
+    --progressbar-track-background: hsl(var(--opacity-20-hsl)/0.2);
     --radio-background-active: var(--blurple-65);
     --radio-background-default: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
     --radio-background-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
@@ -67325,6 +67324,8 @@ html.disable-forced-colors * {
         --profile-gradient-role-pill-background: color-mix(in oklab, hsl(var(--primary-660-hsl)/0.5) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.5) var(--custom-theme-base-color-amount, 0%));
         --profile-gradient-role-pill-border: color-mix(in oklab, hsl(var(--white-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --profile-gradient-section-box: color-mix(in oklab, hsl(var(--black-hsl)/0.45) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.45) var(--custom-theme-base-color-amount, 0%));
+        --progressbar-indicator-background: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --progressbar-track-background: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-premium-primary-pink-for-gradient: color-mix(in oklab, var(--premium-tier-2-pink-for-gradients) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-premium-primary-pressed-background: color-mix(in oklab, hsl(var(--black-hsl)/0.1) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-premium-primary-purple-for-gradient: color-mix(in oklab, var(--premium-tier-2-purple-for-gradients) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -67514,6 +67515,7 @@ html.disable-forced-colors * {
     --message-mentioned-background-default: hsl(var(--opacity-yellow-20-hsl)/0.2);
     --message-mentioned-background-hover: hsl(var(--opacity-yellow-24-hsl)/0.23921568627450981);
     --mobile-text-heading-primary: var(--neutral-1);
+    --progressbar-track-background: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --radio-border-active: var(--neutral-12);
     --radio-border-default: var(--neutral-12);
     --radio-border-hover: var(--neutral-12);
@@ -67618,6 +67620,7 @@ html.disable-forced-colors * {
         --message-mentioned-background-default: color-mix(in oklab, hsl(var(--opacity-yellow-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --message-mentioned-background-hover: color-mix(in oklab, hsl(var(--opacity-yellow-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --mobile-text-heading-primary: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --progressbar-track-background: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-tertiary-text: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-muted-text: color-mix(in oklab, var(--neutral-12) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-text: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -67761,6 +67764,7 @@ html.disable-forced-colors * {
     --message-mentioned-background-default: hsl(var(--opacity-yellow-12-hsl)/0.12156862745098039);
     --message-mentioned-background-hover: hsl(var(--opacity-yellow-16-hsl)/0.1607843137254902);
     --mobile-text-heading-primary: var(--neutral-100);
+    --progressbar-track-background: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --radio-border-active: var(--neutral-50);
     --radio-border-default: var(--neutral-50);
     --radio-border-hover: var(--neutral-50);
@@ -67865,6 +67869,7 @@ html.disable-forced-colors * {
         --message-mentioned-background-default: color-mix(in oklab, hsl(var(--opacity-yellow-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --message-mentioned-background-hover: color-mix(in oklab, hsl(var(--opacity-yellow-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --mobile-text-heading-primary: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --progressbar-track-background: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-tertiary-text: color-mix(in oklab, var(--neutral-76) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-muted-text: color-mix(in oklab, var(--neutral-50) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-text: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -68008,6 +68013,7 @@ html.disable-forced-colors * {
     --message-mentioned-background-default: hsl(var(--opacity-yellow-24-hsl)/0.23921568627450981);
     --message-mentioned-background-hover: hsl(var(--opacity-yellow-28-hsl)/0.2784313725490196);
     --mobile-text-heading-primary: var(--neutral-1);
+    --progressbar-track-background: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --radio-border-active: var(--neutral-24);
     --radio-border-default: var(--neutral-24);
     --radio-border-hover: var(--neutral-24);
@@ -68112,6 +68118,7 @@ html.disable-forced-colors * {
         --message-mentioned-background-default: color-mix(in oklab, hsl(var(--opacity-yellow-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --message-mentioned-background-hover: color-mix(in oklab, hsl(var(--opacity-yellow-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --mobile-text-heading-primary: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --progressbar-track-background: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-tertiary-text: color-mix(in oklab, var(--neutral-6) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-muted-text: color-mix(in oklab, var(--neutral-24) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-text: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -68255,6 +68262,7 @@ html.disable-forced-colors * {
     --message-mentioned-background-default: hsl(var(--opacity-yellow-20-hsl)/0.2);
     --message-mentioned-background-hover: hsl(var(--opacity-yellow-24-hsl)/0.23921568627450981);
     --mobile-text-heading-primary: var(--neutral-1);
+    --progressbar-track-background: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --radio-border-active: var(--neutral-19);
     --radio-border-default: var(--neutral-19);
     --radio-border-hover: var(--neutral-19);
@@ -68359,6 +68367,7 @@ html.disable-forced-colors * {
         --message-mentioned-background-default: color-mix(in oklab, hsl(var(--opacity-yellow-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --message-mentioned-background-hover: color-mix(in oklab, hsl(var(--opacity-yellow-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --mobile-text-heading-primary: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --progressbar-track-background: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-tertiary-text: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-muted-text: color-mix(in oklab, var(--neutral-19) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --redesign-channel-name-text: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));

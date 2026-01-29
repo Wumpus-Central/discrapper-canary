@@ -15,7 +15,6 @@ var r = {
     headerCentered: "headerCentered__8a031",
     headerLayout: "headerLayout__8a031",
     headerStepIndicator: "headerStepIndicator__8a031",
-    progressBar: "progressBar__8a031",
     headerGradient: "headerGradient__8a031",
     headerGraphic: "headerGraphic__8a031",
     headerGraphicContainer: "headerGraphicContainer__8a031",

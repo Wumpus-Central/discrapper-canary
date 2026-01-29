@@ -100,140 +100,160 @@ let E = i.createContext(null);
 
 function y(e) {
     var t, n, f;
-    let { steps: _, currentStepKey: g, numberedSteps: y, onStepChange: b, onComplete: O } = e,
-        v = m(e, ["steps", "currentStepKey", "numberedSteps", "onStepChange", "onComplete"]),
-        { i18n: A } = (0, o.G9)(),
-        I = v.onClose,
-        [S, T] = i.useState(!1),
-        [C, N] = i.useState(null),
-        w = _.find((e) => e.stepKey === g);
-    if (null == w) throw Error("Step with key ".concat(g, " not found"));
-    let R = _.findIndex((e) => e.stepKey === g),
-        P = R === _.length - 1,
-        D = 0 === R,
-        L = null == (t = w.nextEnabled) || t,
-        x = i.useCallback(
+    let _,
+        { steps: g, currentStepKey: y, numberedSteps: b, onStepChange: O, onComplete: v } = e,
+        A = m(e, ["steps", "currentStepKey", "numberedSteps", "onStepChange", "onComplete"]),
+        { i18n: I } = (0, o.G9)(),
+        S = A.onClose,
+        [T, C] = i.useState(!1),
+        [N, w] = i.useState(null),
+        R = g.find((e) => e.stepKey === y);
+    if (null == R) throw Error("Step with key ".concat(y, " not found"));
+    let P = g.findIndex((e) => e.stepKey === y),
+        D = P === g.length - 1,
+        L = 0 === P,
+        [x, M] = i.useState(!1),
+        j = null == (t = R.nextEnabled) || t,
+        k = i.useCallback(
             (e) => {
-                N(null), null == b || b(e, g);
+                w(null), null == O || O(e, y);
             },
-            [b, g],
+            [O, y],
         ),
-        M = i.useCallback(async () => {
-            await (null == O ? void 0 : O()), I();
-        }, [O, I]),
-        j = i.useCallback(async () => {
-            T(!0), N(null);
+        U = i.useCallback(async () => {
+            await (null == v ? void 0 : v()), M(!0), S();
+        }, [v, S]),
+        G = i.useCallback(async () => {
+            C(!0), w(null);
             try {
-                if (null != w.onNext && !(await w.onNext())) return void T(!1);
-                P ? await M() : x(_[R + 1].stepKey);
+                if (null != R.onNext && !(await R.onNext())) return void C(!1);
+                D ? await U() : k(g[P + 1].stepKey);
             } catch (e) {
-                N(A.INLINE_NOTICE_GENERIC_ERROR);
+                w(I.INLINE_NOTICE_GENERIC_ERROR);
             } finally {
-                T(!1);
+                C(!1);
             }
-        }, [x, R, _, P, M, w, A]),
-        k = i.useCallback(() => {
-            D || x(_[R - 1].stepKey);
-        }, [x, R, _, D]),
-        U = i.useMemo(
+        }, [k, P, g, D, U, R, I]),
+        F = i.useCallback(() => {
+            L || k(g[P - 1].stepKey);
+        }, [k, P, g, L]),
+        V = i.useMemo(
             () => ({
-                currentStepKey: g,
-                goToStep: x,
-                goToNextStep: j,
-                goToPreviousStep: k,
-                complete: M,
+                currentStepKey: y,
+                goToStep: k,
+                goToNextStep: G,
+                goToPreviousStep: F,
+                complete: U,
             }),
-            [g, x, j, k, M],
+            [y, k, G, F, U],
         ),
-        G = {
+        B = {
             variant: "secondary",
-            text: A.BACK,
+            text: I.BACK,
         },
-        F = {
+        H = {
             variant: "primary",
-            text: P ? A.SUBMIT : A.NEXT,
-            disabled: !L,
-            loading: S,
+            text: D ? I.SUBMIT : I.NEXT,
+            disabled: !j,
+            loading: T,
             onClick: () => {
-                L && !S && j();
+                j && !T && G();
             },
         },
-        V = {
-            text: A.CANCEL,
+        Y = {
+            text: I.CANCEL,
             variant: "secondary",
-            onClick: I,
+            onClick: S,
         },
-        B =
-            w.hideBackButton || D
+        W =
+            R.hideBackButton || L
                 ? void 0
                 : (0, r.jsx)(
                       a.Q,
-                      h(p({}, G, w.backButtonProps), {
-                          onClick: k,
+                      h(p({}, B, R.backButtonProps), {
+                          onClick: F,
                       }),
                   ),
-        H = w.modalProps,
-        Y = "graphic" in H ? H : null;
-    return (0, r.jsx)(E.Provider, {
-        value: U,
-        children: (0, r.jsxs)(
-            s.d,
-            h(p({}, v), {
-                paddingSize: null != Y ? "lg" : "sm",
-                children: [
-                    null != Y
-                        ? (0, r.jsx)(u.V6, p({}, Y))
-                        : (0, r.jsx)(u.rQ, {
-                              title: H.title,
-                              subtitle: H.subtitle,
-                              stepNumber: (null == y ? void 0 : y.includes(g)) ? y.indexOf(g) + 1 : void 0,
-                              stepCount: null == y ? void 0 : y.length,
-                          }),
-                    (0, r.jsx)(
-                        d.i,
-                        {
-                            message:
-                                null != C ? C : "notice" in H ? (null == (n = H.notice) ? void 0 : n.message) : void 0,
-                            type:
-                                null != C
-                                    ? "critical"
-                                    : "notice" in H
-                                      ? null == (f = H.notice)
-                                          ? void 0
-                                          : f.type
-                                      : void 0,
-                        },
-                        g,
-                    ),
-                    _.map((e) => {
-                        let t = "graphic" in e.modalProps ? null : e.modalProps;
-                        return (
-                            (null != e.body ||
-                                (null == t ? void 0 : t.input) != null ||
-                                (null == t ? void 0 : t.listProps) != null) &&
-                            (0, r.jsx)(
-                                "div",
-                                {
-                                    style: {
-                                        display: e.stepKey === g ? void 0 : "none",
+        K = R.modalProps,
+        z = "graphic" in K ? K : null,
+        q = null != b && b.length > 0 && b.includes(y),
+        Z = q && !x ? b.indexOf(y) + 1 : void 0;
+    return (
+        q &&
+            (_ = x
+                ? {
+                      percent: 100,
+                  }
+                : {
+                      stepCount: b.length,
+                      stepNumber: Z,
+                  }),
+        (0, r.jsx)(E.Provider, {
+            value: V,
+            children: (0, r.jsxs)(
+                s.d,
+                h(p({}, A), {
+                    paddingSize: null != z ? "lg" : "sm",
+                    children: [
+                        null != z
+                            ? (0, r.jsx)(u.V6, p({}, z))
+                            : (0, r.jsx)(u.rQ, {
+                                  title: K.title,
+                                  subtitle: K.subtitle,
+                                  progressBarProps: _,
+                              }),
+                        (0, r.jsx)(
+                            d.i,
+                            {
+                                message:
+                                    null != N
+                                        ? N
+                                        : "notice" in K
+                                          ? null == (n = K.notice)
+                                              ? void 0
+                                              : n.message
+                                          : void 0,
+                                type:
+                                    null != N
+                                        ? "critical"
+                                        : "notice" in K
+                                          ? null == (f = K.notice)
+                                              ? void 0
+                                              : f.type
+                                          : void 0,
+                            },
+                            y,
+                        ),
+                        g.map((e) => {
+                            let t = "graphic" in e.modalProps ? null : e.modalProps;
+                            return (
+                                (null != e.body ||
+                                    (null == t ? void 0 : t.input) != null ||
+                                    (null == t ? void 0 : t.listProps) != null) &&
+                                (0, r.jsx)(
+                                    "div",
+                                    {
+                                        style: {
+                                            display: e.stepKey === y ? void 0 : "none",
+                                        },
+                                        children: (0, r.jsx)(c.c, {
+                                            controls: null == t ? void 0 : t.input,
+                                            listProps: null == t ? void 0 : t.listProps,
+                                            children: e.body,
+                                        }),
                                     },
-                                    children: (0, r.jsx)(c.c, {
-                                        controls: null == t ? void 0 : t.input,
-                                        listProps: null == t ? void 0 : t.listProps,
-                                        children: e.body,
-                                    }),
-                                },
-                                e.stepKey,
-                            )
-                        );
-                    }),
-                    (0, r.jsx)(l.H, {
-                        leading: B,
-                        actionsFullWidth: D,
-                        actions: [...(D ? [V] : []), p({}, F, w.nextButtonProps)],
-                    }),
-                ],
-            }),
-        ),
-    });
+                                    e.stepKey,
+                                )
+                            );
+                        }),
+                        (0, r.jsx)(l.H, {
+                            leading: W,
+                            actionsFullWidth: L,
+                            actions: [...(L ? [Y] : []), p({}, H, R.nextButtonProps)],
+                        }),
+                    ],
+                }),
+            ),
+        })
+    );
 }

@@ -87,6 +87,10 @@ function N(e, t, n, r, o) {
                     SELECT_PLACEHOLDER: C.intl.string(T.default["A+pfVR"]),
                     CLEAR_SELECTION: C.intl.string(T.default.JA5C7L),
                     SELECTED_TAGS_HEADING: C.intl.string(T.default.VMNfsY),
+                    PERCENT_COMPLETE: (e) =>
+                        C.intl.formatToPlainString(T.default["2L/ygS"], {
+                            percent: e,
+                        }),
                 },
                 locale: o,
                 theme: e,

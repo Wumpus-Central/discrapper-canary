@@ -5,9 +5,9 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(796873),
-    l = n.n(o),
+    o = n.n(a),
+    s = n(796873),
+    l = n.n(s),
     c = n(397927),
     u = n(682718),
     d = n(453771),
@@ -39,11 +39,11 @@ function h(e) {
                         count: e.length,
                     });
         }, [n.items]),
-        s = i.useCallback(() => {
+        o = i.useCallback(() => {
             u.A.cancel(t, n);
         }, [t, n]),
-        o = 100 === n.progress,
-        d = !o && n.currentSize > 0;
+        s = 100 === n.progress,
+        d = !s && n.currentSize > 0;
     return (0, r.jsx)("div", {
         className: p.Ig,
         children: (0, r.jsxs)("div", {
@@ -72,19 +72,18 @@ function h(e) {
                         }),
                         (0, r.jsx)("div", {
                             className: p.L$,
-                            children: o
+                            children: s
                                 ? f.intl.string(f.t.jfKTes)
-                                : (0, r.jsx)(c.kej, {
-                                      className: p.qB,
+                                : (0, r.jsx)(c.z21, {
                                       percent: n.progress,
                                   }),
                         }),
                     ],
                 }),
-                o
+                s
                     ? null
                     : (0, r.jsx)(c.DUT, {
-                          onClick: s,
+                          onClick: o,
                           children: (0, r.jsx)(c.PGe, {
                               size: "md",
                               color: "currentColor",
@@ -96,9 +95,9 @@ function h(e) {
     });
 }
 let m = (e) => {
-    let { className: t, url: n, fileName: i, fileSize: a, onClick: o, onContextMenu: u, renderAdjacentContent: d } = e;
+    let { className: t, url: n, fileName: i, fileSize: a, onClick: s, onContextMenu: u, renderAdjacentContent: d } = e;
     return (0, r.jsxs)("div", {
-        className: s()(p.Ig, t),
+        className: o()(p.Ig, t),
         children: [
             (0, r.jsxs)("div", {
                 className: p.NJ,
@@ -114,7 +113,7 @@ let m = (e) => {
                                 children: (0, r.jsx)(c.MzZ, {
                                     className: p.AD,
                                     href: n,
-                                    onClick: o,
+                                    onClick: s,
                                     onContextMenu: u,
                                     children: i,
                                 }),

@@ -7,7 +7,6 @@ e.exports = {
     iW: "filename__0ccae",
     yu: "metadata__0ccae",
     L$: "progressContainer__0ccae metadata__0ccae",
-    qB: "progress__0ccae",
     x7: "cancelButton__0ccae",
     Ej: "size__0ccae",
     RT: "filenameLinkWrapper__0ccae",

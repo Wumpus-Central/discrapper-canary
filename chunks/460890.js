@@ -55,6 +55,7 @@ let o = {
             SELECT_PLACEHOLDER: "Select...",
             CLEAR_SELECTION: "Clear",
             SELECTED_TAGS_HEADING: "Selected",
+            PERCENT_COMPLETE: (e) => "".concat(e, " percent complete"),
         },
         theme: "light",
         locale: "en-US",

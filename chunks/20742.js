@@ -14,7 +14,7 @@ var r = n(627968),
     d = n(608250),
     f = n(978495),
     p = n(534514),
-    _ = n(460890),
+    _ = n(911608),
     h = n(331322),
     m = n(834730),
     g = n(22856),
@@ -237,47 +237,45 @@ function w(e) {
             alignCenter: m = !1,
             leading: y,
             trailing: O,
-            stepNumber: v,
-            stepCount: A,
+            progressBarProps: v,
         } = e,
-        { headingId: I } = (0, g.k)(),
-        { i18n: S } = (0, _.G9)(),
-        w = null != t,
-        D = (0, f.Oy)(n),
-        L = m ? (D ? C : N) : T,
-        x =
+        { headingId: A } = (0, g.k)(),
+        I = null != t,
+        S = (0, f.Oy)(n),
+        w = m ? (S ? C : N) : T,
+        D =
             null != n &&
             (0, r.jsx)("div", {
                 className: o()(E.headerGraphic, {
-                    [E.headerGraphicAnimated]: D,
+                    [E.headerGraphicAnimated]: S,
                 }),
                 children: (0, r.jsx)("div", {
                     className: E.headerGraphicContainer,
                     children: (0, r.jsx)(d.v, b({}, n)),
                 }),
             }),
-        M = (0, r.jsx)(p.D, {
+        L = (0, r.jsx)(p.D, {
             className: E.headerTitle,
-            id: I,
+            id: A,
             variant: null != l ? l : "heading-lg/semibold",
             color: "text-strong",
             children: s,
         }),
-        j = null != n ? x : M;
+        x = null != n ? D : L;
     "end" === a &&
-        (M = (0, r.jsxs)(h.B, {
+        (L = (0, r.jsxs)(h.B, {
             direction: "horizontal",
             gap: 8,
             align: "center",
             children: [
-                M,
+                L,
                 (0, r.jsx)(R, {
                     badge: i,
                     position: a,
                 }),
             ],
         }));
-    let k = (0, r.jsx)("header", {
+    let M = (0, r.jsx)("header", {
         className: o()(E.section, E.header, {
             [E.headerCentered]: m,
         }),
@@ -286,30 +284,19 @@ function w(e) {
             children: [
                 (0, r.jsx)("div", {
                     className: E.headerLayout,
-                    children: (0, r.jsx)(L, {
+                    children: (0, r.jsx)(w, {
                         leading: y,
                         trailing: O,
-                        hasGradient: w,
+                        hasGradient: I,
                         children: (0, r.jsxs)("div", {
                             className: E.headerMain,
                             children: [
                                 null != v &&
-                                    null != A &&
                                     (0, r.jsx)("div", {
                                         className: E.headerStepIndicator,
-                                        children: (0, r.jsx)("span", {
-                                            className: E.progressBar,
-                                            style: {
-                                                width: "".concat((v / (A + 1)) * 100, "%"),
-                                            },
-                                            role: "progressbar",
-                                            "aria-valuenow": v,
-                                            "aria-valuemin": 1,
-                                            "aria-valuemax": A,
-                                            "aria-label": S.STEP_INDICATOR(v, A),
-                                        }),
+                                        children: (0, r.jsx)(_.z, b({}, v)),
                                     }),
-                                j,
+                                x,
                             ],
                         }),
                     }),
@@ -319,7 +306,7 @@ function w(e) {
                         badge: i,
                         position: a,
                     }),
-                null != n && null != s && M,
+                null != n && null != s && L,
                 null != c &&
                     (0, r.jsx)(P, {
                         subtitle: c,
@@ -327,13 +314,13 @@ function w(e) {
             ],
         }),
     });
-    return w
+    return I
         ? (0, r.jsx)(u.h, {
               color: t,
               className: E.headerGradient,
-              children: k,
+              children: M,
           })
-        : k;
+        : M;
 }
 
 function R(e) {
