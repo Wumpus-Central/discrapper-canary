@@ -1,6 +1,6 @@
 n.d(t, {
-    A: () => T,
-    s: () => j,
+    A: () => C,
+    s: () => N,
 }),
     n(896048),
     n(747238),
@@ -14,51 +14,49 @@ var r = n(627968),
     c = n(311907),
     u = n(397927),
     d = n(770178),
-    p = n(736653),
-    h = n(975807),
-    g = n(151252),
-    f = n(859703),
-    m = n(341915),
-    A = n(579473),
-    _ = n(561844),
-    b = n(590202),
-    E = n(415441),
-    O = n(73473),
-    y = n(545986),
-    I = n(654487),
-    v = n(818348),
-    S = n(985018),
-    C = n(794053);
+    p = n(975807),
+    h = n(151252),
+    g = n(859703),
+    f = n(341915),
+    m = n(579473),
+    A = n(561844),
+    _ = n(590202),
+    b = n(415441),
+    E = n(73473),
+    O = n(545986),
+    y = n(654487),
+    I = n(985018),
+    v = n(794053);
 
-function N(e) {
+function S(e) {
     let { assetImage: t, assetVideo: n } = e;
     return null == n
         ? (0, r.jsxs)("div", {
-              className: C.Tv,
+              className: v.Tv,
               children: [
                   (0, r.jsx)("div", {
-                      className: C.Np,
+                      className: v.Np,
                   }),
                   (0, r.jsx)("div", {
-                      className: C.LO,
+                      className: v.LO,
                       children: (0, r.jsx)("img", {
-                          className: C.LY,
+                          className: v.LY,
                           src: t.url,
                           alt: t.altText,
                       }),
                   }),
                   (0, r.jsx)("div", {
-                      className: a()(C.LO, C.jx, C.hw),
+                      className: a()(v.LO, v.jx, v.hw),
                       children: (0, r.jsx)("img", {
-                          className: C.LY,
+                          className: v.LY,
                           src: t.url,
                           alt: "",
                       }),
                   }),
                   (0, r.jsx)("div", {
-                      className: a()(C.LO, C.jx, C.Co),
+                      className: a()(v.LO, v.jx, v.Co),
                       children: (0, r.jsx)("img", {
-                          className: C.LY,
+                          className: v.LY,
                           src: t.url,
                           alt: "",
                       }),
@@ -66,32 +64,32 @@ function N(e) {
               ],
           })
         : (0, r.jsxs)("div", {
-              className: C.Tv,
+              className: v.Tv,
               children: [
                   (0, r.jsx)("div", {
-                      className: C.Np,
+                      className: v.Np,
                   }),
                   (0, r.jsx)("div", {
-                      className: C.LO,
-                      children: (0, r.jsx)(E.N, {
+                      className: v.LO,
+                      children: (0, r.jsx)(b.N, {
                           showImage: !1,
                           showVideo: !0,
                           imageAsset: {
                               alt: n.altText,
-                              className: C.LY,
+                              className: v.LY,
                               asset: {
                                   url: t.url,
-                                  mimetype: (0, A.vm)(t.url),
+                                  mimetype: (0, m.vm)(t.url),
                                   isAnimated: !1,
                               },
                               assetId: t.url,
                           },
                           videoAsset: {
                               alt: n.altText,
-                              className: C.LY,
+                              className: v.LY,
                               asset: {
                                   url: n.url,
-                                  mimetype: (0, A.vm)(n.url),
+                                  mimetype: (0, m.vm)(n.url),
                                   isAnimated: !0,
                               },
                               assetId: n.url,
@@ -102,41 +100,39 @@ function N(e) {
           });
 }
 
-function T(e) {
+function C(e) {
     let { config: t, onQuestCtaClick: n } = e,
         l = (0, s.zy)(),
-        A = (0, s.W6)(),
-        { enabled: E } = (0, g.Z)({
-            location: I.rE.QUEST_HOME_DESKTOP,
+        m = (0, s.W6)(),
+        { enabled: b } = (0, h.Z)({
+            location: y.rE.QUEST_HOME_DESKTOP,
         }),
-        T = (0, p.Ay)(),
-        [j, x] = i.useState("display-lg"),
-        P = i.useCallback((e) => {
-            e.contentRect.width < 500 ? x("display-md") : x("display-lg");
+        [C, N] = i.useState("display-lg"),
+        T = i.useCallback((e) => {
+            e.contentRect.width < 500 ? N("display-md") : N("display-lg");
         }, []),
-        w = (0, d.w)(P, [], {
+        j = (0, d.w)(T, [], {
             fireOnMount: !0,
         }),
-        L = (0, c.bG)([f.A], () => f.A.quests);
-    return (0, r.jsx)(O.R, {
+        x = (0, c.bG)([g.A], () => g.A.quests);
+    return (0, r.jsx)(E.R, {
         adContentId: t.campaignId,
         adCreativeType: o.p.TAKEOVER,
-        questContent: m.uF.QUEST_HOME_TAKEOVER,
-        sourceQuestContent: m.uF.QUEST_HOME_TAKEOVER,
+        questContent: f.uF.QUEST_HOME_TAKEOVER,
+        sourceQuestContent: f.uF.QUEST_HOME_TAKEOVER,
         children: (e) =>
             (0, r.jsx)("div", {
-                className: a()(C.iE, {
-                    "theme-dark": T === v.NJ.LIGHT,
-                    [C.Qx]: !E,
+                className: a()(v.iE, "theme-midnight", {
+                    [v.Qx]: !b,
                 }),
                 ref: (t) => {
-                    (w.current = t), (e.current = t);
+                    (j.current = t), (e.current = t);
                 },
                 children: (0, r.jsxs)("div", {
-                    className: C.FG,
+                    className: v.FG,
                     children: [
                         (0, r.jsxs)(u.BJc, {
-                            className: C.Qs,
+                            className: v.Qs,
                             direction: "vertical",
                             justify: "space-between",
                             children: [
@@ -148,18 +144,18 @@ function T(e) {
                                         (0, r.jsx)("img", {
                                             src: t.assetSponsorImage.url,
                                             alt: t.assetSponsorImage.altText,
-                                            className: C.wm,
+                                            className: v.wm,
                                         }),
                                         (0, r.jsx)(u.Text, {
                                             color: "text-strong",
                                             variant: "text-sm/normal",
-                                            className: C.yu,
-                                            children: S.intl.string(S.t.OJjFi5),
+                                            className: v.yu,
+                                            children: I.intl.string(I.t.OJjFi5),
                                         }),
                                     ],
                                 }),
                                 (0, r.jsxs)(u.BJc, {
-                                    className: C.yp,
+                                    className: v.yp,
                                     gap: 16,
                                     children: [
                                         (0, r.jsxs)(u.BJc, {
@@ -167,14 +163,14 @@ function T(e) {
                                             children: [
                                                 (0, r.jsx)(u.Heading, {
                                                     color: "text-strong",
-                                                    variant: j,
-                                                    className: C.DD,
+                                                    variant: C,
+                                                    className: v.DD,
                                                     children: t.labelTitle,
                                                 }),
                                                 (0, r.jsx)(u.Text, {
                                                     color: "text-strong",
                                                     variant: "text-md/normal",
-                                                    className: C.VA,
+                                                    className: v.VA,
                                                     children: t.labelSubtitle,
                                                 }),
                                             ],
@@ -183,13 +179,13 @@ function T(e) {
                                             children: [
                                                 (0, r.jsx)(u.Button, {
                                                     onClick: () => {
-                                                        (0, h.A)(t.ctaSponsorUrl.url),
-                                                            (0, _.vK)({
+                                                        (0, p.A)(t.ctaSponsorUrl.url),
+                                                            (0, A.vK)({
                                                                 adContentId: t.campaignId,
                                                                 adCreativeType: o.p.TAKEOVER,
-                                                                questContent: m.uF.QUEST_HOME_TAKEOVER,
-                                                                questContentCTA: b.Cy.OPEN_GAME_LINK,
-                                                                sourceQuestContent: m.uF.QUEST_HOME_TAKEOVER,
+                                                                questContent: f.uF.QUEST_HOME_TAKEOVER,
+                                                                questContentCTA: _.Cy.OPEN_GAME_LINK,
+                                                                sourceQuestContent: f.uF.QUEST_HOME_TAKEOVER,
                                                             });
                                                     },
                                                     size: "md",
@@ -197,13 +193,13 @@ function T(e) {
                                                     variant: "overlay-primary",
                                                 }),
                                                 t.ctaQuests.map((e, i) =>
-                                                    L.has(e.questId)
+                                                    x.has(e.questId)
                                                         ? (0, r.jsx)(
                                                               u.Button,
                                                               {
                                                                   onClick: () => {
                                                                       var r, i;
-                                                                      A.replace(
+                                                                      m.replace(
                                                                           ((r = (function (e) {
                                                                               for (
                                                                                   var t = 1;
@@ -282,17 +278,17 @@ function T(e) {
                                                                       ),
                                                                           null == n || n(),
                                                                           window.requestIdleCallback(() => {
-                                                                              (0, y.navigateToQuestHome)({
+                                                                              (0, O.navigateToQuestHome)({
                                                                                   questId: e.questId,
                                                                               });
                                                                           }),
-                                                                          (0, _.vK)({
+                                                                          (0, A.vK)({
                                                                               adContentId: t.campaignId,
                                                                               adCreativeType: o.p.TAKEOVER,
-                                                                              questContent: m.uF.QUEST_HOME_TAKEOVER,
-                                                                              questContentCTA: b.Cy.VIEW_QUESTS,
+                                                                              questContent: f.uF.QUEST_HOME_TAKEOVER,
+                                                                              questContentCTA: _.Cy.VIEW_QUESTS,
                                                                               sourceQuestContent:
-                                                                                  m.uF.QUEST_HOME_TAKEOVER,
+                                                                                  f.uF.QUEST_HOME_TAKEOVER,
                                                                           });
                                                                   },
                                                                   size: "md",
@@ -309,7 +305,7 @@ function T(e) {
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(N, {
+                        (0, r.jsx)(S, {
                             assetImage: t.assetHeroImage,
                             assetVideo: t.assetHeroVideo,
                         }),
@@ -319,9 +315,9 @@ function T(e) {
     });
 }
 
-function j() {
+function N() {
     return (0, r.jsx)("div", {
-        className: a()(C.iE, C.FG, C.B3),
+        className: a()(v.iE, v.FG, v.B3),
         children: (0, r.jsx)(u.y$y, {}),
     });
 }
