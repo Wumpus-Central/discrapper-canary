@@ -1,107 +1,109 @@
 n.d(t, {
-    default: () => p,
+    default: () => _,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(158954),
+    l = n(158954),
     s = n(311907),
-    o = n(397927),
-    l = n(631670),
-    c = n(752319),
-    u = n(592074),
-    d = n(652215),
-    f = n(985018);
+    a = n(397927),
+    o = n(631670),
+    c = n(836602),
+    d = n(592074),
+    u = n(652215),
+    p = n(985018);
 
-function p(e) {
-    var t, n, p, _;
-    let { transitionState: h, onSuccess: m, onClose: g, requirementsUpdated: E } = e,
-        [b, y] = i.useState(""),
-        [O, A] = i.useState(""),
-        [v, S] = i.useState(""),
-        [I, T] = i.useState(null),
-        [C, N] = i.useState(null),
-        R = (0, s.bG)([c.A], () => c.A.getErrors()),
-        w = (0, s.bG)([c.A], () => c.A.getFormState()),
+function _(e) {
+    var t, n, _, m;
+    let { transitionState: g, onSuccess: f, onClose: b, requirementsUpdated: h } = e,
+        [A, E] = i.useState(""),
+        [x, O] = i.useState(""),
+        [C, y] = i.useState(""),
+        [j, T] = i.useState(null),
+        [v, S] = i.useState(null),
+        { formState: I, errors: N } = (0, s.cf)([c.A], () => ({
+            formState: c.A.getFormState(),
+            errors: c.A.getErrors(),
+        })),
         P = i.useRef(null);
-    async function D(e) {
-        e.preventDefault(), (0, l.x8)();
+    async function R(e) {
+        e.preventDefault(), (0, o.x8)();
         let t = !1;
         if (
-            ("" === O ? (T(f.intl.string(f.t["/7/oPU"])), (t = !0)) : T(null),
-            O !== v ? (N(f.intl.string(f.t["IEKYZ/"])), (t = !0)) : N(null),
+            ("" === x ? (T(p.intl.string(p.t["/7/oPU"])), (t = !0)) : T(null),
+            x !== C ? (S(p.intl.string(p.t["IEKYZ/"])), (t = !0)) : S(null),
             t)
         )
             return;
-        let n = await (0, l.yu)({
-            password: b,
-            newPassword: O,
+        let n = await (0, o.yu)({
+            password: A,
+            newPassword: x,
         });
-        if (null == n ? void 0 : n.ok) m();
+        if (null == n ? void 0 : n.ok) f();
         else {
             var r;
-            (null == n || null == (r = n.body) ? void 0 : r.username) != null && (0, u.E)();
+            (null == n || null == (r = n.body) ? void 0 : r.username) != null && (0, d.E)();
         }
     }
     return (
         i.useEffect(() => {
-            if (h === o.ip4.ENTERED) {
+            if (g === a.ip4.ENTERED) {
                 var e;
                 null == (e = P.current) || e.focus();
             }
-        }, [h]),
+        }, [g]),
         (0, r.jsx)("form", {
-            onSubmit: D,
-            children: (0, r.jsx)(a.Modal, {
-                transitionState: h,
-                onClose: g,
-                title: f.intl.string(f.t.geta79),
-                subtitle: E ? f.intl.string(f.t["37iHbZ"]) : f.intl.string(f.t.iOurYj),
+            onSubmit: R,
+            children: (0, r.jsx)(l.Modal, {
+                transitionState: g,
+                onClose: b,
+                title: p.intl.string(p.t.geta79),
+                subtitle: h ? p.intl.string(p.t["37iHbZ"]) : p.intl.string(p.t.iOurYj),
                 actions: [
                     {
                         variant: "secondary",
-                        text: f.intl.string(f.t["ETE/oC"]),
-                        onClick: g,
+                        text: p.intl.string(p.t["ETE/oC"]),
+                        onClick: b,
                     },
                     {
                         variant: "primary",
-                        text: f.intl.string(f.t.i4jeWR),
-                        loading: w === d.XlH.SUBMITTING,
+                        text: p.intl.string(p.t.i4jeWR),
+                        loading: I === u.XlH.SUBMITTING,
                         type: "submit",
                     },
                 ],
-                children: (0, r.jsxs)(o.BJc, {
+                children: (0, r.jsxs)(a.BJc, {
                     gap: 20,
                     children: [
-                        (0, r.jsx)(o.ksK, {
-                            label: f.intl.string(f.t.WBqMRQ),
-                            error: null == R || null == (p = R.password) ? void 0 : p[0],
+                        (0, r.jsx)(a.ksK, {
+                            label: p.intl.string(p.t.WBqMRQ),
+                            error: null == N || null == (_ = N.password) ? void 0 : _[0],
                             type: "password",
-                            value: b,
-                            onChange: y,
+                            value: A,
+                            onChange: E,
                             inputRef: P,
                             autoComplete: "current-password",
                             required: !0,
                         }),
-                        (0, r.jsx)(o.ksK, {
-                            label: f.intl.string(f.t["8dM4FO"]),
+                        (0, r.jsx)(a.ksK, {
+                            label: p.intl.string(p.t["8dM4FO"]),
                             error:
                                 null !=
-                                (t = null != (n = null == R || null == (_ = R.new_password) ? void 0 : _[0]) ? n : I)
+                                (t = null != (n = null == N || null == (m = N.new_password) ? void 0 : m[0]) ? n : j)
                                     ? t
                                     : void 0,
                             type: "password",
-                            value: O,
-                            onChange: A,
+                            value: x,
+                            onChange: O,
                             autoComplete: "new-password",
                             required: !0,
                         }),
-                        (0, r.jsx)(o.ksK, {
-                            label: f.intl.string(f.t.iQG2KC),
-                            error: null != C ? C : void 0,
+                        (0, r.jsx)(a.ksK, {
+                            label: p.intl.string(p.t.iQG2KC),
+                            error: null != v ? v : void 0,
                             type: "password",
-                            value: v,
-                            onChange: S,
+                            value: C,
+                            onChange: y,
                             autoComplete: "new-password",
                             required: !0,
                         }),

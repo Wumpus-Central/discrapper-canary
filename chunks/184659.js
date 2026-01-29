@@ -1,41 +1,41 @@
 n.d(t, {
-    z: () => u,
+    z: () => d,
 });
 var r = n(627968),
     l = n(311907),
-    a = n(287070),
-    i = n(101058),
-    s = n(752319),
-    c = n(927578),
-    o = n(132198),
-    d = n(266371);
-let u = (e) => {
+    i = n(287070),
+    a = n(101058),
+    s = n(836602),
+    o = n(927578),
+    c = n(132198),
+    u = n(266371);
+let d = (e) => {
     var t, n;
-    let { user: u } = e,
-        m = c.Ay.canUsePremiumProfileCustomization(u),
-        f = (0, l.cf)([s.A], () => s.A.getAllPending()),
-        { pendingAvatar: b } = f,
-        p = (function (e, t) {
+    let { user: d } = e,
+        m = o.Ay.canUsePremiumProfileCustomization(d),
+        p = (0, l.cf)([s.A], () => s.A.getPendingChanges()),
+        { pendingAvatar: f } = p,
+        x = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
                 l,
-                a = {};
+                i = {};
             if ("u" > typeof Reflect && Reflect.ownKeys) {
                 for (l = 0, n = Reflect.ownKeys(e); l < n.length; l++)
                     (r = n[l]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-                return a;
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                return i;
             }
             if (
-                ((a = (function (e, t) {
+                ((i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
                         l = {},
-                        a = Object.getOwnPropertyNames(e);
-                    for (r = 0; r < a.length; r++)
-                        (n = a[r]),
+                        i = Object.getOwnPropertyNames(e);
+                    for (r = 0; r < i.length; r++)
+                        (n = i[r]),
                             !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
                     return l;
                 })(e, t)),
@@ -43,17 +43,17 @@ let u = (e) => {
             )
                 for (l = 0, n = Object.getOwnPropertySymbols(e); l < n.length; l++)
                     (r = n[l]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-            return a;
-        })(f, ["pendingAvatar"]),
-        x = (0, i.V7)({
-            userId: u.id,
-            image: b,
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+            return i;
+        })(p, ["pendingAvatar"]),
+        h = (0, a.V7)({
+            userId: d.id,
+            image: f,
         });
     return (0, r.jsx)("div", {
-        className: d.k,
+        className: u.k,
         children: (0, r.jsx)(
-            a.A,
+            i.A,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -78,12 +78,12 @@ let u = (e) => {
                         });
                 }
                 return e;
-            })({}, p)),
+            })({}, x)),
             (n = n =
                 {
-                    pendingAvatar: x,
-                    user: u,
-                    pendingBadges: [(0, o._)()],
+                    pendingAvatar: h,
+                    user: d,
+                    pendingBadges: [(0, c._)()],
                     canUsePremiumCustomization: m,
                     disabledInputs: !0,
                     hideExampleButton: !0,

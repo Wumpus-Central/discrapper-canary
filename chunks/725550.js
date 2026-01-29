@@ -1,99 +1,99 @@
-n.d(t, {
-    A: () => S,
+r.d(t, {
+    A: () => I,
 });
-var r = n(627968);
-n(64700);
-var l = n(735438),
-    i = n(311907),
-    s = n(397927),
-    c = n(590180),
-    o = n(993408),
-    a = n(764999),
-    u = n(833336),
-    d = n(451909),
-    p = n(702211),
-    f = n(287070),
-    m = n(101058),
-    b = n(207803),
-    g = n(950191),
-    y = n(814390),
-    x = n(773669),
-    h = n(606532),
-    j = n(752319),
-    O = n(287809),
-    A = n(405269),
-    v = n(927578),
-    P = n(985018),
-    E = n(645052);
+var n = r(627968);
+r(64700);
+var l = r(735438),
+    i = r(311907),
+    s = r(397927),
+    o = r(590180),
+    c = r(993408),
+    a = r(645178),
+    u = r(833336),
+    d = r(451909),
+    p = r(702211),
+    f = r(287070),
+    m = r(101058),
+    g = r(207803),
+    y = r(836602),
+    b = r(950191),
+    O = r(814390),
+    h = r(773669),
+    x = r(606532),
+    j = r(287809),
+    A = r(405269),
+    v = r(927578),
+    P = r(985018),
+    _ = r(645052);
 
-function _(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
 }
 let C = (e) => {
-        let { pendingProfileEffectRecord: t, product: n, purchase: u } = e,
-            d = (0, i.bG)([O.default], () => O.default.getCurrentUser()),
-            f = (0, i.bG)([c.A], () => c.A.getProduct(null == t ? void 0 : t.skuId)),
-            m = (0, i.bG)([x.default], () => x.default.locale),
-            b = v.Ay.canUseCollectibles(d),
-            g = (0, o.gA)(u),
-            y = (0, o.G0)(n),
-            h = !b && g,
-            j = (null == u ? void 0 : u.expiresAt) != null ? (0, A.Tf)(Date.now(), u.expiresAt) : null,
-            _ = (0, a.Tk)(u),
+        let { pendingProfileEffectRecord: t, product: r, purchase: u } = e,
+            d = (0, i.bG)([j.default], () => j.default.getCurrentUser()),
+            f = (0, i.bG)([o.A], () => o.A.getProduct(null == t ? void 0 : t.skuId)),
+            m = (0, i.bG)([h.default], () => h.default.locale),
+            g = v.Ay.canUseCollectibles(d),
+            y = (0, c.gA)(u),
+            b = (0, c.G0)(r),
+            O = !g && y,
+            x = (null == u ? void 0 : u.expiresAt) != null ? (0, A.Tf)(Date.now(), u.expiresAt) : null,
+            E = (0, a.Tk)(u),
             C = (0, a.o7)(f),
-            S = (0, p.b)(!y || b),
-            w = I(h, y, b, S),
-            k = null == u || h;
+            I = (0, p.b)(!b || g),
+            S = w(O, b, g, I),
+            T = null == u || O;
         return null != t
-            ? (0, r.jsx)("div", {
-                  className: k ? E.Mf : E.zf,
-                  children: (0, r.jsxs)("div", {
-                      className: E.RQ,
+            ? (0, n.jsx)("div", {
+                  className: T ? _.Mf : _.zf,
+                  children: (0, n.jsxs)("div", {
+                      className: _.RQ,
                       children: [
-                          (0, r.jsx)(s.Text, {
+                          (0, n.jsx)(s.Text, {
                               color: "text-strong",
                               variant: "text-sm/semibold",
-                              children: (0, l.isEmpty)(_) ? C : _,
+                              children: (0, l.isEmpty)(E) ? C : E,
                           }),
-                          k
-                              ? (0, r.jsx)(s.Text, {
+                          T
+                              ? (0, n.jsx)(s.Text, {
                                     color: "text-default",
                                     variant: "text-sm/normal",
-                                    children: w,
+                                    children: S,
                                 })
-                              : (0, r.jsxs)(r.Fragment, {
+                              : (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        null != j &&
-                                            (0, r.jsx)(s.Text, {
+                                        null != x &&
+                                            (0, n.jsx)(s.Text, {
                                                 variant: "text-xxs/normal",
                                                 color: "text-muted",
                                                 children: P.intl.format(P.t.Io7ozn, {
-                                                    days: j.days.toString(),
+                                                    days: x.days.toString(),
                                                 }),
                                             }),
-                                        (0, r.jsxs)(s.Text, {
+                                        (0, n.jsxs)(s.Text, {
                                             variant: "text-xxs/normal",
                                             color: "text-muted",
                                             children: [
@@ -104,9 +104,9 @@ let C = (e) => {
                                                     }),
                                                 }),
                                                 null != u.expiresAt &&
-                                                    (0, r.jsxs)(r.Fragment, {
+                                                    (0, n.jsxs)(n.Fragment, {
                                                         children: [
-                                                            (0, r.jsx)("br", {}),
+                                                            (0, n.jsx)("br", {}),
                                                             P.intl.format(P.t.eZSTa5, {
                                                                 date: u.expiresAt.toLocaleDateString(m, {
                                                                     minute: "numeric",
@@ -120,8 +120,8 @@ let C = (e) => {
                                                     }),
                                             ],
                                         }),
-                                        g &&
-                                            (0, r.jsx)(s.Text, {
+                                        y &&
+                                            (0, n.jsx)(s.Text, {
                                                 variant: "text-xxs/normal",
                                                 color: "text-muted",
                                                 children: P.intl.string(P.t.nKdAlO),
@@ -133,96 +133,96 @@ let C = (e) => {
               })
             : null;
     },
-    I = (e, t, n, r) =>
+    w = (e, t, r, n) =>
         e
             ? P.intl.string(P.t["1UPza/"])
-            : t && n
+            : t && r
               ? P.intl.string(P.t.hmyYK8)
-              : t && !n
-                ? r
+              : t && !r
+                ? n
                     ? P.intl.string(P.t.melduy)
                     : P.intl.string(P.t.JtAKwp)
                 : P.intl.string(P.t.fEGjVQ),
-    S = (e) => {
-        var t, n;
-        let { user: l, pendingProfileEffectRecord: s, product: c, purchase: o, guild: a } = e,
+    I = (e) => {
+        var t, r;
+        let { user: l, pendingProfileEffectRecord: s, product: o, purchase: c, guild: a } = e,
             {
                 pendingGlobalName: p,
-                pendingNickname: x,
-                pendingPronouns: O,
+                pendingNickname: h,
+                pendingPronouns: j,
                 pendingBio: A,
                 pendingBanner: P,
-                pendingAvatar: I,
-                pendingAvatarDecoration: S,
-                pendingThemeColors: w,
-                pendingAccentColor: k,
-            } = (0, i.cf)([u.A, j.A], () =>
-                _(
+                pendingAvatar: w,
+                pendingAvatarDecoration: I,
+                pendingThemeColors: S,
+                pendingAccentColor: T,
+            } = (0, i.cf)([u.A, y.A], () =>
+                E(
                     {
                         pendingNickname: void 0,
                         pendingGlobalName: void 0,
                         pendingAccentColor: void 0,
                     },
-                    null != a ? u.A.getAllPending() : j.A.getAllPending(),
+                    null != a ? u.A.getAllPending() : y.A.getPendingChanges(),
                 ),
             ),
-            N = v.Ay.isPremium(l),
-            T = v.Ay.canUsePremiumProfileCustomization(l),
-            R = (0, g.Ay)(l.id),
-            L = !!(null == R ? void 0 : R.getPreviewBio(A)),
-            U = {
+            k = v.Ay.isPremium(l),
+            N = v.Ay.canUsePremiumProfileCustomization(l),
+            R = (0, b.Ay)(l.id),
+            U = !!(null == R ? void 0 : R.getPreviewBio(A)),
+            D = {
                 user: l,
                 guild: a,
                 pendingGlobalName: p,
-                pendingNickname: x,
-                pendingPronouns: O,
-                pendingBio: (0, y.A)() && null != A ? d.Ay.parse(void 0, A).content : A,
+                pendingNickname: h,
+                pendingPronouns: j,
+                pendingBio: (0, O.A)() && null != A ? d.Ay.parse(void 0, A).content : A,
                 pendingBanner: P,
                 useLargeBanner: !0,
                 pendingAvatar: (0, m.V7)({
                     userId: l.id,
-                    image: I,
+                    image: w,
                 }),
-                pendingAvatarDecoration: S,
-                pendingThemeColors: w,
-                pendingAccentColor: k,
+                pendingAvatarDecoration: I,
+                pendingThemeColors: S,
+                pendingAccentColor: T,
                 pendingProfileEffect: null != s ? s : null,
-                hideFakeActivity: L,
-                canUsePremiumCustomization: T,
-                onUpsellClick: h.A,
-                onBannerChange: b.Iz,
+                hideFakeActivity: U,
+                canUsePremiumCustomization: N,
+                onUpsellClick: x.A,
+                onBannerChange: g.Iz,
             };
-        return (0, r.jsxs)("div", {
-            className: E.i1,
+        return (0, n.jsxs)("div", {
+            className: _.i1,
             children: [
-                (0, r.jsx)(
+                (0, n.jsx)(
                     f.A,
-                    ((t = _({}, U)),
-                    (n = n =
+                    ((t = E({}, D)),
+                    (r = r =
                         {
                             disabledInputs: !0,
                             hideCustomStatus: !0,
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {
-                              var n = Object.keys(e);
+                              var r = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
+                                  var n = Object.getOwnPropertySymbols(e);
+                                  r.push.apply(r, n);
                               }
-                              return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                              return r;
+                          })(Object(r)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                           }),
                     t),
                 ),
                 !1,
-                (0, r.jsx)(C, {
+                (0, n.jsx)(C, {
                     pendingProfileEffectRecord: s,
-                    product: c,
-                    purchase: o,
-                    userIsPremium: N,
+                    product: o,
+                    purchase: c,
+                    userIsPremium: k,
                 }),
             ],
         });
