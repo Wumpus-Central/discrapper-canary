@@ -1,22 +1,21 @@
 n.d(t, {
-    A: () => l,
-    G: () => o,
+    G: () => s,
 }),
     n(228524);
 var r = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(195043),
-    s = n(645022);
+var i = n(397927);
+n(195043);
+var l = n(645022);
 
-function o(e) {
-    let { children: t, title: n, description: a } = e;
+function s(e) {
+    let { children: t, title: n, description: s } = e;
     return (0, r.jsxs)("div", {
-        className: s.L1,
+        className: l.L1,
         children: [
-            (null != n || null != a) &&
+            (null != n || null != s) &&
                 (0, r.jsxs)("div", {
-                    className: s.Km,
+                    className: l.Km,
                     children: [
                         null != n &&
                             (0, r.jsx)(i.Heading, {
@@ -24,33 +23,21 @@ function o(e) {
                                 color: "text-strong",
                                 children: n,
                             }),
-                        null != a &&
+                        null != s &&
                             (0, r.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: a,
+                                children: s,
                             }),
                     ],
                 }),
             (0, r.jsx)("div", {
-                className: s.Yq,
+                className: l.Yq,
                 children: t,
             }),
             (0, r.jsx)(i.cGx, {
-                className: s.yj,
+                className: l.yj,
             }),
         ],
-    });
-}
-
-function l(e) {
-    let { children: t, title: n, description: i, webSetting: s } = e;
-    return (0, r.jsx)(a.x, {
-        setting: s,
-        children: (0, r.jsx)(o, {
-            title: n,
-            description: i,
-            children: t,
-        }),
     });
 }

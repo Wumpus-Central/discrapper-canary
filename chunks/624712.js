@@ -13,13 +13,13 @@ var i = n(562465),
     u = n(287809),
     d = n(469778),
     p = n(147964),
-    f = n(927813),
-    h = n(837921),
-    A = n(636401),
-    g = n(613057),
-    m = n(652215);
+    h = n(927813),
+    g = n(837921),
+    f = n(636401),
+    m = n(613057),
+    A = n(652215);
 
-function b(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function b(e) {
     return e;
 }
 
-function _(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,10 +63,10 @@ function _(e, t) {
         e
     );
 }
-let E = 10 * f.A.Millis.SECOND,
+let E = 10 * h.A.Millis.SECOND,
     O = {
-        [m.e$_.VALIDATE_APPLICATION]: {
-            scope: g.hj,
+        [A.e$_.VALIDATE_APPLICATION]: {
+            scope: m.hj,
             handler(e) {
                 let { socket: t } = e,
                     i = t.application.id;
@@ -74,25 +74,25 @@ let E = 10 * f.A.Millis.SECOND,
                     var o;
                     let e;
                     if (null == i)
-                        throw new A.A(
+                        throw new f.A(
                             {
-                                errorCode: m.Lw6.INVALID_COMMAND,
+                                errorCode: A.Lw6.INVALID_COMMAND,
                             },
                             "No application.",
                         );
                     let t = c.A.getApplication(i);
                     if (null == t)
-                        throw new A.A(
+                        throw new f.A(
                             {
-                                errorCode: m.Lw6.INVALID_ENTITLEMENT,
+                                errorCode: A.Lw6.INVALID_ENTITLEMENT,
                             },
                             "SKU does not exist.",
                         );
                     let n = t.primarySkuId;
                     if (null == n)
-                        throw new A.A(
+                        throw new f.A(
                             {
-                                errorCode: m.Lw6.INVALID_ENTITLEMENT,
+                                errorCode: A.Lw6.INVALID_ENTITLEMENT,
                             },
                             "SKU does not exist.",
                         );
@@ -105,17 +105,17 @@ let E = 10 * f.A.Millis.SECOND,
                                   () => !0 === d.A.isEntitledToSku(u.default.getCurrentUser(), n, o),
                               )).then((e) => {
                             if (!e)
-                                throw new A.A(
+                                throw new f.A(
                                     {
-                                        errorCode: m.Lw6.INVALID_ENTITLEMENT,
+                                        errorCode: A.Lw6.INVALID_ENTITLEMENT,
                                     },
                                     "User does not have entitlement.",
                                 );
                         }),
                         (0, l.BK)(E).then(() => {
-                            throw new A.A(
+                            throw new f.A(
                                 {
-                                    errorCode: m.Lw6.INVALID_ENTITLEMENT,
+                                    errorCode: A.Lw6.INVALID_ENTITLEMENT,
                                 },
                                 "Timed out fetching entitlement.",
                             );
@@ -123,14 +123,14 @@ let E = 10 * f.A.Millis.SECOND,
                     ]);
                 } catch (e) {
                     throw (
-                        (e.code === m.Lw6.INVALID_ENTITLEMENT &&
-                            (h.Ay.focus(null, !0),
+                        (e.code === A.Lw6.INVALID_ENTITLEMENT &&
+                            (g.Ay.focus(null, !0),
                             (0, a.mMO)(async () => {
-                                let { default: e } = await n.e("26766").then(n.bind(n, 448701));
+                                let { default: e } = await n.e("4385").then(n.bind(n, 448701));
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
-                                        _(b({}, t), {
+                                        b(_({}, t), {
                                             applicationId: i,
                                         }),
                                     );
@@ -140,20 +140,20 @@ let E = 10 * f.A.Millis.SECOND,
                 }
             },
         },
-        [m.e$_.GET_ENTITLEMENT_TICKET]: {
-            scope: g.hj,
+        [A.e$_.GET_ENTITLEMENT_TICKET]: {
+            scope: m.hj,
             handler(e) {
                 let { socket: t } = e,
                     l = t.application.id;
                 if (null == l)
-                    throw new A.A(
+                    throw new f.A(
                         {
-                            errorCode: m.Lw6.INVALID_COMMAND,
+                            errorCode: A.Lw6.INVALID_COMMAND,
                         },
                         "No application.",
                     );
                 return i.Bo.post({
-                    url: m.Rsh.ENTITLEMENT_TICKET(l),
+                    url: A.Rsh.ENTITLEMENT_TICKET(l),
                     body: {
                         test_mode: p.A.inTestModeForApplication(l) || o.A.inDevModeForApplication(l),
                     },
@@ -167,13 +167,13 @@ let E = 10 * f.A.Millis.SECOND,
                     })
                     .catch((e) => {
                         throw (
-                            (h.Ay.focus(null, !0),
+                            (g.Ay.focus(null, !0),
                             (0, a.mMO)(async () => {
-                                let { default: e } = await n.e("26766").then(n.bind(n, 448701));
+                                let { default: e } = await n.e("4385").then(n.bind(n, 448701));
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
-                                        _(b({}, t), {
+                                        b(_({}, t), {
                                             applicationId: l,
                                         }),
                                     );

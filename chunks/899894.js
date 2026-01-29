@@ -30,12 +30,9 @@ function d(e) {
         : (0, r.jsxs)(s.DUT, {
               onClick: () => {
                   (0, s.mMO)(async () => {
-                      let { default: e } = await Promise.all([
-                          n.e("22726"),
-                          n.e("83518"),
-                          n.e("9407"),
-                          n.e("1708"),
-                      ]).then(n.bind(n, 956450));
+                      let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("1708")]).then(
+                          n.bind(n, 956450),
+                      );
                       return (t) =>
                           (0, r.jsx)(e, {
                               classificationId: h,

@@ -1,52 +1,52 @@
 n.d(t, {
-    A: () => O,
+    A: () => h,
 }),
     n(896048);
-var r = n(627968),
-    i = n(64700),
+var s = n(627968),
+    r = n(64700),
     l = n(311907),
-    s = n(397927),
-    a = n(212245),
-    o = n(287809),
+    i = n(397927),
+    o = n(212245),
+    a = n(287809),
     c = n(927578),
-    d = n(987384),
-    u = n(912630),
-    _ = n(965162),
-    p = n(413339),
-    m = n(952572),
-    g = n(144830),
-    A = n(577718),
-    f = n(652215),
-    h = n(693591),
-    b = n(985018);
+    u = n(987384),
+    d = n(912630),
+    p = n(965162),
+    m = n(413339),
+    O = n(952572),
+    f = n(144830),
+    j = n(577718),
+    g = n(652215),
+    b = n(693591),
+    x = n(985018);
 
-function E(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            s = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (s = s.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            s.forEach(function (t) {
+                var s;
+                (s = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: s,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = s);
             });
     }
     return e;
 }
 
-function x(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,8 +54,8 @@ function x(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var s = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, s);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -65,76 +65,75 @@ function x(e, t) {
     );
 }
 
-function O(e) {
+function h(e) {
     let {
             onLearnMore: t,
-            selectedBackgroundOption: O,
-            onSelectBackgroundOption: C,
-            currentDeviceId: I,
-            responsiveBackgroundOptions: T,
-            className: S,
+            selectedBackgroundOption: h,
+            onSelectBackgroundOption: v,
+            currentDeviceId: N,
+            className: E,
         } = e,
-        j = (0, l.bG)([o.default], () => o.default.getCurrentUser()),
-        [v, N] = i.useState(null),
-        y = (0, m.A)(),
-        P = c.Ay.canUseCustomBackgrounds(j);
-    i.useEffect(() => {
-        (0, d.HR)();
+        _ = (0, l.bG)([a.default], () => a.default.getCurrentUser()),
+        [S, P] = r.useState(null),
+        D = (0, O.A)(),
+        I = c.Ay.canUseCustomBackgrounds(_);
+    r.useEffect(() => {
+        (0, u.HR)();
     }, []);
-    let R = (0, l.cf)([u.A], () => (P ? u.A.videoFilterAssets : {})),
-        D = i.useMemo(() => Object.values(R).filter((e) => e.type === A.yZ.BACKGROUND), [R]),
-        w = (0, a.p)(),
-        L = {
-            isVideoBackgroundSupported: y,
-            onSelectBackgroundOption: C,
-            selectedBackgroundOption: O,
+    let T = (0, l.cf)([d.A], () => (I ? d.A.videoFilterAssets : {})),
+        k = r.useMemo(() => Object.values(T).filter((e) => e.type === j.yZ.BACKGROUND), [T]),
+        C = (0, o.p)(),
+        w = {
+            isVideoBackgroundSupported: D,
+            onSelectBackgroundOption: v,
+            selectedBackgroundOption: h,
         },
-        M = i.useRef(L);
-    i.useEffect(() => {
-        M.current = L;
+        U = r.useRef(w);
+    r.useEffect(() => {
+        U.current = w;
     }),
-        i.useEffect(() => {
-            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = M.current;
+        r.useEffect(() => {
+            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = U.current;
             e
-                ? (0, p.S1)(n, I, {
+                ? (0, m.S1)(n, N, {
                       track: !1,
                   }).catch(() => t(null))
                 : null != n && t(null);
-        }, [I]);
-    let U = (e) => {
-        C(e),
-            (0, p.S1)(e, I, {
-                location: w.location,
+        }, [N]);
+    let B = (e) => {
+        v(e),
+            (0, m.S1)(e, N, {
+                location: C.location,
             })
-                .then(() => N(null))
+                .then(() => P(null))
                 .catch(() => {
-                    N(b.intl.string(b.t.ejrSLe)),
-                        (0, p.S1)(null, I, {
-                            location: w.location,
+                    P(x.intl.string(x.t.ejrSLe)),
+                        (0, m.S1)(null, N, {
+                            location: C.location,
                         });
                 });
     };
-    return y
-        ? (0, r.jsx)("div", {
-              className: S,
-              children: (0, r.jsx)(s.D0$, {
-                  label: b.intl.string(b.t.lZTUPs),
-                  errorMessage: v,
-                  children: (0, r.jsx)(g.A, {
-                      canUseCustomBackgrounds: P,
-                      customBackgroundOptions: D,
-                      selectedOption: O,
-                      onSelectOption: U,
+    return D
+        ? (0, s.jsx)("div", {
+              className: E,
+              children: (0, s.jsx)(i.D0$, {
+                  label: x.intl.string(x.t.lZTUPs),
+                  errorMessage: S,
+                  children: (0, s.jsx)(f.A, {
+                      canUseCustomBackgrounds: I,
+                      customBackgroundOptions: k,
+                      selectedOption: h,
+                      onSelectOption: B,
                       onUpsellClick: () => {
-                          (0, s.mMO)(async () => {
+                          (0, i.mMO)(async () => {
                               let { default: e } = await n.e("95743").then(n.bind(n, 210402));
                               return (n) =>
-                                  (0, r.jsx)(
+                                  (0, s.jsx)(
                                       e,
-                                      x(E({}, n), {
+                                      A(y({}, n), {
                                           onLearnMore: t,
-                                          analyticsSource: x(E({}, w.location), {
-                                              object: f.ZSU.BUTTON_CTA,
+                                          analyticsSource: A(y({}, C.location), {
+                                              object: g.ZSU.BUTTON_CTA,
                                           }),
                                       }),
                                   );
@@ -142,17 +141,16 @@ function O(e) {
                       },
                       onAddBackgroundImage: function (e, t) {
                           let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                          return new Promise(async (r) => {
+                          return new Promise(async (s) => {
                               try {
-                                  let r = await (0, d.F9)(e, A.yZ.BACKGROUND);
-                                  U(r), (0, _.D1)(r, t.type === h.a.MP4, n), N(null);
+                                  let s = await (0, u.F9)(e, j.yZ.BACKGROUND);
+                                  B(s), (0, p.D1)(s, t.type === b.a.MP4, n), P(null);
                               } catch (e) {
-                                  N(e.message);
+                                  P(e.message);
                               }
-                              r();
+                              s();
                           });
                       },
-                      responsive: T,
                   }),
               }),
           })

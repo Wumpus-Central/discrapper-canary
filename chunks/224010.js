@@ -201,12 +201,9 @@ let T = (t) => {
             {
                 onClick: () => {
                     (0, c.mMO)(async () => {
-                        let { default: t } = await Promise.all([
-                            s.e("92414"),
-                            s.e("22726"),
-                            s.e("9407"),
-                            s.e("52139"),
-                        ]).then(s.bind(s, 956450));
+                        let { default: t } = await Promise.all([s.e("92414"), s.e("9407"), s.e("52139")]).then(
+                            s.bind(s, 956450),
+                        );
                         return (e) =>
                             (0, i.jsx)(
                                 t,
