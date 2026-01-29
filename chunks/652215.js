@@ -5262,6 +5262,7 @@ var na = (function (e) {
             (e.CHANNEL_WITH_UNREAD_MENTIONS_LOADED = "channel_with_unread_mentions_loaded"),
             (e.REPLY_NUDGES_CREATED = "reply_nudges_created"),
             (e.REPLY_NUDGE_OPENED = "reply_nudge_opened"),
+            (e.APP_TRANSACTION_ID_SYNCED = "app_transaction_id_synced"),
             e
         );
     })({}),

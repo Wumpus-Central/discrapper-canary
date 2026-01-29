@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(136722),
     i = n(665260),
     a = n(988506),
-    s = n(315069),
-    o = n(507698),
+    o = n(315069),
+    s = n(507698),
     l = n(945096),
     c = n(47537),
     u = n(369496),
@@ -49,7 +49,7 @@ function E(e) {
     return e;
 }
 
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,18 +62,18 @@ function b(e, t) {
     return n;
 }
 
-function y(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-class O extends s.A {
+class O extends o.A {
     get createdAt() {
         return new Date(_.default.extractTimestamp(this.id));
     }
@@ -96,7 +96,7 @@ class O extends s.A {
     }
     addGuildAvatarHash(e, t) {
         if (this.guildMemberAvatars[e] === t) return this;
-        let n = y(E({}, this.guildMemberAvatars), {
+        let n = b(E({}, this.guildMemberAvatars), {
             [e]: t,
         });
         return this.merge({
@@ -105,7 +105,7 @@ class O extends s.A {
     }
     removeGuildAvatarHash(e) {
         if (void 0 === this.guildMemberAvatars[e]) return this;
-        let t = y(E({}, this.guildMemberAvatars), {
+        let t = b(E({}, this.guildMemberAvatars), {
             [e]: void 0,
         });
         return this.merge({
@@ -235,7 +235,7 @@ class O extends s.A {
         return this.avatarDecorationData;
     }
     set avatarDecoration(e) {
-        this.avatarDecorationData = (0, o.Xq)(e);
+        this.avatarDecorationData = (0, s.Xq)(e);
     }
     get nameplate() {
         var e;
@@ -248,7 +248,7 @@ class O extends s.A {
             : a.qT.UNSPECIFIED;
     }
     constructor(e) {
-        var t, n, i, a, s, o, u, f, p, _, m, E, b, y, O, A, v, S, I, T, C, N, R, w, P, D, x, L, j, M, k, U, G, V;
+        var t, n, i, a, o, s, u, f, p, _, m, E, y, b, O, v, A, I, S, T, C, N, w, R, P, D, L, x, M, j, k, U, G, F, V, B;
         super(),
             g(this, "id", void 0),
             g(this, "username", void 0),
@@ -279,42 +279,45 @@ class O extends s.A {
             g(this, "collectibles", void 0),
             g(this, "displayNameStyles", void 0),
             g(this, "premiumState", void 0),
+            g(this, "appTransactionIds", void 0),
             g(this, "hasFlag", (e) => !1),
             g(this, "isStaff", () => !1),
             g(this, "isStaffPersonal", () => !1),
             g(this, "hasAnyStaffLevel", () => !1);
-        const F = null != (t = e.premium_type) ? t : e.premiumType;
+        const H = null != (t = e.premium_type) ? t : e.premiumType;
         (this.id = e.id),
             (this.username = null != (n = e.username) ? n : ""),
             (this.discriminator = null != (i = e.discriminator) ? i : h.h3J),
             (this.avatar = null != (a = e.avatar) ? a : null),
-            (this.avatarDecoration = null != (s = e.avatar_decoration_data) ? s : e.avatarDecorationData),
-            (this.email = null != (o = e.email) ? o : null),
+            (this.avatarDecoration = null != (o = e.avatar_decoration_data) ? o : e.avatarDecorationData),
+            (this.email = null != (s = e.email) ? s : null),
             (this.verified = null != (u = e.verified) && u),
             (this.bot = null != (f = e.bot) && f),
             (this.system = null != (p = e.system) && p),
             (this.mfaEnabled = null != (_ = null != (m = e.mfa_enabled) ? m : e.mfaEnabled) && _),
             (this.mobile = null != (E = e.mobile) && E),
-            (this.desktop = null != (b = e.desktop) && b),
-            (this.premiumType = F === h.oA2 ? null : F),
-            (this.flags = null != (y = e.flags) ? y : 0),
-            (this.publicFlags = null != (O = null != (A = e.public_flags) ? A : e.publicFlags) ? O : 0),
-            (this.purchasedFlags = null != (v = null != (S = e.purchased_flags) ? S : e.purchasedFlags) ? v : 0),
+            (this.desktop = null != (y = e.desktop) && y),
+            (this.premiumType = H === h.oA2 ? null : H),
+            (this.flags = null != (b = e.flags) ? b : 0),
+            (this.publicFlags = null != (O = null != (v = e.public_flags) ? v : e.publicFlags) ? O : 0),
+            (this.purchasedFlags = null != (A = null != (I = e.purchased_flags) ? I : e.purchasedFlags) ? A : 0),
             (this.premiumUsageFlags =
-                null != (I = null != (T = e.premium_usage_flags) ? T : e.premiumUsageFlags) ? I : 0),
+                null != (S = null != (T = e.premium_usage_flags) ? T : e.premiumUsageFlags) ? S : 0),
             (this.phone = null != (C = e.phone) ? C : null),
             (this.nsfwAllowed = null != (N = e.nsfw_allowed) ? N : e.nsfwAllowed),
-            (this.ageVerificationStatus = null != (R = e.age_verification_status) ? R : e.ageVerificationStatus),
-            (this.guildMemberAvatars = null != (w = e.guildMemberAvatars) ? w : {}),
+            (this.ageVerificationStatus = null != (w = e.age_verification_status) ? w : e.ageVerificationStatus),
+            (this.guildMemberAvatars = null != (R = e.guildMemberAvatars) ? R : {}),
             (this.hasBouncedEmail = null != (P = null != (D = e.has_bounced_email) ? D : e.hasBouncedEmail) && P),
             (this.personalConnectionId =
-                null != (x = null != (L = e.personal_connection_id) ? L : e.personalConnectionId) ? x : null),
-            (this.globalName = null != (j = e.global_name) ? j : e.globalName),
+                null != (L = null != (x = e.personal_connection_id) ? x : e.personalConnectionId) ? L : null),
+            (this.globalName = null != (M = e.global_name) ? M : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, c.j)(null != (M = null != (k = e.primary_guild) ? k : e.primaryGuild) ? M : null)),
+            (this.primaryGuild = (0, c.j)(null != (j = null != (k = e.primary_guild) ? k : e.primaryGuild) ? j : null)),
             (this.collectibles = e.collectibles),
             (this.displayNameStyles = null != (U = e.displayNameStyles) ? U : (0, l.mT)(e.display_name_styles)),
             (this.premiumState = null != (G = e.premiumState) ? G : (0, d.f)(e.premium_state)),
+            (this.appTransactionIds =
+                null != (F = null != (V = e.appTransactionIds) ? V : e.app_transaction_ids) ? F : null),
             Object.defineProperties(this, {
                 hasFlag: {
                     writable: !1,
@@ -350,7 +353,7 @@ class O extends s.A {
                         this.hasFlag(h.nhx.RESTRICTED_COLLABORATOR),
                 },
             }),
-            (null == (V = this.globalName) ? void 0 : V.length) === 0 && (this.globalName = null);
+            (null == (B = this.globalName) ? void 0 : B.length) === 0 && (this.globalName = null);
     }
 }
 new O({
