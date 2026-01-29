@@ -1,12 +1,12 @@
 n.d(t, {
     Dv: () => O,
-    Em: () => S,
+    Em: () => T,
     Rd: () => g,
     S: () => m,
     Yn: () => l,
     _g: () => p,
     rO: () => f,
-    s2: () => o,
+    s2: () => s,
     tp: () => d,
 }),
     n(801541),
@@ -15,9 +15,9 @@ n.d(t, {
 var r = n(889137),
     i = n(440703),
     a = n(341915),
-    s = n(229695);
+    o = n(229695);
 
-function o(e) {
+function s(e) {
     try {
         return (0, r.YW)(e.config)
             .with(
@@ -45,7 +45,7 @@ function l(e) {
             {
                 config_version: 2,
             },
-            (e) => (0, s.k)(e),
+            (e) => (0, o.k)(e),
         )
         .exhaustive();
 }
@@ -156,7 +156,7 @@ function h(e) {
             secondary: e.colors.secondary,
         },
         rewards: e.rewards.map(_),
-        cosponsorMetadata: (0, s.j)(e.cosponsor_metadata),
+        cosponsorMetadata: (0, o.j)(e.cosponsor_metadata),
     };
 }
 
@@ -254,6 +254,17 @@ function I(e) {
 }
 
 function S(e) {
+    return {
+        gradientStart: e.gradient_start,
+        gradientEnd: e.gradient_end,
+        entrypointAssetImageUrl: e.entrypoint_asset_image_url,
+        tooltipAssetImageUrl: e.tooltip_asset_image_url,
+        tooltipTitle: e.tooltip_title,
+        tooltipSubtitle: e.tooltip_subtitle,
+    };
+}
+
+function T(e) {
     if (1 !== e.version || !(a.gh.QUEST_HOME_BANNER in e.placements)) return null;
     let t = e.placements[a.gh.QUEST_HOME_BANNER];
     if (null == t) return null;
@@ -269,5 +280,9 @@ function S(e) {
         startsAt: t.starts_at,
         expiresAt: t.expires_at,
     };
-    return null != t.asset_hero_video && (n.assetHeroVideo = v(t.asset_hero_video)), n;
+    return (
+        null != t.asset_hero_video && (n.assetHeroVideo = v(t.asset_hero_video)),
+        null != t.quest_home_entrypoint && (n.questHomeEntrypoint = S(t.quest_home_entrypoint)),
+        n
+    );
 }
