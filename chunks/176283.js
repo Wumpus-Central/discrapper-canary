@@ -7,7 +7,7 @@ var n = i(574381),
     r = i(69435),
     u = i(985018);
 let a = (0, l.E2)(s.X.ADVANCED_HARDWARE_ACCELERATION, {
-    usePredicate: () => n.Av,
+    usePredicate: () => n.Av && !(0, n.cX)(),
     useSearchTerms: () => [u.intl.string(u.t["eOC/F2"]), u.intl.string(u.t.Afc7l6)],
     Component: r.D,
 });
