@@ -4,8 +4,8 @@ n.d(t, {
 });
 var i,
     a = n(111956),
-    s = n.n(a),
-    o = n(311907),
+    o = n.n(a),
+    s = n(311907),
     l = n(73153),
     c = n(956793),
     u = n(77729),
@@ -30,20 +30,20 @@ function E(e, t, n) {
         e
     );
 }
-let b = Date.now(),
-    y = !1,
+let y = Date.now(),
+    b = !1,
     O = !1,
-    A = !1,
     v = !1,
-    S = !1;
+    A = !1,
+    I = !1;
 
-function I() {
-    return A || v || ((0, _.isAndroid)() && S);
+function S() {
+    return v || A || ((0, _.isAndroid)() && I);
 }
 
 function T() {
     let e = f.cU.getSetting();
-    0 === e || null != r || Date.now() - b > Math.min(e * p.A.Millis.SECOND, m.sdF) || I()
+    0 === e || null != r || Date.now() - y > Math.min(e * p.A.Millis.SECOND, m.sdF) || S()
         ? O ||
           l.h.dispatch({
               type: "AFK",
@@ -57,14 +57,14 @@ function T() {
 }
 
 function C() {
-    Date.now() - b > m.sdF || I()
-        ? y ||
+    Date.now() - y > m.sdF || S()
+        ? b ||
           l.h.dispatch({
               type: "IDLE",
               idle: !0,
-              idleSince: b,
+              idleSince: y,
           })
-        : y &&
+        : b &&
           l.h.dispatch({
               type: "IDLE",
               idle: !1,
@@ -75,7 +75,7 @@ function N() {
     C(), T();
 }
 
-function R() {
+function w() {
     var e;
     let t = (e) => {
         if (
@@ -84,9 +84,9 @@ function R() {
             }).system_wide_input
         ) {
             let t = Date.now() - e;
-            (null == r || t > r) && ((b = Math.max(t, b)), (r = null));
+            (null == r || t > r) && ((y = Math.max(t, y)), (r = null));
         }
-        N(), setTimeout(R, 10 * p.A.Millis.SECOND);
+        N(), setTimeout(w, 10 * p.A.Millis.SECOND);
     };
     if (
         (null === u.A || void 0 === u.A || null == (e = u.A.remotePowerMonitor) ? void 0 : e.getSystemIdleTimeMs) !=
@@ -97,112 +97,113 @@ function R() {
     }
 }
 
-function w(e) {
+function R(e) {
     d.A.getConfig({
         location: "handlePowerEvent",
     }).power_events
-        ? j({})
+        ? M({})
         : (e && (r = Date.now()), N());
 }
 if (!__OVERLAY__) {
     _.isPlatformEmbedded && (null === u.A || void 0 === u.A ? void 0 : u.A.remotePowerMonitor) != null
-        ? (R(),
+        ? (w(),
           u.A.remotePowerMonitor.on("resume", () => {
-              (A = !1), w(!1);
+              (v = !1), R(!1);
           }),
           u.A.remotePowerMonitor.on("suspend", () => {
-              (A = !0), w(!0), c.default.disconnect();
+              (v = !0), R(!0), c.default.disconnect();
           }),
           u.A.remotePowerMonitor.on("lock-screen", () => {
-              (v = !0), w(!0);
+              (A = !0), R(!0);
           }),
           u.A.remotePowerMonitor.on("unlock-screen", () => {
-              (v = !1), w(!1);
+              (A = !1), R(!1);
           }))
         : setInterval(N, 30 * p.A.Millis.SECOND);
-    let e = s()(() => {
+    let e = o()(() => {
         d.A.getConfig({
             location: "handleGenericInput",
-        }).generic_inputs && j({});
+        }).generic_inputs && M({});
     }, 500);
     window.addEventListener("mouseup", e), window.addEventListener("wheel", e), window.addEventListener("keypress", e);
 }
 
 function P(e) {
-    y = e.idle;
+    b = e.idle;
 }
 
 function D(e) {
     O = e.afk;
 }
 
-function x(e) {
-    let { userId: t, speakingFlags: n } = e;
-    return n !== g.ME.NONE && t === h.default.getId() && j({}), !1;
-}
-
 function L(e) {
-    let { state: t } = e;
-    return (S = t === m.g6G.BACKGROUND), (r = null), (b = Date.now()), N(), !1;
+    let { userId: t, speakingFlags: n } = e;
+    return n !== g.ME.NONE && t === h.default.getId() && M({}), !1;
 }
 
-function j(e) {
-    let { timestamp: t, type: n } = e,
-        i = "OVERLAY_SET_NOT_IDLE" === n && null != t;
+function x(e) {
+    let { state: t } = e;
+    return (I = t === m.g6G.BACKGROUND), (r = null), (y = Date.now()), N(), !1;
+}
+
+function M(e) {
+    let { timestamp: t, type: n, bypassIdleUpdate: i } = e,
+        a = "OVERLAY_SET_NOT_IDLE" === n && null != t;
     return (
-        (!i || !(t <= b)) &&
+        (!a || !(t <= y)) &&
+        !i &&
         ((r = null),
-        (b = i ? t : Date.now()),
+        (y = a ? t : Date.now()),
         __OVERLAY__
             ? l.h.dispatch({
                   type: "OVERLAY_SET_NOT_IDLE",
-                  timestamp: b,
+                  timestamp: y,
               })
             : N(),
         !1)
     );
 }
 
-function M() {
+function j() {
     if (
         !d.A.getConfig({
             location: "handleSettingsProtoUpdate",
         }).settings_updates
     )
         return !1;
-    j({});
+    M({});
 }
-class k extends (i = o.Ay.Store) {
+class k extends (i = s.Ay.Store) {
     initialize() {
         this.waitFor(h.default);
     }
     isIdle() {
-        return y;
+        return b;
     }
     isAFK() {
         return O;
     }
     getIdleSince() {
-        return y ? b : null;
+        return b ? y : null;
     }
     getSystemSuspended() {
-        return A;
+        return v;
     }
     getSystemLocked() {
-        return v;
+        return A;
     }
 }
 E(k, "displayName", "IdleStore");
 let U = new k(l.h, {
     IDLE: P,
     AFK: D,
-    SPEAKING: x,
-    APP_STATE_UPDATE: L,
-    OVERLAY_SET_NOT_IDLE: j,
-    CHANNEL_SELECT: j,
-    VOICE_CHANNEL_SELECT: j,
-    WINDOW_FOCUS: j,
-    OVERLAY_INITIALIZE: j,
-    OVERLAY_SET_INPUT_LOCKED: j,
-    USER_SETTINGS_PROTO_UPDATE: M,
+    SPEAKING: L,
+    APP_STATE_UPDATE: x,
+    OVERLAY_SET_NOT_IDLE: M,
+    CHANNEL_SELECT: M,
+    VOICE_CHANNEL_SELECT: M,
+    WINDOW_FOCUS: M,
+    OVERLAY_INITIALIZE: M,
+    OVERLAY_SET_INPUT_LOCKED: M,
+    USER_SETTINGS_PROTO_UPDATE: j,
 });
