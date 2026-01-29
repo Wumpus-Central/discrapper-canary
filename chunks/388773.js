@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => _,
+    A: () => u,
 }),
     n(896048);
 var r = n(627968),
@@ -7,83 +7,79 @@ var r = n(627968),
     l = n(397927),
     s = n(641324),
     a = n(46373),
-    o = n(112715),
-    c = n(78837),
-    d = n(985018),
-    u = n(115686);
+    o = n(78837),
+    c = n(985018),
+    d = n(115686);
 
-function _(e) {
+function u(e) {
     var t;
     let n,
-        { node: _ } = e,
-        [p, m] = i.useState(!1),
-        { layout: g, collapseAfter: A, useCollapsibleTitle: f, useCollapsedSubtitle: h, initialize: b } = _,
-        E = null != A ? g.slice(0, A) : g,
-        x = null != A ? g.slice(A) : [],
-        O =
-            null != (t = null == f ? void 0 : f(p, x.length))
+        { node: u } = e,
+        [_, p] = i.useState(!1),
+        { layout: m, collapseAfter: g, useCollapsibleTitle: A, useCollapsedSubtitle: f } = u,
+        b = null != g ? m.slice(0, g) : m,
+        h = null != g ? m.slice(g) : [],
+        E =
+            null != (t = null == A ? void 0 : A(_, h.length))
                 ? t
-                : ((n = x.length),
-                  p
-                      ? d.intl.formatToPlainString(d.t["3SHL+d"], {
+                : ((n = h.length),
+                  _
+                      ? c.intl.formatToPlainString(c.t["3SHL+d"], {
                             count: n,
                         })
-                      : d.intl.formatToPlainString(d.t["8JRFyZ"], {
+                      : c.intl.formatToPlainString(c.t["8JRFyZ"], {
                             count: n,
                         })),
-        C = null == h ? void 0 : h();
-    return (
-        (0, o.Z)(b),
-        (0, r.jsxs)(l.BJc, {
-            gap: 8,
-            children: [
-                E.map((e, t) =>
-                    (0, r.jsxs)(
-                        i.Fragment,
-                        {
-                            children: [
-                                (0, r.jsx)(s.A, {
-                                    node: e,
-                                }),
-                                t !== E.length - 1 && (0, r.jsx)(a.A, {}),
-                            ],
-                        },
-                        e.key,
-                    ),
-                ),
-                x.length > 0 &&
-                    (0, r.jsxs)("div", {
-                        className: u.CT,
+        O = null == f ? void 0 : f();
+    return (0, r.jsxs)(l.BJc, {
+        gap: 8,
+        children: [
+            b.map((e, t) =>
+                (0, r.jsxs)(
+                    i.Fragment,
+                    {
                         children: [
-                            (0, r.jsx)(a.A, {
-                                className: u.mn,
+                            (0, r.jsx)(s.A, {
+                                node: e,
                             }),
-                            (0, r.jsx)(c.f, {
-                                title: O,
-                                collapsedSubtitle: C,
-                                isExpanded: p,
-                                onExpandedChange: m,
-                                children: (0, r.jsx)(l.BJc, {
-                                    gap: 8,
-                                    children: x.map((e, t) =>
-                                        (0, r.jsxs)(
-                                            i.Fragment,
-                                            {
-                                                children: [
-                                                    (0, r.jsx)(s.A, {
-                                                        node: e,
-                                                    }),
-                                                    t !== x.length - 1 && (0, r.jsx)(a.A, {}),
-                                                ],
-                                            },
-                                            e.key,
-                                        ),
-                                    ),
-                                }),
-                            }),
+                            t !== b.length - 1 && (0, r.jsx)(a.A, {}),
                         ],
-                    }),
-            ],
-        })
-    );
+                    },
+                    e.key,
+                ),
+            ),
+            h.length > 0 &&
+                (0, r.jsxs)("div", {
+                    className: d.CT,
+                    children: [
+                        (0, r.jsx)(a.A, {
+                            className: d.mn,
+                        }),
+                        (0, r.jsx)(o.f, {
+                            title: E,
+                            collapsedSubtitle: O,
+                            isExpanded: _,
+                            onExpandedChange: p,
+                            children: (0, r.jsx)(l.BJc, {
+                                gap: 8,
+                                children: h.map((e, t) =>
+                                    (0, r.jsxs)(
+                                        i.Fragment,
+                                        {
+                                            children: [
+                                                (0, r.jsx)(s.A, {
+                                                    node: e,
+                                                }),
+                                                t !== h.length - 1 && (0, r.jsx)(a.A, {}),
+                                            ],
+                                        },
+                                        e.key,
+                                    ),
+                                ),
+                            }),
+                        }),
+                    ],
+                }),
+        ],
+    });
 }

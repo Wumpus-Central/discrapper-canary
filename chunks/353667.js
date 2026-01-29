@@ -1,5 +1,5 @@
 n.d(t, {
-    j: () => S,
+    j: () => T,
 }),
     n(896048),
     n(65821);
@@ -17,11 +17,10 @@ var r = n(627968),
     m = n(641324),
     g = n(46373),
     A = n(890690),
-    f = n(112715),
-    h = n(49999),
+    f = n(49999),
     b = n(872175);
 
-function E(e) {
+function h(e) {
     let { notice: t, children: n } = e,
         { showNotice: o, handleStoreUpdate: c } = (0, u.L_)(),
         d = null == t ? void 0 : t.stores;
@@ -58,10 +57,10 @@ function E(e) {
     });
 }
 
-function x(e) {
+function E(e) {
     let { scrollerRef: t, panelKey: n, notice: l, children: s } = e,
         o = i.useRef(null);
-    return (0, r.jsx)(E, {
+    return (0, r.jsx)(h, {
         notice: l,
         children: (0, r.jsx)(
             a.ArX,
@@ -129,7 +128,7 @@ function C(e) {
             });
     }, [s, l]);
     let _ = null != (n = s.find((e) => e.key === c)) ? n : s[0];
-    return (0, r.jsxs)(x, {
+    return (0, r.jsxs)(E, {
         panelKey: l,
         notice: o,
         children: [
@@ -177,12 +176,12 @@ function C(e) {
     });
 }
 
-function I(e) {
+function x(e) {
     let { panelKey: t, notice: n, layout: l } = e,
         s = i.useRef(null);
     return (
         (0, A.u)(t, l, s),
-        (0, r.jsx)(x, {
+        (0, r.jsx)(E, {
             scrollerRef: s,
             panelKey: t,
             notice: n,
@@ -193,20 +192,19 @@ function I(e) {
     );
 }
 
-function T(e) {
+function S(e) {
     let { component: t, panelKey: n, notice: i } = e;
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(E, {
         panelKey: n,
         notice: i,
         children: (0, r.jsx)(t, {}),
     });
 }
 
-function S(e) {
+function T(e) {
     let { node: t } = e,
-        { layout: n, initialize: s } = t;
-    (0, f.Z)(s);
-    let a = (0, l.bG)([d.A], () => d.A.hidePersonalInformation);
+        { layout: n } = t,
+        s = (0, l.bG)([d.A], () => d.A.hidePersonalInformation);
     if (
         (i.useEffect(() => {
             var e, n;
@@ -221,16 +219,16 @@ function S(e) {
             null != i &&
                 i.forEach((e) => {
                     (0, c.Dr)(e, {
-                        dismissAction: h.i.AUTO,
+                        dismissAction: f.i.AUTO,
                         forceTrack: !0,
                     });
                 });
         }, [t]),
-        a && t.hideInStreamerMode)
+        s && t.hideInStreamerMode)
     )
         return (0, r.jsx)(o.A, {});
     if (null != t.StronglyDiscouragedCustomComponent)
-        return (0, r.jsx)(T, {
+        return (0, r.jsx)(S, {
             component: t.StronglyDiscouragedCustomComponent,
             panelKey: t.key,
             notice: t.notice,
@@ -242,7 +240,7 @@ function S(e) {
             layout: n,
         });
     if ((0, _.Iu)(n))
-        return (0, r.jsx)(I, {
+        return (0, r.jsx)(x, {
             panelKey: t.key,
             notice: t.notice,
             layout: n,
