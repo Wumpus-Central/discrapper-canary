@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => y,
+    A: () => I,
 });
 var r = n(627968),
     i = n(64700),
@@ -10,88 +10,82 @@ var r = n(627968),
     c = n(397927),
     d = n(775602),
     u = n(793574),
-    _ = n(688810),
-    p = n(560138),
+    p = n(688810),
+    _ = n(560138),
     m = n(526292),
     g = n(236834),
-    A = n(549996),
-    f = n(371764),
+    f = n(549996),
+    b = n(371764),
     h = n(65470),
-    b = n(792656),
-    E = n(939724),
-    x = n(224850),
-    O = n(552554),
-    C = n(797255),
-    I = n(103733),
-    T = n(288351),
-    S = n(160321),
-    j = n(788868),
+    A = n(792656),
+    E = n(224850),
+    x = n(552554),
+    O = n(797255),
+    C = n(103733),
+    y = n(288351),
+    j = n(160321),
+    T = n(788868),
     v = n(985018),
-    N = n(232285);
-let y = i.memo(
+    S = n(232285);
+let I = i.memo(
     i.forwardRef((e, t) => {
-        let { className: n, subscriptionTier: i, isEligibleForBogoPromotion: l, offerExpiresAt: y } = e,
-            { analyticsLocations: P } = (0, _.Ay)(u.A.PREMIUM_MARKETING_HERO_CTA),
-            R = (0, O.N)(),
-            D = (0, g.A)(),
-            w = null != D,
-            L = (0, o.bG)([d.A], () => d.A.useReducedMotion),
-            { visibilityPercentageRef: M, visibilityPercentage: U } = (0, I.U)(!L),
-            G = (0, o.bG)([p.A], () => p.A.affinities),
-            k = !w && G.length > 0,
-            V = (0, A.c)(a.C.MARKETING_PAGE_BANNER),
-            H = null != V && "marketingPageBanner" === V.properties.properties.oneofKind,
-            B = (0, m.ar)() && !H;
-        return (0, r.jsx)(_.f5, {
-            value: P,
+        let { className: n, subscriptionTier: i, isEligibleForBogoPromotion: l } = e,
+            { analyticsLocations: I } = (0, p.Ay)(u.A.PREMIUM_MARKETING_HERO_CTA),
+            N = (0, x.N)(),
+            P = (0, g.A)(),
+            R = null != P,
+            D = (0, o.bG)([d.A], () => d.A.useReducedMotion),
+            { visibilityPercentageRef: w, visibilityPercentage: L } = (0, C.U)(!D),
+            M = (0, o.bG)([_.A], () => _.A.affinities),
+            G = !R && M.length > 0,
+            U = (0, f.c)(a.C.MARKETING_PAGE_BANNER),
+            k = null != U && "marketingPageBanner" === U.properties.properties.oneofKind,
+            H = (0, m.ar)() && !k;
+        return (0, r.jsx)(p.f5, {
+            value: I,
             children: (0, r.jsx)("div", {
                 ref: t,
-                className: s()(N.kL, null != y && N.VW, n),
+                className: s()(S.kL, n),
                 "data-testid": "marketing-page-hero-header",
                 children: (0, r.jsx)("div", {
-                    ref: M,
+                    ref: w,
                     children: (0, r.jsxs)("div", {
-                        className: N.hQ,
+                        className: S.hQ,
                         children: [
-                            (0, r.jsx)(S.A, {
-                                containerVisibilityPercentage: U,
+                            (0, r.jsx)(j.A, {
+                                containerVisibilityPercentage: L,
                             }),
-                            B &&
-                                (null != y
-                                    ? (0, r.jsx)(E.A, {
-                                          expiresAt: y,
-                                          className: N.IZ,
-                                      })
-                                    : (0, r.jsx)("div", {
-                                          className: N.XN,
-                                          children: (0, r.jsx)(T.A, {
-                                              enablePremiumBrandRefresh: !0,
-                                          }),
-                                      })),
+                            H &&
+                                (0, r.jsx)("div", {
+                                    className: S.XN,
+                                    children: (0, r.jsx)(y.A, {
+                                        enablePremiumBrandRefresh: !0,
+                                    }),
+                                }),
                             (0, r.jsx)("div", {
-                                className: N.s8,
+                                className: S.s8,
                                 children: (0, r.jsx)(c.Heading, {
                                     variant: "display-md",
                                     color: "text-strong",
-                                    className: N.wx,
+                                    className: S.wx,
                                     children: v.intl.string(v.t.YCZldK),
                                 }),
                             }),
                             (0, r.jsxs)("div", {
-                                className: N.rf,
+                                className: S.rf,
                                 children: [
-                                    w &&
+                                    R &&
                                         (0, r.jsx)("div", {
-                                            className: N.eZ,
-                                            children: (0, r.jsx)(C.A, {
-                                                referrer: D,
+                                            className: S.eZ,
+                                            children: (0, r.jsx)(O.A, {
+                                                referrer: P,
                                                 enablePremiumBrandRefresh: !0,
                                             }),
                                         }),
-                                    k &&
+                                    G &&
                                         (0, r.jsx)("div", {
-                                            className: N.Qn,
-                                            children: (0, r.jsx)(x.A, {
+                                            className: S.Qn,
+                                            children: (0, r.jsx)(E.A, {
                                                 textColor: "text-strong",
                                                 smallerText: !1,
                                                 isApplicationHome: !0,
@@ -99,16 +93,16 @@ let y = i.memo(
                                             }),
                                         }),
                                     (0, r.jsxs)("div", {
-                                        className: B ? N.es : N.UJ,
+                                        className: H ? S.es : S.UJ,
                                         children: [
-                                            (0, r.jsx)(b.A, {
+                                            (0, r.jsx)(A.A, {
                                                 size: "md",
-                                                fullWidth: B,
+                                                fullWidth: H,
                                                 hasActivePromotion: !!l,
-                                                subscriptionTier: H ? j.pe.NONE : i,
-                                                buttonTextOverride: H ? v.intl.string(v.t["2pG5Ga"]) : void 0,
+                                                subscriptionTier: k ? T.pe.NONE : i,
+                                                buttonTextOverride: k ? v.intl.string(v.t["2pG5Ga"]) : void 0,
                                             }),
-                                            !B &&
+                                            !H &&
                                                 (0, r.jsx)(h.A, {
                                                     variant: "secondary",
                                                     size: "md",
@@ -116,21 +110,21 @@ let y = i.memo(
                                         ],
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: N.iQ,
+                                        className: S.iQ,
                                         children: (0, r.jsx)(c.Text, {
                                             color: "text-muted",
                                             variant: "text-xs/medium",
                                             children: v.intl.format(v.t.kt9wxs, {
-                                                cheapestMonthlyPrice: R,
+                                                cheapestMonthlyPrice: N,
                                             }),
                                         }),
                                     }),
-                                    null != V &&
-                                        "marketingPageBanner" === V.properties.properties.oneofKind &&
-                                        (0, r.jsx)(f.x, {
-                                            componentId: V.id,
+                                    null != U &&
+                                        "marketingPageBanner" === U.properties.properties.oneofKind &&
+                                        (0, r.jsx)(b.x, {
+                                            componentId: U.id,
                                             promotionBannerMarketingComponentFields:
-                                                V.properties.properties.marketingPageBanner,
+                                                U.properties.properties.marketingPageBanner,
                                         }),
                                 ],
                             }),

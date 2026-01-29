@@ -1,66 +1,53 @@
 n.d(t, {
-    Ag: () => S,
-    MA: () => A,
-    fY: () => m,
+    Ag: () => v,
+    MA: () => b,
+    fY: () => y,
 });
 var i = n(627968),
     s = n(64700),
     r = n(503698),
     l = n.n(r),
-    o = n(554146),
-    a = n(990078),
-    d = n(397927),
-    u = n(496431),
-    c = n(826673),
-    h = n(405269),
-    g = n(927578),
-    p = n(804412),
-    f = n(234419),
-    C = n(915516),
-    v = n(985018),
-    y = n(271300);
+    o = n(990078),
+    a = n(397927),
+    d = n(496431),
+    u = n(405269),
+    c = n(927578),
+    h = n(234419),
+    g = n(915516),
+    p = n(985018),
+    f = n(271300);
 
-function b(e) {
-    let {
-            isTabSelected: t,
-            expiresAt: n,
-            badgeCopy: r,
-            className: g,
-            tooltipTextOverride: p,
-            tooltipPosition: f,
-            shouldShowOfferReminder: C,
-        } = e,
-        b = s.useMemo(() => Date.parse(n), [n]),
-        S = (0, u.A)(b, 6e4),
-        m = (0, c.k8)(o.M.NITRO_TAB_BADGE_OFFER_REMINDER),
-        A = C && !m;
-    return Object.values(S).every((e) => 0 === e)
+function C(e) {
+    let { isTabSelected: t, expiresAt: n, badgeCopy: r, className: c, tooltipTextOverride: h, tooltipPosition: g } = e,
+        C = s.useMemo(() => Date.parse(n), [n]),
+        v = (0, d.A)(C, 6e4);
+    return Object.values(v).every((e) => 0 === e)
         ? null
-        : (0, i.jsx)(a.m, {
+        : (0, i.jsx)(o.m, {
               text:
-                  null != p
-                      ? p
-                      : (0, h.uN)(S, {
-                            days: v.t.qVGNkU,
-                            hours: v.t.wyg9a9,
-                            minutes: v.t.IzmIlV,
+                  null != h
+                      ? h
+                      : (0, u.uN)(v, {
+                            days: p.t.qVGNkU,
+                            hours: p.t.wyg9a9,
+                            minutes: p.t.IzmIlV,
                         }),
-              position: null != f ? f : "top",
+              position: null != g ? g : "top",
               children: (0, i.jsxs)("div", {
-                  className: l()(y.Fg, A ? y.AT : y.C8, g, {
-                      [y.WO]: t,
+                  className: l()(f.Fg, f.C8, c, {
+                      [f.WO]: t,
                   }),
                   children: [
-                      (0, i.jsx)(d.O4, {
+                      (0, i.jsx)(a.O4, {
                           size: "custom",
                           width: 20,
                           height: 20,
-                          color: A ? "white" : "currentColor",
-                          className: y._q,
+                          color: "currentColor",
+                          className: f._q,
                       }),
-                      (0, i.jsx)(d.Text, {
+                      (0, i.jsx)(a.Text, {
                           variant: "eyebrow",
-                          color: A ? "always-white" : "text-strong",
+                          color: "text-strong",
                           children: r,
                       }),
                   ],
@@ -68,66 +55,54 @@ function b(e) {
           });
 }
 
-function S(e) {
+function v(e) {
     var t;
-    let { isTabSelected: n, trialOffer: s, shouldShowOfferReminder: r } = e,
-        l = null == (t = (0, f.V)()) ? void 0 : t.subscription_trial,
-        o = (0, g.tS)({
-            intervalType: null == l ? void 0 : l.interval,
-            intervalCount: null == l ? void 0 : l.interval_count,
+    let { isTabSelected: n, trialOffer: s } = e,
+        r = null == (t = (0, h.V)()) ? void 0 : t.subscription_trial,
+        l = (0, c.tS)({
+            intervalType: null == r ? void 0 : r.interval,
+            intervalCount: null == r ? void 0 : r.interval_count,
         }),
-        a = (0, C.Fu)(s),
-        { hasExperimentalTooltip: d } = (0, p.Ay)("PremiumOfferTabBadge");
-    return (0, i.jsx)(A, {
+        o = (0, g.Fu)(s);
+    return (0, i.jsx)(b, {
         isTabSelected: n,
-        badgeCopy: o,
+        badgeCopy: l,
         offerExpiresAt: s.expires_at,
-        tooltipTextOverride: d ? a : null,
-        tooltipPosition: d ? "right" : "top",
-        shouldShowOfferReminder: r,
+        tooltipTextOverride: o,
+        tooltipPosition: "right",
     });
 }
 
-function m(e) {
-    let { isTabSelected: t, userDiscount: n, includesAmountOff: s, shouldShowOfferReminder: r } = e,
-        l = v.intl.formatToPlainString(v.t.iiLbvu, {
+function y(e) {
+    let { isTabSelected: t, userDiscount: n, includesAmountOff: s } = e,
+        r = p.intl.formatToPlainString(p.t.iiLbvu, {
             percent: n.discount.amount,
         }),
-        o = (0, C.__)(n),
-        { hasExperimentalTooltip: a } = (0, p.Ay)("PremiumOfferTabBadge");
-    return (0, i.jsx)(A, {
+        l = (0, g.__)(n);
+    return (0, i.jsx)(b, {
         isTabSelected: t,
-        badgeCopy: s ? l : v.intl.string(v.t["/DTtr6"]),
+        badgeCopy: s ? r : p.intl.string(p.t["/DTtr6"]),
         offerExpiresAt: n.expires_at,
-        tooltipTextOverride: a ? o : null,
-        tooltipPosition: a ? "right" : "top",
-        shouldShowOfferReminder: r,
+        tooltipTextOverride: l,
+        tooltipPosition: "right",
     });
 }
 
-function A(e) {
-    let {
-        isTabSelected: t,
-        badgeCopy: n,
-        offerExpiresAt: s,
-        tooltipTextOverride: r,
-        tooltipPosition: o,
-        shouldShowOfferReminder: a = !1,
-    } = e;
+function b(e) {
+    let { isTabSelected: t, badgeCopy: n, offerExpiresAt: s, tooltipTextOverride: r, tooltipPosition: o } = e;
     return null != s
-        ? (0, i.jsx)(b, {
+        ? (0, i.jsx)(C, {
               expiresAt: s,
               isTabSelected: t,
               badgeCopy: n,
               tooltipTextOverride: r,
               tooltipPosition: o,
-              shouldShowOfferReminder: a,
           })
         : (0, i.jsx)("div", {
-              className: l()(y.Fg, y.AT),
-              children: (0, i.jsx)(d.Text, {
+              className: l()(f.Fg, f.AT),
+              children: (0, i.jsx)(a.Text, {
                   variant: "eyebrow",
-                  className: y.md,
+                  className: f.md,
                   children: n,
               }),
           });

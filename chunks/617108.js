@@ -1,82 +1,54 @@
 n.d(t, {
-    A: () => N,
+    A: () => T,
 });
 var r = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(496431),
-    o = n(793574),
-    a = n(688810),
-    s = n(532794),
-    c = n(954571),
-    u = n(804412),
-    E = n(422936),
-    d = n(635995),
-    _ = n(915516),
-    A = n(788868),
-    T = n(652215),
-    I = n(985018),
-    O = n(237082);
-let N = function (e) {
+var i = n(496431),
+    l = n(793574),
+    o = n(688810),
+    a = n(532794),
+    s = n(954571),
+    c = n(422936),
+    u = n(635995),
+    E = n(915516),
+    d = n(788868),
+    _ = n(652215),
+    A = n(985018);
+let T = function (e) {
     var t;
-    let { dismissCurrentNotice: n, subscriptionTier: N } = e,
-        { analyticsLocations: p } = (0, a.Ay)(o.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
-        R = (0, E.O)(),
-        S = (0, l.A)(null != R && null != R.expires_at ? Date.parse(R.expires_at) : 0),
-        { variant: P, showNagbar: y } = (0, u.Ay)("PremiumDiscountEndingNotice");
-    if (
-        null == R ||
-        (null == (t = R.discount) ? void 0 : t.plan_ids.some((e) => A.hd[e].skuId !== N)) ||
-        null == R.expires_at ||
-        Object.values(S).every((e) => 0 === e) ||
-        !y
-    )
-        return null;
-    let f = () => {
-        (0, s.A)({
-            subscriptionTier: N,
-            analyticsLocations: p,
-            analyticsObject: {
-                page: T.liQ.IN_APP,
-                section: T.JJy.NOTIFICATION_BAR,
-                object: T.ZSU.BUTTON_CTA,
-            },
-        });
-    };
-    return P === u.CJ.NAGBAR_REFRESH
-        ? (0, r.jsxs)(d.T0, {
+    let { dismissCurrentNotice: n, subscriptionTier: T } = e,
+        { analyticsLocations: I } = (0, o.Ay)(l.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
+        O = (0, c.O)(),
+        N = (0, i.A)(null != O && null != O.expires_at ? Date.parse(O.expires_at) : 0);
+    return null == O ||
+        (null == (t = O.discount) ? void 0 : t.plan_ids.some((e) => d.hd[e].skuId !== T)) ||
+        null == O.expires_at ||
+        Object.values(N).every((e) => 0 === e)
+        ? null
+        : (0, r.jsxs)(u.T0, {
               onClick: () => {
                   n(),
-                      c.default.track(T.HAw.APP_NOTICE_CLOSED, {
-                          notice_type: T.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
+                      s.default.track(_.HAw.APP_NOTICE_CLOSED, {
+                          notice_type: _.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
                       });
               },
               children: [
-                  (0, r.jsx)(d.In, {
-                      children: (0, _.rn)(S, Number(R.discount.amount)),
+                  (0, r.jsx)(u.In, {
+                      children: (0, E.rn)(N, Number(O.discount.amount)),
                   }),
-                  (0, r.jsx)(d.fY, {
-                      onClick: f,
-                      text: I.intl.string(I.t.zLXssK),
-                  }),
-              ],
-          })
-        : (0, r.jsxs)(i.$Td, {
-              color: i.Hv$.PREMIUM_TIER_2,
-              children: [
-                  (0, r.jsx)(i.PMB, {
-                      noticeType: T.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
-                      onClick: n,
-                  }),
-                  (0, r.jsx)(i.tvc, {
-                      size: "md",
-                      color: "currentColor",
-                      className: O.PC,
-                  }),
-                  (0, _.rn)(S, Number(R.discount.amount)),
-                  (0, r.jsx)(i.zr9, {
-                      onClick: f,
-                      children: I.intl.string(I.t.zLXssK),
+                  (0, r.jsx)(u.fY, {
+                      onClick: () => {
+                          (0, a.A)({
+                              subscriptionTier: T,
+                              analyticsLocations: I,
+                              analyticsObject: {
+                                  page: _.liQ.IN_APP,
+                                  section: _.JJy.NOTIFICATION_BAR,
+                                  object: _.ZSU.BUTTON_CTA,
+                              },
+                          });
+                      },
+                      text: A.intl.string(A.t.zLXssK),
                   }),
               ],
           });
