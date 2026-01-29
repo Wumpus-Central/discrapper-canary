@@ -117,7 +117,7 @@ function C(e) {
         x = (0, c.bG)([g.A], () => g.A.quests);
     return (0, r.jsx)(E.R, {
         adContentId: t.campaignId,
-        adCreativeType: o.p.TAKEOVER,
+        adCreativeType: o.p.QUEST_HOME_HEROES,
         questContent: f.uF.QUEST_HOME_TAKEOVER,
         sourceQuestContent: f.uF.QUEST_HOME_TAKEOVER,
         children: (e) =>
@@ -182,7 +182,7 @@ function C(e) {
                                                         (0, p.A)(t.ctaSponsorUrl.url),
                                                             (0, A.vK)({
                                                                 adContentId: t.campaignId,
-                                                                adCreativeType: o.p.TAKEOVER,
+                                                                adCreativeType: o.p.QUEST_HOME_HEROES,
                                                                 questContent: f.uF.QUEST_HOME_TAKEOVER,
                                                                 questContentCTA: _.Cy.OPEN_GAME_LINK,
                                                                 sourceQuestContent: f.uF.QUEST_HOME_TAKEOVER,
@@ -284,7 +284,7 @@ function C(e) {
                                                                           }),
                                                                           (0, A.vK)({
                                                                               adContentId: t.campaignId,
-                                                                              adCreativeType: o.p.TAKEOVER,
+                                                                              adCreativeType: o.p.QUEST_HOME_HEROES,
                                                                               questContent: f.uF.QUEST_HOME_TAKEOVER,
                                                                               questContentCTA: _.Cy.VIEW_QUESTS,
                                                                               sourceQuestContent:
