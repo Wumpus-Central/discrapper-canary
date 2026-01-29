@@ -26,6 +26,11 @@ let r = (0, n(250105).Ay)({
             autoOpenTIV: !0,
             autoNavigateChannel: !0,
         },
+        3: {
+            collectAnalytics: !0,
+            autoOpenTIV: !1,
+            autoNavigateChannel: !0,
+        },
     },
 });
 
