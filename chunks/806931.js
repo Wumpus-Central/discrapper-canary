@@ -1,7 +1,7 @@
 n.d(t, {
     Ay: () => l,
-    GK: () => o,
-    J7: () => s,
+    GK: () => s,
+    J7: () => o,
     PJ: () => u,
     R8: () => d,
     Xw: () => c,
@@ -27,16 +27,17 @@ var r = (function (e) {
     a = (function (e) {
         return (e.NONE = "NONE"), (e.AUTO = "AUTO"), e;
     })({}),
-    s = (function (e) {
+    o = (function (e) {
         return (
             (e[(e.DESKTOP = 0)] = "DESKTOP"),
             (e[(e.MOBILE = 1)] = "MOBILE"),
             (e[(e.XBOX = 2)] = "XBOX"),
             (e[(e.PLAYSTATION = 3)] = "PLAYSTATION"),
+            (e[(e.QUEST = 4)] = "QUEST"),
             e
         );
     })({}),
-    o = (function (e) {
+    s = (function (e) {
         return (
             (e.CONTEXT_MENU = "Context Menu"),
             (e.THREE_DOT = "Three-Dot"),
