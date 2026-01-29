@@ -55356,6 +55356,7 @@ screen and (max-width:485px) {
     font-size: 24px;
     height: 100px;
     justify-content: center;
+    padding: 12px;
     width: 100px
 }
 

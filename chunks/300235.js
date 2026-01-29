@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(735438),
-    s = n(397927),
-    o = n(408238),
+    o = n(397927),
+    s = n(408238),
     l = n(252561),
     c = n(907931);
 let u = [
@@ -105,11 +105,25 @@ let u = [
                 () =>
                     [...Array(e)].map((e, t) =>
                         (0, r.jsx)(
-                            s.DUT,
+                            o.DUT,
                             {
                                 className: c.j,
                                 onClick: () => console.log(t),
-                                children: t,
+                                children: (0, r.jsxs)(o.BJc, {
+                                    direction: "vertical",
+                                    justify: "space-between",
+                                    align: "center",
+                                    children: [
+                                        (0, r.jsx)("div", {
+                                            children: t,
+                                        }),
+                                        t % 3 == 0 &&
+                                            (0, r.jsx)(o.Button, {
+                                                onClick: () => console.log("clicked button ".concat(t)),
+                                                text: "Click Me",
+                                            }),
+                                    ],
+                                }),
                             },
                             t,
                         ),
@@ -118,7 +132,7 @@ let u = [
             );
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)(o.A, {
+                (0, r.jsx)(s.A, {
                     gap: n,
                     edgeFade: f,
                     hideActionsWhenDisabled: _,
@@ -127,12 +141,12 @@ let u = [
                 (0, r.jsx)(l.nB, {}),
                 (0, r.jsxs)(l.MG, {
                     children: [
-                        (0, r.jsx)(s.Checkbox, {
+                        (0, r.jsx)(o.Checkbox, {
                             checked: _,
                             onChange: () => h(!_),
                             label: "Hide Actions When Disabled",
                         }),
-                        (0, r.jsx)(s.ksK, {
+                        (0, r.jsx)(o.ksK, {
                             type: "number",
                             min: 0,
                             value: e.toString(),
@@ -144,7 +158,7 @@ let u = [
                     ],
                 }),
                 (0, r.jsx)(l.MG, {
-                    children: (0, r.jsx)(s.l6P, {
+                    children: (0, r.jsx)(o.l6P, {
                         value: n,
                         options: u,
                         onSelectionChange: d,
@@ -154,7 +168,7 @@ let u = [
                     }),
                 }),
                 (0, r.jsx)(l.MG, {
-                    children: (0, r.jsx)(s.l6P, {
+                    children: (0, r.jsx)(o.l6P, {
                         value: f,
                         options: u,
                         onSelectionChange: p,
