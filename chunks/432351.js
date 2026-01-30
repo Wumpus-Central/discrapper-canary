@@ -7,7 +7,7 @@ var r = n(972347),
     i = n(205693),
     a = n(731854);
 
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function s(e, t, n) {
     );
 }
 
-function o(e) {
+function s(e) {
     return null;
 }
 
@@ -177,11 +177,17 @@ class c extends r.A {
     fetchAsyncResources(e) {
         return Promise.resolve();
     }
+    getDeviceOSVolume(e) {
+        return Promise.resolve(void 0);
+    }
+    getDeviceOSMuted(e) {
+        return Promise.resolve(void 0);
+    }
     getNoiseCancellationStats() {
         return Promise.reject(Error("Dummy noise cancellation stats not supported"));
     }
     setNoiseCancellationEnableStats(e) {}
     constructor(...e) {
-        super(...e), s(this, "Video", o), s(this, "Camera", l);
+        super(...e), o(this, "Video", s), o(this, "Camera", l);
     }
 }
