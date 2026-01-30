@@ -174,7 +174,7 @@ function el(e) {
         (0, i.jsxs)("div", {
             children: [
                 eS &&
-                    (0, i.jsx)(U.v, {
+                    (0, i.jsx)(U.vi, {
                         fractionalPremiumInfo: V,
                     }),
                 ev && null != x

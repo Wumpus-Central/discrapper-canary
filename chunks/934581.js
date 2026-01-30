@@ -1,97 +1,111 @@
 n.d(t, {
-    u: () => u,
-    v: () => d,
+    NQ: () => d,
+    uA: () => u,
+    vi: () => f,
 });
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(709917),
-    s = n(788868),
-    o = n(985018),
+    o = n(788868),
+    s = n(985018),
     l = n(857365),
     c = n(694414),
     u = (function (e) {
         return (e.TRIAL = "trial"), (e.DEFAULT = "default"), e;
     })({});
+let d = (e) => {
+    let { fractionalPremiumInfo: t, variant: n = "default", trialPeriod: r, trialEnd: i } = e,
+        l = t.fractionalState === o.xc.FP_SUB_PAUSED,
+        c = (0, a.A)(t.endsAt, l),
+        u = "",
+        d = {
+            trial: {
+                days_and_hours: s.t["8VIDrU"],
+                days: s.t["5e2wY0"],
+                hours: s.t.sQcCKt,
+            },
+            default: {
+                days_and_hours: s.t["6r9LLp"],
+                days: s.t.c2BbVA,
+                hours: s.t["8Xm6uL"],
+            },
+        };
+    return (
+        "trial" === n && null != r && null != i
+            ? c.days > 0 && c.hours > 0
+                ? (u = s.intl.format(d.trial.days_and_hours, {
+                      days: c.days,
+                      hours: c.hours,
+                      trialPeriod: r,
+                      trialEnd: i,
+                  }))
+                : c.days > 0
+                  ? (u = s.intl.format(d.trial.days, {
+                        days: c.days,
+                        trialPeriod: r,
+                        trialEnd: i,
+                    }))
+                  : c.hours > 0 &&
+                    (u = s.intl.format(d.trial.hours, {
+                        days: c.days,
+                        hours: c.hours,
+                        trialPeriod: r,
+                        trialEnd: i,
+                    }))
+            : c.days > 0 && c.hours > 0
+              ? (u = s.intl.format(d.default.days_and_hours, {
+                    days: c.days,
+                    hours: c.hours,
+                }))
+              : c.days > 0
+                ? (u = s.intl.format(d.default.days, {
+                      days: c.days,
+                  }))
+                : c.hours > 0 &&
+                  (u = s.intl.format(d.default.hours, {
+                      hours: c.hours,
+                  })),
+        u
+    );
+};
 
-function d(e) {
+function f(e) {
     let {
             fractionalPremiumInfo: t,
             variant: n = "default",
-            enablePremiumBrandRefresh: u = !1,
-            style: d,
-            trialPeriod: f,
-            trialEnd: p,
+            enablePremiumBrandRefresh: a = !1,
+            style: o,
+            trialPeriod: s,
+            trialEnd: u,
         } = e,
-        _ = t.fractionalState === s.xc.FP_SUB_PAUSED,
-        h = (0, a.A)(t.endsAt, _),
-        m = "",
-        g = {
-            trial: {
-                days_and_hours: o.t["8VIDrU"],
-                days: o.t["5e2wY0"],
-                hours: o.t.sQcCKt,
-            },
-            default: {
-                days_and_hours: o.t["6r9LLp"],
-                days: o.t.c2BbVA,
-                hours: o.t["8Xm6uL"],
-            },
-        };
-    return "trial" === n && null != f && null != p
-        ? (h.days > 0 && h.hours > 0
-              ? (m = o.intl.format(g.trial.days_and_hours, {
-                    days: h.days,
-                    hours: h.hours,
-                    trialPeriod: f,
-                    trialEnd: p,
-                }))
-              : h.days > 0
-                ? (m = o.intl.format(g.trial.days, {
-                      days: h.days,
-                      trialPeriod: f,
-                      trialEnd: p,
-                  }))
-                : h.hours > 0 &&
-                  (m = o.intl.format(g.trial.hours, {
-                      days: h.days,
-                      hours: h.hours,
-                      trialPeriod: f,
-                      trialEnd: p,
-                  })),
-          "" === m)
+        f = d({
+            fractionalPremiumInfo: t,
+            variant: n,
+            trialPeriod: s,
+            trialEnd: u,
+        });
+    return "trial" === n && null != s && null != u
+        ? "" === f
             ? null
             : (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)(i.Text, {
                           variant: "text-sm/normal",
                           className: l.OK,
-                          children: m,
+                          children: f,
                       }),
                       (0, r.jsx)("hr", {
                           className: l.oz,
                       }),
                   ],
               })
-        : (h.days > 0 && h.hours > 0
-                ? (m = o.intl.format(g.default.days_and_hours, {
-                      days: h.days,
-                      hours: h.hours,
-                  }))
-                : h.days > 0
-                  ? (m = o.intl.format(g.default.days, {
-                        days: h.days,
-                    }))
-                  : h.hours > 0 &&
-                    (m = o.intl.format(g.default.hours, {
-                        hours: h.hours,
-                    })),
-            "" === m)
+        : "" === f
           ? null
-          : u
+          : a
             ? (0, r.jsxs)("div", {
                   className: l.bD,
-                  style: d,
+                  style: o,
                   children: [
                       (0, r.jsx)("img", {
                           src: c,
@@ -100,13 +114,13 @@ function d(e) {
                       }),
                       (0, r.jsx)(i.Text, {
                           variant: "text-sm/medium",
-                          children: m,
+                          children: f,
                       }),
                   ],
               })
             : (0, r.jsxs)("div", {
                   className: l.s2,
-                  style: d,
+                  style: o,
                   children: [
                       (0, r.jsxs)("div", {
                           className: l.Dl,
@@ -125,7 +139,7 @@ function d(e) {
                       }),
                       (0, r.jsx)(i.Text, {
                           variant: "text-sm/normal",
-                          children: m,
+                          children: f,
                       }),
                       (0, r.jsx)("div", {
                           className: l.WW,

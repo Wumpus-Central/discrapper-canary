@@ -126,46 +126,50 @@ let m = (e) => (0, r.jsx)(g, h({}, e)),
     b = (e) => {
         let {
             upperInlineNoticeProps: t,
-            planSelectContent: n,
-            purchaseItemContent: i,
-            subscriptionDetailsContent: o,
-            isStepLoading: s,
-            paymentSelectContent: l,
-            invoiceSummaryContent: c,
+            upperInlineNoticeContent: n,
+            planSelectContent: i,
+            purchaseItemContent: o,
+            subscriptionDetailsContent: s,
+            isStepLoading: l,
+            paymentSelectContent: c,
+            invoiceSummaryContent: u,
         } = e;
-        return s
+        return l
             ? (0, r.jsx)(y, {})
             : (0, r.jsxs)("div", {
                   className: p.db,
                   children: [
-                      null != t &&
+                      (null != t || null != n) &&
                           (0, r.jsx)("div", {
                               className: p.dD,
-                              children: (0, r.jsx)(a.wx6, {
-                                  type: t.type,
-                                  hidden: t.hidden,
-                                  children: t.message,
-                              }),
+                              children:
+                                  null != t
+                                      ? (0, r.jsx)(a.wx6, {
+                                            type: t.type,
+                                            hidden: t.hidden,
+                                            children: t.message,
+                                        })
+                                      : n,
                           }),
-                      n,
-                      null != n &&
-                          null != i &&
+                      i,
+                      null != i &&
+                          null != o &&
                           (0, r.jsx)("div", {
                               className: p.GG,
                           }),
-                      i,
-                      null != o &&
+                      o,
+                      null != s &&
                           (0, r.jsx)("div", {
                               className: p.P3,
-                              children: o,
+                              children: s,
                           }),
                       (0, r.jsx)("div", {
                           className: p.Jv,
-                          children: l,
+                          children: c,
                       }),
                       (0, r.jsx)("div", {
                           className: p.ZF,
-                          children: c,
+                          children: u,
                       }),
                   ],
               });
