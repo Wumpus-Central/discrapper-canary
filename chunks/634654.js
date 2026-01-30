@@ -1,8 +1,8 @@
 n.d(t, {
-    Db: () => a,
+    Db: () => o,
     bJ: () => s,
     hN: () => l,
-    lJ: () => o,
+    lJ: () => a,
     rv: () => c,
 });
 var r,
@@ -13,12 +13,10 @@ var r,
         (r.DISMISS_TAB_PREVIEW = "dismiss_tab_preview"),
         (r.DISMISS_CHANNEL_ROW = "dismiss_channel_row"),
         r),
-    o =
-        21552 == n.j
-            ? (((i = {}).CHANNEL_ROW_CONTEXT_MENU = "channel_row_context_menu"),
-              (i.SHOP_HEADER_BUTTON = "shop_header_button"),
-              i)
-            : null;
-let a = "hasClickedGuildShopProductPreviewTab",
+    a =
+        (((i = {}).CHANNEL_ROW_CONTEXT_MENU = "channel_row_context_menu"),
+        (i.SHOP_HEADER_BUTTON = "shop_header_button"),
+        i);
+let o = "hasClickedGuildShopProductPreviewTab",
     s = "hasClickedGuildShopChannelRow",
     c = "https://discord.com/servershop";
