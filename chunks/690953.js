@@ -116,7 +116,7 @@ function A(e) {
                                 })
                               : l.type === g.fg2.XBOX
                                 ? (0, i.mMO)(async () => {
-                                      let { default: t } = await Promise.all([n.e("6665"), n.e("67670")]).then(
+                                      let { default: t } = await Promise.all([n.e("83393"), n.e("67670")]).then(
                                           n.bind(n, 188072),
                                       );
                                       return (n) =>
