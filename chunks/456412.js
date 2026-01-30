@@ -5,9 +5,9 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(770178),
-    s = n(765548);
+    o = n(765548);
 
-function o(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
@@ -74,39 +74,40 @@ let d = {
     };
 
 function p(e) {
-    return i.forwardRef(function (t, n) {
-        let [o, c] = i.useState({
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return i.forwardRef(function (n, s) {
+        let [c, p] = i.useState({
                 width: 0,
                 height: 0,
             }),
-            p = (0, s.A)((e) => {
+            _ = (0, o.A)((e) => {
                 if (null != e) {
                     let { width: t, height: n } = e;
-                    c({
+                    p({
                         width: t,
                         height: n,
                     });
                 }
             }),
-            _ = (0, s.A)((e) => {
-                p(e.contentRect);
+            h = (0, o.A)((e) => {
+                _(e.contentRect);
             }),
-            h = (0, a.w)(_);
+            m = (0, a.w)(h, [], t);
         return (
-            i.useImperativeHandle(n, () => ({
+            i.useImperativeHandle(s, () => ({
                 triggerResize: () => {
                     var e;
-                    p(null == (e = h.current) ? void 0 : e.getBoundingClientRect());
+                    _(null == (e = m.current) ? void 0 : e.getBoundingClientRect());
                 },
             })),
             (0, r.jsx)("div", {
-                ref: h,
+                ref: m,
                 style: d,
                 children: (0, r.jsx)(
                     e,
-                    u(l({}, t), {
-                        width: o.width,
-                        height: o.height,
+                    u(l({}, n), {
+                        width: c.width,
+                        height: c.height,
                         style: f,
                     }),
                 ),

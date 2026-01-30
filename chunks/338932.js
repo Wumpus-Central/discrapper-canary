@@ -5,25 +5,30 @@ n.d(t, {
 var r = n(64700),
     i = n(311907),
     a = n(775602),
-    s = n(531685);
-let o = 1e3,
+    o = n(531685);
+let s = 1e3,
     l = (e, t) => {
         let n = (0, i.bG)([a.A], () => a.A.useReducedMotion),
-            l = (0, i.bG)([s.A], () => s.A.isFocused()),
+            l = (0, i.bG)([o.A], () => o.A.isFocused()),
             [c, u] = r.useState(!1),
             d = r.useRef(null);
         return (
             r.useEffect(() => {
-                clearTimeout(d.current), (d.current = null);
+                null !== d.current && (clearTimeout(d.current), (d.current = null));
                 let r = !n && !t,
                     i = l && (e || r);
                 i && n
                     ? (d.current = window.setTimeout(() => {
                           u(!0);
-                      }, o))
+                      }, s))
                     : u(i);
             }, [l, e, n, t]),
-            r.useEffect(() => () => clearTimeout(d.current), []),
+            r.useEffect(
+                () => () => {
+                    null !== d.current && (clearTimeout(d.current), (d.current = null));
+                },
+                [],
+            ),
             {
                 canAnimate: c,
             }
