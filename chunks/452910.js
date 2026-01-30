@@ -19,48 +19,48 @@ var i = n(503698),
     A = n(296388);
 let f = (e) => {
     var t;
-    let n,
-        {
-            title: i,
-            titleClassName: f = "",
-            buttonClassName: h = "",
-            subtitle: b = "",
-            description: E = "",
-            descriptionCta: x = "",
+    let {
+            title: n,
+            titleClassName: i,
+            buttonClassName: f,
+            subtitle: b,
+            description: h,
+            descriptionCta: E,
             isPremiumGetCta: O,
             onCtaClick: C,
-            cardVariant: I,
+            cardVariant: x,
         } = e,
-        T = (0, d.V)(),
-        S = null == T ? void 0 : T.subscription_trial,
-        j = (0, c.O)(),
-        v = (0, a.FY)({
-            intervalType: null == S ? void 0 : S.interval,
-            intervalCount: null == S ? void 0 : S.interval_count,
+        S = (0, d.V)(),
+        T = null == S ? void 0 : S.subscription_trial,
+        I = (0, c.O)(),
+        y = (0, a.FY)({
+            intervalType: null == T ? void 0 : T.interval,
+            intervalCount: null == T ? void 0 : T.interval_count,
         }),
         N = (0, o.G)({
             defaultResponse: g.intl.string(g.t["8x0jKT"]),
             onNonTier2Subscriber: g.intl.string(g.t.IJI7yk),
-            onTier2TrialOffer: v,
-            onTier0TrialOffer: v,
+            onTier2TrialOffer: y,
+            onTier0TrialOffer: y,
             onDiscountOffer: g.intl.formatToPlainString(g.t.bkQ4bH, {
-                percent: null == j ? void 0 : j.discount.amount,
+                percent: null == I ? void 0 : I.discount.amount,
             }),
         }),
-        y = (0, _.Q)(I);
+        j = (0, _.Q)(x);
     return (0, r.jsxs)("div", {
-        className: l()(A.L_, null == y || null == (t = y.description) ? void 0 : t.className),
+        className: l()(A.L_, null == j || null == (t = j.overlayContainer) ? void 0 : t.className),
         children: [
             (0, r.jsx)(p.A, {
-                title: i,
-                cardVariantStyleInfo: y,
-                titleClassName: f,
+                title: n,
+                cardVariantStyleInfo: j,
+                titleClassName: i,
                 subtitle: b,
-                description: E,
+                description: h,
+                isOverlay: !0,
             }),
             O &&
                 (0, r.jsx)(u.A, {
-                    className: h,
+                    className: f,
                     look: s.$n.Looks.BLANK,
                     color: s.$n.Colors.CUSTOM,
                     subscriptionTier: m.pe.TIER_2,
@@ -69,14 +69,13 @@ let f = (e) => {
                     },
                     showGradient: !0,
                 }),
-            0 !== x.length &&
-                (null == (n = null == y ? void 0 : y.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
+            null != E &&
                 null != C &&
                 (0, r.jsx)(s.$n, {
                     "data-migration-pending": !0,
-                    className: h,
+                    className: f,
                     onClick: C,
-                    children: x,
+                    children: E,
                 }),
         ],
     });

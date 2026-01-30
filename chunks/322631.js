@@ -15,8 +15,7 @@ var r,
         r),
     a =
         (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"),
-        (i[(i.REWARD = 1)] = "REWARD"),
-        (i[(i.PROMOTION_REDEMPTION = 2)] = "PROMOTION_REDEMPTION"),
-        (i[(i.NITRO_GRADIENT_HOVER_BORDER = 3)] = "NITRO_GRADIENT_HOVER_BORDER"),
+        (i[(i.NITRO_GRADIENT_HOVER_BORDER = 1)] = "NITRO_GRADIENT_HOVER_BORDER"),
+        (i[(i.RECURRING_3P_PROMOTIONS = 2)] = "RECURRING_3P_PROMOTIONS"),
         i),
     o = (((l = {}).SEE_ALL = "See All Nitro Perks"), (l.MARKETING = "Marketing"), (l.HOME = "Home"), l);

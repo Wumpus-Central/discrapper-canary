@@ -1,6 +1,6 @@
 n.d(t, {
     PR: () => D,
-    Recurring3PModal: () => L,
+    Recurring3PModal: () => w,
     uE: () => M,
 }),
     n(896048),
@@ -21,18 +21,18 @@ var r = n(627968),
     g = n(264779),
     A = n(597758),
     f = n(35587),
-    h = n(412260),
-    b = n(852218),
+    b = n(412260),
+    h = n(852218),
     E = n(699443),
-    x = n(934204),
-    O = n(788868),
-    C = n(652215),
-    T = n(985018),
-    I = n(342087),
-    S = n(870378),
-    j = n(8496);
+    O = n(934204),
+    C = n(788868),
+    x = n(652215),
+    S = n(985018),
+    T = n(342087),
+    I = n(870378),
+    y = n(8496);
 
-function v(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,31 +57,31 @@ function v(e) {
     }
     return e;
 }
-let N = {
-        [b.KS]: {
-            title: T.t.sfGgOG,
-            body: T.t.igiSKe,
-            bodyWithExpiration: T.t.w8CXUl,
+let j = {
+        [h.KS]: {
+            title: S.t.sfGgOG,
+            body: S.t.igiSKe,
+            bodyWithExpiration: S.t.w8CXUl,
             redemptionURL: "https://steelseries.com/",
             logos: {
                 dark: (0, r.jsx)(E.a1, {}),
                 light: (0, r.jsx)(E.Gn, {}),
             },
-            asset: j.A,
+            asset: y.A,
         },
-        [b.Cs]: {
-            title: T.t["9N8obd"],
-            body: T.t["34g+Z3"],
-            bodyWithExpiration: T.t.rqmpXc,
+        [h.Cs]: {
+            title: S.t["9N8obd"],
+            body: S.t["34g+Z3"],
+            bodyWithExpiration: S.t.rqmpXc,
             redemptionURL: "https://www.kontrolfreek.com/",
             logos: {
                 dark: (0, r.jsx)(E.WF, {}),
                 light: (0, r.jsx)(E.s, {}),
             },
-            asset: S.A,
+            asset: I.A,
         },
     },
-    y = (e) => {
+    v = (e) => {
         let { recurrence: t } = e,
             n = (0, r.jsx)(l.rOg, {
                 color: a.LU0.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT,
@@ -99,12 +99,12 @@ let N = {
             [o, c] = i.useState(() => s);
         if (null != t.code)
             return (0, r.jsx)("div", {
-                className: I.oP,
+                className: T.oP,
                 children: (0, r.jsxs)("div", {
-                    className: I.t0,
+                    className: T.t0,
                     children: [
                         (0, r.jsx)("div", {
-                            className: I.cD,
+                            className: T.cD,
                             children: (0, r.jsx)(l.EYj, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
@@ -115,12 +115,12 @@ let N = {
                         (0, r.jsx)(l.$nd, {
                             variant: "overlay-primary",
                             size: "sm",
-                            text: T.intl.formatToPlainString(T.t.DF68t7, {
+                            text: S.intl.formatToPlainString(S.t.DF68t7, {
                                 redemptionURL: t.redemptionURL,
                             }),
                             onClick: () => {
                                 window.open(t.redemptionURL, "_blank"),
-                                    d.default.track(C.HAw.RECURRING_PROMOTION_CLAIMED);
+                                    d.default.track(x.HAw.RECURRING_PROMOTION_CLAIMED);
                             },
                         }),
                     ],
@@ -128,46 +128,46 @@ let N = {
             });
     },
     P = () =>
-        Object.entries(N).map((e) => {
+        Object.entries(j).map((e) => {
             let [t, n] = e;
             return (0, r.jsx)(
                 "div",
                 {
-                    className: I.lA,
+                    className: T.lA,
                     children: (0, r.jsxs)("div", {
-                        className: I.LV,
+                        className: T.LV,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: I.JN,
+                                className: T.JN,
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: I.MC,
+                                        className: T.MC,
                                         children: (0, r.jsx)(l.XAi, {
                                             size: "refresh_sm",
                                         }),
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: I.yO,
+                                        className: T.yO,
                                         children: [
                                             (0, r.jsx)(l.DZT, {
                                                 variant: "heading-lg/semibold",
                                                 color: "text-strong",
-                                                children: T.intl.string(n.title),
+                                                children: S.intl.string(n.title),
                                             }),
                                             (0, r.jsx)(l.DZT, {
                                                 variant: "heading-sm/medium",
                                                 color: "text-subtle",
-                                                children: T.intl.string(n.body),
+                                                children: S.intl.string(n.body),
                                             }),
                                         ],
                                     }),
                                 ],
                             }),
                             (0, r.jsx)("div", {
-                                className: I.R4,
+                                className: T.R4,
                                 children: (0, r.jsx)(a._V3, {
                                     src: n.asset,
-                                    className: I.Ys,
+                                    className: T.Ys,
                                     width: 100,
                                     height: 100,
                                     zoomable: !1,
@@ -186,17 +186,17 @@ let N = {
             { promotionRecurrences: d } = e,
             [_, m] = i.useState(d.length > 1),
             [A, f] = i.useState([]),
-            [h, b] = i.useState(new Set());
+            [b, h] = i.useState(new Set());
         i.useEffect(() => {
             f([d.sort((e, t) => (t.startDate > e.startDate ? 1 : -1))[0]]);
         }, [d]);
         let E =
                 ((t = d[0].partnerId),
                 (n = (0, s.bG)([o.A], () => (0, l.Mwr)(o.A.theme))),
-                null == (c = N[t]) ? null : n ? c.logos.dark : c.logos.light),
-            x = (0, r.jsx)(a._V3, {
+                null == (c = j[t]) ? null : n ? c.logos.dark : c.logos.light),
+            O = (0, r.jsx)(a._V3, {
                 src: d[0].asset,
-                className: I.Ys,
+                className: T.Ys,
                 width: 100,
                 height: 100,
                 zoomable: !1,
@@ -204,40 +204,40 @@ let N = {
         return (0, r.jsxs)("div", {
             children: [
                 A.map((e, t) => {
-                    let n = h.has(e.id),
+                    let n = b.has(e.id),
                         i = null == e.code;
                     return (0, r.jsxs)(
                         "div",
                         {
-                            className: I.lA,
+                            className: T.lA,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: I.LV,
+                                    className: T.LV,
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: I.JN,
+                                            className: T.JN,
                                             children: [
                                                 E,
                                                 (0, r.jsxs)("div", {
-                                                    className: I.yO,
+                                                    className: T.yO,
                                                     children: [
                                                         (0, r.jsx)(l.DZT, {
                                                             variant: "heading-lg/semibold",
                                                             color: "text-strong",
-                                                            children: T.intl.string(e.title),
+                                                            children: S.intl.string(e.title),
                                                         }),
                                                         (0, r.jsx)(l.DZT, {
                                                             variant: "heading-sm/medium",
                                                             color: "text-subtle",
                                                             children: n
-                                                                ? T.intl.format(T.t.i2EuFO, {
+                                                                ? S.intl.format(S.t.i2EuFO, {
                                                                       helpdeskArticle: u.A.getArticleURL(
-                                                                          C.MVz.RECURRING_PROMOTION,
+                                                                          x.MVz.RECURRING_PROMOTION,
                                                                       ),
                                                                   })
                                                                 : i
-                                                                  ? T.intl.string(e.body)
-                                                                  : T.intl.format(e.bodyWithExpiration, {
+                                                                  ? S.intl.string(e.body)
+                                                                  : S.intl.format(e.bodyWithExpiration, {
                                                                         date: e.endDate,
                                                                     }),
                                                         }),
@@ -250,13 +250,13 @@ let N = {
                                                               variant: "critical-secondary",
                                                               size: "sm",
                                                               disabled: !0,
-                                                              text: T.intl.string(T.t["8LKchl"]),
+                                                              text: S.intl.string(S.t["8LKchl"]),
                                                           })
                                                         : (0, r.jsx)(l.$nd, {
                                                               icon: l.XAi,
                                                               variant: "overlay-primary",
                                                               size: "sm",
-                                                              text: T.intl.string(T.t.vwASIl),
+                                                              text: S.intl.string(S.t.vwASIl),
                                                               onClick: () => {
                                                                   (0, g.kd)({
                                                                       promotionId: e.id,
@@ -266,7 +266,7 @@ let N = {
                                                                           var r, i;
                                                                           f([
                                                                               ...A.slice(0, t),
-                                                                              ((r = v({}, e)),
+                                                                              ((r = N({}, e)),
                                                                               (i = i =
                                                                                   {
                                                                                       code: n.code,
@@ -305,7 +305,7 @@ let N = {
                                                                           ]);
                                                                       })
                                                                       .catch((t) => {
-                                                                          b((t) => new Set([...t, e.id])),
+                                                                          h((t) => new Set([...t, e.id])),
                                                                               p.A.captureException(t);
                                                                       });
                                                               },
@@ -313,13 +313,13 @@ let N = {
                                             ],
                                         }),
                                         (0, r.jsx)("div", {
-                                            className: I.R4,
-                                            children: x,
+                                            className: T.R4,
+                                            children: O,
                                         }),
                                     ],
                                 }),
                                 null != e.code &&
-                                    (0, r.jsx)(y, {
+                                    (0, r.jsx)(v, {
                                         recurrence: e,
                                     }),
                             ],
@@ -329,14 +329,14 @@ let N = {
                 }),
                 _ &&
                     (0, r.jsx)(l.DUT, {
-                        className: I.K8,
+                        className: T.K8,
                         onClick: () => {
                             m(!1), f([...A, ...d.slice(1)]);
                         },
                         children: (0, r.jsx)(l.EYj, {
                             variant: "text-sm/medium",
                             color: "text-subtle",
-                            children: T.intl.string(T.t.rjjZxV),
+                            children: S.intl.string(S.t.rjjZxV),
                         }),
                     }),
             ],
@@ -345,23 +345,23 @@ let N = {
     D = (e) => {
         let { percentage: t } = e;
         return (0, r.jsxs)("div", {
-            className: I.hr,
+            className: T.hr,
             children: [
                 t > 0 &&
                     t < 100 &&
                     (0, r.jsx)(
                         () =>
                             (0, r.jsx)("div", {
-                                className: I.ML,
+                                className: T.ML,
                                 style: {
                                     left: "calc(".concat(t, "% - ").concat(5, "px)"),
                                 },
-                                children: (0, r.jsx)(x.z, {}),
+                                children: (0, r.jsx)(O.z, {}),
                             }),
                         {},
                     ),
                 (0, r.jsx)("div", {
-                    className: I.SX,
+                    className: T.SX,
                     style: {
                         width: "".concat(t, "%"),
                     },
@@ -369,26 +369,26 @@ let N = {
             ],
         });
     },
-    w = (e) => {
-        if (e.promotionType === b.pt.THIRD_PARTY_OUTBOUND_RECURRING) {
+    L = (e) => {
+        if (e.promotionType === h.pt.THIRD_PARTY_OUTBOUND_RECURRING) {
             var t, n;
             return null != (t = null == (n = e.partnerId) ? void 0 : n.toLowerCase()) ? t : null;
         }
         return e.outboundTitle.toLowerCase();
     },
-    L = (e) => {
+    w = (e) => {
         let t,
             n,
             i,
             { onClose: a } = e,
             { promotionsLoaded: o, claimedOutboundPromotionCodeMap: d } = (0, f.y7)(),
-            p = (0, s.yK)([h.A], () => h.A.outboundRecurringPromotions),
-            b = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
-            E = !1 === _.Ay.isPremiumExactly(b, O.PremiumTypes.TIER_2),
-            x = null == b ? void 0 : b.isFractionalPremiumWithNoStandardSub(),
-            S = null == b || E || x;
+            p = (0, s.yK)([b.A], () => b.A.outboundRecurringPromotions),
+            h = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
+            E = !1 === _.Ay.isPremiumExactly(h, C.PremiumTypes.TIER_2),
+            O = null == h ? void 0 : h.isFractionalPremiumWithNoStandardSub(),
+            I = null == h || E || O;
         if (!1 === o) return (0, r.jsx)(l.y$y, {});
-        let j = ((e) => {
+        let y = ((e) => {
             let { promotions: t, codesByPromotion: n } = e,
                 r = {};
             return (
@@ -403,18 +403,18 @@ let N = {
                     )
                     .forEach((e) => {
                         var t;
-                        let i = w(e),
+                        let i = L(e),
                             l = ((e) => {
                                 var t;
                                 let { promotion: n } = e,
-                                    r = w(n);
-                                return null == r ? null : null != (t = N[r]) ? t : null;
+                                    r = L(n);
+                                return null == r ? null : null != (t = j[r]) ? t : null;
                             })({
                                 promotion: e,
                             });
                         if (null == i || null == l) return;
                         i in r || (r[i] = []);
-                        let s = v(
+                        let s = N(
                             {
                                 id: e.id,
                                 partnerId: i,
@@ -433,15 +433,15 @@ let N = {
             codesByPromotion: d,
         });
         return (0, r.jsx)(l.Modal, {
-            title: T.intl.string(T.t["7ioAjs"]),
-            subtitle: T.intl.format(T.t.LOYRxB, {
-                helpCenterLink: u.A.getArticleURL(C.MVz.RECURRING_PROMOTION),
+            title: S.intl.string(S.t["7ioAjs"]),
+            subtitle: S.intl.format(S.t.LOYRxB, {
+                helpCenterLink: u.A.getArticleURL(x.MVz.RECURRING_PROMOTION),
             }),
             actions: [],
             preview: (() => {
-                if (!0 === S)
+                if (!0 === I)
                     return (0, r.jsx)(m.A, {
-                        subscriptionTier: O.pe.TIER_2,
+                        subscriptionTier: C.pe.TIER_2,
                         fullWidth: !0,
                         onClick: () => {
                             a();
@@ -464,27 +464,30 @@ let N = {
                     0,
                 ).getDate()),
                 (i = (t.getDate() / n) * 100),
-                S
+                I
                     ? (0, r.jsx)(P, {})
                     : (0, r.jsxs)("div", {
-                          className: I.kL,
+                          className: T.kL,
                           children: [
                               (0, r.jsx)("div", {
-                                  className: I.Ps,
+                                  className: T.Ps,
                                   children: (0, r.jsx)(l.EYj, {
                                       variant: "text-md/medium",
                                       color: "text-subtle",
-                                      children: T.intl.format(T.t["43kZKL"], {
+                                      children: S.intl.format(S.t["43kZKL"], {
                                           days: n - t.getDate(),
                                       }),
                                   }),
                               }),
-                              (0, r.jsx)(D, {
-                                  percentage: i,
+                              (0, r.jsx)("div", {
+                                  className: T.G9,
+                                  children: (0, r.jsx)(D, {
+                                      percentage: i,
+                                  }),
                               }),
                               (0, r.jsx)("div", {
-                                  className: I.kR,
-                                  children: Object.entries(j)
+                                  className: T.kR,
+                                  children: Object.entries(y)
                                       .sort((e, t) => {
                                           let [n] = e,
                                               [r] = t;
@@ -507,12 +510,12 @@ let N = {
     },
     M = (e) => {
         let { analyticsLocations: t } = e;
-        d.default.track(C.HAw.RECURRING_PROMOTION_MODAL_OPENED, {
+        d.default.track(x.HAw.RECURRING_PROMOTION_MODAL_OPENED, {
             location_stack: t,
         }),
             A.Ay.fetchActivePromotions(),
             (0, a.mMO)(async () => {
                 let { Recurring3PModal: e } = await Promise.resolve().then(n.bind(n, 161319));
-                return (t) => (0, r.jsx)(e, v({}, t));
+                return (t) => (0, r.jsx)(e, N({}, t));
             });
     };

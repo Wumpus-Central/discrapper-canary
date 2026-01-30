@@ -20,15 +20,15 @@ let u = (e) => {
             isCarousel: g,
             onCtaClick: A,
             perkComponent: f,
-            subtitle: h = "",
-            descriptionCta: b = "",
+            subtitle: b,
+            descriptionCta: h,
             customContent: E,
-            cardVariant: x,
-            subtitleClassName: O,
-            imageOverlayText: C,
+            cardVariant: O,
+            subtitleClassName: C,
+            imageOverlayText: x,
         } = e,
-        I = (0, o.Q)(x),
-        T = null != C;
+        S = (0, o.Q)(O),
+        T = null != x;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
@@ -36,11 +36,11 @@ let u = (e) => {
             }),
             (0, r.jsx)(c.A, {
                 title: u,
-                shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
-                cardVariantStyleInfo: I,
+                cardVariantStyleInfo: S,
                 titleClassName: _,
-                subtitle: h,
-                subtitleClassName: O,
+                subtitle: b,
+                subtitleClassName: C,
+                isOverlay: !1,
             }),
             null != m &&
                 (0, r.jsxs)("div", {
@@ -48,9 +48,9 @@ let u = (e) => {
                         d.V8,
                         {
                             [d.wP]: !g,
-                            [d.QN]: !g && !(null == I || null == (t = I.perkImage) ? void 0 : t.disableHoverAnimation),
+                            [d.QN]: !g && !(null == S || null == (t = S.perkImage) ? void 0 : t.disableHoverAnimation),
                         },
-                        null == I || null == (n = I.perkImage) ? void 0 : n.className,
+                        null == S || null == (n = S.perkImage) ? void 0 : n.className,
                     ),
                     children: [
                         (0, r.jsx)("img", {
@@ -64,7 +64,7 @@ let u = (e) => {
                                   children: (0, r.jsx)(a.Text, {
                                       className: d.nj,
                                       variant: "text-md/bold",
-                                      children: C,
+                                      children: x,
                                   }),
                               })
                             : null,
@@ -75,7 +75,7 @@ let u = (e) => {
                     className: d.wX,
                     children: [
                         f,
-                        0 !== b.length &&
+                        null != h &&
                             null != A &&
                             (0, r.jsx)(s.$n, {
                                 "data-migration-pending": !0,
@@ -83,8 +83,8 @@ let u = (e) => {
                                 fullWidth: !0,
                                 onClick: A,
                                 children: (0, r.jsx)("div", {
-                                    className: null == I || null == (i = I.descriptionCta) ? void 0 : i.className,
-                                    children: b,
+                                    className: null == S || null == (i = S.descriptionCta) ? void 0 : i.className,
+                                    children: h,
                                 }),
                             }),
                     ],
