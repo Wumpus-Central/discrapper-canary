@@ -1,47 +1,48 @@
-l.d(t, {
-    k: () => b,
+n.d(t, {
+    k: () => f,
 });
-var n = l(627968),
-    r = l(64700),
-    s = l(503698),
-    a = l.n(s),
-    i = l(397927),
-    o = l(496431),
-    c = l(854818),
-    u = l(985018),
-    d = l(587496);
-let f = {
+var r = n(627968),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    i = n(397927),
+    o = n(496431),
+    c = n(854818),
+    u = n(985018),
+    d = n(587496);
+let g = {
         pink: "pinkCountdown",
     },
-    b = r.memo(function (e) {
-        let { message: t, onClick: l, countdownEndDate: s, variant: b } = e,
-            g = r.useMemo(() => {
+    f = l.memo(function (e) {
+        let { message: t, onClick: n, countdownEndDate: s, variant: f } = e,
+            m = l.useMemo(() => {
                 if (null == s) return null;
                 let e = s instanceof Date ? s : new Date(s);
                 return isNaN(e.getTime()) ? null : e;
             }, [s]),
-            m = (0, o.A)(null != g ? g : 0, 1e3, void 0, null == g);
-        if (null != g && Object.values(m).every((e) => 0 === e)) return null;
-        let p = null != b ? d[b] : void 0,
-            h = null != b ? d[f[b]] : void 0;
-        return (0, n.jsx)(i.DUT, {
-            className: a()(d.nagBar, p),
-            onClick: l,
+            p = (0, o.A)(null != m ? m : 0, 1e3, void 0, null == m);
+        if (null != m && Object.values(p).every((e) => 0 === e)) return null;
+        let _ = null != f ? d[f] : void 0,
+            b = null != f ? d[g[f]] : void 0;
+        return (0, r.jsx)(i.DUT, {
+            className: a()(d.nagBar, _),
+            onClick: n,
             "aria-label": u.intl.string(u.t.zMqLH9),
-            children: (0, n.jsxs)("div", {
+            children: (0, r.jsxs)("div", {
                 className: d.content,
                 children: [
-                    (0, n.jsx)(i.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: "text-md/medium",
                         color: "always-white",
                         className: d.message,
                         children: t,
                     }),
-                    null != g &&
-                        (0, n.jsx)(c.e, {
-                            endDate: g,
+                    null != m &&
+                        (0, r.jsx)(c.e, {
+                            endDate: m,
                             size: "md",
-                            className: h,
+                            className: b,
+                            showSeconds: !0,
                         }),
                 ],
             }),
