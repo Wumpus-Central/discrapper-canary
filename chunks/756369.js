@@ -1,6 +1,6 @@
 n.d(t, {
-    Ay: () => e6,
-    OC: () => e9,
+    Ay: () => e9,
+    OC: () => e6,
     iV: () => e7,
 }),
     n(896048),
@@ -396,22 +396,20 @@ class e7 extends (r = l.Component) {
             disableReactionReads: n,
             disableReactionUpdates: r,
             isLurking: l,
-            isGuest: a,
-            isPendingMember: s,
-            channel: o,
-            forceAddReactions: c,
+            isPendingMember: a,
+            channel: s,
+            forceAddReactions: o,
         } = this.props;
         return n
             ? null
             : (0, i.jsx)(eV.A, {
                   message: e,
-                  channel: o,
+                  channel: s,
                   disableReactionCreates: t,
                   disableReactionUpdates: r,
                   isLurking: l,
-                  isGuest: a,
-                  isPendingMember: s,
-                  forceAddReactions: c,
+                  isPendingMember: a,
+                  forceAddReactions: o,
                   useChatFontScaling: !0,
               });
     }
@@ -962,7 +960,7 @@ class e7 extends (r = l.Component) {
     }
 }
 
-function e6(e) {
+function e9(e) {
     var t;
     let { channel: n, message: r, renderSuppressEmbeds: l, isMessageSnapshot: a } = e,
         s = (0, u.bG)([ep.default], () => ep.default.getId()),
@@ -973,8 +971,7 @@ function e6(e) {
         f = eu.kt.useSetting(),
         g = (0, u.bG)([ef.A], () => null == n.guild_id || ef.A.canChatInGuild(n.guild_id), [n]),
         h = (0, u.bG)([z.A], () => null != n.guild_id && z.A.isLurking(n.guild_id), [n]),
-        _ = (0, u.bG)([em.Ay], () => em.Ay.isCurrentUserGuest(n.guild_id), [n]),
-        b = (0, u.bG)([em.Ay, eh.default], () => {
+        _ = (0, u.bG)([em.Ay, eh.default], () => {
             var e, t;
             let r = eh.default.getCurrentUser();
             return (
@@ -987,7 +984,7 @@ function e6(e) {
                             : null) && e
             );
         }),
-        { canAddNewReactions: A, canManageMessages: y } = (0, u.cf)(
+        { canAddNewReactions: b, canManageMessages: A } = (0, u.cf)(
             [eg.A],
             () => ({
                 canAddNewReactions: g && eg.A.can(eY.xBc.ADD_REACTIONS, n),
@@ -995,37 +992,36 @@ function e6(e) {
             }),
             [g, n],
         ),
-        v = (0, M.ix)(n.guild_id),
-        [, x] = (0, k.c)(n.guild_id),
-        O = (0, eo.Id)(n),
-        E =
-            (s === r.author.id || y) &&
+        y = (0, M.ix)(n.guild_id),
+        [, v] = (0, k.c)(n.guild_id),
+        x = (0, eo.Id)(n),
+        O =
+            (s === r.author.id || A) &&
             r.author.id !== eY.oIV &&
             !1 !== l &&
             !(0, c.Lt)(r.flags, eY.pr7.EPHEMERAL) &&
-            O &&
+            x &&
             (0, eI.A)(r) >= 1,
-        j = s === r.author.id && O && !a,
-        C = r.author.id === s,
-        I = r.isFirstMessageInForumPost(n),
-        T = (0, eT.A)({
+        E = s === r.author.id && x && !a,
+        j = r.author.id === s,
+        C = r.isFirstMessageInForumPost(n),
+        I = (0, eT.A)({
             channel: n,
             canChat: g,
             renderReactions: m,
-            canAddNewReactions: A,
+            canAddNewReactions: b,
             isLurking: h,
-            isGuest: _,
-            communicationDisabled: x,
-            isActiveChannelOrUnarchivableThread: O,
-            isAutomodQuarantined: v,
+            communicationDisabled: v,
+            isActiveChannelOrUnarchivableThread: x,
+            isAutomodQuarantined: y,
         }),
-        P = (0, W.S)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
-        w = (0, J.A)(null == n ? void 0 : n.id),
-        R = (0, X.A)(r),
-        D = (0, N.P)(r),
-        L = (0, eC.z)(n),
-        U = (0, eO._f)(r.id, r.channel_id),
-        G = (0, S._R)();
+        T = (0, W.S)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
+        P = (0, J.A)(null == n ? void 0 : n.id),
+        w = (0, X.A)(r),
+        R = (0, N.P)(r),
+        D = (0, eC.z)(n),
+        L = (0, eO._f)(r.id, r.channel_id),
+        U = (0, S._R)();
     return (0, i.jsx)(
         e7,
         eX(
@@ -1033,36 +1029,35 @@ function e6(e) {
                 eX(
                     eZ(
                         {
-                            canSuppressEmbeds: E,
-                            canDeleteAttachments: j,
+                            canSuppressEmbeds: O,
+                            canDeleteAttachments: E,
                         },
-                        T,
+                        I,
                     ),
                     {
-                        disableReactionReads: !!I || T.disableReactionReads,
+                        disableReactionReads: !!C || I.disableReactionReads,
                     },
                 ),
                 e,
             ),
             {
-                hasSpoilerEmbeds: e.hasSpoilerEmbeds && L,
+                hasSpoilerEmbeds: e.hasSpoilerEmbeds && D,
                 hasBailedAst: e.hasBailedAst,
                 isLurking: h && g,
-                isGuest: _ && g,
-                isPendingMember: b && g,
-                isCurrentUser: C,
+                isPendingMember: _ && g,
+                isCurrentUser: j,
                 inlineAttachmentMedia: o,
                 inlineEmbedMedia: d,
                 renderEmbeds: p,
                 gifAutoPlay: f,
                 canRenderReferralEmbed: n.isDM(),
-                poll: R,
-                showListsAndHeaders: P,
-                showMaskedLinks: P,
-                shouldHideMediaOptions: w,
-                enabledContentHarmTypeFlags: D,
-                ctaButtonType: U,
-                shouldAgeVerify: G,
+                poll: w,
+                showListsAndHeaders: T,
+                showMaskedLinks: T,
+                shouldHideMediaOptions: P,
+                enabledContentHarmTypeFlags: R,
+                ctaButtonType: L,
+                shouldAgeVerify: U,
             },
         ),
     );
@@ -1071,7 +1066,7 @@ eQ(e7, "defaultProps", {
     renderEmbeds: !0,
     compact: !1,
 });
-let e9 = (e) => {
+let e6 = (e) => {
     var t;
     let {
             message: n,

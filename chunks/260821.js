@@ -169,18 +169,17 @@ class ed extends (i = r.PureComponent) {
                 emoji: u,
                 readOnly: c,
                 isLurking: h,
-                isGuest: m,
-                isPendingMember: b,
-                className: O,
-                useChatFontScaling: v,
-                message: A,
-                hideEmoji: T,
-                animationStartPosition: E,
-                emojiSize: I,
+                isPendingMember: m,
+                className: b,
+                useChatFontScaling: O,
+                message: v,
+                hideEmoji: A,
+                animationStartPosition: T,
+                emojiSize: E,
             } = this.props,
-            { shouldShowTooltip: S, tooltipTextAria: x, reactionRef: N, tooltipPositionKey: P } = this.state,
-            C = v ? ei : en,
-            w = {
+            { shouldShowTooltip: I, tooltipTextAria: S, reactionRef: x, tooltipPositionKey: N } = this.state,
+            P = O ? ei : en,
+            C = {
                 transform: [
                     {
                         scale: this.scale,
@@ -188,39 +187,39 @@ class ed extends (i = r.PureComponent) {
                 ],
                 opacity: this.opacity,
             },
-            M = o ? i : n;
+            w = o ? i : n;
         if (o && null != r) {
-            var L;
+            var M;
             let { accentColor: n, backgroundColor: i, opacity: l } = r,
-                o = null != (L = (0, p.xp)(null != i ? i : "", l)) ? L : "";
-            this.isMe() && (w.borderColor = i), (w.background = o), (e = n), (t = n);
+                o = null != (M = (0, p.xp)(null != i ? i : "", l)) ? M : "";
+            this.isMe() && (C.borderColor = i), (C.background = o), (e = n), (t = n);
         }
-        let D = null == N ? void 0 : N.getBoundingClientRect(),
-            U = null != E && null != D,
-            k = null == E;
+        let L = null == x ? void 0 : x.getBoundingClientRect(),
+            D = null != T && null != L,
+            U = null == T;
         return (0, l.jsx)(f.YNO, {
             targetElementRef: {
-                current: N,
+                current: x,
             },
-            shouldShow: S,
-            "aria-label": null != x && x,
+            shouldShow: I,
+            "aria-label": null != S && S,
             renderPopout: this.renderTooltip,
             nudgeAlignIntoViewport: !0,
             position: "top",
             align: "center",
-            positionKey: P,
+            positionKey: N,
             children: () =>
                 (0, l.jsx)("div", {
                     onMouseEnter: this.handleEnter,
                     onMouseLeave: this.handleLeave,
                     ref: this.handleSetReactionRef,
                     children: (0, l.jsx)(d.A.div, {
-                        className: a()(C.reaction, O, {
-                            [C.reactionMe]: this.isMe(),
-                            [C.reactionReadOnly]: c && !h && !b && !m,
-                            [C.shakeReaction]: T && null == E,
+                        className: a()(P.reaction, b, {
+                            [P.reactionMe]: this.isMe(),
+                            [P.reactionReadOnly]: c && !h && !m,
+                            [P.shakeReaction]: A && null == T,
                         }),
-                        style: w,
+                        style: C,
                         children: (0, l.jsx)(f.YNO, {
                             targetElementRef: this.upsellPopoutTargetRef,
                             renderPopout: this.renderLurkerModeUpsellPopout,
@@ -230,15 +229,15 @@ class ed extends (i = r.PureComponent) {
                                     f.DUT,
                                     ea(eo({}, n), {
                                         innerRef: this.upsellPopoutTargetRef,
-                                        className: C.reactionInner,
+                                        className: P.reactionInner,
                                         onClick: this.handleClick,
                                         "aria-disabled": c,
-                                        "aria-label": (0, _.mb)(this.isMe(), M, u, o),
+                                        "aria-label": (0, _.mb)(this.isMe(), w, u, o),
                                         "aria-pressed": this.isMe(),
                                         children: [
                                             (0, l.jsx)("div", {
                                                 className: a()({
-                                                    [C.burstGlow]: o,
+                                                    [P.burstGlow]: o,
                                                 }),
                                                 style: {
                                                     boxShadow: "0 0 16px ".concat(t),
@@ -249,20 +248,20 @@ class ed extends (i = r.PureComponent) {
                                                     o
                                                         ? (0, l.jsxs)(l.Fragment, {
                                                               children: [
-                                                                  U &&
+                                                                  D &&
                                                                       (0, l.jsx)(j.A, {
-                                                                          messageId: A.id,
+                                                                          messageId: v.id,
                                                                           emoji: u,
-                                                                          startPosition: E,
-                                                                          targetPosition: D,
+                                                                          startPosition: T,
+                                                                          targetPosition: L,
                                                                       }),
-                                                                  k &&
+                                                                  U &&
                                                                       (0, l.jsx)(q.A, {
                                                                           count: i,
                                                                           emoji: u,
-                                                                          channelId: A.getChannelId(),
-                                                                          messageId: A.id,
-                                                                          useChatFontScaling: v,
+                                                                          channelId: v.getChannelId(),
+                                                                          messageId: v.id,
+                                                                          useChatFontScaling: O,
                                                                           color: t,
                                                                           emojiSize: Q.x.NORMAL,
                                                                       }),
@@ -271,11 +270,11 @@ class ed extends (i = r.PureComponent) {
                                                         : null,
                                                     (0, l.jsx)(g.A, {
                                                         className: a()({
-                                                            [C.hideEmoji]: T,
+                                                            [P.hideEmoji]: A,
                                                         }),
                                                         emojiId: u.id,
                                                         emojiName: u.name,
-                                                        size: I,
+                                                        size: E,
                                                         animated: u.animated,
                                                     }),
                                                 ],
@@ -283,14 +282,14 @@ class ed extends (i = r.PureComponent) {
                                             s
                                                 ? null
                                                 : (0, l.jsx)(y.A, {
-                                                      className: C.reactionCount,
-                                                      value: M,
+                                                      className: P.reactionCount,
+                                                      value: w,
                                                       color: e,
                                                       digitWidth: es,
                                                   }),
                                             (0, l.jsx)(R.A, {
-                                                count: M,
-                                                reactionRef: N,
+                                                count: w,
+                                                reactionRef: x,
                                             }),
                                         ],
                                     }),
@@ -335,26 +334,25 @@ class ed extends (i = r.PureComponent) {
                         isBurstReaction: l,
                         isPendingMember: r,
                         isLurking: o,
-                        isGuest: a,
-                        isForumToolbar: s,
+                        isForumToolbar: a,
                     } = this.props,
-                    u = D.A.getChannel(t.getChannelId());
-                if (o || a) {
-                    var c, d;
-                    null == (d = this.ctaRef) || null == (c = d.current) || c.focus();
+                    s = D.A.getChannel(t.getChannelId());
+                if (o) {
+                    var u, c;
+                    null == (c = this.ctaRef) || null == (u = c.current) || u.focus();
                     return;
                 }
-                let p = t.getChannelId(),
-                    h = s ? w.qN.FORUM_TOOLBAR : w.qN.MESSAGE_INLINE_BUTTON;
+                let d = t.getChannelId(),
+                    p = a ? w.qN.FORUM_TOOLBAR : w.qN.MESSAGE_INLINE_BUTTON;
                 l && !this.userCanBurstReact()
                     ? (0, C.z)({
                           analytics: {
                               type: $.e.BURST_REACTION_UPSELL,
                               page:
-                                  (null == u ? void 0 : u.getGuildId()) != null
+                                  (null == s ? void 0 : s.getGuildId()) != null
                                       ? Y.liQ.GUILD_CHANNEL
                                       : Y.liQ.DM_CHANNEL,
-                              section: null != u ? (0, _.sn)(u) : void 0,
+                              section: null != s ? (0, _.sn)(s) : void 0,
                               object: Y.ZSU.EMOJI_REACTION_UPSELL,
                           },
                       })
@@ -363,15 +361,15 @@ class ed extends (i = r.PureComponent) {
                       : i ||
                         (this.isMe()
                             ? (0, w.et)({
-                                  channelId: p,
+                                  channelId: d,
                                   messageId: t.id,
                                   emoji: n,
-                                  location: h,
+                                  location: p,
                                   options: {
                                       burst: l,
                                   },
                               })
-                            : (0, w.BB)(p, t.id, n, h, {
+                            : (0, w.BB)(d, t.id, n, p, {
                                   burst: l,
                               }));
             }),

@@ -30,49 +30,48 @@ let h = i.memo(function (e) {
                 burst_colors: v,
                 readOnly: x,
                 isLurking: O,
-                isGuest: E,
-                isPendingMember: j,
-                type: C,
-                emojiSize: I,
+                isPendingMember: E,
+                type: j,
+                emojiSize: C,
             } = e,
-            S = C === p.v.BURST,
-            T = (0, m.IN)(b, A, C),
-            N = (0, d.g)(S && null != v ? v : []),
-            P = i ? g : f,
-            w = S ? y : _,
-            R = (0, u.x)(w, m.$Z),
-            D = {};
-        if (S && null != N) {
-            var L;
-            let { accentColor: e, backgroundColor: r, opacity: i } = N,
-                l = null != (L = (0, o.xp)(null != r ? r : "", i)) ? L : "";
-            T && (D.borderColor = r), (D.background = l), (t = e), (n = e);
+            I = j === p.v.BURST,
+            S = (0, m.IN)(b, A, j),
+            T = (0, d.g)(I && null != v ? v : []),
+            N = i ? g : f,
+            P = I ? y : _,
+            w = (0, u.x)(P, m.$Z),
+            R = {};
+        if (I && null != T) {
+            var D;
+            let { accentColor: e, backgroundColor: r, opacity: i } = T,
+                l = null != (D = (0, o.xp)(null != r ? r : "", i)) ? D : "";
+            S && (R.borderColor = r), (R.background = l), (t = e), (n = e);
         }
-        let M = {
-            minWidth: R,
+        let L = {
+            minWidth: w,
             color: t,
             borderColor: n,
         };
         return (0, r.jsxs)("div", {
-            className: a()(P.reaction, P.reactionInner, h, {
-                [P.reactionMe]: T,
-                [P.reactionReadOnly]: x && !O && !j && !E,
+            className: a()(N.reaction, N.reactionInner, h, {
+                [N.reactionMe]: S,
+                [N.reactionReadOnly]: x && !O && !E,
             }),
-            style: D,
+            style: R,
             children: [
                 (0, r.jsx)(c.A, {
                     className: a()({
-                        [P.hideEmoji]: l,
+                        [N.hideEmoji]: l,
                     }),
                     emojiId: s.id,
                     emojiName: s.name,
-                    size: I,
-                    animated: S && s.animated,
+                    size: C,
+                    animated: I && s.animated,
                 }),
                 (0, r.jsx)("div", {
-                    className: P.reactionCount,
-                    style: M,
-                    children: w,
+                    className: N.reactionCount,
+                    style: L,
+                    children: P,
                 }),
             ],
         });

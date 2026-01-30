@@ -9,17 +9,16 @@ function i(e) {
             renderReactions: i,
             canAddNewReactions: l,
             isLurking: r,
-            isGuest: o,
-            communicationDisabled: a,
-            isActiveChannelOrUnarchivableThread: s,
-            isAutomodQuarantined: u,
+            communicationDisabled: o,
+            isActiveChannelOrUnarchivableThread: a,
+            isAutomodQuarantined: s,
         } = e,
-        c = t.isPrivate(),
-        d = t.isSystemDM(),
-        p = (n || c) && s;
+        u = t.isPrivate(),
+        c = t.isSystemDM(),
+        d = (n || u) && a;
     return {
         disableReactionReads: !i,
-        disableReactionCreates: r || o || !p || !((!0 === l || c) && !d && s),
-        disableReactionUpdates: r || o || !p || !0 === a || !0 === u,
+        disableReactionCreates: r || !d || !((!0 === l || u) && !c && a),
+        disableReactionUpdates: r || !d || !0 === o || !0 === s,
     };
 }
