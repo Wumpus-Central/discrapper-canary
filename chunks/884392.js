@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => h,
+    A: () => _,
 });
 var r = n(627968),
     i = n(412703),
@@ -7,63 +7,64 @@ var r = n(627968),
     a = n(397927),
     s = n(829219),
     o = n(859703),
-    c = n(890687),
-    u = n(590202),
-    d = n(792620),
-    p = n(545986),
-    m = n(654487),
-    f = n(985018);
+    c = n(868031),
+    u = n(890687),
+    d = n(590202),
+    p = n(792620),
+    m = n(545986),
+    f = n(654487),
+    g = n(985018);
 
-function g(e) {
+function h(e) {
     switch (e) {
         case i.n.ACHIEVEMENT_IN_GAME:
         case i.n.ACHIEVEMENT_IN_ACTIVITY:
         case i.n.PLAY_ACTIVITY:
         case i.n.WATCH_VIDEO:
-            return u.Cy.START_QUEST;
+            return d.Cy.START_QUEST;
         default:
-            return u.Cy.ACCEPT_QUEST;
+            return d.Cy.ACCEPT_QUEST;
     }
 }
-let h = function (e) {
+let _ = function (e) {
     var t;
     let {
             quest: n,
-            taskType: u,
-            size: h = "sm",
-            preClickCallback: _,
-            analyticsCtxQuestContent: b,
-            analyticsCtxSourceQuestContent: A,
-            analyticsCtxQuestContentPosition: y,
-            analyticsCtxQuestContentRowIndex: v,
+            taskType: d,
+            size: _ = "sm",
+            preClickCallback: b,
+            analyticsCtxQuestContent: A,
+            analyticsCtxSourceQuestContent: y,
+            analyticsCtxQuestContentPosition: v,
+            analyticsCtxQuestContentRowIndex: x,
         } = e,
-        x = {
-            questContent: b,
-            questContentCTA: g(u),
-            sourceQuestContent: A,
-            questContentPosition: y,
-            questContentRowIndex: v,
+        O = {
+            questContent: A,
+            questContentCTA: h(d),
+            sourceQuestContent: y,
+            questContentPosition: v,
+            questContentRowIndex: x,
         },
-        O = n.id,
-        { isEnrolling: E } = (0, l.cf)(
+        E = n.id,
+        { isEnrolling: j } = (0, l.cf)(
             [o.A],
             () => ({
-                isEnrolling: o.A.isEnrolling(O),
+                isEnrolling: o.A.isEnrolling(E),
             }),
-            [O],
+            [E],
         ),
-        j = (0, p.Oz)(n),
-        C = (function (e, t) {
-            let { launchInGameActivity: n } = (0, c.zW)(t);
-            if ((0, d.BS)(t))
+        C = (0, m.Oz)(n),
+        I = (function (e, t) {
+            let { launchInGameActivity: n } = (0, u.zW)(t);
+            if ((0, p.BS)(t))
                 return () => {
-                    (0, p.Fy)(t);
+                    (0, m.Fy)(t);
                 };
             switch (e) {
                 case i.n.ACHIEVEMENT_IN_GAME:
                 case i.n.ACHIEVEMENT_IN_ACTIVITY:
                 case i.n.PLAY_ACTIVITY:
-                    if (t.config.features.includes(m.Li.START_QUEST_CTA))
+                    if (t.config.features.includes(f.Li.START_QUEST_CTA))
                         return () => {
                             n();
                         };
@@ -71,54 +72,55 @@ let h = function (e) {
                 default:
                     return null;
             }
-        })(u, n),
-        I = (function (e, t) {
+        })(d, n),
+        S = (function (e, t) {
+            let { features: n } = t.config;
             switch (e) {
                 case i.n.WATCH_VIDEO:
-                    return f.intl.string(f.t.umdNin);
+                    return (0, c.WB)(t);
                 case i.n.ACHIEVEMENT_IN_GAME:
                 case i.n.ACHIEVEMENT_IN_ACTIVITY:
-                    return t.includes(m.Li.START_QUEST_CTA) ? f.intl.string(f.t["hRIVy+"]) : f.intl.string(f.t.l7E81v);
+                    return n.includes(f.Li.START_QUEST_CTA) ? g.intl.string(g.t["hRIVy+"]) : g.intl.string(g.t.l7E81v);
                 case i.n.PLAY_ACTIVITY:
-                    if (t.includes(m.Li.CLOUD_GAMING_ACTIVITY)) return f.intl.string(f.t["+qoymD"]);
-                    if (t.includes(m.Li.START_QUEST_CTA)) return f.intl.string(f.t["Ie9++s"]);
-                    return f.intl.string(f.t.l7E81v);
+                    if (n.includes(f.Li.CLOUD_GAMING_ACTIVITY)) return g.intl.string(g.t["+qoymD"]);
+                    if (n.includes(f.Li.START_QUEST_CTA)) return g.intl.string(g.t["Ie9++s"]);
+                    return g.intl.string(g.t.l7E81v);
                 default:
-                    return f.intl.string(f.t.kUQLMJ);
+                    return g.intl.string(g.t.kUQLMJ);
             }
-        })(u, n.config.features),
-        S =
-            ((t = null != C ? C : void 0),
-            u === i.n.WATCH_VIDEO
+        })(d, n),
+        T =
+            ((t = null != I ? I : void 0),
+            d === i.n.WATCH_VIDEO
                 ? async () => {
-                      await (0, p.e0)(n, {
-                          questContent: x.questContent,
-                          questContentCTA: x.questContentCTA,
-                          sourceQuestContent: x.sourceQuestContent,
-                          sourceQuestContentCTA: g(u),
-                          questContentPosition: x.questContentPosition,
-                          questContentRowIndex: x.questContentRowIndex,
+                      await (0, m.e0)(n, {
+                          questContent: O.questContent,
+                          questContentCTA: O.questContentCTA,
+                          sourceQuestContent: O.sourceQuestContent,
+                          sourceQuestContentCTA: h(d),
+                          questContentPosition: O.questContentPosition,
+                          questContentRowIndex: O.questContentRowIndex,
                       });
                   }
                 : async () => {
                       await (0, s.Oy)(n.id, {
-                          questContent: x.questContent,
-                          questContentCTA: x.questContentCTA,
-                          sourceQuestContent: x.sourceQuestContent,
-                          questContentPosition: x.questContentPosition,
-                          questContentRowIndex: x.questContentRowIndex,
+                          questContent: O.questContent,
+                          questContentCTA: O.questContentCTA,
+                          sourceQuestContent: O.sourceQuestContent,
+                          questContentPosition: O.questContentPosition,
+                          questContentRowIndex: O.questContentRowIndex,
                       }),
                           null == t || t();
                   });
     return (0, r.jsx)(a.Button, {
-        size: h,
-        loading: E,
+        size: _,
+        loading: j,
         variant: "primary",
         onClick: () => {
-            null == _ || _(), S();
+            null == b || b(), T();
         },
-        text: I,
-        icon: j,
+        text: S,
+        icon: C,
         fullWidth: !0,
     });
 };

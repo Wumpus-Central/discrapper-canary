@@ -1,6 +1,6 @@
 n.d(t, {
     B3: () => N,
-    BQ: () => L,
+    BQ: () => x,
     CI: () => E,
     Fw: () => A,
     GD: () => g,
@@ -9,9 +9,9 @@ n.d(t, {
     Ko: () => _,
     Li: () => u.L,
     Ls: () => w,
-    Pc: () => x,
+    Pc: () => L,
     TY: () => c.T,
-    WQ: () => M,
+    WQ: () => j,
     ZV: () => p,
     aJ: () => I,
     eA: () => v,
@@ -32,8 +32,8 @@ n.d(t, {
 var r = n(735438),
     i = n(412703),
     a = n(257280),
-    s = n(562465),
-    o = n(927813),
+    o = n(562465),
+    s = n(927813),
     l = n(341915),
     c = n(557567),
     u = n(902173),
@@ -84,10 +84,11 @@ var r = n(735438),
             (e.QUEST_DEEP_LINK_UTIL = "quest_deep_link_util"),
             (e.YOU_TAB_PROFILE_HEADER = "you_tab_profile_header"),
             (e.QUEST_INSTRUCTIONS = "quest_instructions"),
+            (e.QUEST_PRIMARY_CTA = "quest_primary_cta"),
             e
         );
     })({});
-let f = o.A.Millis.MINUTE * a.K.ConsecutiveHeartbeatPeriodMinutes,
+let f = s.A.Millis.MINUTE * a.K.ConsecutiveHeartbeatPeriodMinutes,
     p = {
         tension: 900,
         friction: 45,
@@ -101,7 +102,7 @@ let f = o.A.Millis.MINUTE * a.K.ConsecutiveHeartbeatPeriodMinutes,
 var h = (function (e) {
     return (e.CONSOLE = "CONSOLE"), (e.DESKTOP = "DESKTOP"), e;
 })({});
-let m = (0, s.TP)(),
+let m = (0, o.TP)(),
     g =
         -1 !== m.indexOf("localhost") || -1 !== m.indexOf("127.0.0.1")
             ? "".concat(m, "/_cdn_storage/")
@@ -168,10 +169,10 @@ var D = (function (e) {
             e
         );
     })({}),
-    x = (function (e) {
+    L = (function (e) {
         return (e.VIDEO = "task_video"), (e.PLAY = "task_play"), e;
     })({}),
-    L = (function (e) {
+    x = (function (e) {
         return (
             (e.VIRTUAL_CURRENCY = "reward_virtual_currency"),
             (e.COLLECTIBLE = "reward_collectible"),
@@ -179,7 +180,7 @@ var D = (function (e) {
             e
         );
     })({});
-let j = [
+let M = [
     {
         group: "task",
         filter: "task_play",
@@ -202,13 +203,13 @@ let j = [
     },
 ];
 
-function M(e) {
-    return Object.values(x).includes(e)
+function j(e) {
+    return Object.values(L).includes(e)
         ? {
               group: "task",
               filter: e,
           }
-        : Object.values(L).includes(e)
+        : Object.values(x).includes(e)
           ? {
                 group: "reward",
                 filter: e,
@@ -216,7 +217,7 @@ function M(e) {
           : null;
 }
 let k = ["reward", "task"],
-    U = Object.entries((0, r.groupBy)(j, "group")).sort((e, t) => {
+    U = Object.entries((0, r.groupBy)(M, "group")).sort((e, t) => {
         let n = k.indexOf(e[0]),
             r = k.indexOf(t[0]);
         return n < r ? -1 : +(r < n);
