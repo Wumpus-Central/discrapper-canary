@@ -1,84 +1,84 @@
 n.d(t, {
-    default: () => A,
+    default: () => L,
 }),
     n(228524),
     n(638769),
     n(896048),
     n(134528),
     n(947204);
-var l = n(627968),
-    i = n(64700),
-    a = n(835245),
-    r = n(621466),
-    o = n(311907),
-    s = n(562465),
-    u = n(843282),
-    c = n(732955),
-    d = n(397927),
-    m = n(817363),
-    v = n(565150),
-    p = n(521502),
-    h = n(851023),
+var i = n(627968),
+    l = n(64700),
+    r = n(835245),
+    a = n(311907),
+    o = n(562465),
+    s = n(843282),
+    u = n(732955),
+    c = n(397927),
+    d = n(817363),
+    m = n(565150),
+    v = n(521502),
+    p = n(851023),
     f = n(349688),
-    x = n(914905),
+    h = n(914905),
+    x = n(176634),
     g = n(101555),
     b = n(386976),
     j = n(32523),
     y = n(287809),
-    w = n(486020),
-    O = n(405269),
-    S = n(723702),
-    k = n(256252),
-    E = n(382913),
-    _ = n(985018),
-    C = n(433963);
+    _ = n(486020),
+    w = n(405269),
+    O = n(723702),
+    S = n(256252),
+    k = n(382913),
+    C = n(985018),
+    E = n(433963);
 
-function L(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
+            i = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            l.forEach(function (t) {
-                var l;
-                (l = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: l,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = l);
+                        : (e[t] = i);
             });
     }
     return e;
 }
-let P = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map((e) => ({
+let A = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map((e) => ({
     id: e,
     label: e,
     value: e,
 }));
 
-function A(e) {
-    var t, A, N, T;
-    let { transitionState: B, onClose: D } = e,
-        I = i.useRef(null),
-        R = i.useRef(null),
-        [M, V] = i.useState(""),
-        [z, H] = i.useState(""),
-        [W, Y] = i.useState(),
-        [K, q] = i.useState(""),
-        [U, F] = i.useState([]),
-        [G, Z] = i.useState(),
-        [J, X] = i.useState(),
-        [Q, $] = i.useState(!1),
-        [ee, et] = i.useState(""),
-        [en, el] = i.useState(
+function L(e) {
+    var t, L, N, T;
+    let { transitionState: B, onClose: I } = e,
+        D = l.useRef(null),
+        R = l.useRef(null),
+        [V, z] = l.useState(""),
+        [M, W] = l.useState(""),
+        [Y, H] = l.useState(),
+        [K, F] = l.useState(""),
+        [U, G] = l.useState([]),
+        [q, Z] = l.useState(),
+        [J, X] = l.useState(),
+        [Q, $] = l.useState(!1),
+        [ee, et] = l.useState(""),
+        [en, ei] = l.useState(
             (function (e) {
                 switch (e) {
                     case "windows":
@@ -89,19 +89,19 @@ function A(e) {
                         return "Linux";
                 }
                 return "";
-            })((0, S.getOS)()),
+            })((0, O.getOS)()),
         ),
-        [ei, ea] = i.useState(""),
-        [er, eo] = i.useState(""),
-        [es, eu] = i.useState(""),
-        [ec, ed] = i.useState(""),
-        [em, ev] = i.useState(!1),
-        [ep, eh] = i.useState(!1),
-        [ef, ex] = i.useState(!1),
-        [eg, eb] = i.useState(null);
-    i.useEffect(() => {
+        [el, er] = l.useState(""),
+        [ea, eo] = l.useState(""),
+        [es, eu] = l.useState(""),
+        [ec, ed] = l.useState(""),
+        [em, ev] = l.useState(!1),
+        [ep, ef] = l.useState(!1),
+        [eh, ex] = l.useState(!1),
+        [eg, eb] = l.useState(null);
+    l.useEffect(() => {
         let e = Math.random().toString(16).slice(2);
-        s.Bo.get({
+        o.Bo.get({
             url: ""
                 .concat(location.protocol, "//")
                 .concat(location.host)
@@ -112,93 +112,93 @@ function A(e) {
             },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "61528d3e3435ecbee37bf641aa64b9de561b202c" !== e.body.hash) {
-                let e = new Date("1769110173981"),
+            if (null != e.body && "91383aaf3cfe5dfbf07b224224b9bc1cf44b942c" !== e.body.hash) {
+                let e = new Date("1769813048061"),
                     t = new Date(),
-                    n = (0, O.Tf)(t, e);
+                    n = (0, w.Tf)(t, e);
                 n.hours > 6 && eb(n.hours);
             }
         });
     }, []);
-    let ej = (0, o.bG)([y.default], () => {
+    let ej = (0, a.bG)([y.default], () => {
             let e = y.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        ey = (0, o.bG)([p.A], () => {
+        ey = (0, a.bG)([v.A], () => {
             var e;
-            return null == (e = p.A.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web;
+            return null == (e = v.A.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web;
         }),
-        { overridesInfo: ew } = (0, j.hI)(),
-        { overridesInfo: eO } = (0, b.op)(),
-        eS = Object.entries(L({}, ew, eO)).map((e) => {
+        { overridesInfo: e_ } = (0, j.hI)(),
+        { overridesInfo: ew } = (0, b.op)(),
+        eO = Object.entries(P({}, e_, ew)).map((e) => {
             let [t, { variantId: n }] = e;
             return {
                 experimentId: t,
                 variantId: n,
             };
         });
-    async function ek() {
+    async function eS() {
         var e, t;
-        if ((ex(!1), "" === M || "" === z || null == W)) return void ev(!0);
-        let i = null == G || null == (t = G.features) ? void 0 : t.find((e) => (0, k.wY)(e) === J);
-        eh(!0), ev(!1);
-        let a = (0, E.B)(
+        if ((ex(!1), "" === V || "" === M || null == Y)) return void ev(!0);
+        let l = null == q || null == (t = q.features) ? void 0 : t.find((e) => (0, S.wY)(e) === J);
+        ef(!0), ev(!1);
+        let r = (0, k.B)(
                 U.map((e) => {
                     let { item: t } = e;
                     return t;
                 }),
             ),
-            r = await (0, k.zC)(
+            a = await (0, S.zC)(
                 {
-                    name: M,
-                    description: z,
-                    priority: W,
-                    feature: i,
+                    name: V,
+                    description: M,
+                    priority: Y,
+                    feature: l,
                     url: K,
                     buildOverride: null != (e = null == ey ? void 0 : ey.id) ? e : null,
-                    experimentOverrides: eS,
+                    experimentOverrides: eO,
                 },
                 !0 === Q
                     ? {
                           overridePlatformInformation: Q,
                           device: ee,
                           operatingSystem: en,
-                          operatingSystemVersion: ei,
-                          clientVersion: er,
+                          operatingSystemVersion: el,
+                          clientVersion: ea,
                           clientBuildNumber: es,
                           locale: ec,
                       }
                     : {
                           overridePlatformInformation: Q,
                       },
-                a,
+                r,
             ).catch(() => ex(!0));
-        eh(!1),
-            null != r && r.ok
-                ? (ej && window.open(r.body.permalink_url, "_blank"),
-                  D(),
-                  (0, d.mMO)(async () => {
+        ef(!1),
+            null != a && a.ok
+                ? (ej && window.open(a.body.permalink_url, "_blank"),
+                  I(),
+                  (0, c.mMO)(async () => {
                       let { default: e } = await n.e("71256").then(n.bind(n, 369323));
                       return (t) => {
-                          var n, i;
-                          return (0, l.jsx)(
+                          var n, l;
+                          return (0, i.jsx)(
                               e,
-                              ((n = L({}, t)),
-                              (i = i =
+                              ((n = P({}, t)),
+                              (l = l =
                                   {
-                                      asanaTask: r.body,
+                                      asanaTask: a.body,
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
-                                            var l = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, l);
+                                            var i = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, i);
                                         }
                                         return n;
-                                    })(Object(i)).forEach(function (e) {
-                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
                               n),
                           );
@@ -207,13 +207,13 @@ function A(e) {
                 : ex(!0);
     }
     return (
-        i.useEffect(() => {
+        l.useEffect(() => {
             async function e() {
-                Z(await (0, k.xt)());
+                Z(await (0, S.xt)());
             }
             ej && e();
         }, [ej]),
-        i.useEffect(() => {
+        l.useEffect(() => {
             if (U.length > 0) {
                 var e;
                 null == (e = R.current) ||
@@ -223,89 +223,72 @@ function A(e) {
                     });
             }
         }, [U]),
-        i.useEffect(() => {
-            let e = (e) => {
-                var t, n;
-                let l = null == (t = e.clipboardData) ? void 0 : t.files;
-                if (null != l && l.length > 0) {
-                    let t = Array.from(l).filter((e) => e.type.startsWith("image/"));
-                    if (t.length > 0) {
-                        e.preventDefault(), e.stopPropagation();
-                        let n = t.at(0);
-                        void 0 !== n &&
-                            F((e) =>
-                                e.some((e) => {
-                                    var t;
-                                    return (
-                                        e.filename === n.name &&
-                                        (null == (t = e.item.file) ? void 0 : t.size) === n.size
-                                    );
-                                })
-                                    ? e
-                                    : [
-                                          ...e,
-                                          new v.Ay({
-                                              id: (0, a.A)(),
-                                              file: n,
-                                              platform: v.xz.WEB,
-                                              origin: "clipboard",
-                                          }),
-                                      ],
-                            );
-                    }
-                }
-                let i = document.activeElement;
-                if (!((0, r.vq)(i, HTMLInputElement) || (0, r.vq)(i, HTMLTextAreaElement))) {
-                    let t = null == (n = e.clipboardData) ? void 0 : n.getData("text");
-                    null != t && (e.preventDefault(), e.stopPropagation(), H(z.concat(t)));
-                }
-            };
-            return (
-                document.addEventListener("paste", e, !0),
-                () => {
-                    document.removeEventListener("paste", e, !0);
-                }
-            );
-        }, [z]),
-        (0, l.jsx)(c.aFV, {
+        (0, x.A)({
+            onPasteFiles: l.useCallback((e) => {
+                let t = Array.from(e)
+                    .filter((e) => e.type.startsWith("image/"))
+                    .at(0);
+                void 0 !== t &&
+                    G((e) =>
+                        e.some((e) => {
+                            var n;
+                            return e.filename === t.name && (null == (n = e.item.file) ? void 0 : n.size) === t.size;
+                        })
+                            ? e
+                            : [
+                                  ...e,
+                                  new m.Ay({
+                                      id: (0, r.A)(),
+                                      file: t,
+                                      platform: m.xz.WEB,
+                                      origin: "clipboard",
+                                  }),
+                              ],
+                    );
+            }, []),
+            onPasteBackgroundText: l.useCallback((e) => {
+                W((t) => t.concat(e));
+            }, []),
+        }),
+        (0, i.jsx)(u.aFV, {
             size: "md",
             transitionState: B,
-            "aria-label": _.intl.string(_.t.mCCdwi),
-            title: _.intl.string(_.t["5LqopY"]),
+            "aria-label": C.intl.string(C.t.mCCdwi),
+            title: C.intl.string(C.t["5LqopY"]),
             actions: [
                 {
                     variant: "secondary",
-                    text: _.intl.string(_.t["ETE/oC"]),
-                    onClick: D,
+                    text: C.intl.string(C.t["ETE/oC"]),
+                    onClick: I,
                     autoFocus: !1,
                 },
                 {
                     variant: "primary",
                     text: ej ? "Submit and Open Report" : "Submit Report",
                     loading: ep,
-                    onClick: ek,
+                    onClick: eS,
                     autoFocus: !1,
                 },
             ],
-            onClose: D,
-            children: (0, l.jsxs)("div", {
+            onClose: I,
+            children: (0, i.jsxs)("div", {
                 children: [
-                    (0, l.jsxs)(d.BJc, {
+                    (0, i.jsxs)(c.BJc, {
                         gap: 8,
                         children: [
                             null != ey &&
-                                (0, l.jsxs)(d.wx6, {
+                                (0, i.jsxs)(c.wx6, {
                                     type: "critical",
                                     children: [
-                                        (0, l.jsx)(d.Heading, {
+                                        (0, i.jsx)(c.Heading, {
                                             variant: "heading-md/medium",
-                                            children: _.intl.string(_.t["ZP/hEx"]),
+                                            children: C.intl.string(C.t["ZP/hEx"]),
                                         }),
-                                        (0, l.jsx)(d.Text, {
+                                        (0, i.jsx)(c.Text, {
                                             variant: "text-sm/normal",
-                                            children: _.intl.format(_.t["yY60+7"], {
+                                            children: C.intl.format(C.t["yY60+7"], {
                                                 buildOverrideHook: () =>
-                                                    (0, l.jsx)("b", {
+                                                    (0, i.jsx)("b", {
                                                         children: null == ey ? void 0 : ey.id,
                                                     }),
                                             }),
@@ -314,34 +297,34 @@ function A(e) {
                                 }),
                             null == ey &&
                                 null != eg &&
-                                (0, l.jsxs)(d.wx6, {
+                                (0, i.jsxs)(c.wx6, {
                                     type: "critical",
                                     children: [
-                                        (0, l.jsx)(d.Heading, {
+                                        (0, i.jsx)(c.Heading, {
                                             variant: "heading-md/medium",
-                                            children: _.intl.formatToPlainString(_.t["ql2Q/e"], {
+                                            children: C.intl.formatToPlainString(C.t["ql2Q/e"], {
                                                 hours: eg,
                                             }),
                                         }),
-                                        (0, l.jsx)(d.Text, {
+                                        (0, i.jsx)(c.Text, {
                                             variant: "text-sm/normal",
-                                            children: _.intl.string(_.t.x18RUs),
+                                            children: C.intl.string(C.t.x18RUs),
                                         }),
                                     ],
                                 }),
                             ej &&
-                                Object.keys(eS).length > 0 &&
-                                (0, l.jsxs)(d.wx6, {
+                                Object.keys(eO).length > 0 &&
+                                (0, i.jsxs)(c.wx6, {
                                     type: "critical",
                                     children: [
-                                        (0, l.jsx)(d.Heading, {
+                                        (0, i.jsx)(c.Heading, {
                                             variant: "heading-md/medium",
                                             children: "You have the following experiments overridden:",
                                         }),
-                                        (0, l.jsx)(d.Text, {
+                                        (0, i.jsx)(c.Text, {
                                             variant: "text-sm/normal",
-                                            children: eS.map((e) =>
-                                                (0, l.jsxs)(
+                                            children: eO.map((e) =>
+                                                (0, i.jsxs)(
                                                     "div",
                                                     {
                                                         children: [e.experimentId, " (variant ", e.variantId, ")"],
@@ -354,162 +337,162 @@ function A(e) {
                                 }),
                         ],
                     }),
-                    (0, l.jsxs)(d.BJc, {
+                    (0, i.jsxs)(c.BJc, {
                         gap: 24,
                         padding: {
                             top: 8,
                             bottom: 8,
                         },
                         children: [
-                            (0, l.jsx)(d.ksK, {
-                                label: _.intl.string(_.t.OZRgjw),
-                                error: em && "" === M ? _.intl.string(_.t.EkokLy) : null,
+                            (0, i.jsx)(c.ksK, {
+                                label: C.intl.string(C.t.OZRgjw),
+                                error: em && "" === V ? C.intl.string(C.t.EkokLy) : null,
                                 placeholder: "Something is broken on this screen.",
                                 type: "text",
-                                value: M,
+                                value: V,
                                 maxLength: 100,
-                                onChange: V,
+                                onChange: z,
                                 autoFocus: !0,
                             }),
-                            (0, l.jsx)(d.fs1, {
-                                label: _.intl.string(_.t["1SplH2"]),
-                                error: em && "" === z ? _.intl.string(_.t.EkokLy) : null,
+                            (0, i.jsx)(c.fs1, {
+                                label: C.intl.string(C.t["1SplH2"]),
+                                error: em && "" === M ? C.intl.string(C.t.EkokLy) : null,
                                 placeholder: "What did you expect to see?",
-                                value: z,
-                                onChange: H,
+                                value: M,
+                                onChange: W,
                                 description: ej
                                     ? "You can add additional information/media on the ticket after submitting"
                                     : void 0,
                             }),
-                            (0, l.jsx)(u.Te, {
-                                label: _.intl.string(_.t.xMXLda),
-                                errorMessage: em && void 0 === W ? _.intl.string(_.t.EkokLy) : null,
+                            (0, i.jsx)(s.Te, {
+                                label: C.intl.string(C.t.xMXLda),
+                                errorMessage: em && void 0 === Y ? C.intl.string(C.t.EkokLy) : null,
                                 renderOptionLabel: (e) => {
                                     let t;
                                     return (
                                         (t = e.priority),
-                                        (0, l.jsxs)("div", {
-                                            className: C.jS,
+                                        (0, i.jsxs)("div", {
+                                            className: E.jS,
                                             children: [
-                                                (0, l.jsxs)("div", {
-                                                    className: C.Kt,
+                                                (0, i.jsxs)("div", {
+                                                    className: E.Kt,
                                                     children: [
-                                                        (0, l.jsx)("img", {
+                                                        (0, i.jsx)("img", {
                                                             alt: "",
-                                                            className: C.YN,
-                                                            src: (0, w._O)({
+                                                            className: E.YN,
+                                                            src: (0, _._O)({
                                                                 id: t.emoji,
                                                                 animated: !0,
                                                                 size: 48,
                                                             }),
                                                         }),
-                                                        (0, l.jsx)(d.Text, {
+                                                        (0, i.jsx)(c.Text, {
                                                             color: "text-strong",
                                                             variant: "text-sm/semibold",
-                                                            className: C.n8,
+                                                            className: E.n8,
                                                             children: t.title,
                                                         }),
                                                     ],
                                                 }),
-                                                (0, l.jsx)(d.Text, {
+                                                (0, i.jsx)(c.Text, {
                                                     color: "text-default",
                                                     variant: "text-xs/normal",
-                                                    className: C.dP,
+                                                    className: E.dP,
                                                     children: t.description,
                                                 }),
                                             ],
                                         })
                                     );
                                 },
-                                onChange: Y,
-                                options: (0, k.lx)().map((e) => ({
+                                onChange: H,
+                                options: (0, S.lx)().map((e) => ({
                                     priority: e,
                                     value: e.value,
                                     label: e.title,
                                 })),
-                                optionClassName: C.sI,
-                                value: W,
+                                optionClassName: E.sI,
+                                value: Y,
                                 maxVisibleItems: 4,
                                 closeOnSelect: !0,
                                 "data-migration-pending": !0,
                             }),
                             ej &&
-                                (0, l.jsx)(d.ZiE, {
+                                (0, i.jsx)(c.ZiE, {
                                     selectionMode: "single",
-                                    label: _.intl.string(_.t["77VVd8"]),
+                                    label: C.intl.string(C.t["77VVd8"]),
                                     value: J,
                                     options:
                                         null !=
                                         (t =
-                                            null == G ||
-                                            null == (T = G.features) ||
-                                            null == (N = T.filter((e) => "" !== (0, k.wY)(e))) ||
+                                            null == q ||
+                                            null == (T = q.features) ||
+                                            null == (N = T.filter((e) => "" !== (0, S.wY)(e))) ||
                                             null ==
-                                                (A = N.map((e) => {
+                                                (L = N.map((e) => {
                                                     var t;
                                                     return {
-                                                        id: (0, k.wY)(e),
+                                                        id: (0, S.wY)(e),
                                                         label: null != (t = e.name) ? t : "",
-                                                        value: (0, k.wY)(e),
+                                                        value: (0, S.wY)(e),
                                                     };
                                                 }))
                                                 ? void 0
-                                                : A.sort((e, t) => e.label.localeCompare(t.label)))
+                                                : L.sort((e, t) => e.label.localeCompare(t.label)))
                                             ? t
                                             : [],
-                                    disabled: null == G,
+                                    disabled: null == q,
                                     onSelectionChange: (e) => X(e),
                                 }),
-                            (0, l.jsx)(d.ksK, {
-                                label: _.intl.string(_.t["7p5pqh"]),
-                                placeholder: _.intl.string(_.t.HewMzo),
+                            (0, i.jsx)(c.ksK, {
+                                label: C.intl.string(C.t["7p5pqh"]),
+                                placeholder: C.intl.string(C.t.HewMzo),
                                 type: "text",
                                 value: K,
                                 maxLength: 5e3,
-                                onChange: q,
+                                onChange: F,
                             }),
-                            (0, l.jsx)(d.Checkbox, {
+                            (0, i.jsx)(c.Checkbox, {
                                 checked: Q,
                                 onChange: (e) => $(e),
-                                label: _.intl.string(_.t.ayhqiH),
+                                label: C.intl.string(C.t.ayhqiH),
                             }),
                             Q
-                                ? (0, l.jsxs)(l.Fragment, {
+                                ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, l.jsx)(d.ksK, {
-                                              label: _.intl.string(_.t.rrI4Tk),
+                                          (0, i.jsx)(c.ksK, {
+                                              label: C.intl.string(C.t.rrI4Tk),
                                               placeholder: "Device",
                                               value: ee,
                                               onChange: (e) => et(e),
                                           }),
-                                          (0, l.jsx)(d.l6P, {
-                                              label: _.intl.string(_.t.kcHxi6),
+                                          (0, i.jsx)(c.l6P, {
+                                              label: C.intl.string(C.t.kcHxi6),
                                               value: en,
-                                              options: P,
-                                              onSelectionChange: el,
+                                              options: A,
+                                              onSelectionChange: ei,
                                               selectionMode: "single",
                                               fullWidth: !0,
                                           }),
-                                          (0, l.jsx)(d.ksK, {
-                                              label: _.intl.string(_.t.rEtxdg),
+                                          (0, i.jsx)(c.ksK, {
+                                              label: C.intl.string(C.t.rEtxdg),
                                               placeholder: "Operating System Version",
-                                              value: ei,
-                                              onChange: (e) => ea(e),
+                                              value: el,
+                                              onChange: (e) => er(e),
                                           }),
-                                          (0, l.jsx)(d.ksK, {
-                                              label: _.intl.string(_.t["wy1M/t"]),
+                                          (0, i.jsx)(c.ksK, {
+                                              label: C.intl.string(C.t["wy1M/t"]),
                                               placeholder: "Client Version",
-                                              value: er,
+                                              value: ea,
                                               onChange: (e) => eo(e),
                                           }),
-                                          (0, l.jsx)(d.ksK, {
-                                              label: _.intl.string(_.t.f7kbVu),
+                                          (0, i.jsx)(c.ksK, {
+                                              label: C.intl.string(C.t.f7kbVu),
                                               placeholder: "Client Build Number",
                                               value: es,
                                               onChange: (e) => eu(e),
                                           }),
-                                          (0, l.jsx)(d.ksK, {
-                                              label: _.intl.string(_.t["4Z5+zg"]),
+                                          (0, i.jsx)(c.ksK, {
+                                              label: C.intl.string(C.t["4Z5+zg"]),
                                               placeholder: "Locale",
                                               value: ec,
                                               onChange: (e) => ed(e),
@@ -517,31 +500,31 @@ function A(e) {
                                       ],
                                   })
                                 : null,
-                            (0, l.jsx)(d.Button, {
+                            (0, i.jsx)(c.Button, {
                                 variant: "secondary",
-                                text: _.intl.string(_.t.HVxmOD),
+                                text: C.intl.string(C.t.HVxmOD),
                                 onClick: () => {
                                     var e;
-                                    null == (e = I.current) || e.activateUploadDialogue();
+                                    null == (e = D.current) || e.activateUploadDialogue();
                                 },
                                 fullWidth: !0,
                             }),
-                            (0, l.jsx)("div", {
-                                className: C.Fg,
-                                children: (0, l.jsx)(m.A, {
-                                    ref: I,
+                            (0, i.jsx)("div", {
+                                className: E.Fg,
+                                children: (0, i.jsx)(d.A, {
+                                    ref: D,
                                     onChange: (e) => {
                                         var t, n;
                                         (null == (n = e.currentTarget) || null == (t = n.files) ? void 0 : t[0]) !=
                                             null &&
-                                            F([
+                                            G([
                                                 ...U,
                                                 ...Array.from(e.currentTarget.files).map(
                                                     (e) =>
-                                                        new v.Ay({
-                                                            id: (0, a.A)(),
+                                                        new m.Ay({
+                                                            id: (0, r.A)(),
                                                             file: e,
-                                                            platform: v.xz.WEB,
+                                                            platform: m.xz.WEB,
                                                             origin: "file_picker",
                                                         }),
                                                 ),
@@ -551,35 +534,35 @@ function A(e) {
                                 }),
                             }),
                             U.length > 0
-                                ? (0, l.jsx)(d.D0$, {
+                                ? (0, i.jsx)(c.D0$, {
                                       label: "Preview",
-                                      children: (0, l.jsx)("div", {
+                                      children: (0, i.jsx)("div", {
                                           ref: R,
-                                          className: C.ZO,
+                                          className: E.ZO,
                                           children:
                                               U.length > 0 &&
                                               U.map((e) =>
-                                                  (0, l.jsxs)(
+                                                  (0, i.jsxs)(
                                                       "div",
                                                       {
-                                                          className: C.oh,
+                                                          className: E.oh,
                                                           children: [
-                                                              (0, l.jsxs)("div", {
+                                                              (0, i.jsxs)("div", {
                                                                   children: [
-                                                                      (0, l.jsx)(x.J, {
+                                                                      (0, i.jsx)(h.J, {
                                                                           size: f.L.SMALL,
                                                                           upload: e,
                                                                       }),
-                                                                      (0, l.jsx)("div", {
-                                                                          className: C.eA,
-                                                                          children: (0, l.jsx)(g.Ay, {
-                                                                              children: (0, l.jsx)(h.A, {
-                                                                                  tooltip: _.intl.string(_.t.vN7REz),
+                                                                      (0, i.jsx)("div", {
+                                                                          className: E.eA,
+                                                                          children: (0, i.jsx)(g.Ay, {
+                                                                              children: (0, i.jsx)(p.A, {
+                                                                                  tooltip: C.intl.string(C.t.vN7REz),
                                                                                   onClick: () => {
                                                                                       var t;
                                                                                       return (
                                                                                           (t = e.id),
-                                                                                          void F(
+                                                                                          void G(
                                                                                               U.filter(
                                                                                                   (e) => e.id !== t,
                                                                                               ),
@@ -587,7 +570,7 @@ function A(e) {
                                                                                       );
                                                                                   },
                                                                                   dangerous: !0,
-                                                                                  children: (0, l.jsx)(d.ucK, {
+                                                                                  children: (0, i.jsx)(c.ucK, {
                                                                                       size: "md",
                                                                                       color: "currentColor",
                                                                                   }),
@@ -596,7 +579,7 @@ function A(e) {
                                                                       }),
                                                                   ],
                                                               }),
-                                                              (0, l.jsx)(d.Text, {
+                                                              (0, i.jsx)(c.Text, {
                                                                   variant: "text-xxs/medium",
                                                                   color: "text-subtle",
                                                                   children: e.filename,
@@ -609,8 +592,8 @@ function A(e) {
                                       }),
                                   })
                                 : null,
-                            ef
-                                ? (0, l.jsx)(d.Text, {
+                            eh
+                                ? (0, i.jsx)(c.Text, {
                                       color: "text-feedback-critical",
                                       variant: "text-sm/normal",
                                       children: "Something went wrong, try again!",
