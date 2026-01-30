@@ -1,15 +1,15 @@
 n.d(t, {
-    A: () => s,
+    A: () => o,
 });
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(985018);
-let s = (e) => {
-    let { onChangeAvatar: t, onChangeAvatarDecoration: n, onClose: s } = e;
+let o = (e) => {
+    let { onChangeAvatar: t, onChangeAvatarDecoration: n, onClose: o } = e;
     return (0, r.jsxs)(i.W1t, {
-        "data-menu-needs-review": !0,
-        onClose: s,
+        "data-menu-migrated": !0,
+        onClose: o,
         onSelect: void 0,
         navId: "user-settings-change-avatar",
         "aria-label": a.intl.string(a.t.ldIeAd),

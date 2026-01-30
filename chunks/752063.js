@@ -265,6 +265,7 @@ function C(e) {
                 renderPopout: (e) => {
                     let { closePopout: i } = e;
                     return (0, r.jsx)(c.W1t, {
+                        "data-menu-migrated": !0,
                         navId: "plaintext-preview-overflow-menu",
                         onClose: i,
                         onSelect: () => {},

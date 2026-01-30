@@ -31,8 +31,8 @@ var a = n(627968),
     N = n(559506),
     w = n(646986),
     I = n(379654),
-    k = n(946356),
-    P = n(810396),
+    P = n(946356),
+    k = n(810396),
     R = n(376285),
     D = n(159218),
     M = n(442228),
@@ -51,8 +51,8 @@ var a = n(627968),
     Y = n(33042),
     J = n(347853),
     X = n(652215),
-    $ = n(49999),
-    Z = n(996988),
+    Z = n(49999),
+    $ = n(996988),
     ee = n(985018),
     et = n(423648),
     en = n(183959);
@@ -135,7 +135,7 @@ function el(e) {
             eI(!1);
         }, 500);
     }, []);
-    let ek = (e) => {
+    let eP = (e) => {
             null == n || n(),
                 (0, C.openUserProfileModal)(
                     ea(
@@ -148,12 +148,12 @@ function el(e) {
                     ),
                 );
         },
-        eP = (null == eo ? void 0 : eo.widgets) != null && eo.widgets.length > 0,
-        eR = eP ? [] : [o.M.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
+        ek = (null == eo ? void 0 : eo.widgets) != null && eo.widgets.length > 0,
+        eR = ek ? [] : [o.M.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
         [eD, eM] = (0, f.kn)(eR),
         eL = eD === o.M.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE,
         eU = l.useCallback(() => {
-            eM($.i.USER_DISMISS), n();
+            eM(Z.i.USER_DISMISS), n();
         }, [eM, n]),
         eB = l.useCallback(() => {
             eA(), eU();
@@ -180,14 +180,14 @@ function el(e) {
                 children: [
                     (0, a.jsx)(Q.A, {
                         displayProfile: eo,
-                        handleOpenUserProfileModal: ek,
+                        handleOpenUserProfileModal: eP,
                         height: em,
                     }),
-                    (0, a.jsxs)(k.A, {
+                    (0, a.jsxs)(P.A, {
                         className: et.BK,
                         user: t,
                         displayProfile: eo,
-                        themeType: Z.d.POPOUT,
+                        themeType: $.d.POPOUT,
                         children: [
                             (0, a.jsxs)("div", {
                                 className: en.wx,
@@ -195,18 +195,18 @@ function el(e) {
                                     (0, a.jsx)(T.A, {
                                         user: t,
                                         displayProfile: eo,
-                                        themeType: Z.d.POPOUT,
+                                        themeType: $.d.POPOUT,
                                     }),
                                     (0, a.jsx)(S.A, {
                                         user: t,
                                         displayProfile: eo,
-                                        themeType: Z.d.POPOUT,
-                                        onOpenProfile: es ? void 0 : ek,
+                                        themeType: $.d.POPOUT,
+                                        onOpenProfile: es ? void 0 : eP,
                                     }),
                                     (0, a.jsx)(D.A, {
                                         ref: eO,
                                         user: t,
-                                        themeType: Z.d.POPOUT,
+                                        themeType: $.d.POPOUT,
                                         onCloseProfile: n,
                                         prompt: eS ? eN : null,
                                     }),
@@ -221,15 +221,15 @@ function el(e) {
                                     (0, a.jsx)(N.A, {
                                         userId: t.id,
                                     }),
-                                    (0, a.jsx)(P.A, {
+                                    (0, a.jsx)(k.A, {
                                         user: t,
                                         className: et.Xh,
                                         nickname: F.Ay.getName(void 0, null, t),
-                                        onOpenProfile: es ? void 0 : ek,
+                                        onOpenProfile: es ? void 0 : eP,
                                         pronouns: null == eo ? void 0 : eo.pronouns,
                                         tags: (0, a.jsx)(O.A, {
                                             displayProfile: eo,
-                                            themeType: Z.d.POPOUT,
+                                            themeType: $.d.POPOUT,
                                             onClose: n,
                                             shouldOpenBadgeTooltip: null != er ? (e) => e === er : void 0,
                                             shouldGlowTenureBadge: eE.current,
@@ -245,11 +245,11 @@ function el(e) {
                                         hidePersonalInformation: eb,
                                         onClose: n,
                                     }),
-                                    eP &&
+                                    ek &&
                                         (0, a.jsx)(I.A, {
                                             user: t,
                                             widgets: null == eo ? void 0 : eo.widgets,
-                                            onOpenUserProfileModal: ek,
+                                            onOpenUserProfileModal: eP,
                                         }),
                                     (0, a.jsx)(E.A, {
                                         isPremiumUser: eC,
@@ -258,13 +258,13 @@ function el(e) {
                                     (0, a.jsx)(w.A, {
                                         user: t,
                                         currentUser: t,
-                                        onOpenUserProfileModal: ek,
+                                        onOpenUserProfileModal: eP,
                                         onClose: n,
                                     }),
                                     (0, a.jsxs)("div", {
                                         className: et.T_,
                                         children: [
-                                            (0, a.jsx)(k.A.Overlay, {
+                                            (0, a.jsx)(P.A.Overlay, {
                                                 className: et.g0,
                                                 children: (0, a.jsxs)(z.Gs, {
                                                     children: [
@@ -442,7 +442,7 @@ function el(e) {
                                                                                                           ),
                                                                                                       children: (0,
                                                                                                       a.jsx)(c.W1t, {
-                                                                                                          "data-menu-needs-review":
+                                                                                                          "data-menu-migrated":
                                                                                                               !0,
                                                                                                           navId: "set-status-submenu-mobile-web",
                                                                                                           variant:
@@ -510,7 +510,7 @@ function el(e) {
                                                     ],
                                                 }),
                                             }),
-                                            (0, a.jsx)(k.A.Overlay, {
+                                            (0, a.jsx)(P.A.Overlay, {
                                                 className: et.g0,
                                                 children: (0, a.jsxs)(z.Gs, {
                                                     children: [

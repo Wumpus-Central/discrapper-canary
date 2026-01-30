@@ -5,8 +5,8 @@ var r = n(627968);
 n(64700);
 var i = n(284009),
     a = n.n(i),
-    s = n(311907),
-    o = n(397927),
+    o = n(311907),
+    s = n(397927),
     l = n(820284),
     c = n(688810),
     u = n(48435),
@@ -20,7 +20,7 @@ var i = n(284009),
 function g(e) {
     let { onClose: t, onSelect: n, minimal: i = !1, appContext: g, onInteraction: E } = e,
         { analyticsLocations: y } = (0, c.Ay)(),
-        b = (0, s.bG)([d.default], () => {
+        b = (0, o.bG)([d.default], () => {
             let e = d.default.getCurrentUser();
             return a()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e;
         }),
@@ -34,8 +34,8 @@ function g(e) {
         A = (0, p.A)(g);
     return (0, r.jsx)(l.A, {
         object: _.ZSU.CONTEXT_MENU,
-        children: (0, r.jsxs)(o.W1t, {
-            "data-menu-needs-review": !0,
+        children: (0, r.jsxs)(s.W1t, {
+            "data-menu-migrated": !0,
             onClose: t,
             navId: "video-device-context",
             variant: "fixed",
@@ -44,7 +44,7 @@ function g(e) {
             onInteraction: E,
             children: [
                 O,
-                (0, r.jsxs)(o.rXV, {
+                (0, r.jsxs)(s.rXV, {
                     children: [v, i ? A : null],
                 }),
             ],

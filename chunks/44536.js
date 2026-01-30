@@ -31,8 +31,8 @@ let T = (0, a.A)(
             a = (0, d.A)(t),
             o = (0, A.A)(t),
             T = (0, _.A)(t),
-            w = (0, u.A)(t),
-            S = (0, v.A)(t),
+            S = (0, u.A)(t),
+            w = (0, v.A)(t),
             R = (0, f.A)(t),
             N = (0, c.A)({
                 id: t.id,
@@ -50,7 +50,7 @@ let T = (0, a.A)(
             Y = (0, s.y)(t),
             k = (0, g.A)(t);
         return (0, r.jsxs)(i.W1t, {
-            "data-menu-needs-review": !0,
+            "data-menu-migrated": !0,
             navId: "thread-context",
             onClose: l.Z_,
             "aria-label": j.intl.string(j.t["1NBjqb"]),
@@ -66,7 +66,7 @@ let T = (0, a.A)(
                 (0, r.jsxs)(
                     i.rXV,
                     {
-                        children: [x, M, w, S, P, U, a],
+                        children: [x, M, S, w, P, U, a],
                     },
                     "thread-actions",
                 ),

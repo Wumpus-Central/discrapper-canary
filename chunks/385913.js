@@ -141,7 +141,7 @@ let Y = (0, o.A)(
                 eS = n.isManaged(),
                 eM = t.isNonUserBot();
             return (0, r.jsxs)(i.W1t, {
-                "data-menu-needs-review": !0,
+                "data-menu-migrated": !0,
                 navId: "user-context",
                 onClose: l.Z_,
                 "aria-label": B.intl.string(B.t.liqwPJ),

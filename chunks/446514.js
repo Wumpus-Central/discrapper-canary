@@ -107,7 +107,7 @@ function j(t) {
             },
         });
     return (0, n.jsxs)(c.W1t, {
-        "data-menu-needs-migration": !0,
+        "data-menu-migrated": !0,
         navId: "textarea-context",
         onClose: V,
         "aria-label": T.intl.string(T.t.NWlDSI),
