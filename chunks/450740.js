@@ -1,0 +1,15 @@
+e.exports = {
+    mG: "noDrag_e9ca56",
+    kL: "container_e9ca56",
+    Nr: "card_e9ca56",
+    qr: "footer_e9ca56",
+    DD: "title_e9ca56 noDrag_e9ca56",
+    LY: "asset_e9ca56 noDrag_e9ca56",
+    M1: "stats_e9ca56",
+    dJ: "stat_e9ca56",
+    iY: "statImage_e9ca56 noDrag_e9ca56",
+    KA: "statText_e9ca56",
+    hC: "powerContainer_e9ca56",
+    JA: "powerText_e9ca56",
+    TO: "powerBar_e9ca56",
+};

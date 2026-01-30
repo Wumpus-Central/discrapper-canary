@@ -1,12 +1,12 @@
 n.d(t, {
     ZV: () => R,
     c7: () => b,
-    j2: () => N,
+    j2: () => w,
     kC: () => S,
-    p4: () => O,
-    so: () => C,
-    wT: () => I,
-    zv: () => E,
+    p4: () => v,
+    so: () => N,
+    wT: () => T,
+    zv: () => y,
 }),
     n(896048),
     n(457529),
@@ -14,17 +14,18 @@ n.d(t, {
 var r = n(835245),
     i = n(317097),
     a = n(155718),
-    s = n(626584),
-    o = n(337591),
+    o = n(626584),
+    s = n(337591),
     l = n(731068),
     c = n(486020),
     u = n(403362),
     d = n(661191),
     f = n(489414),
     p = n(630446),
-    _ = n(985018);
-let h = new s.A("InteractionComponentUtils"),
-    m = (e, t) => ({
+    _ = n(532294),
+    h = n(985018);
+let m = new o.A("InteractionComponentUtils"),
+    g = (e, t) => ({
         id: e.id,
         name: e.name,
         animated: e.animated,
@@ -37,24 +38,24 @@ let h = new s.A("InteractionComponentUtils"),
                   })
                 : void 0,
     }),
-    g = (e) => ((null == e ? void 0 : e.errorCode) === 429 ? _.intl.string(_.t.fitPBS) : _.intl.string(_.t.VCsUJu)),
-    E = (e, t, n) => {
+    E = (e) => ((null == e ? void 0 : e.errorCode) === 429 ? h.intl.string(h.t.fitPBS) : h.intl.string(h.t.VCsUJu)),
+    y = (e, t, n) => {
         let r =
             (null == e ? void 0 : e.data.interactionType) === a.G4.MESSAGE_COMPONENT &&
-            (null == e ? void 0 : e.state) === o.m.FAILED
+            (null == e ? void 0 : e.state) === s.m.FAILED
                 ? e.data.componentId
                 : null;
-        if (null != (null != r ? v(n, r) : null)) {
+        if (null != (null != r ? I(n, r) : null)) {
             var i;
-            return null != (i = null == t ? void 0 : t.interactionError) ? i : g(e);
+            return null != (i = null == t ? void 0 : t.interactionError) ? i : E(e);
         }
     };
 
 function b(e) {
     var t;
-    return null != (t = e.placeholder) ? t : _.intl.string(_.t.Otr6W2);
+    return null != (t = e.placeholder) ? t : h.intl.string(h.t.Otr6W2);
 }
-let y = (e) => {
+let O = (e) => {
     switch (e) {
         case a.I5.ACTION_ROW:
         case a.I5.BUTTON:
@@ -86,7 +87,7 @@ let y = (e) => {
     }
 };
 
-function O(e) {
+function v(e) {
     let t = new Map();
     for (let n of e) A(t, n);
     return t;
@@ -105,7 +106,7 @@ function A(e, t) {
     }
 }
 
-function v(e, t) {
+function I(e, t) {
     var n, r, i;
     switch (e.type) {
         case a.I5.ACTION_ROW:
@@ -119,18 +120,18 @@ function v(e, t) {
 }
 
 function S(e) {
-    let t = Array.from(O(e).values())
+    let t = Array.from(v(e).values())
         .filter((e) => e.type === a.I5.TEXT_DISPLAY)
         .map((e) => e.content)
         .join("\n");
     return "" !== t ? t : null;
 }
 
-function I(e, t) {
+function T(e, t) {
     function n(e) {
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
         for (let i of e) {
-            let e = T(i);
+            let e = C(i);
             if (e.some((e) => e.id === t.id)) return [i, ...r];
             let a = n(e, [i, ...r]);
             if (null != a) return a;
@@ -140,7 +141,7 @@ function I(e, t) {
     return n(e);
 }
 
-function T(e) {
+function C(e) {
     switch (e.type) {
         case a.I5.ACTION_ROW:
             return e.components;
@@ -170,11 +171,11 @@ function T(e) {
         case a.I5.CHECKBOX:
             return [];
         default:
-            return h.warn("getComponentChildren: Unknown component type", e.type), [];
+            return m.warn("getComponentChildren: Unknown component type", e.type), [];
     }
 }
 
-function C(e) {
+function N(e) {
     var t, n, i;
     return JSON.stringify({
         type: "component-upload",
@@ -183,7 +184,7 @@ function C(e) {
     });
 }
 
-function N(e) {
+function w(e) {
     try {
         let t = JSON.parse(e);
         if (
@@ -199,32 +200,32 @@ function N(e) {
 }
 
 function R(e) {
-    return e.map((e, t) => w(e, [t])).filter((e) => null != e);
+    return e.map((e, t) => P(e, [t])).filter((e) => null != e);
 }
 
-function w(e, t) {
-    var n, r, s, o, c, p, _, g, E, b, O, A;
-    if (!y(e.type)) return null;
+function P(e, t) {
+    var n, r, o, s, c, d, p, _, h, E, y;
+    if (!O(e.type)) return null;
 
-    function v(e, n) {
-        let r = w(e, [...t, n]);
+    function b(e, n) {
+        let r = P(e, [...t, n]);
         return null == r ? null : r;
     }
-    let S = !1;
+    let v = !1;
     switch (e.type) {
         case a.I5.ACTION_ROW: {
-            let n = e.components.map((e, t) => v(e, t)).filter(u.Vq);
+            let n = e.components.map((e, t) => b(e, t)).filter(u.Vq);
             return {
                 type: a.I5.ACTION_ROW,
-                id: P(t),
+                id: D(t),
                 components: n,
             };
         }
         case a.I5.BUTTON: {
-            let n = null != e.emoji ? m(e.emoji, S) : void 0;
+            let n = null != e.emoji ? g(e.emoji, v) : void 0;
             return {
                 type: a.I5.BUTTON,
-                id: P(t),
+                id: D(t),
                 customId: e.custom_id,
                 style: e.style,
                 disabled: e.disabled,
@@ -237,7 +238,7 @@ function w(e, t) {
         case a.I5.STRING_SELECT:
             return {
                 type: a.I5.STRING_SELECT,
-                id: P(t),
+                id: D(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (n = e.required) && n,
@@ -247,7 +248,7 @@ function w(e, t) {
                     value: e.value,
                     default: e.default,
                     description: e.description,
-                    emoji: null != e.emoji ? m(e.emoji, S) : void 0,
+                    emoji: null != e.emoji ? g(e.emoji, v) : void 0,
                 })),
                 placeholder: e.placeholder,
                 minValues: e.min_values,
@@ -256,7 +257,7 @@ function w(e, t) {
         case a.I5.TEXT_INPUT:
             return {
                 type: e.type,
-                id: P(t),
+                id: D(t),
                 style: e.style,
                 customId: e.custom_id,
                 label: e.label,
@@ -270,19 +271,7 @@ function w(e, t) {
         case a.I5.USER_SELECT:
             return {
                 type: a.I5.USER_SELECT,
-                id: P(t),
-                customId: e.custom_id,
-                disabled: e.disabled,
-                required: null != (s = e.required) && s,
-                placeholder: e.placeholder,
-                minValues: e.min_values,
-                maxValues: e.max_values,
-                defaultValues: e.default_values,
-            };
-        case a.I5.ROLE_SELECT:
-            return {
-                type: a.I5.ROLE_SELECT,
-                id: P(t),
+                id: D(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (o = e.required) && o,
@@ -291,10 +280,22 @@ function w(e, t) {
                 maxValues: e.max_values,
                 defaultValues: e.default_values,
             };
+        case a.I5.ROLE_SELECT:
+            return {
+                type: a.I5.ROLE_SELECT,
+                id: D(t),
+                customId: e.custom_id,
+                disabled: e.disabled,
+                required: null != (s = e.required) && s,
+                placeholder: e.placeholder,
+                minValues: e.min_values,
+                maxValues: e.max_values,
+                defaultValues: e.default_values,
+            };
         case a.I5.MENTIONABLE_SELECT:
             return {
                 type: a.I5.MENTIONABLE_SELECT,
-                id: P(t),
+                id: D(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (c = e.required) && c,
@@ -306,10 +307,10 @@ function w(e, t) {
         case a.I5.CHANNEL_SELECT:
             return {
                 type: a.I5.CHANNEL_SELECT,
-                id: P(t),
+                id: D(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (p = e.required) && p,
+                required: null != (d = e.required) && d,
                 placeholder: e.placeholder,
                 minValues: e.min_values,
                 maxValues: e.max_values,
@@ -317,12 +318,12 @@ function w(e, t) {
                 defaultValues: e.default_values,
             };
         case a.I5.SECTION: {
-            let n = e.components.map((e, t) => v(e, t)).filter(u.Vq),
-                r = v(e.accessory, n.length);
+            let n = e.components.map((e, t) => b(e, t)).filter(u.Vq),
+                r = b(e.accessory, n.length);
             if (0 === n.length || null == r) return null;
             return {
                 type: a.I5.SECTION,
-                id: P(t),
+                id: D(t),
                 components: n,
                 accessory: r,
             };
@@ -330,13 +331,13 @@ function w(e, t) {
         case a.I5.TEXT_DISPLAY:
             return {
                 type: a.I5.TEXT_DISPLAY,
-                id: P(t),
+                id: D(t),
                 content: e.content,
             };
         case a.I5.THUMBNAIL:
             return {
                 type: a.I5.THUMBNAIL,
-                id: P(t),
+                id: D(t),
                 media: (0, l.Uv)(e.media),
                 description: e.description,
                 spoiler: e.spoiler,
@@ -344,7 +345,7 @@ function w(e, t) {
         case a.I5.MEDIA_GALLERY:
             return {
                 type: a.I5.MEDIA_GALLERY,
-                id: P(t),
+                id: D(t),
                 items: e.items.map((e) => ({
                     media: (0, l.Uv)(e.media),
                     description: e.description,
@@ -354,7 +355,7 @@ function w(e, t) {
         case a.I5.FILE:
             return {
                 type: a.I5.FILE,
-                id: P(t),
+                id: D(t),
                 file: (0, l.Uv)(e.file),
                 name: e.name,
                 size: e.size,
@@ -363,33 +364,33 @@ function w(e, t) {
         case a.I5.SEPARATOR:
             return {
                 type: a.I5.SEPARATOR,
-                id: P(t),
-                divider: null == (_ = e.divider) || _,
-                spacing: null != (g = e.spacing) ? g : a.C8.SMALL,
+                id: D(t),
+                divider: null == (p = e.divider) || p,
+                spacing: null != (_ = e.spacing) ? _ : a.C8.SMALL,
             };
         case a.I5.CONTENT_INVENTORY_ENTRY:
             if (null == e.content_inventory_entry) return null;
             return {
                 type: a.I5.CONTENT_INVENTORY_ENTRY,
-                id: P(t),
+                id: D(t),
                 contentInventoryEntry: e.content_inventory_entry,
             };
         case a.I5.CONTAINER: {
-            let n = e.components.map((e, t) => v(e, t)).filter(u.Vq);
+            let n = e.components.map((e, t) => b(e, t)).filter(u.Vq);
             return {
                 type: a.I5.CONTAINER,
-                id: P(t),
+                id: D(t),
                 accentColor: null != e.accent_color ? (0, i.$k)(e.accent_color, !0) : void 0,
                 spoiler: e.spoiler,
                 components: n,
             };
         }
         case a.I5.LABEL: {
-            let n = v(e.component, 0);
+            let n = b(e.component, 0);
             if (null == n) return null;
             return {
                 type: a.I5.LABEL,
-                id: P(t),
+                id: D(t),
                 label: e.label,
                 description: e.description,
                 component: n,
@@ -398,83 +399,91 @@ function w(e, t) {
         case a.I5.FILE_UPLOAD:
             return {
                 type: e.type,
-                id: P(t),
+                id: D(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (E = e.required) && E,
+                required: null != (h = e.required) && h,
                 minValues: e.min_values,
                 maxValues: e.max_values,
             };
-        case a.I5.CHECKPOINT_CARD: {
-            let n = e.checkpoint_data;
-            return {
-                type: e.type,
-                id: P(t),
-                checkpointData: {
-                    cardId: n.card_id,
-                    powerLevel: n.power_level,
-                    powerLevelPercentile: n.power_level_percentile,
-                    numMessagesSent: n.num_messages_sent,
-                    totalVoiceMinutes: n.total_voice_minutes,
-                    numEmojisSent: n.num_emojis_sent,
-                    topGuild:
-                        null != n.top_guild
-                            ? {
-                                  guildId: n.top_guild.guild_id,
-                                  guildName: n.top_guild.guild_name,
-                                  guildIcon: n.top_guild.guild_icon,
-                              }
-                            : void 0,
-                    topEmoji:
-                        null != n.top_emoji
-                            ? {
-                                  emojiId: d.default.isProbablyAValidSnowflake(n.top_emoji.emoji_id)
-                                      ? n.top_emoji.emoji_id
-                                      : void 0,
-                                  emojiName: null == (b = n.top_emoji) ? void 0 : b.emoji_name,
-                              }
-                            : void 0,
-                    topGame:
-                        null != n.top_game
-                            ? {
-                                  applicationId: n.top_game.application_id,
-                                  applicationName: n.top_game.application_name,
-                                  applicationImageId: n.top_game.application_image_id,
-                              }
-                            : void 0,
-                },
-            };
-        }
+        case a.I5.CHECKPOINT_CARD:
+            return L(e, t);
         case a.I5.RADIO_GROUP:
             return {
                 type: e.type,
-                id: P(t),
+                id: D(t),
                 customId: e.custom_id,
                 options: e.options,
-                required: null != (O = e.required) && O,
+                required: null != (E = e.required) && E,
             };
         case a.I5.CHECKBOX_GROUP:
             return {
                 type: e.type,
-                id: P(t),
+                id: D(t),
                 customId: e.custom_id,
                 options: e.options,
                 minValues: e.min_values,
                 maxValues: e.max_values,
-                required: null != (A = e.required) && A,
+                required: null != (y = e.required) && y,
             };
         case a.I5.CHECKBOX:
             return {
                 type: e.type,
-                id: P(t),
+                id: D(t),
                 customId: e.custom_id,
                 default: e.default,
             };
         default:
-            return h.warn("transformComponent: Unknown component type", e.type), null;
+            return m.warn("transformComponent: Unknown component type", e.type), null;
     }
 }
 
-function P(e) {
+function D(e) {
     return (0, f.X1)(e.join(","));
+}
+
+function L(e, t) {
+    let n = e.checkpoint_data;
+    if (n.version === _.w.V2025) {
+        var r;
+        return {
+            type: e.type,
+            id: D(t),
+            checkpointData: {
+                version: n.version,
+                cardId: n.card_id,
+                powerLevel: n.power_level,
+                powerLevelPercentile: n.power_level_percentile,
+                numMessagesSent: n.num_messages_sent,
+                totalVoiceMinutes: n.total_voice_minutes,
+                numEmojisSent: n.num_emojis_sent,
+                topGuild:
+                    null != n.top_guild
+                        ? {
+                              guildId: n.top_guild.guild_id,
+                              guildName: n.top_guild.guild_name,
+                              guildIcon: n.top_guild.guild_icon,
+                          }
+                        : void 0,
+                topEmoji:
+                    null != n.top_emoji
+                        ? {
+                              emojiId: d.default.isProbablyAValidSnowflake(n.top_emoji.emoji_id)
+                                  ? n.top_emoji.emoji_id
+                                  : void 0,
+                              emojiName: null == (r = n.top_emoji) ? void 0 : r.emoji_name,
+                          }
+                        : void 0,
+                topGame:
+                    null != n.top_game
+                        ? {
+                              applicationId: n.top_game.application_id,
+                              applicationName: n.top_game.application_name,
+                              applicationImageId: n.top_game.application_image_id,
+                          }
+                        : void 0,
+            },
+        };
+    }
+    return null;
 }

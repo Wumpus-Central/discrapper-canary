@@ -6,10 +6,10 @@ n.d(t, {
 });
 var r = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(530912);
+var i = n(397927),
+    l = n(530912);
 
-function i(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,27 +61,24 @@ function c(e) {
         source: c,
         initialSelectedDestinations: u = [],
         forwardOptions: d,
-        onRequestSent: m,
-        customSendHandler: f,
+        onRequestSent: p,
+        customSendHandler: m,
     } = e;
-    (0, a.pp)(t.channel_id, t.id, c),
-        (0, l.mMO)(
+    (0, l.pp)(t.channel_id, t.id, c),
+        (0, i.mMO)(
             async () => {
-                let { ForwardModal: e } = await Promise.all([
-                    n.e("40215"),
-                    n.e("96758"),
-                    n.e("43622"),
-                    n.e("60664"),
-                ]).then(n.bind(n, 911269));
+                let { ForwardModal: e } = await Promise.all([n.e("96758"), n.e("43622"), n.e("12539")]).then(
+                    n.bind(n, 911269),
+                );
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        s(i({}, n), {
+                        s(a({}, n), {
                             message: t,
                             initialSelectedDestinations: u,
                             forwardOptions: d,
-                            onRequestSent: m,
-                            customSendHandler: f,
+                            onRequestSent: p,
+                            customSendHandler: m,
                             source: c,
                         }),
                     );
@@ -93,19 +90,19 @@ function c(e) {
 }
 
 function u() {
-    (0, l.OoC)(o);
+    (0, i.OoC)(o);
 }
 
 function d(e) {
-    let { message: t, failedDestinations: a, forwardOptions: o } = e;
-    (0, l.mMO)(async () => {
+    let { message: t, failedDestinations: l, forwardOptions: o } = e;
+    (0, i.mMO)(async () => {
         let { ForwardFailedAlertModal: e } = await n.e("66139").then(n.bind(n, 181622));
         return (n) =>
             (0, r.jsx)(
                 e,
-                s(i({}, n), {
+                s(a({}, n), {
                     message: t,
-                    failedDestinations: a,
+                    failedDestinations: l,
                     forwardOptions: o,
                 }),
             );

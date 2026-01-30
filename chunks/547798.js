@@ -1,65 +1,63 @@
 n.d(t, {
-    A: () => k,
+    A: () => N,
 }),
     n(65821),
     n(896048);
 var a = n(627968),
     l = n(64700),
-    i = n(503698),
-    r = n.n(i),
+    r = n(503698),
+    i = n.n(r),
     s = n(141931),
     o = n(562465),
     c = n(306173),
     d = n(397927),
     u = n(73153),
     m = n(787880),
-    p = n(796104),
-    h = n(146104),
-    f = n(142120),
-    x = n(69555),
-    b = n(237984),
+    p = n(142120),
+    h = n(69555),
+    x = n(237984),
     g = n(349435),
-    v = n(674272),
-    j = n(253932),
-    y = n(559248),
-    _ = n(179690),
-    A = n(309010),
-    C = n(837921),
-    S = n(652215),
-    O = n(327337),
-    E = n(431804),
-    N = n(229988),
+    f = n(674272),
+    b = n(253932),
+    v = n(559248),
+    j = n(179690),
+    _ = n(309010),
+    y = n(837921),
+    A = n(652215),
+    C = n(327337),
+    S = n(431804),
+    O = n(229988),
     T = n(473169);
 
-function I() {
+function E() {
     throw Error("Send help");
 }
 
-function k() {
-    let e = j.j0.useSetting(),
-        [t, i] = l.useState(!1);
+function N() {
+    let e = b.j0.useSetting(),
+        [t, r] = l.useState(!1);
     return t
         ? {}
         : (0, a.jsxs)(d.HOs, {
               children: [
                   (0, a.jsx)("div", {
-                      className: r()(N.N, T.SX),
-                      children: (0, a.jsx)(y.M, {}),
+                      className: i()(O.N, T.SX),
+                      children: (0, a.jsx)(v.M, {}),
                   }),
                   (0, a.jsx)("div", {
-                      className: r()(N.N, T.QB),
+                      className: i()(O.N, T.QB),
                       children: (0, a.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
                           text: "Launch Vibing Wumpus",
                           onClick: () =>
-                              (0, v.A)({
-                                  source: E.y.KEYBIND,
+                              (0, f.A)({
+                                  source: S.y.KEYBIND,
                               }),
                       }),
                   }),
                   (0, a.jsx)("div", {
-                      className: r()(N.N, T.QB),
+                      className: i()(O.N, T.QB),
                       children: (0, a.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
@@ -67,7 +65,7 @@ function k() {
                           onClick: () => {
                               let e, t;
                               return (
-                                  (t = null != (e = A.A.getChannelId()) ? e : "21154681615024128"),
+                                  (t = null != (e = _.A.getChannelId()) ? e : "21154681615024128"),
                                   void (0, d.mMO)(
                                       async () => {
                                           let { default: e } = await Promise.all([
@@ -115,7 +113,7 @@ function k() {
                                               );
                                       },
                                       {
-                                          modalKey: O.V,
+                                          modalKey: C.V,
                                       },
                                   )
                               );
@@ -123,16 +121,7 @@ function k() {
                       }),
                   }),
                   (0, a.jsx)("div", {
-                      className: r()(N.N, T.QB),
-                      children: (0, a.jsx)(d.Button, {
-                          variant: "primary",
-                          size: "sm",
-                          text: "Launch Clicker Game",
-                          onClick: () => (0, h.A)("devtools"),
-                      }),
-                  }),
-                  (0, a.jsx)("div", {
-                      className: r()(N.N, T.QB),
+                      className: i()(O.N, T.QB),
                       children: (0, a.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
@@ -141,16 +130,16 @@ function k() {
                       }),
                   }),
                   (0, a.jsx)("div", {
-                      className: r()(N.N, T.QB),
+                      className: i()(O.N, T.QB),
                       children: (0, a.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
                           text: "Reset Hang Status State",
-                          onClick: x.B7,
+                          onClick: h.B7,
                       }),
                   }),
                   (0, a.jsx)("div", {
-                      className: r()(N.N, T.QB),
+                      className: i()(O.N, T.QB),
                       children: (0, a.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
@@ -159,37 +148,28 @@ function k() {
                       }),
                   }),
                   (0, a.jsx)("div", {
-                      className: r()(N.N, T.QB),
-                      children: (0, a.jsx)(d.Button, {
-                          variant: "primary",
-                          size: "sm",
-                          text: "Reset to fake checkpoint",
-                          onClick: () => (0, p.nX)(!0),
-                      }),
-                  }),
-                  (0, a.jsx)("div", {
-                      className: r()(N.N, T.QB),
+                      className: i()(O.N, T.QB),
                       children: (0, a.jsx)(d.dOG, {
                           label: "Ignore profile speedbump disabled",
                           checked: e,
-                          onChange: (e) => j.j0.updateSetting(e),
+                          onChange: (e) => b.j0.updateSetting(e),
                       }),
                   }),
                   (0, a.jsxs)("div", {
-                      className: r()(N.N, T.QB),
+                      className: i()(O.N, T.QB),
                       children: [
                           (0, a.jsx)(d.Button, {
                               variant: "primary",
                               size: "sm",
                               text: "Open Overlay",
-                              onClick: () => (0, b.o)(),
+                              onClick: () => (0, x.o)(),
                           }),
                           (0, a.jsx)(d.Button, {
                               variant: "primary",
                               size: "sm",
                               text: "Reset Socket",
                               onClick: () => {
-                                  f.A.getSocket().close(), f.A.getSocket().connect();
+                                  p.A.getSocket().close(), p.A.getSocket().connect();
                               },
                           }),
                           (0, a.jsx)(d.Button, {
@@ -209,7 +189,7 @@ function k() {
                               variant: "primary",
                               size: "sm",
                               text: "Show TOTP Success",
-                              onClick: () => (0, _.sy)(!0),
+                              onClick: () => (0, j.sy)(!0),
                           }),
                           (0, a.jsx)(d.Button, {
                               variant: "primary",
@@ -217,7 +197,7 @@ function k() {
                               text: "Trigger Suspicious Sessions Notifications",
                               onClick: () => {
                                   o.Bo.post({
-                                      url: S.Rsh.AUTH_SESSION_NOTIFICATIONS_DEBUG,
+                                      url: A.Rsh.AUTH_SESSION_NOTIFICATIONS_DEBUG,
                                       rejectWithError: !0,
                                   });
                               },
@@ -225,7 +205,7 @@ function k() {
                       ],
                   }),
                   (0, a.jsxs)("div", {
-                      className: r()(N.N, T.QB),
+                      className: i()(O.N, T.QB),
                       children: [
                           (0, a.jsx)(d.l6P, {
                               label: "Trigger native crash",
@@ -264,7 +244,7 @@ function k() {
                                       id: "out_of_memory",
                                   },
                               ],
-                              onSelectionChange: (e) => null != e && C.Ay.crash(e),
+                              onSelectionChange: (e) => null != e && y.Ay.crash(e),
                           }),
                           (0, a.jsx)(d.l6P, {
                               label: "Trigger JS crash",
@@ -293,19 +273,19 @@ function k() {
                                       id: "exception_in_main_process",
                                   },
                               ],
-                              onSelectionChange: (e) => (null != e ? void C.Ay.triggerJSException(e) : void 0),
+                              onSelectionChange: (e) => (null != e ? void y.Ay.triggerJSException(e) : void 0),
                           }),
                           (0, a.jsx)(d.Button, {
                               variant: "primary",
                               size: "sm",
                               text: "React Crash",
-                              onClick: () => i(!0),
+                              onClick: () => r(!0),
                           }),
                           (0, a.jsx)(d.Button, {
                               variant: "primary",
                               size: "sm",
                               text: "onClick Throw",
-                              onClick: I,
+                              onClick: E,
                           }),
                       ],
                   }),

@@ -8,9 +8,7 @@ let a = (e) => {
     let { sku: t, guildId: a, source: s, analyticsLocations: o, analyticsContext: c } = e;
     (0, i.mMO)(
         async () => {
-            let { default: e } = await Promise.all([n.e("40215"), n.e("96758"), n.e("43622"), n.e("51966")]).then(
-                n.bind(n, 763375),
-            );
+            let { default: e } = await Promise.all([n.e("96758"), n.e("43622"), n.e("65787")]).then(n.bind(n, 763375));
             return (n) => {
                 var i, l;
                 return (0, r.jsx)(
