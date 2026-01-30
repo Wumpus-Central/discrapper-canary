@@ -1643,6 +1643,7 @@ let ed = "",
         ACTIVITY_LEAVE: (e, t, n) =>
             "/applications/".concat(e, "/activities/").concat(t, "/instances/").concat(n, "/leave"),
         ACTIVITIES_DISCORD_CONFIG: (e) => "/activities/discord-config/".concat(e),
+        ACTIVITIES_TRUSTED_LINKS: (e) => "/applications/".concat(e, "/trusted-links/check"),
         APPLICATION_UPLOAD_ATTACHMENT: (e) => "/applications/".concat(e, "/attachment"),
         APPLICATION_PROXY_TICKET: (e) => "/applications/".concat(e, "/proxy-tickets"),
         CHANNEL_THREADS: (e) => "/channels/".concat(e, "/threads"),
