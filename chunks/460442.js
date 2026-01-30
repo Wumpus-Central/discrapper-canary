@@ -1,13 +1,14 @@
 n.d(t, {
+    B: () => h,
     g: () => d,
 });
 var r = n(627968);
 n(64700);
 var l = n(503698),
     i = n.n(l),
-    a = n(158954),
-    o = n(827734),
-    s = n(985018),
+    s = n(158954),
+    a = n(827734),
+    o = n(985018),
     c = n(865444);
 
 function u(e) {
@@ -22,13 +23,25 @@ function d(e) {
     let { isHoveringOrFocusing: t } = e;
     return (0, r.jsx)(u, {
         style: i()(c.AI, t && c.mW),
-        icon: (0, r.jsx)(a.rOg, {
+        icon: (0, r.jsx)(s.rOg, {
             size: "custom",
-            color: o.A.colors.WHITE,
+            color: a.A.colors.WHITE,
             width: 38,
             height: 38,
             className: i()(c.x6, c.AI),
-            "aria-label": s.intl.string(s.t.L5Pt9L),
+            "aria-label": o.intl.string(o.t.L5Pt9L),
+        }),
+    });
+}
+
+function h(e) {
+    let { count: t } = e;
+    return (0, r.jsx)(u, {
+        style: c.RF,
+        icon: (0, r.jsxs)(s.EYj, {
+            variant: "text-sm/medium",
+            color: "always-white",
+            children: ["+", t + 1],
         }),
     });
 }
