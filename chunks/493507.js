@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => I,
+    A: () => O,
 }),
     n(896048);
 var r,
@@ -9,11 +9,12 @@ var r,
     o = n(253932),
     s = n(617617),
     c = n(961350),
-    u = n(543465),
-    d = n(927813),
-    _ = n(469679);
+    u = n(309010),
+    d = n(543465),
+    _ = n(927813),
+    f = n(469679);
 
-function f(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,76 +27,100 @@ function f(e, t, n) {
         e
     );
 }
-let A = 3 * d.A.Millis.DAY,
-    p = !1,
-    b = {};
+let p = 3 * _.A.Millis.DAY,
+    b = !1,
+    h = {};
 
-function h() {
+function m(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now(),
+        n = {};
+    for (let [r, { timestamp: l, isActive: a }] of Object.entries(e))
+        null != l &&
+            t - l < p &&
+            a &&
+            (n[r] = {
+                timestamp: l,
+                isActive: a,
+            });
+    return n;
+}
+
+function g(e) {
+    if (!(e in h)) return !1;
+    h[e].isActive = !1;
+}
+
+function I() {
     let e =
         !1 !== o.LJ.getSetting() &&
-        _.T.getConfig({
+        f.T.getConfig({
             location: "ReplyNudgeStore",
         }).enabled;
-    if (p === e) return !1;
-    p = e;
+    if (b === e) return !1;
+    b = e;
 }
 
-function m() {
+function y() {
     let e = !1;
-    for (let t of Object.keys(b)) u.Ay.isChannelMuted(null, t) && (delete b[t], (e = !0));
+    for (let t of Object.keys(h)) d.Ay.isChannelMuted(null, t) && (delete h[t], (e = !0));
     return e;
 }
-class g extends (r = l.Ay.PersistedStore) {
+class E extends (r = l.Ay.PersistedStore) {
     initialize(e) {
         var t;
-        (b = (function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now(),
-                n = {};
-            for (let [r, l] of Object.entries(e)) null != l && t - l < A && (n[r] = l);
-            return n;
-        })(null != (t = null == e ? void 0 : e.nudgedChannels) ? t : {})),
-            this.waitFor(c.default, s.A, i.A, u.Ay),
-            this.syncWith([s.A, i.A], h),
-            this.syncWith([u.Ay], m);
+        (h = m(null != (t = null == e ? void 0 : e.nudgedChannels) ? t : {})),
+            this.waitFor(c.default, s.A, i.A, d.Ay, u.A),
+            this.syncWith([s.A, i.A], I),
+            this.syncWith([d.Ay], y);
     }
     getState() {
         return {
-            nudgedChannels: b,
+            nudgedChannels: m(h),
         };
     }
     getNudgeTimestamp(e) {
-        var t;
-        return p && null != (t = b[e]) ? t : null;
+        var t, n;
+        return b && null != (t = null == (n = h[e]) ? void 0 : n.timestamp) ? t : null;
     }
     isChannelNudged(e) {
-        return null != this.getNudgeTimestamp(e);
+        var t;
+        return !!b && (null == (t = h[e]) ? void 0 : t.isActive) === !0;
     }
 }
-f(g, "displayName", "ReplyNudgeStore"), f(g, "persistKey", "ReplyNudgeStore");
-let I = new g(a.h, {
+A(E, "displayName", "ReplyNudgeStore"), A(E, "persistKey", "ReplyNudgeStore");
+let O = new E(a.h, {
     REPLY_NUDGE_SET: function (e) {
-        let { channelId: t, timestamp: n } = e;
-        if (u.Ay.isChannelMuted(null, t) || t in b) return !1;
-        b[t] = n;
+        var t;
+        let { channelId: n, timestamp: r } = e;
+        if (d.Ay.isChannelMuted(null, n) || (null == (t = h[n]) ? void 0 : t.isActive) === !0) return !1;
+        h[n] = {
+            timestamp: r,
+            isActive: !0,
+        };
+    },
+    REPLY_NUDGE_CLEAR: function (e) {
+        let { channelId: t } = e;
+        return g(t);
     },
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
-        if (!(t.channel_id in b)) return !1;
-        delete b[t.channel_id];
+        return g(t.channel_id);
     },
     MESSAGE_REACTION_ADD: function (e) {
         let { channelId: t, userId: n } = e;
-        if (n !== c.default.getId() || !(t in b)) return !1;
-        delete b[t];
+        return n === c.default.getId() && g(t);
+    },
+    CHANNEL_SELECT: function () {
+        let e = u.A.getLastSelectedChannelId();
+        return null != e && g(e);
     },
     CHANNEL_DELETE: function (e) {
         let {
             channel: { id: t },
         } = e;
-        if (!(t in b)) return !1;
-        delete b[t];
+        return g(t);
     },
     LOGOUT: function () {
-        (b = {}), (p = !1);
+        (h = {}), (b = !1);
     },
 });
