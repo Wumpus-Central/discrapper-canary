@@ -350,14 +350,15 @@ function q(e) {
                           ],
                       }),
                   eI &&
-                      (0, r.jsxs)(r.Fragment, {
-                          children: [
-                              (0, r.jsx)(f.Text, {
-                                  variant: "text-md/medium",
+                      (0, r.jsx)("div", {
+                          className: K.Ni,
+                          children: (0, r.jsx)(f.wx6, {
+                              type: "info",
+                              children: (0, r.jsx)(f.Text, {
+                                  variant: "text-sm/medium",
                                   children: (0, v.Nn)(),
                               }),
-                              (0, r.jsx)(M.pK, {}),
-                          ],
+                          }),
                       }),
                   ei &&
                       (0, r.jsxs)("div", {
