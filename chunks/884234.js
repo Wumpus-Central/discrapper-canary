@@ -1,10 +1,11 @@
 n.d(t, {
-    y: () => o,
+    y: () => s,
 });
 var r = n(791375),
     i = n(98107),
-    a = n(245529);
-let o = {
+    a = n(734381),
+    o = n(245529);
+let s = {
     title: "Layout",
-    stories: [i.g, r.s, a.d],
+    stories: [i.g, r.s, o.d, a.H],
 };

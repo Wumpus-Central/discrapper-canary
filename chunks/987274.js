@@ -1,14 +1,13 @@
 n.d(t, {
-    I7: () => c,
+    I7: () => l,
 });
 var r = n(627968);
 n(64700);
 var i = n(706276),
     a = n(808411),
-    s = n(300235),
     o = n(919470),
-    l = n(985018);
-let c = {
+    s = n(985018);
+let l = {
     title: "Nitro Components",
     stories: [
         {
@@ -24,12 +23,6 @@ let c = {
             controls: {},
         },
         {
-            name: "Interactive H Scroll",
-            component: s.A,
-            id: "interactive-h-scroll",
-            controls: {},
-        },
-        {
             name: "Premium Tooltip",
             component: o.A,
             id: "premium-tooltip",
@@ -37,7 +30,7 @@ let c = {
                 title: {
                     label: "Title",
                     type: "text",
-                    defaultValue: l.intl.string(l.t.lG6a5x).toUpperCase(),
+                    defaultValue: s.intl.string(s.t.lG6a5x).toUpperCase(),
                 },
                 body: {
                     label: "Body",
