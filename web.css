@@ -27803,7 +27803,9 @@ img.thumbnail__0f2e8 {
     background-color: transparent;
     font-size: .875rem;
     line-height: 1rem;
-    min-height: 100px
+    min-height: 100px;
+    -moz-tab-size: 4;
+    tab-size: 4
 }
 
 .codeView__4d95d::-webkit-scrollbar-track {
@@ -47142,6 +47144,8 @@ div.mobilePushContainer__3d3b0 {
     min-height: var(--custom-channel-textarea-text-area-height);
     padding-inline: 0 10px;
     resize: none;
+    -moz-tab-size: 4;
+    tab-size: 4;
     width: 100%
 }
 
