@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(933832),
-    s = n(176781),
-    o = n(173936),
+    o = n(176781),
+    s = n(173936),
     l = n(625903),
     c = n(972213),
     u = n(421380);
@@ -30,9 +30,9 @@ let d = {
                         withDescriptions: g,
                         withIcons: E,
                     } = e,
-                    [b, y] = i.useState("option1"),
-                    O = [a.A, s.x, o.q, l.Z, c.d],
-                    A = Array.from(
+                    [y, b] = i.useState("option1"),
+                    O = [a.A, o.x, s.q, l.Z, c.d],
+                    v = Array.from(
                         {
                             length: t,
                         },
@@ -44,12 +44,13 @@ let d = {
                         }),
                     );
                 return (0, r.jsx)(u.$d, {
-                    value: b,
+                    "data-migration-pending": !0,
+                    value: y,
                     onChange: (e) => {
                         let { value: t } = e;
-                        return y(t);
+                        return b(t);
                     },
-                    options: A,
+                    options: v,
                     size: n,
                     disabled: d,
                     orientation: f,
