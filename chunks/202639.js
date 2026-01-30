@@ -5,7 +5,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    o = n(353709),
+    o = n(970984),
     s = n(397927),
     l = n(565645),
     c = n(736653),
@@ -57,12 +57,13 @@ function E(e) {
             className: E,
             onSubscribeModalClose: b,
             position: O = "floating",
-            hoveredNitroLockedSound: v,
+            useGradientBg: v = !1,
+            hoveredNitroLockedSound: A,
         } = e,
-        A = u.r.useConfig({
+        I = u.r.useConfig({
             location: "PremiumFloatingPickerUpsell",
         }).enabled,
-        I = (0, s.zhh)({
+        S = (0, s.zhh)({
             transform: t ? "translateY(0%)" : "translateY(120%)",
             opacity: +!!t,
             config: {
@@ -70,21 +71,21 @@ function E(e) {
                 friction: 14,
             },
         }),
-        S = A && null != v,
-        T = (null == v ? void 0 : v.emojiId) != null || (null == v ? void 0 : v.emojiName) != null,
-        C = n;
-    if (S) {
-        var N;
-        let e = d.A.getGuild(v.guildId);
-        C = _.intl.format(_.t.eku049, {
-            serverName: null != (N = null == e ? void 0 : e.name) ? N : _.intl.string(_.t.DmIUGK),
+        T = I && null != A,
+        C = (null == A ? void 0 : A.emojiId) != null || (null == A ? void 0 : A.emojiName) != null,
+        N = n;
+    if (T) {
+        var w;
+        let e = d.A.getGuild(A.guildId);
+        N = _.intl.format(_.t.eku049, {
+            serverName: null != (w = null == e ? void 0 : e.name) ? w : _.intl.string(_.t.DmIUGK),
         });
     }
     return (0, r.jsx)(o.animated.div, {
-        style: g({}, I),
+        style: g({}, S),
         className: a()(
             h.Zj,
-            A && h.g9,
+            v && h.Me,
             {
                 [h.tO]: "floating" === O,
                 [h.Kx]: "inline" === O,
@@ -93,24 +94,25 @@ function E(e) {
             E,
         ),
         children: (0, r.jsxs)(y, {
-            hasPreviewSound: S,
+            hasPreviewSound: T,
+            useGradientBg: v,
             children: [
-                S &&
+                T &&
                     (0, r.jsxs)("div", {
                         className: h.Ed,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: h.vg,
                                 children: [
-                                    T &&
+                                    C &&
                                         (0, r.jsx)(l.A, {
-                                            emojiId: v.emojiId,
-                                            emojiName: v.emojiName,
+                                            emojiId: A.emojiId,
+                                            emojiName: A.emojiName,
                                         }),
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-strong",
-                                        children: v.name,
+                                        children: A.name,
                                     }),
                                 ],
                             }),
@@ -118,11 +120,11 @@ function E(e) {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
                                 className: h.Fr,
-                                children: null != C ? C : n,
+                                children: null != N ? N : n,
                             }),
                         ],
                     }),
-                !S &&
+                !T &&
                     (0, r.jsx)(s.Text, {
                         variant: null != i ? i : "text-sm/medium",
                         color: "text-strong",
@@ -145,12 +147,9 @@ function E(e) {
 }
 
 function y(e) {
-    let { hasPreviewSound: t, children: n } = e,
-        i = u.r.useConfig({
-            location: "PremiumFloatingPickerUpsell",
-        }).enabled,
+    let { hasPreviewSound: t, useGradientBg: n, children: i } = e,
         o = (0, c.Ay)();
-    return i
+    return n
         ? (0, r.jsx)(s.hLv, {
               color: "nitro-pink",
               offsetBottom: -3,
@@ -158,7 +157,7 @@ function y(e) {
                   [h.Ay]: (0, s.Mwr)(o),
                   [h.u8]: t,
               }),
-              children: n,
+              children: i,
           })
-        : n;
+        : i;
 }
