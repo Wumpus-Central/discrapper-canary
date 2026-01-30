@@ -15,6 +15,7 @@ e.exports = {
     py: "expandCollapseSection__4d95d",
     md: "languageSelector__4d95d",
     Qw: "languageIcon__4d95d",
+    op: "downloadAnchor__4d95d",
     IQ: "overflowIcon__4d95d",
     jE: "modalContent__4d95d",
     Hx: "modalFooter__4d95d",

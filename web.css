@@ -27496,13 +27496,18 @@ img.thumbnail__0f2e8 {
     padding: 8px 8px 4px
 }
 
-.languageIcon__4d95d,
-.overflowIcon__4d95d {
+.languageIcon__4d95d {
     cursor: pointer;
     display: flex
 }
 
+.downloadAnchor__4d95d {
+    display: none
+}
+
 .overflowIcon__4d95d {
+    cursor: pointer;
+    display: flex;
     -webkit-margin-start: var(--space-16);
     margin-inline-start: var(--space-16);
     -webkit-margin-end: var(--space-4);
@@ -55698,7 +55703,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
