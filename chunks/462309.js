@@ -87,6 +87,8 @@ function T(e) {
         if (Y && A === E.pn.REVIEW) {
             let e = (0, c.u)({
                 skuId: null != a ? a : null != w ? w.id : null,
+                showTrialBadge: L,
+                showPromoBadge: x,
             });
             return (0, r.jsx)(u.s3, I({}, e));
         }
