@@ -1,13 +1,13 @@
 n.d(t, {
-    A: () => eF,
+    A: () => eV,
 }),
     n(896048),
     n(321073);
 var r,
     i = n(284009),
     a = n.n(i),
-    s = n(735438),
-    o = n.n(s),
+    o = n(735438),
+    s = n.n(o),
     l = n(311907),
     c = n(73153),
     u = n(933958),
@@ -85,27 +85,27 @@ function P(e, t) {
     );
 }
 let D = new d.A("ChannelRTCStore"),
-    x = Object.freeze([]),
-    L = [],
-    j = {},
+    L = Object.freeze([]),
+    x = [],
     M = {},
+    j = {},
     k = {},
     U = {},
     G = {},
-    V = {},
     F = {},
+    V = {},
     B = {},
     H = {},
     Y = {},
     W = {};
 
 function K(e) {
-    let t = j[e];
-    return null == t && ((t = new S.Ay(e)), (j[e] = t)), t;
+    let t = M[e];
+    return null == t && ((t = new S.Ay(e)), (M[e] = t)), t;
 }
 
 function z() {
-    for (let e of L) ei(e);
+    for (let e of x) ei(e);
     ea();
 }
 
@@ -118,31 +118,31 @@ function q() {
     let r = f.default.getRemoteSessionId(),
         i = I.A.getVoiceStateForSession(m.default.getId(), r);
     (null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId),
-        o().difference(L, e).forEach(ei);
-    let a = o().difference(e, L);
-    return (L = e), a;
+        s().difference(x, e).forEach(ei);
+    let a = s().difference(e, x);
+    return (x = e), a;
 }
 
 function Z(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
     return t.reduce((t, n) => (e(K(n)) ? (er(n), en(n), !0) : t), !1);
 }
 
-function X(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
+function Q(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
     return Z((t) => t.updateParticipant(e), t);
 }
 
-function Q(e) {
+function X(e) {
     var t;
     let n = E.A.getChannel(e),
         r = (null == n ? void 0 : n.isDM()) && 1 ? T.jd.AUTO : T.jd.NONE;
-    return null != (t = M[e]) ? t : [r, T.jd.NONE];
+    return null != (t = j[e]) ? t : [r, T.jd.NONE];
 }
 
 function J(e) {
-    if (null == M[e]) return !1;
-    let [t] = M[e];
+    if (null == j[e]) return !1;
+    let [t] = j[e];
     return t !== T.jd.NONE;
 }
 
@@ -167,7 +167,7 @@ function $(e) {
 function ee(e, t) {
     $(e);
     let n = J(e);
-    null == t ? delete M[e] : (M[e] = t), n !== J(e) && k[e].toggleCount++;
+    null == t ? delete j[e] : (j[e] = t), n !== J(e) && k[e].toggleCount++;
 }
 
 function et(e) {
@@ -186,16 +186,16 @@ function en(e) {
         let [e] = n.toArray(S.r4.VIDEO);
         r = e.id;
     } else {
-        var s;
+        var o;
         let e = n.toArray().find((e) => e.type === T.lp.USER && e.id !== t && !e.ringing);
-        r = null != (s = null == e ? void 0 : e.id) ? s : t;
+        r = null != (o = null == e ? void 0 : e.id) ? o : t;
     }
-    let [o] = Q(e);
-    if (o !== T.jd.AUTO && o !== T.jd.NONE) {
-        let e = n.getParticipant(o);
-        (null == e || (e.type === T.lp.STREAM && null == h.A.getActiveStreamForStreamKey(e.id))) && (o = T.jd.NONE);
+    let [s] = X(e);
+    if (s !== T.jd.AUTO && s !== T.jd.NONE) {
+        let e = n.getParticipant(s);
+        (null == e || (e.type === T.lp.STREAM && null == h.A.getActiveStreamForStreamKey(e.id))) && (s = T.jd.NONE);
     }
-    ee(e, [o, r]);
+    ee(e, [s, r]);
 }
 
 function er(e) {
@@ -210,19 +210,25 @@ function er(e) {
 }
 
 function ei(e) {
-    delete j[e], delete M[e], delete U[e], delete G[e];
+    delete M[e], delete j[e], delete U[e], delete G[e];
 }
 
 function ea() {
     return Z((e) => e.rebuild(), q());
 }
 
-function es(e) {
-    let { channelId: t, currentVoiceChannelId: n } = e;
-    return null != t ? delete k[t] : null != n && (delete B[n], delete Y[n], $(n)), ea();
+function eo(e) {
+    let { channelId: t, currentVoiceChannelId: n } = e,
+        r = !1;
+    if ((null != t ? delete k[t] : null != n && (delete B[n], delete Y[n], $(n)), t !== n && null != n)) {
+        let e = K(n);
+        e.guildRingingUsers.forEach((t) => e.updateGuildRingingUsers(t, !1)), (r = Z((e) => e.rebuild(), [n]));
+    }
+    let i = ea();
+    return r || i;
 }
 
-function eo(e) {
+function es(e) {
     let { channelId: t, messageId: n } = e,
         r = ea();
     if (null == t || null == n || B[t]) return r;
@@ -246,9 +252,9 @@ function el(e) {
                 },
             ).enabled &&
             K(i).updateGuildRingingUsers(r, !1),
-        n && null != i && !L.includes(i))
+        n && null != i && !x.includes(i))
             ? e
-            : X(r) || e;
+            : Q(r) || e;
     }, !1);
 }
 
@@ -267,7 +273,7 @@ function ed() {
 
 function ef(e) {
     let { user: t } = e;
-    return X(t.id);
+    return Q(t.id);
 }
 
 function ep(e) {
@@ -284,34 +290,34 @@ function eh(e) {
     let { guild: t } = e,
         n = [];
     if (
-        (o().forEach(L, (e) => {
+        (s().forEach(x, (e) => {
             let r = E.A.getChannel(e);
             (null == r || r.getGuildId() === t.id) && n.push(e);
         }),
         0 === n.length)
     )
         return !1;
-    o().forEach(n, (e) => ei(e));
+    s().forEach(n, (e) => ei(e));
 }
 
 function em(e) {
     let { channelId: t, participantsOpen: n } = e;
-    V[t] = n;
+    F[t] = n;
 }
 
 function eg(e) {
     let { channelId: t, voiceParticipantsHidden: n } = e;
-    F[t] = n;
+    V[t] = n;
 }
 
 function eE(e) {
     let { channelId: t, selfStreamHidden: n } = e,
         r = m.default.getId();
     if (n) {
-        let [e] = Q(t);
+        let [e] = X(t);
         (0, p.wL)(e) && e.includes(r) && ee(t, null);
     }
-    X(r, [t]);
+    Q(r, [t]);
 }
 
 function ey(e) {
@@ -341,25 +347,25 @@ function eA(e) {
         r.toArray(S.r4.STREAM).forEach((e) => {
             (0, T.Ay)(e) && r.updateParticipant(e.user.id);
         });
-    let [, i] = Q(t);
+    let [, i] = X(t);
     if ((ee(t, [null != n ? n : T.jd.NONE, i]), (0, p.wL)(n))) {
         try {
             let { ownerId: e } = (0, p.Iy)(n);
-            e === m.default.getId() && X(e, [t]);
+            e === m.default.getId() && Q(e, [t]);
         } catch (e) {
             D.warn("INVALID STREAM KEY FORMAT ".concat(n), e);
         }
-        et(r) || (V[t] = !1);
+        et(r) || (F[t] = !1);
     }
 }
 
 function eI(e) {
     let { channelId: t, participantId: n } = e,
-        [r] = Q(t);
+        [r] = X(t);
     r === n && ee(t, null);
     let i = K(t),
         a = i.getParticipant(n);
-    null == a || (a.type !== T.lp.ACTIVITY && (i.updateParticipantPoppedOut(n, !0), X(a.user.id, [t])));
+    null == a || (a.type !== T.lp.ACTIVITY && (i.updateParticipantPoppedOut(n, !0), Q(a.user.id, [t])));
 }
 
 function eS(e) {
@@ -367,7 +373,7 @@ function eS(e) {
         r = K(t);
     r.updateParticipantPoppedOut(n, !1);
     let i = r.getParticipant(n);
-    null == i || (i.type !== T.lp.ACTIVITY && X(i.user.id, [t]));
+    null == i || (i.type !== T.lp.ACTIVITY && Q(i.user.id, [t]));
 }
 
 function eT(e) {
@@ -404,36 +410,36 @@ function eN(e) {
 function ew(e) {
     let { streamKey: t } = e,
         { channelId: n, ownerId: r } = (0, p.Iy)(t);
-    return X(r, [n]);
+    return Q(r, [n]);
 }
 
 function eR(e) {
     let { streamKey: t } = e,
         { channelId: n, ownerId: r } = (0, p.Iy)(t);
-    return X(r, [n]);
+    return Q(r, [n]);
 }
 
 function eP(e) {
     let { channelId: t, userId: n } = e;
-    return X(n, [t]);
+    return Q(n, [t]);
 }
 
 function eD(e) {
     let { channelId: t, userId: n } = e;
-    return X(n, [t]);
-}
-
-function ex(e) {
-    let { userId: t } = e;
-    return X(t);
+    return Q(n, [t]);
 }
 
 function eL(e) {
+    let { userId: t } = e;
+    return Q(t);
+}
+
+function ex(e) {
     let { channelId: t, senderUserId: n, maxResolution: r, maxFrameRate: i } = e;
     return Z((e) => e.updateParticipantQuality(n, r, i), [t]);
 }
 
-function ej(e) {
+function eM(e) {
     let { channelId: t, guildId: n, ringing: r } = e;
     if (
         !_.A.getCurrentConfig({
@@ -446,7 +452,7 @@ function ej(e) {
     return r.forEach((e) => i.updateGuildRingingUsers(e, !0)), Z((e) => e.rebuild(), [t]);
 }
 
-function eM(e) {
+function ej(e) {
     let { channelId: t, guildId: n, ringing: r } = e;
     if (
         !_.A.getCurrentConfig({
@@ -473,17 +479,17 @@ function eG(e) {
     var t;
     return !!(null == (t = E.A.getChannel(e)) ? void 0 : t.isVocalThread());
 }
-class eV extends (r = l.Ay.PersistedStore) {
+class eF extends (r = l.Ay.PersistedStore) {
     initialize(e) {
         this.waitFor(h.A, m.default, g.A, E.A, u.Ay, f.default, y.A, b.A, O.A, v.default, A.A, I.A),
             this.syncWith([u.Ay], ec),
             this.syncWith([f.default], ea),
             (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 &&
-                Object.assign(F, null == e ? void 0 : e.voiceParticipantsHidden);
+                Object.assign(V, null == e ? void 0 : e.voiceParticipantsHidden);
     }
     getState() {
         return {
-            voiceParticipantsHidden: F,
+            voiceParticipantsHidden: V,
         };
     }
     getParticipantsVersion(e) {
@@ -491,28 +497,28 @@ class eV extends (r = l.Ay.PersistedStore) {
     }
     getParticipants(e) {
         var t;
-        return null != (t = K(e).toArray()) ? t : x;
+        return null != (t = K(e).toArray()) ? t : L;
     }
     getSpeakingParticipants(e) {
         var t;
-        return null != (t = K(e).toArray(S.r4.SPEAKING)) ? t : x;
+        return null != (t = K(e).toArray(S.r4.SPEAKING)) ? t : L;
     }
     getFilteredParticipants(e) {
         var t;
         let n = K(e);
-        return null != (t = F[e]) && t ? n.toArray(S.r4.FILTERED) : n.toArray(S.r4.NOT_POPPED_OUT);
+        return null != (t = V[e]) && t ? n.toArray(S.r4.FILTERED) : n.toArray(S.r4.NOT_POPPED_OUT);
     }
     getVideoParticipants(e) {
         var t;
-        return null != (t = K(e).toArray(S.r4.VIDEO)) ? t : x;
+        return null != (t = K(e).toArray(S.r4.VIDEO)) ? t : L;
     }
     getStreamParticipants(e) {
         var t;
-        return null != (t = K(e).toArray(S.r4.STREAM)) ? t : x;
+        return null != (t = K(e).toArray(S.r4.STREAM)) ? t : L;
     }
     getActivityParticipants(e) {
         var t;
-        return null != (t = K(e).toArray(S.r4.ACTIVITY)) ? t : x;
+        return null != (t = K(e).toArray(S.r4.ACTIVITY)) ? t : L;
     }
     getParticipant(e, t) {
         return K(e).getParticipant(t);
@@ -523,14 +529,14 @@ class eV extends (r = l.Ay.PersistedStore) {
     }
     getParticipantsOpen(e) {
         var t;
-        return null == (t = V[e]) || t;
+        return null == (t = F[e]) || t;
     }
     getVoiceParticipantsHidden(e) {
         var t;
-        return null != (t = F[e]) && t;
+        return null != (t = V[e]) && t;
     }
     getSelectedParticipantId(e) {
-        let [t, n] = Q(e);
+        let [t, n] = X(e);
         return t === T.jd.NONE ? null : t !== T.jd.AUTO ? t : n === T.jd.NONE || n === T.jd.AUTO ? null : n;
     }
     getSelectedParticipant(e) {
@@ -588,14 +594,14 @@ class eV extends (r = l.Ay.PersistedStore) {
         return null != n && "isPoppedOut" in n && n.isPoppedOut;
     }
 }
-N(eV, "displayName", "ChannelRTCStore"), N(eV, "persistKey", "ChannelRTCStore");
-let eF = new eV(c.h, {
+N(eF, "displayName", "ChannelRTCStore"), N(eF, "persistKey", "ChannelRTCStore");
+let eV = new eF(c.h, {
     CONNECTION_OPEN: z,
     CONNECTION_OPEN_SUPPLEMENTAL: ea,
     THREAD_LIST_SYNC: ea,
     OVERLAY_INITIALIZE: ea,
-    VOICE_CHANNEL_SELECT: es,
-    CHANNEL_SELECT: eo,
+    VOICE_CHANNEL_SELECT: eo,
+    CHANNEL_SELECT: es,
     CHANNEL_RTC_ACTIVE_CHANNELS: ea,
     VOICE_STATE_UPDATES: el,
     CHANNEL_CREATE: eT,
@@ -617,8 +623,8 @@ let eF = new eV(c.h, {
     CHANNEL_RTC_UPDATE_PARTCIPANTS_LIST_OPEN: ev,
     RTC_CONNECTION_VIDEO: eP,
     RTC_CONNECTION_PLATFORM: eD,
-    AUDIO_SET_LOCAL_VIDEO_DISABLED: ex,
-    MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED: eL,
+    AUDIO_SET_LOCAL_VIDEO_DISABLED: eL,
+    MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED: ex,
     STREAM_CLOSE: ew,
     STREAM_DELETE: ew,
     STREAM_WATCH: eR,
@@ -626,8 +632,8 @@ let eF = new eV(c.h, {
     GUILD_SOUNDBOARD_SOUND_PLAY_START: eu,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: eu,
     PUSH_TO_TALK_STATE_CHANGE: ed,
-    GUILD_RING_START: ej,
-    GUILD_RING_STOP: eM,
+    GUILD_RING_START: eM,
+    GUILD_RING_STOP: ej,
     USER_UPDATE: ef,
     GUILD_MEMBER_UPDATE: ef,
     GUILD_DELETE: eh,
