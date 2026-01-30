@@ -264,6 +264,7 @@ let i = {
         actions: [
             "APP_STATE_UPDATE",
             "OVERLAY_INITIALIZE",
+            "CONNECTION_RESUMED",
             "CHANNEL_SELECT",
             "VOICE_CHANNEL_SELECT",
             "THREAD_CREATE",
