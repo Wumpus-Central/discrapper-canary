@@ -34645,6 +34645,10 @@ html:not(.chat-input) .inputInner_b1f01d {
     justify-content: space-between
 }
 
+.custom-user-profile-theme .container__39f84 {
+    background: var(--user-profile-overlay-background)
+}
+
 .content__39f84 {
     min-width: 0;
     padding: 8px
@@ -34939,7 +34943,6 @@ html:not(.chat-input) .inputInner_b1f01d {
 .appWidgetPreview__39ec2 {
     margin-inline: calc(var(--custom-activity-card-padding)*-1);
     -webkit-margin-after: calc(var(--custom-activity-card-padding)*-1);
-    background-color: var(--user-profile-overlay-background);
     margin-block-end: calc(var(--custom-activity-card-padding)*-1)
 }
 
