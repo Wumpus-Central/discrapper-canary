@@ -42,19 +42,18 @@ function u(e) {
             null == e.activityInstance &&
             0 === (0, r.VL)(e.flags, d) &&
             1
-        ) ||
-        !i.canWithPartialContext(s.xBc.READ_MESSAGE_HISTORY, {
-            channelId: e.channel_id,
-        })
+        )
     )
         return !1;
     let f = g.getChannel(e.channel_id),
-        y = null == f ? void 0 : f.guild_id;
+        y = i.can(s.xBc.READ_MESSAGE_HISTORY, f);
+    if (null != f && !y && !f.isPrivate()) return !1;
+    let b = null == f ? void 0 : f.guild_id;
     return (
         !(
-            (null != y &&
-                (null == (n = p.getGuild(y)) ? void 0 : n.features.has(s.GuildFeatures.FORWARDING_DISABLED))) ||
-            (null != y && u.isChannelOrThreadParentGated(y, e.channel_id))
+            (null != b &&
+                (null == (n = p.getGuild(b)) ? void 0 : n.features.has(s.GuildFeatures.FORWARDING_DISABLED))) ||
+            (null != b && u.isChannelOrThreadParentGated(b, e.channel_id))
         ) &&
         (null == (t = null == f ? void 0 : f.isModeratorReportChannel()) || !t)
     );
