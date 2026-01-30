@@ -4,9 +4,9 @@ n.d(t, {
 });
 var i,
     a = n(311907),
-    s = n(73153);
+    o = n(73153);
 
-function o(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ let l = [],
         (c = l), (u = null);
     },
     p = (e) => {
-        e.item.skuId === r && (r = void 0);
+        e.skuId === r && (r = void 0);
     };
 class _ extends (i = a.Ay.Store) {
     get analyticsLocations() {
@@ -51,8 +51,8 @@ class _ extends (i = a.Ay.Store) {
         };
     }
 }
-o(_, "displayName", "CollectiblesShopStore");
-let h = new _(s.h, {
+s(_, "displayName", "CollectiblesShopStore");
+let h = new _(o.h, {
     COLLECTIBLES_SHOP_OPEN: d,
     COLLECTIBLES_SHOP_CLOSE: f,
     COLLECTIBLES_PRODUCT_DETAILS_OPEN: p,
