@@ -139,6 +139,7 @@ async function er(e) {
         distributor_game_id: a.sku,
         hidden_by_distributor: a.hidden,
         game_metadata: (0, L.MT)(a),
+        executable_fingerprint: a.executableFingerprint,
     }),
         null != O && I.Ay.addExecutableTrackedByAnalytics(O);
 }
@@ -296,6 +297,7 @@ class ei extends i.PureComponent {
                     voice_channel_type: S,
                     voice_channel_bitrate: N,
                     voice_channel_guild_id: v,
+                    executable_fingerprint: U.executableFingerprint,
                 });
         }
         if ((e.videoEnabled !== T || e.isScreenSharing !== j) && null != m) {
