@@ -159,7 +159,6 @@ function O(e) {
             subtext:
                 null != e
                     ? (0, r.jsx)(f.Lo, {
-                          strikethrough: !1,
                           price: e,
                       })
                     : null,
