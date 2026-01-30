@@ -11,10 +11,10 @@ var l = n(417597),
     c = n(977997),
     u = n(458829),
     d = n(857253),
-    p = n(694967),
-    h = n(431516),
-    f = n(652215),
-    g = n(985018);
+    h = n(694967),
+    p = n(431516),
+    g = n(652215),
+    f = n(985018);
 
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,29 +65,29 @@ function A(e) {
     let t = (0, l.bG)([o.A], () => o.A.getChannelId() === e.id),
         A = (0, d.A)(),
         y = (null == A ? void 0 : A.channelId) === e.id,
-        _ = (0, a.J)(e) && !e.isPrivate(),
-        O = (0, a.A)(e),
-        j = (!(0, l.bG)([c.A], () => c.A.isInChannel(e.id)) && O) || _,
-        v = (0, p.A)();
-    if (!y && 0 === v.length) return null;
-    let x = (0, h.A)(void 0);
+        O = (0, a.J)(e) && !e.isPrivate(),
+        _ = (0, a.A)(e),
+        j = (!(0, l.bG)([c.A], () => c.A.isInChannel(e.id)) && _) || O,
+        x = (0, h.A)();
+    if (!y && 0 === x.length) return null;
+    let v = (0, p.A)(void 0);
     return y
         ? (0, r.jsx)(i.Drp, {
-              label: g.intl.string(g.t.PlwgdU),
+              label: f.intl.string(f.t.PlwgdU),
               id: "handoff",
               action: () => {
                   (0, u.x)(A);
               },
-              icon: x,
+              icon: v,
               leadingAccessory: {
                   type: "icon",
-                  icon: x,
+                  icon: v,
               },
               disabled: j,
           })
-        : v.map((l) => {
+        : x.map((l) => {
               var a, o;
-              let c = (0, h.A)(l.type);
+              let c = (0, p.A)(l.type);
               return (0, r.jsx)(
                   i.Drp,
                   {
@@ -95,18 +95,18 @@ function A(e) {
                       label:
                           ((a = l.type),
                           (o = t),
-                          a === f.fg2.XBOX
+                          a === g.fg2.XBOX
                               ? o
-                                  ? g.intl.string(g.t["qVE/VF"])
-                                  : g.intl.string(g.t.E8euSk)
-                              : a === f.fg2.PLAYSTATION
+                                  ? f.intl.string(f.t["qVE/VF"])
+                                  : f.intl.string(f.t.E8euSk)
+                              : a === g.fg2.PLAYSTATION
                                 ? o
-                                    ? g.intl.string(g.t.vzfxmY)
-                                    : g.intl.string(g.t.QxEYDj)
-                                : a === f.fg2.PLAYSTATION_STAGING
+                                    ? f.intl.string(f.t.vzfxmY)
+                                    : f.intl.string(f.t.QxEYDj)
+                                : a === g.fg2.PLAYSTATION_STAGING
                                   ? o
-                                      ? g.intl.string(g.t.BDiXtV)
-                                      : g.intl.string(g.t["bhdB9+"])
+                                      ? f.intl.string(f.t.BDiXtV)
+                                      : f.intl.string(f.t["bhdB9+"])
                                   : void 0),
                       action: () => {
                           !l.twoWayLink || l.revoked
@@ -114,9 +114,9 @@ function A(e) {
                                     platformType: l.type,
                                     location: "Console Transfer Item",
                                 })
-                              : l.type === f.fg2.XBOX
+                              : l.type === g.fg2.XBOX
                                 ? (0, i.mMO)(async () => {
-                                      let { default: t } = await Promise.all([n.e("14882"), n.e("67670")]).then(
+                                      let { default: t } = await Promise.all([n.e("6665"), n.e("67670")]).then(
                                           n.bind(n, 188072),
                                       );
                                       return (n) =>
@@ -127,7 +127,7 @@ function A(e) {
                                               }),
                                           );
                                   })
-                                : (l.type === f.fg2.PLAYSTATION || l.type === f.fg2.PLAYSTATION_STAGING) &&
+                                : (l.type === g.fg2.PLAYSTATION || l.type === g.fg2.PLAYSTATION_STAGING) &&
                                   (0, i.mMO)(async () => {
                                       let { default: t } = await n.e("71282").then(n.bind(n, 315337));
                                       return (n) =>

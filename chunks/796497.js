@@ -18,7 +18,7 @@ function d() {
         text: e,
         onClick: () => {
             (0, i.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("14882"), n.e("84268")]).then(n.bind(n, 320742));
+                let { default: e } = await Promise.all([n.e("6665"), n.e("84268")]).then(n.bind(n, 320742));
                 return (t) =>
                     (0, r.jsx)(
                         e,

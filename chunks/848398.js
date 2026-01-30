@@ -1,5 +1,5 @@
 n.d(t, {
-    t: () => o,
+    t: () => s,
 });
 var r = n(627968);
 n(64700);
@@ -19,7 +19,7 @@ function a(e, t, n) {
     );
 }
 
-function s(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,13 +36,13 @@ function s(e) {
     return e;
 }
 
-function o(e) {
+function s(e) {
     (0, i.mMO)(async () => {
-        let { default: t } = await Promise.all([n.e("14882"), n.e("89479"), n.e("41917")]).then(n.bind(n, 126703));
+        let { default: t } = await Promise.all([n.e("6665"), n.e("89479"), n.e("41917")]).then(n.bind(n, 126703));
         return (n) =>
             (0, r.jsx)(
                 t,
-                s(
+                o(
                     {
                         analyticsLocation: e,
                     },
