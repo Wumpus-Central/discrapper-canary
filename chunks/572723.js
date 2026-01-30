@@ -18,8 +18,8 @@ var i = n(627968),
     m = n(565150),
     v = n(521502),
     p = n(851023),
-    f = n(349688),
-    h = n(914905),
+    h = n(349688),
+    f = n(914905),
     x = n(176634),
     g = n(101555),
     b = n(386976),
@@ -69,7 +69,7 @@ function L(e) {
     let { transitionState: B, onClose: I } = e,
         D = l.useRef(null),
         R = l.useRef(null),
-        [V, z] = l.useState(""),
+        [z, V] = l.useState(""),
         [M, W] = l.useState(""),
         [Y, H] = l.useState(),
         [K, F] = l.useState(""),
@@ -96,8 +96,8 @@ function L(e) {
         [es, eu] = l.useState(""),
         [ec, ed] = l.useState(""),
         [em, ev] = l.useState(!1),
-        [ep, ef] = l.useState(!1),
-        [eh, ex] = l.useState(!1),
+        [ep, eh] = l.useState(!1),
+        [ef, ex] = l.useState(!1),
         [eg, eb] = l.useState(null);
     l.useEffect(() => {
         let e = Math.random().toString(16).slice(2);
@@ -112,8 +112,8 @@ function L(e) {
             },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "91383aaf3cfe5dfbf07b224224b9bc1cf44b942c" !== e.body.hash) {
-                let e = new Date("1769813048061"),
+            if (null != e.body && "c7a61a70b17759b20e5d28b88b3feed25cb8c8dc" !== e.body.hash) {
+                let e = new Date("1769814525734"),
                     t = new Date(),
                     n = (0, w.Tf)(t, e);
                 n.hours > 6 && eb(n.hours);
@@ -139,9 +139,9 @@ function L(e) {
         });
     async function eS() {
         var e, t;
-        if ((ex(!1), "" === V || "" === M || null == Y)) return void ev(!0);
+        if ((ex(!1), "" === z || "" === M || null == Y)) return void ev(!0);
         let l = null == q || null == (t = q.features) ? void 0 : t.find((e) => (0, S.wY)(e) === J);
-        ef(!0), ev(!1);
+        eh(!0), ev(!1);
         let r = (0, k.B)(
                 U.map((e) => {
                     let { item: t } = e;
@@ -150,7 +150,7 @@ function L(e) {
             ),
             a = await (0, S.zC)(
                 {
-                    name: V,
+                    name: z,
                     description: M,
                     priority: Y,
                     feature: l,
@@ -173,7 +173,7 @@ function L(e) {
                       },
                 r,
             ).catch(() => ex(!0));
-        ef(!1),
+        eh(!1),
             null != a && a.ok
                 ? (ej && window.open(a.body.permalink_url, "_blank"),
                   I(),
@@ -346,12 +346,12 @@ function L(e) {
                         children: [
                             (0, i.jsx)(c.ksK, {
                                 label: C.intl.string(C.t.OZRgjw),
-                                error: em && "" === V ? C.intl.string(C.t.EkokLy) : null,
+                                error: em && "" === z ? C.intl.string(C.t.EkokLy) : null,
                                 placeholder: "Something is broken on this screen.",
                                 type: "text",
-                                value: V,
+                                value: z,
                                 maxLength: 100,
-                                onChange: z,
+                                onChange: V,
                                 autoFocus: !0,
                             }),
                             (0, i.jsx)(c.fs1, {
@@ -363,6 +363,7 @@ function L(e) {
                                 description: ej
                                     ? "You can add additional information/media on the ticket after submitting"
                                     : void 0,
+                                autosize: !0,
                             }),
                             (0, i.jsx)(s.Te, {
                                 label: C.intl.string(C.t.xMXLda),
@@ -549,8 +550,8 @@ function L(e) {
                                                           children: [
                                                               (0, i.jsxs)("div", {
                                                                   children: [
-                                                                      (0, i.jsx)(h.J, {
-                                                                          size: f.L.SMALL,
+                                                                      (0, i.jsx)(f.J, {
+                                                                          size: h.L.SMALL,
                                                                           upload: e,
                                                                       }),
                                                                       (0, i.jsx)("div", {
@@ -592,7 +593,7 @@ function L(e) {
                                       }),
                                   })
                                 : null,
-                            eh
+                            ef
                                 ? (0, i.jsx)(c.Text, {
                                       color: "text-feedback-critical",
                                       variant: "text-sm/normal",
