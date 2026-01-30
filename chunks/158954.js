@@ -271,7 +271,6 @@ n.d(t, {
     bMW: () => q.EyeIcon,
     bSJ: () => q.ForumIcon,
     bhD: () => q.BadgeIcon,
-    bxf: () => q.ActivitiesIcon,
     c$8: () => q.BookmarkOutlineIcon,
     c$x: () => eH.c,
     cBN: () => q.CircleQuestionIcon,

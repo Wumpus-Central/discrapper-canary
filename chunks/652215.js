@@ -4443,7 +4443,6 @@ var na = (function (e) {
                 "premium_application_subscription_manage_cta_clicked"),
             (e.CLOUD_PLAY_CTA_CLICKED = "cloud_play_cta_clicked"),
             (e.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED = "channel_attach_menu_use_apps_clicked"),
-            (e.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED = "channel_attach_menu_start_activity_clicked"),
             (e.FORTNITE_GFNJOIN_CLICKED = "fortnite_gfnjoin_clicked"),
             (e.FORTNITE_DOWNLOAD_CLICKED = "fortnite_download_clicked"),
             (e.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED = "app_launcher_entrypoint_button_clicked"),
