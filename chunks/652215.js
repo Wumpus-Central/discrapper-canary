@@ -1143,6 +1143,7 @@ let ed = "",
         GUILD_VANITY_URL: (e) => "/guilds/".concat(e, "/vanity-url"),
         GUILD_MFA: (e) => "/guilds/".concat(e, "/mfa"),
         GUILD_PRUNE: (e) => "/guilds/".concat(e, "/prune"),
+        GUILD_PRUNE_V2: (e) => "/guilds/".concat(e, "/prune/v2"),
         GUILD_ICON: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "jpg";
             return "/guilds/".concat(e, "/icons/").concat(t, ".").concat(n);

@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => p,
+    A: () => g,
 }),
     n(896048);
 var r = n(627968),
@@ -9,30 +9,45 @@ var r = n(627968),
     a = n(311907),
     s = n(732955),
     c = n(397927),
+    u = n(73153),
     d = n(437553),
-    u = n(34457),
-    C = n(317525),
-    f = n(576705),
+    C = n(34457),
+    m = n(317525),
+    p = n(576705),
+    f = n(552247),
     b = n(985018),
-    m = n(510403);
-let p = (e) => {
-    let { guild: t, transitionState: n, onClose: i } = e,
-        [p, j] = l.useState(7),
-        [g, h] = l.useState(null),
-        [x, y] = l.useState([]),
-        O = l.useCallback(async () => {
-            h(null), h(await d.A.updateEstimate(t.id, p, x));
-        }, [p, t.id, x]);
+    j = n(510403);
+let g = (e) => {
+    var t;
+    let { guild: n, transitionState: i, onClose: g } = e,
+        [h, x] = l.useState(7),
+        [y, O] = l.useState([]),
+        v = null != (t = (0, f._k)(n.id, h, y)) ? t : -1;
     l.useEffect(() => {
-        O();
-    }, [O]);
-    let v = l.useCallback(() => {
-            d.A.prune(t.id, p, x), i();
-        }, [t.id, p, x, i]),
-        H = (0, a.yK)([f.A, C.A], () => {
-            let e = f.A.getHighestRole(t);
-            return o()(C.A.getSortedRoles(t.id))
-                .filter((n) => !(0, u.Oy)(n) && f.A.isRoleHigher(t, e, n))
+        let e = (e) => {
+            if (e.guildId !== n.id || !e.prune.isPreview) return;
+            let t = e.prune.days,
+                r = e.prune.includeRoles,
+                l = Number(e.prune.pruneCount);
+            (0, f.nA)(e.guildId, t, r, l);
+        };
+        return (
+            u.h.subscribe("GUILD_PRUNE_UPDATE", e),
+            () => {
+                u.h.unsubscribe("GUILD_PRUNE_UPDATE", e);
+            }
+        );
+    }, [n.id]),
+        l.useEffect(() => {
+            -1 === v && d.A.updateEstimateV2(n.id, h, y);
+        }, [n.id, h, y, v]);
+    let _ = l.useCallback(() => {
+            d.A.prune(n.id, h, y), g();
+        }, [n.id, h, y, g]),
+        H = (0, a.yK)([p.A, m.A], () => {
+            let e = p.A.getHighestRole(n);
+            return o()(m.A.getSortedRoles(n.id))
+                .filter((t) => !(0, C.Oy)(t) && p.A.isRoleHigher(n, e, t))
                 .map((e) => {
                     let { id: t, name: n } = e;
                     return {
@@ -42,30 +57,30 @@ let p = (e) => {
                     };
                 })
                 .value();
-        }, [t]);
+        }, [n]);
     return (0, r.jsx)(s.aFV, {
-        title: "".concat(b.intl.string(b.t.zbyz7p), "—").concat(null != t ? t.name : ""),
+        title: "".concat(b.intl.string(b.t.zbyz7p), "—").concat(null != n ? n.name : ""),
         actions: [
             {
                 text: b.intl.string(b.t["ETE/oC"]),
-                onClick: i,
+                onClick: g,
                 variant: "secondary",
             },
             {
                 text: b.intl.string(b.t["2mIlKQ"]),
-                onClick: v,
+                onClick: _,
             },
         ],
         onClose: async () => {
-            await i();
+            await g();
         },
-        transitionState: n,
+        transitionState: i,
         children: (0, r.jsxs)("div", {
-            className: m.Q,
+            className: j.Q,
             children: [
                 (0, r.jsx)(c.z6M, {
                     label: b.intl.string(b.t.YccTvK),
-                    value: String(p),
+                    value: String(h),
                     options: [
                         {
                             name: b.intl.formatToPlainString(b.t.FM1dHS, {
@@ -81,31 +96,31 @@ let p = (e) => {
                         },
                     ],
                     onChange: (e) => {
-                        j(Number(e));
+                        x(Number(e));
                     },
                 }),
                 (0, r.jsx)(c.IpV, {
-                    className: m.X,
+                    className: j.X,
                     children: (0, r.jsx)(c.ZiE, {
                         selectionMode: "multiple",
                         label: b.intl.string(b.t.buoe17),
                         maxOptionsVisible: 10,
-                        value: x,
-                        onSelectionChange: (e) => y(e),
+                        value: y,
+                        onSelectionChange: (e) => O(e),
                         options: H,
                     }),
                 }),
                 (0, r.jsx)(c.Text, {
                     variant: "text-sm/normal",
                     children:
-                        x.length > 0
+                        y.length > 0
                             ? b.intl.format(b.t["5WxHHp"], {
-                                  members: g,
-                                  days: p,
+                                  members: v,
+                                  days: h,
                               })
                             : b.intl.format(b.t.f13az9, {
-                                  members: g,
-                                  days: p,
+                                  members: v,
+                                  days: h,
                               }),
                 }),
             ],

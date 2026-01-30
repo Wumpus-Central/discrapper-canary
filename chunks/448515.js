@@ -948,6 +948,18 @@ q(
                     guildId: e.id,
                 });
     }),
+    z(["GUILD_PRUNE_UPDATE"], (e) => {
+        X({
+            type: "GUILD_PRUNE_UPDATE",
+            guildId: e.guild_id,
+            prune: {
+                isPreview: e.prune.is_preview,
+                days: e.prune.days,
+                pruneCount: e.prune.prune_count,
+                includeRoles: e.prune.include_roles,
+            },
+        });
+    }),
     z(["GUILD_DELETE"], (e) => {
         X({
             type: "GUILD_DELETE",
