@@ -491,7 +491,7 @@ function er(e, t, n, r) {
                     case "mention":
                     case "roleMention":
                     case "channel":
-                        i += (0, s.az)(e.content);
+                        !0 === t.isNotification ? (i += (0, s.az)(e.content)) : (i += e.content);
                         break;
                     default:
                         i += n(e.content);
@@ -601,6 +601,7 @@ function ea(e) {
         customEmoji: _,
         textExclusions: p,
         disableErrorGuards: !0,
+        isNotification: !1,
     };
 }
 
