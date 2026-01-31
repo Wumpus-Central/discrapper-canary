@@ -1,13 +1,10 @@
-n.d(t, {
-    A: () => _,
-}),
-    n(896048);
+n(896048);
 var r = n(311907),
     i = n(73153),
-    a = n(640631),
-    s = n(626584),
-    o = n(734057),
-    l = n(320501),
+    l = n(640631),
+    a = n(626584),
+    s = n(734057),
+    o = n(320501),
     c = n(595766);
 
 function u(e, t, n) {
@@ -24,10 +21,10 @@ function u(e, t, n) {
     );
 }
 let d = -1 / 0,
-    f = new s.A("MessagePreviewStore");
-class p extends r.Ay.Store {
+    p = new a.A("MessagePreviewStore");
+class h extends r.Ay.Store {
     initialize() {
-        this.waitFor(o.A, l.A);
+        this.waitFor(s.A, o.A);
     }
     isLatest(e, t) {
         var n;
@@ -70,7 +67,7 @@ class p extends r.Ay.Store {
         var t, n;
         let r = null != (t = e.guildId) ? t : null;
         if ((null == (n = this.data(r)) ? void 0 : n.messageId(e.channelId)) === e.id) {
-            let t = l.A.getMessages(e.channelId),
+            let t = o.A.getMessages(e.channelId),
                 n = t.hasMoreAfter ? null : t.last();
             null != n ? this.data(r).put(e.channelId, n, this.generation) : this.data(r).delete(e.channelId);
         }
@@ -81,9 +78,9 @@ class p extends r.Ay.Store {
             r = e.message.channel_id,
             i = e.message.id;
         if (null == r || null == i) return !1;
-        let a = this.data(n);
-        if ((null == a ? void 0 : a.messageId(r)) !== i) return !1;
-        null == a || a.update(e.message);
+        let l = this.data(n);
+        if ((null == l ? void 0 : l.messageId(r)) !== i) return !1;
+        null == l || l.update(e.message);
     }
     handleThreadListSync(e) {
         var t;
@@ -91,27 +88,27 @@ class p extends r.Ay.Store {
     }
     handleLoadMessagesSuccess(e) {
         var t, n;
-        let r = o.A.getBasicChannel(e.channelId);
+        let r = s.A.getBasicChannel(e.channelId);
         if (null == r) return !1;
-        (0, a.D)(e.messages),
+        (0, l.D)(e.messages),
             e.isAfter || e.isBefore || e.hasMoreAfter
                 ? this.data(r.guild_id).putNew(e.channelId, null != (n = e.messages[0]) ? n : null, this.generation)
                 : this.data(r.guild_id).put(e.channelId, null != (t = e.messages[0]) ? t : null, this.generation);
     }
     handleLocalMessagesLoaded(e) {
-        let t = o.A.getBasicChannel(e.channelId);
+        let t = s.A.getBasicChannel(e.channelId);
         if (null != t) {
             var n;
-            (0, a.D)(e.messages), this.data(t.guild_id).putNew(e.channelId, null != (n = e.messages[0]) ? n : null, d);
+            (0, l.D)(e.messages), this.data(t.guild_id).putNew(e.channelId, null != (n = e.messages[0]) ? n : null, d);
         }
     }
     handleMessagePreviewsLoaded(e) {
-        f.verbose("adding remote previews (guildId: ".concat(e.guildId, ", messages: ").concat(e.messages.length, ")"));
+        p.verbose("adding remote previews (guildId: ".concat(e.guildId, ", messages: ").concat(e.messages.length, ")"));
         let t = this.data(e.guildId);
         for (let n of e.messages) t.isLatest(n.channel_id, this.generation) || t.put(n.channel_id, n, this.generation);
     }
     handleMessagePreviewsLocallyLoaded(e) {
-        f.verbose("adding local previews (guildId: ".concat(e.guildId, ", messages: ").concat(e.messages.length, ")"));
+        p.verbose("adding local previews (guildId: ".concat(e.guildId, ", messages: ").concat(e.messages.length, ")"));
         let t = this.data(e.guildId);
         for (let [n, r] of e.messages) t.has(n) || t.put(n, r, d);
         t.localNeeded = !1;
@@ -138,4 +135,4 @@ class p extends r.Ay.Store {
             u(this, "generation", 0);
     }
 }
-let _ = new p();
+new h();

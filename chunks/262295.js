@@ -4,60 +4,50 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(948651);
+    o = n.n(a),
+    s = n(948651);
 let l = i.forwardRef((e, t) => {
     let {
         muted: n = !1,
         highlighted: i = !1,
         avatar: a,
         decorators: l,
-        rightDecorators: c,
-        name: u,
-        subText: d,
-        avatarClassName: f,
-        innerClassName: p,
-        nameClassName: _,
-        subtextClassName: h,
-        withDisplayNameStyles: m = !1,
+        name: c,
+        subText: u,
+        avatarClassName: d,
+        innerClassName: f,
+        withDisplayNameStyles: p = !1,
     } = e;
     return (0, r.jsxs)("div", {
         ref: t,
-        className: s()(o.Zp, p, {
-            [o.SU]: n,
-            [o.mr]: i,
-            [o.Ij]: null != c,
+        className: o()(s.Zp, f, {
+            [s.SU]: n,
+            [s.mr]: i,
         }),
         children: [
             (0, r.jsx)("div", {
-                className: s()(o.my, f),
+                className: o()(s.my, d),
                 children: a,
             }),
             (0, r.jsxs)("div", {
-                className: s()(o.Qs, {
-                    [o.e8]: m,
+                className: o()(s.Qs, {
+                    [s.e8]: p,
                 }),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: o.BG,
+                        className: s.BG,
                         children: [
-                            (0, r.jsxs)("div", {
-                                className: o.R1,
-                                children: [
-                                    (0, r.jsx)("div", {
-                                        className: s()(o.UU, _),
-                                        children: u,
-                                    }),
-                                    l,
-                                ],
+                            (0, r.jsx)("div", {
+                                className: s.UU,
+                                children: c,
                             }),
-                            c,
+                            l,
                         ],
                     }),
-                    null != d
+                    null != u
                         ? (0, r.jsx)("div", {
-                              className: s()(o.Sv, h),
-                              children: d,
+                              className: s.Sv,
+                              children: u,
                           })
                         : null,
                 ],

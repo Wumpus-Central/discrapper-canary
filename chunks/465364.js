@@ -1,8 +1,7 @@
 n.d(t, {
-    Ay: () => y,
+    Ay: () => b,
     Le: () => g,
-    Tz: () => S,
-    jp: () => A,
+    Tz: () => v,
     ko: () => m,
 }),
     n(896048),
@@ -14,8 +13,8 @@ n(380610);
 var i = n(833291);
 n(100392);
 var a = n(46054),
-    s = n(659674),
-    o = n(728458),
+    o = n(659674),
+    s = n(728458),
     l = n(652215);
 
 function c(e, t, n) {
@@ -125,8 +124,8 @@ function E(e, t, n) {
     let {
             toAST: i = !1,
             hideSimpleEmbedContent: a = !0,
-            formatInline: s = !1,
-            postProcessor: o,
+            formatInline: o = !1,
+            postProcessor: s,
             contentMessage: l,
         } = n,
         c = !1,
@@ -150,12 +149,12 @@ function E(e, t, n) {
                             },
                         },
                     ])),
-                a && (e = w(e, (null != l ? l : t).embeds)),
-                s || (e = I(e, n)),
-                (e = b(e)),
-                t.embeds.length > 0 && (c = C(e, n)),
-                s && (e = P(e)),
-                null != o && (e = o(e, n)),
+                a && (e = N(e, (null != l ? l : t).embeds)),
+                o || (e = A(e, n)),
+                (e = y(e)),
+                t.embeds.length > 0 && (c = S(e, n)),
+                o && (e = w(e)),
+                null != s && (e = s(e, n)),
                 e
             ),
         );
@@ -166,7 +165,7 @@ function E(e, t, n) {
     };
 }
 
-function b(e) {
+function y(e) {
     let t = e.some((e) => "link" !== e.type);
     return e.filter((e) => {
         let n = "link" === e.type,
@@ -175,47 +174,12 @@ function b(e) {
     });
 }
 
-function y(e) {
+function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return E(t.formatInline ? a.A.parseInlineReply : a.A.parse, e, t);
 }
 
-function O(e, t) {
-    arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    let { content: n, guildId: r, channelId: i } = t;
-    return e(
-        n,
-        !0,
-        {
-            allowLinks: !1,
-            allowDevLinks: !1,
-            allowEmojiLinks: !1,
-            mentionChannels: [],
-            soundboardSounds: [],
-            isInteracting: !1,
-            formatInline: !0,
-            noStyleAndInteraction: !1,
-            allowHeading: !1,
-            allowList: !1,
-            allowGameMentions: !1,
-            disableAutoBlockNewlines: !0,
-            previewLinkTarget: !1,
-            disableAnimatedEmoji: !0,
-            guildId: r,
-            channelId: i,
-            muted: !1,
-            disablePressableChannelMention: !0,
-        },
-        (e) => (Array.isArray(e) || (e = [e]), e),
-    );
-}
-
-function A(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return O(e, t, n);
-}
-
-function v(e, t, n, r) {
+function O(e, t, n, r) {
     return e(
         t,
         !0,
@@ -241,17 +205,17 @@ function v(e, t, n, r) {
     );
 }
 
-function S(e, t, n) {
-    return v(a.A.parseAutoModerationSystemMessage, e, t, n);
+function v(e, t, n) {
+    return O(a.A.parseAutoModerationSystemMessage, e, t, n);
 }
 
-function I(e, t) {
+function A(e, t) {
     return t
-        ? T(e)
-        : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = T(e[0].content)), e);
+        ? I(e)
+        : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = I(e[0].content)), e);
 }
 
-function T(e) {
+function I(e) {
     if (
         e.some(
             (e) =>
@@ -276,43 +240,43 @@ function T(e) {
     );
 }
 
-function C(e, t) {
-    return t ? R(e) : "paragraph" === e[0].type && e[0].content instanceof Array && R(e[0].content);
+function S(e, t) {
+    return t ? C(e) : "paragraph" === e[0].type && e[0].content instanceof Array && C(e[0].content);
 }
 
-function N(e, t) {
-    if (e instanceof Array) return e.some((e) => N(e, t));
+function T(e, t) {
+    if (e instanceof Array) return e.some((e) => T(e, t));
     let n = t(e);
     return null != n
         ? n
         : e.content instanceof Array
-          ? N(e.content, t)
-          : e.items instanceof Array && e.items.some((e) => N(e, t));
+          ? T(e.content, t)
+          : e.items instanceof Array && e.items.some((e) => T(e, t));
 }
 
-function R(e) {
-    return N(e, (e) =>
-        "spoiler" === e.type ? N(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
+function C(e) {
+    return T(e, (e) =>
+        "spoiler" === e.type ? T(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
     );
 }
 
-function w(e, t) {
+function N(e, t) {
     if (1 !== e.length || 1 !== t.length) return e;
     let n = e[0],
         r = t[0];
-    return ("link" === n.type || "attachmentLink" === n.type) && _.has(r.type) && (0, s.NV)(r) ? [] : e;
+    return ("link" === n.type || "attachmentLink" === n.type) && _.has(r.type) && (0, o.NV)(r) ? [] : e;
 }
 
-function P(e) {
+function w(e) {
     return (
         e.forEach((e) => {
             h.has(e.type) &&
                 null != e.content &&
                 (Array.isArray(e.content)
-                    ? P(e.content)
+                    ? w(e.content)
                     : "string" == typeof e.content
                       ? (e.content = e.content.replace(/\n/g, " "))
-                      : o.A.captureMessage(
+                      : s.A.captureMessage(
                             "AST node type:"
                                 .concat(e.type, " with content typeof ")
                                 .concat(typeof e.content, ". Keys ")
