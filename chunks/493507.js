@@ -1,8 +1,9 @@
 t.d(i, {
-    A: () => U,
+    A: () => L,
 }),
-    t(638769),
     t(896048),
+    t(638769),
+    t(321073),
     t(134528),
     t(947204);
 var n,
@@ -11,15 +12,16 @@ var n,
     a = t(626584),
     u = t(217222),
     r = t(21119),
-    d = t(253932),
-    A = t(617617),
+    A = t(253932),
+    d = t(617617),
     g = t(961350),
     f = t(734057),
     M = t(309010),
     o = t(543465),
-    c = t(469679);
+    c = t(469679),
+    m = t(575443);
 
-function m(e, i, t) {
+function N(e, i, t) {
     return (
         i in e
             ? Object.defineProperty(e, i, {
@@ -32,48 +34,54 @@ function m(e, i, t) {
         e
     );
 }
-let N = new a.A("ReplyNudgeStore"),
-    E = !1,
-    y = {};
+let E = new a.A("ReplyNudgeStore"),
+    h = !1,
+    y = {},
+    R = new Set();
 
-function h(e, i) {
+function C(e, i) {
     let { maxNudgeAge: t, maxNudgeCount: n } = i,
         l = Date.now(),
         s = {},
         a = Object.entries(e);
-    for (let [e, { timestamp: i, isActive: u }] of (a.sort((e, i) => i[1].timestamp - e[1].timestamp), a))
-        if (
-            null != i &&
-            l - i < t &&
-            u &&
-            ((s[e] = {
+    a.sort((e, i) => i[1].timestamp - e[1].timestamp);
+    let u = 0;
+    for (let [e, { timestamp: i, isActive: r }] of a)
+        if (null != i && l - i < m.Mk) {
+            let a = r && l - i < t && u < n;
+            (s[e] = {
                 timestamp: i,
-                isActive: u,
+                isActive: a,
             }),
-            Object.keys(s).length >= n)
-        )
-            break;
-    return N.info("Pruned ".concat(a.length - Object.keys(s).length, " expired nudges")), s;
+                a && u++;
+        }
+    return E.info("Pruned ".concat(a.length - Object.keys(s).length, " expired nudges")), s;
 }
 
-function C(e) {
-    if (!(e in y)) return !1;
+function p(e) {
+    if (!(e in y) || !y[e].isActive) return !1;
     y[e].isActive = !1;
 }
 
-function R(e) {
+function v() {
+    let e = [];
+    for (let [i, { isActive: t }] of Object.entries(y)) t && e.push(i);
+    return e;
+}
+
+function O(e) {
     var i, t;
     let n = f.A.getChannel(e);
     if (null == n)
         return (
-            N.warn("getDMChannelAffinity: Unable to find channel", {
+            E.warn("getDMChannelAffinity: Unable to find channel", {
                 channelId: e,
             }),
             null
         );
     if ((null == n ? void 0 : n.isDM()) !== !0)
         return (
-            N.warn("getDMChannelAffinity: Channel is not a DM", {
+            E.warn("getDMChannelAffinity: Channel is not a DM", {
                 channelId: e,
             }),
             null
@@ -82,7 +90,7 @@ function R(e) {
     return null != (i = null == (t = r.A.getUserAffinity(l)) ? void 0 : t.dmProbability) ? i : null;
 }
 
-function p() {
+function U() {
     let {
             displayNudges: e,
             maxNudgeAge: i,
@@ -90,27 +98,28 @@ function p() {
         } = c.T.getConfig({
             location: "handleNudgeVisibilityChange",
         }),
-        n = !1 !== d.LJ.getSetting() && e;
-    if (E === n) return !1;
-    (E = n) &&
-        (y = h(y, {
+        n = !1 !== A.LJ.getSetting() && e;
+    if (h === n) return !1;
+    (h = n) &&
+        ((y = C(y, {
             maxNudgeAge: i,
             maxNudgeCount: t,
-        }));
+        })),
+        (R = new Set(v())));
 }
 
-function v() {
+function S() {
     let e = !1;
     for (let i of Object.keys(y)) o.Ay.isChannelMuted(null, i) && (delete y[i], (e = !0));
     return e;
 }
-class O extends (n = l.Ay.PersistedStore) {
+class D extends (n = l.Ay.PersistedStore) {
     initialize(e) {
         var i;
         (y = null != (i = null == e ? void 0 : e.nudgedChannels) ? i : {}),
-            this.waitFor(u.A, g.default, f.A, M.A, r.A, o.Ay, A.A),
-            this.syncWith([A.A, u.A], p),
-            this.syncWith([o.Ay], v);
+            this.waitFor(u.A, g.default, f.A, M.A, r.A, o.Ay, d.A),
+            this.syncWith([d.A, u.A], U),
+            this.syncWith([o.Ay], S);
     }
     getState() {
         return {
@@ -118,17 +127,23 @@ class O extends (n = l.Ay.PersistedStore) {
         };
     }
     getNudgeTimestamp(e) {
-        var i, t;
-        return E && null != (i = null == (t = y[e]) ? void 0 : t.timestamp) ? i : null;
+        if (!h) return null;
+        let i = y[e];
+        if (null == i) return null;
+        if (i.isActive || R.has(e)) {
+            var t;
+            return null != (t = y[e].timestamp) ? t : null;
+        }
+        return null;
     }
     isChannelNudged(e) {
         var i;
         let { includeInvisible: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return (!!E || !!t) && (null == (i = y[e]) ? void 0 : i.isActive) === !0;
+        return (!!h || !!t) && (null == (i = y[e]) ? void 0 : i.isActive) === !0;
     }
 }
-m(O, "displayName", "ReplyNudgeStore"), m(O, "persistKey", "ReplyNudgeStore");
-let U = new O(s.h, {
+N(D, "displayName", "ReplyNudgeStore"), N(D, "persistKey", "ReplyNudgeStore");
+let L = new D(s.h, {
     REPLY_NUDGE_SET: function (e) {
         let { channelId: i, timestamp: t } = e;
         if (o.Ay.isChannelMuted(null, i)) return !1;
@@ -137,78 +152,79 @@ let U = new O(s.h, {
         });
         if (
             i in
-            (y = h(y, {
+            (y = C(y, {
                 maxNudgeAge: n,
                 maxNudgeCount: l,
             }))
         )
             return !1;
-        if (Object.keys(y).length >= l) {
-            let e = Object.keys(y),
-                t = e.at(-1),
-                n = 1 / 0;
-            for (let i of e) {
-                let e = R(i);
-                if (null == e) {
-                    N.warn("handleReplyNudgeSet: Nudge affinity is null", {
+        let s = v();
+        if (s.length >= l) {
+            let e = s.at(-1),
+                t = 1 / 0;
+            for (let i of s) {
+                let n = O(i);
+                if (null == n) {
+                    E.warn("handleReplyNudgeSet: Nudge affinity is null", {
                         nudgedChannelId: i,
                     });
                     continue;
                 }
-                e < n && ((n = e), (t = i));
+                n < t && ((t = n), (e = i));
             }
-            let l = R(i);
-            if (null == l)
+            let n = O(i);
+            if (null == n)
                 return (
-                    N.warn("handleReplyNudgeSet: New nudge affinity is null", {
+                    E.warn("handleReplyNudgeSet: New nudge affinity is null", {
                         channelId: i,
                     }),
                     !1
                 );
-            if (l < n)
+            if (n < t)
                 return (
-                    N.info("handleReplyNudgeSet: New nudge is lower than the lowest affinity. No space to nudge.", {
+                    E.info("handleReplyNudgeSet: New nudge is lower than the lowest affinity. No space to nudge.", {
                         channelId: i,
-                        lowestAffinity: n,
-                        newNudgeAffinity: l,
+                        lowestAffinity: t,
+                        newNudgeAffinity: n,
                     }),
                     !1
                 );
-            N.info("handleReplyNudgeSet: Evicting nudge with lowest affinity", {
+            E.info("handleReplyNudgeSet: Evicting nudge with lowest affinity", {
                 channelId: i,
-                lowestAffinity: n,
-                newNudgeAffinity: l,
+                lowestAffinity: t,
+                newNudgeAffinity: n,
             }),
-                delete y[t];
+                delete y[e];
         }
-        y[i] = {
+        (y[i] = {
             timestamp: t,
             isActive: !0,
-        };
+        }),
+            R.add(i);
     },
     REPLY_NUDGE_CLEAR: function (e) {
         let { channelId: i } = e;
-        return C(i);
+        return p(i);
     },
     MESSAGE_CREATE: function (e) {
         let { message: i } = e;
-        return C(i.channel_id);
+        return p(i.channel_id);
     },
     MESSAGE_REACTION_ADD: function (e) {
         let { channelId: i, userId: t } = e;
-        return t === g.default.getId() && C(i);
+        return t === g.default.getId() && p(i);
     },
     CHANNEL_SELECT: function () {
         let e = M.A.getLastSelectedChannelId();
-        return null != e && C(e);
+        return null != e && p(e);
     },
     CHANNEL_DELETE: function (e) {
         let {
             channel: { id: i },
         } = e;
-        return C(i);
+        return p(i);
     },
     LOGOUT: function () {
-        (y = {}), (E = !1);
+        (y = {}), (R = new Set()), (h = !1);
     },
 });
