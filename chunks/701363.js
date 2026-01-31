@@ -1,6 +1,6 @@
 n.d(t, {
-    Ay: () => eb,
-    th: () => eg,
+    Ay: () => eg,
+    th: () => eb,
     w_: () => ed,
     z9: () => ey,
 }),
@@ -18,14 +18,14 @@ var r = n(627968),
     m = n(607399),
     f = n(311907),
     y = n(3026),
-    g = n(397927),
-    b = n(308528),
+    b = n(397927),
+    g = n(308528),
     A = n(442433),
     x = n(960076),
     v = n(901517),
     h = n(397244),
-    E = n(714114),
-    O = n(729551),
+    O = n(714114),
+    E = n(729551),
     j = n(709066),
     S = n(262295),
     N = n(343328),
@@ -136,7 +136,7 @@ function eo(e, t) {
             (r = n[l]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     return i;
 }
-let eu = en.Ay.getEnableHardwareAcceleration() ? g.JsQ : g.euF,
+let eu = en.Ay.getEnableHardwareAcceleration() ? b.JsQ : b.euF,
     ec = {
         offset: {
             top: 2,
@@ -149,7 +149,7 @@ let eu = en.Ay.getEnableHardwareAcceleration() ? g.JsQ : g.euF,
             o = eo(e, ["nameplate", "icon", "forceShow", "reducedClickTarget", "visibleElementRef"]),
             u = (0, F.K)(t);
         return (0, r.jsx)(
-            g.DUT,
+            b.DUT,
             ea(
                 es(
                     {
@@ -189,19 +189,19 @@ let eu = en.Ay.getEnableHardwareAcceleration() ? g.JsQ : g.euF,
         );
     },
     ep = () =>
-        (0, r.jsx)(g.Gg5, {
+        (0, r.jsx)(b.Gg5, {
             size: "xs",
             color: "currentColor",
             className: ei.wB,
         }),
     em = () =>
-        (0, r.jsx)(g.G3N, {
+        (0, r.jsx)(b.G3N, {
             size: "xs",
             color: "currentColor",
             className: ei.wB,
         }),
     ef = () =>
-        (0, r.jsx)(g.KTN, {
+        (0, r.jsx)(b.KTN, {
             size: "xs",
             color: "currentColor",
             className: ei.wB,
@@ -219,7 +219,7 @@ let eu = en.Ay.getEnableHardwareAcceleration() ? g.JsQ : g.euF,
                 onClick: p,
                 className: f,
                 role: y,
-                "aria-posinset": b,
+                "aria-posinset": g,
                 "aria-setsize": A,
                 listItemRef: x,
             } = e,
@@ -255,10 +255,10 @@ let eu = en.Ay.getEnableHardwareAcceleration() ? g.JsQ : g.euF,
                 },
                 ec,
             ),
-            "aria-posinset": b,
+            "aria-posinset": g,
             "aria-setsize": A,
             ref: x,
-            children: (0, r.jsx)(g.HG8, {
+            children: (0, r.jsx)(b.HG8, {
                 as: "div",
                 selected: n,
                 className: s()(a, ei.bG, ei.$J, {
@@ -298,14 +298,14 @@ let eu = en.Ay.getEnableHardwareAcceleration() ? g.JsQ : g.euF,
         });
     };
 
-function eg(e) {
+function eb(e) {
     let {
             channel: t,
             selected: i = !1,
             user: o,
             activities: m,
             applicationStream: v,
-            voiceChannel: E,
+            voiceChannel: O,
             isTyping: Q,
             status: F,
             isMobile: K,
@@ -315,20 +315,20 @@ function eg(e) {
             "aria-posinset": en,
             "aria-setsize": ey,
         } = e,
-        [eg, eb] = l.useState(!1),
+        [eb, eg] = l.useState(!1),
         [eA, ex] = l.useState(!1),
         [ev, eh] = l.useState(!1),
-        eE = l.useRef(null),
         eO = l.useRef(null),
-        ej = null != ee ? ee : eO,
+        eE = l.useRef(null),
+        ej = null != ee ? ee : eE,
         {
             avatarSrc: eS,
             avatarDecorationSrc: eN,
             eventHandlers: eT,
         } = (0, z.A)({
             userId: null == o ? void 0 : o.id,
-            size: g._3J.SIZE_32,
-            animateOnHover: !(i || eg || eA || ev),
+            size: b._3J.SIZE_32,
+            animateOnHover: !(i || eb || eA || ev),
         }),
         e_ = t.isMultiUserDM(),
         eC = t.isSystemDM(),
@@ -341,7 +341,7 @@ function eg(e) {
         })),
         eD = eP && eM,
         eL = eP && eR,
-        eU = (ew || eD || eL) && !(i || eg),
+        eU = (ew || eD || eL) && !(i || eb),
         { hasUnreadMessages: ek, lastMessageId: eG } = (0, f.cf)([Y.Ay], () => ({
             hasUnreadMessages: Y.Ay.getMentionCount(t.id) > 0,
             lastMessageId: Y.Ay.lastMessageId(t.id),
@@ -357,12 +357,12 @@ function eg(e) {
             timestamp: et.default.extractTimestamp(null != eG ? eG : t.id),
         }),
         eK = l.useRef(null),
-        eW = null != W && (i || eg || ev),
+        eW = null != W && (i || eb || ev),
         eY = () => {
-            eb(!0);
+            eg(!0);
         },
         eX = () => {
-            eb(!1);
+            eg(!1);
         },
         eJ = () => {
             ex(!0);
@@ -372,10 +372,10 @@ function eg(e) {
         },
         eZ = function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            null != e && (e.preventDefault(), e.stopPropagation()), b.A.closePrivateChannel(t.id, i, n);
+            null != e && (e.preventDefault(), e.stopPropagation()), g.A.closePrivateChannel(t.id, i, n);
         },
         e0 = () => {
-            b.A.preload(er.ME, t.id);
+            g.A.preload(er.ME, t.id);
         },
         e1 = (e) => {
             e.stopPropagation();
@@ -383,7 +383,7 @@ function eg(e) {
         e2 = (e) => {
             if (e.target === e.currentTarget) {
                 var t;
-                null == (t = eE.current) || t.click();
+                null == (t = eO.current) || t.click();
             }
         },
         e9 = (e) => {
@@ -459,14 +459,14 @@ function eg(e) {
                 (i = el.intl.format(el.t.IK1Qvs, {
                     name: eQ,
                 }))),
-                (0, g.mMO)(async () => {
+                (0, b.mMO)(async () => {
                     let { default: e } = await n.e("37803").then(n.bind(n, 148166));
                     return (t) =>
                         (0, r.jsx)(
                             e,
                             es(
                                 {
-                                    header: l,
+                                    title: l,
                                     body: i,
                                     onSubmit: eZ,
                                 },
@@ -478,8 +478,8 @@ function eg(e) {
         e7 = (0, r.jsx)(M.A, {
             userName: eQ,
             displayNameStyles: null == o ? void 0 : o.displayNameStyles,
-            effectDisplayType: eg || i || ev ? w.G.ANIMATED : w.G.PLAIN,
-            loop: eg,
+            effectDisplayType: eb || i || ev ? w.G.ANIMATED : w.G.PLAIN,
+            loop: eb,
             boldFontOpacity: 0.9,
         }),
         e3 = eI
@@ -499,11 +499,11 @@ function eg(e) {
               })
             : e7,
         e4 = l.useRef(null),
-        e5 =
+        e8 =
             (0, I.W)({
                 location: "PrivateChannel",
             }) && (null == o ? void 0 : o.displayNameStyles) != null,
-        e8 = [
+        e5 = [
             (0, T.Ay)({
                 channel: t,
                 unread: ek,
@@ -530,7 +530,7 @@ function eg(e) {
                       te,
                       eB !== U.P.ALL || eV
                           ? null
-                          : (0, r.jsx)(g.Text, {
+                          : (0, r.jsx)(b.Text, {
                                 variant: "text-xs/normal",
                                 color: i ? "interactive-text-active" : ek ? "interactive-text-default" : "text-muted",
                                 className: ei.vE,
@@ -551,7 +551,7 @@ function eg(e) {
                 className: s()(ei.Ix, ei.dm),
                 role: p,
                 focusProps: ea(es({}, ec), {
-                    focusTarget: eE,
+                    focusTarget: eO,
                     ringTarget: ej,
                 }),
                 ref: ej,
@@ -571,7 +571,7 @@ function eg(e) {
                               }),
                           })
                         : null,
-                    (0, r.jsxs)(g.HG8, {
+                    (0, r.jsxs)(b.HG8, {
                         className: s()(ei.bG, {
                             [ei.Q2]: i || ev,
                         }),
@@ -583,7 +583,7 @@ function eg(e) {
                             (0, r.jsx)(q.A, {
                                 nameplate: eW ? W : void 0,
                                 selected: i,
-                                hovered: eg,
+                                hovered: eb,
                                 content: e4,
                                 placement: H.u.CHANNEL,
                             }),
@@ -592,10 +592,10 @@ function eg(e) {
                                 ea(
                                     es(
                                         {
-                                            innerRef: eE,
+                                            innerRef: eO,
                                             to: er.BVt.CHANNEL(er.ME, t.id),
                                             className: ei.nf,
-                                            "aria-label": e8,
+                                            "aria-label": e5,
                                         },
                                         f,
                                     ),
@@ -603,7 +603,7 @@ function eg(e) {
                                         children: (0, r.jsx)(S.A, {
                                             ref: e4,
                                             avatar: (() => {
-                                                let e = g._3J.SIZE_32;
+                                                let e = b._3J.SIZE_32;
                                                 if (t.isMultiUserDM())
                                                     if (t.recipients.length >= 2 && null == t.icon)
                                                         return (0, r.jsx)(D.A, {
@@ -634,7 +634,7 @@ function eg(e) {
                                                     (0, r.jsx)(
                                                         eu,
                                                         ea(es({}, eT), {
-                                                            size: g._3J.SIZE_32,
+                                                            size: b._3J.SIZE_32,
                                                             src: eS,
                                                             avatarDecoration: eN,
                                                             status: n,
@@ -688,14 +688,14 @@ function eg(e) {
                                                               activities: m,
                                                               status: F,
                                                               applicationStream: v,
-                                                              voiceChannel: E,
+                                                              voiceChannel: O,
                                                           })
-                                                        ? (0, r.jsx)(O.A, {
+                                                        ? (0, r.jsx)(E.A, {
                                                               user: o,
                                                               activities: m,
-                                                              voiceChannel: E,
+                                                              voiceChannel: O,
                                                               applicationStream: v,
-                                                              animateEmoji: eg || eA || ev,
+                                                              animateEmoji: eb || eA || ev,
                                                               textClassName: ei.XD,
                                                               iconClassName: eU ? ei.tG : void 0,
                                                           })
@@ -709,7 +709,7 @@ function eg(e) {
                                             nameClassName: ei.Xh,
                                             name: (0, r.jsx)(y.A, {
                                                 className: s()(ei.uN, {
-                                                    [ei.e8]: e5,
+                                                    [ei.e8]: e8,
                                                 }),
                                                 children: e3,
                                             }),
@@ -721,7 +721,7 @@ function eg(e) {
                                                   })
                                                 : null,
                                             rightDecorators: tt,
-                                            withDisplayNameStyles: e5,
+                                            withDisplayNameStyles: e8,
                                         }),
                                     },
                                 ),
@@ -733,7 +733,7 @@ function eg(e) {
                                 children: [
                                     !eH && te,
                                     (0, r.jsx)(ed, {
-                                        icon: g.PGe,
+                                        icon: b.PGe,
                                         "aria-label": e_ ? el.intl.string(el.t["26C4oi"]) : el.intl.string(el.t.jsvgc3),
                                         onClick: e_ ? e6 : eZ,
                                         onMouseDown: e1,
@@ -750,7 +750,7 @@ function eg(e) {
         },
     });
 }
-let eb =
+let eg =
     21552 == n.j
         ? (e) => {
               let { channel: t, selected: n } = e,
@@ -773,7 +773,7 @@ let eb =
                   { voiceActivityStatusEnabled: o } = (0, v.G)({
                       location: "PrivateChannel",
                   }),
-                  { voiceChannel: u } = (0, E.A)({
+                  { voiceChannel: u } = (0, O.A)({
                       userId: s,
                   }),
                   c = (0, Q.r)({
@@ -798,7 +798,7 @@ let eb =
                   });
               return t.isMultiUserDM()
                   ? (0, r.jsx)(
-                        eg,
+                        eb,
                         es(
                             {
                                 channel: t,
@@ -811,7 +811,7 @@ let eb =
                         ),
                     )
                   : (0, r.jsx)(
-                        eg,
+                        eb,
                         es(
                             {
                                 channel: t,

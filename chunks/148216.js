@@ -5,10 +5,10 @@ r.d(t, {
 var n = r(627968),
     o = r(64700),
     c = r(989349),
-    l = r.n(c),
-    i = r(421380),
-    s = r(397927),
-    a = r(985018),
+    i = r.n(c),
+    l = r(158954),
+    a = r(397927),
+    s = r(985018),
     p = r(826063);
 
 function u(e) {
@@ -45,16 +45,16 @@ function u(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (c[n] = e[n]);
             return c;
         })(e, ["createReminder"]),
-        [b, f] = o.useState(() => l()()),
-        [O, y] = o.useState(() => l()()),
-        d = o.useCallback(() => {
+        [b, f] = o.useState(() => i()()),
+        [O, y] = o.useState(() => i()()),
+        j = o.useCallback(() => {
             c(b.toDate());
         }, [c, b]),
-        j = (e) => {
+        g = (e) => {
             e.isValid() && f(e);
         };
     return (0, n.jsx)(
-        s.VoidConfirmModal,
+        l.ConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -81,31 +81,31 @@ function u(e) {
             return e;
         })(
             {
-                header: a.intl.string(a.t.VKsXpY),
-                confirmText: a.intl.string(a.t["R3BPH+"]),
-                cancelText: a.intl.string(a.t["ETE/oC"]),
-                confirmButtonColor: i.$n.Colors.BRAND,
-                onConfirm: d,
+                title: s.intl.string(s.t.VKsXpY),
+                confirmText: s.intl.string(s.t["R3BPH+"]),
+                cancelText: s.intl.string(s.t["ETE/oC"]),
+                onConfirm: j,
             },
             u,
         )),
         (r = r =
             {
+                variant: "primary",
                 children: (0, n.jsxs)("div", {
                     className: p.U,
                     children: [
-                        (0, n.jsx)(s.J3s, {
-                            label: a.intl.string(a.t.pSZKvM),
+                        (0, n.jsx)(a.J3s, {
+                            label: s.intl.string(s.t.pSZKvM),
                             required: !0,
                             value: b,
-                            onSelect: j,
+                            onSelect: g,
                             minDate: O,
                         }),
-                        (0, n.jsx)(s.czz, {
-                            label: a.intl.string(a.t.GOmEb8),
+                        (0, n.jsx)(a.czz, {
+                            label: s.intl.string(s.t.GOmEb8),
                             required: !0,
                             value: b,
-                            onChange: j,
+                            onChange: g,
                         }),
                     ],
                 }),

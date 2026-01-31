@@ -4,7 +4,7 @@ n.d(t, {
     n(896048);
 var l = n(627968),
     r = n(64700),
-    i = n(421380),
+    i = n(158954),
     s = n(397927),
     a = n(496092),
     c = n(929267),
@@ -95,9 +95,9 @@ function p(e) {
         f = (null == N ? void 0 : N.response) === o.Qi.INTERESTED ? o.Qi.UNINTERESTED : o.Qi.INTERESTED,
         y = f === o.Qi.INTERESTED ? u.intl.string(u.t.WtORed) : u.intl.string(u.t["8MPCVr"]);
     return (0, l.jsx)(
-        s.VoidConfirmModal,
+        i.ConfirmModal,
         v(m({}, g), {
-            header: y,
+            title: y,
             confirmText: u.intl.string(u.t.TyCVIq),
             cancelText: u.intl.string(u.t["ETE/oC"]),
             onConfirm: () => {
@@ -105,7 +105,7 @@ function p(e) {
                     null == x || x(),
                     g.onClose();
             },
-            confirmButtonColor: i.$n.Colors.BRAND,
+            variant: "primary",
             children: (0, l.jsx)("div", {
                 className: d.E,
                 children: (0, l.jsx)(s.z6M, {

@@ -1,18 +1,15 @@
 r.d(t, {
-    default: () => s,
-}),
-    r(896048);
-var n = r(627968),
-    o = r(64700),
-    c = r(421380),
-    i = r(397927),
-    l = r(157559),
-    a = r(435183),
-    p = r(985018);
-let s = function (e) {
+    default: () => l,
+});
+var n = r(627968);
+r(64700);
+var o = r(158954),
+    c = r(435183),
+    i = r(985018);
+let l = function (e) {
     var t, r;
-    let { channelId: s, application: b, onClose: f } = e,
-        u = (function (e, t) {
+    let { channelId: l, application: a, onClose: p } = e,
+        b = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -43,20 +40,15 @@ let s = function (e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (c[n] = e[n]);
             return c;
         })(e, ["channelId", "application", "onClose"]),
-        [y, O] = o.useState(!1),
-        g = async () => {
+        s = async (e) => {
             try {
-                O(!0), await a.Ay.removeLinkedLobby(s), f();
-            } catch (e) {
-                O(!1),
-                    l.A.show({
-                        title: p.intl.string(p.t.vFzPFj),
-                        body: p.intl.string(p.t["6D5WVg"]),
-                    });
+                await c.Ay.removeLinkedLobby(l);
+            } catch (t) {
+                throw (e(i.intl.string(i.t["6D5WVg"])), t);
             }
         };
     return (0, n.jsx)(
-        i.VoidConfirmModal,
+        o.ConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -83,24 +75,20 @@ let s = function (e) {
             return e;
         })(
             {
-                header: p.intl.string(p.t.JmUENg),
-                confirmText: p.intl.string(p.t["cY+Oob"]),
-                cancelText: p.intl.string(p.t["ETE/oC"]),
-                confirmButtonColor: c.$n.Colors.BRAND,
-                onConfirm: g,
-                loading: y,
-                onClose: f,
+                title: i.intl.string(i.t.JmUENg),
+                subtitle: i.intl.format(i.t["6l2osp"], {
+                    applicationName: a.name,
+                }),
+                confirmText: i.intl.string(i.t["cY+Oob"]),
+                cancelText: i.intl.string(i.t["ETE/oC"]),
+                onConfirm: s,
+                onClose: p,
             },
-            u,
+            b,
         )),
         (r = r =
             {
-                children: (0, n.jsx)(i.Text, {
-                    variant: "text-sm/normal",
-                    children: p.intl.format(p.t["6l2osp"], {
-                        applicationName: b.name,
-                    }),
-                }),
+                variant: "primary",
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

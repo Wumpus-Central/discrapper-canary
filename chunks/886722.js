@@ -3,8 +3,8 @@ r.d(t, {
 });
 var n = r(627968);
 r(64700);
-var o = r(417597),
-    i = r(397927),
+var o = r(158954),
+    i = r(417597),
     l = r(157559),
     c = r(287809),
     a = r(954571),
@@ -19,8 +19,8 @@ function f(e) {
             sku_id: b,
             sku_name: O,
             guild_id: y,
-            cancelLabel: d,
-            confirmLabel: m,
+            cancelLabel: m,
+            confirmLabel: d,
             transitionState: g,
             onClose: j,
         } = e,
@@ -65,9 +65,9 @@ function f(e) {
             "transitionState",
             "onClose",
         ]),
-        P = (0, o.bG)([c.default], () => c.default.getCurrentUser());
+        P = (0, i.bG)([c.default], () => c.default.getCurrentUser());
     return (0, n.jsx)(
-        i.VoidConfirmModal,
+        o.ConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -94,9 +94,9 @@ function f(e) {
             return e;
         })(
             {
-                header: null != f ? f : s.intl.string(s.t["+78Pfm"]),
-                cancelText: null != d ? d : s.intl.string(s.t["ETE/oC"]),
-                confirmText: null != m ? m : s.intl.string(s.t["+78Pfm"]),
+                title: null != f ? f : s.intl.string(s.t["+78Pfm"]),
+                cancelText: null != m ? m : s.intl.string(s.t["ETE/oC"]),
+                confirmText: null != d ? d : s.intl.string(s.t["+78Pfm"]),
                 onConfirm: () => {
                     a.default.track(u.HAw.TNS_SKU_REPORT_SUBMITTED, {
                         sku_id: b,

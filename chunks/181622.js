@@ -1,217 +1,211 @@
-n.d(t, {
-    ForwardFailedAlertModal: () => P,
+r.d(t, {
+    ForwardFailedAlertModal: () => j,
 });
-var r = n(627968),
-    l = n(64700),
-    i = n(311907),
-    c = n(421380),
-    s = n(397927),
-    a = n(966327),
-    o = n(47167),
-    u = n(598104),
-    d = n(255266),
-    f = n(734057),
-    b = n(71393),
-    p = n(290863),
-    h = n(994500),
-    y = n(287809),
-    j = n(427262),
-    m = n(294454),
-    O = n(985018),
-    g = n(655412);
+var n = r(627968),
+    l = r(64700),
+    i = r(158954),
+    a = r(311907),
+    s = r(397927),
+    c = r(966327),
+    o = r(47167),
+    u = r(598104),
+    A = r(255266),
+    _ = r(734057),
+    f = r(71393),
+    h = r(290863),
+    p = r(994500),
+    I = r(287809),
+    d = r(427262),
+    O = r(294454),
+    y = r(985018),
+    b = r(655412);
 
-function x(e) {
-    let { icon: t, label: n } = e;
-    return (0, r.jsxs)("div", {
-        className: g.us,
+function E(e) {
+    let { icon: t, label: r } = e;
+    return (0, n.jsxs)("div", {
+        className: b.us,
         children: [
             t,
-            (0, r.jsx)(s.Text, {
-                className: g.Pf,
+            (0, n.jsx)(s.Text, {
+                className: b.Pf,
                 variant: "text-md/medium",
                 lineClamp: 1,
-                children: n,
+                children: r,
             }),
         ],
     });
 }
 
-function A(e) {
+function L(e) {
     let { channel: t } = e,
-        n = (0, o.Ay)(t);
-    return (0, r.jsx)(x, {
-        icon: (0, r.jsx)(u.A, {
+        r = (0, o.Ay)(t);
+    return (0, n.jsx)(E, {
+        icon: (0, n.jsx)(u.A, {
             "aria-hidden": !0,
             size: s._3J.SIZE_32,
             channel: t,
         }),
-        label: n,
+        label: r,
     });
 }
 
-function v(e) {
+function g(e) {
     let { user: t } = e,
-        n = j.Ay.useName(t),
-        l = (0, i.bG)([h.A], () => h.A.getNickname(t.id)),
-        c = (0, i.bG)([p.A], () => p.A.getStatus(t.id));
-    return (0, r.jsx)(x, {
-        icon: (0, r.jsx)(a.A, {
+        r = d.Ay.useName(t),
+        l = (0, a.bG)([p.A], () => p.A.getNickname(t.id)),
+        i = (0, a.bG)([h.A], () => h.A.getStatus(t.id));
+    return (0, n.jsx)(E, {
+        icon: (0, n.jsx)(c.A, {
             "aria-hidden": !0,
             size: s._3J.SIZE_32,
             user: t,
-            status: c,
+            status: i,
         }),
-        label: null != l ? l : n,
+        label: null != l ? l : r,
     });
 }
 
-function w(e) {
+function P(e) {
     let { channel: t } = e,
-        n = (0, i.bG)([b.A], () => b.A.getGuild(null == t ? void 0 : t.guild_id)),
+        r = (0, a.bG)([f.A], () => f.A.getGuild(null == t ? void 0 : t.guild_id)),
         l = (0, o.Ay)(t);
-    return (0, r.jsx)(x, {
-        icon: (0, r.jsx)(d.A, {
-            size: d.q.SMALL_32,
-            guild: n,
+    return (0, n.jsx)(E, {
+        icon: (0, n.jsx)(A.A, {
+            size: A.q.SMALL_32,
+            guild: r,
             channel: t,
         }),
         label: l,
     });
 }
 
-function _(e) {
+function N(e) {
     let { destination: t } = e,
-        { channel: n, user: l } = (0, i.cf)([f.A, y.default], () => ({
-            channel: "channel" === t.type ? f.A.getChannel(t.id) : null,
-            user: "user" === t.type ? y.default.getUser(t.id) : null,
+        { channel: r, user: l } = (0, a.cf)([_.A, I.default], () => ({
+            channel: "channel" === t.type ? _.A.getChannel(t.id) : null,
+            user: "user" === t.type ? I.default.getUser(t.id) : null,
         }));
-    return (null == n ? void 0 : n.isGroupDM())
-        ? (0, r.jsx)(A, {
-              channel: n,
+    return (null == r ? void 0 : r.isGroupDM())
+        ? (0, n.jsx)(L, {
+              channel: r,
           })
         : null != l
-          ? (0, r.jsx)(v, {
+          ? (0, n.jsx)(g, {
                 user: l,
             })
-          : null != n
-            ? (0, r.jsx)(w, {
-                  channel: n,
+          : null != r
+            ? (0, n.jsx)(P, {
+                  channel: r,
               })
             : null;
 }
 
-function P(e) {
-    var t, n;
-    let { message: i, failedDestinations: a, forwardOptions: o } = e,
-        u = (function (e, t) {
+function j(e) {
+    var t, r;
+    let { message: a, failedDestinations: s, forwardOptions: c } = e,
+        o = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
+            var r,
+                n,
                 l,
                 i = {};
             if ("u" > typeof Reflect && Reflect.ownKeys) {
-                for (l = 0, n = Reflect.ownKeys(e); l < n.length; l++)
-                    (r = n[l]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                for (l = 0, r = Reflect.ownKeys(e); l < r.length; l++)
+                    (n = r[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 return i;
             }
             if (
                 ((i = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
+                    var r,
+                        n,
                         l = {},
                         i = Object.getOwnPropertyNames(e);
-                    for (r = 0; r < i.length; r++)
-                        (n = i[r]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                    for (n = 0; n < i.length; n++)
+                        (r = i[n]),
+                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
                     return l;
                 })(e, t)),
                 Object.getOwnPropertySymbols)
             )
-                for (l = 0, n = Object.getOwnPropertySymbols(e); l < n.length; l++)
-                    (r = n[l]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                for (l = 0, r = Object.getOwnPropertySymbols(e); l < r.length; l++)
+                    (n = r[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             return i;
         })(e, ["message", "failedDestinations", "forwardOptions"]),
-        d = l.useCallback(() => {
-            (0, m.fO)({
-                message: i,
+        u = l.useCallback(() => {
+            (0, O.fO)({
+                message: a,
                 source: "retry-modal",
-                initialSelectedDestinations: a,
-                forwardOptions: o,
+                initialSelectedDestinations: s,
+                forwardOptions: c,
             });
-        }, [a, i, o]);
-    return (0, r.jsxs)(
-        s.VoidConfirmModal,
+        }, [s, a, c]);
+    return (0, n.jsx)(
+        i.ConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
                         }),
                     )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: r,
+                                      value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = r);
+                                : (e[t] = n);
                     });
             }
             return e;
         })(
             {
-                header: O.intl.string(O.t["/OPIaM"]),
-                confirmText: O.intl.string(O.t["5911Lb"]),
-                cancelText: O.intl.string(O.t["ETE/oC"]),
-                confirmButtonColor: c.$n.Colors.BRAND,
-                onConfirm: d,
+                title: y.intl.string(y.t["/OPIaM"]),
+                subtitle: y.intl.format(y.t.cn9vFb, {
+                    count: s.length,
+                }),
+                confirmText: y.intl.string(y.t["5911Lb"]),
+                onConfirm: u,
             },
-            u,
+            o,
         )),
-        (n = n =
+        (r = r =
             {
-                children: [
-                    (0, r.jsx)(s.Text, {
-                        variant: "text-md/medium",
-                        children: O.intl.format(O.t.cn9vFb, {
-                            count: a.length,
-                        }),
-                    }),
-                    (0, r.jsx)("div", {
-                        className: g.Zc,
-                        children: a.map((e, t) =>
-                            (0, r.jsx)(
-                                _,
-                                {
-                                    destination: e,
-                                },
-                                t,
-                            ),
+                variant: "primary",
+                children: (0, n.jsx)("div", {
+                    className: b.Zc,
+                    children: s.map((e, t) =>
+                        (0, n.jsx)(
+                            N,
+                            {
+                                destination: e,
+                            },
+                            t,
                         ),
-                    }),
-                ],
+                    ),
+                }),
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
             : (function (e, t) {
-                  var n = Object.keys(e);
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
                   }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
               }),
         t),
     );

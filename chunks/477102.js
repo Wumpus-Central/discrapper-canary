@@ -952,7 +952,7 @@ let _ = {
             );
     },
     ConsentCheckBoxModal: async () => {
-        let { VoidConfirmModal: e } = await Promise.resolve().then(n.bind(n, 640238)),
+        let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 158954)),
             { Text: t, Heading: l } = await Promise.resolve().then(n.bind(n, 397927)),
             r = await Promise.resolve().then(n.t.bind(n, 64700, 19));
 
@@ -962,7 +962,7 @@ let _ = {
             return (0, a.jsx)(
                 e,
                 j(v({}, n), {
-                    header: "Consent CheckBox Examples",
+                    title: "Consent CheckBox Examples",
                     confirmText: "Close",
                     cancelText: "",
                     onConfirm: () => (console.log("ConsentCheckBoxModal: Modal closed"), n.onClose()),

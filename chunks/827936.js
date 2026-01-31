@@ -1,17 +1,18 @@
 n.d(t, {
-    A: () => g,
+    A: () => p,
 });
 var i = n(627968);
 n(64700);
-var r = n(311907),
-    l = n(827734),
+var r = n(158954),
+    l = n(311907),
+    o = n(827734),
     s = n(397927),
-    o = n(308528),
-    a = n(297413),
-    d = n(966327),
-    c = n(287809),
-    u = n(985018),
-    A = n(792595);
+    a = n(308528),
+    d = n(297413),
+    c = n(966327),
+    u = n(287809),
+    A = n(985018),
+    g = n(792595);
 
 function b(e) {
     let { color: t, className: n } = e;
@@ -55,20 +56,20 @@ function b(e) {
     });
 }
 
-function g(e, t) {
-    let n = (0, r.bG)([c.default], () => c.default.getCurrentUser());
+function p(e, t) {
+    let n = (0, l.bG)([u.default], () => u.default.getCurrentUser());
     return null == n || t.ownerId !== n.id || e.id === n.id
         ? null
         : (0, i.jsx)(s.Drp, {
               id: "make-dm-owner",
               color: "danger",
-              label: u.intl.string(u.t["6t3CyN"]),
+              label: A.intl.string(A.t["6t3CyN"]),
               action: () => {
-                  (0, s.qfG)((r) => {
-                      var c, g;
-                      return (0, i.jsxs)(
-                          s.VoidConfirmModal,
-                          ((c = (function (e) {
+                  (0, s.qfG)((l) => {
+                      var u, p;
+                      return (0, i.jsx)(
+                          r.ConfirmModal,
+                          ((u = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
                                       i = Object.keys(n);
@@ -94,65 +95,67 @@ function g(e, t) {
                               return e;
                           })(
                               {
-                                  bodyClassName: A.Uh,
-                                  header: u.intl.string(u.t.WZoUsm),
-                                  confirmText: u.intl.string(u.t["cY+Oob"]),
-                                  cancelText: u.intl.string(u.t["ETE/oC"]),
-                                  onConfirm: () => o.A.setDMOwner(t.id, e.id),
+                                  title: A.intl.string(A.t.WZoUsm),
+                                  confirmText: A.intl.string(A.t["cY+Oob"]),
+                                  cancelText: A.intl.string(A.t["ETE/oC"]),
+                                  onConfirm: () => a.A.setDMOwner(t.id, e.id),
                               },
-                              r,
+                              l,
                           )),
-                          (g = g =
+                          (p = p =
                               {
-                                  children: [
-                                      (0, i.jsx)(b, {
-                                          color: l.A.unsafe_rawColors.PRIMARY_300.css,
-                                      }),
-                                      (0, i.jsxs)("div", {
-                                          className: A.nS,
-                                          children: [
-                                              (0, i.jsx)("div", {
-                                                  className: A.HT,
-                                                  children: (0, i.jsx)(d.A, {
-                                                      user: n,
-                                                      size: s._3J.SIZE_80,
-                                                  }),
-                                              }),
-                                              (0, i.jsx)("div", {
-                                                  className: A.to,
-                                                  children: (0, i.jsx)(d.A, {
-                                                      user: e,
-                                                      size: s._3J.SIZE_80,
-                                                  }),
-                                              }),
-                                          ],
-                                      }),
-                                      (0, i.jsx)(s.Text, {
-                                          variant: "text-md/normal",
-                                          children: u.intl.format(u.t.gsBb3F, {
-                                              usernameHook: (t, n) =>
-                                                  (0, i.jsx)(
-                                                      a.A,
-                                                      {
-                                                          usernameIcon: (0, i.jsx)(s.euF, {
-                                                              className: A.jj,
-                                                              src: e.getAvatarURL(void 0, 16),
-                                                              size: s._3J.SIZE_16,
-                                                              "aria-hidden": !0,
-                                                          }),
-                                                          className: A.xK,
-                                                          usernameClass: A.Xh,
-                                                          discriminatorClass: A.D2,
-                                                          user: e,
-                                                      },
-                                                      n,
-                                                  ),
+                                  children: (0, i.jsxs)("div", {
+                                      className: g.Uh,
+                                      children: [
+                                          (0, i.jsx)(b, {
+                                              color: o.A.unsafe_rawColors.PRIMARY_300.css,
                                           }),
-                                      }),
-                                  ],
+                                          (0, i.jsxs)("div", {
+                                              className: g.nS,
+                                              children: [
+                                                  (0, i.jsx)("div", {
+                                                      className: g.HT,
+                                                      children: (0, i.jsx)(c.A, {
+                                                          user: n,
+                                                          size: s._3J.SIZE_80,
+                                                      }),
+                                                  }),
+                                                  (0, i.jsx)("div", {
+                                                      className: g.to,
+                                                      children: (0, i.jsx)(c.A, {
+                                                          user: e,
+                                                          size: s._3J.SIZE_80,
+                                                      }),
+                                                  }),
+                                              ],
+                                          }),
+                                          (0, i.jsx)(s.Text, {
+                                              variant: "text-md/normal",
+                                              children: A.intl.format(A.t.gsBb3F, {
+                                                  usernameHook: (t, n) =>
+                                                      (0, i.jsx)(
+                                                          d.A,
+                                                          {
+                                                              usernameIcon: (0, i.jsx)(s.euF, {
+                                                                  className: g.jj,
+                                                                  src: e.getAvatarURL(void 0, 16),
+                                                                  size: s._3J.SIZE_16,
+                                                                  "aria-hidden": !0,
+                                                              }),
+                                                              className: g.xK,
+                                                              usernameClass: g.Xh,
+                                                              discriminatorClass: g.D2,
+                                                              user: e,
+                                                          },
+                                                          n,
+                                                      ),
+                                              }),
+                                          }),
+                                      ],
+                                  }),
                               }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(g))
+                              ? Object.defineProperties(u, Object.getOwnPropertyDescriptors(p))
                               : (function (e, t) {
                                     var n = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
@@ -160,10 +163,10 @@ function g(e, t) {
                                         n.push.apply(n, i);
                                     }
                                     return n;
-                                })(Object(g)).forEach(function (e) {
-                                    Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(g, e));
+                                })(Object(p)).forEach(function (e) {
+                                    Object.defineProperty(u, e, Object.getOwnPropertyDescriptor(p, e));
                                 }),
-                          c),
+                          u),
                       );
                   });
               },

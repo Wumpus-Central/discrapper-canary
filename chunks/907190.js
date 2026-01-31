@@ -74,7 +74,7 @@ function u(e) {
                 sku_id: u.id,
                 sku_name: u.name,
                 guild_id: u.guild_id,
-                header: a.intl.format(a.t.avKMZo, {
+                header: a.intl.formatToPlainString(a.t.avKMZo, {
                     listingName: u.name,
                 }),
                 transitionState: s,

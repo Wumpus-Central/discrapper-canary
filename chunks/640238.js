@@ -1,12 +1,12 @@
 n.d(t, {
     M: () => _,
-    VoidConfirmModal: () => p,
+    a: () => p,
 });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(862482),
+    o = n.n(a),
+    s = n(862482),
     l = n(725570),
     c = n(397927),
     u = n(818284);
@@ -55,45 +55,45 @@ function p(e) {
             onCancel: m,
             onClose: g,
             onCloseCallback: E,
-            bodyClassName: b,
-            transitionState: y,
+            bodyClassName: y,
+            transitionState: b,
             loading: O = !1,
-            confirmButtonColor: A = o.$n.Colors.RED,
-            focusCancel: v = !1,
-            impression: S,
+            confirmButtonColor: v = s.$n.Colors.RED,
+            focusCancel: A = !1,
+            impression: I,
         } = e,
-        I = i.useRef(null);
+        S = i.useRef(null);
     return (
         i.useEffect(() => {
-            v ||
+            A ||
                 setTimeout(() => {
                     var e;
-                    return null == (e = I.current) ? void 0 : e.focus();
+                    return null == (e = S.current) ? void 0 : e.focus();
                 }, 0);
-        }, [v]),
+        }, [A]),
         i.useLayoutEffect(() => () => (null == E ? void 0 : E())),
         null != p &&
-            (t = (0, r.jsx)(o.$n, {
+            (t = (0, r.jsx)(s.$n, {
                 "data-migration-pending": !0,
                 type: "button",
-                look: o.$n.Looks.FILLED,
-                color: o.$n.Colors.PRIMARY,
+                look: s.$n.Looks.FILLED,
+                color: s.$n.Colors.PRIMARY,
                 className: u.x,
-                size: o.$n.Sizes.MEDIUM,
+                size: s.$n.Sizes.MEDIUM,
                 disabled: O,
                 onClick: () => {
                     null == m || m(), g();
                 },
-                autoFocus: v,
+                autoFocus: A,
                 children: p,
             })),
         null != f &&
-            (n = (0, r.jsx)(o.$n, {
+            (n = (0, r.jsx)(s.$n, {
                 "data-migration-pending": !0,
-                buttonRef: I,
+                buttonRef: S,
                 type: "submit",
-                size: o.$n.Sizes.MEDIUM,
-                color: A,
+                size: s.$n.Sizes.MEDIUM,
+                color: v,
                 submitting: O,
                 onClick: async () => {
                     try {
@@ -102,14 +102,14 @@ function p(e) {
                         throw e;
                     }
                 },
-                autoFocus: !v,
+                autoFocus: !A,
                 children: f,
             })),
         (0, r.jsxs)(l.EO, {
             "data-migration-pending": !0,
             className: _,
-            transitionState: y,
-            impression: S,
+            transitionState: b,
+            impression: I,
             parentComponent: "ConfirmModal",
             children: [
                 null != a
@@ -124,7 +124,7 @@ function p(e) {
                     : null,
                 (0, r.jsx)(l.$m, {
                     "data-migration-pending": !0,
-                    className: s()(u.Q, b),
+                    className: o()(u.Q, y),
                     children: d,
                 }),
                 (0, r.jsxs)(l.jl, {

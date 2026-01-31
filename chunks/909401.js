@@ -1,53 +1,52 @@
 t.d(l, {
-    default: () => h,
+    default: () => S,
 }),
     t(896048);
-var n = t(627968);
+var s = t(627968);
 t(64700);
-var s = t(417597),
-    o = t(421380),
-    i = t(397927),
-    r = t(843472),
-    a = t(997509),
-    c = t(734057),
-    u = t(258671),
+var n = t(158954),
+    i = t(417597),
+    o = t(397927),
+    a = t(843472),
+    r = t(997509),
+    u = t(734057),
+    c = t(258671),
     d = t(652215),
     g = t(985018),
-    b = t(378720);
+    _ = t(378720);
 
-function h(e) {
-    let { channelId: l, messageId: t, transitionState: h, onClose: S } = e,
-        _ = (0, s.bG)([c.A], () => c.A.getChannel(l)),
-        [f, C] = (0, u.A)(l),
-        F = null == _ ? void 0 : _.guild_id;
-    return (0, n.jsx)(i.VoidConfirmModal, {
-        header: g.intl.string(g.t.aIz1oV),
+function S(e) {
+    let { channelId: l, messageId: t, transitionState: S, onClose: h } = e,
+        F = (0, i.bG)([u.A], () => u.A.getChannel(l)),
+        [b, m] = (0, c.A)(l),
+        f = null == F ? void 0 : F.guild_id;
+    return (0, s.jsx)(n.ConfirmModal, {
+        title: g.intl.string(g.t.aIz1oV),
         confirmText: g.intl.string(g.t["cY+Oob"]),
-        cancelText: g.intl.string(g.t["ETE/oC"]),
-        confirmButtonColor: o.$n.Colors.BRAND,
-        onConfirm: () => r.A.crosspostMessage(l, t),
-        transitionState: h,
-        onClose: S,
-        children: (0, n.jsx)(i.Text, {
+        onConfirm: () => a.A.crosspostMessage(l, t),
+        transitionState: S,
+        onClose: h,
+        variant: "primary",
+        children: (0, s.jsx)(o.Text, {
             variant: "text-md/normal",
-            className: b.YK,
-            children: C
-                ? (0, n.jsx)(i.y$y, {})
-                : null != f && null != f.guildsFollowing && f.guildsFollowing > 0
-                  ? (0, n.jsxs)(n.Fragment, {
+            className: _.YK,
+            children: m
+                ? (0, s.jsx)(o.y$y, {})
+                : null != b && null != b.guildsFollowing && b.guildsFollowing > 0
+                  ? (0, s.jsxs)(s.Fragment, {
                         children: [
-                            (0, n.jsx)(i.Text, {
-                                className: b.YK,
+                            (0, s.jsx)(o.Text, {
+                                className: _.YK,
                                 variant: "text-sm/normal",
                                 children: g.intl.format(g.t.GCGrNP, {
-                                    numGuildsFollowing: f.guildsFollowing,
+                                    numGuildsFollowing: b.guildsFollowing,
                                 }),
                             }),
-                            (0, n.jsx)(i.Text, {
+                            (0, s.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 children: g.intl.format(g.t.IMhGZz, {
                                     onClick: () => {
-                                        null != F && null != S && (S(), a.A.open(F, d.BEX.ANALYTICS));
+                                        null != f && null != h && (h(), r.A.open(f, d.BEX.ANALYTICS));
                                     },
                                 }),
                             }),

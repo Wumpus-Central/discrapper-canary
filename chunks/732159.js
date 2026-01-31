@@ -1,12 +1,12 @@
 n.d(t, {
-    ConfirmModal: () => f,
+    ConfirmModal: () => _,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(460890),
-    s = n(189213),
-    o = n(696208);
+    o = n(189213),
+    s = n(696208);
 
 function l(e, t, n) {
     return (
@@ -40,6 +40,31 @@ function c(e) {
 }
 
 function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : u(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -50,13 +75,13 @@ function u(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = d(e, t)), Object.getOwnPropertySymbols))
+    if (((a = p(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function d(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -67,74 +92,89 @@ function d(e, t) {
     return i;
 }
 
-function f(e) {
+function _(e) {
     let {
             confirmText: t,
             cancelText: n,
             checkboxProps: l,
-            onConfirm: d,
-            onCancel: f,
-            onCloseCallback: p,
-            variant: _ = "critical",
+            onConfirm: u,
+            onCancel: p,
+            onCloseCallback: _,
+            variant: h = "critical",
+            children: m,
         } = e,
-        h = u(e, ["confirmText", "cancelText", "checkboxProps", "onConfirm", "onCancel", "onCloseCallback", "variant"]),
-        { i18n: m } = (0, a.G9)(),
-        g = m.CANCEL,
-        E = m.INLINE_NOTICE_GENERIC_ERROR,
-        [b, y] = i.useState(!1),
-        O = i.useRef(p);
+        g = f(e, [
+            "confirmText",
+            "cancelText",
+            "checkboxProps",
+            "onConfirm",
+            "onCancel",
+            "onCloseCallback",
+            "variant",
+            "children",
+        ]),
+        { i18n: E } = (0, a.G9)(),
+        y = E.CANCEL,
+        b = E.INLINE_NOTICE_GENERIC_ERROR,
+        [O, v] = i.useState(!1),
+        A = i.useRef(_);
     i.useLayoutEffect(() => {
-        O.current = p;
+        A.current = _;
     }),
         i.useLayoutEffect(
             () => () => {
                 var e;
-                null == (e = O.current) || e.call(O);
+                null == (e = A.current) || e.call(A);
             },
             [],
         );
-    let [A, v] = i.useState(void 0),
-        S = (e) => {
-            v(e);
+    let [I, S] = i.useState(void 0),
+        T = (e) => {
+            S(e);
         };
     return (0, r.jsx)(
-        s.Modal,
-        c(
+        o.Modal,
+        d(
+            c(
+                {
+                    actions: [
+                        {
+                            text: null != n ? n : y,
+                            variant: "secondary",
+                            onClick: () => {
+                                null == p || p(), g.onClose();
+                            },
+                        },
+                        {
+                            text: t,
+                            variant: "critical" === h ? "critical-primary" : h,
+                            onClick: async () => {
+                                S(void 0), v(!0);
+                                try {
+                                    await (null == u ? void 0 : u(T)), g.onClose();
+                                } catch (e) {
+                                    throw (v(!1), S((e) => (null != e ? e : b)), e);
+                                }
+                            },
+                            disabled: O,
+                            loading: O,
+                        },
+                    ],
+                    actionBarInput: null != l ? (0, r.jsx)(s.e, c({}, l)) : void 0,
+                    role: "alertdialog",
+                    notice:
+                        null != I
+                            ? {
+                                  message: I,
+                                  type: "critical",
+                              }
+                            : void 0,
+                },
+                g,
+            ),
             {
-                actions: [
-                    {
-                        text: null != n ? n : g,
-                        variant: "secondary",
-                        onClick: () => {
-                            null == f || f(), h.onClose();
-                        },
-                    },
-                    {
-                        text: t,
-                        variant: "critical" === _ ? "critical-primary" : _,
-                        onClick: async () => {
-                            v(void 0), y(!0);
-                            try {
-                                await (null == d ? void 0 : d(S)), h.onClose();
-                            } catch (e) {
-                                throw (y(!1), v((e) => (null != e ? e : E)), e);
-                            }
-                        },
-                        disabled: b,
-                        loading: b,
-                    },
-                ],
-                actionBarInput: null != l ? (0, r.jsx)(o.e, c({}, l)) : void 0,
-                role: "alertdialog",
-                notice:
-                    null != A
-                        ? {
-                              message: A,
-                              type: "critical",
-                          }
-                        : void 0,
+                children: m,
             },
-            h,
         ),
     );
 }

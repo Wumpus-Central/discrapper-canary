@@ -1,41 +1,42 @@
 n.d(e, {
-    A: () => g,
+    A: () => E,
 }),
     n(896048);
 var l = n(627968);
 n(64700);
-var r = n(311907),
-    i = n(397927),
-    u = n(931991),
-    o = n(698441),
-    a = n(496092),
-    c = n(722260),
-    s = n(563312),
-    d = n(985018);
+var r = n(158954),
+    i = n(311907),
+    u = n(397927),
+    o = n(931991),
+    a = n(698441),
+    c = n(496092),
+    s = n(722260),
+    d = n(563312),
+    g = n(985018);
 
-function g(t) {
-    let { guildEventId: e, recurrenceId: n, guild: g, channel: y } = t,
-        f = null != n,
-        { canManageGuildEvent: b } = (0, u.nr)(null != y ? y : g),
-        [p, A] = (0, r.yK)([o.Ay], () => [o.Ay.isActive(e), o.Ay.getGuildScheduledEvent(e)]),
-        v = (0, c.A)(n, null == A ? void 0 : A.id),
-        E = null != A && b(A),
-        O = (null == A ? void 0 : A.recurrence_rule) != null && !f,
-        m = (0, s.nh)(e, n);
-    if (!E || (p && !O && !f) || (f && !f) || null == A || null == m) return null;
-    let { startTime: j } = m;
-    if (p && f) {
-        var h;
-        if (null == j) return null;
-        let t = new Date(null != (h = null == v ? void 0 : v.scheduled_start_time) ? h : j);
+function E(t) {
+    let { guildEventId: e, recurrenceId: n, guild: E, channel: f } = t,
+        A = null != n,
+        { canManageGuildEvent: y } = (0, o.nr)(null != f ? f : E),
+        [p, b] = (0, i.yK)([a.Ay], () => [a.Ay.isActive(e), a.Ay.getGuildScheduledEvent(e)]),
+        v = (0, s.A)(n, null == b ? void 0 : b.id),
+        O = null != b && y(b),
+        h = (null == b ? void 0 : b.recurrence_rule) != null && !A,
+        _ = (0, d.nh)(e, n);
+    if (!O || (p && !h && !A) || (A && !A) || null == b || null == _) return null;
+    let { startTime: m } = _;
+    if (p && A) {
+        var T;
+        if (null == m) return null;
+        let t = new Date(null != (T = null == v ? void 0 : v.scheduled_start_time) ? T : m);
         if (new Date() > t) return null;
     }
-    let D = (t) => {
-        (0, i.qfG)((r) => {
-            var u, o;
-            return (0, l.jsxs)(
-                i.VoidConfirmModal,
-                ((u = (function (t) {
+    let j = (t) => {
+        (0, u.qfG)((i) => {
+            var o, a;
+            return (0, l.jsx)(
+                r.ConfirmModal,
+                ((o = (function (t) {
                     for (var e = 1; e < arguments.length; e++) {
                         var n = null != arguments[e] ? arguments[e] : {},
                             l = Object.keys(n);
@@ -59,29 +60,24 @@ function g(t) {
                             });
                     }
                     return t;
-                })({}, r)),
-                (o = o =
+                })({}, i)),
+                (a = a =
                     {
-                        header: d.intl.string(d.t.R5bpin),
-                        confirmText: O || t ? d.intl.string(d.t["8ZsNv5"]) : d.intl.string(d.t.B9sJLX),
-                        cancelText: d.intl.string(d.t.oEAioF),
+                        title: g.intl.string(g.t.R5bpin),
+                        subtitle: g.intl.string(g.t.v2GWNQ),
+                        confirmText: h || t ? g.intl.string(g.t["8ZsNv5"]) : g.intl.string(g.t.B9sJLX),
+                        cancelText: g.intl.string(g.t.oEAioF),
                         onConfirm: () =>
-                            f && !t ? a.A.deleteRecurrence(g.id, e, n, v) : a.A.deleteGuildEvent(e, g.id),
-                        children: [
-                            (0, l.jsx)(i.Text, {
+                            A && !t ? c.A.deleteRecurrence(E.id, e, n, v) : c.A.deleteGuildEvent(e, E.id),
+                        children:
+                            (h || t) &&
+                            (0, l.jsx)(u.Text, {
                                 variant: "text-md/normal",
-                                children: d.intl.string(d.t.v2GWNQ),
+                                children: g.intl.format(g.t.ZcpcyO, {}),
                             }),
-                            (0, l.jsx)("br", {}),
-                            (O || t) &&
-                                (0, l.jsx)(i.Text, {
-                                    variant: "text-md/normal",
-                                    children: d.intl.format(d.t.ZcpcyO, {}),
-                                }),
-                        ],
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(u, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
                     : (function (t, e) {
                           var n = Object.keys(t);
                           if (Object.getOwnPropertySymbols) {
@@ -89,33 +85,33 @@ function g(t) {
                               n.push.apply(n, l);
                           }
                           return n;
-                      })(Object(o)).forEach(function (t) {
-                          Object.defineProperty(u, t, Object.getOwnPropertyDescriptor(o, t));
+                      })(Object(a)).forEach(function (t) {
+                          Object.defineProperty(o, t, Object.getOwnPropertyDescriptor(a, t));
                       }),
-                u),
+                o),
             );
         });
     };
-    return (0, l.jsx)(i.Drp, {
-        id: d.intl.string(d.t.B9sJLX),
-        label: d.intl.string(d.t.B9sJLX),
-        action: f ? void 0 : () => D(),
+    return (0, l.jsx)(u.Drp, {
+        id: g.intl.string(g.t.B9sJLX),
+        label: g.intl.string(g.t.B9sJLX),
+        action: A ? void 0 : () => j(),
         color: "danger",
         children:
-            f &&
+            A &&
             (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(i.Drp, {
-                        id: d.intl.string(d.t.tqClly),
-                        label: d.intl.string(d.t.tqClly),
-                        action: () => D(),
+                    (0, l.jsx)(u.Drp, {
+                        id: g.intl.string(g.t.tqClly),
+                        label: g.intl.string(g.t.tqClly),
+                        action: () => j(),
                         disabled: null == v ? void 0 : v.is_canceled,
                         color: "danger",
                     }),
-                    (0, l.jsx)(i.Drp, {
-                        id: d.intl.string(d.t.wr33rW),
-                        label: d.intl.string(d.t.wr33rW),
-                        action: () => D(!0),
+                    (0, l.jsx)(u.Drp, {
+                        id: g.intl.string(g.t.wr33rW),
+                        label: g.intl.string(g.t.wr33rW),
+                        action: () => j(!0),
                         color: "danger",
                     }),
                 ],
