@@ -132,7 +132,7 @@ function O(e) {
                   })
                 : j.interval === E.WT.YEAR
                   ? y.intl.formatToPlainString(y.t.rtLTJP, {
-                        percent: discount,
+                        percent: k,
                     })
                   : null;
         },
