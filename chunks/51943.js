@@ -11,18 +11,18 @@ var l = n(827734),
     c = n(263063),
     u = n(562153),
     d = n(939496),
-    h = n(518477),
-    p = n(996988),
+    p = n(518477),
+    h = n(996988),
     g = n(7319);
 let f = (0, a.FT9)(a._3J.SIZE_16);
 
 function m(e) {
     let { user: t, guild: m, nick: b, onSelect: A } = e,
         { theme: y, themeType: O } = (0, d.E)(),
-        _ = t.hasAvatarForGuild(m.id);
+        j = t.hasAvatarForGuild(m.id);
     return (0, r.jsxs)(a.DUT, {
         focusProps:
-            O === p.d.MODAL_V2
+            O === h.d.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -42,44 +42,42 @@ function m(e) {
                 let { default: e } = await Promise.all([
                     n.e("49681"),
                     n.e("3795"),
-                    n.e("43600"),
-                    n.e("28136"),
                     n.e("68587"),
-                    n.e("63379"),
-                    n.e("56026"),
-                    n.e("16301"),
-                    n.e("22191"),
                     n.e("40396"),
+                    n.e("43600"),
                     n.e("13088"),
-                    n.e("25961"),
                     n.e("48330"),
                     n.e("92414"),
                     n.e("94857"),
-                    n.e("88332"),
+                    n.e("28136"),
                     n.e("7034"),
+                    n.e("63379"),
                     n.e("49559"),
+                    n.e("56026"),
+                    n.e("16301"),
+                    n.e("22191"),
+                    n.e("25961"),
                     n.e("37372"),
                     n.e("8018"),
                     n.e("3183"),
-                    n.e("64935"),
+                    n.e("9753"),
                     n.e("21968"),
                     n.e("35894"),
                     n.e("50796"),
+                    n.e("24202"),
                     n.e("11810"),
                     n.e("8458"),
                     n.e("39048"),
-                    n.e("44411"),
+                    n.e("76719"),
+                    n.e("17537"),
                     n.e("49862"),
-                    n.e("60989"),
-                    n.e("24202"),
-                    n.e("38985"),
+                    n.e("49438"),
+                    n.e("34348"),
                     n.e("36290"),
                     n.e("59541"),
-                    n.e("34795"),
                     n.e("59735"),
-                    n.e("61222"),
                     n.e("54469"),
-                    n.e("36137"),
+                    n.e("71020"),
                 ]).then(n.bind(n, 544676));
                 return (t) => {
                     var n, l;
@@ -139,7 +137,7 @@ function m(e) {
                 className: null != m.icon ? g.Kk : g.lN,
                 badgeStrokeColor: (0, s.Mw)(y) ? l.A.unsafe_rawColors.PRIMARY_600.css : l.A.unsafe_rawColors.WHITE.css,
                 badgeTooltipColor: a.oMw.PRIMARY,
-                badgeTooltipDelay: h.In,
+                badgeTooltipDelay: p.In,
                 size: c.A.Sizes.MEDIUM,
                 active: !0,
             }),
@@ -150,7 +148,7 @@ function m(e) {
                         className: g.UU,
                         children: m.name,
                     }),
-                    _ &&
+                    j &&
                         (0, r.jsxs)("div", {
                             className: g.C9,
                             children: [
@@ -163,18 +161,18 @@ function m(e) {
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-xs/medium",
                                     children: (0, r.jsx)(i.A, {
-                                        delay: h.In,
+                                        delay: p.In,
                                         children: null != b ? b : u.Ay.getName(m.id, void 0, t),
                                     }),
                                 }),
                             ],
                         }),
-                    !_ &&
+                    !j &&
                         null != b &&
                         (0, r.jsx)(a.Text, {
                             variant: "text-xs/medium",
                             children: (0, r.jsx)(i.A, {
-                                delay: h.In,
+                                delay: p.In,
                                 children: b,
                             }),
                         }),

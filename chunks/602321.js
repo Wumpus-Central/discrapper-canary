@@ -1,15 +1,17 @@
 r.d(t, {
-    default: () => u,
+    default: () => p,
 });
 var n = r(627968),
     o = r(64700),
     c = r(397927),
     a = r(442433),
-    i = r(545059);
+    l = r(545059),
+    u = r(810412),
+    i = r(652215);
 
-function u(e) {
-    let { groupId: t, onSelect: u } = e,
-        l = o.useCallback(() => {
+function p(e) {
+    let { groupId: t, onSelect: p } = e,
+        s = o.useCallback(() => {
             (0, c.mMO)(async () => {
                 let { default: e } = await r.e("51080").then(r.bind(r, 519528));
                 return (r) => {
@@ -63,25 +65,29 @@ function u(e) {
             }),
                 (0, a.Z_)();
         }, [t]),
-        p = o.useCallback(() => {
-            i.A.deleteGroup(t), (0, a.Z_)();
+        b = o.useCallback(() => {
+            l.A.deleteGroup(t),
+                (0, a.Z_)(),
+                (0, u.YX)(i.uss.FRIENDS, {
+                    type: u.Z5.GROUP_MANAGED,
+                    value: u.IP.REMOVED_FROM_FAVORITES,
+                });
         }, [t]);
     return (0, n.jsxs)(c.W1t, {
-        "data-menu-migrated": !0,
         "aria-label": "Group Context Menu",
-        navId: "group-context-menu",
+        navId: "overlay-group-context-menu",
         onClose: a.Z_,
-        onSelect: u,
+        onSelect: p,
         children: [
             (0, n.jsx)(c.Drp, {
                 id: "edit",
                 label: "Edit Group",
-                action: l,
+                action: s,
             }),
             (0, n.jsx)(c.Drp, {
                 id: "delete",
                 label: "Delete Group",
-                action: p,
+                action: b,
                 color: "danger",
             }),
         ],

@@ -1,16 +1,17 @@
 n.d(t, {
-    E: () => w,
+    E: () => D,
     Fg: () => m,
-    H: () => v,
+    H: () => A,
     Jo: () => u,
     LA: () => f,
+    NI: () => P,
     QC: () => g,
-    X4: () => R,
+    X4: () => w,
     Yz: () => d,
-    aS: () => S,
+    aS: () => I,
     cB: () => l,
-    lR: () => y,
-    m5: () => b,
+    lR: () => b,
+    m5: () => y,
     o0: () => T,
     oA: () => p,
     sq: () => O,
@@ -20,13 +21,13 @@ n.d(t, {
 var r = n(812729),
     i = n.n(r),
     a = n(600975),
-    s = n(945810),
-    o = n(688151);
+    o = n(945810),
+    s = n(688151);
 let l = (0, a.C)({
     kind: "user",
     id: "2025-06_overlay_raf_manager",
     label: "Overlay RAF Manager",
-    commonTriggerPoint: o.$G.CONNECTION_OPEN,
+    commonTriggerPoint: s.$G.CONNECTION_OPEN,
     defaultConfig: {
         enabled: !1,
     },
@@ -56,7 +57,7 @@ let u = (0, a.C)({
     kind: "user",
     id: "2025-06_overlay_render_timeout",
     label: "Overlay Render Timeout",
-    commonTriggerPoint: o.$G.CONNECTION_OPEN,
+    commonTriggerPoint: s.$G.CONNECTION_OPEN,
     defaultConfig: {
         shortTimeout: 8e3,
         longTimeout: 12e3,
@@ -104,7 +105,7 @@ let f = (0, a.C)({
     kind: "user",
     id: "2025-07_overlay_default_disable",
     label: "Overlay Default Disable",
-    commonTriggerPoint: o.$G.CONNECTION_OPEN,
+    commonTriggerPoint: s.$G.CONNECTION_OPEN,
     defaultConfig: {
         enabled: !1,
     },
@@ -138,7 +139,7 @@ var _ = (function (e) {
         e
     );
 })({});
-let h = (0, s.mj)({
+let h = (0, o.mj)({
     name: "2025-08-overlay-stream-watch-nudge",
     kind: "user",
     defaultConfig: {
@@ -200,7 +201,7 @@ let E = (0, a.C)({
     ],
 });
 
-function b(e) {
+function y(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return E.getCurrentConfig(
         {
@@ -211,7 +212,7 @@ function b(e) {
         },
     );
 }
-let y = (0, a.C)({
+let b = (0, a.C)({
     id: "2025-10_overlay_default_keybind",
     label: "Overlay Default Keybind",
     kind: "user",
@@ -245,7 +246,7 @@ let y = (0, a.C)({
 
 function O(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return y.getCurrentConfig(
+    return b.getCurrentConfig(
         {
             location: e,
         },
@@ -254,7 +255,7 @@ function O(e) {
         },
     );
 }
-let A = (0, a.C)({
+let v = (0, a.C)({
     kind: "user",
     id: "2025-10_overlay_negative_widget_testing",
     label: "Overlay Negative Widget Testing",
@@ -324,16 +325,16 @@ let A = (0, a.C)({
     ],
 });
 
-function v(e) {
-    let t = S(e, !1);
-    if (i()(A.definition.defaultConfig, t)) return "control";
-    let n = A.definition.treatments.find((e) => i()(e.config, t));
+function A(e) {
+    let t = I(e, !1);
+    if (i()(v.definition.defaultConfig, t)) return "control";
+    let n = v.definition.treatments.find((e) => i()(e.config, t));
     return null == n ? "control" : "treatment-".concat(n.id);
 }
 
-function S(e) {
+function I(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return A.getCurrentConfig(
+    return v.getCurrentConfig(
         {
             location: e,
         },
@@ -342,7 +343,7 @@ function S(e) {
         },
     );
 }
-let I = (0, a.C)({
+let S = (0, a.C)({
     id: "2025-11_overlay_welcome_notification",
     label: "Overlay Welcome Notification",
     kind: "user",
@@ -362,7 +363,7 @@ let I = (0, a.C)({
 
 function T(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return I.getCurrentConfig(
+    return S.getCurrentConfig(
         {
             location: e,
         },
@@ -401,16 +402,41 @@ function N(e) {
     );
 }
 
-function R(e) {
+function w(e) {
     return C.useExperiment({
         location: e,
     }).enabled;
 }
+let R = (0, o.mj)({
+    name: "2025-11-overlay-chat",
+    kind: "user",
+    defaultConfig: {
+        hasChat: !1,
+        hasFriendList: !1,
+    },
+    variations: {
+        1: {
+            hasChat: !0,
+            hasFriendList: !1,
+        },
+        2: {
+            hasChat: !0,
+            hasFriendList: !0,
+        },
+    },
+});
 
-function w() {
+function P(e) {
+    return R.getConfig({
+        location: e,
+    });
+}
+
+function D() {
     m("OVERLAY_INITIALIZED"),
-        b("OVERLAY_INITIALIZED"),
-        S("OVERLAY_INITIALIZED"),
+        y("OVERLAY_INITIALIZED"),
+        I("OVERLAY_INITIALIZED"),
         T("OVERLAY_INITIALIZED"),
-        N("OVERLAY_INITIALIZED");
+        N("OVERLAY_INITIALIZED"),
+        P("OVERLAY_INITIALIZED");
 }

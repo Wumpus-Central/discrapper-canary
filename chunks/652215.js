@@ -102,11 +102,11 @@ n.d(t, {
     QCW: () => nQ,
     RCc: () => e9,
     RWi: () => ng,
-    R_U: () => nF,
+    R_U: () => nV,
     RoK: () => to,
     Rsh: () => eg,
     Rv1: () => rP,
-    S3d: () => F,
+    S3d: () => V,
     S7L: () => j,
     SH7: () => a.S,
     SO9: () => n_,
@@ -146,7 +146,7 @@ n.d(t, {
     XL8: () => t9,
     XYD: () => rd,
     XYq: () => _.XY,
-    XgB: () => eV,
+    XgB: () => eF,
     XlF: () => p.Xl,
     XlH: () => m,
     Xlh: () => tu,
@@ -180,9 +180,9 @@ n.d(t, {
     cSc: () => e8,
     cZu: () => eO,
     clD: () => p.cl,
-    cmJ: () => V,
+    cmJ: () => F,
     d0r: () => eM,
-    d3x: () => nV,
+    d3x: () => nF,
     d68: () => s.d,
     d7Q: () => eA,
     dD: () => ra,
@@ -294,7 +294,7 @@ n.d(t, {
     rzx: () => p.rz,
     sFm: () => ri,
     sJq: () => p.sJ,
-    s_7: () => eF,
+    s_7: () => eV,
     sbO: () => Y,
     sdF: () => eU,
     sl8: () => B,
@@ -307,7 +307,7 @@ n.d(t, {
     uJv: () => rL,
     uPF: () => r_,
     uaN: () => tr,
-    ugG: () => tV,
+    ugG: () => tF,
     uje: () => n3,
     ump: () => t2,
     uss: () => Z,
@@ -330,7 +330,7 @@ n.d(t, {
     yKI: () => nz,
     yTV: () => tH,
     zF_: () => n6,
-    zOV: () => tF,
+    zOV: () => tV,
     zWA: () => b,
     zgK: () => nh,
     zzC: () => ek,
@@ -852,7 +852,7 @@ var j = (function (e) {
             e
         );
     })({}),
-    F = (function (e) {
+    V = (function (e) {
         return (
             (e.LOGIN = "Login"),
             (e.REGISTER = "Register"),
@@ -874,7 +874,7 @@ var j = (function (e) {
             e
         );
     })({}),
-    V = (function (e) {
+    F = (function (e) {
         return (e.SENT = "SENT"), (e.SENDING = "SENDING"), (e.SEND_FAILED = "SEND_FAILED"), e;
     })({});
 let B = new Set([o.l.REPLY, o.l.THREAD_STARTER_MESSAGE, o.l.CONTEXT_MENU_COMMAND]);
@@ -936,6 +936,7 @@ var H = (function (e) {
             (e.VOICE = "VOICE"),
             (e.VIDEO = "VIDEO"),
             (e.VOICE_V3 = "VOICE_V3"),
+            (e.TEXT_CHAT_V3 = "TEXT_CHAT_V3"),
             (e.TEXT = "TEXT"),
             (e.GUILDS_TEXT = "GUILDS_TEXT"),
             (e.GO_LIVE = "GO_LIVE"),
@@ -2011,7 +2012,7 @@ let eb = 100,
     ek = 32,
     eU = 6e5,
     eG = 6 * u.A.Seconds.HOUR,
-    eF = [
+    eV = [
         0,
         5,
         10,
@@ -2027,7 +2028,7 @@ let eb = 100,
         2 * u.A.Seconds.HOUR,
         eG,
     ],
-    eV = 10,
+    eF = 10,
     eB = 0xa00000,
     eH = 524288e3,
     eY = (e) => "||".concat(e, "||"),
@@ -3471,7 +3472,7 @@ var tD = (function (e) {
             e
         );
     })({}),
-    tF = (function (e) {
+    tV = (function (e) {
         return (
             (e.TOGGLE_REACTION_POPOUT = "TOGGLE_REACTION_POPOUT"),
             (e.ANIMATE_CHAT_AVATAR = "ANIMATE_CHAT_AVATAR"),
@@ -3479,7 +3480,7 @@ var tD = (function (e) {
             e
         );
     })({});
-let tV = 50;
+let tF = 50;
 var tB = (function (e) {
         return (
             (e.TWITCH = "twitch"),
@@ -5998,10 +5999,10 @@ var nU = (function (e) {
             e
         );
     })({}),
-    nF = (function (e) {
+    nV = (function (e) {
         return (e.PULL = "PULL"), (e.PUSH = "PUSH"), (e.CONFLICT = "CONFLICT"), (e.NONE = "NONE"), e;
     })({}),
-    nV = (function (e) {
+    nF = (function (e) {
         return (
             (e.DISCORD = "discord"),
             (e.STEAM = "steam"),

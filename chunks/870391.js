@@ -1,18 +1,15 @@
 n.d(t, {
-    A: () => O,
+    A: () => A,
 }),
-    n(896048),
-    n(638769),
     n(321073),
-    n(667532);
+    n(896048);
 var r,
     i = n(311907),
     l = n(73153),
     s = n(21119),
-    o = n(153488),
-    a = n(994500),
-    u = n(287809),
-    c = n(652215);
+    a = n(153488),
+    u = n(994500),
+    o = n(287809);
 
 function d(e, t, n) {
     return (
@@ -28,7 +25,7 @@ function d(e, t, n) {
     );
 }
 
-function p(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +42,7 @@ function p(e) {
     return e;
 }
 
-function g(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,12 +61,12 @@ function g(e, t) {
     );
 }
 let f = [],
-    h = !1;
-class m extends (r = i.Ay.PersistedStore) {
+    g = !1;
+class I extends (r = i.Ay.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(o.A, a.A, s.A, u.default), null != e)) {
+        if ((this.waitFor(a.A, u.A, s.A, o.default), null != e)) {
             var t, n;
-            (f = null != (t = e.groups) ? t : []), (h = null != (n = e.isInitialized) && n);
+            (f = null != (t = e.groups) ? t : []), (g = null != (n = e.isInitialized) && n);
         }
     }
     getGroups() {
@@ -90,49 +87,26 @@ class m extends (r = i.Ay.PersistedStore) {
         return null == t || 0 === t.userIds.length;
     }
     isInitialized() {
-        return h;
+        return g;
     }
     getState() {
         return {
             groups: f,
-            isInitialized: h,
+            isInitialized: g,
         };
     }
 }
-d(m, "displayName", "FriendGroupsStore"), d(m, "persistKey", "FriendGroupsStore");
-let O = new m(l.h, {
+d(I, "displayName", "FriendGroupsStore"), d(I, "persistKey", "FriendGroupsStoreV2");
+let A = new I(l.h, {
     POST_CONNECTION_OPEN: function () {
-        if (h || f.length > 0) return !1;
-        (f = [
-            {
-                id: "favorites",
-                name: "Favorites",
-                userIds: (function () {
-                    if (!o.A.hasConsented(c.YAq.PERSONALIZATION)) return [];
-                    let e = s.A.getUserAffinities();
-                    if (0 === e.length) return [];
-                    let t = [...e].sort((e, t) => s.A.compare(e.otherUserId, t.otherUserId)),
-                        n = [];
-                    for (let e of t) {
-                        if (n.length >= 5) break;
-                        let t = e.otherUserId;
-                        null != u.default.getUser(t) &&
-                            a.A.isFriend(t) &&
-                            !a.A.isIgnored(t) &&
-                            !a.A.isBlocked(t) &&
-                            n.push(t);
-                    }
-                    return n;
-                })(),
-            },
-        ]),
-            (h = !0);
+        if (g || f.length > 0) return !1;
+        (f = []), (g = !0);
     },
     CREATE_FRIEND_GROUP: function (e) {
         let { groupId: t, name: n } = e;
         return (
             !f.some((e) => e.id === t) &&
-            (f.unshift({
+            (f.push({
                 id: t,
                 name: n,
                 userIds: [],
@@ -145,7 +119,7 @@ let O = new m(l.h, {
             r = f.findIndex((e) => e.id === t);
         return (
             -1 !== r &&
-            ((f[r] = g(p({}, f[r]), {
+            ((f[r] = h(c({}, f[r]), {
                 name: n,
             })),
             !0)
@@ -175,7 +149,7 @@ let O = new m(l.h, {
             s = n.filter((e) => !l.has(e));
         return (
             0 !== s.length &&
-            ((f[r] = g(p({}, i), {
+            ((f[r] = h(c({}, i), {
                 userIds: [...i.userIds, ...s],
             })),
             !0)
@@ -190,7 +164,7 @@ let O = new m(l.h, {
             s = i.userIds.filter((e) => !l.has(e));
         return (
             s.length !== i.userIds.length &&
-            ((f[r] = g(p({}, i), {
+            ((f[r] = h(c({}, i), {
                 userIds: s,
             })),
             !0)

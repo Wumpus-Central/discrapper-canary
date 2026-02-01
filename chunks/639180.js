@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => s,
+    A: () => o,
 });
 var r = n(315069);
 
@@ -33,9 +33,9 @@ function a(e) {
     }
     return e;
 }
-class s extends r.A {
+class o extends r.A {
     constructor(e) {
-        var t, n;
+        var t, n, r;
         super(),
             i(this, "id", void 0),
             i(this, "layoutId", void 0),
@@ -51,24 +51,22 @@ class s extends r.A {
             (this.id = e.id || ""),
             (this.layoutId = e.layoutId || ""),
             (this.type = e.type);
-        let {
-            top: r,
-            left: s,
-            bottom: o,
-            right: l,
-        } = null != (t = e.anchor)
-            ? t
-            : {
-                  top: 0,
-                  left: 0,
-              };
-        "number" == typeof o ? (r = void 0) : (o = void 0),
-            "number" == typeof l ? (s = void 0) : (l = void 0),
+        const o = null != (t = e.anchor) ? t : {},
+            s = null != (n = e.size) ? n : {};
+        let l = "number" == typeof o.top ? o.top : void 0,
+            c = "number" == typeof o.bottom ? o.bottom : void 0,
+            u = "number" == typeof o.left ? o.left : void 0,
+            d = "number" == typeof o.right ? o.right : void 0;
+        const f = null != l && null != c && "auto" === s.height;
+        f || (null != c ? (l = void 0) : (c = void 0)),
+            (null != u && null != d && "auto" === s.width) || (null != d ? (u = void 0) : (d = void 0)),
+            null == l && null == c && (l = 0),
+            null == u && null == d && (u = 0),
             (this.anchor = {
-                top: r,
-                left: s,
-                bottom: o,
-                right: l,
+                top: l,
+                left: u,
+                bottom: c,
+                right: d,
             }),
             (this.size = a(
                 {
@@ -86,7 +84,7 @@ class s extends r.A {
             )),
             (this.pinned = !!e.pinned),
             (this.zIndex = e.zIndex || 0),
-            (this.opacity = null != (n = e.opacity) ? n : 1),
+            (this.opacity = null != (r = e.opacity) ? r : 1),
             (this.meta = a({}, e.meta)),
             null != e.showExtrasHintTimestamp && (this.showExtrasHintTimestamp = e.showExtrasHintTimestamp);
     }

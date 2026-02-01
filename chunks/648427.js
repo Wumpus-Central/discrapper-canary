@@ -1,16 +1,17 @@
 n.d(t, {
-    A: () => g,
+    A: () => S,
 }),
     n(896048),
     n(667532);
 var r,
     i = n(311907),
     l = n(73153),
-    s = n(734057),
-    o = n(696451),
-    a = n(71393);
+    s = n(95701),
+    a = n(734057),
+    u = n(696451),
+    o = n(71393);
 
-function u(e, t, n) {
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,36 +25,102 @@ function u(e, t, n) {
     );
 }
 let c = [],
-    d = new Set();
-class p extends (r = i.Ay.PersistedStore) {
+    h = new Set(),
+    f = [],
+    g = new Set();
+
+function I(e) {
+    let { channelId: t, history: n, historySet: r } = e;
+    if (r.has(t)) {
+        let e = n.filter((e) => e !== t);
+        return (
+            e.unshift(t),
+            {
+                didChange: !0,
+                history: e,
+                historySet: new Set([...e]),
+            }
+        );
+    }
+    let i = [t, ...n],
+        l = new Set(r);
+    return (l.add(t), i.length > 10)
+        ? ((i.length = 10),
+          {
+              didChange: !0,
+              history: i,
+              historySet: new Set([...i]),
+          })
+        : {
+              didChange: !0,
+              history: i,
+              historySet: l,
+          };
+}
+class A extends (r = i.Ay.PersistedStore) {
     initialize(e) {
-        var t;
-        this.waitFor(o.Ay, a.A, s.A),
-            (d = new Set([...(c = null != (t = null == e ? void 0 : e.channelHistory) ? t : [])]));
+        var t, n;
+        this.waitFor(u.Ay, o.A, a.A),
+            (c = null != (t = null == e ? void 0 : e.voiceChannelHistory) ? t : []),
+            (f = null != (n = null == e ? void 0 : e.textChannelHistory) ? n : []),
+            (h = new Set([...c])),
+            (g = new Set([...f]));
     }
     getState() {
         return {
-            channelHistory: c,
+            voiceChannelHistory: c,
+            textChannelHistory: f,
         };
     }
-    getChannelHistory() {
+    getVoiceChannelHistory() {
         return c;
     }
+    getTextChannelHistory() {
+        return f;
+    }
 }
-u(p, "displayName", "RecentVoiceChannelStore"), u(p, "persistKey", "RecentVoiceChannelStore");
-let g = new p(l.h, {
+d(A, "displayName", "RecentVoiceChannelStore"),
+    d(A, "persistKey", "RecentVoiceChannelStore"),
+    d(A, "migrations", [
+        (e) => {
+            var t, n, r;
+            return null == e || "object" != typeof e
+                ? {
+                      voiceChannelHistory: [],
+                      textChannelHistory: [],
+                  }
+                : {
+                      voiceChannelHistory:
+                          null != (t = null != (n = e.voiceChannelHistory) ? n : e.channelHistory) ? t : [],
+                      textChannelHistory: null != (r = e.textChannelHistory) ? r : [],
+                  };
+        },
+    ]);
+let S = new A(l.h, {
     POST_CONNECTION_OPEN: function () {
-        d = new Set([...c]);
+        (h = new Set([...c])), (g = new Set([...f]));
     },
     VOICE_CHANNEL_SELECT: function (e) {
         var t, n;
         let { channelId: r } = e;
-        return (
-            null != r &&
-            !!(null != (t = null == (n = s.A.getChannel(r)) ? void 0 : n.isVocal()) && t) &&
-            (d.has(r) ? ((c = c.filter((e) => e !== r)).unshift(r), (d = new Set([...c]))) : (c.unshift(r), d.add(r)),
-            c.length > 10 && ((c.length = 10), (d = new Set([...c]))),
-            !0)
-        );
+        if (null == r || !(null != (t = null == (n = a.A.getChannel(r)) ? void 0 : n.isVocal()) && t)) return !1;
+        let i = I({
+            channelId: r,
+            history: c,
+            historySet: h,
+        });
+        return (c = i.history), (h = i.historySet), i.didChange;
+    },
+    CHANNEL_SELECT: function (e) {
+        let { channelId: t } = e;
+        if (null == t) return !1;
+        let n = a.A.getChannel(t);
+        if (null == n || n.isVocal() || n.isPrivate() || !(0, s.ke)(n.type)) return !1;
+        let r = I({
+            channelId: t,
+            history: f,
+            historySet: g,
+        });
+        return (f = r.history), (g = r.historySet), r.didChange;
     },
 });

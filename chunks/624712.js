@@ -15,8 +15,8 @@ var i = n(562465),
     p = n(147964),
     h = n(927813),
     g = n(837921),
-    f = n(636401),
-    m = n(613057),
+    m = n(636401),
+    f = n(613057),
     A = n(652215);
 
 function _(e) {
@@ -66,7 +66,7 @@ function b(e, t) {
 let E = 10 * h.A.Millis.SECOND,
     O = {
         [A.e$_.VALIDATE_APPLICATION]: {
-            scope: m.hj,
+            scope: f.hj,
             handler(e) {
                 let { socket: t } = e,
                     i = t.application.id;
@@ -74,7 +74,7 @@ let E = 10 * h.A.Millis.SECOND,
                     var o;
                     let e;
                     if (null == i)
-                        throw new f.A(
+                        throw new m.A(
                             {
                                 errorCode: A.Lw6.INVALID_COMMAND,
                             },
@@ -82,7 +82,7 @@ let E = 10 * h.A.Millis.SECOND,
                         );
                     let t = c.A.getApplication(i);
                     if (null == t)
-                        throw new f.A(
+                        throw new m.A(
                             {
                                 errorCode: A.Lw6.INVALID_ENTITLEMENT,
                             },
@@ -90,7 +90,7 @@ let E = 10 * h.A.Millis.SECOND,
                         );
                     let n = t.primarySkuId;
                     if (null == n)
-                        throw new f.A(
+                        throw new m.A(
                             {
                                 errorCode: A.Lw6.INVALID_ENTITLEMENT,
                             },
@@ -105,7 +105,7 @@ let E = 10 * h.A.Millis.SECOND,
                                   () => !0 === d.A.isEntitledToSku(u.default.getCurrentUser(), n, o),
                               )).then((e) => {
                             if (!e)
-                                throw new f.A(
+                                throw new m.A(
                                     {
                                         errorCode: A.Lw6.INVALID_ENTITLEMENT,
                                     },
@@ -113,7 +113,7 @@ let E = 10 * h.A.Millis.SECOND,
                                 );
                         }),
                         (0, l.BK)(E).then(() => {
-                            throw new f.A(
+                            throw new m.A(
                                 {
                                     errorCode: A.Lw6.INVALID_ENTITLEMENT,
                                 },
@@ -126,7 +126,7 @@ let E = 10 * h.A.Millis.SECOND,
                         (e.code === A.Lw6.INVALID_ENTITLEMENT &&
                             (g.Ay.focus(null, !0),
                             (0, a.mMO)(async () => {
-                                let { default: e } = await n.e("4385").then(n.bind(n, 448701));
+                                let { default: e } = await n.e("26766").then(n.bind(n, 448701));
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
@@ -141,12 +141,12 @@ let E = 10 * h.A.Millis.SECOND,
             },
         },
         [A.e$_.GET_ENTITLEMENT_TICKET]: {
-            scope: m.hj,
+            scope: f.hj,
             handler(e) {
                 let { socket: t } = e,
                     l = t.application.id;
                 if (null == l)
-                    throw new f.A(
+                    throw new m.A(
                         {
                             errorCode: A.Lw6.INVALID_COMMAND,
                         },
@@ -169,7 +169,7 @@ let E = 10 * h.A.Millis.SECOND,
                         throw (
                             (g.Ay.focus(null, !0),
                             (0, a.mMO)(async () => {
-                                let { default: e } = await n.e("4385").then(n.bind(n, 448701));
+                                let { default: e } = await n.e("26766").then(n.bind(n, 448701));
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,

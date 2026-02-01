@@ -166,7 +166,7 @@ class A extends s.PureComponent {
                     (0, c.L3)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([i.e("97262"), i.e("32418"), i.e("8893")]).then(
+                            let { default: e } = await Promise.all([i.e("97262"), i.e("32418"), i.e("22252")]).then(
                                 i.bind(i, 668569),
                             );
                             return (i) =>

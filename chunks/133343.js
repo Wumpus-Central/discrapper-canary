@@ -54,8 +54,8 @@ var r = n(627968),
     k = n(631576),
     U = n(378058),
     G = n(406704),
-    F = n(253932),
-    V = n(696451),
+    V = n(253932),
+    F = n(696451),
     B = n(576705),
     H = n(309010),
     Y = n(638128),
@@ -171,7 +171,8 @@ function eO(e, t, a, o, s) {
                                 n.e("99011"),
                                 n.e("94857"),
                                 n.e("7034"),
-                                n.e("48898"),
+                                n.e("12907"),
+                                n.e("7602"),
                                 n.e("39289"),
                             ]).then(n.bind(n, 538899));
                             return (t) =>
@@ -379,14 +380,14 @@ function eR(e) {
 function eP(e, t, n, r) {
     let i = e.getGuildId(),
         a = (0, p.bG)([D.A], () => null != i && D.A.isLurking(i), [i]),
-        o = (0, p.bG)([V.Ay, K.default], () => {
+        o = (0, p.bG)([F.Ay, K.default], () => {
             var e, t;
             let n = K.default.getCurrentUser();
             return (
                 null !=
                     (e =
                         null != i && null != n
-                            ? null == (t = V.Ay.getMember(i, n.id))
+                            ? null == (t = F.Ay.getMember(i, n.id))
                                 ? void 0
                                 : t.isPending
                             : null) && e
@@ -553,7 +554,7 @@ function ek(e, t) {
         accessibilityLabel: k,
         channel: U,
         type: G,
-        focused: V,
+        focused: F,
         error: B,
         renderAttachButton: H,
         renderApplicationCommandIcon: W,
@@ -574,8 +575,8 @@ function ek(e, t) {
         allowNewLines: ek = !0,
         characterCountClassName: eU,
         "aria-describedby": eG,
-        "aria-labelledby": eF,
-        setEditorRef: eV,
+        "aria-labelledby": eV,
+        setEditorRef: eF,
         autoCompletePosition: eB,
         children: eH,
         disableThemedBackground: eY = !1,
@@ -592,7 +593,7 @@ function ek(e, t) {
         e$ = i.useRef(null),
         e0 = i.useRef(null),
         e1 = i.useRef(null);
-    null == eV || eV(e$.current);
+    null == eF || eF(e$.current);
     let e2 = (0, b.A)(U),
         [e3, e6] = i.useState(!e2);
     (0, m.i4)(eQ, (e) => {
@@ -617,8 +618,8 @@ function ek(e, t) {
             canEveryoneSendMessages: tn,
         } = eP(U, G, e4, L),
         tr = G.toolbarType === J.O1.STATIC,
-        ti = !F.D_.useSetting() && !(0, Q.isAndroidWeb)() && null != window.ResizeObserver,
-        ta = !ti || !(null == (n = G.commands) ? void 0 : n.enabled) || !V || "/" !== f,
+        ti = !V.D_.useSetting() && !(0, Q.isAndroidWeb)() && null != window.ResizeObserver,
+        ta = !ti || !(null == (n = G.commands) ? void 0 : n.enabled) || !F || "/" !== f,
         to = (0, x.A)(),
         { fontSize: ts } = (0, p.cf)([g.A], () => ({
             fontSize: g.A.fontSize,
@@ -671,9 +672,9 @@ function ek(e, t) {
         }, [tc]);
     (0, X.R)(tc, U.guild_id, U.id);
     let tG = null != z,
-        tF = (e9 && !((e7 || e8) && tn)) || (tp && (null == (s = G.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
-        tV = null;
-    null != e4 ? (tV = null == W ? void 0 : W(e4, e5, ef.g$)) : (!e9 || tt) && (tV = null == H ? void 0 : H(tG, ef.g$));
+        tV = (e9 && !((e7 || e8) && tn)) || (tp && (null == (s = G.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
+        tF = null;
+    null != e4 ? (tF = null == W ? void 0 : W(e4, e5, ef.g$)) : (!e9 || tt) && (tF = null == H ? void 0 : H(tG, ef.g$));
     let tB = ti && null != h && !e9 && G.showCharacterCount && null == e4,
         tH = ti && !__OVERLAY__ && null != h && null == e4 && G.toolbarType !== J.O1.NONE && !e9,
         tY = (0, en.Y)({
@@ -742,7 +743,7 @@ function ek(e, t) {
                     ref: eQ,
                     className: o()(O, {
                         [ef.gM]: !0,
-                        [ef.h9]: tF,
+                        [ef.h9]: tV,
                         [ef.mr]: eh,
                         [ef.Wn]: d.Fr,
                         [ef.Ls]: tK,
@@ -777,8 +778,8 @@ function ek(e, t) {
                                       }),
                                 (0, r.jsxs)("div", {
                                     className: o()(ef.vW, {
-                                        [ef.BF]: tF,
-                                        [ef.RL]: G !== J.oU.EDIT && (null != tV || (tF && null == tV) || e7),
+                                        [ef.BF]: tV,
+                                        [ef.RL]: G !== J.oU.EDIT && (null != tF || (tV && null == tF) || e7),
                                         [ef.fk]: G === J.oU.THREAD_CREATION,
                                         [ef.TZ]: G === J.oU.CREATE_FORUM_POST || G === J.oU.FORWARD_MESSAGE_INPUT,
                                         [ef.$i]: G === J.oU.USER_PROFILE_REPLY,
@@ -786,14 +787,14 @@ function ek(e, t) {
                                     onMouseDown: tP,
                                     children: [
                                         tZ,
-                                        tV,
+                                        tF,
                                         (0, r.jsx)(_.vN3, {
                                             ringTarget: eQ,
                                             ringClassName: ef.Rg,
                                             children: (0, r.jsx)($.A, {
                                                 ref: e$,
                                                 id: P,
-                                                focused: V,
+                                                focused: F,
                                                 useSlate: ti,
                                                 textValue: f,
                                                 richValue: h,
@@ -836,7 +837,7 @@ function ek(e, t) {
                                                     },
                                                     w,
                                                 ),
-                                                "aria-labelledby": eF,
+                                                "aria-labelledby": eV,
                                                 showValueWhenDisabled: eq,
                                             }),
                                         }),
@@ -868,7 +869,7 @@ function ek(e, t) {
                             canSendStickers: null == (l = G.stickers) ? void 0 : l.allowSending,
                             canSendSoundmoji: null == (u = G.soundmoji) ? void 0 : u.allowSending,
                             textValue: f,
-                            focused: V,
+                            focused: F,
                             isEditorIdle: tx,
                             expressionPickerView: tw,
                             type: G,

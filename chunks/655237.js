@@ -1,14 +1,27 @@
 n.d(t, {
-    A: () => f,
+    A: () => _,
 });
-var l,
-    r,
+var r,
     i = n(311907),
     a = n(73153),
-    s = n(600975),
-    o = n(961350);
+    o = n(600975),
+    s = n(961350);
+
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
 let c = {},
-    u = (0, s.C)({
+    u = (0, o.C)({
         kind: "user",
         id: "2025-03_slayer_notif_supression_killswitch",
         label: "Disable suppressing notifications with slayer game active",
@@ -25,9 +38,17 @@ let c = {},
             },
         ],
     });
-class d extends (r = i.Ay.Store) {
+
+function d(e) {
+    delete c[e.socketId];
+}
+
+function f(e) {
+    delete c[e.socketId], e.suppressNotifications && (c[e.socketId] = e.targetUserId);
+}
+class p extends (r = i.Ay.Store) {
     initialize() {
-        this.waitFor(o.default);
+        this.waitFor(s.default);
     }
     areSlayerNotificationsSuppressed() {
         if (
@@ -41,23 +62,12 @@ class d extends (r = i.Ay.Store) {
             ).enabled
         )
             return !1;
-        for (let e in c) if (c[e] === o.default.getId()) return !0;
+        for (let e in c) if (c[e] === s.default.getId()) return !0;
         return !1;
     }
 }
-(l = "displayName") in d
-    ? Object.defineProperty(d, l, {
-          value: "RpcNotificationSettingsStore",
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-      })
-    : (d[l] = "RpcNotificationSettingsStore");
-let f = new d(a.h, {
-    RPC_APP_DISCONNECTED: function (e) {
-        delete c[e.socketId];
-    },
-    SET_RPC_NOTIFICATION_SETTINGS: function (e) {
-        delete c[e.socketId], e.suppressNotifications && (c[e.socketId] = e.targetUserId);
-    },
+l(p, "displayName", "RpcNotificationSettingsStore");
+let _ = new p(a.h, {
+    RPC_APP_DISCONNECTED: d,
+    SET_RPC_NOTIFICATION_SETTINGS: f,
 });

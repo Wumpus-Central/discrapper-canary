@@ -1,36 +1,35 @@
 n.d(t, {
-    A: () => G,
+    A: () => U,
 }),
     n(321073),
     n(733351);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(735438),
+    o = n.n(a),
+    s = n(735438),
     l = n(158954),
     c = n(311907),
     u = n(990078),
     d = n(672979),
     f = n(87664),
     p = n(47167),
-    _ = n(126904),
-    h = n(834757),
-    m = n(242919),
-    g = n(890330),
-    E = n(961350),
-    b = n(994500),
+    _ = n(834757),
+    h = n(242919),
+    m = n(890330),
+    g = n(961350),
+    E = n(994500),
     y = n(412242),
-    O = n(566903),
-    A = n(109989),
+    b = n(566903),
+    O = n(109989),
     v = n(143239),
-    S = n(684448),
+    A = n(684448),
     I = n(835072),
-    T = n(194187);
+    S = n(194187);
 n(851883);
-var C = n(652215),
-    N = n(985018),
-    R = n(123511);
+var T = n(652215),
+    C = n(985018),
+    N = n(123511);
 
 function w(e, t, n) {
     return (
@@ -46,7 +45,7 @@ function w(e, t, n) {
     );
 }
 
-function P(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +62,7 @@ function P(e) {
     return e;
 }
 
-function D(e, t) {
+function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +75,12 @@ function D(e, t) {
     return n;
 }
 
-function x(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : P(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -90,16 +89,16 @@ function x(e, t) {
 
 function L(e) {
     let t = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
-    return null != t ? t : N.intl.string(N.t.eXan7B);
+    return null != t ? t : C.intl.string(C.t.eXan7B);
 }
 
-function j(e, t) {
+function x(e, t) {
     return (
         (e.isDM() || e.isGroupDM()
-            ? N.intl.string(N.t["9FaEzi"])
+            ? C.intl.string(C.t["9FaEzi"])
             : e.isGuildStageVoice()
-              ? N.intl.string(N.t.QygGCN)
-              : N.intl.string(N.t.msxteM)) + (null != t ? " (".concat(t, ")") : "")
+              ? C.intl.string(C.t.QygGCN)
+              : C.intl.string(C.t.msxteM)) + (null != t ? " (".concat(t, ")") : "")
     );
 }
 
@@ -109,60 +108,57 @@ function M(e) {
         { descriptiveTextEnabled: a } = (0, y.n)({
             location: "StackedActivityStatus",
         }),
-        { enableTopNavButton: s } = (0, _.tR)({
-            location: "StackedActivityStatus",
-        }),
         o = (0, p.Ay)(r),
-        l = a || s;
+        s = a;
     return (
         null != t && i.push(L(t)),
         n.forEach((e) => {
-            let { tooltip: t } = (0, O.A)(e, l);
+            let { tooltip: t } = (0, b.A)(e, s);
             null != t && i.push(t);
         }),
-        null == t && null != r && i.push(j(r, o)),
+        null == t && null != r && i.push(x(r, o)),
         i.length > 0 ? i.join(", ") : ""
     );
 }
 
-function k(e) {
+function j(e) {
     let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
-        o = a - 1;
+        s = a - 1;
     return (0, r.jsxs)(l.EYj, {
         variant: t,
-        className: s()(n, R.qi),
+        className: o()(n, N.qi),
         color: i ? "status-positive" : "none",
-        children: ["+", o],
+        children: ["+", s],
     });
 }
 
-function U(e) {
+function k(e) {
     let { textVariant: t, className: n } = e;
     return (0, r.jsx)(l.EYj, {
         variant: t,
-        className: s()(R.Om, n),
+        className: o()(N.Om, n),
         children: "•",
     });
 }
 
-function G(e) {
+function U(e) {
     let {
         user: t,
         activities: n,
         applicationStream: a,
         voiceChannel: l,
         textClassName: p,
-        iconClassName: _,
-        textSize: y = "xs",
-        animateEmoji: O = !0,
-        hasQuest: N = !1,
-        hideEmoji: w = !1,
-        hideTooltip: D = !1,
+        iconClassName: y,
+        textSize: b = "xs",
+        animateEmoji: C = !0,
+        hasQuest: w = !1,
+        hideEmoji: P = !1,
+        hideTooltip: L = !1,
     } = e;
     (0, f.A)(null == t ? void 0 : t.id);
-    let L = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        j = (0, h.AO)(L),
-        G = (0, g.v)("ActivityStatus", l),
+    let x = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+        U = (0, _.AO)(x),
+        G = (0, m.v)("ActivityStatus", l),
         V = i.useMemo(() => {
             var e, t;
             let r =
@@ -170,25 +166,25 @@ function G(e) {
                     ? void 0
                     : n.find((e) => {
                           let { type: t } = e;
-                          return t === C.$pd.CUSTOM_STATUS;
+                          return t === T.$pd.CUSTOM_STATUS;
                       });
             if (null == r) return null;
             let i = null != (e = null == (t = r.state) ? void 0 : t.trim()) ? e : null;
             return null == ("" === i ? null : i) && null == r.emoji ? null : r;
         }, [n]),
-        F = (0, c.bG)([E.default], () => E.default.getId() === (null == t ? void 0 : t.id)),
-        B = (0, c.bG)([m.A], () =>
+        F = (0, c.bG)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id)),
+        B = (0, c.bG)([h.A], () =>
             G
                 ? F
-                    ? m.A.getHangStatusActivity()
+                    ? h.A.getHangStatusActivity()
                     : null != n
-                      ? n.find((e) => e.type === C.$pd.HANG_STATUS)
+                      ? n.find((e) => e.type === T.$pd.HANG_STATUS)
                       : null
                 : null,
         ),
         H = i.useMemo(() => {
             var e;
-            return (0, o.uniqWith)(
+            return (0, s.uniqWith)(
                 null !=
                     (e =
                         null == n
@@ -196,9 +192,9 @@ function G(e) {
                             : n.filter((e) => {
                                   let { type: t, name: n } = e;
                                   return (
-                                      t !== C.$pd.CUSTOM_STATUS &&
-                                      t !== C.$pd.HANG_STATUS &&
-                                      n !== (null == j ? void 0 : j.name)
+                                      t !== T.$pd.CUSTOM_STATUS &&
+                                      t !== T.$pd.HANG_STATUS &&
+                                      n !== (null == U ? void 0 : U.name)
                                   );
                               }))
                     ? e
@@ -207,33 +203,33 @@ function G(e) {
                     (null != e.application_id && null != t.application_id && e.application_id === t.application_id) ||
                     (null != e.name && null != t.name && e.name === t.name),
             );
-        }, [n, null == j ? void 0 : j.name]),
-        Y = null == n ? void 0 : n.find((e) => e.name === (null == j ? void 0 : j.name)),
+        }, [n, null == U ? void 0 : U.name]),
+        Y = null == n ? void 0 : n.find((e) => e.name === (null == U ? void 0 : U.name)),
         W = (null == t ? void 0 : t.bot) === !0,
-        K = (0, c.bG)([b.A], () => b.A.isBlockedOrIgnored(null == t ? void 0 : t.id)),
+        K = (0, c.bG)([E.A], () => E.A.isBlockedOrIgnored(null == t ? void 0 : t.id)),
         z = (null == V ? void 0 : V.state) != null,
-        q = null != L,
-        X = !q && null != l,
-        Z = H.length + (q || X ? 1 : 0),
-        Q = Z > 1,
-        $ = ((null == V ? void 0 : V.state) != null || null != B) && "xs" === y,
-        J = M({
+        q = null != x,
+        Z = !q && null != l,
+        Q = H.length + (q || Z ? 1 : 0),
+        X = Q > 1,
+        J = ((null == V ? void 0 : V.state) != null || null != B) && "xs" === b,
+        $ = M({
             streamActivity: Y,
             otherActivities: H,
-            voiceActivityChannel: X ? l : null,
+            voiceActivityChannel: Z ? l : null,
         });
     if (K) return null;
     let ee = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                t = !0 === e || D;
-            if (null != L)
+                t = !0 === e || L;
+            if (null != x)
                 return (0, r.jsx)(v.A, {
-                    stream: L,
+                    stream: x,
                     game: Y,
-                    textVariant: "text-".concat(y, "/medium"),
+                    textVariant: "text-".concat(b, "/medium"),
                     textClassName: p,
-                    iconClassName: _,
-                    hideText: $,
+                    iconClassName: y,
+                    hideText: J,
                     hideIcon: W,
                     hideTooltip: t,
                 });
@@ -241,20 +237,20 @@ function G(e) {
             return null != n
                 ? (0, r.jsx)(I.A, {
                       activity: n,
-                      textVariant: "text-".concat(y, "/medium"),
+                      textVariant: "text-".concat(b, "/medium"),
                       textClassName: p,
-                      iconClassName: _,
-                      hideText: $,
+                      iconClassName: y,
+                      hideText: J,
                       hideIcon: W,
                       hideTooltip: t,
                   })
                 : null != l
-                  ? (0, r.jsx)(T.A, {
+                  ? (0, r.jsx)(S.A, {
                         channel: l,
-                        textVariant: "text-".concat(y, "/medium"),
+                        textVariant: "text-".concat(b, "/medium"),
                         textClassName: p,
-                        iconClassName: _,
-                        hideText: $,
+                        iconClassName: y,
+                        hideText: J,
                         hideTooltip: t,
                     })
                   : null;
@@ -269,14 +265,14 @@ function G(e) {
                     canTruncate: !1,
                 };
             return (
-                null != L &&
+                null != x &&
                     e.push(
                         (0, r.jsx)(
                             v.A,
-                            x(
-                                P(
+                            D(
+                                R(
                                     {
-                                        stream: L,
+                                        stream: x,
                                         game: null == n ? void 0 : n.find(d.A),
                                     },
                                     t,
@@ -292,7 +288,7 @@ function G(e) {
                     e.push(
                         (0, r.jsx)(
                             I.A,
-                            P(
+                            R(
                                 {
                                     activity: n,
                                 },
@@ -302,12 +298,12 @@ function G(e) {
                         ),
                     );
                 }),
-                X &&
+                Z &&
                     e.push(
                         (0, r.jsx)(
-                            T.A,
-                            x(
-                                P(
+                            S.A,
+                            D(
+                                R(
                                     {
                                         channel: l,
                                     },
@@ -324,46 +320,46 @@ function G(e) {
             );
         },
         en = () =>
-            (0, r.jsx)(k, {
-                textVariant: "text-".concat(y, "/medium"),
+            (0, r.jsx)(j, {
+                textVariant: "text-".concat(b, "/medium"),
                 className: p,
                 hasCustomStatusText: z,
-                totalActivityCount: Z,
+                totalActivityCount: Q,
             }),
         er = () =>
-            0 === Z
+            0 === Q
                 ? null
-                : Q && !W
-                  ? D
+                : X && !W
+                  ? L
                       ? (0, r.jsxs)("div", {
-                            className: s()(R.ht, $ && R.e7),
+                            className: o()(N.ht, J && N.e7),
                             children: [ee(), en()],
                         })
                       : (0, r.jsx)(u.m, {
                             delay: 150,
                             __unsupportedReactNodeAsText: et(),
                             children: (0, r.jsxs)("div", {
-                                className: s()(R.ht, $ && R.e7),
-                                "aria-label": J,
+                                className: o()(N.ht, J && N.e7),
+                                "aria-label": $,
                                 children: [ee(!0), en()],
                             }),
                         })
                   : ee(),
-        ei = s()(R.kL, {
-            [R.Dk]: "xs" === y,
-            [R.WV]: "sm" === y,
+        ei = o()(N.kL, {
+            [N.Dk]: "xs" === b,
+            [N.WV]: "sm" === b,
         }),
         ea = () =>
             null == V && null == B
                 ? null
-                : (0, r.jsx)(S.A, {
+                : (0, r.jsx)(A.A, {
                       customStatusActivity: V,
-                      textSize: y,
-                      animateEmoji: O,
-                      hideEmoji: w,
-                      hideTooltip: D,
+                      textSize: b,
+                      animateEmoji: C,
+                      hideEmoji: P,
+                      hideTooltip: L,
                       textClassName: p,
-                      iconClassName: _,
+                      iconClassName: y,
                       tooltipClassName: ei,
                       voiceChannel: l,
                       hangStatus: B,
@@ -374,13 +370,13 @@ function G(e) {
         children: [
             er(),
             (null != V || null != B) &&
-                Z > 0 &&
-                (0, r.jsx)(U, {
-                    textVariant: "text-".concat(y, "/normal"),
+                Q > 0 &&
+                (0, r.jsx)(k, {
+                    textVariant: "text-".concat(b, "/normal"),
                     className: p,
                 }),
             ea(),
-            N && (0, r.jsx)(A.A, {}),
+            w && (0, r.jsx)(O.A, {}),
         ],
     });
 }

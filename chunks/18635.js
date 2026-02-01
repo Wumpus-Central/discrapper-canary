@@ -18,13 +18,13 @@ var r = n(627968),
     u = n(73153),
     d = n(944791),
     p = n(711950),
-    f = n(726249),
-    h = n(915089),
-    A = n(346084),
-    g = n(742589),
-    m = n(95550),
-    b = n(608881),
-    _ = n(210714),
+    h = n(726249),
+    g = n(915089),
+    m = n(346084),
+    f = n(742589),
+    A = n(95550),
+    _ = n(608881),
+    b = n(210714),
     E = n(544028),
     O = n(595623),
     y = n(912309),
@@ -38,7 +38,7 @@ var r = n(627968),
 function j() {
     return (0, r.jsx)("div", {
         className: T.N3,
-        children: (0, r.jsx)(m.A, {
+        children: (0, r.jsx)(A.Ay, {
             tooltip: N.intl.string(N.t["HfOgA/"]),
         }),
     });
@@ -59,12 +59,12 @@ let x = function (e) {
                 });
     }, [l, n]),
         i.useEffect(() => {
-            d.I(S.BVt.FRIENDS), (0, _.d)("friends");
+            d.I(S.BVt.FRIENDS), (0, b.d)("friends");
         }, []);
-    let m = (0, o.bG)([E.A], () => E.A.theme),
+    let A = (0, o.bG)([E.A], () => E.A.theme),
         x = (0, y.kX)(),
         { section: P, rows: w } = (0, o.cf)([O.Ay], () => O.Ay.getState()),
-        L = (0, o.bG)([A.A], () => A.A.getSuggestionCount()),
+        L = (0, o.bG)([m.A], () => m.A.getSuggestionCount()),
         R = i.useMemo(() => w.getRelationshipCounts(), [w]);
     i.useEffect(() => {
         null != t && p.A.setInitialSection(t),
@@ -79,8 +79,8 @@ let x = function (e) {
                 explicit: !0,
             });
         },
-        M = (0, h.GV)(),
-        k = (0, h.GV)(),
+        M = (0, g.GV)(),
+        k = (0, g.GV)(),
         U = [
             {
                 id: S.m3P.ONLINE,
@@ -142,7 +142,7 @@ let x = function (e) {
         G = null,
         V = (0, r.jsx)("div", {
             className: T.Xl,
-            children: (0, r.jsx)(b.A, {}),
+            children: (0, r.jsx)(_.A, {}),
         });
     return (
         (G =
@@ -155,28 +155,28 @@ let x = function (e) {
             className: T.kL,
             "aria-label": N.intl.string(N.t.TdEu5X),
             children: [
-                (0, r.jsx)(f.HI, {
+                (0, r.jsx)(h.HI, {
                     location: N.intl.string(N.t.TdEu5X),
                 }),
                 (0, r.jsx)(c.NPJ, {
-                    theme: m,
+                    theme: A,
                     children: (e) =>
-                        (0, r.jsxs)(g.A, {
+                        (0, r.jsxs)(f.A, {
                             className: e,
                             toolbar: (0, r.jsx)(j, {}),
                             role: "navigation",
                             "aria-labelledby": M,
                             scrollable: !0,
                             children: [
-                                (0, r.jsx)(g.A.Icon, {
+                                (0, r.jsx)(f.A.Icon, {
                                     icon: c.$yI,
                                     "aria-hidden": !0,
                                 }),
-                                (0, r.jsx)(g.A.Title, {
+                                (0, r.jsx)(f.A.Title, {
                                     id: M,
                                     children: N.intl.string(N.t.TdEu5X),
                                 }),
-                                (0, r.jsx)(g.A.Divider, {}),
+                                (0, r.jsx)(f.A.Divider, {}),
                                 (0, r.jsx)(c.VQ0, {
                                     "aria-label": N.intl.string(N.t.TdEu5X),
                                     selectedItem: P,

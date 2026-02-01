@@ -1,59 +1,52 @@
 n.d(t, {
-    A: () => p,
+    A: () => f,
 });
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(397927),
-    o = n(47167),
-    l = n(126904),
-    c = n(10862),
-    u = n(200041),
-    d = n(985018),
-    f = n(123511);
+    o = n(397927),
+    s = n(47167),
+    l = n(10862),
+    c = n(200041),
+    u = n(985018),
+    d = n(123511);
 
-function p(e) {
+function f(e) {
     let {
             channel: t,
             textVariant: n,
             textClassName: i,
-            iconClassName: p,
-            hideText: _ = !1,
-            hideTooltip: h = !1,
-            canTruncate: m = !0,
-            showChannelName: g = !1,
+            iconClassName: f,
+            hideText: p = !1,
+            hideTooltip: _ = !1,
+            canTruncate: h = !0,
+            showChannelName: m = !1,
         } = e,
-        E = (0, s.S31)(s.clD.ONLINE),
-        b = (0, o.Ay)(t),
+        g = (0, o.S31)(o.clD.ONLINE),
+        E = (0, s.Ay)(t),
         y = t.isDM() || t.isGroupDM(),
-        { enableTopNavButton: O } = (0, l.tR)({
-            location: "VoiceActivityStatusWithCombinedTooltip",
-        }),
-        A =
-            O && null != b
-                ? b
-                : y
-                  ? d.intl.string(d.t["9FaEzi"])
-                  : t.isGuildStageVoice()
-                    ? d.intl.string(d.t.QygGCN)
-                    : d.intl.string(d.t.msxteM),
-        v = null == b || O ? A : "".concat(A, " (").concat(b, ")"),
-        S = g ? v : A;
-    return (0, r.jsx)(u.A, {
-        icon: (0, r.jsx)(c.A, {
+        b = y
+            ? u.intl.string(u.t["9FaEzi"])
+            : t.isGuildStageVoice()
+              ? u.intl.string(u.t.QygGCN)
+              : u.intl.string(u.t.msxteM),
+        O = null != E ? "".concat(b, " (").concat(E, ")") : b,
+        v = m ? O : b;
+    return (0, r.jsx)(c.A, {
+        icon: (0, r.jsx)(l.A, {
             size: "custom",
-            color: E,
+            color: g,
             channel: t,
-            className: a()(f.Kk, p),
+            className: a()(d.Kk, f),
         }),
-        text: S,
-        tooltipText: h ? void 0 : v,
+        text: v,
+        tooltipText: _ ? void 0 : O,
         textVariant: n,
         textClassName: i,
-        hideTooltip: h,
-        canTruncate: m,
-        "aria-label": v,
-        hideText: _,
+        hideTooltip: _,
+        canTruncate: h,
+        "aria-label": O,
+        hideText: p,
     });
 }

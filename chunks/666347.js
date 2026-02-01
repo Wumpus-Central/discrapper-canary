@@ -1,12 +1,12 @@
 n.d(t, {
-    A: () => j,
+    A: () => M,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
-    s = n.n(a),
-    o = n(108531),
+    o = n.n(a),
+    s = n(353709),
     l = n(258873),
     c = n(622242),
     u = n(731738),
@@ -18,19 +18,19 @@ var r = n(627968),
     m = n(831062),
     g = n(976860),
     E = n(287809),
-    b = n(144400),
-    y = n(927813),
+    y = n(144400),
+    b = n(927813),
     O = n(777334),
-    A = n(41984),
-    v = n(302614),
-    S = n(395011),
-    I = n(672910),
+    v = n(41984),
+    A = n(302614),
+    I = n(395011),
+    S = n(672910),
     T = n(672396),
     C = n(652215),
     N = n(985018),
-    R = n(209943);
+    w = n(209943);
 
-function w(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function w(e, t, n) {
         e
     );
 }
-let P = s().throttle(
+let P = o().throttle(
         () => {
             m.A.increment(
                 {
@@ -58,19 +58,19 @@ let P = s().throttle(
             trailing: !1,
         },
     ),
-    D = 10 * y.A.Millis.SECOND;
+    D = 10 * b.A.Millis.SECOND;
 
-function x(e) {
+function L(e) {
     var t, n;
-    let { error: a, onLock: s, onReload: l, onDisable: c, onCrashDisabled: u } = e,
-        p = i.useMemo(() => new o.SpringValue(1), []),
+    let { error: a, onLock: o, onReload: l, onDisable: c, onCrashDisabled: u } = e,
+        p = i.useMemo(() => new s.SpringValue(1), []),
         m = i.useRef(null),
-        [g, y] = i.useState(!1),
-        [O, A] = i.useState(!1),
-        v = (0, d.bG)([E.default], () => E.default.getCurrentUser());
+        [g, b] = i.useState(!1),
+        [O, v] = i.useState(!1),
+        A = (0, d.bG)([E.default], () => E.default.getCurrentUser());
     (0, h.Ay)(
         () => (
-            (m.current = setTimeout(w, D)),
+            (m.current = setTimeout(P, D)),
             _.A.track(C.HAw.NOTIFICATION_VIEWED, {
                 notif_type: T.KS.OverlayCrashed,
             }),
@@ -79,18 +79,21 @@ function x(e) {
             }
         ),
     );
-    let w = i.useCallback(() => {
+    let R =
+            (null != (t = null == A ? void 0 : A.isStaff()) && t) ||
+            (null != (n = null == A ? void 0 : A.isStaffPersonal()) && n),
+        P = i.useCallback(() => {
             p.set(0),
                 null != m.current && clearTimeout(m.current),
                 (m.current = null),
-                null == s || s(),
+                null == o || o(),
                 null == u || u();
-        }, [p, s, u]),
-        P = i.useCallback(
+        }, [p, o, u]),
+        L = i.useCallback(
             (e) => {
                 O ||
-                    (A(!0),
-                    null == s || s(),
+                    (v(!0),
+                    null == o || o(),
                     _.A.track(
                         C.HAw.NOTIFICATION_CLICKED,
                         {
@@ -102,22 +105,22 @@ function x(e) {
                     e.stopPropagation(),
                     setTimeout(() => (null == l ? void 0 : l()), 200));
             },
-            [s, l, O],
+            [o, l, O],
         ),
         x = i.useCallback(
             (e) => {
-                e.stopPropagation(), e.shiftKey ? (y(!0), null != m.current && clearTimeout(m.current)) : y(!1);
+                e.stopPropagation(), e.shiftKey ? (b(!0), null != m.current && clearTimeout(m.current)) : b(!1);
             },
-            [y],
+            [b],
         ),
-        L = i.useCallback(
+        M = i.useCallback(
             (e) => {
-                e.stopPropagation(), null == s || s(), null == c || c();
+                e.stopPropagation(), null == o || o(), null == c || c();
             },
-            [c, s],
+            [c, o],
         ),
-        j = (0, d.bG)([S.A], () => S.A.getFocusedRunningGame()),
-        M = g
+        j = (0, d.bG)([I.A], () => I.A.getFocusedRunningGame()),
+        k = g
             ? (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)(f.Text, {
@@ -126,7 +129,7 @@ function x(e) {
                           children: N.intl.string(N.t.mn4eXC),
                       }),
                       (0, r.jsxs)("div", {
-                          className: R.Xh,
+                          className: w.Xh,
                           children: [
                               (0, r.jsx)(f.Text, {
                                   variant: "text-sm/normal",
@@ -137,7 +140,7 @@ function x(e) {
                                   variant: "text-xxs/normal",
                                   color: "text-subtle",
                                   children: (0, r.jsx)("code", {
-                                      className: R.aY,
+                                      className: w.aY,
                                       children: (0, r.jsx)("pre", {
                                           children: a.stack,
                                       }),
@@ -148,25 +151,22 @@ function x(e) {
                   ],
               })
             : null,
-        k = g ? null : N.intl.string(N.t.oEJEFq),
-        U =
-            (null != (t = null == v ? void 0 : v.isStaff()) && t) ||
-            (null != (n = null == v ? void 0 : v.isStaffPersonal()) && n);
-    return (0, r.jsx)(I.$, {
+        U = g ? null : N.intl.string(N.t.oEJEFq);
+    return (0, r.jsx)(S.$, {
         title: N.intl.string(N.t.U38qZj),
-        body: M,
-        hint: U ? k : void 0,
+        body: k,
+        hint: R ? U : void 0,
         confirmText: N.intl.string(N.t.a3HlgJ),
         cancelText: null != j ? N.intl.string(N.t.qIYnPo) : void 0,
-        icon: (0, r.jsx)(b.A, {
+        icon: (0, r.jsx)(y.A, {
             width: 40,
             height: 40,
-            className: R.Lo,
+            className: w.Lo,
         }),
         onNotificationClick: x,
-        onConfirmClick: P,
-        onCancelClick: null != j ? L : void 0,
-        onDismissClick: s,
+        onConfirmClick: L,
+        onCancelClick: null != j ? M : void 0,
+        onDismissClick: o,
         expand: !0,
         locked: !0,
         notificationId: "overlay-crashed",
@@ -174,20 +174,20 @@ function x(e) {
         status: C.yFH.ACTIVE,
         containerRef: null,
         contentOpacity: p,
-        className: R.Pl,
-        wrapperClassName: R.fl,
+        className: w.Pl,
+        wrapperClassName: w.fl,
     });
 }
-class L extends i.PureComponent {
+class x extends i.PureComponent {
     componentDidCatch(e, t) {
         let n = (0, g.JK)().location;
         this.setState({
             error: e,
             info: t,
         });
-        let r = S.A.getTargetPID();
+        let r = I.A.getTargetPID();
         _.A.setOverlayCrashed(r, e), _.A.setInputLocked(!0, r);
-        let i = (0, O.St)(e, A.Ue.OutOfProcess, {
+        let i = (0, O.St)(e, v.Ue.OutOfProcess, {
             extra: {
                 info: t,
                 location: n,
@@ -209,32 +209,32 @@ class L extends i.PureComponent {
             { error: n, showError: i } = this.state;
         return null != n
             ? i
-                ? (0, r.jsx)(v.A, {
-                      className: R.wz,
-                      children: (0, r.jsx)(x, {
+                ? (0, r.jsx)(A.A, {
+                      className: w.wz,
+                      children: (0, r.jsx)(L, {
                           error: n,
                           onLock: () => {
                               var e;
-                              let t = null != (e = this.pid) ? e : S.A.getTargetPID();
+                              let t = null != (e = this.pid) ? e : I.A.getTargetPID();
                               _.A.setInputLocked(!0, t),
                                   this.setState({
                                       showError: !1,
                                   });
                           },
                           onDisable: () => {
-                              let e = S.A.getFocusedRunningGame();
+                              let e = I.A.getFocusedRunningGame();
                               null != e && p.A.toggleOverlay(e, !1, !1);
                           },
                           onCrashDisabled: () => {
                               var e;
-                              let t = null != (e = this.pid) ? e : S.A.getTargetPID();
-                              _.A.updateOverlayState(t, A.AR.OVERLAY_CRASHED_DISABLED, "OOPOverlayErrorBoundary"),
+                              let t = null != (e = this.pid) ? e : I.A.getTargetPID();
+                              _.A.updateOverlayState(t, v.AR.OVERLAY_CRASHED_DISABLED, "OOPOverlayErrorBoundary"),
                                   this.setState({
                                       showError: !1,
                                   });
                           },
                           onReload: () => {
-                              _.A.setReloadOverlay(S.A.getTargetPID()),
+                              _.A.setReloadOverlay(I.A.getTargetPID()),
                                   this.setState({
                                       showError: !1,
                                   });
@@ -249,12 +249,12 @@ class L extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            w(this, "state", {
+            R(this, "state", {
                 error: null,
                 showError: !0,
                 info: null,
             }),
-            w(this, "pid", null);
+            R(this, "pid", null);
     }
 }
-let j = L;
+let M = x;

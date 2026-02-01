@@ -106,9 +106,9 @@ let x = {
             let { default: e } = await Promise.all([
                     n.e("10614"),
                     n.e("49681"),
+                    n.e("68587"),
                     n.e("43600"),
                     n.e("28136"),
-                    n.e("68587"),
                     n.e("63379"),
                     n.e("56026"),
                     n.e("16301"),
@@ -118,12 +118,12 @@ let x = {
                     n.e("21968"),
                     n.e("35894"),
                     n.e("50796"),
+                    n.e("24202"),
                     n.e("11810"),
                     n.e("8458"),
                     n.e("39048"),
-                    n.e("60989"),
-                    n.e("24202"),
-                    n.e("38985"),
+                    n.e("17537"),
+                    n.e("49438"),
                     n.e("36290"),
                     n.e("59735"),
                     n.e("54469"),
@@ -252,7 +252,7 @@ let x = {
                       );
         },
         ChannelListThreadContextMenu: async () => {
-            let { default: e } = await Promise.all([n.e("99011"), n.e("88974"), n.e("9282")]).then(n.bind(n, 44536)),
+            let { default: e } = await Promise.all([n.e("99011"), n.e("78441"), n.e("73545")]).then(n.bind(n, 44536)),
                 t = c.A.getGuilds(),
                 l = null;
             for (let e of Object.values(t)) {

@@ -1,5 +1,5 @@
 n.d(t, {
-    E: () => f,
+    E: () => I,
 });
 var r = n(627968),
     l = n(64700),
@@ -39,7 +39,7 @@ function w(e) {
     return e;
 }
 
-function b(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,12 +58,12 @@ function b(e, t) {
     );
 }
 
-function f(e) {
+function I(e) {
     let { channel: t } = e;
     return l.useCallback(
-        (e, l, i, f) => {
+        (e, l, i, I) => {
             if (null == t) return;
-            let I = {
+            let O = {
                 context: p.BRT.CALL_TILE_POPOUT,
             };
             switch (e.type) {
@@ -83,7 +83,7 @@ function f(e) {
                                             minimal: i,
                                             exitFullscreen: () => {},
                                             onInteraction: (0, d.s)("StreamContextMenu", o.A.CALL_TILE_POPOUT, {
-                                                entrypoint: f,
+                                                entrypoint: I,
                                                 tileType: h.qs.STREAM,
                                                 targetUserId: e.user.id,
                                             }),
@@ -92,18 +92,18 @@ function f(e) {
                                     ),
                                 );
                         },
-                        I,
+                        O,
                     );
                     return;
                 case h.lp.USER:
-                    let O = c.default.getUser(e.id);
-                    if (null != O) {
+                    let b = c.default.getUser(e.id);
+                    if (null != b) {
                         if (i)
-                            return (0, u.r)(l, O, t, I, (e, t) => {
+                            return (0, u.r)(l, b, t, O, (e, t) => {
                                 (0, d.s)(e, o.A.CALL_TILE_POPOUT, {
                                     entrypoint: h.GK.THREE_DOT,
                                     tileType: h.qs.USER,
-                                    targetUserId: O.id,
+                                    targetUserId: b.id,
                                 })(t);
                             });
                         switch (t.type) {
@@ -114,27 +114,28 @@ function f(e) {
                                         let { default: e } = await Promise.all([
                                             n.e("97262"),
                                             n.e("29534"),
+                                            n.e("93169"),
                                             n.e("39778"),
                                             n.e("54266"),
                                         ]).then(n.bind(n, 385913));
                                         return (n) =>
                                             (0, r.jsx)(
                                                 e,
-                                                b(w({}, n), {
+                                                f(w({}, n), {
                                                     showChannelCallItems: !0,
                                                     showMediaItems: !0,
-                                                    user: O,
+                                                    user: b,
                                                     channel: t,
                                                     showModalItems: !0,
                                                     onInteraction: (0, d.s)("DMUserContextMenu", o.A.CALL_TILE_POPOUT, {
-                                                        entrypoint: f,
+                                                        entrypoint: I,
                                                         tileType: h.qs.USER,
-                                                        targetUserId: O.id,
+                                                        targetUserId: b.id,
                                                     }),
                                                 }),
                                             );
                                     },
-                                    I,
+                                    O,
                                 );
                             case p.rbe.GROUP_DM:
                                 return (0, a.L3)(
@@ -149,26 +150,26 @@ function f(e) {
                                         return (n) =>
                                             (0, r.jsx)(
                                                 e,
-                                                b(w({}, n), {
+                                                f(w({}, n), {
                                                     showChannelCallItems: !0,
                                                     showMediaItems: !0,
                                                     showChatItems: !1,
-                                                    user: O,
+                                                    user: b,
                                                     channel: t,
                                                     showModalItems: !0,
                                                     onInteraction: (0, d.s)(
                                                         "GroupDMUserContextMenu",
                                                         o.A.CALL_TILE_POPOUT,
                                                         {
-                                                            entrypoint: f,
+                                                            entrypoint: I,
                                                             tileType: h.qs.USER,
-                                                            targetUserId: O.id,
+                                                            targetUserId: b.id,
                                                         },
                                                     ),
                                                 }),
                                             );
                                     },
-                                    I,
+                                    O,
                                 );
                             case p.rbe.GUILD_VOICE:
                             case p.rbe.PUBLIC_THREAD:
@@ -184,16 +185,16 @@ function f(e) {
                                                 n.e("29534"),
                                                 n.e("55296"),
                                                 n.e("84841"),
-                                                n.e("91609"),
+                                                n.e("31885"),
                                             ]).then(n.bind(n, 107632));
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     l,
-                                                    b(w({}, n), {
+                                                    f(w({}, n), {
                                                         showMediaItems: !0,
                                                         showChannelCallItems: !0,
                                                         showChatItems: !1,
-                                                        user: O,
+                                                        user: b,
                                                         channel: t,
                                                         guildId: e,
                                                         showModalItems: !0,
@@ -201,15 +202,15 @@ function f(e) {
                                                             "GuildChannelUserContextMenu",
                                                             o.A.CALL_TILE_POPOUT,
                                                             {
-                                                                entrypoint: f,
+                                                                entrypoint: I,
                                                                 tileType: h.qs.USER,
-                                                                targetUserId: O.id,
+                                                                targetUserId: b.id,
                                                             },
                                                         ),
                                                     }),
                                                 );
                                         },
-                                        I,
+                                        O,
                                     )
                                 );
                         }

@@ -1,35 +1,33 @@
 n.d(t, {
-    default: () => C,
+    default: () => _,
 });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(442433),
+var l = n(397927),
+    r = n(442433),
     o = n(847767),
     a = n(358367),
     d = n(468389),
     s = n(793574),
     u = n(50268),
-    c = n(126904),
-    A = n(222311),
-    b = n(803664),
-    f = n(29293),
-    g = n(509302),
-    p = n(497600),
-    m = n(239211),
-    v = n(707378),
-    O = n(399476),
-    j = n(889460),
-    h = n(693227),
-    y = n(301541),
-    x = n(460597),
-    E = n(198229),
-    P = n(243949),
-    D = n(972432),
-    S = n(77544),
-    _ = n(652215),
-    U = n(985018);
-let C = (0, a.A)(
+    c = n(222311),
+    A = n(803664),
+    b = n(29293),
+    f = n(509302),
+    g = n(497600),
+    p = n(239211),
+    O = n(707378),
+    m = n(399476),
+    v = n(889460),
+    j = n(301541),
+    y = n(460597),
+    h = n(198229),
+    x = n(243949),
+    E = n(972432),
+    P = n(77544),
+    D = n(652215),
+    S = n(985018);
+let _ = (0, a.A)(
     (0, o.A)(
         function (e) {
             let {
@@ -38,101 +36,93 @@ let C = (0, a.A)(
                     channelId: o,
                     showMediaItems: a = !1,
                     mediaEngineContext: s,
-                    onSelect: C,
-                    onInteraction: L,
-                    appContext: I = _.BRT.APP,
-                    friendGroupId: T,
+                    onSelect: _,
+                    onInteraction: C,
+                    appContext: L = D.BRT.APP,
                 } = e,
-                { enableTopNavButton: w } = (0, c.tR)({
-                    location: "user-context-menu",
-                }),
-                G = (0, P.A)({
+                U = (0, x.A)({
                     userId: t.id,
                     guildId: n,
                     channelId: o,
                 }),
-                V = (0, y.A)(t.id, I),
-                k = (0, v.A)({
+                I = (0, j.A)(t.id, L),
+                T = (0, O.A)({
                     user: t,
                 }),
-                M = (0, p.A)({
+                w = (0, g.A)({
                     user: t,
                     guildId: n,
                     channelId: o,
-                    context: I,
+                    context: L,
                 }),
-                N = (0, f.A)({
+                V = (0, b.A)({
                     user: t,
                 }),
-                R = (0, h.A)({
-                    user: t,
-                    groupId: T,
-                }),
-                B = (0, S.A)(t.id),
-                F = (0, D.A)(t.id),
-                X = (0, E.A)(t.id, s),
-                K = (0, j.A)({
+                k = (0, P.A)(t.id),
+                M = (0, E.A)(t.id),
+                N = (0, h.A)(t.id, s),
+                G = (0, v.A)({
                     user: t,
                 }),
-                W = (0, d.A)(null, t),
-                H = (0, b.A)({
+                R = (0, d.A)(null, t),
+                B = (0, A.A)({
                     user: t,
                 }),
-                J = (0, g.A)({
+                F = (0, f.A)({
                     user: t,
                 }),
-                Y = (0, x.A)({
+                X = (0, y.A)({
                     user: t,
                 }),
-                q = (0, m.A)({
+                W = (0, p.A)({
                     user: t,
                 }),
-                z = (0, O.A)({
+                H = (0, m.A)({
                     user: t,
                 }),
-                Z = (0, u.A)({
+                K = (0, u.A)({
                     id: t.id,
-                    label: U.intl.string(U.t["/AXYnE"]),
+                    label: S.intl.string(S.t["/AXYnE"]),
                 }),
-                Q = (0, A.A)(t),
-                $ = t.isNonUserBot();
-            return (0, r.jsxs)(i.W1t, {
+                J = (0, c.A)(t),
+                Y = t.isNonUserBot();
+            return (0, i.jsxs)(l.W1t, {
                 "data-menu-migrated": !0,
                 navId: "user-context",
-                onClose: l.Z_,
-                "aria-label": U.intl.string(U.t.liqwPJ),
-                onSelect: C,
-                onInteraction: L,
+                onClose: r.Z_,
+                "aria-label": S.intl.string(S.t.liqwPJ),
+                onSelect: _,
+                onInteraction: C,
                 children: [
-                    !$ &&
-                        (0, r.jsxs)(r.Fragment, {
+                    !Y &&
+                        (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, r.jsx)(i.rXV, {
-                                    children: Q,
+                                (0, i.jsx)(l.rXV, {
+                                    children: J,
                                 }),
-                                (0, r.jsxs)(i.rXV, {
-                                    children: [G, V, k, M, N, w ? R : null, B],
+                                (0, i.jsxs)(l.rXV, {
+                                    children: [U, I, T, w, V, k],
                                 }),
                                 a &&
-                                    (0, r.jsx)(i.rXV, {
-                                        children: F,
+                                    (0, i.jsx)(l.rXV, {
+                                        children: M,
                                     }),
-                                (0, r.jsx)(i.rXV, {
-                                    children: W,
+                                (0, i.jsx)(l.rXV, {
+                                    children: R,
                                 }),
-                                (0, r.jsxs)(i.rXV, {
-                                    children: [a && X, K, H, J, Y, z, q],
+                                (0, i.jsxs)(l.rXV, {
+                                    children: [a && N, G, B, F, X, H, W],
                                 }),
                             ],
                         }),
-                    (0, r.jsx)(i.rXV, {
-                        children: Z,
+                    (0, i.jsx)(l.rXV, {
+                        children: K,
                     }),
                 ],
             });
         },
         {
-            object: _.ZSU.CONTEXT_MENU,
+            object: D.ZSU.CONTEXT_MENU,
         },
     ),
     [s.A.CONTEXT_MENU, s.A.USER_GENERIC_MENU],

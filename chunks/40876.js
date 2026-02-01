@@ -347,6 +347,17 @@ let i = {
         inlineRequire: () => n(869014).A,
         neverLoadBeforeConnectionOpen: !0,
     },
+    OverlayTextChatAutomaticLifecycleManager: {
+        actions: [
+            "CHANNEL_SELECT",
+            "SIDEBAR_VIEW_CHANNEL",
+            "OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL",
+            "OVERLAY_TEXT_CHAT_SELECT_CHANNEL",
+            "OVERLAY_TEXT_CHAT_REMOVE_CHANNEL",
+        ],
+        inlineRequire: () => n(171076).A,
+        neverLoadBeforeConnectionOpen: !0,
+    },
     OverlayKeybindExperimentManager: {
         actions: [
             "POST_CONNECTION_OPEN",
