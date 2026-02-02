@@ -1,20 +1,15 @@
 n.d(t, {
     A: () => r,
 });
-let r = (0, n(600975).C)({
+let r = (0, n(945810).mj)({
+    name: "2026-01-bug-reporter",
     kind: "user",
-    id: "2024-09_bug_reporter",
-    label: "Bug Reporter",
     defaultConfig: {
         hasBugReporterAccess: !1,
     },
-    treatments: [
-        {
-            id: 1,
-            label: "\uD83D\uDC1B",
-            config: {
-                hasBugReporterAccess: !0,
-            },
+    variations: {
+        1: {
+            hasBugReporterAccess: !0,
         },
-    ],
+    },
 });

@@ -15,8 +15,8 @@ var r = n(627968),
     p = n(875444),
     h = n(770031),
     g = n(932340),
-    f = n(545167),
-    m = n(420936),
+    m = n(545167),
+    f = n(420936),
     A = n(733738),
     _ = n(27169),
     b = n(871432),
@@ -61,20 +61,15 @@ let V = i.memo(function () {
     let { notificationCenterVariant: e, entrypoint: t } = (0, S.X8)({
             location: "AppTitleBar",
         }),
-        { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, m.t)({
+        { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, f.t)({
             location: "AppTitleBar",
         }),
-        { backForwardButtons: s, titlebarIconSize: _ } = (0, f.p)({
+        { backForwardButtons: s, titlebarIconSize: _ } = (0, m.p)({
             location: "AppTitleBar",
         }),
-        { hasBugReporterAccess: v } = h.A.useExperiment(
-            {
-                location: "HeaderBar",
-            },
-            {
-                autoTrackExposure: !1,
-            },
-        ),
+        { hasBugReporterAccess: v } = h.A.useConfig({
+            location: "HeaderBar",
+        }),
         U = (0, o.bG)([P.A], () => P.A.isDeveloper),
         V = (0, o.bG)(
             [w.A, d.A],
@@ -202,23 +197,19 @@ let V = i.memo(function () {
                                         i),
                                     ),
                                 v
-                                    ? (0, r.jsxs)(r.Fragment, {
-                                          children: [
-                                              (0, r.jsx)(y.w, {
-                                                  focusSectionProps: "HELP" === K ? e : void 0,
-                                                  className: W,
-                                              }),
-                                              U
-                                                  ? (0, r.jsx)(E.R, {
-                                                        className: W,
-                                                    })
-                                                  : null,
-                                          ],
+                                    ? (0, r.jsx)(y.w, {
+                                          focusSectionProps: "HELP" === K ? e : void 0,
+                                          className: W,
                                       })
                                     : (0, r.jsx)(O.A, {
                                           focusSectionProps: "HELP" === K ? e : void 0,
                                           className: W,
                                       }),
+                                U
+                                    ? (0, r.jsx)(E.R, {
+                                          className: W,
+                                      })
+                                    : null,
                                 V &&
                                     (0, r.jsx)(u.A, {
                                         className: W,
