@@ -1,78 +1,79 @@
 r.d(t, {
-    default: () => b,
+    default: () => f,
 }),
     r(896048);
 var n = r(627968),
     l = r(64700),
-    c = r(284009),
-    o = r.n(c),
-    s = r(397927),
-    i = r(10005),
-    a = r(208993),
-    d = r(842130),
-    u = r(985018),
-    p = r(765488);
-let b = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: c, onClose: b } = e,
-        [f, y] = l.useState(!1),
-        j = l.useCallback(() => {
-            y(!0);
-        }, []),
+    o = r(284009),
+    i = r.n(o),
+    c = r(397927),
+    s = r(10005),
+    a = r(534654),
+    d = r(208993),
+    u = r(842130),
+    p = r(985018),
+    b = r(765488);
+let f = (e) => {
+    let { currentUser: t, otherUser: r, transitionState: o, onClose: f } = e,
+        [y, j] = l.useState(!1),
         x = l.useCallback(() => {
-            b();
-        }, [b]),
-        O = t.nsfwAllowed,
-        { declineLinkRequest: h, isDeclineLoading: m } = (0, i.A)({
-            onError: j,
-            onSuccess: x,
+            j(!0);
+        }, []),
+        O = l.useCallback(() => {
+            f();
+        }, [f]),
+        h = (0, a.A)(),
+        { declineLinkRequest: m, isDeclineLoading: g } = (0, s.A)({
+            onError: x,
+            onSuccess: O,
         });
     return (
-        o()(!O, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
-        (0, n.jsxs)(s.dWK, {
-            transitionState: c,
-            onClose: b,
+        i()(h, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
+        (0, n.jsxs)(c.dWK, {
+            transitionState: o,
+            onClose: f,
             children: [
-                f &&
-                    (0, n.jsx)(s.wx6, {
+                y &&
+                    (0, n.jsx)(c.wx6, {
                         type: "critical",
-                        children: u.intl.string(d.default.tJAUyn),
+                        children: p.intl.string(u.default.tJAUyn),
                     }),
-                (0, n.jsxs)(s.cwr, {
+                (0, n.jsxs)(c.cwr, {
                     children: [
-                        (0, n.jsx)(a.A.Header, {
+                        (0, n.jsx)(d.A.Header, {
                             currentUser: t,
                             otherUser: r,
-                            header: u.intl.string(d.default.teIRCR),
-                            icon: (0, n.jsx)(s.PGe, {
+                            header: p.intl.string(u.default.teIRCR),
+                            icon: (0, n.jsx)(c.PGe, {
                                 size: "md",
                                 color: "currentColor",
-                                className: p.u,
+                                className: b.u,
                             }),
                         }),
-                        (0, n.jsx)(a.A.Content, {
-                            children: (0, n.jsx)(a.A.Notice, {
-                                notice: u.intl.string(d.default.LcM8BS),
+                        (0, n.jsx)(d.A.Content, {
+                            children: (0, n.jsx)(d.A.Notice, {
+                                notice: p.intl.string(u.default.LcM8BS),
                             }),
                         }),
                     ],
                 }),
-                (0, n.jsx)(s.H7u, {
+                (0, n.jsx)(c.H7u, {
                     actionsFullWidth: !0,
                     actions: [
                         {
                             variant: "secondary",
-                            text: u.intl.string(u.t["ETE/oC"]),
-                            onClick: b,
-                            disabled: m,
+                            text: p.intl.string(p.t["ETE/oC"]),
+                            onClick: f,
+                            disabled: g,
                         },
                         {
                             variant: "critical-primary",
-                            text: u.intl.string(d.default.dKxFcn),
+                            text: p.intl.string(u.default.dKxFcn),
                             onClick: () => {
-                                y(!1), h(r.id);
+                                j(!1), m(r.id);
                             },
-                            disabled: m,
-                            loading: m,
+                            disabled: g,
+                            loading: g,
                         },
                     ],
                 }),

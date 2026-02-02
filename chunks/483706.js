@@ -7,20 +7,20 @@ var r = n(627968),
     s = n(397927),
     a = n(308528),
     o = n(922529),
-    c = n(840387),
-    d = n(780964),
-    u = n(12901),
-    _ = n(840065),
-    p = n(899847),
-    m = n(809697),
-    g = n(153739),
+    c = n(780964),
+    d = n(12901),
+    u = n(840065),
+    _ = n(899847),
+    p = n(809697),
+    m = n(153739),
+    g = n(534654),
     A = n(834981),
     f = n(191627),
-    h = n(652215),
-    b = n(842130),
+    b = n(652215),
+    h = n(842130),
     E = n(985018),
-    x = n(191248);
-let O = (e) => {
+    O = n(191248);
+let x = (e) => {
         let { title: t, buttonText: n, onButtonPress: i } = e;
         return (0, r.jsxs)(l.BJc, {
             padding: {
@@ -48,8 +48,8 @@ let O = (e) => {
     C = () => {
         let e = (0, A.vx)(),
             t = () => {
-                (0, _.openUserSettings)(d.X.CONTENT_AND_SOCIAL_PANEL, {
-                    section: h.nc_.CONTENT_AND_SOCIAL,
+                (0, u.openUserSettings)(c.X.CONTENT_AND_SOCIAL_PANEL, {
+                    section: b.nc_.CONTENT_AND_SOCIAL,
                 });
             };
         return (0, r.jsxs)(l.BJc, {
@@ -64,12 +64,12 @@ let O = (e) => {
                     children: [
                         (0, r.jsx)(l.EYj, {
                             variant: "text-sm/semibold",
-                            children: E.intl.string(b.default.ahKIJO),
+                            children: E.intl.string(h.default.ahKIJO),
                         }),
                         (0, r.jsx)(l.EYj, {
                             variant: "text-md/medium",
                             color: "text-muted",
-                            children: E.intl.format(b.default.X9rW0j, {
+                            children: E.intl.format(h.default.X9rW0j, {
                                 openSettingsHook: (e, n) =>
                                     (0, r.jsx)(
                                         s.MzZ,
@@ -84,11 +84,11 @@ let O = (e) => {
                     ],
                 }),
                 (0, r.jsx)(s.Button, {
-                    text: E.intl.formatToPlainString(b.default.ggcjPR, {
+                    text: E.intl.formatToPlainString(h.default.ggcjPR, {
                         count: e.length,
                     }),
                     onClick: () => {
-                        (0, u.default)(),
+                        (0, d.default)(),
                             a.A.openPrivateChannel({
                                 recipientIds: e,
                             });
@@ -99,12 +99,12 @@ let O = (e) => {
             ],
         });
     },
-    I = () => {
-        let e = (0, g.y3)(),
-            t = (0, g.tl)(),
-            { handleTabChange: n } = (0, m.A)();
+    S = () => {
+        let e = (0, m.y3)(),
+            t = (0, m.tl)(),
+            { handleTabChange: n } = (0, p.A)();
         i.useEffect(() => {
-            (null == e ? void 0 : e.id) != null && t && p.Ay.fetchTeenSettingsAndConsents(null == e ? void 0 : e.id);
+            (null == e ? void 0 : e.id) != null && t && _.Ay.fetchTeenSettingsAndConsents(null == e ? void 0 : e.id);
         }, [null == e ? void 0 : e.id, t]);
         let s = (e) => {
             n(e);
@@ -117,24 +117,24 @@ let O = (e) => {
                     children: [
                         (0, r.jsx)(l.EYj, {
                             variant: "text-sm/semibold",
-                            children: E.intl.string(b.default.ahKIJO),
+                            children: E.intl.string(h.default.ahKIJO),
                         }),
                         (0, r.jsx)(l.EYj, {
                             variant: "text-md/medium",
                             color: "text-muted",
-                            children: E.intl.string(b.default.Sv236e),
+                            children: E.intl.string(h.default.Sv236e),
                         }),
                     ],
                 }),
-                (0, r.jsx)(O, {
+                (0, r.jsx)(x, {
                     title: E.intl.string(E.t["+o1pDZ"]),
                     buttonText: E.intl.string(E.t.bt75uw),
                     onButtonPress: () => s(f.u9.CONTENT_AND_SOCIAL),
                 }),
                 (0, r.jsx)(o.A, {
-                    className: x.yF,
+                    className: O.yF,
                 }),
-                (0, r.jsx)(O, {
+                (0, r.jsx)(x, {
                     title: E.intl.string(E.t.OAuOHD),
                     buttonText: E.intl.string(E.t.bt75uw),
                     onButtonPress: () => s(f.u9.DATA_AND_PRIVACY),
@@ -143,11 +143,11 @@ let O = (e) => {
         });
     },
     T = () => {
-        let e = (0, c.Z)();
+        let e = (0, g.A)();
         return 0 === (0, A.vx)().length
             ? null
             : (0, r.jsx)("div", {
-                  className: x.kL,
-                  children: e ? (0, r.jsx)(C, {}) : (0, r.jsx)(I, {}),
+                  className: O.kL,
+                  children: e ? (0, r.jsx)(C, {}) : (0, r.jsx)(S, {}),
               });
     };
