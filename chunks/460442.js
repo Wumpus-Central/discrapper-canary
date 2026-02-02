@@ -1,6 +1,7 @@
 n.d(t, {
-    B: () => h,
-    g: () => d,
+    BF: () => p,
+    Yb: () => h,
+    gS: () => d,
 });
 var r = n(627968);
 n(64700);
@@ -34,7 +35,7 @@ function d(e) {
     });
 }
 
-function h(e) {
+function p(e) {
     let { count: t } = e;
     return (0, r.jsx)(u, {
         style: c.RF,
@@ -42,6 +43,20 @@ function h(e) {
             variant: "text-sm/medium",
             color: "always-white",
             children: ["+", t + 1],
+        }),
+    });
+}
+
+function h(e) {
+    let { count: t } = e;
+    return (0, r.jsx)(u, {
+        style: c.RF,
+        icon: (0, r.jsx)(s.EYj, {
+            variant: "text-sm/medium",
+            color: "always-white",
+            children: o.intl.format(o.t.F6iMs4, {
+                count: t,
+            }),
         }),
     });
 }

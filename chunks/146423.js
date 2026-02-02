@@ -4,9 +4,9 @@ n.d(t, {
 var r = n(627968),
     l = n(64700),
     i = n(503698),
-    a = n.n(i),
-    o = n(158954),
-    s = n(713517),
+    s = n.n(i),
+    a = n(158954),
+    o = n(713517),
     c = n(607123),
     u = n(72939);
 
@@ -16,38 +16,40 @@ function d(e) {
             user: n,
             children: i,
             cardStyle: d,
-            skuPreviewStyle: f,
-            disableHoverOrFocus: p,
+            skuPreviewStyle: p,
+            disableHoverOrFocus: h,
             onHoverOrFocusChange: g,
-            onClick: m,
+            onClick: f,
+            options: m,
         } = e,
         b = l.useRef(null),
-        { isHoveringOrFocusing: y } = (0, s.A)(b),
-        O = l.useRef(g);
+        { isHoveringOrFocusing: A } = (0, o.A)(b),
+        y = l.useRef(g);
     return (
         l.useEffect(() => {
-            O.current = g;
+            y.current = g;
         }, [g]),
         l.useEffect(() => {
             var e;
-            null == (e = O.current) || e.call(O, y);
-        }, [y]),
-        (0, r.jsxs)(o.DUT, {
+            null == (e = y.current) || e.call(y, A);
+        }, [A]),
+        (0, r.jsxs)(a.DUT, {
             innerRef: b,
-            className: a()(u.N, d),
-            onClick: m,
+            className: s()(u.N, d),
+            onClick: f,
             children: [
-                (0, r.jsx)(o.AC4, {
-                    children: (0, r.jsx)(o.H, {
+                (0, r.jsx)(a.AC4, {
+                    children: (0, r.jsx)(a.H, {
                         children: t.name,
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: a()(u.e, f),
+                    className: s()(u.e, p),
                     children: (0, r.jsx)(c.Ay, {
                         sku: t,
-                        isFocused: !p && y,
+                        isFocused: !h && A,
                         user: n,
+                        options: m,
                     }),
                 }),
                 i,

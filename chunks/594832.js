@@ -176,48 +176,44 @@ function w(e) {
         numItems: o,
     } = e;
     return r.useMemo(() => {
-        var e, r;
+        var e;
         if (null != a)
             return {
                 displayItems: [],
-                wishlistItemCountToBeDisplayed: 0,
-                hasMoreItems: !1,
-                totalWishlistItemCount: 0,
+                totalUnownedWishlistItemCount: 0,
             };
-        let s = (null != (e = null == t ? void 0 : t.items) ? e : []).filter((e) => !0 !== e.isOwned),
-            l = s.slice(0, o),
-            c = [];
+        let r = (null != (e = null == t ? void 0 : t.items) ? e : []).filter((e) => !0 !== e.isOwned),
+            s = r.slice(0, o),
+            l = [];
         if (
-            (c.push(
-                ...l.map((e) => ({
+            (l.push(
+                ...s.map((e) => ({
                     item: e,
                     source: "wishlist",
                 })),
             ),
-            c.length < o)
+            l.length < o)
         ) {
-            let e = new Set(l.map((e) => e.skuId)),
+            let e = new Set(s.map((e) => e.skuId)),
                 t = i.filter((t) => !e.has(t.skuId));
-            for (let e = 0; e < t.length && c.length < o; e++)
-                c.push({
+            for (let e = 0; e < t.length && l.length < o; e++)
+                l.push({
                     item: t[e],
                     source: "popular",
                 });
             let r = n.filter((t) => !e.has(t.skuId));
-            for (let e = 0; e < r.length && c.length < o; e++) {
+            for (let e = 0; e < r.length && l.length < o; e++) {
                 let t = I(r[e]);
                 null !== t &&
-                    c.push({
+                    l.push({
                         item: t,
                         source: "popular",
                     });
             }
         }
         return {
-            displayItems: c,
-            wishlistItemCountToBeDisplayed: l.length,
-            hasMoreItems: s.length > o,
-            totalWishlistItemCount: null != (r = null == t ? void 0 : t.items.length) ? r : 0,
+            displayItems: l,
+            totalUnownedWishlistItemCount: r.length,
         };
     }, [a, null == t ? void 0 : t.items, n, i, o]);
 }
