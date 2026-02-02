@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => p,
+    A: () => m,
 });
 var a = n(627968),
     l = n(64700),
@@ -7,71 +7,70 @@ var a = n(627968),
     i = n.n(r),
     s = n(353709),
     o = n(397927),
-    c = n(398025),
-    d = n(772244),
-    u = n(419367),
-    m = n(638322);
-let p = l.forwardRef((e, t) => {
+    c = n(772244),
+    d = n(419367),
+    u = n(638322);
+let m = l.forwardRef((e, t) => {
     let {
             quest: n,
             percentComplete: l,
             size: r = 42,
-            strokeWidth: p = 3,
-            glowBlur: h = 0.4,
-            percentCompleteText: x,
-            percentCompleteTextVariant: g = "text-lg/medium",
-            children: f,
+            strokeWidth: m = 3,
+            glowBlur: p = 0.4,
+            percentCompleteText: h,
+            percentCompleteTextVariant: x = "text-lg/medium",
+            children: g,
         } = e,
-        b = (0, d.OY)(n, l > 0),
-        v = r / 2,
-        j = r / 2 - p / 2,
-        _ = 2 * Math.PI * j,
-        y = _ - l * _,
+        f = (0, c.OY)(n, l > 0),
+        b = r / 2,
+        v = r / 2 - m / 2,
+        j = 2 * Math.PI * v,
+        _ = j - l * j,
+        y = {
+            strokeDasharray: "".concat(j, " ").concat(j),
+            strokeDashoffset: _,
+        },
         A = {
-            strokeDasharray: "".concat(_, " ").concat(_),
-            strokeDashoffset: y,
+            strokeDasharray: "".concat(j, " ").concat(j),
+            strokeDashoffset: -l * j,
         },
         C = {
-            strokeDasharray: "".concat(_, " ").concat(_),
-            strokeDashoffset: -l * _,
+            boxShadow: "0 0 20px 0px ".concat(f.glow),
         },
-        S = {
-            boxShadow: "0 0 20px 0px ".concat(b.glow),
-        },
-        { progressTextAnimation: O } = (0, o.zhh)({
-            progressTextAnimation: +(null != x && 1 !== l),
-            config: u.N,
+        { progressTextAnimation: S } = (0, o.zhh)({
+            progressTextAnimation: +(null != h && 1 !== l),
+            config: d.N,
         });
     return (0, a.jsxs)("div", {
-        className: m.A7,
+        className: u.A7,
         ref: t,
         children: [
             (0, a.jsxs)("div", {
-                className: m.vW,
-                style: S,
+                className: u.vW,
+                style: C,
                 children: [
-                    f,
+                    g,
                     (0, a.jsxs)(s.animated.div, {
                         style: {
-                            opacity: (0, c.a)(O),
+                            opacity: S,
                         },
-                        className: i()(m.rD, m.qk),
+                        className: i()(u.rD, u.qk),
                         children: [
                             (0, a.jsx)("div", {
-                                className: i()(m.rD, m.LU),
+                                className: i()(u.rD, u.LU),
                             }),
                             (0, a.jsx)(o.Text, {
-                                variant: g,
+                                variant: x,
                                 color: "text-strong",
-                                className: m.l_,
-                                children: x,
+                                className: u.l_,
+                                children: h,
                             }),
                         ],
                     }),
                 ],
             }),
             (0, a.jsxs)("svg", {
-                className: m.hr,
+                className: u.hr,
                 height: r,
                 width: r,
                 children: [
@@ -82,7 +81,7 @@ let p = l.forwardRef((e, t) => {
                                 children: [
                                     (0, a.jsx)("feGaussianBlur", {
                                         result: "coloredBlur",
-                                        stdDeviation: h,
+                                        stdDeviation: p,
                                     }),
                                     (0, a.jsxs)("feMerge", {
                                         children: [
@@ -111,35 +110,35 @@ let p = l.forwardRef((e, t) => {
                                 children: [
                                     (0, a.jsx)("stop", {
                                         offset: "0%",
-                                        stopColor: b.backgroundTop,
+                                        stopColor: f.backgroundTop,
                                     }),
                                     (0, a.jsx)("stop", {
                                         offset: "100%",
-                                        stopColor: b.backgroundBottom,
+                                        stopColor: f.backgroundBottom,
                                     }),
                                 ],
                             }),
                         ],
                     }),
                     (0, a.jsx)("circle", {
-                        className: m.qB,
-                        strokeWidth: p,
+                        className: u.qB,
+                        strokeWidth: m,
                         fill: "transparent",
-                        r: j,
-                        cx: v,
-                        cy: v,
+                        r: v,
+                        cx: b,
+                        cy: b,
                         stroke: "url(#linear)",
-                        style: C,
+                        style: A,
                     }),
                     (0, a.jsx)("circle", {
-                        className: m.qB,
-                        strokeWidth: p,
+                        className: u.qB,
+                        strokeWidth: m,
                         fill: "transparent",
-                        r: j,
-                        cx: v,
-                        cy: v,
-                        stroke: b.foreground,
-                        style: A,
+                        r: v,
+                        cx: b,
+                        cy: b,
+                        stroke: f.foreground,
+                        style: y,
                     }),
                 ],
             }),

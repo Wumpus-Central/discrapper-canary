@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => A,
+    A: () => y,
 });
 var a = n(627968),
     l = n(64700),
@@ -13,50 +13,49 @@ var a = n(627968),
     m = n(901406),
     p = n(270045),
     h = n(57718),
-    x = n(398025),
-    g = n(545986),
-    f = n(568329),
-    b = n(963713),
-    v = n(223352),
-    j = n(985018),
-    _ = n(116224);
-let y = (0, s.animated)(h.Ay),
-    A = () => {
+    x = n(545986),
+    g = n(568329),
+    f = n(963713),
+    b = n(223352),
+    v = n(985018),
+    j = n(116224);
+let _ = (0, s.animated)(h.Ay),
+    y = () => {
         let e = (0, u.go)(),
-            { expansionSpring: t } = l.useContext(f.PW),
+            { expansionSpring: t } = l.useContext(g.PW),
             {
                 onCtxMenuOpen: n,
                 onCtxMenuClose: r,
                 onCtxMenuSelect: h,
-                isExpanded: A,
-                isExpansionAnimationComplete: C,
-                quest: S,
-            } = l.useContext(b.T),
-            O = l.useCallback(() => {
-                (0, g.Zc)(S, {
+                isExpanded: y,
+                isExpansionAnimationComplete: A,
+                quest: C,
+            } = l.useContext(f.T),
+            S = l.useCallback(() => {
+                (0, x.Zc)(C, {
                     content: c.uF.QUEST_BAR_V2,
                     ctaContent: d.Cy.OPEN_DISCLOSURE,
                     sourceQuestContent: c.uF.QUEST_BAR_V2,
                 });
-            }, [S]),
-            T = l.useCallback(() => {
-                (0, m.pu)(S, {
+            }, [C]),
+            O = l.useCallback(() => {
+                (0, m.pu)(C, {
                     content: c.uF.QUEST_BAR_V2,
                     ctaContent: d.Cy.OPEN_GAME_LINK,
                     impressionId: e,
                     sourceQuestContent: c.uF.QUEST_BAR_V2,
                 });
-            }, [e, S]),
-            E = A && C,
-            N = (0, a.jsx)(o.DUT, {
-                onClick: T,
-                className: i()(_.vk, {
-                    [_.wm]: E,
+            }, [e, C]),
+            T = y && A,
+            E = (0, a.jsx)(o.DUT, {
+                onClick: O,
+                className: i()(j.vk, {
+                    [j.wm]: T,
                 }),
-                children: (0, a.jsx)(y, {
-                    quest: S,
+                children: (0, a.jsx)(_, {
+                    quest: C,
                     withGameTile: !1,
-                    logotypeClassName: _.Iu,
+                    logotypeClassName: j.Iu,
                     logotypeStyle: {
                         height: 24,
                         maxWidth: 92,
@@ -73,8 +72,8 @@ let y = (0, s.animated)(h.Ay),
                 }),
             });
         return (0, a.jsxs)(s.animated.div, {
-            className: i()(_.iE, _.Ht, {
-                [_.tT]: E,
+            className: i()(j.iE, j.Ht, {
+                [j.tT]: T,
             }),
             style: {
                 transform: (0, s.to)(
@@ -89,43 +88,39 @@ let y = (0, s.animated)(h.Ay),
             },
             children: [
                 (0, a.jsx)(s.animated.div, {
-                    className: _.Tu,
+                    className: j.Tu,
                     style: {
-                        opacity: (0, x.a)(
-                            t.to({
-                                range: [0, 1],
-                                output: [0, 1],
-                            }),
-                        ),
+                        opacity: t.to({
+                            range: [0, 1],
+                            output: [0, 1],
+                        }),
                     },
                 }),
-                (0, a.jsx)(v.A, {
-                    isFullyExpanded: E,
-                    partnerBranding: N,
+                (0, a.jsx)(b.A, {
+                    isFullyExpanded: T,
+                    partnerBranding: E,
                 }),
                 (0, a.jsxs)(s.animated.div, {
-                    className: _.P0,
+                    className: j.P0,
                     style: {
-                        opacity: (0, x.a)(
-                            t.to({
-                                range: [0, 1],
-                                output: [0, 1],
-                            }),
-                        ),
+                        opacity: t.to({
+                            range: [0, 1],
+                            output: [0, 1],
+                        }),
                     },
                     children: [
                         (0, a.jsxs)(o.DUT, {
-                            className: _.y8,
-                            onClick: O,
+                            className: j.y8,
+                            onClick: S,
                             children: [
                                 (0, a.jsx)(o.Text, {
                                     color: "always-white",
                                     variant: "text-xs/normal",
-                                    children: j.intl.string(j.t.o6FLcF),
+                                    children: v.intl.string(v.t.o6FLcF),
                                 }),
                                 (0, a.jsx)(o.cBN, {
                                     color: o.LU0.colors.WHITE,
-                                    className: _.P$,
+                                    className: j.P$,
                                 }),
                             ],
                         }),
@@ -134,7 +129,7 @@ let y = (0, s.animated)(h.Ay),
                             onClose: r,
                             onSelect: h,
                             questContent: c.uF.QUEST_BAR_V2,
-                            quest: S,
+                            quest: C,
                             shouldShowDisclosure: !0,
                             showShareLink: !0,
                             sourceQuestContent: c.uF.QUEST_BAR_V2,
@@ -169,12 +164,12 @@ let y = (0, s.animated)(h.Ay),
                                     })({}, e)),
                                     (n = n =
                                         {
-                                            className: _.rb,
-                                            "aria-label": j.intl.string(j.t.DEoVWZ),
+                                            className: j.rb,
+                                            "aria-label": v.intl.string(v.t.DEoVWZ),
                                             children: (0, a.jsx)(o.jNK, {
                                                 size: "md",
                                                 color: "currentColor",
-                                                className: i()(_.Bx, _.ON),
+                                                className: i()(j.Bx, j.ON),
                                             }),
                                         }),
                                     Object.getOwnPropertyDescriptors

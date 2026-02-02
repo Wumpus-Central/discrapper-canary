@@ -1,7 +1,7 @@
 n.d(t, {
-    PW: () => u,
-    dN: () => m,
-    oK: () => p,
+    PW: () => d,
+    dN: () => u,
+    oK: () => m,
 }),
     n(896048),
     n(321073);
@@ -9,10 +9,9 @@ var a = n(627968),
     l = n(64700),
     r = n(340287),
     i = n(353709),
-    s = n(765671),
-    o = n(398025);
+    s = n(765671);
 
-function c(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -38,7 +37,7 @@ function c(e) {
     return e;
 }
 
-function d(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +56,7 @@ function d(e, t) {
     );
 }
 n(272111);
-let u = l.createContext({
+let d = l.createContext({
         registerComponent: () => {},
         unregisterComponent: () => {},
         animatedComponents: {},
@@ -68,98 +67,94 @@ let u = l.createContext({
         expansionSpring: new i.SpringValue(0),
         mountPoints: new Map(),
     }),
-    m = l.forwardRef(function (e, t) {
+    u = l.forwardRef(function (e, t) {
         var n;
-        let { children: c, id: d, inState: m, isTextTransition: p = !1 } = e,
+        let { children: o, id: c, inState: u, isTextTransition: m = !1 } = e,
             {
-                recalculateAnimationPositions: h,
-                registerComponent: x,
-                unregisterComponent: g,
-                expansionSpring: f,
-                mountPoints: b,
-            } = l.useContext(u),
+                recalculateAnimationPositions: p,
+                registerComponent: h,
+                unregisterComponent: x,
+                expansionSpring: g,
+                mountPoints: f,
+            } = l.useContext(d),
+            b = l.useRef(null),
             v = l.useRef(null),
-            j = l.useRef(null),
-            _ = l.useRef(void 0);
+            j = l.useRef(void 0);
         l.useEffect(() => {
-            h();
-        }, [h]),
+            p();
+        }, [p]),
             l.useLayoutEffect(() => {
-                let e = v.current;
+                let e = b.current;
                 return (
-                    null != e && x(e, d, m),
+                    null != e && h(e, c, u),
                     () => {
-                        null != e && g(d, m);
+                        null != e && x(c, u);
                     }
                 );
-            }, [d, m, x, g]);
-        let y = l.useCallback(
+            }, [c, u, h, x]);
+        let _ = l.useCallback(
             (e) => {
                 let { height: t } = e;
-                _.current !== t && (h(), (_.current = t));
+                j.current !== t && (p(), (j.current = t));
             },
-            [h],
+            [p],
         );
-        (0, s.i4)(v, y);
-        let A = null == (n = b.get(d)) ? void 0 : n.current,
-            C = null;
+        (0, s.i4)(b, _);
+        let y = null == (n = f.get(c)) ? void 0 : n.current,
+            A = null;
         return (
-            null == A
-                ? (C = null)
-                : p && null != f
-                  ? (C = (0, a.jsxs)(a.Fragment, {
+            null == y
+                ? (A = null)
+                : m && null != g
+                  ? (A = (0, a.jsxs)(a.Fragment, {
                         children: [
-                            "collapsed" === m &&
+                            "collapsed" === u &&
                                 (0, r.createPortal)(
                                     (0, a.jsx)(i.animated.div, {
                                         style: {
                                             position: "absolute",
-                                            opacity: (0, o.a)(
-                                                f.to({
-                                                    range: [0, 1],
-                                                    output: [1, 0],
-                                                }),
-                                            ),
+                                            opacity: g.to({
+                                                range: [0, 1],
+                                                output: [1, 0],
+                                            }),
                                         },
-                                        children: c(j),
+                                        children: o(v),
                                     }),
-                                    A,
+                                    y,
                                 ),
-                            "expanded" === m &&
+                            "expanded" === u &&
                                 (0, r.createPortal)(
                                     (0, a.jsx)(i.animated.div, {
                                         style: {
                                             position: "absolute",
-                                            opacity: (0, o.a)(
-                                                f.to({
-                                                    range: [0, 1],
-                                                    output: [0, 1],
-                                                }),
-                                            ),
+                                            opacity: g.to({
+                                                range: [0, 1],
+                                                output: [0, 1],
+                                            }),
                                         },
-                                        children: c(j),
+                                        children: o(v),
                                     }),
-                                    A,
+                                    y,
                                 ),
                         ],
                     }))
-                  : "collapsed" === m && (C = (0, r.createPortal)(c(j), A)),
+                  : "collapsed" === u && (A = (0, r.createPortal)(o(v), y)),
             (0, a.jsxs)("div", {
                 style: {
-                    opacity: +((null == C && "collapsed" === m) || null == A),
+                    opacity: +((null == A && "collapsed" === u) || null == y),
                 },
                 ref: t,
-                children: [c(v), C],
+                children: [o(b), A],
             })
         );
     }),
-    p = (e) => {
+    m = (e) => {
         let { children: t, expandedContentRef: n, collapsedContentRef: r, expansionSpring: i } = e,
-            [s, o] = l.useState({}),
+            [s, u] = l.useState({}),
             [m, p] = l.useState([]),
             [h, x] = l.useState(() => new Map()),
             g = l.useCallback((e, t, n) => {
-                o((a) => {
+                u((a) => {
                     var l;
                     let r =
                         null != (l = a[t])
@@ -168,8 +163,8 @@ let u = l.createContext({
                                   expanded: null,
                                   collapsed: null,
                               };
-                    return d(c({}, a), {
-                        [t]: d(c({}, r), {
+                    return c(o({}, a), {
+                        [t]: c(o({}, r), {
                             [n]: e,
                         }),
                     });
@@ -181,7 +176,7 @@ let u = l.createContext({
             }, []),
             f = l.useCallback((e, t) => {
                 let n = !1;
-                o((a) => {
+                u((a) => {
                     var l;
                     let r =
                         null != (l = a[e])
@@ -193,7 +188,7 @@ let u = l.createContext({
                     return (
                         (r[t] = null),
                         (n = null == r.expanded && null == r.collapsed),
-                        d(c({}, a), {
+                        c(o({}, a), {
                             [e]: r,
                         })
                     );
@@ -234,7 +229,7 @@ let u = l.createContext({
                 }
                 p(e);
             }, [s, n, r, p]);
-        return (0, a.jsx)(u.Provider, {
+        return (0, a.jsx)(d.Provider, {
             value: {
                 registerComponent: g,
                 unregisterComponent: f,
