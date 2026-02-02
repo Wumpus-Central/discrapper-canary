@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    A: () => F,
+    A: () => B,
 }),
     n(65821),
     n(896048);
@@ -244,16 +244,33 @@ function j(e) {
 
 function k(e) {
     let { guildId: t, announcement: n } = e;
-    (g[t] = n), (g = u({}, g));
+    (g = u({}, g))[t] = {
+        state: "success",
+        announcement: n,
+    };
 }
 
-function U() {
+function U(e) {
+    let { guildId: t } = e;
+    (g = u({}, g))[t] = {
+        state: "error",
+    };
+}
+
+function G(e) {
+    let { guildId: t } = e;
+    (g = u({}, g))[t] = {
+        state: "loading",
+    };
+}
+
+function V() {
     if (r === s.default.locale) return !1;
     (r = s.default.locale), (_ = {}), (h = {}), (m = {});
 }
-class G extends (i = a.Ay.Store) {
+class F extends (i = a.Ay.Store) {
     initialize() {
-        this.waitFor(l.default, s.default), this.syncWith([s.default], U), (r = s.default.locale);
+        this.waitFor(l.default, s.default), this.syncWith([s.default], V), (r = s.default.locale);
     }
     getStorefrontData(e) {
         return h[e];
@@ -275,8 +292,8 @@ class G extends (i = a.Ay.Store) {
         return "ineligible" !== E[e];
     }
 }
-c(G, "displayName", "SocialLayerStorefrontStore");
-let F = new G(o.h, {
+c(F, "displayName", "SocialLayerStorefrontStore");
+let B = new F(o.h, {
     LOGOUT: b,
     POST_CONNECTION_OPEN: N,
     ENTITLEMENT_CREATE: S,
@@ -290,7 +307,9 @@ let F = new G(o.h, {
     SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: R,
     SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE: P,
     SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START: w,
+    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START: G,
     SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: k,
+    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE: U,
     SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START: O,
     SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: v,
     SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE: A,

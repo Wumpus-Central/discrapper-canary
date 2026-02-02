@@ -215,6 +215,10 @@ async function O(e) {
 }
 async function v(e) {
     try {
+        i.h.dispatch({
+            type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START",
+            guildId: e,
+        });
         let t = (
             await r.Bo.get({
                 url: c.Rsh.SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT(e),
