@@ -1,13 +1,16 @@
 n.d(t, {
-    ML: () => o,
-    iQ: () => f,
+    ML: () => l,
+    P4: () => _,
+    iQ: () => m,
+    pd: () => h,
 }),
     n(228524),
     n(321073),
     n(896048);
 var r = n(284009),
     i = n.n(r),
-    a = n(306173);
+    a = n(306173),
+    o = n(723426);
 
 function s(e, t, n) {
     return (
@@ -22,16 +25,16 @@ function s(e, t, n) {
         e
     );
 }
-let o = [],
-    l = Symbol("unknown");
-class c {
+let l = [],
+    c = Symbol("unknown");
+class u {
     getEnabledFeatureName() {
         let e = this.getCachedConfig();
         return void 0 === e || e.treatmentId <= 0 ? null : "".concat(this.id, ":").concat(e.treatmentId);
     }
     getCachedConfig() {
         return (
-            this.cachedConfig === l &&
+            this.cachedConfig === c &&
                 ((0, a.xd)() ? (this.cachedConfig = (0, a.Ih)().getConfig(this.id)) : (this.cachedConfig = void 0)),
             this.cachedConfig
         );
@@ -55,11 +58,11 @@ class c {
             s(this, "cachedConfig", void 0),
             (this.id = e),
             (this.inner = null),
-            (this.cachedConfig = l),
-            o.push(this);
+            (this.cachedConfig = c),
+            l.push(this);
     }
 }
-class u extends c {
+class d extends u {
     getLabel() {
         return this.label;
     }
@@ -75,13 +78,53 @@ class u extends c {
     }
     getCachedEnabled() {
         let e = this.getCachedConfig();
-        return null != e && 1 === e.treatmentId;
+        return null == e || -1 === e.treatmentId ? this.defaultValue : 1 === e.treatmentId;
     }
-    constructor(e, t) {
-        super(e), s(this, "label", void 0), (this.label = t);
+    constructor(e, t, n = !1) {
+        super(e), s(this, "label", void 0), s(this, "defaultValue", void 0), (this.label = t), (this.defaultValue = n);
     }
 }
-class d extends c {
+class f extends u {
+    getCachedBridgedStoreMode() {
+        let e = this.getCachedConfig(),
+            t = (() => {
+                var t;
+                switch (null != (t = null == e ? void 0 : e.treatmentId) ? t : -1) {
+                    case 1:
+                        return "typescript-libdiscore-dual-read";
+                    case 2:
+                        return "libdiscore";
+                    default:
+                        return "typescript";
+                }
+            })();
+        return (0, o.E)(t);
+    }
+    getEnabledFeatureName() {
+        let e = this.getCachedBridgedStoreMode();
+        return "typescript" === e ? null : "BridgedStore[".concat(this.storeName, ",").concat(e, "]");
+    }
+    getLabel() {
+        return "libdiscore '".concat(this.storeName, "' Migration");
+    }
+    getTreatments() {
+        return [
+            {
+                treatmentId: 0,
+            },
+            {
+                treatmentId: 1,
+            },
+            {
+                treatmentId: 2,
+            },
+        ];
+    }
+    constructor(e, t, n) {
+        super(e, n), s(this, "storeName", void 0), (this.storeName = t);
+    }
+}
+class p extends u {
     getLabel() {
         return "libdiscore Telemetry";
     }
@@ -127,5 +170,6 @@ class d extends c {
         super(...e), s(this, "MAX_EMISSIONS_PER_APP_LAUNCH", 5), s(this, "emissionsCount", 0);
     }
 }
-new d("2025-09-libdiscore-telemetry");
-let f = new u("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
+let _ = new f("2026-01-libdiscore-batch-store-refactor", "batch-store-refactor"),
+    h = new p("2025-09-libdiscore-telemetry"),
+    m = new d("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
