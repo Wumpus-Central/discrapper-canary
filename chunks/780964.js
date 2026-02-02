@@ -455,7 +455,6 @@ var r = (function (e) {
         (e.HIGHLIGHT_MANA_COMPONENTS = "highlight_mana_components"),
         (e.HIGHLIGHT_VOID_COMPONENTS = "highlight_void_components"),
         (e.AXE_AUDITING = "axe_auditing"),
-        (e.LEGACY_SETTINGS_SIDEBAR_ITEM = "legacy_settings_sidebar_item"),
         (e.LOGOUT_SECTION = "logout_section"),
         (e.LOGOUT_SIDEBAR_ITEM = "logout_sidebar_item"),
         e

@@ -1,55 +1,55 @@
-l.d(t, {
+n.d(t, {
     tR: () => o,
 }),
-    l(747238),
-    l(896048),
-    l(680155),
-    l(323874),
-    l(14289),
-    l(35956);
-var n = l(64700),
-    r = l(960488),
-    s = l(398590),
-    a = l(976860),
-    i = l(652215);
+    n(747238),
+    n(896048),
+    n(680155),
+    n(323874),
+    n(14289),
+    n(35956);
+var r = n(64700),
+    l = n(960488),
+    s = n(976860),
+    a = n(840065),
+    i = n(652215);
 
 function o() {
-    let { search: e } = (0, r.zy)(),
-        t = (0, r.g)(),
-        l = n.useMemo(() => new URLSearchParams(e), [e]).get("source"),
-        o = null != l ? parseInt(l, 10) : null;
+    let { search: e } = (0, l.zy)(),
+        t = (0, l.g)(),
+        n = r.useMemo(() => new URLSearchParams(e), [e]).get("source"),
+        o = null != n ? parseInt(n, 10) : null;
     return (function (e) {
         for (var t = 1; t < arguments.length; t++) {
-            var l = null != arguments[t] ? arguments[t] : {},
-                n = Object.keys(l);
+            var n = null != arguments[t] ? arguments[t] : {},
+                r = Object.keys(n);
             "function" == typeof Object.getOwnPropertySymbols &&
-                (n = n.concat(
-                    Object.getOwnPropertySymbols(l).filter(function (e) {
-                        return Object.getOwnPropertyDescriptor(l, e).enumerable;
+                (r = r.concat(
+                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
                     }),
                 )),
-                n.forEach(function (t) {
-                    var n;
-                    (n = l[t]),
+                r.forEach(function (t) {
+                    var r;
+                    (r = n[t]),
                         t in e
                             ? Object.defineProperty(e, t, {
-                                  value: n,
+                                  value: r,
                                   enumerable: !0,
                                   configurable: !0,
                                   writable: !0,
                               })
-                            : (e[t] = n);
+                            : (e[t] = r);
                 });
         }
         return e;
     })(
         {
-            onClose: n.useCallback(() => {
+            onClose: r.useCallback(() => {
                 if (0 === o) {
-                    (0, a.aX)(), (0, s.id)(i.zgK.USER_SETTINGS);
+                    (0, s.aX)(), (0, a.openUserSettings)();
                     return;
                 }
-                (0, a.EL)() ? (0, a.aX)() : (0, a.pX)(i.BVt.APP);
+                (0, s.EL)() ? (0, s.aX)() : (0, s.pX)(i.BVt.APP);
             }, [o]),
             source: o,
         },

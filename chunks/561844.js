@@ -13,8 +13,8 @@ var r = n(835245),
     o = n(861638),
     s = n(58149),
     l = n(69114),
-    c = n(111162),
-    u = n(186111),
+    c = n(265059),
+    u = n(111162),
     d = n(954571),
     f = n(723702),
     p = n(859703),
@@ -142,8 +142,9 @@ function P(e, t) {
         ((0, h.Q)({
             location: b.rE.QUEST_PREVIEW_TOOL,
         }) &&
-            u.A.getLayers().includes(O.zgK.USER_SETTINGS)) ||
-        (c.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", e, t), r)
+            c.A.displayTools &&
+            "quest_preview" === c.A.lastOpenTabId) ||
+        (u.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", e, t), r)
     )
         return;
     let i = T.has(e);

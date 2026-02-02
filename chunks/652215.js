@@ -5395,7 +5395,6 @@ var np = (function (e) {
     })({}),
     nh = (function (e) {
         return (
-            (e.USER_SETTINGS = "USER_SETTINGS"),
             (e.CHANNEL_SETTINGS = "CHANNEL_SETTINGS"),
             (e.GUILD_SETTINGS = "GUILD_SETTINGS"),
             (e.RTC_DEBUG = "RTC_DEBUG"),

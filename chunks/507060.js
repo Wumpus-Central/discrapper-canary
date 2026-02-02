@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => U,
+    A: () => k,
 }),
     n(321073);
 var r,
@@ -14,8 +14,8 @@ var r,
     p = n(398590),
     h = n(390435),
     g = n(775121),
-    f = n(268218),
-    m = n(361158),
+    m = n(268218),
+    f = n(361158),
     A = n(97469),
     _ = n(186111),
     b = n(203982),
@@ -72,28 +72,23 @@ function S(e, t) {
         e
     );
 }
-let C = (0, f.Fe)({
-        createPromise: () => n.e("67878").then(n.bind(n, 655297)),
-        webpackId: 655297,
-        name: "UserSettings",
-    }),
-    N = (0, f.Fe)({
+let C = (0, m.Fe)({
         createPromise: () => Promise.resolve().then(n.bind(n, 944771)),
         webpackId: 944771,
         name: "ComponentPlayground",
     }),
-    T = (0, f.Fe)({
+    N = (0, m.Fe)({
         createPromise: () =>
             Promise.all([n.e("68587"), n.e("43600"), n.e("21968"), n.e("78888")]).then(n.bind(n, 667587)),
         webpackId: 667587,
         name: "ChannelSettings",
     }),
-    j = (0, f.Fe)({
+    T = (0, m.Fe)({
         createPromise: () => n.e("59275").then(n.bind(n, 737630)),
         webpackId: 737630,
         name: "CollectiblesShop",
     }),
-    x = (0, f.Fe)({
+    j = (0, m.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("68587"),
@@ -114,24 +109,23 @@ let C = (0, f.Fe)({
         webpackId: 422559,
         name: "GuildSettings",
     }),
-    P = {
-        [E.zgK.USER_SETTINGS]: () => (0, i.jsx)(C, {}),
-        [E.zgK.CHANNEL_SETTINGS]: () => (0, i.jsx)(T, {}),
-        [E.zgK.GUILD_SETTINGS]: () => (0, i.jsx)(x, {}),
-        [E.zgK.COLLECTIBLES_SHOP]: () => (0, i.jsx)(j, {}),
-        [E.zgK.COMPONENT_PLAYGROUND]: () => (0, i.jsx)(N, {}),
+    x = {
+        [E.zgK.CHANNEL_SETTINGS]: () => (0, i.jsx)(N, {}),
+        [E.zgK.GUILD_SETTINGS]: () => (0, i.jsx)(j, {}),
+        [E.zgK.COLLECTIBLES_SHOP]: () => (0, i.jsx)(T, {}),
+        [E.zgK.COMPONENT_PLAYGROUND]: () => (0, i.jsx)(C, {}),
     },
-    w = "SHOWN",
-    L = "HIDDEN",
-    R = {
+    P = "SHOWN",
+    w = "HIDDEN",
+    L = {
         friction: 10,
         tension: 100,
     };
 
-function D() {
+function R() {
     return l.useEffect(() => (g.A.enable(), g.A.enableTemp(h.w), () => g.A.disableTemp()), []), null;
 }
-class M extends (r = l.PureComponent) {
+class D extends (r = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -144,8 +138,8 @@ class M extends (r = l.PureComponent) {
         let { mode: t } = this.props,
             { mode: n } = e;
         if (t !== n) {
-            if (t === w && n === L) return this.animateIn();
-            if (t === L && n === w) return this.animateUnder();
+            if (t === P && n === w) return this.animateIn();
+            if (t === w && n === P) return this.animateUnder();
         }
     }
     componentWillEnter(e) {
@@ -178,7 +172,7 @@ class M extends (r = l.PureComponent) {
                     {
                         toValue: 1,
                     },
-                    R,
+                    L,
                 ),
             ),
             o.A.spring(
@@ -187,7 +181,7 @@ class M extends (r = l.PureComponent) {
                     {
                         toValue: 1,
                     },
-                    R,
+                    L,
                 ),
             ),
         ]).start(() => this.animateComplete(e));
@@ -202,7 +196,7 @@ class M extends (r = l.PureComponent) {
                     {
                         toValue: 0,
                     },
-                    R,
+                    L,
                 ),
             ),
             o.A.spring(
@@ -211,7 +205,7 @@ class M extends (r = l.PureComponent) {
                     {
                         toValue: 1.1,
                     },
-                    R,
+                    L,
                 ),
             ),
         ]).start(() => {
@@ -228,7 +222,7 @@ class M extends (r = l.PureComponent) {
                     {
                         toValue: 0,
                     },
-                    R,
+                    L,
                 ),
             ),
             o.A.spring(
@@ -237,7 +231,7 @@ class M extends (r = l.PureComponent) {
                     {
                         toValue: 0.93,
                     },
-                    R,
+                    L,
                 ),
             ),
         ]).start(() => this.animateComplete());
@@ -287,7 +281,7 @@ class M extends (r = l.PureComponent) {
                             !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
                 return l;
             })(t, ["name", "mode", "children", "baseLayer"]),
-            u = r === L,
+            u = r === w,
             p = e || u ? this.getAnimatedStyle() : null,
             h = !u && !a,
             g = (0, i.jsx)(
@@ -302,8 +296,6 @@ class M extends (r = l.PureComponent) {
                             "aria-label": h
                                 ? (function (e) {
                                       switch (e) {
-                                          case E.zgK.USER_SETTINGS:
-                                              return O.intl.string(O.t.cduTBL);
                                           case E.zgK.CHANNEL_SETTINGS:
                                               return O.intl.string(O.t.XPDhcc);
                                           case E.zgK.COLLECTIBLES_SHOP:
@@ -319,7 +311,7 @@ class M extends (r = l.PureComponent) {
                             className: s()(y.qd, {
                                 [y.n3]: a,
                                 [y.bW]: e,
-                                "stop-animations": r === L,
+                                "stop-animations": r === w,
                             }),
                             style: p,
                         },
@@ -360,7 +352,7 @@ class M extends (r = l.PureComponent) {
         super(e), I(this, "containerRef", l.createRef());
         let t = 1,
             n = 1;
-        e.mode === L && ((t = 0.93), (n = 0)),
+        e.mode === w && ((t = 0.93), (n = 0)),
             (this.state = {
                 animating: !1,
                 scale: new o.A.Value(t),
@@ -369,11 +361,11 @@ class M extends (r = l.PureComponent) {
             });
     }
 }
-I(M, "defaultProps", {
+I(D, "defaultProps", {
     baseLayer: !1,
 }),
-    I(M, "contextType", d.CZY);
-class k extends l.PureComponent {
+    I(D, "contextType", d.CZY);
+class M extends l.PureComponent {
     componentDidMount() {
         b._.subscribe(E.jej.LAYER_POP_ESCAPE_KEY, p.jH);
     }
@@ -387,9 +379,9 @@ class k extends l.PureComponent {
         return (
             l.push(
                 (0, i.jsx)(
-                    M,
+                    D,
                     {
-                        mode: 0 !== r || n ? L : w,
+                        mode: 0 !== r || n ? w : P,
                         baseLayer: !0,
                         children: e,
                     },
@@ -403,13 +395,13 @@ class k extends l.PureComponent {
     renderComponent(e, t, n) {
         let r;
         return (
-            (r = "string" == typeof e ? P[e]() : (0, i.jsx)(e, {})),
+            (r = "string" == typeof e ? x[e]() : (0, i.jsx)(e, {})),
             (0, i.jsxs)(
-                M,
+                D,
                 {
                     name: "string" == typeof e ? e : void 0,
-                    mode: t === n - 1 ? w : L,
-                    children: [(0, i.jsx)(D, {}), r],
+                    mode: t === n - 1 ? P : w,
+                    children: [(0, i.jsx)(R, {}), r],
                 },
                 "layer-".concat(t),
             )
@@ -438,14 +430,14 @@ class k extends l.PureComponent {
     }
 }
 
-function U(e) {
+function k(e) {
     let t = (0, A.NC)(),
         n = (0, c.bG)([_.A], () => _.A.getLayers()),
-        r = (0, m.xr)(
+        r = (0, f.xr)(
             (e) => e.fullScreenLayers.length > 0 && !e.fullScreenLayers.some((e) => e.options.showAppUnderLayer),
         );
     return (0, i.jsx)(
-        k,
+        M,
         S(v({}, e), {
             sidebarTheme: t,
             layers: n,

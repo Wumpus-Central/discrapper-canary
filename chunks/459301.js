@@ -1,73 +1,72 @@
 i.d(e, {
-    m: () => Y,
+    m: () => X,
 });
 var n = i(627968),
     l = i(64700),
     s = i(517846),
     r = i(158954),
-    u = i(192308),
-    a = i(732955),
-    o = i(462887),
-    T = i(890138),
-    A = i(736653),
-    S = i(793574),
-    E = i(688810),
-    d = i(857586),
-    _ = i(757036),
-    I = i(602450),
+    u = i(732955),
+    a = i(462887),
+    o = i(890138),
+    d = i(736653),
+    T = i(793574),
+    A = i(688810),
+    S = i(857586),
+    c = i(757036),
+    E = i(602450),
     g = i(144605),
-    c = i(927766),
-    N = i(557571),
+    _ = i(927766),
+    I = i(557571),
     O = i(18640),
-    C = i(236698),
-    L = i(976860),
-    R = i(392943),
-    b = i(954571),
-    D = i(840065),
-    P = i(715999),
-    p = i(934370),
-    m = i(450987),
-    G = i(623375),
-    V = i(652215),
-    y = i(788868),
-    v = i(985018),
-    f = i(895431),
-    h = i(458017),
-    M = i(120499),
-    X = i(684399),
-    U = i(446115);
-let Y = () => {
-        let t = (0, o.q)((0, A.Ay)()),
-            { analyticsLocations: e } = (0, E.Ay)(S.A.CF_WARP_SETTINGS);
+    N = i(236698),
+    C = i(976860),
+    b = i(392943),
+    p = i(954571),
+    L = i(12901),
+    D = i(715999),
+    m = i(934370),
+    R = i(450987),
+    f = i(623375),
+    P = i(652215),
+    v = i(788868),
+    y = i(985018),
+    G = i(895431),
+    V = i(458017),
+    h = i(120499),
+    U = i(684399),
+    M = i(446115);
+let X = () => {
+        let t = (0, a.q)((0, d.Ay)()),
+            { analyticsLocations: e } = (0, A.Ay)(T.A.CF_WARP_SETTINGS);
         return (
             (0, l.useEffect)(() => {
-                b.default.track(V.HAw.PREMIUM_UPSELL_VIEWED, {
-                    type: y.e.PRIVACY_PERK_SETTINGS,
+                p.default.track(P.HAw.PREMIUM_UPSELL_VIEWED, {
+                    type: v.e.PRIVACY_PERK_SETTINGS,
                     location_stack: e,
                 });
             }, [e]),
             (0, n.jsxs)("div", {
-                className: h.V1,
+                className: V.V1,
                 children: [
                     (0, n.jsxs)(r.hLv, {
                         color: "pink",
                         children: [
                             (0, n.jsx)("div", {
-                                className: h.N1,
+                                className: V.N1,
                                 children: (0, n.jsxs)("div", {
-                                    className: h.wx,
+                                    className: V.wx,
                                     children: [
                                         (0, n.jsxs)("div", {
-                                            className: h.QF,
+                                            className: V.QF,
                                             children: [
-                                                (0, n.jsx)(R.A, {
+                                                (0, n.jsx)(b.A, {
                                                     color: t ? "black" : "white",
                                                 }),
                                                 (0, n.jsx)("div", {
-                                                    className: h.zN,
+                                                    className: V.zN,
                                                 }),
                                                 (0, n.jsx)("img", {
-                                                    src: t ? X : M,
+                                                    src: t ? U : h,
                                                     alt: "Cloudflare",
                                                     width: 103,
                                                     height: 15,
@@ -79,110 +78,108 @@ let Y = () => {
                                 }),
                             }),
                             (0, n.jsxs)("div", {
-                                className: h.hQ,
+                                className: V.hQ,
                                 children: [
                                     (0, n.jsx)("img", {
-                                        src: U,
+                                        src: M,
                                         width: "100",
                                         alt: "Private browsing perk logo",
                                     }),
                                     (0, n.jsxs)("div", {
-                                        className: h.Qs,
-                                        children: [(0, n.jsx)(p.F, {}), (0, n.jsx)(P.q, {})],
+                                        className: V.Qs,
+                                        children: [(0, n.jsx)(m.F, {}), (0, n.jsx)(D.q, {})],
                                     }),
                                     (0, n.jsx)("div", {
-                                        className: h.yP,
+                                        className: V.yP,
                                     }),
                                     (0, n.jsx)("div", {
-                                        className: h.OQ,
-                                        children: (0, n.jsx)(k, {}),
+                                        className: V.OQ,
+                                        children: (0, n.jsx)(x, {}),
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, n.jsx)(G.u, {}),
+                    (0, n.jsx)(f.u, {}),
                 ],
             })
         );
     },
-    k = () => {
-        let { installationStatus: t, isWeb: e, setInstallationStatus: i } = (0, N.lV)(),
-            o = (0, _.L)(),
-            A = (0, l.useRef)(!1);
+    x = () => {
+        let { installationStatus: t, isWeb: e, setInstallationStatus: i } = (0, I.lV)(),
+            a = (0, c.L)(),
+            d = (0, l.useRef)(!1);
         if (
             ((0, l.useEffect)(
                 () => () => {
-                    A.current ||
-                        C.Ay.fireSurveyAction(
-                            o ? s.w.WARP_VPN_SETTINGS_BOUNCE_NITRO : s.w.WARP_VPN_SETTINGS_BOUNCE_NON_NITRO,
+                    d.current ||
+                        N.Ay.fireSurveyAction(
+                            a ? s.w.WARP_VPN_SETTINGS_BOUNCE_NITRO : s.w.WARP_VPN_SETTINGS_BOUNCE_NON_NITRO,
                         );
                 },
-                [A, o],
+                [d, a],
             ),
             e)
         )
-            return (0, n.jsx)(c.X, {
+            return (0, n.jsx)(_.X, {
                 onClick: () => {
-                    A.current = !0;
+                    d.current = !0;
                 },
             });
-        if (!o)
+        if (!a)
             return (0, n.jsxs)("div", {
-                className: h._u,
+                className: V._u,
                 children: [
-                    (0, n.jsx)(d.A, {
-                        buttonTextOverride: v.intl.string(v.t["8x0jKT"]),
-                        subscriptionTier: y.pe.TIER_2,
+                    (0, n.jsx)(S.A, {
+                        buttonTextOverride: y.intl.string(y.t["8x0jKT"]),
+                        subscriptionTier: v.pe.TIER_2,
                         fullWidth: !0,
                         size: "sm",
                         premiumModalAnalyticsLocation: {
-                            page: S.A.CF_WARP_SETTINGS,
+                            page: T.A.CF_WARP_SETTINGS,
                         },
                         onClick: () => {
-                            A.current = !0;
+                            d.current = !0;
                         },
                     }),
-                    (0, n.jsx)(a.$nd, {
+                    (0, n.jsx)(u.$nd, {
                         variant: "secondary",
-                        text: v.intl.string(v.t.ZnqyZ2),
+                        text: y.intl.string(y.t.ZnqyZ2),
                         size: "sm",
                         onClick: () => {
-                            (0, u.closeModal)(D.USER_SETTINGS_MODAL_KEY),
-                                (0, L.pX)(V.BVt.APPLICATION_STORE),
-                                (A.current = !0);
+                            (0, L.default)(), (0, C.pX)(P.BVt.APPLICATION_STORE), (d.current = !0);
                         },
                     }),
                 ],
             });
         switch (t) {
-            case I.Lk.ERROR:
-            case I.Lk.NOT_INSTALLED:
-                return (0, n.jsx)(m.y, {
-                    onClick: () => (A.current = !0),
+            case E.Lk.ERROR:
+            case E.Lk.NOT_INSTALLED:
+                return (0, n.jsx)(R.y, {
+                    onClick: () => (d.current = !0),
                 });
-            case I.Lk.INSTALLED:
+            case E.Lk.INSTALLED:
                 return (0, n.jsx)(O.X, {});
-            case I.Lk.ZERO_TRUST:
+            case E.Lk.ZERO_TRUST:
                 break;
-            case I.Lk.EXISTING_INSTALLATION:
-                return (0, n.jsx)(a.$nd, {
+            case E.Lk.EXISTING_INSTALLATION:
+                return (0, n.jsx)(u.$nd, {
                     variant: "primary",
                     onClick: () => {
-                        (0, T.u)(V.HAw.NITRO_WARP_CTA_CLICKED, {
+                        (0, o.u)(P.HAw.NITRO_WARP_CTA_CLICKED, {
                             is_enable_warp: !0,
                         }),
-                            i(I.Lk.READY_FOR_LICENSE),
-                            (A.current = !0);
+                            i(E.Lk.READY_FOR_LICENSE),
+                            (d.current = !0);
                     },
-                    text: v.intl.string(f.default.J09UWz),
+                    text: y.intl.string(G.default.J09UWz),
                 });
-            case I.Lk.INSTALLING:
-            case I.Lk.READY_FOR_LICENSE:
-            case I.Lk.WAITING_FOR_TERMS:
-            case I.Lk.INSTALLING_TIMEOUT:
+            case E.Lk.INSTALLING:
+            case E.Lk.READY_FOR_LICENSE:
+            case E.Lk.WAITING_FOR_TERMS:
+            case E.Lk.INSTALLING_TIMEOUT:
                 return (0, n.jsx)("div", {
-                    className: h.u1,
+                    className: V.u1,
                     children: (0, n.jsx)(r.y$y, {
                         type: r.tVU.SPINNING_CIRCLE,
                     }),
