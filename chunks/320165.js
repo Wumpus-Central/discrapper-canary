@@ -325,13 +325,14 @@ function z(e) {
         { channel: n, user: l, guild: d, title: f, dragStart: g, dragging: b } = e,
         [D, R] = r.useState(!1),
         k = (0, s.bG)([A.A], () => A.A.getChannelId(), []) === (null == n ? void 0 : n.id),
-        L = (0, s.bG)(
+        L = w.intl.string(N.default.tYPfF2),
+        U = (0, s.bG)(
             [y.A],
             () => ((null == n ? void 0 : n.isThread()) && null != n.parent_id ? y.A.getChannel(n.parent_id) : null),
             [n],
         ),
-        U = (0, s.bG)([E.default, v.A], () => (null != L ? (0, h.m1)(L, E.default, v.A) : null), [L]),
-        z = (0, s.bG)([], () => {
+        z = (0, s.bG)([E.default, v.A], () => (null != U ? (0, h.m1)(U, E.default, v.A) : null), [U]),
+        F = (0, s.bG)([], () => {
             var e, t;
             return (
                 (e = n),
@@ -358,7 +359,7 @@ function z(e) {
                           : null
             );
         }, [n, l]),
-        F = r.useCallback(
+        H = r.useCallback(
             (e) => {
                 M(n) &&
                     ((0, O.YX)(C.uss.TEXT_CHAT_V3, {
@@ -370,7 +371,7 @@ function z(e) {
             },
             [n],
         ),
-        H = r.useCallback(() => {
+        Y = r.useCallback(() => {
             (null == n ? void 0 : n.id) != null &&
                 R((e) => {
                     let t = !e;
@@ -412,7 +413,7 @@ function z(e) {
                     (0, i.jsxs)("div", {
                         className: P.G1,
                         children: [
-                            null != L && null != U
+                            null != U && null != z
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(u.DUT, {
@@ -422,15 +423,15 @@ function z(e) {
                                                   var t, n, i;
                                                   e.stopPropagation(),
                                                       (0, I.D$)({
-                                                          channelId: L.id,
+                                                          channelId: U.id,
                                                           source: T.B.MANUAL,
                                                           guildId:
                                                               null !=
                                                               (t =
                                                                   null !=
-                                                                  (n = null == (i = L.getGuildId) ? void 0 : i.call(L))
+                                                                  (n = null == (i = U.getGuildId) ? void 0 : i.call(U))
                                                                       ? n
-                                                                      : L.guild_id)
+                                                                      : U.guild_id)
                                                                   ? t
                                                                   : null,
                                                           messageId: null,
@@ -440,7 +441,7 @@ function z(e) {
                                               children: (0, i.jsx)(u.Text, {
                                                   variant: "text-sm/medium",
                                                   color: "text-muted",
-                                                  children: U,
+                                                  children: z,
                                               }),
                                           }),
                                           (0, i.jsx)(u._BQ, {
@@ -470,34 +471,45 @@ function z(e) {
                     (0, i.jsx)(G, {
                         channel: n,
                         isConnectedToVoiceChannel: k,
-                        onStartPrivateCall: F,
+                        onStartPrivateCall: H,
                         pinsOpen: D,
-                        onTogglePinsPopout: H,
+                        onTogglePinsPopout: Y,
                         onRequestClosePinsPopout: () => R(!1),
                     }),
                     (0, i.jsx)(V, {
                         channel: n,
                         pinsOpen: D,
-                        onTogglePinsPopout: H,
+                        onTogglePinsPopout: Y,
                         onRequestClosePinsPopout: () => R(!1),
                     }),
-                    null != z &&
+                    null != F &&
                         (0, i.jsx)(S.j, {
-                            tab: z.tab,
-                            targetId: z.targetId,
+                            tab: F.tab,
+                            targetId: F.targetId,
                             widgetType: C.uss.TEXT_CHAT_V3,
                             shouldStopPropagation: !1,
                         }),
                     (null == n ? void 0 : n.id) != null &&
                         (0, i.jsx)(o.m, {
-                            text: w.intl.string(N.default.ERApc4),
-                            "aria-label": w.intl.string(N.default.ERApc4),
+                            text: k ? L : w.intl.string(N.default.ERApc4),
+                            "aria-label": k ? L : w.intl.string(N.default.ERApc4),
                             children: (0, i.jsx)(u.K0, {
-                                icon: u.PGe,
-                                "aria-label": w.intl.string(N.default.ERApc4),
+                                icon: k ? u.gR : u.PGe,
+                                "aria-label": k ? L : w.intl.string(N.default.ERApc4),
                                 size: "sm",
                                 variant: "icon-only",
                                 onClick: () => {
+                                    if (k) {
+                                        (0, O.YX)(C.uss.TEXT_CHAT_V3, {
+                                            type: O.Z5.TEXT_CHAT,
+                                            value: O.IP.CLOSED_TEXT_CHAT,
+                                            secondaryValue: "minimize_voice",
+                                        }),
+                                            (0, I.S$)({
+                                                minimized: !0,
+                                            });
+                                        return;
+                                    }
                                     (0, I.lu)({
                                         channelId: n.id,
                                         widgetType: C.uss.TEXT_CHAT_V3,

@@ -1,46 +1,53 @@
 n.d(t, {
-    _: () => T,
-    g: () => C,
+    _: () => w,
+    g: () => P,
 }),
     n(896048);
 var i,
     r = n(627968),
     l = n(64700),
-    a = n(311907),
-    s = n(459192),
-    o = n(397927),
-    u = n(47167),
-    c = n(713654),
-    d = n(941971),
-    h = n(734057),
-    p = n(71393),
-    f = n(222823),
-    g = n(994500),
-    m = n(741961),
-    y = n(287809),
-    A = n(145567),
-    v = n(187667),
-    b = n(922611),
-    E = n(651813),
-    O = n(919843),
-    x = n(534765),
-    _ = n(34307),
-    S = n(652215),
-    I = n(985018),
-    j = n(58812),
-    T = (((i = {}).DEFAULT = "DEFAULT"), (i.CHANNEL_TYPE = "CHANNEL_TYPE"), i);
-let C = l.memo(function (e) {
+    a = n(503698),
+    s = n.n(a),
+    o = n(311907),
+    u = n(459192),
+    c = n(397927),
+    d = n(47167),
+    h = n(713654),
+    p = n(941971),
+    f = n(734057),
+    g = n(71393),
+    m = n(222823),
+    y = n(994500),
+    A = n(485296),
+    v = n(741961),
+    b = n(287809),
+    E = n(145567),
+    O = n(187667),
+    x = n(922611),
+    _ = n(651813),
+    S = n(919843),
+    I = n(534765),
+    j = n(34307),
+    T = n(652215),
+    C = n(985018),
+    N = n(58812),
+    w = (((i = {}).DEFAULT = "DEFAULT"), (i.CHANNEL_TYPE = "CHANNEL_TYPE"), i);
+let P = l.memo(function (e) {
     var t, n;
-    let { channelId: i, selectedVoiceChannelId: T, iconVariant: C = "DEFAULT" } = e,
-        N = (0, a.bG)([v.A], () => v.A.getSelectedChannelId() === i, [i]),
-        [w, P] = l.useState(!1),
-        { mentionCount: D, isMentionLowImportance: R } = (0, a.cf)(
-            [f.Ay],
+    let { channelId: i, selectedVoiceChannelId: a, iconVariant: w = "DEFAULT" } = e,
+        P = null != a && i === a,
+        D = (0, o.bG)([O.A], () => O.A.getSelectedChannelId() === i, [i]),
+        R = (0, o.bG)([O.A], () => O.A.getVoiceChatMinimized()),
+        k = (0, c.rdh)(c.LU0.colors.ICON_STATUS_ONLINE),
+        M = (0, o.bG)([A.A], () => !!P && !!(A.A.isAnyoneElseSpeaking() || A.A.isCurrentUserSpeaking()), [P]),
+        [L, U] = l.useState(!1),
+        { mentionCount: G, isMentionLowImportance: V } = (0, o.cf)(
+            [m.Ay],
             () =>
                 null != i
                     ? {
-                          mentionCount: f.Ay.getMentionCount(i),
-                          isMentionLowImportance: f.Ay.getIsMentionLowImportance(i),
+                          mentionCount: m.Ay.getMentionCount(i),
+                          isMentionLowImportance: m.Ay.getIsMentionLowImportance(i),
                       }
                     : {
                           mentionCount: 0,
@@ -49,130 +56,143 @@ let C = l.memo(function (e) {
             [i],
         ),
         {
-            label: k,
-            user: M,
-            guild: L,
-            channel: U,
-        } = (0, a.cf)([h.A, p.A, y.default, g.A], () => {
+            label: z,
+            user: F,
+            guild: H,
+            channel: Y,
+        } = (0, o.cf)([f.A, g.A, b.default, y.A], () => {
             var e;
-            let t = null != (e = h.A.getChannel(i)) ? e : null;
+            let t = null != (e = f.A.getChannel(i)) ? e : null;
             if (null == t)
                 return {
-                    label: I.intl.string(I.t.zLZPmk),
+                    label: C.intl.string(C.t.zLZPmk),
                     user: null,
                     guild: null,
                     channel: null,
                 };
-            let n = (0, u.m1)(t, y.default, g.A);
+            let n = (0, d.m1)(t, b.default, y.A);
             return {
                 label: n,
-                user: (0, E.j)(t, y.default),
-                guild: (0, E.P)(t, p.A),
+                user: (0, _.j)(t, b.default),
+                guild: (0, _.P)(t, g.A),
                 channel: t,
             };
         }, [i]);
     l.useEffect(() => {
-        null == U && (0, O.b)(i);
-    }, [U, i]);
-    let G = (0, a.bG)([m.A, y.default], () => {
+        null == Y && (0, S.b)(i);
+    }, [Y, i]);
+    let K = (0, o.bG)([v.A, b.default], () => {
             var e, t;
-            if (null == U) return !1;
-            let n = null != (e = null == (t = y.default.getCurrentUser()) ? void 0 : t.id) ? e : null,
-                i = m.A.getTypingUsers(U.id);
+            if (null == Y) return !1;
+            let n = null != (e = null == (t = b.default.getCurrentUser()) ? void 0 : t.id) ? e : null,
+                i = v.A.getTypingUsers(Y.id);
             for (let e in i) if (e !== n) return !0;
             return !1;
-        }, [U]),
-        V = (0, a.bG)([f.Ay], () => {
-            let e = null == U ? void 0 : U.id;
-            return null != e && f.Ay.hasUnread(e);
-        }, [U]),
-        z = (0, r.jsx)("div", {
-            className: j.St,
+        }, [Y]),
+        W = (0, o.bG)([m.Ay], () => {
+            let e = null == Y ? void 0 : Y.id;
+            return null != e && m.Ay.hasUnread(e);
+        }, [Y]),
+        B = (0, r.jsx)("div", {
+            className: N.St,
             children: (() => {
                 var e;
-                let t = null != (e = null == U ? void 0 : U.isPrivate()) && e;
-                if ("CHANNEL_TYPE" === C && !t) {
-                    let e = (0, c.gU)(U, L);
+                let t = null != (e = null == Y ? void 0 : Y.isPrivate()) && e;
+                if ("CHANNEL_TYPE" === w && !t) {
+                    let e = (0, h.gU)(Y, H);
+                    null != e || (e = c.oyn);
+                    let t = P && !R && M,
+                        n = {
+                            boxShadow: "none",
+                        },
+                        i = k.rgba({
+                            opacity: 0.85,
+                        }),
+                        l = k.rgba({
+                            opacity: 0.45,
+                        });
                     return (
-                        null != e || (e = o.oyn),
+                        t && (n.boxShadow = "0 0 0 2px rgba(".concat(i, "), 0 0 12px 2px rgba(").concat(l, ")")),
                         (0, r.jsx)("div", {
-                            className: (function () {
-                                for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                                return t.filter(Boolean).join(" ");
-                            })(j.s, N && j.lJ),
+                            className: s()(N.s, D && N.lJ),
+                            style: n,
                             children: (0, r.jsx)(e, {
-                                className: j.Yc,
+                                className: N.Yc,
                                 size: "sm",
-                                color: N ? o.LU0.colors.WHITE : o.LU0.colors.ICON_STATUS_ONLINE,
+                                color: D ? c.LU0.colors.WHITE : c.LU0.colors.ICON_STATUS_ONLINE,
                             }),
                         })
                     );
                 }
-                return (0, r.jsx)(b.g, {
-                    channel: U,
-                    user: M,
-                    guild: L,
-                    isSelected: N,
-                    size: b.c.SIZE_40,
-                    isTyping: G,
-                    mentionCount: D,
-                    isMentionLowImportance: R,
+                return (0, r.jsx)(x.g, {
+                    channel: Y,
+                    user: F,
+                    guild: H,
+                    isSelected: D,
+                    size: x.c.SIZE_40,
+                    isTyping: K,
+                    mentionCount: G,
+                    isMentionLowImportance: V,
                 });
             })(),
         }),
-        F = (0, x.r)({
-            channel: U,
-            guild: L,
-            user: M,
+        Z = (0, I.r)({
+            channel: Y,
+            guild: H,
+            user: F,
         }),
-        H = null != (t = null == U ? void 0 : U.isPrivate()) && t,
-        Y = null != (n = null == L ? void 0 : L.name) ? n : "",
-        K = H ? void 0 : k,
-        W = H ? k : "" !== Y ? Y : k,
-        B = (() => {
-            if (null == U || H) return null;
-            let e = (0, c.gU)(U, L);
+        X = null != (t = null == Y ? void 0 : Y.isPrivate()) && t,
+        J = null != (n = null == H ? void 0 : H.name) ? n : "",
+        Q = X ? void 0 : z,
+        q = X ? z : "" !== J ? J : z,
+        $ = (() => {
+            if (null == Y || X) return null;
+            let e = (0, h.gU)(Y, H);
             return (
-                null != e || (e = o.oyn),
+                null != e || (e = c.oyn),
                 (0, r.jsx)(e, {
                     size: "sm",
-                    color: o.LU0.colors.INTERACTIVE_ICON_DEFAULT,
+                    color: c.LU0.colors.INTERACTIVE_ICON_DEFAULT,
                 })
             );
         })();
-    return null == U
+    return null == Y
         ? (0, r.jsx)("div", {
-              className: j.R,
+              className: N.R,
           })
-        : (0, r.jsx)(s.u, {
-              title: K,
-              body: W,
-              asset: B,
+        : (0, r.jsx)(u.u, {
+              title: Q,
+              body: q,
+              asset: $,
               assetSize: 20,
-              "aria-label": k,
-              children: (0, r.jsxs)(o.DUT, {
-                  className: j.pc,
+              "aria-label": z,
+              children: (0, r.jsxs)(c.DUT, {
+                  className: N.pc,
                   onClick: () => {
                       var e;
-                      (0, A.D$)({
-                          channelId: i,
-                          source: _.B.MANUAL,
-                          guildId: null != (e = null == L ? void 0 : L.id) ? e : null,
-                          messageId: null,
-                          widgetType: S.uss.TEXT_CHAT_V3,
-                      });
+                      P &&
+                          (0, E.S$)({
+                              minimized: !1,
+                          }),
+                          (0, E.D$)({
+                              channelId: i,
+                              source: j.B.MANUAL,
+                              guildId: null != (e = null == H ? void 0 : H.id) ? e : null,
+                              messageId: null,
+                              widgetType: T.uss.TEXT_CHAT_V3,
+                          });
                   },
-                  onContextMenu: F,
-                  onMouseEnter: () => P(!0),
-                  onMouseLeave: () => P(!1),
+                  onContextMenu: Z,
+                  onMouseEnter: () => U(!0),
+                  onMouseLeave: () => U(!1),
                   children: [
-                      z,
+                      B,
                       (0, r.jsx)("div", {
-                          className: j.vT,
-                          children: (0, r.jsx)(d.A, {
-                              selected: N,
-                              hovered: w,
-                              unread: V,
+                          className: N.vT,
+                          children: (0, r.jsx)(p.A, {
+                              selected: D,
+                              hovered: L,
+                              unread: W,
                           }),
                       }),
                   ],

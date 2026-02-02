@@ -1,6 +1,7 @@
 n.d(t, {
     D$: () => s,
     Ml: () => o,
+    S$: () => c,
     lu: () => l,
 });
 var r = n(73153),
@@ -57,4 +58,12 @@ function l(e) {
             channelId: t,
         })
     );
+}
+
+function c(e) {
+    let { minimized: t } = e;
+    return r.h.dispatch({
+        type: "OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED",
+        minimized: t,
+    });
 }
