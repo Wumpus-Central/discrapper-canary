@@ -3,56 +3,56 @@ n.d(t, {
 }),
     n(896048),
     n(747238);
-var r = n(627968),
-    l = n(64700),
+var l = n(627968),
+    r = n(64700),
     i = n(503698),
-    s = n.n(i),
-    a = n(837381),
+    a = n.n(i),
+    s = n(837381),
     o = n(311907),
     c = n(435371),
     u = n(397927),
     d = n(49229),
-    p = n(297413),
-    h = n(966327),
+    h = n(297413),
+    p = n(966327),
     f = n(793574),
-    g = n(235986),
-    m = n(803664),
-    b = n(583311),
-    A = n(290863),
-    y = n(584777),
-    _ = n(994500),
-    O = n(427262),
-    j = n(652215),
-    v = n(985018),
-    x = n(318880);
+    m = n(235986),
+    g = n(803664),
+    A = n(583311),
+    b = n(290863),
+    _ = n(584777),
+    y = n(994500),
+    v = n(427262),
+    E = n(652215),
+    O = n(985018),
+    C = n(318880);
 
-function E(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            l = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            l.forEach(function (t) {
+                var l;
+                (l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = l);
             });
     }
     return e;
 }
 
-function C(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,8 +60,8 @@ function C(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var l = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, l);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -70,18 +70,19 @@ function C(e, t) {
         e
     );
 }
-let S = (e) => {
-    let { user: t } = e,
-        n = (0, o.bG)([_.A], () => _.A.getRelationshipType(t.id)),
-        [i, s] = l.useState(!1),
-        a = (0, m.A)({
+let j = (e) => {
+    let { user: t, handleTrackAction: n } = e,
+        i = (0, o.bG)([y.A], () => y.A.getRelationshipType(t.id)),
+        [a, s] = r.useState(!1),
+        h = (0, g.A)({
             user: t,
             location: f.A.NEW_GROUP_DM_INVITE_MODAL,
             setLoading: s,
         }),
-        p = l.useRef(null),
-        h = l.useCallback(async () => {
-            s(!0),
+        p = r.useRef(null),
+        m = r.useCallback(async () => {
+            n(),
+                s(!0),
                 await d.A.addRelationship({
                     userId: t.id,
                     context: {
@@ -89,58 +90,58 @@ let S = (e) => {
                     },
                 }),
                 s(!1);
-        }, [t.id]);
+        }, [n, t.id]);
     if (t.bot) return null;
-    switch (n) {
-        case j.eA$.FRIEND:
+    switch (i) {
+        case E.eA$.FRIEND:
             return null;
-        case j.eA$.PENDING_INCOMING:
-            return (0, r.jsx)(b.A, {
+        case E.eA$.PENDING_INCOMING:
+            return (0, l.jsx)(A.A, {
                 targetElementRef: p,
-                menuItems: [a],
+                menuItems: [h],
                 children: (e) =>
-                    (0, r.jsx)(c.m_, {
+                    (0, l.jsx)(c.m_, {
                         asContainer: !0,
-                        text: v.intl.string(v.t["6QQCQ+"]),
+                        text: O.intl.string(O.t["6QQCQ+"]),
                         ariaHidden: !0,
-                        children: (0, r.jsx)(
+                        children: (0, l.jsx)(
                             u.K0,
-                            C(E({}, e), {
+                            S(x({}, e), {
                                 buttonRef: p,
                                 size: "sm",
                                 variant: "icon-only",
-                                "aria-label": v.intl.string(v.t["6QQCQ+"]),
+                                "aria-label": O.intl.string(O.t["6QQCQ+"]),
                                 icon: u.lI8,
-                                loading: i,
+                                loading: a,
                             }),
                         ),
                     }),
             });
-        case j.eA$.PENDING_OUTGOING:
-            return (0, r.jsx)(c.m_, {
+        case E.eA$.PENDING_OUTGOING:
+            return (0, l.jsx)(c.m_, {
                 asContainer: !0,
-                text: v.intl.string(v.t["s/+byI"]),
+                text: O.intl.string(O.t["s/+byI"]),
                 ariaHidden: !0,
-                children: (0, r.jsx)(u.K0, {
+                children: (0, l.jsx)(u.K0, {
                     size: "sm",
                     variant: "icon-only",
-                    "aria-label": v.intl.string(v.t["s/+byI"]),
+                    "aria-label": O.intl.string(O.t["s/+byI"]),
                     icon: u.lI8,
                     disabled: !0,
                 }),
             });
         default:
-            return (0, r.jsx)(c.m_, {
+            return (0, l.jsx)(c.m_, {
                 asContainer: !0,
-                text: v.intl.string(v.t.w5uwoI),
+                text: O.intl.string(O.t.w5uwoI),
                 ariaHidden: !0,
-                children: (0, r.jsx)(u.K0, {
+                children: (0, l.jsx)(u.K0, {
                     size: "sm",
-                    onClick: h,
+                    onClick: m,
                     variant: "icon-only",
-                    "aria-label": v.intl.string(v.t.w5uwoI),
+                    "aria-label": O.intl.string(O.t.w5uwoI),
                     icon: u.Rvf,
-                    loading: i,
+                    loading: a,
                 }),
             });
     }
@@ -150,123 +151,125 @@ function I(e) {
     let t,
         {
             user: n,
-            section: l,
+            section: r,
             row: i,
             hideDiscriminator: d,
             comparator: f,
-            selected: m,
-            checked: b,
-            disabled: _ = !1,
-            onClick: j,
+            selected: g,
+            checked: A,
+            disabled: y = !1,
+            onClick: E,
             onMouseEnter: I,
-            onMessageClick: N,
-            "aria-setsize": T,
+            onMessageClick: T,
+            "aria-setsize": N,
             "aria-posinset": P,
             numSelected: w,
             staffOverride: R,
-            showFriendButton: D = !1,
+            handleTrackAction: D,
+            showFriendButton: M = !1,
         } = e,
-        M = (0, o.bG)([A.A], () => A.A.getStatus(n.id)),
-        L = (0, a.rm)(String(n.id));
+        L = (0, o.bG)([b.A], () => b.A.getStatus(n.id)),
+        k = (0, s.rm)(String(n.id));
     return (
         (t = R
-            ? (0, r.jsx)(u.P7L, {
-                  checked: b,
-                  disabled: _,
+            ? (0, l.jsx)(u.P7L, {
+                  checked: A,
+                  disabled: y,
               })
             : 0 === w
-              ? (0, r.jsx)(u.Button, {
+              ? (0, l.jsx)(u.Button, {
                     variant: "secondary",
-                    text: v.intl.string(v.t["g33r/P"]),
+                    text: O.intl.string(O.t["g33r/P"]),
                     size: "sm",
                     onClick: () => {
-                        null != N && N(n.id);
+                        D(r, i, "message"), null != T && T(n.id);
                     },
                 })
-              : (0, r.jsx)(c.m_, {
+              : (0, l.jsx)(c.m_, {
                     asContainer: !0,
-                    text: v.intl.string(v.t.z9qAt9),
-                    children: (0, r.jsx)(u.P7L, {
-                        checked: b,
+                    text: O.intl.string(O.t.z9qAt9),
+                    children: (0, l.jsx)(u.P7L, {
+                        checked: A,
                         disabled: !0,
                     }),
                 })),
-        (0, r.jsx)(
+        (0, l.jsx)(
             u.DUT,
-            C(
-                E(
+            S(
+                x(
                     {
                         id: "user-row-".concat(i),
-                        className: s()(x.Se, {
-                            [x.r9]: _,
+                        className: a()(C.Se, {
+                            [C.r9]: y,
                         }),
                         onClick:
-                            l === y.A.FRIENDS || R
+                            r === _.A.FRIENDS || R
                                 ? () => {
-                                      null != j && j(n.id);
+                                      D(r, i, "select"), null != E && E(n.id);
                                   }
                                 : void 0,
                         onMouseEnter: () => {
-                            null != I && I(l, i);
+                            null != I && I(r, i);
                         },
                     },
-                    L,
+                    k,
                 ),
                 {
                     role: "option",
-                    "aria-selected": b,
-                    "aria-disabled": _,
-                    "aria-setsize": T,
+                    "aria-selected": A,
+                    "aria-disabled": y,
+                    "aria-setsize": N,
                     "aria-posinset": P,
-                    children: (0, r.jsxs)(g.A, {
-                        align: g.A.Align.CENTER,
-                        className: s()(x.Bc, {
-                            [x.oz]: m,
+                    children: (0, l.jsxs)(m.A, {
+                        align: m.A.Align.CENTER,
+                        className: a()(C.Bc, {
+                            [C.oz]: g,
                         }),
                         children: [
-                            (0, r.jsx)(h.A, {
+                            (0, l.jsx)(p.A, {
                                 user: n,
-                                status: M,
-                                className: x.my,
+                                status: L,
+                                className: C.my,
                             }),
-                            (0, r.jsxs)("div", {
-                                className: x.YW,
+                            (0, l.jsxs)("div", {
+                                className: C.YW,
                                 children: [
-                                    (0, r.jsx)(u.Text, {
+                                    (0, l.jsx)(u.Text, {
                                         tag: "strong",
-                                        className: x.$R,
+                                        className: C.$R,
                                         "aria-hidden": !0,
                                         variant: "text-md/medium",
                                         children:
                                             null != f && f === n.tag
-                                                ? O.Ay.getName(n)
+                                                ? v.Ay.getName(n)
                                                 : null != f && "" !== f
                                                   ? f
-                                                  : O.Ay.getName(n),
+                                                  : v.Ay.getName(n),
                                     }),
-                                    (0, r.jsx)(u.Text, {
+                                    (0, l.jsx)(u.Text, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
-                                        children: (0, r.jsx)(p.A, {
+                                        children: (0, l.jsx)(h.A, {
                                             user: n,
                                             hideDiscriminator: d,
-                                            className: x.xK,
-                                            usernameClass: x.__invalid_weightMedium,
-                                            discriminatorClass: x.__invalid_weightMedium,
+                                            className: C.xK,
+                                            usernameClass: C.__invalid_weightMedium,
+                                            discriminatorClass: C.__invalid_weightMedium,
                                             forceUsername: !0,
                                         }),
                                     }),
                                 ],
                             }),
-                            l !== y.A.FRIENDS && D
-                                ? (0, r.jsx)(S, {
+                            r !== _.A.FRIENDS && M
+                                ? (0, l.jsx)(j, {
                                       user: n,
+                                      handleTrackAction: () => D(r, i, "friend"),
                                   })
                                 : null,
-                            l === y.A.FRIENDS
-                                ? (0, r.jsx)(u.P7L, {
-                                      checked: b,
-                                      disabled: _,
+                            r === _.A.FRIENDS
+                                ? (0, l.jsx)(u.P7L, {
+                                      checked: A,
+                                      disabled: y,
                                   })
                                 : t,
                         ],

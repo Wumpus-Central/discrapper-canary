@@ -5113,6 +5113,7 @@ var na = (function (e) {
             (e.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT = "voice_channel_blocked_user_warning_engagement"),
             (e.CREATE_DM_USER_LIST_CLICKED = "create_dm_user_list_clicked"),
             (e.SEARCH_USER_LIST_STARTED = "search_user_list_started"),
+            (e.CREATE_DM_USER_ROW_INTERACTED = "create_dm_user_row_interacted"),
             (e.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED = "user_account_email_change_attempted"),
             (e.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE = "user_account_email_change_reason_continue"),
             (e.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED = "user_account_email_change_reason_selected"),
