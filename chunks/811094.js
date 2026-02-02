@@ -21,7 +21,6 @@ e.exports = {
     Is: "iconWithGuildIcon__2ea32",
     d4: "modeConnected__2ea32",
     IA: "notInteractive__2ea32",
-    oh: "hoistingNotConnected__2ea32",
     WS: "unreadImportant__2ea32",
     Do: "numberBadge__2ea32",
     NW: "activeEvent__2ea32",
