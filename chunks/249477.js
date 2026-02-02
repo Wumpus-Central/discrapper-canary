@@ -16,8 +16,8 @@ var r = n(627968),
     p = n(855511),
     h = n(58149),
     g = n(332456),
-    f = n(237774),
-    m = n(504982),
+    m = n(237774),
+    f = n(504982),
     A = n(815706),
     _ = n(134047),
     b = n(313961),
@@ -53,8 +53,8 @@ var r = n(627968),
     Q = n(595623),
     X = n(256415),
     Z = n(954571),
-    $ = n(403362),
-    J = n(652215),
+    J = n(403362),
+    $ = n(652215),
     ee = n(705751);
 
 function et(e, t, n) {
@@ -97,8 +97,8 @@ async function er(e) {
             overlayMethod: p,
             sharedGuildIds: h,
             voiceChannelId: g,
-            voiceChannelType: f,
-            voiceChannelBitrate: m,
+            voiceChannelType: m,
+            voiceChannelBitrate: f,
             voiceChannelGuildId: A,
         } = e,
         _ = await (0, w.E1)(a.pid),
@@ -106,13 +106,13 @@ async function er(e) {
         C = c.enabledLegacy || c.enabledOOP,
         N = j.x.legacyEnabled || j.x.oopEnabled,
         T = c.source;
-    Z.default.track(J.HAw.LAUNCH_GAME, {
+    Z.default.track($.HAw.LAUNCH_GAME, {
         game: b,
         game_id: E,
         verified: null != s && (0, y.PQ)(S, null == s ? void 0 : s.executables),
         elevated: a.elevated,
         is_launcher: null != (t = null == a ? void 0 : a.isLauncher) && t,
-        game_platform: J.yTV.DESKTOP,
+        game_platform: $.yTV.DESKTOP,
         detection_method: o,
         distributor: v,
         is_overlay_enabled: N,
@@ -133,13 +133,12 @@ async function er(e) {
         game_detection_enabled: (0, I.Xr)(a),
         executable_path: O,
         voice_channel_id: g,
-        voice_channel_type: f,
-        voice_channel_bitrate: m,
+        voice_channel_type: m,
+        voice_channel_bitrate: f,
         voice_channel_guild_id: A,
         distributor_game_id: a.sku,
         hidden_by_distributor: a.hidden,
         game_metadata: (0, L.MT)(a),
-        executable_fingerprint: a.executableFingerprint,
     }),
         null != O && I.Ay.addExecutableTrackedByAnalytics(O);
 }
@@ -147,7 +146,7 @@ class ei extends i.PureComponent {
     componentDidUpdate(e) {
         var t, n, r, i, l, a, o, u, d, p, g;
         let {
-            voiceChannelId: m,
+            voiceChannelId: f,
             voiceChannelGuildId: v,
             voiceChannelType: S,
             voiceChannelBitrate: N,
@@ -160,7 +159,7 @@ class ei extends i.PureComponent {
             selectedGuildId: F,
             connected: Y,
         } = this.props;
-        if (e.voiceChannelId !== m && null != e.voiceChannelId) {
+        if (e.voiceChannelId !== f && null != e.voiceChannelId) {
             let t = I.Ay.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : "",
                 r = R.A.getStageInstanceByChannel(e.voiceChannelId),
@@ -168,7 +167,7 @@ class ei extends i.PureComponent {
                 a = H.A.getLastRTCConnectionState();
             (null == a ? void 0 : a.channelId) !== e.voiceChannelId && (a = null),
                 Z.default.track(
-                    J.HAw.LEAVE_VOICE_CHANNEL,
+                    $.HAw.LEAVE_VOICE_CHANNEL,
                     en(
                         {
                             channel_id: e.voiceChannelId,
@@ -190,29 +189,29 @@ class ei extends i.PureComponent {
                     ),
                 );
         }
-        if (e.voiceChannelId !== m && null != m) {
+        if (e.voiceChannelId !== f && null != f) {
             let e = I.Ay.getCurrentGameForAnalytics(),
                 t = null != e ? e.name : "",
-                n = R.A.getStageInstanceByChannel(m),
-                r = C.Ay.getActiveEventByChannel(m);
-            (0, h.zV)(J.HAw.CHANNEL_OPENED, en({}, (0, h.qL)(m))),
-                (0, f.k)(J.HAw.CHANNEL_OPENED_CLICKSTREAM, {
-                    channelId: m,
+                n = R.A.getStageInstanceByChannel(f),
+                r = C.Ay.getActiveEventByChannel(f);
+            (0, h.zV)($.HAw.CHANNEL_OPENED, en({}, (0, h.qL)(f))),
+                (0, m.k)($.HAw.CHANNEL_OPENED_CLICKSTREAM, {
+                    channelId: f,
                 });
             let i = null,
                 l = X.default.getFocusedPID();
             null != l &&
                 P.default.getOverlayMethod(l) !== x.Ue.Disabled &&
                 (X.default.isInstanceLocked()
-                    ? (i = J.Xmn.OVERLAY_LOCKED_ACTIVATED)
+                    ? (i = $.Xmn.OVERLAY_LOCKED_ACTIVATED)
                     : X.default.isInstanceLocked() ||
-                      (i = X.default.isPinned(J.uss.TEXT) ? J.Xmn.OVERLAY_UNLOCKED_PINNED : J.Xmn.OVERLAY_UNLOCKED)),
+                      (i = X.default.isPinned($.uss.TEXT) ? $.Xmn.OVERLAY_UNLOCKED_PINNED : $.Xmn.OVERLAY_UNLOCKED)),
                 Z.default.track(
-                    J.HAw.JOIN_VOICE_CHANNEL,
+                    $.HAw.JOIN_VOICE_CHANNEL,
                     en(
                         {
                             location: i,
-                            channel_id: m,
+                            channel_id: f,
                             channel_type: S,
                             channel_bitrate: N,
                             guild_id: v,
@@ -224,8 +223,8 @@ class ei extends i.PureComponent {
                             was_moved: H.A.getWasMoved(),
                             join_voice_id: H.A.getJoinVoiceId(),
                         },
-                        (0, h.dL)(v, m),
-                        (0, h.JK)(v, m, T),
+                        (0, h.dL)(v, f),
+                        (0, h.JK)(v, f, T),
                     ),
                 );
         }
@@ -245,24 +244,24 @@ class ei extends i.PureComponent {
             s = null != n ? "custom_override" : null != t ? "verified_game" : "launcher";
             let h = P.default.getTrackedGameByPid(w.pid),
                 g = (0, I.hw)(w),
-                f = {
+                m = {
                     enabledOOP: null != (a = null == h ? void 0 : h.oopEnabled) ? a : g.enabledOOP,
                     enabledLegacy: null != (o = null == h ? void 0 : h.legacyEnabled) ? o : g.enabledLegacy,
                     overlayMethod: null != (u = null == h ? void 0 : h.overlayMethod) ? u : g.overlayMethod,
                     source: null != (d = null == h ? void 0 : h.source) ? d : g.source,
                     reason: "ChatAutoAnalytics",
                 },
-                A = null != (p = P.default.getOverlayMethod(w.pid)) ? p : f.overlayMethod;
+                A = null != (p = P.default.getOverlayMethod(w.pid)) ? p : m.overlayMethod;
             if (
                 (setTimeout(() => {
-                    (w.distributor === J.d3x.ROBLOX ? this.debouncedRobloxAnalytics : er)({
+                    (w.distributor === $.d3x.ROBLOX ? this.debouncedRobloxAnalytics : er)({
                         runningGame: w,
                         game: t,
                         detectionMethod: s,
-                        overlayStatus: f,
+                        overlayStatus: m,
                         overlayMethod: A,
                         sharedGuildIds: l,
-                        voiceChannelId: m,
+                        voiceChannelId: f,
                         voiceChannelType: S,
                         voiceChannelBitrate: N,
                         voiceChannelGuildId: v,
@@ -283,30 +282,29 @@ class ei extends i.PureComponent {
         ) {
             let e = O.A.getById(U.id);
             null != e &&
-                Z.default.track(J.HAw.LAUNCH_NON_GAME_APPLICATION, {
+                Z.default.track($.HAw.LAUNCH_NON_GAME_APPLICATION, {
                     name: e.name,
                     application_id: e.id,
                     application_type: ee.S7.NON_GAME_DETECTABLE,
                     elevated: U.elevated,
-                    game_platform: J.yTV.DESKTOP,
+                    game_platform: $.yTV.DESKTOP,
                     distributor: U.distributor,
                     detection_method: "verified_non_game_application",
                     current_user_status: K.A.getStatus(),
                     executable_path: (0, y.Ic)(U.exePath),
-                    voice_channel_id: m,
+                    voice_channel_id: f,
                     voice_channel_type: S,
                     voice_channel_bitrate: N,
                     voice_channel_guild_id: v,
-                    executable_fingerprint: U.executableFingerprint,
                 });
         }
-        if ((e.videoEnabled !== T || e.isScreenSharing !== j) && null != m) {
+        if ((e.videoEnabled !== T || e.isScreenSharing !== j) && null != f) {
             let e = "none",
-                t = [j ? "screen" : null, T ? "camera" : null].filter($.Vq),
+                t = [j ? "screen" : null, T ? "camera" : null].filter(J.Vq),
                 n = null;
             j ? ((e = "screen"), (n = (0, A.p)())) : T && (e = "camera"),
                 Z.default.track(
-                    J.HAw.VIDEO_INPUT_TOGGLED,
+                    $.HAw.VIDEO_INPUT_TOGGLED,
                     en(
                         {
                             video_input_type: e,
@@ -316,7 +314,7 @@ class ei extends i.PureComponent {
                         },
                         n,
                         this.getGameMetadata(),
-                        (0, h.QS)(m),
+                        (0, h.QS)(f),
                     ),
                 );
         }
@@ -332,12 +330,12 @@ class ei extends i.PureComponent {
                         .find((e) => {
                             var t;
                             return (
-                                (0, s.Lt)(e.flags, J.pr7.IS_CROSSPOST) &&
+                                (0, s.Lt)(e.flags, $.pr7.IS_CROSSPOST) &&
                                 (null == (t = e.messageReference) ? void 0 : t.guild_id) === "667560445975986187"
                             );
                         });
                 Z.default.track(
-                    J.HAw.ACK_COMMUNITY_MESSAGES,
+                    $.HAw.ACK_COMMUNITY_MESSAGES,
                     en(
                         {
                             last_message_id: null == i ? void 0 : i.id,
@@ -355,7 +353,7 @@ class ei extends i.PureComponent {
                 _.M.getConfig({
                     location: "ChatAutoAnalytics",
                 }).collectAnalytics &&
-                Z.default.track(J.HAw.TEXT_IN_VOICE_CLOSED, {
+                Z.default.track($.HAw.TEXT_IN_VOICE_CLOSED, {
                     reason: "switched away",
                     channel_id: t,
                     guild_id: null == n ? void 0 : n.getGuildId(),
@@ -433,7 +431,7 @@ function el() {
             gameName: null != j ? j.name : null,
             gameId: null != j ? j.application_id : null,
             gameExeName: null != x ? x.exeName : null,
-            hasPreviewEnabled: null == u ? void 0 : u.features.has(J.GuildFeatures.PREVIEW_ENABLED),
+            hasPreviewEnabled: null == u ? void 0 : u.features.has($.GuildFeatures.PREVIEW_ENABLED),
             isMemberPending: A,
             postableChannelCount: w,
             isTextInVoice: l,
@@ -456,12 +454,12 @@ function el() {
             i.useEffect(() => {
                 if (n && null != s) {
                     let e = (0, g.C)(M.A.getChannel(s), !0);
-                    (0, h.zV)(J.HAw.CHANNEL_OPENED, en({}, e, (0, h.qL)(s))),
-                        (0, f.k)(J.HAw.CHANNEL_OPENED_CLICKSTREAM, {
+                    (0, h.zV)($.HAw.CHANNEL_OPENED, en({}, e, (0, h.qL)(s))),
+                        (0, m.k)($.HAw.CHANNEL_OPENED_CLICKSTREAM, {
                             channelId: s,
                         }),
                         t.current.isTextInVoice &&
-                            (0, h.zV)(J.HAw.TEXT_IN_VOICE_OPENED, {
+                            (0, h.zV)($.HAw.TEXT_IN_VOICE_OPENED, {
                                 channel_is_nsfw: t.current.isNSFWChannel,
                             });
                 }
@@ -469,8 +467,8 @@ function el() {
                 i.useEffect(() => {
                     n &&
                         null == o &&
-                        l === J.BVt.FRIENDS &&
-                        (0, m.A)({
+                        l === $.BVt.FRIENDS &&
+                        (0, f.A)({
                             tab_opened: r,
                         });
                 }, [n, r, l, o]),
@@ -512,8 +510,8 @@ function el() {
                                       Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                   }),
                             i);
-                        (0, h.zV)(J.HAw.GUILD_VIEWED, n),
-                            (0, f.k)(J.HAw.GUILD_VIEWED_CLICKSTREAM, {
+                        (0, h.zV)($.HAw.GUILD_VIEWED, n),
+                            (0, m.k)($.HAw.GUILD_VIEWED_CLICKSTREAM, {
                                 guildId: o,
                             });
                     }
@@ -522,10 +520,10 @@ function el() {
             i.useEffect(() => {
                 n &&
                     null == o &&
-                    l === J.BVt.MESSAGE_REQUESTS &&
+                    l === $.BVt.MESSAGE_REQUESTS &&
                     !c.current &&
                     ((c.current = !0),
-                    Z.default.track(J.HAw.MESSAGE_REQUESTS_INITIALIZED, {
+                    Z.default.track($.HAw.MESSAGE_REQUESTS_INITIALIZED, {
                         num_message_requests: t.current.numMessageRequests,
                     }));
             }, [n, o, l]);

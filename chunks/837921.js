@@ -1,7 +1,7 @@
 n.d(t, {
     Ay: () => Q,
     UB: () => z,
-    _0: () => F,
+    _0: () => V,
     dv: () => W,
     kw: () => Y,
 }),
@@ -114,11 +114,11 @@ let D = new Set([
     k = /(\.[a-zA-Z0-9]+)%3A.+$/,
     U = /[^a-zA-Z0-9]/g,
     G = /\.[^.]*$/;
-var F = (function (e) {
+var V = (function (e) {
     return (e.SAVED = "saved"), (e.CANCELED = "canceled"), (e.ERRORED = "errored"), e;
 })({});
 
-function V(e) {
+function F(e) {
     try {
         let t = decodeURIComponent(e);
         return (t = (t = t.replace(j, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(M, "_");
@@ -180,7 +180,6 @@ function K(e) {
         windowHandle: null != (s = e.windowHandle) ? s : null,
         fullscreenType: null != (l = e.fullscreenType) ? l : p.aI.UNKNOWN,
         isLauncher: null != (c = e.isLauncher) && c,
-        executableFingerprint: e.executableFingerprint,
     };
 }
 
@@ -252,13 +251,14 @@ let Z = {
         setFocused(e) {
             this.getDiscordUtils().inputSetFocused(e);
         },
-        setObservedGamesCallback(e, t, n, r) {
+        setObservedGamesCallback(e, t, n) {
             try {
                 P = {};
-                let i = 0,
-                    a = this.getDiscordUtils(),
-                    o = e.map((e) => {
-                        let t = ++i;
+                let r = 0,
+                    i = this.getDiscordUtils();
+                (t && null != i.setObservedGamesCallback2 ? i.setObservedGamesCallback2 : i.setObservedGamesCallback)(
+                    e.map((e) => {
+                        let t = ++r;
                         return (
                             null != e.id && (P[t] = e.id),
                             v(b({}, e), {
@@ -267,11 +267,8 @@ let Z = {
                             })
                         );
                     }),
-                    s = (e) => n(e.map(K));
-                null != r && null != a.setProcessObserverUserId && a.setProcessObserverUserId(r),
-                    t && null != a.setObservedGamesCallback2
-                        ? a.setObservedGamesCallback2(o, s)
-                        : a.setObservedGamesCallback(o, s);
+                    (e) => n(e.map(K)),
+                );
             } catch (e) {}
         },
         setGameDetectionCallback(e) {
@@ -437,7 +434,7 @@ let Z = {
             let c = m.A.toURLSafe(e);
             if (null == c) return "errored";
             let u = null != (r = c.pathname.split("/").pop()) ? r : "unknown";
-            u = V(u);
+            u = F(u);
             let d = c.searchParams.get("format");
             if (null != d) {
                 let e = d.replace(U, "").toLowerCase();
@@ -470,7 +467,7 @@ let Z = {
             let r = m.A.toURLSafe(e);
             if (null == r) return null;
             let i = null != (n = null != t ? t : r.pathname.split("/").pop()) ? n : "unknown";
-            null == t && (i = V(i));
+            null == t && (i = F(i));
             let a = await B(e),
                 o = E.from(a),
                 s = await A.fileManager.saveWithDialog(o, i, void 0);
