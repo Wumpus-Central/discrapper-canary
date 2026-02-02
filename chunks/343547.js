@@ -16,19 +16,19 @@ var r = n(627968),
     g = n(895944),
     A = n(649032),
     f = n(976860),
-    h = n(780964),
-    b = n(840065),
+    b = n(780964),
+    h = n(840065),
     E = n(975571),
-    x = n(749082),
-    O = n(385243),
+    O = n(749082),
+    x = n(385243),
     C = n(652215),
-    I = n(758836),
+    S = n(758836),
     T = n(901123),
-    S = n(49370),
-    j = n(985018),
-    v = n(785619),
-    N = n(909340),
-    y = n(455482);
+    I = n(49370),
+    N = n(985018),
+    y = n(785619),
+    j = n(909340),
+    v = n(455482);
 let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
     R = (e) => {
         var t, n;
@@ -38,14 +38,14 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                 programReward: g.A.getRewardForProgram(A.W.NITRO),
             })),
             D = (0, _.A)("(min-width: ".concat(720, "px)")),
-            w = (0, p.DP)(),
-            L = i.useMemo(
+            L = (0, p.DP)(),
+            w = i.useMemo(
                 () => ({
                     hueRotate: 25,
-                    glowAmount: (0, d.M)(w) ? 2 : 8,
+                    glowAmount: (0, d.M)(L) ? 2 : 8,
                     blurAmount: 20,
                 }),
-                [w],
+                [L],
             );
         if (!E || null == R) return null;
         let M = (function (e, t) {
@@ -62,14 +62,15 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                         displayTotalLifetimeRewards: null != l,
                         displayProgressBar: !0,
                         actionButton: (0, r.jsx)(c.$nd, {
-                            text: j.intl.string(S.default.BxjHiu),
+                            text: N.intl.string(I.default.BxjHiu),
                             variant: t ? "overlay-primary" : "secondary",
-                            onClick: () => (0, f.pX)(T.BV.COLLECTIBLES_SHOP_WITH_TAB(I.G2.ORBS)),
+                            onClick: () => (0, f.pX)(T.BV.COLLECTIBLES_SHOP_WITH_TAB(S.G2.ORBS)),
                         }),
-                        headerText: j.intl.format(S.default.cfE8Oh, {
+                        headerText: N.intl.format(I.default.BxLJQL, {
                             days: Math.max(1, i),
+                            orbsCount: e.reward_amount,
                         }),
-                        subheaderText: j.intl.format(S.default["53tWRt"], {
+                        subheaderText: N.intl.format(I.default.tUV1vV, {
                             helpdeskArticle: P,
                         }),
                     };
@@ -78,15 +79,15 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                         displayTotalLifetimeRewards: !1,
                         displayProgressBar: !1,
                         actionButton: (0, r.jsx)(c.$nd, {
-                            text: j.intl.string(S.default.KVCfnE),
+                            text: N.intl.string(I.default.KVCfnE),
                             variant: t ? "overlay-primary" : "secondary",
                             onClick: () =>
-                                (0, b.openUserSettings)(h.X.BILLING_PANEL, {
+                                (0, h.openUserSettings)(b.X.BILLING_PANEL, {
                                     section: C.nc_.BILLING,
                                 }),
                         }),
-                        headerText: j.intl.string(S.default.uuZJXR),
-                        subheaderText: j.intl.format(S.default.dkeEV7, {
+                        headerText: N.intl.string(I.default.uuZJXR),
+                        subheaderText: N.intl.format(I.default.dkeEV7, {
                             helpdeskArticle: P,
                         }),
                     };
@@ -97,16 +98,16 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                         actionButton: (0, r.jsx)("span", {
                             className: t ? "theme-dark" : void 0,
                             children: (0, r.jsx)(c.$nd, {
-                                text: j.intl.string(S.default.KVCfnE),
+                                text: N.intl.string(I.default.KVCfnE),
                                 variant: "critical-secondary",
                                 onClick: () =>
-                                    (0, b.openUserSettings)(h.X.BILLING_PANEL, {
+                                    (0, h.openUserSettings)(b.X.BILLING_PANEL, {
                                         section: C.nc_.BILLING,
                                     }),
                             }),
                         }),
-                        headerText: j.intl.string(S.default["+O9Asn"]),
-                        subheaderText: j.intl.format(S.default.nWKEBZ, {
+                        headerText: N.intl.string(I.default["+O9Asn"]),
+                        subheaderText: N.intl.format(I.default.nWKEBZ, {
                             helpdeskArticle: P,
                         }),
                     };
@@ -115,12 +116,12 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                         displayTotalLifetimeRewards: null != l,
                         displayProgressBar: null != i,
                         actionButton: (0, r.jsx)(c.$nd, {
-                            text: j.intl.string(S.default["wLAd/+"]),
+                            text: N.intl.string(I.default["wLAd/+"]),
                             variant: t ? "overlay-primary" : "secondary",
-                            onClick: () => (0, f.pX)(T.BV.COLLECTIBLES_SHOP_WITH_TAB(I.G2.ORBS)),
+                            onClick: () => (0, f.pX)(T.BV.COLLECTIBLES_SHOP_WITH_TAB(S.G2.ORBS)),
                         }),
-                        headerText: j.intl.string(S.default.zF0HnJ),
-                        subheaderText: j.intl.format(S.default["5tzNTa"], {
+                        headerText: N.intl.string(I.default.zF0HnJ),
+                        subheaderText: N.intl.format(I.default["5tzNTa"], {
                             helpdeskArticle: P,
                         }),
                     };
@@ -129,16 +130,16 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                         displayTotalLifetimeRewards: null != l,
                         displayProgressBar: null != i,
                         actionButton: (0, r.jsx)(c.$nd, {
-                            text: j.intl.string(S.default.FToh6D),
+                            text: N.intl.string(I.default.FToh6D),
                             variant: t ? "overlay-primary" : "secondary",
                             icon: c.tvc,
                             onClick: () =>
-                                (0, b.openUserSettings)(h.X.BILLING_PANEL, {
+                                (0, h.openUserSettings)(b.X.BILLING_PANEL, {
                                     section: C.nc_.BILLING,
                                 }),
                         }),
-                        headerText: j.intl.string(S.default.ISnOet),
-                        subheaderText: j.intl.format(S.default["vjaRZ/"], {
+                        headerText: N.intl.string(I.default.ISnOet),
+                        subheaderText: N.intl.format(I.default["vjaRZ/"], {
                             helpdeskArticle: P,
                         }),
                     };
@@ -148,16 +149,16 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
         })(R, D);
         if (null == M) return null;
         let {
-            displayTotalLifetimeRewards: U,
-            displayProgressBar: G,
+            displayTotalLifetimeRewards: G,
+            displayProgressBar: U,
             actionButton: k,
-            headerText: V,
+            headerText: B,
             subheaderText: H,
         } = M;
         return (0, r.jsx)("div", {
-            className: s()(v.Hc, l),
+            className: s()(y.Hc, l),
             children: (0, r.jsxs)(
-                x.A,
+                O.A,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -185,9 +186,9 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                 })(
                     {
                         cardType: u.sl2.CUSTOM,
-                        cardClassName: v.Nr,
+                        cardClassName: y.Nr,
                     },
-                    L,
+                    w,
                 )),
                 (n = n =
                     {
@@ -197,28 +198,28 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                                 autoPlay: !0,
                                 playsInline: !0,
                                 loop: !0,
-                                className: v.Ki,
-                                src: N.A,
+                                className: y.Ki,
+                                src: j.A,
                             }),
                             (0, r.jsxs)("div", {
-                                className: v.zK,
+                                className: y.zK,
                                 children: [
                                     (0, r.jsx)("img", {
-                                        src: y.A,
-                                        className: v._e,
+                                        src: v.A,
+                                        className: y._e,
                                         alt: "",
                                         "aria-hidden": !0,
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: v.mR,
+                                        className: y.mR,
                                     }),
                                 ],
                             }),
                             (0, r.jsxs)("div", {
-                                className: v.FS,
+                                className: y.FS,
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: v.aZ,
+                                        className: y.aZ,
                                         children: (0, r.jsx)(c.Exy, {
                                             type: "beta",
                                             variant: "expressive",
@@ -226,26 +227,26 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                                     }),
                                     (0, r.jsx)(c.DZT, {
                                         variant: "heading-xl/bold",
-                                        className: v.R_,
-                                        children: V,
+                                        className: y.R_,
+                                        children: B,
                                     }),
                                     (0, r.jsx)(c.EYj, {
                                         variant: "text-md/medium",
-                                        className: v.G3,
+                                        className: y.G3,
                                         children: H,
                                     }),
-                                    G &&
-                                        (0, r.jsx)(O.A, {
-                                            className: v.L$,
-                                        }),
                                     U &&
+                                        (0, r.jsx)(x.A, {
+                                            className: y.L$,
+                                        }),
+                                    G &&
                                         (0, r.jsxs)("div", {
-                                            className: v.fB,
+                                            className: y.fB,
                                             children: [
                                                 (0, r.jsx)(c.EYj, {
                                                     variant: "text-md/medium",
-                                                    className: v.G3,
-                                                    children: j.intl.string(S.default["/1mWUn"]),
+                                                    className: y.G3,
+                                                    children: N.intl.string(I.default["/1mWUn"]),
                                                 }),
                                                 (0, r.jsx)(c.Cp8, {
                                                     size: "sm",
@@ -253,13 +254,13 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                                                 }),
                                                 (0, r.jsx)(c.EYj, {
                                                     variant: "text-md/medium",
-                                                    className: v.G3,
+                                                    className: y.G3,
                                                     children: R.total_rewarded_from_program,
                                                 }),
                                             ],
                                         }),
                                     (0, r.jsx)("div", {
-                                        className: v.WT,
+                                        className: y.WT,
                                         children: (0, r.jsx)(c.e2v, {
                                             children: k,
                                         }),

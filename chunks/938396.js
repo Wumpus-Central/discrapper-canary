@@ -4,8 +4,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(892227),
-    s = n(311907),
-    o = n(964892),
+    o = n(311907),
+    s = n(964892),
     l = n(916845),
     c = n(732955),
     u = n(775602),
@@ -28,7 +28,7 @@ var r = n(627968),
     C = n(633217),
     N = n(909340);
 let w = () => {
-        let e = (0, s.bG)([u.A], () => u.A.useReducedMotion);
+        let e = (0, o.bG)([u.A], () => u.A.useReducedMotion);
         return (0, r.jsx)("div", {
             className: S.s,
             children: e
@@ -63,22 +63,14 @@ function P() {
 
 function D(e) {
     let { targetElementRef: t, shouldShow: n, onRequestClose: _, ctaText: v, ctaOnClick: T } = e,
-        C = (0, s.bG)([u.A], () => u.A.useReducedMotion),
-        D = (0, s.bG)([f.A], () => f.A.getRewardForProgram(p.W.NITRO)),
-        x = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
-        { balance: L } = (0, h.W)(),
+        C = (0, o.bG)([u.A], () => u.A.useReducedMotion),
+        D = (0, o.bG)([f.A], () => f.A.getRewardForProgram(p.W.NITRO)),
+        L = (0, o.bG)([m.default], () => m.default.getCurrentUser()),
+        { balance: x } = (0, h.W)(),
+        M = !(0, E.ki)(L),
         j = i.useMemo(() => {
-            let e = (0, E.YE)(x, b.PremiumTypes.TIER_2),
-                t = !(0, E.ki)(x);
-            if (!f.A.passesGeneralUIInvariant(p.W.NITRO)) return null;
-            if (t)
-                return (0, r.jsx)(c.EYj, {
-                    variant: "text-xs/normal",
-                    color: "text-default",
-                    children: I.intl.format(A.default.cjEl8a, {
-                        deepLinkToNitroOrbs: P,
-                    }),
-                });
+            let e = (0, E.YE)(L, b.PremiumTypes.TIER_2);
+            if (!f.A.passesGeneralUIInvariant(p.W.NITRO) || M) return null;
             if (e && null != D) {
                 let e = (0, a.default)(new Date(D.next_reward_date), new Date());
                 return (0, r.jsxs)(r.Fragment, {
@@ -96,8 +88,8 @@ function D(e) {
                 });
             }
             return null;
-        }, [x, D]);
-    return (0, r.jsxs)(o.x, {
+        }, [L, M, D]);
+    return (0, r.jsxs)(s.x, {
         targetElementRef: t,
         shouldShow: n,
         onRequestClose: _,
@@ -106,7 +98,7 @@ function D(e) {
         modal: !0,
         closeOnClickOutside: !0,
         children: [
-            (null != L ? L : 0) >= R &&
+            (null != x ? x : 0) >= R &&
                 (0, r.jsx)(d.A, {
                     autoPlay: !C,
                     loop: !C,
@@ -135,9 +127,9 @@ function D(e) {
                                             (0, r.jsx)(c.EYj, {
                                                 variant: "display-lg",
                                                 className: S.K,
-                                                children: null != L ? L : 0,
+                                                children: null != x ? x : 0,
                                             }),
-                                            (null != L ? L : 0) > 0 &&
+                                            (null != x ? x : 0) > 0 &&
                                                 (0, r.jsx)(c.EYj, {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
@@ -157,11 +149,15 @@ function D(e) {
                             }),
                             (0, r.jsx)(c.EYj, {
                                 variant: "text-xs/normal",
-                                color: "text-muted",
+                                color: M ? "text-default" : "text-muted",
                                 className: S.CU,
-                                children: I.intl.format(A.default.fhAVek, {
-                                    helpdeskArticle: g.A.getArticleURL(O.MVz.ORBS_FAQ),
-                                }),
+                                children: M
+                                    ? I.intl.format(A.default.juvXqj, {
+                                          deepLinkToNitroOrbs: P,
+                                      })
+                                    : I.intl.format(A.default.fhAVek, {
+                                          helpdeskArticle: g.A.getArticleURL(O.MVz.ORBS_FAQ),
+                                      }),
                             }),
                         ],
                     }),
