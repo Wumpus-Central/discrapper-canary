@@ -8,14 +8,9 @@ var r = t(397927),
     a = t(985018);
 
 function o(e) {
-    let { guildFriendsEnabled: n } = l.A.useExperiment(
-        {
-            location: "useFriendsItem",
-        },
-        {
-            autoTrackExposure: !1,
-        },
-    );
+    let { guildFriendsEnabled: n } = l.A.useConfig({
+        location: "useFriendsItem",
+    });
     return n
         ? (0, i.jsx)(r.Drp, {
               id: "friends",
