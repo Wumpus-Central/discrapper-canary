@@ -1,8 +1,6 @@
 n.d(t, {
     Ce: () => c,
-    f7: () => f,
-    gx: () => m,
-    rB: () => u,
+    f7: () => d,
 }),
     n(896048),
     n(64700);
@@ -13,17 +11,7 @@ var r = n(846293),
     s = n(711014),
     a = n(998218);
 let c = (e) => null != e.text;
-
-function u(e) {
-    let t = 0 | e,
-        n = Math.floor(t / 3600),
-        r = Math.floor((t % 3600) / 60),
-        l = t % 60;
-    return n > 0
-        ? "".concat(n, ":").concat(String(r).padStart(2, "0"), ":").concat(String(l).padStart(2, "0"))
-        : "".concat(r, ":").concat(String(l).padStart(2, "0"));
-}
-async function d(e) {
+async function u(e) {
     try {
         var t;
         let n = (0, o.br)(e);
@@ -41,15 +29,11 @@ async function d(e) {
         return !1;
     }
 }
-async function f(e) {
+async function d(e) {
     try {
         if (a.A.isDiscordUrl(e)) return !0;
-        return await d(e);
+        return await u(e);
     } catch (e) {
         return !1;
     }
-}
-
-function m(e, t, n) {
-    return e ? (t.timestampSec >= t.duration ? 0 : t.timestampSec) : Math.max(t.timestampSec, n.progressSeconds);
 }
