@@ -5,7 +5,7 @@ var r = n(280230),
     i = n.n(r),
     a = n(919535);
 
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function s(e, t, n) {
     );
 }
 
-function o(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,30 +30,28 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
 
 function l(e, t, n, r, i) {
-    let s;
-    return (
-        n || (t += "\n\n"),
-        (s = e(
+    let o;
+    n || (t += "\n\n"),
+        (o = e(
             t,
-            o(
+            s(
                 {
                     inline: n,
                 },
                 r,
             ),
         )),
-        (s = (0, a.rI)(r, s)),
-        (s = (0, a.Ae)(s)),
-        null != i && (s = i(s, n)),
-        s
-    );
+        (o = (0, a.rI)(r, o));
+    let l = (0, a.Ae)(o),
+        c = l.hasBailedAst;
+    return (o = l.ast), null != i && (o = i(o, n, c)), o;
 }
 let c = {
     reactParserFor(e) {

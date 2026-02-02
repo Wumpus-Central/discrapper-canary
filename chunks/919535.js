@@ -33,7 +33,7 @@ function a(e, t) {
     e.push(t);
 }
 
-function s(e) {
+function o(e) {
     let t = null;
     for (let n = 0; n < e.length; n++) {
         let r = e[n];
@@ -45,17 +45,17 @@ function s(e) {
     }
 }
 
-function o(e, t) {
+function s(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     if (Array.isArray(t)) {
         let r = t.length,
             i = [];
-        for (let s = 0; s < r; s++) a(i, o(e, t[s], n));
-        return e.isSlate || s(i), i;
+        for (let o = 0; o < r; o++) a(i, s(e, t[o], n));
+        return e.isSlate || o(i), i;
     }
-    return (null != t.content && (t.content = o(e, t.content, t)),
+    return (null != t.content && (t.content = s(e, t.content, t)),
     "inlineCode" === t.type && delete t.validationChildContent,
-    "list" === t.type && (t.items = t.items.map((t) => (Array.isArray(t) ? o(e, t, null) : t))),
+    "list" === t.type && (t.items = t.items.map((t) => (Array.isArray(t) ? s(e, t, null) : t))),
     null != n && t.type === n.type)
         ? t.content
         : t;
@@ -63,8 +63,7 @@ function o(e, t) {
 n.d(t, {
     $: () => d,
     Ae: () => u,
-    rI: () => o,
-    t9: () => c,
+    rI: () => s,
 }),
     n(321073),
     n(896048),
@@ -78,23 +77,41 @@ function u(e) {
             ? arguments[1]
             : {
                   limit: c,
+                  hasBailedAst: !1,
               };
     if (Array.isArray(e)) {
         let n = e.length;
         for (let r = 0; r < n; r++) {
-            let n = u(e[r], t);
+            let { ast: n } = u(e[r], t);
             if (n === l) {
-                e.length = r;
+                (t.hasBailedAst = !0), (e.length = r);
                 break;
             }
             e[r] = n;
         }
     } else if ("text" !== e.type) {
-        if (((t.limit -= 1), t.limit <= 0)) return l;
-        Array.isArray(e.content) && (e.content = u(e.content, t)),
-            "list" === e.type && (e.items = e.items.map((e) => u(e, t)));
+        if (((t.limit -= 1), t.limit <= 0))
+            return (
+                (t.hasBailedAst = !0),
+                {
+                    ast: l,
+                    hasBailedAst: !0,
+                }
+            );
+        if (Array.isArray(e.content)) {
+            let { ast: n } = u(e.content, t);
+            e.content = n;
+        }
+        "list" === e.type &&
+            (e.items = e.items.map((e) => {
+                let { ast: n } = u(e, t);
+                return n;
+            }));
     }
-    return e;
+    return {
+        ast: e,
+        hasBailedAst: t.hasBailedAst,
+    };
 }
 
 function d(e) {
