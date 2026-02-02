@@ -9,14 +9,14 @@ n.d(t, {
     ok: () => h,
     uA: () => u,
     vI: () => c,
-    wh: () => b,
+    wh: () => y,
 }),
     n(896048);
 var r = n(867051),
     i = n(329972),
     a = n(486020),
-    s = n(661191),
-    o = n(240248),
+    o = n(661191),
+    s = n(240248),
     l = n(652215);
 let c = "Guild",
     u = new Set([l.ftr.EXPLICIT, l.ftr.AGE_RESTRICTED]),
@@ -28,6 +28,7 @@ let c = "Guild",
         verificationLevel: l.PvD.NONE,
         explicitContentFilter: l.gh6.DISABLED,
         premiumProgressBarEnabled: !1,
+        premiumProgressBarEnabledUserUpdatedAt: null,
         systemChannelFlags: 0,
         maxStageVideoChannelUsers: -1,
         maxVideoChannelUsers: -1,
@@ -72,7 +73,7 @@ function f(e, t) {
 }
 
 function p(e) {
-    return (0, o.oN)(e.name);
+    return (0, s.oN)(e.name);
 }
 
 function _(e, t) {
@@ -89,14 +90,14 @@ function m(e) {
 }
 
 function g(e) {
-    return s.default.castGuildIdAsEveryoneGuildRoleId(e.id);
+    return o.default.castGuildIdAsEveryoneGuildRoleId(e.id);
 }
 
 function E(e, t) {
     return (0, r.hZ)(e, "joinedAt", "string" == typeof t ? new Date(t) : t);
 }
 
-function b(e) {
+function y(e) {
     var t;
     return (
         null != e &&
