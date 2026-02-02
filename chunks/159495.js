@@ -1,6 +1,6 @@
 n.d(t, {
-    $: () => K,
-    A: () => ei,
+    $: () => q,
+    A: () => el,
 }),
     n(321073),
     n(65821),
@@ -12,8 +12,8 @@ var l = n(627968),
     a = n(735438),
     o = n.n(a),
     c = n(136722),
-    d = n(158954),
-    u = n(311907),
+    u = n(158954),
+    d = n(311907),
     h = n(36525),
     g = n(582754),
     m = n(397927),
@@ -25,35 +25,34 @@ var l = n(627968),
     A = n(155718),
     y = n(736653),
     v = n(775602),
-    O = n(386849),
-    C = n(861197),
-    N = n(352505),
-    S = n(942234),
-    E = n(233993),
-    _ = n(260509),
-    T = n(427157),
-    w = n(176360),
-    M = n(863036),
-    R = n(696451),
-    I = n(317525),
-    L = n(71393),
-    P = n(576705),
-    D = n(287809),
-    k = n(403362),
-    G = n(695184),
-    B = n(975571),
-    U = n(562153),
-    V = n(558393),
-    H = n(488926),
-    F = n(427262),
-    W = n(786033),
-    Z = n(13948),
+    O = n(861197),
+    C = n(352505),
+    N = n(942234),
+    S = n(233993),
+    E = n(260509),
+    _ = n(427157),
+    T = n(176360),
+    w = n(863036),
+    M = n(696451),
+    R = n(317525),
+    I = n(71393),
+    L = n(576705),
+    P = n(287809),
+    D = n(403362),
+    k = n(695184),
+    G = n(975571),
+    B = n(562153),
+    U = n(558393),
+    V = n(488926),
+    H = n(427262),
+    F = n(786033),
+    W = n(13948),
     Y = n(652215),
-    J = n(985018),
-    z = n(442875),
-    Q = n(336389);
+    Z = n(985018),
+    J = n(442875),
+    z = n(336389);
 
-function X(e) {
+function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -79,7 +78,7 @@ function X(e) {
     return e;
 }
 
-function q(e, t) {
+function X(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -97,17 +96,17 @@ function q(e, t) {
         e
     );
 }
-let K = u.Ay.connectStores([w.A, M.A], () => {
-    let e = M.A.getChannel();
+let q = d.Ay.connectStores([T.A, w.A], () => {
+    let e = w.A.getChannel();
     return {
-        submitting: w.A.formState === Y.XlH.SUBMITTING,
+        submitting: T.A.formState === Y.XlH.SUBMITTING,
         onReset() {
             (0, b.Ts)();
         },
         onSave() {
             if (null == e) return;
-            let t = w.A.editedPermissionIds.reduce((e, t) => {
-                let n = w.A.getPermissionOverwrite(t);
+            let t = T.A.editedPermissionIds.reduce((e, t) => {
+                let n = T.A.getPermissionOverwrite(t);
                 return null != n && e.push(n), e;
             }, []);
             (0, b.R$)(e.id, t);
@@ -115,29 +114,25 @@ let K = u.Ay.connectStores([w.A, M.A], () => {
     };
 })(h.A);
 
-function $(e) {
+function K(e) {
     let { overwrite: t } = e,
-        n = (0, u.bG)([w.A], () => w.A.channel),
-        i = (0, u.bG)([L.A], () => (null != n ? L.A.getGuild(n.getGuildId()) : null)),
-        r = (0, u.bG)([I.A], () => (null != i && null != t && t.type === A.r2.ROLE ? I.A.getRole(i.id, t.id) : void 0)),
-        s = N.M.useExperiment({
+        n = (0, d.bG)([T.A], () => T.A.channel),
+        i = (0, d.bG)([I.A], () => (null != n ? I.A.getGuild(n.getGuildId()) : null)),
+        r = (0, d.bG)([R.A], () => (null != i && null != t && t.type === A.r2.ROLE ? R.A.getRole(i.id, t.id) : void 0)),
+        s = C.M.useExperiment({
             guildId: null == n ? void 0 : n.guild_id,
             location: "ChannelSettingsPermissions",
-        }).enabled,
-        { enabled: a } = O.A.useExperiment({
-            location: "ChannelSettingsPermissionsContent",
-            guildId: null == n ? void 0 : n.guild_id,
-        });
+        }).enabled;
     if (null == n || null == i || null == t) return null;
-    let { guild_id: o, id: d } = n,
-        h = () => {
+    let { guild_id: a, id: o } = n,
+        u = () => {
             var e;
-            if (null == L.A.getGuild(o)) return "";
-            let n = t.type === A.r2.MEMBER ? D.default.getUser(t.id) : void 0,
+            if (null == I.A.getGuild(a)) return "";
+            let n = t.type === A.r2.MEMBER ? P.default.getUser(t.id) : void 0,
                 l = null != (e = null == n ? void 0 : n.username) ? e : "";
             return null != r ? r.name : l;
         },
-        g = (e, l) => {
+        h = (e, l) => {
             if ("boolean" == typeof l) throw Error("Unexpected boolean action");
             let { allow: i, deny: r } = t;
             switch (((r = c.TF(r, e)), (i = c.TF(i, e)), l)) {
@@ -148,8 +143,8 @@ function $(e) {
                     r = c.WQ(r, e);
             }
             if (
-                P.A.can(e, n, {
-                    [t.id]: q(X({}, t), {
+                L.A.can(e, n, {
+                    [t.id]: X(Q({}, t), {
                         allow: i,
                         deny: r,
                     }),
@@ -159,70 +154,69 @@ function $(e) {
             else {
                 let e;
                 if (t.type === A.r2.MEMBER) {
-                    let n = D.default.getUser(t.id);
-                    null != n && (e = F.Ay.getName(n));
+                    let n = P.default.getUser(t.id);
+                    null != n && (e = H.Ay.getName(n));
                 } else if (t.type === A.r2.ROLE) {
-                    let l = L.A.getGuild(n.getGuildId());
+                    let l = I.A.getGuild(n.getGuildId());
                     if (null != l) {
-                        let n = I.A.getRole(l.id, t.id);
+                        let n = R.A.getRole(l.id, t.id);
                         null != n && (e = n.name);
                     }
                 }
-                W.t(e);
+                F.t(e);
             }
         },
-        x = (e) => {
-            let t = P.A.can(Y.xBc.ADMINISTRATOR, i) || P.A.can(Y.xBc.MANAGE_ROLES, n, void 0, void 0, !0);
-            return n.isGuildStageVoice() && E.Zq.has(e)
-                ? J.intl.string(J.t.bTS5lf)
-                : !((!c.aI(e, Y.xBc.MANAGE_ROLES) || t) && (null == e || P.A.can(e, i) || t)) &&
-                      J.intl.string(J.t.nOtPMM);
+        g = (e) => {
+            let t = L.A.can(Y.xBc.ADMINISTRATOR, i) || L.A.can(Y.xBc.MANAGE_ROLES, n, void 0, void 0, !0);
+            return n.isGuildStageVoice() && S.Zq.has(e)
+                ? Z.intl.string(Z.t.bTS5lf)
+                : !((!c.aI(e, Y.xBc.MANAGE_ROLES) || t) && (null == e || L.A.can(e, i) || t)) &&
+                      Z.intl.string(Z.t.nOtPMM);
         },
-        j = t.id === o,
-        y = n.isForumLikeChannel() && c.zy(t.deny, Y.xBc.SEND_MESSAGES),
-        v = c.zy(t.deny, Y.xBc.SEND_MESSAGES),
-        _ = c.zy(t.deny, Y.xBc.READ_MESSAGE_HISTORY),
-        T = V.A.generateChannelPermissionSpec(o, n, j, {
-            createPostsDisabled: y,
-            sendMessagesDisabled: v,
-            readMessageHistoryDisabled: _,
+        x = t.id === a,
+        j = n.isForumLikeChannel() && c.zy(t.deny, Y.xBc.SEND_MESSAGES),
+        y = c.zy(t.deny, Y.xBc.SEND_MESSAGES),
+        v = c.zy(t.deny, Y.xBc.READ_MESSAGE_HISTORY),
+        E = U.A.generateChannelPermissionSpec(a, n, x, {
+            createPostsDisabled: j,
+            sendMessagesDisabled: y,
+            readMessageHistoryDisabled: v,
             inGameMentionsExperiment: s,
         });
-    return (0, l.jsxs)(C.Ay.Content, {
-        className: z.uA,
+    return (0, l.jsxs)(O.Ay.Content, {
+        className: J.uA,
         children: [
-            T.map((e, n) =>
+            E.map((e, n) =>
                 (0, l.jsx)(
-                    S.A,
+                    N.A,
                     {
                         spec: e,
                         allow: t.allow,
                         deny: t.deny,
-                        onChange: g,
-                        permissionRender: x,
-                        className: z.p2,
-                        hasBypassSlowmodePermission: a,
-                        guildId: o,
+                        onChange: h,
+                        permissionRender: g,
+                        className: J.p2,
+                        guildId: a,
                     },
                     n,
                 ),
             ),
-            o === t.id
+            a === t.id
                 ? null
                 : (0, l.jsx)(m.Button, {
                       variant: "critical-secondary",
-                      text: J.intl.format(J.t.txPV7k, {
-                          name: h(),
+                      text: Z.intl.format(Z.t.txPV7k, {
+                          name: u(),
                       }),
                       onClick: () => {
-                          let e = h();
+                          let e = u();
                           p.A.show({
-                              title: J.intl.string(J.t.GuPYQB),
-                              body: J.intl.format(J.t.xERCnZ, {
+                              title: Z.intl.string(Z.t.GuPYQB),
+                              body: Z.intl.format(Z.t.xERCnZ, {
                                   name: e,
                               }),
-                              cancelText: J.intl.string(J.t["ETE/oC"]),
-                              onConfirm: () => f.A.clearPermissionOverwrite(d, t.id),
+                              cancelText: Z.intl.string(Z.t["ETE/oC"]),
+                              onConfirm: () => f.A.clearPermissionOverwrite(o, t.id),
                           });
                       },
                   }),
@@ -230,22 +224,22 @@ function $(e) {
     });
 }
 
-function ee(e) {
+function $(e) {
     let { guildId: t, channelId: n, user: i } = e,
         r = i.getAvatarURL(t, 32),
-        a = U.Ay.getNickname(t, n, i),
-        o = F.Ay.useUserTag(i),
+        a = B.Ay.getNickname(t, n, i),
+        o = H.Ay.useUserTag(i),
         c = null,
-        d = null;
+        u = null;
     return (
         (c = null != a ? a : i.hasAvatarForGuild(t) ? i.username : o),
         (null != a || i.hasAvatarForGuild(t)) &&
-            (d = (0, l.jsxs)("div", {
-                className: z.BP,
+            (u = (0, l.jsxs)("div", {
+                className: J.BP,
                 children: [
                     i.hasAvatarForGuild(t)
                         ? (0, l.jsx)(m.euF, {
-                              className: z.PX,
+                              className: J.PX,
                               size: m._3J.SIZE_16,
                               src: i.getAvatarURL(void 0, 16),
                               "aria-label": i.username,
@@ -259,23 +253,23 @@ function ee(e) {
                 ],
             })),
         (0, l.jsxs)("div", {
-            className: s()(Q.uN, z.mG),
+            className: s()(z.uN, J.mG),
             children: [
                 (0, l.jsx)(m.euF, {
                     size: m._3J.SIZE_32,
                     src: r,
                     "aria-label": i.username,
-                    className: z.RJ,
+                    className: J.RJ,
                 }),
                 (0, l.jsxs)("div", {
-                    className: z.F0,
+                    className: J.F0,
                     children: [
                         (0, l.jsx)(m.Text, {
-                            className: z.F0,
+                            className: J.F0,
                             variant: "text-md/normal",
                             children: c,
                         }),
-                        d,
+                        u,
                     ],
                 }),
             ],
@@ -283,56 +277,56 @@ function ee(e) {
     );
 }
 
-function et(e) {
+function ee(e) {
     return "object" == typeof e && null != e && "colorString" in e && "name" in e;
 }
 
-function en(e) {
+function et(e) {
     let { guild: t, channel: n, permissionOverwrites: r, onClose: a, onSelect: c } = e,
-        h = (0, u.bG)([I.A], () => I.A.getSortedRoles(t.id)),
-        g = (0, u.yK)([R.Ay], () => R.Ay.getMemberIds(t.id)),
+        h = (0, d.bG)([R.A], () => R.A.getSortedRoles(t.id)),
+        g = (0, d.yK)([M.Ay], () => M.Ay.getMemberIds(t.id)),
         p = i.useMemo(
             () => [
                 ...h.filter((e) => null == r[e.id]),
                 ...o()(g)
-                    .map(D.default.getUser)
-                    .filter(k.Vq)
+                    .map(P.default.getUser)
+                    .filter(D.Vq)
                     .filter((e) => null == r[e.id])
                     .sortBy((e) => e.username.toLowerCase())
                     .value(),
             ],
             [g, r, h],
         );
-    return (0, l.jsx)(d.lGe, {
-        className: z.Nd,
+    return (0, l.jsx)(u.lGe, {
+        className: J.Nd,
         children: (0, l.jsxs)(m.iS7, {
             selectionMode: "single",
             onSelectionChange: (e) => {
-                null != e && (et(e) ? c(e.id, A.r2.ROLE) : e instanceof T.A && c(e.id, A.r2.MEMBER), a());
+                null != e && (ee(e) ? c(e.id, A.r2.ROLE) : e instanceof _.A && c(e.id, A.r2.MEMBER), a());
             },
             options: p,
             formatOption: (e) => ({
                 id: e.id,
                 value: e,
-                label: et(e) ? e.name : F.Ay.getUserTag(e),
+                label: ee(e) ? e.name : H.Ay.getUserTag(e),
             }),
             children: [
                 (0, l.jsx)("div", {
-                    className: z.ON,
+                    className: J.ON,
                     children: (0, l.jsx)(m.a32, {
-                        label: J.intl.string(J.t.lT5Zth),
-                        placeholder: J.intl.string(J.t.V2pZRh),
+                        label: Z.intl.string(Z.t.lT5Zth),
+                        placeholder: Z.intl.string(Z.t.V2pZRh),
                         showChevronButton: !1,
                         onQueryChange: (e) => {
                             let n = e.target.value;
-                            G.A.requestMembers(t.id, n, 20);
+                            k.A.requestMembers(t.id, n, 20);
                         },
                     }),
                 }),
                 (0, l.jsx)(m.X2W, {
                     renderListItem: (e) => {
                         let { value: i } = e;
-                        if (et(i)) {
+                        if (ee(i)) {
                             let e;
                             return (
                                 null != i.colorString &&
@@ -340,26 +334,26 @@ function en(e) {
                                         color: i.colorString,
                                     }),
                                 (0, l.jsxs)("div", {
-                                    className: s()(Q.uN, z.xf),
+                                    className: s()(z.uN, J.xf),
                                     children: [
                                         (0, l.jsx)(m.Text, {
                                             variant: "text-md/medium",
                                             color: "text-strong",
-                                            className: z.S3,
+                                            className: J.S3,
                                             style: e,
                                             children: i.name,
                                         }),
                                         (0, l.jsx)(m.Text, {
                                             variant: "text-xs/normal",
                                             color: "text-subtle",
-                                            children: J.intl.string(J.t.IqVT2L),
+                                            children: Z.intl.string(Z.t.IqVT2L),
                                         }),
                                     ],
                                 })
                             );
                         }
-                        if (i instanceof T.A)
-                            return (0, l.jsx)(ee, {
+                        if (i instanceof _.A)
+                            return (0, l.jsx)($, {
                                 guildId: t.id,
                                 channelId: n.id,
                                 user: i,
@@ -372,45 +366,45 @@ function en(e) {
     });
 }
 
-function el() {
+function en() {
     let e,
         t = i.useRef(null),
-        { channel: r, permissionOverwrites: s, selectedOverwriteId: a } = (0, u.cf)([w.A], () => w.A),
+        { channel: r, permissionOverwrites: s, selectedOverwriteId: a } = (0, d.cf)([T.A], () => T.A),
         c = null == r ? void 0 : r.getGuildId(),
-        { guild: d, sortedGuildRoles: h } = (0, u.cf)([L.A, I.A], () => {
-            let e = null != c ? L.A.getGuild(c) : void 0,
-                t = null != e ? I.A.getSortedRoles(e.id) : void 0;
+        { guild: u, sortedGuildRoles: h } = (0, d.cf)([I.A, R.A], () => {
+            let e = null != c ? I.A.getGuild(c) : void 0,
+                t = null != e ? R.A.getSortedRoles(e.id) : void 0;
             return {
                 guild: e,
                 sortedGuildRoles: t,
             };
         }, [c]),
-        O = (0, Z.A)(c, s),
+        C = (0, W.A)(c, s),
         N = (0, y.Ay)(),
-        S = (0, u.bG)([v.A], () => v.A.roleStyle),
-        E = i.useCallback(
+        S = (0, d.bG)([v.A], () => v.A.roleStyle),
+        _ = i.useCallback(
             (e, t) => {
                 if (null == r) return null;
                 (0, x.L3)(e, async () => {
                     let { id: e, role: i, name: s } = t,
-                        a = null != d ? (0, _.af)(d) : null,
+                        a = null != u ? (0, E.af)(u) : null,
                         o = null != i && a === i.id,
                         { default: c } = await n.e("77168").then(n.bind(n, 495603));
                     return (t) =>
                         (0, l.jsx)(
                             c,
-                            q(X({}, t), {
+                            X(Q({}, t), {
                                 id: e,
                                 role: i,
                                 handleDeletePermission: o
                                     ? void 0
                                     : () => {
                                           p.A.show({
-                                              title: J.intl.string(J.t.GuPYQB),
-                                              body: J.intl.format(J.t.xERCnZ, {
+                                              title: Z.intl.string(Z.t.GuPYQB),
+                                              body: Z.intl.format(Z.t.xERCnZ, {
                                                   name: s,
                                               }),
-                                              cancelText: J.intl.string(J.t["ETE/oC"]),
+                                              cancelText: Z.intl.string(Z.t["ETE/oC"]),
                                               onConfirm: () => f.A.clearPermissionOverwrite(r.id, e),
                                           });
                                       },
@@ -418,18 +412,18 @@ function el() {
                         );
                 });
             },
-            [r, d],
+            [r, u],
         );
-    if (null == d || null == h || null == r || null == s) return null;
-    let T = (e, t) => {
+    if (null == u || null == h || null == r || null == s) return null;
+    let w = (e, t) => {
         f.A.updatePermissionOverwrite(r.id, {
             id: e,
             type: t,
-            allow: H.x3,
-            deny: H.x3,
+            allow: V.x3,
+            deny: V.x3,
         }).then(() => (0, b.G9)(e));
     };
-    null != s && null == s[d.id] && (s[d.id] = H.xT(d.id));
+    null != s && null == s[u.id] && (s[u.id] = V.xT(u.id));
     let M = h
             .filter((e) => {
                 var t;
@@ -443,11 +437,11 @@ function el() {
                         roleStyle: S,
                         id: e.id,
                         role: e,
-                        guild: d,
+                        guild: u,
                         color: e.colorString,
                         "aria-label": e.name,
                         onContextMenu: (t) =>
-                            E(t, {
+                            _(t, {
                                 id: e.id,
                                 name: e.name,
                                 role: e,
@@ -457,37 +451,37 @@ function el() {
                     "".concat(a, "-").concat(e.id),
                 ),
             ),
-        R = o()(O)
+        L = o()(C)
             .sortBy((e) => e.username.toLowerCase())
             .map((e) => {
-                let t = e.getAvatarURL(d.id, 24);
+                let t = e.getAvatarURL(u.id, 24);
                 return (0, l.jsx)(
                     j.A,
                     {
                         id: e.id,
-                        guild: d,
+                        guild: u,
                         theme: N,
                         roleStyle: S,
-                        "aria-label": F.Ay.getUserTag(e, {
+                        "aria-label": H.Ay.getUserTag(e, {
                             decoration: "never",
                         }),
                         onContextMenu: (t) =>
-                            E(t, {
+                            _(t, {
                                 id: e.id,
                                 name: e.username,
                             }),
                         children: (0, l.jsxs)("div", {
-                            className: z.mG,
+                            className: J.mG,
                             children: [
                                 (0, l.jsx)(m.euF, {
                                     size: m._3J.SIZE_20,
                                     src: t,
                                     "aria-label": e.username,
-                                    className: z.bE,
+                                    className: J.bE,
                                 }),
                                 (0, l.jsx)("span", {
-                                    className: z.Xh,
-                                    children: F.Ay.getUserTag(e),
+                                    className: J.Xh,
+                                    children: H.Ay.getUserTag(e),
                                 }),
                             ],
                         }),
@@ -496,8 +490,8 @@ function el() {
                 );
             })
             .value();
-    return (0, l.jsx)(C.Ay.Sidebar, {
-        className: z.uA,
+    return (0, l.jsx)(O.Ay.Sidebar, {
+        className: J.uA,
         scrollable: !0,
         children: (0, l.jsxs)(m.VQ0, {
             onItemSelect: b.G9,
@@ -509,12 +503,12 @@ function el() {
                     targetElementRef: t,
                     renderPopout: (e) => {
                         let { position: t, closePopout: n } = e;
-                        return (0, l.jsx)(en, {
-                            guild: d,
+                        return (0, l.jsx)(et, {
+                            guild: u,
                             channel: r,
                             permissionOverwrites: s,
                             position: null != t ? t : "bottom",
-                            onSelect: T,
+                            onSelect: w,
                             onClose: n,
                         });
                     },
@@ -524,8 +518,8 @@ function el() {
                     children: (n) =>
                         (0, l.jsx)(
                             m.VQ0.Header,
-                            q(
-                                X(
+                            X(
+                                Q(
                                     {
                                         ref: t,
                                     },
@@ -533,18 +527,18 @@ function el() {
                                 ),
                                 {
                                     children: (0, l.jsxs)("div", {
-                                        className: z.$M,
+                                        className: J.$M,
                                         children: [
                                             (0, l.jsxs)("span", {
                                                 children: [
-                                                    J.intl.string(J.t["LPJmL/"]),
+                                                    Z.intl.string(Z.t["LPJmL/"]),
                                                     "/",
-                                                    J.intl.string(J.t["9Oq93m"]),
+                                                    Z.intl.string(Z.t["9Oq93m"]),
                                                 ],
                                             }),
                                             (0, l.jsx)("img", {
                                                 alt: "",
-                                                className: z.aN,
+                                                className: J.aN,
                                                 src: e,
                                             }),
                                         ],
@@ -554,7 +548,7 @@ function el() {
                         ),
                 })),
                 M,
-                R,
+                L,
                 (0, l.jsxs)(i.Fragment, {
                     children: [
                         (0, l.jsx)(m.VQ0.Separator, {
@@ -564,12 +558,12 @@ function el() {
                             },
                         }),
                         (0, l.jsx)(m.MzZ, {
-                            href: B.A.getArticleURL(Y.MVz.PERMISSIONS_TUTORIAL),
+                            href: G.A.getArticleURL(Y.MVz.PERMISSIONS_TUTORIAL),
                             target: "_blank",
                             children: (0, l.jsx)(m.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-link",
-                                children: J.intl.string(J.t.pfoA83),
+                                children: Z.intl.string(Z.t.pfoA83),
                             }),
                         }),
                     ],
@@ -579,21 +573,21 @@ function el() {
     });
 }
 
-function ei() {
-    let { channel: e, permissionOverwrites: t, selectedOverwriteId: n } = (0, u.cf)([w.A], () => w.A);
+function el() {
+    let { channel: e, permissionOverwrites: t, selectedOverwriteId: n } = (0, d.cf)([T.A], () => T.A);
     if (
-        null == (0, u.bG)([L.A], () => (null != e ? L.A.getGuild(e.getGuildId()) : null)) ||
+        null == (0, d.bG)([I.A], () => (null != e ? I.A.getGuild(e.getGuildId()) : null)) ||
         null == e ||
         null == t ||
         null == n
     )
         return null;
     let i = t[n];
-    return (0, l.jsxs)(C.Ay, {
-        className: z.kL,
+    return (0, l.jsxs)(O.Ay, {
+        className: J.kL,
         children: [
-            (0, l.jsx)(el, {}),
-            (0, l.jsx)($, {
+            (0, l.jsx)(en, {}),
+            (0, l.jsx)(K, {
                 overwrite: i,
             }),
         ],

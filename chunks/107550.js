@@ -1,6 +1,5 @@
 e.exports = {
     BK: "helpText_db0ee9",
-    q4: "migrationInfoBox_db0ee9",
     MT: "searchContainer_db0ee9",
     kA: "rolesTable_db0ee9",
     qd: "tableHeader_db0ee9",

@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => f,
+    A: () => m,
 }),
     n(65821),
     n(228524);
@@ -12,7 +12,7 @@ var i = n(627968),
     c = n(268199),
     d = n(90430),
     u = n(644020);
-class b extends r.PureComponent {
+class p extends r.PureComponent {
     getOverwriteValue(e) {
         let { allow: t, deny: n } = this.props;
         if (null == t || null == n) throw Error("PermissionsForm.getOverwriteValue: Invalid allow or deny props");
@@ -40,19 +40,19 @@ class b extends r.PureComponent {
     }
     renderComponent(e, t) {
         let { title: n, description: r, flag: l } = e,
-            { permissions: a, locked: c, permissionRender: u, hasBypassSlowmodePermission: b, guildId: f } = this.props,
-            p = null == u ? void 0 : u(l),
-            m = !!(c || p),
-            g = "string" == typeof p && "" !== p ? s.KTN : void 0,
-            h =
+            { permissions: a, locked: c, permissionRender: u, guildId: p } = this.props,
+            m = null == u ? void 0 : u(l),
+            g = !!(c || m),
+            b = "string" == typeof m && "" !== m ? s.KTN : void 0,
+            f =
                 null == a
                     ? (0, i.jsx)(
                           d.A,
                           {
                               label: n,
                               description: (0, o.Nk)(r),
-                              icon: g,
-                              disabled: m,
+                              icon: b,
+                              disabled: g,
                               value: this.getOverwriteValue(l),
                               onChange: (e) => this.handleChange(l, e),
                           },
@@ -63,32 +63,32 @@ class b extends r.PureComponent {
                           {
                               label: n,
                               description: (0, o.Nk)(r),
-                              icon: g,
-                              disabled: m,
+                              icon: b,
+                              disabled: g,
                               checked: this.getPermissionValue(l, a),
                               onChange: (e) => this.handleChange(l, e),
                           },
                           String(l),
                       ),
-            x = (0, o.x3)(l, b, f);
+            h = (0, o.x3)(l, p);
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 t > 0 && (0, i.jsx)(s.cGx, {}),
                 (0, i.jsxs)(s.BJc, {
                     gap: 8,
                     children: [
-                        h,
-                        null != x &&
+                        f,
+                        null != h &&
                             (0, i.jsx)(s.po8, {
                                 messageType: s.YCn.WARNING,
-                                children: x,
+                                children: h,
                             }),
-                        "string" == typeof p &&
-                            "" !== p &&
+                        "string" == typeof m &&
+                            "" !== m &&
                             (0, i.jsx)(s.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-feedback-critical",
-                                children: p,
+                                children: m,
                             }),
                     ],
                 }),
@@ -108,4 +108,4 @@ class b extends r.PureComponent {
         });
     }
 }
-let f = b;
+let m = p;
