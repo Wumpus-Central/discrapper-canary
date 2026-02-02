@@ -859,7 +859,7 @@ let eB = (e) => {
                     avatarDecoration: g,
                 });
         if (t.type === c.R.BUNDLE) {
-            if (!(0, $.W)(t))
+            if (!(0, $.Wb)(t))
                 return (0, r.jsx)("div", {
                     className: eS.RA,
                     children: (0, r.jsx)("div", {

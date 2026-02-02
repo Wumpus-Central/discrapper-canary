@@ -51,7 +51,7 @@ let I = (t) => {
                 firstProfileEffect: e,
                 firstNameplate: r,
                 isBundle: i,
-                hasRequiredProductItems: i ? (0, E.u)(t) : null != n || null != e || null != r,
+                hasRequiredProductItems: i ? (0, E.uh)(t) : null != n || null != e || null != r,
             };
         })(M),
         U = (0, c.A)({
