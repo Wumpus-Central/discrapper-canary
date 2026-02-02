@@ -1,83 +1,83 @@
-r.d(t, {
-    A: () => O,
+n.d(t, {
+    A: () => g,
 }),
-    r(896048);
-var n = r(627968),
-    l = r(64700),
-    o = r(503698),
-    a = r.n(o),
-    c = r(284009),
-    i = r.n(c),
-    s = r(108531),
-    u = r(837381),
-    f = r(397927),
-    b = r(964486),
-    y = r(894858),
-    d = r(890690),
-    p = r(637577);
+    n(896048);
+var r = n(627968),
+    o = n(64700),
+    a = n(503698),
+    l = n.n(a),
+    i = n(284009),
+    c = n.n(i),
+    s = n(353709),
+    u = n(837381),
+    d = n(397927),
+    _ = n(964486),
+    b = n(894858),
+    p = n(890690),
+    f = n(637577);
 
-function g(e) {
-    let { category: t, onClick: r, active: l } = e,
-        { useTitle: o, useSubnavLabel: c, key: s } = t,
-        b = null == o ? void 0 : o(),
-        y = null == c ? void 0 : c(),
-        d = null != y ? y : b;
+function y(e) {
+    let { category: t, onClick: n, active: o } = e,
+        { useTitle: a, useSubnavLabel: i, key: s } = t,
+        _ = null == a ? void 0 : a(),
+        b = null == i ? void 0 : i(),
+        p = null != b ? b : _;
     return (
-        i()(null != d, "[SettingsSubnavigationCategory] Category must have a title"),
-        (0, n.jsx)(u.tG, {
+        c()(null != p, "[SettingsSubnavigationCategory] Category must have a title"),
+        (0, r.jsx)(u.tG, {
             id: s,
             children: (e) => {
-                var t, o;
-                return (0, n.jsx)(
-                    f.DUT,
+                var t, a;
+                return (0, r.jsx)(
+                    d.DUT,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
-                            var r = null != arguments[t] ? arguments[t] : {},
-                                n = Object.keys(r);
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (n = n.concat(
-                                    Object.getOwnPropertySymbols(r).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                n.forEach(function (t) {
-                                    var n;
-                                    (n = r[t]),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: n,
+                                                  value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = n);
+                                            : (e[t] = r);
                                 });
                         }
                         return e;
                     })(
                         {
-                            onClick: r,
-                            className: a()(p.AS, {
-                                [p.vu]: l,
+                            onClick: n,
+                            className: l()(f.AS, {
+                                [f.vu]: o,
                             }),
                         },
                         e,
                     )),
-                    (o = o =
+                    (a = a =
                         {
-                            children: d,
+                            children: p,
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(o))
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
                         : (function (e, t) {
-                              var r = Object.keys(e);
+                              var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var n = Object.getOwnPropertySymbols(e);
-                                  r.push.apply(r, n);
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
                               }
-                              return r;
-                          })(Object(o)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(o, e));
+                              return n;
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
                           }),
                     t),
                     s,
@@ -87,34 +87,34 @@ function g(e) {
     );
 }
 
-function O(e) {
+function g(e) {
     let { categories: t } = e,
-        r = y.A.useField("currentCategoryKey");
-    (0, b.Ay)(() => {
-        t.some((e) => e.key === r) ||
-            y.A.setState({
+        n = b.A.useField("currentCategoryKey");
+    (0, _.Ay)(() => {
+        t.some((e) => e.key === n) ||
+            b.A.setState({
                 currentCategoryKey: t[0].key,
             });
     });
-    let o = l.useMemo(
+    let a = o.useMemo(
             () =>
                 Math.max(
-                    t.findIndex((e) => e.key === r),
+                    t.findIndex((e) => e.key === n),
                     0,
                 ),
-            [t, r],
+            [t, n],
         ),
         {
-            thumbRef: a,
-            trackRef: c,
-            thumbAnchorRef: i,
+            thumbRef: l,
+            trackRef: i,
+            thumbAnchorRef: c,
             springs: u,
         } = (function (e) {
-            let t = l.useRef(null),
-                r = l.useRef(null),
-                n = l.useRef(null),
-                o = l.useRef(!0),
-                [a, c] = (0, f.zhh)(() => ({
+            let t = o.useRef(null),
+                n = o.useRef(null),
+                r = o.useRef(null),
+                a = o.useRef(!0),
+                [l, i] = (0, d.zhh)(() => ({
                     y: 0,
                     height: 0,
                     config: {
@@ -124,66 +124,66 @@ function O(e) {
                     },
                 }));
             return (
-                l.useLayoutEffect(() => {
-                    if (null == t.current || null == r.current || null == n.current) return;
-                    let [e, l] = [t.current.getBoundingClientRect(), n.current.getBoundingClientRect()];
-                    if (o.current) {
-                        (o.current = !1), a.y.set(l.y - e.y), a.height.set(l.height);
+                o.useLayoutEffect(() => {
+                    if (null == t.current || null == n.current || null == r.current) return;
+                    let [e, o] = [t.current.getBoundingClientRect(), r.current.getBoundingClientRect()];
+                    if (a.current) {
+                        (a.current = !1), l.y.set(o.y - e.y), l.height.set(o.height);
                         return;
                     }
-                    c({
-                        y: l.y - e.y,
-                        height: l.height,
+                    i({
+                        y: o.y - e.y,
+                        height: o.height,
                     });
-                }, [e, c, a.y, a.height]),
+                }, [e, i, l.y, l.height]),
                 {
-                    thumbRef: r,
+                    thumbRef: n,
                     trackRef: t,
-                    thumbAnchorRef: n,
-                    springs: a,
+                    thumbAnchorRef: r,
+                    springs: l,
                 }
             );
-        })(o);
+        })(a);
     return (
-        (0, d.o)(),
-        (0, n.jsxs)("div", {
-            className: p.o8,
+        (0, p.u)(t),
+        (0, r.jsxs)("div", {
+            className: f.o8,
             role: "list",
             style: {
                 "--custom-nav-count": t.length,
-                "--custom-nav-index": o,
+                "--custom-nav-index": a,
             },
             children: [
-                (0, n.jsx)("div", {
-                    className: p.u4,
-                    "aria-hidden": "true",
-                    ref: c,
-                    children: (0, n.jsx)(s.animated.div, {
-                        className: p.FF,
-                        style: u,
-                        ref: a,
-                    }),
-                }),
-                (0, n.jsx)("div", {
-                    className: p.gu,
+                (0, r.jsx)("div", {
+                    className: f.u4,
                     "aria-hidden": "true",
                     ref: i,
+                    children: (0, r.jsx)(s.animated.div, {
+                        className: f.FF,
+                        style: u,
+                        ref: l,
+                    }),
+                }),
+                (0, r.jsx)("div", {
+                    className: f.gu,
+                    "aria-hidden": "true",
+                    ref: c,
                 }),
                 t.map((e) =>
-                    (0, n.jsx)(
-                        g,
+                    (0, r.jsx)(
+                        y,
                         {
                             onClick: () => {
                                 var t;
                                 return (
                                     (t = e.key),
-                                    void y.A.setState({
+                                    void b.A.setState({
                                         requestedTargetKey: t,
                                         showNavigationMobile: !1,
                                     })
                                 );
                             },
-                            active: e.key === r,
+                            active: e.key === n,
                             category: e,
                         },
                         e.key,

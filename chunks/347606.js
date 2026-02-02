@@ -4,26 +4,49 @@ n.d(t, {
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(942381),
-    l = n(172218),
-    c = n(775602),
-    u = n(963935),
+    l = n(503698),
+    s = n.n(l),
+    a = n(172218),
+    o = n(775602),
+    c = n(963935),
     d = n(894858),
-    f = n(270952);
+    u = n(397274),
+    _ = n(270952);
 
 function p(e) {
     let { node: t, children: n } = e,
-        a = i.useRef(!1),
-        [p, _] = i.useState(!1),
-        h = (0, l.K)((e) => {
-            (a.current = e), e && _(!1);
+        l = i.useRef(!1),
+        [p, m] = i.useState(!1),
+        g = (0, a.K)((e) => {
+            (l.current = e), e && m(!1);
         }, 0.5),
-        m = i.useRef(null),
-        g = i.useCallback(() => {
-            null != m.current && (cancelAnimationFrame(m.current), (m.current = null));
-        }, []);
+        A = i.useCallback(
+            async (e) => {
+                null == g.current ||
+                    null == e ||
+                    e.targetKey !== t.key ||
+                    null != e.targetAccordionKey ||
+                    ((e.animateScroll && !o.A.useReducedMotion) || t.type === c.Z6.CATEGORY || m(!0),
+                    l.current && m(!1),
+                    d.A.setState({
+                        disableSidebarCategoryAutoSelect: !0,
+                    }),
+                    u.A.clearInitialScrollListener(),
+                    await u.A.scrollIntoView(g.current, {
+                        animate: e.animateScroll,
+                        block: e.scrollBlock,
+                    }),
+                    u.A.setInitialScrollListener(() => {
+                        d.A.setState({
+                            disableSidebarCategoryAutoSelect: !1,
+                        });
+                    }),
+                    d.A.setState({
+                        navTransition: void 0,
+                    }));
+            },
+            [t.key, t.type, g],
+        );
     return (
         i.useEffect(() => {
             let e = d.A.subscribe(
@@ -31,37 +54,20 @@ function p(e) {
                     let { navTransition: t } = e;
                     return t;
                 },
-                (e) => {
-                    if ((g(), null == e || e.targetKey !== t.key || null != e.targetAccordionKey)) return;
-                    let n = e.animateScroll && !c.A.useReducedMotion;
-                    n || t.type === u.Z6.CATEGORY || _(!0),
-                        (m.current = requestAnimationFrame(() => {
-                            var t, r;
-                            let i = null != (t = e.scrollBlock) ? t : "start";
-                            null == (r = h.current) ||
-                                r.scrollIntoView({
-                                    behavior: n ? "smooth" : "auto",
-                                    block: i,
-                                }),
-                                d.A.setState({
-                                    navTransition: void 0,
-                                }),
-                                a.current && _(!1);
-                        }));
-                },
+                A,
                 {
-                    equalityFn: o.x,
+                    equalityFn: (e, t) => e === t,
                     fireImmediately: !0,
                 },
             );
             return () => {
-                e(), g();
+                e(), u.A.clearInitialScrollListener();
             };
-        }, [g, t.key, t.type, h]),
+        }, [A]),
         (0, r.jsx)("div", {
-            ref: h,
+            ref: g,
             "data-debug-key": t.key,
-            className: s()(f.k, p && f.j),
+            className: s()(_.k, p && _.j),
             children: n,
         })
     );
