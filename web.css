@@ -51906,6 +51906,10 @@ div.modalOverrideBody__34eac {
     flex-direction: row
 }
 
+.productVariantsContainer__2c397.wrap__2c397 {
+    flex-wrap: wrap
+}
+
 .full-motion .productVariantsContainer__2c397 {
     transition: gap .25s ease
 }
@@ -55701,7 +55705,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
