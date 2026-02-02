@@ -243,16 +243,22 @@ function q(e) {
     let { entry: t, currentUserActivity: n, idx: r, variant: l } = e,
         a = (0, d.bG)([L.default], () => L.default.getUser(t.author_id)),
         s = (0, d.bG)([P.A], () => (null != a ? P.A.getAnyStreamForUser(a.id) : null), [a]),
-        { isMobileOnline: o, status: u } = (0, d.cf)(
+        {
+            isMobileOnline: o,
+            isVROnline: u,
+            status: c,
+        } = (0, d.cf)(
             [k.A],
             () =>
                 null == a
                     ? {
                           isMobileOnline: void 0,
+                          isVROnline: void 0,
                           status: void 0,
                       }
                     : {
                           isMobileOnline: k.A.isMobileOnline(a.id),
+                          isVROnline: k.A.isVROnline(a.id),
                           status: k.A.getStatus(a.id),
                       },
             [a],
@@ -266,7 +272,8 @@ function q(e) {
                       className: B.my,
                       user: a,
                       isMobile: o,
-                      status: u,
+                      isVR: u,
+                      status: c,
                   }),
                   (0, i.jsxs)("div", {
                       className: B.zH,

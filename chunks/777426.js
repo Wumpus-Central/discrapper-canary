@@ -11,13 +11,13 @@ var r = n(627968),
     u = n(397927),
     d = n(793574),
     p = n(688810),
-    f = n(139286),
-    h = n(532794),
-    A = n(414711),
-    g = n(187696),
-    m = n(723690),
-    b = n(21119),
-    _ = n(594832),
+    h = n(139286),
+    g = n(532794),
+    m = n(414711),
+    f = n(187696),
+    A = n(723690),
+    _ = n(21119),
+    b = n(594832),
     E = n(994500),
     O = n(954571),
     y = n(404036),
@@ -38,42 +38,43 @@ function T(e) {
             applicationStream: P,
             isGameRelationship: w,
             isMobile: L,
-            onOtherHover: R,
-            onClick: D,
-            recipientUser: M,
-            giftIntentType: k,
+            isVR: R,
+            onOtherHover: D,
+            onClick: M,
+            recipientUser: k,
+            giftIntentType: U,
         } = e,
-        { analyticsLocations: U } = (0, p.Ay)(d.A.PREMIUM_GIFT_INTENT_FRIEND_ROW),
-        { Component: G } = (0, c.V)(),
-        V = (0, o.bG)([v.Ay], () => v.Ay.getFriendAnniversaryYears(M.id)),
-        B = (0, _.tA)({
+        { analyticsLocations: G } = (0, p.Ay)(d.A.PREMIUM_GIFT_INTENT_FRIEND_ROW),
+        { Component: V } = (0, c.V)(),
+        B = (0, o.bG)([v.Ay], () => v.Ay.getFriendAnniversaryYears(k.id)),
+        H = (0, b.tA)({
             location: "gift-intent-friend-row",
             isGift: !0,
-            giftRecipient: M,
+            giftRecipient: k,
         });
     i.useEffect(() => {
-        let e = b.A.getUserAffinity(M.id);
-        (0, f.x)({
+        let e = _.A.getUserAffinity(k.id);
+        (0, h.x)({
             name: s.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
             type: s.ImpressionTypes.VIEW,
             properties: {
-                gift_intent_type: k,
+                gift_intent_type: U,
                 affinity: null == e ? void 0 : e.communicationProbability,
             },
         });
-    }, [M, k]);
-    let H = (e) => {
+    }, [k, U]);
+    let F = (e) => {
         e.stopPropagation();
-        let t = b.A.getUserAffinity(M.id);
+        let t = _.A.getUserAffinity(k.id);
         O.default.track(S.HAw.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
-            gift_intent_type: k,
+            gift_intent_type: U,
             affinity: null == t ? void 0 : t.dmProbability,
-            location_stack: U,
+            location_stack: G,
         }),
-            B
+            H
                 ? (0, y.A)({
-                      giftRecipient: M,
-                      analyticsLocations: U,
+                      giftRecipient: k,
+                      analyticsLocations: G,
                       analyticsLocation: S.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
                       analyticsObject: {
                           page: S.liQ.FRIENDS_LIST,
@@ -82,11 +83,11 @@ function T(e) {
                           objectType: S.AnalyticsObjectTypes.GIFT,
                       },
                   })
-                : (0, h.A)({
+                : (0, g.A)({
                       isGift: !0,
                       initialPlanId: null,
-                      giftRecipient: M,
-                      analyticsLocations: U,
+                      giftRecipient: k,
+                      analyticsLocations: G,
                       analyticsLocation: S.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
                       analyticsObject: {
                           page: S.liQ.FRIENDS_LIST,
@@ -96,32 +97,33 @@ function T(e) {
                       },
                   });
     };
-    return (0, r.jsx)(A.A, {
+    return (0, r.jsx)(m.A, {
         ref: t,
         isFocused: l,
         isActive: T,
-        user: M,
-        onOtherHover: R,
-        onClick: D,
+        user: k,
+        onOtherHover: D,
+        onClick: M,
         height: 72,
         children: (e) =>
             (0, r.jsxs)("div", {
                 className: a()(N.a4, N.Z$),
                 children: [
-                    (0, r.jsx)(m.A, {
+                    (0, r.jsx)(A.A, {
                         className: N.Cv,
-                        user: M,
+                        user: k,
                         status: j,
                         isMobile: L,
+                        isVR: R,
                         subText: (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(g.A, {
+                                (0, r.jsx)(f.A, {
                                     hovered: e,
                                     activities: x,
                                     applicationStream: P,
                                     status: j,
-                                    user: M,
-                                    userIgnored: E.A.isIgnored(M.id),
+                                    user: k,
+                                    userIgnored: E.A.isIgnored(k.id),
                                 }),
                                 (0, r.jsxs)("div", {
                                     className: N.K3,
@@ -134,7 +136,7 @@ function T(e) {
                                             variant: "text-xs/normal",
                                             color: "text-subtle",
                                             children: C.intl.formatToPlainString(C.t.S3fdq7, {
-                                                numberOfYears: V,
+                                                numberOfYears: B,
                                             }),
                                         }),
                                     ],
@@ -142,7 +144,7 @@ function T(e) {
                             ],
                         }),
                         hovered: e,
-                        showAccountIdentifier: !w && !M.isProvisional,
+                        showAccountIdentifier: !w && !k.isProvisional,
                     }),
                     (0, r.jsxs)("div", {
                         className: N.o1,
@@ -150,15 +152,15 @@ function T(e) {
                             (0, r.jsx)(u.K0, {
                                 size: "sm",
                                 variant: "secondary",
-                                icon: G,
+                                icon: V,
                                 "aria-label": C.intl.string(C.t.I61IsE),
                                 onClick: () => {
                                     O.default.track(S.HAw.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
-                                        gift_intent_type: k,
+                                        gift_intent_type: U,
                                         cta_type: "send_message",
-                                        location_stack: U,
+                                        location_stack: G,
                                     }),
-                                        (0, I.xs)(M.id),
+                                        (0, I.xs)(k.id),
                                         (0, u.mMO)(async () => {
                                             let { default: e } = await n.e("95501").then(n.bind(n, 367516));
                                             return (t) => {
@@ -195,8 +197,8 @@ function T(e) {
                                                     })({}, t)),
                                                     (i = i =
                                                         {
-                                                            giftIntentType: null != k ? k : void 0,
-                                                            analyticsLocationHistory: U,
+                                                            giftIntentType: null != U ? U : void 0,
+                                                            analyticsLocationHistory: G,
                                                         }),
                                                     Object.getOwnPropertyDescriptors
                                                         ? Object.defineProperties(
@@ -228,7 +230,7 @@ function T(e) {
                                 text: C.intl.string(C.t.PEjaCx),
                                 icon: u.okO,
                                 "aria-label": C.intl.string(C.t.PEjaCx),
-                                onClick: H,
+                                onClick: F,
                             }),
                         ],
                     }),

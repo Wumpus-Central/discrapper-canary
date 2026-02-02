@@ -68,15 +68,21 @@ function H(e) {
                 !(null == r || null == t || t.isMultiUserDM()) &&
                 null != T.A.getTypingUsers(null == t ? void 0 : t.id)[null == r ? void 0 : r.id],
         ),
-        { status: a, isMobile: o } = (0, s.cf)([x.A], () =>
+        {
+            status: a,
+            isMobile: o,
+            isVR: u,
+        } = (0, s.cf)([x.A], () =>
             null == r || null == t || t.isMultiUserDM()
                 ? {
                       status: null,
                       isMobile: !1,
+                      isVR: !1,
                   }
                 : {
                       status: x.A.getStatus(r.id),
                       isMobile: x.A.isMobileOnline(r.id),
+                      isVR: x.A.isVROnline(r.id),
                   },
         );
     return (0, l.jsx)(k, {
@@ -84,6 +90,7 @@ function H(e) {
         src: null == r ? void 0 : r.getAvatarURL(void 0, 40),
         status: a,
         isMobile: o,
+        isVR: u,
         isTyping: i,
         "aria-label": null == r ? void 0 : r.username,
         statusTooltip: !0,
@@ -189,8 +196,8 @@ let U = r.memo(function (e) {
                           channel: { type: H },
                           onMouseEnter: B,
                           onMouseLeave: F,
-                          "aria-label": K,
-                          children: V,
+                          "aria-label": V,
+                          children: K,
                           guild: W,
                           channelTypeOverride: q,
                           forceInteractable: Z,
@@ -291,7 +298,7 @@ let U = r.memo(function (e) {
                               )),
                               (c = c =
                                   {
-                                      "aria-label": K,
+                                      "aria-label": V,
                                       focusProps: {
                                           enabled: !1,
                                       },
@@ -318,11 +325,11 @@ let U = r.memo(function (e) {
                                                           name: null != f ? f : eu,
                                                       }),
                                                   }),
-                                                  r.Children.count(V) > 0
+                                                  r.Children.count(K) > 0
                                                       ? (0, l.jsx)("div", {
                                                             onClick: L,
                                                             className: I.Y_,
-                                                            children: V,
+                                                            children: K,
                                                         })
                                                       : null,
                                               ],

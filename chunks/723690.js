@@ -1,37 +1,47 @@
 i.d(t, {
     A: () => h,
 });
-var n = i(627968);
+var s = i(627968);
 i(64700);
-var s = i(503698),
-    r = i.n(s),
-    a = i(311907),
-    o = i(297413),
+var n = i(503698),
+    r = i.n(n),
+    o = i(311907),
+    a = i(297413),
     l = i(966327),
     u = i(994500);
 i(427262);
 var c = i(156528);
 let h = function (e) {
-    let { user: t, hovered: i, subText: s, showAccountIdentifier: h, status: p, isMobile: d, className: m } = e,
-        A = (0, a.bG)([u.A], () => u.A.getNickname(t.id));
-    return (0, n.jsxs)("div", {
-        className: r()(c.eF, m, {
+    let {
+            user: t,
+            hovered: i,
+            subText: n,
+            showAccountIdentifier: h,
+            status: p,
+            isMobile: d,
+            isVR: m,
+            className: A,
+        } = e,
+        y = (0, o.bG)([u.A], () => u.A.getNickname(t.id));
+    return (0, s.jsxs)("div", {
+        className: r()(c.eF, A, {
             [c.yo]: i,
         }),
         children: [
-            (0, n.jsx)(l.A, {
+            (0, s.jsx)(l.A, {
                 user: t,
                 className: c.my,
                 animate: i,
                 status: p,
                 isMobile: d,
+                isVR: m,
             }),
-            (0, n.jsxs)("div", {
+            (0, s.jsxs)("div", {
                 className: c.Qq,
                 children: [
-                    (0, n.jsx)(o.A, {
+                    (0, s.jsx)(a.A, {
                         user: t,
-                        nick: A,
+                        nick: y,
                         botClass: c.AO,
                         className: r()(c.xK, {
                             [c.ID]: t.hasUniqueUsername(),
@@ -40,9 +50,9 @@ let h = function (e) {
                         discriminatorClass: c.D2,
                         showAccountIdentifier: h,
                     }),
-                    (0, n.jsx)("div", {
+                    (0, s.jsx)("div", {
                         className: c.W$,
-                        children: s,
+                        children: n,
                     }),
                 ],
             }),

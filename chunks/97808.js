@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(108531),
+    o = n.n(a),
+    s = n(353709),
     l = n(158954),
     c = n(863610),
     u = n(935154),
@@ -22,9 +22,9 @@ var r = n(627968),
     m = n(398094),
     g = n(778712),
     E = n(985018),
-    b = n(920466);
+    y = n(920466);
 
-function y(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,13 +49,13 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
 
-function A(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,19 +68,19 @@ function A(e, t) {
     return n;
 }
 
-function v(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function S(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -91,13 +91,13 @@ function S(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = I(e, t)), Object.getOwnPropertySymbols))
+    if (((a = S(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -118,13 +118,13 @@ function C() {
 
 function N(e) {
     let { size: t, isMobile: n, isTyping: i } = e,
-        a = S(e, ["size", "isMobile", "isTyping"]),
-        s = (0, g.Kj)(t),
-        o = s.status * (n && !i ? g.jo : 1),
-        l = s.status * (i ? g.x : 1),
-        c = i ? (s.status * g.x - s.status) / 2 : 0,
-        u = s.size - s.status - c - s.offset,
-        d = s.size - o - s.offset;
+        a = I(e, ["size", "isMobile", "isTyping"]),
+        o = (0, g.Kj)(t),
+        s = o.status * (n && !i ? g.jo : 1),
+        l = o.status * (i ? g.x : 1),
+        c = i ? (o.status * g.x - o.status) / 2 : 0,
+        u = o.size - o.status - c - o.offset,
+        d = o.size - s - o.offset;
     return (0, r.jsx)(
         "rect",
         O(
@@ -132,7 +132,7 @@ function N(e) {
                 x: u,
                 y: d,
                 width: l,
-                height: o,
+                height: s,
                 fill: "transparent",
                 "aria-hidden": !0,
             },
@@ -141,7 +141,7 @@ function N(e) {
     );
 }
 
-function R(e, t) {
+function w(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return null != t
         ? E.intl.formatToPlainString(E.t["/6mw10"], {
@@ -151,7 +151,8 @@ function R(e, t) {
         : e;
 }
 
-function w(e, t, n, r) {
+function R(e, t, n, r) {
+    let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     if (null == e) return null;
     if (r)
         switch (t) {
@@ -180,7 +181,7 @@ function w(e, t, n, r) {
             case g._3.SIZE_120:
                 return p.hW.AVATAR_DECORATION_STATUS_TYPING_120;
         }
-    if (n)
+    if (n && !i)
         switch (t) {
             case g._3.SIZE_16:
                 return p.hW.AVATAR_DECORATION_STATUS_MOBILE_16;
@@ -237,6 +238,7 @@ function w(e, t, n, r) {
 }
 
 function P(e, t, n, r) {
+    let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     if (null == e) return p.hW.AVATAR_DEFAULT;
     if (r)
         switch (t) {
@@ -265,7 +267,7 @@ function P(e, t, n, r) {
             case g._3.SIZE_120:
                 return p.hW.AVATAR_STATUS_TYPING_120;
         }
-    if (e === h.clD.ONLINE && n)
+    if (e === h.clD.ONLINE && n && !i)
         switch (t) {
             case g._3.SIZE_16:
                 return p.hW.AVATAR_STATUS_MOBILE_16;
@@ -327,69 +329,80 @@ function P(e, t, n, r) {
 }
 
 function D(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        i = (0, u.i0)(e.status, t, n, r),
-        a = (r ? e.size - (i.width / 2 + e.status / 2) : e.size - i.width) - e.offset;
-    return v(O({}, i), {
-        x: a,
-        y: e.size - i.height - e.offset,
+    let { isTyping: r, isMobile: i, isVR: a } = n,
+        o = (0, u.i0)(e.status, t, {
+            isTyping: r,
+            isMobile: i,
+            isVR: a,
+        }),
+        s = (r ? e.size - (o.width / 2 + e.status / 2) : e.size - o.width) - e.offset;
+    return A(O({}, o), {
+        x: s,
+        y: e.size - o.height - e.offset,
     });
 }
 
-function x(e, t, n) {
-    let { size: r, status: i, stroke: a, offset: s } = e,
-        o = n ? i * g.x : i,
-        l = (o - i) / 2,
-        c = t ? i * g.jo : i;
+function L(e, t) {
+    let { size: n, status: r, stroke: i, offset: a } = e,
+        { isTyping: o, isMobile: s, isVR: l } = t,
+        c = o ? r * g.x : r,
+        u = (c - r) / 2,
+        d = s && !l,
+        f = d ? r * g.jo : r;
     return {
-        avatarCutoutX: r - o + l - a - s,
-        avatarCutoutY: r - c - a - s,
-        avatarCutoutWidth: o + 2 * a,
-        avatarCutoutHeight: c + 2 * a,
-        avatarCutoutRadius: t ? (c + 2 * a) * g.hn : (i + 2 * a) / 2,
+        avatarCutoutX: n - c + u - i - a,
+        avatarCutoutY: n - f - i - a,
+        avatarCutoutWidth: c + 2 * i,
+        avatarCutoutHeight: f + 2 * i,
+        avatarCutoutRadius: d ? (f + 2 * i) * g.hn : (r + 2 * i) / 2,
     };
 }
 
-function L(e, t, n, i) {
-    let a = D(n, i, t, !1),
-        s = (0, u.yi)(i, e);
-    if (!t) {
-        let t = a.height / 2 + n.stroke,
-            i = a.x + n.status / 2;
+function x(e, t, n, i) {
+    let { isMobile: a, isTyping: o, isVR: s } = i,
+        l = D(t, n, {
+            isMobile: a,
+            isTyping: o,
+            isVR: s,
+        }),
+        c = (0, u.yi)(n, e);
+    if (!(a && !s)) {
+        let n = l.height / 2 + t.stroke,
+            i = l.x + t.status / 2;
         return (0, r.jsx)("circle", {
             style: {
-                opacity: s,
+                opacity: c,
             },
             fill: e,
-            r: t,
+            r: n,
             cx: i,
             cy: i,
         });
     }
-    let o = a.height + 2 * n.stroke,
-        l = a.width + 2 * n.stroke,
-        c = a.x - n.stroke,
-        d = a.y - n.stroke;
+    let d = l.height + 2 * t.stroke,
+        f = l.width + 2 * t.stroke,
+        p = l.x - t.stroke,
+        _ = l.y - t.stroke;
     return (0, r.jsx)("rect", {
         fill: e,
-        height: o,
-        width: l,
+        height: d,
+        width: f,
         style: {
-            opacity: s,
+            opacity: c,
         },
-        x: c,
-        y: d,
-        rx: n.stroke,
+        x: p,
+        y: _,
+        rx: t.stroke,
     });
 }
-let j = {
+let M = {
     "\uD83D\uDD25":
         "M3 14a9 9 0 1 0 18 0c0-2.63-.61-5.22-1.79-7.58L18.2 4.38a.7.7 0 0 0-1.3.18l-.78 3.9a.66.66 0 0 1-1.27.11L12.22 1.6a.9.9 0 0 0-1.48-.33l-4.2 4.2A12.07 12.07 0 0 0 3 14Zm9.26-.84a.57.57 0 0 0-1-.23L9.6 15a3.08 3.08 0 1 0 5.12.48c-.14-.26-.5-.28-.71-.06L13 16.5l-.74-3.34Z",
 };
 
-function M(e, t, n, i, a) {
-    let s = j[i];
-    if (null != s) {
+function j(e, t, n, i, a) {
+    let o = M[i];
+    if (null != o) {
         let i = n / 20;
         return (0, r.jsx)("g", {
             transform: "translate("
@@ -397,7 +410,7 @@ function M(e, t, n, i, a) {
                 .concat(t - 1, ") scale(")
                 .concat(i, ")"),
             children: (0, r.jsx)("path", {
-                d: s,
+                d: o,
                 fill: "black",
                 stroke: "black",
                 strokeWidth: "10",
@@ -406,23 +419,31 @@ function M(e, t, n, i, a) {
             }),
         });
     }
-    let o = x(a, !1, !1);
+    let s = L(a, {
+        isTyping: !1,
+        isMobile: !1,
+        isVR: !1,
+    });
     return (0, r.jsx)("rect", {
-        x: o.avatarCutoutX,
+        x: s.avatarCutoutX,
         y: 0 - a.stroke,
-        width: o.avatarCutoutWidth,
-        height: o.avatarCutoutHeight,
-        rx: o.avatarCutoutRadius - 1,
-        ry: o.avatarCutoutRadius - 1,
+        width: s.avatarCutoutWidth,
+        height: s.avatarCutoutHeight,
+        rx: s.avatarCutoutRadius - 1,
+        ry: s.avatarCutoutRadius - 1,
         fill: "black",
     });
 }
 
-function k(e, t, n, i) {
-    let { status: a, isMobile: s, isTyping: o } = n,
-        l = t.size - t.status - t.offset,
-        c = t.offset,
-        u = x(t, s, o);
+function k(e, t, n, i, a) {
+    let { isMobile: o, isTyping: s, isVR: l } = i,
+        c = t.size - t.status - t.offset,
+        u = t.offset,
+        d = L(t, {
+            isMobile: o,
+            isTyping: s,
+            isVR: l,
+        });
     return (0, r.jsxs)("mask", {
         id: e,
         width: t.size,
@@ -434,17 +455,17 @@ function k(e, t, n, i) {
                 r: t.size / 2,
                 fill: "white",
             }),
-            null != a &&
+            null != n &&
                 (0, r.jsx)("rect", {
-                    x: u.avatarCutoutX,
-                    y: u.avatarCutoutY,
-                    width: u.avatarCutoutWidth,
-                    height: u.avatarCutoutHeight,
-                    rx: u.avatarCutoutRadius,
-                    ry: u.avatarCutoutRadius,
+                    x: d.avatarCutoutX,
+                    y: d.avatarCutoutY,
+                    width: d.avatarCutoutWidth,
+                    height: d.avatarCutoutHeight,
+                    rx: d.avatarCutoutRadius,
+                    ry: d.avatarCutoutRadius,
                     fill: "black",
                 }),
-            null != i && M(l, c, t.status, i, t),
+            null != a && j(c, u, t.status, a, t),
         ],
     });
 }
@@ -458,7 +479,7 @@ function U(e, t) {
         width: e.status,
         height: e.status,
         children: (0, r.jsx)("div", {
-            className: b.QP,
+            className: y.QP,
             children: (0, r.jsx)(t, {
                 size: "custom",
                 width: e.status,
@@ -469,73 +490,78 @@ function U(e, t) {
     });
 }
 
-function G(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = arguments.length > 3 ? arguments[3] : void 0,
-        a = arguments.length > 4 ? arguments[4] : void 0,
-        { avatarTooltipTitle: s, avatarTooltipText: o } = i,
-        l = e.size - e.status - e.offset - e.stroke,
-        c = x(e, t, n),
-        u = l,
-        f = 0,
-        p = c.avatarCutoutWidth,
-        _ = e.size - (c.avatarCutoutHeight - e.stroke),
-        h = (0, r.jsxs)("g", {
+function G(e, t, n, i) {
+    let { isMobile: a = !1, isTyping: o = !1, isVR: s = !1 } = t,
+        { avatarTooltipTitle: l, avatarTooltipText: c } = n,
+        u = e.size - e.status - e.offset - e.stroke,
+        f = L(e, {
+            isMobile: a,
+            isTyping: o,
+            isVR: s,
+        }),
+        p = u,
+        _ = 0,
+        h = f.avatarCutoutWidth,
+        m = e.size - (f.avatarCutoutHeight - e.stroke),
+        g = (0, r.jsxs)("g", {
             children: [
                 (0, r.jsx)("rect", {
                     x: 0,
                     y: 0,
-                    width: l,
+                    width: u,
                     height: e.size,
                     fill: "transparent",
-                    className: b.Hs,
+                    className: y.Hs,
                 }),
                 (0, r.jsx)("rect", {
-                    x: u,
-                    y: f,
-                    width: p,
-                    height: _,
+                    x: p,
+                    y: _,
+                    width: h,
+                    height: m,
                     fill: "transparent",
-                    className: b.Hs,
+                    className: y.Hs,
                 }),
             ],
         });
-    return null == o
+    return null == c
         ? (0, r.jsx)(d.m_, {
-              text: s,
+              text: l,
               align: "center",
               position: "top",
               spacing: 12,
               delay: 0,
-              children: h,
+              children: g,
           })
         : (0, r.jsx)(d.un, {
-              title: s,
-              body: o,
+              title: l,
+              body: c,
               align: "center",
               position: "top",
               delay: 0,
               asset: (0, r.jsx)("span", {
                   role: "img",
-                  "aria-label": o,
-                  className: b.mh,
-                  children: a,
+                  "aria-label": c,
+                  className: y.mh,
+                  children: i,
               }),
-              children: h,
+              children: g,
           });
 }
 
 function V(e) {
     let { status: t, isMobile: n, isTyping: r, size: i } = e,
         a = n && !r && t === h.clD.ONLINE,
-        s = (0, g.Kj)(i);
+        o = (0, g.Kj)(i);
     return O(
         {},
-        x(s, a, r),
+        L(o, {
+            isMobile: a,
+            isTyping: r,
+            isVR: !1,
+        }),
         (0, u.v)({
             status: t,
-            size: s.status,
+            size: o.status,
             isMobile: a,
             isTyping: r,
             topOffset: 2,
@@ -550,7 +576,7 @@ function F(e) {
             size: n,
             onClick: i,
             onMouseDown: a,
-            onKeyDown: o,
+            onKeyDown: s,
             onContextMenu: c,
             onMouseEnter: u,
             onMouseLeave: d,
@@ -559,35 +585,36 @@ function F(e) {
             ariaLabel: _,
             ariaHidden: h,
             status: E,
-            isMobile: y = !1,
-            isTyping: O = !1,
+            isMobile: b = !1,
+            isVR: O = !1,
+            isTyping: v = !1,
             avatarDecoration: A,
-            typingOffset: v,
+            typingOffset: I,
             specs: S,
         } = e,
-        I = {
+        T = {
             width: (0, g.FT)(n),
             height: (0, g.FT)(n),
         },
-        T = null == _ || h ? void 0 : R(_, E, y),
-        C = S.size * m.Xq,
-        N = w(E, n, y, O),
-        P =
+        C = null == _ || h ? void 0 : w(_, E, b),
+        N = S.size * m.Xq,
+        P = R(E, n, b, v, O),
+        D =
             null != A &&
             (0, r.jsx)("svg", {
-                width: C + v,
-                height: C,
-                viewBox: "0 0 ".concat(C + v, " ").concat(C),
-                className: b.DX,
+                width: N + I,
+                height: N,
+                viewBox: "0 0 ".concat(N + I, " ").concat(N),
+                className: y.DX,
                 "aria-hidden": !0,
                 children: (0, r.jsx)("foreignObject", {
                     x: 0,
                     y: 0,
-                    width: C,
-                    height: C,
-                    mask: null != N ? "url(#".concat(N, ")") : void 0,
+                    width: N,
+                    height: N,
+                    mask: null != P ? "url(#".concat(P, ")") : void 0,
                     children: (0, r.jsx)("img", {
-                        className: b.M,
+                        className: y.M,
                         src: A,
                         alt: " ",
                         "aria-hidden": !0,
@@ -596,33 +623,33 @@ function F(e) {
             });
     return null != i || null != a
         ? (0, r.jsxs)(l.DUT, {
-              className: s()(b.iE, b.Wn, f),
-              style: I,
+              className: o()(y.iE, y.Wn, f),
+              style: T,
               onClick: i,
               tabIndex: p,
               onContextMenu: c,
               onMouseDown: a,
-              onKeyDown: o,
+              onKeyDown: s,
               onMouseEnter: null != u ? u : void 0,
               onMouseLeave: null != d ? d : void 0,
-              "aria-label": T,
+              "aria-label": C,
               "aria-hidden": h,
-              children: [t, P],
+              children: [t, D],
           })
         : (0, r.jsxs)("div", {
-              className: s()(b.iE, f),
-              style: I,
+              className: o()(y.iE, f),
+              style: T,
               onContextMenu: null != c ? c : void 0,
               onMouseEnter: null != u ? u : void 0,
               onMouseLeave: null != d ? d : void 0,
               role: "img",
-              "aria-label": T,
+              "aria-label": C,
               "aria-hidden": h,
-              children: [t, P],
+              children: [t, D],
           });
 }
 let B = i.forwardRef((e, t) => {
-    let { src: n, isSpeaking: i, isLatched: a, className: o, voiceDb: l = -1 / 0, speakingStylesConfig: c } = e,
+    let { src: n, isSpeaking: i, isLatched: a, className: s, voiceDb: l = -1 / 0, speakingStylesConfig: c } = e,
         u = (0, f.v)(
             O(
                 {
@@ -639,17 +666,17 @@ let B = i.forwardRef((e, t) => {
         "div",
         {
             ref: t,
-            className: s()(b.yA, o),
+            className: o()(y.yA, s),
             children: [
                 (0, r.jsx)("img", {
                     src: null != n ? n : void 0,
                     alt: " ",
-                    className: b.my,
+                    className: y.my,
                     "aria-hidden": !0,
                 }),
                 (i || a) &&
                     (0, r.jsx)("div", {
-                        className: b.uh,
+                        className: y.uh,
                         style: u,
                     }),
             ],
@@ -663,117 +690,145 @@ function H(e) {
             src: t,
             status: n,
             size: a,
-            statusColor: o,
+            statusColor: s,
             isMobile: l = !1,
-            isTyping: f = !1,
-            typingIndicatorRef: p,
-            avatarContentRef: m,
-            isSpeaking: E = !1,
-            isLatched: y = !1,
-            voiceDb: A,
+            isVR: f = !1,
+            isTyping: p = !1,
+            typingIndicatorRef: m,
+            avatarContentRef: E,
+            isSpeaking: b = !1,
+            isLatched: v = !1,
+            voiceDb: I,
             speakingStylesConfig: S,
-            statusTooltip: I = !1,
-            statusTooltipDelay: T,
-            statusBackdropColor: C,
-            "aria-hidden": N = !1,
+            statusTooltip: T = !1,
+            statusTooltipDelay: C,
+            statusBackdropColor: N,
+            "aria-hidden": w = !1,
             "aria-label": R,
-            imageClassName: w,
-            ref: x,
+            imageClassName: L,
+            ref: M,
             CutoutIcon: j,
-            avatarTooltipAsset: M,
-            avatarTooltipText: V,
-            avatarTooltipTitle: H,
+            avatarTooltipAsset: V,
+            avatarTooltipText: H,
+            avatarTooltipTitle: Y,
         } = e,
-        Y = n !== h.clD.UNKNOWN ? n : null,
-        W = (0, g.Kj)(a),
-        K = null != Y ? Math.ceil((W.status * g.x - W.status) / 2) : 0,
-        z = W.size + K,
-        q = (0, u.S3)(Y, o),
-        X = i.useId();
+        W = n !== h.clD.UNKNOWN ? n : null,
+        K = (0, g.Kj)(a),
+        z = null != W ? Math.ceil((K.status * g.x - K.status) / 2) : 0,
+        q = K.size + z,
+        Z = (0, u.S3)(W, s),
+        Q = i.useId();
     return (0, r.jsx)(
         F,
-        v(O({}, e), {
+        A(O({}, e), {
             ariaLabel: R,
-            ariaHidden: N,
-            status: Y,
-            specs: W,
-            typingOffset: K,
+            ariaHidden: w,
+            status: W,
+            specs: K,
+            typingOffset: z,
             children: (0, r.jsxs)("svg", {
-                ref: x,
-                width: z,
-                height: z,
-                viewBox: "0 0 ".concat(z, " ").concat(z),
-                className: s()(b.dK, b.JW),
+                ref: M,
+                width: q,
+                height: q,
+                viewBox: "0 0 ".concat(q, " ").concat(q),
+                className: o()(y.dK, y.JW),
                 "aria-hidden": !0,
                 children: [
-                    null != M &&
+                    null != V &&
                         k(
-                            X,
+                            Q,
+                            K,
                             W,
                             {
-                                status: Y,
                                 isMobile: l,
-                                isTyping: f,
+                                isTyping: p,
+                                isVR: f,
                             },
-                            M,
+                            V,
                         ),
                     (0, r.jsx)("foreignObject", {
                         x: 0,
                         y: 0,
-                        width: W.size,
-                        height: W.size,
-                        mask: null != M ? "url(#".concat(X, ")") : "url(#".concat(P(Y, a, l, f), ")"),
+                        width: K.size,
+                        height: K.size,
+                        mask: null != V ? "url(#".concat(Q, ")") : "url(#".concat(P(W, a, l, p, f), ")"),
                         children: (0, r.jsx)(B, {
-                            ref: m,
+                            ref: E,
                             src: t,
-                            isSpeaking: E,
-                            isLatched: y,
-                            voiceDb: A,
+                            isSpeaking: b,
+                            isLatched: v,
+                            voiceDb: I,
                             speakingStylesConfig: S,
-                            className: w,
+                            className: L,
                         }),
                     }),
-                    null != Y && null != C ? L(C, l, W, Y) : null,
-                    null != Y
+                    null != W && null != N
+                        ? x(N, K, W, {
+                              isMobile: l,
+                              isTyping: p,
+                              isVR: f,
+                          })
+                        : null,
+                    null != W
                         ? (0, r.jsx)(d.m_, {
-                              text: I ? (0, _.MU)(Y) : null,
+                              text: T ? (0, _.MU)(W) : null,
                               ariaHidden: !0,
                               position: "top",
-                              spacing: 5 + 1.5 * W.stroke,
-                              delay: T,
+                              spacing: 5 + 1.5 * K.stroke,
+                              delay: C,
                               children: (0, r.jsxs)("g", {
                                   children: [
                                       (0, r.jsx)(
                                           "rect",
-                                          v(O({}, D(W, Y, l, f)), {
-                                              fill: q,
-                                              mask: "url(#".concat((0, u.p8)(Y, l, f), ")"),
-                                              className: b.Hs,
-                                          }),
+                                          A(
+                                              O(
+                                                  {},
+                                                  D(K, W, {
+                                                      isMobile: l,
+                                                      isTyping: p,
+                                                      isVR: f,
+                                                  }),
+                                              ),
+                                              {
+                                                  fill: Z,
+                                                  mask: "url(#".concat(
+                                                      (0, u.p8)(W, {
+                                                          isMobile: l,
+                                                          isTyping: p,
+                                                          isVR: f,
+                                                      }),
+                                                      ")",
+                                                  ),
+                                                  className: y.Hs,
+                                              },
+                                          ),
                                       ),
-                                      f
+                                      p
                                           ? (0, r.jsx)(c.n, {
-                                                ref: p,
-                                                dotRadius: W.status / 4,
-                                                x: W.size - 1.375 * W.status - W.offset,
-                                                y: W.size - W.status / 1.333 - W.offset,
+                                                ref: m,
+                                                dotRadius: K.status / 4,
+                                                x: K.size - 1.375 * K.status - K.offset,
+                                                y: K.size - K.status / 1.333 - K.offset,
                                             })
                                           : null,
                                   ],
                               }),
                           })
                         : null,
-                    null != j && U(W, j),
-                    null != H &&
+                    null != j && U(K, j),
+                    null != Y &&
                         G(
-                            W,
-                            l,
-                            f,
+                            K,
                             {
-                                avatarTooltipTitle: H,
-                                avatarTooltipText: V,
+                                isMobile: l,
+                                isTyping: p,
+                                isVR: f,
                             },
-                            M,
+                            {
+                                avatarTooltipTitle: Y,
+                                avatarTooltipText: H,
+                            },
+                            V,
                         ),
                 ],
             }),
@@ -790,10 +845,10 @@ function W(e, t, n) {
     let r = e.status * t,
         i = null != n ? (r * g.x - r) / 2 : 0,
         a = (e.status - r) / 2,
-        s = e.size - r - i - e.offset - a,
-        o = e.size - r * g.jo - e.offset - a,
-        l = Math.round((s / t) * 100) / 100,
-        c = Math.round((o / t) * 100) / 100;
+        o = e.size - r - i - e.offset - a,
+        s = e.size - r * g.jo - e.offset - a,
+        l = Math.round((o / t) * 100) / 100,
+        c = Math.round((s / t) * 100) / 100;
     return "translate(".concat(l, ", ").concat(c, ")");
 }
 
@@ -807,26 +862,26 @@ function K(e) {
             typingIndicatorRef: h,
             isSpeaking: m = !1,
             isLatched: E = !1,
-            voiceDb: y,
-            speakingStylesConfig: A,
-            size: I,
-            src: R,
-            status: w,
+            voiceDb: b,
+            speakingStylesConfig: v,
+            size: S,
+            src: w,
+            status: R,
             statusColor: P,
             statusTooltip: D = !1,
-            statusTooltipDelay: x,
-            statusBackdropColor: j,
+            statusTooltipDelay: L,
+            statusBackdropColor: M,
             "aria-hidden": k = !1,
             "aria-label": H,
             imageClassName: K,
             pulseStatusIcon: z,
             CutoutIcon: q,
-            avatarTooltipAsset: X,
-            avatarTooltipText: Z,
-            avatarTooltipTitle: Q,
+            avatarTooltipAsset: Z,
+            avatarTooltipText: Q,
+            avatarTooltipTitle: X,
         } = e,
-        $ = (0, u.S3)(w, P),
-        J = i.useId(),
+        J = (0, u.S3)(R, P),
+        $ = i.useId(),
         ee = i.useId(),
         [et] = i.useState(() =>
             O(
@@ -834,7 +889,7 @@ function K(e) {
                     fill: a,
                 },
                 V({
-                    size: I,
+                    size: S,
                     status: n,
                     isMobile: t,
                     isTyping: !1,
@@ -845,16 +900,16 @@ function K(e) {
             () =>
                 O(
                     {
-                        fill: $,
+                        fill: J,
                     },
                     V({
-                        size: I,
-                        status: w,
+                        size: S,
+                        status: R,
                         isMobile: f,
                         isTyping: p,
                     }),
                 ),
-            [$, I, w, f, p],
+            [J, S, R, f, p],
         ),
         er = (0, l.zhh)(
             {
@@ -867,12 +922,12 @@ function K(e) {
         {
             avatarCutoutX: ei,
             avatarCutoutY: ea,
-            avatarCutoutWidth: es,
-            avatarCutoutHeight: eo,
+            avatarCutoutWidth: eo,
+            avatarCutoutHeight: es,
             avatarCutoutRadius: el,
             fill: ec,
         } = er,
-        eu = S(er, [
+        eu = I(er, [
             "avatarCutoutX",
             "avatarCutoutY",
             "avatarCutoutWidth",
@@ -880,13 +935,13 @@ function K(e) {
             "avatarCutoutRadius",
             "fill",
         ]),
-        ed = (0, g.FT)(I),
-        ef = (0, g.Kj)(I),
+        ed = (0, g.FT)(S),
+        ef = (0, g.Kj)(S),
         ep = ef.status * g.x,
         e_ = ef.status * g.jo,
-        eh = null != w ? (ef.status * g.x - ef.status) / 2 : 0,
+        eh = null != R ? (ef.status * g.x - ef.status) / 2 : 0,
         em = ef.size + Math.ceil(eh),
-        [eg, eE, eb] = (0, l.zhh)(
+        [eg, eE, ey] = (0, l.zhh)(
             {
                 config: {
                     tension: 450,
@@ -911,11 +966,11 @@ function K(e) {
                     : [],
             },
             C() ? "animate-always" : "animate-never",
-            [z, w],
+            [z, R],
         );
     return (0, r.jsx)(
         F,
-        v(O({}, e), {
+        A(O({}, e), {
             ariaLabel: H,
             ariaHidden: k,
             typingOffset: eh,
@@ -924,11 +979,11 @@ function K(e) {
                 width: em,
                 height: em,
                 viewBox: "0 0 ".concat(em, " ").concat(em),
-                className: s()(b.dK, b.JW),
+                className: o()(y.dK, y.JW),
                 "aria-hidden": !0,
                 children: [
                     (0, r.jsxs)("mask", {
-                        id: J,
+                        id: $,
                         width: ed,
                         height: ed,
                         children: [
@@ -938,52 +993,57 @@ function K(e) {
                                 r: ed / 2,
                                 fill: "white",
                             }),
-                            (0, r.jsx)(o.animated.rect, {
+                            (0, r.jsx)(s.animated.rect, {
                                 color: "black",
                                 x: ei,
                                 y: ea,
-                                width: es,
-                                height: eo,
+                                width: eo,
+                                height: es,
                                 rx: el,
                                 ry: el,
                             }),
-                            null != X && M(ef.size - ef.status - ef.offset, ef.offset, ef.status, X, ef),
+                            null != Z && j(ef.size - ef.status - ef.offset, ef.offset, ef.status, Z, ef),
                         ],
                     }),
                     (0, r.jsx)("foreignObject", {
-                        className: b.__invalid_foreignObject,
+                        className: y.__invalid_foreignObject,
                         x: 0,
                         y: 0,
                         width: ed,
                         height: ed,
-                        mask: "url(#".concat(J, ")"),
+                        mask: "url(#".concat($, ")"),
                         children: (0, r.jsx)(B, {
-                            src: R,
+                            src: w,
                             isSpeaking: m,
                             isLatched: E,
-                            voiceDb: y,
+                            voiceDb: b,
                             className: K,
-                            speakingStylesConfig: A,
+                            speakingStylesConfig: v,
                         }),
                     }),
-                    null != j && L(j, f, ef, w),
+                    null != M &&
+                        x(M, ef, R, {
+                            isMobile: f,
+                            isTyping: p,
+                            isVR: !1,
+                        }),
                     (0, r.jsx)(d.m_, {
-                        text: D ? (0, _.MU)(w) : null,
+                        text: D ? (0, _.MU)(R) : null,
                         ariaHidden: !0,
                         position: "top",
                         spacing: Y(ef.status, ef.stroke, f, p),
-                        delay: x,
-                        children: (0, r.jsxs)(o.animated.g, {
-                            transform: eg.scale.to((e) => "scale(".concat(e, ") ").concat(W(ef, e, w))),
+                        delay: L,
+                        children: (0, r.jsxs)(s.animated.g, {
+                            transform: eg.scale.to((e) => "scale(".concat(e, ") ").concat(W(ef, e, R))),
                             children: [
                                 (0, r.jsxs)("svg", {
                                     width: ep,
                                     height: e_,
                                     viewBox: "0 0 ".concat(ep, " ").concat(e_),
-                                    className: D ? b.Oi : void 0,
+                                    className: D ? y.Oi : void 0,
                                     children: [
                                         (0, u.pF)(eu, ef.status, ee),
-                                        (0, r.jsx)(o.animated.rect, {
+                                        (0, r.jsx)(s.animated.rect, {
                                             fill: ec,
                                             width: ep,
                                             height: e_,
@@ -999,25 +1059,28 @@ function K(e) {
                                     ],
                                 }),
                                 (0, r.jsx)(N, {
-                                    size: I,
+                                    size: S,
                                     isMobile: f,
                                     isTyping: p,
-                                    className: b.Hs,
+                                    className: y.Hs,
                                 }),
                             ],
                         }),
                     }),
                     null != q && U(ef, q),
-                    null != Q &&
+                    null != X &&
                         G(
                             ef,
-                            f,
-                            p,
                             {
-                                avatarTooltipTitle: Q,
-                                avatarTooltipText: Z,
+                                isMobile: f,
+                                isTyping: p,
+                                isVR: !1,
                             },
-                            X,
+                            {
+                                avatarTooltipTitle: X,
+                                avatarTooltipText: Q,
+                            },
+                            Z,
                         ),
                 ],
             }),
@@ -1031,34 +1094,34 @@ function z(e, t, n, r, i) {
 B.displayName = "AvatarImg";
 let q = i.memo(function (e) {
     let { statusColor: t, status: n } = e,
-        a = S(e, ["statusColor", "status"]),
-        { isMobile: s = !1, isTyping: o = !1 } = a,
-        l = i.useRef(n),
-        c = i.useRef(s),
-        d = (0, u.S3)(n, t),
-        f = i.useRef(d),
-        p = i.useRef(!1),
-        _ = p.current || z(o, n, l.current, s, c.current);
+        a = I(e, ["statusColor", "status"]),
+        { isMobile: o = !1, isTyping: s = !1, isVR: l = !1 } = a,
+        c = i.useRef(n),
+        d = i.useRef(o),
+        f = (0, u.S3)(n, t),
+        p = i.useRef(f),
+        _ = i.useRef(!1),
+        h = _.current || z(s, n, c.current, o, d.current);
     return (
         i.useLayoutEffect(() => {
-            (p.current = _), (l.current = n), (c.current = s), (f.current = d);
-        }, [n, s, d, _]),
-        null != n && null != l.current && _
+            (_.current = h), (c.current = n), (d.current = o), (p.current = f);
+        }, [n, o, f, h]),
+        !l && null != n && null != c.current && h
             ? (0, r.jsx)(
                   K,
-                  v(O({}, a), {
+                  A(O({}, a), {
                       status: n,
-                      statusColor: d,
-                      fromStatus: l.current,
-                      fromIsMobile: c.current,
-                      fromColor: f.current,
+                      statusColor: f,
+                      fromStatus: c.current,
+                      fromIsMobile: d.current,
+                      fromColor: p.current,
                   }),
               )
             : (0, r.jsx)(
                   H,
-                  v(O({}, a), {
+                  A(O({}, a), {
                       status: n,
-                      statusColor: d,
+                      statusColor: f,
                   }),
               )
     );

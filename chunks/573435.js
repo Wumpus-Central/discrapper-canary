@@ -1,6 +1,6 @@
 n.d(t, {
-    Al: () => ed,
-    Ay: () => eu,
+    Al: () => ef,
+    Ay: () => ed,
     hW: () => m,
 });
 var r = n(627968),
@@ -241,6 +241,7 @@ var m = (function (e) {
         (e.AVATAR_CALL_ICON = "svg-mask-avatar-call-icon"),
         (e.AVATAR_CALL_ICON_32 = "svg-mask-avatar-call-icon-32"),
         (e.STATUS_ONLINE_MOBILE = "svg-mask-status-online-mobile"),
+        (e.STATUS_ONLINE_VR = "svg-mask-status-online-vr"),
         (e.STATUS_ONLINE = "svg-mask-status-online"),
         (e.STATUS_IDLE = "svg-mask-status-idle"),
         (e.STATUS_DND = "svg-mask-status-dnd"),
@@ -871,6 +872,31 @@ function B(e) {
 }
 
 function H(e) {
+    return (0, r.jsx)("mask", {
+        id: e,
+        maskContentUnits: "objectBoundingBox",
+        viewBox: "0 0 1 1",
+        children: (0, r.jsxs)("svg", {
+            viewBox: "0 4 24 16",
+            width: "1",
+            height: "1",
+            children: [
+                (0, r.jsx)("path", {
+                    fill: "white",
+                    d: "M8.46 8.64a1 1 0 0 1 1 1c0 .44-.3.8-.72.92l-.11.07c-.08.06-.2.19-.2.41a.99.99 0 0 1-.98.86h-.06a1 1 0 0 1-.94-1.05l.02-.32c.05-1.06.92-1.9 1.99-1.9Z",
+                }),
+                (0, r.jsx)("path", {
+                    fill: "white",
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M15.55 5a5.5 5.5 0 0 1 5.15 3.67h.3a2 2 0 0 1 2 2v3.18a2 2 0 0 1-2 1.99h-.2A4.54 4.54 0 0 1 16.55 19a4.45 4.45 0 0 1-3.6-1.83 1.2 1.2 0 0 0-1.9 0 4.44 4.44 0 0 1-3.9 1.82 4.54 4.54 0 0 1-3.94-3.15H3a2 2 0 0 1-2-2v-3.18c0-1.1.9-1.99 2-1.99h.3A5.5 5.5 0 0 1 8.46 5h7.09Zm-7.1 2C6.6 7 5.06 8.5 4.97 10.41l-.02.66v3.18c0 1.43 1.05 2.66 2.34 2.74.85.06 1.63-.32 2.14-1.01a3.2 3.2 0 0 1 2.57-1.3c1 0 1.97.48 2.57 1.3.5.69 1.3 1.08 2.14 1.01 1.3-.08 2.34-1.31 2.34-2.74l-.02-3.84a3.54 3.54 0 0 0-3.49-3.43H8.45Z",
+                }),
+            ],
+        }),
+    });
+}
+
+function Y(e) {
     let t = 8;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -893,7 +919,7 @@ function H(e) {
     });
 }
 
-function Y(e) {
+function W(e) {
     let t = 8;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -919,7 +945,7 @@ function Y(e) {
     });
 }
 
-function W(e) {
+function K(e) {
     let t = 8;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -942,7 +968,7 @@ function W(e) {
     });
 }
 
-function K(e) {
+function z(e) {
     let t = 8;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -969,7 +995,7 @@ function K(e) {
     });
 }
 
-function z(e) {
+function q(e) {
     let t = 8;
     return (0, r.jsx)("mask", {
         id: e,
@@ -987,7 +1013,7 @@ function z(e) {
     });
 }
 
-function q(e) {
+function Z(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -1006,7 +1032,7 @@ function q(e) {
     });
 }
 
-function Z(e) {
+function Q(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -1018,7 +1044,7 @@ function Z(e) {
     });
 }
 
-function Q(e) {
+function X(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -1039,7 +1065,7 @@ function Q(e) {
     });
 }
 
-function X(e) {
+function J(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -1060,7 +1086,7 @@ function X(e) {
     });
 }
 
-function J(e) {
+function $(e) {
     let t = 24;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -1082,7 +1108,7 @@ function J(e) {
     });
 }
 
-function $(e) {
+function ee(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -1094,7 +1120,7 @@ function $(e) {
     });
 }
 
-function ee(e) {
+function et(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -1114,7 +1140,7 @@ function ee(e) {
     });
 }
 
-function et(e) {
+function en(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -1133,7 +1159,7 @@ function et(e) {
     });
 }
 
-function en(e) {
+function er(e) {
     let t = 16;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -1155,7 +1181,7 @@ function en(e) {
     });
 }
 
-function er(e, t, n, i) {
+function ei(e, t, n, i) {
     let a = 4;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -1179,7 +1205,7 @@ function er(e, t, n, i) {
     });
 }
 
-function ei(e) {
+function ea(e) {
     let t = 24;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -1203,21 +1229,6 @@ function ei(e) {
     });
 }
 
-function ea(e) {
-    return (0, r.jsx)("mask", {
-        id: e,
-        maskContentUnits: "objectBoundingBox",
-        viewBox: "0 0 1 1",
-        children: (0, r.jsx)("rect", {
-            fill: "white",
-            rx: 0.3,
-            ry: 0.3,
-            width: 1,
-            height: 1,
-        }),
-    });
-}
-
 function eo(e) {
     return (0, r.jsx)("mask", {
         id: e,
@@ -1234,6 +1245,21 @@ function eo(e) {
 }
 
 function es(e) {
+    return (0, r.jsx)("mask", {
+        id: e,
+        maskContentUnits: "objectBoundingBox",
+        viewBox: "0 0 1 1",
+        children: (0, r.jsx)("rect", {
+            fill: "white",
+            rx: 0.3,
+            ry: 0.3,
+            width: 1,
+            height: 1,
+        }),
+    });
+}
+
+function el(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -1256,7 +1282,7 @@ function es(e) {
     });
 }
 
-function el(e) {
+function ec(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -1268,7 +1294,7 @@ function el(e) {
     });
 }
 
-function ec(e) {
+function eu(e) {
     let {
             mask: t,
             width: n = g,
@@ -1319,9 +1345,9 @@ function ec(e) {
         ),
     );
 }
-ec.Masks = m;
-let eu = ec,
-    ed = i.memo(
+eu.Masks = m;
+let ed = eu,
+    ef = i.memo(
         function () {
             return (0, r.jsxs)("svg", {
                 viewBox: "0 0 1 1",
@@ -1463,32 +1489,33 @@ let eu = ec,
                     P("svg-mask-diagonal-facepile-status-120", l._3.SIZE_120),
                     D("svg-mask-diagonal-facepile-typing-120", l._3.SIZE_120),
                     B("svg-mask-status-online-mobile"),
+                    H("svg-mask-status-online-vr"),
                     M("svg-mask-status-online"),
-                    H("svg-mask-status-idle"),
-                    Y("svg-mask-status-dnd"),
-                    W("svg-mask-status-offline"),
-                    K("svg-mask-status-streaming"),
-                    z("svg-mask-status-typing"),
-                    q("svg-mask-status-screenshare"),
+                    Y("svg-mask-status-idle"),
+                    W("svg-mask-status-dnd"),
+                    K("svg-mask-status-offline"),
+                    z("svg-mask-status-streaming"),
+                    q("svg-mask-status-typing"),
+                    Z("svg-mask-status-screenshare"),
                     y("svg-mask-avatar-voice-call-80"),
                     b("svg-mask-avatar-call-icon", l._3.SIZE_56, 1),
                     b("svg-mask-avatar-call-icon-32", l._3.SIZE_32, 0.5),
-                    Z("svg-mask-sticker-rounded-rect"),
-                    Q("svg-mask-chat-input-button-notification"),
-                    X("svg-mask-sticker-shop-notification"),
-                    J("svg-mask-autocomplete-emoji-upsell-emoji"),
-                    $("svg-mask-event-ticket"),
-                    ee("svg-mask-guild-icon-with-channel-type"),
-                    et("svg-mask-channel-icon-with-guild-icon"),
-                    en("svg-mask-content-inventory-card-face-pile-avatar"),
-                    ei("svg-mask-guild-popout-activity-icon"),
-                    ea("svg-mask-clan-icon"),
-                    es("svg-mask-badged-guild-icon"),
-                    el("svg-mask-forward-attachment-pile-overflow"),
-                    er("svg-mask-content-image-60", 60, 24, 2),
-                    er("svg-mask-content-image-72", 72, 32, 4),
-                    er("svg-mask-content-image-100", 100, 32, 4),
-                    eo("svg-mask-user-avatar-with-game-icon"),
+                    Q("svg-mask-sticker-rounded-rect"),
+                    X("svg-mask-chat-input-button-notification"),
+                    J("svg-mask-sticker-shop-notification"),
+                    $("svg-mask-autocomplete-emoji-upsell-emoji"),
+                    ee("svg-mask-event-ticket"),
+                    et("svg-mask-guild-icon-with-channel-type"),
+                    en("svg-mask-channel-icon-with-guild-icon"),
+                    er("svg-mask-content-inventory-card-face-pile-avatar"),
+                    ea("svg-mask-guild-popout-activity-icon"),
+                    eo("svg-mask-clan-icon"),
+                    el("svg-mask-badged-guild-icon"),
+                    ec("svg-mask-forward-attachment-pile-overflow"),
+                    ei("svg-mask-content-image-60", 60, 24, 2),
+                    ei("svg-mask-content-image-72", 72, 32, 4),
+                    ei("svg-mask-content-image-100", 100, 32, 4),
+                    es("svg-mask-user-avatar-with-game-icon"),
                 ],
             });
         },
