@@ -1,78 +1,79 @@
 n.d(t, {
-    A: () => m,
+    A: () => p,
 });
 var a = n(627968),
     l = n(64700),
-    i = n(503698),
-    r = n.n(i),
-    s = n(108531),
+    r = n(503698),
+    i = n.n(r),
+    s = n(353709),
     o = n(397927),
-    c = n(772244),
-    d = n(419367),
-    u = n(638322);
-let m = l.forwardRef((e, t) => {
+    c = n(398025),
+    d = n(772244),
+    u = n(419367),
+    m = n(638322);
+let p = l.forwardRef((e, t) => {
     let {
             quest: n,
             percentComplete: l,
-            size: i = 42,
-            strokeWidth: m = 3,
-            glowBlur: p = 0.4,
-            percentCompleteText: h,
-            percentCompleteTextVariant: f = "text-lg/medium",
-            children: x,
+            size: r = 42,
+            strokeWidth: p = 3,
+            glowBlur: h = 0.4,
+            percentCompleteText: x,
+            percentCompleteTextVariant: g = "text-lg/medium",
+            children: f,
         } = e,
-        b = (0, c.OY)(n, l > 0),
-        g = i / 2,
-        v = i / 2 - m / 2,
-        j = 2 * Math.PI * v,
-        y = j - l * j,
-        _ = {
-            strokeDasharray: "".concat(j, " ").concat(j),
+        b = (0, d.OY)(n, l > 0),
+        v = r / 2,
+        j = r / 2 - p / 2,
+        _ = 2 * Math.PI * j,
+        y = _ - l * _,
+        A = {
+            strokeDasharray: "".concat(_, " ").concat(_),
             strokeDashoffset: y,
         },
-        A = {
-            strokeDasharray: "".concat(j, " ").concat(j),
-            strokeDashoffset: -l * j,
-        },
         C = {
+            strokeDasharray: "".concat(_, " ").concat(_),
+            strokeDashoffset: -l * _,
+        },
+        S = {
             boxShadow: "0 0 20px 0px ".concat(b.glow),
         },
-        { progressTextAnimation: S } = (0, o.zhh)({
-            progressTextAnimation: +(null != h && 1 !== l),
-            config: d.N,
+        { progressTextAnimation: O } = (0, o.zhh)({
+            progressTextAnimation: +(null != x && 1 !== l),
+            config: u.N,
         });
     return (0, a.jsxs)("div", {
-        className: u.A7,
+        className: m.A7,
         ref: t,
         children: [
             (0, a.jsxs)("div", {
-                className: u.vW,
-                style: C,
+                className: m.vW,
+                style: S,
                 children: [
-                    x,
+                    f,
                     (0, a.jsxs)(s.animated.div, {
                         style: {
-                            opacity: S,
+                            opacity: (0, c.a)(O),
                         },
-                        className: r()(u.rD, u.qk),
+                        className: i()(m.rD, m.qk),
                         children: [
                             (0, a.jsx)("div", {
-                                className: r()(u.rD, u.LU),
+                                className: i()(m.rD, m.LU),
                             }),
                             (0, a.jsx)(o.Text, {
-                                variant: f,
+                                variant: g,
                                 color: "text-strong",
-                                className: u.l_,
-                                children: h,
+                                className: m.l_,
+                                children: x,
                             }),
                         ],
                     }),
                 ],
             }),
             (0, a.jsxs)("svg", {
-                className: u.hr,
-                height: i,
-                width: i,
+                className: m.hr,
+                height: r,
+                width: r,
                 children: [
                     (0, a.jsxs)("defs", {
                         children: [
@@ -81,7 +82,7 @@ let m = l.forwardRef((e, t) => {
                                 children: [
                                     (0, a.jsx)("feGaussianBlur", {
                                         result: "coloredBlur",
-                                        stdDeviation: p,
+                                        stdDeviation: h,
                                     }),
                                     (0, a.jsxs)("feMerge", {
                                         children: [
@@ -121,24 +122,24 @@ let m = l.forwardRef((e, t) => {
                         ],
                     }),
                     (0, a.jsx)("circle", {
-                        className: u.qB,
-                        strokeWidth: m,
+                        className: m.qB,
+                        strokeWidth: p,
                         fill: "transparent",
-                        r: v,
-                        cx: g,
-                        cy: g,
+                        r: j,
+                        cx: v,
+                        cy: v,
                         stroke: "url(#linear)",
-                        style: A,
+                        style: C,
                     }),
                     (0, a.jsx)("circle", {
-                        className: u.qB,
-                        strokeWidth: m,
+                        className: m.qB,
+                        strokeWidth: p,
                         fill: "transparent",
-                        r: v,
-                        cx: g,
-                        cy: g,
+                        r: j,
+                        cx: v,
+                        cy: v,
                         stroke: b.foreground,
-                        style: _,
+                        style: A,
                     }),
                 ],
             }),

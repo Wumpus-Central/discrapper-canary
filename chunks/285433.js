@@ -1,12 +1,12 @@
 n.d(t, {
-    A: () => N,
+    A: () => P,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
     a = n.n(l),
-    s = n(108531),
+    s = n(353709),
     o = n(827734),
     c = n(990078),
     u = n(397927),
@@ -15,150 +15,153 @@ var r = n(627968),
     m = n(765548),
     f = n(341915),
     g = n(714510),
-    h = n(890687),
-    _ = n(18437),
+    _ = n(890687),
+    h = n(18437),
     b = n(590202),
-    A = n(918338),
-    y = n(270045),
+    y = n(918338),
+    A = n(270045),
     v = n(57718),
-    x = n(847641),
-    O = n(646764),
-    E = n(433745),
-    j = n(654487),
-    C = n(818348),
-    I = n(985018),
-    S = n(806449);
-let T = (0, s.animated)(u.abt),
-    N = (e) => {
+    O = n(847641),
+    x = n(646764),
+    E = n(398025),
+    j = n(433745),
+    C = n(654487),
+    I = n(818348),
+    S = n(985018),
+    T = n(806449);
+let N = (0, s.animated)(u.abt),
+    P = (e) => {
         var t;
         let {
                 isQuestExpired: n,
                 quest: l,
-                location: N,
-                size: P,
-                expansionSpring: w,
-                isAnimating: R,
-                isExpanded: D,
-                isInteracting: L,
-                contentPosition: M,
-                toggleExpanded: k,
-                sourceQuestContent: U,
+                location: P,
+                size: w,
+                expansionSpring: R,
+                isAnimating: D,
+                isExpanded: L,
+                isInteracting: M,
+                contentPosition: k,
+                toggleExpanded: U,
+                sourceQuestContent: G,
             } = e,
-            { ref: G, height: B } = (0, d.Ay)(),
-            [F, H] = i.useState(null),
-            [V, z] = i.useState(null),
-            W = (0, m.A)((e) => {
+            { ref: B, height: F } = (0, d.Ay)(),
+            [H, V] = i.useState(null),
+            [z, W] = i.useState(null),
+            K = (0, m.A)((e) => {
                 let t = e.target;
-                H(t.offsetWidth), z(t.scrollWidth);
+                V(t.offsetWidth), W(t.scrollWidth);
             }),
-            K = (0, p.w)(W),
-            Y = (0, E.a3)(N),
-            q = N === f.uF.QUESTS_EMBED,
-            J = (0, g.wT)(l, j.rE.QUESTS_CARD, N, U),
-            Q = (null == (t = l.userStatus) ? void 0 : t.completedAt) != null,
-            Z = (0, _.Ut)(),
-            X = (0, h.S5)(l.config.expiresAt),
-            $ = (0, h.S5)(l.config.rewardsConfig.rewardsExpireAt),
-            ee = i.useMemo(() => null != l.config.cosponsorMetadata, [l]),
-            et = (e) => {
+            Y = (0, p.w)(K),
+            q = (0, j.a3)(P),
+            J = P === f.uF.QUESTS_EMBED,
+            Q = (0, g.wT)(l, C.rE.QUESTS_CARD, P, G),
+            X = (null == (t = l.userStatus) ? void 0 : t.completedAt) != null,
+            Z = (0, h.Ut)(),
+            $ = (0, _.S5)(l.config.expiresAt),
+            ee = (0, _.S5)(l.config.rewardsConfig.rewardsExpireAt),
+            et = i.useMemo(() => null != l.config.cosponsorMetadata, [l]),
+            en = (e) => {
                 e.stopPropagation(),
                     e.currentTarget.blur(),
-                    k(),
+                    U(),
                     Z({
                         questId: l.id,
-                        questContent: N,
-                        questContentCTA: D ? b.Cy.COLLAPSE : b.Cy.EXPAND,
-                        questContentPosition: M,
-                        sourceQuestContent: U,
+                        questContent: P,
+                        questContentCTA: L ? b.Cy.COLLAPSE : b.Cy.EXPAND,
+                        questContentPosition: k,
+                        sourceQuestContent: G,
                     });
             },
-            en = (0, r.jsx)(v.Ay, {
-                className: S.Iu,
-                logotypeClassName: ee ? S.qN : void 0,
+            er = (0, r.jsx)(v.Ay, {
+                className: T.Iu,
+                logotypeClassName: et ? T.qN : void 0,
                 gameTileSize: v.LU.MEDIUM,
                 quest: l,
                 separatorSpacing: v.C8.MEDIUM,
-                theme: C.NJ.DARK,
-                withGameTile: !q || null == l.config.cosponsorMetadata,
+                theme: I.NJ.DARK,
+                withGameTile: !J || null == l.config.cosponsorMetadata,
             });
         return (0, r.jsxs)("div", {
-            className: a()(S.nw, {
-                [S.fu]: Y,
-                [S.Gg]: q,
-                [S.e5]: "xs" === P,
+            className: a()(T.nw, {
+                [T.fu]: q,
+                [T.Gg]: J,
+                [T.e5]: "xs" === w,
             }),
-            "aria-label": I.intl.string(I.t.dcl9MQ),
+            "aria-label": S.intl.string(S.t.dcl9MQ),
             style: {
-                height: Y ? B : void 0,
+                height: q ? F : void 0,
             },
             children: [
-                (0, r.jsx)(A.A, {
+                (0, r.jsx)(y.A, {
                     quest: l,
-                    isInteracting: L,
-                    containerClassName: S.v7,
+                    isInteracting: M,
+                    containerClassName: T.v7,
                     imageSize: {
                         width: 660,
                         height: 185,
                     },
-                    imageClassName: S.Z5,
+                    imageClassName: T.Z5,
                 }),
                 (0, r.jsxs)("div", {
-                    className: S.wx,
-                    "aria-expanded": D,
+                    className: T.wx,
+                    "aria-expanded": L,
                     children: [
                         (0, r.jsxs)(s.animated.div, {
-                            className: a()(S.VW, {
-                                [S.eX]: q,
+                            className: a()(T.VW, {
+                                [T.eX]: J,
                             }),
                             style: {
-                                y: Y
-                                    ? w.to({
+                                y: q
+                                    ? R.to({
                                           range: [0, 1],
-                                          output: [E.es, 0],
+                                          output: [j.es, 0],
                                       })
                                     : void 0,
                             },
                             children: [
-                                Y &&
+                                q &&
                                     (0, r.jsx)(s.animated.div, {
-                                        className: S.gM,
+                                        className: T.gM,
                                         style: {
-                                            opacity: w.to({
-                                                range: [0, 1],
-                                                output: [1, 0],
-                                            }),
-                                            visibility: R || !D ? "inherit" : "hidden",
+                                            opacity: (0, E.a)(
+                                                R.to({
+                                                    range: [0, 1],
+                                                    output: [1, 0],
+                                                }),
+                                            ),
+                                            visibility: D || !L ? "inherit" : "hidden",
                                         },
-                                        "aria-hidden": !R && D,
+                                        "aria-hidden": !D && L,
                                         children: (0, r.jsxs)(u.sqX, {
-                                            "aria-label": I.intl.string(I.t.dcl9MQ),
-                                            onClick: et,
-                                            className: S._F,
+                                            "aria-label": S.intl.string(S.t.dcl9MQ),
+                                            onClick: en,
+                                            className: T._F,
                                             children: [
                                                 (0, r.jsx)("div", {
-                                                    className: S.SY,
-                                                    children: (0, r.jsx)(O.A, {
+                                                    className: T.SY,
+                                                    children: (0, r.jsx)(x.A, {
                                                         quest: l,
-                                                        questContent: N,
-                                                        className: S.EK,
-                                                        sourceQuestContent: U,
+                                                        questContent: P,
+                                                        className: T.EK,
+                                                        sourceQuestContent: G,
                                                     }),
                                                 }),
                                                 (0, r.jsxs)("div", {
-                                                    className: S.if,
+                                                    className: T.if,
                                                     children: [
                                                         (0, r.jsxs)("div", {
-                                                            className: S.dc,
+                                                            className: T.dc,
                                                             children: [
-                                                                en,
-                                                                (0, r.jsx)(x.A, {
+                                                                er,
+                                                                (0, r.jsx)(O.A, {
                                                                     color: "always-white",
                                                                 }),
                                                             ],
                                                         }),
                                                         (0, r.jsx)(u.Text, {
                                                             variant: "text-xs/medium",
-                                                            children: J,
+                                                            children: Q,
                                                         }),
                                                     ],
                                                 }),
@@ -167,51 +170,53 @@ let T = (0, s.animated)(u.abt),
                                     }),
                                 (0, r.jsx)(s.animated.div, {
                                     ref: (e) => {
-                                        G.current = e;
+                                        B.current = e;
                                     },
-                                    className: a()(S.Yu, {
-                                        [S.fu]: Y,
-                                        [S.Gg]: q,
+                                    className: a()(T.Yu, {
+                                        [T.fu]: q,
+                                        [T.Gg]: J,
                                     }),
                                     style: {
-                                        opacity: w.to({
-                                            range: [0, 1],
-                                            output: [0, 1],
-                                        }),
-                                        visibility: R || D ? "inherit" : "hidden",
+                                        opacity: (0, E.a)(
+                                            R.to({
+                                                range: [0, 1],
+                                                output: [0, 1],
+                                            }),
+                                        ),
+                                        visibility: D || L ? "inherit" : "hidden",
                                     },
-                                    "aria-hidden": !R && !D,
+                                    "aria-hidden": !D && !L,
                                     children: (0, r.jsxs)("div", {
-                                        className: S.uA,
+                                        className: T.uA,
                                         children: [
                                             (0, r.jsxs)("div", {
-                                                className: S._V,
+                                                className: T._V,
                                                 children: [
-                                                    en,
-                                                    q
+                                                    er,
+                                                    J
                                                         ? null
-                                                        : (0, r.jsx)(x.A, {
+                                                        : (0, r.jsx)(O.A, {
                                                               color: "always-white",
                                                           }),
                                                 ],
                                             }),
                                             (0, r.jsxs)("div", {
-                                                className: S.P9,
+                                                className: T.P9,
                                                 children: [
                                                     (0, r.jsx)(c.m, {
                                                         __unsupportedReactNodeAsText: l.config.messages.questName,
-                                                        shouldShow: null != F && null != V && F < V,
+                                                        shouldShow: null != H && null != z && H < z,
                                                         children: (0, r.jsx)(u.Heading, {
-                                                            ref: K,
+                                                            ref: Y,
                                                             variant:
-                                                                "lg" === P
+                                                                "lg" === w
                                                                     ? "heading-xxl/bold"
-                                                                    : "sm" === P
+                                                                    : "sm" === w
                                                                       ? "heading-xl/bold"
                                                                       : "heading-lg/bold",
-                                                            className: S.R_,
+                                                            className: T.R_,
                                                             color: "always-white",
-                                                            children: I.intl.format(I.t.EAYZAr, {
+                                                            children: S.intl.format(S.t.EAYZAr, {
                                                                 questName: l.config.messages.questName,
                                                             }),
                                                         }),
@@ -219,16 +224,16 @@ let T = (0, s.animated)(u.abt),
                                                     (0, r.jsx)(u.Text, {
                                                         variant: "text-xs/normal",
                                                         color: "always-white",
-                                                        children: Q
-                                                            ? I.intl.formatToPlainString(I.t.APddvF, {
-                                                                  expirationDate: $,
+                                                        children: X
+                                                            ? S.intl.formatToPlainString(S.t.APddvF, {
+                                                                  expirationDate: ee,
                                                               })
                                                             : n
-                                                              ? I.intl.formatToPlainString(I.t.v7xMw7, {
-                                                                    expirationDate: X,
+                                                              ? S.intl.formatToPlainString(S.t.v7xMw7, {
+                                                                    expirationDate: $,
                                                                 })
-                                                              : I.intl.formatToPlainString(I.t["pX+fmn"], {
-                                                                    expirationDate: X,
+                                                              : S.intl.formatToPlainString(S.t["pX+fmn"], {
+                                                                    expirationDate: $,
                                                                 }),
                                                     }),
                                                 ],
@@ -239,32 +244,32 @@ let T = (0, s.animated)(u.abt),
                             ],
                         }),
                         (0, r.jsxs)(s.animated.div, {
-                            className: S._q,
+                            className: T._q,
                             style: {
-                                top: Y
-                                    ? w.to({
+                                top: q
+                                    ? R.to({
                                           range: [0, 1],
-                                          output: [E.es / 2 - E.uR / 2, E.wl],
+                                          output: [j.es / 2 - j.uR / 2, j.wl],
                                       })
-                                    : E.wl,
+                                    : j.wl,
                             },
                             children: [
-                                (0, r.jsx)(y.C, {
-                                    questContent: N,
+                                (0, r.jsx)(A.C, {
+                                    questContent: P,
                                     quest: l,
-                                    questContentPosition: M,
+                                    questContentPosition: k,
                                     shouldShowDisclosure: !0,
-                                    hideLearnMore: Y,
-                                    showShareLink: !n && q,
-                                    sourceQuestContent: U,
+                                    hideLearnMore: q,
+                                    showShareLink: !n && J,
+                                    sourceQuestContent: G,
                                     children: (e) => {
                                         var t, n;
                                         return (0, r.jsx)(s.animated.div, {
                                             style: {
-                                                opacity: w,
-                                                visibility: R || D ? "inherit" : "hidden",
+                                                opacity: (0, E.a)(R),
+                                                visibility: D || L ? "inherit" : "hidden",
                                             },
-                                            "aria-hidden": !R && !D,
+                                            "aria-hidden": !D && !L,
                                             children: (0, r.jsx)(
                                                 u.DUT,
                                                 ((t = (function (e) {
@@ -295,8 +300,8 @@ let T = (0, s.animated)(u.abt),
                                                 })({}, e)),
                                                 (n = n =
                                                     {
-                                                        className: S.P0,
-                                                        "aria-label": I.intl.string(I.t.DEoVWZ),
+                                                        className: T.P0,
+                                                        "aria-label": S.intl.string(S.t.DEoVWZ),
                                                         children: (0, r.jsx)(u.jNK, {
                                                             size: "md",
                                                             color: o.A.colors.WHITE,
@@ -323,14 +328,14 @@ let T = (0, s.animated)(u.abt),
                                         });
                                     },
                                 }),
-                                !(0, E.rW)(N) &&
+                                !(0, j.rW)(P) &&
                                     (0, r.jsx)(u.DUT, {
-                                        onClick: et,
-                                        className: S.P0,
-                                        "aria-label": D ? I.intl.string(I.t.iTcuma) : I.intl.string(I.t.dcl9MQ),
-                                        children: (0, r.jsx)(T, {
+                                        onClick: en,
+                                        className: T.P0,
+                                        "aria-label": L ? S.intl.string(S.t.iTcuma) : S.intl.string(S.t.dcl9MQ),
+                                        children: (0, r.jsx)(N, {
                                             style: {
-                                                rotate: w.to({
+                                                rotate: R.to({
                                                     range: [0, 1],
                                                     output: [0, 180],
                                                 }),
