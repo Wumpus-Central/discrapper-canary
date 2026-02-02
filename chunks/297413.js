@@ -1,12 +1,12 @@
 n.d(t, {
-    A: () => v,
+    A: () => A,
 });
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(311907),
-    o = n(990078),
+    o = n(311907),
+    s = n(990078),
     l = n(709066),
     c = n(824994),
     u = n(922301),
@@ -48,7 +48,7 @@ function E(e) {
     return e;
 }
 
-function b(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,13 +59,13 @@ function b(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = y(e, t)), Object.getOwnPropertySymbols))
+    if (((a = b(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function y(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,36 +79,36 @@ function y(e, t) {
 function O(e) {
     return e.isSystemUser() ? f.v.SYSTEM_DM : e.bot ? f.v.BOT : null;
 }
-let A = (e) => {
+let v = (e) => {
         let {
                 primary: t,
                 secondary: n,
                 botType: i,
-                botVerified: s,
+                botVerified: o,
                 discriminatorClass: u,
                 className: f,
                 usernameClass: p,
                 botClass: _,
                 showStreamerModeTooltip: g,
                 displayNameStyles: E,
-                displayNameStylesType: b,
+                displayNameStylesType: y,
             } = e,
-            y = (0, c.W)({
+            b = (0, c.W)({
                 location: "DiscordTag",
             });
         return (0, r.jsxs)("div", {
             className: a()(
                 m.pq,
                 {
-                    [m.e8]: y && null != E,
+                    [m.e8]: b && null != E,
                 },
                 f,
             ),
             children: [
-                (0, r.jsx)(o.m, {
+                (0, r.jsx)(s.m, {
                     text: h.intl.string(h.t.Br1ls3),
                     shouldShow: g,
-                    "aria-label": !!g && void 0,
+                    ariaHidden: !g,
                     children: (0, r.jsx)("span", {
                         className: a()(m.__invalid_username, p),
                         children:
@@ -116,7 +116,7 @@ let A = (e) => {
                                 ? (0, r.jsx)(d.A, {
                                       userName: t,
                                       displayNameStyles: E,
-                                      effectDisplayType: b,
+                                      effectDisplayType: y,
                                   })
                                 : t,
                     }),
@@ -131,24 +131,24 @@ let A = (e) => {
                     (0, r.jsx)(l.A, {
                         type: i,
                         className: a()(m.ok, _),
-                        verified: s,
+                        verified: o,
                     }),
             ],
         });
     },
-    v = (e) => {
+    A = (e) => {
         let {
                 user: t,
                 nick: n,
                 forceUsername: i,
                 showAccountIdentifier: a,
-                overrideDiscriminator: o,
+                overrideDiscriminator: s,
                 forcePomelo: l,
                 hideBotTag: c = !1,
                 hideDiscriminator: d = !1,
                 displayNameStylesType: h = u.G.PLAIN,
             } = e,
-            m = b(e, [
+            m = y(e, [
                 "user",
                 "nick",
                 "forceUsername",
@@ -159,32 +159,32 @@ let A = (e) => {
                 "hideDiscriminator",
                 "displayNameStylesType",
             ]),
-            g = (0, s.bG)([p.A], () => p.A.hidePersonalInformation),
-            y = g || d || t.isNonUserBot(),
-            v = t.toString(),
-            S = c ? null : O(t),
-            I = t.isVerifiedBot(),
+            g = (0, o.bG)([p.A], () => p.A.hidePersonalInformation),
+            b = g || d || t.isNonUserBot(),
+            A = t.toString(),
+            I = c ? null : O(t),
+            S = t.isVerifiedBot(),
             T = _.Ay.getName(t),
-            C = i ? v : null != n ? n : T,
+            C = i ? A : null != n ? n : T,
             N = t.hasUniqueUsername() || l;
-        if (N || C !== v) {
+        if (N || C !== A) {
             let e =
-                    C === v && N && i
+                    C === A && N && i
                         ? _.Ay.getUserTag(t, {
                               forcePomelo: l,
                           })
                         : C,
-                n = a && e !== "@".concat(v) ? _.Ay.getUserTag(t) : void 0;
+                n = a && e !== "@".concat(A) ? _.Ay.getUserTag(t) : void 0;
             return (0, r.jsx)(
-                A,
+                v,
                 E(
                     {
                         primary: e,
                         secondary: n,
-                        botType: S,
-                        botVerified: I,
+                        botType: I,
+                        botVerified: S,
                         showStreamerModeTooltip: g && _.Ay.isNameConcealed(e),
-                        displayNameStyles: C !== v ? t.displayNameStyles : null,
+                        displayNameStyles: C !== A ? t.displayNameStyles : null,
                         displayNameStylesType: h,
                     },
                     m,
@@ -196,9 +196,9 @@ let A = (e) => {
             E(
                 {
                     name: C,
-                    botType: S,
-                    botVerified: I,
-                    discriminator: y || C !== v ? null : null != o ? o : t.discriminator,
+                    botType: I,
+                    botVerified: S,
+                    discriminator: b || C !== A ? null : null != s ? s : t.discriminator,
                 },
                 m,
             ),
