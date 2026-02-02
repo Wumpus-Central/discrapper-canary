@@ -1,7 +1,7 @@
 n.d(t, {
     L7: () => m,
-    Z0: () => g,
-    kt: () => f,
+    Z0: () => f,
+    kt: () => g,
 }),
     n(896048),
     n(638769),
@@ -18,43 +18,49 @@ var r = n(64700),
     p = n(605431),
     h = n(366251);
 
-function f(e) {
+function g(e) {
     let { channel: t } = e,
-        { totalSuggestions: n } = s.A.useConfig({
-            location: "useVoiceInviteSuggestions",
-        }),
-        i = (0, l.bG)([a.A], () => a.A.getUserAffinitiesMap(), []),
-        p = null == t ? void 0 : t.guild_id,
+        n = null == t ? void 0 : t.guild_id,
+        { totalSuggestions: i } = s.A.useExperiment(
+            {
+                guildId: n,
+                location: "useVoiceInviteSuggestions",
+            },
+            {
+                autoTrackExposure: !1,
+            },
+        ),
+        p = (0, l.bG)([a.A], () => a.A.getUserAffinitiesMap(), []),
         h = new Set(
             (0, l.bG)([u.Ay], () => (null == t ? [] : u.Ay.getVoiceStatesForChannel(t).map((e) => e.user.id)), [t]),
         ),
-        f = (0, l.yK)(
+        g = (0, l.yK)(
             [o.Ay, c.default],
             () =>
-                o.Ay.getMembers(p)
+                o.Ay.getMembers(n)
                     .map((e) => c.default.getUser(e.userId))
                     .filter(d.Vq)
                     .filter((e) => !h.has(e.id)),
-            [p, h],
+            [n, h],
         );
     return r
         .useMemo(
             () =>
-                f.toSorted((e, t) => {
-                    var n, r, l, s;
-                    let { id: a } = e,
-                        { id: o } = t;
+                g.toSorted((e, t) => {
+                    var n, r, l, i;
+                    let { id: s } = e,
+                        { id: a } = t;
                     return (
-                        (null != (n = null == (l = i.get(o)) ? void 0 : l.vcProbability) ? n : 0) -
-                        (null != (r = null == (s = i.get(a)) ? void 0 : s.vcProbability) ? r : 0)
+                        (null != (n = null == (l = p.get(a)) ? void 0 : l.vcProbability) ? n : 0) -
+                        (null != (r = null == (i = p.get(s)) ? void 0 : i.vcProbability) ? r : 0)
                     );
                 }),
-            [f, i],
+            [g, p],
         )
-        .slice(0, n);
+        .slice(0, i);
 }
 
-function g(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { collapsed: n = !1 } = t,
         i = (0, l.bG)([h.A], () => h.A.getShouldShowPopover(e.id), [e.id]);
