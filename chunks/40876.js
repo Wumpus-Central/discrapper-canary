@@ -924,5 +924,9 @@ let i = {
         actions: ["HAVEN_DISCONNECT"],
         inlineRequire: () => n(63446).A,
     },
+    RestrictedHoursManager: {
+        inlineRequire: () => n(425116).A,
+        hasStoreChangeListeners: !0,
+    },
 };
 (0, r.n)(i);
