@@ -1,15 +1,15 @@
 n.d(t, {
-    Ay: () => y,
+    Ay: () => b,
     K2: () => g,
-    Kr: () => b,
+    Kr: () => y,
     Lx: () => E,
 });
 var r = n(499867),
     i = n(265690),
     a = n(121894),
-    s = n(506774);
+    o = n(506774);
 
-function o(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
@@ -125,7 +125,7 @@ var g = (function (e) {
     E = (function (e) {
         return (e.NONE = "NONE"), (e.FETCHING = "FETCHING"), (e.SUCCESS = "SUCCESS"), (e.FAILURE = "FAILURE"), e;
     })({});
-let b = (0, i.h)()(
+let y = (0, i.h)()(
         (0, r.Zr)(
             (e, t) => ({
                 volume: m,
@@ -150,9 +150,9 @@ let b = (0, i.h)()(
                     );
                 },
                 setVideoProgress: (n, r, i) => {
-                    var s, o;
+                    var o, s;
                     let c = Math.max(
-                        null != (s = null == (o = t().videoProgress[n]) ? void 0 : o.maxTimestampSec) ? s : 0,
+                        null != (o = null == (s = t().videoProgress[n]) ? void 0 : s.maxTimestampSec) ? o : 0,
                         Math.floor(r),
                     );
                     (0, a.r)(() =>
@@ -208,6 +208,13 @@ let b = (0, i.h)()(
                         });
                     });
                 },
+                clearAllVideoProgress: () => {
+                    (0, a.r)(() => {
+                        e({
+                            videoProgress: {},
+                        });
+                    });
+                },
                 setTranscriptAsset: (t) => {
                     (0, a.r)(() => {
                         e({
@@ -221,10 +228,10 @@ let b = (0, i.h)()(
                 storage: (0, r.KU)(() => ({
                     getItem: (e) => {
                         var t;
-                        return null != (t = s.w.get(e)) ? t : null;
+                        return null != (t = o.w.get(e)) ? t : null;
                     },
-                    setItem: (e, t) => s.w.set(e, t),
-                    removeItem: (e) => s.w.remove(e),
+                    setItem: (e, t) => o.w.set(e, t),
+                    removeItem: (e) => o.w.remove(e),
                 })),
                 partialize: (e) => ({
                     volume: e.volume,
@@ -235,4 +242,4 @@ let b = (0, i.h)()(
             },
         ),
     ),
-    y = b;
+    b = y;
