@@ -53,6 +53,7 @@ n.d(t, {
     E_w: () => r.E_w,
     EdP: () => r.EdP,
     EpV: () => r.EpV,
+    EsG: () => r.EsG,
     Exy: () => r.Exy,
     FD6: () => r.FD6,
     FHP: () => r.FHP,

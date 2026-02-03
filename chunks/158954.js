@@ -61,6 +61,7 @@ n.d(t, {
     EdP: () => q.ArrowSmallRightIcon,
     Eie: () => eS.Ei,
     EpV: () => q.CircleErrorIcon,
+    EsG: () => q.PhoneIcon,
     ExpressiveModal: () => F.k,
     Exy: () => l.E,
     F2Z: () => g.F,
