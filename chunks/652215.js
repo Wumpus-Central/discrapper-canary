@@ -102,11 +102,11 @@ n.d(t, {
     QCW: () => nQ,
     RCc: () => e9,
     RWi: () => ng,
-    R_U: () => nV,
+    R_U: () => nF,
     RoK: () => to,
     Rsh: () => eg,
     Rv1: () => rP,
-    S3d: () => V,
+    S3d: () => F,
     S7L: () => j,
     SH7: () => a.S,
     SO9: () => n_,
@@ -146,7 +146,7 @@ n.d(t, {
     XL8: () => t9,
     XYD: () => rd,
     XYq: () => _.XY,
-    XgB: () => eF,
+    XgB: () => eV,
     XlF: () => p.Xl,
     XlH: () => m,
     Xlh: () => tu,
@@ -180,9 +180,9 @@ n.d(t, {
     cSc: () => e8,
     cZu: () => eO,
     clD: () => p.cl,
-    cmJ: () => F,
+    cmJ: () => V,
     d0r: () => eM,
-    d3x: () => nF,
+    d3x: () => nV,
     d68: () => s.d,
     d7Q: () => eA,
     dD: () => ra,
@@ -294,7 +294,7 @@ n.d(t, {
     rzx: () => p.rz,
     sFm: () => ri,
     sJq: () => p.sJ,
-    s_7: () => eV,
+    s_7: () => eF,
     sbO: () => Y,
     sdF: () => eU,
     sl8: () => B,
@@ -307,7 +307,7 @@ n.d(t, {
     uJv: () => rL,
     uPF: () => r_,
     uaN: () => tr,
-    ugG: () => tF,
+    ugG: () => tV,
     uje: () => n3,
     ump: () => t2,
     uss: () => Z,
@@ -330,7 +330,7 @@ n.d(t, {
     yKI: () => nz,
     yTV: () => tH,
     zF_: () => n6,
-    zOV: () => tV,
+    zOV: () => tF,
     zWA: () => b,
     zgK: () => nh,
     zzC: () => ek,
@@ -853,7 +853,7 @@ var j = (function (e) {
             e
         );
     })({}),
-    V = (function (e) {
+    F = (function (e) {
         return (
             (e.LOGIN = "Login"),
             (e.REGISTER = "Register"),
@@ -875,7 +875,7 @@ var j = (function (e) {
             e
         );
     })({}),
-    F = (function (e) {
+    V = (function (e) {
         return (e.SENT = "SENT"), (e.SENDING = "SENDING"), (e.SEND_FAILED = "SEND_FAILED"), e;
     })({});
 let B = new Set([o.l.REPLY, o.l.THREAD_STARTER_MESSAGE, o.l.CONTEXT_MENU_COMMAND]);
@@ -2014,7 +2014,7 @@ let eb = 100,
     ek = 32,
     eU = 6e5,
     eG = 6 * u.A.Seconds.HOUR,
-    eV = [
+    eF = [
         0,
         5,
         10,
@@ -2030,7 +2030,7 @@ let eb = 100,
         2 * u.A.Seconds.HOUR,
         eG,
     ],
-    eF = 10,
+    eV = 10,
     eB = 0xa00000,
     eH = 524288e3,
     eY = (e) => "||".concat(e, "||"),
@@ -3475,7 +3475,7 @@ var tD = (function (e) {
             e
         );
     })({}),
-    tV = (function (e) {
+    tF = (function (e) {
         return (
             (e.TOGGLE_REACTION_POPOUT = "TOGGLE_REACTION_POPOUT"),
             (e.ANIMATE_CHAT_AVATAR = "ANIMATE_CHAT_AVATAR"),
@@ -3483,7 +3483,7 @@ var tD = (function (e) {
             e
         );
     })({});
-let tF = 50;
+let tV = 50;
 var tB = (function (e) {
         return (
             (e.TWITCH = "twitch"),
@@ -4935,6 +4935,9 @@ var na = (function (e) {
                 "premium_group_subscription_card_cancel_invite_clicked"),
             (e.PREMIUM_GROUP_CANCEL_INVITE_MODAL_VIEWED = "premium_group_cancel_invite_modal_viewed"),
             (e.PREMIUM_GROUP_CANCEL_INVITE_CTA_CLICKED = "premium_group_cancel_invite_cta_clicked"),
+            (e.PREMIUM_GROUP_PURCHASE_CONFIRMATION_VIEWED = "premium_group_purchase_confirmation_viewed"),
+            (e.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_OPENED = "premium_group_purchase_friend_selector_opened"),
+            (e.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_SKIPPED = "premium_group_purchase_friend_selector_skipped"),
             (e.FETCH_USER_OFFER_STARTED = "fetch_user_offer_started"),
             (e.SHARE_NITRO_FLOW_STEPS = "share_nitro_flow_steps"),
             (e.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED = "referral_program_share_modal_cta_clicked"),
@@ -6002,10 +6005,10 @@ var nU = (function (e) {
             e
         );
     })({}),
-    nV = (function (e) {
+    nF = (function (e) {
         return (e.PULL = "PULL"), (e.PUSH = "PUSH"), (e.CONFLICT = "CONFLICT"), (e.NONE = "NONE"), e;
     })({}),
-    nF = (function (e) {
+    nV = (function (e) {
         return (
             (e.DISCORD = "discord"),
             (e.STEAM = "steam"),
