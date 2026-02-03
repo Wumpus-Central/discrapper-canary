@@ -1,45 +1,44 @@
 n.d(t, {
-    A: () => u,
+    A: () => c,
 });
 var i = n(544420),
     r = n(684013),
     l = n(742984),
     a = n(592598),
-    o = n(581730),
-    s = n(672396),
-    c = n(985018);
+    s = n(581730),
+    o = n(672396),
+    u = n(985018);
 
-function u(e, t, n, u, d) {
-    if (a.A.isNotificationDisabled(s.KS.ActivityInvite) || null == t.activity || null == u.id) return null;
-    let p = t.activity.type,
-        h = d.session_id;
-    if (null == h) return null;
-    let { icon: f, title: m, body: g } = (0, l.TB)(e, t, n),
-        { trackView: y, trackClick: A } = (0, o.Y9)(s.KS.ActivityInvite, {
-            notif_type: s.KS.ActivityInvite,
+function c(e, t, n, c, d) {
+    if (a.A.isNotificationDisabled(o.KS.ActivityInvite) || null == t.activity) return null;
+    let h = t.activity.type,
+        p = c.session_id;
+    if (null == p) return null;
+    let { icon: f, title: g, body: m } = (0, l.TB)(e, t, n),
+        { trackView: y, trackClick: A } = (0, s.Y9)(o.KS.ActivityInvite, {
+            notif_type: o.KS.ActivityInvite,
             notif_user_id: n.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
             channel_id: e.id,
             channel_type: e.type,
-            activity_type: p,
-            activity_name: d.name,
+            activity_type: h,
+            activity_name: c.name,
         });
     return {
         icon: f,
-        title: m,
-        body: g,
+        title: g,
+        body: m,
         onNotificationShow: () => {
             y();
         },
-        confirmText: c.intl.string(c.t.VJlc0S),
+        confirmText: u.intl.string(u.t.VJlc0S),
         onConfirmClick: (l, a) => {
-            var o;
             i.A.join({
                 userId: n.id,
-                sessionId: h,
-                applicationId: null != (o = u.altId) ? o : u.id,
+                sessionId: p,
+                applicationId: d,
                 channelId: e.id,
                 messageId: t.id,
             }),
