@@ -31,14 +31,14 @@ var r = n(627968),
     m = n(580745),
     f = n(320501),
     g = n(287809),
-    h = n(954571),
-    _ = n(203982),
+    _ = n(954571),
+    h = n(203982),
     b = n(723702),
-    A = n(427262),
-    y = n(841549),
+    y = n(427262),
+    A = n(841549),
     v = n(439147),
-    x = n(81437),
-    O = n(652215);
+    O = n(81437),
+    x = n(652215);
 
 function E(e, t, n) {
     return i.useCallback(() => {
@@ -55,12 +55,12 @@ function j(e, t, n) {
             if (null == i) return;
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
             let l = "@".concat(
-                    A.Ay.getUserTag(i, {
+                    y.Ay.getUserTag(i, {
                         decoration: "never",
                     }),
                 ),
                 a = "<@".concat(e, ">");
-            _._.dispatchToLastSubscribed(O.jej.INSERT_TEXT, {
+            h._.dispatchToLastSubscribed(x.jej.INSERT_TEXT, {
                 plainText: l,
                 rawText: a,
             }),
@@ -114,11 +114,11 @@ function R(e, t) {
 function D(e, t, l, o) {
     let { id: c } = t,
         { id: d, flags: g } = e,
-        _ = (0, a.Lt)(g, O.pr7.EPHEMERAL),
-        A = (0, u.Us)();
+        h = (0, a.Lt)(g, x.pr7.EPHEMERAL),
+        y = (0, u.Us)();
     return i.useCallback(
         (e, t) => {
-            if (_) return;
+            if (h) return;
             if (!b.isPlatformEmbedded) {
                 let t = e.target;
                 if (("A" === t.tagName && "" !== t.textContent) || null == window.getSelection) return;
@@ -131,7 +131,7 @@ function D(e, t, l, o) {
             null == i ||
                 null == a ||
                 u ||
-                (h.default.track(O.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                (_.default.track(x.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: d,
                     channel: c,
                     location: "right_click",
@@ -147,7 +147,7 @@ function D(e, t, l, o) {
                             n.e("6502"),
                             n.e("1636"),
                             n.e("27687"),
-                            n.e("3219"),
+                            n.e("92869"),
                         ]).then(n.bind(n, 547983));
                         return (n) => {
                             var l, s;
@@ -206,11 +206,11 @@ function D(e, t, l, o) {
                             l({
                                 contextMenu: !1,
                             }),
-                        context: A,
+                        context: y,
                     },
                 ));
         },
-        [_, c, d, l, A, o],
+        [h, c, d, l, y, o],
     );
 }
 
@@ -219,7 +219,7 @@ function L(e, t) {
         (n) => {
             let r = g.default.getUser(e),
                 i = p.A.getChannel(t);
-            null != r && null != i && (n.stopPropagation(), (0, y.wQ)(n, r, i));
+            null != r && null != i && (n.stopPropagation(), (0, A.wQ)(n, r, i));
         },
         [e, t],
     );
@@ -233,7 +233,7 @@ function M(e, t, n) {
             null != i &&
                 null != l &&
                 (r.stopPropagation(),
-                (0, y.B8)(r, {
+                (0, A.B8)(r, {
                     user: i,
                     channel: l,
                     moderationAlertId: n,
@@ -248,7 +248,7 @@ function k(e, t) {
         (n) => {
             let r = g.default.getUser(e),
                 i = p.A.getChannel(t);
-            null != r && null != i && (n.stopPropagation(), (0, y.pB)(n, r, i.guild_id));
+            null != r && null != i && (n.stopPropagation(), (0, A.pB)(n, r, i.guild_id));
         },
         [e, t],
     );
@@ -273,10 +273,10 @@ function G(e) {
         [o, c] = i.useState(r);
     s.current = o || s.current;
     let u = i.useCallback(() => {
-            (0, d.cE)(), o || (_._.dispatchKeyed(O.zOV.ANIMATE_CHAT_AVATAR, a, !0), c(!0));
+            (0, d.cE)(), o || (h._.dispatchKeyed(x.zOV.ANIMATE_CHAT_AVATAR, a, !0), c(!0));
         }, [o, a]),
         p = i.useCallback(() => {
-            _._.dispatchKeyed(O.zOV.ANIMATE_CHAT_AVATAR, a, !1), c(!1);
+            h._.dispatchKeyed(x.zOV.ANIMATE_CHAT_AVATAR, a, !1), c(!1);
         }, [a]);
     return {
         hasHovered: s.current,
@@ -322,7 +322,7 @@ function F(e, t) {
                     returnMessageId: e.id,
                 });
             };
-        (null == t || (0, x.A)(t, r)) && r();
+        (null == t || (0, O.A)(t, r)) && r();
     }, [t, e]);
 }
 

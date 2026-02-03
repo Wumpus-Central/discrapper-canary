@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
-        default: () => V,
-        useAppSidebarState: () => U,
+        default: () => H,
+        useAppSidebarState: () => V,
     });
 var r = n(627968),
     i = n(64700),
@@ -31,19 +31,21 @@ var r = n(627968),
     T = n(52144),
     j = n(97469),
     x = n(253932),
-    P = n(540999),
-    w = n(147964),
-    L = n(531685),
-    R = n(837921),
-    D = n(475815),
-    M = n(71855);
+    P = n(430363),
+    w = n(113800),
+    L = n(540999),
+    R = n(147964),
+    D = n(531685),
+    M = n(837921),
+    k = n(475815),
+    U = n(71855);
 n(801416);
-var k = n(260175);
-let U = (0, s.v)(() => ({
+var G = n(260175);
+let V = (0, s.v)(() => ({
     isOpen: !0,
 }));
 
-function G(e) {
+function B(e) {
     let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e;
     return n
         ? (0, r.jsx)(_.F, {
@@ -54,9 +56,9 @@ function G(e) {
               focusSectionProps: i,
           });
 }
-let V = i.memo(function () {
+let H = i.memo(function () {
     i.useLayoutEffect(() => {
-        R.Ay.setMinimumSize(800, 500);
+        M.Ay.setMinimumSize(800, 500);
     }, []);
     let { notificationCenterVariant: e, entrypoint: t } = (0, S.X8)({
             location: "AppTitleBar",
@@ -70,23 +72,24 @@ let V = i.memo(function () {
         { hasBugReporterAccess: v } = h.A.useConfig({
             location: "HeaderBar",
         }),
-        U = (0, o.bG)([P.A], () => P.A.isDeveloper),
-        V = (0, o.bG)(
-            [w.A, d.A],
+        V = (0, o.bG)([L.A], () => L.A.isDeveloper),
+        H = (0, P.Uk)("VoiceDareTitleBarButton"),
+        F = (0, o.bG)(
+            [R.A, d.A],
             () =>
                 x.Q_.getSetting() &&
-                null != w.A.testModeApplicationId &&
-                null != d.A.getApplication(w.A.testModeApplicationId) &&
-                (0, p.A)(d.A.getApplication(w.A.testModeApplicationId)),
+                null != R.A.testModeApplicationId &&
+                null != d.A.getApplication(R.A.testModeApplicationId) &&
+                (0, p.A)(d.A.getApplication(R.A.testModeApplicationId)),
         ),
-        B = null !== e && t === S.RK.TITLE_BAR_LEFT,
-        H = null === e;
+        Y = null !== e && t === S.RK.TITLE_BAR_LEFT,
+        K = null === e;
     i.useLayoutEffect(() => {
-        R.Ay.setMinimumSize(800, 500);
+        M.Ay.setMinimumSize(800, 500);
     }, []);
-    let F = (0, j.NC)(),
-        Y = (0, o.bG)([L.A, N.A], () => (0, D._U)()),
-        K = (function (e) {
+    let W = (0, j.NC)(),
+        q = (0, o.bG)([D.A, N.A], () => (0, k._U)()),
+        z = (function (e) {
             let {
                 showBackForwardButtons: t,
                 showNotificationsInbox: n,
@@ -108,49 +111,50 @@ let V = i.memo(function () {
             );
         })({
             showBackForwardButtons: s,
-            showNotificationsInbox: B,
+            showNotificationsInbox: Y,
             titlebarFastTravel: n,
-            showRecentsButton: H,
+            showRecentsButton: K,
         });
-    if (Y) return null;
-    let W = a()(k.x, {
-        [k.U]: "sm" === _,
+    if (q) return null;
+    let Q = a()(G.x, {
+        [G.U]: "sm" === _,
     });
     return (0, r.jsx)(c.skg, {
         children: (e) =>
             (0, r.jsx)(c.NPJ, {
-                theme: F,
+                theme: W,
                 children: (t) => {
                     var i, a;
-                    return (0, r.jsx)(M.cq, {
+                    return (0, r.jsx)(U.cq, {
                         className: t,
                         leading: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 s &&
                                     (0, r.jsx)(A.A, {
-                                        firstElementFocusJumpSectionProps: "BACK_FORWARD_NAVIGATION" === K ? e : void 0,
+                                        firstElementFocusJumpSectionProps: "BACK_FORWARD_NAVIGATION" === z ? e : void 0,
                                     }),
-                                B &&
+                                Y &&
                                     (0, r.jsx)(C.A, {
-                                        focusSectionProps: "NOTIFICATIONS_INBOX" === K ? e : void 0,
+                                        focusSectionProps: "NOTIFICATIONS_INBOX" === z ? e : void 0,
                                     }),
                             ],
                         }),
-                        title: (0, r.jsx)(G, {
+                        title: (0, r.jsx)(B, {
                             withFastTravel: n,
                             quickSwitcherInsteadOfTitle: l,
-                            focusSectionProps: "TITLEBAR_FAST_TRAVEL" === K ? e : void 0,
+                            focusSectionProps: "TITLEBAR_FAST_TRAVEL" === z ? e : void 0,
                         }),
                         trailing: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(b.A, {
-                                    className: W,
+                                    className: Q,
                                 }),
+                                H ? (0, r.jsx)(w.A, {}) : null,
                                 (0, r.jsx)(g.A, {
                                     canShowReminder: !0,
-                                    className: W,
+                                    className: Q,
                                 }),
-                                H &&
+                                K &&
                                     (0, r.jsx)(
                                         T.A,
                                         ((i = (function (e) {
@@ -177,10 +181,10 @@ let V = i.memo(function () {
                                                     });
                                             }
                                             return e;
-                                        })({}, "RECENTS" === K ? e : {})),
+                                        })({}, "RECENTS" === z ? e : {})),
                                         (a = a =
                                             {
-                                                className: W,
+                                                className: Q,
                                             }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
@@ -198,24 +202,24 @@ let V = i.memo(function () {
                                     ),
                                 v
                                     ? (0, r.jsx)(y.w, {
-                                          focusSectionProps: "HELP" === K ? e : void 0,
-                                          className: W,
+                                          focusSectionProps: "HELP" === z ? e : void 0,
+                                          className: Q,
                                       })
                                     : (0, r.jsx)(O.A, {
-                                          focusSectionProps: "HELP" === K ? e : void 0,
-                                          className: W,
+                                          focusSectionProps: "HELP" === z ? e : void 0,
+                                          className: Q,
                                       }),
-                                U
+                                V
                                     ? (0, r.jsx)(E.R, {
-                                          className: W,
+                                          className: Q,
                                       })
                                     : null,
-                                V &&
+                                F &&
                                     (0, r.jsx)(u.A, {
-                                        className: W,
+                                        className: Q,
                                     }),
                                 (0, r.jsx)(I.A, {
-                                    className: W,
+                                    className: Q,
                                 }),
                             ],
                         }),
