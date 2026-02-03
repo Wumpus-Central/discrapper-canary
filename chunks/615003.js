@@ -16,8 +16,8 @@ var r = n(627968),
     p = n(366999),
     h = n(531260),
     g = n(771781),
-    f = n(826673),
-    m = n(379848),
+    m = n(826673),
+    f = n(379848),
     A = n(895944),
     _ = n(649032),
     b = n(287809),
@@ -114,13 +114,13 @@ let et = (e) => {
             ep = (0, y.Of)(eu, ed),
             eh = (0, y.YE)(eu, Z.PremiumTypes.TIER_2),
             eg = (0, l.rm)("nitro"),
-            ef = (0, x.V)(),
-            em = (0, j.O)(),
+            em = (0, x.V)(),
+            ef = (0, j.O)(),
             eA = (0, T.p)(),
             e_ = (0, S.d)(),
             eb = (0, v.cg)(),
             eE = (0, k.NF)({
-                trialOffer: ef,
+                trialOffer: em,
             }),
             eO = (0, w.bf)(),
             ey = (0, z.H)(),
@@ -132,7 +132,7 @@ let et = (e) => {
             eT = null == eN ? void 0 : eN.last_granted_reward,
             ej = null == eN ? void 0 : eN.last_granted_reward_amount,
             ex = eh && eS && null != eT && null != ej,
-            eP = eh && eS && null != eN,
+            eP = eh && eS && !ex && null != eN,
             ew = (0, Q.gr)(),
             eL = null != eA && null != ed && ed.status === J.Dmq.CANCELED,
             {
@@ -142,14 +142,14 @@ let et = (e) => {
             } = (0, h.A)({
                 forceFetch: !0,
             }),
-            [ek, eU] = (0, m.Wl)(eR !== Z.xc.NONE ? o.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
+            [ek, eU] = (0, f.Wl)(eR !== Z.xc.NONE ? o.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
                 showAfterTimestamp: eD.valueOf(),
                 cooldownDurationMs: 0,
             }),
             eG = (0, C.A)({
                 location: "NitroTabButton",
             }),
-            eV = (null == ef ? void 0 : ef.trial_id) === Z.Dw,
+            eV = (null == em ? void 0 : em.trial_id) === Z.Dw,
             eB = [],
             eH = [];
         (0, g.Tc)() &&
@@ -157,15 +157,15 @@ let et = (e) => {
             eb && eB.push(o.M.BOGO_2025_NITRO_TAB_BADGE),
             eG && eB.push(o.M.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE),
             e_ && eB.push(o.M.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2));
-        let [eF, eY] = (0, m.kn)(eB, void 0, !0);
+        let [eF, eY] = (0, f.kn)(eB, void 0, !0);
         eL && eH.push(o.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK),
             eO && eH.push(o.M.PREMIUM_GROUP_POPOVER),
             eC && eH.push(o.M.PREMIUM_ORBS_UPSELL_POPOVER),
             eP && eH.push(o.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER);
-        let [eK, eW] = (0, m.kn)(eH, void 0, !0),
+        let [eK, eW] = (0, f.kn)(eH, void 0, !0),
             eq = (0, P.c)(a.C.PREMIUM_TAB),
             ez = (0, P.c)(a.C.PREMIUM_TAB_TOOLTIP),
-            [eQ, eX] = (0, m.Cc)(
+            [eQ, eX] = (0, f.Cc)(
                 null != eq && "premiumTab" === eq.properties.properties.oneofKind
                     ? o.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE
                     : null,
@@ -173,7 +173,7 @@ let et = (e) => {
                 void 0,
                 !0,
             ),
-            [eZ, eJ] = (0, m.Cc)(ex ? o.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER : null, null != eT ? eT : "", void 0, !0),
+            [eZ, eJ] = (0, f.Cc)(ex ? o.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER : null, null != eT ? eT : "", void 0, !0),
             e$ =
                 null != ez &&
                 "premiumTabTooltip" === ez.properties.properties.oneofKind &&
@@ -231,7 +231,7 @@ let et = (e) => {
             (er = (0, r.jsx)(Y.MA, {
                 isTabSelected: el,
                 badgeCopy: ee.intl.string(ee.t.OS9KPu),
-                offerExpiresAt: !0 === e ? (null == ef ? void 0 : ef.expires_at) : null,
+                offerExpiresAt: !0 === e ? (null == em ? void 0 : em.expires_at) : null,
             })),
                 (ei = 4);
         } else
@@ -266,19 +266,19 @@ let et = (e) => {
                             showStars: !1,
                         })),
                         (ei = 1))
-                      : null != em
+                      : null != ef
                         ? ((er = (0, r.jsx)(Y.fY, {
-                              userDiscount: em,
+                              userDiscount: ef,
                               isTabSelected: el,
                               includesAmountOff: !1,
                           })),
                           (ei = 3))
-                        : null == ef || eV
+                        : null == em || eV
                           ? ew
                               ? ((er = (0, r.jsx)(K.F, {
                                     isSelected: el,
                                     onSelect: () =>
-                                        (0, f.Dr)(o.M.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
+                                        (0, m.Dr)(o.M.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
                                             dismissAction: $.i.TAKE_ACTION,
                                         }),
                                 })),
@@ -304,7 +304,7 @@ let et = (e) => {
                                     })),
                                     (ei = 2))
                           : ((er = (0, r.jsx)(Y.Ag, {
-                                trialOffer: ef,
+                                trialOffer: em,
                                 isTabSelected: el,
                             })),
                             (ei = 4));
