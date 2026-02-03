@@ -137,8 +137,8 @@ function k(e) {
             planError: k,
             onPurchaseError: U,
             baseAnalyticsData: G,
-            flowStartTime: F,
-            trialId: V,
+            flowStartTime: V,
+            trialId: F,
             planGroup: B,
             analyticsLocation: H,
             purchaseTokenAuthState: Y,
@@ -188,7 +188,7 @@ function k(e) {
             (eO.emoji_name = (null == eh ? void 0 : eh.id) == null ? (null == eh ? void 0 : eh.surrogates) : void 0),
             (eO.sound_id = null == em ? void 0 : em.soundId));
     let ev = null == X ? void 0 : X.id,
-        eA = (0, T.$o)(V, J.paymentSourceId, ev),
+        eA = (0, T.$o)(F, J.paymentSourceId, ev),
         { analyticsLocations: eI } = (0, d.Ay)(),
         eS = (0, N.W)(er, en),
         [eT, eC] = i.useState(eA),
@@ -201,15 +201,15 @@ function k(e) {
         eM = null,
         ej = null;
     if (et === R.VVm.ONE_TIME) {
-        var ek;
+        var ek, eU;
         l()(null != ei, "SKU must be selected for one-time purchases"),
             (eM = null != (ek = ea[ei]) ? ek : null),
             l()(null != eM, "SKU must exist and be fetched.");
         let e = eo[ei],
             t = null != en ? en : b.B;
-        ej = null != e ? e[t] : null;
+        ej = null != e ? (null != (eU = e[t]) ? eU : e[b.B]) : null;
     }
-    let eU = async () => {
+    let eG = async () => {
             await (0, S.l)({
                 setPurchaseState: n,
                 setHasAcceptedTerms: $,
@@ -221,10 +221,10 @@ function k(e) {
                 baseAnalyticsData: G,
                 analyticsLocation: H,
                 analyticsLocations: eI,
-                flowStartTime: F,
+                flowStartTime: V,
                 subscriptionPlan: X,
                 planGroup: B,
-                trialId: V,
+                trialId: F,
                 priceOptions: J,
                 paymentSource: eS,
                 isPrepaidPaymentPastDue: eL,
@@ -242,10 +242,10 @@ function k(e) {
                 orderId: ex,
             });
         },
-        eG = {
+        eV = {
             baseAnalyticsData: G,
-            flowStartTime: F,
-            makePurchase: eU,
+            flowStartTime: V,
+            makePurchase: eG,
             onNext: s,
             onPurchaseError: U,
             paymentSource: eS,
@@ -253,21 +253,21 @@ function k(e) {
             purchaseTokenAuthState: Y,
             setPurchaseState: n,
         },
-        eF = i.useRef(eG);
+        eF = i.useRef(eV);
     i.useEffect(() => {
-        eF.current = eG;
+        eF.current = eV;
     }),
         i.useEffect(() => {
             let { makePurchase: e } = eF.current;
             eA && !ef && null == t && e();
         }, [eA, ef, t]);
-    let { enabled: eV } = (0, f.T0)({
+    let { enabled: eB } = (0, f.T0)({
         location: "PaymentModalReviewStepFooter",
     });
     if (eA) return null;
-    let eB = null != W || (et === R.VVm.ONE_TIME && !ef),
-        eH = z && !eB,
-        eY = {
+    let eH = null != W || (et === R.VVm.ONE_TIME && !ef),
+        eY = z && !eH,
+        eW = {
             legalTermsNodeRef: p,
             invoiceError: x,
             planError: k,
@@ -279,18 +279,18 @@ function k(e) {
             planGroup: B,
             isPrepaid: eP,
             isTrial: Z,
-            makePurchase: eU,
+            makePurchase: eG,
             needsPaymentSource: null == eS && !eD,
             onNext: s,
             inReverseTrial: eu,
             onPaymentSourceAdd: Q,
         };
-    return eV
+    return eB
         ? (0, r.jsx)(
               j,
-              M(L({}, eY), {
+              M(L({}, eW), {
                   selectedSkuId: ei,
-                  showBackButton: eH,
+                  showBackButton: eY,
                   onBackClick: a,
               }),
           )
@@ -299,9 +299,9 @@ function k(e) {
               align: _.A.Align.CENTER,
               className: o()(ed, P.H),
               children: [
-                  (0, r.jsx)(y.Ay, L({}, eY)),
+                  (0, r.jsx)(y.Ay, L({}, eW)),
                   (0, r.jsx)(w.A, {}),
-                  eH
+                  eY
                       ? (0, r.jsx)("div", {
                             className: P.a,
                             children: (0, r.jsx)(g.A, {

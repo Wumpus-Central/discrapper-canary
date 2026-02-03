@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(64700),
     i = n(635358),
     a = n(417597),
-    s = n(830382),
-    o = n(198982),
+    o = n(830382),
+    s = n(198982),
     l = n(136857),
     c = n(79387),
     u = n(67480),
@@ -87,49 +87,62 @@ function m() {
 }
 
 function g(e) {
-    let { applicationId: t, skuIDs: n, currentPaymentSourceId: f, isGift: p, excludeSKUPurchasePreviews: _ = !1 } = e,
-        h = r.useMemo(() => n.filter((e) => !d.oz.includes(e)), [JSON.stringify(n)]),
-        g = (0, a.bG)([u.A], () => h.every((e) => !u.A.isFetching(e) && null != u.A.get(e))),
-        { previewErrorsById: E, setErrorById: b } = m(),
-        y = (0, a.cf)([u.A], () => {
+    let {
+            applicationId: t,
+            skuIDs: n,
+            currentPaymentSourceId: f,
+            isGift: p,
+            excludeSKUPurchasePreviews: _ = !1,
+            loadId: h,
+        } = e,
+        g = r.useMemo(() => n.filter((e) => !d.oz.includes(e)), [JSON.stringify(n)]),
+        E = (0, a.bG)([u.A], () => g.every((e) => !u.A.isFetching(e) && null != u.A.get(e))),
+        { previewErrorsById: y, setErrorById: b } = m(),
+        O = (0, a.cf)([u.A], () => {
             let e = {};
-            for (let n of h) {
+            for (let n of g) {
                 var t;
                 e[n] = null != (t = u.A.get(n)) ? t : void 0;
             }
             return e;
-        }, [h]);
+        }, [g]);
     r.useEffect(() => {
-        for (let e of h) u.A.isFetching(e) || null != u.A.get(e) || (0, s.EX)(t, e, i.g.VARIANTS_GROUP);
-    }, [t, h]);
-    let O = (0, a.cf)([c.A], () => {
-        let e = {};
-        for (let n of h) {
-            var t;
-            e[n] = null != (t = c.A.getPricesForSku(n)) ? t : void 0;
-        }
-        return e;
-    }, [h]);
+        for (let e of g) u.A.isFetching(e) || null != u.A.get(e) || (0, o.EX)(t, e, i.g.VARIANTS_GROUP);
+    }, [t, g]);
+    let v = (0, a.cf)([c.A], () => {
+            let e = {};
+            for (let n of g) {
+                var t;
+                e[n] = null != (t = c.A.getPricesForSku(n)) ? t : void 0;
+            }
+            return e;
+        }, [g]),
+        A = r.useRef(!1);
     return (
         r.useEffect(() => {
-            if (!_)
-                for (let e of h)
-                    c.A.isFetchingSKU(e) ||
-                        (0, s.QX)(t, e, f, {
+            if (!_) {
+                for (let e of g)
+                    if (!c.A.isFetchingSKU(e)) {
+                        let n = A.current ? f : null;
+                        (0, o.QX)(t, e, n, {
                             isGift: p,
+                            loadId: h,
                         }).catch((t) => {
-                            t instanceof o.Ey &&
+                            t instanceof s.Ey &&
                                 (t.code === l.tG.BILLING_BUNDLE_ALREADY_PURCHASED ||
                                     t.code === l.tG.BILLING_BUNDLE_PARTIALLY_OWNED ||
                                     t.code === l.tG.INVALID_BILLING_ADDRESS) &&
                                 b(e, t);
                         });
-        }, [t, h, f, p, b, _]),
+                    }
+                A.current = !0;
+            }
+        }, [t, g, f, p, b, _, h]),
         {
-            hasFetchedSkus: g,
-            skusById: y,
-            skuPricePreviewsById: O,
-            previewErrorsById: E,
+            hasFetchedSkus: E,
+            skusById: O,
+            skuPricePreviewsById: v,
+            previewErrorsById: y,
         }
     );
 }

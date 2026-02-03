@@ -26,7 +26,7 @@ var b = n(50956),
     v = n(592362),
     A = n(520796),
     I = n(800471),
-    S = n(412090),
+    S = n(367160),
     T = n(112242),
     C = n(216641),
     N = n(69494),
@@ -84,44 +84,52 @@ function U() {
             inReverseTrial: d,
             isEligibleForTrial: p,
             userTrialOffer: _,
+            checkoutPaymentSources: h,
+            hasCheckoutContextLoaded: y,
         } = (0, E.P5)(),
-        { isGift: h } = (0, g.Pv)(),
-        y = (0, C.W)(r, n),
-        b = i.useMemo(() => {
+        { isGift: b } = (0, g.Pv)(),
+        O = (0, C.W)(r, n),
+        v = i.useMemo(() => {
+            if (null == n) return !1;
+            if (!y) return !0;
+            let e = h.find((e) => e.id === n);
+            return null != e && !e.enabled;
+        }, [h, y, n]),
+        A = i.useMemo(() => {
             if (null != o) {
                 if ((0, m.xq)(o.id)) return P.LE;
                 if ((0, m.z4)(o.id)) return P.DA;
             }
             return [];
         }, [o]),
-        O = i.useMemo(
+        I = i.useMemo(
             () =>
                 c === D.VV.ONE_TIME
-                    ? (null == s && null != n) || null != l
-                    : null == u || (!h && null != y && c === D.VV.SUBSCRIPTION && p && !y.canRedeemTrial()),
-            [c, s, n, l, u, h, y, p],
+                    ? null == n || v || null == s || null != l
+                    : null == u || (!b && null != O && c === D.VV.SUBSCRIPTION && p && !O.canRedeemTrial()),
+            [c, s, n, l, u, b, O, p, v],
         ),
-        v = (0, m.J$)(a.paymentSourceId),
-        A =
+        S = (0, m.J$)(a.paymentSourceId),
+        T =
             c === D.VV.SUBSCRIPTION && null == o
                 ? L.intl.string(L.t.YScQSF)
                 : (0, f.Ro)({
                       purchaseType: c,
                       plan: o,
                       premiumSubscription: e,
-                      isGift: h,
-                      planGroup: b,
-                      isPrepaidPaymentSource: v,
+                      isGift: b,
+                      planGroup: A,
+                      isPrepaidPaymentSource: S,
                       inReverseTrial: d,
                       paymentSourceId: n,
                       hasPaymentSources: t,
                   });
     return {
-        paymentSource: y,
+        paymentSource: O,
         isEligibleForTrial: p,
-        planGroup: b,
-        disablePurchase: O,
-        buttonText: A,
+        planGroup: A,
+        disablePurchase: I,
+        buttonText: T,
         userTrialOffer: _,
     };
 }
@@ -135,8 +143,8 @@ function G(e) {
             trialFooterMessageOverride: C,
             reviewWarningMessage: M,
             planGroup: G,
-            openInvoiceId: F,
-            analyticsData: V,
+            openInvoiceId: V,
+            analyticsData: F,
             analyticsLocation: B,
             referralTrialOfferId: H,
             initialPlanId: Y,
@@ -209,7 +217,7 @@ function G(e) {
         ),
         eU = null != en && P.Er.has(en.id) && null != ew && !(0, u.j2)(ew) ? Error(L.intl.string(L.t["2ik8ih"])) : null,
         eG = i.useRef(null),
-        [eF, eV] = i.useState(null),
+        [eV, eF] = i.useState(null),
         eB = null == eO || null == (n = eO.discount) ? void 0 : n.plan_ids,
         eH = eb && null != eO && null != eB && null != en && eB.includes(en.id),
         eY = ev && (0, h.Ik)(eI),
@@ -287,11 +295,11 @@ function G(e) {
                 setHasAcceptedTerms: ed,
                 legalTermsNodeRef: eG,
                 hasLegalTermsFlash: eC,
-                onInvoiceError: (e) => eV(e),
+                onInvoiceError: (e) => eF(e),
                 planGroup: e$,
                 currencies: X,
                 onCurrencyChange: (e) => ei(e),
-                hasOpenInvoice: null != F,
+                hasOpenInvoice: null != V,
                 purchaseState: ec,
                 handleClose: K,
             }));
@@ -328,15 +336,15 @@ function G(e) {
                     onPurchaseError: (e) => es(e),
                     legalTermsNodeRef: eG,
                     flashLegalTerms: () => eN(!0),
-                    invoiceError: eF,
+                    invoiceError: eV,
                     planError: eU,
                     analyticsLocation: B,
-                    baseAnalyticsData: V,
+                    baseAnalyticsData: F,
                     flowStartTime: Q.startTime,
                     trialId: eM,
                     planGroup: e$,
                     purchaseTokenAuthState: et,
-                    openInvoiceId: F,
+                    openInvoiceId: V,
                     backButtonEligible: eq,
                     metadata: ej,
                     isTrial: eR,

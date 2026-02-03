@@ -24877,6 +24877,13 @@ screen and (max-width:485px) {
     color: var(--red-400)
 }
 
+.dropdownLoadingContainer_f38e43 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 8px
+}
+
 .formTitle__553e7 {
     margin-bottom: 8px
 }
