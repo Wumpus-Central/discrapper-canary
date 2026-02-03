@@ -26,8 +26,8 @@ var r = n(627968),
     T = n(901123),
     I = n(49370),
     N = n(985018),
-    y = n(785619),
-    j = n(909340),
+    j = n(785619),
+    y = n(909340),
     v = n(455482);
 let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
     R = (e) => {
@@ -156,7 +156,7 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
             subheaderText: H,
         } = M;
         return (0, r.jsx)("div", {
-            className: s()(y.Hc, l),
+            className: s()(j.Hc, l),
             children: (0, r.jsxs)(
                 O.A,
                 ((t = (function (e) {
@@ -186,7 +186,7 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                 })(
                     {
                         cardType: u.sl2.CUSTOM,
-                        cardClassName: y.Nr,
+                        cardClassName: j.Nr,
                     },
                     w,
                 )),
@@ -198,28 +198,28 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                                 autoPlay: !0,
                                 playsInline: !0,
                                 loop: !0,
-                                className: y.Ki,
-                                src: j.A,
+                                className: j.Ki,
+                                src: y.A,
                             }),
                             (0, r.jsxs)("div", {
-                                className: y.zK,
+                                className: j.zK,
                                 children: [
                                     (0, r.jsx)("img", {
                                         src: v.A,
-                                        className: y._e,
+                                        className: j._e,
                                         alt: "",
                                         "aria-hidden": !0,
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: y.mR,
+                                        className: j.mR,
                                     }),
                                 ],
                             }),
                             (0, r.jsxs)("div", {
-                                className: y.FS,
+                                className: j.FS,
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: y.aZ,
+                                        className: j.aZ,
                                         children: (0, r.jsx)(c.Exy, {
                                             type: "beta",
                                             variant: "expressive",
@@ -227,25 +227,26 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                                     }),
                                     (0, r.jsx)(c.DZT, {
                                         variant: "heading-xl/bold",
-                                        className: y.R_,
+                                        className: j.R_,
                                         children: B,
                                     }),
                                     (0, r.jsx)(c.EYj, {
                                         variant: "text-md/medium",
-                                        className: y.G3,
+                                        className: j.G3,
                                         children: H,
                                     }),
                                     U &&
                                         (0, r.jsx)(x.A, {
-                                            className: y.L$,
+                                            className: j.L$,
                                         }),
                                     G &&
+                                        R.total_rewarded_from_program > 0 &&
                                         (0, r.jsxs)("div", {
-                                            className: y.fB,
+                                            className: j.fB,
                                             children: [
                                                 (0, r.jsx)(c.EYj, {
                                                     variant: "text-md/medium",
-                                                    className: y.G3,
+                                                    className: j.G3,
                                                     children: N.intl.string(I.default["/1mWUn"]),
                                                 }),
                                                 (0, r.jsx)(c.Cp8, {
@@ -254,13 +255,13 @@ let P = E.A.getArticleURL(C.MVz.ORBS_REWARDS_FAQ),
                                                 }),
                                                 (0, r.jsx)(c.EYj, {
                                                     variant: "text-md/medium",
-                                                    className: y.G3,
+                                                    className: j.G3,
                                                     children: R.total_rewarded_from_program,
                                                 }),
                                             ],
                                         }),
                                     (0, r.jsx)("div", {
-                                        className: y.WT,
+                                        className: j.WT,
                                         children: (0, r.jsx)(c.e2v, {
                                             children: k,
                                         }),
