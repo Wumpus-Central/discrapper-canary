@@ -1,6 +1,7 @@
 n.d(t, {
     fE: () => m,
     jK: () => g,
+    ob: () => c,
     qT: () => E,
 }),
     n(734808),
@@ -1191,7 +1192,7 @@ class G extends o.G {
                     a = t.fixed64().toString();
                     break;
                 case 2:
-                    o = V.internalBinaryRead(t, t.uint32(), n);
+                    o = F.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -1199,7 +1200,7 @@ class G extends o.G {
                     );
             }
         }
-        e[null != a ? a : "0"] = null != o ? o : V.create();
+        e[null != a ? a : "0"] = null != o ? o : F.create();
     }
     binaryReadMap2(e, t, n) {
         let r = t.uint32(),
@@ -1249,7 +1250,7 @@ class G extends o.G {
         for (let i of Object.keys(e.linkedUsers))
             t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.Bit64).fixed64(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                V.internalBinaryWrite(e.linkedUsers[i], t, n),
+                F.internalBinaryWrite(e.linkedUsers[i], t, n),
                 t.join().join();
         for (let i of Object.keys(e.safetyFeatureLimits))
             t.tag(2, r.O0.LengthDelimited).fork().tag(1, r.O0.Varint).uint32(parseInt(i)),
@@ -1285,7 +1286,7 @@ class G extends o.G {
                 K: 6,
                 V: {
                     kind: "message",
-                    T: () => V,
+                    T: () => F,
                 },
             },
             {
@@ -1366,7 +1367,7 @@ class G extends o.G {
     }
 }
 new G();
-class F extends o.G {
+class V extends o.G {
     create(e) {
         let t = {
             userId: "0",
@@ -1470,7 +1471,7 @@ class F extends o.G {
         ]);
     }
 }
-let V = new F();
+let F = new V();
 class B extends o.G {
     create(e) {
         let t = {};
