@@ -14,18 +14,23 @@ function d(e) {
     var t;
     let { user: n, checked: l, onChange: d, disabled: p, tooltipConfig: m } = e,
         f = i.useRef(null),
-        { avatarSrc: g, eventHandlers: h } = (0, c.A)({
+        { avatarSrc: g, eventHandlers: _ } = (0, c.A)({
             userId: null == n ? void 0 : n.id,
             size: o._3J.SIZE_32,
         }),
-        _ = null != (t = n.globalName) ? t : n.username;
+        h = null != (t = n.globalName) ? t : n.username;
     return (0, r.jsx)(s.m, {
         text: (null == m ? void 0 : m.isActive(n, p)) ? m.text(n) : null,
         position: "top",
         anchorRef: f,
         asContainer: !0,
-        children: (0, r.jsxs)("div", {
-            className: u.kL,
+        children: (0, r.jsxs)(o.DUT, {
+            className: a()(u.kL, {
+                [u.vk]: !p,
+            }),
+            onClick: () => {
+                p || d(n, !l);
+            },
             children: [
                 (0, r.jsx)("div", {
                     className: u.dj,
@@ -61,10 +66,10 @@ function d(e) {
                                     [u.SU]: p,
                                 }),
                                 src: g,
-                                "aria-label": _,
+                                "aria-label": h,
                                 size: o._3J.SIZE_32,
                             },
-                            h,
+                            _,
                         ),
                     ),
                 }),
@@ -75,7 +80,7 @@ function d(e) {
                             className: u.nT,
                             color: p ? "text-muted" : "text-default",
                             variant: "text-md/semibold",
-                            children: _,
+                            children: h,
                         }),
                         (0, r.jsx)(o.Text, {
                             className: u.nT,
@@ -91,7 +96,6 @@ function d(e) {
                     children: (0, r.jsx)(o.Checkbox, {
                         disabled: p,
                         checked: l,
-                        onChange: (e) => d(n, e),
                         label: "",
                     }),
                 }),

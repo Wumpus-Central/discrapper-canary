@@ -19,13 +19,13 @@ var n = r(627968),
     g = r(783437),
     y = r(298492),
     h = r(88001),
-    _ = r(652215),
-    O = r(519412),
-    S = r(985018),
-    j = r(300296),
-    v = r(788396);
+    O = r(652215),
+    S = r(519412),
+    j = r(985018),
+    v = r(300296),
+    P = r(788396);
 
-function P(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -51,7 +51,7 @@ function P(e) {
     return e;
 }
 
-function I(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -98,21 +98,21 @@ function x(e, t) {
             (n = r[s]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-let w = (e) => {
+let E = (e) => {
         let t,
             { onInvite: r, onClose: c, subscriptionId: u } = e,
             b = x(e, ["onInvite", "onClose", "subscriptionId"]),
-            [y, v] = s.useState([]),
-            [w, E] = s.useState(""),
-            N = (0, o.A)(w, 400),
+            [y, P] = s.useState([]),
+            [E, w] = s.useState(""),
+            N = (0, o.A)(E, 400),
             C = (0, l.bG)([m.A], () => m.A.getNumAvailableInvites());
         s.useEffect(() => {
-            d.default.track(_.HAw.PREMIUM_GROUP_INVITE_FRIENDS_MODAL_VIEWED);
+            d.default.track(O.HAw.PREMIUM_GROUP_INVITE_FRIENDS_MODAL_VIEWED);
         }, []);
         let {
                 eligibleUsers: M,
-                getNextRows: k,
-                hasError: R,
+                getNextRows: R,
+                hasError: k,
                 isFetching: A,
             } = (0, g.A)({
                 subscriptionId: u,
@@ -121,9 +121,9 @@ let w = (e) => {
             [U, D] = s.useState(!1),
             T = s.useCallback(
                 (e) => {
-                    v((t) => t.filter((t) => !e.has(t.id)));
+                    P((t) => t.filter((t) => !e.has(t.id)));
                 },
-                [v],
+                [P],
             ),
             z = s.useMemo(
                 () =>
@@ -133,14 +133,14 @@ let w = (e) => {
                     })),
                 [y],
             );
-        return R
+        return k
             ? (0, n.jsx)(
                   i.Modal,
-                  P(
+                  I(
                       {
                           size: "sm",
-                          title: S.intl.string(O.default["54lM5y"]),
-                          subtitle: S.intl.string(O.default.zrtwpV),
+                          title: j.intl.string(S.default["54lM5y"]),
+                          subtitle: j.intl.string(S.default.zrtwpV),
                           onClose: c,
                           actions: [],
                       },
@@ -150,32 +150,29 @@ let w = (e) => {
             : 0 !== M.length || A || 0 !== N.length
               ? (0, n.jsx)(
                     i.Modal,
-                    I(
-                        P(
+                    _(
+                        I(
                             {
                                 size: "md",
-                                title: S.intl.string(O.default["Um/7BM"]),
-                                subtitle: S.intl.format(O.default.qSWXaf, {
+                                title: j.intl.string(S.default["Um/7BM"]),
+                                subtitle: j.intl.format(S.default.qSWXaf, {
                                     totalSeats: h.LM,
                                     premiumGroupProductName: (0, h.DP)(),
                                     helpCenterLink: h.TE,
                                 }),
                                 onClose: c,
                                 input: (0, n.jsx)("div", {
-                                    className: j.c,
+                                    className: v.c,
                                     children: (0, n.jsx)(a.ksK, {
-                                        value: w,
-                                        onChange: E,
-                                        placeholder: 0 === y.length ? S.intl.string(O.default.wRS8vo) : "",
-                                        leading:
-                                            z.length > 0
-                                                ? {
-                                                      type: "tags",
-                                                      label: S.intl.string(O.default["Um/7BM"]),
-                                                      items: z,
-                                                      onRemove: T,
-                                                  }
-                                                : void 0,
+                                        value: E,
+                                        onChange: w,
+                                        placeholder: 0 === y.length ? j.intl.string(S.default.wRS8vo) : "",
+                                        leading: {
+                                            type: "tags",
+                                            label: j.intl.string(S.default["Um/7BM"]),
+                                            items: z,
+                                            onRemove: T,
+                                        },
                                     }),
                                 }),
                                 actions: [],
@@ -184,13 +181,13 @@ let w = (e) => {
                                     (0, n.jsx)(a.Button, {
                                         variant: "primary",
                                         disabled: (0 === y.length && !t) || U,
-                                        text: S.intl.string(O.default["5fZHp3"]),
+                                        text: j.intl.string(S.default["5fZHp3"]),
                                         size: "md",
                                         fullWidth: !0,
                                         onClick: async () => {
                                             t
                                                 ? c()
-                                                : (d.default.track(_.HAw.PREMIUM_GROUP_INVITE_FRIENDS_CTA_CLICKED, {
+                                                : (d.default.track(O.HAw.PREMIUM_GROUP_INVITE_FRIENDS_CTA_CLICKED, {
                                                       invited_user_ids: y.map((e) => e.id),
                                                   }),
                                                   D(!0),
@@ -206,20 +203,20 @@ let w = (e) => {
                                 users: M,
                                 isUserSelected: (e) => y.some((t) => t.id === e.id),
                                 onSelectionChange: (e, t) => {
-                                    v((r) => (t ? [...r, e] : r.filter((t) => t.id !== e.id)));
+                                    P((r) => (t ? [...r, e] : r.filter((t) => t.id !== e.id))), t && w("");
                                 },
                                 isUserDisabled: (e) => (y.length >= C && !y.some((t) => t.id === e.id)) || !e.eligible,
                                 isFetching: A,
-                                onFetchMore: k,
+                                onFetchMore: R,
                                 searchQuery: N,
                                 emptySearchContent: {
-                                    header: S.intl.string(O.default.gaamNe),
-                                    body: S.intl.string(O.default.nQcM39),
+                                    header: j.intl.string(S.default.gaamNe),
+                                    body: j.intl.string(S.default.nQcM39),
                                 },
-                                className: j.p_,
+                                className: v.p_,
                                 tooltipConfig: {
                                     text: (e) =>
-                                        S.intl.formatToPlainString(O.default["5tzM9V"], {
+                                        j.intl.formatToPlainString(S.default["5tzM9V"], {
                                             disabledUserName: f.Ay.getName(e),
                                             premiumGroupProductName: (0, h.DP)(),
                                         }),
@@ -231,11 +228,11 @@ let w = (e) => {
                 )
               : (0, n.jsx)(
                     i.Modal,
-                    P(
+                    I(
                         {
                             size: "sm",
-                            title: S.intl.string(O.default.ONaJLH),
-                            subtitle: S.intl.format(O.default["0LHbPc"], {
+                            title: j.intl.string(S.default.ONaJLH),
+                            subtitle: j.intl.format(S.default["0LHbPc"], {
                                 helpCenterLink: h.TE,
                             }),
                             onClose: c,
@@ -245,28 +242,28 @@ let w = (e) => {
                     ),
                 );
     },
-    E = (e) => {
+    w = (e) => {
         let { onClose: t, inviteUsersResult: r } = e,
             s = x(e, ["onClose", "inviteUsersResult"]);
         return (0, n.jsx)(
             i.ExpressiveModal,
-            I(
-                P(
+            _(
+                I(
                     {
                         graphic: {
                             type: "image",
-                            src: v.A,
+                            src: P.A,
                         },
                         gradientColor: "nitro-pink",
-                        title: S.intl.formatToPlainString(O.default.MIiPur, {
+                        title: j.intl.formatToPlainString(S.default.MIiPur, {
                             premiumGroupProductName: (0, h.DP)(),
                             sentCount: r.filter((e) => e.isSuccess).length,
                         }),
-                        subtitle: S.intl.format(O.default.olkQkj, {
+                        subtitle: j.intl.format(S.default.olkQkj, {
                             onClick: () => {
                                 t(),
                                     (0, u.openUserSettings)(c.X.SUBSCRIPTIONS_PANEL, {
-                                        section: _.nc_.SUBSCRIPTIONS,
+                                        section: O.nc_.SUBSCRIPTIONS,
                                     });
                             },
                         }),
@@ -276,7 +273,7 @@ let w = (e) => {
                 ),
                 {
                     children: (0, n.jsx)("div", {
-                        className: j.yk,
+                        className: v.yk,
                         children: r.map((e) =>
                             (0, n.jsx)(
                                 y.q,
@@ -304,7 +301,7 @@ let w = (e) => {
                 for (let t of e) r.set(t.id, t), n.push(t.id);
                 let s = await (0, b.n2)(t.id, n);
                 if (null == s) {
-                    d.default.track(_.HAw.PREMIUM_GROUP_INVITE_FRIENDS_RESULT, {
+                    d.default.track(O.HAw.PREMIUM_GROUP_INVITE_FRIENDS_RESULT, {
                         successful_user_ids: [],
                         failed_user_ids: n,
                     }),
@@ -318,7 +315,7 @@ let w = (e) => {
                     return;
                 }
                 let { invitedUsers: i, ineligibleUsers: a } = s;
-                d.default.track(_.HAw.PREMIUM_GROUP_INVITE_FRIENDS_RESULT, {
+                d.default.track(O.HAw.PREMIUM_GROUP_INVITE_FRIENDS_RESULT, {
                     successful_user_ids: i,
                     failed_user_ids: a,
                 }),
@@ -336,16 +333,16 @@ let w = (e) => {
             };
         return 1 === a
             ? (0, n.jsx)(
-                  w,
-                  I(P({}, r), {
+                  E,
+                  _(I({}, r), {
                       onInvite: c,
                       subscriptionId: t.id,
                   }),
               )
             : 2 === a
               ? (0, n.jsx)(
-                    E,
-                    I(P({}, r), {
+                    w,
+                    _(I({}, r), {
                         inviteUsersResult: i,
                     }),
                 )
