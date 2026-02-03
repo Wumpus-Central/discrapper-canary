@@ -1,9 +1,9 @@
 n.d(t, {
-    Q: () => s,
+    Q: () => o,
     f: () => a,
 });
 var r = n(64700),
-    i = n(108531);
+    i = n(92674);
 let a = (0, r.createContext)({
     scale: new i.SpringValue(1),
     x: new i.SpringValue(0),
@@ -14,6 +14,6 @@ let a = (0, r.createContext)({
     setZoomed() {},
 });
 
-function s() {
+function o() {
     return (0, r.useContext)(a);
 }

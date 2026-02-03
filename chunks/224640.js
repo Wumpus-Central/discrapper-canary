@@ -1,12 +1,12 @@
 n.d(t, {
-    d: () => y,
+    d: () => b,
     i: () => _.i,
 });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(108531),
+    o = n.n(a),
+    s = n(92674),
     l = n(110259),
     c = n(113325),
     u = n(426333),
@@ -60,7 +60,7 @@ function E(e, t) {
     return n;
 }
 
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function b(e, t) {
     );
 }
 
-function y(e) {
+function b(e) {
     var t;
     let {
             transitionState: n,
@@ -80,36 +80,36 @@ function y(e) {
             size: _ = "md",
             paddingSize: m = "sm",
             fullScreenOnMobile: E = !0,
-            returnRef: y,
+            returnRef: b,
             role: O = "dialog",
-            "aria-label": A,
-            dismissable: v = !0,
-            onClose: S,
-            contentOutsideContainer: I,
+            "aria-label": v,
+            dismissable: A = !0,
+            onClose: I,
+            contentOutsideContainer: S,
             trackingProps: T,
             children: C,
         } = e,
         N = i.useId(),
-        R = i.useMemo(
+        w = i.useMemo(
             () => ({
                 id: N,
                 headingId: "heading-".concat(N),
-                onClose: S,
-                dismissable: v,
+                onClose: I,
+                dismissable: A,
             }),
-            [v, N, S],
+            [A, N, I],
         ),
-        w = (0, p.kS)(n, a),
+        R = (0, p.kS)(n, a),
         P = i.useRef(null);
     return (0, r.jsx)(f.V.Provider, {
-        value: R,
+        value: w,
         children: (0, r.jsx)(c.l, {
             id: N,
             role: O,
-            "aria-label": A,
-            "aria-labelledby": null != A ? void 0 : R.headingId,
-            returnRef: y,
-            trackingProps: b(g({}, T), {
+            "aria-label": v,
+            "aria-labelledby": null != v ? void 0 : w.headingId,
+            returnRef: b,
+            trackingProps: y(g({}, T), {
                 impressionType: null != (t = null == T ? void 0 : T.impressionType) ? t : l.ImpressionTypes.MODAL,
             }),
             children: (0, r.jsx)(u.xp, {
@@ -118,15 +118,15 @@ function y(e) {
                     forceLevel: 1,
                     children: (0, r.jsxs)("div", {
                         ref: P,
-                        className: s()(h.outerContainer, {
+                        className: o()(h.outerContainer, {
                             [h.fullScreenOnMobile]: E,
                         }),
                         children: [
-                            I,
-                            (0, r.jsx)(o.animated.div, {
+                            S,
+                            (0, r.jsx)(s.animated.div, {
                                 "data-mana-component": "modal",
-                                className: s()(h.container, h["size-".concat(_)], h["padding-size-".concat(m)]),
-                                style: w,
+                                className: o()(h.container, h["size-".concat(_)], h["padding-size-".concat(m)]),
+                                style: R,
                                 children: C,
                             }),
                         ],

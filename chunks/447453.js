@@ -4,8 +4,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(108531),
+    o = n.n(a),
+    s = n(92674),
     l = n(311907),
     c = n(397927),
     u = n(775602),
@@ -48,18 +48,18 @@ function _(e) {
                 opacity: 0,
                 y: 80 * !a,
             },
-            config: o.config.stiff,
+            config: s.config.stiff,
         },
         "animate-always",
     )((e, a) =>
         a
             ? (0, r.jsx)("div", {
-                  className: s()(p.lY, t),
-                  children: (0, r.jsx)(o.animated.div, {
+                  className: o()(p.lY, t),
+                  children: (0, r.jsx)(s.animated.div, {
                       className: p.kL,
                       style: e,
                       children: n.map((e, t) => {
-                          let { keybinds: a, name: s } = e;
+                          let { keybinds: a, name: o } = e;
                           return (0, r.jsxs)(
                               i.Fragment,
                               {
@@ -67,7 +67,7 @@ function _(e) {
                                       (0, r.jsx)(c.Text, {
                                           variant: "text-md/semibold",
                                           className: p.nx,
-                                          children: s,
+                                          children: o,
                                       }),
                                       a.map((e) =>
                                           (0, r.jsx)(
@@ -86,7 +86,7 @@ function _(e) {
                                           : null,
                                   ],
                               },
-                              s,
+                              o,
                           );
                       }),
                   }),

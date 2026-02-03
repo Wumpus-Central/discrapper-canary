@@ -1,23 +1,23 @@
 n.d(t, {
-    A: () => I,
+    A: () => h,
 });
 var l = n(627968),
     r = n(64700),
-    a = n(108531),
+    a = n(92674),
     i = n(66455),
     s = n(311907),
     o = n(397927),
-    c = n(475743),
-    u = n(775121),
+    u = n(475743),
+    c = n(775121),
     E = n(761640),
-    d = n(706752),
-    _ = n(290294),
+    _ = n(706752),
+    d = n(290294),
     g = n(420775),
     A = n(684968),
     T = n(486974),
-    f = n(652215);
+    I = n(652215);
 
-function h(e, t) {
+function O(e, t) {
     return (n) => {
         if (0 === n) return "auto";
         let l = "forwards" === t.current,
@@ -33,36 +33,36 @@ function h(e, t) {
     };
 }
 
-function I(e) {
+function h(e) {
     var t;
-    let { userId: n, guildId: I, onClose: O, analyticsLocation: N, className: m } = e,
-        S = (0, s.bG)([E.Ay], () => E.Ay.getGuildSidebarState(I), [I]),
+    let { userId: n, guildId: h, onClose: N, analyticsLocation: m, className: f } = e,
+        S = (0, s.bG)([E.Ay], () => E.Ay.getGuildSidebarState(h), [h]),
         p = null != (t = null == S ? void 0 : S.details.modViewPanel) ? t : T.g.INFO,
-        b = (0, c.A)(n),
-        G = null == p ? null : p === T.g.INFO ? "backwards" : "forwards",
-        R = (0, i.A)(G),
-        { reducedMotion: D } = r.useContext(o.CZY),
+        G = (0, u.A)(n),
+        R = null == p ? null : p === T.g.INFO ? "backwards" : "forwards",
+        D = (0, i.A)(R),
+        { reducedMotion: C } = r.useContext(o.CZY),
         L = r.useCallback(
             (e) => {
                 null != S &&
-                    (0, d.z)(I, n, S.baseChannelId, {
+                    (0, _.z)(h, n, S.baseChannelId, {
                         modViewPanel: e,
                     });
             },
-            [S, I, n],
+            [S, h, n],
         ),
         x = r.useMemo(
             () => ({
-                [f.IWg.CLOSE_MODAL]: {
+                [I.IWg.CLOSE_MODAL]: {
                     binds: ["esc"],
                     comboKeysBindGlobal: !0,
-                    action: () => (p === T.g.INFO ? O() : L(T.g.INFO)),
+                    action: () => (p === T.g.INFO ? N() : L(T.g.INFO)),
                 },
             }),
-            [O, p, L],
+            [N, p, L],
         );
-    r.useEffect(() => (u.A.enable(), u.A.enableTemp(x), () => u.A.disableTemp()), [x]);
-    let C = (0, o.pnh)(
+    r.useEffect(() => (c.A.enable(), c.A.enableTemp(x), () => c.A.disableTemp()), [x]);
+    let b = (0, o.pnh)(
         p,
         {
             value: 0,
@@ -76,7 +76,7 @@ function I(e) {
                 value: -1,
             },
         },
-        b !== n ? "animate-never" : "animate-always",
+        G !== n ? "animate-never" : "animate-always",
     );
     return (0, l.jsx)(a.animated.div, {
         style: {
@@ -85,9 +85,9 @@ function I(e) {
             flex: 1,
             overflow: "hidden",
         },
-        children: C((e, t, r) => {
+        children: b((e, t, r) => {
             var i, s, o;
-            let { key: c } = r;
+            let { key: u } = r;
             return (0, l.jsx)(
                 a.animated.div,
                 {
@@ -124,44 +124,44 @@ function I(e) {
                             width: "100%",
                             height: "100%",
                         },
-                        D.enabled
+                        C.enabled
                             ? {
                                   opacity: null == (i = e.value) ? void 0 : i.to((e) => 1 - Math.abs(e)),
                               }
                             : {
-                                  left: null == (s = e.value) ? void 0 : s.to(h("left", R)),
-                                  right: null == (o = e.value) ? void 0 : o.to(h("right", R)),
+                                  left: null == (s = e.value) ? void 0 : s.to(O("left", D)),
+                                  right: null == (o = e.value) ? void 0 : o.to(O("right", D)),
                               },
                     ),
                     children: (function (e) {
                         switch (e) {
                             case T.g.INFO:
-                                return (0, l.jsx)(_.A, {
+                                return (0, l.jsx)(d.A, {
                                     userId: n,
-                                    guildId: I,
+                                    guildId: h,
                                     onNavigate: L,
-                                    className: m,
+                                    className: f,
                                 });
                             case T.g.MESSAGE_HISTORY:
                                 return (0, l.jsx)(g.A, {
                                     userId: n,
-                                    guildId: I,
+                                    guildId: h,
                                     onNavigate: () => L(T.g.INFO),
-                                    className: m,
+                                    className: f,
                                 });
                             case T.g.PERMISSIONS:
                                 return (0, l.jsx)(A.A, {
                                     userId: n,
-                                    guildId: I,
+                                    guildId: h,
                                     onNavigate: () => L(T.g.INFO),
-                                    className: m,
+                                    className: f,
                                 });
                             default:
                                 return null;
                         }
                     })(t),
                 },
-                c,
+                u,
             );
         }),
     });

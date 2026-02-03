@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(977418),
-    s = n(967158),
-    o = n(108531),
+    o = n(967158),
+    s = n(92674),
     l = n(823807),
     c = n(827734),
     u = n(717421),
@@ -61,7 +61,7 @@ function E(e, t) {
     return n;
 }
 
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,18 +72,18 @@ function b(e, t) {
         e
     );
 }
-let y = "M4.10585 5.3837L5.37864 4.11091L11.884 10.61632L10.6112 11.88912L4.10585 5.3837Z",
+let b = "M4.10585 5.3837L5.37864 4.11091L11.884 10.61632L10.6112 11.88912L4.10585 5.3837Z",
     O = "M10.61632 4.11091L11.88912 5.3837L5.3837 11.88912L4.11091 10.61632L10.61632 4.11091Z",
-    A = "M5.25333 8.80104L5.25333 7.17346L10.85336 7.17346L10.85336 8.80104L5.25333 8.80104Z",
-    v = "M10.84656 7.17346L10.84656 8.80104L5.24954 8.80104L5.24954 7.17346L10.84656 7.17346Z",
-    S = "M6.31649 11.88304L5.0437 10.61032L11.44792 4.20604L12.72072 5.47883L6.31649 11.88304Z",
-    I = "M3.26914 8.87224L4.54194 7.59943L7.5588 10.61632L6.28601 11.88912L3.26914 8.87224Z",
+    v = "M5.25333 8.80104L5.25333 7.17346L10.85336 7.17346L10.85336 8.80104L5.25333 8.80104Z",
+    A = "M10.84656 7.17346L10.84656 8.80104L5.24954 8.80104L5.24954 7.17346L10.84656 7.17346Z",
+    I = "M6.31649 11.88304L5.0437 10.61032L11.44792 4.20604L12.72072 5.47883L6.31649 11.88304Z",
+    S = "M3.26914 8.87224L4.54194 7.59943L7.5588 10.61632L6.28601 11.88912L3.26914 8.87224Z",
     T = [0, 0.1, 0.4, 0.6, 0.9, 1],
     C = [0, 0.1, 0.9, 1],
     N = [0, 0.1, 0.2, 0.5, 0.7, 1],
-    R = [0, 0.3, 0.5, 0.8, 0.9, 1];
+    w = [0, 0.3, 0.5, 0.8, 0.9, 1];
 
-function w(e, t, n) {
+function R(e, t, n) {
     let i = e.to({
         range: C,
         output: [t, t, n, n],
@@ -95,19 +95,19 @@ function w(e, t, n) {
         children: (0, r.jsxs)("g", {
             transform: "translate(4 4)",
             children: [
-                (0, r.jsx)(o.animated.path, {
+                (0, r.jsx)(s.animated.path, {
                     fill: i,
                     d: e.to({
                         range: C,
-                        output: [y, A, A, S],
+                        output: [b, v, v, I],
                         extrapolate: "clamp",
                     }),
                 }),
-                (0, r.jsx)(o.animated.path, {
+                (0, r.jsx)(s.animated.path, {
                     fill: i,
                     d: e.to({
                         range: C,
-                        output: [O, v, v, I],
+                        output: [O, A, A, S],
                         extrapolate: "clamp",
                     }),
                 }),
@@ -122,36 +122,36 @@ function P(e) {
             disabled: n,
             id: m,
             onChange: E,
-            focusProps: y,
+            focusProps: b,
             hasIcon: O = !1,
-            describedBy: A,
-            labelledBy: v,
-            innerRef: S,
+            describedBy: v,
+            labelledBy: A,
+            innerRef: I,
         } = e,
-        { reducedMotion: I } = i.useContext(f.C),
+        { reducedMotion: S } = i.useContext(f.C),
         P = i.useRef(null),
         D = i.useRef(null),
-        x = null != S ? S : D,
-        L = (0, l.H)({
+        L = null != I ? I : D,
+        x = (0, l.H)({
             isSelected: t,
             onChange: E,
             isDisabled: n,
         }),
         {
-            inputProps: j,
-            labelProps: M,
+            inputProps: M,
+            labelProps: j,
             isPressed: k,
         } = (0, a.K)(
             {
                 id: m,
                 isDisabled: n,
-                "aria-describedby": A,
-                "aria-labelledby": v,
+                "aria-describedby": v,
+                "aria-labelledby": A,
             },
-            L,
             x,
+            L,
         ),
-        { hoverProps: U, isHovered: G } = (0, s.M)({
+        { hoverProps: U, isHovered: G } = (0, o.M)({
             isDisabled: n,
         }),
         V = (0, d.r)(c.A.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
@@ -163,18 +163,18 @@ function P(e) {
         K = (0, d.r)(c.A.colors.SWITCH_BACKGROUND_HOVER).spring(),
         z = (0, d.r)(c.A.colors.SWITCH_BACKGROUND_SELECTED_HOVER).spring(),
         q = (0, d.r)(c.A.colors.SWITCH_BORDER_HOVER).spring(),
-        X = (0, d.r)(c.A.colors.SWITCH_BORDER_SELECTED_HOVER).spring(),
-        Z = (0, d.r)(c.A.colors.SWITCH_THUMB_ICON_DEFAULT).spring(),
-        Q = (0, d.r)(c.A.colors.SWITCH_THUMB_ICON_ACTIVE).spring(),
-        $ = (0, d.r)(c.A.colors.SWITCH_THUMB_BACKGROUND_DEFAULT).spring(),
-        J = (0, d.r)(c.A.colors.SWITCH_THUMB_BACKGROUND_SELECTED_DEFAULT).spring(),
+        Z = (0, d.r)(c.A.colors.SWITCH_BORDER_SELECTED_HOVER).spring(),
+        Q = (0, d.r)(c.A.colors.SWITCH_THUMB_ICON_DEFAULT).spring(),
+        X = (0, d.r)(c.A.colors.SWITCH_THUMB_ICON_ACTIVE).spring(),
+        J = (0, d.r)(c.A.colors.SWITCH_THUMB_BACKGROUND_DEFAULT).spring(),
+        $ = (0, d.r)(c.A.colors.SWITCH_THUMB_BACKGROUND_SELECTED_DEFAULT).spring(),
         { state: ee, opacity: et } = (0, u.z)(
             {
                 config: {
-                    duration: I.enabled ? 200 : 300,
+                    duration: S.enabled ? 200 : 300,
                 },
                 opacity: n ? 0.5 : 1,
-                state: k ? (t ? R[R.length - 2] : N[1]) : +!!t,
+                state: k ? (t ? w[w.length - 2] : N[1]) : +!!t,
             },
             "animate-always",
         ),
@@ -182,7 +182,7 @@ function P(e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...e].reverse();
             return t
                 ? ee.to({
-                      range: R,
+                      range: w,
                       output: n,
                   })
                 : ee.to({
@@ -192,20 +192,20 @@ function P(e) {
         };
     return (0, r.jsx)(
         p.vN,
-        b(g({}, y), {
+        y(g({}, b), {
             ringTarget: P,
-            focusTarget: x,
+            focusTarget: L,
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(
                 "label",
-                b(g({}, M), {
+                y(g({}, j), {
                     className: h.kL,
                     "data-disabled": n || void 0,
                     children: [
                         (0, r.jsx)(
-                            o.animated.div,
-                            b(g({}, U), {
+                            s.animated.div,
+                            y(g({}, U), {
                                 ref: P,
                                 className: h.cw,
                                 "data-size": "md",
@@ -220,17 +220,17 @@ function P(e) {
                                     border: "1px solid",
                                     borderColor: ee.to({
                                         range: C,
-                                        output: [G ? q : Y, G ? q : Y, G ? X : W, G ? X : W],
+                                        output: [G ? q : Y, G ? q : Y, G ? Z : W, G ? Z : W],
                                         extrapolate: "clamp",
                                     }),
                                 },
-                                children: (0, r.jsxs)(o.animated.svg, {
+                                children: (0, r.jsxs)(s.animated.svg, {
                                     className: h.FF,
                                     viewBox: "0 0 24 24",
                                     preserveAspectRatio: "xMidYMin meet",
                                     style: {
                                         left: ee.to(
-                                            I.enabled
+                                            S.enabled
                                                 ? {
                                                       range: C,
                                                       output: [1, 1, 24, 24],
@@ -243,18 +243,18 @@ function P(e) {
                                     },
                                     "aria-hidden": !0,
                                     children: [
-                                        (0, r.jsx)(o.animated.rect, {
+                                        (0, r.jsx)(s.animated.rect, {
                                             fill: ee.to({
                                                 range: C,
-                                                output: [$, $, J, J],
+                                                output: [J, J, $, $],
                                             }),
-                                            x: I.enabled ? 4 : en([4, 4, 2.5, 1, 2.5, 4]),
-                                            y: I.enabled ? 4 : en([4, 7, 2.5, 7, 2.5, 4]),
-                                            width: I.enabled ? 16 : en([16, 16, 19, 22, 19, 16]),
-                                            height: I.enabled ? 16 : en([16, 10, 19, 10, 19, 16]),
-                                            rx: I.enabled ? 8 : en([8, 5, 9.5, 5, 9.5, 8]),
+                                            x: S.enabled ? 4 : en([4, 4, 2.5, 1, 2.5, 4]),
+                                            y: S.enabled ? 4 : en([4, 7, 2.5, 7, 2.5, 4]),
+                                            width: S.enabled ? 16 : en([16, 16, 19, 22, 19, 16]),
+                                            height: S.enabled ? 16 : en([16, 10, 19, 10, 19, 16]),
+                                            rx: S.enabled ? 8 : en([8, 5, 9.5, 5, 9.5, 8]),
                                         }),
-                                        O && w(ee, Z, Q),
+                                        O && R(ee, Q, X),
                                     ],
                                 }),
                             }),
@@ -262,8 +262,8 @@ function P(e) {
                         (0, r.jsx)(_.A, {
                             children: (0, r.jsx)(
                                 "input",
-                                b(g({}, j), {
-                                    ref: x,
+                                y(g({}, M), {
+                                    ref: L,
                                 }),
                             ),
                         }),

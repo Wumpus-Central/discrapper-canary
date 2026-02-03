@@ -4,8 +4,8 @@ r.r(t),
     }),
     r(896048);
 var i = r(627968),
-    n = r(64700),
-    s = r(108531),
+    s = r(64700),
+    n = r(92674),
     a = r(575593),
     l = r(334279),
     c = r(417597),
@@ -50,8 +50,8 @@ function P(e) {
     return e;
 }
 let w = (e) => {
-        let { product: t, itemConsumed: r, forCollectedModal: n } = e,
-            s = (0, d.A)({
+        let { product: t, itemConsumed: r, forCollectedModal: s } = e,
+            n = (0, d.A)({
                 location: "CollectiblesProductPreview",
             }),
             m = (0, c.bG)([p.default], () => p.default.getCurrentUser());
@@ -62,8 +62,8 @@ let w = (e) => {
                 className: b.NM,
                 children: (0, i.jsx)(f.A, {
                     skuId: P.skuId,
-                    delayProfileEffectIntro: n,
-                    withScaleAnimation: n,
+                    delayProfileEffectIntro: s,
+                    withScaleAnimation: s,
                 }),
             });
         if (t.type === a.R.AVATAR_DECORATION)
@@ -90,14 +90,14 @@ let w = (e) => {
                     product: t,
                     user: m,
                     isHighlighted: !0,
-                    forCollectedModal: n,
+                    forCollectedModal: s,
                 }),
             });
         if (t.type === a.R.EXTERNAL_SKU) {
             if (Object.values(l.j).includes(t.skuId))
                 if (r)
                     return (0, i.jsx)("img", {
-                        src: s ? x : v,
+                        src: n ? x : v,
                         alt: j.intl.string(j.t.t0xkSB),
                         style: {
                             width: "100%",
@@ -116,7 +116,7 @@ let w = (e) => {
     },
     E = (e) => {
         let { reducedMotion: t, displayOptions: r } = e,
-            [a, l] = n.useState(!1),
+            [a, l] = s.useState(!1),
             c = (0, o.zhh)({
                 from: {
                     transform: "translateX(100%)",
@@ -166,12 +166,12 @@ let w = (e) => {
             );
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(s.animated.div, {
+                (0, i.jsx)(n.animated.div, {
                     className: b.VH,
                     style: c,
                     children: (0, i.jsx)(w, P({}, e)),
                 }),
-                (0, i.jsx)(s.animated.div, {
+                (0, i.jsx)(n.animated.div, {
                     className: b.VH,
                     style: t ? d : u,
                     children: (0, i.jsx)("img", {
@@ -187,14 +187,14 @@ let w = (e) => {
 
 function _(e) {
     var t, r;
-    let n = (0, m.K9)(e.product.categorySkuId);
-    return null != n
+    let s = (0, m.K9)(e.product.categorySkuId);
+    return null != s
         ? (0, i.jsx)(
               E,
               ((t = P({}, e)),
               (r = r =
                   {
-                      displayOptions: n,
+                      displayOptions: s,
                   }),
               Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

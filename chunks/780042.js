@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(108531),
+    o = n.n(a),
+    s = n(92674),
     l = n(311907),
     c = n(554146),
     u = n(459192),
@@ -18,45 +18,45 @@ var r = n(627968),
     m = n(49999),
     g = n(985018),
     E = n(500320);
-let b = {
+let y = {
         tension: 750,
         mass: 2.5,
         friction: 70,
     },
-    y = 20;
+    b = 20;
 
 function O(e) {
     let { checked: t, onClick: n, id: a = "burst-reaction-toggle-button" } = e,
         O = (0, l.bG)([f.A], () => f.A.useReducedMotion),
-        A = _.default.getCurrentUser(),
-        v = null == A || (0, h.TW)(A) ? [c.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [S, I] = (0, p.kn)(v),
+        v = _.default.getCurrentUser(),
+        A = null == v || (0, h.TW)(v) ? [c.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [I, S] = (0, p.kn)(A),
         [T, C] = i.useState(!1),
-        [N, R] = (0, d.zhh)(() => ({})),
-        w = (0, o.animated)(d.it9);
+        [N, w] = (0, d.zhh)(() => ({})),
+        R = (0, s.animated)(d.it9);
 
     function P() {
-        R({
+        w({
             from: {
                 rotate: t ? "360deg" : "0deg",
             },
             to: {
                 rotate: t ? "0deg" : "360deg",
             },
-            config: b,
+            config: y,
         }),
             null == n || n(),
             C(!1);
     }
     i.useEffect(() => {
-        let e = S === c.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (I(m.i.DISMISS), setTimeout(() => C(e), 200));
-    }, [S, I]);
+        let e = I === c.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        e && (S(m.i.DISMISS), setTimeout(() => C(e), 200));
+    }, [I, S]);
     let D = T ? g.intl.string(g.t["Osi/uy"]) : t ? g.intl.string(g.t["5cRA/b"]) : g.intl.string(g.t.buV4av),
-        x = T ? g.intl.string(g.t.ORK94p) : void 0;
+        L = T ? g.intl.string(g.t.ORK94p) : void 0;
     return (0, r.jsx)(u.u, {
         position: "top",
-        title: x,
+        title: L,
         body: D,
         asset: (0, r.jsx)(d.tvc, {
             size: "md",
@@ -76,15 +76,15 @@ function O(e) {
                 }),
                 (0, r.jsxs)("label", {
                     htmlFor: a,
-                    className: s()(E.Pf, {
+                    className: o()(E.Pf, {
                         [E.wM]: t,
                     }),
                     children: [
-                        (0, r.jsx)(w, {
+                        (0, r.jsx)(R, {
                             style: O ? void 0 : N,
                             size: "custom",
-                            width: y,
-                            height: y,
+                            width: b,
+                            height: b,
                             color: t ? "white" : "currentColor",
                             className: E.Kk,
                         }),

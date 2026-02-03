@@ -5,8 +5,8 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(108531),
-    o = n(397927),
+    o = n(92674),
+    s = n(397927),
     l = n(94095);
 let c = Object.freeze({
         tension: 400,
@@ -26,7 +26,7 @@ function d(e) {
             height: t ? 40 : n ? 20 : 8,
             transform: "translateX(0) translateZ(0)",
         },
-        _ = (0, o.pnh)(
+        _ = (0, s.pnh)(
             t || n || i,
             {
                 config: c,
@@ -45,7 +45,7 @@ function d(e) {
         children: _(
             (e, t) =>
                 t &&
-                (0, r.jsx)(s.animated.span, {
+                (0, r.jsx)(o.animated.span, {
                     className: l.A,
                     style: e,
                 }),

@@ -3,7 +3,7 @@ n.d(t, {
 });
 var r = n(627968),
     i = n(64700),
-    l = n(108531),
+    l = n(92674),
     a = n(311907),
     s = n(397927),
     o = n(775602),
@@ -16,10 +16,10 @@ let u = {
     },
     d = function (e) {
         let { animate: t, state: n, cleanUp: d, children: p } = e,
-            f = (0, a.bG)([o.A], () => o.A.useReducedMotion),
-            h = i.useMemo(
+            h = (0, a.bG)([o.A], () => o.A.useReducedMotion),
+            g = i.useMemo(
                 () =>
-                    !1 === t || f
+                    !1 === t || h
                         ? {
                               opacity: 1,
                           }
@@ -45,11 +45,11 @@ let u = {
                                     d();
                                 },
                             },
-                [t, d, f, n],
+                [t, d, h, n],
             ),
-            A = (0, s.zhh)(h);
+            m = (0, s.zhh)(g);
         return (0, r.jsx)(l.animated.div, {
-            style: A,
+            style: m,
             className: c.Hp,
             children: p,
         });

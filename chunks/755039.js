@@ -3,13 +3,13 @@ n.d(t, {
 });
 var a = n(627968);
 n(64700);
-var l = n(108531),
-    i = n(397927),
-    r = n(717283);
+var l = n(92674),
+    r = n(397927),
+    i = n(717283);
 
 function s(e) {
     let { text: t } = e,
-        n = (0, i.pnh)(t, {
+        n = (0, r.pnh)(t, {
             from: {
                 opacity: 0,
                 transform: "translate3d(0, 107%, 0)",
@@ -24,10 +24,10 @@ function s(e) {
             },
         });
     return (0, a.jsx)("div", {
-        className: r.k,
+        className: i.k,
         children: n((e, t) =>
             (0, a.jsx)(l.animated.div, {
-                className: r.H,
+                className: i.H,
                 style: e,
                 children: t,
             }),

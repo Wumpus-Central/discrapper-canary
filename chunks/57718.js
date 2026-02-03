@@ -1,7 +1,7 @@
 n.d(t, {
-    Ay: () => A,
+    Ay: () => y,
     C8: () => b,
-    LU: () => _,
+    LU: () => h,
 });
 var r,
     i,
@@ -9,7 +9,7 @@ var r,
 n(64700);
 var a = n(503698),
     s = n.n(a),
-    o = n(108531),
+    o = n(92674),
     c = n(827734),
     u = n(582754),
     d = n(397927),
@@ -17,37 +17,37 @@ var a = n(503698),
     m = n(579473),
     f = n(241124),
     g = n(652215),
-    h = n(995360),
-    _ = (((r = {})[(r.SMALL = 24)] = "SMALL"), (r[(r.MEDIUM = 32)] = "MEDIUM"), r),
+    _ = n(995360),
+    h = (((r = {})[(r.SMALL = 24)] = "SMALL"), (r[(r.MEDIUM = 32)] = "MEDIUM"), r),
     b = (((i = {})[(i.SMALL = 2)] = "SMALL"), (i[(i.MEDIUM = 8)] = "MEDIUM"), i);
-let A = function (e) {
+let y = function (e) {
     let {
             className: t,
             logotypeClassName: n,
             gameTileSize: r = 24,
             quest: i,
             separatorSpacing: a = 2,
-            theme: _ = g.NJ8.DARK,
+            theme: h = g.NJ8.DARK,
             withCosponsor: b = !0,
-            withGameTile: A = !0,
-            logotypeStyle: y,
+            withGameTile: y = !0,
+            logotypeStyle: A,
             onLoadComplete: v,
         } = e,
-        x = (0, u.Mw)(_) ? g.NJ8.DARK : g.NJ8.LIGHT,
-        O = (0, p.a5)(i.id, x),
-        E = b && null != i.config.cosponsorMetadata && null != O;
+        O = (0, u.Mw)(h) ? g.NJ8.DARK : g.NJ8.LIGHT,
+        x = (0, p.a5)(i.id, O),
+        E = b && null != i.config.cosponsorMetadata && null != x;
     return (0, l.jsxs)("div", {
-        className: s()(h.Iu, t),
+        className: s()(_.Iu, t),
         children: [
-            A &&
+            y &&
                 (0, l.jsx)(f.Sn, {
                     id: "QuestPartnerBranding_gameTile",
                     children: (e) =>
                         (0, l.jsx)("img", {
                             ref: e,
-                            className: h._Y,
+                            className: _._Y,
                             alt: "",
-                            src: (0, m.tW)(i, m.fY.GAME_TILE, x).url,
+                            src: (0, m.tW)(i, m.fY.GAME_TILE, O).url,
                             style: {
                                 borderRadius: (function (e) {
                                     switch (e) {
@@ -68,12 +68,12 @@ let A = function (e) {
                 children: (e) =>
                     (0, l.jsx)(o.animated.img, {
                         ref: e,
-                        className: s()(h.lW, n, {
-                            [h.TO]: E,
+                        className: s()(_.lW, n, {
+                            [_.TO]: E,
                         }),
-                        style: y,
+                        style: A,
                         alt: i.config.messages.gameTitle,
-                        src: (0, m.tW)(i, m.fY.LOGO_TYPE, x).url,
+                        src: (0, m.tW)(i, m.fY.LOGO_TYPE, O).url,
                         onLoad: v,
                     }),
             }),
@@ -81,12 +81,12 @@ let A = function (e) {
                 (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)("div", {
-                            className: h.ub,
+                            className: _.ub,
                             style: {
                                 margin: "0 ".concat(a, "px"),
                             },
                             children: (0, l.jsx)(d.aoi, {
-                                className: h.JB,
+                                className: _.JB,
                                 color: c.A.colors.WHITE,
                             }),
                         }),
@@ -96,13 +96,13 @@ let A = function (e) {
                                 var t, r;
                                 return (0, l.jsx)(o.animated.img, {
                                     ref: e,
-                                    className: s()(h.lW, h.TO, n),
-                                    style: y,
+                                    className: s()(_.lW, _.TO, n),
+                                    style: A,
                                     alt:
                                         null != (t = null == (r = i.config.cosponsorMetadata) ? void 0 : r.name)
                                             ? t
                                             : "",
-                                    src: O.url,
+                                    src: x.url,
                                     onLoad: v,
                                 });
                             },

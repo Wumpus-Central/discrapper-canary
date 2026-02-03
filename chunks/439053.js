@@ -1,12 +1,12 @@
 n.d(t, {
-    A: () => b,
+    A: () => y,
 });
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(108531),
-    o = n(311907),
+    o = n(92674),
+    s = n(311907),
     l = n(397927),
     c = n(308528),
     u = n(775602),
@@ -18,7 +18,7 @@ var i = n(503698),
     m = n(910200);
 let g = (e) => {
         let { message: t, userId: n, onClose: i } = e,
-            { trackUserProfileAction: s } = (0, d.NJ)();
+            { trackUserProfileAction: o } = (0, d.NJ)();
         return (0, r.jsxs)("div", {
             className: a()(m.oR, h.d6),
             children: [
@@ -39,7 +39,7 @@ let g = (e) => {
                             variant: "text-sm/semibold",
                             children: _.intl.format(_.t.QEW8Mq, {
                                 onClick: () => {
-                                    s({
+                                    o({
                                         action: "PRESS_REACT_REPLY_TOAST",
                                     }),
                                         null == i || i(),
@@ -69,16 +69,16 @@ let g = (e) => {
                 }),
             ],
         }),
-    b = (e) => {
+    y = (e) => {
         let { userId: t, onClose: n, className: i } = e,
             { interactionTypeSent: c, showInteractionToast: d } = (0, f.Pq)(),
             m = c === p.AQ.REPLY ? _.intl.string(_.t.BPaiaa) : _.intl.string(_.t.Ry2EtG),
-            b = (0, o.bG)([u.A], () => u.A.useReducedMotion),
-            y = (0, l.pnh)(
+            y = (0, s.bG)([u.A], () => u.A.useReducedMotion),
+            b = (0, l.pnh)(
                 d,
                 {
                     from: {
-                        transform: b ? "translateY(0)" : "translateY(16px)",
+                        transform: y ? "translateY(0)" : "translateY(16px)",
                         opacity: 0,
                     },
                     enter: {
@@ -86,7 +86,7 @@ let g = (e) => {
                         opacity: 1,
                     },
                     leave: {
-                        transform: b ? "translateY(0)" : "translateY(16px)",
+                        transform: y ? "translateY(0)" : "translateY(16px)",
                         opacity: 0,
                     },
                     config: {
@@ -100,10 +100,10 @@ let g = (e) => {
                 "animate-always",
             );
         return (0, r.jsx)(r.Fragment, {
-            children: y(
-                (e, o) =>
-                    o &&
-                    (0, r.jsx)(s.animated.div, {
+            children: b(
+                (e, s) =>
+                    s &&
+                    (0, r.jsx)(o.animated.div, {
                         className: a()(h.Jt, i),
                         style: e,
                         children:

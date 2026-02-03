@@ -1,13 +1,13 @@
 n.d(t, {
-    e: () => v,
+    e: () => A,
     x: () => P,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(108531),
+    o = n.n(a),
+    s = n(92674),
     l = n(158954),
     c = n(311907),
     u = n(453903),
@@ -49,7 +49,7 @@ function E(e) {
     return e;
 }
 
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,12 +62,12 @@ function b(e, t) {
     return n;
 }
 
-function y(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,13 +85,13 @@ function O(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = A(e, t)), Object.getOwnPropertySymbols))
+    if (((a = v(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function A(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -101,15 +101,15 @@ function A(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-let v = i.createContext(null),
-    S = 20,
-    I = 22,
+let A = i.createContext(null),
+    I = 20,
+    S = 22,
     T = 240,
     C = 10,
     N = 4,
-    R = h.FX;
+    w = h.FX;
 
-function w() {
+function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "center",
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
         n = arguments.length > 2 ? arguments[2] : void 0,
@@ -117,14 +117,14 @@ function w() {
     if ("center" === e || "custom" === e) return 0;
     let i = "left" === t || "right" === t,
         a = i ? r : null != n ? n : T,
-        s = i ? I : S;
+        o = i ? S : I;
     if (0 === a) return 0;
-    let o = a / 2 - s;
+    let s = a / 2 - o;
     switch (e) {
         case "start":
-            return o;
+            return s;
         case "end":
-            return -o;
+            return -s;
         default:
             return 0;
     }
@@ -137,14 +137,14 @@ function P(e) {
             targetElementRef: a,
             shouldShow: h = !0,
             onRequestClose: g,
-            position: b = "top",
-            align: A,
+            position: y = "top",
+            align: v,
             alignmentStrategy: P = "trigger-center",
             caretConfig: D,
-            hasVideo: x = !1,
-            gradientColor: L,
-            gradientOffsetBottom: j = 0.4,
-            onPositionChange: M,
+            hasVideo: L = !1,
+            gradientColor: x,
+            gradientOffsetBottom: M = 0.4,
+            onPositionChange: j,
             onNudgeChange: k,
             scrollBehavior: U = "sticky",
             modal: G = !1,
@@ -153,16 +153,16 @@ function P(e) {
             closeOnClickOutside: B = !1,
         } = e,
         [H, Y] = i.useState(h),
-        [W, K] = i.useState(b),
-        z = i.useRef(b),
+        [W, K] = i.useState(y),
+        z = i.useRef(y),
         q = i.useRef(0),
-        { ref: X, width: Z, height: Q } = (0, d.Ay)(),
-        $ = (0, c.bG)([f.A], () => f.A.getLayers()),
-        J = null != (t = $[$.length - 1]) ? t : "base",
-        ee = i.useRef(M);
+        { ref: Z, width: Q, height: X } = (0, d.Ay)(),
+        J = (0, c.bG)([f.A], () => f.A.getLayers()),
+        $ = null != (t = J[J.length - 1]) ? t : "base",
+        ee = i.useRef(j);
     i.useEffect(() => {
-        ee.current = M;
-    }, [M]);
+        ee.current = j;
+    }, [j]);
     let et = i.useCallback((e) => {
             var t;
             null != e && e !== z.current && ((z.current = e), K(e), null == (t = ee.current) || t.call(ee, e));
@@ -173,15 +173,15 @@ function P(e) {
                 null == a.current ||
                 (null != (e = null == (t = a.current.closest("[data-layer]")) ? void 0 : t.getAttribute("data-layer"))
                     ? e
-                    : "base") === J
+                    : "base") === $
             );
-        }, [a, J]);
+        }, [a, $]);
     i.useEffect(() => {
         en && h ? Y(!0) : en || Y(!1);
     }, [en, h]),
         i.useEffect(() => {
-            et(b);
-        }, [b, et]);
+            et(y);
+        }, [y, et]);
     let er = () => {
             Y(!1);
         },
@@ -191,20 +191,20 @@ function P(e) {
             onExitComplete: er,
         }),
         ea = i.useMemo(() => {
-            if ("edge" === P && null != A) {
+            if ("edge" === P && null != v) {
                 let e = "top" === W || "bottom" === W,
                     t = "left" === W || "right" === W;
                 if (e) {
-                    if ("left" === A || "center" === A || "right" === A) return A;
-                } else if (t && ("top" === A || "center" === A || "bottom" === A)) return A;
+                    if ("left" === v || "center" === v || "right" === v) return v;
+                } else if (t && ("top" === v || "center" === v || "bottom" === v)) return v;
             }
             return "center";
-        }, [P, A, W]),
-        es = i.useMemo(() => {
+        }, [P, v, W]),
+        eo = i.useMemo(() => {
             var e;
-            if ("edge" !== P) return w(null != (e = null == D ? void 0 : D.align) ? e : "center", W, Z, Q);
-        }, [P, D, W, Z, Q]),
-        eo = i.useMemo(
+            if ("edge" !== P) return R(null != (e = null == D ? void 0 : D.align) ? e : "center", W, Q, X);
+        }, [P, D, W, Q, X]),
+        es = i.useMemo(
             () => ({
                 position: W,
                 caretConfig:
@@ -226,33 +226,33 @@ function P(e) {
                     if (!i) return null;
                     let u = (0, r.jsx)(
                         l.lGe,
-                        y(E({}, c), {
+                        b(E({}, c), {
                             setDialogRef: t,
                             modal: G,
-                            className: s()(null != L ? m.popoverContentWithGradient : m.popover, {
-                                [m["popover--video"]]: x,
+                            className: o()(null != x ? m.popoverContentWithGradient : m.popover, {
+                                [m["popover--video"]]: L,
                             }),
                             returnRef: V,
-                            children: (0, r.jsx)(v.Provider, {
-                                value: eo,
+                            children: (0, r.jsx)(A.Provider, {
+                                value: es,
                                 children: n,
                             }),
                         }),
                     );
-                    return (0, r.jsx)(o.animated.div, {
-                        ref: X,
+                    return (0, r.jsx)(s.animated.div, {
+                        ref: Z,
                         "data-mana-component": "popover",
-                        style: y(E({}, e), {
-                            "--custom-caret-edge-offset-horizontal": "".concat(S, "px"),
-                            "--custom-caret-edge-offset-vertical": "".concat(I, "px"),
+                        style: b(E({}, e), {
+                            "--custom-caret-edge-offset-horizontal": "".concat(I, "px"),
+                            "--custom-caret-edge-offset-vertical": "".concat(S, "px"),
                             "--custom-caret-edge-offset-horizontal-nudge": "".concat(a, "px"),
                             "--custom-popover-width": "".concat(T, "px"),
                         }),
                         children:
-                            null != L
+                            null != x
                                 ? (0, r.jsx)(l.hLv, {
-                                      offsetBottom: j,
-                                      color: L,
+                                      offsetBottom: M,
+                                      color: x,
                                       className: m.popoverGradientWrapper,
                                       children: u,
                                   })
@@ -268,9 +268,9 @@ function P(e) {
         position: W,
         align: ea,
         spacing: C + N,
-        offset: es,
+        offset: eo,
         layerContext: void 0,
-        positionKey: null != es ? "".concat(W, "-").concat(es) : void 0,
+        positionKey: null != eo ? "".concat(W, "-").concat(eo) : void 0,
         popoutKey: void 0,
         fixed: !1,
         autoInvert: !0,
@@ -279,6 +279,6 @@ function P(e) {
         ignoreModalClicks: F,
         scrollBehavior: U,
         renderPopout: el,
-        children: R,
+        children: w,
     });
 }

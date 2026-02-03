@@ -1,12 +1,12 @@
 n.d(t, {
-    y: () => b,
+    y: () => y,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    a = n(108531),
-    s = n(397927),
-    o = n(480504),
+    a = n(92674),
+    o = n(397927),
+    s = n(480504),
     l = n(652215),
     c = n(613568);
 
@@ -97,17 +97,17 @@ let _ = 200,
     });
 
 function E(e) {
-    let { readyState: t, placeholderImg: n, placeholderStyle: o } = e,
+    let { readyState: t, placeholderImg: n, placeholderStyle: s } = e,
         u = t === l.Rv1.LOADING,
         [f] = i.useState(() => Date.now()),
         p = t === l.Rv1.READY && Date.now() - f < _,
-        g = (0, s.pnh)(u && null != n, p ? m : h);
+        g = (0, o.pnh)(u && null != n, p ? m : h);
     return (0, r.jsx)(r.Fragment, {
         children: g(
             (e, t) =>
                 t &&
                 (0, r.jsx)(a.animated.img, {
-                    style: d({}, o, e),
+                    style: d({}, s, e),
                     className: c.bc,
                     src: n,
                     alt: "",
@@ -116,21 +116,21 @@ function E(e) {
     });
 }
 
-function b(e) {
+function y(e) {
     let { readyState: t, aspectRatio: n, placeholder: u, placeholderVersion: d, placeholderStyle: f, children: p } = e,
         _ = t === l.Rv1.LOADING,
         [h] = i.useState(_),
-        [m, b] = i.useState(!1),
-        y = (0, o._)(u, d, h);
+        [m, y] = i.useState(!1),
+        b = (0, s._)(u, d, h);
     i.useEffect(() => {
         let e = setTimeout(() => {
-            b(!0);
+            y(!0);
         }, 2e3);
         return () => {
             clearTimeout(e);
         };
     }, [h]);
-    let O = (0, s.pnh)(_ && m, g);
+    let O = (0, o.pnh)(_ && m, g);
     return (0, r.jsxs)("div", {
         className: c.bX,
         style: {
@@ -138,10 +138,10 @@ function b(e) {
         },
         children: [
             p,
-            null != y &&
+            null != b &&
                 (0, r.jsx)(E, {
                     readyState: t,
-                    placeholderImg: y,
+                    placeholderImg: b,
                     placeholderStyle: f,
                 }),
             O(
@@ -150,8 +150,8 @@ function b(e) {
                     (0, r.jsx)(a.animated.div, {
                         style: e,
                         className: c.oM,
-                        children: (0, r.jsx)(s.y$y, {
-                            type: s.tVU.SPINNING_CIRCLE_SIMPLE,
+                        children: (0, r.jsx)(o.y$y, {
+                            type: o.tVU.SPINNING_CIRCLE_SIMPLE,
                             className: c.Xd,
                         }),
                     }),

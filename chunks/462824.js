@@ -6,8 +6,8 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(108531),
-    o = n(866323),
+    o = n(92674),
+    s = n(866323),
     l = n(892491),
     c = n(150591),
     u = n(894198);
@@ -25,7 +25,7 @@ function f(e) {
         disabled: d = !1,
         disablePointerEvents: f = !1,
     } = e;
-    return (0, o.p)(
+    return (0, s.p)(
         l,
         {
             keys: (e) => (e ? "scrim" : "empty"),
@@ -43,7 +43,7 @@ function f(e) {
         "instant" === n ? "animate-never" : "animate-always",
     )((e, n) =>
         n
-            ? (0, r.jsx)(s.animated.div, {
+            ? (0, r.jsx)(o.animated.div, {
                   role: "none",
                   className: a()(u.f5, {
                       [u.Et]: "lightbox" === t,

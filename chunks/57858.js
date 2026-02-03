@@ -1,68 +1,68 @@
 n.r(t),
     n.d(t, {
-        default: () => T,
+        default: () => k,
     }),
     n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
     s = n.n(l),
-    c = n(108531),
+    o = n(92674),
     a = n(311907),
-    o = n(397927),
+    c = n(397927),
     d = n(442433),
     u = n(686956),
-    f = n(765671),
-    p = n(4616),
-    b = n(743674),
-    m = n(60175),
-    g = n(545868),
-    O = n(164956),
-    x = n(976860),
-    h = n(426660),
-    j = n(71393),
+    p = n(765671),
+    f = n(4616),
+    m = n(743674),
+    g = n(60175),
+    b = n(545868),
+    _ = n(164956),
+    h = n(976860),
+    x = n(426660),
+    O = n(71393),
     v = n(486020),
-    y = n(998304),
-    _ = n(669953),
+    j = n(998304),
+    y = n(669953),
     A = n(591552),
     N = n(713125),
     P = n(961973),
     E = n(783153),
-    D = n(133266),
-    w = n(912417),
-    S = n(710434),
-    C = n(652215),
+    w = n(133266),
+    D = n(912417),
+    C = n(710434),
+    S = n(652215),
     I = n(985018),
-    k = n(22004);
+    T = n(22004);
 
-function T(e) {
+function k(e) {
     let { guildId: t } = e,
-        { ref: l, width: T, height: R } = (0, f.Ay)(),
-        G = (0, a.yK)([A.A], () => A.A.getOnboardingPromptsForOnboarding(t)),
-        L = (0, a.bG)([A.A], () => A.A.getEnabled(t)),
+        { ref: l, width: k, height: R } = (0, p.Ay)(),
+        L = (0, a.yK)([A.A], () => A.A.getOnboardingPromptsForOnboarding(t)),
+        G = (0, a.bG)([A.A], () => A.A.getEnabled(t)),
         H = (0, a.bG)([A.A], () => A.A.getConnections(t)),
-        V = (0, a.bG)([m.A], () => m.A.getRulesPrompt(t)),
-        F = i.useCallback(
+        B = (0, a.bG)([g.A], () => g.A.getRulesPrompt(t)),
+        V = i.useCallback(
             (e, n, r) => {
-                _.A.selectOption(t, e, n, r);
+                y.A.selectOption(t, e, n, r);
             },
             [t],
         ),
-        M = i.useCallback(() => {
-            _.A.completeOnboarding(t, G);
-        }, [t, G]),
-        B = (0, a.bG)([j.A], () => j.A.getGuild(t)),
+        F = i.useCallback(() => {
+            y.A.completeOnboarding(t, L);
+        }, [t, L]),
+        M = (0, a.bG)([O.A], () => O.A.getGuild(t)),
         q = i.useMemo(
             () =>
-                null == B
+                null == M
                     ? null
                     : v.Ay.getGuildSplashURL({
-                          id: B.id,
-                          splash: B.splash,
+                          id: M.id,
+                          splash: M.splash,
                       }),
-            [B],
+            [M],
         ),
-        U = (0, b.S)(q),
+        U = (0, m.S)(q),
         K = i.useRef(null),
         $ = i.useCallback(
             (e) => {
@@ -127,24 +127,24 @@ function T(e) {
         [z, Q] = i.useState(!1),
         Z = i.useCallback(
             (e) => {
-                X(J), _.A.setUserOnboardingStep(t, e);
+                X(J), y.A.setUserOnboardingStep(t, e);
             },
             [t, J],
         ),
-        Y = (0, a.bG)([O.A], () => O.A.isFullServerPreview(t)),
+        Y = (0, a.bG)([_.A], () => _.A.isFullServerPreview(t)),
         ee = (0, a.bG)([N.Ay], () => N.Ay.getOnboardingStatus(t)),
-        et = null != G && G.length > 0,
+        et = null != L && L.length > 0,
         en = i.useCallback(() => {
-            (0, N.eg)(ee) && L && (et || 0 !== H.length) ? (H.length > 0 ? Z("connections") : Z(0)) : M();
-        }, [ee, L, et, H.length, Z, M]);
+            (0, N.eg)(ee) && G && (et || 0 !== H.length) ? (H.length > 0 ? Z("connections") : Z(0)) : F();
+        }, [ee, G, et, H.length, Z, F]);
     i.useEffect(() => {
         if (!N.Ay.shouldShowOnboarding(t)) return u.A.escapeToDefaultChannel(t);
-        (0, g.L)(t);
+        (0, b.L)(t);
     }, [t]);
-    let er = (0, o.pnh)(
+    let er = (0, c.pnh)(
             J,
             {
-                config: c.config.default,
+                config: o.config.default,
                 from: {
                     scale: 0.8,
                     opacity: 0,
@@ -157,45 +157,45 @@ function T(e) {
             "cover" !== W && null !== W ? "animate-never" : "respect-motion-settings",
         ),
         ei = N.Ay.shouldShowOnboarding(t),
-        el = null == B;
+        el = null == M;
     return (i.useEffect(() => {
         if (!ei || el) {
             let e = setTimeout(() => {
-                (0, x.pX)(C.BVt.CHANNEL(t));
+                (0, h.pX)(S.BVt.CHANNEL(t));
             }, 1e3);
             return () => clearTimeout(e);
         }
     }, [ei, el, t]),
-    N.Ay.shouldShowOnboarding(t) && null != B)
+    N.Ay.shouldShowOnboarding(t) && null != M)
         ? (0, r.jsxs)("div", {
-              className: s()(k.iW, {
-                  [k.Me]: null == q,
+              className: s()(T.iW, {
+                  [T.Me]: null == q,
               }),
               ref: l,
               onContextMenu: $,
               children: [
                   null != q
-                      ? (0, r.jsx)(p.A, {
-                            className: k.xX,
+                      ? (0, r.jsx)(f.A, {
+                            className: T.xX,
                             src: q,
-                            width: T,
+                            width: k,
                             height: R,
-                            imageClassName: k.Iv,
+                            imageClassName: T.Iv,
                         })
-                      : (0, r.jsx)(h.A, {}),
+                      : (0, r.jsx)(x.A, {}),
                   null != U &&
                       (0, r.jsx)("div", {
-                          className: k.D7,
+                          className: T.D7,
                           style: {
                               background: "linear-gradient(180deg, "
-                                  .concat((0, y.cb)(U, 0.16), " 0%, ")
-                                  .concat((0, y.cb)(U, 1), " 100%)"),
+                                  .concat((0, j.cb)(U, 0.16), " 0%, ")
+                                  .concat((0, j.cb)(U, 1), " 100%)"),
                           },
                       }),
                   null == q
                       ? null
                       : (0, r.jsx)("div", {
-                            className: k.D7,
+                            className: T.D7,
                         }),
                   (0, r.jsxs)("div", {
                       ref: K,
@@ -203,14 +203,14 @@ function T(e) {
                           er((e, n, i) => {
                               let { key: l } = i;
                               return (0, r.jsx)(
-                                  c.animated.div,
+                                  o.animated.div,
                                   {
                                       style: e,
                                       children: (() => {
                                           switch (J) {
                                               case "cover":
-                                                  return (0, r.jsx)(D.Ay, {
-                                                      guild: B,
+                                                  return (0, r.jsx)(w.Ay, {
+                                                      guild: M,
                                                       onboardingStatus: N.$o.READY,
                                                       onStart: en,
                                                       disableTracking: Y,
@@ -218,40 +218,40 @@ function T(e) {
                                               case "connections":
                                                   return (0, r.jsx)(E.A, {
                                                       guildId: t,
-                                                      isLastStep: 0 === G.length && !(0, P.L1)(B, V),
+                                                      isLastStep: 0 === L.length && !(0, P.L1)(M, B),
                                                       isSubmitting: z,
                                                       disableTracking: Y,
                                                       onComplete: () => {
-                                                          G.length > 0
+                                                          L.length > 0
                                                               ? Z(0)
-                                                              : (0, P.L1)(B, V)
+                                                              : (0, P.L1)(M, B)
                                                                 ? Z("rules")
-                                                                : (Q(!0), M());
+                                                                : (Q(!0), F());
                                                       },
                                                   });
                                               case "rules":
-                                                  return (0, r.jsx)(S.A, {
+                                                  return (0, r.jsx)(C.A, {
                                                       setCurrentStep: Z,
                                                       previousPromptIndex:
-                                                          G.length > 0
-                                                              ? G.length - 1
+                                                          L.length > 0
+                                                              ? L.length - 1
                                                               : H.length > 0
                                                                 ? "connections"
                                                                 : "cover",
-                                                      guild: B,
-                                                      prompts: G,
-                                                      completeOnboarding: M,
+                                                      guild: M,
+                                                      prompts: L,
+                                                      completeOnboarding: F,
                                                       disableTracking: Y,
                                                   });
                                               case null:
                                                   return null;
                                               default:
-                                                  return (0, r.jsx)(w.A, {
-                                                      guild: B,
-                                                      prompts: G,
+                                                  return (0, r.jsx)(D.A, {
+                                                      guild: M,
+                                                      prompts: L,
                                                       step: J,
-                                                      selectOption: F,
-                                                      completeOnboarding: M,
+                                                      selectOption: V,
+                                                      completeOnboarding: F,
                                                       setCurrentStep: Z,
                                                       disableTracking: Y,
                                                   });
@@ -263,12 +263,12 @@ function T(e) {
                           }),
                           "cover" === J &&
                               (0, r.jsx)("div", {
-                                  className: k.m6,
-                                  children: (0, r.jsx)(o.Heading, {
+                                  className: T.m6,
+                                  children: (0, r.jsx)(c.Heading, {
                                       variant: "heading-sm/normal",
                                       color: "text-default",
                                       children: I.intl.format(I.t.kI6UoD, {
-                                          privacyLink: C.X7G.PRIVACY,
+                                          privacyLink: S.X7G.PRIVACY,
                                       }),
                                   }),
                               }),

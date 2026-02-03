@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(108531),
+    o = n.n(a),
+    s = n(92674),
     l = n(311907),
     c = n(451988),
     u = n(397927),
@@ -18,13 +18,13 @@ var r = n(627968),
     m = n(576241),
     g = n(410540),
     E = n(7584),
-    b = n(961350),
-    y = n(183555),
+    y = n(961350),
+    b = n(183555),
     O = n(679492),
-    A = n(563437),
-    v = n(8925),
-    S = n(933639),
-    I = n(518477);
+    v = n(563437),
+    A = n(8925),
+    I = n(933639),
+    S = n(518477);
 n(745541);
 var T = n(985018),
     C = n(178740);
@@ -43,7 +43,7 @@ function N(e, t, n) {
     );
 }
 
-function R(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function R(e) {
     return e;
 }
 
-function w(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -78,7 +78,7 @@ function P(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -96,13 +96,13 @@ function D(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = x(e, t)), Object.getOwnPropertySymbols))
+    if (((a = L(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -113,10 +113,10 @@ function x(e, t) {
     return i;
 }
 
-function L(e) {
+function x(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)("div", {
-        className: s()(C.nL, n),
+        className: o()(C.nL, n),
         children: (0, r.jsx)("div", {
             className: C.A7,
             children: (0, r.jsx)("span", {
@@ -126,11 +126,11 @@ function L(e) {
         }),
     });
 }
-let j = i.forwardRef(function (e, t) {
+let M = i.forwardRef(function (e, t) {
         let { onCloseProfile: i, prompt: a } = e,
-            o = (0, h.GV)(),
+            s = (0, h.GV)(),
             { analyticsLocations: l } = (0, _.Ay)(),
-            { trackUserProfileAction: c } = (0, y.NJ)(),
+            { trackUserProfileAction: c } = (0, b.NJ)(),
             d = () => {
                 c({
                     action: "PRESS_ADD_CUSTOM_STATUS",
@@ -141,7 +141,7 @@ let j = i.forwardRef(function (e, t) {
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                P(R({}, t), {
+                                P(w({}, t), {
                                     sourceAnalyticsLocations: l,
                                     prompt: a,
                                 }),
@@ -159,29 +159,29 @@ let j = i.forwardRef(function (e, t) {
                     }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-sm/normal",
-                        className: s()(C.ch, null != a && C.R9),
+                        className: o()(C.ch, null != a && C.R9),
                         children: f,
                     }),
                 ],
             });
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(L, {
+                (0, r.jsx)(x, {
                     children: p,
                 }),
                 (0, r.jsx)("div", {
-                    className: s()(C.kL, C.LL),
+                    className: o()(C.kL, C.LL),
                     ref: t,
                     children: (0, r.jsx)(u.DUT, {
                         className: C.A7,
                         "aria-label": T.intl.string(T.t["zrpF/b"]),
-                        "aria-describedby": o,
+                        "aria-describedby": s,
                         onClick: d,
                         focusProps: {
                             ringClassName: C.hN,
                         },
                         children: (0, r.jsxs)("span", {
-                            className: s()(C.vW, C.vk),
+                            className: o()(C.vW, C.vk),
                             children: [
                                 (0, r.jsx)(u.U1e, {
                                     size: "xs",
@@ -189,12 +189,12 @@ let j = i.forwardRef(function (e, t) {
                                     colorClass: C.qv,
                                 }),
                                 (0, r.jsxs)(u.AC4, {
-                                    id: o,
+                                    id: s,
                                     children: [T.intl.string(T.t.EVV6uZ), ": ", f],
                                 }),
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-sm/normal",
-                                    className: s()(C.ch, null != a && C.R9),
+                                    className: o()(C.ch, null != a && C.R9),
                                     "aria-hidden": "true",
                                     children: f,
                                 }),
@@ -205,7 +205,7 @@ let j = i.forwardRef(function (e, t) {
             ],
         });
     }),
-    M = i.forwardRef(function (e, t) {
+    j = i.forwardRef(function (e, t) {
         var n, a;
         let {
                 emoji: p,
@@ -213,35 +213,35 @@ let j = i.forwardRef(function (e, t) {
                 animate: h,
                 className: g,
                 renderToolbar: E,
-                onShowToolbar: b,
-                placeholderText: A,
-                hasEntered: v = !0,
+                onShowToolbar: y,
+                placeholderText: v,
+                hasEntered: A = !0,
             } = e,
-            S = (0, O.NR)(),
-            { trackUserProfileAction: N } = (0, y.NJ)(),
-            R = (0, m.h)({
+            I = (0, O.NR)(),
+            { trackUserProfileAction: N } = (0, b.NJ)(),
+            w = (0, m.h)({
                 location: "CustomStatusBubble",
             }),
-            w = 1.25 * (null != p),
-            P = 36 + w,
-            D = 144 + w,
-            x = i.useRef(null),
-            j = i.useRef(null),
+            R = 1.25 * (null != p),
+            P = 36 + R,
+            D = 144 + R,
+            L = i.useRef(null),
             M = i.useRef(null),
+            j = i.useRef(null),
             k = i.useRef(P),
             U = i.useRef(D),
             G = null != p && null == _,
             [V, F] = i.useState(!1),
             [B, H] = i.useState(!0),
-            [Y, W] = i.useState(!G && v),
-            K = v && V,
+            [Y, W] = i.useState(!G && A),
+            K = A && V,
             z = (0, l.bG)([d.A], () => d.A.useReducedMotion),
             [q] = i.useState(() => new c.Ep());
         i.useEffect(() => () => q.stop(), [q]),
             i.useEffect(() => {
-                null == S || S.onInteractionPopoutTargetRefChange(x);
-            }, [S]);
-        let [X, Z] = (0, u.zhh)(() => ({
+                null == I || I.onInteractionPopoutTargetRefChange(L);
+            }, [I]);
+        let [Z, Q] = (0, u.zhh)(() => ({
             maxHeight: "".concat(k.current, "px"),
             config: {
                 clamp: !0,
@@ -249,20 +249,20 @@ let j = i.forwardRef(function (e, t) {
             },
         }));
         i.useLayoutEffect(() => {
-            if ((F(!0), null == j.current || null == M.current || !K)) return;
-            let e = j.current.getBoundingClientRect().height,
-                t = M.current.getBoundingClientRect().height;
+            if ((F(!0), null == M.current || null == j.current || !K)) return;
+            let e = M.current.getBoundingClientRect().height,
+                t = j.current.getBoundingClientRect().height;
             W(t > e),
                 (k.current = e),
                 (U.current = t),
-                Z({
+                Q({
                     maxHeight: "".concat(Math.min(B ? k.current : U.current, B ? P : D), "px"),
                 });
-        }, [K, _, p, Z, B, P, D]);
-        let Q = (e) => {
+        }, [K, _, p, Q, B, P, D]);
+        let X = (e) => {
                 Y &&
                     (e
-                        ? Z({
+                        ? Q({
                               maxHeight: "".concat(Math.min(U.current, D), "px"),
                               delay: 300 * !z,
                               config: {
@@ -270,23 +270,23 @@ let j = i.forwardRef(function (e, t) {
                                   duration: 150 * !z,
                               },
                           })
-                        : Z({
+                        : Q({
                               maxHeight: "".concat(Math.min(k.current, P), "px"),
                               delay: 0,
                           }),
                     z ? H(!e) : q.start(e ? 300 : 150, () => H(!e)));
             },
-            $ =
+            J =
                 null != p
                     ? (0, r.jsx)(f.A, {
                           emoji: p,
                           animate: h,
                           hideTooltip: !1,
-                          tooltipDelay: I.In,
+                          tooltipDelay: S.In,
                           className: C.H0,
                       })
                     : null,
-            J =
+            $ =
                 null != _
                     ? (0, r.jsx)(u.Text, {
                           variant: "text-sm/normal",
@@ -295,61 +295,61 @@ let j = i.forwardRef(function (e, t) {
                       })
                     : null,
             ee =
-                void 0 === A || (null != p && R)
+                void 0 === v || (null != p && w)
                     ? null
                     : (0, r.jsx)(u.Text, {
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          "aria-label": "".concat(T.intl.string(T.t.EVV6uZ), ": ").concat(A),
-                          className: s()(C.qS, R && C.R9),
-                          children: null != A ? A : "",
+                          "aria-label": "".concat(T.intl.string(T.t.EVV6uZ), ": ").concat(v),
+                          className: o()(C.qS, w && C.R9),
+                          children: null != v ? v : "",
                       }),
-            et = null == J || "" === _ ? ee : J,
+            et = null == $ || "" === _ ? ee : $,
             en = (0, r.jsxs)("div", {
-                ref: j,
+                ref: M,
                 className: C.Qs,
-                children: [$, et],
+                children: [J, et],
             }),
             er = (0, r.jsxs)("div", {
-                ref: M,
-                className: s()(C.Qs, C.m2),
-                children: [$, et],
+                ref: j,
+                className: o()(C.Qs, C.m2),
+                children: [J, et],
             }),
             ei = (0, r.jsx)("div", {
                 ref: t,
                 className: C.A7,
                 children: (0, r.jsx)("span", {
                     className: C.vW,
-                    children: (0, r.jsxs)(o.animated.div, {
-                        style: X,
-                        className: s()(C.Qs, {
+                    children: (0, r.jsxs)(s.animated.div, {
+                        style: Z,
+                        className: o()(C.Qs, {
                             [C.m2]: !B,
                         }),
-                        children: [$, et],
+                        children: [J, et],
                     }),
                 }),
             }),
-            ea = (0, r.jsxs)(L, {
+            ea = (0, r.jsxs)(x, {
                 children: [en, er],
             });
-        return null == b
+        return null == y
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       ea,
                       (0, r.jsxs)("div", {
-                          ref: x,
-                          className: s()(C.kL, g),
+                          ref: L,
+                          className: o()(C.kL, g),
                           onMouseEnter: () => {
                               N({
                                   action: "HOVER_CUSTOM_STATUS",
                               }),
-                                  Q(!0);
+                                  X(!0);
                           },
                           onMouseLeave: () => {
-                              Q(!1);
+                              X(!1);
                           },
-                          onFocus: () => Q(!0),
-                          onBlur: () => Q(!1),
+                          onFocus: () => X(!0),
+                          onBlur: () => X(!1),
                           children: [
                               (0, r.jsx)(u.vN3, {
                                   children: (0, r.jsx)("div", {
@@ -372,24 +372,24 @@ let j = i.forwardRef(function (e, t) {
                   children: [
                       ea,
                       (0, r.jsxs)("div", {
-                          ref: x,
-                          className: s()(C.kL, g),
+                          ref: L,
+                          className: o()(C.kL, g),
                           onFocus: () => {
-                              b(!0), Q(!0);
+                              y(!0), X(!0);
                           },
                           onBlur: (e) => {
                               var t;
-                              (null == (t = x.current) ? void 0 : t.contains(e.relatedTarget)) || (b(!1), Q(!1));
+                              (null == (t = L.current) ? void 0 : t.contains(e.relatedTarget)) || (y(!1), X(!1));
                           },
                           onMouseEnter: () => {
                               N({
                                   action: "HOVER_CUSTOM_STATUS",
                               }),
-                                  b(!0),
-                                  Q(!0);
+                                  y(!0),
+                                  X(!0);
                           },
                           onMouseLeave: () => {
-                              b(!1), Q(!1);
+                              y(!1), X(!1);
                           },
                           children: [
                               (0, r.jsx)(u.vN3, {
@@ -412,20 +412,20 @@ let j = i.forwardRef(function (e, t) {
     }),
     k = i.forwardRef(function (e, t) {
         let [n, ...a] = [e, t],
-            { emoji: s, text: o, onCloseProfile: l } = n,
+            { emoji: o, text: s, onCloseProfile: l } = n,
             c = D(n, ["emoji", "text", "onCloseProfile"]),
             [u] = a,
             [d, f] = i.useState(!1);
         return (0, r.jsx)(
-            M,
-            P(R({}, c), {
+            j,
+            P(w({}, c), {
                 ref: u,
-                emoji: s,
-                text: o,
+                emoji: o,
+                text: s,
                 className: C.LL,
                 onShowToolbar: f,
                 renderToolbar: (e) =>
-                    (0, r.jsx)(S.A, {
+                    (0, r.jsx)(I.A, {
                         isVisible: d,
                         isExpandable: e,
                         onCloseProfile: l,
@@ -435,61 +435,61 @@ let j = i.forwardRef(function (e, t) {
     });
 
 function U(e) {
-    let { emoji: t, text: n, user: a, guildId: s, channelId: o, themeType: l } = e,
+    let { emoji: t, text: n, user: a, guildId: o, channelId: s, themeType: l } = e,
         c = D(e, ["emoji", "text", "user", "guildId", "channelId", "themeType"]),
-        { trackUserProfileAction: u } = (0, y.NJ)(),
+        { trackUserProfileAction: u } = (0, b.NJ)(),
         { interactionType: d, interactionSource: f, resetInteraction: p } = (0, O.Pq)(),
-        _ = f === I.dS.STATUS && d === I.AQ.REACT,
-        h = f === I.dS.STATUS && d === I.AQ.REPLY,
+        _ = f === S.dS.STATUS && d === S.AQ.REACT,
+        h = f === S.dS.STATUS && d === S.AQ.REPLY,
         m = _ || h,
         g = i.useRef(null),
-        b = i.useRef(t),
-        S = i.useRef(n);
+        y = i.useRef(t),
+        I = i.useRef(n);
     i.useEffect(() => {
-        f === I.dS.STATUS && ((b.current !== t || S.current !== n) && p(), (b.current = t), (S.current = n));
+        f === S.dS.STATUS && ((y.current !== t || I.current !== n) && p(), (y.current = t), (I.current = n));
     }, [f, p, t, n]);
     let [T, N] = i.useState(!1),
-        w = i.useCallback(
+        R = i.useCallback(
             (e) => {
                 (e || !m) && N(e);
             },
             [m],
         ),
-        x = (e) =>
+        L = (e) =>
             null == e
                 ? null
                 : null != e.id
                   ? "`" + ":".concat(e.name, ":") + "`"
                   : E.Ay.translateSurrogatesToInlineEmoji(e.name),
-        L = (e, t) => (null == e ? t : "".concat(e, " ").concat(t)),
-        j = () => {
-            let e = x(t);
-            return null == n ? e : L(e, n);
+        x = (e, t) => (null == e ? t : "".concat(e, " ").concat(t)),
+        M = () => {
+            let e = L(t);
+            return null == n ? e : x(e, n);
         };
-    return (0, r.jsx)(A.A, {
+    return (0, r.jsx)(v.A, {
         user: a,
-        guildId: s,
-        channelId: o,
+        guildId: o,
+        channelId: s,
         themeType: l,
-        sourceDetails: j(),
-        sourceType: I.dS.STATUS,
+        sourceDetails: M(),
+        sourceType: S.dS.STATUS,
         onAction: u,
         onClose: () => N(!1),
         children: () =>
             (0, r.jsx)(
-                M,
-                P(R({}, c), {
+                j,
+                P(w({}, c), {
                     ref: g,
                     emoji: t,
                     text: n,
                     themeType: l,
                     className: m ? C.zf : void 0,
-                    onShowToolbar: w,
+                    onShowToolbar: R,
                     renderToolbar: (e) =>
-                        (0, r.jsx)(v.Ay, {
+                        (0, r.jsx)(A.Ay, {
                             targetRef: g,
                             user: a,
-                            sourceType: I.dS.STATUS,
+                            sourceType: S.dS.STATUS,
                             isVisible: T && !m,
                             isExpandable: e,
                             onAction: u,
@@ -502,8 +502,8 @@ let G = i.forwardRef(function (e, t) {
     var n, i;
     let {
             user: a,
-            onCloseProfile: s,
-            previewText: o,
+            onCloseProfile: o,
+            previewText: s,
             previewEmoji: c,
             placeholderText: u,
             prompt: d,
@@ -520,17 +520,17 @@ let G = i.forwardRef(function (e, t) {
         ]),
         m = (0, g.A)(a.id),
         { analyticsLocations: E } = (0, _.Ay)(p.A.USER_PROFILE_CUSTOM_STATUS_BUBBLE),
-        y = (0, l.bG)([b.default], () => b.default.getId() === a.id),
-        O = y && !f,
-        A = !y && !a.bot && !f;
-    if (null != o || null != c) {
+        b = (0, l.bG)([y.default], () => y.default.getId() === a.id),
+        O = b && !f,
+        v = !b && !a.bot && !f;
+    if (null != s || null != c) {
         let e = null != c ? c : null,
-            n = null != o && "" !== o ? o : null;
+            n = null != s && "" !== s ? s : null;
         return (0, r.jsx)(_.f5, {
             value: E,
             children: (0, r.jsx)(
-                M,
-                R(
+                j,
+                w(
                     {
                         emoji: e,
                         text: n,
@@ -542,18 +542,18 @@ let G = i.forwardRef(function (e, t) {
             ),
         });
     }
-    let v = null != (n = null == m ? void 0 : m.emoji) ? n : null,
-        S = null != (i = null == m ? void 0 : m.state) ? i : null,
-        I = null != S && "" !== S ? S : null;
-    return null != v || null != I || O
-        ? null == v && null == I
+    let A = null != (n = null == m ? void 0 : m.emoji) ? n : null,
+        I = null != (i = null == m ? void 0 : m.state) ? i : null,
+        S = null != I && "" !== I ? I : null;
+    return null != A || null != S || O
+        ? null == A && null == S
             ? (0, r.jsx)(_.f5, {
                   value: E,
                   children: (0, r.jsx)(
-                      j,
-                      R(
+                      M,
+                      w(
                           {
-                              onCloseProfile: s,
+                              onCloseProfile: o,
                               prompt: d,
                               ref: t,
                           },
@@ -561,16 +561,16 @@ let G = i.forwardRef(function (e, t) {
                       ),
                   ),
               })
-            : A
+            : v
               ? (0, r.jsx)(_.f5, {
                     value: E,
                     children: (0, r.jsx)(
                         U,
-                        R(
+                        w(
                             {
                                 user: a,
-                                emoji: v,
-                                text: I,
+                                emoji: A,
+                                text: S,
                             },
                             h,
                         ),
@@ -581,11 +581,11 @@ let G = i.forwardRef(function (e, t) {
                       value: E,
                       children: (0, r.jsx)(
                           k,
-                          R(
+                          w(
                               {
-                                  emoji: v,
-                                  text: I,
-                                  onCloseProfile: s,
+                                  emoji: A,
+                                  text: S,
+                                  onCloseProfile: o,
                                   ref: t,
                               },
                               h,
@@ -595,11 +595,11 @@ let G = i.forwardRef(function (e, t) {
                 : (0, r.jsx)(_.f5, {
                       value: E,
                       children: (0, r.jsx)(
-                          M,
-                          R(
+                          j,
+                          w(
                               {
-                                  emoji: v,
-                                  text: I,
+                                  emoji: A,
+                                  text: S,
                                   ref: t,
                               },
                               h,

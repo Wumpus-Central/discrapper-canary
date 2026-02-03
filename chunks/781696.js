@@ -1,16 +1,16 @@
 n.d(t, {
-    ST: () => M,
-    oM: () => S,
+    ST: () => j,
+    oM: () => I,
 }),
     n(65821),
     n(896048);
 var r,
     i = n(627968),
     a = n(64700),
-    s = n(503698),
-    o = n.n(s),
+    o = n(503698),
+    s = n.n(o),
     l = n(340287),
-    c = n(108531),
+    c = n(92674),
     u = n(607399),
     d = n(621466),
     f = n(158954),
@@ -21,7 +21,7 @@ var r,
     g = n(750506),
     E = n(197290);
 
-function b(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function b(e, t, n) {
     );
 }
 
-function y(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -65,7 +65,7 @@ function O(e, t) {
     return n;
 }
 
-function A(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,13 +76,13 @@ function A(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = v(e, t)), Object.getOwnPropertySymbols))
+    if (((a = A(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function v(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,14 +92,14 @@ function v(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-var S = (function (e) {
+var I = (function (e) {
     return (e.PRIMARY = "primary"), (e.GREY = "grey"), (e.BRAND = "brand"), (e.GREEN = "green"), (e.RED = "red"), e;
 })({});
-let I = 16,
+let S = 16,
     T = 10,
     C = 8,
     N = Object.freeze({}),
-    R = Object.freeze({
+    w = Object.freeze({
         top: E.dn,
         bottom: E.L_,
         left: E.Lf,
@@ -113,17 +113,17 @@ let I = 16,
         red: E.Rp,
     });
 
-function w(e, t, n) {
+function R(e, t, n) {
     let r = "left" === e || "right" === e,
         i = r ? "top" : "left",
         a = r ? "top" : "left",
-        s = r ? "bottom" : "right",
-        o = "50%",
+        o = r ? "bottom" : "right",
+        s = "50%",
         l = n;
     return (
-        t === a ? ((o = "0%"), (l += I)) : t === s && ((o = "100%"), (l -= T + T)),
+        t === a ? ((s = "0%"), (l += S)) : t === o && ((s = "100%"), (l -= T + T)),
         {
-            [i]: "calc(".concat(o, " + ").concat(l, "px)"),
+            [i]: "calc(".concat(s, " + ").concat(l, "px)"),
         }
     );
 }
@@ -133,7 +133,7 @@ let P = (e) => {
                 align: n = "center",
                 position: r,
                 color: a,
-                children: s,
+                children: o,
                 onNonAccessibleClick: l,
                 tooltipClassName: u,
                 tooltipStyle: d,
@@ -142,53 +142,53 @@ let P = (e) => {
                 animationStyle: _,
                 disableTooltipPointerEvents: h = !1,
                 allowOverflow: m = !1,
-                tooltipPointerClassName: b,
+                tooltipPointerClassName: y,
                 positionKeyStemOverride: O,
-                dataMeticulousIgnore: A,
+                dataMeticulousIgnore: v,
             } = e,
-            v = "".concat(null != O ? O : "string" == typeof s ? s : "", ":").concat(r);
+            A = "".concat(null != O ? O : "string" == typeof o ? o : "", ":").concat(r);
         return (0, i.jsx)(g.nE, {
             disablePointerEvents: h,
             targetRef: t,
             position: r,
             autoInvert: !0,
             align: n,
-            positionKey: v,
+            positionKey: A,
             spacing: p,
             nudgeAlignIntoViewport: !0,
             children: (e) => {
                 let { position: t, nudge: p } = e;
                 return (0, i.jsxs)(c.animated.div, {
                     onClick: l,
-                    className: o()(
+                    className: s()(
                         E.YL,
-                        R[null != t ? t : r],
-                        R[a],
+                        w[null != t ? t : r],
+                        w[a],
                         {
                             [E.Cy]: h,
                         },
                         u,
                     ),
-                    style: y({}, _, d),
-                    "data-mtctest-ignore": A,
+                    style: b({}, _, d),
+                    "data-mtctest-ignore": v,
                     children: [
                         (0, i.jsx)("div", {
-                            className: o()(E.xQ, E.yH, b),
-                            style: w(null != t ? t : r, n, p),
+                            className: s()(E.xQ, E.yH, y),
+                            style: R(null != t ? t : r, n, p),
                         }),
                         (0, i.jsx)("div", {
-                            className: o()(E.xQ, b),
-                            style: w(null != t ? t : r, n, p),
+                            className: s()(E.xQ, y),
+                            style: R(null != t ? t : r, n, p),
                         }),
                         (0, i.jsx)("div", {
-                            className: o()(
+                            className: s()(
                                 E.rv,
                                 {
                                     [E.u2]: m,
                                 },
                                 f,
                             ),
-                            children: s,
+                            children: o,
                         }),
                     ],
                 });
@@ -199,26 +199,26 @@ let P = (e) => {
         scale: 0.95,
         opacity: 0,
     },
-    x = {
+    L = {
         scale: 1,
         opacity: 0,
     },
-    L = {
+    x = {
         scale: 1,
         opacity: 1,
     },
-    j = (e) => {
+    M = (e) => {
         let { isVisible: t, onAnimationRest: n, targetElementRef: r } = e,
-            s = A(e, ["isVisible", "onAnimationRest", "targetElementRef"]),
-            { reducedMotion: o } = a.useContext(f.CZY);
+            o = v(e, ["isVisible", "onAnimationRest", "targetElementRef"]),
+            { reducedMotion: s } = a.useContext(f.CZY);
         return (0, h.pnh)(
             t,
             {
                 keys: (e) => (e ? "tooltip" : "empty"),
                 config: _.p,
-                from: o.enabled ? x : D,
-                enter: L,
-                leave: o.enabled ? x : D,
+                from: s.enabled ? L : D,
+                enter: x,
+                leave: s.enabled ? L : D,
                 onRest: n,
             },
             "animate-always",
@@ -226,19 +226,19 @@ let P = (e) => {
             t
                 ? (0, i.jsx)(
                       P,
-                      y(
+                      b(
                           {
                               "data-migration-pending": !0,
                               animationStyle: e,
                               targetElementRef: r,
                           },
-                          s,
+                          o,
                       ),
                   )
                 : null,
         );
     };
-class M extends (r = a.Component) {
+class j extends (r = a.Component) {
     static getDerivedStateFromProps(e, t) {
         return t.shouldShowTooltip && null == e.text
             ? {
@@ -274,7 +274,7 @@ class M extends (r = a.Component) {
             { children: t, text: n, "aria-label": r } = this.props;
         if (null == n) return t(N);
         "string" == typeof r ? (e = r) : "string" == typeof n && !1 !== r && (e = n);
-        let s = {
+        let o = {
             onClick: this.handleClick,
             onMouseEnter: this.handleMouseEnter,
             onMouseLeave: this.handleMouseLeave,
@@ -283,10 +283,10 @@ class M extends (r = a.Component) {
             onBlur: this.handleBlur,
         };
         return (
-            null != e && (s["aria-label"] = e),
+            null != e && (o["aria-label"] = e),
             (0, i.jsxs)(a.Fragment, {
                 children: [
-                    t(s),
+                    t(o),
                     void 0 === this.props.targetElementRef &&
                         (0, i.jsx)("span", {
                             ref: this.siblingDomRef,
@@ -310,8 +310,8 @@ class M extends (r = a.Component) {
                 position: n,
                 color: r,
                 spacing: a,
-                tooltipClassName: s,
-                tooltipStyle: o,
+                tooltipClassName: o,
+                tooltipStyle: s,
                 tooltipContentClassName: l,
                 disableTooltipPointerEvents: c,
                 onAnimationRest: d,
@@ -323,28 +323,28 @@ class M extends (r = a.Component) {
             } = this.props,
             g = (u.Fr || u.v1) && !0 === p && _,
             E = (!1 !== c && !g) || !0 === c,
-            b = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement,
-            y = null;
+            y = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement,
+            b = null;
         return (
-            (y = e instanceof Function ? (b ? e() : null) : e),
-            (0, i.jsx)(j, {
+            (b = e instanceof Function ? (y ? e() : null) : e),
+            (0, i.jsx)(M, {
                 disableTooltipPointerEvents: E,
                 targetElementRef: this.domElementRef,
-                tooltipStyle: o,
-                tooltipClassName: s,
+                tooltipStyle: s,
+                tooltipClassName: o,
                 tooltipContentClassName: l,
                 tooltipPointerClassName: h,
                 align: t,
                 position: n,
                 color: r,
                 spacing: a,
-                isVisible: b,
+                isVisible: y,
                 onAnimationRest: d,
                 onNonAccessibleClick: g ? this.handleClick : void 0,
                 allowOverflow: f,
                 positionKeyStemOverride: this.props.positionKeyStemOverride,
                 dataMeticulousIgnore: m,
-                children: y,
+                children: b,
             })
         );
     }
@@ -374,40 +374,40 @@ class M extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            b(this, "showTimeout", new p.Ep()),
-            b(this, "domElementRef", {
+            y(this, "showTimeout", new p.Ep()),
+            y(this, "domElementRef", {
                 current: null,
             }),
-            b(this, "hasDomElement", !1),
-            b(this, "siblingDomRef", a.createRef()),
-            b(this, "state", {
+            y(this, "hasDomElement", !1),
+            y(this, "siblingDomRef", a.createRef()),
+            y(this, "state", {
                 shouldShowTooltip: !1,
             }),
-            b(this, "handleMouseEnter", () => {
+            y(this, "handleMouseEnter", () => {
                 ((u.Fr || u.v1) && !0 === this.props.clickableOnMobile) || this.show();
             }),
-            b(this, "handleMouseLeave", () => {
+            y(this, "handleMouseLeave", () => {
                 ((u.Fr || u.v1) && !0 === this.props.clickableOnMobile) || this.hide();
             }),
-            b(this, "handleFocus", () => {
+            y(this, "handleFocus", () => {
                 m.A.keyboardModeEnabled && this.show();
             }),
-            b(this, "handleBlur", () => {
+            y(this, "handleBlur", () => {
                 this.hide();
             }),
-            b(this, "handleClick", () => {
+            y(this, "handleClick", () => {
                 let e = this.hasDomElement;
                 e && this.props.hideOnClick
                     ? this.hide()
                     : !e && (u.Fr || u.v1) && !0 === this.props.clickableOnMobile && this.show();
             }),
-            b(this, "handleContextMenu", () => {
+            y(this, "handleContextMenu", () => {
                 this.hide();
             });
     }
 }
-b(M, "Colors", S),
-    b(M, "defaultProps", {
+y(j, "Colors", I),
+    y(j, "defaultProps", {
         hideOnClick: !0,
         position: "top",
         color: "primary",

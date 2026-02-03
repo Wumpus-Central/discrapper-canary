@@ -1,10 +1,10 @@
 n.d(t, {
-    H: () => f,
+    H: () => h,
 }),
     n(896048);
 var l = n(627968),
     r = n(64700),
-    i = n(108531),
+    i = n(92674),
     a = n(311907),
     s = n(397927),
     o = n(971778),
@@ -12,7 +12,7 @@ var l = n(627968),
     u = n(985018),
     d = n(144958);
 
-function f() {
+function h() {
     let e = (0, a.bG)([o.A], () => o.A.getError());
     return e
         ? (0, l.jsx)(p, {
@@ -23,7 +23,7 @@ function f() {
 let p = (e) => {
     let { error: t } = e,
         [n, a] = (0, r.useState)(!1),
-        f = (0, s.pnh)(
+        h = (0, s.pnh)(
             !n,
             {
                 from: {
@@ -51,7 +51,7 @@ let p = (e) => {
                     return u.intl.string(u.t.F8FvUy);
             }
         })();
-    return f((e) =>
+    return h((e) =>
         n
             ? null
             : (0, l.jsx)(i.animated.div, {

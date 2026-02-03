@@ -6,7 +6,7 @@ var r,
     i = n(627968),
     s = n(64700),
     l = n(218681),
-    a = n(108531),
+    a = n(92674),
     o = n(397927);
 let c = null != (r = window.ResizeObserver) ? r : l.t;
 
@@ -47,7 +47,7 @@ function u(e) {
                 friction: 26,
             },
         }),
-        f = (0, o.zhh)({
+        p = (0, o.zhh)({
             from: {
                 opacity: 0,
             },
@@ -68,7 +68,7 @@ function u(e) {
         },
         children: (0, i.jsx)(a.animated.div, {
             style: {
-                opacity: f.opacity,
+                opacity: p.opacity,
             },
             ref: u,
             children: n,

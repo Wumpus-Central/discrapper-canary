@@ -1,14 +1,14 @@
 n.d(t, {
-    A: () => f,
+    A: () => x,
 }),
     n(896048);
 var a = n(627968),
     l = n(64700),
-    i = n(503698),
-    r = n.n(i),
+    r = n(503698),
+    i = n.n(r),
     s = n(735438),
     o = n.n(s),
-    c = n(108531),
+    c = n(92674),
     d = n(311907),
     u = n(397927),
     m = n(775602),
@@ -19,42 +19,42 @@ let h = {
     friction: 140,
 };
 
-function f(e) {
+function x(e) {
     let { className: t, pageMultiplier: n } = e,
-        i = (0, d.bG)([m.A], () => m.A.useReducedMotion),
-        [s, f] = l.useState({
+        r = (0, d.bG)([m.A], () => m.A.useReducedMotion),
+        [s, x] = l.useState({
             x: 0,
             y: 0,
         }),
-        x = l.useMemo(
+        g = l.useMemo(
             () =>
                 o().throttle((e) => {
-                    i ||
-                        f({
+                    r ||
+                        x({
                             x: (window.innerWidth - e.pageX * n) / 90,
                             y: (window.innerHeight - e.pageY * n) / 90,
                         });
                 }, 20),
-            [n, i],
+            [n, r],
         );
-    l.useEffect(() => (window.addEventListener("mousemove", x), () => window.removeEventListener("mousemove", x)), [x]);
-    let [b, g] = (0, u.zhh)(() => ({
+    l.useEffect(() => (window.addEventListener("mousemove", g), () => window.removeEventListener("mousemove", g)), [g]);
+    let [f, b] = (0, u.zhh)(() => ({
         x: 0,
         y: 0,
         config: h,
     }));
     return (
         l.useEffect(() => {
-            g({
+            b({
                 x: s.x,
                 y: s.y,
             });
-        }, [s.x, s.y, g]),
+        }, [s.x, s.y, b]),
         (0, a.jsx)(c.animated.div, {
             style: {
-                transform: (0, c.to)([b.x, b.y], (e, t) => "translate3d(".concat(e, "px, ").concat(t, "px, 0)")),
+                transform: (0, c.to)([f.x, f.y], (e, t) => "translate3d(".concat(e, "px, ").concat(t, "px, 0)")),
             },
-            className: r()(p.T, t),
+            className: i()(p.T, t),
         })
     );
 }

@@ -3,11 +3,11 @@ n.d(t, {
 }),
     n(896048);
 var r = n(64700),
-    i = n(108531),
+    i = n(92674),
     a = n(844222),
-    s = n(384494);
+    o = n(384494);
 
-function o(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
@@ -40,10 +40,10 @@ function l(e) {
 
 function c(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "respect-motion-settings",
-        o = arguments.length > 3 ? arguments[3] : void 0,
+        s = arguments.length > 3 ? arguments[3] : void 0,
         c = r.useContext(a.C).reducedMotion.enabled,
         u = t;
-    "animate-always" !== n && ("respect-motion-settings" !== n || c) && (u = l({}, t, s.W));
-    let [d, f, p] = (0, i.useTransition)(e, u, o);
+    "animate-always" !== n && ("respect-motion-settings" !== n || c) && (u = l({}, t, o.W));
+    let [d, f, p] = (0, i.useTransition)(e, u, s);
     return 4 == arguments.length ? [d, f, p] : d;
 }

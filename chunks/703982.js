@@ -5,7 +5,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     l = n.n(i),
-    s = n(108531),
+    s = n(92674),
     a = n(397927),
     o = n(793574),
     c = n(688810),
@@ -17,7 +17,7 @@ var i = n(503698),
 let g = function (e) {
     let { isVisible: t, premiumSubscription: i, churnDiscountOffer: g, discountedPrice: A } = e,
         { analyticsLocations: f } = (0, c.Ay)(o.A.CHURN_DISCOUNT_PERSISTENT_CTA),
-        h = (0, a.zhh)({
+        b = (0, a.zhh)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: {
@@ -29,7 +29,7 @@ let g = function (e) {
         className: l()(p.iE, {
             [p.q4]: !t,
         }),
-        style: h,
+        style: b,
         children: (0, r.jsxs)("div", {
             className: p.iJ,
             children: [

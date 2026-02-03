@@ -1,29 +1,29 @@
 n.d(t, {
-    A: () => h,
+    A: () => A,
 }),
     n(896048);
 var l = n(627968),
     r = n(64700),
-    i = n(108531),
+    i = n(92674),
     a = n(311907),
     s = n(397927),
     o = n(565645),
     c = n(775602),
     u = n(927813),
     d = n(614518),
-    f = n(804771);
+    h = n(804771);
 let p = 6 * u.A.Millis.SECOND,
-    b = 2 * u.A.Millis.SECOND,
-    g = 2 * u.A.Millis.SECOND,
-    m = (e) => "scale(".concat(1 - -(e / 120), ") rotate(").concat(e, "deg)");
+    f = 2 * u.A.Millis.SECOND,
+    m = 2 * u.A.Millis.SECOND,
+    g = (e) => "scale(".concat(1 - -(e / 120), ") rotate(").concat(e, "deg)");
 
-function h(e) {
+function A(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: u } = e,
-        { emoji: h, sentAt: A } = n,
-        y = (0, a.bG)([c.A], () => c.A.useReducedMotion),
-        [_, E] = r.useState(!0),
-        v = !y,
-        O = (0, s.pnh)(_, {
+        { emoji: A, sentAt: b } = n,
+        _ = (0, a.bG)([c.A], () => c.A.useReducedMotion),
+        [y, v] = r.useState(!0),
+        E = !_,
+        O = (0, s.pnh)(y, {
             from: {
                 rotate: -120,
             },
@@ -42,20 +42,20 @@ function h(e) {
     return (r.useEffect(() => {
         let e;
         return (
-            Date.now() - A >= g
+            Date.now() - b >= m
                 ? (0, d.a)(t)
                 : (e = setTimeout(
                       () => {
-                          E(!1), v && (0, d.a)(t);
+                          v(!1), E && (0, d.a)(t);
                       },
-                      v ? b : p,
+                      E ? f : p,
                   )),
             () => {
                 null != e && clearTimeout(e);
             }
         );
-    }, [A, t, v]),
-    v)
+    }, [b, t, E]),
+    E)
         ? null
         : O((e, t) => {
               var n;
@@ -63,15 +63,15 @@ function h(e) {
               return (
                   t &&
                   (0, l.jsx)(i.animated.div, {
-                      className: f._,
+                      className: h._,
                       style: {
-                          transform: r.to(m),
+                          transform: r.to(g),
                       },
                       children: (0, l.jsx)(o.A, {
-                          className: f.F,
-                          emojiId: h.id,
-                          emojiName: h.name,
-                          animated: null != (n = h.animated) && n,
+                          className: h.F,
+                          emojiId: A.id,
+                          emojiName: A.name,
+                          animated: null != (n = A.animated) && n,
                       }),
                   })
               );

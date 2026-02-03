@@ -1,8 +1,8 @@
 n.d(t, {
-    A: () => a,
+    A: () => l,
 });
-var l = n(108531);
-class a {
+var r = n(92674);
+class l {
     handleScroll(e) {
         this.top.set(e.currentTarget.scrollTop);
     }
@@ -19,6 +19,6 @@ class a {
                       writable: !0,
                   })
                 : (e.top = n);
-        })(this, 0, new l.SpringValue(0));
+        })(this, 0, new r.SpringValue(0));
     }
 }

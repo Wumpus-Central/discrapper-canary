@@ -1,5 +1,5 @@
 n.d(t, {
-    j: () => A,
+    j: () => b,
 }),
     n(896048);
 var l = n(627968),
@@ -7,11 +7,11 @@ var l = n(627968),
     i = n(503698),
     a = n.n(i),
     s = n(444058),
-    o = n(108531),
+    o = n(92674),
     c = n(397927),
     u = n(927813),
     d = n(985018),
-    f = n(626228);
+    h = n(626228);
 
 function p(e) {
     if (null != e) {
@@ -40,7 +40,7 @@ function p(e) {
         countdownString: "",
     };
 }
-let b = (e) => {
+let f = (e) => {
         let { digit: t } = e,
             n = (0, c.pnh)(t, {
                 from: {
@@ -62,7 +62,7 @@ let b = (e) => {
                 },
             });
         return (0, l.jsx)("div", {
-            className: f.z$,
+            className: h.z$,
             children: n((e, t) => {
                 var n, r;
                 return (0, l.jsx)(o.animated.div, {
@@ -119,7 +119,7 @@ let b = (e) => {
             }),
         });
     },
-    g = () => {
+    m = () => {
         let [e, t] = r.useState(!1);
         r.useEffect(() => {
             let e;
@@ -146,57 +146,57 @@ let b = (e) => {
         });
         return (0, l.jsxs)(o.animated.div, {
             style: n,
-            className: f.Z5,
+            className: h.Z5,
             children: [
                 (0, l.jsx)("div", {
-                    className: f.Cj,
+                    className: h.Cj,
                 }),
                 (0, l.jsx)("div", {
-                    className: f.Cj,
+                    className: h.Cj,
                 }),
             ],
         });
     },
-    m = (e) => {
+    g = (e) => {
         let { digits: t } = e;
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)("div", {
-                    className: f.JA,
-                    children: (0, l.jsx)(b, {
+                    className: h.JA,
+                    children: (0, l.jsx)(f, {
                         digit: t[0],
                     }),
                 }),
                 (0, l.jsx)("div", {
-                    className: f.JA,
-                    children: (0, l.jsx)(b, {
+                    className: h.JA,
+                    children: (0, l.jsx)(f, {
                         digit: t[1],
                     }),
                 }),
             ],
         });
     },
-    h = (e) => {
+    A = (e) => {
         let { countdown: t } = e;
         return (0, l.jsxs)("div", {
-            className: f.eh,
+            className: h.eh,
             children: [
-                (0, l.jsx)(m, {
+                (0, l.jsx)(g, {
                     digits: t.hours,
                 }),
-                (0, l.jsx)(g, {}),
-                (0, l.jsx)(m, {
+                (0, l.jsx)(m, {}),
+                (0, l.jsx)(g, {
                     digits: t.minutes,
                 }),
-                (0, l.jsx)(g, {}),
-                (0, l.jsx)(m, {
+                (0, l.jsx)(m, {}),
+                (0, l.jsx)(g, {
                     digits: t.seconds,
                 }),
             ],
         });
     };
 
-function A(e) {
+function b(e) {
     let { textVariant: t, className: n, catalogUpdateTime: i, isScrolled: s } = e,
         [o, u] = r.useState(() => p(i));
     return (
@@ -207,22 +207,22 @@ function A(e) {
             return () => clearInterval(e);
         }, [i]),
         (0, l.jsxs)("div", {
-            className: a()(n, f.Pc, {
-                [f.NW]: s,
+            className: a()(n, h.Pc, {
+                [h.NW]: s,
             }),
             "aria-label": o.countdownString,
             children: [
                 (0, l.jsxs)("div", {
-                    className: f.zc,
+                    className: h.zc,
                     children: [
                         (0, l.jsx)("div", {
-                            className: f.PG,
+                            className: h.PG,
                             children: (0, l.jsx)(c.O4, {
                                 size: "custom",
                                 height: 16,
                                 width: 16,
                                 color: "currentColor",
-                                colorClass: f.y,
+                                colorClass: h.y,
                             }),
                         }),
                         (0, l.jsx)(c.Text, {
@@ -233,8 +233,8 @@ function A(e) {
                     ],
                 }),
                 (0, l.jsx)("div", {
-                    className: f.eh,
-                    children: (0, l.jsx)(h, {
+                    className: h.eh,
+                    children: (0, l.jsx)(A, {
                         countdown: o,
                     }),
                 }),

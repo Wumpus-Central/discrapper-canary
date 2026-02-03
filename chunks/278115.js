@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => F,
+    A: () => V,
 }),
     n(228524),
     n(896048),
@@ -8,7 +8,7 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     o = n.n(a),
-    s = n(353709),
+    s = n(92674),
     l = n(172218),
     c = n(311907),
     u = n(397927),
@@ -107,10 +107,10 @@ function x(e) {
         j = (0, m.A)(t),
         k = (0, c.bG)([d.A], () => d.A.useReducedMotion),
         U = i.useRef(null),
-        [G, F] = i.useState(!1),
-        [V, B] = i.useState(!1),
-        H = V,
-        Y = V && null != O && "" !== O && !k ? O : E,
+        [G, V] = i.useState(!1),
+        [F, B] = i.useState(!1),
+        H = F,
+        Y = F && null != O && "" !== O && !k ? O : E,
         W = i.useCallback(() => {
             let e = b.A.getGuild(t);
             null != e &&
@@ -151,7 +151,7 @@ function x(e) {
             config: z,
         }),
         J = i.useCallback((e) => {
-            e && F(!0);
+            e && V(!0);
         }, []),
         $ = (0, l.K)(J),
         ee = N.skuId === I.W5;
@@ -364,4 +364,4 @@ let j = 3,
               });
     });
 G.displayName = "GuildBoostingMarketingPerkCards";
-let F = G;
+let V = G;

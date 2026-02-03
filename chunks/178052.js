@@ -1,16 +1,16 @@
 n.d(t, {
-    A: () => p,
+    A: () => b,
 }),
     n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(33851),
     o = n.n(i),
-    a = n(108531),
+    a = n(92674),
     s = n(615300),
     c = n(827734),
-    d = n(397927),
-    u = n(475743);
+    u = n(397927),
+    d = n(475743);
 
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -38,7 +38,7 @@ function C(e) {
     return e;
 }
 
-function f(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,20 +56,20 @@ function f(e, t) {
         e
     );
 }
-let b = {
+let p = {
         duration: 100,
         easing: s.A.Easing.inOut(s.A.Easing.back()),
         clamp: !0,
     },
-    m = {
+    f = {
         duration: 2e3,
         easing: s.A.Easing.quad,
         clamp: !0,
     };
 
-function p(e) {
+function b(e) {
     let { value: t, children: n, equalityFn: i = o(), style: s } = e,
-        p = (function (e, t) {
+        b = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -100,23 +100,23 @@ function p(e) {
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             return i;
         })(e, ["value", "children", "equalityFn", "style"]),
-        j = (0, u.A)(t),
-        [{ spring: g }, h] = (0, d.zhh)(
+        j = (0, d.A)(t),
+        [{ spring: g }, h] = (0, u.zhh)(
             () => ({
                 spring: 0,
             }),
             "animate-always",
         ),
-        x = (0, d.rdh)(c.A.colors.BACKGROUND_BASE_LOW).hex(),
-        y = (0, d.rdh)(c.A.colors.CONTROL_BRAND_FOREGROUND).hex(),
+        x = (0, u.rdh)(c.A.colors.BACKGROUND_BASE_LOW).hex(),
+        y = (0, u.rdh)(c.A.colors.CONTROL_BRAND_FOREGROUND).hex(),
         O = l.useCallback(() => {
             h({
                 spring: 1,
-                config: b,
+                config: p,
             }),
                 h({
                     spring: 0,
-                    config: m,
+                    config: f,
                     delay: 300,
                 });
         }, [h]);
@@ -130,9 +130,9 @@ function p(e) {
                       range: [0, 1],
                       output: ["".concat(x, "00"), "".concat(y, "27")],
                   }),
-        H =
+        _ =
             null != s
-                ? f(C({}, s), {
+                ? m(C({}, s), {
                       backgroundColor: v,
                   })
                 : {
@@ -140,8 +140,8 @@ function p(e) {
                   };
     return (0, r.jsx)(
         a.animated.tr,
-        f(C({}, p), {
-            style: H,
+        m(C({}, b), {
+            style: _,
             children: n,
         }),
     );

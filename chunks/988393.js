@@ -3,9 +3,9 @@ n.d(t, {
 });
 var r = n(627968),
     i = n(64700),
-    a = n(108531),
-    s = n(397927),
-    o = n(857250),
+    a = n(92674),
+    o = n(397927),
+    s = n(857250),
     l = n(691540),
     c = n(97483),
     u = n(17069);
@@ -138,7 +138,7 @@ function g(e) {
             var e, t;
             return m[null != (e = null == _ || null == (t = _.options) ? void 0 : t.position) ? e : h.current];
         }, [_]),
-        b = (0, s.pnh)(
+        y = (0, o.pnh)(
             _,
             f(
                 {
@@ -159,14 +159,14 @@ function g(e) {
         }, [_, p]),
         (0, r.jsx)("div", {
             className: E.styles,
-            children: b((e, t) =>
+            children: y((e, t) =>
                 null == t
                     ? null
                     : (0, r.jsx)(
                           a.animated.div,
                           {
                               style: e,
-                              children: (0, r.jsx)(o.y, f({}, t)),
+                              children: (0, r.jsx)(s.y, f({}, t)),
                           },
                           t.id,
                       ),

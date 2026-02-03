@@ -1,22 +1,22 @@
 n.d(t, {
-    C: () => v,
+    C: () => x,
 }),
     n(896048);
 var r,
     l = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(108531),
+    s = n(503698),
+    a = n.n(s),
+    o = n(92674),
     c = n(696292),
     u = n(397927),
     d = n(753845),
-    f = n(849269),
-    p = n(881343),
-    h = n(697675),
-    b = n(869003),
-    g = n(652215),
-    m = n(985018),
+    p = n(849269),
+    h = n(881343),
+    g = n(697675),
+    f = n(869003),
+    m = n(652215),
+    b = n(985018),
     A = n(279240);
 let y = ["embedded_cover"],
     O = {
@@ -28,23 +28,23 @@ var j =
     (r[(r.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     r);
 
-function v(e) {
+function x(e) {
     var t;
-    let { context: n, activityItem: r, onClick: a, aspectRatio: j = 0, animatedDivClass: v, commandOrigin: x } = e,
+    let { context: n, activityItem: r, onClick: s, aspectRatio: j = 0, animatedDivClass: x, commandOrigin: _ } = e,
         {
-            onActivityItemSelected: E,
-            imageBackground: _,
+            onActivityItemSelected: v,
+            imageBackground: E,
             activityAction: C,
             labelType: S,
-        } = (0, f.Ay)({
+        } = (0, p.Ay)({
             context: n,
             activityItem: r,
             guildId: null != (t = n.channel.getGuildId()) ? t : void 0,
             locationObject: {},
-            onActivityItemSelected: a,
-            embeddedActivitiesManager: b.A,
+            onActivityItemSelected: s,
+            embeddedActivitiesManager: f.A,
             assetNames: y,
-            commandOrigin: x,
+            commandOrigin: _,
         }),
         [I, N] = i.useState(!1),
         T = i.useCallback(() => {
@@ -59,7 +59,7 @@ function v(e) {
                     className: A.Gz,
                     children: (0, l.jsx)("div", {
                         className: A.fC,
-                        children: (0, l.jsx)(h.A, {
+                        children: (0, l.jsx)(g.A, {
                             labelType: S,
                         }),
                     }),
@@ -68,7 +68,7 @@ function v(e) {
         ),
         R = i.useMemo(() => {
             switch (C) {
-                case f.o6.JOIN:
+                case p.o6.JOIN:
                     return (0, l.jsx)("div", {
                         className: A.m9,
                         children: (0, l.jsx)("div", {
@@ -76,29 +76,29 @@ function v(e) {
                             children: (0, l.jsx)(u.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
-                                children: m.intl.string(m.t.VJlc0S),
+                                children: b.intl.string(b.t.VJlc0S),
                             }),
                         }),
                     });
-                case f.o6.LEAVE:
+                case p.o6.LEAVE:
                     return (0, l.jsx)("div", {
                         className: A.m9,
                         children: (0, l.jsx)("div", {
-                            className: s()(A.aF, A.pS),
+                            className: a()(A.aF, A.pS),
                             children: (0, l.jsx)(u.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
-                                children: m.intl.string(m.t["wH/wDO"]),
+                                children: b.intl.string(b.t["wH/wDO"]),
                             }),
                         }),
                     });
-                case f.o6.START:
+                case p.o6.START:
                 default:
                     return null;
             }
         }, [C]);
     return (0, l.jsx)(u.DUT, {
-        onClick: E,
+        onClick: v,
         onFocus: T,
         onBlur: P,
         onMouseEnter: T,
@@ -115,7 +115,7 @@ function v(e) {
             children: (e) => {
                 let { value: t } = e;
                 return (0, l.jsx)(u.NPJ, {
-                    theme: g.NJ8.DARK,
+                    theme: m.NJ8.DARK,
                     children: (e) =>
                         (0, l.jsx)(d.A, {
                             applicationId: r.application.id,
@@ -123,7 +123,7 @@ function v(e) {
                             children: (n) =>
                                 (0, l.jsxs)(o.animated.div, {
                                     ref: n,
-                                    className: s()(e, A.LM, v, {
+                                    className: a()(e, A.LM, x, {
                                         [A.$g]: 0 === j,
                                         [A.J3]: 1 === j,
                                     }),
@@ -131,8 +131,8 @@ function v(e) {
                                         transform: t.to([0, 1], [1, 1.05]).to((e) => "scale(".concat(e, ")")),
                                     },
                                     children: [
-                                        (0, l.jsx)(p.A, {
-                                            imageBackground: _,
+                                        (0, l.jsx)(h.A, {
+                                            imageBackground: E,
                                             applicationName: r.application.name,
                                             imageClassName: A.jj,
                                             imageNotFoundClassName: A.v_,
@@ -147,4 +147,4 @@ function v(e) {
         }),
     });
 }
-v.AspectRatio = j;
+x.AspectRatio = j;

@@ -14,25 +14,25 @@ a.r(t),
 var i,
     c = a(627968),
     o = a(64700),
-    d = a(503698),
-    s = a.n(d),
-    M = a(108531),
-    l = a(311907),
-    m = a(562465),
-    u = a(397927),
-    _ = a(73153),
-    r = a(775602),
+    s = a(503698),
+    d = a.n(s),
+    _ = a(92674),
+    M = a(311907),
+    l = a(562465),
+    m = a(397927),
+    r = a(73153),
+    u = a(775602),
     w = a(607470),
     E = a(954571),
     h = a(676279),
     p = a(203982),
-    f = a(728458),
-    T = a(598653),
+    T = a(728458),
+    f = a(598653),
     I = a(639735),
     A = a(652215),
     W = a(427800),
-    b = a(666642),
-    S = a(951091),
+    S = a(666642),
+    b = a(951091),
     y = a(475158),
     g = a(239871),
     P = a(941182),
@@ -40,62 +40,62 @@ var i,
     F = (((i = {}).WUMPUS_FLIGHT = "wumpus_flight"), (i.GRADIENT_HIGHLIGHT = "gradient_highlight"), i);
 async function O(e, t) {
     try {
-        _.h.dispatch({
+        r.h.dispatch({
             type: "PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA",
         });
-        let a = e ? b.A : S.A;
+        let a = e ? S.A : b.A;
         window.matchMedia("(min-width: 1012px) and (max-width: 1980px)").matches ||
         window.matchMedia("(min-height: 720px) and (max-height: 1408px)").matches
             ? (a = e ? y.A : g.A)
             : (window.matchMedia("(min-width: 1980px)").matches || window.matchMedia("(min-height: 1408px)").matches) &&
               (a = e ? P.A : U.A);
-        let n = await m.Bo.get({
+        let n = await l.Bo.get({
                 url: a,
                 binary: !0,
                 rejectWithError: !0,
             }),
             i = window.URL.createObjectURL(n.body);
         t(i),
-            _.h.dispatch({
+            r.h.dispatch({
                 type: "PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS",
                 wumpusMedia: i,
             });
     } catch (e) {
-        f.A.captureException(e),
-            _.h.dispatch({
+        T.A.captureException(e),
+            r.h.dispatch({
                 type: "PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE",
             });
     }
 }
 
 function C() {
-    let e = (0, l.bG)([r.A], () => r.A.useReducedMotion),
+    let e = (0, M.bG)([u.A], () => u.A.useReducedMotion),
         [t, a] = o.useState(null),
-        { isFetchingMedia: i, canPlayWowMoment: d } = (0, l.cf)([I.A], () => ({
+        { isFetchingMedia: i, canPlayWowMoment: s } = (0, M.cf)([I.A], () => ({
             isFetchingMedia: I.A.isFetchingWowMomentMedia,
             canPlayWowMoment: I.A.canPlayWowMoment,
         })),
-        [m, _] = o.useState(!1),
-        f = (0, h.Z5)(),
-        b = (0, h.TM)(),
-        S = f > 52 || -1 === f || b,
-        y = b ? "video/mp4" : "video/webm",
-        g = S && !e && d && null === t && !1 === i;
+        [l, r] = o.useState(!1),
+        T = (0, h.Z5)(),
+        S = (0, h.TM)(),
+        b = T > 52 || -1 === T || S,
+        y = S ? "video/mp4" : "video/webm",
+        g = b && !e && s && null === t && !1 === i;
     o.useEffect(() => {
-        g && O(b, a);
-    }, [g, b, a]),
+        g && O(S, a);
+    }, [g, S, a]),
         o.useEffect(() => {
             function t() {
                 !e &&
                     I.A.canPlayWowMoment &&
-                    (_(!0),
+                    (r(!0),
                     (n = setTimeout(() => {
-                        _(!1),
+                        r(!1),
                             U(!0),
                             E.default.track(A.HAw.PREMIUM_WOW_MOMENT_VIEWED, {
                                 wow_moment_type: "gradient_highlight",
                             }),
-                            (0, T.o)(!1);
+                            (0, f.o)(!1);
                     }, 2e3)));
             }
             return (
@@ -104,16 +104,16 @@ function C() {
                     p._.unsubscribe(A.jej.PREMIUM_SUBSCRIPTION_CREATED, t);
                 }
             );
-        }, [e, S]);
+        }, [e, b]);
     let [P, U] = o.useState(!1),
         [F, C] = o.useState(!1),
-        H = (0, u.zhh)({
+        H = (0, m.zhh)({
             opacity: 0.2 * !!P,
             config: {
                 duration: 100,
             },
         }),
-        N = (0, u.zhh)(
+        N = (0, m.zhh)(
             {
                 x: F ? "100%" : "-100%",
                 config: {
@@ -146,10 +146,10 @@ function C() {
                 }
             );
         }, [F]);
-    let R = m && null !== t,
+    let R = l && null !== t,
         x = R || P;
     return (0, c.jsxs)("div", {
-        className: s()({
+        className: d()({
             [W.iE]: !x,
             [W.iV]: x,
         }),
@@ -165,18 +165,18 @@ function C() {
                             });
                     },
                     onEnded: () => {
-                        _(!1), (0, T.o)(!1), window.URL.revokeObjectURL(t), a(null);
+                        r(!1), (0, f.o)(!1), window.URL.revokeObjectURL(t), a(null);
                     },
                     children: (0, c.jsx)("source", {
                         src: t,
                         type: y,
                     }),
                 }),
-            (0, c.jsx)(M.animated.div, {
+            (0, c.jsx)(_.animated.div, {
                 className: W.$D,
                 style: H,
             }),
-            (0, c.jsx)(M.animated.div, {
+            (0, c.jsx)(_.animated.div, {
                 className: W.AX,
                 style: N,
                 children: (0, c.jsxs)("svg", {
@@ -199,5 +199,5 @@ function C() {
     });
 }
 let H = function () {
-    return (0, l.bG)([I.A], () => I.A.canPlayWowMoment) ? (0, c.jsx)(C, {}) : null;
+    return (0, M.bG)([I.A], () => I.A.canPlayWowMoment) ? (0, c.jsx)(C, {}) : null;
 };

@@ -8,7 +8,7 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     o = n.n(a),
-    s = n(353709),
+    s = n(92674),
     l = n(172218),
     c = n(158954),
     u = n(311907),
@@ -94,7 +94,7 @@ function G(e, t) {
     );
 }
 
-function F(e) {
+function V(e) {
     let {
             guildId: t,
             activeStatus: n,
@@ -108,8 +108,8 @@ function F(e) {
             onClose: j,
             onHover: U,
         } = e,
-        { analyticsLocations: F } = (0, _.Ay)(),
-        V = n !== w.b_.INACTIVE,
+        { analyticsLocations: V } = (0, _.Ay)(),
+        F = n !== w.b_.INACTIVE,
         B = (0, A.A)(t),
         H = (0, u.bG)([E.default], () => E.default.getCurrentUser()),
         Y = i.useRef(null),
@@ -125,10 +125,10 @@ function F(e) {
                         section: R.JJy.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
                     },
                     numberOfBoostsToAdd: 1,
-                    analyticsLocations: F,
+                    analyticsLocations: V,
                     guild: e,
                 });
-        }, [t, F]),
+        }, [t, V]),
         X = i.useCallback(() => {
             j(), (0, T.A)(t, p.A.GUILD_POWERUPS_MARKETING, I);
         }, [t, I, j]),
@@ -213,7 +213,7 @@ function F(e) {
                             quantity: b,
                             decorator: null != O ? O : "",
                         }),
-                        isEnabled: V,
+                        isEnabled: F,
                     }),
                     (0, r.jsxs)(s.animated.div, {
                         style: en,
@@ -262,12 +262,12 @@ function F(e) {
     });
 }
 
-function V(e) {
+function F(e) {
     let { guildId: t, powerup: n, costDecorator: a, isNew: o, onClose: s } = e,
         [l, c] = i.useState(!1),
         u = (0, S.Ay)(t, n).type,
         d = (0, v.A)(n, l);
-    return (0, r.jsx)(F, {
+    return (0, r.jsx)(V, {
         guildId: t,
         activeStatus: u,
         title: n.title,
@@ -314,7 +314,7 @@ let B = 3,
                           className: x.DO,
                           children: s.map((e) =>
                               (0, r.jsx)(
-                                  V,
+                                  F,
                                   {
                                       guildId: n.id,
                                       powerup: e,

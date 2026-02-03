@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(108531),
+    o = n.n(a),
+    s = n(92674),
     l = n(110259),
     c = n(66455),
     u = n(607399),
@@ -32,7 +32,7 @@ function E(e, t, n) {
     );
 }
 
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function b(e) {
     return e;
 }
 
-function y(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,14 +67,14 @@ function O(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 
-function A(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,13 +85,13 @@ function A(e, t) {
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         return a;
     }
-    if (((a = v(e, t)), Object.getOwnPropertySymbols))
+    if (((a = A(e, t)), Object.getOwnPropertySymbols))
         for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
             (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     return a;
 }
 
-function v(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -101,14 +101,14 @@ function v(e, t) {
         (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     return i;
 }
-let S = {
+let I = {
     mass: 1,
     tension: 300,
     friction: 28,
     clamp: !0,
 };
 
-function I(e, t) {
+function S(e, t) {
     return null == e ? null : e.index > t.index ? "backwards" : e.index < t.index ? "forwards" : null;
 }
 
@@ -134,11 +134,11 @@ function C(e) {
 
 function N(e) {
     var t, n, a;
-    let { contentDisplay: E, fadeInOut: y = !1 } = e,
-        v = A(e, ["contentDisplay", "fadeInOut"]),
+    let { contentDisplay: E, fadeInOut: b = !1 } = e,
+        A = v(e, ["contentDisplay", "fadeInOut"]),
         C = {},
         { analyticsLocations: N } = (0, m.Ay)();
-    i.Children.forEach(v.children, (e, t) => {
+    i.Children.forEach(A.children, (e, t) => {
         C[e.props.id] = {
             children: e.props.children,
             impressionName: e.props.impressionName,
@@ -146,28 +146,28 @@ function N(e) {
             index: t,
         };
     });
-    let R = v.activeSlide,
-        w = (0, _.A)(v.activeSlide),
-        P = null != (t = v.directionOverride) ? t : I(null != w ? C[w] : null, C[R]),
+    let w = A.activeSlide,
+        R = (0, _.A)(A.activeSlide),
+        P = null != (t = A.directionOverride) ? t : S(null != R ? C[R] : null, C[w]),
         { reducedMotion: D } = i.useContext(d.CZY),
-        x = i.useContext(h.A),
-        L = C[R].impressionName,
-        j = O(b({}, C[R].impressionProperties), {
+        L = i.useContext(h.A),
+        x = C[w].impressionName,
+        M = O(y({}, C[w].impressionProperties), {
             location_stack: N,
         });
-    x({
+    L({
         type: l.ImpressionTypes.MODAL,
-        name: L,
-        properties: j,
+        name: x,
+        properties: M,
         _stackContext: {
             isSlide: !0,
         },
     });
-    let { ref: M, width: k = 0, height: U = 0 } = (0, p.Ay)(R),
-        G = b(
+    let { ref: j, width: k = 0, height: U = 0 } = (0, p.Ay)(w),
+        G = y(
             {},
-            S,
-            v.springConfig,
+            I,
+            A.springConfig,
             D.enabled
                 ? {
                       clamp: !0,
@@ -176,14 +176,14 @@ function N(e) {
         ),
         V = (0, f.zhh)(
             {
-                width: null != (n = v.width) ? n : k,
+                width: null != (n = A.width) ? n : k,
                 height: U,
                 config: G,
             },
-            null == w ? "animate-never" : "respect-motion-settings",
+            null == R ? "animate-never" : "respect-motion-settings",
         ),
         F = (0, f.pnh)(
-            R,
+            w,
             {
                 value: 0,
                 from: {
@@ -198,18 +198,18 @@ function N(e) {
                 config: G,
                 onRest: (e, t) => {
                     let { item: n } = t;
-                    n === R && null != v.onSlideReady && v.onSlideReady(n);
+                    n === w && null != A.onSlideReady && A.onSlideReady(n);
                 },
             },
-            null == w ? "animate-never" : "respect-motion-settings",
+            null == R ? "animate-never" : "respect-motion-settings",
         ),
         B = (0, c.A)(P),
-        { width: H, centered: Y = !0 } = v,
+        { width: H, centered: Y = !0 } = A,
         W =
-            u.Fr && !v.shouldUseMediaQueriesForSizing
+            u.Fr && !A.shouldUseMediaQueriesForSizing
                 ? "100%"
                 : V.width.to((e) => ("string" == typeof e ? e : Math.round(e))),
-        K = u.Fr && !v.shouldUseMediaQueriesForSizing ? "100%" : V.height.to((e) => Math.round(e)),
+        K = u.Fr && !A.shouldUseMediaQueriesForSizing ? "100%" : V.height.to((e) => Math.round(e)),
         z = u.Fr
             ? {}
             : Y
@@ -223,16 +223,16 @@ function N(e) {
         q = u.Fr
             ? {}
             : {
-                  overflow: null != (a = v.overflow) ? a : "hidden",
+                  overflow: null != (a = A.overflow) ? a : "hidden",
               },
-        X = i.useMemo(
+        Z = i.useMemo(
             () => ({
-                width: u.Fr && !v.shouldUseMediaQueriesForSizing ? "100%" : H,
+                width: u.Fr && !A.shouldUseMediaQueriesForSizing ? "100%" : H,
             }),
-            [v.shouldUseMediaQueriesForSizing, H],
+            [A.shouldUseMediaQueriesForSizing, H],
         );
-    return (0, r.jsx)(o.animated.div, {
-        style: b(
+    return (0, r.jsx)(s.animated.div, {
+        style: y(
             {
                 position: "relative",
                 minWidth: W,
@@ -240,8 +240,8 @@ function N(e) {
             },
             q,
         ),
-        className: s()({
-            [g.f]: v.shouldUseMediaQueriesForSizing,
+        className: o()({
+            [g.f]: A.shouldUseMediaQueriesForSizing,
         }),
         children: F((e, t, n) => {
             let { key: i } = n,
@@ -249,30 +249,30 @@ function N(e) {
                     opacity: e.value.to((e) => 1 - Math.abs(e)),
                 };
             return (0, r.jsx)(
-                o.animated.div,
+                s.animated.div,
                 {
-                    ref: t === R ? M : null,
-                    style: b(
+                    ref: t === w ? j : null,
+                    style: y(
                         {
                             position: "absolute",
                             display: E,
                             flexDirection: "column",
                             backfaceVisibility: "hidden",
                         },
-                        X,
+                        Z,
                         z,
                         D.enabled
                             ? a
-                            : b(
+                            : y(
                                   {
                                       left: e.value.to(T("left", B)),
                                       right: e.value.to(T("right", B)),
                                   },
-                                  y && a,
+                                  b && a,
                               ),
                     ),
-                    className: s()({
-                        [g.o]: v.shouldUseMediaQueriesForSizing,
+                    className: o()({
+                        [g.o]: A.shouldUseMediaQueriesForSizing,
                     }),
                     children: C[t].children,
                 },

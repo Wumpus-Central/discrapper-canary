@@ -1,13 +1,13 @@
 n.d(t, {
-    A: () => f,
+    A: () => g,
 });
 var r = n(627968),
     i = n(64700),
     l = n(503698),
     s = n.n(l),
-    a = n(108531),
-    c = n(397927),
-    o = n(995591);
+    a = n(92674),
+    o = n(397927),
+    c = n(995591);
 class d extends i.Component {
     render() {
         var e, t;
@@ -99,9 +99,9 @@ class d extends i.Component {
     }
 }
 let u = (0, a.animated)(d),
-    f = function (e) {
+    g = function (e) {
         let { className: t, name: n, icon: i, iconClassName: l } = e,
-            a = (0, c.pnh)(
+            a = (0, o.pnh)(
                 {
                     name: n,
                     icon: i,
@@ -123,12 +123,12 @@ let u = (0, a.animated)(d),
                 "animate-always",
             );
         return (0, r.jsx)("div", {
-            className: s()(o.t, t),
+            className: s()(c.t, t),
             children: a((e, t) => {
                 let { icon: n, iconClassName: i } = t;
                 return (0, r.jsx)(u, {
                     icon: n,
-                    className: s()(o.K, i),
+                    className: s()(c.K, i),
                     style: e,
                 });
             }),

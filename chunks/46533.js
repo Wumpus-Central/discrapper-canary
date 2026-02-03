@@ -5,7 +5,7 @@ n.d(t, {
     n(321073);
 var r = n(627968),
     i = n(64700),
-    l = n(353709),
+    l = n(92674),
     a = n(942381),
     s = n(311907),
     o = n(554146),
@@ -15,8 +15,8 @@ var r = n(627968),
     p = n(73153),
     h = n(442433),
     g = n(512155),
-    f = n(475743),
-    m = n(793574),
+    m = n(475743),
+    f = n(793574),
     A = n(688810),
     _ = n(665037),
     b = n(771781),
@@ -431,8 +431,8 @@ class ed extends i.PureComponent {
                 null != t &&
                     (0, h.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                            n.e("43600"),
                             n.e("68587"),
+                            n.e("43600"),
                             n.e("63379"),
                             n.e("56026"),
                             n.e("16301"),
@@ -583,8 +583,8 @@ function ep(e) {
         { enableStudyGroup: G } = (0, T.y)(u),
         q = (0, b.Ay)((e) => e.currentlyShown.has(o.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [z, Q] = i.useState(!q),
-        X = (0, f.A)(n),
-        { analyticsLocations: Z } = (0, A.Ay)(m.A.GUILD_HEADER);
+        X = (0, m.A)(n),
+        { analyticsLocations: Z } = (0, A.Ay)(f.A.GUILD_HEADER);
     i.useEffect(() => {
         n !== X && Q(!q);
     }, [n, X, q]);
@@ -608,9 +608,9 @@ function ep(e) {
         ),
         eh = (0, s.bG)([M.A], () => M.A.getChannel(c)),
         { isPopoutOpen: eg } = (0, y.S)(),
-        ef = null != (t = null == u ? void 0 : u.features.has($.GuildFeatures.COMMUNITY)) && t,
-        em = W.Ay.isNewUser(R),
-        eA = z && !em;
+        em = null != (t = null == u ? void 0 : u.features.has($.GuildFeatures.COMMUNITY)) && t,
+        ef = W.Ay.isNewUser(R),
+        eA = z && !ef;
     (0, I.A)(u);
     let e_ = (0, E.JZ)(o.M.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         eb = (0, x.A)(n),
@@ -645,7 +645,7 @@ function ep(e) {
         showGuildTemplateDirtyTooltip: ep,
         showRoleSubscriptionUpsell: es,
         showHubPrivacySettingsTooltip: eo,
-        showNewUnreadsBar: ef,
+        showNewUnreadsBar: em,
         showMediaChannelUpsell: eb,
         showTierTemplatesUpsell: eE,
         isHeaderPopoutOpen: eg,

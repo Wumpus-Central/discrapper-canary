@@ -1,49 +1,49 @@
-t.d(l, {
-    A: () => h,
+n.d(t, {
+    A: () => j,
 }),
-    t(896048);
-var n = t(627968),
-    i = t(64700),
-    r = t(503698),
-    s = t.n(r),
-    a = t(108531),
-    o = t(311907),
-    d = t(397927),
-    c = t(775602),
-    u = t(384377),
-    f = t(518477),
-    p = t(985018),
-    m = t(845913),
-    x = t(910200);
-let A = {
-        [f.jM.WIDGET_ADDED]: {
-            message: p.intl.string(p.t.fFP1Uy),
-            icon: (0, n.jsx)(d.A9s, {
+    n(896048);
+var l = n(627968),
+    i = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    o = n(92674),
+    a = n(311907),
+    d = n(397927),
+    c = n(775602),
+    u = n(384377),
+    p = n(518477),
+    f = n(985018),
+    m = n(845913),
+    A = n(910200);
+let x = {
+        [p.jM.WIDGET_ADDED]: {
+            message: f.intl.string(f.t.fFP1Uy),
+            icon: (0, l.jsx)(d.A9s, {
                 size: "sm",
                 color: d.LU0.colors.STATUS_POSITIVE.css,
             }),
             toast_id: "user_profile_widget_added",
         },
-        [f.jM.WIDGET_REMOVED]: {
-            message: p.intl.string(p.t.zzsK7h),
-            icon: (0, n.jsx)(d.A9s, {
+        [p.jM.WIDGET_REMOVED]: {
+            message: f.intl.string(f.t.zzsK7h),
+            icon: (0, l.jsx)(d.A9s, {
                 size: "sm",
                 color: d.LU0.colors.STATUS_POSITIVE.css,
             }),
             toast_id: "user_profile_widget_removed",
         },
-        [f.jM.WIDGET_SAVE_FAILURE]: {
-            message: p.intl.string(p.t["84MExs"]),
-            icon: (0, n.jsx)(d.d$L, {
+        [p.jM.WIDGET_SAVE_FAILURE]: {
+            message: f.intl.string(f.t["84MExs"]),
+            icon: (0, l.jsx)(d.d$L, {
                 size: "sm",
                 color: d.LU0.colors.ICON_FEEDBACK_CRITICAL,
             }),
             toast_id: "user_profile_widget_save_failure",
             type: d.ToastType.FAILURE,
         },
-        [f.jM.SOMETHING_WENT_WRONG]: {
-            message: p.intl.string(p.t.F8FvUy),
-            icon: (0, n.jsx)(d.d$L, {
+        [p.jM.SOMETHING_WENT_WRONG]: {
+            message: f.intl.string(f.t.F8FvUy),
+            icon: (0, l.jsx)(d.d$L, {
                 size: "sm",
                 color: d.LU0.colors.ICON_FEEDBACK_CRITICAL,
             }),
@@ -51,38 +51,38 @@ let A = {
             type: d.ToastType.FAILURE,
         },
     },
-    j = (e) => {
-        let { message: l, icon: t, type: i } = e;
-        return (0, n.jsxs)("div", {
-            className: s()(x.oR, m.oR),
+    g = (e) => {
+        let { message: t, icon: n, type: i } = e;
+        return (0, l.jsxs)("div", {
+            className: s()(A.oR, m.oR),
             "data-type": i,
             children: [
-                (0, n.jsx)("div", {
+                (0, l.jsx)("div", {
                     className: m.RC,
-                    children: t,
+                    children: n,
                 }),
-                (0, n.jsx)(d.Text, {
+                (0, l.jsx)(d.Text, {
                     color: "text-strong",
                     variant: "text-sm/semibold",
-                    children: l,
+                    children: t,
                 }),
             ],
         });
     },
-    h = (e) => {
-        let { className: l, onAutoHide: t } = e,
+    j = (e) => {
+        let { className: t, onAutoHide: n } = e,
             r = (0, u.fu)(),
-            f = (0, o.bG)([c.A], () => c.A.useReducedMotion),
-            [p, x] = i.useState(!1),
-            [h, g] = i.useState(null);
+            p = (0, a.bG)([c.A], () => c.A.useReducedMotion),
+            [f, A] = i.useState(!1),
+            [j, h] = i.useState(null);
         i.useEffect(() => {
-            null !== r ? (x(!0), g(A[r]), d.ORC.announce(A[r].message)) : x(!1);
+            null !== r ? (A(!0), h(x[r]), d.ORC.announce(x[r].message)) : A(!1);
         }, [r]);
-        let v = (0, d.pnh)(
-            p,
+        let b = (0, d.pnh)(
+            f,
             {
                 from: {
-                    transform: f ? "translateY(0)" : "translateY(-12px)",
+                    transform: p ? "translateY(0)" : "translateY(-12px)",
                     opacity: 0,
                 },
                 enter: {
@@ -90,7 +90,7 @@ let A = {
                     opacity: 1,
                 },
                 leave: {
-                    transform: f ? "translateY(0)" : "translateY(-12px)",
+                    transform: p ? "translateY(0)" : "translateY(-12px)",
                     opacity: 0,
                 },
                 config: {
@@ -104,48 +104,48 @@ let A = {
         );
         return (
             i.useEffect(() => {
-                if (p) {
+                if (f) {
                     let e = setTimeout(() => {
-                        null == t || t();
+                        null == n || n();
                     }, 2e3);
                     return () => clearTimeout(e);
                 }
-            }, [p, t]),
-            (0, n.jsx)(n.Fragment, {
-                children: v(
-                    (e, t) =>
-                        t &&
-                        null !== h &&
-                        (0, n.jsx)(a.animated.div, {
-                            className: s()(l, m.Jt),
+            }, [f, n]),
+            (0, l.jsx)(l.Fragment, {
+                children: b(
+                    (e, n) =>
+                        n &&
+                        null !== j &&
+                        (0, l.jsx)(o.animated.div, {
+                            className: s()(t, m.Jt),
                             style: e,
-                            children: (0, n.jsx)(
-                                j,
+                            children: (0, l.jsx)(
+                                g,
                                 (function (e) {
-                                    for (var l = 1; l < arguments.length; l++) {
-                                        var t = null != arguments[l] ? arguments[l] : {},
-                                            n = Object.keys(t);
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            l = Object.keys(n);
                                         "function" == typeof Object.getOwnPropertySymbols &&
-                                            (n = n.concat(
-                                                Object.getOwnPropertySymbols(t).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                            (l = l.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                 }),
                                             )),
-                                            n.forEach(function (l) {
-                                                var n;
-                                                (n = t[l]),
-                                                    l in e
-                                                        ? Object.defineProperty(e, l, {
-                                                              value: n,
+                                            l.forEach(function (t) {
+                                                var l;
+                                                (l = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: l,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0,
                                                           })
-                                                        : (e[l] = n);
+                                                        : (e[t] = l);
                                             });
                                     }
                                     return e;
-                                })({}, h),
+                                })({}, j),
                             ),
                         }),
                 ),

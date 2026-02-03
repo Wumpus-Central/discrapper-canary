@@ -7,7 +7,7 @@ var r = n(627968),
     l = n(64700),
     o = n(503698),
     i = n.n(o),
-    s = n(353709),
+    s = n(92674),
     a = n(942381),
     c = n(311907),
     u = n(397927),
@@ -108,8 +108,8 @@ function K(e) {
         e1 = l.useMemo(() => ee.config.features.includes(Q.Li.FULL_EPISODE_VIDEO_QUEST), [ee.config.features]),
         e6 = l.useRef(!1),
         [e2, e4] = l.useState(null),
-        [e7, e9] = l.useState(!1),
-        [e8, e3] = l.useState(!1),
+        [e7, e8] = l.useState(!1),
+        [e9, e3] = l.useState(!1),
         [e5, te] = l.useState(null),
         tt = e0
             ? null != (t = null == (G = eZ.current) ? void 0 : G.duration)
@@ -177,7 +177,7 @@ function K(e) {
             getCurrentVideoTime: tx,
             isPlaying: ef === N.Q6.PLAYING,
             isMetadataLoaded: e7,
-            isInitialSeekComplete: e8,
+            isInitialSeekComplete: e9,
             onAnalytics: ty,
             emitIntervalMs: 4e3,
             minSegmentDurationMs: 2e3,
@@ -513,7 +513,7 @@ function K(e) {
                     onLoadedMetadata: (e) => {
                         null != eZ.current &&
                             (tn.info("[QV] | handleLoadedMetadata | videoAssetId: ".concat(ta)),
-                            e9(!0),
+                            e8(!0),
                             ta !== O.fY.VIDEO_PLAYER_VIDEO_HLS && tQ(tr),
                             eq ? (eZ.current.volume = 0) : (eZ.current.volume = ez));
                     },

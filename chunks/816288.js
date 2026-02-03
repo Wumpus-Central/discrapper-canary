@@ -1,45 +1,45 @@
 n.d(t, {
-    A: () => x,
+    A: () => _,
 }),
     n(896048);
 var r = n(627968),
     l = n(64700),
     i = n(503698),
-    a = n.n(i),
-    s = n(108531),
+    s = n.n(i),
+    a = n(92674),
     o = n(158954),
     c = n(311907),
     u = n(397927),
     d = n(442433),
-    f = n(793574),
-    p = n(230135),
-    h = n(552836),
-    b = n(147925),
-    g = n(363487),
-    m = n(267771),
+    p = n(793574),
+    h = n(230135),
+    g = n(552836),
+    f = n(147925),
+    m = n(363487),
+    b = n(267771),
     A = n(828162),
     y = n(333354),
     O = n(985018),
     j = n(375395);
 
-function v(e) {
+function x(e) {
     let { guild: t, withMargin: i } = e,
-        v = (0, m.A)(t),
-        x = (0, g.A)(t.id),
-        E = l.useCallback(() => {
-            (0, A.A)(t.id, f.A.GUILD_BOOSTING_SIDEBAR_DISPLAY);
+        x = (0, b.A)(t),
+        _ = (0, m.A)(t.id),
+        v = l.useCallback(() => {
+            (0, A.A)(t.id, p.A.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        _ = (0, c.bG)([h.A], () => {
+        E = (0, c.bG)([g.A], () => {
             var e;
-            return null != (e = h.A.getCountForGuild(t.id)) ? e : 0;
+            return null != (e = g.A.getCountForGuild(t.id)) ? e : 0;
         });
     l.useEffect(() => {
-        _ !== t.premiumSubscriberCount && (0, p.u)(t.id, t.premiumSubscriberCount);
-    }, [t.id, _, t.premiumSubscriberCount]);
-    let C = Math.min((_ / v) * 100, 100),
+        E !== t.premiumSubscriberCount && (0, h.u)(t.id, t.premiumSubscriberCount);
+    }, [t.id, E, t.premiumSubscriberCount]);
+    let C = Math.min((E / x) * 100, 100),
         [S, I] = (0, u.zhh)(
             () => ({
-                width: _ === t.premiumSubscriberCount ? "calc(".concat(C, "% - 4px)") : "0%",
+                width: E === t.premiumSubscriberCount ? "calc(".concat(C, "% - 4px)") : "0%",
                 config: {
                     tension: 250,
                     damping: 5,
@@ -47,14 +47,14 @@ function v(e) {
                 },
             }),
             "respect-motion-settings",
-            [_, t.premiumSubscriberCount],
+            [E, t.premiumSubscriberCount],
         );
     l.useEffect(() => {
         I({
             width: "calc(".concat(C, "% - 4px)"),
         });
     }, [C, I]);
-    let N = _ >= v;
+    let N = E >= x;
     return (0, r.jsx)(u.DUT, {
         "aria-label": void 0,
         role: "button",
@@ -65,13 +65,13 @@ function v(e) {
             },
         },
         onClick: () => {
-            E();
+            v();
         },
-        className: a()(j.kL, {
+        className: s()(j.kL, {
             [j.aF]: i,
         }),
         onContextMenu: (e) => {
-            x &&
+            _ &&
                 (0, d.L3)(e, async () => {
                     let { default: e } = await n.e("71728").then(n.bind(n, 709843));
                     return (n) => {
@@ -130,8 +130,8 @@ function v(e) {
                 (0, r.jsx)("div", {
                     className: j.L$,
                 }),
-                (0, r.jsx)(s.animated.div, {
-                    className: a()(j.qB, {
+                (0, r.jsx)(a.animated.div, {
+                    className: s()(j.qB, {
                         [j.mu]: C <= 5,
                     }),
                     style: S,
@@ -147,7 +147,7 @@ function v(e) {
                                     variant: "text-xs/semibold",
                                     children: O.intl.string(y.default.NI6Ihe),
                                 }),
-                                t.premiumSubscriberCount >= v &&
+                                t.premiumSubscriberCount >= x &&
                                     (0, r.jsx)(o.EYj, {
                                         className: j.Qq,
                                         variant: "text-xs/semibold",
@@ -159,22 +159,22 @@ function v(e) {
                             className: j.Ui,
                             children: [
                                 (0, r.jsx)(o.EYj, {
-                                    className: a()(j.Qq, j.ue),
+                                    className: s()(j.Qq, j.ue),
                                     variant: "text-xs/semibold",
                                     children: N
                                         ? O.intl.formatToPlainString(y.default["Ehpq+7"], {
-                                              appliedBoostCount: _,
+                                              appliedBoostCount: E,
                                           })
                                         : O.intl.formatToPlainString(y.default["/rbPDs"], {
-                                              appliedBoostCount: _,
-                                              maxBoostCount: v,
+                                              appliedBoostCount: E,
+                                              maxBoostCount: x,
                                           }),
                                 }),
-                                (0, r.jsx)(b.A, {
+                                (0, r.jsx)(f.A, {
                                     width: 12,
                                     height: 12,
-                                    direction: b.A.Directions.RIGHT,
-                                    className: a()(j.Qq, j.ue),
+                                    direction: f.A.Directions.RIGHT,
+                                    className: s()(j.Qq, j.ue),
                                 }),
                             ],
                         }),
@@ -185,9 +185,9 @@ function v(e) {
     });
 }
 
-function x(e) {
+function _(e) {
     let { guild: t, withMargin: n } = e;
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(x, {
         guild: t,
         withMargin: n,
     });

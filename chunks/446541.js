@@ -6,7 +6,7 @@ var r = n(627968),
     i = n(64700),
     l = n(503698),
     s = n.n(l),
-    a = n(108531),
+    a = n(92674),
     o = n(615300),
     c = n(397927),
     d = n(311907),
@@ -29,7 +29,7 @@ function m(e) {
         f = (0, c.rdh)(_).spring({
             opacity: 1,
         }),
-        [h, b] = (0, c.zhh)(
+        [b, h] = (0, c.zhh)(
             () => ({
                 from: {
                     backgroundColor: m,
@@ -48,10 +48,10 @@ function m(e) {
             targetColor: g,
             animationDelay: d,
         },
-        x = i.useRef(E);
+        O = i.useRef(E);
     return (
         i.useEffect(() => {
-            x.current = E;
+            O.current = E;
         }),
         i.useEffect(() => {
             let {
@@ -61,10 +61,10 @@ function m(e) {
                     targetBorderColor: r,
                     targetColor: i,
                     animationDelay: l,
-                } = x.current,
+                } = O.current,
                 { useReducedMotion: s } = u.A,
                 a = 200 * !s;
-            b({
+            h({
                 reset: !0,
                 immediate: !1,
                 to: {
@@ -76,7 +76,7 @@ function m(e) {
                     easing: o.A.Easing.ease,
                 },
             }),
-                b({
+                h({
                     delay: l,
                     immediate: s,
                     to: [
@@ -90,7 +90,7 @@ function m(e) {
                         easing: o.A.Easing.ease,
                     },
                 }),
-                b({
+                h({
                     delay: l + 200 + 200,
                     immediate: s,
                     to: [
@@ -105,9 +105,9 @@ function m(e) {
                     },
                     onRest: t,
                 });
-        }, [b]),
+        }, [h]),
         (0, r.jsx)(a.animated.div, {
-            style: h,
+            style: b,
             className: s()(p.h, n),
             children: t,
         })

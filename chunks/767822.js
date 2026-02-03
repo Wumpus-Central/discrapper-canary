@@ -1,20 +1,20 @@
 n.d(t, {
-    A: () => p,
+    A: () => h,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    l = n(108531),
+    l = n(92674),
     s = n(827734),
     a = n(397927),
-    c = n(627794),
-    o = n(53594),
+    o = n(627794),
+    c = n(53594),
     d = n(268749),
     u = n(690420),
-    f = n(985018),
-    g = n(522743);
+    g = n(985018),
+    m = n(522743);
 
-function b(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function b(e) {
     return e;
 }
 
-function m(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,57 +59,57 @@ function m(e, t) {
     );
 }
 
-function p(e) {
+function h(e) {
     let { guildId: t, triggerType: n } = e,
-        p = i.useMemo(() => () => (0, c._I)(t, n), [t, n]),
-        [x] = i.useState(p),
-        [h, j] = i.useState(!1),
-        { editingRule: O, createNewEditingRule: y } = (0, d.U)(),
-        { getDefaultRuleName: v } = o.i$[n],
-        A = !(0, c.wC)(O) && (null == O ? void 0 : O.triggerType) === n,
-        [E, N] = i.useState(A ? O : x),
-        _ = (0, a.zhh)({
-            opacity: +!A,
-            pointerEvents: A ? "none" : "all",
-            config: m(b({}, l.config.stiff), {
+        h = i.useMemo(() => () => (0, o._I)(t, n), [t, n]),
+        [b] = i.useState(h),
+        [x, j] = i.useState(!1),
+        { editingRule: _, createNewEditingRule: O } = (0, d.U)(),
+        { getDefaultRuleName: v } = c.i$[n],
+        y = !(0, o.wC)(_) && (null == _ ? void 0 : _.triggerType) === n,
+        [A, E] = i.useState(y ? _ : b),
+        N = (0, a.zhh)({
+            opacity: +!y,
+            pointerEvents: y ? "none" : "all",
+            config: f(p({}, l.config.stiff), {
                 clamp: !0,
             }),
         }),
         S = (0, a.zhh)({
-            opacity: +!!A,
-            pointerEvents: A ? "all" : "none",
-            config: m(b({}, l.config.stiff), {
+            opacity: +!!y,
+            pointerEvents: y ? "all" : "none",
+            config: f(p({}, l.config.stiff), {
                 clamp: !0,
             }),
             onStart: () => {
-                N(A ? O : x);
+                E(y ? _ : b);
             },
             onRest: () => {
-                N(A ? O : x), j(A);
+                E(y ? _ : b), j(y);
             },
         });
-    return null == O || A
+    return null == _ || y
         ? (0, r.jsxs)("div", {
-              className: g.$F,
+              className: m.$F,
               style: {
-                  height: A ? "auto" : "60px",
+                  height: y ? "auto" : "60px",
               },
               children: [
                   (0, r.jsx)(l.animated.div, {
-                      className: g.pT,
+                      className: m.pT,
                       style: S,
                       children: (0, r.jsx)(u.A, {
-                          rule: E,
-                          persistEdit: h,
+                          rule: A,
+                          persistEdit: x,
                       }),
                   }),
                   (0, r.jsx)(l.animated.div, {
-                      className: g.animatedNewRuleContainer,
-                      style: _,
+                      className: m.animatedNewRuleContainer,
+                      style: N,
                       children: (0, r.jsxs)(a.DUT, {
-                          className: g.Y0,
+                          className: m.Y0,
                           onClick: () => {
-                              y(t, n);
+                              O(t, n);
                           },
                           children: [
                               (0, r.jsx)(a.U1e, {
@@ -117,12 +117,12 @@ function p(e) {
                                   width: 20,
                                   height: 20,
                                   color: s.A.unsafe_rawColors.BLUE_345.css,
-                                  className: g.WW,
+                                  className: m.WW,
                               }),
                               (0, r.jsx)(a.Text, {
                                   variant: "text-md/semibold",
                                   color: "text-link",
-                                  children: f.intl.format(f.t.dNjRAf, {
+                                  children: g.intl.format(g.t.dNjRAf, {
                                       ruleName: v(),
                                   }),
                               }),

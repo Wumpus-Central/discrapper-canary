@@ -6,7 +6,7 @@ var r = n(627968),
     i = n(64700),
     l = n(503698),
     s = n.n(l),
-    a = n(108531),
+    a = n(92674),
     o = n(397927),
     c = n(180022),
     d = n(663244);
@@ -31,17 +31,17 @@ let u = (e) => {
             p((e) => (A > m && e > A - m ? A - m : A <= m ? 0 : e));
         }, [A, m]);
     let f = _ > 0,
-        h = i.useCallback(
+        b = i.useCallback(
             (e) => ({
                 x: (e - _) * 100,
             }),
             [_],
         ),
-        [b, E] = (0, o.mX6)(t.length, h);
+        [h, E] = (0, o.mX6)(t.length, b);
     return (
         i.useEffect(() => {
-            E(h);
-        }, [E, h]),
+            E(b);
+        }, [E, b]),
         (0, r.jsx)("div", {
             className: n,
             children: (0, r.jsxs)("div", {
@@ -65,7 +65,7 @@ let u = (e) => {
                         }),
                     (0, r.jsx)("div", {
                         className: d.C8,
-                        children: b.map((e, n) => {
+                        children: h.map((e, n) => {
                             var i, s;
                             let { x: o } = e;
                             return (0, r.jsx)(

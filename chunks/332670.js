@@ -2,7 +2,7 @@ n.d(t, {
     A: () => a,
 }),
     n(896048);
-var r = n(108531);
+var r = n(92674);
 
 function i(e, t, n) {
     return (
@@ -69,7 +69,7 @@ class a extends r.FrameLoop {
                     (this.startQueue.size > 0 && (this.startQueue.forEach(this.addAnimation), this.startQueue.clear()),
                     this.timeoutQueue.length > 0 &&
                         r.Globals.batchedUpdates(() => {
-                            let t = s(this.timeoutQueue, (t) => t.time > e);
+                            let t = o(this.timeoutQueue, (t) => t.time > e);
                             this.timeoutQueue.splice(0, t).forEach((e) => e.handler());
                         }),
                     e > this.lastTime)
@@ -102,13 +102,13 @@ class a extends r.FrameLoop {
                         let e = this.timeoutQueue.findIndex((e) => e.cancel === i);
                         e >= 0 && this.timeoutQueue.splice(e, 1);
                     },
-                    a = s(this.timeoutQueue, (e) => e.time > n),
-                    o = {
+                    a = o(this.timeoutQueue, (e) => e.time > n),
+                    s = {
                         time: n,
                         handler: e,
                         cancel: i,
                     };
-                return this.timeoutQueue.splice(a, 0, o), this.startLoop(), o;
+                return this.timeoutQueue.splice(a, 0, s), this.startLoop(), s;
             }),
             i(this, "onFrame", (e) => {
                 this.frameQueue.add(e), this.startLoop();
@@ -119,7 +119,7 @@ class a extends r.FrameLoop {
     }
 }
 
-function s(e, t) {
+function o(e, t) {
     let n = e.findIndex(t);
     return n < 0 ? e.length : n;
 }
