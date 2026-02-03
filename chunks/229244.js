@@ -5,8 +5,8 @@ n.d(t, {
     n(801541);
 var a = n(627968),
     l = n(64700),
-    i = n(284009),
-    r = n.n(i),
+    r = n(284009),
+    i = n.n(r),
     s = n(889137),
     o = n(412703),
     c = n(440703),
@@ -15,23 +15,23 @@ var a = n(627968),
     m = n(397927),
     p = n(341915),
     h = n(92246),
-    f = n(792620),
-    x = n(241124),
-    b = n(947926),
-    g = n(717695),
+    x = n(792620),
+    g = n(241124),
+    f = n(947926),
+    b = n(717695),
     v = n(164203),
     j = n(127219),
-    y = n(438038),
-    _ = n(439075),
+    _ = n(438038),
+    y = n(439075),
     A = n(223344),
     C = n(589939),
     S = n(443960),
     O = n(899860),
-    E = n(633581),
-    N = n(508575),
-    T = n(847807),
-    I = n(364329),
-    w = n(545986),
+    T = n(633581),
+    E = n(508575),
+    N = n(847807),
+    w = n(364329),
+    I = n(545986),
     k = n(927813),
     P = n(350246);
 
@@ -157,6 +157,7 @@ let F = "1193992107035983872",
                 questBarHeroVideo: null,
                 gameTile: "game_tile.png",
                 logotype: "game_logotype.png",
+                questBarHeroBlurhash: null,
             },
             taskConfigV2: {
                 joinOperator: u.K.AND,
@@ -178,17 +179,17 @@ let F = "1193992107035983872",
         targetedContent: [],
     };
 
-function H() {
-    var e, t, i, d, u, R;
-    let [F, H] = l.useState(V),
-        W = l.useCallback((e) => {
-            H(
+function W() {
+    var e, t, r, d, u, R;
+    let [F, W] = l.useState(V),
+        H = l.useCallback((e) => {
+            W(
                 M(D({}, e), {
                     preview: !0,
                 }),
             );
         }, []),
-        [K, z] = l.useState(I.b.UNENROLLED),
+        [K, z] = l.useState(w.b.UNENROLLED),
         [q, Q] = l.useState(!1),
         [Y, J] = l.useState(!1),
         [X, $] = l.useState(null),
@@ -213,7 +214,7 @@ function H() {
             "questBarHeroVideo" === e
         ) {
             var n, a;
-            W(
+            H(
                 M(D({}, F), {
                     config:
                         ((n = F.config),
@@ -260,7 +261,7 @@ function H() {
             default:
                 return;
         }
-        W(
+        H(
             M(D({}, F), {
                 config: M(D({}, F.config), {
                     taskConfigV2: M(D({}, F.config.taskConfigV2), {
@@ -278,7 +279,7 @@ function H() {
     function en(e, t) {
         if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
             var n, a;
-            W(
+            H(
                 M(D({}, F), {
                     config:
                         ((n = F.config),
@@ -304,7 +305,7 @@ function H() {
     function ea(e, t, n) {
         if ("name" === e || "nameWithArticle" === e) {
             var a, l;
-            W(
+            H(
                 M(D({}, F), {
                     config:
                         ((a = F.config),
@@ -336,7 +337,7 @@ function H() {
     }
 
     function el(e, t) {
-        W(
+        H(
             M(D({}, F), {
                 config: M(D({}, F.config), {
                     colors: M(D({}, F.config.colors), {
@@ -347,15 +348,15 @@ function H() {
         );
     }
 
-    function ei() {
-        (0, h.tU)(F.config) && (0, w.hJ)(F, p.uF.GIFT_INVENTORY_FOR_YOU, p.uF.INTERNAL_PREVIEW_TOOL, !0);
+    function er() {
+        (0, h.tU)(F.config) && (0, I.hJ)(F, p.uF.GIFT_INVENTORY_FOR_YOU, p.uF.INTERNAL_PREVIEW_TOOL, !0);
     }
-    let er = l.useMemo(() => {
+    let ei = l.useMemo(() => {
             for (let [e, t] of Object.entries(F.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
             return 10 * k.A.Seconds.MINUTE;
         }, [F.config.taskConfigV2.tasks]),
         es = l.useMemo(() => o.n.WATCH_VIDEO in F.config.taskConfigV2.tasks, [F.config.taskConfigV2.tasks]);
-    r()(!1 !== F.preview && null != F.preview, "Preview config must have property preview: true");
+    i()(!1 !== F.preview && null != F.preview, "Preview config must have property preview: true");
     let eo = F.config.taskConfigV2.tasks[o.n.WATCH_VIDEO];
     return (0, a.jsxs)(m.IpV, {
         className: P.kL,
@@ -367,30 +368,30 @@ function H() {
             }),
             (0, a.jsx)("div", {
                 className: P.OA,
-                children: (0, a.jsx)(E.A, {
+                children: (0, a.jsx)(T.A, {
                     onSelect: function (e) {
                         $(e),
                             null == e ||
                                 (z(
                                     (function (e) {
-                                        if (null == e.userStatus) return I.b.UNENROLLED;
-                                        if (null != e.userStatus.claimedAt) return I.b.CLAIMED;
-                                        if (null != e.userStatus.completedAt) return I.b.COMPLETED_100;
-                                        let t = (0, f.Yh)(e),
+                                        if (null == e.userStatus) return w.b.UNENROLLED;
+                                        if (null != e.userStatus.claimedAt) return w.b.CLAIMED;
+                                        if (null != e.userStatus.completedAt) return w.b.COMPLETED_100;
+                                        let t = (0, x.Yh)(e),
                                             n = t.progressSeconds,
                                             a = t.targetSeconds;
                                         return n / a >= 1
-                                            ? I.b.COMPLETED_100
+                                            ? w.b.COMPLETED_100
                                             : n / a >= 0.75
-                                              ? I.b.COMPLETED_75
+                                              ? w.b.COMPLETED_75
                                               : n / a >= 0.5
-                                                ? I.b.COMPLETED_50
+                                                ? w.b.COMPLETED_50
                                                 : n / a >= 0.25
-                                                  ? I.b.COMPLETED_25
-                                                  : I.b.ENROLLED;
+                                                  ? w.b.COMPLETED_25
+                                                  : w.b.ENROLLED;
                                     })(e),
                                 ),
-                                W(e));
+                                H(e));
                     },
                     quest: X,
                 }),
@@ -402,11 +403,11 @@ function H() {
             }),
             (0, a.jsx)("div", {
                 className: P.OA,
-                children: (0, a.jsx)(N.A, {
-                    taskDuration: er,
+                children: (0, a.jsx)(E.A, {
+                    taskDuration: ei,
                     taskConfigV2: F.config.taskConfigV2,
                     onSelect: function (e) {
-                        W(
+                        H(
                             M(D({}, F), {
                                 config: M(D({}, F.config), {
                                     taskConfigV2: e,
@@ -453,7 +454,7 @@ function H() {
                                 let l = M(D({}, a.messages), {
                                     [e]: t,
                                 });
-                                W(
+                                H(
                                     M(D({}, F), {
                                         config: M(D({}, F.config), {
                                             taskConfigV2: M(D({}, F.config.taskConfigV2), {
@@ -536,7 +537,7 @@ function H() {
                                     assetKey: "videoPlayerVideoLowRes",
                                     onFileChange: et,
                                     filters: B,
-                                    initialValue: null == eo || null == (i = eo.assets.videoLowRes) ? void 0 : i.url,
+                                    initialValue: null == eo || null == (r = eo.assets.videoLowRes) ? void 0 : r.url,
                                 }),
                                 (0, a.jsx)(S.A, {
                                     title: "Video Player Thumbnail (optional)",
@@ -582,7 +583,7 @@ function H() {
                                                 (function (e, t, n) {
                                                     if ("asset" === e) {
                                                         var a;
-                                                        W(
+                                                        H(
                                                             M(D({}, F), {
                                                                 config:
                                                                     ((a = F.config),
@@ -635,7 +636,7 @@ function H() {
                                             (0, a.jsx)(m.Button, {
                                                 variant: "primary",
                                                 text: "Open Reward Modal",
-                                                onClick: ei,
+                                                onClick: er,
                                             }),
                                         ],
                                     }),
@@ -676,20 +677,20 @@ function H() {
                     }),
                     (0, a.jsx)("div", {
                         className: P.OA,
-                        children: (0, a.jsx)(T.A, {}),
+                        children: (0, a.jsx)(N.A, {}),
                     }),
-                    (0, a.jsx)(I.A, {
+                    (0, a.jsx)(w.A, {
                         onChange: function (e) {
                             switch ((z(e), e)) {
-                                case I.b.UNENROLLED:
-                                    W(
+                                case w.b.UNENROLLED:
+                                    H(
                                         M(D({}, F), {
                                             userStatus: null,
                                         }),
                                     );
                                     break;
-                                case I.b.ENROLLED:
-                                    W(
+                                case w.b.ENROLLED:
+                                    H(
                                         M(D({}, F), {
                                             userStatus: G({
                                                 enrolledAt: new Date().toISOString(),
@@ -697,55 +698,55 @@ function H() {
                                         }),
                                     );
                                     break;
-                                case I.b.COMPLETED_25:
-                                    W(
+                                case w.b.COMPLETED_25:
+                                    H(
                                         M(D({}, F), {
                                             userStatus: G({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.25 * er,
+                                                streamProgressSeconds: 0.25 * ei,
                                             }),
                                         }),
                                     );
                                     break;
-                                case I.b.COMPLETED_50:
-                                    W(
+                                case w.b.COMPLETED_50:
+                                    H(
                                         M(D({}, F), {
                                             userStatus: G({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.5 * er,
+                                                streamProgressSeconds: 0.5 * ei,
                                             }),
                                         }),
                                     );
                                     break;
-                                case I.b.COMPLETED_75:
-                                    W(
+                                case w.b.COMPLETED_75:
+                                    H(
                                         M(D({}, F), {
                                             userStatus: G({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.75 * er,
+                                                streamProgressSeconds: 0.75 * ei,
                                             }),
                                         }),
                                     );
                                     break;
-                                case I.b.COMPLETED_100:
-                                    W(
+                                case w.b.COMPLETED_100:
+                                    H(
                                         M(D({}, F), {
                                             userStatus: G({
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: er,
+                                                streamProgressSeconds: ei,
                                             }),
                                         }),
                                     );
                                     break;
-                                case I.b.CLAIMED:
-                                    W(
+                                case w.b.CLAIMED:
+                                    H(
                                         M(D({}, F), {
                                             userStatus: G({
                                                 claimedAt: new Date().toISOString(),
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: er,
+                                                streamProgressSeconds: ei,
                                             }),
                                         }),
                                     );
@@ -781,12 +782,12 @@ function H() {
                                         }),
                                     (0, a.jsx)("div", {
                                         className: P.ok,
-                                        children: (0, a.jsx)(x.jY, {
+                                        children: (0, a.jsx)(g.jY, {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
-                                            children: (0, a.jsx)(g.A, {
-                                                children: (0, a.jsx)(b.Y, {
+                                            children: (0, a.jsx)(b.A, {
+                                                children: (0, a.jsx)(f.Y, {
                                                     quest: F,
                                                 }),
                                             }),
@@ -803,11 +804,11 @@ function H() {
                                 variant: "heading-sm/semibold",
                                 children: "Quest Home Card",
                             }),
-                            (0, a.jsx)(x.jY, {
+                            (0, a.jsx)(g.jY, {
                                 isPreview: !0,
                                 source: "preview",
                                 questId: "0",
-                                children: (0, a.jsx)(_.A, {
+                                children: (0, a.jsx)(y.A, {
                                     quest: F,
                                     className: P.d,
                                     questContent: p.uF.QUEST_HOME_DESKTOP,
@@ -834,7 +835,7 @@ function H() {
                                 }),
                             (0, a.jsx)("div", {
                                 className: P.l4,
-                                children: (0, a.jsx)(x.jY, {
+                                children: (0, a.jsx)(g.jY, {
                                     isPreview: !0,
                                     source: "preview",
                                     questId: "0",
@@ -872,7 +873,7 @@ function H() {
                                       questId: F.id,
                                   })
                                 : (0, a.jsx)(
-                                      y.R,
+                                      _.R,
                                       {
                                           quest: F,
                                           location: p.uF.QUESTS_EMBED,
@@ -933,7 +934,7 @@ function H() {
         ],
     });
 }
-class W extends l.Component {
+class H extends l.Component {
     componentDidCatch(e) {
         this.setState({
             error: e,
@@ -967,7 +968,7 @@ class W extends l.Component {
                           }),
                   ],
               })
-            : (0, a.jsx)(H, {}, t);
+            : (0, a.jsx)(W, {}, t);
     }
     constructor(...e) {
         super(...e),
@@ -983,4 +984,4 @@ class W extends l.Component {
             });
     }
 }
-let K = W;
+let K = H;

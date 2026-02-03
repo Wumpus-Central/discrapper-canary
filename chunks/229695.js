@@ -1,11 +1,11 @@
 n.d(t, {
-    j: () => o,
-    k: () => s,
+    j: () => s,
+    k: () => o,
 });
 var r = n(326687),
     i = n(506548),
     a = n(3498);
-let s = (e) => ({
+let o = (e) => ({
     id: e.id,
     configVersion: 2,
     startsAt: e.starts_at,
@@ -19,6 +19,7 @@ let s = (e) => ({
         hero: e.assets.hero,
         heroVideo: e.assets.hero_video,
         questBarHero: e.assets.quest_bar_hero,
+        questBarHeroBlurhash: e.assets.quest_bar_hero_blurhash,
         questBarHeroVideo: e.assets.quest_bar_hero_video,
         gameTile: e.assets.game_tile,
         logotype: e.assets.logotype,
@@ -38,12 +39,12 @@ let s = (e) => ({
     },
     taskConfigV2: (0, a.z)(e.task_config_v2),
     rewardsConfig: (0, i.S)(e.rewards_config),
-    cosponsorMetadata: o(e.cosponsor_metadata),
+    cosponsorMetadata: s(e.cosponsor_metadata),
     sharePolicy: e.share_policy,
     ctaConfig: (0, r.W)(e.cta_config),
 });
 
-function o(e) {
+function s(e) {
     if (null != e)
         return {
             name: e.name,
