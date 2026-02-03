@@ -52034,9 +52034,111 @@ div.modalOverrideBody__34eac {
 .toastIcon__979b1 {
     flex-shrink: 0;
     -webkit-margin-end: 4px;
+    margin-inline-end: 4px
+}
+
+.iconContainer__979b1,
+.toastIcon__979b1 {
+    align-items: center;
+    display: flex
+}
+
+.iconContainer__979b1 {
+    justify-content: center;
+    position: relative
+}
+
+.iconWrapper__979b1 {
+    display: flex
+}
+
+.animationOverlay__979b1 {
     align-items: center;
     display: flex;
-    margin-inline-end: 4px
+    inset: 0;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: center
+}
+
+.animationOverlay__979b1 path {
+    fill: var(--white)
+}
+
+.full-motion .wishlistButton__979b1:active .canAnimate__979b1 .animationOverlay__979b1 {
+    animation: holdScale__979b1 .1s cubic-bezier(.67, 0, .26, 1) forwards;
+    animation-delay: 50ms
+}
+
+.full-motion .clickAnimation__979b1 {
+    animation: clickScale__979b1 .4s cubic-bezier(.67, 0, .26, 1) forwards
+}
+
+.full-motion .clickAnimation__979b1 path {
+    animation: clickColor__979b1 .4s cubic-bezier(.67, 0, .26, 1) forwards
+}
+
+.full-motion .wishlistButton__979b1:focus-visible .canHover__979b1,
+.full-motion .wishlistButton__979b1:hover .canHover__979b1 {
+    animation: hoverPulse__979b1 1.25s cubic-bezier(.23, 0, .58, 1) infinite
+}
+
+@keyframes holdScale__979b1 {
+    0% {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(.25)
+    }
+}
+
+@keyframes clickScale__979b1 {
+    0% {
+        transform: scale(0)
+    }
+
+    62.5% {
+        transform: scale(1.35)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes clickColor__979b1 {
+
+    0%,
+    20% {
+        fill: var(--white)
+    }
+
+    70%,
+    to {
+        fill: #ec1060
+    }
+}
+
+@keyframes hoverPulse__979b1 {
+    0% {
+        transform: scale(1)
+    }
+
+    20% {
+        transform: scale(1.1)
+    }
+
+    60% {
+        transform: scale(.9)
+    }
+
+    80%,
+    to {
+        transform: scale(1)
+    }
 }
 
 .wishlistButton__7b466 {
