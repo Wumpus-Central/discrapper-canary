@@ -1,43 +1,43 @@
 n.d(t, {
-    A: () => h,
+    A: () => g,
 });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
+    l = n.n(i),
     s = n(311907),
-    o = n(732955),
-    l = n(688810),
+    a = n(732955),
+    o = n(688810),
     c = n(895944),
-    u = n(649032),
-    d = n(343547),
-    f = n(49370),
+    d = n(649032),
+    u = n(343547),
+    _ = n(49370),
     p = n(985018),
-    _ = n(128906);
-let h = (e) => {
+    m = n(128906);
+let g = (e) => {
     let { className: t, location: n, sectionRef: i } = e,
-        { analyticsLocations: h } = (0, l.Ay)(n);
-    return (0, s.bG)([c.A], () => c.A.passesGeneralUIInvariant(u.W.NITRO))
-        ? (0, r.jsx)(l.f5, {
-              value: h,
+        { analyticsLocations: g } = (0, o.Ay)(n);
+    return (0, s.bG)([c.A], () => c.A.passesGeneralUIInvariant(d.W.NITRO))
+        ? (0, r.jsx)(o.f5, {
+              value: g,
               children: (0, r.jsxs)("div", {
                   ref: i,
-                  className: a()(_.uW, _.Uv, t),
+                  className: l()(m.uW, m.Uv, m.qr, t),
                   children: [
-                      (0, r.jsx)(o.DZT, {
+                      (0, r.jsx)(a.DZT, {
                           variant: "heading-xxl/extrabold",
-                          className: _.R_,
+                          className: m.R_,
                           style: {
                               textAlign: "start",
                           },
-                          children: p.intl.string(f.default.EdGvBM),
+                          children: p.intl.string(_.default.EdGvBM),
                       }),
-                      (0, r.jsx)(o.EYj, {
+                      (0, r.jsx)(a.EYj, {
                           variant: "text-lg/normal",
-                          className: a()(_.VA, _.dO),
-                          children: p.intl.string(f.default["2KoHRF"]),
+                          className: l()(m.VA, m.dO),
+                          children: p.intl.string(_.default["2KoHRF"]),
                       }),
-                      (0, r.jsx)(d.A, {}),
+                      (0, r.jsx)(u.A, {}),
                   ],
               }),
           })

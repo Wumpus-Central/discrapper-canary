@@ -27,14 +27,14 @@ var r = n(627968),
     h = n(26508),
     E = n(622543),
     O = n(94343),
-    C = n(576622),
-    x = n(166403),
+    x = n(576622),
+    C = n(166403),
     S = n(954571),
     T = n(170887),
     I = n(131168),
-    y = n(511484),
-    N = n(703982),
-    j = n(326736),
+    N = n(511484),
+    j = n(703982),
+    y = n(326736),
     v = n(810036),
     P = n(160116),
     R = n(530060),
@@ -53,7 +53,7 @@ let H = (e) => {
     i.useEffect(() => {
         u.h.wait(async () => {
             let e = [(0, A.Ay)()];
-            null != t && e.push((0, C.A)(t)), await Promise.all(e);
+            null != t && e.push((0, x.A)(t)), await Promise.all(e);
         });
     }, [t]),
         i.useEffect(() => {
@@ -62,7 +62,7 @@ let H = (e) => {
         (0, g.P)(m.b);
     let H = i.useRef(null),
         V = i.useRef(null),
-        F = (0, o.bG)([x.A], () => x.A.getPremiumTypeSubscription()),
+        F = (0, o.bG)([C.A], () => C.A.getPremiumTypeSubscription()),
         { isReady: Y, programReward: W } = (0, o.cf)([f.A], () => ({
             isReady: f.A.isReady(),
             programReward: f.A.getRewardForProgram(b.W.NITRO),
@@ -75,7 +75,7 @@ let H = (e) => {
         [J, Q] = i.useState(!1),
         [$, ee] = i.useState(!1),
         et = null != X && null != F && F.status === G.Dmq.CANCELED,
-        en = (0, y.iU)(M.gD.PREMIUM_MONTH_TIER_2, X, F),
+        en = (0, N.iU)(M.gD.PREMIUM_MONTH_TIER_2, X, F),
         er = !$ && et,
         { analyticsLocations: ei } = (0, p.Ay)(_.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [el, es] = i.useState(!1),
@@ -111,13 +111,19 @@ let H = (e) => {
                                               discountedPrice: en,
                                           }),
                                       }),
-                                      (0, r.jsx)(j.A, {
+                                      (0, r.jsx)(y.A, {
                                           variant: w.cJ.WHATS_NEW,
                                           className: k.Iw,
                                           noBackground: !0,
                                           leftAlignHeaders: !0,
                                       }),
-                                      (0, r.jsx)(j.A, {
+                                      null != W &&
+                                          (0, h.T0)("PremiumSubscriberHome") &&
+                                          (0, r.jsx)(R.A, {
+                                              location: _.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION,
+                                              sectionRef: l,
+                                          }),
+                                      (0, r.jsx)(y.A, {
                                           className: k.xU,
                                           variant: w.cJ.PERKS_DISCOVERABILITY,
                                           noBackground: !0,
@@ -127,12 +133,6 @@ let H = (e) => {
                                               previousComponent: w.A2.HOME,
                                           }),
                                       }),
-                                      null != W &&
-                                          (0, h.T0)("PremiumSubscriberHome") &&
-                                          (0, r.jsx)(R.A, {
-                                              location: _.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION,
-                                              sectionRef: l,
-                                          }),
                                       (0, r.jsx)(v.A, {
                                           className: k.Zy,
                                           location: _.A.PREMIUM_MARKETING_GIFT_SECTION,
@@ -171,7 +171,7 @@ let H = (e) => {
                           }),
                           et &&
                               null != en &&
-                              (0, r.jsx)(N.A, {
+                              (0, r.jsx)(j.A, {
                                   isVisible: er && z,
                                   premiumSubscription: F,
                                   churnDiscountOffer: X,

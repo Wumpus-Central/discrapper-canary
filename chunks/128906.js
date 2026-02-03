@@ -15,4 +15,5 @@ e.exports = {
     qO: "centerAlignSection_efc71f",
     W0: "showAllPerksButton_efc71f",
     xk: "showAllPerksButtonCenter_efc71f",
+    qr: "footer_efc71f",
 };
