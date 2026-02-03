@@ -897,6 +897,7 @@ var H = (function (e) {
             (e[(e.HAS_SNAPSHOT = 16384)] = "HAS_SNAPSHOT"),
             (e[(e.IS_COMPONENTS_V2 = 32768)] = "IS_COMPONENTS_V2"),
             (e[(e.SENT_BY_SOCIAL_LAYER_INTEGRATION = 65536)] = "SENT_BY_SOCIAL_LAYER_INTEGRATION"),
+            (e[(e.HIDDEN_SUSPENDED_USER = 131072)] = "HIDDEN_SUSPENDED_USER"),
             e
         );
     })({}),
@@ -2042,6 +2043,7 @@ var eq = (function (e) {
             (e.MESSAGE_GROUP_BLOCKED = "MESSAGE_GROUP_BLOCKED"),
             (e.MESSAGE_GROUP_IGNORED = "MESSAGE_GROUP_IGNORED"),
             (e.MESSAGE_GROUP_SPAMMER = "MESSAGE_GROUP_SPAMMER"),
+            (e.MESSAGE_GROUP_SUSPENDED_USER = "MESSAGE_GROUP_SUSPENDED_USER"),
             (e.THREAD_STARTER_MESSAGE = "THREAD_STARTER_MESSAGE"),
             (e.DIVIDER = "DIVIDER"),
             (e.JUMP_TARGET = "JUMP_TARGET"),
