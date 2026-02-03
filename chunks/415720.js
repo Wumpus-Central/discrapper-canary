@@ -184,6 +184,42 @@ let { Themes: r } = n(680049).zv,
                     opacity: 0.12156862745098039,
                 },
             },
+            BADGE_BACKGROUND_DEFAULT: {
+                [r.DARK]: {
+                    raw: "OPACITY_20",
+                    opacity: 0.2,
+                },
+                [r.LIGHT]: {
+                    raw: "OPACITY_20",
+                    opacity: 0.2,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "OPACITY_24",
+                    opacity: 0.23921568627450981,
+                },
+                [r.DARKER]: {
+                    raw: "OPACITY_20",
+                    opacity: 0.2,
+                },
+            },
+            BADGE_TEXT_DEFAULT: {
+                [r.DARK]: {
+                    raw: "NEUTRAL_1",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_100",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_1",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_1",
+                    opacity: 1,
+                },
+            },
             BORDER_FOCUS: {
                 [r.DARK]: {
                     raw: "BLUE_NEW_18",

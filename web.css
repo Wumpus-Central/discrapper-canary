@@ -885,6 +885,11 @@
 }
 
 .default_c2b88c {
+    background-color: var(--badge-background-default);
+    color: var(--badge-text-default)
+}
+
+.brand_c2b88c {
     background-color: var(--badge-background-brand);
     color: var(--badge-text-brand)
 }
@@ -64774,10 +64779,12 @@ html.disable-forced-colors * {
     --background-tile-gradient-pink-end: hsl(var(--illo-pink-70-hsl)/0.3);
     --background-tile-gradient-pink-start: hsl(var(--illo-pink-50-hsl)/0.3);
     --badge-background-brand: var(--blurple-50);
+    --badge-background-default: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --badge-expressive-background-default: var(--neutral-1);
     --badge-expressive-text-default: var(--neutral-71);
     --badge-notification-background: var(--red-new-46);
     --badge-text-brand: var(--neutral-1);
+    --badge-text-default: var(--neutral-1);
     --bg-surface-raised: var(--primary-560);
     --border-feedback-critical: hsl(var(--opacity-red-20-hsl)/0.2);
     --border-focus: var(--blue-new-30);
@@ -65435,10 +65442,12 @@ html.disable-forced-colors * {
     --background-tile-gradient-pink-end: hsl(var(--illo-pink-30-hsl)/0.3);
     --background-tile-gradient-pink-start: hsl(var(--illo-pink-10-hsl)/0.3);
     --badge-background-brand: var(--blurple-50);
+    --badge-background-default: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --badge-expressive-background-default: var(--blurple-50);
     --badge-expressive-text-default: var(--neutral-1);
     --badge-notification-background: var(--red-new-50);
     --badge-text-brand: var(--neutral-1);
+    --badge-text-default: var(--neutral-71);
     --bg-surface-raised: var(--white);
     --border-feedback-critical: hsl(var(--opacity-red-24-hsl)/0.23921568627450981);
     --border-focus: var(--blue-new-40);
@@ -66096,10 +66105,12 @@ html.disable-forced-colors * {
     --background-tile-gradient-pink-end: hsl(var(--illo-pink-70-hsl)/0.3);
     --background-tile-gradient-pink-start: hsl(var(--illo-pink-50-hsl)/0.3);
     --badge-background-brand: var(--blurple-50);
+    --badge-background-default: hsl(var(--opacity-20-hsl)/0.2);
     --badge-expressive-background-default: var(--neutral-1);
     --badge-expressive-text-default: var(--neutral-71);
     --badge-notification-background: var(--red-new-46);
     --badge-text-brand: var(--neutral-1);
+    --badge-text-default: var(--neutral-8);
     --bg-surface-raised: var(--plum-23);
     --border-feedback-critical: hsl(var(--opacity-red-24-hsl)/0.23921568627450981);
     --border-focus: var(--blue-new-30);
@@ -66757,10 +66768,12 @@ html.disable-forced-colors * {
     --background-tile-gradient-pink-end: hsl(var(--illo-pink-70-hsl)/0.3);
     --background-tile-gradient-pink-start: hsl(var(--illo-pink-50-hsl)/0.3);
     --badge-background-brand: var(--blurple-50);
+    --badge-background-default: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --badge-expressive-background-default: var(--neutral-1);
     --badge-expressive-text-default: var(--neutral-71);
     --badge-notification-background: var(--red-new-46);
     --badge-text-brand: var(--neutral-1);
+    --badge-text-default: var(--neutral-2);
     --bg-surface-raised: var(--plum-18);
     --border-feedback-critical: hsl(var(--opacity-red-20-hsl)/0.2);
     --border-focus: var(--blue-new-30);
@@ -67422,6 +67435,8 @@ html.disable-forced-colors * {
     --background-mod-normal: hsl(var(--opacity-20-hsl)/0.2);
     --background-mod-strong: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --background-mod-subtle: hsl(var(--opacity-12-hsl)/0.12156862745098039);
+    --badge-background-default: hsl(var(--opacity-20-hsl)/0.2);
+    --badge-text-default: var(--neutral-1);
     --border-focus: var(--blue-new-18);
     --border-muted: var(--neutral-26);
     --border-normal: var(--neutral-5);
@@ -67671,6 +67686,8 @@ html.disable-forced-colors * {
     --background-mod-normal: hsl(var(--opacity-20-hsl)/0.2);
     --background-mod-strong: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --background-mod-subtle: hsl(var(--opacity-16-hsl)/0.1607843137254902);
+    --badge-background-default: hsl(var(--opacity-20-hsl)/0.2);
+    --badge-text-default: var(--neutral-100);
     --border-focus: var(--blue-new-63);
     --border-muted: var(--neutral-38);
     --border-normal: var(--neutral-59);
@@ -67920,6 +67937,8 @@ html.disable-forced-colors * {
     --background-mod-normal: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --background-mod-strong: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --background-mod-subtle: hsl(var(--opacity-16-hsl)/0.1607843137254902);
+    --badge-background-default: hsl(var(--opacity-24-hsl)/0.23921568627450981);
+    --badge-text-default: var(--neutral-1);
     --border-focus: var(--blue-new-35);
     --border-muted: var(--neutral-36);
     --border-normal: var(--neutral-18);
@@ -68169,6 +68188,8 @@ html.disable-forced-colors * {
     --background-mod-normal: hsl(var(--opacity-20-hsl)/0.2);
     --background-mod-strong: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --background-mod-subtle: hsl(var(--opacity-12-hsl)/0.12156862745098039);
+    --badge-background-default: hsl(var(--opacity-20-hsl)/0.2);
+    --badge-text-default: var(--neutral-1);
     --border-focus: var(--blue-new-30);
     --border-muted: var(--neutral-32);
     --border-normal: var(--neutral-13);

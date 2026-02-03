@@ -673,6 +673,25 @@ let { Themes: r } = n(680049).zv,
                     opacity: 1,
                 },
             },
+            BADGE_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "OPACITY_16",
+                    opacity: 0.1607843137254902,
+                },
+                [r.LIGHT]: {
+                    raw: "OPACITY_16",
+                    opacity: 0.1607843137254902,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "OPACITY_20",
+                    opacity: 0.2,
+                },
+                [r.DARKER]: {
+                    raw: "OPACITY_16",
+                    opacity: 0.1607843137254902,
+                },
+            },
             BADGE_EXPRESSIVE_BACKGROUND_DEFAULT: {
                 category: "generic",
                 [r.DARK]: {
@@ -746,6 +765,25 @@ let { Themes: r } = n(680049).zv,
                 },
                 [r.DARKER]: {
                     raw: "NEUTRAL_1",
+                    opacity: 1,
+                },
+            },
+            BADGE_TEXT_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "NEUTRAL_1",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_8",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_2",
                     opacity: 1,
                 },
             },

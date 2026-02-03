@@ -87,6 +87,7 @@ function f(e) {
     if ("object" == typeof t && "type" in t && "badge" === t.type)
         return (0, r.jsx)(s.E, {
             type: t.badgeType,
+            variant: "brand",
         });
     let a = t;
     return (0, r.jsx)("div", {
