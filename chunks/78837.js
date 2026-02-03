@@ -1,92 +1,75 @@
 n.d(t, {
-    f: () => A,
+    f: () => m,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
     s = n.n(l),
-    a = n(735438),
-    o = n(386181),
-    c = n(650682),
-    d = n(934551),
-    u = n(827734),
-    _ = n(397927),
-    p = n(770178),
-    m = n(590089),
-    g = n(747625);
+    a = n(386181),
+    o = n(650682),
+    c = n(934551),
+    d = n(827734),
+    u = n(397927),
+    _ = n(590089),
+    p = n(747625);
 
-function A(e) {
+function m(e) {
     let {
-            title: t,
-            collapsedSubtitle: n,
-            isExpanded: l,
-            onExpandedChange: A,
-            onExpandedChangeComplete: f,
-            children: h,
-            animate: b = !0,
+            ref: t,
+            title: n,
+            collapsedSubtitle: l,
+            isExpanded: m,
+            onExpandedChange: g,
+            children: A,
+            animate: f = !0,
         } = e,
-        E = i.useRef(null),
-        [x, O] = i.useState(null),
-        C = i.useRef(l),
-        T = i.useRef(!1);
-    i.useEffect(() => {
-        C.current !== l && ((T.current = !0), (C.current = l));
-    }, [l]);
-    let I = i.useCallback(
-            (e) => {
-                null != e.target && T.current && ((T.current = !1), null == f || f(l));
-            },
-            [l, f],
-        ),
-        S = i.useMemo(() => (0, a.debounce)(I, 50), [I]),
-        j = (0, p.w)(S, [], {
-            enabled: null != f,
-        }),
-        v = l && null != x;
+        b = i.useRef(null),
+        [h, E] = i.useState(null),
+        O = m && null != h;
     return (
         i.useLayoutEffect(() => {
-            null != E.current && null == x && O(E.current.clientHeight);
-        }, [x]),
-        (0, r.jsxs)(o.EN, {
-            ref: j,
-            isExpanded: l,
-            onExpandedChange: A,
+            null != b.current && null == h && E(b.current.clientHeight);
+        }, [h]),
+        (0, r.jsxs)(a.EN, {
+            ref: t,
+            isExpanded: m,
+            onExpandedChange: g,
             children: [
-                (0, r.jsx)(m.U, {
-                    ref: E,
+                (0, r.jsx)(_.U, {
+                    ref: b,
                     style:
-                        null != x
+                        null != h
                             ? {
-                                  minHeight: x,
+                                  minHeight: h,
                               }
                             : void 0,
-                    title: t,
-                    description: v ? void 0 : n,
-                    secondaryTrailingElement: (0, r.jsx)(_.vN3, {
-                        children: (0, r.jsx)(c.$, {
+                    title: n,
+                    description: O ? void 0 : l,
+                    secondaryTrailingElement: (0, r.jsx)(u.vN3, {
+                        children: (0, r.jsx)(o.$, {
                             slot: "trigger",
-                            className: g.bW,
-                            children: (0, r.jsx)(d.ChevronLargeUpIcon, {
-                                className: s()(g.Kk, {
-                                    [g.kX]: !l,
+                            className: p.bW,
+                            children: (0, r.jsx)(c.ChevronLargeUpIcon, {
+                                className: s()(p.Kk, {
+                                    [p.kX]: !m,
                                 }),
-                                color: u.A.colors.ICON_STRONG,
+                                color: d.A.colors.ICON_STRONG,
                             }),
                         }),
                     }),
-                    onClick: () => A(!l),
+                    onClick: () => g(!m),
                 }),
-                (0, r.jsx)(o.kS, {
-                    className: s()(g.nd, {
-                        [g.t5]: !b,
+                (0, r.jsx)(a.kS, {
+                    className: s()(p.nd, {
+                        [p.t5]: !f,
                     }),
-                    children: (0, r.jsx)(_.BJc, {
+                    children: (0, r.jsx)(u.BJc, {
                         gap: 16,
                         padding: {
                             top: 16,
                         },
-                        children: h,
+                        children: A,
                     }),
                 }),
             ],

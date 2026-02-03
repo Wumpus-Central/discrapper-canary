@@ -1,31 +1,33 @@
 n.d(t, {
-    A: () => c,
+    A: () => u,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
-    l = n(942381),
-    s = n(894858),
-    a = n(641324),
-    o = n(78837);
-let c = i.memo(function (e) {
+    l = n(735438),
+    s = n(942381),
+    a = n(770178),
+    o = n(894858),
+    c = n(641324),
+    d = n(78837);
+let u = i.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, layout: c, useCollapsedSubtitle: d } = t,
-        [u, _] = i.useState(!1),
-        [p, m] = i.useState(!0);
+        { useTitle: n, layout: u, useCollapsedSubtitle: _ } = t,
+        [p, m] = i.useState(!1),
+        [g, A] = i.useState(!0),
+        f = i.useRef(p);
     i.useEffect(
         () =>
-            s.A.subscribe(
+            o.A.subscribe(
                 (e) => {
                     let { navTransition: t } = e;
                     return t;
                 },
                 (e) => {
-                    if (null == e) return;
                     let n = (null == e ? void 0 : e.targetAccordionKey) === t.key;
-                    if ((n && !u && (_(!0), m(!1)), n && u)) {
+                    if ((n && !p && ((f.current = !0), m(!0), A(!1)), n && p)) {
                         var r, i;
-                        s.A.setState({
+                        o.A.setState({
                             navTransition:
                                 ((r = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
@@ -70,42 +72,47 @@ let c = i.memo(function (e) {
                                       }),
                                 r),
                         }),
-                            m(!0);
+                            A(!0);
                     }
                 },
                 {
-                    equalityFn: l.x,
+                    equalityFn: s.x,
                     fireImmediately: !0,
                 },
             ),
-        [u, t.key],
+        [p, t.key],
     );
-    let g = null == n ? void 0 : n(u),
-        A = null == d ? void 0 : d(),
-        f = i.useCallback(
+    let b = i.useCallback(
             (e) => {
-                e &&
-                    s.A.setState({
-                        navTransition: {
-                            targetKey: t.key,
-                            targetAccordionKey: t.key,
-                            animateScroll: !0,
-                            scrollBlock: "nearest",
-                        },
-                    });
+                null == e.target ||
+                    f.current === p ||
+                    ((f.current = p),
+                    p &&
+                        o.A.setState({
+                            navTransition: {
+                                targetKey: t.key,
+                                targetAccordionKey: t.key,
+                                animateScroll: !0,
+                                scrollBlock: "nearest",
+                            },
+                        }));
             },
-            [t.key],
-        );
-    return (0, r.jsx)(o.f, {
-        title: g,
-        collapsedSubtitle: A,
-        isExpanded: u,
-        onExpandedChange: _,
-        onExpandedChangeComplete: f,
-        animate: p,
-        children: c.map((e) =>
+            [p, t.key],
+        ),
+        h = i.useMemo(() => (0, l.debounce)(b, 50), [b]),
+        E = (0, a.w)(h),
+        O = null == n ? void 0 : n(p),
+        x = null == _ ? void 0 : _();
+    return (0, r.jsx)(d.f, {
+        ref: E,
+        title: O,
+        collapsedSubtitle: x,
+        isExpanded: p,
+        onExpandedChange: m,
+        animate: g,
+        children: u.map((e) =>
             (0, r.jsx)(
-                a.A,
+                c.A,
                 {
                     node: e,
                 },
