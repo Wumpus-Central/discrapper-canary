@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => g,
+    A: () => m,
 }),
     n(896048);
 var r = n(627968),
@@ -12,11 +12,12 @@ var r = n(627968),
     u = n(837381),
     d = n(397927),
     _ = n(964486),
-    b = n(894858),
-    p = n(890690),
-    f = n(637577);
+    b = n(775602),
+    p = n(894858),
+    f = n(890690),
+    y = n(637577);
 
-function y(e) {
+function g(e) {
     let { category: t, onClick: n, active: o } = e,
         { useTitle: a, useSubnavLabel: i, key: s } = t,
         _ = null == a ? void 0 : a(),
@@ -57,8 +58,8 @@ function y(e) {
                     })(
                         {
                             onClick: n,
-                            className: l()(f.AS, {
-                                [f.vu]: o,
+                            className: l()(y.AS, {
+                                [y.vu]: o,
                             }),
                         },
                         e,
@@ -87,12 +88,12 @@ function y(e) {
     );
 }
 
-function g(e) {
+function m(e) {
     let { categories: t } = e,
-        n = b.A.useField("currentCategoryKey");
+        n = p.A.useField("currentCategoryKey");
     (0, _.Ay)(() => {
         t.some((e) => e.key === n) ||
-            b.A.setState({
+            p.A.setState({
                 currentCategoryKey: t[0].key,
             });
     });
@@ -134,6 +135,7 @@ function g(e) {
                     i({
                         y: o.y - e.y,
                         height: o.height,
+                        immediate: b.A.useReducedMotion,
                     });
                 }, [e, i, l.y, l.height]),
                 {
@@ -145,9 +147,9 @@ function g(e) {
             );
         })(a);
     return (
-        (0, p.u)(t),
+        (0, f.u)(t),
         (0, r.jsxs)("div", {
-            className: f.o8,
+            className: y.o8,
             role: "list",
             style: {
                 "--custom-nav-count": t.length,
@@ -155,29 +157,29 @@ function g(e) {
             },
             children: [
                 (0, r.jsx)("div", {
-                    className: f.u4,
+                    className: y.u4,
                     "aria-hidden": "true",
                     ref: i,
                     children: (0, r.jsx)(s.animated.div, {
-                        className: f.FF,
+                        className: y.FF,
                         style: u,
                         ref: l,
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: f.gu,
+                    className: y.gu,
                     "aria-hidden": "true",
                     ref: c,
                 }),
                 t.map((e) =>
                     (0, r.jsx)(
-                        y,
+                        g,
                         {
                             onClick: () => {
                                 var t;
                                 return (
                                     (t = e.key),
-                                    void b.A.setState({
+                                    void p.A.setState({
                                         requestedTargetKey: t,
                                         showNavigationMobile: !1,
                                     })
