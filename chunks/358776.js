@@ -1,8 +1,9 @@
 n.d(t, {
-    WJ: () => a,
-    dk: () => i,
+    WJ: () => o,
+    dk: () => a,
 });
-let r = (0, n(945810).mj)({
+var r = n(945810);
+let i = (0, r.mj)({
         name: "2025-12-user-settings-redesign-3",
         kind: "user",
         defaultConfig: {
@@ -17,11 +18,41 @@ let r = (0, n(945810).mj)({
             },
         },
     }),
-    i = (e) =>
-        r.useConfig({
+    a = (e) =>
+        i.useConfig({
             location: e,
         }).enabled,
-    a = (e) =>
-        r.getConfig({
+    o = (e) =>
+        i.getConfig({
             location: e,
         }).enabled;
+(0, r.mj)({
+    name: "2026-02-user-settings-redesign-4a",
+    kind: "user",
+    defaultConfig: {
+        enabled: !1,
+    },
+    variations: {
+        0: {
+            enabled: !1,
+        },
+        1: {
+            enabled: !0,
+        },
+    },
+}),
+    (0, r.mj)({
+        name: "2026-02-user-settings-redesign-4b",
+        kind: "user",
+        defaultConfig: {
+            enabled: !1,
+        },
+        variations: {
+            0: {
+                enabled: !1,
+            },
+            1: {
+                enabled: !0,
+            },
+        },
+    });
