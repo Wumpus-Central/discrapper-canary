@@ -45,8 +45,8 @@ var r = n(889137),
     k = n(917878),
     U = n(586872),
     G = n(99341),
-    F = n(141468),
-    V = n(407580),
+    V = n(141468),
+    F = n(407580),
     B = n(130201),
     H = n(963852),
     Y = n(195880),
@@ -333,12 +333,12 @@ function eG(e) {
     });
 }
 
-function eF(e, t) {
+function eV(e, t) {
     let n = el.A.getMessage(e, t);
     return null != n && n.hasFlag(ev.pr7.CROSSPOSTED);
 }
 
-function eV(e, t) {
+function eF(e, t) {
     let n = el.A.getMessage(e, t);
     if (null == n || n.type !== ev.lAJ.REPLY) return;
     let r = $.A.getMessageByReference(n.messageReference);
@@ -648,7 +648,7 @@ let eB = {
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 });
-            if (r.body.length > 0) return (0, F.rh)(r.body[0]);
+            if (r.body.length > 0) return (0, V.rh)(r.body[0]);
         },
         fetchMessages(e) {
             let {
@@ -929,7 +929,7 @@ let eB = {
             });
             let s = () => eH._sendMessage(e, t, i),
                 l = G.Ay.backgroundify(s, void 0);
-            return (V.A.recordMessageSendAttempt(e, o, i), el.A.isReady(e))
+            return (F.A.recordMessageSendAttempt(e, o, i), el.A.isReady(e))
                 ? l()
                 : r && e !== y.E
                   ? (eL.info("Waiting for channel ".concat(e, " to be ready before sending.")),
@@ -1133,13 +1133,12 @@ let eB = {
                     onAttachmentUploadError: X,
                     announcementSendOptions: J,
                     withCheckpoint: $,
-                    messageIdFromNotificationExperiment: en,
                 } = n,
-                er = null != (r = n.flags) ? r : 0,
-                [ei, eo] = (0, et.A)(E);
-            ei && ((E = eo), (er = (0, a.UI)(er, ev.pr7.SUPPRESS_NOTIFICATIONS)));
-            let es = !1,
-                el = (null == (o = n.messageReference) ? void 0 : o.type) === ev.SH7.FORWARD;
+                en = null != (r = n.flags) ? r : 0,
+                [er, ei] = (0, et.A)(E);
+            er && ((E = ei), (en = (0, a.UI)(en, ev.pr7.SUPPRESS_NOTIFICATIONS)));
+            let eo = !1,
+                es = (null == (o = n.messageReference) ? void 0 : o.type) === ev.SH7.FORWARD;
             if (
                 "" === E &&
                 null == I &&
@@ -1147,33 +1146,33 @@ let eB = {
                 null == M &&
                 null == j &&
                 null == k &&
-                !el &&
+                !es &&
                 (null == G || 0 === G.length) &&
                 !$ &&
                 (null == t.components || 0 === t.components.length)
             )
                 if (null == K || !(K.length > 0)) return Promise.resolve();
-                else es = !0;
-            let ec = null != L ? ev.lAJ.REPLY : ev.lAJ.DEFAULT,
-                eu = null != (i = n.nonce) ? i : (0, Y.m)(),
-                ed = eu,
-                e_ = (0, H.Ay)({
+                else eo = !0;
+            let el = null != L ? ev.lAJ.REPLY : ev.lAJ.DEFAULT,
+                ec = null != (i = n.nonce) ? i : (0, Y.m)(),
+                eu = ec,
+                ed = (0, H.Ay)({
                     channelId: e,
                     content: E,
                     tts: A,
-                    type: ec,
+                    type: el,
                     messageReference: L,
                     allowedMentions: x,
-                    flags: 0 !== er ? er : void 0,
-                    nonce: eu,
+                    flags: 0 !== en ? en : void 0,
+                    nonce: ec,
                     poll: (0, Z.G8)(M),
                     sharedCustomTheme: j,
                 });
             if (
                 (!1 !== n.eagerDispatch &&
-                    ((0, z.iq)(e, e_.id),
-                    null != w && (e_.sticker_items = w.map((e) => ee.A.getStickerById(e)).filter((e) => null != e)),
-                    eH.receiveMessage(e, e_, !0, n)),
+                    ((0, z.iq)(e, ed.id),
+                    null != w && (ed.sticker_items = w.map((e) => ee.A.getStickerById(e)).filter((e) => null != e)),
+                    eH.receiveMessage(e, ed, !0, n)),
                 !ex && null != y && y.length > 0)
             ) {
                 ex = !0;
@@ -1181,25 +1180,25 @@ let eB = {
                     { errorMessage: n, errorMessageName: r } = eH.validateMessage(y, t, e);
                 eH.sendBotMessage(e, n, r);
             }
-            let em = {
+            let e_ = {
                 type: null != J ? d.AZ.SEND_ANNOUNCEMENT : d.AZ.SEND,
                 message: {
                     channelId: e,
                     content: E,
-                    nonce: eu,
+                    nonce: ec,
                     tts: A,
                     message_reference: L,
                     allowed_mentions: x,
-                    flags: er,
+                    flags: en,
                     analyticsLocation: C,
                 },
             };
             if (
-                (null != t.components && (em.message.components = t.components),
+                (null != t.components && (e_.message.components = t.components),
                 null != J &&
-                    ((em.message.create_thread = J.createThread),
-                    (em.message.title = J.threadName),
-                    (em.message.publish = null != (s = J.publish) && s)),
+                    ((e_.message.create_thread = J.createThread),
+                    (e_.message.title = J.threadName),
+                    (e_.message.publish = null != (s = J.publish) && s)),
                 null != I)
             ) {
                 let e,
@@ -1218,33 +1217,32 @@ let eB = {
                         },
                         { activity: n } = I;
                     null != n.party && null != n.party.id && (t.party_id = n.party.id),
-                        (em.message.application_id = n.application_id),
-                        (em.message.activity = t);
+                        (e_.message.application_id = n.application_id),
+                        (e_.message.activity = t);
                 }
             }
             if (
-                (null != M && (em.message.poll = M),
-                null != j && (em.message.shared_client_theme = j),
-                null != w && (em.message.sticker_ids = w),
-                q.A.isEnabled() && (em.message.has_poggermode_enabled = !0),
-                $ && (em.message.with_checkpoint = !0),
-                null != k && (em.message.content_inventory_entry = k),
-                null != G && G.length > 0 && (em.message.attachments = G),
-                null != en && (em.message.message_id_from_notification_experiment = en),
+                (null != M && (e_.message.poll = M),
+                null != j && (e_.message.shared_client_theme = j),
+                null != w && (e_.message.sticker_ids = w),
+                q.A.isEnabled() && (e_.message.has_poggermode_enabled = !0),
+                $ && (e_.message.with_checkpoint = !0),
+                null != k && (e_.message.content_inventory_entry = k),
+                null != G && G.length > 0 && (e_.message.attachments = G),
                 null != K && K.length > 0)
             )
                 try {
                     let t = await (0, U.L)({
                         channelId: e,
-                        nonce: eu,
+                        nonce: ec,
                         items: K,
-                        message: e_,
+                        message: ed,
                         shouldUploadFailureSendNotification: !n.doNotNotifyOnError && void 0,
                     });
                     if (null == t) return;
                     let r = t.attachments;
-                    if (((m = t.uploader), es && (null == r || 0 === r.length))) return;
-                    if (null != r && ((em.message.attachments = r.map((e, t) => (0, eb.OW)(e, t))), (0, b.J)())) {
+                    if (((m = t.uploader), eo && (null == r || 0 === r.length))) return;
+                    if (null != r && ((e_.message.attachments = r.map((e, t) => (0, eb.OW)(e, t))), (0, b.J)())) {
                         for (let e of r)
                             if (
                                 (null == (p = e.item) ||
@@ -1263,7 +1261,7 @@ let eB = {
                                     },
                                     n = "__CLIP_METADATA__",
                                     r = "".concat(n).concat(JSON.stringify(t));
-                                em.message.content = "".concat(em.message.content).concat(r);
+                                e_.message.content = "".concat(e_.message.content).concat(r);
                                 break;
                             }
                     }
@@ -1283,7 +1281,7 @@ let eB = {
                     o = Math.floor(1e4 * Math.random());
                 eL.info("Queueing message to be sent LogId:".concat(o)),
                     d.Ay.enqueue(
-                        em,
+                        e_,
                         (s) => {
                             let c = Date.now() - i;
                             if (s.ok) {
@@ -1296,7 +1294,7 @@ let eB = {
                                         poll: M,
                                     }),
                                     null != n.alsoForwardToChannelId &&
-                                        T.A.sendForward((0, F.rh)(s.body), n.alsoForwardToChannelId)
+                                        T.A.sendForward((0, V.rh)(s.body), n.alsoForwardToChannelId)
                                             .then(() => {
                                                 var e, t, r;
                                                 eG({
@@ -1332,7 +1330,7 @@ let eB = {
                                         joinRequestUserId: n,
                                     });
                                 }
-                                V.A.recordMessageSendApiResponse(eu),
+                                F.A.recordMessageSendApiResponse(ec),
                                     l.h.dispatch({
                                         type: "SLOWMODE_RESET_COOLDOWN",
                                         slowmodeType: ef.R.SendMessage,
@@ -1395,7 +1393,7 @@ let eB = {
                                         R.yf.has(s.body.code)
                                             ? l.h.dispatch({
                                                   type: "MESSAGE_SEND_FAILED_AUTOMOD",
-                                                  messageData: em,
+                                                  messageData: e_,
                                                   errorResponseBody: {
                                                       code: s.body.code,
                                                       message: s.body.message,
@@ -1407,15 +1405,15 @@ let eB = {
                                                 })
                                               : s.body.code === ev.t02.EXPLICIT_CONTENT
                                                 ? (t = eS.ty.EXPLICIT_CONTENT)
-                                                : null != M || el || null != k || eH.sendClydeError(e, s.body.code);
+                                                : null != M || es || null != k || eH.sendClydeError(e, s.body.code);
                                 i
-                                    ? eH.deleteMessage(e, ed, !0)
+                                    ? eH.deleteMessage(e, eu, !0)
                                     : (null != m &&
                                           l.h.dispatch({
                                               type: "UPLOAD_FAIL",
                                               channelId: e,
                                               file: m._file,
-                                              messageId: ed,
+                                              messageId: eu,
                                               reason: t,
                                               noSendFailed: !0,
                                           }),
@@ -1428,7 +1426,7 @@ let eB = {
                                           ),
                                       l.h.dispatch({
                                           type: "MESSAGE_SEND_FAILED",
-                                          messageId: ed,
+                                          messageId: eu,
                                           channelId: e,
                                           shouldNotify: !n.doNotNotifyOnError,
                                           reason: t,
@@ -1502,8 +1500,8 @@ let eB = {
         async editMessage(e, t, n) {
             let { content: r, components: i } = n;
             await en.A.unarchiveThreadIfNecessary(e);
-            let a = eV(e, t),
-                o = eF(e, t),
+            let a = eF(e, t),
+                o = eV(e, t),
                 c = {
                     channelId: e,
                     messageId: t,
