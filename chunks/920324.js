@@ -107,15 +107,22 @@ let l = (e) => e,
                 children: [
                     {
                         block: "Grid",
-                        columns: 6,
+                        columns: 3,
                         children: [
                             {
                                 block: "ShopProductCard",
                                 skuId: l("1458472704167379109"),
                             },
                             {
-                                block: "ShopProductCard",
-                                skuId: l("1458472704079434020"),
+                                block: "GridItem",
+                                columns: 2,
+                                rows: 2,
+                                children: [
+                                    {
+                                        block: "ShopProductCard",
+                                        skuId: l("1458472704079434020"),
+                                    },
+                                ],
                             },
                             {
                                 block: "ShopProductCard",
@@ -131,11 +138,18 @@ let l = (e) => e,
                             },
                             {
                                 block: "ShopProductCard",
-                                skuId: l("1428438925021548544"),
+                                skuId: l("1458472704435945653"),
                             },
                             {
-                                block: "ShopProductCard",
-                                skuId: l("1458472704435945653"),
+                                block: "GridItem",
+                                columns: 2,
+                                rows: 1,
+                                children: [
+                                    {
+                                        block: "ShopProductCard",
+                                        skuId: l("1428438925021548544"),
+                                    },
+                                ],
                             },
                             {
                                 block: "ShopProductCard",
