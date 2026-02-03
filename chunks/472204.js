@@ -53,10 +53,13 @@ function f(e) {
         (e) => {
             r && d(e),
                 (0, s.D$)({
-                    channelId: t,
+                    target: {
+                        kind: s.bB.CHANNEL,
+                        channelId: t,
+                        guildId: n,
+                        messageId: null,
+                    },
                     source: u.B.FRIENDS_WIDGET_CLICK,
-                    guildId: n,
-                    messageId: null,
                     widgetType: c.uss.FRIENDS,
                 });
         },

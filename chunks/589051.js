@@ -1,9 +1,10 @@
 n.d(t, {
-    E: () => D,
+    E: () => L,
     Fg: () => m,
     H: () => A,
     Jo: () => u,
     LA: () => f,
+    M8: () => D,
     NI: () => P,
     QC: () => g,
     X4: () => w,
@@ -432,7 +433,13 @@ function P(e) {
     });
 }
 
-function D() {
+function D(e) {
+    return R.useConfig({
+        location: e,
+    });
+}
+
+function L() {
     m("OVERLAY_INITIALIZED"),
         y("OVERLAY_INITIALIZED"),
         I("OVERLAY_INITIALIZED"),

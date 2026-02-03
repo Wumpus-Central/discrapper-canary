@@ -81,7 +81,7 @@ let P = l.memo(function (e) {
     l.useEffect(() => {
         null == Y && (0, S.b)(i);
     }, [Y, i]);
-    let K = (0, o.bG)([v.A, b.default], () => {
+    let W = (0, o.bG)([v.A, b.default], () => {
             var e, t;
             if (null == Y) return !1;
             let n = null != (e = null == (t = b.default.getCurrentUser()) ? void 0 : t.id) ? e : null,
@@ -89,7 +89,7 @@ let P = l.memo(function (e) {
             for (let e in i) if (e !== n) return !0;
             return !1;
         }, [Y]),
-        W = (0, o.bG)([m.Ay], () => {
+        K = (0, o.bG)([m.Ay], () => {
             let e = null == Y ? void 0 : Y.id;
             return null != e && m.Ay.hasUnread(e);
         }, [Y]),
@@ -130,7 +130,7 @@ let P = l.memo(function (e) {
                     guild: H,
                     isSelected: D,
                     size: x.c.SIZE_40,
-                    isTyping: K,
+                    isTyping: W,
                     mentionCount: G,
                     isMentionLowImportance: V,
                 });
@@ -175,10 +175,13 @@ let P = l.memo(function (e) {
                               minimized: !1,
                           }),
                           (0, E.D$)({
-                              channelId: i,
+                              target: {
+                                  kind: E.bB.CHANNEL,
+                                  channelId: i,
+                                  guildId: null != (e = null == H ? void 0 : H.id) ? e : null,
+                                  messageId: null,
+                              },
                               source: j.B.MANUAL,
-                              guildId: null != (e = null == H ? void 0 : H.id) ? e : null,
-                              messageId: null,
                               widgetType: T.uss.TEXT_CHAT_V3,
                           });
                   },
@@ -192,7 +195,7 @@ let P = l.memo(function (e) {
                           children: (0, r.jsx)(p.A, {
                               selected: D,
                               hovered: L,
-                              unread: W,
+                              unread: K,
                           }),
                       }),
                   ],

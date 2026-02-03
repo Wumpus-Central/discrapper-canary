@@ -67,8 +67,8 @@ function I(e, t, n, I) {
         onNotificationShow: () => {
             I && (0, u.Ak)(c.cH, c.pD), w();
         },
-        onNotificationClick: () => {
-            let n = y.A.getTargetPID();
+        onNotificationClick: (n, i) => {
+            let a = y.A.getTargetPID();
             if (
                 ((0, l.ack)(
                     e.id,
@@ -83,29 +83,28 @@ function I(e, t, n, I) {
                 ),
                 D)
             ) {
-                var i;
-                (0, v.Ml)({
-                    channelId: e.id,
-                    source: f.B9.NOTIFICATION_CLICK,
-                    lastMessageId: t.id,
-                }),
-                    (0, v.D$)({
+                var s;
+                (0, v.D$)({
+                    target: {
+                        kind: v.bB.CHANNEL,
                         channelId: e.id,
-                        source: f.B9.NOTIFICATION_CLICK,
-                        guildId: null != (i = e.guild_id) ? i : null,
+                        guildId: null != (s = e.guild_id) ? s : null,
                         messageId: t.id,
-                        widgetType: _.uss.NOTIFICATIONS,
-                    }),
-                    A.A.isInputLocked(n) ? (P("unlock"), r.A.setInputLocked(!1, n)) : P("jump"),
+                    },
+                    source: f.B9.NOTIFICATION_CLICK,
+                    widgetType: _.uss.NOTIFICATIONS,
+                }),
+                    A.A.isInputLocked(a) ? (P("unlock"), r.A.setInputLocked(!1, a)) : P("jump"),
                     requestAnimationFrame(() => {
                         d._.dispatchToLastSubscribed(_.jej.TEXTAREA_FOCUS, {
                             channelId: e.id,
                         });
-                    });
+                    }),
+                    r.A.updateNotificationStatus(i, _.yFH.DISMISSED);
                 return;
             }
-            A.A.isInputLocked(n)
-                ? (P("unlock"), r.A.setInputLocked(!1, n))
+            A.A.isInputLocked(a)
+                ? (P("unlock"), r.A.setInputLocked(!1, a))
                 : (P("jump"), (0, o.pX)(_.BVt.CHANNEL(e.guild_id, e.id, t.id)), h.isPlatformEmbedded && p.Ay.focus());
         },
         onDismissClick: () => {

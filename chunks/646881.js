@@ -1,115 +1,114 @@
 n.d(t, {
-    A: () => x,
+    A: () => O,
 });
 var i = n(627968),
     r = n(64700),
     l = n(311907),
-    a = n(308528),
-    s = n(375492),
-    o = n(287809),
-    u = n(810412),
-    c = n(914853),
-    d = n(243612),
-    h = n(640490),
-    p = n(67103),
-    f = n(755588),
-    g = n(222870),
-    m = n(180720),
-    y = n(576420),
-    A = n(145567),
-    v = n(34307),
-    b = n(652215),
-    E = n(553777);
+    a = n(375492),
+    s = n(287809),
+    o = n(810412),
+    u = n(914853),
+    c = n(243612),
+    d = n(640490),
+    h = n(67103),
+    p = n(755588),
+    f = n(222870),
+    g = n(180720),
+    m = n(576420),
+    y = n(145567),
+    A = n(34307),
+    v = n(652215),
+    b = n(553777);
 
-function O() {
+function E() {
     var e, t, n;
-    let O = (0, d.b4)(),
-        x = null == O ? void 0 : O.id,
-        _ = null == O ? void 0 : O.altId,
-        S = null != (e = (0, l.bG)([o.default], () => o.default.getCurrentUser())) ? e : null,
-        I = null != _ ? _ : x,
-        j = y.Ay.useField("activeTab"),
-        T = y.Ay.useField("setActiveTab"),
-        C = r.useCallback(
+    let E = (0, c.b4)(),
+        O = null == E ? void 0 : E.id,
+        x = null == E ? void 0 : E.altId,
+        _ = null != (e = (0, l.bG)([s.default], () => s.default.getCurrentUser())) ? e : null,
+        S = null != x ? x : O,
+        I = m.Ay.useField("activeTab"),
+        j = m.Ay.useField("setActiveTab"),
+        T = r.useCallback(
             (e) => {
-                e !== j &&
-                    (T(e),
-                    (0, u.YX)(b.uss.FRIENDS, {
-                        type: u.Z5.TAB_SELECTED,
+                e !== I &&
+                    (j(e),
+                    (0, o.YX)(v.uss.FRIENDS, {
+                        type: o.Z5.TAB_SELECTED,
                         value: (function (e) {
                             switch (e) {
-                                case c.x.FRIENDS:
-                                    return u.IP.FRIEND_TAB_SELECTED;
-                                case c.x.MESSAGES:
-                                    return u.IP.MESSAGES_TAB_SELECTED;
-                                case c.x.VOICE:
-                                    return u.IP.VOICE_TAB_SELECTED;
+                                case u.x.FRIENDS:
+                                    return o.IP.FRIEND_TAB_SELECTED;
+                                case u.x.MESSAGES:
+                                    return o.IP.MESSAGES_TAB_SELECTED;
+                                case u.x.VOICE:
+                                    return o.IP.VOICE_TAB_SELECTED;
                                 default:
-                                    return u.IP.FRIEND_TAB_SELECTED;
+                                    return o.IP.FRIEND_TAB_SELECTED;
                             }
                         })(e),
                     }));
             },
-            [j, T],
+            [I, j],
         ),
-        N = null != (t = (0, l.bG)([s.A], () => (null == I ? null : s.A.getApplicationActivity(I)), [I])) ? t : null,
-        w = (0, r.useCallback)((e, t) => {
+        C = null != (t = (0, l.bG)([a.A], () => (null == S ? null : a.A.getApplicationActivity(S)), [S])) ? t : null,
+        N = (0, r.useCallback)((e, t) => {
             let n = (function (e) {
                 switch (e) {
-                    case p.x.OPEN_DIRECT_MESSAGE:
+                    case h.x.OPEN_DIRECT_MESSAGE:
                         return {
-                            type: u.Z5.FRIEND_LIST,
-                            value: u.IP.CHAT,
+                            type: o.Z5.FRIEND_LIST,
+                            value: o.IP.CHAT,
                         };
-                    case p.x.ACCEPT_FRIEND_REQUEST:
+                    case h.x.ACCEPT_FRIEND_REQUEST:
                         return {
-                            type: u.Z5.FRIEND_REQUEST,
-                            value: u.IP.ACCEPT_REQUEST,
+                            type: o.Z5.FRIEND_REQUEST,
+                            value: o.IP.ACCEPT_REQUEST,
                         };
-                    case p.x.DECLINE_FRIEND_REQUEST:
+                    case h.x.DECLINE_FRIEND_REQUEST:
                         return {
-                            type: u.Z5.FRIEND_REQUEST,
-                            value: u.IP.DECLINE_REQUEST,
+                            type: o.Z5.FRIEND_REQUEST,
+                            value: o.IP.DECLINE_REQUEST,
                         };
-                    case p.x.CANCEL_FRIEND_REQUEST:
+                    case h.x.CANCEL_FRIEND_REQUEST:
                         return {
-                            type: u.Z5.FRIEND_REQUEST,
-                            value: u.IP.CANCEL_REQUEST,
+                            type: o.Z5.FRIEND_REQUEST,
+                            value: o.IP.CANCEL_REQUEST,
                         };
-                    case p.x.SEND_FRIEND_REQUEST:
+                    case h.x.SEND_FRIEND_REQUEST:
                         return {
-                            type: u.Z5.FRIEND_REQUEST,
-                            value: u.IP.SEND_REQUEST,
+                            type: o.Z5.FRIEND_REQUEST,
+                            value: o.IP.SEND_REQUEST,
                         };
-                    case p.x.SEND_ACTIVITY_INVITE:
+                    case h.x.SEND_ACTIVITY_INVITE:
                         return {
-                            type: u.Z5.INVITE,
-                            value: u.IP.INVITE_SENT,
+                            type: o.Z5.INVITE,
+                            value: o.IP.INVITE_SENT,
                         };
-                    case p.x.ASK_TO_JOIN:
+                    case h.x.ASK_TO_JOIN:
                         return {
-                            type: u.Z5.INVITE,
-                            value: u.IP.JOIN_REQUEST_SENT,
+                            type: o.Z5.INVITE,
+                            value: o.IP.JOIN_REQUEST_SENT,
                         };
-                    case p.x.USER_CONTEXT_MENU:
+                    case h.x.USER_CONTEXT_MENU:
                         return {
-                            type: u.Z5.FRIEND_LIST,
-                            value: u.IP.SETTINGS_OPENED,
+                            type: o.Z5.FRIEND_LIST,
+                            value: o.IP.SETTINGS_OPENED,
                         };
-                    case p.x.OPEN_FRIEND_MODAL:
+                    case h.x.OPEN_FRIEND_MODAL:
                         return {
-                            type: u.Z5.FRIEND_LIST,
-                            value: u.IP.PROFILE_OPENED,
+                            type: o.Z5.FRIEND_LIST,
+                            value: o.IP.PROFILE_OPENED,
                         };
-                    case p.x.OPEN_SETTINGS_MODAL:
+                    case h.x.OPEN_SETTINGS_MODAL:
                         return {
-                            type: u.Z5.FRIEND_LIST,
-                            value: u.IP.SETTINGS_OPENED,
+                            type: o.Z5.FRIEND_LIST,
+                            value: o.IP.SETTINGS_OPENED,
                         };
-                    case p.x.SEARCH_FRIENDS:
+                    case h.x.SEARCH_FRIENDS:
                         return {
-                            type: u.Z5.FRIEND_LIST,
-                            value: u.IP.SEARCH,
+                            type: o.Z5.FRIEND_LIST,
+                            value: o.IP.SEARCH,
                         };
                     default:
                         return null;
@@ -117,23 +116,24 @@ function O() {
             })(e);
             if (null != n) {
                 var i, r;
-                if (e === p.x.OPEN_DIRECT_MESSAGE) {
+                if (e === h.x.OPEN_DIRECT_MESSAGE) {
                     if (null == t) return;
                     (async () => {
                         try {
-                            let e = await a.A.getOrEnsurePrivateChannel(t);
-                            (0, A.D$)({
-                                channelId: e,
-                                source: v.B.FRIENDS_WIDGET_CLICK,
-                                guildId: null,
-                                messageId: null,
-                                widgetType: b.uss.FRIENDS,
+                            await (0, y.D$)({
+                                target: {
+                                    kind: y.bB.DM_USER,
+                                    userId: t,
+                                    messageId: null,
+                                },
+                                source: A.B.FRIENDS_WIDGET_CLICK,
+                                widgetType: v.uss.FRIENDS,
                             });
                         } catch (e) {}
                     })();
                 }
-                (0, u.YX)(
-                    b.uss.FRIENDS,
+                (0, o.YX)(
+                    v.uss.FRIENDS,
                     ((i = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -180,32 +180,32 @@ function O() {
             }
         }, []);
     return (0, i.jsxs)("div", {
-        className: E.kL,
+        className: b.kL,
         children: [
-            (0, i.jsx)(f.b, {
-                currentUser: S,
-                activity: N,
-                currentGameName: null != (n = null == O ? void 0 : O.name) ? n : null,
-                activeTab: j,
-                onTabChange: C,
+            (0, i.jsx)(p.b, {
+                currentUser: _,
+                activity: C,
+                currentGameName: null != (n = null == E ? void 0 : E.name) ? n : null,
+                activeTab: I,
+                onTabChange: T,
             }),
             (0, i.jsx)("div", {
-                className: E.Qs,
+                className: b.Qs,
                 children:
-                    j === c.x.FRIENDS
-                        ? (0, i.jsx)(h.F, {
-                              onAction: w,
+                    I === u.x.FRIENDS
+                        ? (0, i.jsx)(d.F, {
+                              onAction: N,
                           })
-                        : j === c.x.MESSAGES
-                          ? (0, i.jsx)(g.t, {})
-                          : j === c.x.VOICE
-                            ? (0, i.jsx)(m.T, {})
+                        : I === u.x.MESSAGES
+                          ? (0, i.jsx)(f.t, {})
+                          : I === u.x.VOICE
+                            ? (0, i.jsx)(g.T, {})
                             : null,
             }),
         ],
     });
 }
-let x = r.memo(function (e) {
+let O = r.memo(function (e) {
     let { locked: t } = e;
-    return t ? null : (0, i.jsx)(O, {});
+    return t ? null : (0, i.jsx)(E, {});
 });

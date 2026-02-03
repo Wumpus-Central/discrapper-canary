@@ -1,67 +1,72 @@
-r.d(t, {
-    A: () => g,
+n.d(t, {
+    A: () => p,
 }),
-    r(896048);
-var n = r(627968);
-r(64700);
-var i = r(311907),
-    l = r(397927),
-    o = r(308528),
-    a = r(442433),
-    c = r(734057),
-    d = r(576705),
-    s = r(145567),
-    u = r(187667),
-    A = r(34307),
-    f = r(652215),
-    p = r(895867),
-    b = r(985018);
+    n(896048);
+var r = n(627968);
+n(64700);
+var i = n(311907),
+    l = n(397927),
+    a = n(442433),
+    o = n(734057),
+    u = n(576705),
+    s = n(589051),
+    d = n(145567),
+    c = n(187667),
+    A = n(34307),
+    f = n(652215),
+    b = n(895867),
+    g = n(985018);
 
-function g(e, t) {
-    let r = "DM_USER" === e.kind ? e.userId : null,
-        g = (0, i.bG)([c.A], () => {
+function p(e, t) {
+    let { hasChat: n } = (0, s.M8)("useOverlayTextChatToggleMenuItem"),
+        p = "DM_USER" === e.kind ? e.userId : null,
+        v = (0, i.bG)([o.A], () => {
             var e;
-            return null != r && null != (e = c.A.getDMFromUserId(r)) ? e : null;
-        }, [r]),
-        y = "CHANNEL" === e.kind ? e.channel.id : g,
-        O = "CHANNEL" === e.kind ? e.channel : null,
-        v = (0, i.bG)(
-            [d.A],
+            return null != p && null != (e = o.A.getDMFromUserId(p)) ? e : null;
+        }, [p]),
+        O = "CHANNEL" === e.kind ? e.channel.id : v,
+        y = (0, i.bG)([c.A], () => {
+            if (null == O) return !1;
+            let [e] = c.A.getSessionEntries();
+            for (let t of e) if (t.channelId === O) return !0;
+            return c.A.getSelectedChannelId() === O;
+        }, [O]),
+        E = "CHANNEL" === e.kind ? e.channel : null,
+        m = (0, i.bG)(
+            [u.A],
             () =>
-                !!(null == O || O.isDM() || O.isMultiUserDM() || O.isPrivate()) ||
-                d.A.can(f.xBc.READ_MESSAGE_HISTORY, O),
-            [O],
+                !!(null == E || E.isDM() || E.isMultiUserDM() || E.isPrivate()) ||
+                u.A.can(f.xBc.READ_MESSAGE_HISTORY, E),
+            [E],
         );
-    return (0, i.bG)([u.A], () => {
-        if (null == y) return !1;
-        let [e] = u.A.getSessionEntries();
-        for (let t of e) if (t.channelId === y) return !0;
-        return u.A.getSelectedChannelId() === y;
-    }, [y]) && null != y
-        ? (0, n.jsx)(l.Drp, {
+    return y && null != O
+        ? (0, r.jsx)(l.Drp, {
               id: "close-chat",
-              label: b.intl.string(p.default.ERApc4),
+              label: g.intl.string(b.default.ERApc4),
               action: () => {
-                  (0, s.lu)({
-                      channelId: y,
+                  (0, d.lu)({
+                      channelId: O,
                       widgetType: t,
                       secondaryValue: "context_menu_close_chat",
                   }),
                       (0, a.Z_)();
               },
           })
-        : v
-          ? (0, n.jsx)(l.Drp, {
+        : n && m
+          ? (0, r.jsx)(l.Drp, {
                 id: "open-chat",
-                label: b.intl.string(p.default.KWrMk5),
+                label: g.intl.string(b.default.KWrMk5),
                 action: () => {
                     switch (e.kind) {
                         case "CHANNEL":
-                            (0, s.D$)({
-                                channelId: e.channel.id,
+                            (0, d.D$)({
+                                target: {
+                                    kind: d.bB.CHANNEL,
+                                    channelId: e.channel.id,
+                                    guildId: e.guildId,
+                                    messageId: null,
+                                },
                                 source: A.B.MANUAL,
-                                guildId: e.guildId,
-                                messageId: null,
                                 widgetType: t,
                             });
                             break;
@@ -76,12 +81,14 @@ function g(e, t) {
                             }
                             (async () => {
                                 try {
-                                    let r = null != g ? g : await o.A.getOrEnsurePrivateChannel(e.userId);
-                                    (0, s.D$)({
-                                        channelId: r,
+                                    await (0, d.D$)({
+                                        target: {
+                                            kind: d.bB.DM_USER,
+                                            userId: e.userId,
+                                            messageId: null,
+                                            existingChannelId: v,
+                                        },
                                         source: A.B.MANUAL,
-                                        guildId: null,
-                                        messageId: null,
                                         widgetType: t,
                                     });
                                 } catch (e) {

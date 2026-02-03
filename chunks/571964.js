@@ -1,113 +1,115 @@
-r.d(t, {
-    A: () => s,
+n.d(t, {
+    A: () => c,
 }),
-    r(896048),
-    r(321073);
-var n = r(627968);
-r(64700);
-var i = r(311907),
-    l = r(397927),
-    o = r(545059),
-    a = r(870391),
-    c = r(994500),
-    d = r(985018);
+    n(896048),
+    n(321073);
+var r = n(627968);
+n(64700);
+var i = n(311907),
+    l = n(397927),
+    a = n(545059),
+    o = n(870391),
+    u = n(994500),
+    s = n(589051),
+    d = n(985018);
 
-function s(e) {
-    let { user: t, onAction: s, groupId: u } = e,
-        A = t.id,
-        [f, p] = (0, i.yK)([c.A, a.A], () => [c.A.isFriend(A), a.A.getGroups()], [A]);
-    if (!f || 0 === p.length) return null;
-    let b = [];
+function c(e) {
+    let { user: t, onAction: c, groupId: A } = e,
+        { hasFriendList: f } = (0, s.M8)("useManageFriendGroupsItems"),
+        b = t.id,
+        [g, p] = (0, i.yK)([u.A, o.A], () => [u.A.isFriend(b), o.A.getGroups()], [b]);
+    if (!f || !g || 0 === p.length) return null;
+    let v = [];
     return (
         p.length > 0 &&
-            b.push(
-                (0, n.jsxs)(
+            v.push(
+                (0, r.jsxs)(
                     l.Drp,
                     {
                         id: "add-to-group",
                         label: "Add to Group",
                         children: [
                             p.map((e) =>
-                                (0, n.jsx)(
+                                (0, r.jsx)(
                                     l.Drp,
                                     {
                                         id: "add-".concat(e.id),
                                         label: e.name,
                                         action: () => {
-                                            null == s || s(), o.A.addUsersToGroup(e.id, A);
+                                            null == c || c(), a.A.addUsersToGroup(e.id, b);
                                         },
                                     },
                                     e.id,
                                 ),
                             ),
-                            (0, n.jsx)(l.bXX, {}, "add-to-group-separator"),
-                            (0, n.jsx)(
+                            (0, r.jsx)(l.bXX, {}, "add-to-group-separator"),
+                            (0, r.jsx)(
                                 l.Drp,
                                 {
                                     id: "create-new-group",
                                     label: d.intl.string(d.t["3hF1W4"]),
                                     action: () => {
-                                        null == s || s(),
+                                        null == c || c(),
                                             (0, l.mMO)(async () => {
-                                                let { default: e } = await r.e("51080").then(r.bind(r, 519528));
+                                                let { default: e } = await n.e("51080").then(n.bind(n, 519528));
                                                 return (t) => {
-                                                    var r, i;
-                                                    return (0, n.jsx)(
+                                                    var n, i;
+                                                    return (0, r.jsx)(
                                                         e,
-                                                        ((r = (function (e) {
+                                                        ((n = (function (e) {
                                                             for (var t = 1; t < arguments.length; t++) {
-                                                                var r = null != arguments[t] ? arguments[t] : {},
-                                                                    n = Object.keys(r);
+                                                                var n = null != arguments[t] ? arguments[t] : {},
+                                                                    r = Object.keys(n);
                                                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                                                    (n = n.concat(
-                                                                        Object.getOwnPropertySymbols(r).filter(
+                                                                    (r = r.concat(
+                                                                        Object.getOwnPropertySymbols(n).filter(
                                                                             function (e) {
                                                                                 return Object.getOwnPropertyDescriptor(
-                                                                                    r,
+                                                                                    n,
                                                                                     e,
                                                                                 ).enumerable;
                                                                             },
                                                                         ),
                                                                     )),
-                                                                    n.forEach(function (t) {
-                                                                        var n;
-                                                                        (n = r[t]),
+                                                                    r.forEach(function (t) {
+                                                                        var r;
+                                                                        (r = n[t]),
                                                                             t in e
                                                                                 ? Object.defineProperty(e, t, {
-                                                                                      value: n,
+                                                                                      value: r,
                                                                                       enumerable: !0,
                                                                                       configurable: !0,
                                                                                       writable: !0,
                                                                                   })
-                                                                                : (e[t] = n);
+                                                                                : (e[t] = r);
                                                                     });
                                                             }
                                                             return e;
                                                         })({}, t)),
                                                         (i = i =
                                                             {
-                                                                initialUserIds: [A],
+                                                                initialUserIds: [b],
                                                             }),
                                                         Object.getOwnPropertyDescriptors
                                                             ? Object.defineProperties(
-                                                                  r,
+                                                                  n,
                                                                   Object.getOwnPropertyDescriptors(i),
                                                               )
                                                             : (function (e, t) {
-                                                                  var r = Object.keys(e);
+                                                                  var n = Object.keys(e);
                                                                   if (Object.getOwnPropertySymbols) {
-                                                                      var n = Object.getOwnPropertySymbols(e);
-                                                                      r.push.apply(r, n);
+                                                                      var r = Object.getOwnPropertySymbols(e);
+                                                                      n.push.apply(n, r);
                                                                   }
-                                                                  return r;
+                                                                  return n;
                                                               })(Object(i)).forEach(function (e) {
                                                                   Object.defineProperty(
-                                                                      r,
+                                                                      n,
                                                                       e,
                                                                       Object.getOwnPropertyDescriptor(i, e),
                                                                   );
                                                               }),
-                                                        r),
+                                                        n),
                                                     );
                                                 };
                                             });
@@ -120,20 +122,20 @@ function s(e) {
                     "add-to-group",
                 ),
             ),
-        null != u &&
-            b.push(
-                (0, n.jsx)(
+        null != A &&
+            v.push(
+                (0, r.jsx)(
                     l.Drp,
                     {
                         id: "remove-from-group",
                         label: "Remove from Group",
                         action: () => {
-                            null == s || s(), o.A.removeUsersFromGroup(u, A);
+                            null == c || c(), a.A.removeUsersFromGroup(A, b);
                         },
                     },
                     "remove-from-group",
                 ),
             ),
-        b
+        v
     );
 }

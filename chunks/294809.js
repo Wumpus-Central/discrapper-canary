@@ -8,23 +8,23 @@ var i = n(627968),
     l = n(311907),
     a = n(377802),
     s = n(342952),
-    o = n(435371),
-    u = n(397927),
-    c = n(47167),
-    d = n(713654),
-    h = n(21119),
-    p = n(734057),
-    f = n(71393),
-    g = n(576705),
-    m = n(222823),
-    y = n(994500),
-    A = n(309010),
-    v = n(287809),
-    b = n(977997),
-    E = n(607567),
-    O = n(403362),
-    x = n(996439),
-    _ = n(914853),
+    o = n(397927),
+    u = n(47167),
+    c = n(713654),
+    d = n(21119),
+    h = n(734057),
+    p = n(71393),
+    f = n(576705),
+    g = n(222823),
+    m = n(994500),
+    y = n(309010),
+    A = n(287809),
+    v = n(977997),
+    b = n(607567),
+    E = n(403362),
+    O = n(996439),
+    x = n(914853),
+    _ = n(676923),
     S = n(1404),
     I = n(483392),
     j = n(578093),
@@ -58,21 +58,21 @@ function z(e) {
         r = (function (e) {
             let { channelId: t } = e;
             return (0, l.yK)(
-                [b.A, v.default, h.A, y.A],
+                [v.A, A.default, d.A, m.A],
                 () =>
-                    Object.values(b.A.getVoiceStatesForChannel(t))
-                        .map((e) => v.default.getUser(e.userId))
-                        .filter(O.Vq)
+                    Object.values(v.A.getVoiceStatesForChannel(t))
+                        .map((e) => A.default.getUser(e.userId))
+                        .filter(E.Vq)
                         .sort((e, t) => {
                             var n, i, r, l;
-                            return y.A.isFriend(e.id) && !y.A.isFriend(t.id)
+                            return m.A.isFriend(e.id) && !m.A.isFriend(t.id)
                                 ? -1
-                                : !y.A.isFriend(e.id) && y.A.isFriend(t.id)
+                                : !m.A.isFriend(e.id) && m.A.isFriend(t.id)
                                   ? 1
-                                  : (null != (n = null == (r = h.A.getUserAffinity(t.id)) ? void 0 : r.vcProbability)
+                                  : (null != (n = null == (r = d.A.getUserAffinity(t.id)) ? void 0 : r.vcProbability)
                                         ? n
                                         : 0) -
-                                    (null != (i = null == (l = h.A.getUserAffinity(e.id)) ? void 0 : l.vcProbability)
+                                    (null != (i = null == (l = d.A.getUserAffinity(e.id)) ? void 0 : l.vcProbability)
                                         ? i
                                         : 0);
                         }),
@@ -89,7 +89,7 @@ function z(e) {
                   users: r,
                   guildId: null != n ? n : void 0,
                   maxUsers: Math.min(r.length, 4),
-                  size: u._3J.SIZE_24,
+                  size: o._3J.SIZE_24,
                   disableUserPopout: !0,
                   "aria-label": k.intl.string(k.t.TxqPQR),
               }),
@@ -98,39 +98,39 @@ function z(e) {
 
 function F(e) {
     var t, n, s;
-    let h,
+    let d,
         {
-            channelId: y,
-            listItemId: v,
-            voiceStates: b,
-            shouldHighlightIfRecentlyAdded: O,
+            channelId: m,
+            listItemId: A,
+            voiceStates: v,
+            shouldHighlightIfRecentlyAdded: E,
             isExpanded: I = !1,
             onToggleExpanded: L,
         } = e,
-        F = (0, l.bG)([p.A], () => p.A.getChannel(y), [y]),
-        H = null != (t = (0, c.Ay)(null != F ? F : void 0, !0)) ? t : "???",
+        F = (0, l.bG)([h.A], () => h.A.getChannel(m), [m]),
+        H = null != (t = (0, u.Ay)(null != F ? F : void 0, !0)) ? t : "???",
         Y = null != (n = null == F || null == (s = F.getGuildId) ? void 0 : s.call(F)) ? n : null,
-        K = (0, l.bG)([f.A], () => {
+        W = (0, l.bG)([p.A], () => {
             var e;
-            return null != Y && null != (e = f.A.getGuild(Y)) ? e : null;
+            return null != Y && null != (e = p.A.getGuild(Y)) ? e : null;
         }, [Y]),
-        W = (0, l.bG)([A.A], () => A.A.getVoiceChannelId() === y, [y]),
-        B = (0, l.bG)([g.A], () => {
+        K = (0, l.bG)([y.A], () => y.A.getVoiceChannelId() === m, [m]),
+        B = (0, l.bG)([f.A], () => {
             var e, t;
             return (
                 null != F &&
                 ((null != (e = null == (t = F.isPrivate) ? void 0 : t.call(F)) && !!e) ||
-                    g.A.can(R.xBc.READ_MESSAGE_HISTORY, F))
+                    f.A.can(R.xBc.READ_MESSAGE_HISTORY, F))
             );
         }, [F]),
         [Z] = (0, l.bG)(
-            [E.Ay],
-            () => (null == F || null == Y ? [[], 0] : [E.Ay.getVoiceStatesForChannel(F), E.Ay.getVoiceStateVersion(Y)]),
+            [b.Ay],
+            () => (null == F || null == Y ? [[], 0] : [b.Ay.getVoiceStatesForChannel(F), b.Ay.getVoiceStateVersion(Y)]),
             [F, Y],
-            x.D,
+            O.D,
         ),
         X = null != Z && Z.length > 0,
-        J = (0, w.A2)(y),
+        J = (0, w.A2)(m),
         Q = (0, D.X)(F),
         q = r.useRef(null),
         $ = r.useCallback(() => {
@@ -144,13 +144,13 @@ function F(e) {
         [$],
     );
     let ee = (0, C.CD)({
-            channelId: y,
+            channelId: m,
             isExpanded: I,
             onToggleExpanded: L,
         }),
         et = (0, C.Wn)(),
         en = (0, C.j7)({
-            channelId: y,
+            channelId: m,
             guildId: Y,
             shouldStopEvent: !0,
         }),
@@ -163,11 +163,11 @@ function F(e) {
         er = r.useCallback(
             (e) => {
                 if (X) {
-                    null == L || L(y);
+                    null == L || L(m);
                     return;
                 }
             },
-            [y, X, L],
+            [m, X, L],
         ),
         el = r.useCallback(
             (e) => {
@@ -177,47 +177,40 @@ function F(e) {
         ),
         ea = (0, P.sZ)({
             channel: F,
-            guild: K,
+            guild: W,
         }),
         { mentionCount: es } = (0, l.cf)(
-            [m.Ay],
+            [g.Ay],
             () => ({
-                mentionCount: m.Ay.getMentionCount(y),
-                isMentionLowImportance: m.Ay.getIsMentionLowImportance(y),
-                unread: m.Ay.hasUnread(y),
+                mentionCount: g.Ay.getMentionCount(m),
+                isMentionLowImportance: g.Ay.getIsMentionLowImportance(m),
+                unread: g.Ay.hasUnread(m),
             }),
-            [y],
+            [m],
         ),
-        eo = (0, u.rdh)(u.LU0.colors.STATUS_POSITIVE),
-        eu = (0, u.rdh)(u.LU0.colors.STATUS_DANGER),
-        ec = (0, u.rdh)(u.LU0.colors.TEXT_STRONG),
-        ed = (0, u.rdh)(u.LU0.colors.TEXT_MUTED),
-        eh = W ? eo : es > 0 ? ec : ed,
+        eo = (0, o.rdh)(o.LU0.colors.STATUS_POSITIVE),
+        eu = (0, o.rdh)(o.LU0.colors.STATUS_DANGER),
+        ec = (0, o.rdh)(o.LU0.colors.TEXT_STRONG),
+        ed = (0, o.rdh)(o.LU0.colors.TEXT_MUTED),
+        eh = K ? eo : es > 0 ? ec : ed,
         {
             Component: ep,
             events: { onMouseEnter: ef, onMouseLeave: eg },
         } = (0, a.O)(),
         em = () => {
-            let e = W ? k.intl.string(k.t["6vrfgt"]) : k.intl.string(k.t.S0W8Z5),
-                t = W ? eu.hex() : eo.hex(),
-                n = W ? ep : u._jp;
-            return (0, i.jsx)(o.m_, {
-                text: e,
-                "aria-label": e,
-                children: (0, i.jsx)("div", {
-                    onDoubleClick: V,
+            let e = K ? k.intl.string(k.t["6vrfgt"]) : k.intl.string(k.t.S0W8Z5),
+                t = K ? eu.hex() : eo.hex(),
+                n = K ? ep : o._jp;
+            return (0, i.jsx)("div", {
+                onDoubleClick: V,
+                children: (0, i.jsx)(_.S, {
+                    tooltipText: e,
+                    onClick: K ? et : ee,
                     onMouseEnter: ef,
                     onMouseLeave: eg,
-                    children: (0, i.jsx)(u.K0, {
-                        icon: () =>
-                            (0, i.jsx)(n, {
-                                size: "sm",
-                                color: t,
-                            }),
+                    children: (0, i.jsx)(n, {
                         size: "sm",
-                        "aria-label": e,
-                        variant: "icon-only",
-                        onClick: W ? et : ee,
+                        color: t,
                     }),
                 }),
             });
@@ -226,15 +219,15 @@ function F(e) {
         onDoubleClick: el,
         children: [
             (0, i.jsx)(S.D, {
-                listItemId: v,
-                recentlyAddedTimestampMs: O ? J : null,
+                listItemId: A,
+                recentlyAddedTimestampMs: E ? J : null,
                 onClick: er,
                 onContextMenu: ea,
                 avatar:
                     null != F
                         ? (0, i.jsx)(T.A, {
                               isTyping: Q,
-                              guild: null != K ? K : void 0,
+                              guild: null != W ? W : void 0,
                               channel: F,
                               size: T.Q.SMALL_32,
                           })
@@ -242,27 +235,27 @@ function F(e) {
                 primaryText: (0, i.jsxs)("div", {
                     className: M.QV,
                     children: [
-                        null == (h = (0, d.gU)(F, K))
+                        null == (d = (0, c.gU)(F, W))
                             ? null
-                            : (0, i.jsx)(h, {
+                            : (0, i.jsx)(d, {
                                   color: eh.hex(),
                                   size: "xxs",
                                   className: M.p,
                               }),
-                        (0, i.jsx)(u.Text, {
+                        (0, i.jsx)(o.Text, {
                             className: M.Xh,
                             variant: "text-sm/medium",
-                            color: W ? "status-positive-text" : es > 0 ? "text-strong" : "text-muted",
+                            color: K ? "status-positive-text" : es > 0 ? "text-strong" : "text-muted",
                             children: H,
                         }),
                     ],
                 }),
                 secondaryText:
-                    (null == K ? void 0 : K.name) != null
-                        ? (0, i.jsx)(u.Text, {
+                    (null == W ? void 0 : W.name) != null
+                        ? (0, i.jsx)(o.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
-                              children: K.name,
+                              children: W.name,
                           })
                         : null,
                 rightActions: (e) => {
@@ -275,8 +268,8 @@ function F(e) {
                                       children: [
                                           em(),
                                           (0, i.jsx)(j.j, {
-                                              tab: _.x.VOICE,
-                                              targetId: y,
+                                              tab: x.x.VOICE,
+                                              targetId: m,
                                           }),
                                       ],
                                   })
@@ -291,13 +284,13 @@ function F(e) {
                                               children: [
                                                   em(),
                                                   (0, i.jsx)(j.j, {
-                                                      tab: _.x.VOICE,
-                                                      targetId: y,
+                                                      tab: x.x.VOICE,
+                                                      targetId: m,
                                                   }),
                                               ],
                                           })
                                         : (0, i.jsx)(z, {
-                                              channelId: y,
+                                              channelId: m,
                                               guildId: Y,
                                           }),
                                     (0, i.jsx)(G, {
@@ -317,7 +310,7 @@ function F(e) {
                           (0, i.jsx)(
                               N.a,
                               {
-                                  channelId: y,
+                                  channelId: m,
                                   guildId: Y,
                                   userId: e.user.id,
                                   onDoubleClick: V,

@@ -1,21 +1,23 @@
 n.d(t, {
-    A: () => E,
+    A: () => L,
 }),
     n(896048);
 var r = n(439372),
     i = n(547),
-    a = n(95701),
-    o = n(734057),
-    s = n(320501),
-    l = n(41984),
-    c = n(833551),
-    u = n(395011),
-    d = n(222506),
-    f = n(145567),
-    p = n(187667),
-    _ = n(652215);
+    a = n(742984),
+    o = n(95701),
+    s = n(734057),
+    l = n(320501),
+    c = n(543465),
+    u = n(41984),
+    d = n(956753),
+    f = n(833551),
+    p = n(395011),
+    _ = n(222506),
+    h = n(145567),
+    m = n(187667);
 
-function h(e, t, n) {
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,133 +30,196 @@ function h(e, t, n) {
         e
     );
 }
-let m = 1e3;
-class g extends r.A {
-    constructor(...e) {
-        super(...e),
-            h(this, "pendingFetchTimeoutsByChannelId", new Map()),
-            h(this, "scheduleFetchMessages", (e) => {
-                let { channelId: t, guildId: n, messageId: r } = e;
-                if (!c.default.isAnyOverlayRendering() || null == o.A.getChannel(t) || s.A.isReady(t)) return;
-                let a = this.pendingFetchTimeoutsByChannelId.get(t);
-                null != a && clearTimeout(a);
-                let l = setTimeout(() => {
-                    this.pendingFetchTimeoutsByChannelId.delete(t),
-                        s.A.isReady(t) ||
-                            i.A.fetchMessages({
-                                guildId: n,
-                                channelId: t,
-                                messageId: r,
-                            });
-                }, m);
-                this.pendingFetchTimeoutsByChannelId.set(t, l);
-            }),
-            h(this, "handleOverlayTextChatAddOrUpdateChannel", (e) => {
-                var t, n, r;
-                let { channelId: i, lastMessageId: a } = e,
-                    s = o.A.getChannel(i),
-                    l =
-                        null !=
-                        (t =
-                            null != (n = null == s || null == (r = s.getGuildId) ? void 0 : r.call(s))
-                                ? n
-                                : null == s
-                                  ? void 0
-                                  : s.guild_id)
-                            ? t
-                            : null;
-                this.scheduleFetchMessages({
-                    channelId: i,
-                    guildId: l,
-                    messageId: null != a ? a : null,
-                });
-            }),
-            h(this, "handleOverlayTextChatSelectChannel", (e) => {
-                let { channelId: t, guildId: n, messageId: r } = e;
-                this.scheduleFetchMessages({
-                    channelId: t,
+let E = 1e3,
+    y = (e) => (0, d.U)(e, "OverlayTextChatAutomaticLifecycleManager"),
+    b = new Map(),
+    O = null;
+
+function v(e) {
+    if (null == e.timestamp) return Date.now();
+    let t = new Date(e.timestamp).getTime();
+    return Number.isFinite(t) ? t : Date.now();
+}
+
+function A(e) {
+    let { channelId: t, guildId: n, messageId: r } = e;
+    if (!f.default.isAnyOverlayRendering() || null == s.A.getChannel(t) || l.A.isReady(t)) return;
+    let a = b.get(t);
+    null != a && clearTimeout(a);
+    let o = setTimeout(() => {
+        b.delete(t),
+            l.A.isReady(t) ||
+                i.A.fetchMessages({
                     guildId: n,
+                    channelId: t,
                     messageId: r,
                 });
-            }),
-            h(this, "handleOverlayTextChatRemoveChannel", (e) => {
-                let { channelId: t } = e,
-                    n = this.pendingFetchTimeoutsByChannelId.get(t);
-                null != n && (clearTimeout(n), this.pendingFetchTimeoutsByChannelId.delete(t)),
-                    setTimeout(() => {
-                        var e, n, r;
-                        let i = p.A.getSelectedChannelId();
-                        if (null == i || i === t) return;
-                        let a = o.A.getChannel(i),
-                            s =
-                                null !=
-                                (e =
-                                    null != (n = null == a || null == (r = a.getGuildId) ? void 0 : r.call(a))
-                                        ? n
-                                        : null == a
-                                          ? void 0
-                                          : a.guild_id)
-                                    ? e
-                                    : null;
-                        this.scheduleFetchMessages({
-                            channelId: i,
-                            guildId: s,
-                            messageId: null,
-                        });
-                    }, 0);
-            }),
-            h(this, "handleOverlayTextChatSetVoiceChatMinimized", (e) => {
-                let { minimized: t } = e;
-                t &&
-                    setTimeout(() => {
-                        var e, t, n;
-                        let r = p.A.getSelectedChannelId();
-                        if (null == r) return;
-                        let i = o.A.getChannel(r),
-                            a =
-                                null !=
-                                (e =
-                                    null != (t = null == i || null == (n = i.getGuildId) ? void 0 : n.call(i))
-                                        ? t
-                                        : null == i
-                                          ? void 0
-                                          : i.guild_id)
-                                    ? e
-                                    : null;
-                        this.scheduleFetchMessages({
-                            channelId: r,
-                            guildId: a,
-                            messageId: null,
-                        });
-                    }, 0);
-            }),
-            h(this, "handleChannelSelect", (e) => {
-                let { channelId: t } = e;
-                if (!c.default.isAnyOverlayRendering() || null == t) return;
-                let n = u.A.getTargetPID(),
-                    r = u.A.isFocused(n),
-                    i = d.A.isInputLocked(n);
-                if (!r || i) return;
-                let s = o.A.getChannel(t);
-                null != s &&
-                    (0, a.pQ)(s.type) &&
-                    p.A.getSelectedChannelId() !== t &&
-                    (0, f.D$)({
-                        channelId: t,
-                        source: l.B9.AUTOMATIC_CHANNEL_SELECT,
-                        guildId: s.getGuildId(),
-                        messageId: null,
-                        widgetType: _.uss.TEXT_CHAT_V3,
-                    });
-            }),
-            h(this, "actions", {
-                CHANNEL_SELECT: this.handleChannelSelect,
-                SIDEBAR_VIEW_CHANNEL: this.handleChannelSelect,
-                OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: this.handleOverlayTextChatAddOrUpdateChannel,
-                OVERLAY_TEXT_CHAT_SELECT_CHANNEL: this.handleOverlayTextChatSelectChannel,
-                OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: this.handleOverlayTextChatRemoveChannel,
-                OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: this.handleOverlayTextChatSetVoiceChatMinimized,
+    }, E);
+    b.set(t, o);
+}
+
+function I() {
+    var e, t, n;
+    if (!f.default.isAnyOverlayRendering()) return;
+    let r = m.A.getSelectedChannelId();
+    if (null == r || r === O) return;
+    let i = s.A.getChannel(r);
+    null != i &&
+        (0, o.pQ)(i.type) &&
+        ((O = r),
+        A({
+            channelId: r,
+            guildId:
+                null !=
+                (e =
+                    null != (t = null == i || null == (n = i.getGuildId) ? void 0 : n.call(i))
+                        ? t
+                        : null == i
+                          ? void 0
+                          : i.guild_id)
+                    ? e
+                    : null,
+            messageId: null,
+        }));
+}
+
+function S() {
+    I();
+}
+
+function T(e) {
+    let { channelId: t, message: n } = e;
+    if (!f.default.isAnyOverlayRendering()) return;
+    let r = s.A.getChannel(t);
+    if (null == r) return;
+    let i = m.A.getSelectedChannelId() === t;
+    if (r.isPrivate()) {
+        if (c.Ay.isChannelMuted(null, t)) return;
+    } else if (!i && (c.Ay.isChannelMuted(r.getGuildId(), t) || !(0, a.lx)(n, t, !0, !0))) return;
+    let o = r.isPrivate() ? u.B9.INCOMING_DM_MESSAGE : u.B9.INCOMING_MENTION_MESSAGE,
+        l = v(n);
+    (0, h.Ml)({
+        channelId: t,
+        source: o,
+        lastActivityAtMs: l,
+        lastMessageId: n.id,
+    });
+}
+
+function C(e) {
+    var t, n, r;
+    let { channelId: i, lastMessageId: a } = e,
+        o = s.A.getChannel(i);
+    A({
+        channelId: i,
+        guildId:
+            null !=
+            (t =
+                null != (n = null == o || null == (r = o.getGuildId) ? void 0 : r.call(o))
+                    ? n
+                    : null == o
+                      ? void 0
+                      : o.guild_id)
+                ? t
+                : null,
+        messageId: null != a ? a : null,
+    });
+}
+
+function N(e) {
+    let { channelId: t, guildId: n, messageId: r } = e;
+    A({
+        channelId: t,
+        guildId: n,
+        messageId: r,
+    });
+}
+
+function w(e) {
+    let { channelId: t } = e,
+        n = b.get(t);
+    null != n && (clearTimeout(n), b.delete(t)),
+        setTimeout(() => {
+            var e, n, r;
+            let i = m.A.getSelectedChannelId();
+            if (null == i || i === t) return;
+            let a = s.A.getChannel(i);
+            A({
+                channelId: i,
+                guildId:
+                    null !=
+                    (e =
+                        null != (n = null == a || null == (r = a.getGuildId) ? void 0 : r.call(a))
+                            ? n
+                            : null == a
+                              ? void 0
+                              : a.guild_id)
+                        ? e
+                        : null,
+                messageId: null,
+            });
+        }, 0);
+}
+
+function R(e) {
+    var t, n, r;
+    let { minimized: i } = e;
+    if (!i) return;
+    let a = m.A.getSelectedChannelId();
+    if (null == a) return;
+    let o = s.A.getChannel(a);
+    A({
+        channelId: a,
+        guildId:
+            null !=
+            (t =
+                null != (n = null == o || null == (r = o.getGuildId) ? void 0 : r.call(o))
+                    ? n
+                    : null == o
+                      ? void 0
+                      : o.guild_id)
+                ? t
+                : null,
+        messageId: null,
+    });
+}
+
+function P(e) {
+    let { channelId: t } = e;
+    if (!f.default.isAnyOverlayRendering() || null == t) return;
+    let n = p.A.getTargetPID(),
+        r = p.A.isFocused(n),
+        i = _.A.isInputLocked(n);
+    if (!r || i) return;
+    let a = s.A.getChannel(t);
+    null != a &&
+        (0, o.pQ)(a.type) &&
+        m.A.getSelectedChannelId() !== t &&
+        (0, h.D$)({
+            target: {
+                kind: h.bB.CHANNEL,
+                channelId: t,
+                guildId: a.getGuildId(),
+                messageId: null,
+            },
+            source: u.B9.AUTOMATIC_CHANNEL_SELECT,
+            widgetType: null,
+        });
+}
+class D extends r.A {
+    constructor(...e) {
+        super(...e),
+            g(this, "actions", {
+                CHANNEL_SELECT: y(P),
+                SIDEBAR_VIEW_CHANNEL: y(P),
+                MESSAGE_CREATE: y(T),
+                VOICE_STATE_UPDATES: y(S),
+                VOICE_CHANNEL_SELECT: y(S),
+                OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: y(C),
+                OVERLAY_TEXT_CHAT_SELECT_CHANNEL: y(N),
+                OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: y(w),
+                OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: y(R),
             });
     }
 }
-let E = new g();
+let L = new D();

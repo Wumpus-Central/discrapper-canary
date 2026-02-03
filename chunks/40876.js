@@ -350,7 +350,10 @@ let i = {
     OverlayTextChatAutomaticLifecycleManager: {
         actions: [
             "CHANNEL_SELECT",
+            "MESSAGE_CREATE",
             "SIDEBAR_VIEW_CHANNEL",
+            "VOICE_CHANNEL_SELECT",
+            "VOICE_STATE_UPDATES",
             "OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL",
             "OVERLAY_TEXT_CHAT_SELECT_CHANNEL",
             "OVERLAY_TEXT_CHAT_REMOVE_CHANNEL",
