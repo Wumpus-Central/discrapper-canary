@@ -1,303 +1,303 @@
-l.d(t, {
-    A: () => D,
+n.d(t, {
+    A: () => B,
 }),
-    l(896048);
-var n = l(627968),
-    r = l(64700),
-    s = l(503698),
-    a = l.n(s),
-    i = l(651162),
-    o = l(554146),
-    c = l(397927),
-    u = l(564322),
-    d = l(367727),
-    f = l(954571),
-    b = l(440938),
-    g = l(344011),
-    p = l(379177),
-    m = l(335657),
-    h = l(100057),
-    E = l(599062),
-    v = l(159439),
-    A = l(998694),
-    x = l(666413),
-    S = l(573455),
-    C = l(565057),
-    O = l(227205),
-    _ = l(457414),
-    y = l(633026),
-    j = l(251191),
-    L = l(613258),
-    T = l(152568),
-    I = l(758836),
-    N = l(652215),
-    k = l(985018),
-    R = l(201073);
+    n(896048);
+var r = n(627968),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    i = n(651162),
+    o = n(554146),
+    c = n(397927),
+    u = n(564322),
+    d = n(367727),
+    g = n(954571),
+    f = n(440938),
+    m = n(344011),
+    p = n(379177),
+    h = n(335657),
+    b = n(100057),
+    _ = n(599062),
+    E = n(159439),
+    v = n(998694),
+    C = n(666413),
+    A = n(573455),
+    S = n(565057),
+    x = n(227205),
+    O = n(457414),
+    y = n(633026),
+    j = n(251191),
+    L = n(613258),
+    T = n(152568),
+    I = n(758836),
+    k = n(652215),
+    N = n(985018),
+    R = n(201073);
 let P = (e) => {
-        var t, l, s;
-        let { handleTransition: c, numVisibleItems: u, isFetchingCategories: f, tab: v } = e,
-            { noCache: L, includeUnpublished: N } = (0, A.A)(),
-            P = (0, p.rR)("CollectiblesFeedShop") && v === I.G2.ORBS,
-            D =
-                ((l = (function (e) {
+        var t, n, s;
+        let { handleTransition: c, numVisibleItems: u, isFetchingCategories: g, tab: E } = e,
+            { noCache: L, includeUnpublished: k } = (0, v.A)(),
+            P = (0, p.rR)("CollectiblesFeedShop") && E === I.G2.ORBS,
+            B =
+                ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var l = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(l);
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(l).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            n.forEach(function (t) {
-                                var n;
-                                (n = l[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: n,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = n);
+                                        : (e[t] = r);
                             });
                     }
                     return e;
                 })({}, I.ue)),
                 (s = s =
                     {
-                        name: k.intl.string(k.t.bfXHLB),
+                        name: N.intl.string(N.t.bfXHLB),
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(s))
                     : (function (e, t) {
-                          var l = Object.keys(e);
+                          var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(e);
-                              l.push.apply(l, n);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
-                          return l;
+                          return n;
                       })(Object(s)).forEach(function (e) {
-                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(s, e));
                       }),
-                l),
-            [w, B] = r.useState(!1),
-            M = (0, b.uM)(),
+                n),
+            [w, D] = l.useState(!1),
+            M = (0, f.uM)(),
             H = null != (t = null == M ? void 0 : M.sessionId) ? t : "";
-        r.useEffect(() => {
-            (0, h.z)({
+        l.useEffect(() => {
+            (0, b.z)({
                 sessionId: H,
-                checkpoint: h.t.SHOP_MOUNTED,
-                tab: v,
-                unpublishedCategoriesShown: N,
+                checkpoint: b.t.SHOP_MOUNTED,
+                tab: E,
+                unpublishedCategoriesShown: k,
                 cacheDisabled: L,
             });
-        }, [v]);
+        }, [E]);
         let {
                 isFetchingShopHome: G,
-                fetchShopHomeError: F,
-                shopBlocks: U,
-                refreshShopHome: z,
-            } = (0, m.y)(
-                v,
+                fetchShopHomeError: U,
+                shopBlocks: F,
+                refreshShopHome: V,
+            } = (0, h.y)(
+                E,
                 {
                     noCache: L,
-                    includeUnpublished: N,
+                    includeUnpublished: k,
                     includeBundles: !0,
                     logPerf: !0,
                 },
                 {
                     sessionId: H,
-                    tab: v,
+                    tab: E,
                 },
             ),
-            V = r.useCallback(() => {
-                z();
-            }, [z]);
-        return (r.useEffect(() => {
-            null != F ||
+            z = l.useCallback(() => {
+                V();
+            }, [V]);
+        return (l.useEffect(() => {
+            null != U ||
                 G ||
-                0 === U.length ||
-                (0, h.z)({
+                0 === F.length ||
+                (0, b.z)({
                     sessionId: H,
-                    checkpoint: h.t.SHOP_RENDERED,
-                    tab: v,
-                    unpublishedCategoriesShown: N,
+                    checkpoint: b.t.SHOP_RENDERED,
+                    tab: E,
+                    unpublishedCategoriesShown: k,
                     cacheDisabled: L,
                 });
-        }, [F, G, U.length, N, L, H, v]),
-        null != F)
-            ? (0, n.jsx)(E.h, {
-                  onRetry: V,
-                  errorOrigin: E.A.SHOP_PAGE,
-                  errorMessage: F.message,
+        }, [U, G, F.length, k, L, H, E]),
+        null != U)
+            ? (0, r.jsx)(_.h, {
+                  onRetry: z,
+                  errorOrigin: _.A.SHOP_PAGE,
+                  errorMessage: U.message,
               })
-            : G || 0 === U.length
-              ? (0, n.jsxs)("div", {
+            : G || 0 === F.length
+              ? (0, r.jsxs)("div", {
                     className: a()(R.g4, R.Of),
                     children: [
-                        (0, n.jsx)(O.A, {
+                        (0, r.jsx)(x.A, {
                             isLoading: G,
                             handleTransition: c,
-                            tab: v,
+                            tab: E,
                         }),
-                        (0, n.jsx)(S.A, {
+                        (0, r.jsx)(A.A, {
                             isLoading: G,
                             handleTransition: c,
                             categories: [],
                         }),
-                        (0, n.jsx)(C.A, {
+                        (0, r.jsx)(S.A, {
                             isLoading: G,
-                            title: v === I.G2.ORBS ? k.intl.string(k.t.dFgeuZ) : k.intl.string(k.t.NSv5KV),
+                            title: E === I.G2.ORBS ? N.intl.string(N.t.dFgeuZ) : N.intl.string(N.t.NSv5KV),
                             numVisibleItems: u,
-                            tab: v,
+                            tab: E,
                         }),
                     ],
                 })
-              : (0, n.jsx)(n.Fragment, {
-                    children: U.map((e, t) =>
-                        ((e, t, l) => {
+              : (0, r.jsx)(r.Fragment, {
+                    children: F.map((e, t) =>
+                        ((e, t, n) => {
                             if (null == e) return null;
-                            let r = null,
+                            let l = null,
                                 s = !1;
                             switch (e.type) {
                                 case i.g.HERO:
-                                    r = (0, n.jsx)(
-                                        O.A,
+                                    l = (0, r.jsx)(
+                                        x.A,
                                         {
                                             isLoading: G,
                                             handleTransition: c,
-                                            heroBlock: P ? D : e,
-                                            tab: v,
+                                            heroBlock: P ? B : e,
+                                            tab: E,
                                         },
-                                        l,
+                                        n,
                                     );
                                     break;
                                 case i.g.FEATURED:
-                                    r = (0, n.jsx)(
-                                        S.A,
+                                    l = (0, r.jsx)(
+                                        A.A,
                                         {
                                             isLoading: G,
                                             handleTransition: c,
                                             featuredBlockRecord: e,
                                         },
-                                        l,
+                                        n,
                                     );
                                     break;
                                 case i.g.FEED:
-                                    let b = e.sortedSkuIds;
-                                    r = (0, n.jsx)(
-                                        C.A,
+                                    let f = e.sortedSkuIds;
+                                    l = (0, r.jsx)(
+                                        S.A,
                                         {
                                             title:
-                                                v === I.G2.ORBS ? k.intl.string(k.t.dFgeuZ) : k.intl.string(k.t.NSv5KV),
-                                            isLoading: G || f,
+                                                E === I.G2.ORBS ? N.intl.string(N.t.dFgeuZ) : N.intl.string(N.t.NSv5KV),
+                                            isLoading: G || g,
                                             numVisibleItems: u,
-                                            sortedSkuIds: b,
+                                            sortedSkuIds: f,
                                             buttonContainerClassName:
                                                 (null == t ? void 0 : t.type) === i.g.IMMERSIVE_BANNER ? R.w : void 0,
-                                            prioritizeUserDiscounts: v === I.G2.HOME,
-                                            tab: v,
-                                            orbsSupportedOnly: v === I.G2.ORBS,
+                                            prioritizeUserDiscounts: E === I.G2.HOME,
+                                            tab: E,
+                                            orbsSupportedOnly: E === I.G2.ORBS,
                                         },
-                                        l,
+                                        n,
                                     );
                                     break;
                                 case i.g.WIDE_BANNER:
                                     if (e.isDismissible) {
                                         var p;
                                         let t = null != (p = e.dismissibleContentVersion) ? p : 0,
-                                            { isDismissed: l } = (0, d.En)(o.M.COLLECTIBLES_SHOP_WIDE_BANNER, t);
-                                        if (l) return null;
+                                            { isDismissed: n } = (0, d.En)(o.M.COLLECTIBLES_SHOP_WIDE_BANNER, t);
+                                        if (n) return null;
                                     }
-                                    r = (0, n.jsx)(
+                                    l = (0, r.jsx)(
                                         T.A,
                                         {
                                             wideBannerBlock: e,
-                                            tab: v,
+                                            tab: E,
                                         },
-                                        l,
+                                        n,
                                     );
                                     break;
                                 case i.g.SHELF:
-                                    r = (0, n.jsx)(
+                                    l = (0, r.jsx)(
                                         j.A,
                                         {
                                             handleTransition: c,
                                             shelf: e,
-                                            tab: v,
+                                            tab: E,
                                         },
-                                        l,
+                                        n,
                                     );
                                     break;
                                 case i.g.COUNTDOWN_TIMER:
-                                    (r = (0, n.jsx)(
-                                        x.S,
+                                    (l = (0, r.jsx)(
+                                        C.S,
                                         {
                                             countdownTimerBlock: e,
                                             isVisible: w,
                                         },
-                                        l,
+                                        n,
                                     )),
                                         (s = !0);
                                     break;
                                 case i.g.IMMERSIVE_BANNER:
-                                    r = (0, n.jsx)(
-                                        _.A,
+                                    l = (0, r.jsx)(
+                                        O.A,
                                         {
                                             immersiveBannerBlock: e,
-                                            onVisibilityChange: (e) => B(!e),
+                                            onVisibilityChange: (e) => D(!e),
                                         },
-                                        l,
+                                        n,
                                     );
                                     break;
                                 case i.g.REWARD_HERO:
-                                    r = (0, n.jsx)(
+                                    l = (0, r.jsx)(
                                         y.A,
                                         {
                                             isLoading: G,
                                             handleTransition: c,
                                             heroBlock: e,
-                                            tab: v,
+                                            tab: E,
                                         },
-                                        l,
+                                        n,
                                     );
                                     break;
                                 default:
                                     return null;
                             }
-                            return (0, n.jsx)(g.rW, {
+                            return (0, r.jsx)(m.rW, {
                                 blockType: e.type,
-                                children: (0, n.jsx)(
+                                children: (0, r.jsx)(
                                     "div",
                                     {
                                         className: a()(R.v1, R.Of, {
-                                            [R.J1]: 0 === l || s,
+                                            [R.J1]: 0 === n || s,
                                         }),
-                                        children: r,
+                                        children: l,
                                     },
-                                    l,
+                                    n,
                                 ),
                             });
-                        })(e, t > 0 ? U[t - 1] : null, t),
+                        })(e, t > 0 ? F[t - 1] : null, t),
                     ),
                 });
     },
-    D = (e) => {
-        let { handleTransition: t, tab: l, transitionState: s } = e,
-            a = r.useRef(null),
-            { handleScroll: i } = (0, u.X)(a, l),
-            o = (0, v.U)(),
-            d = (0, b.uM)(),
-            [g, p] = r.useState(I.md),
-            [m, h] = r.useState(!1);
+    B = (e) => {
+        let { handleTransition: t, tab: n, transitionState: s } = e,
+            a = l.useRef(null),
+            { handleScroll: i } = (0, u.X)(a, n),
+            o = (0, E.U)(),
+            d = (0, f.uM)(),
+            [m, p] = l.useState(I.md),
+            [h, b] = l.useState(!1);
         return (
-            r.useEffect(() => {
+            l.useEffect(() => {
                 if (null != a.current) {
                     let e = () => {
                             if (null == a.current) return;
                             let e = a.current.getDistanceFromBottom();
-                            g >= 36 ? h(e < 20) : e <= 200 && p((e) => e + I.md);
+                            m >= 36 ? b(e < 20) : e <= 200 && p((e) => e + I.md);
                         },
                         t = a.current.getScrollerNode();
                     return (
@@ -307,46 +307,46 @@ let P = (e) => {
                         }
                     );
                 }
-            }, [a, g, p, h]),
-            (0, n.jsx)(c.T7Y, {
+            }, [a, m, p, b]),
+            (0, r.jsx)(c.T7Y, {
                 className: R.OW,
                 ref: a,
                 onScroll: i,
-                children: (0, n.jsxs)("div", {
+                children: (0, r.jsxs)("div", {
                     className: R.bx,
                     children: [
-                        (0, n.jsxs)("div", {
+                        (0, r.jsxs)("div", {
                             className: R.rb,
                             children: [
-                                (0, n.jsx)(P, {
+                                (0, r.jsx)(P, {
                                     handleTransition: t,
-                                    numVisibleItems: g,
+                                    numVisibleItems: m,
                                     isFetchingCategories: o,
-                                    tab: l,
+                                    tab: n,
                                 }),
-                                l !== I.G2.CATALOG &&
-                                    g >= 36 &&
-                                    (0, n.jsxs)("div", {
+                                n !== I.G2.CATALOG &&
+                                    m >= 36 &&
+                                    (0, r.jsxs)("div", {
                                         className: R.R$,
                                         children: [
-                                            (0, n.jsx)(c.Heading, {
+                                            (0, r.jsx)(c.Heading, {
                                                 variant: "heading-md/semibold",
-                                                children: k.intl.string(k.t.Yr70c4),
+                                                children: N.intl.string(N.t.Yr70c4),
                                             }),
-                                            (0, n.jsx)(c.Button, {
+                                            (0, r.jsx)(c.Button, {
                                                 variant: "primary",
-                                                text: k.intl.string(k.t.AfrvRD),
+                                                text: N.intl.string(N.t.AfrvRD),
                                                 onClick: () => {
                                                     t({
                                                         sourceButton: "shop all button",
                                                         shouldAnimate: !0,
                                                     }),
-                                                        f.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        g.default.track(k.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id:
                                                                 null == d ? void 0 : d.sessionId,
-                                                            page_type: l,
+                                                            page_type: n,
                                                             page_category:
-                                                                l === I.G2.HOME || null == d ? void 0 : d.pageCategory,
+                                                                n === I.G2.HOME || null == d ? void 0 : d.pageCategory,
                                                             cta_name: "browse the shop button",
                                                         });
                                                 },
@@ -356,15 +356,8 @@ let P = (e) => {
                                     }),
                             ],
                         }),
-                        (0, n.jsx)(L.A, {
-                            peaking: m,
-                            transitioning: s === I.Pf.OUT,
-                        }),
-                        (0, n.jsx)(L.A, {
-                            style: {
-                                left: 1850,
-                            },
-                            peaking: m,
+                        (0, r.jsx)(L.A, {
+                            peaking: h,
                             transitioning: s === I.Pf.OUT,
                         }),
                     ],
