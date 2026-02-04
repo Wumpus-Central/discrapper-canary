@@ -31,7 +31,7 @@ function g(e, t, n) {
     );
 }
 let E = 1e3,
-    y = (e) => (0, d.U)(e, "OverlayTextChatAutomaticLifecycleManager"),
+    y = (e) => (0, d.U5)(e, "OverlayTextChatAutomaticLifecycleManager"),
     b = new Map(),
     O = null;
 

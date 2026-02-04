@@ -124,7 +124,7 @@ function G(e) {
     return p.Ay.isChannelMuted(null, e);
 }
 
-function V(e, t, n, r, i) {
+function F(e, t, n, r, i) {
     return {
         channelId: e,
         source: t,
@@ -137,14 +137,14 @@ function V(e, t, n, r, i) {
     };
 }
 
-function F(e) {
+function V(e) {
     let t = f.A.getChannelId();
     if (null == t || null == l.A.getChannel(t)) return !1;
     if (((w = t), !N.has(t))) {
         var n, r;
         let i = M(t),
             a = null != (n = null == (r = l.A.getChannel(t)) ? void 0 : r.lastMessageId) ? n : void 0,
-            o = V(t, g.B9.MANUAL, e, i, a);
+            o = F(t, g.B9.MANUAL, e, i, a);
         N.set(t, o);
     }
     return !0;
@@ -162,7 +162,7 @@ function B(e) {
         if (null == i) continue;
         let a = m.default.extractTimestamp(i);
         if (e - a > x) continue;
-        let o = V(r, g.B9.MANUAL, e, a, i);
+        let o = F(r, g.B9.MANUAL, e, a, i);
         N.set(r, o), n++;
     }
 }
@@ -170,7 +170,7 @@ function B(e) {
 function H() {
     var e;
     let t = Date.now();
-    N.clear(), (w = null), (R = t), (P = !1), (D = null != (e = u.A.getChannelId()) ? e : null), F(t), B(t), K();
+    N.clear(), (w = null), (R = t), (P = !1), (D = null != (e = u.A.getChannelId()) ? e : null), V(t), B(t), K();
 }
 
 function Y() {
@@ -203,7 +203,7 @@ function q(e) {
         s = null != (t = N.get(r)) ? t : null,
         l = null == s ? a : Math.max(s.lastActivityAtMs, a),
         c = null != o ? o : null == s ? void 0 : s.lastMessageId,
-        u = V(r, i, null != (n = null == s ? void 0 : s.addedOnMs) ? n : a, l, c);
+        u = F(r, i, null != (n = null == s ? void 0 : s.addedOnMs) ? n : a, l, c);
     return N.set(r, u);
 }
 
@@ -250,7 +250,7 @@ function $(e, t) {
         let e = Date.now(),
             n = M(w),
             a = null != (r = null == (i = l.A.getChannel(w)) ? void 0 : i.lastMessageId) ? r : void 0,
-            o = V(w, t, e, n, a);
+            o = F(w, t, e, n, a);
         N.set(w, o);
     }
     return !0;
@@ -316,7 +316,7 @@ class eo extends (r = i.Ay.Store) {
     }
 }
 O(eo, "displayName", "Overlay-v3-Text-Chat-Store");
-let es = (e) => (0, E.U)(e, "OverlayTextChatStore"),
+let es = (e) => (0, E.U5)(e, "OverlayTextChatStore"),
     el = new eo(
         o.h,
         __OVERLAY__ || (!b.OX && !b.ed)

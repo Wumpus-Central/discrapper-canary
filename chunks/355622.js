@@ -150,9 +150,7 @@ let d = {
             button: !0,
             allowSending: !0,
         },
-        gifts: {
-            button: !0,
-        },
+        gifts: void 0,
         permissions: {
             requireSendMessages: !0,
         },

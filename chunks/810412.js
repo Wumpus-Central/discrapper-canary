@@ -126,6 +126,7 @@ var m = (function (e) {
     })({}),
     g = (function (e) {
         return (
+            (e.UNKNOWN = "unknown"),
             (e.ENABLED = "enabled"),
             (e.DISABLED = "disabled"),
             (e.SETTINGS_OPENED = "settings opened"),

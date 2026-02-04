@@ -1,83 +1,79 @@
 n.d(t, {
-    Z: () => el,
+    Z: () => et,
 }),
     n(896048);
-var i = n(627968),
+var l = n(627968),
     r = n(64700),
-    l = n(735438),
-    a = n(172218),
-    s = n(311907),
+    i = n(735438),
+    s = n(172218),
+    a = n(311907),
     o = n(435371),
     u = n(397927),
-    c = n(49229),
-    d = n(960076),
-    h = n(566903),
-    p = n(397244),
-    f = n(714114),
-    g = n(729551),
-    m = n(864436),
-    y = n(835072),
-    A = n(87664),
-    v = n(47167),
-    b = n(506326),
-    E = n(490427),
-    O = n(609425),
-    x = n(922301),
-    _ = n(750112),
-    S = n(769015),
-    I = n(834757),
-    j = n(145497),
-    T = n(534400),
+    c = n(960076),
+    d = n(566903),
+    h = n(397244),
+    g = n(714114),
+    f = n(729551),
+    p = n(864436),
+    I = n(835072),
+    m = n(87664),
+    E = n(47167),
+    A = n(506326),
+    y = n(490427),
+    S = n(609425),
+    v = n(922301),
+    O = n(750112),
+    b = n(769015),
+    N = n(834757),
+    T = n(145497),
+    _ = n(534400),
     C = n(854627),
-    N = n(657331),
-    w = n(10862),
-    P = n(616356),
-    D = n(734057),
-    R = n(71393),
-    k = n(290863),
-    M = n(309010),
-    L = n(461213),
+    x = n(10862),
+    D = n(616356),
+    M = n(734057),
+    j = n(71393),
+    w = n(290863),
+    P = n(309010),
+    R = n(461213),
     U = n(287809),
     G = n(562153),
-    V = n(914853),
-    z = n(1404),
+    L = n(914853),
+    k = n(1404),
     F = n(578093),
-    H = n(20796),
-    Y = n(67103),
-    W = n(472204),
-    K = n(576420),
-    B = n(876891),
-    Z = n(652215),
-    X = n(985018),
-    J = n(783346);
+    V = n(20796),
+    H = n(67103),
+    Y = n(576420),
+    W = n(652215),
+    z = n(985018),
+    B = n(783346);
 
-function Q(e) {
+function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            l = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
+            l.forEach(function (t) {
+                var l;
+                (l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = i);
+                        : (e[t] = l);
             });
     }
     return e;
 }
 
-function q(e, t) {
+function X(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -85,8 +81,8 @@ function q(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
+                      var l = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, l);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -95,24 +91,24 @@ function q(e, t) {
         e
     );
 }
-let $ = u._3J.SIZE_32,
-    ee = [b.iq, b.tR, b.K7, b.sp, b.MK];
+let Q = u._3J.SIZE_32,
+    Z = [A.iq, A.tR, A.K7, A.sp, A.MK];
 
-function et(e) {
+function q(e) {
     let t,
-        { channel: n, textVariant: a, activities: o, applicationStream: c } = e,
-        d = (0, s.bG)([U.default], () => U.default.getCurrentUser()),
-        p = (0, u.S31)(Z.clD.ONLINE),
-        f = (0, v.Ay)(n),
-        g = (0, s.bG)([R.A], () => R.A.getGuild(n.getGuildId())),
-        b = null == g ? void 0 : g.name;
-    (0, A.A)(null == d ? void 0 : d.id);
-    let E = (null == c ? void 0 : c.discoverable) !== !1 ? c : null,
-        O = (0, I.AO)(E),
-        x = n.isDM() || n.isGroupDM(),
-        _ = r.useMemo(() => {
+        { channel: n, textVariant: s, activities: o, applicationStream: c } = e,
+        h = (0, a.bG)([U.default], () => U.default.getCurrentUser()),
+        g = (0, u.S31)(W.clD.ONLINE),
+        f = (0, E.Ay)(n),
+        A = (0, a.bG)([j.A], () => j.A.getGuild(n.getGuildId())),
+        y = null == A ? void 0 : A.name;
+    (0, m.A)(null == h ? void 0 : h.id);
+    let S = (null == c ? void 0 : c.discoverable) !== !1 ? c : null,
+        v = (0, N.AO)(S),
+        O = n.isDM() || n.isGroupDM(),
+        b = r.useMemo(() => {
             var e;
-            return (0, l.uniqWith)(
+            return (0, i.uniqWith)(
                 null !=
                     (e =
                         null == o
@@ -120,9 +116,9 @@ function et(e) {
                             : o.filter((e) => {
                                   let { type: t, name: n } = e;
                                   return (
-                                      t !== Z.$pd.CUSTOM_STATUS &&
-                                      t !== Z.$pd.HANG_STATUS &&
-                                      n !== (null == O ? void 0 : O.name)
+                                      t !== W.$pd.CUSTOM_STATUS &&
+                                      t !== W.$pd.HANG_STATUS &&
+                                      n !== (null == v ? void 0 : v.name)
                                   );
                               }))
                     ? e
@@ -131,71 +127,71 @@ function et(e) {
                     (null != e.application_id && null != t.application_id && e.application_id === t.application_id) ||
                     (null != e.name && null != t.name && e.name === t.name),
             );
-        }, [o, null == O ? void 0 : O.name]),
-        S = null == _ ? void 0 : _[0];
-    return (0, i.jsxs)("div", {
-        className: J.fE,
+        }, [o, null == v ? void 0 : v.name]),
+        _ = null == b ? void 0 : b[0];
+    return (0, l.jsxs)("div", {
+        className: B.fE,
         children: [
-            ((t = (null == _ ? void 0 : _.length) > 0),
-            (0, i.jsxs)("div", {
-                className: J._9,
+            ((t = (null == b ? void 0 : b.length) > 0),
+            (0, l.jsxs)("div", {
+                className: B._9,
                 children: [
                     !t &&
-                        !x &&
-                        null != g &&
-                        (0, i.jsxs)("div", {
-                            className: J.j1,
+                        !O &&
+                        null != A &&
+                        (0, l.jsxs)("div", {
+                            className: B.j1,
                             children: [
-                                (0, i.jsx)(j.Ay, {
-                                    guild: g,
+                                (0, l.jsx)(T.Ay, {
+                                    guild: A,
                                     iconSize: 14,
                                 }),
-                                (0, i.jsx)(u.Text, {
-                                    className: J.J5,
-                                    variant: a,
+                                (0, l.jsx)(u.Text, {
+                                    className: B.J5,
+                                    variant: s,
                                     color: "currentColor",
                                     lineClamp: 1,
-                                    children: b,
+                                    children: y,
                                 }),
-                                (0, i.jsx)(u._BQ, {
+                                (0, l.jsx)(u._BQ, {
                                     size: "xxs",
                                     color: "currentColor",
                                 }),
                             ],
                         }),
-                    (0, i.jsx)(w.A, {
+                    (0, l.jsx)(x.A, {
                         size: "custom",
-                        color: p,
+                        color: g,
                         channel: n,
-                        className: J.WT,
+                        className: B.WT,
                     }),
-                    (0, i.jsx)(u.Text, {
-                        variant: a,
+                    (0, l.jsx)(u.Text, {
+                        variant: s,
                         color: "currentColor",
                         lineClamp: 1,
-                        className: J.Qo,
+                        className: B.Qo,
                         children: f,
                     }),
                 ],
             })),
             (() => {
-                if (null == S) return null;
-                let { text: e } = (0, h.A)(S, !1),
-                    t = (0, y.f)(S);
+                if (null == _) return null;
+                let { text: e } = (0, d.A)(_, !1),
+                    t = (0, I.f)(_);
                 return null == e && null == t
                     ? null
-                    : (0, i.jsxs)("div", {
-                          className: J._9,
+                    : (0, l.jsxs)("div", {
+                          className: B._9,
                           children: [
                               null != t
-                                  ? (0, i.jsx)(m.A, {
+                                  ? (0, l.jsx)(p.A, {
                                         icon: t,
-                                        className: J.WT,
+                                        className: B.WT,
                                     })
                                   : void 0,
                               null != e
-                                  ? (0, i.jsx)(u.Text, {
-                                        variant: a,
+                                  ? (0, l.jsx)(u.Text, {
+                                        variant: s,
                                         color: "text-status-online",
                                         lineClamp: 1,
                                         children: e,
@@ -208,80 +204,81 @@ function et(e) {
     });
 }
 
-function en(e) {
+function J(e) {
     let {
             user: t,
             activities: n,
-            gameProfileEntry: l,
+            gameProfileEntry: i,
             relationshipType: o,
             isSuggestion: u,
-            appContext: c,
-            onAction: h,
+            appContext: d,
+            onPrimaryAction: p,
+            onContextMenu: I,
             onFriendVisible: m,
-            friendGroupId: y,
+            friendGroupId: E,
         } = e,
-        A = t.id,
+        S = t.id,
         {
             avatarDecorationSrc: v,
             avatarSrc: O,
-            eventHandlers: x,
+            eventHandlers: b,
         } = (0, C.A)({
-            userId: A,
-            size: $,
+            userId: S,
+            size: Q,
             animateOnHover: !0,
             guildId: null,
         }),
-        _ = r.useMemo(() => {
-            let e = null != y ? y : "no-group",
+        N = r.useMemo(() => {
+            let e = null != E ? E : "no-group",
                 t = null != o ? o : "no-relationship";
             return "friends-widget-friend-row:"
-                .concat(A, ":")
+                .concat(S, ":")
                 .concat(e, ":")
                 .concat(t, ":")
                 .concat(u ? "suggestion" : "not-suggestion");
-        }, [y, u, o, A]),
-        S = (0, s.yK)([L.A], () =>
-            L.A.getActivities().filter((e) => e.type === Z.$pd.PLAYING && null != e.application_id),
+        }, [E, u, o, S]),
+        T = (0, a.yK)([R.A], () =>
+            R.A.getActivities().filter((e) => e.type === W.$pd.PLAYING && null != e.application_id),
         ),
-        { voiceChannel: I } = (0, f.A)({
+        { voiceChannel: _ } = (0, g.A)({
             userId: t.id,
         }),
         {
-            status: j,
-            applicationStream: T,
-            isMobile: N,
-            newStatus: w,
-        } = (0, s.cf)([k.A, P.A], () => {
-            let e = k.A.getStatus(t.id),
-                i = P.A.getAnyStreamForUser(t.id),
-                r = k.A.isMobileOnline(t.id),
-                l = (0, d.A)(null != n ? n : []) ? Z.clD.STREAMING : e;
+            status: x,
+            applicationStream: M,
+            isMobile: j,
+            newStatus: P,
+        } = (0, a.cf)([w.A, D.A], () => {
+            let e = w.A.getStatus(t.id),
+                l = D.A.getAnyStreamForUser(t.id),
+                r = w.A.isMobileOnline(t.id),
+                i = (0, c.A)(null != n ? n : []) ? W.clD.STREAMING : e;
             return {
                 status: e,
-                applicationStream: i,
+                applicationStream: l,
                 isMobile: r,
-                newStatus: l,
+                newStatus: i,
             };
         }, [t.id, n]),
-        D = S.length > 0,
-        R = r.useCallback(
+        U = T.length > 0,
+        G = r.useCallback(
             (e) => {
-                null == m || m(A, e, D);
+                null == m || m(S, e, U);
             },
-            [m, A, D],
+            [m, S, U],
         ),
-        M = (0, a.K)(R),
-        U = r.useCallback(() => {
-            if (null != l) {
-                let e = l.traits,
-                    t = q(Q({}, l), {
+        L = (0, s.K)(G),
+        k = r.useCallback(() => {
+            if (null != i) {
+                let e = i.traits,
+                    t = X(K({}, i), {
                         traits: e.slice(0, 3),
                     });
-                return (0, i.jsx)(b.mG, {
-                    location: b.N5.FRIENDS_POPOUT,
-                    className: J.cV,
-                    children: ee.map((e, n) =>
-                        (0, i.jsx)(
+                return (0, l.jsx)(A.mG, {
+                    location: A.N5.FRIENDS_POPOUT,
+                    className: B.cV,
+                    children: Z.map((e, n) =>
+                        (0, l.jsx)(
                             e,
                             {
                                 entry: t,
@@ -292,20 +289,20 @@ function en(e) {
                 });
             }
             if (
-                (0, p.A)({
+                (0, h.A)({
                     activities: n,
-                    status: j,
-                    applicationStream: T,
-                    voiceChannel: I,
+                    status: x,
+                    applicationStream: M,
+                    voiceChannel: _,
                 })
             ) {
-                let e = !(0, E.A)({
+                let e = !(0, y.A)({
                     activity:
                         null == n
                             ? void 0
                             : n.find((e) => {
                                   let { type: t } = e;
-                                  return t === Z.$pd.CUSTOM_STATUS;
+                                  return t === W.$pd.CUSTOM_STATUS;
                               }),
                     user: t,
                 });
@@ -313,423 +310,442 @@ function en(e) {
                     ? void 0
                     : n.find((e) => {
                           let { type: t } = e;
-                          return t === Z.$pd.PLAYING;
-                      })) == null && null != I
-                    ? (0, i.jsx)(et, {
-                          channel: I,
+                          return t === W.$pd.PLAYING;
+                      })) == null && null != _
+                    ? (0, l.jsx)(q, {
+                          channel: _,
                           textVariant: "text-xs/medium",
                           activities: null != n ? n : [],
-                          applicationStream: T,
+                          applicationStream: M,
                       })
-                    : (0, i.jsx)(g.A, {
+                    : (0, l.jsx)(f.A, {
                           user: t,
                           activities: n,
-                          applicationStream: T,
-                          voiceChannel: I,
+                          applicationStream: M,
+                          voiceChannel: _,
                           animateEmoji: !1,
                           hideEmoji: e,
                           hasQuest: !1,
                       });
             }
             return null;
-        }, [t, n, j, T, I, l]);
+        }, [t, n, x, M, _, i]);
     return {
         avatarDecorationSrc: v,
         avatarSrc: O,
-        eventHandlers: x,
-        listItemId: _,
-        intersectionRef: M,
-        isMobile: N,
-        newStatus: w,
-        status: j,
-        renderSubtext: U,
-        renderUserContextMenu: (0, B.l2)({
-            user: t,
-            appContext: c,
-            friendGroupId: y,
-            onUserContextMenuOpened: () => {
-                null == h || h(Y.x.USER_CONTEXT_MENU, t.id);
+        eventHandlers: b,
+        listItemId: N,
+        intersectionRef: L,
+        isMobile: j,
+        newStatus: P,
+        status: x,
+        renderSubtext: k,
+        renderUserContextMenu: r.useCallback(
+            (e) => {
+                null == I ||
+                    I({
+                        type: H.K.FRIEND_ROW,
+                        event: e,
+                        user: t,
+                        friendGroupId: E,
+                    });
             },
-            onMessageUser: () => {
-                null == h || h(Y.x.OPEN_DIRECT_MESSAGE, t.id);
-            },
-        }),
+            [E, I, t],
+        ),
     };
 }
-let ei = r.memo((e) => {
+let $ = r.memo((e) => {
     let {
             user: t,
             activities: n = [],
-            gameProfileEntry: l,
-            closeParentPopout: a,
+            gameProfileEntry: i,
+            closeParentPopout: s,
             appContext: c,
             nickname: d,
-            onAction: h,
-            onFriendVisible: p,
-            friendGroupId: f,
-            shouldHighlightIfRecentlyAdded: g,
+            onPrimaryAction: h,
+            onContextMenu: g,
+            onFriendVisible: f,
+            friendGroupId: p,
+            shouldHighlightIfRecentlyAdded: I,
             relationshipType: m,
-            isSuggestion: y,
+            isSuggestion: E,
         } = e,
         {
             avatarDecorationSrc: A,
-            avatarSrc: v,
-            eventHandlers: b,
-            listItemId: E,
-            intersectionRef: I,
-            isMobile: j,
-            newStatus: C,
-            status: w,
-            renderSubtext: P,
+            avatarSrc: y,
+            eventHandlers: N,
+            listItemId: T,
+            intersectionRef: C,
+            isMobile: x,
+            newStatus: D,
+            status: j,
+            renderSubtext: w,
             renderUserContextMenu: R,
-        } = en({
+        } = J({
             user: t,
             activities: n,
-            gameProfileEntry: l,
+            gameProfileEntry: i,
             relationshipType: m,
-            isSuggestion: y,
+            isSuggestion: E,
             appContext: c,
-            onAction: h,
-            onFriendVisible: p,
-            friendGroupId: f,
+            onPrimaryAction: h,
+            onContextMenu: g,
+            onFriendVisible: f,
+            friendGroupId: p,
         }),
-        { guildId: k, channelId: L } = (0, s.cf)([M.A, D.A], () => {
+        { guildId: U, channelId: Z } = (0, a.cf)([P.A, M.A], () => {
             var e, t;
-            let n = null != (e = M.A.getVoiceChannelId()) ? e : M.A.getChannelId();
+            let n = null != (e = P.A.getVoiceChannelId()) ? e : P.A.getChannelId();
             return {
-                guildId: null != n ? (null == (t = D.A.getChannel(n)) ? void 0 : t.guild_id) : null,
+                guildId: null != n ? (null == (t = M.A.getChannel(n)) ? void 0 : t.guild_id) : null,
                 channelId: n,
             };
         }),
-        U = (0, O.A)({
+        q = (0, S.A)({
             userId: t.id,
-            guildId: k,
+            guildId: U,
         }),
-        B = G.Ay.useName(k, L, t),
-        ee = (0, W.ZD)({
-            userId: t.id,
-            onAction: h,
-            closeParentPopout: a,
-        }),
-        et = n.some((e) => {
-            let { type: t } = e;
-            return t === Z.$pd.PLAYING;
-        }),
-        ei = w !== Z.clD.ONLINE && w !== Z.clD.IDLE && w !== Z.clD.DND,
-        er = (0, K.A2)(t.id),
-        el = r.useCallback(
+        $ = G.Ay.useName(U, Z, t),
+        ee = r.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    null == h || h(Y.x.OPEN_FRIEND_MODAL, t.id),
-                    (0, N.openUserProfileModal)({
-                        userId: t.id,
-                        guildId: k,
-                        channelId: L,
-                        appContext: c,
-                    });
+                    null == h ||
+                        h({
+                            type: H.c.OPEN_DIRECT_MESSAGE,
+                            userId: t.id,
+                        }),
+                    null == s || s();
             },
-            [c, L, k, h, t.id],
+            [s, h, t.id],
+        ),
+        et = n.some((e) => {
+            let { type: t } = e;
+            return t === W.$pd.PLAYING;
+        }),
+        en = j !== W.clD.ONLINE && j !== W.clD.IDLE && j !== W.clD.DND,
+        el = (0, Y.A2)(t.id),
+        er = r.useCallback(
+            (e) => {
+                e.preventDefault(),
+                    e.stopPropagation(),
+                    null == h ||
+                        h({
+                            type: H.c.OPEN_FRIEND_MODAL,
+                            userId: t.id,
+                            guildId: null != U ? U : void 0,
+                            channelId: null != Z ? Z : void 0,
+                        });
+            },
+            [Z, U, h, t.id],
         );
-    return (0, i.jsx)(z.D, {
-        listItemId: E,
-        outerRef: I,
-        isVisuallyOffline: ei,
-        recentlyAddedTimestampMs: g ? er : null,
+    return (0, l.jsx)(k.D, {
+        listItemId: T,
+        outerRef: C,
+        isVisuallyOffline: en,
+        recentlyAddedTimestampMs: I ? el : null,
         onClick: ee,
         onContextMenu: R,
-        avatar: (0, i.jsx)(
+        avatar: (0, l.jsx)(
             u.euF,
-            q(Q({}, b), {
-                size: $,
-                src: v,
-                isMobile: j,
+            X(K({}, N), {
+                size: Q,
+                src: y,
+                isMobile: x,
                 isTyping: !1,
-                status: C,
-                className: J.my,
+                status: D,
+                className: B.my,
                 "aria-label": t.username,
                 statusTooltip: !0,
                 avatarDecoration: A,
             }),
         ),
-        primaryText: (0, i.jsxs)("div", {
-            className: J.QV,
+        primaryText: (0, l.jsxs)("div", {
+            className: B.QV,
             children: [
-                (0, i.jsx)(_.A, {
-                    userName: B,
-                    displayNameStyles: U,
-                    effectDisplayType: x.G.STATIC,
-                    textClassName: J.Xh,
+                (0, l.jsx)(O.A, {
+                    userName: $,
+                    displayNameStyles: q,
+                    effectDisplayType: v.G.STATIC,
+                    textClassName: B.Xh,
                 }),
-                (0, i.jsx)(T.Ay, {
+                (0, l.jsx)(_.Ay, {
                     userId: t.id,
                     disableGuildProfile: !0,
                 }),
             ],
         }),
-        secondaryText: P(),
+        secondaryText: w(),
         rightActions: (e) =>
             e
-                ? (0, i.jsxs)(i.Fragment, {
+                ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, i.jsx)(o.m_, {
-                              text: X.intl.string(X.t.iXAna6),
-                              "aria-label": X.intl.string(X.t.iXAna6),
-                              children: (0, i.jsx)(u.K0, {
+                          (0, l.jsx)(o.m_, {
+                              text: z.intl.string(z.t.iXAna6),
+                              "aria-label": z.intl.string(z.t.iXAna6),
+                              children: (0, l.jsx)(u.K0, {
                                   icon: u.rMq,
-                                  "aria-label": X.intl.string(X.t.iXAna6),
+                                  "aria-label": z.intl.string(z.t.iXAna6),
                                   size: "sm",
                                   variant: "icon-only",
-                                  onClick: el,
+                                  onClick: er,
                               }),
                           }),
-                          (0, i.jsx)(F.j, {
-                              tab: V.x.FRIENDS,
+                          (0, l.jsx)(F.j, {
+                              tab: L.x.FRIENDS,
                               targetId: t.id,
                           }),
                       ],
                   })
                 : et
-                  ? (0, i.jsx)("div", {
-                        className: J.im,
-                        children: (0, i.jsx)(H.B, {
+                  ? (0, l.jsx)("div", {
+                        className: B.im,
+                        children: (0, l.jsx)(V.B, {
                             activities: n,
-                            gameProfileEntry: l,
-                            gameIconSize: S.M.SMALL,
+                            gameProfileEntry: i,
+                            gameIconSize: b.M.SMALL,
                             platformIconSizePx: 24,
                         }),
                     })
                   : null,
     });
 });
-ei.displayName = "FriendListRow";
-let er = r.memo((e) => {
+$.displayName = "FriendListRow";
+let ee = r.memo((e) => {
     let {
             user: t,
             activities: n = [],
-            gameProfileEntry: l,
-            relationshipType: a,
-            isSuggestion: s,
-            appContext: d,
-            nickname: h,
-            onAction: p,
+            gameProfileEntry: i,
+            relationshipType: s,
+            isSuggestion: a,
+            appContext: c,
+            nickname: d,
+            onPrimaryAction: h,
+            onContextMenu: g,
             onFriendVisible: f,
-            friendGroupId: g,
+            friendGroupId: p,
         } = e,
-        [m, y] = r.useState(null),
-        A = r.useRef(!1),
         {
-            avatarDecorationSrc: v,
-            avatarSrc: b,
+            avatarDecorationSrc: I,
+            avatarSrc: m,
             eventHandlers: E,
-            listItemId: I,
-            intersectionRef: j,
-            isMobile: T,
-            newStatus: C,
-            status: N,
-            renderSubtext: w,
-            renderUserContextMenu: P,
-        } = en({
+            listItemId: A,
+            intersectionRef: y,
+            isMobile: N,
+            newStatus: T,
+            status: _,
+            renderSubtext: C,
+            renderUserContextMenu: x,
+        } = J({
             user: t,
             activities: n,
-            gameProfileEntry: l,
-            relationshipType: a,
-            isSuggestion: s,
-            appContext: d,
-            onAction: p,
+            gameProfileEntry: i,
+            relationshipType: s,
+            isSuggestion: a,
+            appContext: c,
+            onPrimaryAction: h,
+            onContextMenu: g,
             onFriendVisible: f,
-            friendGroupId: g,
+            friendGroupId: p,
         }),
-        D = (0, O.A)({
+        D = (0, S.A)({
             userId: t.id,
             guildId: null,
         }),
-        R = G.Ay.useName(null, null, t),
-        k = r.useCallback(async (e, t) => {
-            if (!A.current) {
-                (A.current = !0), y(e);
-                try {
-                    await t();
-                } finally {
-                    (A.current = !1), y(null);
-                }
-            }
-        }, []),
-        M = (0, W.ZD)({
-            userId: t.id,
-            onAction: p,
-        }),
+        M = G.Ay.useName(null, null, t),
+        [j, w] = r.useState(!1),
+        P = r.useRef(null),
+        R = r.useCallback(() => {
+            w(!0),
+                null != P.current && clearTimeout(P.current),
+                (P.current = setTimeout(() => {
+                    w(!1), (P.current = null);
+                }, 2e3));
+        }, []);
+    r.useEffect(
+        () => () => {
+            null != P.current && clearTimeout(P.current);
+        },
+        [],
+    );
+    let U = r.useCallback(
+            (e) => {
+                e.preventDefault(),
+                    e.stopPropagation(),
+                    null == h ||
+                        h({
+                            type: H.c.OPEN_DIRECT_MESSAGE,
+                            userId: t.id,
+                        });
+            },
+            [h, t.id],
+        ),
         L = r.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    null == p || p(Y.x.ACCEPT_FRIEND_REQUEST, t.id),
-                    k("accept", () =>
-                        c.A.addRelationship({
-                            userId: t.id,
-                            context: {
-                                location: "friends-popout",
-                            },
-                        }),
-                    );
+                    j ||
+                        (R(),
+                        null == h ||
+                            h({
+                                type: H.c.ACCEPT_FRIEND_REQUEST,
+                                userId: t.id,
+                            }));
             },
-            [t.id, p, k],
-        ),
-        U = r.useCallback(
-            (e) => {
-                e.preventDefault(),
-                    e.stopPropagation(),
-                    null == p || p(Y.x.DECLINE_FRIEND_REQUEST, t.id),
-                    k("decline", () =>
-                        c.A.removeRelationship(t.id, {
-                            location: "friends-popout",
-                        }),
-                    );
-            },
-            [t.id, p, k],
-        ),
-        V = r.useCallback(
-            (e) => {
-                e.preventDefault(),
-                    e.stopPropagation(),
-                    null == p || p(Y.x.CANCEL_FRIEND_REQUEST, t.id),
-                    k("cancel", () =>
-                        c.A.cancelFriendRequest(t.id, {
-                            location: "friends-popout",
-                        }),
-                    );
-            },
-            [t.id, p, k],
+            [t.id, h, j, R],
         ),
         F = r.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    null == p || p(Y.x.SEND_FRIEND_REQUEST, t.id),
-                    k("send", () =>
-                        c.A.addRelationship({
-                            userId: t.id,
-                            context: {
-                                location: "friends-popout",
-                            },
-                        }),
-                    );
+                    j ||
+                        (R(),
+                        null == h ||
+                            h({
+                                type: H.c.DECLINE_FRIEND_REQUEST,
+                                userId: t.id,
+                            }));
             },
-            [t.id, p, k],
+            [t.id, h, j, R],
         ),
-        K = n.some((e) => {
+        Y = r.useCallback(
+            (e) => {
+                e.preventDefault(),
+                    e.stopPropagation(),
+                    j ||
+                        (R(),
+                        null == h ||
+                            h({
+                                type: H.c.CANCEL_FRIEND_REQUEST,
+                                userId: t.id,
+                            }));
+            },
+            [t.id, h, j, R],
+        ),
+        Z = r.useCallback(
+            (e) => {
+                e.preventDefault(),
+                    e.stopPropagation(),
+                    j ||
+                        (R(),
+                        null == h ||
+                            h({
+                                type: H.c.SEND_FRIEND_REQUEST,
+                                userId: t.id,
+                            }));
+            },
+            [t.id, h, j, R],
+        ),
+        q = n.some((e) => {
             let { type: t } = e;
-            return t === Z.$pd.PLAYING;
+            return t === W.$pd.PLAYING;
         }),
-        B = N !== Z.clD.ONLINE && N !== Z.clD.IDLE && N !== Z.clD.DND;
-    return (0, i.jsx)(z.D, {
-        listItemId: I,
-        outerRef: j,
-        isVisuallyOffline: B,
-        onClick: M,
-        onContextMenu: P,
-        avatar: (0, i.jsx)(
+        $ = _ !== W.clD.ONLINE && _ !== W.clD.IDLE && _ !== W.clD.DND;
+    return (0, l.jsx)(k.D, {
+        listItemId: A,
+        outerRef: y,
+        isVisuallyOffline: $,
+        onClick: U,
+        onContextMenu: x,
+        avatar: (0, l.jsx)(
             u.euF,
-            q(Q({}, E), {
-                size: $,
-                src: b,
-                isMobile: T,
+            X(K({}, E), {
+                size: Q,
+                src: m,
+                isMobile: N,
                 isTyping: !1,
-                status: C,
-                className: J.my,
+                status: T,
+                className: B.my,
                 "aria-label": t.username,
                 statusTooltip: !0,
-                avatarDecoration: v,
+                avatarDecoration: I,
             }),
         ),
-        primaryText: (0, i.jsx)(_.A, {
-            userName: R,
+        primaryText: (0, l.jsx)(O.A, {
+            userName: M,
             displayNameStyles: D,
-            effectDisplayType: x.G.PLAIN,
-            textClassName: J.Xh,
+            effectDisplayType: v.G.PLAIN,
+            textClassName: B.Xh,
         }),
-        secondaryText: w(),
-        rightActions: () => {
-            let e;
-            return (0, i.jsxs)(i.Fragment, {
+        secondaryText: C(),
+        rightActions: () =>
+            (0, l.jsxs)(l.Fragment, {
                 children: [
-                    K
-                        ? (0, i.jsx)("div", {
-                              className: J.im,
-                              children: (0, i.jsx)(H.B, {
+                    q
+                        ? (0, l.jsx)("div", {
+                              className: B.im,
+                              children: (0, l.jsx)(V.B, {
                                   activities: n,
-                                  gameProfileEntry: l,
-                                  gameIconSize: S.M.XSMALL,
+                                  gameProfileEntry: i,
+                                  gameIconSize: b.M.XSMALL,
                                   platformIconSizePx: 20,
                               }),
                           })
                         : null,
-                    ((e = null != m),
-                    a === Z.eA$.PENDING_INCOMING
-                        ? (0, i.jsxs)(i.Fragment, {
+                    s === W.eA$.PENDING_INCOMING
+                        ? (0, l.jsxs)(l.Fragment, {
                               children: [
-                                  (0, i.jsx)(o.m_, {
-                                      text: X.intl.string(X.t.MMlhsr),
-                                      children: (0, i.jsx)(u.K0, {
-                                          "aria-label": X.intl.string(X.t.MMlhsr),
+                                  (0, l.jsx)(o.m_, {
+                                      text: z.intl.string(z.t.MMlhsr),
+                                      children: (0, l.jsx)(u.K0, {
+                                          "aria-label": z.intl.string(z.t.MMlhsr),
                                           size: "sm",
                                           variant: "secondary",
                                           icon: u.A9s,
                                           onClick: L,
-                                          disabled: e,
+                                          disabled: j,
                                       }),
                                   }),
-                                  (0, i.jsx)(o.m_, {
-                                      text: X.intl.string(X.t.ytCpKs),
-                                      children: (0, i.jsx)(u.K0, {
-                                          "aria-label": X.intl.string(X.t.ytCpKs),
+                                  (0, l.jsx)(o.m_, {
+                                      text: z.intl.string(z.t.ytCpKs),
+                                      children: (0, l.jsx)(u.K0, {
+                                          "aria-label": z.intl.string(z.t.ytCpKs),
                                           size: "sm",
                                           variant: "secondary",
                                           icon: u.PGe,
-                                          onClick: U,
-                                          disabled: e,
+                                          onClick: F,
+                                          disabled: j,
                                       }),
                                   }),
                               ],
                           })
-                        : a === Z.eA$.PENDING_OUTGOING
-                          ? (0, i.jsx)(o.m_, {
-                                text: X.intl.string(X.t["bTfA//"]),
-                                children: (0, i.jsx)(u.K0, {
-                                    "aria-label": X.intl.string(X.t["bTfA//"]),
+                        : s === W.eA$.PENDING_OUTGOING
+                          ? (0, l.jsx)(o.m_, {
+                                text: z.intl.string(z.t["bTfA//"]),
+                                children: (0, l.jsx)(u.K0, {
+                                    "aria-label": z.intl.string(z.t["bTfA//"]),
                                     size: "sm",
                                     variant: "secondary",
                                     icon: u.lI8,
-                                    onClick: V,
-                                    disabled: e,
+                                    onClick: Y,
+                                    disabled: j,
                                 }),
                             })
-                          : s
-                            ? (0, i.jsx)(o.m_, {
-                                  text: X.intl.string(X.t.w5uwoI),
-                                  children: (0, i.jsx)(u.K0, {
-                                      "aria-label": X.intl.string(X.t.w5uwoI),
+                          : a
+                            ? (0, l.jsx)(o.m_, {
+                                  text: z.intl.string(z.t.w5uwoI),
+                                  children: (0, l.jsx)(u.K0, {
+                                      "aria-label": z.intl.string(z.t.w5uwoI),
                                       size: "sm",
                                       variant: "secondary",
                                       icon: u.Rvf,
-                                      onClick: F,
-                                      disabled: e,
+                                      onClick: Z,
+                                      disabled: j,
                                   }),
                               })
-                            : null),
+                            : null,
                 ],
-            });
-        },
+            }),
     });
 });
-er.displayName = "FriendRequestRow";
-let el = r.memo((e) =>
+ee.displayName = "FriendRequestRow";
+let et = r.memo((e) =>
     "friend_request" ===
     (function (e) {
         let { relationshipType: t, isSuggestion: n } = e;
-        return t === Z.eA$.PENDING_INCOMING || t === Z.eA$.PENDING_OUTGOING || n ? "friend_request" : "friend";
+        return t === W.eA$.PENDING_INCOMING || t === W.eA$.PENDING_OUTGOING || n ? "friend_request" : "friend";
     })(e)
-        ? (0, i.jsx)(er, Q({}, e))
-        : (0, i.jsx)(ei, Q({}, e)),
+        ? (0, l.jsx)(ee, K({}, e))
+        : (0, l.jsx)($, K({}, e)),
 );
-el.displayName = "FriendRow";
+et.displayName = "FriendRow";

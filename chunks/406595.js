@@ -1,26 +1,25 @@
 n.d(t, {
-    A: () => J,
+    A: () => K,
 }),
     n(896048);
-var r,
-    i = n(311907),
-    l = n(713402),
+var l,
+    r = n(311907),
+    i = n(713402),
     s = n(73153),
     a = n(21119),
-    u = n(95701),
-    o = n(734057),
-    d = n(197305),
-    c = n(576705),
+    o = n(95701),
+    u = n(734057),
+    c = n(197305),
+    d = n(576705),
     h = n(290863),
-    f = n(222823),
-    g = n(994500),
-    I = n(287809),
-    A = n(914853),
-    S = n(956753),
-    E = n(672396),
-    p = n(652215);
+    g = n(222823),
+    f = n(994500),
+    p = n(287809),
+    I = n(914853),
+    m = n(956753),
+    E = n(652215);
 
-function y(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,118 +32,118 @@ function y(e, t, n) {
         e
     );
 }
-let v = Number.MAX_SAFE_INTEGER,
-    _ = new l.J(
+let y = Number.MAX_SAFE_INTEGER,
+    S = new i.J(
         (e) => [e.tab],
         (e) => e.sortKey,
     ),
-    O = new Set(Object.values(A.x)),
-    m = new Map(),
-    M = !1;
+    v = new Set(Object.values(I.x)),
+    O = new Map(),
+    b = !1;
 
-function T(e, t, n) {
+function N(e, t, n) {
     return e < t ? t : e > n ? n : e;
 }
 
-function N(e, t) {
+function T(e, t) {
     return String(e).padStart(t, "0");
 }
 
-function C(e) {
-    return Number.isFinite(e) ? Math.floor(T(e, 0, v)) : Date.now();
+function _(e) {
+    return Number.isFinite(e) ? Math.floor(N(e, 0, y)) : Date.now();
 }
 
-function D(e) {
+function C(e) {
     return e ? "0" : "1";
 }
 
-function w(e, t) {
+function x(e, t) {
     return "".concat(e, ":").concat(t);
 }
 
-function U(e) {
-    let t = m.get(e);
-    return null == t && ((t = new Map()), m.set(e, t)), t;
+function D(e) {
+    let t = O.get(e);
+    return null == t && ((t = new Map()), O.set(e, t)), t;
 }
 
-function b(e) {
-    return Array.from(U(e).values());
+function M(e) {
+    return Array.from(D(e).values());
 }
 
-function G() {
-    let e = d.A.affinities,
+function j() {
+    let e = c.A.affinities,
         t = 0;
-    for (let r = 0; r < e.length; r += 1) {
+    for (let l = 0; l < e.length; l += 1) {
         var n;
-        let i = null != (n = e[r].score) ? n : 0;
-        i > t && (t = i);
+        let r = null != (n = e[l].score) ? n : 0;
+        r > t && (t = r);
     }
     return t > 0 ? t : 1;
 }
 
-function P(e) {
+function w(e) {
     return {
-        hasMention: f.Ay.getMentionCount(e) > 0,
-        hasUnread: f.Ay.hasUnread(e),
+        hasMention: g.Ay.getMentionCount(e) > 0,
+        hasUnread: g.Ay.hasUnread(e),
     };
 }
 
-function R(e, t) {
-    let n = o.A.getChannel(t);
+function P(e, t) {
+    let n = u.A.getChannel(t);
     if (null == n) return !1;
     switch (e) {
-        case A.x.MESSAGES:
+        case I.x.MESSAGES:
             if (n.isDM() || n.isMultiUserDM() || n.isPrivate()) return !0;
-            if (!(0, u.ke)(n.type)) return !1;
-            return c.A.can(p.xBc.READ_MESSAGE_HISTORY, n);
-        case A.x.VOICE:
-            if (!(0, u.ay)(n.type)) return !1;
-            return c.A.can(p.xBc.VIEW_CHANNEL, n);
-        case A.x.FRIENDS:
+            if (!(0, o.ke)(n.type)) return !1;
+            return d.A.can(E.xBc.READ_MESSAGE_HISTORY, n);
+        case I.x.VOICE:
+            if (!(0, o.ay)(n.type)) return !1;
+            return d.A.can(E.xBc.VIEW_CHANNEL, n);
+        case I.x.FRIENDS:
             return !1;
         default:
             return e;
     }
 }
 
-function L(e) {
+function R(e) {
     var t;
     let n,
-        { tab: r, targetId: i, isOnline: l, affinityScore: s, hasMention: a, hasUnread: u, addedTimestampMs: o } = e,
-        d = {
-            rowId: w(r, i),
-            tab: r,
-            targetId: i,
-            isOnline: l,
+        { tab: l, targetId: r, isOnline: i, affinityScore: s, hasMention: a, hasUnread: o, addedTimestampMs: u } = e,
+        c = {
+            rowId: x(l, r),
+            tab: l,
+            targetId: r,
+            isOnline: i,
             affinityScore: s,
             hasMention: a,
-            hasUnread: u,
-            addedTimestampMs: o,
+            hasUnread: o,
+            addedTimestampMs: u,
             sortKey: "",
         };
     return (
-        (d.sortKey = [
-            (t = d).tab,
-            D(t.isOnline),
-            N(Math.round((1 - T(t.affinityScore, 0, 1)) * 1e6), 7),
-            D(t.hasMention),
-            D(t.hasUnread),
-            ((n = T(t.addedTimestampMs, 0, v)), N(v - n, 16)),
+        (c.sortKey = [
+            (t = c).tab,
+            C(t.isOnline),
+            T(Math.round((1 - N(t.affinityScore, 0, 1)) * 1e6), 7),
+            C(t.hasMention),
+            C(t.hasUnread),
+            ((n = N(t.addedTimestampMs, 0, y)), T(y - n, 16)),
             t.rowId,
         ].join("\0")),
-        d
+        c
     );
 }
 
-function F(e) {
-    let { tab: t, targetId: n, addedTimestampMs: r, guildAffinityNormalizationMax: i, pruneInvalid: l } = e;
-    if (t === A.x.FRIENDS) {
-        if (null == I.default.getUser(n))
+function U(e) {
+    let { tab: t, targetId: n, addedTimestampMs: l, guildAffinityNormalizationMax: r, pruneInvalid: i } = e;
+    if (t === I.x.FRIENDS) {
+        if (null == p.default.getUser(n))
             return {
                 kind: "NOT_READY_YET",
             };
-        if (!g.A.isFriend(n))
-            return l
+        if (!f.A.isFriend(n))
+            return i
                 ? {
                       kind: "INVALID",
                   }
@@ -152,30 +151,30 @@ function F(e) {
                       kind: "NOT_READY_YET",
                   };
         let e = (function (e, t, n) {
-            var r, i, l;
-            if (e !== A.x.FRIENDS || null == I.default.getUser(t) || !g.A.isFriend(t)) return null;
-            let s = (l = h.A.getStatus(t)) === p.clD.ONLINE || l === p.clD.IDLE || l === p.clD.DND,
-                u = null != (r = null == (i = a.A.getUserAffinity(t)) ? void 0 : i.communicationProbability) ? r : 0,
-                d = o.A.getDMFromUserId(t),
-                { hasMention: c, hasUnread: f } =
-                    null != d
-                        ? P(d)
+            var l, r, i;
+            if (e !== I.x.FRIENDS || null == p.default.getUser(t) || !f.A.isFriend(t)) return null;
+            let s = (i = h.A.getStatus(t)) === E.clD.ONLINE || i === E.clD.IDLE || i === E.clD.DND,
+                o = null != (l = null == (r = a.A.getUserAffinity(t)) ? void 0 : r.communicationProbability) ? l : 0,
+                c = u.A.getDMFromUserId(t),
+                { hasMention: d, hasUnread: g } =
+                    null != c
+                        ? w(c)
                         : {
                               hasMention: !1,
                               hasUnread: !1,
                           };
-            return L({
+            return R({
                 tab: e,
                 targetId: t,
                 isOnline: s,
-                affinityScore: u,
-                hasMention: c,
-                hasUnread: f,
+                affinityScore: o,
+                hasMention: d,
+                hasUnread: g,
                 addedTimestampMs: n,
             });
-        })(t, n, r);
+        })(t, n, l);
         return null == e
-            ? l
+            ? i
                 ? {
                       kind: "INVALID",
                   }
@@ -187,48 +186,48 @@ function F(e) {
                   row: e,
               };
     }
-    if (null == o.A.getChannel(n))
+    if (null == u.A.getChannel(n))
         return {
             kind: "NOT_READY_YET",
         };
-    if (!R(t, n))
-        return l
+    if (!P(t, n))
+        return i
             ? {
                   kind: "INVALID",
               }
             : {
                   kind: "NOT_READY_YET",
               };
-    let s = (function (e, t, n, r) {
-        var i, l, s;
-        if (!R(e, t)) return null;
-        let a = o.A.getChannel(t);
+    let s = (function (e, t, n, l) {
+        var r, i, s;
+        if (!P(e, t)) return null;
+        let a = u.A.getChannel(t);
         if (null == a) return null;
-        let c = null != (i = a.getGuildId()) ? i : null,
-            h = T(
-                (null != c && null != (l = null == (s = d.A.getGuildAffinity(c)) ? void 0 : s.score) ? l : 0) / r,
+        let d = null != (r = a.getGuildId()) ? r : null,
+            h = N(
+                (null != d && null != (i = null == (s = c.A.getGuildAffinity(d)) ? void 0 : s.score) ? i : 0) / l,
                 0,
                 1,
             ),
-            { hasMention: f, hasUnread: g } =
-                (0, u.ke)(a.type) || a.isDM() || a.isMultiUserDM() || a.isPrivate()
-                    ? P(t)
+            { hasMention: g, hasUnread: f } =
+                (0, o.ke)(a.type) || a.isDM() || a.isMultiUserDM() || a.isPrivate()
+                    ? w(t)
                     : {
                           hasMention: !1,
                           hasUnread: !1,
                       };
-        return L({
+        return R({
             tab: e,
             targetId: t,
             isOnline: !1,
             affinityScore: h,
-            hasMention: f,
-            hasUnread: g,
+            hasMention: g,
+            hasUnread: f,
             addedTimestampMs: n,
         });
-    })(t, n, r, i);
+    })(t, n, l, r);
     return null == s
-        ? l
+        ? i
             ? {
                   kind: "INVALID",
               }
@@ -241,7 +240,7 @@ function F(e) {
           };
 }
 
-function V(e, t) {
+function G(e, t) {
     return (
         e.rowId !== t.rowId ||
         e.tab !== t.tab ||
@@ -255,383 +254,384 @@ function V(e, t) {
     );
 }
 
-function x(e) {
+function L(e) {
     let { pruneInvalid: t } = e,
-        n = new Set(_.values().map((e) => e.rowId)),
-        r = G(),
-        i = !1;
-    for (let e of O) {
-        let l = U(e);
-        for (let [s, a] of l.entries()) {
-            let u = w(e, s),
-                o = F({
+        n = new Set(S.values().map((e) => e.rowId)),
+        l = j(),
+        r = !1;
+    for (let e of v) {
+        let i = D(e);
+        for (let [s, a] of i.entries()) {
+            let o = x(e, s),
+                u = U({
                     tab: e,
                     targetId: s,
                     addedTimestampMs: a.addedTimestampMs,
-                    guildAffinityNormalizationMax: r,
+                    guildAffinityNormalizationMax: l,
                     pruneInvalid: t,
                 });
-            switch ((n.delete(u), o.kind)) {
+            switch ((n.delete(o), u.kind)) {
                 case "BUILT": {
-                    let e = o.row,
-                        t = _.get(e.rowId);
-                    (null == t || V(t, e)) && (i = _.set(e.rowId, e) || i);
+                    let e = u.row,
+                        t = S.get(e.rowId);
+                    (null == t || G(t, e)) && (r = S.set(e.rowId, e) || r);
                     break;
                 }
                 case "NOT_READY_YET":
-                    i = _.delete(u) || i;
+                    r = S.delete(o) || r;
                     break;
                 case "INVALID":
-                    l.delete(s), (i = !0), (i = _.delete(u) || i);
+                    i.delete(s), (r = !0), (r = S.delete(o) || r);
                     break;
                 default:
-                    return o;
+                    return u;
             }
         }
     }
-    for (let e of n) i = _.delete(e) || i;
-    return i;
+    for (let e of n) r = S.delete(e) || r;
+    return r;
 }
 
-function j(e, t) {
-    let n = U(e).delete(t),
-        r = _.delete(w(e, t));
-    return n || r;
+function k(e, t) {
+    let n = D(e).delete(t),
+        l = S.delete(x(e, t));
+    return n || l;
 }
 
-function k(e) {
-    let { tab: t, targetId: n, pruneInvalid: r, guildAffinityNormalizationMax: i } = e,
-        l = U(t),
-        s = l.get(n),
-        a = w(t, n);
-    if (null == s) return _.delete(a);
-    let u = F({
+function F(e) {
+    let { tab: t, targetId: n, pruneInvalid: l, guildAffinityNormalizationMax: r } = e,
+        i = D(t),
+        s = i.get(n),
+        a = x(t, n);
+    if (null == s) return S.delete(a);
+    let o = U({
         tab: t,
         targetId: n,
         addedTimestampMs: s.addedTimestampMs,
-        guildAffinityNormalizationMax: i,
-        pruneInvalid: r,
+        guildAffinityNormalizationMax: r,
+        pruneInvalid: l,
     });
-    switch (u.kind) {
+    switch (o.kind) {
         case "BUILT": {
-            let e = u.row,
-                t = _.get(e.rowId);
-            return !!(null == t || V(t, e)) && _.set(e.rowId, e);
+            let e = o.row,
+                t = S.get(e.rowId);
+            return !!(null == t || G(t, e)) && S.set(e.rowId, e);
         }
         case "NOT_READY_YET":
-            return _.delete(a);
+            return S.delete(a);
         case "INVALID":
-            return r && l.delete(n), _.delete(a);
+            return l && i.delete(n), S.delete(a);
         default:
-            return u;
+            return o;
     }
 }
 
-function W(e, t) {
+function V(e, t) {
     let { pruneInvalid: n } = t,
-        r = U(e);
-    if (0 === r.size && 0 === _.values(e).length) return !1;
-    let i = G(),
-        l = !1,
+        l = D(e);
+    if (0 === l.size && 0 === S.values(e).length) return !1;
+    let r = j(),
+        i = !1,
         s = new Set();
-    for (let t of r.keys())
-        s.add(w(e, t)),
-            (l =
-                k({
+    for (let t of l.keys())
+        s.add(x(e, t)),
+            (i =
+                F({
                     tab: e,
                     targetId: t,
                     pruneInvalid: n,
-                    guildAffinityNormalizationMax: i,
-                }) || l);
-    for (let t of _.values(e)) s.has(t.rowId) || (l = _.delete(t.rowId) || l);
-    return l;
+                    guildAffinityNormalizationMax: r,
+                }) || i);
+    for (let t of S.values(e)) s.has(t.rowId) || (i = S.delete(t.rowId) || i);
+    return i;
 }
 
-function Y(e, t) {
+function H(e, t) {
     let { pruneInvalid: n } = t,
-        r = U(A.x.FRIENDS);
-    if (0 === r.size) return !1;
-    let i = G(),
-        l = !1;
-    for (let t of r.keys())
-        o.A.getDMFromUserId(t) === e &&
-            (l =
-                k({
-                    tab: A.x.FRIENDS,
+        l = D(I.x.FRIENDS);
+    if (0 === l.size) return !1;
+    let r = j(),
+        i = !1;
+    for (let t of l.keys())
+        u.A.getDMFromUserId(t) === e &&
+            (i =
+                F({
+                    tab: I.x.FRIENDS,
                     targetId: t,
                     pruneInvalid: n,
-                    guildAffinityNormalizationMax: i,
-                }) || l);
-    return l;
+                    guildAffinityNormalizationMax: r,
+                }) || i);
+    return i;
 }
 
-function H(e) {
-    let t = M,
-        n = G(),
-        r = !1;
+function Y(e) {
+    let t = b,
+        n = j(),
+        l = !1;
     return (
-        U(A.x.MESSAGES).has(e) &&
-            (r =
-                k({
-                    tab: A.x.MESSAGES,
+        D(I.x.MESSAGES).has(e) &&
+            (l =
+                F({
+                    tab: I.x.MESSAGES,
                     targetId: e,
                     pruneInvalid: t,
                     guildAffinityNormalizationMax: n,
-                }) || r),
-        (r =
-            Y(e, {
+                }) || l),
+        (l =
+            H(e, {
                 pruneInvalid: t,
-            }) || r)
+            }) || l)
     );
 }
 
-function z() {
+function W() {
     return (
-        (M = !0),
-        x({
+        (b = !0),
+        L({
             pruneInvalid: !0,
         })
     );
 }
-class B extends (r = i.Ay.PersistedStore) {
+class z extends (l = r.Ay.PersistedStore) {
     initialize(e) {
-        this.waitFor(o.A, d.A, c.A, h.A, f.Ay, g.A, a.A, I.default),
+        this.waitFor(u.A, c.A, d.A, h.A, g.Ay, f.A, a.A, p.default),
             (function (e) {
-                (m = new Map()), _.clear();
-                for (let t of O)
+                (O = new Map()), S.clear();
+                for (let t of v)
                     (function (e, t) {
                         let n = (function (e, t) {
-                                var n, r, i;
+                                var n, l, r;
                                 if (null == e) return [];
                                 switch (t) {
-                                    case A.x.FRIENDS:
+                                    case I.x.FRIENDS:
                                         return null != (n = e.friendsFavoriteTargetIds) ? n : [];
-                                    case A.x.MESSAGES:
-                                        return null != (r = e.messagesFavoriteTargetIds) ? r : [];
-                                    case A.x.VOICE:
-                                        return null != (i = e.voiceFavoriteTargetIds) ? i : [];
+                                    case I.x.MESSAGES:
+                                        return null != (l = e.messagesFavoriteTargetIds) ? l : [];
+                                    case I.x.VOICE:
+                                        return null != (r = e.voiceFavoriteTargetIds) ? r : [];
                                     default:
                                         return t;
                                 }
                             })(e, t),
-                            r = U(t),
-                            i = 0;
+                            l = D(t),
+                            r = 0;
                         for (let e of n) {
                             let t =
                                 null == e || "string" != typeof e.targetId
                                     ? null
                                     : {
                                           targetId: e.targetId,
-                                          addedTimestampMs: C(e.addedTimestampMs),
+                                          addedTimestampMs: _(e.addedTimestampMs),
                                       };
-                            null != t && (r.set(t.targetId, t), (i += 1));
+                            null != t && (l.set(t.targetId, t), (r += 1));
                         }
                     })(e, t);
             })(e),
-            x({
+            L({
                 pruneInvalid: !1,
             });
     }
     getState() {
         return {
-            friendsFavoriteTargetIds: b(A.x.FRIENDS),
-            messagesFavoriteTargetIds: b(A.x.MESSAGES),
-            voiceFavoriteTargetIds: b(A.x.VOICE),
+            friendsFavoriteTargetIds: M(I.x.FRIENDS),
+            messagesFavoriteTargetIds: M(I.x.MESSAGES),
+            voiceFavoriteTargetIds: M(I.x.VOICE),
         };
     }
     getFavoriteTargetIdsForTab(e) {
-        return [_.values(e).map((e) => e.targetId), _.version];
+        return [S.values(e).map((e) => e.targetId), S.version];
     }
     isFavorite(e, t) {
-        return [U(e).has(t), _.version];
+        return [D(e).has(t), S.version];
     }
 }
-y(B, "displayName", "OverlayFriendsWidgetFavoritesStore"), y(B, "persistKey", "OverlayFriendsWidgetFavoritesStore");
-let K = (e) => (0, S.R)(e, "OverlayFriendsWidgetFavoritesStore"),
-    J = new B(
+A(z, "displayName", "OverlayFriendsWidgetFavoritesStore"), A(z, "persistKey", "OverlayFriendsWidgetFavoritesStore");
+let B = (e) => (0, m.v$)(e, "OverlayFriendsWidgetFavoritesStore"),
+    K = new z(
         s.h,
-        __OVERLAY__ || (!E.OX && !E.ed)
+        __OVERLAY__
             ? {}
             : {
-                  OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: K(function (e) {
-                      var t, n, r;
-                      let i = w(e.tab, e.targetId);
+                  OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: B(function (e) {
+                      var t, n, l;
+                      let r = x(e.tab, e.targetId);
                       if (!e.isFavorite) {
-                          let t = U(e.tab).delete(e.targetId),
-                              n = _.delete(i);
+                          let t = D(e.tab).delete(e.targetId),
+                              n = S.delete(r);
                           return t || n;
                       }
-                      let l = C(
+                      let i = _(
                               null !=
                                   (t =
                                       null != (n = e.addedTimestampMs)
                                           ? n
-                                          : null == (r = U(e.tab).get(e.targetId))
+                                          : null == (l = D(e.tab).get(e.targetId))
                                             ? void 0
-                                            : r.addedTimestampMs)
+                                            : l.addedTimestampMs)
                                   ? t
                                   : Date.now(),
                           ),
-                          s = U(e.tab);
+                          s = D(e.tab);
                       s.set(e.targetId, {
                           targetId: e.targetId,
-                          addedTimestampMs: l,
+                          addedTimestampMs: i,
                       });
-                      let a = G(),
-                          u = F({
+                      let a = j(),
+                          o = U({
                               tab: e.tab,
                               targetId: e.targetId,
-                              addedTimestampMs: l,
+                              addedTimestampMs: i,
                               guildAffinityNormalizationMax: a,
-                              pruneInvalid: M,
+                              pruneInvalid: b,
                           });
-                      switch (u.kind) {
+                      switch (o.kind) {
                           case "BUILT": {
-                              let e = u.row,
-                                  t = _.get(e.rowId);
-                              (null == t || V(t, e)) && _.set(e.rowId, e);
+                              let e = o.row,
+                                  t = S.get(e.rowId);
+                              (null == t || G(t, e)) && S.set(e.rowId, e);
                               break;
                           }
                           case "NOT_READY_YET":
-                              _.delete(i);
+                              S.delete(r);
                               break;
                           case "INVALID":
-                              s.delete(e.targetId), _.delete(i);
+                              s.delete(e.targetId), S.delete(r);
                               break;
                           default:
-                              return u;
+                              return o;
                       }
                       return !0;
                   }),
-                  POST_CONNECTION_OPEN: K(z),
-                  OVERLAY_INITIALIZE: K(z),
-                  CACHE_LOADED: K(z),
-                  CACHE_LOADED_LAZY: K(z),
-                  PRESENCE_UPDATES: K(function (e) {
-                      let t = U(A.x.FRIENDS);
+                  POST_CONNECTION_OPEN: B(W),
+                  OVERLAY_INITIALIZE: B(W),
+                  CACHE_LOADED: B(W),
+                  CACHE_LOADED_LAZY: B(W),
+                  FRIENDS_LIST_POPOUT_MOUNTED: B(W),
+                  PRESENCE_UPDATES: B(function (e) {
+                      let t = D(I.x.FRIENDS);
                       if (0 === t.size) return !1;
-                      let n = G(),
-                          r = !1;
-                      for (let l of e.updates) {
-                          var i;
-                          let e = null == (i = l.user) ? void 0 : i.id;
+                      let n = j(),
+                          l = !1;
+                      for (let i of e.updates) {
+                          var r;
+                          let e = null == (r = i.user) ? void 0 : r.id;
                           null != e &&
                               t.has(e) &&
-                              (r =
-                                  k({
-                                      tab: A.x.FRIENDS,
+                              (l =
+                                  F({
+                                      tab: I.x.FRIENDS,
                                       targetId: e,
-                                      pruneInvalid: M,
+                                      pruneInvalid: b,
                                       guildAffinityNormalizationMax: n,
-                                  }) || r);
+                                  }) || l);
                       }
-                      return r;
+                      return l;
                   }),
-                  PRESENCES_REPLACE: K(function (e) {
-                      let t = U(A.x.FRIENDS);
+                  PRESENCES_REPLACE: B(function (e) {
+                      let t = D(I.x.FRIENDS);
                       if (0 === t.size) return !1;
-                      let n = G(),
-                          r = !1;
-                      for (let l of e.presences) {
-                          var i;
-                          let e = null == (i = l.user) ? void 0 : i.id;
+                      let n = j(),
+                          l = !1;
+                      for (let i of e.presences) {
+                          var r;
+                          let e = null == (r = i.user) ? void 0 : r.id;
                           null != e &&
                               t.has(e) &&
-                              (r =
-                                  k({
-                                      tab: A.x.FRIENDS,
+                              (l =
+                                  F({
+                                      tab: I.x.FRIENDS,
                                       targetId: e,
-                                      pruneInvalid: M,
+                                      pruneInvalid: b,
                                       guildAffinityNormalizationMax: n,
-                                  }) || r);
+                                  }) || l);
                       }
-                      return r;
+                      return l;
                   }),
-                  LOAD_USER_AFFINITIES_V2_SUCCESS: K(function () {
-                      return W(A.x.FRIENDS, {
-                          pruneInvalid: M,
+                  LOAD_USER_AFFINITIES_V2_SUCCESS: B(function () {
+                      return V(I.x.FRIENDS, {
+                          pruneInvalid: b,
                       });
                   }),
-                  LOAD_GUILD_AFFINITIES_SUCCESS: K(function () {
-                      let e = M;
+                  LOAD_GUILD_AFFINITIES_SUCCESS: B(function () {
+                      let e = b;
                       return (
-                          W(A.x.MESSAGES, {
+                          V(I.x.MESSAGES, {
                               pruneInvalid: e,
                           }) ||
-                          W(A.x.VOICE, {
+                          V(I.x.VOICE, {
                               pruneInvalid: e,
                           })
                       );
                   }),
-                  MESSAGE_CREATE: K((e) => H(e.channelId)),
-                  MESSAGE_ACK: K((e) => H(e.channelId)),
-                  CHANNEL_ACK: K((e) => H(e.channelId)),
-                  CHANNEL_UPDATES: K(function (e) {
-                      let t = M,
-                          n = G(),
-                          r = !1,
-                          i = U(A.x.MESSAGES),
-                          l = U(A.x.VOICE);
+                  MESSAGE_CREATE: B((e) => Y(e.channelId)),
+                  MESSAGE_ACK: B((e) => Y(e.channelId)),
+                  CHANNEL_ACK: B((e) => Y(e.channelId)),
+                  CHANNEL_UPDATES: B(function (e) {
+                      let t = b,
+                          n = j(),
+                          l = !1,
+                          r = D(I.x.MESSAGES),
+                          i = D(I.x.VOICE);
                       for (let s of e.channels) {
                           let e = null == s ? void 0 : s.id;
                           null != e &&
-                              (i.has(e) &&
-                                  (r =
-                                      k({
-                                          tab: A.x.MESSAGES,
+                              (r.has(e) &&
+                                  (l =
+                                      F({
+                                          tab: I.x.MESSAGES,
                                           targetId: e,
                                           pruneInvalid: t,
                                           guildAffinityNormalizationMax: n,
-                                      }) || r),
-                              l.has(e) &&
-                                  (r =
-                                      k({
-                                          tab: A.x.VOICE,
+                                      }) || l),
+                              i.has(e) &&
+                                  (l =
+                                      F({
+                                          tab: I.x.VOICE,
                                           targetId: e,
                                           pruneInvalid: t,
                                           guildAffinityNormalizationMax: n,
-                                      }) || r),
-                              (r =
-                                  Y(e, {
+                                      }) || l),
+                              (l =
+                                  H(e, {
                                       pruneInvalid: t,
-                                  }) || r));
+                                  }) || l));
                       }
-                      return r;
+                      return l;
                   }),
-                  CHANNEL_DELETE: K(function (e) {
+                  CHANNEL_DELETE: B(function (e) {
                       var t;
                       let n = null == (t = e.channel) ? void 0 : t.id;
                       if (null == n) return !1;
-                      let r = !1;
+                      let l = !1;
                       return (
-                          (r = j(A.x.MESSAGES, n) || r),
-                          (r = j(A.x.VOICE, n) || r),
-                          (r =
-                              Y(n, {
-                                  pruneInvalid: M,
-                              }) || r)
+                          (l = k(I.x.MESSAGES, n) || l),
+                          (l = k(I.x.VOICE, n) || l),
+                          (l =
+                              H(n, {
+                                  pruneInvalid: b,
+                              }) || l)
                       );
                   }),
-                  RELATIONSHIP_ADD: K(function (e) {
+                  RELATIONSHIP_ADD: B(function (e) {
                       var t;
                       let n = null == (t = e.relationship) ? void 0 : t.id;
-                      if (null == n || !U(A.x.FRIENDS).has(n)) return !1;
-                      let r = G();
-                      return k({
-                          tab: A.x.FRIENDS,
+                      if (null == n || !D(I.x.FRIENDS).has(n)) return !1;
+                      let l = j();
+                      return F({
+                          tab: I.x.FRIENDS,
                           targetId: n,
-                          pruneInvalid: M,
-                          guildAffinityNormalizationMax: r,
+                          pruneInvalid: b,
+                          guildAffinityNormalizationMax: l,
                       });
                   }),
-                  RELATIONSHIP_REMOVE: K(function (e) {
+                  RELATIONSHIP_REMOVE: B(function (e) {
                       var t;
                       let n = null == (t = e.relationship) ? void 0 : t.id;
-                      return null != n && j(A.x.FRIENDS, n);
+                      return null != n && k(I.x.FRIENDS, n);
                   }),
-                  LOGOUT: K(function () {
-                      let e = _.size() > 0 || m.size > 0;
-                      return _.clear(), (m = new Map()), (M = !1), e;
+                  LOGOUT: B(function () {
+                      let e = S.size() > 0 || O.size > 0;
+                      return S.clear(), (O = new Map()), (b = !1), e;
                   }),
               },
     );

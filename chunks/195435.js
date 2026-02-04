@@ -1,148 +1,153 @@
 n.d(t, {
-    a: () => O,
+    a: () => v,
 }),
     n(896048);
-var i = n(627968),
+var l = n(627968),
     r = n(64700),
-    l = n(311907),
-    a = n(397927),
-    s = n(609425),
+    i = n(311907),
+    s = n(397927),
+    a = n(609425),
     o = n(922301),
     u = n(750112),
     c = n(534400),
     d = n(342296),
     h = n(481947),
-    p = n(616356),
+    g = n(616356),
     f = n(287809),
-    g = n(977997),
-    m = n(403362),
-    y = n(562153),
-    A = n(996439),
-    v = n(876891),
-    b = n(652215),
-    E = n(905777);
-let O = r.memo(function (e) {
-    let { channelId: t, guildId: n, userId: O, onDoubleClick: x } = e,
-        _ = r.useRef(null),
-        [S, I] = r.useState(!1),
-        j = (0, l.bG)([f.default], () => f.default.getUser(O), [O]),
-        T = (function (e, t) {
-            let [n] = (0, l.bG)(
-                [g.A],
+    p = n(977997),
+    I = n(403362),
+    m = n(562153),
+    E = n(996439),
+    A = n(67103),
+    y = n(652215),
+    S = n(905777);
+let v = r.memo(function (e) {
+    let { channelId: t, guildId: n, userId: v, onDoubleClick: O, onContextMenu: b } = e,
+        N = r.useRef(null),
+        [T, _] = r.useState(!1),
+        C = (0, i.bG)([f.default], () => f.default.getUser(v), [v]),
+        x = (function (e, t) {
+            let [n] = (0, i.bG)(
+                [p.A],
                 () => {
                     var n;
-                    return [null != (n = g.A.getVoiceStateForChannel(e, t)) ? n : null, g.A.getVoiceStateVersion()];
+                    return [null != (n = p.A.getVoiceStateForChannel(e, t)) ? n : null, p.A.getVoiceStateVersion()];
                 },
                 [e, t],
-                A.D,
+                E.D,
             );
             return n;
-        })(t, O),
-        C = (0, s.A)({
-            userId: O,
+        })(t, v),
+        D = (0, a.A)({
+            userId: v,
             guildId: n,
         }),
-        N = (0, l.bG)([p.A], () => null != n && null != p.A.getStreamForUser(O, n), [n, O]),
-        w = (0, y.tx)(null != n ? n : void 0, t, j),
-        P = (0, v.Pe)({
-            user: null != j ? j : null,
-            guildId: n,
-            channelId: t,
-        }),
-        D = r.useCallback(
+        M = (0, i.bG)([g.A], () => null != n && null != g.A.getStreamForUser(v, n), [n, v]),
+        j = (0, m.tx)(null != n ? n : void 0, t, C),
+        w = r.useCallback(
             (e) => {
-                (0, m.Vq)(j) && null != T && P(e);
+                (0, I.Vq)(C) &&
+                    null != x &&
+                    (null == b ||
+                        b({
+                            type: A.K.VOICE_USER,
+                            event: e,
+                            user: C,
+                            channelId: t,
+                        }));
             },
-            [P, j, T],
+            [t, b, C, x],
         );
-    return (0, m.Vq)(j) && null != T
-        ? (0, i.jsx)(d.A, {
-              targetElementRef: _,
-              user: j,
+    return (0, I.Vq)(C) && null != x
+        ? (0, l.jsx)(d.A, {
+              targetElementRef: N,
+              user: C,
               guildId: null != n ? n : void 0,
               channelId: t,
-              appContext: b.BRT.OVERLAY,
-              shouldShow: S,
-              onRequestClose: () => I(!1),
+              appContext: y.BRT.OVERLAY,
+              shouldShow: T,
+              onRequestClose: () => _(!1),
               spacing: 24,
               children: (e) => {
                   var t, r;
-                  return (0, i.jsx)(
-                      a.DUT,
+                  return (0, l.jsx)(
+                      s.DUT,
                       ((t = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
-                                  i = Object.keys(n);
+                                  l = Object.keys(n);
                               "function" == typeof Object.getOwnPropertySymbols &&
-                                  (i = i.concat(
+                                  (l = l.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                       }),
                                   )),
-                                  i.forEach(function (t) {
-                                      var i;
-                                      (i = n[t]),
+                                  l.forEach(function (t) {
+                                      var l;
+                                      (l = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
-                                                    value: i,
+                                                    value: l,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0,
                                                 })
-                                              : (e[t] = i);
+                                              : (e[t] = l);
                                   });
                           }
                           return e;
                       })({}, e)),
                       (r = r =
                           {
-                              innerRef: _,
-                              className: E.gD,
-                              onDoubleClick: x,
-                              onContextMenu: D,
+                              innerRef: N,
+                              className: S.gD,
+                              onDoubleClick: O,
+                              onContextMenu: w,
                               onClick: (e) => {
-                                  e.preventDefault(), e.stopPropagation(), I(!0);
+                                  e.preventDefault(), e.stopPropagation(), _(!0);
                               },
-                              children: (0, i.jsxs)("div", {
-                                  className: E.h6,
+                              children: (0, l.jsxs)("div", {
+                                  className: S.h6,
                                   children: [
-                                      (0, i.jsx)(a.euF, {
-                                          src: j.getAvatarURL(null != n ? n : void 0, 24),
-                                          size: a._3J.SIZE_24,
-                                          "aria-label": w,
+                                      (0, l.jsx)(s.euF, {
+                                          src: C.getAvatarURL(null != n ? n : void 0, 24),
+                                          size: s._3J.SIZE_24,
+                                          "aria-label": j,
                                       }),
-                                      (0, i.jsxs)("div", {
-                                          className: E.rg,
+                                      (0, l.jsxs)(s.Text, {
+                                          className: S.rg,
+                                          variant: "text-sm/medium",
+                                          color: "text-subtle",
                                           children: [
-                                              (0, i.jsx)(u.A, {
-                                                  userName: w,
-                                                  displayNameStyles: C,
+                                              (0, l.jsx)(u.A, {
+                                                  userName: j,
+                                                  displayNameStyles: D,
                                                   effectDisplayType: o.G.STATIC,
-                                                  textClassName: E.m2,
+                                                  textClassName: S.m2,
                                               }),
-                                              (0, i.jsx)(c.Ay, {
-                                                  userId: O,
+                                              (0, l.jsx)(c.Ay, {
+                                                  userId: v,
                                                   disableGuildProfile: !0,
                                               }),
                                           ],
                                       }),
-                                      (0, i.jsx)("div", {
-                                          className: E.ZA,
-                                          onDoubleClick: x,
-                                          children: (0, i.jsx)(h.Kc, {
+                                      (0, l.jsx)("div", {
+                                          className: S.ZA,
+                                          onDoubleClick: O,
+                                          children: (0, l.jsx)(h.Kc, {
                                               guildId: null != n ? n : void 0,
-                                              user: j,
-                                              video: T.selfVideo,
-                                              isStreaming: N,
-                                              className: E.ZA,
-                                              iconClassName: E.Ow,
+                                              user: C,
+                                              video: x.selfVideo,
+                                              isStreaming: M,
+                                              className: S.ZA,
+                                              iconClassName: S.Ow,
                                               isWatching: !1,
                                               localMute: !1,
                                               localVideoDisabled: !1,
-                                              mute: T.isVoiceMuted(),
-                                              deaf: T.isVoiceDeafened(),
-                                              serverMute: T.mute || T.suppress,
-                                              serverDeaf: T.deaf,
+                                              mute: x.isVoiceMuted(),
+                                              deaf: x.isVoiceDeafened(),
+                                              serverMute: x.mute || x.suppress,
+                                              serverDeaf: x.deaf,
                                               disabled: !1,
                                           }),
                                       }),
@@ -154,8 +159,8 @@ let O = r.memo(function (e) {
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
-                                    var i = Object.getOwnPropertySymbols(e);
-                                    n.push.apply(n, i);
+                                    var l = Object.getOwnPropertySymbols(e);
+                                    n.push.apply(n, l);
                                 }
                                 return n;
                             })(Object(r)).forEach(function (e) {

@@ -119,18 +119,18 @@ let x = (0, h.Fe)({
         webpackId: 885338,
         name: "VerifyConnectedAccountError",
     }),
-    V = (0, h.Fe)({
+    F = (0, h.Fe)({
         createPromise: () => Promise.all([n.e("34917"), n.e("52986")]).then(n.bind(n, 97649)),
         webpackId: 97649,
         name: "LinkConnectedAccount",
     }),
-    F = (0, h.Fe)({
+    V = (0, h.Fe)({
         createPromise: () => n.e("65893").then(n.bind(n, 599128)),
         webpackId: 599128,
         name: "LinkAuthorize",
     }),
     B = (0, h.Fe)({
-        createPromise: () => Promise.all([n.e("82832"), n.e("16864")]).then(n.bind(n, 60883)),
+        createPromise: () => Promise.all([n.e("50906"), n.e("16864")]).then(n.bind(n, 60883)),
         webpackId: 60883,
         name: "ActivateDevice",
     }),
@@ -205,10 +205,10 @@ let x = (0, h.Fe)({
                 n.e("7602"),
                 n.e("52694"),
                 n.e("34160"),
-                n.e("42402"),
+                n.e("44669"),
                 n.e("90228"),
+                n.e("7685"),
                 n.e("28636"),
-                n.e("57010"),
                 n.e("71853"),
                 n.e("94531"),
                 n.e("56423"),
@@ -222,7 +222,7 @@ let x = (0, h.Fe)({
     Y = (0, h.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("82832"),
+                n.e("50906"),
                 n.e("48330"),
                 n.e("37372"),
                 n.e("88890"),
@@ -311,7 +311,7 @@ let x = (0, h.Fe)({
                 n.e("97246"),
                 n.e("7602"),
                 n.e("34160"),
-                n.e("42402"),
+                n.e("44669"),
                 n.e("84018"),
             ]).then(n.bind(n, 611861)),
         webpackId: 611861,
@@ -514,11 +514,11 @@ class ei extends i.Component {
                                     }),
                                     (0, r.jsx)(_.A, {
                                         path: N.BVt.CONNECTION_LINK(":type"),
-                                        component: V,
+                                        component: F,
                                     }),
                                     (0, r.jsx)(_.A, {
                                         path: N.BVt.CONNECTION_LINK_AUTHORIZE(":type"),
-                                        component: F,
+                                        component: V,
                                     }),
                                     (0, r.jsx)(_.A, {
                                         path: N.BVt.ACTIVATE,
