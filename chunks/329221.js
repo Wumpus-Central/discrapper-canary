@@ -11,6 +11,5 @@ e.exports = {
     Tz: "trialPlanSelectHeader_d947e6",
     iX: "customGiftMessageWrapper_d947e6",
     pt: "customGiftMessage_d947e6",
-    Rz: "equalDistantBackButton_d947e6",
     KW: "compactSendGiftToUser_d947e6",
 };
