@@ -24,9 +24,9 @@ function f(e) {
 
 function p(e) {
     let { applicationId: t, numItems: n, userIds: a, isEligible: o, includeWishlists: c } = e,
-        u = null == a ? void 0 : a.slice(0, s.g9),
+        u = r.useMemo(() => (null == a ? void 0 : a.slice(0, s.g9)), [a]),
         d = (0, i.bG)([l.A], () => (null != t ? l.A.recommendationsByApplicationsAndUsers(t, u) : void 0)),
-        p = r.useMemo(() => !o || null == t || null == u || 0 === u.length || 0 === n, [o, t, u, n]);
+        p = !o || null == t || null == u || 0 === u.length || 0 === n;
     return (
         r.useEffect(() => {
             p ||
