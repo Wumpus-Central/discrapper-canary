@@ -1,5 +1,4 @@
 n.d(t, {
-    B: () => A,
     a: () => b,
 });
 var r = n(627968),
@@ -205,15 +204,3 @@ let O = (e) => {
             },
         );
     };
-
-function A() {
-    (0, a.mMO)(
-        async () => {
-            let { default: e } = await n.e("1218").then(n.bind(n, 839225));
-            return (t) => (0, r.jsx)(e, m({}, t));
-        },
-        {
-            modalKey: "slayer-storefront-announcement-modal",
-        },
-    );
-}
