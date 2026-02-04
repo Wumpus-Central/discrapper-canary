@@ -1,6 +1,6 @@
 n.d(t, {
-    Ez: () => V,
-    gZ: () => M,
+    Ez: () => F,
+    gZ: () => j,
 }),
     n(896048),
     n(733351),
@@ -8,8 +8,8 @@ n.d(t, {
 var r = n(284009),
     i = n.n(r),
     a = n(989349),
-    s = n.n(a),
-    o = n(478437),
+    o = n.n(a),
+    s = n(478437),
     l = n(715943),
     c = n(308528),
     u = n(686956),
@@ -21,19 +21,19 @@ var r = n(284009),
     m = n(393309),
     g = n(406704),
     E = n(253932),
-    b = n(734057),
-    y = n(576705),
+    y = n(734057),
+    b = n(576705),
     O = n(287809),
-    A = n(927813),
-    v = n(427262),
-    S = n(392054),
-    I = n(73510),
+    v = n(927813),
+    A = n(427262),
+    I = n(392054),
+    S = n(73510),
     T = n(652215),
     C = n(200700),
     N = n(381941),
-    R = n(985018);
+    w = n(985018);
 
-function w(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -58,7 +58,7 @@ function P(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -77,7 +77,7 @@ function D(e, t) {
     return n;
 }
 
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -88,41 +88,41 @@ function x(e, t) {
         e
     );
 }
-let L = n(743361).A,
-    j = (e, t) => {
+let x = n(743361).A,
+    M = (e, t) => {
         var n;
         return null == (n = e.find((e) => e.name === t)) ? void 0 : n.value;
     },
-    M = {
-        [I.Ik.BUILT_IN]: {
-            id: I.Ik.BUILT_IN,
-            type: S.Hf.BUILT_IN,
+    j = {
+        [S.Ik.BUILT_IN]: {
+            id: S.Ik.BUILT_IN,
+            type: I.Hf.BUILT_IN,
             get name() {
-                return R.intl.string(R.t.fI5MTa);
+                return w.intl.string(w.t.fI5MTa);
             },
         },
-        [I.Ik.FRECENCY]: {
-            id: I.Ik.FRECENCY,
-            type: S.Hf.BUILT_IN,
+        [S.Ik.FRECENCY]: {
+            id: S.Ik.FRECENCY,
+            type: I.Hf.BUILT_IN,
             get name() {
-                return R.intl.string(R.t["+cGVV6"]);
+                return w.intl.string(w.t["+cGVV6"]);
             },
         },
     },
     k = [
-        ...L,
+        ...x,
         {
             id: "-1",
             untranslatedName: "shrug",
             displayName: "shrug",
             type: f.kc.CHAT,
-            inputType: S.y$.BUILT_IN_TEXT,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN_TEXT,
+            applicationId: S.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.j5xUSW);
+                return w.intl.string(w.t.j5xUSW);
             },
             get displayDescription() {
-                return R.intl.string(R.t.j5xUSW);
+                return w.intl.string(w.t.j5xUSW);
             },
             options: [
                 {
@@ -130,16 +130,16 @@ let L = n(743361).A,
                     displayName: "message",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t.JewOrS);
+                        return w.intl.string(w.t.JewOrS);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.JewOrS);
+                        return w.intl.string(w.t.JewOrS);
                     },
                 },
             ],
             execute: (e) => {
                 var t;
-                let n = null != (t = j(e, "message")) ? t : "";
+                let n = null != (t = M(e, "message")) ? t : "";
                 return {
                     content: "".concat(n, " \xaf\\_(ツ)_/\xaf").trim(),
                 };
@@ -150,13 +150,13 @@ let L = n(743361).A,
             untranslatedName: "tableflip",
             displayName: "tableflip",
             type: f.kc.CHAT,
-            inputType: S.y$.BUILT_IN_TEXT,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN_TEXT,
+            applicationId: S.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.nrQRce);
+                return w.intl.string(w.t.nrQRce);
             },
             get displayDescription() {
-                return R.intl.string(R.t.nrQRce);
+                return w.intl.string(w.t.nrQRce);
             },
             options: [
                 {
@@ -164,16 +164,16 @@ let L = n(743361).A,
                     displayName: "message",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t.EI80tw);
+                        return w.intl.string(w.t.EI80tw);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.EI80tw);
+                        return w.intl.string(w.t.EI80tw);
                     },
                 },
             ],
             execute: (e) => {
                 var t;
-                let n = null != (t = j(e, "message")) ? t : "";
+                let n = null != (t = M(e, "message")) ? t : "";
                 return {
                     content: "".concat(n, " (╯\xb0□\xb0)╯︵ ┻━┻").trim(),
                 };
@@ -184,13 +184,13 @@ let L = n(743361).A,
             untranslatedName: "unflip",
             displayName: "unflip",
             type: f.kc.CHAT,
-            inputType: S.y$.BUILT_IN_TEXT,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN_TEXT,
+            applicationId: S.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.pnnn8e);
+                return w.intl.string(w.t.pnnn8e);
             },
             get displayDescription() {
-                return R.intl.string(R.t.pnnn8e);
+                return w.intl.string(w.t.pnnn8e);
             },
             options: [
                 {
@@ -198,16 +198,16 @@ let L = n(743361).A,
                     displayName: "message",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t.ETs6go);
+                        return w.intl.string(w.t.ETs6go);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.ETs6go);
+                        return w.intl.string(w.t.ETs6go);
                     },
                 },
             ],
             execute: (e) => {
                 var t;
-                let n = null != (t = j(e, "message")) ? t : "";
+                let n = null != (t = M(e, "message")) ? t : "";
                 return {
                     content: "".concat(n, " ┬─┬ノ( \xba _ \xbaノ)").trim(),
                 };
@@ -218,13 +218,13 @@ let L = n(743361).A,
             untranslatedName: "tts",
             displayName: "tts",
             type: f.kc.CHAT,
-            inputType: S.y$.BUILT_IN_TEXT,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN_TEXT,
+            applicationId: S.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.jZcIid);
+                return w.intl.string(w.t.jZcIid);
             },
             get displayDescription() {
-                return R.intl.string(R.t.jZcIid);
+                return w.intl.string(w.t.jZcIid);
             },
             options: [
                 {
@@ -232,22 +232,22 @@ let L = n(743361).A,
                     displayName: "message",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t["k+sw9g"]);
+                        return w.intl.string(w.t["k+sw9g"]);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t["k+sw9g"]);
+                        return w.intl.string(w.t["k+sw9g"]);
                     },
                     required: !0,
                 },
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return null != t && !t.isPrivate() && E.on.getSetting() && y.A.can(T.xBc.SEND_TTS_MESSAGES, t);
+                return null != t && !t.isPrivate() && E.on.getSetting() && b.A.can(T.xBc.SEND_TTS_MESSAGES, t);
             },
             execute: (e) => {
                 var t;
                 return {
-                    content: null != (t = j(e, "message")) ? t : "",
+                    content: null != (t = M(e, "message")) ? t : "",
                     tts: !0,
                 };
             },
@@ -257,13 +257,13 @@ let L = n(743361).A,
             untranslatedName: "me",
             displayName: "me",
             type: f.kc.CHAT,
-            inputType: S.y$.BUILT_IN_TEXT,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN_TEXT,
+            applicationId: S.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.UGO8fU);
+                return w.intl.string(w.t.UGO8fU);
             },
             get displayDescription() {
-                return R.intl.string(R.t.UGO8fU);
+                return w.intl.string(w.t.UGO8fU);
             },
             options: [
                 {
@@ -271,17 +271,17 @@ let L = n(743361).A,
                     displayName: "message",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t.RWTgNd);
+                        return w.intl.string(w.t.RWTgNd);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.RWTgNd);
+                        return w.intl.string(w.t.RWTgNd);
                     },
                     required: !0,
                 },
             ],
             execute: (e) => {
                 var t;
-                let n = null != (t = j(e, "message")) ? t : "";
+                let n = null != (t = M(e, "message")) ? t : "";
                 return {
                     content: "_".concat(n, "_"),
                 };
@@ -292,13 +292,13 @@ let L = n(743361).A,
             untranslatedName: "spoiler",
             displayName: "spoiler",
             type: f.kc.CHAT,
-            inputType: S.y$.BUILT_IN_TEXT,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN_TEXT,
+            applicationId: S.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.v0eDdV);
+                return w.intl.string(w.t.v0eDdV);
             },
             get displayDescription() {
-                return R.intl.string(R.t.v0eDdV);
+                return w.intl.string(w.t.v0eDdV);
             },
             options: [
                 {
@@ -306,17 +306,17 @@ let L = n(743361).A,
                     displayName: "message",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t.D13pbc);
+                        return w.intl.string(w.t.D13pbc);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.D13pbc);
+                        return w.intl.string(w.t.D13pbc);
                     },
                     required: !0,
                 },
             ],
             execute: (e) => {
                 var t;
-                let n = null != (t = j(e, "message")) ? t : "";
+                let n = null != (t = M(e, "message")) ? t : "";
                 return {
                     content: (0, T.ZGg)(n).trim(),
                 };
@@ -327,13 +327,13 @@ let L = n(743361).A,
             untranslatedName: "nick",
             displayName: "nick",
             type: f.kc.CHAT,
-            inputType: S.y$.BUILT_IN,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN,
+            applicationId: S.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t["jiHfS/"]);
+                return w.intl.string(w.t["jiHfS/"]);
             },
             get displayDescription() {
-                return R.intl.string(R.t["jiHfS/"]);
+                return w.intl.string(w.t["jiHfS/"]);
             },
             options: [
                 {
@@ -341,11 +341,12 @@ let L = n(743361).A,
                     displayName: "new_nick",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t.WTSzVu);
+                        return w.intl.string(w.t.WTSzVu);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.WTSzVu);
+                        return w.intl.string(w.t.WTSzVu);
                     },
+                    maxLength: T.zzC,
                 },
             ],
             predicate: (e) => {
@@ -353,14 +354,14 @@ let L = n(743361).A,
                 return (
                     null != t &&
                     !t.isPrivate() &&
-                    (y.A.can(T.xBc.CHANGE_NICKNAME, t) || y.A.can(T.xBc.MANAGE_NICKNAMES, t))
+                    (b.A.can(T.xBc.CHANGE_NICKNAME, t) || b.A.can(T.xBc.MANAGE_NICKNAMES, t))
                 );
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
                 if (null == r || null == i) return;
-                let a = null != (n = j(e, "new_nick")) ? n : "";
+                let a = null != (n = M(e, "new_nick")) ? n : "";
                 l.A.changeNickname(r.id, i.id, T.ME, a || "");
             },
         },
@@ -369,13 +370,13 @@ let L = n(743361).A,
             untranslatedName: "thread",
             displayName: "thread",
             type: f.kc.CHAT,
-            inputType: S.y$.BUILT_IN,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN,
+            applicationId: S.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.t6ZAS0);
+                return w.intl.string(w.t.t6ZAS0);
             },
             get displayDescription() {
-                return R.intl.string(R.t.t6ZAS0);
+                return w.intl.string(w.t.t6ZAS0);
             },
             options: [
                 {
@@ -383,10 +384,10 @@ let L = n(743361).A,
                     displayName: "name",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t.TffOfY);
+                        return w.intl.string(w.t.TffOfY);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.TffOfY);
+                        return w.intl.string(w.t.TffOfY);
                     },
                     required: !0,
                 },
@@ -395,10 +396,10 @@ let L = n(743361).A,
                     displayName: "message",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t.QXfSfU);
+                        return w.intl.string(w.t.QXfSfU);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.QXfSfU);
+                        return w.intl.string(w.t.QXfSfU);
                     },
                     required: !0,
                 },
@@ -410,10 +411,10 @@ let L = n(743361).A,
             execute: async (e, t) => {
                 var n, r;
                 let { channel: i } = t,
-                    a = null != (n = j(e, "name")) ? n : "",
-                    s = null != (r = j(e, "message")) ? r : "",
-                    l = await (0, m.Nw)(i, a, o.r.PUBLIC_THREAD, (0, h.Gl)(i, null), "Slash Command");
-                d.A.sendMessage(l.id, _.Ay.parse(l, s), !0, {
+                    a = null != (n = M(e, "name")) ? n : "",
+                    o = null != (r = M(e, "message")) ? r : "",
+                    l = await (0, m.Nw)(i, a, s.r.PUBLIC_THREAD, (0, h.Gl)(i, null), "Slash Command");
+                d.A.sendMessage(l.id, _.Ay.parse(l, o), !0, {
                     location: N.Hx.THREAD_CREATION,
                 });
             },
@@ -423,13 +424,13 @@ let L = n(743361).A,
             untranslatedName: "kick",
             displayName: "kick",
             type: f.kc.CHAT,
-            inputType: S.y$.BUILT_IN,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN,
+            applicationId: S.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t["03N0UL"]);
+                return w.intl.string(w.t["03N0UL"]);
             },
             get displayDescription() {
-                return R.intl.string(R.t["03N0UL"]);
+                return w.intl.string(w.t["03N0UL"]);
             },
             options: [
                 {
@@ -437,10 +438,10 @@ let L = n(743361).A,
                     displayName: "user",
                     type: f.n4.USER,
                     get description() {
-                        return R.intl.string(R.t.gF8IpD);
+                        return w.intl.string(w.t.gF8IpD);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.gF8IpD);
+                        return w.intl.string(w.t.gF8IpD);
                     },
                     required: !0,
                 },
@@ -449,39 +450,39 @@ let L = n(743361).A,
                     displayName: "reason",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t.QWldgj);
+                        return w.intl.string(w.t.QWldgj);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.QWldgj);
+                        return w.intl.string(w.t.QWldgj);
                     },
                     required: !1,
                 },
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return y.A.can(T.xBc.KICK_MEMBERS, t);
+                return b.A.can(T.xBc.KICK_MEMBERS, t);
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
                 if (null == r || null == i) return;
-                let a = null != (n = j(e, "user")) ? n : "";
-                y.A.canManageUser(T.xBc.KICK_MEMBERS, a, r)
+                let a = null != (n = M(e, "user")) ? n : "";
+                b.A.canManageUser(T.xBc.KICK_MEMBERS, a, r)
                     ? (async () => {
                           var t;
                           let n = O.default.getUser(a);
                           if (null == n) throw Error();
-                          await u.A.kickUser(r.id, a, null != (t = j(e, "reason")) ? t : ""),
+                          await u.A.kickUser(r.id, a, null != (t = M(e, "reason")) ? t : ""),
                               d.A.sendBotMessage(
                                   i.id,
-                                  R.intl.formatToPlainString(R.t["9wzHDV"], {
-                                      user: v.Ay.getUserTag(n),
+                                  w.intl.formatToPlainString(w.t["9wzHDV"], {
+                                      user: A.Ay.getUserTag(n),
                                   }),
                               );
                       })().catch(() => {
-                          d.A.sendBotMessage(i.id, R.intl.string(R.t.l0gNlp));
+                          d.A.sendBotMessage(i.id, w.intl.string(w.t.l0gNlp));
                       })
-                    : d.A.sendBotMessage(i.id, R.intl.string(R.t["6RIwPI"]));
+                    : d.A.sendBotMessage(i.id, w.intl.string(w.t["6RIwPI"]));
             },
         },
         {
@@ -489,13 +490,13 @@ let L = n(743361).A,
             untranslatedName: "ban",
             displayName: "ban",
             type: f.kc.CHAT,
-            inputType: S.y$.BUILT_IN,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN,
+            applicationId: S.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.HWuskv);
+                return w.intl.string(w.t.HWuskv);
             },
             get displayDescription() {
-                return R.intl.string(R.t.HWuskv);
+                return w.intl.string(w.t.HWuskv);
             },
             options: [
                 {
@@ -503,10 +504,10 @@ let L = n(743361).A,
                     displayName: "user",
                     type: f.n4.USER,
                     get description() {
-                        return R.intl.string(R.t.z3XPjr);
+                        return w.intl.string(w.t.z3XPjr);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.z3XPjr);
+                        return w.intl.string(w.t.z3XPjr);
                     },
                     required: !0,
                 },
@@ -515,48 +516,48 @@ let L = n(743361).A,
                     displayName: "delete_messages",
                     type: f.n4.INTEGER,
                     get description() {
-                        return R.intl.string(R.t.smrvA6);
+                        return w.intl.string(w.t.smrvA6);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.smrvA6);
+                        return w.intl.string(w.t.smrvA6);
                     },
                     required: !0,
                     get choices() {
                         return [
                             {
-                                name: R.intl.string(R.t["4obaMS"]),
-                                displayName: R.intl.string(R.t["4obaMS"]),
+                                name: w.intl.string(w.t["4obaMS"]),
+                                displayName: w.intl.string(w.t["4obaMS"]),
                                 value: 0,
                             },
                             {
-                                name: R.intl.string(R.t.RKpitY),
-                                displayName: R.intl.string(R.t.RKpitY),
-                                value: A.A.Seconds.HOUR,
+                                name: w.intl.string(w.t.RKpitY),
+                                displayName: w.intl.string(w.t.RKpitY),
+                                value: v.A.Seconds.HOUR,
                             },
                             {
-                                name: R.intl.string(R.t["8WfJZ8"]),
-                                displayName: R.intl.string(R.t["8WfJZ8"]),
-                                value: 6 * A.A.Seconds.HOUR,
+                                name: w.intl.string(w.t["8WfJZ8"]),
+                                displayName: w.intl.string(w.t["8WfJZ8"]),
+                                value: 6 * v.A.Seconds.HOUR,
                             },
                             {
-                                name: R.intl.string(R.t.p1up7u),
-                                displayName: R.intl.string(R.t.p1up7u),
-                                value: 12 * A.A.Seconds.HOUR,
+                                name: w.intl.string(w.t.p1up7u),
+                                displayName: w.intl.string(w.t.p1up7u),
+                                value: 12 * v.A.Seconds.HOUR,
                             },
                             {
-                                name: R.intl.string(R.t.XuVkkD),
-                                displayName: R.intl.string(R.t.XuVkkD),
-                                value: A.A.Seconds.DAY,
+                                name: w.intl.string(w.t.XuVkkD),
+                                displayName: w.intl.string(w.t.XuVkkD),
+                                value: v.A.Seconds.DAY,
                             },
                             {
-                                name: R.intl.string(R.t["gMcDS+"]),
-                                displayName: R.intl.string(R.t["gMcDS+"]),
-                                value: 3 * A.A.Seconds.DAY,
+                                name: w.intl.string(w.t["gMcDS+"]),
+                                displayName: w.intl.string(w.t["gMcDS+"]),
+                                value: 3 * v.A.Seconds.DAY,
                             },
                             {
-                                name: R.intl.string(R.t.FA7IUk),
-                                displayName: R.intl.string(R.t.FA7IUk),
-                                value: 7 * A.A.Seconds.DAY,
+                                name: w.intl.string(w.t.FA7IUk),
+                                displayName: w.intl.string(w.t.FA7IUk),
+                                value: 7 * v.A.Seconds.DAY,
                             },
                         ];
                     },
@@ -566,41 +567,41 @@ let L = n(743361).A,
                     displayName: "reason",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t.dG4noU);
+                        return w.intl.string(w.t.dG4noU);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.dG4noU);
+                        return w.intl.string(w.t.dG4noU);
                     },
                     required: !1,
                 },
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return y.A.can(T.xBc.BAN_MEMBERS, t);
+                return b.A.can(T.xBc.BAN_MEMBERS, t);
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
                 if (null == r || null == i) return;
-                let a = null != (n = j(e, "user")) ? n : "";
-                y.A.canManageUser(T.xBc.BAN_MEMBERS, a, r)
+                let a = null != (n = M(e, "user")) ? n : "";
+                b.A.canManageUser(T.xBc.BAN_MEMBERS, a, r)
                     ? (async () => {
                           var t, n;
                           if ("" === a) throw Error();
-                          let s = null != (t = j(e, "delete_messages")) ? t : 0,
-                              o = null != (n = j(e, "reason")) ? n : "",
+                          let o = null != (t = M(e, "delete_messages")) ? t : 0,
+                              s = null != (n = M(e, "reason")) ? n : "",
                               l = O.default.getUser(a);
-                          await u.A.banUser(r.id, a, s, o),
+                          await u.A.banUser(r.id, a, o, s),
                               d.A.sendBotMessage(
                                   i.id,
-                                  R.intl.formatToPlainString(R.t.YflWdM, {
-                                      user: null != l ? v.Ay.getUserTag(l) : a,
+                                  w.intl.formatToPlainString(w.t.YflWdM, {
+                                      user: null != l ? A.Ay.getUserTag(l) : a,
                                   }),
                               );
                       })().catch(() => {
-                          d.A.sendBotMessage(i.id, R.intl.string(R.t.w2J6Qs));
+                          d.A.sendBotMessage(i.id, w.intl.string(w.t.w2J6Qs));
                       })
-                    : d.A.sendBotMessage(i.id, R.intl.string(R.t.R27LJl));
+                    : d.A.sendBotMessage(i.id, w.intl.string(w.t.R27LJl));
             },
         },
         {
@@ -608,13 +609,13 @@ let L = n(743361).A,
             untranslatedName: "timeout",
             displayName: "timeout",
             type: f.kc.CHAT,
-            inputType: S.y$.BUILT_IN,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN,
+            applicationId: S.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.KkPcep);
+                return w.intl.string(w.t.KkPcep);
             },
             get displayDescription() {
-                return R.intl.string(R.t.KkPcep);
+                return w.intl.string(w.t.KkPcep);
             },
             options: [
                 {
@@ -622,10 +623,10 @@ let L = n(743361).A,
                     displayName: "user",
                     type: f.n4.USER,
                     get description() {
-                        return R.intl.string(R.t.UU3VRm);
+                        return w.intl.string(w.t.UU3VRm);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.UU3VRm);
+                        return w.intl.string(w.t.UU3VRm);
                     },
                     required: !0,
                 },
@@ -634,15 +635,15 @@ let L = n(743361).A,
                     displayName: "duration",
                     type: f.n4.INTEGER,
                     get description() {
-                        return R.intl.string(R.t.SNqN1e);
+                        return w.intl.string(w.t.SNqN1e);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.SNqN1e);
+                        return w.intl.string(w.t.SNqN1e);
                     },
                     required: !0,
                     get choices() {
                         return (0, C.ny)().map((e) =>
-                            x(P({}, e), {
+                            L(P({}, e), {
                                 name: e.label,
                                 displayName: e.label,
                             }),
@@ -654,47 +655,47 @@ let L = n(743361).A,
                     displayName: "reason",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t.akHScA);
+                        return w.intl.string(w.t.akHScA);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.akHScA);
+                        return w.intl.string(w.t.akHScA);
                     },
                     required: !1,
                 },
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return y.A.can(T.xBc.MODERATE_MEMBERS, t);
+                return b.A.can(T.xBc.MODERATE_MEMBERS, t);
             },
             execute: (e, t) => {
                 let { guild: n, channel: r } = t;
                 if (null == n || null == r) return;
-                let i = j(e, "user");
+                let i = M(e, "user");
                 (0, p.b)(n.id, i)
                     ? (async () => {
                           var t, a;
-                          let o = null != (t = j(e, "duration")) ? t : "",
-                              l = null != (a = j(e, "reason")) ? a : "",
+                          let s = null != (t = M(e, "duration")) ? t : "",
+                              l = null != (a = M(e, "reason")) ? a : "",
                               c = O.default.getUser(i);
                           if (null == c) throw Error();
                           await u.A.setCommunicationDisabledUntil({
                               guildId: n.id,
                               userId: i,
-                              communicationDisabledUntilTimestamp: s()().add(o, "s").toISOString(),
-                              duration: o,
+                              communicationDisabledUntilTimestamp: o()().add(s, "s").toISOString(),
+                              duration: s,
                               reason: l,
                           }),
                               d.A.sendBotMessage(
                                   r.id,
-                                  R.intl.formatToPlainString(R.t.BbRV6o, {
-                                      user: v.Ay.getUserTag(c),
-                                      duration: o,
+                                  w.intl.formatToPlainString(w.t.BbRV6o, {
+                                      user: A.Ay.getUserTag(c),
+                                      duration: s,
                                   }),
                               );
                       })().catch(() => {
-                          d.A.sendBotMessage(r.id, R.intl.string(R.t["+mWyVq"]));
+                          d.A.sendBotMessage(r.id, w.intl.string(w.t["+mWyVq"]));
                       })
-                    : d.A.sendBotMessage(r.id, R.intl.string(R.t.F5pqSf));
+                    : d.A.sendBotMessage(r.id, w.intl.string(w.t.F5pqSf));
             },
         },
         {
@@ -702,13 +703,13 @@ let L = n(743361).A,
             untranslatedName: "msg",
             displayName: "msg",
             type: f.kc.CHAT,
-            inputType: S.y$.BUILT_IN,
-            applicationId: I.Ik.BUILT_IN,
+            inputType: I.y$.BUILT_IN,
+            applicationId: S.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return R.intl.string(R.t.Dg8XZw);
+                return w.intl.string(w.t.Dg8XZw);
             },
             get displayDescription() {
-                return R.intl.string(R.t.Dg8XZw);
+                return w.intl.string(w.t.Dg8XZw);
             },
             options: [
                 {
@@ -716,10 +717,10 @@ let L = n(743361).A,
                     displayName: "user",
                     type: f.n4.USER,
                     get description() {
-                        return R.intl.string(R.t["KmVq/D"]);
+                        return w.intl.string(w.t["KmVq/D"]);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t["KmVq/D"]);
+                        return w.intl.string(w.t["KmVq/D"]);
                     },
                     required: !0,
                 },
@@ -728,10 +729,10 @@ let L = n(743361).A,
                     displayName: "message",
                     type: f.n4.STRING,
                     get description() {
-                        return R.intl.string(R.t.oGUuOJ);
+                        return w.intl.string(w.t.oGUuOJ);
                     },
                     get displayDescription() {
-                        return R.intl.string(R.t.oGUuOJ);
+                        return w.intl.string(w.t.oGUuOJ);
                     },
                     required: !0,
                     get maxLength() {
@@ -744,20 +745,20 @@ let L = n(743361).A,
                 var n;
                 let { channel: r } = t;
                 if (null == r) return;
-                let a = j(e, "user"),
-                    s = null != (n = j(e, "message")) ? n : "";
+                let a = M(e, "user"),
+                    o = null != (n = M(e, "message")) ? n : "";
                 (async () => {
                     await c.A.openPrivateChannel({
                         recipientIds: a,
                     }).then((e) => {
-                        let t = b.A.getChannel(e);
+                        let t = y.A.getChannel(e);
                         i()(null != t, "Newly created PrivateChannel is null"),
-                            d.A.sendMessage(t.id, _.Ay.parse(t, s), !0, {
+                            d.A.sendMessage(t.id, _.Ay.parse(t, o), !0, {
                                 location: N.Hx.PRIVATE_MESSAGE_COMMAND,
                             });
                     });
                 })().catch(() => {
-                    d.A.sendBotMessage(r.id, R.intl.string(R.t["3XaE95"]));
+                    d.A.sendBotMessage(r.id, w.intl.string(w.t["3XaE95"]));
                 });
             },
         },
@@ -765,11 +766,11 @@ let L = n(743361).A,
     G = k.filter((e) =>
         ["gif", "tenor", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"].includes(e.untranslatedName),
     ),
-    V = (e, t, n) => {
+    F = (e, t, n) => {
         let r = t ? k : G;
         return r.filter(
             (t) =>
                 e.includes(t.type) &&
-                (!n || t.inputType === S.y$.BUILT_IN_TEXT || t.inputType === S.y$.BUILT_IN_INTEGRATION),
+                (!n || t.inputType === I.y$.BUILT_IN_TEXT || t.inputType === I.y$.BUILT_IN_INTEGRATION),
         );
     };
