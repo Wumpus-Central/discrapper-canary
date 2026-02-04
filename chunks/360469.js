@@ -1,38 +1,37 @@
 n.d(t, {
-    $J: () => C,
-    $W: () => o,
+    $W: () => s,
     AM: () => m,
-    CS: () => A,
+    CS: () => v,
     D4: () => l,
     DY: () => g,
     Gl: () => w,
-    H5: () => D,
+    H5: () => P,
     I4: () => _,
     Ig: () => a,
     M1: () => L,
-    N7: () => I,
-    W9: () => v,
+    N7: () => S,
+    W9: () => A,
     _J: () => T,
-    bN: () => N,
-    dm: () => j,
+    bN: () => C,
+    dm: () => x,
     eK: () => h,
     gq: () => p,
-    i6: () => x,
+    i6: () => D,
     iu: () => E,
-    lk: () => P,
+    lk: () => R,
     mO: () => O,
     qA: () => c,
-    qG: () => b,
-    vu: () => S,
-    xW: () => y,
-    yz: () => s,
+    qG: () => y,
+    vu: () => I,
+    xW: () => b,
+    yz: () => o,
 }),
     n(896048);
 var r = n(155718),
     i = n(652215);
 let a = 160,
-    s = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
-    o = "438122941302046720",
+    o = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
+    s = "438122941302046720",
     l = "1417273808645259344",
     c = "773336526917861400",
     u = "755600276941176913",
@@ -47,8 +46,8 @@ let a = 160,
         SMALL: 64,
         LARGE: 160,
     },
-    b = ["in_development", "activities_team", "employee_release"],
-    y = [
+    y = ["in_development", "activities_team", "employee_release"],
+    b = [
         "1037680572660727838",
         "235088799074484224",
         "1007373802981822582",
@@ -62,7 +61,7 @@ let a = 160,
         "1227719606223765687",
     ],
     O = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
-var A = (function (e) {
+var v = (function (e) {
         return (
             (e.ADS = "ADS"),
             (e.FAILED_LOAD = "FAILED_LOAD"),
@@ -73,13 +72,13 @@ var A = (function (e) {
             e
         );
     })({}),
-    v = (function (e) {
+    A = (function (e) {
         return (e[(e.PLAY = 0)] = "PLAY"), (e[(e.SPECTATE = 1)] = "SPECTATE"), e;
     })({}),
-    S = (function (e) {
+    I = (function (e) {
         return (e.DESKTOP = "desktop"), (e.MOBILE = "mobile"), e;
     })({}),
-    I = (function (e) {
+    S = (function (e) {
         return (
             (e[(e.UNLOCKED = 1)] = "UNLOCKED"),
             (e[(e.PORTRAIT = 2)] = "PORTRAIT"),
@@ -87,12 +86,11 @@ var A = (function (e) {
             e
         );
     })({});
-let T = new Set([u, d, f, p]),
-    C = new Set([d, f, p]);
-var N = (function (e) {
+let T = new Set([u, d, f, p]);
+var C = (function (e) {
     return (e[(e.FOCUSED = 0)] = "FOCUSED"), (e[(e.PIP = 1)] = "PIP"), (e[(e.GRID = 2)] = "GRID"), e;
 })({});
-let R = {
+let N = {
         label_type: r.Hr.NONE,
         release_phase: "",
         label_from: null,
@@ -107,19 +105,19 @@ let R = {
         tablet_default_orientation_lock_state: 1,
         supported_platforms: [r.Yl.WEB],
         client_platform_config: {
-            [r.Yl.WEB]: R,
-            [r.Yl.IOS]: R,
-            [r.Yl.ANDROID]: R,
+            [r.Yl.WEB]: N,
+            [r.Yl.IOS]: N,
+            [r.Yl.ANDROID]: N,
         },
         has_csp_exception: !1,
         displays_advertisements: !1,
         blocked_locales: [],
         supported_locales: [],
     },
-    P = [i.rbe.GUILD_TEXT, i.rbe.DM, i.rbe.GROUP_DM],
-    D = [...P, i.rbe.GUILD_VOICE],
-    x = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
+    R = [i.rbe.GUILD_TEXT, i.rbe.DM, i.rbe.GROUP_DM],
+    P = [...R, i.rbe.GUILD_VOICE],
+    D = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
 var L = (function (e) {
     return (e.NORMAL = "normal"), (e.FULL_SCREEN = "full-screen"), e;
 })({});
-let j = 216e5;
+let x = 216e5;
