@@ -255,8 +255,10 @@ function I(e) {
 
 function S(e) {
     return {
-        gradientStart: e.gradient_start,
-        gradientEnd: e.gradient_end,
+        linearGradientStart: e.linear_gradient_start,
+        linearGradientEnd: e.linear_gradient_end,
+        radialGradientStart: e.radial_gradient_start,
+        radialGradientEnd: e.radial_gradient_end,
         entrypointAssetImageUrl: e.entrypoint_asset_image_url,
         tooltipAssetImageUrl: e.tooltip_asset_image_url,
         tooltipTitle: e.tooltip_title,
