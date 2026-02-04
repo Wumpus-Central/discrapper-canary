@@ -1,78 +1,76 @@
 i.d(t, {
-    A: () => d,
+    A: () => c,
 });
 var n = i(64700),
-    r = i(871123),
-    l = i(20424),
-    s = i(592356),
-    a = i(950191),
-    o = i(721932),
-    u = i(594832),
-    c = i(188275);
+    r = i(20424),
+    l = i(592356),
+    s = i(950191),
+    a = i(721932),
+    o = i(594832),
+    u = i(188275);
 
-function d(e) {
-    let { user: t, numItems: i = u.pl, location: d } = e,
-        m = (0, a.Ay)(t.id),
+function c(e) {
+    let { user: t, numItems: i = o.pl, location: c } = e,
+        d = (0, s.Ay)(t.id),
         {
-            defaultWishlistId: p,
-            wishlist: f,
-            popularCollectiblesProducts: _,
-            isFetchingWishlist: h,
-            isValidatingPopularProducts: g,
-            isFetchingPopularProducts: I,
-            wishlistError: S,
-        } = (0, u.eT)({
+            defaultWishlistId: m,
+            wishlist: p,
+            popularCollectiblesProducts: f,
+            isFetchingWishlist: _,
+            isValidatingPopularProducts: h,
+            isFetchingPopularProducts: g,
+            wishlistError: I,
+        } = (0, o.eT)({
             giftRecipient: t,
             minNumItems: i,
-            source: u.B5.USER_PROFILE,
+            source: o.B5.USER_PROFILE,
         }),
-        x = (0, l.A)({
-            displayProfile: m,
-            location: d,
+        S = (0, r.A)({
+            displayProfile: d,
+            location: c,
         }),
-        C = n.useMemo(() => [t.id], [t.id]),
-        { recommendations: b } = (0, s.A)({
-            guildId: (0, r.zf)(),
-            numWishlistItems: Math.max(i, u.pl),
-            location: d,
-            applicationId: c.XR,
-            userIds: C,
+        x = n.useMemo(() => [t.id], [t.id]),
+        { recommendations: C } = (0, l.A)({
+            numWishlistItems: Math.max(i, o.pl),
+            location: c,
+            applicationId: u.XR,
+            userIds: x,
             includeWishlists: !0,
         }),
-        w = n.useMemo(() => {
+        b = n.useMemo(() => {
             var e;
-            return (null != (e = null == f ? void 0 : f.items) ? e : []).filter((e) => !0 !== e.isOwned && (0, o.$)(e))
-                .length > 0 || x
-                ? b
+            return (null != (e = null == p ? void 0 : p.items) ? e : []).filter((e) => !0 !== e.isOwned && (0, a.$)(e))
+                .length > 0 || S
+                ? C
                 : [];
-        }, [null == f ? void 0 : f.items, x, b]),
-        { displayItems: y, totalUnownedWishlistItemCount: O } = (0, u.mk)({
-            wishlist: f,
-            popularCollectiblesProducts: _,
-            popularSocialLayerStorefrontItems: w,
-            wishlistError: S,
+        }, [null == p ? void 0 : p.items, S, C]),
+        { displayItems: w, totalUnownedWishlistItemCount: y } = (0, o.mk)({
+            wishlist: p,
+            popularCollectiblesProducts: f,
+            popularSocialLayerStorefrontItems: b,
+            wishlistError: I,
             numItems: i,
         });
     return {
-        displayItems: y,
-        totalUnownedWishlistItemCount: O,
+        displayItems: w,
+        totalUnownedWishlistItemCount: y,
         fetchState: n.useMemo(
             () =>
-                h || g || I
+                _ || h || g
                     ? {
                           status: "loading",
                       }
-                    : null != S
+                    : null != I
                       ? {
                             status: "error",
-                            error: S,
+                            error: I,
                         }
                       : {
                             status: "success",
                         },
-            [h, g, I, S],
+            [_, h, g, I],
         ),
-        defaultWishlistId: p,
-        wishlist: f,
+        defaultWishlistId: m,
+        wishlist: p,
     };
 }

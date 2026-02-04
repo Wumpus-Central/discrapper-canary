@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => j,
+    A: () => T,
 }),
     n(896048);
 var r = n(627968),
@@ -12,82 +12,81 @@ var r = n(627968),
     u = n(397927),
     d = n(688810),
     p = n(429913),
-    f = n(576030),
-    h = n(713517),
-    A = n(492518),
-    g = n(242640),
-    m = n(808247),
-    b = n(594832),
-    _ = n(287809),
-    E = n(871123),
-    O = n(592356),
-    y = n(366523),
-    I = n(235218),
-    v = n(188275),
-    S = n(518477),
-    C = n(985018),
-    N = n(30621);
+    h = n(576030),
+    f = n(713517),
+    g = n(492518),
+    m = n(242640),
+    A = n(808247),
+    _ = n(594832),
+    b = n(287809),
+    E = n(592356),
+    O = n(366523),
+    y = n(235218),
+    I = n(188275),
+    v = n(518477),
+    S = n(985018),
+    C = n(30621);
 
-function T(e) {
+function N(e) {
     let { application: t, sku: n, handleOpenUserProfileModal: l, analyticsLocations: a } = e,
         o = i.useRef(null),
         { analyticsLocations: p } = (0, d.Ay)(null != a ? a : []),
-        { isHoveringOrFocusing: g } = (0, h.A)(o),
-        [_, E] = i.useState(!1),
-        O = i.useCallback(
+        { isHoveringOrFocusing: m } = (0, f.A)(o),
+        [b, E] = i.useState(!1),
+        y = i.useCallback(
             async (e) => {
-                if ((e.stopPropagation(), !_)) {
+                if ((e.stopPropagation(), !b)) {
                     E(!0);
                     try {
-                        await m.A.addSkuToWishlist(n.id, p),
+                        await A.A.addSkuToWishlist(n.id, p),
                             null == l ||
                                 l({
-                                    tabSection: S.RP.WISHLIST,
+                                    tabSection: v.RP.WISHLIST,
                                 });
                     } catch (e) {
-                        (0, u.showToast)((0, u.createToast)(C.intl.string(C.t.F8FvUy), u.ToastType.FAILURE)),
-                            s.ORC.announce(C.intl.string(C.t.F8FvUy));
+                        (0, u.showToast)((0, u.createToast)(S.intl.string(S.t.F8FvUy), u.ToastType.FAILURE)),
+                            s.ORC.announce(S.intl.string(S.t.F8FvUy));
                     } finally {
                         E(!1);
                     }
                 }
             },
-            [n.id, p, l, _],
+            [n.id, p, l, b],
         );
     return (0, r.jsx)(c.un, {
-        title: C.intl.string(C.t["8DkMEQ"]),
+        title: S.intl.string(S.t["8DkMEQ"]),
         body: n.name,
-        asset: (0, r.jsx)(f.mW, {
+        asset: (0, r.jsx)(h.mW, {
             application: t,
         }),
-        assetSize: b.Q8,
+        assetSize: _.Q8,
         children: (0, r.jsxs)(s.sqX, {
-            className: N.Nr,
+            className: C.Nr,
             ref: o,
             "aria-label": n.name,
-            onClick: O,
+            onClick: y,
             children: [
                 (0, r.jsx)(
-                    y.e,
+                    O.e,
                     {
                         shape: "custom",
-                        containerClassName: N.Nr,
-                        foregroundImageClassName: N.wP,
-                        backgroundImageClassName: N.GC,
+                        containerClassName: C.Nr,
+                        foregroundImageClassName: C.wP,
+                        backgroundImageClassName: C.GC,
                         sku: n,
                     },
                     n.id,
                 ),
-                (g || _) &&
+                (m || b) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)("div", {
-                                className: N.p0,
+                                className: C.p0,
                             }),
                             (0, r.jsx)("div", {
-                                className: N.R$,
-                                children: _
-                                    ? (0, r.jsx)(A.k, {})
+                                className: C.R$,
+                                children: b
+                                    ? (0, r.jsx)(g.k, {})
                                     : (0, r.jsx)(s.pa$, {
                                           size: "lg",
                                           color: u.LU0.unsafe_rawColors.WHITE_500,
@@ -100,7 +99,7 @@ function T(e) {
     });
 }
 
-function j(e) {
+function T(e) {
     let {
             wishlist: t,
             handleOpenUserProfileModal: n,
@@ -109,37 +108,36 @@ function j(e) {
             maxWishlistItemsToShow: c = s,
             className: u,
         } = e,
-        d = (0, p.h)(v.XR),
-        f = (0, o.bG)([_.default], () => _.default.getCurrentUser()),
-        h = (0, o.bG)([_.default], () => _.default.getUser(null == t ? void 0 : t.userId)),
-        m = null == t || (null != f && null != t && t.userId === f.id),
-        b = i.useMemo(() => (null == t ? (null != f ? [f.id] : void 0) : [t.userId]), [t, f]),
-        y = (0, O.A)({
-            guildId: (0, E.zf)(),
+        d = (0, p.h)(I.XR),
+        h = (0, o.bG)([b.default], () => b.default.getCurrentUser()),
+        f = (0, o.bG)([b.default], () => b.default.getUser(null == t ? void 0 : t.userId)),
+        A = null == t || (null != h && null != t && t.userId === h.id),
+        _ = i.useMemo(() => (null == t ? (null != h ? [h.id] : void 0) : [t.userId]), [t, h]),
+        O = (0, E.A)({
             numWishlistItems: s,
             location: "SocialLayerAddToWishlistGrid",
-            applicationId: v.XR,
-            userIds: b,
+            applicationId: I.XR,
+            userIds: _,
             includeWishlists: !1,
         }),
-        S = i.useMemo(() => {
+        v = i.useMemo(() => {
             var e;
             return new Set(null != (e = null == t ? void 0 : t.items.map((e) => e.skuId)) ? e : []);
         }, [t]),
-        C = y.recommendations.filter((e) => !S.has(e.skuId)).slice(0, c);
-    return "success" !== y.state
+        S = O.recommendations.filter((e) => !v.has(e.skuId)).slice(0, c);
+    return "success" !== O.state
         ? (0, r.jsx)("div", {
-              className: N.g4,
-              children: (0, r.jsx)(A.k, {}),
+              className: C.g4,
+              children: (0, r.jsx)(g.k, {}),
           })
-        : 0 === C.length
+        : 0 === S.length
           ? null
           : (0, r.jsx)("ul", {
-                className: a()(N.Vg, u),
-                children: C.map((e) =>
-                    m
+                className: a()(C.Vg, u),
+                children: S.map((e) =>
+                    A
                         ? (0, r.jsx)(
-                              T,
+                              N,
                               {
                                   application: d,
                                   sku: e.sku,
@@ -149,13 +147,13 @@ function j(e) {
                               e.skuId,
                           )
                         : (0, r.jsx)(
-                              I.A,
+                              y.A,
                               {
                                   item: e,
                                   wishlistId: t.id,
                                   isOwner: !1,
-                                  profileOwner: h,
-                                  cardSize: g.Y.FLEX,
+                                  profileOwner: f,
+                                  cardSize: m.Y.FLEX,
                                   showOverlayButton: !0,
                                   hideButtonIcon: !0,
                                   isDragging: !1,
