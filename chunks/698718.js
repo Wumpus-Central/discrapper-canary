@@ -38,8 +38,8 @@ var l = n(627968),
     R = n(972995),
     D = n(355622),
     M = n(408018),
-    L = n(223938),
-    k = n(811501),
+    k = n(223938),
+    L = n(811501),
     U = n(20737),
     G = n(133343),
     F = n(35277),
@@ -92,8 +92,8 @@ var l = n(627968),
     eR = n(203982),
     eD = n(661191),
     eM = n(460350),
-    eL = n(518960),
-    ek = n(382287),
+    ek = n(518960),
+    eL = n(382287),
     eU = n(137577),
     eG = n(480870),
     eF = n(390756),
@@ -290,7 +290,7 @@ class e2 extends r.PureComponent {
             { contentWarningProps: A } = this.state,
             b =
                 e.type === eW.rbe.GUILD_ANNOUNCEMENT && g
-                    ? (0, l.jsx)(L.A, {
+                    ? (0, l.jsx)(k.A, {
                           ref: this.props.refInstance,
                           textValue: this.state.textValue,
                           richValue: this.state.richValue,
@@ -309,7 +309,7 @@ class e2 extends r.PureComponent {
                           onKeyDown: this.handleKeyDown,
                           renderAttachButton: this.renderAttachButton,
                           renderApplicationCommandIcon: this.renderApplicationCommandIcon,
-                          promptToUpload: eL.R,
+                          promptToUpload: ek.R,
                           highlighted: a,
                           setEditorRef: (e) => (this.editorRef = e),
                       })
@@ -332,7 +332,7 @@ class e2 extends r.PureComponent {
                           onKeyDown: this.handleKeyDown,
                           renderAttachButton: this.renderAttachButton,
                           renderApplicationCommandIcon: this.renderApplicationCommandIcon,
-                          promptToUpload: eL.R,
+                          promptToUpload: ek.R,
                           highlighted: a,
                           setEditorRef: (e) => (this.editorRef = e),
                           pendingScheduledMessage: m,
@@ -476,8 +476,9 @@ class e2 extends r.PureComponent {
                     command: r,
                     commandOptionValues: i,
                     isGif: a,
-                    components: s,
-                    announcementSendOptions: o,
+                    gifMetadata: s,
+                    components: o,
+                    announcementSendOptions: c,
                 } = e;
                 if (0 === (t = t.trim()).length && (null == l || 0 === l.length) && (null == n || 0 === n.length))
                     return Promise.resolve({
@@ -485,13 +486,13 @@ class e2 extends r.PureComponent {
                         shouldRefocus: !0,
                     });
                 let {
-                        guild: c,
-                        channel: u,
-                        pendingReply: h,
-                        chatInputType: p,
-                        threadsAlsoSendToChannel: g,
+                        guild: u,
+                        channel: h,
+                        pendingReply: p,
+                        chatInputType: g,
+                        threadsAlsoSendToChannel: b,
                     } = this.props,
-                    b = !1;
+                    _ = !1;
                 if (null != r) {
                     if (r.inputType === N.y$.BUILT_IN_INTEGRATION)
                         return (
@@ -504,11 +505,11 @@ class e2 extends r.PureComponent {
                                 shouldRefocus: !0,
                             })
                         );
-                    let e = T.A.getCommandOrigin(u.id);
+                    let e = T.A.getCommandOrigin(h.id);
                     if (null == e || e === N.iw.CHAT) {
                         let { isAuthorized: e } = await (0, R.q)({
                             applicationId: r.applicationId,
-                            channel: u,
+                            channel: h,
                             commandIntegrationTypes: r.integration_types,
                         });
                         if (!e)
@@ -521,12 +522,12 @@ class e2 extends r.PureComponent {
                         e === N.iw.IMAGE_RECS_MENU ||
                         e === N.iw.IMAGE_RECS_SUBMENU
                     ) {
-                        var _;
-                        let { location: t, sectionName: n } = null != (_ = (0, eF.bV)(r)) ? _ : {},
+                        var y;
+                        let { location: t, sectionName: n } = null != (y = (0, eF.bV)(r)) ? y : {},
                             l = e === N.iw.APPLICATION_LAUNCHER ? C.A.lastShownEntrypoint() : S.s4.TEXT,
                             { isAuthorized: i } = await (0, R.q)({
                                 applicationId: r.applicationId,
-                                channel: u,
+                                channel: h,
                                 commandIntegrationTypes: r.integration_types,
                                 appLauncherContext: {
                                     location: t,
@@ -545,8 +546,8 @@ class e2 extends r.PureComponent {
                         command: r,
                         optionValues: null != i ? i : {},
                         context: {
-                            guild: c,
-                            channel: u,
+                            guild: u,
+                            channel: h,
                         },
                     });
                     if (r.inputType !== N.y$.BUILT_IN_TEXT)
@@ -554,7 +555,7 @@ class e2 extends r.PureComponent {
                             shouldClear: !0,
                             shouldRefocus: !0,
                         });
-                    null != n && ((t = null != n.content && "" !== n.content ? n.content : t), (b = !0 === n.tts));
+                    null != n && ((t = null != n.content && "" !== n.content ? n.content : t), (_ = !0 === n.tts));
                 }
                 return (0, eM.i)({
                     openWarningPopout: (e) =>
@@ -565,12 +566,12 @@ class e2 extends r.PureComponent {
                     content: t,
                     stickers: l,
                     uploads: n,
-                    channel: u,
+                    channel: h,
                 }).then(async (e) => {
-                    var i, _, y;
-                    let { valid: v, failureReason: E } = e;
-                    if (!v)
-                        if (E === eW.X8x.SLOWMODE_COOLDOWN)
+                    var i, y, v;
+                    let { valid: E, failureReason: O } = e;
+                    if (!E)
+                        if (O === eW.X8x.SLOWMODE_COOLDOWN)
                             return (
                                 eR._.dispatch(eW.jej.SHAKE_APP, {
                                     duration: 200,
@@ -587,27 +588,27 @@ class e2 extends r.PureComponent {
                                 shouldClear: !1,
                                 shouldRefocus: !1,
                             };
-                    let O = (0, Q.S)(t, {
-                        channel: u,
+                    let C = (0, Q.S)(t, {
+                        channel: h,
                         isEdit: !1,
                     });
-                    null != O && (null != O.content && (t = O.content), null != O.tts && (b = O.tts));
-                    let C = $.Ay.parse(u, t);
-                    (C.tts = C.tts || b), null != s && ((C.content = ""), (C.components = s));
-                    let S = eX(
+                    null != C && (null != C.content && (t = C.content), null != C.tts && (_ = C.tts));
+                    let S = $.Ay.parse(h, t);
+                    (S.tts = S.tts || _), null != o && ((S.content = ""), (S.components = o));
+                    let x = eX(
                         eZ(
                             {},
                             m.A.getSendMessageOptions({
                                 content: t,
-                                channelId: u.id,
+                                channelId: h.id,
                                 uploads: n,
                                 stickers: l,
                                 command: r,
                                 isGif: a,
-                                pendingReply: h,
-                                alsoForwardToChannelId: g && null != (i = u.parent_id) ? i : void 0,
+                                pendingReply: p,
+                                alsoForwardToChannelId: b && null != (i = h.parent_id) ? i : void 0,
                                 scheduledTimestamp:
-                                    null == (_ = this.props.pendingScheduledMessage) ? void 0 : _.scheduledTimestamp,
+                                    null == (y = this.props.pendingScheduledMessage) ? void 0 : y.scheduledTimestamp,
                             }),
                         ),
                         {
@@ -615,20 +616,21 @@ class e2 extends r.PureComponent {
                         },
                     );
                     if (
-                        (null != o && (S.announcementSendOptions = o),
-                        null != s && (S.flags = (0, d.UI)(null != (y = S.flags) ? y : 0, eW.pr7.IS_COMPONENTS_V2)),
+                        (null != c && (x.announcementSendOptions = c),
+                        null != s && (x.gifMetadata = s),
+                        null != o && (x.flags = (0, d.UI)(null != (v = x.flags) ? v : 0, eW.pr7.IS_COMPONENTS_V2)),
                         a)
                     )
                         return (
-                            m.A.sendMessage(u.id, C, void 0, S).then(() => {
-                                if (g) {
+                            m.A.sendMessage(h.id, S, void 0, x).then(() => {
+                                if (b) {
                                     var e;
-                                    eb._(null != (e = u.parent_id) ? e : void 0);
+                                    eb._(null != (e = h.parent_id) ? e : void 0);
                                 }
                             }),
-                            (0, ec.Jx)(u.id),
+                            (0, ec.Jx)(h.id),
                             eg.B({
-                                channelId: u.id,
+                                channelId: h.id,
                                 enabled: !1,
                             }),
                             {
@@ -637,54 +639,54 @@ class e2 extends r.PureComponent {
                             }
                         );
                     if (null != n && n.length > 0) {
-                        let e = (0, ek.LJ)(n);
-                        if ((0, ek.fJ)(e, null == c ? void 0 : c.id))
+                        let e = (0, eL.LJ)(n);
+                        if ((0, eL.fJ)(e, null == u ? void 0 : u.id))
                             return (
-                                (0, eL.V)(u, e),
+                                (0, ek.V)(h, e),
                                 {
                                     shouldClear: !1,
                                     shouldRefocus: !1,
                                 }
                             );
-                        (S.eagerDispatch = !1),
-                            (S.attachmentsToUpload = n),
-                            (S.onAttachmentUploadError = (e, l, r) => {
+                        (x.eagerDispatch = !1),
+                            (x.attachmentsToUpload = n),
+                            (x.onAttachmentUploadError = (e, l, r) => {
                                 (0, X.k)({
                                     file: e,
-                                    guildId: u.getGuildId(),
+                                    guildId: h.getGuildId(),
                                     analyticsLocations: [],
                                     code: l,
                                     reason: r,
                                 }) &&
                                     ("" !== t &&
-                                        "" === eE.A.getDraft(u.id, eE.C.ChannelMessage) &&
-                                        f.A.saveDraft(u.id, t, eE.C.ChannelMessage),
-                                    0 === eI.A.getUploadCount(u.id, eE.C.ChannelMessage) &&
+                                        "" === eE.A.getDraft(h.id, eE.C.ChannelMessage) &&
+                                        f.A.saveDraft(h.id, t, eE.C.ChannelMessage),
+                                    0 === eI.A.getUploadCount(h.id, eE.C.ChannelMessage) &&
                                         A.A.setUploads({
-                                            channelId: u.id,
+                                            channelId: h.id,
                                             uploads: n,
                                             draftType: eE.C.ChannelMessage,
                                         }));
                             }),
-                            A.A.clearAll(u.id, eE.C.ChannelMessage);
+                            A.A.clearAll(h.id, eE.C.ChannelMessage);
                     }
-                    if (null != S.scheduledTimestamp)
+                    if (null != x.scheduledTimestamp)
                         try {
                             await (0, eh.pr)({
-                                channelId: u.id,
-                                scheduledTimestamp: S.scheduledTimestamp,
+                                channelId: h.id,
+                                scheduledTimestamp: x.scheduledTimestamp,
                                 messageSendData: {
-                                    channelId: u.id,
+                                    channelId: h.id,
                                     content: t,
                                     nonce: (0, ee.m)(),
-                                    tts: b,
-                                    message_reference: S.messageReference,
-                                    allowed_mentions: S.allowedMentions,
-                                    flags: S.flags,
+                                    tts: _,
+                                    message_reference: x.messageReference,
+                                    allowed_mentions: x.allowedMentions,
+                                    flags: x.flags,
                                 },
                                 attachmentsToUpload: n,
                             }),
-                                (0, ef.c_)(S.scheduledTimestamp);
+                                (0, ef.c_)(x.scheduledTimestamp);
                         } catch (e) {
                             return (
                                 (0, ef.kM)(e.message),
@@ -695,18 +697,18 @@ class e2 extends r.PureComponent {
                             );
                         }
                     else
-                        m.A.sendMessage(u.id, C, void 0, S).then(() => {
-                            if (g) {
+                        m.A.sendMessage(h.id, S, void 0, x).then(() => {
+                            if (b) {
                                 var e;
-                                eb._(null != (e = u.parent_id) ? e : void 0);
+                                eb._(null != (e = h.parent_id) ? e : void 0);
                             }
                         });
                     return (
                         this.setState((0, M.N3)()),
-                        (0, ec.Jx)(u.id),
-                        (0, em.x5)(u.id, p.drafts.type),
+                        (0, ec.Jx)(h.id),
+                        (0, em.x5)(h.id, g.drafts.type),
                         eg.B({
-                            channelId: u.id,
+                            channelId: h.id,
                             enabled: !1,
                         }),
                         {
@@ -732,7 +734,7 @@ class e2 extends r.PureComponent {
                 }),
             ),
             eJ(this, "renderApplicationCommandIcon", (e, t, n) =>
-                (0, l.jsx)(k.A, {
+                (0, l.jsx)(L.A, {
                     className: n,
                     command: e,
                     section: t,

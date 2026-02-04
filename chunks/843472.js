@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => eY,
+    A: () => eW,
 }),
     n(228524),
     n(65821),
@@ -45,8 +45,8 @@ var r = n(889137),
     k = n(917878),
     U = n(586872),
     G = n(99341),
-    V = n(141468),
-    F = n(407580),
+    F = n(141468),
+    V = n(407580),
     B = n(130201),
     H = n(963852),
     Y = n(195880),
@@ -323,7 +323,28 @@ function eU(e, t, n, r, i) {
     });
 }
 
-function eG(e) {
+function eG(e, t, n, r) {
+    let i = eo.A.getChannel(t);
+    null != i &&
+        e_.default.track(
+            ev.HAw.MESSAGE_SENT_WITH_GIF,
+            eN(
+                {
+                    location: r,
+                    message_id: n,
+                    gif_provider: e.gif_provider,
+                    load_id: e.load_id,
+                    source_object: e.source_object,
+                    gif_url: e.gif_url,
+                    gif_id: e.gif_id,
+                },
+                (0, f.H$)(i.getGuildId()),
+                (0, f.dI)(i),
+            ),
+        );
+}
+
+function eF(e) {
     let { referencedMessageId: t, guildId: n, channelId: r, destinationChannelId: i } = e;
     e_.default.track(ev.HAw.MESSAGE_ALSO_SEND_TO_CHANNEL_SENT, {
         referenced_message_id: t,
@@ -338,7 +359,7 @@ function eV(e, t) {
     return null != n && n.hasFlag(ev.pr7.CROSSPOSTED);
 }
 
-function eF(e, t) {
+function eB(e, t) {
     let n = el.A.getMessage(e, t);
     if (null == n || n.type !== ev.lAJ.REPLY) return;
     let r = $.A.getMessageByReference(n.messageReference);
@@ -348,7 +369,7 @@ function eF(e, t) {
             replied_user: !1,
         };
 }
-let eB = {
+let eH = {
         [ev.t02.EMAIL_VERIFICATION_REQUIRED]: {
             messageName: "BOT_REQUIRES_EMAIL_VERIFICATION",
             messageGetter: () => eT.intl.string(eT.t.k1Cjqr),
@@ -385,7 +406,7 @@ let eB = {
             messageGetter: () => eT.intl.string(eT.t.Oc1Zjw),
         },
     },
-    eH = {
+    eY = {
         receiveMessage(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
@@ -404,7 +425,7 @@ let eB = {
                     message_author: "Clyde",
                     message_name: n,
                 }),
-                eH.receiveMessage(
+                eY.receiveMessage(
                     e,
                     (0, H.pO)({
                         messageId: r,
@@ -429,7 +450,7 @@ let eB = {
                     bot: !0,
                 },
             });
-            eH.receiveMessage(
+            eY.receiveMessage(
                 e,
                 eR(eN({}, r), {
                     state: ev.cmJ.SENT,
@@ -453,7 +474,7 @@ let eB = {
                 },
                 giftingPrompt: t,
             });
-            eH.receiveMessage(
+            eY.receiveMessage(
                 e,
                 eR(eN({}, n), {
                     state: ev.cmJ.SENT,
@@ -492,13 +513,13 @@ let eB = {
                               (n = "HARMFUL_LINK_MESSAGE_BLOCKED"))
                             : r === ev.t02.HARMFUL_URL_BLOCKED
                               ? ((t = eT.intl.string(eT.t.WxX2Fd)), (n = "HARMFUL_URL_BLOCKED"))
-                              : r in eB
-                                ? ((n = eB[r].messageName), (t = eB[r].messageGetter()))
+                              : r in eH
+                                ? ((n = eH[r].messageName), (t = eH[r].messageGetter()))
                                 : ((t = eT.intl.formatToPlainString(eT.t.CTMXwL, {
                                       helpUrl: eg.A.getArticleURL(ev.MVz.DM_COULD_NOT_BE_DELIVERED),
                                   })),
                                   (n = "SEND_FAILED (".concat(r, ")"))),
-                eH.sendBotMessage(e, t, n));
+                eY.sendBotMessage(e, t, n));
         },
         sendExplicitMediaClydeError(e, t, n) {
             let i = eo.A.getChannel(e);
@@ -531,7 +552,7 @@ let eB = {
                         messageName: "BOT_GUILD_EXPLICIT_CONTENT",
                     })),
                 s = (0, Y.m)();
-            eH.sendBotMessage(e, a, o, s),
+            eY.sendBotMessage(e, a, o, s),
                 (0, S.hv)({
                     action: S.rY.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT,
                     messageId: s,
@@ -562,7 +583,7 @@ let eB = {
             });
         },
         jumpToPresent(e, t) {
-            eH.trackJump(e, null, "Present");
+            eY.trackJump(e, null, "Present");
             let n = {
                 present: !0,
             };
@@ -573,7 +594,7 @@ let eB = {
                       channelId: e,
                       limit: t,
                   })
-                : eH.fetchMessages({
+                : eY.fetchMessages({
                       channelId: e,
                       limit: t,
                       jump: n,
@@ -608,9 +629,9 @@ let eB = {
                 avoidInitialScroll: f,
             } = e;
             return (
-                "string" == typeof o && eH.trackJump(n, r, o, s),
+                "string" == typeof o && eY.trackJump(n, r, o, s),
                 null == eP || null == (t = eP.pauseAllMediaPlayers) || t.call(eP),
-                eH.fetchMessages({
+                eY.fetchMessages({
                     channelId: n,
                     limit: ev.d7Q,
                     jump: {
@@ -628,7 +649,7 @@ let eB = {
         },
         focusMessage(e) {
             let { channelId: t, messageId: n } = e;
-            eH.fetchMessages({
+            eY.fetchMessages({
                 channelId: t,
                 limit: ev.d7Q,
                 focus: {
@@ -648,7 +669,7 @@ let eB = {
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 });
-            if (r.body.length > 0) return (0, V.rh)(r.body[0]);
+            if (r.body.length > 0) return (0, F.rh)(r.body[0]);
         },
         fetchMessages(e) {
             let {
@@ -679,7 +700,7 @@ let eB = {
                         .concat(n, ". jump=")
                         .concat(JSON.stringify(a)),
                 ),
-                eH._tryFetchMessagesCached({
+                eY._tryFetchMessagesCached({
                     channelId: t,
                     before: n,
                     after: r,
@@ -922,14 +943,14 @@ let eB = {
                 i = arguments.length > 3 ? arguments[3] : void 0;
             if (t.reaction) return Promise.resolve();
             let a = await (0, Q.A)(e);
-            if (null != a) return eH.sendMessage(a, t, r, i);
+            if (null != a) return eY.sendMessage(a, t, r, i);
             let o = null != (n = i.nonce) ? n : (0, Y.m)();
             i = eR(eN({}, i), {
                 nonce: o,
             });
-            let s = () => eH._sendMessage(e, t, i),
+            let s = () => eY._sendMessage(e, t, i),
                 l = G.Ay.backgroundify(s, void 0);
-            return (F.A.recordMessageSendAttempt(e, o, i), el.A.isReady(e))
+            return (V.A.recordMessageSendAttempt(e, o, i), el.A.isReady(e))
                 ? l()
                 : r && e !== y.E
                   ? (eL.info("Waiting for channel ".concat(e, " to be ready before sending.")),
@@ -978,17 +999,17 @@ let eB = {
             alsoForwardToChannelId: e.alsoForwardToChannelId,
         }),
         getSendMessageOptions(e) {
-            let t = eH.getSendMessageOptionsForReply(e.pendingReply),
-                n = eH.getSendMessageOptionsForStickers(eN({}, e)),
-                r = eH.getSendMessageOptionsForScheduledMessage(eN({}, e)),
-                i = eH.getSendMessageOptionsForAlsoForwardToChannel(eN({}, e));
+            let t = eY.getSendMessageOptionsForReply(e.pendingReply),
+                n = eY.getSendMessageOptionsForStickers(eN({}, e)),
+                r = eY.getSendMessageOptionsForScheduledMessage(eN({}, e)),
+                i = eY.getSendMessageOptionsForAlsoForwardToChannel(eN({}, e));
             return eN({}, t, n, r, i);
         },
         sendInvite(e, t, n, r, i) {
             let a = (0, j.A)(t);
             return (
                 null != i && (a = "".concat(i, "\n").concat(a)),
-                eH._sendMessage(
+                eY._sendMessage(
                     e,
                     {
                         content: a,
@@ -1004,7 +1025,7 @@ let eB = {
             );
         },
         sendActivityBookmark: (e, t, n, r) =>
-            eH._sendMessage(
+            eY._sendMessage(
                 e,
                 {
                     content: t,
@@ -1021,7 +1042,7 @@ let eB = {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
                 r = arguments.length > 3 ? arguments[3] : void 0,
                 i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            return eH._sendMessage(
+            return eY._sendMessage(
                 e,
                 {
                     content: n,
@@ -1052,7 +1073,7 @@ let eB = {
             }).then(
                 (n) => (
                     B.A.donateSentMessage(n.body.content, e),
-                    eH.receiveMessage(e, n.body),
+                    eY.receiveMessage(e, n.body),
                     l.h.dispatch({
                         type: "STICKER_TRACK_USAGE",
                         stickerIds: [t],
@@ -1062,7 +1083,7 @@ let eB = {
                 (t) => {
                     throw (
                         (eD.log("Failed to send greeting"),
-                        429 !== t.status && eH.sendClydeError(e, t.body.code),
+                        429 !== t.status && eY.sendClydeError(e, t.body.code),
                         l.h.dispatch({
                             type: "MESSAGE_SEND_FAILED",
                             messageId: t.body.id,
@@ -1075,7 +1096,7 @@ let eB = {
         },
         sendPollMessage(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            return eH._sendMessage(
+            return eY._sendMessage(
                 e,
                 {
                     content: "",
@@ -1113,7 +1134,7 @@ let eB = {
                 return (
                     eL.info("Converting channel to a private channel"),
                     g.then((e) => {
-                        eL.info("Finished converting channel to a private channel"), eH._sendMessage(e, t, n);
+                        eL.info("Finished converting channel to a private channel"), eY._sendMessage(e, t, n);
                     })
                 );
             let E = t.content,
@@ -1172,13 +1193,13 @@ let eB = {
                 (!1 !== n.eagerDispatch &&
                     ((0, z.iq)(e, ed.id),
                     null != w && (ed.sticker_items = w.map((e) => ee.A.getStickerById(e)).filter((e) => null != e)),
-                    eH.receiveMessage(e, ed, !0, n)),
+                    eY.receiveMessage(e, ed, !0, n)),
                 !ex && null != y && y.length > 0)
             ) {
                 ex = !0;
                 let t = ep.default.getCurrentUser(),
-                    { errorMessage: n, errorMessageName: r } = eH.validateMessage(y, t, e);
-                eH.sendBotMessage(e, n, r);
+                    { errorMessage: n, errorMessageName: r } = eY.validateMessage(y, t, e);
+                eY.sendBotMessage(e, n, r);
             }
             let e_ = {
                 type: null != J ? d.AZ.SEND_ANNOUNCEMENT : d.AZ.SEND,
@@ -1286,7 +1307,7 @@ let eB = {
                             let c = Date.now() - i;
                             if (s.ok) {
                                 B.A.donateSentMessage(E, e),
-                                    eH.receiveMessage(e, s.body, !0, {
+                                    eY.receiveMessage(e, s.body, !0, {
                                         sendAnalytics: {
                                             duration: c,
                                             queueSize: a,
@@ -1294,10 +1315,10 @@ let eB = {
                                         poll: M,
                                     }),
                                     null != n.alsoForwardToChannelId &&
-                                        T.A.sendForward((0, V.rh)(s.body), n.alsoForwardToChannelId)
+                                        T.A.sendForward((0, F.rh)(s.body), n.alsoForwardToChannelId)
                                             .then(() => {
                                                 var e, t, r;
-                                                eG({
+                                                eF({
                                                     referencedMessageId: null == (e = s.body) ? void 0 : e.id,
                                                     guildId: null == (t = s.body) ? void 0 : t.guild_id,
                                                     channelId: null == (r = s.body) ? void 0 : r.channel_id,
@@ -1330,7 +1351,7 @@ let eB = {
                                         joinRequestUserId: n,
                                     });
                                 }
-                                F.A.recordMessageSendApiResponse(ec),
+                                V.A.recordMessageSendApiResponse(ec),
                                     l.h.dispatch({
                                         type: "SLOWMODE_RESET_COOLDOWN",
                                         slowmodeType: ef.R.SendMessage,
@@ -1359,6 +1380,8 @@ let eB = {
                                         inviteAnalyticsMetadata: N,
                                     }),
                                     eU(E, e, s.body.id, null != C ? C : "chat_input", !!n.isGiftLinkSentOnBehalfOfUser),
+                                    null != n.gifMetadata &&
+                                        eG(n.gifMetadata, e, s.body.id, null != C ? C : "chat_input"),
                                     null != m &&
                                         l.h.dispatch({
                                             type: "UPLOAD_COMPLETE",
@@ -1405,9 +1428,9 @@ let eB = {
                                                 })
                                               : s.body.code === ev.t02.EXPLICIT_CONTENT
                                                 ? (t = eS.ty.EXPLICIT_CONTENT)
-                                                : null != M || es || null != k || eH.sendClydeError(e, s.body.code);
+                                                : null != M || es || null != k || eY.sendClydeError(e, s.body.code);
                                 i
-                                    ? eH.deleteMessage(e, eu, !0)
+                                    ? eY.deleteMessage(e, eu, !0)
                                     : (null != m &&
                                           l.h.dispatch({
                                               type: "UPLOAD_FAIL",
@@ -1419,7 +1442,7 @@ let eB = {
                                           }),
                                       s.hasErr ||
                                           t !== eS.ty.EXPLICIT_CONTENT ||
-                                          eH.sendExplicitMediaClydeError(
+                                          eY.sendExplicitMediaClydeError(
                                               e,
                                               null == (f = s.body) ? void 0 : f.attachments,
                                               S.SW.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED,
@@ -1500,7 +1523,7 @@ let eB = {
         async editMessage(e, t, n) {
             let { content: r, components: i } = n;
             await en.A.unarchiveThreadIfNecessary(e);
-            let a = eF(e, t),
+            let a = eB(e, t),
                 o = eV(e, t),
                 c = {
                     channelId: e,
@@ -1536,8 +1559,8 @@ let eB = {
                         : r
                           ? s.OR.announce(eT.intl.string(eT.t.Hym4ix))
                           : s.OR.announce(eT.intl.string(eT.t["0x1HBD"])),
-                        eH.endEditMessage(e, n.hasErr ? void 0 : n),
-                        eH.focusMessage({
+                        eY.endEditMessage(e, n.hasErr ? void 0 : n),
+                        eY.focusMessage({
                             channelId: e,
                             messageId: t,
                         });
@@ -1630,4 +1653,4 @@ let eB = {
         },
         trackInvite: ek,
     },
-    eY = eH;
+    eW = eY;

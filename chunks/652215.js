@@ -4278,6 +4278,7 @@ var na = (function (e) {
             (e.GAME_DISPLAY_MODE_ADJUSTMENT_RESPONSE = "game_display_mode_adjustment_response"),
             (e.GIF_FAVORITED = "gif_favorited"),
             (e.GIF_UNFAVORITED = "gif_unfavorited"),
+            (e.MESSAGE_SENT_WITH_GIF = "message_sent_with_gif"),
             (e.GUILD_DISCOVERY_VIEWED = "guild_discovery_viewed"),
             (e.GUILD_DISCOVERY_SEARCH_FAILED = "guild_discovery_search_failed"),
             (e.GUILD_DISCOVERY_SEARCH_START = "guild_discovery_search_start"),
