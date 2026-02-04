@@ -10,6 +10,7 @@ var r = (function (e) {
         (e[(e.MESSAGE_REQUEST_RESTRICTIONS_TOGGLE = 8)] = "MESSAGE_REQUEST_RESTRICTIONS_TOGGLE"),
         (e[(e.LARGE_SERVER_ACCESS = 16)] = "LARGE_SERVER_ACCESS"),
         (e[(e.COMMANDS_TOGGLE = 32)] = "COMMANDS_TOGGLE"),
+        (e[(e.REACTIVE_CHECK = 64)] = "REACTIVE_CHECK"),
         e
     );
 })({});
