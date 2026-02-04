@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => g,
+    A: () => d,
 });
 var r = n(627968),
     l = n(64700),
@@ -8,13 +8,12 @@ var r = n(627968),
     i = n(397927),
     o = n(938191),
     c = n(758836),
-    u = n(985018),
-    d = n(816917);
+    u = n(985018);
 
-function g(e) {
+function d(e) {
     let { handleTransition: t, onClose: n } = e,
-        s = (0, o.y)("CollectiblesIndexPageContextMenu"),
-        g = l.useMemo(
+        s = (0, o.yB)("CollectiblesIndexPageContextMenu"),
+        d = l.useMemo(
             () => [
                 {
                     label: u.intl.string(u.t.dRZYNE),
@@ -41,18 +40,18 @@ function g(e) {
         );
     return (0, r.jsx)("div", {
         className: a()({
-            [d.T3]: s,
+            [o.jP]: s,
         }),
         children: (0, r.jsx)(i.W1t, {
             "data-menu-migrated": !0,
             navId: "collectibles-index-page-menu",
             className: a()({
-                [d.T3]: s,
+                [o.jP]: s,
             }),
             onClose: n,
             "aria-label": u.intl.string(u.t.xFcotU),
             onSelect: () => {},
-            children: g.map((e) =>
+            children: d.map((e) =>
                 (0, r.jsx)(
                     i.Drp,
                     {

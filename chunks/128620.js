@@ -27,8 +27,8 @@ var r = n(627968),
     I = n(901123),
     N = n(49370),
     y = n(985018),
-    j = n(970466),
-    v = n(909340),
+    v = n(970466),
+    j = n(909340),
     P = n(455482);
 let R = O.A.getArticleURL(S.MVz.ORBS_REWARDS_FAQ),
     D = (e) => {
@@ -107,21 +107,25 @@ let R = O.A.getArticleURL(S.MVz.ORBS_REWARDS_FAQ),
                     return {
                         displayTotalLifetimeRewards: null != l,
                         displayProgressBar: !1,
-                        actionButton: (0, r.jsx)("span", {
-                            className: t ? "theme-dark" : void 0,
-                            children: (0, r.jsx)(c.$nd, {
-                                text: y.intl.string(N.default.KVCfnE),
-                                variant: "critical-secondary",
-                                onClick: () => {
-                                    E.default.track(S.HAw.PREMIUM_TENURE_REWARDS_ORBS_CTA_CLICKED, {
-                                        cta_type: "update_billing",
-                                        program_state: n,
+                        actionButton: (0, r.jsx)(c.NPJ, {
+                            theme: t ? S.NJ8.DARKER : void 0,
+                            children: (e) =>
+                                (0, r.jsx)("span", {
+                                    className: e,
+                                    children: (0, r.jsx)(c.$nd, {
+                                        text: y.intl.string(N.default.KVCfnE),
+                                        variant: "critical-secondary",
+                                        onClick: () => {
+                                            E.default.track(S.HAw.PREMIUM_TENURE_REWARDS_ORBS_CTA_CLICKED, {
+                                                cta_type: "update_billing",
+                                                program_state: n,
+                                            }),
+                                                (0, h.openUserSettings)(b.X.BILLING_PANEL, {
+                                                    section: S.nc_.BILLING,
+                                                });
+                                        },
                                     }),
-                                        (0, h.openUserSettings)(b.X.BILLING_PANEL, {
-                                            section: S.nc_.BILLING,
-                                        });
-                                },
-                            }),
+                                }),
                         }),
                         headerText: y.intl.string(N.default["+O9Asn"]),
                         subheaderText: y.intl.format(N.default.nWKEBZ, {
@@ -184,7 +188,7 @@ let R = O.A.getArticleURL(S.MVz.ORBS_REWARDS_FAQ),
             subheaderText: V,
         } = G;
         return (0, r.jsx)("div", {
-            className: s()(j.Hc, l),
+            className: s()(v.Hc, l),
             children: (0, r.jsxs)(
                 x.A,
                 ((t = (function (e) {
@@ -214,7 +218,7 @@ let R = O.A.getArticleURL(S.MVz.ORBS_REWARDS_FAQ),
                 })(
                     {
                         cardType: u.sl2.CUSTOM,
-                        cardClassName: j.Nr,
+                        cardClassName: v.Nr,
                     },
                     M,
                 )),
@@ -226,55 +230,59 @@ let R = O.A.getArticleURL(S.MVz.ORBS_REWARDS_FAQ),
                                 autoPlay: !0,
                                 playsInline: !0,
                                 loop: !0,
-                                className: j.Ki,
-                                src: v.A,
+                                className: v.Ki,
+                                src: j.A,
                             }),
                             (0, r.jsxs)("div", {
-                                className: j.zK,
+                                className: v.zK,
                                 children: [
                                     (0, r.jsx)("img", {
                                         src: P.A,
-                                        className: j._e,
+                                        className: v._e,
                                         alt: "",
                                         "aria-hidden": !0,
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: j.mR,
+                                        className: v.mR,
                                     }),
                                 ],
                             }),
                             (0, r.jsxs)("div", {
-                                className: j.FS,
+                                className: v.FS,
                                 children: [
-                                    (0, r.jsx)("div", {
-                                        className: j.aZ,
-                                        children: (0, r.jsx)(c.Exy, {
-                                            type: "beta",
-                                            variant: "expressive",
-                                        }),
+                                    (0, r.jsx)(c.NPJ, {
+                                        theme: L ? S.NJ8.DARKER : void 0,
+                                        children: (e) =>
+                                            (0, r.jsx)("div", {
+                                                className: e,
+                                                children: (0, r.jsx)(c.Exy, {
+                                                    type: "beta",
+                                                    variant: "expressive",
+                                                }),
+                                            }),
                                     }),
                                     (0, r.jsx)(c.DZT, {
                                         variant: "heading-xl/bold",
-                                        className: j.R_,
+                                        className: v.R_,
                                         children: H,
                                     }),
                                     (0, r.jsx)(c.EYj, {
                                         variant: "text-md/medium",
-                                        className: j.G3,
+                                        className: v.G3,
                                         children: V,
                                     }),
                                     k &&
                                         (0, r.jsx)(C.A, {
-                                            className: j.L$,
+                                            className: v.L$,
                                         }),
                                     U &&
                                         D.total_rewarded_from_program > 0 &&
                                         (0, r.jsxs)("div", {
-                                            className: j.fB,
+                                            className: v.fB,
                                             children: [
                                                 (0, r.jsx)(c.EYj, {
                                                     variant: "text-md/medium",
-                                                    className: j.G3,
+                                                    className: v.G3,
                                                     children: y.intl.string(N.default["/1mWUn"]),
                                                 }),
                                                 (0, r.jsx)(c.Cp8, {
@@ -283,13 +291,13 @@ let R = O.A.getArticleURL(S.MVz.ORBS_REWARDS_FAQ),
                                                 }),
                                                 (0, r.jsx)(c.EYj, {
                                                     variant: "text-md/medium",
-                                                    className: j.G3,
+                                                    className: v.G3,
                                                     children: D.total_rewarded_from_program,
                                                 }),
                                             ],
                                         }),
                                     (0, r.jsx)("div", {
-                                        className: j.WT,
+                                        className: v.WT,
                                         children: (0, r.jsx)(c.e2v, {
                                             children: B,
                                         }),

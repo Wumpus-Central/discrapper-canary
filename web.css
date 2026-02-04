@@ -5186,7 +5186,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     text-decoration: underline !important
 }
 
-[data-accessibility*=desaturate] {
+[data-accessibility=desaturate] {
     filter: saturate(var(--saturation-factor, 1))
 }
 
@@ -64234,13 +64234,12 @@ html.disable-forced-colors * {
     height: 32px
 }
 
-.themePillItemSelected_c85552 {
-    border: 1px solid var(--border-subtle)
+.themePillItem_c85552 {
+    border-radius: var(--radius-xs)
 }
 
-.themePillItemSelected_c85552,
-.themeSelector_c85552 [class*=pillItem] {
-    border-radius: var(--radius-xs)
+.themePillItemSelected_c85552 {
+    border: 1px solid var(--border-subtle)
 }
 
 .container__5a2df {
@@ -64303,12 +64302,6 @@ html.disable-forced-colors * {
 .gradientDirectionSliderContainer__5a2df {
     margin-bottom: 4px;
     position: relative
-}
-
-.gradientDirectionSliderContainer__5a2df div[class*=barFill] {
-    background: transparent;
-    display: none;
-    opacity: 0
 }
 
 .angleIndicatorOverlay__5a2df {

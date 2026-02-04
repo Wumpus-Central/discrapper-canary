@@ -5,19 +5,19 @@ var r = n(627968);
 n(64700);
 var i = n(934551),
     a = n(311907),
-    s = n(397927),
-    o = n(544028),
+    o = n(397927),
+    s = n(544028),
     l = n(230835),
     c = n(738419),
     u = n(818348),
     d = n(520650),
     f = n(985018),
     p = n(792352);
-let _ = (e, t) => (e === t ? p.H : void 0);
+let _ = (e, t) => (e === t ? p.HE : void 0);
 
 function h() {
-    let e = (0, a.bG)([o.A], () => o.A.theme),
-        t = (0, s.Mwr)(e) ? u.NJ.DARK : u.NJ.LIGHT,
+    let e = (0, a.bG)([s.A], () => s.A.theme),
+        t = (0, o.Mwr)(e) ? u.NJ.DARK : u.NJ.LIGHT,
         n = [
             {
                 name: "",
@@ -36,8 +36,9 @@ function h() {
                 tooltipAriaLabel: f.intl.string(d.default["5vlJkY"]),
             },
         ];
-    return (0, r.jsx)(s.IzF, {
-        className: p.t,
+    return (0, r.jsx)(o.IzF, {
+        className: p.t7,
+        optionClassName: p.aF,
         options: n,
         value: t,
         onChange: (e) => {

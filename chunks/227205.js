@@ -1,33 +1,33 @@
-l.d(t, {
-    A: () => N,
+n.d(t, {
+    A: () => k,
 });
-var n = l(627968),
-    r = l(64700),
-    s = l(503698),
-    a = l.n(s),
-    i = l(172218),
-    o = l(696292),
-    c = l(651162),
-    u = l(311907),
-    d = l(397927),
-    f = l(688810),
-    b = l(545986),
-    g = l(318346),
-    p = l(287809),
-    m = l(954571),
-    h = l(440938),
-    E = l(993408),
-    v = l(379177),
-    A = l(212407),
-    x = l(333034),
-    S = l(521e3),
-    C = l(938191),
-    O = l(815280),
-    _ = l(60140),
-    y = l(758836),
-    j = l(652215),
-    L = l(985018),
-    T = l(201073);
+var r = n(627968),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    i = n(172218),
+    o = n(696292),
+    c = n(651162),
+    u = n(311907),
+    d = n(397927),
+    g = n(688810),
+    p = n(545986),
+    m = n(318346),
+    f = n(287809),
+    b = n(954571),
+    h = n(440938),
+    _ = n(993408),
+    E = n(379177),
+    v = n(212407),
+    C = n(333034),
+    A = n(521e3),
+    x = n(938191),
+    S = n(815280),
+    O = n(60140),
+    y = n(758836),
+    j = n(652215),
+    L = n(985018),
+    T = n(201073);
 let I = {
         rankedSkuIds: [],
         name: "",
@@ -37,70 +37,70 @@ let I = {
         type: c.g.HERO,
         categoryStoreListingId: "",
     },
-    N = (e) => {
+    k = (e) => {
         var t;
-        let { isLoading: l, handleTransition: s, category: N, heroBlock: k, tab: R, onVisibilityChange: P } = e,
-            D = (0, i.K)(
+        let { isLoading: n, handleTransition: s, category: k, heroBlock: N, tab: R, onVisibilityChange: P } = e,
+            B = (0, i.K)(
                 (e) => {
                     null == P || P(e);
                 },
                 0.1,
                 null != P,
             ),
-            w = r.useRef(null),
-            B = (0, C.y)("HeroBlock"),
-            M = (0, u.bG)([p.default], () => p.default.getCurrentUser()),
+            w = l.useRef(null),
+            D = (0, x.yB)("HeroBlock"),
+            M = (0, u.bG)([f.default], () => f.default.getCurrentUser()),
             H = (0, h.uM)(),
-            G = r.useMemo(() => {
+            G = l.useMemo(() => {
                 var e;
-                return null != k
-                    ? k
-                    : null == N
+                return null != N
+                    ? N
+                    : null == k
                       ? I
                       : {
-                            rankedSkuIds: null != (e = N.heroRanking) ? e : [],
-                            name: N.name,
-                            unpublishedAt: N.unpublishedAt,
-                            categorySkuId: N.skuId,
-                            summary: N.summary,
+                            rankedSkuIds: null != (e = k.heroRanking) ? e : [],
+                            name: k.name,
+                            unpublishedAt: k.unpublishedAt,
+                            categorySkuId: k.skuId,
+                            summary: k.summary,
                             type: c.g.HERO,
-                            categoryStoreListingId: N.storeListingId,
-                            bannerDisplayConfig: N.heroBannerDisplayConfig,
-                            logoDisplayConfig: N.heroLogoDisplayConfig,
-                            heroLogoUrl: N.heroLogoUrl,
-                            heroBannerUrl: N.heroBannerUrl,
-                            heroBannerAnimatedUrl: N.heroBannerAnimatedUrl,
+                            categoryStoreListingId: k.storeListingId,
+                            bannerDisplayConfig: k.heroBannerDisplayConfig,
+                            logoDisplayConfig: k.heroLogoDisplayConfig,
+                            heroLogoUrl: k.heroLogoUrl,
+                            heroBannerUrl: k.heroBannerUrl,
+                            heroBannerAnimatedUrl: k.heroBannerAnimatedUrl,
                         };
-            }, [k, N]),
-            F = (0, v.rR)("HeroBlock") && G.categorySkuId === y.op,
+            }, [N, k]),
+            U = (0, E.rR)("HeroBlock") && G.categorySkuId === y.op,
             {
-                bannerDisplayConfig: U,
-                logoDisplayConfig: z,
-                heroLogo: V,
+                bannerDisplayConfig: F,
+                logoDisplayConfig: V,
+                heroLogo: z,
                 heroBannerStatic: K,
                 heroBannerAnimated: W,
                 heroBannerRive: Y,
-            } = (0, A.Kk)(G),
-            q = null != (t = null == U ? void 0 : U.responsive) && t,
-            Z = null == U ? void 0 : U.backgroundStyle,
+            } = (0, v.Kk)(G),
+            q = null != (t = null == F ? void 0 : F.responsive) && t,
+            Z = null == F ? void 0 : F.backgroundStyle,
             X = null != Y,
             J = R === y.G2.ORBS,
-            Q = null != N && N.isOrbsExclusive,
+            Q = null != k && k.isOrbsExclusive,
             $ = J ? L.intl.string(L.t["1CdL8d"]) : L.intl.string(L.t.xYKa1T);
-        J && F && ($ = L.intl.string(L.t.dVz4hi));
-        let { analyticsLocations: ee } = (0, f.Ay)(),
+        J && U && ($ = L.intl.string(L.t.dVz4hi));
+        let { analyticsLocations: ee } = (0, g.Ay)(),
             et = () => {
                 J
-                    ? ((0, g.Y)({
+                    ? ((0, m.Y)({
                           pageType: j.liQ.SHOP_ORBS_TAB,
                           sectionType: j.JJy.ORBS_SHOP_HERO_BLOCK,
                           ctaObject: j.ZSU.CTA_TO_QUEST_HOME,
                       }),
-                      F
-                          ? (0, x.A)({
+                      U
+                          ? (0, C.A)({
                                 analyticsLocations: ee,
                             })
-                          : (0, b.navigateToQuestHome)({
+                          : (0, p.navigateToQuestHome)({
                                 fromContent: o.u.ORBS_SHOP_HERO_CTA,
                             }))
                     : (s({
@@ -109,7 +109,7 @@ let I = {
                           isInternalShopDeeplink: !0,
                           isOrbsExclusive: Q,
                       }),
-                      m.default.track(j.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                      b.default.track(j.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                           collectibles_shop_session_id: null == H ? void 0 : H.sessionId,
                           sku_id: G.categorySkuId,
                           page_type: R,
@@ -118,19 +118,19 @@ let I = {
                           cta_name: "shop latest category hero button",
                       }));
             };
-        return null != M && (l || G !== I)
-            ? (0, n.jsxs)("div", {
-                  ref: D,
+        return null != M && (n || G !== I)
+            ? (0, r.jsxs)("div", {
+                  ref: B,
                   className: T.os,
                   children: [
                       X
-                          ? (0, S.VA)({
-                                isCustomCursorEnabled: B,
+                          ? (0, A.VA)({
+                                isCustomCursorEnabled: D,
                                 className: T.Xt,
                                 riveEventTargetRef: w,
                             })
                           : null,
-                      (0, n.jsx)("div", {
+                      (0, r.jsx)("div", {
                           className: a()(T.vK, {
                               [T.cN]: X,
                               [T.no]: q,
@@ -143,7 +143,7 @@ let I = {
                                   : void 0,
                           children:
                               null != K &&
-                              (0, n.jsx)(O.A, {
+                              (0, r.jsx)(S.A, {
                                   bannerStatic: K,
                                   bannerAnimated: W,
                                   bannerRive: Y,
@@ -151,51 +151,51 @@ let I = {
                                   eventTargetRef: w,
                               }),
                       }),
-                      (0, n.jsxs)("div", {
+                      (0, r.jsxs)("div", {
                           className: T.xX,
                           children: [
                               X
-                                  ? (0, n.jsx)("div", {
+                                  ? (0, r.jsx)("div", {
                                         className: T.fy,
                                         children:
-                                            !l &&
-                                            (0, n.jsx)(d.Button, {
+                                            !n &&
+                                            (0, r.jsx)(d.Button, {
                                                 variant: "overlay-primary",
                                                 onClick: et,
                                                 text: $,
                                             }),
                                     })
-                                  : (0, n.jsxs)("div", {
+                                  : (0, r.jsxs)("div", {
                                         className: a()(T.bC, {
                                             [T.no]: q,
                                         }),
                                         children: [
-                                            l
-                                                ? (0, n.jsx)("div", {
+                                            n
+                                                ? (0, r.jsx)("div", {
                                                       className: T.Hw,
                                                   })
-                                                : (0, n.jsxs)("div", {
+                                                : (0, r.jsxs)("div", {
                                                       className: T.Hw,
                                                       children: [
-                                                          (0, E.HF)(G.unpublishedAt) &&
-                                                              (0, n.jsx)(d.LpS, {
+                                                          (0, _.HF)(G.unpublishedAt) &&
+                                                              (0, r.jsx)(d.LpS, {
                                                                   disableColor: !0,
                                                                   text: L.intl.string(L.t["h/uBCR"]),
                                                                   className: T.v0,
                                                               }),
-                                                          (0, n.jsxs)("div", {
+                                                          (0, r.jsxs)("div", {
                                                               className: T.Wq,
                                                               children: [
-                                                                  null != V &&
-                                                                      (0, n.jsx)("img", {
+                                                                  null != z &&
+                                                                      (0, r.jsx)("img", {
                                                                           className: T.rm,
-                                                                          src: V,
+                                                                          src: z,
                                                                           alt: G.name,
                                                                           style:
-                                                                              null == z ? void 0 : z.toDesktopStyles(),
+                                                                              null == V ? void 0 : V.toDesktopStyles(),
                                                                       }),
                                                                   null != G.title &&
-                                                                      (0, n.jsx)(d.Heading, {
+                                                                      (0, r.jsx)(d.Heading, {
                                                                           variant: "heading-xxl/bold",
                                                                           className: T.DD,
                                                                           color: "text-strong",
@@ -203,7 +203,7 @@ let I = {
                                                                       }),
                                                                   null != G.summary &&
                                                                       "" !== G.summary &&
-                                                                      (0, n.jsx)(d.Text, {
+                                                                      (0, r.jsx)(d.Text, {
                                                                           variant: "text-md/normal",
                                                                           className: J ? T.h4 : T.Tm,
                                                                           style:
@@ -218,10 +218,10 @@ let I = {
                                                           }),
                                                       ],
                                                   }),
-                                            !l &&
-                                                (0, n.jsx)("div", {
+                                            !n &&
+                                                (0, r.jsx)("div", {
                                                     className: T.IS,
-                                                    children: (0, n.jsx)(d.Button, {
+                                                    children: (0, r.jsx)(d.Button, {
                                                         variant: "overlay-primary",
                                                         onClick: et,
                                                         text: $,
@@ -229,11 +229,11 @@ let I = {
                                                 }),
                                         ],
                                     }),
-                              (0, n.jsx)(_.A, {
+                              (0, r.jsx)(O.A, {
                                   heroBlockRecord: G,
                                   tab: R,
-                                  isBlockLoading: l,
-                                  layout: R === y.G2.HOME ? "hscroll" : F ? "row" : "feed",
+                                  isBlockLoading: n,
+                                  layout: R === y.G2.HOME ? "hscroll" : U ? "row" : "feed",
                               }),
                           ],
                       }),
