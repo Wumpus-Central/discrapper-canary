@@ -48,8 +48,8 @@ function O(e) {
     T && (k = (0, m.k8)(j, M, v));
     let U = (0, m.y8)(a, !1, M, v),
         G = null != k && !C,
-        F = j.interval === E.WT.YEAR ? y.t.ECT4A5 : y.t.v9QeON,
-        V = () =>
+        V = j.interval === E.WT.YEAR ? y.t.ECT4A5 : y.t.v9QeON,
+        F = () =>
             P && !M && a === E.gD.PREMIUM_MONTH_TIER_2
                 ? (0, r.jsx)(u.Text, {
                       tag: "span",
@@ -73,7 +73,7 @@ function O(e) {
             }),
         H = () =>
             P
-                ? V()
+                ? F()
                 : (j.interval === E.WT.YEAR && null != n) || (G && !L)
                   ? j.interval === E.WT.YEAR && null != n
                       ? (0, r.jsxs)("span", {
@@ -127,12 +127,12 @@ function O(e) {
                 });
             }
             return D
-                ? y.intl.format(F, {
+                ? y.intl.format(V, {
                       price: (0, g.$g)(U.amount, U.currency),
                   })
                 : j.interval === E.WT.YEAR
                   ? y.intl.formatToPlainString(y.t.rtLTJP, {
-                        percent: k,
+                        percent: null != k ? k : "",
                     })
                   : null;
         },
