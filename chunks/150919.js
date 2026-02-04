@@ -3,17 +3,18 @@ var r = n(73153),
     i = n(626584),
     a = n(865116),
     o = n(608960),
-    s = n(279263),
-    l = n(961350),
-    c = n(317525),
-    u = n(71393),
-    d = n(954571),
-    f = n(728458),
-    p = n(157016),
-    _ = n(548965),
-    h = n(652215);
+    s = n(41237),
+    l = n(279263),
+    c = n(961350),
+    u = n(317525),
+    d = n(71393),
+    f = n(954571),
+    p = n(728458),
+    _ = n(157016),
+    h = n(548965),
+    m = n(652215);
 
-function m(e, t, n) {
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +28,7 @@ function m(e, t, n) {
     );
 }
 
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,13 +39,13 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
 
-function E(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,23 +58,23 @@ function E(e, t) {
     return n;
 }
 
-function y(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let b = new i.A("DispatcherBridge"),
-    O = [s.A, u.A, c.A, o.A],
-    v = {
+let O = new i.A("DispatcherBridge"),
+    v = [l.A, d.A, u.A, o.A, s.A],
+    A = {
         GUILD_MEMBER_ADD: (e) =>
-            y(g({}, e), {
-                currentUserId: l.default.getId(),
+            b(E({}, e), {
+                currentUserId: c.default.getId(),
             }),
         CONNECTION_OPEN: (e) => ({
             guilds: e.guilds,
@@ -88,10 +89,10 @@ let b = new i.A("DispatcherBridge"),
             guilds: e.guilds,
         }),
     };
-class A {
+class I {
     withStoreToken(e, t, n) {
         let r = this.tokenToStore.get(e);
-        null == r ? b.warn("When dispatching action", t, "we got a store token", e, "that is unknown") : n(r);
+        null == r ? O.warn("When dispatching action", t, "we got a store token", e, "that is unknown") : n(r);
     }
     filterAuthorativeStores(e) {
         let t = [];
@@ -102,9 +103,9 @@ class A {
         return t;
     }
     constructor(e) {
-        if ((m(this, "tokenToStore", new Map()), 0 === e.length)) return;
-        const t = p.V;
-        if (null == t) return void b.info("Not initializing DispatcherBridge, because kvStoreApi is unavailable.");
+        if ((g(this, "tokenToStore", new Map()), 0 === e.length)) return;
+        const t = _.V;
+        if (null == t) return void O.info("Not initializing DispatcherBridge, because kvStoreApi is unavailable.");
         try {
             const n = [];
             for (const r of e) {
@@ -113,17 +114,17 @@ class A {
                 this.tokenToStore.set(i, r),
                     n.push("".concat(e, " => [token: ").concat(i, ", mode: ").concat(r.getMode(), "]"));
             }
-            b.info("Connected ".concat(e.length, " store(s), mapping: ").concat(n.join(", "), "."));
+            O.info("Connected ".concat(e.length, " store(s), mapping: ").concat(n.join(", "), "."));
             const i = t.getRegisteredActionTypes();
-            b.info("Registering ".concat(i.length, " bridged action(s): ").concat(i.join(", "), "."));
+            O.info("Registering ".concat(i.length, " bridged action(s): ").concat(i.join(", "), "."));
             const o = (e) => {
                 let n,
-                    r = v[e.type],
+                    r = A[e.type],
                     i = performance.now();
                 n =
                     null != r
                         ? JSON.stringify(
-                              g(
+                              E(
                                   {
                                       type: e.type,
                                   },
@@ -135,15 +136,15 @@ class A {
                         kind: "json_stringify_action",
                         durationMillis: performance.now() - i,
                     },
-                    s = _.pd.shouldCollectMetrics(),
+                    s = h.pd.shouldCollectMetrics(),
                     l = t.dispatchAction(n, s);
                 if (!l.ok) {
                     let n = Error(l.error),
                         r = t.findStoresThatCanHandleActionType(e.type),
                         i = this.filterAuthorativeStores(r).map((e) => e.getName());
                     if (
-                        (b.error("Failed to dispatch action", e.type, "authorative stores", i, "error:", n),
-                        f.A.captureException(n, {
+                        (O.error("Failed to dispatch action", e.type, "authorative stores", i, "error:", n),
+                        p.A.captureException(n, {
                             extra: {
                                 authorativeStores: i.join(", "),
                             },
@@ -157,12 +158,12 @@ class A {
                     return;
                 }
                 let c = performance.now() - i,
-                    { metrics: u, changes: p } = l.value;
-                for (let t of p)
+                    { metrics: u, changes: d } = l.value;
+                for (let t of d)
                     this.withStoreToken(t.storeToken, e.type, (e) => {
                         e.applyChanges(t.databaseChanges);
                     });
-                for (let t of p)
+                for (let t of d)
                     this.withStoreToken(t.storeToken, e.type, (t) => {
                         t.doEmitChanges(e);
                     });
@@ -217,16 +218,16 @@ class A {
                                     return "".concat(t, ":\n").concat(n);
                                 })
                                 .join("\n\n");
-                        b.info("Handling action ".concat(e.type, " took ").concat(c, "ms\n").concat(a));
+                        O.info("Handling action ".concat(e.type, " took ").concat(c, "ms\n").concat(a));
                     }
-                    d.default.track(h.HAw.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, {
+                    f.default.track(m.HAw.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, {
                         action_type: e.type,
                         total_duration_millis: c,
                         timings: JSON.stringify(t),
                         mutations: JSON.stringify(u.mutations),
                         memory_usage: JSON.stringify(u.memory),
                     }),
-                        _.pd.didEmit();
+                        h.pd.didEmit();
                 }
             };
             r.h.register(
@@ -236,15 +237,15 @@ class A {
                 r.A.Database,
             );
         } catch (e) {
-            b.error("Failed to initialize the dispatcher bridge", e);
+            O.error("Failed to initialize the dispatcher bridge", e);
         }
     }
 }
-let I = new Set(["libdiscore", "typescript-libdiscore-dual-read"]);
-new A(
+let S = new Set(["libdiscore", "typescript-libdiscore-dual-read"]);
+new I(
     (function (e) {
         return __OVERLAY__
-            ? (b.verbose("Not enabling rust implementation because we're in the legacy overlay"), [])
-            : e.filter((e) => I.has(e.getMode()));
-    })(O),
+            ? (O.verbose("Not enabling rust implementation because we're in the legacy overlay"), [])
+            : e.filter((e) => S.has(e.getMode()));
+    })(v),
 );
