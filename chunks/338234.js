@@ -1,10 +1,10 @@
 n.d(t, {
-    Uw: () => a,
+    Uw: () => l,
     fC: () => i,
 });
 let r = (0, n(600975).C)({
     kind: "guild",
-    id: "2025-01_voice_user_activities",
+    id: "2026-02_voice_user_hover_activities",
     label: "Voice User Activities on Hover",
     defaultConfig: {
         enableUserHoverActivities: !1,
@@ -33,7 +33,7 @@ function i(e) {
     );
 }
 
-function a(e) {
+function l(e) {
     let { guildId: t, location: n } = e;
     return r.getCurrentConfig(
         {
