@@ -1,8 +1,8 @@
 var r = n(110259),
     i = n(167789),
     a = n(73153),
-    s = n(861638),
-    o = n(954571),
+    o = n(861638),
+    s = n(954571),
     l = n(961350),
     c = n(652215);
 (0, r.analyticsTrackingStoreMaker)({
@@ -14,14 +14,15 @@ var r = n(110259),
         CONNECTION_CLOSED: () => r.AnalyticsActionHandlers.handleConnectionClosed(),
         FINGERPRINT: () => r.AnalyticsActionHandlers.handleFingerprint(),
         TRACK: (e) => r.AnalyticsActionHandlers.handleTrack(e),
+        SET_ANALYTICS_TOKEN: (e) => r.AnalyticsActionHandlers.handleSetAnalyticsToken(e),
     },
     TRACKING_URL: c.Rsh.TRACK,
     waitFor: [l.default],
     getFingerprint: l.default.getFingerprint,
     getSessionId: () =>
-        (0, s.Ht)().then((e) => ({
+        (0, o.Ht)().then((e) => ({
             sessionId: null == e ? void 0 : e.uuid,
         })),
-    getLaunchSignature: () => o.launchSignature,
+    getLaunchSignature: () => s.launchSignature,
     scheduleWhenIdle: i.O,
 });
