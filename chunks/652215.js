@@ -697,6 +697,7 @@ var r = n(478437),
             (e.VOICE_DARE_OFFER = "VOICE_DARE_OFFER"),
             (e.PTT_NO_KEYBIND_WARNING = "PTT_NO_KEYBIND_WARNING"),
             (e.E2EE_UPDATE_REQUIRED = "E2EE_UPDATE_REQUIRED"),
+            (e.WINDOWS_MEDIA_PACK_REQUIRED = "WINDOWS_MEDIA_PACK_REQUIRED"),
             e
         );
     })({}),
@@ -5975,6 +5976,7 @@ var nL = (function (e) {
             (e.SOCIAL_LAYER_STOREFRONT = "36394123113239"),
             (e.CHECKPOINT = "36415877391511"),
             (e.NITRO_TRIAL_FOR_ALL = "37127619588375-Nitro-2-Week-Trial-Offer"),
+            (e.WINDOWS_MEDIA_PACK = "37976093740695"),
             e
         );
     })({}),

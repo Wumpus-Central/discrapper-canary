@@ -50,9 +50,9 @@ var r = n(627968),
     Y = n(475723),
     $ = n(598733),
     z = n(37770),
-    J = n(74848),
-    Z = n(532794),
-    Q = n(234419),
+    Q = n(74848),
+    J = n(532794),
+    Z = n(234419),
     ee = n(814249),
     et = n(829219),
     en = n(597936),
@@ -170,7 +170,7 @@ function ej(e) {
         { windowsMuteAndZeroVolumeDetectionEnabled: a } = (0, z.I)({
             location: "AudioIssueNoticeNoInput",
         }),
-        o = (0, J.x5)(eC.oh.AUDIO_INPUT),
+        o = (0, Q.x5)(eC.oh.AUDIO_INPUT),
         s = null != (t = null == o ? void 0 : o.guid) ? t : "",
         { inputDeviceOSMuted: d, inputDeviceOSVolume: _ } = (0, u.cf)([ed.A], () => ({
             inputDeviceOSMuted: ed.A.getInputDeviceOSMuted(),
@@ -246,7 +246,7 @@ let ek = i.memo(function () {
         s = (0, u.bG)([eN.Ay], () => eN.Ay.getNotice()),
         { analyticsLocations: c } = (0, h.Ay)(),
         I = (0, F.H)(a),
-        C = (0, Q.V)();
+        C = (0, Z.V)();
     if (
         (i.useEffect(() => {
             if ((null == s ? void 0 : s.type) != null) {
@@ -286,7 +286,7 @@ let ek = i.memo(function () {
     let D = null != s.type ? eN.Re[s.type] : null,
         x = null != s.type ? eN.k3[s.type] : null,
         z = null != s.type ? eN.f7[s.type] : null,
-        J = eN.pe[s.type];
+        Q = eN.pe[s.type];
     if (null != D)
         return (0, r.jsx)(k.$, {
             dismissibleContent: D,
@@ -301,9 +301,9 @@ let ek = i.memo(function () {
         return (0, r.jsx)(v.T, {
             dismissibleContent: z,
         });
-    if (null != J)
+    if (null != Q)
         return (0, r.jsx)(j.r, {
-            dismissibleContent: J,
+            dismissibleContent: Q,
             noticeType: s.type,
         });
     let eu = null == (e = s.metadata) ? void 0 : e.premiumType;
@@ -374,6 +374,23 @@ let ek = i.memo(function () {
                     }),
                     eg.intl.format(eS.isPlatformEmbedded ? eg.t.J232TI : eg.t.vceuiL, {
                         helpCenterLink: eR.A.getArticleURL(eP.MVz.END_TO_END_ENCRYPTION),
+                    }),
+                ],
+            });
+        case eP.kqX.WINDOWS_MEDIA_PACK_REQUIRED:
+            return (0, r.jsxs)(E.$Td, {
+                color: E.Hv$.WARNING,
+                children: [
+                    (0, r.jsx)(E.PMB, {
+                        onClick: () => ev(),
+                        noticeType: s.type,
+                    }),
+                    eg.intl.string(eg.t.iW0fcQ),
+                    (0, r.jsx)(E.eCN, {
+                        href: eR.A.getArticleURL(eP.MVz.WINDOWS_MEDIA_PACK),
+                        target: "_blank",
+                        noticeType: s.type,
+                        children: eg.intl.string(eg.t.LQG5j6),
                     }),
                 ],
             });
@@ -618,7 +635,7 @@ let ek = i.memo(function () {
                                 applicationId: eq.id,
                                 skuId: eB.id,
                                 openPremiumPaymentModal: () => {
-                                    (0, Z.A)({
+                                    (0, J.A)({
                                         initialPlanId: null,
                                         subscriptionTier: em.pe.TIER_2,
                                         analyticsLocations: c,
