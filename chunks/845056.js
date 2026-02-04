@@ -1,26 +1,27 @@
 n.d(t, {
+    N: () => c,
     m: () => u,
 });
 var r = n(311907),
-    i = n(961350),
-    a = n(290863),
+    l = n(961350),
+    i = n(290863),
     s = n(461213),
-    o = n(765379),
-    l = n(652215);
+    a = n(765379),
+    o = n(652215);
 let c = (e) =>
-    ([l.$pd.PLAYING, l.$pd.WATCHING].includes(e.type) &&
-        (null != e.assets || null != e.state || null != e.details || null != e.party)) ||
-    e.type === l.$pd.LISTENING;
+    ([o.$pd.PLAYING, o.$pd.WATCHING].includes(e.type) &&
+        [e.name, e.application_id, e.assets, e.state, e.details, e.party].some((e) => null != e)) ||
+    e.type === o.$pd.LISTENING;
 
 function u(e, t) {
     return (0, r.bG)(
-        [s.A, a.A, i.default],
+        [s.A, i.A, l.default],
         () =>
-            (e.id === i.default.getId() ? s.A.getActivities() : a.A.getActivities(e.id))
+            (e.id === l.default.getId() ? s.A.getActivities() : i.A.getActivities(e.id))
                 .filter(c)
                 .filter(
                     (e) =>
-                        !(0, o.A)(e) &&
+                        !(0, a.A)(e) &&
                         (null == t ||
                             null == e.application_id ||
                             null == t.application_id ||

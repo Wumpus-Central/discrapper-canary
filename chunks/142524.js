@@ -1,32 +1,30 @@
 n.d(t, {
-    A: () => I,
+    A: () => S,
 }),
     n(896048);
 var r = n(627968),
     i = n(64700),
     l = n(503698),
     a = n.n(l),
-    s = n(311907),
-    o = n(80682),
+    o = n(311907),
+    s = n(80682),
     c = n(643501),
-    u = n(338234),
-    d = n(376696),
-    p = n(616356),
-    f = n(961350),
-    m = n(71393),
-    g = n(576705),
-    y = n(290863),
-    _ = n(977997),
-    b = n(954571),
-    A = n(279250),
+    u = n(616356),
+    d = n(961350),
+    f = n(71393),
+    p = n(576705),
+    m = n(290863),
+    g = n(977997),
+    y = n(954571),
+    b = n(279250),
     h = n(834757),
-    v = n(727353),
-    O = n(652215),
-    j = n(945354);
-class S extends i.PureComponent {
+    A = n(727353),
+    _ = n(652215),
+    v = n(945354);
+class O extends i.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
-        b.default.track(O.HAw.OPEN_POPOUT, {
+        y.default.track(_.HAw.OPEN_POPOUT, {
             type: "Stream Preview",
             other_user_id: e.id,
             application_id: null != t ? t.id : null,
@@ -42,56 +40,42 @@ class S extends i.PureComponent {
             stream: n,
             previewIsOpen: i,
             onAction: l,
-            hideTip: s,
-            channel: o,
-            onWatch: c,
-            activeStream: p,
-            currentUserId: f,
-            canWatch: m,
-            unavailableReason: g,
-            streamApplication: y,
+            hideTip: o,
+            onWatch: s,
+            activeStream: c,
+            currentUserId: u,
+            canWatch: d,
+            unavailableReason: f,
+            streamApplication: p,
         } = this.props;
-        if (null == n) return null;
-        let { enableUserHoverActivities: _ } = (0, u.Uw)({
-            guildId: null == o ? void 0 : o.guild_id,
-            location: "StreamPreviewPopout",
-        });
-        return (0, r.jsxs)("div", {
-            className: a()(j.yt, {
-                [j.P0]: i,
-            }),
-            children: [
-                (0, r.jsx)(v.Z, {
-                    stream: n,
-                    activeStream: p,
-                    streamActivity: e,
-                    streamApplication: y,
-                    user: t,
-                    currentUserId: f,
-                    canWatch: null != m && m,
-                    unavailableReason: g,
-                    onWatchStream: c,
-                    onAction: l,
-                    hideTip: s,
-                    className: j.Rh,
-                    wrapperClassName: void 0,
-                }),
-                _ &&
-                    null != o &&
-                    (0, r.jsx)(d.A, {
-                        channel: o,
-                        user: t,
-                        onAction: l,
-                    }),
-            ],
-        });
+        return null == n
+            ? null
+            : (0, r.jsx)("div", {
+                  className: a()(v.yt, {
+                      [v.P0]: i,
+                  }),
+                  children: (0, r.jsx)(A.Z, {
+                      stream: n,
+                      activeStream: c,
+                      streamActivity: e,
+                      streamApplication: p,
+                      user: t,
+                      currentUserId: u,
+                      canWatch: null != d && d,
+                      unavailableReason: f,
+                      onWatchStream: s,
+                      onAction: l,
+                      hideTip: o,
+                      className: v.Rh,
+                  }),
+              });
     }
 }
 
-function I(e) {
+function S(e) {
     var t, n;
     let { user: l, channel: a } = e,
-        u = (function (e, t) {
+        y = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -122,12 +106,12 @@ function I(e) {
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
             return l;
         })(e, ["user", "channel"]),
-        [d, b] = (0, s.yK)([_.A, m.A, g.A, c.default], () => (0, A.eo)(a, _.A, m.A, g.A, c.default)),
-        v = (0, s.bG)([p.A], () => p.A.getStreamForUser(l.id, a.getGuildId())),
-        O = (0, s.bG)([p.A], () => p.A.getActiveStreamForApplicationStream(v)),
-        j = (0, s.bG)([f.default], () => f.default.getId()),
+        [A, _] = (0, o.yK)([g.A, f.A, p.A, c.default], () => (0, b.eo)(a, g.A, f.A, p.A, c.default)),
+        v = (0, o.bG)([u.A], () => u.A.getStreamForUser(l.id, a.getGuildId())),
+        S = (0, o.bG)([u.A], () => u.A.getActiveStreamForApplicationStream(v)),
+        j = (0, o.bG)([d.default], () => d.default.getId()),
         I = (0, h.AO)(v),
-        x = (0, s.bG)([y.A], () => (0, h.nr)(v, y.A)),
+        x = (0, o.bG)([m.A], () => (0, h.nr)(v, m.A)),
         E = i.useMemo(
             () => ({
                 [a.guild_id]: [l.id],
@@ -135,9 +119,9 @@ function I(e) {
             [a.guild_id, l.id],
         );
     return (
-        (0, o.E)(E, "StreamPreviewPopout"),
+        (0, s.E)(E, "StreamPreviewPopout"),
         (0, r.jsx)(
-            S,
+            O,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -162,15 +146,15 @@ function I(e) {
                         });
                 }
                 return e;
-            })({}, u)),
+            })({}, y)),
             (n = n =
                 {
-                    canWatch: d,
-                    unavailableReason: b,
+                    canWatch: A,
+                    unavailableReason: _,
                     user: l,
                     streamApplication: I,
                     stream: v,
-                    activeStream: O,
+                    activeStream: S,
                     currentUserId: j,
                     activity: x,
                     channel: a,

@@ -1,26 +1,28 @@
 n.d(t, {
-    A: () => o,
+    A: () => s,
 });
 var r = n(573648),
-    i = n(855511),
+    i = n(153331),
+    l = n(855511),
     a = n(652215),
-    s = n(985018);
+    o = n(985018);
 
-function o(e) {
-    var t;
-    let n = null != (t = (0, i.A)(e)) ? t : "";
-    switch (n) {
+function s(e, t, n) {
+    var s;
+    let c = null != (s = (0, l.A)(e)) ? s : "",
+        u = t === i.O.VOICE_CHANNEL && n;
+    switch (c) {
         case a.yTV.PS4:
         case a.yTV.PS5:
-            return s.intl.formatToPlainString(s.t.A17aM8, {
-                platform: n.toUpperCase(),
+            return o.intl.formatToPlainString(o.t.A17aM8, {
+                platform: c.toUpperCase(),
             });
         case a.yTV.XBOX:
         case a.yTV.SAMSUNG:
-            return s.intl.formatToPlainString(s.t.A17aM8, {
-                platform: r.A.get(n).name,
+            return o.intl.formatToPlainString(o.t.A17aM8, {
+                platform: r.A.get(c).name,
             });
         default:
-            return s.intl.string(s.t["2TbM/G"]);
+            return o.intl.string(u ? o.t.J4MQFX : o.t["2TbM/G"]);
     }
 }

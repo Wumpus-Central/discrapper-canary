@@ -1,131 +1,133 @@
 n.d(t, {
-    A: () => j,
+    A: () => v,
 });
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    l = n.n(i),
+var r = n(627968),
+    l = n(64700),
+    i = n(503698),
+    s = n.n(i),
     a = n(311907),
-    s = n(990078),
-    o = n(397927),
-    c = n(302959),
-    u = n(90644),
-    d = n(592182),
-    p = n(172710),
-    f = n(636585),
-    m = n(95701),
-    g = n(961350),
-    y = n(287809),
-    _ = n(486020),
-    b = n(427262),
-    A = n(43950),
-    h = n(185186);
+    o = n(990078),
+    c = n(397927),
+    u = n(302959),
+    d = n(90644),
+    p = n(592182),
+    h = n(172710),
+    g = n(636585),
+    f = n(95701),
+    m = n(961350),
+    b = n(287809),
+    A = n(486020),
+    y = n(427262),
+    O = n(43950),
+    j = n(185186);
 
-function v(e) {
+function _(e) {
     var t;
-    let { guildId: n, member: i, className: a } = e,
-        c = null != i.member ? (0, _.xT)(i.member) : null;
-    return (0, r.jsx)(s.m, {
-        __unsupportedReactNodeAsText: i.nick,
+    let { guildId: n, member: l, className: i } = e,
+        a = null != l.member ? (0, A.xT)(l.member) : null;
+    return (0, r.jsx)(o.m, {
+        __unsupportedReactNodeAsText: l.nick,
         position: "bottom",
-        children: (0, r.jsx)(o.euF, {
-            src: null != c ? c : i.user.getAvatarURL(n, 16),
-            size: o._3J.SIZE_16,
-            className: l()(a, h.wE),
-            "aria-label": null != (t = i.nick) ? t : b.Ay.getName(i.user),
+        children: (0, r.jsx)(c.euF, {
+            src: null != a ? a : l.user.getAvatarURL(n, 16),
+            size: c._3J.SIZE_16,
+            className: s()(i, j.wE),
+            "aria-label": null != (t = l.nick) ? t : y.Ay.getName(l.user),
         }),
     });
 }
 
-function O(e) {
+function x(e) {
     let { members: t, guildId: n } = e;
-    return (0, r.jsx)(f.A, {
-        className: h.S3,
+    return (0, r.jsx)(g.A, {
+        className: j.S3,
         guildId: n,
         users: t,
         max: 6,
-        renderUser: (e, t, i) =>
+        renderUser: (e, t, l) =>
             (0, r.jsx)(
-                v,
+                _,
                 {
                     guildId: n,
                     member: e,
                     className: t,
                 },
-                i,
+                l,
             ),
         renderMoreUsers: (e, t, n) =>
             (0, r.jsx)(
                 "div",
                 {
-                    className: l()(h.TO, t),
+                    className: s()(j.TO, t),
                     children: e,
                 },
                 n,
             ),
     });
 }
-let j = (e) => {
-    let { channel: t, presenceActivity: n, members: i, embeddedApp: l, onAction: s } = e,
-        o = null != l,
-        f = o ? Array.from(l.embeddedActivity.userIds) : [],
-        _ = (0, a.bG)([y.default, g.default], () => {
-            if (o) return y.default.getUser(f[0]);
+let v = (e) => {
+    let { channel: t, presenceActivity: n, members: i, embeddedApp: s, onAction: o, enableUserHoverActivities: c } = e,
+        g = null != s,
+        A = g ? Array.from(s.embeddedActivity.userIds) : [],
+        y = (0, a.bG)([b.default, m.default], () => {
+            if (g) return b.default.getUser(A[0]);
             if (null != i) {
                 var e, t;
                 return i.length <= 0
                     ? null
-                    : null != (e = null == (t = i.find((e) => e.user.id !== g.default.getId())) ? void 0 : t.user)
+                    : null != (e = null == (t = i.find((e) => e.user.id !== m.default.getId())) ? void 0 : t.user)
                       ? e
                       : i[0].user;
             }
-        });
-    if (null == _) return null;
-    let b = o || (0, u.A)(n),
-        v = (0, m.gV)(t.type);
+        }),
+        _ = l.useCallback(() => {
+            if (!c && null != i)
+                return () =>
+                    (0, r.jsx)(x, {
+                        guildId: t.guild_id,
+                        members: i,
+                    });
+        }, [c, i, t.guild_id])();
+    if (null == y) return null;
+    let v = g || (0, d.A)(n),
+        E = (0, f.gV)(t.type);
     return (0, r.jsxs)("div", {
-        className: h.Eb,
+        className: j.Eb,
         children: [
             (0, r.jsx)("div", {
-                className: h.Il,
-                children: b
-                    ? (0, r.jsx)(A.A, {
+                className: j.Il,
+                children: v
+                    ? (0, r.jsx)(O.A, {
                           activity: n,
-                          embeddedApp: l,
-                          user: _,
+                          embeddedApp: s,
+                          user: y,
                           channel: t,
                           sortedVoiceStates: i,
-                          onOpenSpotifyTrack: v ? p.Mp : void 0,
-                          onOpenSpotifyArtist: v ? p.mN : void 0,
-                          onOpenSpotifyAlbum: v ? p.QX : void 0,
+                          onOpenSpotifyTrack: E ? h.Mp : void 0,
+                          onOpenSpotifyArtist: E ? h.mN : void 0,
+                          onOpenSpotifyAlbum: E ? h.QX : void 0,
                       })
-                    : (0, r.jsx)(c.A, {
-                          type: c.M.VOICE_CHANNEL,
+                    : (0, r.jsx)(u.A, {
+                          type: u.M.VOICE_CHANNEL,
                           activity: n,
-                          user: _,
+                          user: y,
                           guildId: t.getGuildId(),
                           channelId: t.id,
-                          renderHeaderAccessory:
-                              null != i
-                                  ? () =>
-                                        (0, r.jsx)(O, {
-                                            guildId: t.guild_id,
-                                            members: i,
-                                        })
-                                  : void 0,
+                          renderHeaderAccessory: _,
+                          enableUserHoverActivities: c,
                       }),
             }),
             (0, r.jsx)("div", {
-                className: h.M4,
-                children: (0, r.jsx)(d.A, {
-                    type: c.M.VOICE_CHANNEL,
+                className: j.M4,
+                children: (0, r.jsx)(p.A, {
+                    type: u.M.VOICE_CHANNEL,
                     activity: n,
-                    embeddedActivity: null == l ? void 0 : l.embeddedActivity,
-                    user: _,
+                    embeddedActivity: null == s ? void 0 : s.embeddedActivity,
+                    user: y,
                     guildId: t.getGuildId(),
                     channelId: t.id,
                     buttonVariant: "primary",
-                    onAction: s,
+                    onAction: o,
                 }),
             }),
         ],
