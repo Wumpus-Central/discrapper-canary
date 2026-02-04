@@ -1,5 +1,5 @@
 n.d(t, {
-    Y: () => w,
+    Y: () => L,
 }),
     n(321073),
     n(896048),
@@ -573,96 +573,173 @@ let N = o.A.map((e) => ({
         label: e.name,
     })),
     w = {
+        name: "Modal: Unified Checkout Stateless Modal",
+        id: "unified-checkout-stateless-modal",
+        component: C,
+        controls: {
+            title: {
+                label: "Title",
+                type: "text",
+                defaultValue: "Checkout",
+            },
+            primaryButtonText: {
+                label: "Primary Button Text",
+                type: "text",
+                defaultValue: "Get Nitro Yearly",
+            },
+            primaryButtonIcon: {
+                label: "Primary Button Icon",
+                type: "select",
+                defaultValue: "nitro-wheel",
+                options: [
+                    {
+                        label: "Nitro Wheel",
+                        value: "nitro-wheel",
+                    },
+                    {
+                        label: "Gift",
+                        value: "gift",
+                    },
+                    {
+                        label: "Orbs",
+                        value: "orbs",
+                    },
+                    {
+                        label: "None",
+                        value: "none",
+                    },
+                ],
+            },
+            countryCode: {
+                label: "Country Code",
+                type: "select",
+                defaultValue: s.d.US,
+                options: N,
+            },
+            headerBadgeText: {
+                label: "Header Pill Text",
+                type: "text",
+                defaultValue: "PROMO",
+            },
+            headerBadgeHasIcon: {
+                label: "Header Badge Has Icon",
+                type: "boolean",
+                defaultValue: !1,
+            },
+            gradientColor: {
+                label: "Gradient Color",
+                type: "select",
+                defaultValue: "nitro-pink",
+                options: [
+                    {
+                        label: "Nitro Pink",
+                        value: "nitro-pink",
+                    },
+                    {
+                        label: "Nitro Green",
+                        value: "nitro-green",
+                    },
+                    {
+                        label: "Purple",
+                        value: "purple",
+                    },
+                    {
+                        label: "Blue",
+                        value: "blue",
+                    },
+                ],
+            },
+            dismissable: {
+                label: "Dismissable",
+                type: "boolean",
+                defaultValue: !0,
+            },
+        },
+    };
+
+function R(e) {
+    let { variant: t, immediateDelivery: n } = e,
+        [a, o] = i.useState(!1);
+    return (0, r.jsx)(
+        u._P,
+        E(m({}, t), {
+            immediateDelivery: n
+                ? {
+                      value: a,
+                      onChange: o,
+                  }
+                : void 0,
+        }),
+    );
+}
+let P = {
+        purchaseButtonText: "Subscribe",
+        totalDue: 999,
+        renewalPrice: 1099,
+        currency: f.Yri.USD,
+        period: "month",
+        startDate: new Date(),
+    },
+    D = {
+        type: u.I0.Subscription,
+        props: P,
+    },
+    L = {
         title: "Unified Checkout",
         stories: [
-            {
-                name: "Modal: Unified Checkout Stateless Modal",
-                id: "unified-checkout-stateless-modal",
-                component: C,
-                controls: {
-                    title: {
-                        label: "Title",
-                        type: "text",
-                        defaultValue: "Checkout",
-                    },
-                    primaryButtonText: {
-                        label: "Primary Button Text",
-                        type: "text",
-                        defaultValue: "Get Nitro Yearly",
-                    },
-                    primaryButtonIcon: {
-                        label: "Primary Button Icon",
-                        type: "select",
-                        defaultValue: "nitro-wheel",
-                        options: [
-                            {
-                                label: "Nitro Wheel",
-                                value: "nitro-wheel",
-                            },
-                            {
-                                label: "Gift",
-                                value: "gift",
-                            },
-                            {
-                                label: "Orbs",
-                                value: "orbs",
-                            },
-                            {
-                                label: "None",
-                                value: "none",
-                            },
-                        ],
-                    },
-                    countryCode: {
-                        label: "Country Code",
-                        type: "select",
-                        defaultValue: s.d.US,
-                        options: N,
-                    },
-                    headerBadgeText: {
-                        label: "Header Pill Text",
-                        type: "text",
-                        defaultValue: "PROMO",
-                    },
-                    headerBadgeHasIcon: {
-                        label: "Header Badge Has Icon",
-                        type: "boolean",
-                        defaultValue: !1,
-                    },
-                    gradientColor: {
-                        label: "Gradient Color",
-                        type: "select",
-                        defaultValue: "nitro-pink",
-                        options: [
-                            {
-                                label: "Nitro Pink",
-                                value: "nitro-pink",
-                            },
-                            {
-                                label: "Nitro Green",
-                                value: "nitro-green",
-                            },
-                            {
-                                label: "Purple",
-                                value: "purple",
-                            },
-                            {
-                                label: "Blue",
-                                value: "blue",
-                            },
-                        ],
-                    },
-                    dismissable: {
-                        label: "Dismissable",
-                        type: "boolean",
-                        defaultValue: !0,
-                    },
-                },
-            },
+            w,
             O,
             v,
             A,
             I,
             S,
+            {
+                name: "Primitive: Legal Copy",
+                id: "unified-checkout-legal-copy",
+                component: R,
+                controls: {
+                    variant: {
+                        label: "Variant",
+                        type: "select",
+                        defaultValue: D,
+                        options: [
+                            {
+                                label: "Subscription",
+                                value: D,
+                            },
+                            {
+                                label: "Subscription Trial",
+                                value: {
+                                    type: u.I0.SubscriptionTrial,
+                                    props: P,
+                                },
+                            },
+                            {
+                                label: "Orbs Redemption",
+                                value: {
+                                    type: u.I0.OrbsRedemption,
+                                    props: {
+                                        purchaseButtonText: "Redeem",
+                                    },
+                                },
+                            },
+                            {
+                                label: "One-time Purchase",
+                                value: {
+                                    type: u.I0.OTP,
+                                    props: {
+                                        purchaseButtonText: "Purchase",
+                                    },
+                                },
+                            },
+                        ],
+                    },
+                    immediateDelivery: {
+                        label: "Immediate Delivery",
+                        type: "boolean",
+                        defaultValue: !1,
+                    },
+                },
+            },
         ],
     };
