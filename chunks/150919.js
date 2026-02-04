@@ -78,6 +78,7 @@ let O = new i.A("DispatcherBridge"),
             }),
         CONNECTION_OPEN: (e) => ({
             guilds: e.guilds,
+            unavailableGuilds: e.unavailableGuilds,
         }),
         CACHE_LOADED: (e) => ({
             guilds: e.guilds,
