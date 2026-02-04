@@ -1,16 +1,16 @@
 var r = n(841873);
-e.exports = n.v(t, e.id, "cd7be289e8153c6f", {
+e.exports = n.v(t, e.id, "629731c15fa24203", {
     "./libdiscore_wasm_bg.js": {
-        __wbindgen_string_new: r.yc,
-        __wbg_warn_2159aed0435b2f46: r.CI,
-        __wbindgen_error_new: r.Rj,
         __wbindgen_is_string: r.Gu,
         __wbindgen_string_get: r.qN,
         __wbindgen_is_object: r.qv,
         __wbindgen_is_undefined: r.vU,
         __wbindgen_in: r.zE,
+        __wbindgen_string_new: r.yc,
         __wbindgen_number_new: r.N8,
+        __wbg_warn_2159aed0435b2f46: r.CI,
         __wbindgen_is_null: r.QR,
+        __wbindgen_error_new: r.Rj,
         __wbindgen_jsval_loose_eq: r.U8,
         __wbindgen_boolean_get: r.eF,
         __wbindgen_number_get: r.sW,
@@ -110,9 +110,9 @@ e.exports = n.v(t, e.id, "cd7be289e8153c6f", {
         __wbindgen_memory: r.Py,
         __wbindgen_throw: r.Qn,
         __wbindgen_debug_string: r.rl,
-        __wbindgen_closure_wrapper1450: r.FQ,
-        __wbindgen_closure_wrapper1515: r.$N,
-        __wbindgen_closure_wrapper2356: r.Dp,
+        __wbindgen_closure_wrapper1550: r.K7,
+        __wbindgen_closure_wrapper1615: r.Mn,
+        __wbindgen_closure_wrapper2456: r.W8,
         __wbindgen_init_externref_table: r.bL,
     },
 });

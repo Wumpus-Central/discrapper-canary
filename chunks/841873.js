@@ -20,12 +20,12 @@ n.d(t, {
     HB: () => e7,
     HS: () => eb,
     Hz: () => eI,
-    JD: () => tS,
     Jp: () => en,
-    Km: () => tC,
+    K7: () => tS,
     LC: () => tI,
     LM: () => tE,
     M2: () => ej,
+    Mn: () => tT,
     Mo: () => eO,
     N8: () => tF,
     ND: () => ec,
@@ -52,9 +52,9 @@ n.d(t, {
     Tb: () => J,
     Tp: () => tg,
     U8: () => tk,
-    Uu: () => tT,
     Ux: () => el,
     Vr: () => eF,
+    W8: () => tC,
     Xb: () => ef,
     Xc: () => ea,
     Y6: () => t_,
@@ -100,7 +100,7 @@ n.d(t, {
     pD: () => ez,
     qN: () => tV,
     qv: () => tx,
-    rf: () => v,
+    rf: () => C,
     rk: () => tr,
     rl: () => tN,
     s5: () => em,
@@ -306,8 +306,9 @@ function O(e) {
     return e instanceof Error ? "".concat(e.name, ": ").concat(e.message, "\n").concat(e.stack) : t;
 }
 
-function v(e, t, n, i, a) {
-    r.installLogCallback(e, t, n, i, a);
+function v(e) {
+    let t = r.__wbindgen_export_4.get(e);
+    return r.__externref_table_dealloc(e), t;
 }
 
 function A() {
@@ -332,9 +333,8 @@ function T(e) {
     }
 }
 
-function C(e) {
-    let t = r.__wbindgen_export_4.get(e);
-    return r.__externref_table_dealloc(e), t;
+function C(e, t, n, i, a) {
+    r.installLogCallback(e, t, n, i, a);
 }
 
 function N(e, t) {
@@ -352,11 +352,11 @@ function w(e, t) {
 }
 
 function R(e, t, n) {
-    r.closure697_externref_shim(e, t, n);
+    r.closure719_externref_shim(e, t, n);
 }
 
 function P(e, t, n, i) {
-    r.closure733_externref_shim(e, t, n, i);
+    r.closure755_externref_shim(e, t, n, i);
 }
 let D = ["bytes"],
     L = ["omit", "same-origin", "include"],
@@ -436,8 +436,8 @@ class F {
     }
     connectStore(e) {
         let t = r.fluxapi_connectStore(this.__wbg_ptr, e);
-        if (t[2]) throw C(t[1]);
-        return C(t[0]);
+        if (t[2]) throw v(t[1]);
+        return v(t[0]);
     }
     dispatchAction(e, t) {
         let n = u(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
@@ -1055,15 +1055,15 @@ function tI(e) {
 }
 
 function tS(e, t, n) {
-    return b(e, t, 511, N);
+    return b(e, t, 533, N);
 }
 
 function tT(e, t, n) {
-    return b(e, t, 551, w);
+    return b(e, t, 573, w);
 }
 
 function tC(e, t, n) {
-    return b(e, t, 698, R);
+    return b(e, t, 720, R);
 }
 
 function tN(e, t) {
