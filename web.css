@@ -52571,14 +52571,14 @@ div.modalOverrideBody__34eac {
     background: var(--custom-gradient-end)
 }
 
-.container__60cb4 {
+.container_e93594 {
     align-items: center;
     display: flex;
     padding-top: var(--space-12);
     width: 100%
 }
 
-.icon__60cb4 {
+.icon_e93594 {
     color: var(--text-default);
     -webkit-margin-start: -2px;
     margin-inline-start: -2px;
@@ -52586,7 +52586,7 @@ div.modalOverrideBody__34eac {
 }
 
 @container premium-marketing-page-container (min-width: 720px) {
-    .icon__60cb4 {
+    .icon_e93594 {
         color: #fff
     }
 }
