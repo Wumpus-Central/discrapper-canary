@@ -4,14 +4,15 @@ var r = n(73153),
     a = n(865116),
     o = n(279263),
     s = n(961350),
-    l = n(71393),
-    c = n(954571),
-    u = n(728458),
-    d = n(157016),
-    f = n(548965),
-    p = n(652215);
+    l = n(317525),
+    c = n(71393),
+    u = n(954571),
+    d = n(728458),
+    f = n(157016),
+    p = n(548965),
+    _ = n(652215);
 
-function _(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function _(e, t, n) {
     );
 }
 
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,13 +37,13 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
 
-function m(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,22 +56,22 @@ function m(e, t) {
     return n;
 }
 
-function g(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let E = new i.A("DispatcherBridge"),
-    y = [o.A, l.A],
-    b = {
+let y = new i.A("DispatcherBridge"),
+    b = [o.A, c.A, l.A],
+    O = {
         GUILD_MEMBER_ADD: (e) =>
-            g(h({}, e), {
+            E(m({}, e), {
                 currentUserId: s.default.getId(),
             }),
         CONNECTION_OPEN: (e) => ({
@@ -86,10 +87,10 @@ let E = new i.A("DispatcherBridge"),
             guilds: e.guilds,
         }),
     };
-class O {
+class v {
     withStoreToken(e, t, n) {
         let r = this.tokenToStore.get(e);
-        null == r ? E.warn("When dispatching action", t, "we got a store token", e, "that is unknown") : n(r);
+        null == r ? y.warn("When dispatching action", t, "we got a store token", e, "that is unknown") : n(r);
     }
     filterAuthorativeStores(e) {
         let t = [];
@@ -100,9 +101,9 @@ class O {
         return t;
     }
     constructor(e) {
-        if ((_(this, "tokenToStore", new Map()), 0 === e.length)) return;
-        const t = d.V;
-        if (null == t) return void E.info("Not initializing DispatcherBridge, because kvStoreApi is unavailable.");
+        if ((h(this, "tokenToStore", new Map()), 0 === e.length)) return;
+        const t = f.V;
+        if (null == t) return void y.info("Not initializing DispatcherBridge, because kvStoreApi is unavailable.");
         try {
             const n = [];
             for (const r of e) {
@@ -111,17 +112,17 @@ class O {
                 this.tokenToStore.set(i, r),
                     n.push("".concat(e, " => [token: ").concat(i, ", mode: ").concat(r.getMode(), "]"));
             }
-            E.info("Connected ".concat(e.length, " store(s), mapping: ").concat(n.join(", "), "."));
+            y.info("Connected ".concat(e.length, " store(s), mapping: ").concat(n.join(", "), "."));
             const i = t.getRegisteredActionTypes();
-            E.info("Registering ".concat(i.length, " bridged action(s): ").concat(i.join(", "), "."));
+            y.info("Registering ".concat(i.length, " bridged action(s): ").concat(i.join(", "), "."));
             const o = (e) => {
                 let n,
-                    r = b[e.type],
+                    r = O[e.type],
                     i = performance.now();
                 n =
                     null != r
                         ? JSON.stringify(
-                              h(
+                              m(
                                   {
                                       type: e.type,
                                   },
@@ -133,15 +134,15 @@ class O {
                         kind: "json_stringify_action",
                         durationMillis: performance.now() - i,
                     },
-                    s = f.pd.shouldCollectMetrics(),
+                    s = p.pd.shouldCollectMetrics(),
                     l = t.dispatchAction(n, s);
                 if (!l.ok) {
                     let n = Error(l.error),
                         r = t.findStoresThatCanHandleActionType(e.type),
                         i = this.filterAuthorativeStores(r).map((e) => e.getName());
                     if (
-                        (E.error("Failed to dispatch action", e.type, "authorative stores", i, "error:", n),
-                        u.A.captureException(n, {
+                        (y.error("Failed to dispatch action", e.type, "authorative stores", i, "error:", n),
+                        d.A.captureException(n, {
                             extra: {
                                 authorativeStores: i.join(", "),
                             },
@@ -154,18 +155,18 @@ class O {
                         throw n;
                     return;
                 }
-                let d = performance.now() - i,
-                    { metrics: _, changes: m } = l.value;
-                for (let t of m)
+                let c = performance.now() - i,
+                    { metrics: f, changes: h } = l.value;
+                for (let t of h)
                     this.withStoreToken(t.storeToken, e.type, (e) => {
                         e.applyChanges(t.databaseChanges);
                     });
-                for (let t of m)
+                for (let t of h)
                     this.withStoreToken(t.storeToken, e.type, (t) => {
                         t.doEmitChanges(e);
                     });
-                if (null != _ && s) {
-                    let t = [o, ..._.timings];
+                if (null != f && s) {
+                    let t = [o, ...f.timings];
                     if (a.Ay.get("libdiscore_verbose_telemetry_logging")) {
                         let n = t
                                 .map((e) => {
@@ -173,7 +174,7 @@ class O {
                                     return " - ".concat(t, ": ").concat(n, "ms");
                                 })
                                 .join("\n"),
-                            r = _.mutations
+                            r = f.mutations
                                 .map((e) => {
                                     let { recordType: t, metrics: n } = e,
                                         r = Object.entries(n)
@@ -189,7 +190,7 @@ class O {
                                     return " * Record Type: ".concat(t, "\n").concat(r);
                                 })
                                 .join("\n"),
-                            i = _.memory
+                            i = f.memory
                                 .map((e) => {
                                     let { recordType: t, statistics: n } = e,
                                         r = Object.entries(n)
@@ -215,16 +216,16 @@ class O {
                                     return "".concat(t, ":\n").concat(n);
                                 })
                                 .join("\n\n");
-                        E.info("Handling action ".concat(e.type, " took ").concat(d, "ms\n").concat(a));
+                        y.info("Handling action ".concat(e.type, " took ").concat(c, "ms\n").concat(a));
                     }
-                    c.default.track(p.HAw.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, {
+                    u.default.track(_.HAw.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, {
                         action_type: e.type,
-                        total_duration_millis: d,
+                        total_duration_millis: c,
                         timings: JSON.stringify(t),
-                        mutations: JSON.stringify(_.mutations),
-                        memory_usage: JSON.stringify(_.memory),
+                        mutations: JSON.stringify(f.mutations),
+                        memory_usage: JSON.stringify(f.memory),
                     }),
-                        f.pd.didEmit();
+                        p.pd.didEmit();
                 }
             };
             r.h.register(
@@ -234,15 +235,15 @@ class O {
                 r.A.Database,
             );
         } catch (e) {
-            E.error("Failed to initialize the dispatcher bridge", e);
+            y.error("Failed to initialize the dispatcher bridge", e);
         }
     }
 }
-let v = new Set(["libdiscore", "typescript-libdiscore-dual-read"]);
-new O(
+let A = new Set(["libdiscore", "typescript-libdiscore-dual-read"]);
+new v(
     (function (e) {
         return __OVERLAY__
-            ? (E.verbose("Not enabling rust implementation because we're in the legacy overlay"), [])
-            : e.filter((e) => v.has(e.getMode()));
-    })(y),
+            ? (y.verbose("Not enabling rust implementation because we're in the legacy overlay"), [])
+            : e.filter((e) => A.has(e.getMode()));
+    })(b),
 );
