@@ -11,23 +11,23 @@ var r = n(627968),
     u = n(397927),
     d = n(573435),
     p = n(545167),
-    f = n(851580),
-    h = n(222823),
-    A = n(287809),
-    g = n(371911),
-    m = n(790782),
-    b = n(985018),
-    _ = n(656678);
+    h = n(851580),
+    g = n(222823),
+    m = n(287809),
+    f = n(371911),
+    A = n(790782),
+    _ = n(985018),
+    b = n(656678);
 
 function E(e) {
     let { onOpen: t, onClose: n, "data-jump-section": l } = e,
-        E = (0, s.bG)([A.default], () => A.default.getCurrentUser()),
+        E = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
         O = i.useRef(null),
         y = (0, s.bG)(
-            [h.Ay],
-            () => (null == E ? void 0 : E.id) != null && h.Ay.getMentionCount(E.id, m.P.NOTIFICATION_CENTER) > 0,
+            [g.Ay],
+            () => (null == E ? void 0 : E.id) != null && g.Ay.getMentionCount(E.id, A.P.NOTIFICATION_CENTER) > 0,
         ),
-        { titlebarIconSize: I, titlebarHoverHighlight: v } = (0, p.p)({
+        { titlebarIconSize: I, titlebarHoverHighlight: v } = (0, p.pz)({
             location: "RecentsButton",
         }),
         S = "sm" === I ? "refresh_sm" : "md",
@@ -39,7 +39,7 @@ function E(e) {
                 }),
             [S],
         );
-    return (0, r.jsx)(g.C, {
+    return (0, r.jsx)(f.C, {
         targetElementRef: O,
         onOpen: t,
         onClose: n,
@@ -55,7 +55,7 @@ function E(e) {
                     (0, r.jsx)(c.m_, {
                         targetElementRef: O,
                         shouldShow: !t,
-                        text: b.intl.string(b.t.GSmTKJ),
+                        text: _.intl.string(_.t.GSmTKJ),
                         children: (0, r.jsx)(
                             u.DUT,
                             ((s = (function (e) {
@@ -89,9 +89,9 @@ function E(e) {
                                     innerRef: O,
                                     onClick: e,
                                     "data-jump-section": l,
-                                    "aria-label": b.intl.string(b.t.GSmTKJ),
-                                    className: a()(_.vk, {
-                                        [_.l9]: v,
+                                    "aria-label": _.intl.string(_.t.GSmTKJ),
+                                    className: a()(b.vk, {
+                                        [b.l9]: v,
                                     }),
                                     children:
                                         y || i
@@ -104,8 +104,8 @@ function E(e) {
                                                           children: C,
                                                       }),
                                                       (0, r.jsx)("span", {
-                                                          className: a()(_.qS, {
-                                                              [_.mf]: "refresh_sm" === S,
+                                                          className: a()(b.qS, {
+                                                              [b.mf]: "refresh_sm" === S,
                                                           }),
                                                       }),
                                                   ],
@@ -127,7 +127,7 @@ function E(e) {
                             s),
                         ),
                     }),
-                    (0, r.jsx)(f.v, {
+                    (0, r.jsx)(h.v, {
                         location: "inbox-button",
                         targetElementRef: O,
                     }),

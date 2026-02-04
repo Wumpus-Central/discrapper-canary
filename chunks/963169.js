@@ -1,13 +1,13 @@
 n.d(t, {
     MS: () => u,
-    OE: () => f,
-    Qb: () => p,
+    OE: () => d,
+    Qb: () => f,
 });
 var r = n(73153),
     i = n(824865),
     a = n(976860),
-    s = n(954571),
-    o = n(545167),
+    o = n(954571),
+    s = n(545167),
     l = n(729904),
     c = n(652215);
 
@@ -18,19 +18,17 @@ function u(e, t) {
         action: t,
     });
 }
-let d = () =>
-    (0, o.J)({
-        location: "NavHistoryActionCreators",
-    });
 
-function f(e) {
+function d(e) {
     if (!(0, a.TX)()) return;
     if (
-        (s.default.track(c.HAw.APP_BACK_FORWARD_NAVIGATED, {
+        (o.default.track(c.HAw.APP_BACK_FORWARD_NAVIGATED, {
             nav_direction: -1,
             nav_trigger: e,
         }),
-        !d())
+        !(0, s.vY)({
+            location: e,
+        }))
     )
         return void (0, a.aX)();
     let t = l.A.backDestination;
@@ -40,14 +38,16 @@ function f(e) {
         });
 }
 
-function p(e) {
+function f(e) {
     if (!(0, a.TX)()) return;
     if (
-        (s.default.track(c.HAw.APP_BACK_FORWARD_NAVIGATED, {
+        (o.default.track(c.HAw.APP_BACK_FORWARD_NAVIGATED, {
             nav_direction: 1,
             nav_trigger: e,
         }),
-        !d())
+        !(0, s.vY)({
+            location: e,
+        }))
     )
         return void (0, a.sY)();
     let t = l.A.forwardDestination;

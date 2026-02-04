@@ -66,7 +66,7 @@ let H = i.memo(function () {
         { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, f.t)({
             location: "AppTitleBar",
         }),
-        { backForwardButtons: s, titlebarIconSize: _ } = (0, m.p)({
+        { backForwardButtons: s, titlebarIconSize: _ } = (0, m.pz)({
             location: "AppTitleBar",
         }),
         { hasBugReporterAccess: v } = h.A.useConfig({

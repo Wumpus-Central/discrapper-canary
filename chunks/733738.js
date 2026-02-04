@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => m,
+    A: () => A,
 });
 var r = n(627968);
 n(64700);
@@ -12,28 +12,28 @@ var i = n(503698),
     u = n(545167),
     d = n(729904),
     p = n(963169),
-    f = n(985018),
-    h = n(88808);
-let A = c.GY.binds["0"],
-    g = c.M$.binds["0"],
-    m = (e) => {
+    h = n(985018),
+    g = n(88808);
+let m = c.GY.binds["0"],
+    f = c.M$.binds["0"],
+    A = (e) => {
         var t, n;
         let { firstElementFocusJumpSectionProps: i = {} } = e,
-            { titlebarIconSize: c } = (0, u.p)({
+            { titlebarIconSize: c } = (0, u.pz)({
                 location: "BackForwardButtons",
             }),
-            { canGoBack: m, canGoForward: b } = (0, a.cf)([d.A], () => ({
+            { canGoBack: A, canGoForward: _ } = (0, a.cf)([d.A], () => ({
                 canGoBack: d.A.canGoBack,
                 canGoForward: d.A.canGoForward,
             }));
         return (0, r.jsxs)("div", {
-            className: h.y_,
+            className: g.y_,
             children: [
                 (0, r.jsx)(s.m_, {
                     ariaHidden: !0,
-                    shouldShow: m,
-                    text: f.intl.string(f.t.B9vzIP),
-                    keyboardShortcut: A,
+                    shouldShow: A,
+                    text: h.intl.string(h.t.B9vzIP),
+                    keyboardShortcut: m,
                     children: (0, r.jsx)(
                         o.DUT,
                         ((t = (function (e) {
@@ -62,10 +62,10 @@ let A = c.GY.binds["0"],
                             return e;
                         })(
                             {
-                                "aria-label": f.intl.string(f.t.B9vzIP),
-                                "aria-disabled": !m,
-                                className: l()(h.x6, h.aX, {
-                                    [h.r9]: !m,
+                                "aria-label": h.intl.string(h.t.B9vzIP),
+                                "aria-disabled": !A,
+                                className: l()(g.x6, g.aX, {
+                                    [g.r9]: !A,
                                 }),
                                 onClick: () => (0, p.OE)("nav_button"),
                             },
@@ -95,14 +95,14 @@ let A = c.GY.binds["0"],
                 }),
                 (0, r.jsx)(s.m_, {
                     ariaHidden: !0,
-                    shouldShow: b,
-                    text: f.intl.string(f.t["9KJ29e"]),
-                    keyboardShortcut: g,
+                    shouldShow: _,
+                    text: h.intl.string(h.t["9KJ29e"]),
+                    keyboardShortcut: f,
                     children: (0, r.jsx)(o.DUT, {
-                        "aria-label": f.intl.string(f.t["9KJ29e"]),
-                        "aria-disabled": !b,
-                        className: l()(h.x6, h.sY, {
-                            [h.r9]: !b,
+                        "aria-label": h.intl.string(h.t["9KJ29e"]),
+                        "aria-disabled": !_,
+                        className: l()(g.x6, g.sY, {
+                            [g.r9]: !_,
                         }),
                         onClick: () => (0, p.Qb)("nav_button"),
                         children: (0, r.jsx)(o.EdP, {

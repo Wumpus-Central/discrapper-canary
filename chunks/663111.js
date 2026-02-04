@@ -11,13 +11,13 @@ var r = n(627968),
     u = n(397927),
     d = n(587895),
     p = n(545167),
-    f = n(515610),
-    h = n(91242),
-    A = n(263063),
-    g = n(394953),
-    m = n(793322),
-    b = n(734057),
-    _ = n(71393),
+    h = n(515610),
+    g = n(91242),
+    m = n(263063),
+    f = n(394953),
+    A = n(793322),
+    _ = n(734057),
+    b = n(71393),
     E = n(309010),
     O = n(967198),
     y = n(486020),
@@ -34,19 +34,19 @@ function T(e) {
         x = (0, s.zy)(),
         P = (0, o.bG)([O.A], () => O.A.getGuildId()),
         w = (0, o.bG)([E.A], () => E.A.getChannelId()),
-        L = (0, o.bG)([b.A], () => b.A.getChannel(w), [w]),
+        L = (0, o.bG)([_.A], () => _.A.getChannel(w), [w]),
         R = null != P ? P : null == L ? void 0 : L.guild_id,
-        D = (0, o.bG)([_.A], () => _.A.getGuild(R), [R]),
-        M = (0, f.A)(),
-        k = (0, g.lI)(),
-        { guildTitleIconSize: U, guildIconSize: G } = (0, p.p)({
+        D = (0, o.bG)([b.A], () => b.A.getGuild(R), [R]),
+        M = (0, h.A)(),
+        k = (0, f.lI)(),
+        { guildTitleIconSize: U, guildIconSize: G } = (0, p.pz)({
             location: "GuildTitle",
         }),
-        { application: V, isFrameInFocusedMode: B } = (0, o.cf)([d.A, h.A], () => {
-            let e = h.A.getConnectedFrame();
+        { application: V, isFrameInFocusedMode: B } = (0, o.cf)([d.A, g.A], () => {
+            let e = g.A.getConnectedFrame();
             return {
                 application: d.A.getApplication(null == e ? void 0 : e.applicationId),
-                isFrameInFocusedMode: h.A.getFrameLayoutMode() === v.y.FOCUSED,
+                isFrameInFocusedMode: g.A.getFrameLayoutMode() === v.y.FOCUSED,
             };
         }),
         H =
@@ -77,7 +77,7 @@ function T(e) {
                   ? (0, r.jsx)(u.Gg5, {
                         size: U,
                     })
-                  : (0, r.jsx)(A.A, {
+                  : (0, r.jsx)(m.A, {
                         guild: D,
                         size: G,
                         active: !0,
@@ -125,7 +125,7 @@ function T(e) {
                                 size: U,
                             })));
     let Y = i.useCallback((e) => {
-            (0, m.L$)("fast-travel");
+            (0, A.L$)("fast-travel");
         }, []),
         K = (null == l || "" === l) && T ? S.intl.string(S.t.ZvKwYa) : l;
     return null == K || "" === K
