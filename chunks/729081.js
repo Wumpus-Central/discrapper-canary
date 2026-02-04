@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => E,
+    A: () => I,
 }),
     n(896048),
     n(638769);
@@ -13,41 +13,45 @@ var r = n(627968),
     u = n(568598),
     d = n(313961),
     p = n(246356),
-    h = n(290863),
-    g = n(954571),
-    f = n(403362),
-    m = n(79871),
-    b = n(592356),
-    A = n(620406),
-    y = n(188275),
-    O = n(652215),
-    j = n(806931),
-    x = n(985018),
-    _ = n(877409);
-let v = "vc-gifting-".concat((0, s.A)());
+    h = n(178213),
+    g = n(594832),
+    f = n(290863),
+    m = n(954571),
+    b = n(403362),
+    A = n(79871),
+    y = n(592356),
+    O = n(568751),
+    j = n(620406),
+    _ = n(188275),
+    x = n(652215),
+    v = n(806931),
+    E = n(985018),
+    C = n(877409);
+let S = "vc-gifting-".concat((0, s.A)());
 
-function E(e) {
+function I(e) {
     var t;
-    let { isHovered: n, closePopout: s, onMouseEnter: E, onMouseLeave: C, channel: S } = e;
+    let { isHovered: n, closePopout: s, onMouseEnter: I, onMouseLeave: N, channel: T } = e;
     l.useEffect(() => {
         n || s();
     }, [s, n]);
-    let I = (0, o.bG)([c.A], () => c.A.getApplication(y.XR)),
-        [N] = (0, o.bG)(
+    let P = (0, h.G)("social_layer_storefront_gifting_mini_shelf"),
+        w = (0, o.bG)([c.A], () => c.A.getApplication(_.XR)),
+        [R] = (0, o.bG)(
             [d.A],
-            () => (null != S.id ? [d.A.getParticipants(S.id), d.A.getParticipantsVersion(S.id)] : [[], 0]),
-            [S.id],
+            () => (null != T.id ? [d.A.getParticipants(T.id), d.A.getParticipantsVersion(T.id)] : [[], 0]),
+            [T.id],
             u.hS,
         ),
-        T = (0, o.yK)([h.A], () => {
+        D = (0, o.yK)([f.A], () => {
             let e = new Set();
-            for (let n of N)
-                if ((0, j.Xw)(n) || (0, j.Ay)(n))
-                    for (let r of h.A.getActivities(n.user.id)) {
+            for (let n of R)
+                if ((0, v.Xw)(n) || (0, v.Ay)(n))
+                    for (let r of f.A.getActivities(n.user.id)) {
                         var t;
                         if (
-                            r.application_id === (null == I ? void 0 : I.id) ||
-                            (null == I || null == (t = I.linkedGames)
+                            r.application_id === (null == w ? void 0 : w.id) ||
+                            (null == w || null == (t = w.linkedGames)
                                 ? void 0
                                 : t.some((e) => e.id === r.application_id)) === !0
                         ) {
@@ -56,93 +60,107 @@ function E(e) {
                         }
                     }
             return Array.from(e).sort();
-        }, [N, I]),
-        P = l.useMemo(() => {
-            let e = N.map((e) => ((0, j.Xw)(e) || (0, j.Ay)(e) ? e.user.id : null)).filter(f.Vq);
-            return (0, i.uniq)([...T, ...e]);
-        }, [N, T]),
+        }, [R, w]),
+        L = l.useMemo(() => {
+            let e = R.map((e) => ((0, v.Xw)(e) || (0, v.Ay)(e) ? e.user.id : null)).filter(b.Vq);
+            return (0, i.uniq)([...D, ...e]);
+        }, [R, D]),
         {
-            state: w,
-            recommendations: R,
-            skuIdToUserIdsReasons: D,
-        } = (0, b.A)({
-            applicationId: y.XR,
-            numWishlistItems: b.o,
-            userIds: P,
+            state: M,
+            recommendations: G,
+            skuIdToUserIdsReasons: k,
+        } = (0, y.A)({
+            applicationId: _.XR,
+            numWishlistItems: y.o,
+            userIds: L,
             location: "Social Layer Gifting Mini Shelf",
             includeWishlists: !0,
         }),
-        L = l.useMemo(() => {
-            let e = new Set(P);
-            return R.map((t) => {
+        U = l.useMemo(() => {
+            let e = new Set(L);
+            return G.map((t) => {
                 var n, l;
                 let i =
                     null !=
                     (n =
-                        null == (l = D[t.skuId])
+                        null == (l = k[t.skuId])
                             ? void 0
                             : l
-                                  .filter((t) => t.reason === m.G.WISHLIST && e.has(t.userId))
+                                  .filter((t) => t.reason === A.G.WISHLIST && e.has(t.userId))
                                   .map((e) => e.userId)
-                                  .filter(f.Vq))
+                                  .filter(b.Vq))
                         ? n
                         : [];
-                return (0, r.jsx)(
-                    A.A,
-                    {
-                        variant: i.length > 0 ? A.$.WISHLIST : A.$.POPULAR,
-                        wishlistItem: t,
-                        userIdsForRecommendation: i,
-                        userIdsForGifting: P,
-                        guildId: S.guild_id,
-                        channelId: S.id,
-                        contextContainerClassName: _.RL,
-                    },
-                    t.skuId,
-                );
+                return P
+                    ? (0, r.jsx)(
+                          O.A,
+                          {
+                              sku: t.sku,
+                              source: i.length > 0 ? g.uS.WISHLIST : g.uS.POPULAR,
+                              guildId: T.guild_id,
+                              channelId: T.id,
+                              contextContainerClassName: C.RL,
+                              userIdsForGifting: L,
+                              userIdsForRecommendation: i,
+                          },
+                          t.skuId,
+                      )
+                    : (0, r.jsx)(
+                          j.A,
+                          {
+                              variant: i.length > 0 ? j.$.WISHLIST : j.$.POPULAR,
+                              wishlistItem: t,
+                              userIdsForRecommendation: i,
+                              userIdsForGifting: L,
+                              guildId: T.guild_id,
+                              channelId: T.id,
+                              contextContainerClassName: C.RL,
+                          },
+                          t.skuId,
+                      );
             });
-        }, [S.guild_id, S.id, R, D, P]);
+        }, [T.guild_id, T.id, G, k, L, P]);
     return (
         l.useEffect(() => {
-            0 !== R.length &&
-                g.default.track(O.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
-                    guild_id: S.guild_id,
-                    channel_id: S.id,
-                    sku_ids: R.map((e) => e.skuId),
+            0 !== G.length &&
+                m.default.track(x.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
+                    guild_id: T.guild_id,
+                    channel_id: T.id,
+                    sku_ids: G.map((e) => e.skuId),
                 });
-        }, [S.id, S.guild_id, R]),
+        }, [T.id, T.guild_id, G]),
         (0, r.jsx)(p.A, {
             children: (0, r.jsx)(a.lGe, {
-                "aria-labelledby": v,
+                "aria-labelledby": S,
                 modal: !1,
                 children: (0, r.jsxs)("div", {
-                    className: _.kL,
-                    onMouseEnter: E,
-                    onMouseLeave: C,
+                    className: C.kL,
+                    onMouseEnter: I,
+                    onMouseLeave: N,
                     children: [
                         (0, r.jsx)(a.DZT, {
-                            className: _.DD,
+                            className: C.DD,
                             variant: "text-lg/bold",
                             color: "text-strong",
-                            children: x.intl.string(x.t.xLP3bi),
+                            children: E.intl.string(E.t.xLP3bi),
                         }),
                         (0, r.jsx)(a.EYj, {
-                            className: _.VA,
+                            className: C.VA,
                             variant: "text-sm/medium",
                             color: "text-subtle",
-                            children: x.intl.format(x.t["+SqhBF"], {
+                            children: E.intl.format(E.t["+SqhBF"], {
                                 applicationName:
-                                    null != (t = null == I ? void 0 : I.name) ? t : x.intl.string(x.t["/1hhto"]),
+                                    null != (t = null == w ? void 0 : w.name) ? t : E.intl.string(E.t["/1hhto"]),
                             }),
                         }),
                         (0, r.jsx)("div", {
-                            className: _.Xb,
+                            className: C.Xb,
                             children:
-                                "loading" === w || 0 === R.length
+                                "loading" === M || 0 === G.length
                                     ? (0, r.jsx)(a.y$y, {
-                                          className: _.Lq,
+                                          className: C.Lq,
                                       })
-                                    : L,
+                                    : U,
                         }),
                     ],
                 }),

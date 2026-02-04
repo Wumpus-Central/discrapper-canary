@@ -5,4 +5,5 @@ e.exports = {
     ld: "items__3a590",
     u1: "spinner__3a590",
     RL: "contextContainer__3a590",
+    tM: "smallSquareCard__3a590",
 };
