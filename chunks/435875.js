@@ -1,25 +1,26 @@
 n.d(t, {
-    q: () => s,
+    q: () => o,
 });
-var r = n(846293),
-    i = n(142120),
+var r = n(73153),
+    i = n(846293),
     l = n(970163),
-    a = n(71393);
-async function s(e) {
+    a = n(71393),
+    s = n(652215);
+async function o(e) {
     let { code: t } = e,
-        s = (await (0, l.A)(t)).invite;
-    if (
-        null == s ||
-        null == s.guild ||
-        (await new Promise((e) => {
-            i.A.addChangeListener(() => !i.A.isConnected() || (e(), !1));
-        }),
-        null == a.A.getGuild(s.guild.id))
-    )
-        return;
-    let { default: o } = await Promise.resolve().then(n.bind(n, 967305));
-    await o({
-        guildId: s.guild.id,
+        o = (await (0, l.A)(t)).invite;
+    if (null == o || null == o.guild) return;
+    let c = o.guild.id;
+    if (null == a.A.getGuild(c))
+        return void r.h.dispatch({
+            type: "INVITE_MODAL_OPEN",
+            invite: o,
+            code: t,
+            context: s.BRT.APP,
+        });
+    let { default: u } = await Promise.resolve().then(n.bind(n, 967305));
+    await u({
+        guildId: c,
     }),
-        r.Ay.transitionToInvite(s, void 0, !0);
+        i.Ay.transitionToInvite(o, void 0, !0);
 }
