@@ -1,25 +1,24 @@
-"use strict";
 n.d(t, { A: () => r });
-var s = n(64700),
-    i = n(425587);
+var i = n(64700),
+    s = n(425587);
 let r = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { refreshOnDepChange: t } = e,
-        [n, r] = s.useState([]),
-        [l, a] = s.useState(!0),
-        o = async () => {
-            a(!0);
+        [n, r] = i.useState([]),
+        [l, o] = i.useState(!0),
+        a = async () => {
+            o(!0);
             try {
-                let e = await i.A.fetchTeams(!0);
+                let e = await s.A.fetchTeams(!0);
                 r(e.body);
             } catch (e) {}
-            a(!1);
+            o(!1);
         },
-        d = s.useRef(!0);
+        c = i.useRef(!0);
     return (
-        s.useEffect(() => {
-            (d.current || t) && ((d.current = !1), o());
+        i.useEffect(() => {
+            (c.current || t) && ((c.current = !1), a());
         }, [t]),
-        { teams: n, loading: l, refresh: o }
+        { teams: n, loading: l, refresh: a }
     );
 };

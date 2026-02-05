@@ -1,4 +1,3 @@
-"use strict";
 r.d(t, { A: () => b });
 var n = r(627968),
     o = r(64700),
@@ -21,13 +20,13 @@ function f(e) {
                       : typeof e;
               })(e);
 }
-function l(e, t) {
+function h(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
     return n;
 }
-function h(e, t) {
-    return (h =
+function l(e, t) {
+    return (l =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
@@ -56,22 +55,22 @@ function b(e) {
         d = e.createMonitor,
         b = e.createConnector,
         m = e.registerHandler,
-        w = e.containerDisplayName,
-        D = e.getType,
-        S = e.collect,
-        k = e.options.arePropsEqual,
-        O = void 0 === k ? i.b : k,
-        C = t.displayName || t.name || "Component",
-        I = (function (e) {
+        D = e.containerDisplayName,
+        k = e.getType,
+        C = e.collect,
+        w = e.options.arePropsEqual,
+        j = void 0 === w ? i.b : w,
+        I = t.displayName || t.name || "Component",
+        O = (function (e) {
             if ("function" != typeof e && null !== e)
                 throw TypeError("Super expression must either be null or a function");
-            (I.prototype = Object.create(e && e.prototype, {
-                constructor: { value: I, writable: !0, configurable: !0 },
+            (O.prototype = Object.create(e && e.prototype, {
+                constructor: { value: O, writable: !0, configurable: !0 },
             })),
-                e && h(I, e);
+                e && l(O, e);
             var p,
-                w,
-                k =
+                D,
+                w =
                     ((p = (function () {
                         if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                         if ("function" == typeof Proxy) return !0;
@@ -83,7 +82,7 @@ function b(e) {
                     })()),
                     function () {
                         var e,
-                            t = y(I);
+                            t = y(O);
                         return (
                             (e = p ? Reflect.construct(t, arguments, y(this).constructor) : t.apply(this, arguments)),
                             (function (e, t) {
@@ -94,11 +93,11 @@ function b(e) {
                             })(this, e)
                         );
                     });
-            function I(e) {
+            function O(e) {
                 var t;
-                if (!(this instanceof I)) throw TypeError("Cannot call a class as a function");
+                if (!(this instanceof O)) throw TypeError("Cannot call a class as a function");
                 return (
-                    g(v((t = k.call(this, e))), "decoratedRef", (0, o.createRef)()),
+                    g(v((t = w.call(this, e))), "decoratedRef", (0, o.createRef)()),
                     g(v(t), "handlerId", void 0),
                     g(v(t), "manager", void 0),
                     g(v(t), "handlerMonitor", void 0),
@@ -118,7 +117,7 @@ function b(e) {
                 );
             }
             return (
-                (w = [
+                (D = [
                     {
                         key: "getHandlerId",
                         value: function () {
@@ -140,7 +139,7 @@ function b(e) {
                     {
                         key: "shouldComponentUpdate",
                         value: function (e, t) {
-                            return !O(e, this.props) || !(0, i.b)(t, this.state);
+                            return !j(e, this.props) || !(0, i.b)(t, this.state);
                         },
                     },
                     {
@@ -155,7 +154,7 @@ function b(e) {
                     {
                         key: "componentDidUpdate",
                         value: function (e) {
-                            O(this.props, e) || (this.receiveProps(this.props), this.handleChange());
+                            j(this.props, e) || (this.receiveProps(this.props), this.handleChange());
                         },
                     },
                     {
@@ -168,7 +167,7 @@ function b(e) {
                     {
                         key: "receiveProps",
                         value: function (e) {
-                            this.handler && (this.handler.receiveProps(e), this.receiveType(D(e)));
+                            this.handler && (this.handler.receiveProps(e), this.receiveType(k(e)));
                         },
                     },
                     {
@@ -218,7 +217,7 @@ function b(e) {
                                         })(t, 2) ||
                                         (function (e, t) {
                                             if (e) {
-                                                if ("string" == typeof e) return l(e, 2);
+                                                if ("string" == typeof e) return h(e, 2);
                                                 var r = Object.prototype.toString.call(e).slice(8, -1);
                                                 if (
                                                     ("Object" === r && e.constructor && (r = e.constructor.name),
@@ -229,7 +228,7 @@ function b(e) {
                                                     "Arguments" === r ||
                                                     /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
                                                 )
-                                                    return l(e, 2);
+                                                    return h(e, 2);
                                             }
                                         })(t, 2) ||
                                         (function () {
@@ -260,7 +259,7 @@ function b(e) {
                         key: "getCurrentState",
                         value: function () {
                             return this.handlerConnector
-                                ? S(this.handlerConnector.hooks, this.handlerMonitor, this.props)
+                                ? C(this.handlerConnector.hooks, this.handlerMonitor, this.props)
                                 : {};
                         },
                     },
@@ -305,8 +304,8 @@ function b(e) {
                                 ((0, a.V)(
                                     void 0 !== e,
                                     "Could not find the drag and drop manager in the context of %s. Make sure to render a DndProvider component in your top-level component. Read more: http://react-dnd.github.io/react-dnd/docs/troubleshooting#could-not-find-the-drag-and-drop-manager-in-the-context",
-                                    C,
-                                    C,
+                                    I,
+                                    I,
                                 ),
                                 void 0 !== e &&
                                     ((this.manager = e),
@@ -324,9 +323,9 @@ function b(e) {
                             "value" in n && (n.writable = !0),
                             Object.defineProperty(e, n.key, n);
                     }
-                })(I.prototype, w),
-                I
+                })(O.prototype, D),
+                O
             );
         })(o.Component);
-    return g(I, "DecoratedComponent", t), g(I, "displayName", "".concat(w, "(").concat(C, ")")), p()(I, t);
+    return g(O, "DecoratedComponent", t), g(O, "displayName", "".concat(D, "(").concat(I, ")")), p()(O, t);
 }

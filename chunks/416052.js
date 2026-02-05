@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { A: () => c });
-var s = n(627968),
-    i = n(64700),
+n.d(t, { A: () => u });
+var i = n(627968),
+    s = n(64700),
     r = n(451988),
     l = n(421380),
-    a = n(397927),
-    o = n(957565),
-    d = n(985018);
-class h extends i.PureComponent {
+    o = n(397927),
+    a = n(957565),
+    c = n(985018);
+class d extends s.PureComponent {
     _timeout;
     static defaultProps = { delay: 1e3 };
     constructor(e) {
         super(e),
-            (this.state = { mode: a.e2O.Modes.DEFAULT }),
+            (this.state = { mode: o.e2O.Modes.DEFAULT }),
             (this._timeout = new r.Ep()),
             (this.handleCopy = this.handleCopy.bind(this));
     }
@@ -22,28 +21,28 @@ class h extends i.PureComponent {
     render() {
         let { text: e } = this.props,
             { mode: t } = this.state,
-            n = t === a.e2O.Modes.SUCCESS ? d.intl.string(d.t.t5VZ88) : e;
-        return (0, s.jsx)(a.e2O, { ...this.props, onCopy: this.handleCopy, mode: t, text: n, supportsCopy: o.p5 });
+            n = t === o.e2O.Modes.SUCCESS ? c.intl.string(c.t.t5VZ88) : e;
+        return (0, i.jsx)(o.e2O, { ...this.props, onCopy: this.handleCopy, mode: t, text: n, supportsCopy: a.p5 });
     }
     handleCopy(e) {
         let { onCopy: t, delay: n = 1e3 } = this.props;
-        (0, o.C)(
+        (0, a.C)(
             e,
-            () => this.setState({ mode: a.e2O.Modes.SUCCESS }),
-            () => this.setState({ mode: a.e2O.Modes.ERROR }),
+            () => this.setState({ mode: o.e2O.Modes.SUCCESS }),
+            () => this.setState({ mode: o.e2O.Modes.ERROR }),
         ),
-            this._timeout.start(n, () => this.setState({ mode: a.e2O.Modes.DEFAULT })),
+            this._timeout.start(n, () => this.setState({ mode: o.e2O.Modes.DEFAULT })),
             t?.(e);
     }
     getVerticalButtonColor(e) {
         switch (e) {
-            case a.e2O.Modes.SUCCESS:
+            case o.e2O.Modes.SUCCESS:
                 return l.$n.Colors.GREEN;
-            case a.e2O.Modes.ERROR:
+            case o.e2O.Modes.ERROR:
                 return l.$n.Colors.RED;
             default:
                 return l.$n.Colors.BRAND;
         }
     }
 }
-let c = h;
+let u = d;

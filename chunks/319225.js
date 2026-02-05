@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { E: () => o });
-var s = n(627968);
+n.d(t, { E: () => a });
+var i = n(627968);
 n(64700);
-var i = n(158954),
+var s = n(158954),
     r = n(397927),
     l = n(985018);
-function a(e) {
-    let { transitionState: t, title: n, body: r, onClose: a } = e;
-    return (0, s.jsx)(i.Modal, {
+function o(e) {
+    let { transitionState: t, title: n, body: r, onClose: o } = e;
+    return (0, i.jsx)(s.Modal, {
         title: n,
-        actions: [{ text: l.intl.string(l.t["NX+WJN"]), onClick: a }],
+        actions: [{ text: l.intl.string(l.t["NX+WJN"]), onClick: o }],
         transitionState: t,
-        onClose: a,
+        onClose: o,
         subtitle: r,
     });
 }
-function o(e) {
-    (0, r.qfG)((t) => (0, s.jsx)(a, { ...t, ...e }));
+function a(e) {
+    (0, r.qfG)((t) => (0, i.jsx)(o, { ...t, ...e }));
 }

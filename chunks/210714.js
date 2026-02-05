@@ -1,14 +1,15 @@
-n.d(t, { D: () => m, d: () => _ });
+"use strict";
+n.d(t, { D: () => _, d: () => h });
 var i = n(835245),
     s = n(77729),
     r = n(954571),
-    a = n(837921),
-    l = n(614792),
+    l = n(837921),
+    a = n(614792),
     o = n(652215);
-function c() {
+function d() {
     return window.GLOBAL_ENV.HTML_TIMESTAMP;
 }
-class d {
+class c {
     loadId = (0, i.A)();
     appUIViewed = !1;
     trackEvent(e) {
@@ -63,8 +64,8 @@ class d {
                 n ? i : {}),
                 load_id: this.loadId,
                 screen_name: e,
-                duration_ms_since_app_opened: t - c(),
-                app_hardware_acceleration_enabled: a.Ay.getEnableHardwareAcceleration(),
+                duration_ms_since_app_opened: t - d(),
+                app_hardware_acceleration_enabled: l.Ay.getEnableHardwareAcceleration(),
             });
         });
     }
@@ -73,12 +74,12 @@ class d {
         window.__TTI_COMPLETED = !0;
         let e = window.location?.pathname?.split("/")?.[1];
         requestIdleCallback(() => {
-            let t = c();
-            l.A.firstRenderAfterReadyPayload.record();
-            let n = l.A.serializeWebPerfStartupMetrics(t);
+            let t = d();
+            a.A.firstRenderAfterReadyPayload.record();
+            let n = a.A.serializeWebPerfStartupMetrics(t);
             r.default.track(o.HAw.APP_WEB_PERF_STARTUP_METRICS, { load_id: this.loadId, url_root_path: e, ...n });
             try {
-                a.Ay.appFirstRenderAfterReadyPayload();
+                l.Ay.appFirstRenderAfterReadyPayload();
             } catch (e) {}
         });
     }
@@ -86,16 +87,16 @@ class d {
         if (!this.appUIViewed) {
             this.trackEvent(e);
             try {
-                a.Ay.appViewed();
+                l.Ay.appViewed();
             } catch (e) {}
             this.appUIViewed = !0;
         }
     }
 }
-let u = new d();
-function _(e) {
+let u = new c();
+function h(e) {
     u.trackAppUIViewed(e);
 }
-function m() {
+function _() {
     u.trackTTI();
 }
