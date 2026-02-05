@@ -24710,24 +24710,15 @@ screen and (max-width:485px) {
     overflow: hidden
 }
 
-.paymentSourceHasWarning_f38e43 {
-    border-end-end-radius: 0;
-    border-end-start-radius: 0
-}
-
 .paymentSourceWarning_f38e43 {
-    align-content: center;
-    align-items: center;
-    background-color: var(--background-base-lowest);
-    border-end-end-radius: 4px;
-    border-end-start-radius: 4px;
+    align-items: flex-start;
     display: flex;
-    padding: 8px;
-    padding-inline-start: 12px
+    gap: 8px;
+    margin-top: 8px
 }
 
 .paymentSourceWarningIcon_f38e43 {
-    padding-inline-end: 8px
+    flex-shrink: 0
 }
 
 .error_f38e43 {

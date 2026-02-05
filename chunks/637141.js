@@ -68,20 +68,27 @@ function b(e, t, n) {
     }
     return (0, r.jsx)("div", { className: I.wC, children: t.label });
 }
-function N(e, t) {
-    if (null == t) return null;
-    let n = t instanceof f.A ? t.source : t,
-        r = null;
-    return (
-        e && !n.canRedeemTrial()
-            ? (r = A.intl.string(A.t.SvheW9))
-            : e &&
-              n.hasFlag(E.rI.NEW) &&
-              (r = A.intl.format(A.t.d7ZLKA, {
-                  helpDeskArticle: m.A.getArticleURL(g.MVz.PAYMENT_AUTHORIZATION_CHARGE),
-              })),
-        r
-    );
+function N(e) {
+    let { isTrial: t, selectedPaymentSource: n, paymentSources: r, defaultPaymentSourceId: i } = e,
+        a = n instanceof f.A ? n.source : n;
+    if (null != a) {
+        if (t && !a.canRedeemTrial()) return A.intl.string(A.t.SvheW9);
+        if (t && a.hasFlag(E.rI.NEW))
+            return A.intl.format(A.t.d7ZLKA, {
+                helpDeskArticle: m.A.getArticleURL(g.MVz.PAYMENT_AUTHORIZATION_CHARGE),
+            });
+    }
+    let s = r.filter((e) => e instanceof f.A);
+    if (s.length > 0) {
+        if (!s.some((e) => e.enabled)) return A.intl.string(A.t.OqbMBV);
+        if (null != i) {
+            let e = s.find((e) => e.id === i),
+                t = null != e && !e.enabled,
+                r = null != n && n.id !== i;
+            if (t && r) return A.intl.string(A.t.cB98Am);
+        }
+    }
+    return null;
 }
 let R = (e) => {
         let {
@@ -171,18 +178,19 @@ function D(e) {
             label: t,
             selectedPaymentSourceId: n,
             paymentSources: a,
-            prependOption: d,
-            hidePersonalInformation: _,
-            onChange: f,
-            onPaymentSourceAdd: p,
-            isTrial: h = !1,
-            disabled: m = !1,
-            className: g,
-            optionClassName: E,
-            dropdownLoading: T,
-            paymentGatewayRestrictions: y,
-            shouldUseUnifiedCheckoutUI: S,
-            newPaymentMethodOptionLabel: v,
+            prependOption: s,
+            hidePersonalInformation: d,
+            onChange: _,
+            onPaymentSourceAdd: f,
+            isTrial: p = !1,
+            disabled: h = !1,
+            className: m,
+            optionClassName: g,
+            dropdownLoading: E,
+            paymentGatewayRestrictions: T,
+            shouldUseUnifiedCheckoutUI: y,
+            newPaymentMethodOptionLabel: S,
+            defaultPaymentSourceId: v,
         } = e,
         {
             hasNoPaymentSources: C,
@@ -193,47 +201,47 @@ function D(e) {
         } = R({
             selectedPaymentSourceId: n,
             paymentSources: a,
-            prependOption: d,
-            hidePersonalInformation: _,
-            onChange: f,
-            onPaymentSourceAdd: p,
-            paymentGatewayRestrictions: y,
-            includeNewPaymentSourceOption: !S,
+            prependOption: s,
+            hidePersonalInformation: d,
+            onChange: _,
+            onPaymentSourceAdd: f,
+            paymentGatewayRestrictions: T,
+            includeNewPaymentSourceOption: !y,
         }),
         P = i.useMemo(() => new Map(a.map((e) => [e.id, e])), [a]),
-        M = N(h, L),
-        k = S
+        M = N({ isTrial: p, selectedPaymentSource: L, paymentSources: a, defaultPaymentSourceId: v }),
+        k = y
             ? (0, r.jsx)(O, {
-                  onPaymentSourceAdd: p,
-                  disabled: m,
+                  onPaymentSourceAdd: f,
+                  disabled: h,
                   handleChange: D,
                   paymentSourceOptions: w,
                   selectedPaymentSourceId: x,
-                  newPaymentMethodOptionLabel: v,
+                  newPaymentMethodOptionLabel: S,
               })
-            : T
+            : E
               ? (0, r.jsx)("div", {
                     className: I.hN,
                     children: (0, r.jsx)(c.y$y, { type: c.y$y.Type.WANDERING_CUBES }),
                 })
               : C
-                ? (0, r.jsx)(u.$nd, { variant: "primary", fullWidth: !0, onClick: p, text: A.intl.string(A.t.eQ2bLp) })
+                ? (0, r.jsx)(u.$nd, { variant: "primary", fullWidth: !0, onClick: f, text: A.intl.string(A.t.eQ2bLp) })
                 : (0, r.jsx)(l.Te, {
                       options: w,
                       value: x,
                       label: t,
                       onChange: D,
-                      isDisabled: m,
-                      className: s()({ [I.uQ]: null != M }, g),
-                      optionClassName: E,
+                      isDisabled: h,
+                      className: m,
+                      optionClassName: g,
                       placeholder: A.intl.string(A.t["8lqkf8"]),
                       renderOptionValue: (e) => {
                           let [t] = e;
-                          return T
+                          return E
                               ? (0, r.jsx)(c.y$y, { type: c.tVU.SPINNING_CIRCLE })
-                              : b(null == t.value ? void 0 : P.get(t.value), t, _);
+                              : b(null == t.value ? void 0 : P.get(t.value), t, d);
                       },
-                      renderOptionLabel: (e) => b(null == e.value ? void 0 : P.get(e.value), e, _),
+                      renderOptionLabel: (e) => b(null == e.value ? void 0 : P.get(e.value), e, d),
                       "data-migration-pending": !0,
                   });
     return (0, r.jsxs)(r.Fragment, {

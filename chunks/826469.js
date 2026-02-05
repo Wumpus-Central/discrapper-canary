@@ -17,6 +17,9 @@ class i {
     get paymentGateway() {
         return this.source.paymentGateway;
     }
+    get isDefault() {
+        return this.source.isDefault;
+    }
     static createFromCheckoutContext(e) {
         let t = {
             id: e.id,

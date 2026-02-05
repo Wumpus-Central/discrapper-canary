@@ -71,7 +71,11 @@ function U(e) {
     s()(null != Y, "Expected selectedSkuId");
     let ei = i.useRef(!1);
     i.useEffect(() => {
-        Q && Z.length > 0 && !ei.current && ((ei.current = !0), F((Z.find((e) => e.enabled) ?? Z[0]).id));
+        if (Q && Z.length > 0 && !ei.current) {
+            ei.current = !0;
+            let e = Z.find((e) => e.enabled) ?? null;
+            null != e ? F(e.id) : F(null);
+        }
     }, [Q, Z, F]);
     let ea = j[Y],
         es = ea?.eligiblePaymentGateways,
@@ -142,6 +146,7 @@ function U(e) {
                               onPaymentSourceAdd: g,
                               hidePersonalInformation: e_,
                               paymentGatewayRestrictions: es,
+                              defaultPaymentSourceId: Z.find((e) => e.isDefault)?.id,
                           }),
                       ],
                   })
