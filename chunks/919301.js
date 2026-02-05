@@ -17,7 +17,7 @@ let h = (0, s.Mz)(),
     g = (e) => {
         let { renderStep: t, paymentModalStepProps: n } = e,
             { handleStepChange: r, handleClose: a } = n,
-            { renderStepBody: s, disabled: o } = (0, f.ZR)({ handleStepChange: r, handleClose: a });
+            { renderStepBody: s, disabled: o } = (0, f.Z)({ handleStepChange: r, handleClose: a });
         return t({
             paymentModalStepProps: n,
             unifiedStepProps: i.useMemo(

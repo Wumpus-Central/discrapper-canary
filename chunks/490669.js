@@ -13,6 +13,5 @@ e.exports = {
     Xb: "giftPreviewImageContainer__7b8d0",
     Iy: "giftPreviewCardContainer__7b8d0",
     vz: "giftPreviewTextContainer__7b8d0",
-    qr: "footer__7b8d0",
     $O: "viewItemButton__7b8d0",
 };
