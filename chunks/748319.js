@@ -176,6 +176,7 @@ function eY(e) {
                               n?.();
                           },
                           setPopoutRef: s,
+                          className: eK.dI,
                       });
                   },
                   position: "top",
@@ -187,34 +188,44 @@ function eY(e) {
                   onRequestClose: () => {
                       m(), y(void 0);
                   },
-                  children: (e) => (
-                      S(e),
-                      (0, a.jsxs)(x.DUT, {
-                          innerRef: j,
+                  children: (e) => {
+                      S(e);
+                      let { onMouseEnter: t, onMouseDown: s, ...m } = e;
+                      return (0, a.jsxs)("div", {
+                          ref: j,
                           style: N,
-                          ...e,
+                          onMouseEnter: t,
+                          onMouseDown: s,
                           onClick: (t) => {
                               e.onClick?.(t), u?.(t);
                           },
-                          "aria-label": eH.intl.string(eH.t["3Uj+2p"]),
-                          "data-jump-section": f,
-                          className: l()(eK.R3, { [eK.ZQ]: null != p }),
+                          className: l()(eK.Q9, { [eK.ZQ]: null != p }),
                           children: [
+                              (0, a.jsx)(x.DUT, {
+                                  ...m,
+                                  onClick: (t) => {
+                                      t.stopPropagation(), e.onClick?.(t), u?.(t);
+                                  },
+                                  "aria-label": eH.intl.string(eH.t["5fWB8U"]),
+                                  focusProps: { ringTarget: j },
+                                  className: eK.$n,
+                                  "data-jump-section": f,
+                              }),
                               (0, a.jsx)(ez, {
                                   size: x._3J.SIZE_32,
                                   src: d.getAvatarURL(void 0, 28, !1),
                                   avatarDecoration: A,
-                                  "aria-label": d.username,
                                   status: o ? eG.clD.STREAMING : c,
                                   isSpeaking: n,
                                   isLatched: i,
                                   voiceDb: r,
                                   className: eK.my,
+                                  "aria-hidden": !0,
                               }),
                               (0, a.jsx)("div", { className: eK.oM, children: h(C) }),
                           ],
-                      })
-                  ),
+                      });
+                  },
               }),
           });
 }
@@ -424,27 +435,33 @@ class eJ extends s.PureComponent {
             } = this.props;
         if (null == s) return null;
         if ((0, j.A)({ activities: t, status: i, applicationStream: n, voiceChannel: r ? o : void 0 }))
-            return (0, a.jsx)(S.A, {
+            return (0, a.jsxs)(S.A, {
                 hoverText: l,
                 forceHover: e,
-                children: (0, a.jsx)(A.A, {
-                    user: s,
-                    activities: t,
-                    applicationStream: n,
-                    voiceChannel: r ? o : void 0,
-                    textClassName: eK.XD,
-                    hideTooltip: !0,
-                }),
+                children: [
+                    (0, a.jsx)(x.AC4, { children: ew.Ay.humanizeStatus(i) }),
+                    (0, a.jsx)(A.A, {
+                        user: s,
+                        activities: t,
+                        applicationStream: n,
+                        voiceChannel: r ? o : void 0,
+                        textClassName: eK.XD,
+                        hideTooltip: !0,
+                    }),
+                ],
             });
         let d = t?.find((e) => {
             let { type: t } = e;
             return t === eG.$pd.CUSTOM_STATUS;
         });
         return null != d
-            ? (0, a.jsx)(S.A, {
+            ? (0, a.jsxs)(S.A, {
                   hoverText: l,
                   forceHover: e,
-                  children: (0, a.jsx)(B.A, { activity: d, emojiClassName: eK.Zg, className: eK.WO }),
+                  children: [
+                      (0, a.jsx)(x.AC4, { children: ew.Ay.humanizeStatus(i) }),
+                      (0, a.jsx)(B.A, { activity: d, emojiClassName: eK.Zg, className: eK.WO }),
+                  ],
               })
             : null != i && i !== eG.clD.UNKNOWN && s.hasUniqueUsername()
               ? (0, a.jsx)(S.A, {
@@ -579,7 +596,7 @@ function eX(e) {
         className: eK.Uo,
         style: E,
         children: [
-            (0, a.jsx)(e7, {
+            (0, a.jsx)(e9, {
                 accountContainerRef: A,
                 selfMute: n,
                 serverMute: i,
@@ -599,7 +616,7 @@ function eX(e) {
                 speaking: y,
                 latched: N,
             }),
-            (0, a.jsx)(e9, {
+            (0, a.jsx)(e7, {
                 selfDeaf: t,
                 serverDeaf: l,
                 onClick: x,
@@ -832,7 +849,7 @@ function e1(e) {
         })
     );
 }
-function e7(e) {
+function e9(e) {
     let t,
         {
             selfMute: n,
@@ -961,7 +978,7 @@ function e7(e) {
         }),
     });
 }
-function e9(e) {
+function e7(e) {
     let {
             selfDeaf: t,
             serverDeaf: n,

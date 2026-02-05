@@ -23,12 +23,12 @@ let m = s.forwardRef(function (e, t) {
                 redGlow: A,
                 onMouseEnter: f,
                 onMouseLeave: x,
-                "aria-label": S,
-                "aria-checked": E,
+                "aria-label": E,
+                "aria-checked": S,
                 role: T,
                 plated: g,
             } = e,
-            h =
+            C =
                 "function" == typeof c
                     ? (0, l.jsx)(c, {
                           width: 20,
@@ -40,7 +40,7 @@ let m = s.forwardRef(function (e, t) {
                     : c;
         return (0, l.jsxs)(u.$n, {
             "data-migration-pending": !0,
-            "aria-label": S,
+            "aria-label": E,
             buttonRef: t,
             look: u.$n.Looks.BLANK,
             size: u.$n.Sizes.NONE,
@@ -56,10 +56,10 @@ let m = s.forwardRef(function (e, t) {
             onMouseLeave: x,
             onContextMenu: s,
             role: T,
-            "aria-checked": E,
+            "aria-checked": S,
             focusProps: { offset: { left: -1, top: -1, right: 1, bottom: 1 } },
             children: [
-                null != n ? (0, l.jsx)(d.Ay, { width: 20, height: 20, mask: d.Ay.Masks.PANEL_BUTTON, children: h }) : h,
+                null != n ? (0, l.jsx)(d.Ay, { width: 20, height: 20, mask: d.Ay.Masks.PANEL_BUTTON, children: C }) : C,
                 n,
             ],
         });
@@ -74,13 +74,15 @@ let m = s.forwardRef(function (e, t) {
                     "aria-label": u,
                     ...c
                 } = e,
-                d = (0, o.O)(n);
+                d = (0, o.O)(n),
+                _ = u ?? d;
             return (0, l.jsx)(r.m_, {
                 text: n,
                 forceOpen: s,
                 shouldShow: a,
                 positionKey: i,
-                children: (0, l.jsx)(m, { ...c, "aria-label": u ?? d, ref: t }),
+                ariaHidden: _ === d,
+                children: (0, l.jsx)(m, { ...c, "aria-label": _, ref: t }),
             });
         }
         {
